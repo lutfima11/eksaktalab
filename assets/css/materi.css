@@ -52,31 +52,31 @@ body{font-family:var(--sans);background:var(--surface);color:var(--text);line-he
   position:sticky;top:0;z-index:50;
   background:var(--surface);
   border-bottom:1px solid var(--border);
-  padding:0 1.5rem;height:56px;
+  padding:0 2rem;height:60px;
   display:flex;align-items:center;justify-content:space-between;gap:1rem;
 }
-.nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;flex-shrink:0;}
 .nav-logo-icon{
-  width:30px;height:30px;border-radius:8px;
+  width:36px;height:36px;border-radius:9px;
   background:var(--teal);
-  display:flex;align-items:center;justify-content:center;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
-.nav-logo-icon svg{width:16px;height:16px;}
+.nav-logo-icon svg{width:18px;height:18px;}
 .nav-logo-text{display:flex;flex-direction:column;gap:0.05rem;line-height:1;}
-.nav-logo-name{font-family:var(--display);font-size:1rem;font-weight:700;color:var(--text);}
+.nav-logo-name{font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--text);letter-spacing:-0.02em;}
 .nav-logo-name em{font-style:normal;color:var(--teal);}
-.nav-logo-tag{font-family:var(--mono);font-size:0.5rem;color:var(--text-3);letter-spacing:.1em;text-transform:uppercase;}
+.nav-logo-tag{font-family:var(--mono);font-size:0.5rem;font-weight:500;color:var(--text-3);letter-spacing:.08em;text-transform:uppercase;}
 
 /* Kanan navbar — semua tombol sama tinggi */
-.nav-right{display:flex;align-items:center;gap:0.5rem;}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0;}
 
 /* Token ukuran tombol navbar — pakai di semua btn */
 .nav-btn{
-  height:32px;
+  height:34px;
   padding:0 0.85rem;
   border-radius:8px;
   border:1px solid var(--border);
-  font-family:var(--sans);font-size:0.75rem;font-weight:600;
+  font-family:var(--sans);font-size:0.78rem;font-weight:600;
   display:inline-flex;align-items:center;gap:0.4rem;
   white-space:nowrap;cursor:pointer;text-decoration:none;
   background:var(--surface-2);color:var(--text-2);
@@ -818,7 +818,7 @@ tr:hover td{background:var(--surface-2);}
 
 /* ── SCROLL PROGRESS ────────────────────── */
 #scroll-bar{
-  position:fixed;top:56px;left:0;height:3px;
+  position:fixed;top:60px;left:0;height:3px;
   background:var(--teal);width:0%;z-index:100;
   transition:width .1s;
 }
@@ -912,15 +912,15 @@ tr:hover td{background:var(--surface-2);}
 
 /* ── NAVBAR MOBILE ───────────────────────── */
 @media(max-width:600px){
-  .navbar{ padding:0 0.75rem; height:52px; gap:0.5rem; }
+  .navbar{ padding:0 1rem; height:56px; gap:0.5rem; }
   .nav-logo-tag{ display:none; }
-  .nav-logo-name{ font-size:0.88rem; }
-  .nav-logo-icon{ width:26px; height:26px; }
+  .nav-logo-name{ font-size:0.95rem; }
+  .nav-logo-icon{ width:30px; height:30px; }
   .nav-btn{ height:30px; padding:0 0.6rem; font-size:0.72rem; }
 }
 @media(max-width:360px){
-  .nav-logo-name{ font-size:0.8rem; }
-  .nav-logo-icon{ width:22px; height:22px; border-radius:6px; }
+  .nav-logo-name{ font-size:0.85rem; }
+  .nav-logo-icon{ width:26px; height:26px; border-radius:7px; }
 }
 
 /* ── TOC DROPDOWN ────────────────────────── */
