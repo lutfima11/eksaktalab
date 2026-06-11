@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Persamaan Kuadrat – EksaktaLab</title>
+<meta name="description" content="Materi lengkap Persamaan Kuadrat SMA: pengertian, pemfaktoran, melengkapi kuadrat sempurna, rumus ABC, diskriminan, rumus Vieta, dan menyusun persamaan kuadrat baru. Dilengkapi 32 contoh soal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [["$","$"]], displayMath: [["$$","$$"]], tags: "ams" },
+  options: { skipHtmlTags: ["script","noscript","style","textarea"] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/persamaan-kuadrat/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Persamaan Kuadrat","url":"https://lutfima11.github.io/eksaktalab/materi/persamaan-kuadrat/","description":"Materi lengkap Persamaan Kuadrat SMA","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"educationalLevel":"SMA Kelas X","inLanguage":"id"}</script>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3" stroke="currentColor" stroke-width="1.8"/><line x1="1" y1="6.5" x2="9" y2="6.5" stroke="currentColor" stroke-width="1.8"/><line x1="1" y1="10" x2="11" y2="10" stroke="currentColor" stroke-width="1.8"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Persamaan Kuadrat · 7 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Pengertian Persamaan Kuadrat</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Menyelesaikan Persamaan Kuadrat</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Diskriminan &amp; Jenis Akar</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Rumus Vieta</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Menyusun PK Baru</a>
+        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Kapita Selekta</a>
+        <a class="toc-menu-item" href="#bagian-g" onclick="closeTOC()"><span class="toc-menu-badge">G</span>Tabel Ringkasan</a>
+      </div>
+    </div>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">&#127769; Gelap</button>
+  </div>
+</nav>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a><span>/</span>
+    <a href="../../#materi">Materi</a><span>/</span>
+    <a href="../../#aljabar">Aljabar &amp; Fungsi Dasar</a><span>/</span>
+    Persamaan Kuadrat
+  </div>
+
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">BAB A · No. 04</div>
+      <h1 class="materi-title">Persamaan Kuadrat</h1>
+      <p class="materi-desc">Dari bentuk baku $ax^2+bx+c=0$ hingga rumus Vieta — pemfaktoran, kuadrat sempurna, rumus ABC, diskriminan, dan menyusun persamaan baru. 32 contoh soal lengkap.</p>
+      <div class="materi-tags">
+        <span class="tag teal">Kelas X</span>
+        <span class="tag">Aljabar &amp; Fungsi</span>
+        <span class="tag">7 Sub-bab</span>
+        <span class="tag">32 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Pengertian Persamaan Kuadrat</a></li>
+      <li><a href="#bagian-b" data-num="B">Menyelesaikan Persamaan Kuadrat</a></li>
+      <li><a href="#bagian-c" data-num="C">Diskriminan dan Jenis-Jenis Akar</a></li>
+      <li><a href="#bagian-d" data-num="D">Hubungan Akar-Akar (Rumus Vieta)</a></li>
+      <li><a href="#bagian-e" data-num="E">Menyusun Persamaan Kuadrat Baru</a></li>
+      <li><a href="#bagian-f" data-num="F">Kapita Selekta</a></li>
+      <li><a href="#bagian-g" data-num="G">Tabel Ringkasan</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       A. PENGERTIAN PERSAMAAN KUADRAT
+       ═══════════════════════════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Pengertian Persamaan Kuadrat</h2>
+
+    <p><strong>Persamaan kuadrat</strong> adalah persamaan yang mengandung variabel dengan pangkat tertinggi dua.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Bentuk Umum Persamaan Kuadrat</div>
+      Misalkan $a, b, c \in \mathbb{R}$ dan $a \neq 0$, maka persamaan berbentuk:
+      $$ax^2 + bx + c = 0$$
+      disebut <strong>persamaan kuadrat</strong> dalam variabel $x$, di mana $a$ = koefisien $x^2$ ($a \neq 0$), $b$ = koefisien $x$, $c$ = konstanta.
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">Catatan Penting</div>
+      <p>Syarat $a \neq 0$ mutlak dipenuhi. Jika $a = 0$, persamaan menjadi linear (bukan kuadrat). Nilai $b$ dan $c$ boleh nol, tetapi $a$ tidak boleh.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Ubahlah ke bentuk baku $ax^2+bx+c=0$, lalu tentukan $a$, $b$, $c$!<br>
+      (a) $(2x-2)(x+4)-(x+3)(x+1)=0$ &nbsp;&nbsp; (b) $2x-5=\dfrac{3}{x}$ &nbsp;&nbsp; (c) $\dfrac{4}{x-1}+\dfrac{1}{x-2}=3$</p>
+    </div>
+    <div class="penyelesaian">
+      <p><strong>(a)</strong> $(2x^2+6x-8)-(x^2+4x+3)=0 \;\Rightarrow\; x^2+2x-11=0$. Jadi $\boxed{a=1,\;b=2,\;c=-11}$.</p>
+      <p><strong>(b)</strong> Kalikan dengan $x$: $2x^2-5x-3=0$. Jadi $\boxed{a=2,\;b=-5,\;c=-3}$.</p>
+      <p><strong>(c)</strong> Kalikan dengan $(x-1)(x-2)$: $4(x-2)+(x-1)=3(x^2-3x+2) \;\Rightarrow\; 3x^2-14x+15=0$. Jadi $\boxed{a=3,\;b=-14,\;c=15}$.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Nyatakan mana yang merupakan persamaan kuadrat dan tentukan $a$, $b$, $c$-nya! (a) $3x^2-x+5=0$ &nbsp; (b) $4x-7=0$ &nbsp; (c) $x^2=9$ &nbsp; (d) $0\cdot x^2+2x-1=0$ &nbsp; (e) $\dfrac{1}{2}x^2-3=0$</li>
+        <li>Ubah ke bentuk baku, tentukan $a$, $b$, $c$! (a) $x(x-5)=6$ &nbsp; (b) $3x^2=4x-1$ &nbsp; (c) $(x+2)(x-3)=4$</li>
+        <li>Ubah ke bentuk baku! (a) $\dfrac{5}{x}-3=2x$ &nbsp; (b) $\dfrac{x+1}{x-2}+\dfrac{x-2}{x+1}=3$ &nbsp; (c) $(3x-1)^2-(x+2)^2=0$</li>
+        <li>Diketahui $f(x)=(k-1)x^2+(2k+3)x-5$. Untuk nilai $k$ berapa $f(x)=0$ merupakan persamaan kuadrat?</li>
+        <li>Seorang siswa menyatakan $\dfrac{1}{x^2}+\dfrac{2}{x}-3=0$ bukan persamaan kuadrat. Apakah benar? Jika salah, ubah ke bentuk baku!</li>
+        <li>Tentukan nilai $p$ agar $(p-2)x^2+(p^2-5p+6)x+(p+1)=0$ merupakan persamaan kuadrat!</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       B. MENYELESAIKAN PERSAMAAN KUADRAT
+       ═══════════════════════════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Menyelesaikan Persamaan Kuadrat</h2>
+
+    <p>Terdapat tiga metode utama untuk menentukan <strong>akar-akar</strong> persamaan kuadrat.</p>
+
+    <h3 class="subsection-title">1. Pemfaktoran (Faktorisasi)</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Metode Pemfaktoran</div>
+      Untuk $ax^2+bx+c=0$, cari dua bilangan $p$ dan $q$ sehingga $p+q=b$ dan $p\times q=a\cdot c$. Maka:
+      $$ax^2+bx+c = \tfrac{1}{a}(ax+p)(ax+q) = 0$$
+      Sehingga $x_1=-\dfrac{p}{a}$ dan $x_2=-\dfrac{q}{a}$. Untuk $a=1$: berlaku $(x+p)(x+q)=0$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan akar-akar dengan pemfaktoran ($a=1$)!<br>
+      (a) $x^2-6x+8=0$ &nbsp;&nbsp; (b) $x^2-8x+16=0$ &nbsp;&nbsp; (c) $-x^2+x+12=0$ &nbsp;&nbsp; (d) $\tfrac{1}{2}x^2-\tfrac{5}{2}x+3=0$</p>
+    </div>
+    <div class="penyelesaian">
+      <p><strong>(a)</strong> $p\times q=8$, $p+q=-6 \Rightarrow p=-4,q=-2$. $(x-4)(x-2)=0 \Rightarrow \boxed{x_1=4,\;x_2=2}$</p>
+      <p><strong>(b)</strong> $p\times q=16$, $p+q=-8 \Rightarrow p=q=-4$. $(x-4)^2=0 \Rightarrow \boxed{x_1=x_2=4}$ (akar kembar)</p>
+      <p><strong>(c)</strong> Kalikan $-1$: $x^2-x-12=0$. $p\times q=-12$, $p+q=-1 \Rightarrow p=-4,q=3$. $\boxed{x_1=4,\;x_2=-3}$</p>
+      <p><strong>(d)</strong> Kalikan 2: $x^2-5x+6=0$. $p\times q=6$, $p+q=-5 \Rightarrow p=-2,q=-3$. $\boxed{x_1=2,\;x_2=3}$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan akar-akar dengan pemfaktoran ($a\neq 1$)!<br>
+      (a) $2x^2-7x+3=0$ &nbsp;&nbsp; (b) $3x^2-x-4=0$ &nbsp;&nbsp; (c) $-3x^2+5x+2=0$ &nbsp;&nbsp; (d) $\tfrac{3}{2}x^2-\tfrac{7}{2}x+2=0$</p>
+    </div>
+    <div class="penyelesaian">
+      <p><strong>(a)</strong> $ac=6$. $p\times q=6$, $p+q=-7 \Rightarrow p=-1,q=-6$. $(2x-1)(x-3)=0 \Rightarrow \boxed{x_1=\tfrac{1}{2},\;x_2=3}$</p>
+      <p><strong>(b)</strong> $ac=-12$. $p\times q=-12$, $p+q=-1 \Rightarrow p=3,q=-4$. $(x+1)(3x-4)=0 \Rightarrow \boxed{x_1=-1,\;x_2=\tfrac{4}{3}}$</p>
+      <p><strong>(c)</strong> Kalikan $-1$: $3x^2-5x-2=0$. $ac=-6$. $p=1,q=-6$. $(3x+1)(x-2)=0 \Rightarrow \boxed{x_1=-\tfrac{1}{3},\;x_2=2}$</p>
+      <p><strong>(d)</strong> Kalikan 2: $3x^2-7x+4=0$. $ac=12$. $p=-3,q=-4$. $(x-1)(3x-4)=0 \Rightarrow \boxed{x_1=1,\;x_2=\tfrac{4}{3}}$</p>
+    </div>
+
+    <h3 class="subsection-title">2. Melengkapkan Kuadrat Sempurna</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Langkah-Langkah (untuk $a=1$)</div>
+      <ol>
+        <li>Pindahkan $c$ ke kanan: $x^2+bx=-c$</li>
+        <li>Tambahkan $\left(\dfrac{b}{2}\right)^2$ ke kedua ruas</li>
+        <li>Bentuk: $\left(x+\dfrac{b}{2}\right)^2=-c+\left(\dfrac{b}{2}\right)^2$</li>
+        <li>Akarkan kedua ruas</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Selesaikan dengan melengkapkan kuadrat sempurna!<br>
+      (a) $x^2+6x+5=0$ &nbsp;&nbsp; (b) $x^2-8x+12=0$ &nbsp;&nbsp; (c) $-2x^2+6x+8=0$ &nbsp;&nbsp; (d) $\tfrac{1}{3}x^2-2x+3=0$</p>
+    </div>
+    <div class="penyelesaian">
+      <p><strong>(a)</strong> $x^2+6x=-5$ (tambah 9): $(x+3)^2=4 \Rightarrow x=-3\pm 2 \Rightarrow \boxed{x_1=-1,\;x_2=-5}$</p>
+      <p><strong>(b)</strong> $x^2-8x=-12$ (tambah 16): $(x-4)^2=4 \Rightarrow x=4\pm 2 \Rightarrow \boxed{x_1=6,\;x_2=2}$</p>
+      <p><strong>(c)</strong> Kalikan $-\tfrac{1}{2}$: $x^2-3x-4=0$. $(x-\tfrac{3}{2})^2=\tfrac{25}{4} \Rightarrow \boxed{x_1=4,\;x_2=-1}$</p>
+      <p><strong>(d)</strong> Kalikan 3: $x^2-6x+9=0$. $(x-3)^2=0 \Rightarrow \boxed{x_1=x_2=3}$ (akar kembar)</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Selesaikan dengan melengkapkan kuadrat sempurna!<br>
+      (a) $2x^2+8x+5=0$ &nbsp;&nbsp; (b) $4x^2-8x+1=0$ &nbsp;&nbsp; (c) $-3x^2+12x-6=0$ &nbsp;&nbsp; (d) $0{,}5x^2-3x+1=0$</p>
+    </div>
+    <div class="penyelesaian">
+      <p><strong>(a)</strong> Bagi 2: $(x+2)^2=\tfrac{3}{2} \Rightarrow \boxed{x_{1,2}=\dfrac{-4\pm\sqrt{6}}{2}}$</p>
+      <p><strong>(b)</strong> Bagi 4: $(x-1)^2=\tfrac{3}{4} \Rightarrow \boxed{x_{1,2}=\dfrac{2\pm\sqrt{3}}{2}}$</p>
+      <p><strong>(c)</strong> Kalikan $-\tfrac{1}{3}$: $(x-2)^2=2 \Rightarrow \boxed{x_{1,2}=2\pm\sqrt{2}}$</p>
+      <p><strong>(d)</strong> Kalikan 2: $(x-3)^2=7 \Rightarrow \boxed{x_{1,2}=3\pm\sqrt{7}}$</p>
+    </div>
+
+    <h3 class="subsection-title">3. Rumus Kuadrat (Rumus ABC)</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus ABC</div>
+      Diturunkan dari melengkapkan kuadrat sempurna pada $ax^2+bx+c=0$:
+      $$x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">Catatan Penting</div>
+      <p>Rumus ABC berlaku untuk <strong>semua</strong> kasus persamaan kuadrat. Gunakan terutama jika pemfaktoran sulit ditemukan.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Selesaikan dengan rumus ABC! (a) $x^2-6x+8=0$ &nbsp;&nbsp; (b) $x^2-9=0$</p>
+    </div>
+    <div class="penyelesaian">
+      <p><strong>(a)</strong> $a=1,b=-6,c=8$: $x_{1,2}=\dfrac{6\pm\sqrt{36-32}}{2}=\dfrac{6\pm 2}{2} \Rightarrow \boxed{x_1=4,\;x_2=2}$</p>
+      <p><strong>(b)</strong> $a=1,b=0,c=-9$: $x_{1,2}=\dfrac{\pm\sqrt{36}}{2}=\dfrac{\pm 6}{2} \Rightarrow \boxed{x_1=3,\;x_2=-3}$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Selesaikan dengan rumus ABC! (a) $x^2-4x-8=0$ &nbsp;&nbsp; (b) $2x^2-8x+5=0$</p>
+    </div>
+    <div class="penyelesaian">
+      <p><strong>(a)</strong> $x_{1,2}=\dfrac{4\pm\sqrt{48}}{2}=2\pm 2\sqrt{3} \Rightarrow \boxed{x_1=2+2\sqrt{3},\;x_2=2-2\sqrt{3}}$</p>
+      <p><strong>(b)</strong> $x_{1,2}=\dfrac{8\pm\sqrt{24}}{4}=\dfrac{4\pm\sqrt{6}}{2} \Rightarrow \boxed{x_1=\dfrac{4+\sqrt{6}}{2},\;x_2=\dfrac{4-\sqrt{6}}{2}}$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian! (a) $(x-6)(x+1)+2(x-2)(x-3)=-6$ &nbsp;&nbsp; (b) $x-4-\dfrac{7}{x+2}=0$</p>
+    </div>
+    <div class="penyelesaian">
+      <p><strong>(a)</strong> $(x^2-5x-6)+2(x^2-5x+6)=-6 \Rightarrow 3x^2-15x+12=0 \Rightarrow x^2-5x+4=0 \Rightarrow (x-4)(x-1)=0$. $\boxed{x_1=4,\;x_2=1}$</p>
+      <p><strong>(b)</strong> Kalikan $(x+2)$: $(x-4)(x+2)-7=0 \Rightarrow x^2-2x-15=0 \Rightarrow (x-5)(x+3)=0$. $\boxed{x_1=5,\;x_2=-3}$ ($x\neq -2$ ✓)</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$ real yang memenuhi $(x^2+2x+3)(2x^2+4x-33)=-54$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p>Misalkan $p=x^2+2x$: $(p+3)(2p-33)=-54 \Rightarrow 2p^2-27p-45=0 \Rightarrow (2p+3)(p-15)=0$.</p>
+      <p><strong>Kasus 1:</strong> $p=-\tfrac{3}{2}$: $2x^2+4x+3=0$, $D=-8<0$ (tidak ada akar real).</p>
+      <p><strong>Kasus 2:</strong> $p=15$: $x^2+2x-15=0 \Rightarrow (x+5)(x-3)=0 \Rightarrow \boxed{x_1=-5,\;x_2=3}$</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Selesaikan dengan pemfaktoran ($a\neq 1$)! (a) $2x^2+5x+3=0$ &nbsp; (b) $3x^2-10x+8=0$ &nbsp; (c) $-2x^2+7x-3=0$ &nbsp; (d) $\tfrac{3}{2}x^2+6x=0$</li>
+        <li>Selesaikan dengan melengkapkan kuadrat! (a) $x^2-10x+21=0$ &nbsp; (b) $x^2+4x-7=0$ &nbsp; (c) $2x^2-6x+1=0$</li>
+        <li>Selesaikan dengan rumus ABC! (a) $x^2-3x-5=0$ &nbsp; (b) $3x^2+5x-1=0$ &nbsp; (c) $x^2+7x+11=0$</li>
+        <li>Tentukan nilai $x$! (a) $\dfrac{2x}{x-1}+\dfrac{x-1}{x+2}=3$ &nbsp;&nbsp; (b) $(x^2-3x+1)(x^2-3x-5)=-5$</li>
+        <li>$(x^2+x)^2-8(x^2+x)+12=0$. Gunakan substitusi $u=x^2+x$, tentukan semua nilai $x$ real!</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       C. DISKRIMINAN
+       ═══════════════════════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Diskriminan dan Jenis-Jenis Akar</h2>
+
+    <p>Sifat akar $ax^2+bx+c=0$ ditentukan oleh nilai $D=b^2-4ac$ yang disebut <strong>diskriminan</strong>.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Tabel Diskriminan</div>
+      <table style="width:100%;border-collapse:collapse;font-size:.85rem;margin:.5rem 0;">
+        <thead><tr style="background:var(--navy);color:#fff;"><th style="padding:.55rem .85rem;text-align:left;font-size:.75rem;letter-spacing:.05em;">Nilai $D = b^2-4ac$</th><th style="padding:.55rem .85rem;text-align:left;font-size:.75rem;letter-spacing:.05em;">Jenis Akar</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:.5rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D>0$ (kuadrat sempurna)</td><td style="padding:.5rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">Dua akar real berbeda, <strong style="color:var(--text)">rasional</strong></td></tr>
+          <tr><td style="padding:.5rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D>0$ (bukan kuadrat sempurna)</td><td style="padding:.5rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">Dua akar real berbeda, <strong style="color:var(--text)">irasional</strong></td></tr>
+          <tr><td style="padding:.5rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D=0$</td><td style="padding:.5rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">Dua akar real <strong style="color:var(--text)">sama</strong> (akar kembar)</td></tr>
+          <tr><td style="padding:.5rem .85rem;color:var(--text-2);">$D<0$</td><td style="padding:.5rem .85rem;color:var(--text-2);">Tidak ada akar real (<strong style="color:var(--text)">imajiner</strong>)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan jenis akar tanpa mencari akarnya! (a) $2x^2-7x+6=0$ &nbsp;&nbsp; (b) $x^2-6x+12=0$ &nbsp;&nbsp; (c) $x^2-4x+4=0$ &nbsp;&nbsp; (d) $x^2-4x+1=0$</p>
+    </div>
+    <div class="penyelesaian">
+      <p><strong>(a)</strong> $D=49-48=1>0$ (kuadrat sempurna) → <strong>dua akar real rasional</strong></p>
+      <p><strong>(b)</strong> $D=36-48=-12<0$ → <strong>tidak ada akar real (imajiner)</strong></p>
+      <p><strong>(c)</strong> $D=16-16=0$ → <strong>akar kembar</strong></p>
+      <p><strong>(d)</strong> $D=16-4=12>0$ (bukan kuadrat sempurna) → <strong>dua akar real irasional</strong></p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $p$ agar persamaan memiliki akar kembar! (a) $x^2-px+16=0$ &nbsp;&nbsp; (b) $(p+3)x^2-4x+p=0$</p>
+    </div>
+    <div class="penyelesaian">
+      <p><strong>(a)</strong> $D=0$: $p^2-64=0 \Rightarrow \boxed{p=\pm 8}$</p>
+      <p><strong>(b)</strong> $D=0$ dan $p\neq -3$: $16-4p(p+3)=0 \Rightarrow p^2+3p-4=0 \Rightarrow (p+4)(p-1)=0 \Rightarrow \boxed{p=-4\text{ atau }p=1}$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan batas nilai $m$ agar persamaan tidak memiliki akar nyata! (a) $x^2-3x-3m=0$ &nbsp;&nbsp; (b) $(m+1)x^2+2mx+(m-2)=0$</p>
+    </div>
+    <div class="penyelesaian">
+      <p><strong>(a)</strong> $D<0$: $9+12m<0 \Rightarrow \boxed{m<-\tfrac{3}{4}}$</p>
+      <p><strong>(b)</strong> $D<0$ dan $m\neq -1$: $4m^2-4(m+1)(m-2)<0 \Rightarrow 4m+8<0 \Rightarrow m<-2$. Karena $m<-2$ mengandung $m\neq -1$: $\boxed{m<-2}$</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Tentukan jenis akar tanpa mencari akarnya! (a) $x^2-5x+6=0$ &nbsp; (b) $x^2-4x+5=0$ &nbsp; (c) $9x^2-12x+4=0$ &nbsp; (d) $x^2-3x+1=0$</li>
+        <li>Tentukan nilai $k$ agar $kx^2-4x+1=0$ memiliki akar kembar. Periksa agar tetap berupa persamaan kuadrat!</li>
+        <li>Tentukan nilai $m$ agar $x^2+2mx+(m+6)=0$ memiliki dua akar real berbeda!</li>
+        <li>Tentukan nilai $p$ agar $(p+1)x^2-2(p-1)x+(p-2)=0$ memiliki akar-akar real!</li>
+        <li>Buktikan bahwa $x^2-(m+3)x+3m=0$ selalu memiliki akar real untuk semua $m\in\mathbb{R}$!</li>
+        <li>Nilai $k$ agar $x^2+2kx+(k^2-k+2)=0$ memiliki: (a) dua akar real berbeda, (b) akar tidak nyata!</li>
+        <li>Jika $x^2-2px+(p+6)=0$ memiliki akar real, tentukan $p$. Tunjukkan kedua akar selalu positif!</li>
+        <li>$(k^2-4)x^2+2(k-2)x+2=0$ memiliki akar kembar. Tentukan semua nilai $k$!</li>
+        <li>$mx^2-(m+3)x+1=0$, $m\neq 0$. Tentukan $m$ agar dua akar real berbeda, lalu tunjukkan untuk $m=1$ akarnya tidak rasional!</li>
+        <li>$x^2+bx+c=0$ punya dua akar real. Jika jumlah kuadrat akar = tiga kali hasil kali akar, tentukan hubungan $b,c$ dan syarat diskriminan!</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       D. RUMUS VIETA
+       ═══════════════════════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Hubungan Akar-Akar Persamaan Kuadrat (Rumus Vieta)</h2>
+
+    <p>Jika $x_1$ dan $x_2$ adalah akar-akar $ax^2+bx+c=0$ ($a\neq 0$), maka berlaku:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Vieta dan Turunannya</div>
+      $$x_1+x_2=-\frac{b}{a} \qquad x_1\cdot x_2=\frac{c}{a} \qquad x_1-x_2=\frac{\sqrt{D}}{|a|}\;(x_1>x_2)$$
+      Ekspresi turunan:
+      <ul>
+        <li>$x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2$</li>
+        <li>$(x_1-x_2)^2=(x_1+x_2)^2-4x_1x_2$</li>
+        <li>$x_1^3+x_2^3=(x_1+x_2)^3-3x_1x_2(x_1+x_2)$</li>
+        <li>$\dfrac{1}{x_1}+\dfrac{1}{x_2}=\dfrac{x_1+x_2}{x_1x_2}$</li>
+      </ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Jika $x_1,x_2$ akar-akar $x^2-3x+6=0$, tentukan: (a) $x_1+x_2$ dan $x_1x_2$ &nbsp; (b) $x_1^2+x_2^2$ &nbsp; (c) $x_1^3x_2+x_2^3x_1$ &nbsp; (d) $\dfrac{x_1}{x_2}+\dfrac{x_2}{x_1}$</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$x_1+x_2=3$, $x_1x_2=6$.</p>
+      <p><strong>(a)</strong> $x_1+x_2=3$, $x_1x_2=6$.</p>
+      <p><strong>(b)</strong> $x_1^2+x_2^2=9-12=\boxed{-3}$ <em>(negatif karena akarnya imajiner, tapi ekspresi tetap valid)</em></p>
+      <p><strong>(c)</strong> $x_1x_2(x_1^2+x_2^2)=6\cdot(-3)=\boxed{-18}$</p>
+      <p><strong>(d)</strong> $\dfrac{x_1^2+x_2^2}{x_1x_2}=\dfrac{-3}{6}=\boxed{-\tfrac{1}{2}}$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Jika salah satu akar $x^2-10x+(k+3)=0$ adalah empat kali akar yang lain, tentukan nilai $k$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$x_1=4x_2$: $4x_2+x_2=10 \Rightarrow x_2=2,\;x_1=8$. Lalu $x_1x_2=k+3 \Rightarrow 16=k+3 \Rightarrow \boxed{k=13}$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Akar-akar $x^2+3x-m=0$ adalah $\alpha,\beta$. Jika $\alpha+3\beta=5$, tentukan $m$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$\alpha+\beta=-3$, $\alpha\beta=-m$. Dari syarat: $(\alpha+\beta)+2\beta=5 \Rightarrow \beta=4$, $\alpha=-7$. $\alpha\beta=-m \Rightarrow -28=-m \Rightarrow \boxed{m=28}$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Akar-akar $2x^2-6x+3=0$ adalah $x_1,x_2$. Tentukan: (a) kuadrat jumlah, (b) jumlah kuadrat, (c) kuadrat selisih.</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$x_1+x_2=3$, $x_1x_2=\tfrac{3}{2}$.</p>
+      <p><strong>(a)</strong> $(x_1+x_2)^2=\boxed{9}$</p>
+      <p><strong>(b)</strong> $x_1^2+x_2^2=9-3=\boxed{6}$ <em>(perhatikan: $(x_1+x_2)^2\neq x_1^2+x_2^2$!)</em></p>
+      <p><strong>(c)</strong> $(x_1-x_2)^2=9-6=\boxed{3}$</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">Catatan Penting</div>
+      <p><strong>Kuadrat jumlah</strong> $(x_1+x_2)^2=x_1^2+2x_1x_2+x_2^2$ ← langsung dari Vieta.<br>
+      <strong>Jumlah kuadrat</strong> $x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2$ ← harus dikurangi $2x_1x_2$.<br>
+      Kesalahan umum: menganggap $(x_1+x_2)^2=x_1^2+x_2^2$. Ingat keduanya <strong>tidak sama</strong>!</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Akar-akar $2x^2-5x+3=0$ adalah $x_1,x_2$. Tentukan PK baru yang akar-akarnya $\dfrac{x_1+1}{x_2}$ dan $\dfrac{x_2+1}{x_1}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$x_1+x_2=\tfrac{5}{2}$, $x_1x_2=\tfrac{3}{2}$. Misal $p=\dfrac{x_1+1}{x_2}$, $q=\dfrac{x_2+1}{x_1}$.</p>
+      <p>$x_1^2+x_2^2=\tfrac{25}{4}-3=\tfrac{13}{4}$.</p>
+      <p>$p+q=\dfrac{(x_1^2+x_2^2)+(x_1+x_2)}{x_1x_2}=\dfrac{\frac{13}{4}+\frac{5}{2}}{\frac{3}{2}}=\dfrac{\frac{23}{4}}{\frac{3}{2}}=\dfrac{23}{6}$</p>
+      <p>$p\cdot q=\dfrac{x_1x_2+x_1+x_2+1}{x_1x_2}=\dfrac{\frac{3}{2}+\frac{5}{2}+1}{\frac{3}{2}}=\dfrac{5}{\frac{3}{2}}=\dfrac{10}{3}$</p>
+      <p>PK baru $\times 6$: $\boxed{6x^2-23x+20=0}$.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Akar-akar $x^2-8x+12=0$ adalah $x_1,x_2$. Tentukan: (a) $x_1+x_2$ dan $x_1x_2$ &nbsp; (b) $x_1^2+x_2^2$ &nbsp; (c) $\dfrac{1}{x_1}+\dfrac{1}{x_2}$</li>
+        <li>Akar-akar $2x^2-6x+3=0$ adalah $\alpha,\beta$. Tentukan: (a) $\alpha^2\beta+\alpha\beta^2$ &nbsp; (b) $\alpha^2+\alpha\beta+\beta^2$ &nbsp; (c) $(\alpha-\beta)^2$</li>
+        <li>Salah satu akar $x^2+px+12=0$ adalah tiga kali akar yang lain. Tentukan $p$ dan kedua akarnya!</li>
+        <li>$\alpha,\beta$ akar $x^2+5x-2=0$. Tentukan $\alpha^3+\beta^3$ dan $\dfrac{\alpha^2}{\beta}+\dfrac{\beta^2}{\alpha}$!</li>
+        <li>$\alpha+\beta=p$, $\alpha\beta=q$, $\alpha^2+\beta^2=10$, $\alpha^3+\beta^3=28$. Tentukan $p$ dan $q$!</li>
+        <li>Akar-akar $3x^2+6x-2=0$ adalah $x_1,x_2$. Tentukan: (a) $\dfrac{x_1^2+1}{x_2}+\dfrac{x_2^2+1}{x_1}$ &nbsp; (b) $\left(x_1-\dfrac{1}{x_2}\right)\!\left(x_2-\dfrac{1}{x_1}\right)$</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       E. MENYUSUN PK BARU
+       ═══════════════════════════════════ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Menyusun Persamaan Kuadrat Baru</h2>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Formula Menyusun Persamaan Kuadrat</div>
+      Jika akar-akarnya $x_1$ dan $x_2$:
+      $$x^2-(x_1+x_2)x+(x_1\cdot x_2)=0$$
+      atau ekuivalen $(x-x_1)(x-x_2)=0$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan PK yang akar-akarnya: (a) $-3$ dan $4$ &nbsp;&nbsp; (b) $3-\sqrt{5}$ dan $3+\sqrt{5}$</p>
+    </div>
+    <div class="penyelesaian">
+      <p><strong>(a)</strong> $x^2-(-3+4)x+(-3)(4)=0 \Rightarrow \boxed{x^2-x-12=0}$</p>
+      <p><strong>(b)</strong> $x_1+x_2=6$, $x_1x_2=9-5=4 \Rightarrow \boxed{x^2-6x+4=0}$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan PK yang akar-akarnya empat lebihnya dari akar-akar $x^2+5x-2=0$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$x_1+x_2=-5$, $x_1x_2=-2$. Akar baru $\alpha=x_1+4$, $\beta=x_2+4$.</p>
+      <p>$\alpha+\beta=-5+8=3$. $\alpha\beta=-2+4(-5)+16=-6$. PK baru: $\boxed{x^2-3x-6=0}$.</p>
+      <p><em>Cara alternatif:</em> $x=\alpha-4$: $(\alpha-4)^2+5(\alpha-4)-2=0 \Rightarrow \alpha^2-3\alpha-6=0$ ✓</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin:0;font-size:.9rem;">Akar-akar $x^2-6x+4=0$ adalah $\alpha,\beta$. Tentukan PK baru yang akar-akarnya $\dfrac{3}{\alpha}$ dan $\dfrac{3}{\beta}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$\alpha+\beta=6$, $\alpha\beta=4$. $x_1+x_2=\dfrac{3(\alpha+\beta)}{\alpha\beta}=\dfrac{18}{4}=\dfrac{9}{2}$. $x_1x_2=\dfrac{9}{4}$.</p>
+      <p>PK baru $\times 4$: $\boxed{4x^2-18x+9=0}$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;">Akar-akar $3x^2-5x+1=0$ adalah $x_1,x_2$. Susun PK yang akar-akarnya $x_1^2+x_2$ dan $x_2^2+x_1$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$x_1+x_2=\tfrac{5}{3}$, $x_1x_2=\tfrac{1}{3}$. $x_1^2+x_2^2=\tfrac{25}{9}-\tfrac{2}{3}=\tfrac{19}{9}$.</p>
+      <p>Jumlah akar baru: $\tfrac{19}{9}+\tfrac{5}{3}=\tfrac{34}{9}$.</p>
+      <p>Hasil kali: $(x_1^2+x_2)(x_2^2+x_1)=x_1^2x_2^2+x_1^3+x_2^3+x_1x_2=\tfrac{1}{9}+\tfrac{80}{27}+\tfrac{1}{3}=\tfrac{92}{27}$.</p>
+      <p>PK baru $\times 27$: $\boxed{27x^2-102x+92=0}$.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Tentukan PK yang akar-akarnya: (a) $2$ dan $7$ &nbsp; (b) $-5$ dan $3$ &nbsp; (c) $2+\sqrt{3}$ dan $2-\sqrt{3}$</li>
+        <li>$x_1,x_2$ akar-akar $x^2-4x+1=0$. Tentukan PK baru yang akar-akarnya: (a) $x_1+3$ dan $x_2+3$ &nbsp; (b) $2x_1$ dan $2x_2$ &nbsp; (c) $\dfrac{1}{x_1}$ dan $\dfrac{1}{x_2}$</li>
+        <li>Susun PK yang akar-akarnya dua kurangnya dari akar-akar $x^2+7x+10=0$!</li>
+        <li>$\alpha,\beta$ akar-akar $3x^2-2x-1=0$. Tentukan PK baru yang akar-akarnya $\alpha^2+\beta$ dan $\beta^2+\alpha$!</li>
+        <li>$\alpha,\beta$ akar-akar $x^2-3x+5=0$. Tentukan PK baru yang akar-akarnya $\dfrac{\alpha+1}{\beta-1}$ dan $\dfrac{\beta+1}{\alpha-1}$!</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       F. KAPITA SELEKTA
+       ═══════════════════════════════════ -->
+  <section class="section" id="bagian-f">
+    <h2 class="section-title"><span class="section-badge">F</span>Kapita Selekta Persamaan Kuadrat</h2>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">Jika $\dfrac{1}{a}+\dfrac{1}{b}=3$ dan $ab=1$, tentukan nilai $a$ dan $b$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$ab=1 \Rightarrow \tfrac{1}{b}=a$. Substitusi: $a+\tfrac{1}{a}=3 \Rightarrow a^2-3a+1=0 \Rightarrow a=\dfrac{3\pm\sqrt{5}}{2}$.</p>
+      <p>$\boxed{(a,b)=\left(\dfrac{3+\sqrt{5}}{2},\dfrac{3-\sqrt{5}}{2}\right)}$ atau sebaliknya.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 23</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan $x$ yang memenuhi: $\dfrac{x+6}{x+5}-\dfrac{x+7}{x+6}=\dfrac{x+8}{x+7}-\dfrac{x+9}{x+8}$</p>
+    </div>
+    <div class="penyelesaian">
+      <p>Ruas kiri $=\dfrac{1}{(x+5)(x+6)}$, ruas kanan $=\dfrac{1}{(x+7)(x+8)}$.</p>
+      <p>$(x+7)(x+8)=(x+5)(x+6) \Rightarrow 4x=-26 \Rightarrow \boxed{x=-\dfrac{13}{2}}$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Panjang persegi panjang 3 cm lebih dari lebarnya. Luas 54 cm². Tentukan panjang dan lebarnya!</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$x(x+3)=54 \Rightarrow x^2+3x-54=0 \Rightarrow (x+9)(x-6)=0 \Rightarrow x=6$.</p>
+      <p><strong>Lebar = 6 cm, panjang = 9 cm.</strong> Verifikasi: $6\times 9=54$ ✓</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Jumlah dua bilangan cacah adalah 11 dan hasil kalinya 28. Tentukan kedua bilangan tersebut!</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$y=11-x$, $x(11-x)=28 \Rightarrow x^2-11x+28=0 \Rightarrow (x-4)(x-7)=0$. <strong>Kedua bilangan: 4 dan 7.</strong></p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Perbandingan akar-akar $x^2-8x+k=0$ adalah $3:1$. Tentukan $k$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$x_1=3m$, $x_2=m$: $4m=8 \Rightarrow m=2$, jadi $x_1=6,x_2=2$. $k=x_1x_2=12 \Rightarrow \boxed{k=12}$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 27</div>
+      <p style="margin:0;font-size:.9rem;">Dua bilangan real positif selisihnya 5. Jumlah kebalikannya $\dfrac{1}{6}$. Tentukan kedua bilangan!</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$x=y+5$, $6(x+y)=xy$. Substitusi: $y^2-7y-30=0 \Rightarrow (y-10)(y+3)=0 \Rightarrow y=10,\;x=15$.</p>
+      <p>Verifikasi: $\tfrac{1}{15}+\tfrac{1}{10}=\tfrac{1}{6}$ ✓</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">$m,n$ akar-akar $4x^2+px+8=0$ ($p\neq 0$), serta $\dfrac{2}{m}+\dfrac{2}{n}=m^3+n^3$. Tentukan $p^2-16$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$m+n=-\tfrac{p}{4}$, $mn=2$. Ruas kiri $=m+n$. Ruas kanan $=(m+n)^3-6(m+n)$.</p>
+      <p>$s=(m+n)$: $s^3-7s=0 \Rightarrow s^2=7$ (karena $p\neq 0$). $\left(-\tfrac{p}{4}\right)^2=7 \Rightarrow p^2=112$. $\boxed{p^2-16=96}$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 29</div>
+      <p style="margin:0;font-size:.9rem;">$x_1,x_2$ memenuhi $x^2+3x+1=0$. Tentukan $\dfrac{1}{(3x_1+1)(x_1+3)}+\dfrac{1}{(3x_2+1)(x_2+3)}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$x_1+x_2=-3$, $x_1x_2=1$. Karena $x_1^2=-3x_1-1$: $(3x_1+1)(x_1+3)=3x_1^2+10x_1+3=x_1$. Demikian $(3x_2+1)(x_2+3)=x_2$.</p>
+      <p>$\dfrac{1}{x_1}+\dfrac{1}{x_2}=\dfrac{x_1+x_2}{x_1x_2}=\dfrac{-3}{1}=\boxed{-3}$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 30</div>
+      <p style="margin:0;font-size:.9rem;">$a,b\in\mathbb{Z}$ dan $\sqrt{2019+2\sqrt{2018}}$ adalah solusi $x^2+ax+b=0$. Tentukan $a+b$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$2019+2\sqrt{2018}=(\sqrt{2018}+1)^2 \Rightarrow x_1=\sqrt{2018}+1$. Akar lain $x_2=-\sqrt{2018}+1$.</p>
+      <p>$x_1+x_2=2=-a \Rightarrow a=-2$. $x_1x_2=1-2018=-2017=b$. $\boxed{a+b=-2019}$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 31</div>
+      <p style="margin:0;font-size:.9rem;">$x_1,x_2$ akar $x^2-2x-1=0$. Cari PK yang akar-akarnya $\dfrac{x_1^2-1}{2x_1}$ dan $\dfrac{2x_2}{x_2^2-1}$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p>Karena $x_1^2-2x_1-1=0$: $x_1^2-1=2x_1$. Maka $\alpha=\dfrac{2x_1}{2x_1}=1$. Sama, $\beta=1$. PK baru (akar kembar 1): $\boxed{x^2-2x+1=0}$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 32</div>
+      <p style="margin:0;font-size:.9rem;">Akar-akar $2x^2-7x+2=0$ adalah $r,s$. Tentukan $\dfrac{r}{(r^2+1)^2}+\dfrac{s}{(s^2+1)^2}$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p>$r+s=\tfrac{7}{2}$, $rs=1$. Karena $2r^2-7r+2=0$: $r^2+1=\tfrac{7r}{2}$.</p>
+      <p>$\dfrac{r}{(r^2+1)^2}=\dfrac{r}{(\frac{7r}{2})^2}=\dfrac{4}{49r}$. Sama untuk $s$.</p>
+      <p>$\dfrac{4}{49}\cdot\dfrac{r+s}{rs}=\dfrac{4}{49}\cdot\dfrac{7}{2}=\boxed{\dfrac{2}{7}}$</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Lapangan persegi panjang, panjang 5 m lebih dari lebar, luas 84 m². Tentukan panjang dan lebarnya!</li>
+        <li>Umur Budi dua kali umur adiknya. Dua tahun lalu, hasil kali umur mereka 24. Tentukan umur mereka sekarang!</li>
+        <li>Jumlah dua bilangan positif adalah 14 dan jumlah kuadratnya 100. Tentukan kedua bilangan!</li>
+        <li>Tentukan $x$ real yang memenuhi $\sqrt{x+5}+\sqrt{2x+3}=3$. (Petunjuk: isolasi salah satu akar, lalu kuadratkan, periksa solusi)</li>
+        <li>$x_1-x_2=1$ dan $x_1^2-x_2^2=3$. Tentukan $\dfrac{x_1+x_2}{x_1-x_2}$ dan susun PK yang memenuhi!</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       G. TABEL RINGKASAN
+       ═══════════════════════════════════ -->
+  <section class="section" id="bagian-g">
+    <h2 class="section-title"><span class="section-badge">G</span>Tabel Ringkasan Persamaan Kuadrat</h2>
+
+    <div class="box box-rumus">
+      <div class="box-label">• 1. Metode Penyelesaian</div>
+      <table style="width:100%;border-collapse:collapse;font-size:.82rem;margin:.5rem 0;">
+        <thead><tr style="background:var(--navy);color:#fff;"><th style="padding:.55rem .7rem;text-align:left;">Metode</th><th style="padding:.55rem .7rem;text-align:left;">Rumus</th><th style="padding:.55rem .7rem;text-align:left;">Syarat</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Bentuk baku</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$ax^2+bx+c=0$</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$a\neq 0$</td></tr>
+          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Pemfaktoran</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$\tfrac{1}{a}(ax+p)(ax+q)=0$</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$p+q=b$, $pq=ac$</td></tr>
+          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Kuadrat sempurna</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$\left(x+\tfrac{b}{2a}\right)^2=\tfrac{b^2-4ac}{4a^2}$</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Bagi $a$, lengkapi, akarkan</td></tr>
+          <tr><td style="padding:.5rem .7rem;color:var(--text-2);">Rumus ABC</td><td style="padding:.5rem .7rem;color:var(--text-2);">$x_{1,2}=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$</td><td style="padding:.5rem .7rem;color:var(--text-2);">Berlaku semua kasus</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• 2. Rumus Vieta — Hubungan Akar dan Koefisien</div>
+      <table style="width:100%;border-collapse:collapse;font-size:.82rem;margin:.5rem 0;">
+        <thead><tr style="background:var(--navy);color:#fff;"><th style="padding:.55rem .7rem;text-align:left;">Ekspresi</th><th style="padding:.55rem .7rem;text-align:left;">Rumus</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Jumlah akar</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1+x_2=-\dfrac{b}{a}$</td></tr>
+          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Hasil kali akar</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1\cdot x_2=\dfrac{c}{a}$</td></tr>
+          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Jumlah kuadrat</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2$</td></tr>
+          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Kuadrat selisih</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$(x_1-x_2)^2=(x_1+x_2)^2-4x_1x_2$</td></tr>
+          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Jumlah kubik</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1^3+x_2^3=(x_1+x_2)^3-3x_1x_2(x_1+x_2)$</td></tr>
+          <tr><td style="padding:.5rem .7rem;color:var(--text-2);">Jumlah kebalikan</td><td style="padding:.5rem .7rem;color:var(--text-2);">$\dfrac{1}{x_1}+\dfrac{1}{x_2}=\dfrac{x_1+x_2}{x_1x_2}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- KONEKSI MATERI BERIKUTNYA -->
+  <div class="koneksi-wrap">
+    <div class="koneksi-header">
+      <div class="koneksi-icon">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg>
+      </div>
+      <span class="koneksi-label">Materi Berikutnya</span>
+    </div>
+    <div class="koneksi-body">
+      <p class="koneksi-text">Pada <strong>Fungsi Kuadrat</strong>, persamaan kuadrat $ax^2+bx+c=0$ yang sudah kamu kuasai menjadi dasar untuk memahami grafik parabola, sumbu simetri, dan nilai ekstremum.</p>
+      <div class="koneksi-comparison">
+        <div class="koneksi-card current">
+          <div class="koneksi-card-label">Sekarang</div>
+          <div class="koneksi-card-formula">$ax^2+bx+c=0$</div>
+          <div class="koneksi-card-desc">Mencari akar<br>Diskriminan, Vieta</div>
+        </div>
+        <div class="koneksi-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10h12M12 5l5 5-5 5"/></svg>
+        </div>
+        <div class="koneksi-card next">
+          <div class="koneksi-card-label">Berikutnya</div>
+          <div class="koneksi-card-formula">$f(x)=ax^2+bx+c$</div>
+          <div class="koneksi-card-desc">Grafik parabola<br>Sumbu simetri, puncak</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <div class="footer-nav">
+      <a class="nav-btn" href="../../">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Kembali ke Semua Materi
+      </a>
+      <a class="nav-btn" href="#">
+        Fungsi Kuadrat
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <div class="footer-actions">
+      <a class="nav-btn primary" href="#">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="10" height="10" rx="2"/><line x1="5" y1="5" x2="9" y2="5"/><line x1="5" y1="7.5" x2="8" y2="7.5"/><line x1="5" y1="10" x2="7" y2="10"/></svg>
+        Kerjakan Latihan Soal Persamaan Kuadrat
+        <span class="coming-soon">Segera</span>
+      </a>
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Giscus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi ini? Tulis di kolom diskusi. Login dengan akun GitHub gratis.</p>
+    <div class="giscus-wrap">
+      <div class="giscus-placeholder">
+        <div class="ph-icon">💬</div>
+        <p>Sistem komentar menggunakan <strong>Giscus</strong> — gratis, tanpa iklan, berbasis GitHub Discussions.<br><br>
+        Untuk mengaktifkan, konfigurasikan repo di <code>giscus.app</code> lalu tempel script-nya di sini.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── Scroll progress ──
+window.addEventListener("scroll", () => {
+  const el = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById("scroll-bar").style.width = pct + "%";
+  const btn = document.getElementById("scroll-top");
+  if (pct > 30) btn.classList.add("visible");
+  else btn.classList.remove("visible");
+});
+
+// ── Theme ──
+function toggleTheme() {
+  const html = document.documentElement;
+  const btn  = document.getElementById("themeBtn");
+  const dark = html.getAttribute("data-theme") === "dark";
+  html.setAttribute("data-theme", dark ? "light" : "dark");
+  btn.textContent = dark ? "🌙 Gelap" : "☀️ Terang";
+}
+
+// ── TOC ──
+function toggleTOC() { document.getElementById("tocDropdown").classList.toggle("open"); }
+function closeTOC()  { document.getElementById("tocDropdown").classList.remove("open"); }
+document.addEventListener("click", e => {
+  const dd = document.getElementById("tocDropdown");
+  if (dd && !dd.contains(e.target)) dd.classList.remove("open");
+});
+
+// ── Bookmark ──
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById("bookmarkBtn");
+  btn.classList.toggle("bookmarked", bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ──
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({ title: "Persamaan Kuadrat — EksaktaLab", text: "Belajar Persamaan Kuadrat lengkap!", url: window.location.href });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector("[onclick=\"shareMateri()\"]");
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add("active");
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove("active"); }, 2000);
+    });
+  }
+}
+
+// ── Shared helpers ──
+const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11"><polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle("open");
+    header.setAttribute("aria-expanded", open);
+    if (statusEl) statusEl.textContent = open ? "Sembunyikan" : "Lihat rumus";
+    if (open && window.MathJax && typesetEl) MathJax.typesetPromise([typesetEl]).catch(() => {});
+  };
+  header.addEventListener("click", doToggle);
+  header.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); doToggle(); } });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // 1. BOX RUMUS → accordion teal/navy
+  document.querySelectorAll(".box.box-rumus").forEach((box) => {
+    const labelEl  = box.querySelector(".box-label");
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, "").trim() : "Rumus";
+    let bodyHTML = "";
+    box.childNodes.forEach(n => { if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || ""); });
+
+    const wrap = document.createElement("div");
+    wrap.className = "rumus-wrap";
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || "Rumus Utama"}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body"><div class="rumus-body-inner">${bodyHTML.trim()}</div></div>`;
+
+    const header   = wrap.querySelector(".rumus-header");
+    const statusEl = wrap.querySelector(".rumus-status");
+    const bodyInner = wrap.querySelector(".rumus-body-inner");
+    makeToggle(wrap, header, statusEl, wrap.querySelector(".rumus-body"), bodyInner);
+    box.replaceWith(wrap);
+  });
+
+  // 2. BOX CONTOH → accordion navy/teal
+  let counter = 0;
+  document.querySelectorAll(".box.box-contoh").forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector(".box-label");
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+
+    let qHTML = "";
+    box.childNodes.forEach(n => { if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || ""); });
+
+    const sib       = box.nextElementSibling;
+    const hasSolve  = sib?.classList.contains("penyelesaian");
+    const solveHTML = hasSolve ? sib.innerHTML : "";
+
+    const wrap = document.createElement("div");
+    wrap.className = "contoh-wrap";
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header"><span class="solve-dot"></span><span class="solve-title">Penyelesaian</span></div>
+          <div class="penyelesaian-inner">${solveHTML || "<p style=\"color:rgba(0,191,165,.4);font-style:italic;margin:0\">Penyelesaian belum tersedia.</p>"}</div>
+        </div>
+      </div>`;
+
+    const header = wrap.querySelector(".contoh-header");
+    const pi     = wrap.querySelector(".penyelesaian-inner");
+    const doToggle = () => {
+      const open = wrap.classList.toggle("open");
+      header.setAttribute("aria-expanded", open);
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener("click", doToggle);
+    header.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); doToggle(); } });
+
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+  // 3. Buka/Tutup Semua per section
+  document.querySelectorAll(".section").forEach(sec => {
+    const wraps = [...sec.querySelectorAll(".contoh-wrap")];
+    if (!wraps.length) return;
+    let allOpen = false;
+    const tw  = document.createElement("div"); tw.className = "toggle-all-wrap";
+    const btn = document.createElement("button"); btn.className = "btn-toggle-all";
+    const updateBtn = () => { btn.innerHTML = `${chevronSVG()} ${allOpen ? "Tutup Semua" : "Buka Semua Contoh"}`; };
+    updateBtn();
+    btn.addEventListener("click", () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector(".contoh-header");
+        const p = w.querySelector(".penyelesaian-inner");
+        w.classList.toggle("open", allOpen);
+        h.setAttribute("aria-expanded", allOpen);
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+  // 4. BOX CATATAN
+  document.querySelectorAll(".box.box-catatan").forEach(box => {
+    box.classList.remove("box");
+  });
+
+  // 5. BOX LATIHAN → accordion soal + kunci
+  document.querySelectorAll(".box.box-latihan").forEach(box => {
+    const list = box.querySelector(".soal-list");
+    if (!list) return;
+    const items = [...list.querySelectorAll("li")];
+    const newList = document.createElement("div");
+    newList.className = "soal-list-accordion";
+    items.forEach((li, i) => {
+      const item = document.createElement("div");
+      item.className = "soal-item";
+      item.innerHTML = `
+        <div class="soal-item-header" role="button" tabindex="0">
+          <span class="soal-num">${i+1}</span>
+          <span class="soal-text">${li.innerHTML}</span>
+          <button class="soal-key-btn" tabindex="-1">Kunci</button>
+        </div>
+        <div class="soal-answer">
+          <div class="soal-answer-inner">
+            <div class="soal-answer-label">Jawaban</div>
+            <span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>
+          </div>
+        </div>`;
+      const header = item.querySelector(".soal-item-header");
+      const toggle = () => {
+        const open = item.classList.toggle("open");
+        if (open && window.MathJax) MathJax.typesetPromise([item.querySelector(".soal-answer-inner")]).catch(() => {});
+      };
+      header.addEventListener("click", toggle);
+      header.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+      newList.appendChild(item);
+    });
+    list.replaceWith(newList);
+  });
+
+});
+</script>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <a class="footer-logo" href="../../">
+        <div class="footer-logo-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="footer-logo-name">Eksakta<em>Lab</em></div>
+      </a>
+      <p class="footer-desc">Platform belajar matematika SMA yang lengkap dan gratis. Materi terstruktur, contoh soal nyata, dan latihan interaktif untuk 36 topik kurikulum nasional.</p>
+      <span class="footer-kurikulum">K-13 &amp; Kurikulum Merdeka</span>
+    </div>
+    <div>
+      <div class="footer-col-title">Belajar</div>
+      <ul class="footer-links">
+        <li><a href="../../">Belajar Mandiri</a></li>
+        <li><a href="../../">Worksheet</a></li>
+        <li><a href="../../">Latihan Soal</a></li>
+        <li><a href="../../">Kapita Selekta</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Materi Populer</div>
+      <ul class="footer-links">
+        <li><a href="../../materi/fungsi-linear/" class="ready">Fungsi Linier</a></li>
+        <li><a href="../../materi/fungsi-komposisi-invers/" class="ready">Fungsi, Komposisi &amp; Invers</a></li>
+        <li><a href="../../materi/persamaan-kuadrat/" class="ready">Persamaan Kuadrat</a></li>
+        <li><a href="../../">Trigonometri Dasar</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Tentang</div>
+      <ul class="footer-links">
+        <li><a href="../../">Tentang EksaktaLab</a></li>
+        <li><a href="../../">Kurikulum</a></li>
+        <li><a href="../../">Hubungi Kami</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 EksaktaLab — Gratis untuk semua siswa Indonesia</div>
+    <div class="footer-legal"><a href="#">Kebijakan Privasi</a><a href="#">Syarat Penggunaan</a></div>
+  </div>
+</footer>
+</body>
+</html>
