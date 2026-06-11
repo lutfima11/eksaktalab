@@ -407,6 +407,27 @@ body{
 }
 .btn-home:hover{background:var(--teal-dim);transform:translateY(-1px);}
 
+/* ── STICKY NEXT BTN ─────────────────────────────────── */
+.sticky-next{
+  position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);
+  z-index:150;
+  display:flex;align-items:center;gap:0.6rem;
+  font-family:var(--sans);font-size:0.88rem;font-weight:700;
+  background:var(--teal);color:#fff;
+  padding:0.72rem 1.5rem;border-radius:99px;
+  border:none;cursor:pointer;
+  box-shadow:0 4px 20px rgba(0,191,165,.35);
+  transition:background .2s,transform .2s,opacity .2s,box-shadow .2s;
+  white-space:nowrap;
+}
+.sticky-next:hover{background:var(--teal-dim);transform:translateX(-50%) translateY(-2px);box-shadow:0 8px 28px rgba(0,191,165,.4);}
+.sticky-next.hidden{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(10px);}
+.sticky-next .sn-badge{
+  background:rgba(255,255,255,.2);
+  font-family:var(--mono);font-size:0.7rem;font-weight:700;
+  padding:0.15rem 0.5rem;border-radius:99px;
+}
+
 /* ── TOAST ───────────────────────────────────────────── */
 #toast{
   position:fixed;bottom:2rem;right:2rem;
@@ -486,7 +507,7 @@ body{
     </div>
   </a>
   <div class="nav-right">
-    <a class="btn-back" href="index.html">← Beranda</a>
+    <a class="btn-back" href="index.html">← Lihat Semua Materi</a>
     <button class="btn-theme" id="themeBtn" onclick="toggleTheme()" title="Ganti tema">🌙</button>
   </div>
 </header>
@@ -1043,6 +1064,10 @@ body{
 
 </div><!-- /quiz-wrap -->
 
+<button class="sticky-next hidden" id="stickyNext" onclick="gulirKeSoalBerikutnya()">
+  ↓ Soal Belum Dijawab <span class="sn-badge" id="stickyBadge">20</span>
+</button>
+
 <div id="toast"></div>
 
 <!-- FOOTER -->
@@ -1142,6 +1167,35 @@ function updateProgress() {
     hint.textContent = `Jawab semua 20 soal untuk melihat hasil. (${20-count} soal lagi)`;
     hint.style.color = 'var(--text-3)';
   }
+
+  // Update sticky button
+  const sisa = 20 - count;
+  const stickyBtn = document.getElementById('stickyNext');
+  const stickyBadge = document.getElementById('stickyBadge');
+  stickyBadge.textContent = sisa;
+  if (sisa === 0 || sudahSubmit) {
+    stickyBtn.classList.add('hidden');
+  } else {
+    stickyBtn.classList.remove('hidden');
+  }
+}
+
+/* ── GULIR KE SOAL BELUM DIJAWAB ─────────────── */
+function gulirKeSoalBerikutnya() {
+  for (let no = 1; no <= 20; no++) {
+    if (!jawaban[no]) {
+      const el = document.getElementById('qc' + no);
+      if (el) {
+        const offset = el.getBoundingClientRect().top + window.scrollY - 120;
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+        // Highlight sebentar
+        el.style.transition = 'box-shadow .2s';
+        el.style.boxShadow = '0 0 0 3px var(--teal)';
+        setTimeout(() => { el.style.boxShadow = ''; }, 1200);
+      }
+      return;
+    }
+  }
 }
 
 /* ── SUBMIT ──────────────────────────────────── */
@@ -1153,6 +1207,7 @@ function submitKuis() {
   sudahSubmit = true;
   document.getElementById('btnSubmit').style.display = 'none';
   document.getElementById('submitHint').style.display = 'none';
+  document.getElementById('stickyNext').classList.add('hidden');
 
   let benar = 0;
   const keys = ['A','B','C','D'];
