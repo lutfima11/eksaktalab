@@ -409,23 +409,23 @@ body{
 
 /* ── STICKY NEXT BTN ─────────────────────────────────── */
 .sticky-next{
-  position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);
+  position:fixed;bottom:1.5rem;right:1.5rem;
   z-index:150;
-  display:flex;align-items:center;gap:0.6rem;
-  font-family:var(--sans);font-size:0.88rem;font-weight:700;
+  display:flex;align-items:center;gap:0.45rem;
+  font-family:var(--sans);font-size:0.75rem;font-weight:700;
   background:var(--teal);color:#fff;
-  padding:0.72rem 1.5rem;border-radius:99px;
+  padding:0.5rem 1rem;border-radius:99px;
   border:none;cursor:pointer;
-  box-shadow:0 4px 20px rgba(0,191,165,.35);
+  box-shadow:0 3px 14px rgba(0,191,165,.35);
   transition:background .2s,transform .2s,opacity .2s,box-shadow .2s;
   white-space:nowrap;
 }
-.sticky-next:hover{background:var(--teal-dim);transform:translateX(-50%) translateY(-2px);box-shadow:0 8px 28px rgba(0,191,165,.4);}
-.sticky-next.hidden{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(10px);}
+.sticky-next:hover{background:var(--teal-dim);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,191,165,.4);}
+.sticky-next.hidden{opacity:0;pointer-events:none;transform:translateY(8px);}
 .sticky-next .sn-badge{
   background:rgba(255,255,255,.2);
-  font-family:var(--mono);font-size:0.7rem;font-weight:700;
-  padding:0.15rem 0.5rem;border-radius:99px;
+  font-family:var(--mono);font-size:0.65rem;font-weight:700;
+  padding:0.1rem 0.4rem;border-radius:99px;
 }
 
 /* ── TOAST ───────────────────────────────────────────── */
