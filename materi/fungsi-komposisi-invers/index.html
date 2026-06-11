@@ -1,0 +1,2554 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fungsi, Komposisi Fungsi, dan Fungsi Invers – EksaktaLab</title>
+<meta name="description" content="Materi lengkap Fungsi, Komposisi Fungsi, dan Fungsi Invers SMA: jenis fungsi, domain, komposisi, fungsi invers, dan hubungannya. Dilengkapi 28 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<style>
+/* ── TOKENS ─────────────────────────────── */
+:root {
+  --navy:     #0A0F1E;
+  --teal:     #00BFA5;
+  --teal-dim: #009E87;
+  --surface:  #FFFFFF;
+  --surface-2:#F0F4FF;
+  --surface-3:#E8EEFF;
+  --text:     #0A0F1E;
+  --text-2:   #3D4A6B;
+  --text-3:   #7B8BB2;
+  --border:   #D8E0F5;
+  --yellow:   #FFF8E1;
+  --yellow-b: #F59E0B;
+  --green:    #ECFDF5;
+  --green-b:  #059669;
+  --blue:     #EFF6FF;
+  --blue-b:   #3B82F6;
+  --red:      #FEF2F2;
+  --red-b:    #EF4444;
+  --sans:  'Inter', system-ui, sans-serif;
+  --display:'Space Grotesk', system-ui, sans-serif;
+  --mono:  'JetBrains Mono', monospace;
+  --radius:12px;
+  --radius-sm:8px;
+  --radius-lg:18px;
+}
+[data-theme="dark"] {
+  --surface:  #0A0F1E;
+  --surface-2:#141929;
+  --surface-3:#1E2640;
+  --text:     #EEF1FF;
+  --text-2:   #A8B4D8;
+  --text-3:   #5C6A8C;
+  --border:   #263050;
+  --yellow:   #1C1A0A;
+  --yellow-b: #D97706;
+  --green:    #052E1C;
+  --green-b:  #34D399;
+  --blue:     #0C1A35;
+  --blue-b:   #60A5FA;
+  --red:      #1C0A0A;
+  --red-b:    #F87171;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--surface);color:var(--text);line-height:1.7;font-size:16px;}
+
+/* ── NAVBAR ─────────────────────────────── */
+.navbar{
+  position:sticky;top:0;z-index:50;
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  padding:0 1.5rem;height:56px;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-logo-icon{
+  width:30px;height:30px;border-radius:8px;
+  background:var(--teal);
+  display:flex;align-items:center;justify-content:center;
+}
+.nav-logo-icon svg{width:16px;height:16px;}
+.nav-logo-text{display:flex;flex-direction:column;gap:0.05rem;line-height:1;}
+.nav-logo-name{font-family:var(--display);font-size:1rem;font-weight:700;color:var(--text);}
+.nav-logo-name em{font-style:normal;color:var(--teal);}
+.nav-logo-tag{font-family:var(--mono);font-size:0.5rem;color:var(--text-3);letter-spacing:.1em;text-transform:uppercase;}
+
+/* Kanan navbar — semua tombol sama tinggi */
+.nav-right{display:flex;align-items:center;gap:0.5rem;}
+
+/* Token ukuran tombol navbar — pakai di semua btn */
+.nav-btn{
+  height:32px;
+  padding:0 0.85rem;
+  border-radius:8px;
+  border:1px solid var(--border);
+  font-family:var(--sans);font-size:0.75rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:0.4rem;
+  white-space:nowrap;cursor:pointer;text-decoration:none;
+  background:var(--surface-2);color:var(--text-2);
+  transition:all .2s;
+}
+.nav-btn:hover{border-color:var(--teal);color:var(--teal);}
+.nav-btn.active{background:var(--teal);color:#fff;border-color:var(--teal);}
+.nav-btn.active:hover{background:var(--teal-dim);}
+
+/* Progress pill di navbar — dihapus, cukup bar tipis */
+
+/* ── LAYOUT ─────────────────────────────── */
+.page-wrap{
+  max-width:780px;margin:0 auto;
+  padding:2.5rem 1.5rem 5rem;
+}
+
+/* ── BREADCRUMB ─────────────────────────── */
+.breadcrumb{
+  display:flex;align-items:center;gap:0.4rem;
+  font-size:0.75rem;color:var(--text-3);
+  margin-bottom:1.5rem;
+}
+.breadcrumb a{color:var(--text-3);text-decoration:none;}
+.breadcrumb a:hover{color:var(--teal);}
+.breadcrumb span{color:var(--border);}
+
+/* ── HERO MATERI ────────────────────────── */
+.materi-hero{
+  background:var(--navy);
+  border-radius:var(--radius);
+  padding:1.75rem 2rem;
+  margin-bottom:2rem;
+  position:relative;overflow:hidden;
+}
+.materi-hero-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(0,191,165,.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,191,165,.06) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+.materi-hero-grid::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 80% at 20% 50%,transparent 40%,var(--navy) 100%);
+  z-index:1;
+}
+.materi-hero-content{position:relative;z-index:2;}
+.materi-eyebrow{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  font-family:var(--mono);font-size:0.68rem;color:var(--teal);
+  letter-spacing:.1em;text-transform:uppercase;
+  background:rgba(0,191,165,.1);border:1px solid rgba(0,191,165,.2);
+  padding:0.25rem 0.65rem;border-radius:16px;
+  margin-bottom:0.85rem;
+}
+.materi-title{
+  font-family:var(--display);font-size:1.9rem;font-weight:700;
+  color:#fff;letter-spacing:-.03em;line-height:1.1;
+  margin-bottom:0.5rem;
+}
+.materi-desc{font-size:0.875rem;color:#8FA8C8;line-height:1.6;max-width:520px;}
+.materi-tags{display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:1rem;}
+.tag{
+  font-size:0.68rem;font-weight:600;
+  padding:0.2rem 0.6rem;border-radius:4px;
+  background:rgba(255,255,255,.08);color:#CBD5E8;
+}
+.tag.teal{background:rgba(0,191,165,.15);color:var(--teal);}
+
+/* ── TOC ────────────────────────────────── */
+.toc{
+  background:var(--surface-2);border:1px solid var(--border);
+  border-radius:var(--radius);padding:1.1rem 1.25rem;
+  margin-bottom:2rem;
+}
+.toc-title{
+  font-family:var(--display);font-size:0.8rem;font-weight:700;
+  color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;
+  margin-bottom:0.65rem;
+}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:0.25rem;}
+.toc-list li a{
+  font-size:0.83rem;font-weight:500;color:var(--text-2);
+  text-decoration:none;
+  display:flex;align-items:center;gap:0.5rem;
+  padding:0.2rem 0;
+  transition:color .15s;
+}
+.toc-list li a:hover{color:var(--teal);}
+.toc-list li a::before{
+  content:attr(data-num);
+  font-family:var(--mono);font-size:0.65rem;font-weight:500;
+  color:var(--teal);min-width:20px;
+}
+
+/* ── SECTION ────────────────────────────── */
+.section{margin-bottom:2.75rem;}
+.section-title{
+  font-family:var(--display);font-size:1.15rem;font-weight:700;
+  color:var(--text);letter-spacing:-.02em;
+  padding-bottom:0.5rem;
+  border-bottom:2px solid var(--teal);
+  margin-bottom:1.25rem;
+  display:flex;align-items:center;gap:0.6rem;
+}
+.section-badge{
+  font-family:var(--mono);font-size:0.65rem;font-weight:500;
+  background:var(--navy);color:var(--teal);
+  padding:0.15rem 0.5rem;border-radius:4px;
+  letter-spacing:.06em;
+}
+[data-theme="dark"] .section-badge{background:rgba(0,191,165,.15);}
+
+.subsection-title{
+  font-size:0.95rem;font-weight:700;color:var(--text);
+  margin:1.25rem 0 0.65rem;
+}
+
+/* ── PROSE ──────────────────────────────── */
+p{margin-bottom:0.85rem;font-size:0.95rem;color:var(--text-2);line-height:1.75;}
+ul,ol{padding-left:1.3rem;margin-bottom:0.85rem;}
+li{font-size:0.93rem;color:var(--text-2);margin-bottom:0.3rem;line-height:1.65;}
+li strong,p strong{color:var(--text);}
+
+/* ══════════════════════════════════════════
+   BOX SYSTEM — Redesign sesuai tema EksaktaLab
+   ══════════════════════════════════════════ */
+
+/* ── BOX RUMUS (accordion hijau) ────────── */
+.rumus-wrap{
+  margin:1.1rem 0;
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid rgba(0,191,165,.2);
+  background:var(--navy);
+  transition:border-color .2s, box-shadow .2s;
+}
+[data-theme="dark"] .rumus-wrap{
+  background:#0D1525;
+  border-color:rgba(0,191,165,.18);
+}
+.rumus-wrap:hover{
+  border-color:rgba(0,191,165,.5);
+  box-shadow:0 4px 20px rgba(0,191,165,.08);
+}
+.rumus-wrap.open{
+  border-color:rgba(0,191,165,.6);
+  box-shadow:0 6px 24px rgba(0,191,165,.12);
+}
+
+/* Header rumus */
+.rumus-header{
+  display:flex;align-items:center;gap:0.75rem;
+  padding:0.82rem 1rem;
+  cursor:pointer;user-select:none;
+  transition:background .2s;
+  position:relative;
+  /* grid motif samar */
+  background-image:
+    linear-gradient(rgba(0,191,165,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,191,165,.04) 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.rumus-header:hover{ background-color:rgba(0,191,165,.04); }
+
+.rumus-badge{
+  font-family:var(--mono);font-size:0.62rem;font-weight:700;
+  background:rgba(0,191,165,.15);color:var(--teal);
+  padding:0.22rem 0.6rem;border-radius:5px;
+  letter-spacing:.08em;white-space:nowrap;flex-shrink:0;
+  border:1px solid rgba(0,191,165,.3);
+  transition:all .2s;
+}
+.rumus-wrap.open .rumus-badge{
+  background:var(--teal);color:var(--navy);border-color:var(--teal);
+}
+
+.rumus-title{
+  flex:1;font-family:var(--display);font-size:0.88rem;font-weight:600;
+  color:#A8C4C0;line-height:1.3;
+}
+.rumus-wrap.open .rumus-title{color:#E0F2EF;}
+
+.rumus-status{
+  font-family:var(--mono);font-size:0.58rem;font-weight:600;
+  padding:0.18rem 0.5rem;border-radius:10px;
+  letter-spacing:.05em;text-transform:uppercase;
+  flex-shrink:0;transition:all .2s;
+  background:rgba(0,191,165,.08);color:rgba(0,191,165,.5);
+  border:1px solid rgba(0,191,165,.15);
+}
+.rumus-wrap.open .rumus-status{
+  background:rgba(0,191,165,.15);
+  color:var(--teal);
+  border-color:rgba(0,191,165,.4);
+}
+
+.rumus-chevron{
+  width:24px;height:24px;flex-shrink:0;
+  border-radius:6px;
+  background:rgba(0,191,165,.08);
+  border:1px solid rgba(0,191,165,.2);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .25s ease;
+}
+.rumus-chevron svg{
+  width:11px;height:11px;
+  stroke:var(--teal);stroke-width:2.2;opacity:.6;
+  fill:none;transition:transform .3s ease, opacity .2s;
+}
+.rumus-wrap.open .rumus-chevron{
+  background:var(--teal);border-color:var(--teal);
+}
+.rumus-wrap.open .rumus-chevron svg{
+  stroke:var(--navy);opacity:1;
+  transform:rotate(180deg);
+}
+
+/* Body rumus */
+.rumus-body{
+  max-height:0;overflow:hidden;opacity:0;
+  transition:max-height .4s cubic-bezier(.4,0,.2,1), opacity .35s ease;
+}
+.rumus-wrap.open .rumus-body{max-height:1200px;opacity:1;}
+
+.rumus-body-inner{
+  border-top:1px solid rgba(0,191,165,.12);
+  padding:1rem 1.1rem;
+  position:relative;
+  /* grid motif di body juga */
+  background-image:
+    linear-gradient(rgba(0,191,165,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,191,165,.03) 1px,transparent 1px);
+  background-size:20px 20px;
+}
+.rumus-body-inner .math-block,
+.rumus-body-inner p,
+.rumus-body-inner ul,
+.rumus-body-inner li{ color:#CBD5E8; }
+.rumus-body-inner mjx-container{ color:#fff !important; }
+
+/* ── BOX CATATAN ─────────────────────────── */
+.box-catatan{
+  position:relative;
+  background:linear-gradient(135deg,#1C1A00 0%,#251F00 100%);
+  border:1px solid rgba(245,158,11,.2);
+  border-radius:var(--radius);
+  padding:1rem 1.2rem 1rem 3.2rem;
+  margin:1.1rem 0;
+  overflow:hidden;
+}
+[data-theme="light"] .box-catatan{
+  background:linear-gradient(135deg,#FFFBEB 0%,#FFF3C4 100%);
+  border-color:rgba(245,158,11,.35);
+}
+.box-catatan::before{
+  content:'!';
+  position:absolute;left:1rem;top:50%;transform:translateY(-50%);
+  font-family:var(--display);font-size:1.1rem;font-weight:800;
+  width:22px;height:22px;border-radius:50%;
+  background:var(--yellow-b);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;line-height:22px;
+  box-shadow:0 0 8px rgba(245,158,11,.4);
+}
+.box-catatan .box-label{
+  font-family:var(--mono);font-size:0.62rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--yellow-b);opacity:1;margin-bottom:0.35rem;
+}
+.box-catatan p{
+  color:var(--text);margin:0;font-size:.88rem;line-height:1.65;
+}
+[data-theme="dark"] .box-catatan p{color:#E2C97A;}
+
+/* ── BOX LATIHAN ─────────────────────────── */
+.box-latihan{
+  position:relative;
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:0;
+  margin:1.25rem 0;
+  overflow:hidden;
+}
+.box-latihan>.box-label{
+  display:flex;align-items:center;gap:0.6rem;
+  padding:0.6rem 1rem;
+  background:var(--navy);
+  background-image:
+    linear-gradient(rgba(0,191,165,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,191,165,.04) 1px,transparent 1px);
+  background-size:18px 18px;
+  background-color:var(--navy);
+  border-bottom:1px solid rgba(0,191,165,.15);
+  font-family:var(--mono);font-size:0.62rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal) !important;opacity:1 !important;
+  margin:0;border-radius:0;
+}
+[data-theme="dark"] .box-latihan>.box-label{background-color:#0D1525;}
+.box-latihan>.box-label::before{
+  content:'';
+  width:7px;height:7px;border-radius:50%;flex-shrink:0;
+  background:var(--teal);
+  box-shadow:0 0 6px rgba(0,191,165,.6);
+}
+.box-latihan .soal-list{padding:0.85rem 1rem;margin:0;}
+.box-latihan .soal-list li{
+  padding:0.5rem 0 0.5rem 2rem;
+  border-bottom:1px solid var(--border);
+}
+.box-latihan .soal-list li:last-child{border-bottom:none;}
+
+/* ── SOAL ITEM ACCORDION ─────────────────── */
+.soal-item{
+  border-bottom:1px solid var(--border);
+  transition:background .15s;
+}
+.soal-item:last-child{border-bottom:none;}
+
+.soal-item-header{
+  display:flex;align-items:flex-start;gap:0.75rem;
+  padding:0.7rem 1rem;
+  cursor:pointer;user-select:none;
+}
+.soal-item-header:hover{background:rgba(0,191,165,.03);}
+
+/* Nomor soal */
+.soal-num{
+  font-family:var(--mono);font-size:0.65rem;font-weight:700;
+  min-width:20px;height:20px;border-radius:5px;
+  background:rgba(0,191,165,.1);color:var(--teal);
+  border:1px solid rgba(0,191,165,.2);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:0.12rem;
+}
+
+/* Label kesulitan dihapus */
+
+/* Teks soal */
+.soal-text{
+  flex:1;font-size:0.875rem;color:var(--text-2);line-height:1.6;
+}
+
+/* Tombol kunci */
+.soal-key-btn{
+  font-family:var(--mono);font-size:0.55rem;font-weight:700;
+  padding:0.18rem 0.5rem;border-radius:8px;
+  border:1px solid var(--border);
+  background:var(--surface-3);color:var(--text-3);
+  cursor:pointer;white-space:nowrap;flex-shrink:0;
+  transition:all .2s;margin-top:0.1rem;
+  letter-spacing:.04em;text-transform:uppercase;
+}
+.soal-item.open .soal-key-btn{
+  background:rgba(0,191,165,.1);
+  color:var(--teal);
+  border-color:rgba(0,191,165,.3);
+}
+
+/* Body jawaban */
+.soal-answer{
+  max-height:0;overflow:hidden;opacity:0;
+  transition:max-height .35s cubic-bezier(.4,0,.2,1), opacity .25s ease;
+  background:var(--surface);
+}
+.soal-item.open .soal-answer{max-height:600px;opacity:1;}
+
+.soal-answer-inner{
+  padding:0.75rem 1rem 0.9rem 2.75rem;
+  border-top:1px solid var(--border);
+  font-size:0.875rem;color:var(--text-2);line-height:1.7;
+  background:rgba(0,191,165,.02);
+}
+.soal-answer-inner strong{color:var(--text);}
+.soal-answer-label{
+  font-family:var(--mono);font-size:0.58rem;font-weight:700;
+  color:var(--teal);letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:0.4rem;display:flex;align-items:center;gap:0.4rem;
+}
+.soal-answer-label::before{
+  content:'';width:5px;height:5px;border-radius:50%;
+  background:var(--teal);box-shadow:0 0 4px rgba(0,191,165,.5);
+}
+
+/* ── CONTOH SOAL ACCORDION (light surface) ── */
+.contoh-wrap{
+  margin:0.75rem 0;
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:var(--surface);
+  transition:border-color .2s, box-shadow .2s;
+}
+.contoh-wrap:hover{
+  border-color:rgba(0,191,165,.35);
+  box-shadow:0 4px 20px rgba(0,191,165,.07);
+}
+.contoh-wrap.open{
+  border-color:rgba(0,191,165,.45);
+  box-shadow:0 6px 24px rgba(0,191,165,.09);
+}
+
+/* Header */
+.contoh-header{
+  display:flex;align-items:center;gap:0.75rem;
+  padding:0.8rem 1rem;
+  background:var(--surface-2);
+  cursor:pointer;user-select:none;
+  transition:background .2s;
+  position:relative;
+}
+.contoh-header:hover{background:var(--surface-3);}
+
+/* Badge — navy/teal saat tutup, teal solid saat buka */
+.contoh-badge{
+  font-family:var(--mono);font-size:0.62rem;font-weight:700;
+  background:var(--navy);color:var(--teal);
+  padding:0.22rem 0.6rem;border-radius:5px;
+  letter-spacing:.06em;white-space:nowrap;flex-shrink:0;
+  border:1px solid rgba(0,191,165,.25);
+  transition:all .2s;
+}
+[data-theme="dark"] .contoh-badge{background:rgba(0,191,165,.12);}
+.contoh-wrap.open .contoh-badge{
+  background:var(--teal);color:var(--navy);border-color:var(--teal);
+}
+
+/* Teks soal */
+.contoh-question{
+  flex:1;font-size:0.875rem;font-weight:500;
+  color:var(--text-2);line-height:1.45;
+}
+.contoh-wrap.open .contoh-question{color:var(--text);}
+
+
+/* Chevron */
+.contoh-chevron{
+  width:24px;height:24px;flex-shrink:0;
+  border-radius:6px;
+  background:var(--surface-3);
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .25s ease;
+}
+.contoh-chevron svg{
+  width:11px;height:11px;
+  stroke:var(--text-3);stroke-width:2.2;
+  fill:none;transition:transform .3s ease, stroke .2s;
+}
+.contoh-wrap.open .contoh-chevron{
+  background:var(--teal);border-color:var(--teal);
+}
+.contoh-wrap.open .contoh-chevron svg{
+  stroke:var(--navy);
+  transform:rotate(180deg);
+}
+
+/* Body */
+.contoh-body{
+  max-height:0;overflow:hidden;opacity:0;
+  transition:max-height .4s cubic-bezier(.4,0,.2,1), opacity .35s ease;
+  background:var(--surface);
+}
+.contoh-wrap.open .contoh-body{max-height:3000px;opacity:1;}
+
+.contoh-body-inner{
+  border-top:1px solid var(--border);
+}
+
+/* Penyelesaian header dalam body */
+.solve-header{
+  display:flex;align-items:center;gap:0.6rem;
+  padding:0.6rem 1rem;
+  background:rgba(0,191,165,.05);
+  border-bottom:1px solid rgba(0,191,165,.1);
+}
+.solve-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--teal);
+  box-shadow:0 0 6px rgba(0,191,165,.5);
+  flex-shrink:0;
+}
+.solve-title{
+  font-family:var(--mono);font-size:0.62rem;font-weight:700;
+  color:var(--teal);letter-spacing:.1em;text-transform:uppercase;
+}
+
+.penyelesaian-inner{
+  padding:1rem 1.1rem;
+  font-size:0.9rem;color:var(--text-2);line-height:1.7;
+}
+.penyelesaian-inner strong{color:var(--text);}
+.penyelesaian-inner mjx-container{color:var(--text) !important;}
+
+/* ── TOGGLE ALL BUTTON ───────────────────── */
+.toggle-all-wrap{
+  display:flex;justify-content:flex-end;
+  margin-bottom:0.6rem;
+}
+.btn-toggle-all{
+  font-family:var(--mono);font-size:0.68rem;font-weight:600;
+  color:var(--text-3);background:transparent;
+  border:1px solid var(--border);
+  padding:0.32rem 0.85rem;border-radius:20px;
+  cursor:pointer;letter-spacing:.04em;
+  transition:all .2s;
+  display:flex;align-items:center;gap:0.4rem;
+}
+.btn-toggle-all:hover{
+  border-color:var(--teal);color:var(--teal);
+  background:rgba(0,191,165,.05);
+}
+.btn-toggle-all svg{
+  stroke:currentColor;fill:none;
+  stroke-width:2;stroke-linecap:round;
+  transition:transform .3s;
+}
+
+/* ── PENYELESAIAN STANDALONE ─────────────── */
+.penyelesaian{
+  background:var(--surface-2);
+  border-radius:8px;
+  padding:0.85rem 1rem;
+  margin:0.6rem 0 1rem;
+  font-size:0.9rem;color:var(--text-2);
+}
+.penyelesaian strong{color:var(--text);}
+.math-block{
+  overflow-x:auto;
+  padding:0.75rem 0;
+  text-align:center;
+}
+
+/* ── TABLE ──────────────────────────────── */
+.table-wrap{overflow-x:auto;margin:1rem 0;}
+table{width:100%;border-collapse:collapse;font-size:0.85rem;}
+th{
+  background:var(--navy);color:#fff;
+  font-family:var(--display);font-size:0.78rem;font-weight:600;
+  padding:0.6rem 0.85rem;text-align:left;
+}
+[data-theme="dark"] th{background:var(--surface-3);}
+td{
+  padding:0.55rem 0.85rem;
+  border-bottom:1px solid var(--border);
+  color:var(--text-2);vertical-align:middle;
+}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:var(--surface-2);}
+
+/* ── NUMBERED LIST SOAL ─────────────────── */
+.soal-list{list-style:none;padding-left:0;counter-reset:soal;}
+.soal-list li{
+  counter-increment:soal;
+  padding:0.5rem 0 0.5rem 2rem;
+  border-bottom:1px solid var(--border);
+  position:relative;
+  font-size:0.9rem;color:var(--text-2);
+  line-height:1.65;
+}
+.soal-list li:last-child{border-bottom:none;}
+.soal-list li::before{
+  content:counter(soal)".";
+  position:absolute;left:0;
+  font-family:var(--mono);font-size:0.75rem;font-weight:600;
+  color:var(--green-b);
+}
+
+/* ── ALPHA LIST ─────────────────────────── */
+.alpha-list{list-style:lower-alpha;padding-left:1.5rem;}
+.alpha-list li{font-size:0.9rem;color:var(--text-2);margin-bottom:0.25rem;}
+
+/* ── STEP LIST ──────────────────────────── */
+.step-list{list-style:none;padding-left:0;counter-reset:step;}
+.step-list li{
+  counter-increment:step;
+  padding:0.4rem 0 0.4rem 2rem;
+  position:relative;
+  font-size:0.9rem;color:var(--text-2);
+}
+.step-list li::before{
+  content:counter(step);
+  position:absolute;left:0;top:0.4rem;
+  width:18px;height:18px;
+  border-radius:50%;
+  background:var(--teal);color:#fff;
+  font-size:0.65rem;font-weight:700;font-family:var(--mono);
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;line-height:18px;
+}
+
+/* ── PENYELESAIAN ───────────────────────── */
+.penyelesaian{
+  background:var(--surface-2);
+  border-radius:8px;
+  padding:0.85rem 1rem;
+  margin:0.6rem 0 1rem;
+  font-size:0.9rem;color:var(--text-2);
+}
+.penyelesaian strong{color:var(--text);}
+
+/* ── KONEKSI KE MATERI BERIKUTNYA ────────── */
+.koneksi-wrap{
+  margin:2rem 0 0;
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid rgba(0,191,165,.2);
+  background:var(--navy);
+  background-image:
+    linear-gradient(rgba(0,191,165,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,191,165,.04) 1px,transparent 1px);
+  background-size:20px 20px;
+  background-color:var(--navy);
+}
+[data-theme="dark"] .koneksi-wrap{background-color:#0D1525;}
+
+.koneksi-header{
+  display:flex;align-items:center;gap:0.6rem;
+  padding:0.65rem 1rem;
+  border-bottom:1px solid rgba(0,191,165,.12);
+}
+.koneksi-icon{
+  width:24px;height:24px;border-radius:6px;
+  background:rgba(0,191,165,.15);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;color:var(--teal);
+}
+.koneksi-label{
+  font-family:var(--mono);font-size:0.62rem;font-weight:700;
+  color:var(--teal);letter-spacing:.1em;text-transform:uppercase;
+}
+
+.koneksi-body{
+  padding:1rem 1.1rem 1.1rem;
+}
+.koneksi-text{
+  font-size:0.875rem;color:#8FA8C8;line-height:1.7;
+  margin-bottom:1rem !important;
+}
+.koneksi-text strong{color:#E0F2EF;}
+
+/* Kartu perbandingan */
+.koneksi-comparison{
+  display:flex;align-items:center;gap:0.75rem;
+  flex-wrap:wrap;
+}
+.koneksi-card{
+  flex:1;min-width:140px;
+  border-radius:var(--radius-sm);
+  padding:0.75rem 0.9rem;
+  border:1px solid rgba(0,191,165,.15);
+}
+.koneksi-card.current{background:rgba(0,191,165,.07);}
+.koneksi-card.next{
+  background:rgba(59,130,246,.07);
+  border-color:rgba(59,130,246,.2);
+}
+.koneksi-card-label{
+  font-family:var(--mono);font-size:0.58rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.08em;
+  margin-bottom:0.4rem;
+}
+.koneksi-card.current .koneksi-card-label{color:var(--teal);}
+.koneksi-card.next .koneksi-card-label{color:#60A5FA;}
+
+.koneksi-card-formula{
+  font-family:var(--mono);font-size:0.85rem;font-weight:600;
+  color:#E0F2EF;margin-bottom:0.35rem;
+}
+.koneksi-card-desc{
+  font-size:0.75rem;color:#64748B;line-height:1.5;
+}
+
+.koneksi-arrow{
+  flex-shrink:0;color:var(--teal);opacity:.5;
+}
+@media(max-width:400px){
+  .koneksi-comparison{flex-direction:column;}
+  .koneksi-arrow{transform:rotate(90deg);}
+}
+
+/* ── ACTION FOOTER ───────────────────────── */
+.action-footer{
+  margin-top:2.5rem;
+  border-top:1px solid var(--border);
+  padding-top:1.5rem;
+}
+/* Baris atas: prev / next */
+.footer-nav{
+  display:flex;gap:0.6rem;justify-content:space-between;
+  margin-bottom:1rem;
+}
+/* Baris bawah: latihan + bookmark + share */
+.footer-actions{
+  display:flex;gap:0.6rem;flex-wrap:wrap;
+}
+.footer-actions .nav-btn{ flex:1;justify-content:center; }
+/* Tombol Latihan Soal — teal */
+.footer-actions .nav-btn.primary{
+  background:var(--teal);color:#fff;border-color:var(--teal);
+  flex:2;position:relative;
+}
+.footer-actions .nav-btn.primary:hover{background:var(--teal-dim);}
+.footer-actions .nav-btn.primary .coming-soon{
+  font-family:var(--mono);font-size:0.52rem;font-weight:700;
+  background:rgba(255,255,255,.2);
+  padding:0.1rem 0.35rem;border-radius:3px;
+  letter-spacing:.06em;text-transform:uppercase;
+  margin-left:0.25rem;
+}
+/* Bookmark aktif */
+.nav-btn.bookmarked{
+  background:rgba(245,158,11,.1);
+  border-color:rgba(245,158,11,.4);
+  color:var(--yellow-b);
+}
+
+@media(max-width:500px){
+  .footer-nav{ flex-direction:column; }
+  .footer-actions .nav-btn{ flex:1 1 40%; }
+}
+
+/* ── SCROLL PROGRESS ────────────────────── */
+#scroll-bar{
+  position:fixed;top:56px;left:0;height:3px;
+  background:var(--teal);width:0%;z-index:100;
+  transition:width .1s;
+}
+
+@media(max-width:600px){
+  .page-wrap{padding:1.5rem 1rem 4rem;}
+  .materi-title{font-size:1.5rem;}
+  table{font-size:0.78rem;}
+}
+
+/* ── SVG GRAFIK ─────────────────────────── */
+.grafik-wrap{
+  display:flex;justify-content:center;
+  margin:1rem 0 0.5rem;
+}
+.grafik-wrap svg{
+  max-width:100%;height:auto;
+  border-radius:10px;
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  padding:8px;
+  transition:background .25s, border-color .25s;
+}
+.grafik-row{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:0.75rem;margin:1rem 0;
+}
+.grafik-row svg{
+  width:100%;height:auto;
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  border-radius:10px;padding:6px;
+  transition:background .25s, border-color .25s;
+}
+@media(max-width:500px){.grafik-row{grid-template-columns:repeat(2,1fr);}}
+
+/* ── Dark mode SVG overrides ─────────────── */
+[data-theme="dark"] .grafik-wrap svg,
+[data-theme="dark"] .grafik-row svg { background:#1E2640; border-color:#334155; }
+
+/* Grid */
+[data-theme="dark"] .grafik-wrap svg line[stroke="#e2e8f0"],
+[data-theme="dark"] .grafik-row svg line[stroke="#e2e8f0"],
+[data-theme="dark"] .grafik-wrap svg line[stroke="#E2E8F0"] { stroke:#2D3A52 !important; }
+
+/* Sumbu */
+[data-theme="dark"] .grafik-wrap svg line[stroke="#555"],
+[data-theme="dark"] .grafik-row svg line[stroke="#555"],
+[data-theme="dark"] .grafik-wrap svg line[stroke="#888"],
+[data-theme="dark"] .grafik-row svg line[stroke="#888"] { stroke:#94A3B8 !important; }
+[data-theme="dark"] .grafik-wrap svg line[stroke="#777"],
+[data-theme="dark"] .grafik-row svg line[stroke="#777"],
+[data-theme="dark"] .grafik-wrap svg line[stroke="#666"] { stroke:#64748B !important; }
+
+/* Semua teks */
+[data-theme="dark"] .grafik-wrap svg text,
+[data-theme="dark"] .grafik-row svg text { fill:#CBD5E8 !important; }
+[data-theme="dark"] .grafik-wrap svg text[fill="#777"],
+[data-theme="dark"] .grafik-row svg text[fill="#777"],
+[data-theme="dark"] .grafik-wrap svg text[fill="#666"],
+[data-theme="dark"] .grafik-wrap svg text[fill="#888"],
+[data-theme="dark"] .grafik-wrap svg text[fill="#555"] { fill:#94A3B8 !important; }
+[data-theme="dark"] .grafik-wrap svg text[fill="#1e293b"],
+[data-theme="dark"] .grafik-wrap svg text[fill="black"] { fill:#E2E8F0 !important; }
+
+/* Titik/node — semua circle → putih terang by default */
+[data-theme="dark"] .grafik-wrap svg circle,
+[data-theme="dark"] .grafik-row svg circle { fill:#E2E8F0 !important; }
+/* Kembalikan node berwarna */
+[data-theme="dark"] .grafik-wrap svg circle[fill="#EF4444"],
+[data-theme="dark"] .grafik-row svg circle[fill="#EF4444"] { fill:#EF4444 !important; }
+[data-theme="dark"] .grafik-wrap svg circle[fill="#059669"],
+[data-theme="dark"] .grafik-row svg circle[fill="#059669"] { fill:#059669 !important; }
+[data-theme="dark"] .grafik-wrap svg circle[fill="#00BFA5"],
+[data-theme="dark"] .grafik-row svg circle[fill="#00BFA5"] { fill:#00BFA5 !important; }
+[data-theme="dark"] .grafik-wrap svg circle[fill="#F59E0B"],
+[data-theme="dark"] .grafik-row svg circle[fill="#F59E0B"] { fill:#F59E0B !important; }
+
+/* Marker arrows */
+[data-theme="dark"] .grafik-wrap svg path[fill="#555"],
+[data-theme="dark"] .grafik-row svg path[fill="#555"] { fill:#94A3B8 !important; }
+
+/* SVG background putih eksplisit */
+[data-theme="dark"] svg[style*="background-color: white"],
+[data-theme="dark"] svg[style*="background-color:white"] { background-color:#1E2640 !important; border-radius:10px; }
+[data-theme="dark"] svg[style*="background-color"] text { fill:#CBD5E8 !important; }
+[data-theme="dark"] svg[style*="background-color"] text.label-red { fill:#FCA5A5 !important; }
+[data-theme="dark"] svg[style*="background-color"] line[stroke="black"] { stroke:#94A3B8 !important; }
+[data-theme="dark"] svg[style*="background-color"] path[fill="black"] { fill:#94A3B8 !important; }
+[data-theme="dark"] svg[style*="background-color"] circle[fill="black"] { fill:#E2E8F0 !important; }
+
+/* ── NAVBAR MOBILE ───────────────────────── */
+@media(max-width:600px){
+  .navbar{ padding:0 0.75rem; height:52px; gap:0.5rem; }
+  .nav-logo-tag{ display:none; }
+  .nav-logo-name{ font-size:0.88rem; }
+  .nav-logo-icon{ width:26px; height:26px; }
+  .nav-btn{ height:30px; padding:0 0.6rem; font-size:0.72rem; }
+}
+@media(max-width:360px){
+  .nav-logo-name{ font-size:0.8rem; }
+  .nav-logo-icon{ width:22px; height:22px; border-radius:6px; }
+}
+
+/* ── TOC DROPDOWN ────────────────────────── */
+.toc-dropdown{ position:relative; }
+
+.toc-dropdown-btn{
+  /* sama persis dengan .nav-btn */
+  height:32px;padding:0 0.85rem;
+  border-radius:8px;border:1px solid var(--border);
+  font-family:var(--sans);font-size:0.75rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:0.4rem;
+  white-space:nowrap;cursor:pointer;
+  background:var(--surface-2);color:var(--text-2);
+  transition:all .2s;
+}
+.toc-dropdown-btn:hover,
+.toc-dropdown.open .toc-dropdown-btn{
+  border-color:var(--teal);color:var(--teal);
+  background:rgba(0,191,165,.05);
+}
+.toc-dropdown-btn svg{
+  transition:transform .25s;stroke:currentColor;fill:none;
+  stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;
+}
+.toc-dropdown.open .toc-dropdown-btn svg{ transform:rotate(180deg); }
+
+.toc-dropdown-menu{
+  display:none;
+  position:absolute;top:calc(100% + 8px);right:0;
+  min-width:220px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:0 12px 32px rgba(0,0,0,.12);
+  overflow:hidden;
+  z-index:200;
+  animation:fadeDown .18s ease;
+}
+.toc-dropdown.open .toc-dropdown-menu{ display:block; }
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-6px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+.toc-menu-header{
+  font-family:var(--mono);font-size:0.6rem;font-weight:700;
+  color:var(--text-3);letter-spacing:.1em;text-transform:uppercase;
+  padding:0.6rem 1rem 0.4rem;
+  border-bottom:1px solid var(--border);
+}
+.toc-menu-item{
+  display:flex;align-items:center;gap:0.6rem;
+  padding:0.55rem 1rem;
+  font-size:0.82rem;font-weight:500;color:var(--text-2);
+  text-decoration:none;
+  transition:background .15s,color .15s;
+  border-bottom:1px solid var(--border);
+}
+.toc-menu-item:last-child{ border-bottom:none; }
+.toc-menu-item:hover{ background:var(--surface-2);color:var(--teal); }
+.toc-menu-badge{
+  font-family:var(--mono);font-size:0.58rem;font-weight:700;
+  background:var(--navy);color:var(--teal);
+  padding:0.1rem 0.4rem;border-radius:3px;
+  flex-shrink:0;
+}
+[data-theme="dark"] .toc-menu-badge{ background:rgba(0,191,165,.12); }
+
+/* ── FLOATING SCROLL TO TOP ──────────────── */
+#scroll-top{
+  position:fixed;bottom:1.75rem;right:1.25rem;
+  width:38px;height:38px;border-radius:10px;
+  background:var(--navy);border:1px solid rgba(0,191,165,.3);
+  color:var(--teal);
+  display:none;align-items:center;justify-content:center;
+  cursor:pointer;z-index:150;
+  box-shadow:0 4px 16px rgba(0,0,0,.2);
+  transition:all .2s;
+}
+#scroll-top:hover{
+  background:var(--teal);color:var(--navy);
+  border-color:var(--teal);
+  transform:translateY(-2px);
+}
+#scroll-top.visible{ display:flex; animation:fadeUp .2s ease; }
+[data-theme="light"] #scroll-top{
+  background:var(--surface);
+  box-shadow:0 4px 16px rgba(0,0,0,.1);
+  color:var(--teal);
+}
+
+/* ── SECTION KOMENTAR ────────────────────── */
+.komentar-section{
+  margin-top:2.5rem;
+  padding-top:2rem;
+  border-top:1px solid var(--border);
+}
+.komentar-header{
+  display:flex;align-items:center;gap:0.75rem;
+  margin-bottom:1.25rem;
+}
+.komentar-title{
+  font-family:var(--display);font-size:1.1rem;font-weight:700;
+  color:var(--text);letter-spacing:-.02em;
+}
+.komentar-badge{
+  font-family:var(--mono);font-size:0.6rem;font-weight:700;
+  background:rgba(0,191,165,.1);color:var(--teal);
+  border:1px solid rgba(0,191,165,.2);
+  padding:0.18rem 0.55rem;border-radius:4px;letter-spacing:.06em;
+}
+.komentar-desc{
+  font-size:0.8rem;color:var(--text-3);margin-bottom:1rem;
+}
+.giscus-wrap{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  padding:1rem;
+  background:var(--surface-2);
+}
+/* Placeholder saat Giscus belum dikonfigurasi */
+.giscus-placeholder{
+  text-align:center;padding:2.5rem 1rem;
+}
+.giscus-placeholder .ph-icon{ font-size:2rem;margin-bottom:0.75rem; }
+.giscus-placeholder p{
+  font-size:0.82rem;color:var(--text-3);line-height:1.6;
+}
+.giscus-placeholder code{
+  font-family:var(--mono);font-size:0.75rem;
+  background:var(--surface-3);color:var(--teal);
+  padding:0.15rem 0.4rem;border-radius:4px;
+}
+
+</style>
+  <link rel="canonical" href="https://web.eksaktalab.my.id/materi/fungsi-komposisi-invers/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://web.eksaktalab.my.id/materi/fungsi-komposisi-invers/">
+  <meta property="og:title" content="Fungsi, Komposisi Fungsi, dan Fungsi Invers – EksaktaLab">
+  <meta property="og:description" content="Materi lengkap Fungsi, Komposisi Fungsi, dan Fungsi Invers SMA: jenis fungsi, domain, komposisi, fungsi invers, dan hubungannya. Dilengkapi 28 contoh soal dan pembahasan.">
+  <meta property="og:site_name" content="EksaktaLab">
+  <meta property="og:locale" content="id_ID">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fungsi, Komposisi Fungsi, dan Fungsi Invers – EksaktaLab">
+  <meta name="twitter:description" content="Materi lengkap Fungsi, Komposisi Fungsi, dan Fungsi Invers SMA: jenis fungsi, domain, komposisi, fungsi invers, dan hubungannya.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Fungsi, Komposisi Fungsi, dan Fungsi Invers","url":"https://web.eksaktalab.my.id/materi/fungsi-komposisi-invers/","description":"Materi lengkap Fungsi, Komposisi Fungsi, dan Fungsi Invers SMA: jenis fungsi, domain, komposisi, fungsi invers, dan hubungannya.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/"},"educationalLevel":"SMA Kelas XI","inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://web.eksaktalab.my.id/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://web.eksaktalab.my.id/"},{"@type":"ListItem","position":3,"name":"Aljabar 0026 Fungsi"},{"@type":"ListItem","position":4,"name":"Fungsi, Komposisi Fungsi, dan Fungsi Invers","item":"https://web.eksaktalab.my.id/materi/fungsi-komposisi-invers/"}]}}</script>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="/">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <!-- Daftar Isi Dropdown -->
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Fungsi, Komposisi &amp; Invers · 5 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Pengertian Fungsi</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Komposisi Fungsi</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Fungsi Invers</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Hubungan Komposisi &amp; Invers</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Tabel Ringkasan</a>
+      </div>
+    </div>
+    <!-- Tema -->
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<!-- Floating scroll to top -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="/">Beranda</a>
+    <span>/</span>
+    <a href="/#materi">Materi</a>
+    <span>/</span>
+    <a href="/#fungsi-lanjut">Fungsi Lanjut &amp; Aljabar Linear</a>
+    <span>/</span>
+    Fungsi, Komposisi &amp; Invers
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">BAB B · No. 09</div>
+      <h1 class="materi-title">Fungsi, Komposisi Fungsi &amp; Fungsi Invers</h1>
+      <p class="materi-desc">Pelajari jenis-jenis fungsi, domain, operasi komposisi, cara menentukan fungsi invers, dan hubungan keduanya. Fondasi penting untuk kalkulus dan analisis fungsi lanjut.</p>
+      <div class="materi-tags">
+        <span class="tag teal">Kelas X</span>
+        <span class="tag">Aljabar &amp; Fungsi</span>
+        <span class="tag">7 Sub-bab</span>
+        <span class="tag">29 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Pengertian Fungsi</a></li>
+      <li><a href="#bagian-b" data-num="B">Komposisi Fungsi</a></li>
+      <li><a href="#bagian-c" data-num="C">Fungsi Invers</a></li>
+      <li><a href="#bagian-d" data-num="D">Hubungan Komposisi &amp; Invers</a></li>
+      <li><a href="#bagian-e" data-num="E">Tabel Ringkasan</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══ A. PENGERTIAN FUNGSI ══════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Pengertian Fungsi</h2>
+
+    <p><strong>Fungsi</strong> (pemetaan) dari himpunan $A$ ke himpunan $B$ adalah aturan yang memasangkan setiap anggota $A$ dengan <strong>tepat satu</strong> anggota $B$.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Notasi Fungsi</div>
+      <div class="math-block">$$f : A \to B, \quad f(x) = y$$</div>
+    </div>
+
+    <ul>
+      <li>$A$ = <strong>domain</strong> (daerah asal)</li>
+      <li>$B$ = <strong>kodomain</strong> (daerah kawan)</li>
+      <li>$f(A)$ = <strong>range</strong> (daerah hasil) — semua nilai $f(x)$ yang terbentuk</li>
+    </ul>
+
+    <!-- SVG: Diagram pemetaan fungsi A → B -->
+    <div class="grafik-wrap">
+      <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" width="400">
+        <defs>
+          <marker id="farr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/>
+          </marker>
+        </defs>
+        <!-- Oval A (Domain) -->
+        <ellipse cx="100" cy="110" rx="70" ry="90" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
+        <text x="100" y="215" font-family="Inter,sans-serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-weight="600">A (Domain)</text>
+        <!-- Oval B (Kodomain) -->
+        <ellipse cx="300" cy="110" rx="70" ry="90" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
+        <text x="300" y="215" font-family="Inter,sans-serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-weight="600">B (Kodomain)</text>
+        <!-- Label f di tengah -->
+        <text x="200" y="30" font-family="Times New Roman,serif" font-size="18" fill="#00BFA5" text-anchor="middle" font-style="italic" font-weight="700">f</text>
+        <line x1="180" y1="34" x2="220" y2="34" stroke="#00BFA5" stroke-width="1" stroke-dasharray="3,2"/>
+        <!-- Elemen di A -->
+        <text x="100" y="65" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle" font-style="italic">a</text>
+        <text x="100" y="100" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle" font-style="italic">b</text>
+        <text x="100" y="135" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle" font-style="italic">c</text>
+        <text x="100" y="170" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle" font-style="italic">d</text>
+        <!-- Elemen di B -->
+        <text x="300" y="65" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle">1</text>
+        <text x="300" y="100" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle">2</text>
+        <text x="300" y="135" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle">3</text>
+        <text x="300" y="170" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle">4</text>
+        <!-- Panah a→1, b→3, c→2, d→4 -->
+        <line x1="118" y1="62" x2="278" y2="62" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#farr)"/>
+        <line x1="118" y1="97" x2="278" y2="132" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#farr)"/>
+        <line x1="118" y1="132" x2="278" y2="97" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#farr)"/>
+        <line x1="118" y1="167" x2="278" y2="167" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#farr)"/>
+        <!-- Range shading di B -->
+        <ellipse cx="300" cy="110" rx="52" ry="72" fill="rgba(0,191,165,0.06)" stroke="#00BFA5" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="355" y="100" font-family="Inter,sans-serif" font-size="10" fill="#00BFA5">f(A)</text>
+        <text x="355" y="112" font-family="Inter,sans-serif" font-size="10" fill="#00BFA5">= Range</text>
+      </svg>
+    </div>
+
+
+    <h3 class="subsection-title">1. Jenis-Jenis Fungsi</h3>
+
+    <p><strong>a. Fungsi Injektif (Satu-Satu)</strong> — Setiap dua elemen berbeda di $A$ dipetakan ke elemen berbeda di $B$. Dengan kata lain:<br>$x_1 \neq x_2 \implies f(x_1) \neq f(x_2)$, atau ekuivalennya<br>$f(x_1) = f(x_2) \implies x_1 = x_2$.</p>
+
+    <p><strong>b. Fungsi Surjektif (Pada)</strong> — $f(A) = B$ (range = kodomain). Setiap $y \in B$ punya paling sedikit satu pasangan $x \in A$.</p>
+
+    <p><strong>c. Fungsi Bijektif (Korespondensi Satu-Satu)</strong> — injektif sekaligus surjektif.</p>
+
+    <!-- SVG: Jenis-jenis fungsi -->
+    <div class="grafik-row" style="grid-template-columns:repeat(3,1fr);gap:1rem;margin:1rem 0;">
+
+      <!-- ── Injektif ── -->
+      <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" style="background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:6px;width:100%;height:auto;">
+        <defs><marker id="j1" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#3B82F6"/></marker></defs>
+        <!-- Oval kiri -->
+        <ellipse cx="45" cy="96" rx="28" ry="62" fill="none" stroke="#475569" stroke-width="1.5"/>
+        <!-- Oval kanan -->
+        <ellipse cx="115" cy="96" rx="28" ry="62" fill="none" stroke="#475569" stroke-width="1.5"/>
+        <!-- Elemen kiri: a, b, c -->
+        <text x="45" y="62"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">a</text>
+        <text x="45" y="96"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">b</text>
+        <text x="45" y="130" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">c</text>
+        <!-- Elemen kanan: 1, 2, 3, 4 -->
+        <text x="115" y="56"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">1</text>
+        <text x="115" y="84"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">2</text>
+        <text x="115" y="112" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">3</text>
+        <text x="115" y="140" font-family="Georgia,serif" font-size="13" fill="#5C6A8C" text-anchor="middle">4</text>
+        <!-- Panah: a→1, b→2, c→3 -->
+        <line x1="59" y1="59"  x2="100" y2="54"  stroke="#3B82F6" stroke-width="1.6" marker-end="url(#j1)"/>
+        <line x1="59" y1="94"  x2="100" y2="82"  stroke="#3B82F6" stroke-width="1.6" marker-end="url(#j1)"/>
+        <line x1="59" y1="128" x2="100" y2="110" stroke="#3B82F6" stroke-width="1.6" marker-end="url(#j1)"/>
+        <!-- Label -->
+        <text x="80" y="174" font-family="Inter,sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle" font-weight="700">Injektif</text>
+        <text x="80" y="188" font-family="Inter,sans-serif" font-size="10" fill="#64748B" text-anchor="middle">(satu-satu)</text>
+      </svg>
+
+      <!-- ── Surjektif ── -->
+      <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" style="background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:6px;width:100%;height:auto;">
+        <defs><marker id="j2" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#059669"/></marker></defs>
+        <ellipse cx="45" cy="96" rx="28" ry="62" fill="none" stroke="#475569" stroke-width="1.5"/>
+        <ellipse cx="115" cy="96" rx="28" ry="62" fill="none" stroke="#475569" stroke-width="1.5"/>
+        <!-- Elemen kiri: a, b, c, d -->
+        <text x="45" y="56"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">a</text>
+        <text x="45" y="84"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">b</text>
+        <text x="45" y="112" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">c</text>
+        <text x="45" y="140" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">d</text>
+        <!-- Elemen kanan: 1, 2, 3 -->
+        <text x="115" y="70"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">1</text>
+        <text x="115" y="100" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">2</text>
+        <text x="115" y="130" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">3</text>
+        <!-- Panah: a→1, b→1, c→2, d→3 -->
+        <line x1="59" y1="54"  x2="100" y2="67"  stroke="#059669" stroke-width="1.6" marker-end="url(#j2)"/>
+        <line x1="59" y1="82"  x2="100" y2="69"  stroke="#059669" stroke-width="1.6" marker-end="url(#j2)"/>
+        <line x1="59" y1="110" x2="100" y2="98"  stroke="#059669" stroke-width="1.6" marker-end="url(#j2)"/>
+        <line x1="59" y1="138" x2="100" y2="128" stroke="#059669" stroke-width="1.6" marker-end="url(#j2)"/>
+        <text x="80" y="174" font-family="Inter,sans-serif" font-size="12" fill="#059669" text-anchor="middle" font-weight="700">Surjektif</text>
+        <text x="80" y="188" font-family="Inter,sans-serif" font-size="10" fill="#64748B" text-anchor="middle">(onto)</text>
+      </svg>
+
+      <!-- ── Bijektif ── -->
+      <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" style="background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:6px;width:100%;height:auto;">
+        <defs><marker id="j3" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#00BFA5"/></marker></defs>
+        <ellipse cx="45" cy="96" rx="28" ry="62" fill="none" stroke="#475569" stroke-width="1.5"/>
+        <ellipse cx="115" cy="96" rx="28" ry="62" fill="none" stroke="#475569" stroke-width="1.5"/>
+        <!-- Elemen: a, b, c ↔ 1, 2, 3 -->
+        <text x="45" y="70"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">a</text>
+        <text x="45" y="98"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">b</text>
+        <text x="45" y="126" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">c</text>
+        <text x="115" y="70"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">1</text>
+        <text x="115" y="98"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">2</text>
+        <text x="115" y="126" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">3</text>
+        <!-- Panah lurus: a→1, b→2, c→3 -->
+        <line x1="59" y1="68"  x2="100" y2="68"  stroke="#00BFA5" stroke-width="1.8" marker-end="url(#j3)"/>
+        <line x1="59" y1="96"  x2="100" y2="96"  stroke="#00BFA5" stroke-width="1.8" marker-end="url(#j3)"/>
+        <line x1="59" y1="124" x2="100" y2="124" stroke="#00BFA5" stroke-width="1.8" marker-end="url(#j3)"/>
+        <text x="80" y="174" font-family="Inter,sans-serif" font-size="12" fill="#00BFA5" text-anchor="middle" font-weight="700">Bijektif</text>
+        <text x="80" y="188" font-family="Inter,sans-serif" font-size="10" fill="#64748B" text-anchor="middle">(korespondensi 1-1)</text>
+      </svg>
+
+    </div>
+
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Hanya fungsi <strong>bijektif</strong> yang memiliki fungsi invers. Jika $f$ tidak bijektif, maka $f^{-1}$ bukan merupakan fungsi.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Domain Berbagai Jenis Fungsi</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">Fungsi Polinomial $a_nx^n + \cdots + a_1x + a_0$</div>
+      <p style="color:#CBD5E8;font-size:.88rem;margin-bottom:.4rem;">Tidak ada batasan — semua nilai $x$ boleh disubstitusi.</p>
+      <div class="math-block">$$D_f = \mathbb{R}$$</div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Fungsi Pecahan $\dfrac{p(x)}{q(x)}$</div>
+      <div class="math-block">$$D_f = \{x \in \mathbb{R} \mid q(x) \neq 0\}$$</div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Fungsi Akar $\sqrt{h(x)}$</div>
+      <div class="math-block">$$D_f = \{x \in \mathbb{R} \mid h(x) \geq 0\}$$</div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Fungsi Pecahan Berakar $\dfrac{p(x)}{\sqrt{q(x)}}$</div>
+      <div class="math-block">$$D_f = \{x \in \mathbb{R} \mid q(x) > 0\}$$</div>
+    </div>
+
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = 5x^3 - 2x + 7$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $f(x)$ adalah fungsi polinomial, tidak ada batasan nilai $x$.
+      $$D_f = \mathbb{R}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = \dfrac{3x + 1}{x^2 - 5x + 6}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Syarat: penyebut $\neq 0$.
+      $$x^2-5x+6 \neq 0 \implies (x-2)(x-3) \neq 0$$
+      $$x \neq 2 \text{ dan } x \neq 3$$
+      $$D_f = \{x \in \mathbb{R} \mid x \neq 2 \text{ dan } x \neq 3\}$$
+<div style="margin-top:.75rem;">
+      <svg viewBox="0 0 320 60" xmlns="http://www.w3.org/2000/svg" width="300" style="max-width:100%;">
+        <defs><marker id="nl2" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker></defs>
+        <!-- Garis bilangan -->
+        <line x1="15" y1="28" x2="305" y2="28" stroke="#555" stroke-width="1.8" marker-end="url(#nl2)"/>
+        <line x1="305" y1="28" x2="15" y2="28" stroke="#555" stroke-width="1.8" marker-end="url(#nl2)"/>
+        <!-- Interval hijau: seluruh garis kecuali x=2 dan x=3 -->
+        <line x1="18" y1="28" x2="302" y2="28" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+        <!-- Titik kosong x=2 dan x=3 -->
+        <circle cx="152" cy="28" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
+        <circle cx="192" cy="28" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
+        <!-- Tick dan label -->
+        <line x1="112" y1="22" x2="112" y2="34" stroke="#555" stroke-width="1.2"/>
+        <text x="112" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
+        <line x1="152" y1="22" x2="152" y2="34" stroke="#555" stroke-width="1.2"/>
+        <text x="152" y="48" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">2</text>
+        <line x1="192" y1="22" x2="192" y2="34" stroke="#555" stroke-width="1.2"/>
+        <text x="192" y="48" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">3</text>
+        <!-- Label domain -->
+        <text x="74" y="16" font-family="Inter,sans-serif" font-size="10" fill="#059669">———</text>
+        <text x="220" y="16" font-family="Inter,sans-serif" font-size="10" fill="#059669">———</text>
+        <text x="172" y="16" font-family="Inter,sans-serif" font-size="9" fill="#EF4444" text-anchor="middle">x≠2, x≠3</text>
+      </svg>
+    </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = \sqrt{2x - 8}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Syarat: ekspresi dalam akar $\geq 0$.
+      $$2x - 8 \geq 0 \implies x \geq 4$$
+      $$D_f = \{x \in \mathbb{R} \mid x \geq 4\}$$
+<div style="margin-top:.75rem;">
+      <svg viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg" width="280" style="max-width:100%;">
+        <defs><marker id="nl3r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#059669"/></marker><marker id="nl3" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker></defs>
+        <line x1="15" y1="28" x2="288" y2="28" stroke="#555" stroke-width="1.8" marker-end="url(#nl3)"/>
+        <line x1="288" y1="28" x2="15" y2="28" stroke="#555" stroke-width="1.8" marker-end="url(#nl3)"/>
+        <!-- Interval hijau: x≥4 -->
+        <line x1="160" y1="28" x2="285" y2="28" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-end="url(#nl3r)"/>
+        <!-- Titik tertutup x=4 -->
+        <circle cx="160" cy="28" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
+        <!-- Ticks -->
+        <line x1="80" y1="22" x2="80" y2="34" stroke="#555" stroke-width="1.2"/>
+        <text x="80" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
+        <line x1="120" y1="22" x2="120" y2="34" stroke="#555" stroke-width="1.2"/>
+        <text x="120" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">2</text>
+        <line x1="160" y1="22" x2="160" y2="34" stroke="#555" stroke-width="1.2"/>
+        <text x="160" y="48" font-family="Georgia,serif" font-size="11" fill="#059669" text-anchor="middle">4</text>
+        <line x1="200" y1="22" x2="200" y2="34" stroke="#555" stroke-width="1.2"/>
+        <text x="200" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">6</text>
+        <!-- Label -->
+        <text x="222" y="16" font-family="Inter,sans-serif" font-size="10" fill="#059669" text-anchor="middle">{x ≥ 4}</text>
+      </svg>
+    </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = \sqrt{-x^2 + 4x + 5}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Syarat: $-x^2+4x+5 \geq 0$. Kalikan $-1$ (balik tanda):
+      $$x^2-4x-5 \leq 0 \implies (x-5)(x+1) \leq 0$$
+      $$D_f = \{x \in \mathbb{R} \mid -1 \leq x \leq 5\}$$
+      $$D_f = \{x \in \mathbb{R} \mid -1 \leq x \leq 5\}$$
+<div style="margin-top:.75rem;">
+      <svg viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg" width="280" style="max-width:100%;">
+        <defs><marker id="nl4" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker></defs>
+        <line x1="15" y1="28" x2="285" y2="28" stroke="#555" stroke-width="1.8" marker-end="url(#nl4)"/>
+        <line x1="285" y1="28" x2="15" y2="28" stroke="#555" stroke-width="1.8" marker-end="url(#nl4)"/>
+        <!-- Interval hijau: -1 ≤ x ≤ 5 -->
+        <!-- origin=120, scale=30 → x=-1: px=90, x=5: px=270 -->
+        <line x1="90" y1="28" x2="270" y2="28" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+        <!-- Titik tertutup di -1 dan 5 -->
+        <circle cx="90" cy="28" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
+        <circle cx="270" cy="28" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
+        <!-- Ticks: origin=120, scale=30 -->
+        <line x1="30" y1="22" x2="30" y2="34" stroke="#555" stroke-width="1.2"/>
+        <text x="30" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">-3</text>
+        <line x1="90" y1="22" x2="90" y2="34" stroke="#555" stroke-width="1.2"/>
+        <text x="90" y="48" font-family="Georgia,serif" font-size="11" fill="#059669" text-anchor="middle">-1</text>
+        <line x1="120" y1="22" x2="120" y2="34" stroke="#555" stroke-width="1.2"/>
+        <text x="120" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
+        <line x1="180" y1="22" x2="180" y2="34" stroke="#555" stroke-width="1.2"/>
+        <text x="180" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">2</text>
+        <line x1="270" y1="22" x2="270" y2="34" stroke="#555" stroke-width="1.2"/>
+        <text x="270" y="48" font-family="Georgia,serif" font-size="11" fill="#059669" text-anchor="middle">5</text>
+        <!-- Label -->
+        <text x="180" y="14" font-family="Inter,sans-serif" font-size="10" fill="#059669" text-anchor="middle">{-1 ≤ x ≤ 5}</text>
+      </svg>
+    </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = \dfrac{x+3}{\sqrt{x^2 - x - 6}}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Penyebut mengandung akar, syarat: $x^2 - x - 6 > 0$.
+      $$(x-3)(x+2) > 0$$
+      Titik kritis $x = -2$ dan $x = 3$. Uji tanda: positif di $x < -2$ dan $x > 3$.
+      $$D_f = \{x \in \mathbb{R} \mid x < -2 \text{ atau } x > 3\}$$
+<div style="margin-top:.75rem;">
+      <svg viewBox="0 0 320 90" xmlns="http://www.w3.org/2000/svg" width="300" style="max-width:100%;">
+        <defs>
+          <marker id="nl5l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M6,1 L0,3.5 L6,6z" fill="#059669"/></marker>
+          <marker id="nl5r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#059669"/></marker>
+          <marker id="nl5" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker>
+        </defs>
+        <line x1="15" y1="38" x2="308" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl5)"/>
+        <line x1="308" y1="38" x2="15" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl5)"/>
+        <!-- Uji tanda: 3 zona -->
+        <!-- Zona 1: x<-2 → positif (+) → hijau
+             Zona 2: -2<x<3 → negatif (-) → merah
+             Zona 3: x>3 → positif (+) → hijau
+             origin=160, scale=35: x=-2→px=90, x=3→px=265 -->
+        <!-- Interval kiri: x<-2 (terbuka) -->
+        <line x1="22" y1="38" x2="89" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-start="url(#nl5l)"/>
+        <!-- Interval kanan: x>3 (terbuka) -->
+        <line x1="266" y1="38" x2="305" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-end="url(#nl5r)"/>
+        <!-- Interval tengah: -2<x<3 (negatif) -->
+        <line x1="91" y1="38" x2="264" y2="38" stroke="#EF4444" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+        <!-- Titik kritis terbuka x=-2 dan x=3 -->
+        <circle cx="90"  cy="38" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
+        <circle cx="265" cy="38" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
+        <!-- Ticks -->
+        <line x1="160" y1="32" x2="160" y2="44" stroke="#555" stroke-width="1.2"/>
+        <text x="160" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
+        <line x1="90" y1="32" x2="90" y2="44" stroke="#555" stroke-width="1.2"/>
+        <text x="90" y="58" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">-2</text>
+        <line x1="265" y1="32" x2="265" y2="44" stroke="#555" stroke-width="1.2"/>
+        <text x="265" y="58" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">3</text>
+        <!-- Tanda uji tanda -->
+        <text x="48"  y="25" font-family="Georgia,serif" font-size="13" fill="#059669" text-anchor="middle">(+)</text>
+        <text x="178" y="25" font-family="Georgia,serif" font-size="13" fill="#EF4444" text-anchor="middle">(−)</text>
+        <text x="285" y="25" font-family="Georgia,serif" font-size="13" fill="#059669" text-anchor="middle">(+)</text>
+        <!-- Label domain -->
+        <text x="160" y="78" font-family="Inter,sans-serif" font-size="10" fill="#059669" text-anchor="middle">{x < -2 atau x > 3}</text>
+      </svg>
+    </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = \sqrt{x+4} + \dfrac{1}{x-1}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Dua syarat sekaligus:
+      <ul style="margin-top:.4rem;">
+        <li>Syarat akar: $x+4 \geq 0 \Rightarrow x \geq -4$</li>
+        <li>Syarat penyebut: $x-1 \neq 0 \Rightarrow x \neq 1$</li>
+      </ul>
+      Irisan kedua syarat:
+      $$D_f = \{x \in \mathbb{R} \mid x \geq -4 \text{ dan } x \neq 1\}$$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Tentukan domain dari $f(x) = \dfrac{4x-1}{x^2-7x+10}$</li>
+        <li>Tentukan domain dari $f(x) = \sqrt{3x+9}$</li>
+        <li>Tentukan domain dari $f(x) = \sqrt{-x^2+2x+8}$</li>
+        <li>Tentukan domain dari $f(x) = \dfrac{x-2}{\sqrt{x^2-3x-4}}$</li>
+        <li>Tentukan domain dari $f(x) = \sqrt{x-1} + \dfrac{3}{x+2}$</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ B. KOMPOSISI FUNGSI ═══════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Komposisi Fungsi</h2>
+
+    <p><strong>Komposisi fungsi</strong> adalah penggabungan dua fungsi sehingga daerah hasil fungsi pertama menjadi daerah asal fungsi berikutnya.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Definisi Komposisi</div>
+      <div class="math-block">$$(f \circ g)(x) = f[g(x)] \qquad \text{dan} \qquad (g \circ f)(x) = g[f(x)]$$</div>
+    </div>
+
+    <!-- SVG: Diagram komposisi f ∘ g -->
+    <div class="grafik-wrap">
+      <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" width="480">
+        <defs>
+          <marker id="carr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/>
+          </marker>
+          <marker id="cred" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#EF4444"/>
+          </marker>
+        </defs>
+        <!-- Tiga oval -->
+        <ellipse cx="80"  cy="95" rx="58" ry="75" fill="none" stroke="#475569" stroke-width="1.5"/>
+        <ellipse cx="250" cy="95" rx="58" ry="75" fill="none" stroke="#475569" stroke-width="1.5"/>
+        <ellipse cx="420" cy="95" rx="58" ry="75" fill="none" stroke="#475569" stroke-width="1.5"/>
+        <!-- Labels bawah -->
+        <text x="80"  y="185" font-family="Inter,sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">$D_g$</text>
+        <text x="250" y="185" font-family="Inter,sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">$R_g = D_f$</text>
+        <text x="420" y="185" font-family="Inter,sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">$R_f$</text>
+        <!-- Panah g: oval 1 → oval 2 -->
+        <path d="M 142 80 Q 190 55 205 80" fill="none" stroke="#3B82F6" stroke-width="2" marker-end="url(#carr)"/>
+        <text x="175" y="52" font-family="Times New Roman,serif" font-size="15" fill="#3B82F6" text-anchor="middle" font-style="italic" font-weight="700">g</text>
+        <!-- Panah f: oval 2 → oval 3 -->
+        <path d="M 312 80 Q 360 55 375 80" fill="none" stroke="#3B82F6" stroke-width="2" marker-end="url(#carr)"/>
+        <text x="348" y="52" font-family="Times New Roman,serif" font-size="15" fill="#3B82F6" text-anchor="middle" font-style="italic" font-weight="700">f</text>
+        <!-- Panah f∘g: oval 1 → oval 3 (melengkung bawah) -->
+        <path d="M 130 125 Q 250 175 370 125" fill="none" stroke="#EF4444" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#cred)"/>
+        <text x="250" y="178" font-family="Times New Roman,serif" font-size="14" fill="#EF4444" text-anchor="middle" font-style="italic">f ∘ g</text>
+        <!-- Titik sampel -->
+        <circle cx="80"  cy="95" r="3" fill="#CBD5E8"/>
+        <circle cx="250" cy="95" r="3" fill="#CBD5E8"/>
+        <circle cx="420" cy="95" r="3" fill="#CBD5E8"/>
+      </svg>
+    </div>
+
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Syarat Terdefinisi</div>
+      <p style="margin:0;font-size:.9rem;">$f \circ g$ terdefinisi jika $R_g \subseteq D_f$. Domain: $D_{f \circ g} = \{x \in D_g \mid g(x) \in D_f\}$</p>
+    </div>
+
+    <h3 class="subsection-title">1. Sifat-Sifat Komposisi Fungsi</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">Sifat-Sifat</div>
+      <div class="math-block">
+        $$\text{Tidak komutatif: } f \circ g \neq g \circ f$$
+        $$\text{Asosiatif: } f \circ (g \circ h) = (f \circ g) \circ h$$
+        $$\text{Identitas: } f \circ I = I \circ f = f, \quad I(x)=x$$
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Misalkan $f = \{(1,4),(2,3),(3,1),(4,2)\}$ dan $g = \{(1,2),(2,4),(3,1),(4,3)\}$. Tentukan $f \circ g$ dan $g \circ f$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>$f \circ g$:</strong> setiap $x$ dipetakan $g$ dulu, lalu hasilnya dipetakan $f$.<br>
+      $(1,2)\to f(2)=3$, $(2,4)\to f(4)=2$, $(3,1)\to f(1)=4$, $(4,3)\to f(3)=1$<br>
+      $\Rightarrow f \circ g = \{(1,3),(2,2),(3,4),(4,1)\}$<br><br>
+      <strong>$g \circ f$:</strong> setiap $x$ dipetakan $f$ dulu, lalu hasilnya dipetakan $g$.<br>
+      $(1,4)\to g(4)=3$, $(2,3)\to g(3)=1$, $(3,1)\to g(1)=2$, $(4,2)\to g(2)=4$<br>
+      $\Rightarrow g \circ f = \{(1,3),(2,1),(3,2),(4,4)\}$<br><br>
+      Terlihat $f \circ g \neq g \circ f$ — membuktikan sifat tidak komutatif.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = 2x - 1$ dan $g(x) = x^2 - 3x + 5$.<br>Tentukan $(f \circ g)(x)$ dan $(g \circ f)(x)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$(f \circ g)(x) = f[x^2-3x+5]$$
+      $$= 2(x^2-3x+5)-1 = \mathbf{2x^2-6x+9}$$
+      $$(g \circ f)(x) = g[2x-1]$$
+      $$= (2x-1)^2-3(2x-1)+5$$
+      $$= 4x^2-10x+9 = \mathbf{4x^2-10x+9}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = \dfrac{2x-3}{7-3x}$ dan $g(x) = 4x + 2$. Tentukan $(f \circ g)(x)$ dan $(g \circ f)(x)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$(f \circ g)(x) = f[4x+2] = \frac{2(4x+2)-3}{7-3(4x+2)}$$
+      $$= \frac{8x+1}{1-12x}$$
+      $$(g \circ f)(x) = g\!\left[\frac{2x-3}{7-3x}\right]$$
+      $$= 4\!\left(\frac{2x-3}{7-3x}\right)+2$$
+      $$= \frac{8x-12+2(7-3x)}{7-3x} = \frac{2x+2}{7-3x}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = 2x + 3$. Tentukan $(f \circ f \circ f)(x)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$(f \circ f)(x) = f[2x+3] = 2(2x+3)+3 = 4x+9$$
+      $$(f \circ f \circ f)(x) = f[4x+9]$$
+      $$= 2(4x+9)+3 = \mathbf{8x+21}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = x^2 - 5x + 4$ dan $g(x) = x^2 + 3x - 6$.<br>Tentukan nilai $(f \circ g)(2)$ dan $(g \circ f)(3)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$g(2) = 4+6-6 = 4$$
+      $$(f \circ g)(2) = f(4) = 16-20+4 = \mathbf{0}$$
+      $$f(3) = 9-15+4 = -2$$
+      $$(g \circ f)(3) = g(-2) = 4-6-6 = \mathbf{-8}$$
+    </div>
+
+    <h3 class="subsection-title">2. Menentukan Fungsi Komponen dari Komposisi</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $(f \circ h)(x) = 2x^2 - 4x - 3$ dan $h(x) = x + 3$. Tentukan $f(x)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Karena $f[x+3] = 2x^2-4x-3$, misalkan $m = x+3$, maka $x = m-3$:
+      $$f(m) = 2(m-3)^2-4(m-3)-3$$
+      $$= 2m^2-12m+18-4m+12-3$$
+      $$= 2m^2-16m+27$$
+      Jadi $f(x) = 2x^2-16x+27$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $(f \circ h)(x) = 4x^2 + 6x - 5$ dan $f(x) = 2x - 1$. Tentukan $h(x)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$f[h(x)] = 4x^2+6x-5$$
+      $$\implies 2\cdot h(x)-1 = 4x^2+6x-5$$
+      $$\implies h(x) = \mathbf{2x^2+3x-2}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $(f \circ g)(x) = 2x^2 - 6x + 7$ dan $g(x) = x^2 - 3x + 4$. Tentukan $f(x)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Misalkan $m = g(x) = x^2-3x+4$, maka $2m = 2x^2-6x+8$.<br>
+      Perhatikan $2m-1 = 2x^2-6x+7 = (f \circ g)(x)$, sehingga:
+      $$f(m) = 2m-1 \implies \mathbf{f(x) = 2x-1}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $(g \circ f)(x) = \dfrac{x-4}{x+3}$ dan $g(x) = 3x - 2$. Tentukan $f(x)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$3\cdot f(x)-2 = \frac{x-4}{x+3}$$
+      $$\implies 3\cdot f(x) = \frac{x-4}{x+3}+\frac{2(x+3)}{x+3} = \frac{3x+2}{x+3}$$
+      $$\implies f(x) = \mathbf{\frac{3x+2}{3(x+3)}}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(2x+1) = 4x^2 - 8x + 5$. Tentukan $f(x)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Misalkan $m = 2x+1$, sehingga $x = \dfrac{m-1}{2}$. Substitusi:
+      $$f(m) = 4\!\left(\frac{m-1}{2}\right)^2 - 8\!\left(\frac{m-1}{2}\right) + 5$$
+      $$= (m-1)^2-4(m-1)+5 = m^2-6m+10$$
+      Jadi $f(x) = x^2-6x+10$.
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Diketahui $f(x) = 3x+1$ dan $g(x) = x^2-2x+4$. Tentukan $(f \circ g)(x)$ dan $(g \circ f)(x)$.</li>
+        <li>Diketahui $f(x) = \dfrac{x+1}{x-2}$ dan $g(x) = 2x+3$. Tentukan $(f \circ g)(x)$ dan $(g \circ f)(x)$.</li>
+        <li>Diketahui $f(x) = 4x-3$. Tentukan $(f \circ f \circ f)(x)$.</li>
+        <li>Diketahui $(f \circ g)(x) = 3x^2+12x+10$ dan $g(x) = x+2$. Tentukan $f(x)$.</li>
+        <li>Diketahui $(f \circ g)(x) = 6x-1$ dan $f(x) = 3x+2$. Tentukan $g(x)$.</li>
+        <li>Diketahui $f(3x-2) = 6x^2-8x+1$. Tentukan $f(x)$.</li>
+        <li>Diketahui $f(x+1) = 2x^2+3x-1$. Tentukan $f(x)$ dan nilai $f(3)$.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ C. FUNGSI INVERS ══════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Fungsi Invers</h2>
+
+    <p>Misalkan $f$ adalah fungsi <strong>bijektif</strong> dari $A$ ke $B$. <strong>Fungsi invers</strong> $f^{-1}$ adalah fungsi dari $B$ ke $A$ yang membalikkan pemetaan $f$.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Definisi Invers</div>
+      <div class="math-block">$$f(x) = y \iff f^{-1}(y) = x$$</div>
+    </div>
+
+    <!-- SVG: Diagram fungsi invers -->
+    <div class="grafik-wrap">
+      <svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" width="360">
+        <defs>
+          <marker id="iarr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/>
+          </marker>
+          <marker id="irarr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#EF4444"/>
+          </marker>
+        </defs>
+        <!-- Oval A dan B -->
+        <ellipse cx="90"  cy="95" rx="65" ry="75" fill="none" stroke="#475569" stroke-width="1.5"/>
+        <ellipse cx="290" cy="95" rx="65" ry="75" fill="none" stroke="#475569" stroke-width="1.5"/>
+        <text x="90"  y="183" font-family="Inter,sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">A</text>
+        <text x="290" y="183" font-family="Inter,sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">B</text>
+        <!-- Elemen x dan y -->
+        <text x="90"  y="100" font-family="Times New Roman,serif" font-size="16" fill="#CBD5E8" text-anchor="middle" font-style="italic">x</text>
+        <text x="290" y="100" font-family="Times New Roman,serif" font-size="16" fill="#CBD5E8" text-anchor="middle" font-style="italic">y</text>
+        <!-- Panah f: A → B (atas) -->
+        <path d="M 158 82 Q 190 50 222 82" fill="none" stroke="#3B82F6" stroke-width="2" marker-end="url(#iarr)"/>
+        <text x="190" y="47" font-family="Times New Roman,serif" font-size="16" fill="#3B82F6" text-anchor="middle" font-style="italic" font-weight="700">f</text>
+        <!-- Panah f⁻¹: B → A (bawah) -->
+        <path d="M 222 115 Q 190 148 158 115" fill="none" stroke="#EF4444" stroke-width="2" marker-end="url(#irarr)"/>
+        <text x="190" y="157" font-family="Times New Roman,serif" font-size="15" fill="#EF4444" text-anchor="middle" font-style="italic">f ⁻¹</text>
+      </svg>
+    </div>
+
+
+    <div class="box box-rumus">
+      <div class="box-label">Sifat Fundamental</div>
+      <div class="math-block">$$(f^{-1} \circ f)(x) = x \qquad \text{dan} \qquad (f \circ f^{-1})(y) = y$$</div>
+    </div>
+
+    <p>Grafik $f^{-1}$ adalah <strong>cerminan</strong> grafik $f$ terhadap garis $y = x$. Setiap titik $(a,b)$ pada $f$ bersesuaian dengan titik $(b,a)$ pada $f^{-1}$.</p>
+
+    <!-- SVG: Grafik cerminan f dan f⁻¹ terhadap y=x -->
+    <div class="grafik-wrap">
+      <svg viewBox="0 0 270 260" xmlns="http://www.w3.org/2000/svg" width="260" style="max-width:100%">
+        <defs>
+          <marker id="gax" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L7,3z" fill="#555"/>
+          </marker>
+        </defs>
+
+        <!-- Grid tipis -->
+        <g stroke="#e2e8f0" stroke-width="0.7">
+          <line x1="50" y1="20" x2="50" y2="230"/><line x1="90" y1="20" x2="90" y2="230"/>
+          <line x1="130" y1="20" x2="130" y2="230"/><line x1="170" y1="20" x2="170" y2="230"/>
+          <line x1="210" y1="20" x2="210" y2="230"/>
+          <line x1="20" y1="220" x2="240" y2="220"/><line x1="20" y1="180" x2="240" y2="180"/>
+          <line x1="20" y1="140" x2="240" y2="140"/><line x1="20" y1="100" x2="240" y2="100"/>
+          <line x1="20" y1="60"  x2="240" y2="60"/>
+        </g>
+
+        <!-- Sumbu: origin=(50,220), scale=40px/unit -->
+        <line x1="20" y1="220" x2="248" y2="220" stroke="#555" stroke-width="1.8" marker-end="url(#gax)"/>
+        <line x1="50" y1="248" x2="50" y2="18"  stroke="#555" stroke-width="1.8" marker-end="url(#gax)"/>
+        <text x="244" y="231" font-size="11" fill="#555">x</text>
+        <text x="42"  y="16"  font-size="11" fill="#555">y</text>
+        <text x="35"  y="232" font-size="10" fill="#555">O</text>
+
+        <!-- Ticks -->
+        <text x="90"  y="232" font-size="9" fill="#64748B" text-anchor="middle">1</text>
+        <text x="130" y="232" font-size="9" fill="#64748B" text-anchor="middle">2</text>
+        <text x="170" y="232" font-size="9" fill="#64748B" text-anchor="middle">3</text>
+        <text x="38"  y="183" font-size="9" fill="#64748B" text-anchor="end">1</text>
+        <text x="38"  y="143" font-size="9" fill="#64748B" text-anchor="end">2</text>
+        <text x="38"  y="103" font-size="9" fill="#64748B" text-anchor="end">3</text>
+
+        <!-- Garis y=x (putus-putus abu) -->
+        <line x1="50" y1="220" x2="220" y2="50" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="5,3"/>
+        <text x="225" y="45" font-size="10" fill="#94A3B8" font-style="italic">y=x</text>
+
+        <!-- f(x) = sqrt(x)+0.5  →  biru -->
+        <polyline points="52,191 56,185 60,180 64,176 68,173 72,170 76,168 80,165 84,163 88,161 92,159 96,157 100,155 104,154 108,152 112,150 116,149 120,147 124,146 128,144 132,143 136,141 140,140 144,139 148,137 152,136 156,135 160,134 164,132 168,131 172,130 176,129 180,128 184,127 188,126 192,125 196,124 200,123 204,122"
+          fill="none" stroke="#3B82F6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="207" y="120" font-size="11" fill="#3B82F6" font-style="italic">f</text>
+
+        <!-- f⁻¹(x) = (x-0.5)²  →  merah putus-putus -->
+        <polyline points="70,220 74,220 78,218 82,216 86,214 90,210 94,206 98,200 102,194 106,188 110,180 114,172 118,162 122,152 126,142 130,130 134,118 138,104 142,90 146,76 150,60 154,44"
+          fill="none" stroke="#EF4444" stroke-width="2.2" stroke-dasharray="7,3" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="150" y="38" font-size="11" fill="#EF4444" font-style="italic">f⁻¹</text>
+
+        <!-- Titik (a,b) dan (b,a) di persimpangan dengan y=x: x≈1.866 → canvas(125,145) -->
+        <circle cx="125" cy="145" r="4.5" fill="#3B82F6"/>
+        <text x="130" y="142" font-size="9" fill="#3B82F6">(a,b)</text>
+        <circle cx="125" cy="145" r="4.5" fill="none" stroke="#EF4444" stroke-width="1.5"/>
+        <text x="105" y="158" font-size="9" fill="#EF4444">(b,a)</text>
+
+        <!-- Garis putus penghubung (a,b)↔(b,a) — sama karena di garis y=x -->
+        <!-- Tunjukkan pasangan titik di luar garis y=x: misal (2, 1.91) dan (1.91, 2) -->
+        <!-- f(2) = sqrt(2)+0.5 ≈ 1.91: canvas(130,143) dan (1.91,2): canvas(126,140) -->
+        <!-- Gunakan titik yang lebih jelas: (1,1.5) biru dan (1.5,1) merah -->
+        <!-- f(1)=1.5 → (90,160); f⁻¹(1.5)=(1.5-0.5)²=1 → (110,180) -->
+        <circle cx="90" cy="160" r="4" fill="#3B82F6"/>
+        <text x="94"  y="157" font-size="8" fill="#3B82F6">(1, 1.5)</text>
+        <circle cx="110" cy="180" r="4" fill="#EF4444"/>
+        <text x="114" y="178" font-size="8" fill="#EF4444">(1.5, 1)</text>
+        <!-- Garis putus penghubung dua titik simetri -->
+        <line x1="90" y1="160" x2="110" y2="180" stroke="#94A3B8" stroke-width="0.9" stroke-dasharray="3,2"/>
+      </svg>
+    </div>
+    <div class="box box-rumus">
+      <div class="box-label">Domain &amp; Range Fungsi Invers</div>
+      <div class="math-block">$$D_{f^{-1}} = R_f \qquad \text{dan} \qquad R_{f^{-1}} = D_f$$</div>
+    </div>
+
+    <h3 class="subsection-title">1. Langkah Menentukan Fungsi Invers</h3>
+    <ol class="step-list">
+      <li>Tuliskan $y = f(x)$</li>
+      <li>Manipulasi aljabar untuk menyatakan $x$ sebagai fungsi dari $y$</li>
+      <li>Ganti $y$ dengan $x$ untuk memperoleh $f^{-1}(x)$</li>
+    </ol>
+
+    <h3 class="subsection-title">2. Rumus Invers Fungsi Khusus</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">Fungsi Linear $f(x) = ax + b$</div>
+      <div class="math-block">$$f^{-1}(x) = \frac{x-b}{a}$$</div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Fungsi Kuadrat Sederhana $f(x) = ax^2 + b$ &nbsp;$(x \geq 0)$</div>
+      <div class="math-block">$$f^{-1}(x) = \sqrt{\frac{x-b}{a}}$$</div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Fungsi Kuadrat $f(x) = a(x-p)^2 + q$ &nbsp;$(x \geq p)$</div>
+      <p style="color:#CBD5E8;font-size:.88rem;margin-bottom:.4rem;">Ubah ke bentuk kuadrat sempurna terlebih dahulu.</p>
+      <div class="math-block">$$f^{-1}(x) = p + \sqrt{\frac{x-q}{a}}$$</div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Fungsi Pecahan Linear $f(x) = \dfrac{ax+b}{cx+d}$</div>
+      <div class="math-block">$$f^{-1}(x) = \frac{dx-b}{-cx+a}$$</div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Fungsi Eksponen $f(x) = a^{bx+c}$</div>
+      <div class="math-block">$$f^{-1}(x) = \frac{\log_a x - c}{b}$$</div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Fungsi Logaritma $f(x) = \log_a(bx+c)$</div>
+      <div class="math-block">$$f^{-1}(x) = \frac{a^x - c}{b}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = \sqrt{2x - 4}$. Tentukan $f^{-1}(x)$, serta nyatakan domain dan range-nya.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1 — $D_f$ dan $R_f$:</strong><br>
+      $2x-4 \geq 0 \Rightarrow x \geq 2$, jadi<br>
+      $D_f=\{x \in \mathbb{R} \mid x \geq 2\}$, $R_f=\{y \in \mathbb{R} \mid y \geq 0\}$<br><br>
+      <strong>Langkah 2 — Cari $f^{-1}$:</strong><br>
+      $y=\sqrt{2x-4} \Rightarrow y^2=2x-4$<br>
+      $\Rightarrow x=\dfrac{y^2+4}{2}$<br>
+      Jadi $f^{-1}(x) = \dfrac{x^2+4}{2}$<br><br>
+      <strong>Langkah 3 — Domain dan range:</strong>
+      $$D_{f^{-1}} = \{x \in \mathbb{R} \mid x \geq 0\}$$
+      $$R_{f^{-1}} = \{x \in \mathbb{R} \mid x \geq 2\}$$
+      <strong>Verifikasi:</strong> $(f^{-1} \circ f)(x) = f^{-1}[\sqrt{2x-4}]$<br>
+      $= \dfrac{(\sqrt{2x-4})^2+4}{2} = \dfrac{2x}{2} = x$ ✓
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan invers dari: (a) $f(x) = 3x - 5$ &nbsp;&nbsp; (b) $g(x) = \dfrac{1}{3}x + \dfrac{3}{4}$</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      (a) $y=3x-5 \Rightarrow x=\dfrac{y+5}{3}$, jadi $f^{-1}(x)=\dfrac{x+5}{3}$<br>
+      Verifikasi: $(f^{-1} \circ f)(x) = f^{-1}[3x-5] = \dfrac{3x}{3} = x$ ✓<br><br>
+      (b) $12y=4x+9 \Rightarrow x=\dfrac{12y-9}{4}$, jadi $g^{-1}(x)=\dfrac{12x-9}{4}$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan invers dari: (a) $f(x) = \dfrac{2x-3}{x-1}$ &nbsp;&nbsp; (b) $g(x) = \dfrac{2-3x}{2x-4}$</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      (a) $y(x-1)=2x-3 \Rightarrow x(y-2)=y-3$<br>
+      $\Rightarrow f^{-1}(x)=\dfrac{x-3}{x-2}$<br><br>
+      (b) $y(2x-4)=2-3x \Rightarrow x(2y+3)=4y+2$<br>
+      $\Rightarrow g^{-1}(x)=\dfrac{4x+2}{2x+3}$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan invers dari: (a) $f(x) = x^2 - 3$ &nbsp;$(x \geq 0)$ &nbsp;&nbsp; (b) $g(x) = 2x^2 + 8$ &nbsp;$(x \geq 0)$</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      (a) $y = x^2-3 \Rightarrow x^2 = y+3 \Rightarrow x = \sqrt{y+3}$<br>
+      Jadi $f^{-1}(x) = \sqrt{x+3}$, &nbsp;$D_{f^{-1}} = \{x \in \mathbb{R} \mid x \geq -3\}$<br><br>
+      (b) $y = 2x^2+8 \Rightarrow x^2 = \dfrac{y-8}{2} \Rightarrow x = \sqrt{\dfrac{y-8}{2}}$<br>
+      Jadi $g^{-1}(x) = \sqrt{\dfrac{x-8}{2}}$, &nbsp;$D_{g^{-1}} = \{x \in \mathbb{R} \mid x \geq 8\}$
+    </div>
+
+        <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan invers dari: (a) $f(x) = x^2 - 6x + 5$ &nbsp;&nbsp; (b) $f(x) = 2x^2 - 8x + 4$</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      (a) $y=(x-3)^2-4 \Rightarrow x=3\pm\sqrt{y+4}$<br>
+      Jadi $f^{-1}(x) = 3 \pm \sqrt{x+4}$<br><br>
+      (b) $\dfrac{y}{2}=(x-2)^2-2 \Rightarrow x-2=\pm\sqrt{\dfrac{y}{2}+2}$<br>
+      $\Rightarrow x=\dfrac{4\pm\sqrt{2y+8}}{2}$<br>
+      Jadi $f^{-1}(x) = \dfrac{4 \pm \sqrt{2x+8}}{2}$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan invers dari $f(x) = \bigl[(x+5)^{1/3} - 4\bigr]^2$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $\sqrt{y} = (x+5)^{1/3}-4 \Rightarrow (\sqrt{y}+4)^3 = x+5$<br>
+      $\Rightarrow x = (\sqrt{y}+4)^3-5$<br>
+      Jadi $f^{-1}(x) = (\sqrt{x}+4)^3-5$<br>
+      $D_{f^{-1}}=\{x \in \mathbb{R} \mid x \geq 0\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 23</div>
+      <p style="margin:0;font-size:.9rem;">Jika $f(x) = \dfrac{2x+5}{x-1}$ dan $f^{-1}(a) = 2$, tentukan nilai $a$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $f^{-1}(a)=2$ berarti $f(2)=a$:
+      $$a = f(2) = \frac{2(2)+5}{2-1} = \frac{9}{1} = \mathbf{9}$$
+    </div>
+
+    <h3 class="subsection-title">3. Invers Fungsi Eksponen dan Logaritma</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan invers dari: (a) $f(x) = 2^{3x-1}$ &nbsp;&nbsp; (b) $g(x) = \log_3(2x+5)$</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      (a) $\log_2 y = 3x-1 \Rightarrow f^{-1}(x)=\dfrac{^2\!\log x+1}{3}$<br>
+      $D_{f^{-1}}=\{x \in \mathbb{R} \mid x > 0\}$<br><br>
+      (b) $3^y=2x+5 \Rightarrow g^{-1}(x)=\dfrac{3^x-5}{2}$, $D_{g^{-1}}=\{x \in \mathbb{R}\}$
+    </div>
+
+    <h3 class="subsection-title">4. Fungsi Invers Diri Sendiri (Involusi / Self-Inverse)</h3>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Syarat Self-Inverse</div>
+      <p style="margin:0;font-size:.9rem;">Fungsi $f(x)=\dfrac{ax+b}{cx+d}$ bersifat self-inverse jika dan hanya jika $a+d=0$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $p$ agar $f(x) = \dfrac{px + 6}{2x - p}$ bersifat self-inverse, lalu verifikasi untuk $p=2$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Syarat: $a+d=0$, yaitu $p+(-p)=0$ — terpenuhi untuk semua $p \neq 0$.<br><br>
+      Untuk $p=2$: $f(x)=\dfrac{2x+6}{2x-2}=\dfrac{x+3}{x-1}$<br>
+      Verifikasi:<br>
+      $f(f(x)) = f\!\left(\dfrac{x+3}{x-1}\right)$<br>
+      $= \dfrac{\frac{x+3}{x-1}+3}{\frac{x+3}{x-1}-1} = \dfrac{4x}{4} = x$ ✓
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Tentukan $f^{-1}(x)$ dari $f(x) = 5x-3$.</li>
+        <li>Tentukan $f^{-1}(x)$ dari $f(x) = \dfrac{3x+4}{x-2}$.</li>
+        <li>Diketahui $f(x) = x^2+4x-1$ dengan $x \geq -2$. Tentukan $f^{-1}(x)$, $D_{f^{-1}}$ dan $R_{f^{-1}}$.</li>
+        <li>Diketahui $f(x) = \dfrac{4x-1}{2x+3}$. Jika $f^{-1}(k)=3$, tentukan $k$.</li>
+        <li>Tentukan $f^{-1}(x)$ dari $f(x) = \sqrt{x-3}+2$, dan nyatakan domainnya.</li>
+        <li>Tentukan $f^{-1}(x)$ dari $f(x) = 3^{2x+1}$.</li>
+        <li>Tentukan $f^{-1}(x)$ dari $f(x) = ^2\!\log(3x-6)$.</li>
+        <li>Tunjukkan bahwa $f(x) = \dfrac{5x-3}{x-5}$ bersifat self-inverse.</li>
+        <li>Diketahui $f(x) = \dfrac{4x+k}{x-4}$ bersifat self-inverse. Tentukan $k$ dan verifikasi $f(f(x))=x$.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ D. HUBUNGAN KOMPOSISI & INVERS ════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Hubungan Komposisi Fungsi dan Fungsi Invers</h2>
+
+    <div class="box box-rumus">
+      <div class="box-label">Sifat-Sifat Penting</div>
+      <div class="math-block">
+        $$f \circ g = h \implies f = h \circ g^{-1}$$
+        $$f \circ g = h \implies g = f^{-1} \circ h$$
+        $$[f^{-1}]^{-1} = f$$
+        $$(f \circ g)^{-1} = g^{-1} \circ f^{-1}$$
+        $$(g \circ f)^{-1} = f^{-1} \circ g^{-1}$$
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = 2x - 5$ dan $h(x) = 6x + 3$. Jika $f \circ g = h$, tentukan $g(x)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $f^{-1}(x) = \dfrac{x+5}{2}$. Gunakan $g = f^{-1} \circ h$:
+      $$g(x) = f^{-1}[6x+3] = \frac{(6x+3)+5}{2}$$
+      $$= \frac{6x+8}{2} = \mathbf{3x+4}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 27</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $g(x) = 2x + 1$ dan $h(x) = 4x^2 - 2x + 3$. Jika $f \circ g = h$, tentukan $f(x)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $g^{-1}(x) = \dfrac{x-1}{2}$. Gunakan $f = h \circ g^{-1}$:
+      $$f(x) = h\!\left(\frac{x-1}{2}\right)$$
+      $$= 4\!\left(\frac{x-1}{2}\right)^2-2\!\left(\frac{x-1}{2}\right)+3$$
+      $$= (x-1)^2-(x-1)+3 = \mathbf{x^2-3x+5}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $g(x) = 3x + 2$ dan $f(x) = 2x - 5$. Tentukan $(f \circ g)^{-1}$ dan verifikasi $(f \circ g)^{-1} = g^{-1} \circ f^{-1}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Cara 1:</strong> $(f \circ g)(x) = 2(3x+2)-5 = 6x-1$<br>
+      $(f \circ g)^{-1}(x) = \dfrac{x+1}{6}$<br><br>
+      <strong>Cara 2:</strong> $g^{-1}(x)=\dfrac{x-2}{3}$, $f^{-1}(x)=\dfrac{x+5}{2}$<br>
+      $(g^{-1} \circ f^{-1})(x) = g^{-1}\!\left[\dfrac{x+5}{2}\right]$<br>
+      $= \dfrac{\frac{x+5}{2}-2}{3} = \dfrac{x+1}{6}$ ✓
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 29</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = \dfrac{3x+5}{4x-2}$ dan $g(x) = 2x - 1$. Tentukan $(g \circ f)^{-1}$ dan verifikasi $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $(g \circ f)(x) = 2\!\left(\dfrac{3x+5}{4x-2}\right)-1$<br>
+      $= \dfrac{6x+10-(4x-2)}{4x-2} = \dfrac{x+6}{2x-1}$<br><br>
+      $(g \circ f)^{-1}(x) = \dfrac{x+6}{2x-1}$<br><br>
+      Verifikasi: $f^{-1}(x)=\dfrac{2x+5}{4x-3}$, $g^{-1}(x)=\dfrac{x+1}{2}$<br>
+      $(f^{-1} \circ g^{-1})(x) = f^{-1}\!\left[\dfrac{x+1}{2}\right]$<br>
+      $= \dfrac{x+1+5}{2(x+1)-3} = \dfrac{x+6}{2x-1}$ ✓
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Diketahui $f(x) = 3x+1$ dan $h(x) = 9x+7$. Jika $f \circ g = h$, tentukan $g(x)$.</li>
+        <li>Diketahui $g(x) = x+4$ dan $h(x) = 2x^2+16x+33$. Jika $f \circ g = h$, tentukan $f(x)$.</li>
+        <li>Diketahui $f(x) = 2x-1$ dan $g(x) = 3x+5$. Tentukan $(f \circ g)^{-1}(x)$ dan verifikasi $(f \circ g)^{-1} = g^{-1} \circ f^{-1}$.</li>
+        <li>Diketahui $f(x) = \dfrac{x+2}{x-1}$ dan $g(x) = 4x-3$. Tentukan $(g \circ f)^{-1}(x)$.</li>
+        <li>Diketahui $f(x) = 2x+3$ dan $g(x) = \dfrac{x-1}{x+2}$. Tentukan $(f \circ g)^{-1}(x)$ dan $(g^{-1} \circ f^{-1})(x)$, lalu verifikasi.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ E. TABEL RINGKASAN ════════════════ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Tabel Ringkasan</h2>
+
+    <h3 class="subsection-title">Jenis-Jenis Fungsi</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Jenis</th><th>Syarat</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Injektif</td><td>$f(x_1)=f(x_2) \Rightarrow x_1=x_2$</td><td>Input berbeda → output berbeda</td></tr>
+          <tr><td>Surjektif</td><td>$f(A) = B$</td><td>Range = Kodomain</td></tr>
+          <tr><td>Bijektif</td><td>Injektif + Surjektif</td><td>Syarat invers terdefinisi</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">Rumus Cepat Invers</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Fungsi $f(x)$</th><th>Invers $f^{-1}(x)$</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>$ax+b$</td><td>$\dfrac{x-b}{a}$</td><td>$a \neq 0$</td></tr>
+          <tr><td>$ax^2+b$ &nbsp;$(x \geq 0)$</td><td>$\sqrt{\dfrac{x-b}{a}}$</td><td>$a > 0$, $x \geq b$</td></tr>
+          <tr><td>$a(x-p)^2+q$ &nbsp;$(x \geq p)$</td><td>$p+\sqrt{\dfrac{x-q}{a}}$</td><td>$a > 0$, $x \geq q$</td></tr>
+          <tr><td>$\dfrac{ax+b}{cx+d}$</td><td>$\dfrac{dx-b}{-cx+a}$</td><td>$ad-bc \neq 0$</td></tr>
+          <tr><td>$a^{bx+c}$</td><td>$\dfrac{\log_a x-c}{b}$</td><td>$D_{f^{-1}}=\{x \mid x > 0\}$</td></tr>
+          <tr><td>$\log_a(bx+c)$</td><td>$\dfrac{a^x-c}{b}$</td><td>$D_{f^{-1}}=\mathbb{R}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">Sifat Komposisi dan Invers</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Konsep</th><th>Rumus / Notasi</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Definisi komposisi</td><td>$(f \circ g)(x)=f[g(x)]$</td><td>$g$ dikerjakan lebih dulu</td></tr>
+          <tr><td>Syarat terdefinisi</td><td>$R_g \subseteq D_f$</td><td>Range $g$ harus termuat di domain $f$</td></tr>
+          <tr><td>Tidak komutatif</td><td>$f \circ g \neq g \circ f$</td><td>Urutan mempengaruhi hasil</td></tr>
+          <tr><td>Invers komposisi</td><td>$(f \circ g)^{-1}=g^{-1} \circ f^{-1}$</td><td>Urutan dibalik saat ambil invers</td></tr>
+          <tr><td>Mencari komponen</td><td>$f \circ g=h \Rightarrow g=f^{-1} \circ h$</td><td>Gunakan invers untuk balikkan</td></tr>
+          <tr><td>Self-inverse</td><td>$a+d=0$ (pecahan linear)</td><td>$f(f(x))=x$</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- KONEKSI KE MATERI BERIKUTNYA -->
+  <div class="koneksi-wrap">
+    <div class="koneksi-header">
+      <span class="koneksi-icon">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 7h10M8 3l4 4-4 4"/>
+        </svg>
+      </span>
+      <span class="koneksi-label">Koneksi ke Materi Berikutnya</span>
+    </div>
+    <div class="koneksi-body">
+      <p class="koneksi-text">
+        Komposisi Fungsi dan Fungsi Invers adalah <strong>fondasi utama</strong> Limit dan Turunan. Sifat $(f \circ g)^{-1} = g^{-1} \circ f^{-1}$ akan muncul kembali saat membahas turunan fungsi komposisi (Chain Rule) dan substitusi pada integral.
+      </p>
+      <div class="koneksi-comparison">
+        <div class="koneksi-card current">
+          <div class="koneksi-card-label">Sekarang</div>
+          <div class="koneksi-card-formula">$(f \circ g)(x)$</div>
+          <div class="koneksi-card-desc">Komposisi fungsi<br>Urutan penting</div>
+        </div>
+        <div class="koneksi-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10h12M12 5l5 5-5 5"/></svg>
+        </div>
+        <div class="koneksi-card next">
+          <div class="koneksi-card-label">Berikutnya</div>
+          <div class="koneksi-card-formula">$\frac{d}{dx}[f(g(x))]$</div>
+          <div class="koneksi-card-desc">Chain Rule Turunan<br>Pakai konsep komposisi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <!-- Baris 1: Prev / Next -->
+    <div class="footer-nav">
+      <a class="nav-btn" href="/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Kembali ke Semua Materi
+      </a>
+      <a class="nav-btn" href="#">
+        Fungsi Kuadrat
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <!-- Baris 2: Actions -->
+    <div class="footer-actions">
+      <a class="nav-btn primary" href="#">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="10" height="10" rx="2"/><line x1="5" y1="5" x2="9" y2="5"/><line x1="5" y1="7.5" x2="8" y2="7.5"/><line x1="5" y1="10" x2="7" y2="10"/></svg>
+        Kerjakan Latihan Soal Fungsi &amp; Komposisi
+        <span class="coming-soon">Segera</span>
+      </a>
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- SECTION KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Giscus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi ini? Tulis di kolom diskusi. Login dengan akun GitHub gratis.</p>
+    <div class="giscus-wrap">
+      <!-- 
+        CARA AKTIVASI GISCUS:
+        1. Buka https://giscus.app
+        2. Masukkan repo GitHub kamu (misal: username/eksaktalab)
+        3. Aktifkan GitHub Discussions di repo
+        4. Copy script yang dihasilkan, ganti placeholder di bawah ini
+      -->
+      <div class="giscus-placeholder">
+        <div class="ph-icon">💬</div>
+        <p>
+          Sistem komentar menggunakan <strong>Giscus</strong> — gratis, tanpa iklan, berbasis GitHub Discussions.<br><br>
+          Untuk mengaktifkan, konfigurasikan repo di <code>giscus.app</code> lalu tempel script-nya di sini.
+        </p>
+      </div>
+      <!-- Setelah dikonfigurasi, hapus div.giscus-placeholder di atas dan paste script Giscus di sini: -->
+      <!-- <script src="https://giscus.app/client.js"
+        data-repo="USERNAME/REPO"
+        data-repo-id="REPO_ID"
+        data-category="Announcements"
+        data-category-id="CATEGORY_ID"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="id"
+        crossorigin="anonymous"
+        async>
+      </script> -->
+    </div>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── Scroll progress bar tipis + scroll-to-top ──
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  // Tampilkan tombol scroll-to-top setelah 30%
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+// ── Theme toggle ──────────────────────────
+function toggleTheme() {
+  const html = document.documentElement;
+  const btn  = document.getElementById('themeBtn');
+  const dark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', dark ? 'light' : 'dark');
+  btn.textContent = dark ? '🌙 Gelap' : '☀️ Terang';
+}
+
+// ── TOC Dropdown ──────────────────────────
+function toggleTOC() {
+  document.getElementById('tocDropdown').classList.toggle('open');
+}
+function closeTOC() {
+  document.getElementById('tocDropdown').classList.remove('open');
+}
+// Tutup dropdown saat klik di luar
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+// ── Bookmark ──────────────────────────────
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ─────────────────────────────────
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Fungsi, Komposisi & Fungsi Invers — EksaktaLab',
+      text:  'Belajar Fungsi, Komposisi Fungsi & Fungsi Invers di EksaktaLab, lengkap dengan contoh soal!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+
+// ── SHARED HELPERS ────────────────────────
+const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+  <polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) {
+      MathJax.typesetPromise([typesetEl]).catch(() => {});
+    }
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── 1. BOX RUMUS → accordion hijau ───────
+  document.querySelectorAll('.box.box-rumus').forEach((box, i) => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+
+    // Semua konten kecuali label
+    let bodyHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body">
+        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
+      </div>`;
+
+    const header   = wrap.querySelector('.rumus-header');
+    const statusEl = wrap.querySelector('.rumus-status');
+    const bodyInner = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+
+    box.replaceWith(wrap);
+  });
+
+  // ── 2. BOX CONTOH → accordion navy/teal ──
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+
+    let qHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header">
+            <span class="solve-dot"></span>
+            <span class="solve-title">Penyelesaian</span>
+          </div>
+          <div class="penyelesaian-inner">
+            ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
+          </div>
+        </div>
+      </div>`;
+
+    const header   = wrap.querySelector('.contoh-header');
+    const statusEl = null;
+    const pi       = wrap.querySelector('.penyelesaian-inner');
+
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (statusEl) statusEl.textContent = '';
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+    });
+
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+  // ── 3. Buka / Tutup Semua per section ────
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+
+    const updateBtn = () => {
+      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
+    };
+    updateBtn();
+
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+  // ── 4. SOAL LATIHAN → accordion kunci jawaban ──
+  const jawabanData = {
+    // A — Domain
+    0: [
+      { jawaban:`$$D_f = \\{x \\in \\mathbb{R} \\mid x \\neq 2 \\text{ dan } x \\neq 5\\}$$` },
+      { jawaban:`$$D_f = \\{x \\in \\mathbb{R} \\mid x \\geq -3\\}$$` },
+      { jawaban:`$$D_f = \\{x \\in \\mathbb{R} \\mid -2 \\leq x \\leq 4\\}$$` },
+      { jawaban:`$$D_f = \\{x \\in \\mathbb{R} \\mid x < -1 \\text{ atau } x > 4\\}$$` },
+      { jawaban:`$$D_f = \\{x \\in \\mathbb{R} \\mid x \\geq 1\\}$$` },
+    ],
+        // B — Komposisi
+    1: [
+      { jawaban:`$(f \\circ g)(x) = 3x^2-6x+13$ &nbsp;&nbsp; $(g \\circ f)(x) = 9x^2+3$` },
+      { jawaban:`$(f \\circ g)(x) = \\dfrac{2x+4}{2x+1}$ &nbsp;&nbsp; $(g \\circ f)(x) = \\dfrac{5x-4}{x-2}$` },
+      { jawaban:`$(f \\circ f \\circ f)(x) = 64x-63$` },
+      { jawaban:`$f(x) = 3x^2-2$` },
+      { jawaban:`$g(x) = 2x-1$` },
+      { jawaban:`$f(x) = \\dfrac{2x^2-5}{3}$` },
+      { jawaban:`$f(x) = 2x^2-x-2$ &nbsp;&nbsp; $f(3) = 13$` },
+    ],
+    // C — Fungsi Invers
+    2: [
+      { jawaban:`$f^{-1}(x) = \\dfrac{x+3}{5}$` },
+      { jawaban:`$f^{-1}(x) = \\dfrac{2x+4}{x-3}$` },
+      { jawaban:`$f^{-1}(x) = -2+\\sqrt{x+5}$ &nbsp;&nbsp; $D_{f^{-1}} = \\{x \\in \\mathbb{R} \\mid x \\geq -5\\}$ &nbsp;&nbsp; $R_{f^{-1}} = \\{x \\in \\mathbb{R} \\mid x \\geq -2\\}$` },
+      { jawaban:`$k = \\dfrac{11}{9}$` },
+      { jawaban:`$f^{-1}(x) = (x-2)^2+3$ &nbsp;&nbsp; $D_{f^{-1}} = \\{x \\in \\mathbb{R} \\mid x \\geq 2\\}$` },
+      { jawaban:`$f^{-1}(x) = \\dfrac{{}^3\\!\\log x - 1}{2}$` },
+      { jawaban:`$f^{-1}(x) = \\dfrac{2^x+6}{3}$` },
+      { jawaban:`$f(f(x)) = x$ ✓ (self-inverse terbukti)` },
+      { jawaban:`$k \\neq -16$ &nbsp;&nbsp; $f(f(x)) = x$ ✓` },
+    ],
+    // D — Hubungan Komposisi & Invers
+    3: [
+      { jawaban:`$g(x) = 3x+2$` },
+      { jawaban:`$f(x) = 2x^2+1$` },
+      { jawaban:`$(f \\circ g)^{-1}(x) = \\dfrac{x-9}{6}$` },
+      { jawaban:`$(g \\circ f)^{-1}(x) = \\dfrac{x+11}{x-1}$` },
+      { jawaban:`$(f \\circ g)^{-1}(x) = \\dfrac{4-2x}{x-5}$` },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+
+    const items = [...list.querySelectorAll('li')];
+    const newList = document.createElement('div');
+    newList.className = 'soal-list-accordion';
+
+    items.forEach((li, i) => {
+      const ans   = answers[i] || {};
+      const diff  = ans.diff || 'sedang';
+      const diffLabel = { mudah:'★ Mudah', sedang:'★★ Sedang', sulit:'★★★ Sulit' }[diff] || '';
+      const jawaban = ans.jawaban || '';
+
+      const item = document.createElement('div');
+      item.className = 'soal-item';
+      item.innerHTML = `
+        <div class="soal-item-header" role="button" tabindex="0">
+          <span class="soal-num">${i+1}</span>
+          <span class="soal-text">${li.innerHTML}</span>
+          <button class="soal-key-btn" tabindex="-1">Kunci</button>
+        </div>
+        <div class="soal-answer">
+          <div class="soal-answer-inner">
+            <div class="soal-answer-label">Jawaban</div>
+            ${jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
+          </div>
+        </div>`;
+
+      const header = item.querySelector('.soal-item-header');
+      const toggle = () => {
+        const open = item.classList.toggle('open');
+        if (open && window.MathJax) {
+          MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
+        }
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+
+      newList.appendChild(item);
+    });
+
+    list.replaceWith(newList);
+  });
+
+});
+</script>
+</body>
+</html>

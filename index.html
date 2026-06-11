@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EksaktaLab — Laboratorium Belajar Matematika SMA</title>
+<meta name="description" content="Platform belajar matematika SMA terlengkap. Materi, contoh soal, dan latihan untuk 35 topik kurikulum nasional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]}}</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<style>
+/* ── TOKENS ──────────────────────────────────────────── */
+:root {
+  --navy:      #0A0F1E;
+  --navy-mid:  #141929;
+  --navy-soft: #1E2640;
+  --teal:      #00BFA5;
+  --teal-dim:  #009E87;
+  --yellow:    #FFF8E1;
+  --yellow-b:  #F59E0B;
+  --green:     #ECFDF5;
+  --green-b:   #059669;
+  --blue:      #EFF6FF;
+  --blue-b:    #3B82F6;
+  --red:       #FEF2F2;
+  --red-b:     #EF4444;
+  --surface:   #FFFFFF;
+  --surface-2: #F0F4FF;
+  --surface-3: #E8EEFF;
+  --text:      #0A0F1E;
+  --text-2:    #3D4A6B;
+  --text-3:    #7B8BB2;
+  --border:    #D8E0F5;
+  --radius-sm: 8px;
+  --radius:    12px;
+  --radius-lg: 18px;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Inter', system-ui, sans-serif;
+  --display: 'Space Grotesk', system-ui, sans-serif;
+}
+[data-theme="dark"] {
+  --surface:   #0A0F1E;
+  --surface-2: #141929;
+  --surface-3: #1E2640;
+  --text:      #EEF1FF;
+  --text-2:    #A8B4D8;
+  --text-3:    #5C6A8C;
+  --border:    #263050;
+  --yellow:    #1C1A0A;
+  --yellow-b:  #D97706;
+  --green:     #052E1C;
+  --green-b:   #34D399;
+  --blue:      #0C1A35;
+  --blue-b:    #60A5FA;
+  --red:       #1C0A0A;
+  --red-b:     #F87171;
+}
+
+/* ── RESET ───────────────────────────────────────────── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  background:var(--surface);
+  color:var(--text);
+  min-height:100vh;
+  transition:background .25s,color .25s;
+}
+
+/* ── NAVBAR ──────────────────────────────────────────── */
+.navbar{
+  position:sticky;top:0;z-index:50;
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  padding:0 2rem;
+  height:60px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;
+}
+.logo{
+  display:flex;align-items:center;gap:0.65rem;
+  text-decoration:none;
+  flex-shrink:0;
+}
+.logo-icon{
+  width:36px;height:36px;border-radius:9px;
+  background:var(--teal);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.logo-icon svg{width:18px;height:18px;}
+.logo-text{
+  display:flex;flex-direction:column;gap:0.05rem;
+  line-height:1;
+}
+.logo-name{
+  font-family:var(--display);
+  font-size:1.15rem;font-weight:700;
+  color:var(--text);letter-spacing:-0.02em;
+}
+.logo-name em{font-style:normal;color:var(--teal);}
+.logo-tagline{
+  font-family:var(--mono);
+  font-size:0.5rem;font-weight:500;
+  color:var(--text-3);
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+}
+
+.nav-tabs{
+  display:flex;gap:0.15rem;
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  padding:3px;border-radius:10px;
+}
+.tab{
+  font-family:var(--sans);font-size:0.8rem;font-weight:600;
+  color:var(--text-3);
+  padding:0.35rem 0.9rem;border-radius:8px;
+  border:none;background:transparent;
+  cursor:pointer;white-space:nowrap;
+  transition:all .2s;
+}
+.tab:hover{color:var(--text);}
+.tab.active{background:var(--navy);color:#fff;}
+[data-theme="dark"] .tab.active{background:var(--teal);color:#fff;}
+
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0;}
+.btn-theme{
+  font-family:var(--sans);font-size:0.75rem;font-weight:600;
+  color:var(--text-2);background:var(--surface-2);
+  border:1px solid var(--border);
+  padding:0.35rem 0.8rem;border-radius:8px;
+  cursor:pointer;transition:all .2s;
+}
+.btn-theme:hover{border-color:var(--teal);color:var(--teal);}
+
+/* ── HERO ────────────────────────────────────────────── */
+.hero{
+  position:relative;overflow:hidden;
+  background:var(--navy);
+  padding:4rem 2rem 3.5rem;
+  text-align:center;
+}
+/* Grid koordinat — signature element */
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(0,191,165,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,191,165,.07) 1px, transparent 1px);
+  background-size:40px 40px;
+  background-position:center center;
+}
+/* Axes */
+.hero-grid::after{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(0,191,165,.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,191,165,.22) 1px, transparent 1px);
+  background-size:200px 200px;
+  background-position:center center;
+}
+/* Radial fade */
+.hero-grid::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 80% at 50% 50%, transparent 40%, var(--navy) 100%);
+  z-index:1;
+}
+.hero-content{position:relative;z-index:2;max-width:680px;margin:0 auto;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  font-family:var(--mono);font-size:0.72rem;font-weight:500;
+  color:var(--teal);letter-spacing:.12em;text-transform:uppercase;
+  background:rgba(0,191,165,.1);border:1px solid rgba(0,191,165,.25);
+  padding:0.3rem 0.75rem;border-radius:8px;
+  margin-bottom:1.25rem;
+}
+.hero-title{
+  font-family:var(--display);
+  font-size:clamp(2rem,5vw,3.2rem);
+  font-weight:700;line-height:1.1;
+  color:#fff;letter-spacing:-0.03em;
+  margin-bottom:1rem;
+}
+.hero-title em{
+  font-style:normal;
+  color:var(--teal);
+}
+.hero-sub{
+  font-size:1rem;line-height:1.65;
+  color:#8FA8C8;
+  max-width:480px;margin:0 auto 2rem;
+}
+.hero-cta{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;}
+.btn-primary{
+  font-family:var(--sans);font-size:0.875rem;font-weight:600;
+  background:var(--teal);color:#fff;
+  padding:0.65rem 1.5rem;border-radius:var(--radius-sm);
+  border:none;cursor:pointer;text-decoration:none;
+  transition:background .2s,transform .15s;
+}
+.btn-primary:hover{background:var(--teal-dim);transform:translateY(-1px);}
+.btn-ghost{
+  font-family:var(--sans);font-size:0.875rem;font-weight:600;
+  background:transparent;color:#CBD5E8;
+  padding:0.63rem 1.5rem;border-radius:var(--radius-sm);
+  border:1.5px solid rgba(255,255,255,.25);cursor:pointer;text-decoration:none;
+  transition:all .2s;
+  letter-spacing:.01em;
+}
+.btn-ghost:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.45);}
+
+/* ── STATS BAR ───────────────────────────────────────── */
+.stats-bar{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border-bottom:1px solid var(--border);
+  background:var(--surface-2);
+}
+.stat-item{
+  display:flex;flex-direction:column;align-items:center;
+  padding:1rem 2.5rem;
+  border-right:1px solid var(--border);
+}
+.stat-item:last-child{border-right:none;}
+.stat-num{
+  font-family:var(--display);font-size:1.5rem;font-weight:700;
+  color:var(--text);letter-spacing:-0.03em;
+}
+.stat-num span{color:var(--teal);}
+.stat-label{
+  font-size:0.72rem;font-weight:500;
+  color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;
+  margin-top:0.15rem;
+}
+
+/* ── MAIN LAYOUT ─────────────────────────────────────── */
+.main-wrap{max-width:1100px;margin:0 auto;padding:2.5rem 2rem;}
+
+/* ── VIEW SECTIONS ───────────────────────────────────── */
+.view{display:none;}
+.view.active{display:block;animation:fadeUp .3s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── SECTION HEADER ──────────────────────────────────── */
+.section-head{margin-bottom:2rem;}
+.section-head h2{
+  font-family:var(--display);font-size:1.35rem;font-weight:700;
+  color:var(--text);letter-spacing:-0.02em;
+  margin-bottom:0.25rem;
+}
+.section-head p{font-size:0.875rem;color:var(--text-3);}
+
+/* ── CHAPTER GROUPS ──────────────────────────────────── */
+.chapter-group{margin-bottom:2.5rem;}
+.chapter-label{
+  display:flex;align-items:center;gap:0.6rem;
+  margin-bottom:0.85rem;
+}
+.chapter-tag{
+  font-family:var(--mono);font-size:0.68rem;font-weight:500;
+  background:var(--navy);color:var(--teal);
+  padding:0.2rem 0.6rem;border-radius:4px;
+  letter-spacing:.06em;
+}
+[data-theme="dark"] .chapter-tag{background:rgba(0,191,165,.15);color:var(--teal);}
+.chapter-title-text{
+  font-family:var(--display);font-size:0.95rem;font-weight:700;
+  color:var(--text);
+}
+
+/* ── MATERI GRID ─────────────────────────────────────── */
+.materi-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:0.6rem;
+}
+.materi-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:0.9rem 1rem;
+  display:flex;align-items:center;gap:0.85rem;
+  cursor:pointer;
+  transition:border-color .2s,box-shadow .2s,transform .15s;
+  text-decoration:none;
+  color:inherit;
+}
+.materi-card:hover{
+  border-color:var(--teal);
+  box-shadow:0 4px 16px rgba(0,191,165,.1);
+  transform:translateY(-1px);
+}
+.card-num{
+  font-family:var(--mono);font-size:0.7rem;font-weight:500;
+  color:var(--text-3);
+  min-width:22px;text-align:right;
+  flex-shrink:0;
+}
+.card-info{flex:1;min-width:0;}
+.card-name{
+  font-size:0.85rem;font-weight:600;
+  color:var(--text);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.card-meta{
+  font-size:0.72rem;color:var(--text-3);
+  margin-top:0.15rem;
+}
+.card-arrow{
+  color:var(--border);
+  flex-shrink:0;
+  transition:color .2s,transform .2s;
+}
+.materi-card:hover .card-arrow{color:var(--teal);transform:translateX(3px);}
+
+/* ── WORKSHEET & KUIS CARDS ──────────────────────────── */
+.file-list{display:flex;flex-direction:column;gap:0.5rem;}
+.file-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:0.9rem 1.1rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  transition:border-color .2s;
+}
+.file-card:hover{border-color:var(--teal);}
+.file-info{display:flex;align-items:center;gap:0.75rem;}
+.file-icon{
+  width:38px;height:38px;border-radius:var(--radius-sm);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;flex-shrink:0;
+}
+.file-icon.pdf{background:#FFEAEA;}
+.file-icon.quiz{background:#FFF3E0;}
+.file-name{font-size:0.875rem;font-weight:600;color:var(--text);}
+.file-desc{font-size:0.75rem;color:var(--text-3);margin-top:0.1rem;}
+.btn-dl{
+  font-size:0.78rem;font-weight:600;
+  padding:0.4rem 1rem;border-radius:var(--radius-sm);
+  border:none;cursor:pointer;white-space:nowrap;
+  transition:background .2s;
+}
+.btn-dl.pdf{background:#FFEAEA;color:#C0392B;}
+.btn-dl.pdf:hover{background:#FFD5D5;}
+.btn-dl.quiz{background:#FFF3E0;color:#E67E22;}
+.btn-dl.quiz:hover{background:#FFE0B2;}
+.btn-dl.start{background:var(--teal);color:#fff;}
+.btn-dl.start:hover{background:var(--teal-dim);}
+
+/* ── PLACEHOLDER VIEWS ───────────────────────────────── */
+.placeholder-view{
+  background:var(--surface-2);border:1px dashed var(--border);
+  border-radius:var(--radius-lg);
+  padding:4rem 2rem;text-align:center;
+}
+.placeholder-view .ph-icon{font-size:2.5rem;margin-bottom:1rem;}
+.placeholder-view h3{
+  font-family:var(--display);font-size:1.1rem;font-weight:700;
+  color:var(--text);margin-bottom:0.5rem;
+}
+.placeholder-view p{font-size:0.875rem;color:var(--text-3);}
+
+/* ── FORMULA PREVIEW (di hero) ───────────────────────── */
+.formula-float{
+  position:absolute;
+  font-family:var(--mono);
+  color:rgba(0,191,165,.2);
+  font-size:0.85rem;
+  user-select:none;pointer-events:none;
+  z-index:2;
+}
+
+/* ── TOAST ───────────────────────────────────────────── */
+#toast{
+  position:fixed;bottom:2rem;right:2rem;
+  background:var(--navy);color:#fff;
+  border:1px solid var(--teal);
+  padding:0.75rem 1.25rem;border-radius:var(--radius-sm);
+  font-size:0.85rem;font-weight:600;
+  display:none;z-index:200;
+  box-shadow:0 8px 24px rgba(0,0,0,.2);
+}
+#toast.show{display:block;animation:fadeUp .2s ease;}
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+/* ── TABLET LANDSCAPE (≤1024px) ─────────── */
+@media(max-width:1024px){
+  .main-wrap{padding:2rem 1.5rem;}
+  .nav-tabs .tab{padding:.28rem .6rem;font-size:.72rem;}
+}
+
+/* ── TABLET PORTRAIT (≤768px) ──────────── */
+@media(max-width:768px){
+  .navbar{padding:0 1rem;gap:.75rem;}
+  .hero{padding:3rem 1.25rem 2.5rem;}
+  .hero-title{font-size:2rem;}
+  .main-wrap{padding:1.5rem 1rem;}
+  .stat-item{padding:.75rem 1rem;}
+  .materi-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+  .chapter-label{flex-wrap:wrap;gap:.35rem;}
+}
+
+/* ── MOBILE (≤600px) ───────────────────── */
+@media(max-width:600px){
+  .hero-title{font-size:1.85rem;}
+  .hero-sub{font-size:0.88rem;}
+  .materi-grid{grid-template-columns:1fr;}
+  .stats-bar{grid-template-columns:repeat(3,1fr);}
+}
+
+/* ── SMALL MOBILE (≤500px) ─────────────── */
+@media(max-width:500px){
+  .nav-tabs{display:none;}
+  .nav-select{display:none;}
+  .main-wrap{padding:1.5rem 1rem 6rem;}
+  .hero{padding:2.5rem 1rem 2rem;}
+  .hero-title{font-size:1.6rem;}
+  .stat-num{font-size:1.25rem;}
+  .chapter-title-text{font-size:.85rem;}
+  .card-name{font-size:.85rem;}
+  .card-meta{font-size:.7rem;}
+  .footer-grid{grid-template-columns:1fr;gap:1.5rem;}
+  .site-footer{padding:2rem 1.25rem 5.5rem;}
+}
+
+/* ── VERY SMALL (≤360px) ───────────────── */
+@media(max-width:360px){
+  .hero-title{font-size:1.4rem;}
+  .logo-tagline{display:none;}
+  .hero-cta{flex-direction:column;align-items:stretch;}
+  .btn-primary,.btn-ghost{text-align:center;}
+}
+
+.card-badge{
+  font-family:var(--mono);font-size:0.55rem;font-weight:700;
+  background:rgba(0,191,165,.12);color:var(--teal);
+  border:1px solid rgba(0,191,165,.25);
+  padding:0.1rem 0.4rem;border-radius:5px;
+  letter-spacing:.06em;text-transform:uppercase;
+  vertical-align:middle;margin-left:0.4rem;
+}
+.materi-card.available{ border-color:rgba(0,191,165,.2); }
+.materi-card.available .card-num{ color:var(--teal); }
+.materi-card.available:hover{
+  border-color:var(--teal);
+  box-shadow:0 4px 16px rgba(0,191,165,.12);
+}
+
+/* ── FOOTER ─────────────────────────────── */
+.site-footer{
+  background:var(--navy);
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:3rem 2rem 1.5rem;
+  margin-top:3rem;
+}
+.footer-grid{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:2.5rem;margin-bottom:2.5rem;
+}
+@media(max-width:768px){ .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;} }
+@media(max-width:480px){ .footer-grid{grid-template-columns:1fr;gap:1.5rem;} .site-footer{padding:2rem 1.25rem 5.5rem;} }
+.footer-logo{ display:flex;align-items:center;gap:0.6rem;text-decoration:none;margin-bottom:0.85rem; }
+.footer-logo-icon{ width:30px;height:30px;border-radius:8px;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+.footer-logo-icon svg{width:16px;height:16px;}
+.footer-logo-name{ font-family:var(--display);font-size:1rem;font-weight:700;color:#fff;letter-spacing:-.02em; }
+.footer-logo-name em{font-style:normal;color:var(--teal);}
+.footer-desc{font-size:0.8rem;color:#475569;line-height:1.65;margin-bottom:1rem;}
+.footer-kurikulum{ display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.58rem;font-weight:600;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;background:rgba(0,191,165,.08);border:1px solid rgba(0,191,165,.2);padding:0.22rem 0.6rem;border-radius:4px; }
+.footer-col-title{ font-family:var(--mono);font-size:0.6rem;font-weight:700;color:#475569;letter-spacing:.1em;text-transform:uppercase;margin-bottom:0.85rem; }
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+.footer-links a{font-size:0.82rem;color:#334155;text-decoration:none;transition:color .15s;}
+.footer-links a:hover{color:var(--teal);}
+.footer-links a.ready::after{content:'·';font-size:0.7rem;color:var(--teal);margin-left:0.35rem;}
+.footer-bottom{ max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.06);padding-top:1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem; }
+.footer-copy{font-size:0.75rem;color:#334155;}
+.footer-legal{display:flex;gap:1.25rem;}
+.footer-legal a{font-size:0.75rem;color:#334155;text-decoration:none;transition:color .15s;}
+.footer-legal a:hover{color:var(--teal);}
+/* ── BOTTOM NAV ─────────────────────────── */
+.bottom-nav{ display:none;position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border);padding:0.4rem 0 calc(0.4rem + env(safe-area-inset-bottom));z-index:100;box-shadow:0 -4px 20px rgba(0,0,0,.08); }
+@media(max-width:500px){ .bottom-nav{display:flex;} .main-wrap{padding:1.5rem 1rem 6rem;} }
+.bottom-nav-item{ flex:1;display:flex;flex-direction:column;align-items:center;gap:0.15rem;background:none;border:none;cursor:pointer;padding:0.3rem 0;transition:all .15s; }
+.bottom-nav-item .bn-icon{font-size:1.1rem;line-height:1;transition:transform .15s;}
+.bottom-nav-item.active .bn-icon{transform:translateY(-1px);}
+.bottom-nav-item .bn-label{font-family:var(--mono);font-size:0.5rem;font-weight:600;color:var(--text-3);letter-spacing:.04em;text-transform:uppercase;}
+.bottom-nav-item.active .bn-label{color:var(--teal);}
+
+/* ── NAV SELECT (tablet) ────────────────── */
+.nav-select{
+  display:none;
+  font-family:var(--sans);font-size:0.78rem;font-weight:600;
+  color:var(--text);
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:0.3rem 1.8rem 0.3rem 0.7rem;
+  cursor:pointer;outline:none;
+  appearance:none;
+  -webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2300BFA5' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 0.5rem center;
+  transition:border-color .2s;
+  flex-shrink:0;
+}
+.nav-select:focus{ border-color:var(--teal); }
+@media(max-width:768px) and (min-width:501px){
+  .nav-tabs{ display:none; }
+  .nav-select{ display:block; }
+}
+</style>
+  <link rel="canonical" href="https://web.eksaktalab.my.id/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://web.eksaktalab.my.id/">
+  <meta property="og:title" content="EksaktaLab — Laboratorium Belajar Matematika SMA">
+  <meta property="og:description" content="Platform belajar matematika SMA terlengkap. Materi, contoh soal, dan latihan untuk 35 topik kurikulum nasional.">
+  <meta property="og:site_name" content="EksaktaLab">
+  <meta property="og:locale" content="id_ID">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EksaktaLab — Laboratorium Belajar Matematika SMA">
+  <meta name="twitter:description" content="Platform belajar matematika SMA terlengkap. Materi, contoh soal, dan latihan untuk 35 topik kurikulum nasional.">
+  <!-- Schema.org -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/","description":"Platform belajar matematika SMA terlengkap","inLanguage":"id"}</script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <a class="logo" href="#">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <div class="logo-name">Eksakta<em>Lab</em></div>
+      <div class="logo-tagline">Lab. Belajar Matematika</div>
+    </div>
+  </a>
+
+  <nav class="nav-tabs" id="desktopNav">
+    <button class="tab active" onclick="switchView('materi',this)">📚 Belajar Mandiri</button>
+    <button class="tab" onclick="switchView('worksheet',this)">📄 Worksheet</button>
+    <button class="tab" onclick="switchView('latihan',this)">✏️ Latihan Soal</button>
+    <button class="tab" onclick="switchView('kapita',this)">🔬 Kapita Selekta</button>
+    <button class="tab" onclick="switchView('video',this)">🎓 UTBK</button>
+  </nav>
+
+  <div class="nav-right">
+    <select class="nav-select" id="navSelect" onchange="switchViewSelect(this.value)">
+      <option value="materi">📚 Belajar Mandiri</option>
+      <option value="worksheet">📄 Worksheet</option>
+      <option value="latihan">✏️ Latihan Soal</option>
+      <option value="kapita">🔬 Kapita Selekta</option>
+      <option value="video">🎓 UTBK</option>
+    </select>
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()" title="Ganti tema">🌙</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="heroSection">
+  <div class="hero-grid"></div>
+
+  <!-- Floating formulas -->
+  <div class="formula-float" style="top:18%;left:5%;">∫ f(x) dx</div>
+  <div class="formula-float" style="top:55%;left:3%;">lim x→∞</div>
+  <div class="formula-float" style="top:22%;right:4%;">ax² + bx + c</div>
+  <div class="formula-float" style="top:60%;right:6%;">sin²θ + cos²θ = 1</div>
+  <div class="formula-float" style="top:75%;left:8%;font-size:.7rem;">Σ aᵢ</div>
+  <div class="formula-float" style="top:35%;right:12%;font-size:.7rem;">∇f = 0</div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <svg width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="currentColor" opacity=".5"/><circle cx="5" cy="5" r="2" fill="currentColor"/></svg>
+      Laboratorium Belajar Matematika
+    </div>
+    <h1 class="hero-title">
+      Belajar Matematika<br>dengan <em>Cara yang Tepat</em>
+    </h1>
+    <p class="hero-sub">28 topik lengkap, mulai dari aljabar dasar hingga kalkulus. Materi terstruktur, contoh soal nyata, dan latihan interaktif dalam satu platform.</p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="#" onclick="document.querySelector('.main-wrap').scrollIntoView({behavior:'smooth'});return false;">Mulai Belajar →</a>
+      <a class="btn-ghost" href="#" onclick="document.querySelector('.main-wrap').scrollIntoView({behavior:'smooth'});return false;">Cari Materi</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">28<span>+</span></div><div class="stat-label">Topik Materi</div></div>
+  <div class="stat-item"><div class="stat-num">SMA <span>/</span> SMK</div><div class="stat-label">Jenjang</div></div>
+  <div class="stat-item"><div class="stat-num">100<span>%</span></div><div class="stat-label">Gratis</div></div>
+
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+
+  <!-- ═══ VIEW: MATERI ═══════════════════════════════ -->
+  <div class="view active" id="materi-view">
+    <div class="section-head">
+      <h2>Belajar Mandiri</h2>
+      <p>Pilih topik untuk membaca materi lengkap beserta contoh soal dan pembahasan.</p>
+    </div>
+
+    <div class="chapter-group">
+      <div class="chapter-label">
+        <span class="chapter-tag">BAB A</span>
+        <span class="chapter-title-text">Aljabar &amp; Fungsi Dasar</span>
+      </div>
+      <div class="materi-grid">
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">01</span>
+          <div class="card-info"><div class="card-name">Persamaan Nilai Mutlak</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">02</span>
+          <div class="card-info"><div class="card-name">Sistem Persamaan Linier</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card available" href="/materi/fungsi-linear/">
+          <span class="card-num">03</span>
+          <div class="card-info"><div class="card-name">Fungsi Linier <span class="card-badge">Tersedia</span></div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">04</span>
+          <div class="card-info"><div class="card-name">Fungsi Kuadrat</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">05</span>
+          <div class="card-info"><div class="card-name">Persamaan Kuadrat</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">06</span>
+          <div class="card-info"><div class="card-name">Pertidaksamaan Linear Dua Variabel</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">07</span>
+          <div class="card-info"><div class="card-name">Program Linear</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">08</span>
+          <div class="card-info"><div class="card-name">Eksponen</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">09</span>
+          <div class="card-info"><div class="card-name">Logaritma</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">10</span>
+          <div class="card-info"><div class="card-name">Barisan dan Deret</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">11</span>
+          <div class="card-info"><div class="card-name">Trigonometri Dasar</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="chapter-group">
+      <div class="chapter-label">
+        <span class="chapter-tag">BAB B</span>
+        <span class="chapter-title-text">Fungsi Lanjut &amp; Aljabar Linear</span>
+      </div>
+      <div class="materi-grid">
+        <a class="materi-card available" href="/materi/fungsi-komposisi-invers/">
+          <span class="card-num">12</span>
+          <div class="card-info"><div class="card-name">Fungsi, Komposisi &amp; Invers <span class="card-badge">Tersedia</span></div><div class="card-meta">Kelas XI · Fase F</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">13</span>
+          <div class="card-info"><div class="card-name">Matriks</div><div class="card-meta">Kelas XI · Fase F</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">14</span>
+          <div class="card-info"><div class="card-name">Trigonometri Lanjut</div><div class="card-meta">Kelas XI · Fase F</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="chapter-group">
+      <div class="chapter-label">
+        <span class="chapter-tag">BAB C</span>
+        <span class="chapter-title-text">Geometri &amp; Vektor</span>
+      </div>
+      <div class="materi-grid">
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">15</span>
+          <div class="card-info"><div class="card-name">Transformasi Geometri</div><div class="card-meta">Kelas XI · Fase F</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">16</span>
+          <div class="card-info"><div class="card-name">Vektor di R² dan R³</div><div class="card-meta">Kelas XI · Fase F</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">17</span>
+          <div class="card-info"><div class="card-name">Geometri Analitik (Lingkaran)</div><div class="card-meta">Kelas XII · MTL</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">18</span>
+          <div class="card-info"><div class="card-name">Irisan Kerucut</div><div class="card-meta">Kelas XII · MTL</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="chapter-group">
+      <div class="chapter-label">
+        <span class="chapter-tag">BAB D</span>
+        <span class="chapter-title-text">Kalkulus</span>
+      </div>
+      <div class="materi-grid">
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">19</span>
+          <div class="card-info"><div class="card-name">Limit Fungsi</div><div class="card-meta">Kelas XI · MTL</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">20</span>
+          <div class="card-info"><div class="card-name">Turunan Fungsi</div><div class="card-meta">Kelas XI · MTL</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">21</span>
+          <div class="card-info"><div class="card-name">Integral</div><div class="card-meta">Kelas XII · MTL</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">22</span>
+          <div class="card-info"><div class="card-name">Suku Banyak</div><div class="card-meta">Kelas XI · MTL</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="chapter-group">
+      <div class="chapter-label">
+        <span class="chapter-tag">BAB E</span>
+        <span class="chapter-title-text">Statistika &amp; Peluang</span>
+      </div>
+      <div class="materi-grid">
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">23</span>
+          <div class="card-info"><div class="card-name">Statistika</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">24</span>
+          <div class="card-info"><div class="card-name">Statistika Inferensial</div><div class="card-meta">Kelas XII · Fase F</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">25</span>
+          <div class="card-info"><div class="card-name">Kaidah Pencacahan</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">26</span>
+          <div class="card-info"><div class="card-name">Peluang</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="chapter-group">
+      <div class="chapter-label">
+        <span class="chapter-tag">BAB F</span>
+        <span class="chapter-title-text">Matematika Keuangan</span>
+      </div>
+      <div class="materi-grid">
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">27</span>
+          <div class="card-info"><div class="card-name">Bunga Tunggal &amp; Majemuk</div><div class="card-meta">Kelas X · Fase E</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a class="materi-card" href="#" onclick="toast('Segera hadir');return false;">
+          <span class="card-num">28</span>
+          <div class="card-info"><div class="card-name">Anuitas</div><div class="card-meta">Kelas XI · Fase F</div></div>
+          <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ VIEW: WORKSHEET ════════════════════════════ -->
+  <div class="view" id="worksheet-view">
+    <div class="section-head">
+      <h2>Worksheet</h2>
+      <p>Unduh lembar kerja dalam format PDF untuk latihan mandiri atau belajar di kelas.</p>
+    </div>
+    <div class="chapter-group">
+      <div class="chapter-label">
+        <span class="chapter-tag">BAB A</span>
+        <span class="chapter-title-text">Aljabar &amp; Fungsi</span>
+      </div>
+      <div class="file-list">
+        <div class="file-card">
+          <div class="file-info">
+            <div class="file-icon pdf">📄</div>
+            <div><div class="file-name">Worksheet Persamaan Nilai Mutlak</div><div class="file-desc">12 soal latihan · Kelas X</div></div>
+          </div>
+          <button class="btn-dl pdf" onclick="toast('Mengunduh PDF...')">↓ Download PDF</button>
+        </div>
+        <div class="file-card">
+          <div class="file-info">
+            <div class="file-icon pdf">📄</div>
+            <div><div class="file-name">Worksheet Sistem Persamaan Linier</div><div class="file-desc">10 soal latihan · Kelas X</div></div>
+          </div>
+          <button class="btn-dl pdf" onclick="toast('Mengunduh PDF...')">↓ Download PDF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ VIEW: LATIHAN ══════════════════════════════ -->
+  <div class="view" id="latihan-view">
+    <div class="section-head">
+      <h2>Latihan Soal</h2>
+      <p>Uji pemahamanmu dengan kuis interaktif per topik. Langsung dapat nilai dan pembahasan.</p>
+    </div>
+    <div class="chapter-group">
+      <div class="chapter-label">
+        <span class="chapter-tag">BAB A</span>
+        <span class="chapter-title-text">Aljabar &amp; Fungsi</span>
+      </div>
+      <div class="file-list">
+        <div class="file-card">
+          <div class="file-info">
+            <div class="file-icon quiz">✏️</div>
+            <div><div class="file-name">Kuis: Persamaan Nilai Mutlak</div><div class="file-desc">10 soal pilihan ganda · ±15 menit</div></div>
+          </div>
+          <button class="btn-dl start" onclick="toast('Memulai kuis...')">Mulai Kuis →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ VIEW: KAPITA ═══════════════════════════════ -->
+  <div class="view" id="kapita-view">
+    <div class="placeholder-view">
+      <div class="ph-icon">🔬</div>
+      <h3>Kapita Selekta — Segera Hadir</h3>
+      <p>Pendalaman topik pilihan, soal olimpiade, dan eksplorasi konsep di luar kurikulum reguler.</p>
+    </div>
+  </div>
+
+  <!-- ═══ VIEW: VIDEO ════════════════════════════════ -->
+  <div class="view" id="video-view">
+    <div class="placeholder-view">
+      <div class="ph-icon">🎥</div>
+      <h3>UTBK — Segera Hadir</h3>
+      <p>Latihan soal UTBK per tahun, dilengkapi pembahasan lengkap untuk persiapan seleksi masuk PTN.</p>
+    </div>
+  </div>
+
+</div><!-- /main-wrap -->
+
+<div id="toast"></div>
+
+<script>
+function switchView(name, el, isMobile) {
+  const views = ['materi','worksheet','latihan','kapita','video'];
+
+  // Sync desktop tabs
+  document.querySelectorAll('#desktopNav .tab').forEach((t, i) => {
+    t.classList.toggle('active', views[i] === name);
+  });
+  // Sync bottom nav
+  document.querySelectorAll('#bottomNav .bottom-nav-item').forEach((t, i) => {
+    t.classList.toggle('active', views[i] === name);
+  });
+  // Sync dropdown select
+  const sel = document.getElementById('navSelect');
+  if (sel) sel.value = name;
+
+  // Toggle views
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  const target = document.getElementById(name + '-view');
+  if (target) target.classList.add('active');
+
+  // Hide/show hero & stats
+  const hero = document.getElementById('heroSection');
+  const statsBar = document.querySelector('.stats-bar');
+  if (hero) hero.style.display = name === 'materi' ? '' : 'none';
+  if (statsBar) statsBar.style.display = name === 'materi' ? '' : 'none';
+}
+
+function switchViewSelect(name) {
+  switchView(name, null, false);
+}
+
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'show';
+  t.style.display = 'block';
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => { t.style.display = 'none'; }, 2200);
+}
+
+function toggleTheme() {
+  const html = document.documentElement;
+  const btn = document.getElementById('themeBtn');
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  btn.textContent = isDark ? '🌙' : '☀️';
+}
+</script>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav" id="bottomNav">
+  <button class="bottom-nav-item active" onclick="switchView('materi',this,true)">
+    <span class="bn-icon">📚</span><span class="bn-label">Materi</span>
+  </button>
+  <button class="bottom-nav-item" onclick="switchView('worksheet',this,true)">
+    <span class="bn-icon">📄</span><span class="bn-label">Worksheet</span>
+  </button>
+  <button class="bottom-nav-item" onclick="switchView('latihan',this,true)">
+    <span class="bn-icon">✏️</span><span class="bn-label">Latihan</span>
+  </button>
+  <button class="bottom-nav-item" onclick="switchView('kapita',this,true)">
+    <span class="bn-icon">🔬</span><span class="bn-label">Kapita</span>
+  </button>
+  <button class="bottom-nav-item" onclick="switchView('video',this,true)">
+    <span class="bn-icon">🎓</span><span class="bn-label">UTBK</span>
+  </button>
+</nav>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <a class="footer-logo" href="#">
+        <div class="footer-logo-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="footer-logo-name">Eksakta<em>Lab</em></div>
+      </a>
+      <p class="footer-desc">Platform belajar matematika SMA yang lengkap dan gratis. Materi terstruktur, contoh soal nyata, dan latihan interaktif untuk 35 topik kurikulum nasional.</p>
+      <span class="footer-kurikulum">K-13 &amp; Kurikulum Merdeka</span>
+    </div>
+    <div>
+      <div class="footer-col-title">Belajar</div>
+      <ul class="footer-links">
+        <li><a href="#">Belajar Mandiri</a></li>
+        <li><a href="#">Worksheet</a></li>
+        <li><a href="#">Latihan Soal</a></li>
+        <li><a href="#">Kapita Selekta</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Materi Populer</div>
+      <ul class="footer-links">
+        <li><a href="/materi/fungsi-linear/" class="ready">Fungsi Linear</a></li>
+        <li><a href="/materi/fungsi-komposisi-invers/" class="ready">Fungsi &amp; Komposisi</a></li>
+        <li><a href="#">Fungsi Kuadrat</a></li>
+        <li><a href="#">Limit Fungsi</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Tentang</div>
+      <ul class="footer-links">
+        <li><a href="#">Tentang EksaktaLab</a></li>
+        <li><a href="#">Kurikulum</a></li>
+        <li><a href="#">Hubungi Kami</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 EksaktaLab — Gratis untuk semua siswa Indonesia</div>
+    <div class="footer-legal"><a href="#">Kebijakan Privasi</a><a href="#">Syarat Penggunaan</a></div>
+  </div>
+</footer>
+</body>
+</html>
