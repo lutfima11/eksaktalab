@@ -135,15 +135,14 @@ mjx-container { max-width: 100%; overflow-x: auto; }
 
     <div class="box box-rumus">
       <div class="box-label">• Bentuk Umum Persamaan Kuadrat</div>
-      Misalkan $a,\, b,\, c \in \mathbb{R}$ dan $a \neq 0$, maka persamaan berbentuk:
       $$ax^2 + bx + c = 0$$
-      disebut <strong>persamaan kuadrat</strong> dalam variabel $x$, di mana:
-      <ul>
-        <li>$a$ = koefisien dari $x^2$ &nbsp;($a \neq 0$)</li>
-        <li>$b$ = koefisien dari $x$</li>
-        <li>$c$ = konstanta (tetapan)</li>
-      </ul>
     </div>
+    <p>Disebut <strong>persamaan kuadrat</strong> dalam variabel $x$, di mana:</p>
+    <ul>
+      <li>$a$ = koefisien dari $x^2$ &nbsp;($a \neq 0$)</li>
+      <li>$b$ = koefisien dari $x$</li>
+      <li>$c$ = konstanta (tetapan)</li>
+    </ul>
 
     <div class="box box-catatan">
       <div class="box-label">Catatan Penting</div>
@@ -154,19 +153,15 @@ mjx-container { max-width: 100%; overflow-x: auto; }
       <div class="box-label">📘 Contoh 1</div>
       <p style="margin:0 0 .4rem;font-size:.9rem;">Ubahlah persamaan berikut ke dalam bentuk baku $ax^2 + bx + c = 0$, lalu tentukan nilai $a$, $b$, dan $c$!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$(2x - 2)(x + 4) - (x + 3)(x + 1) = 0$</li>
         <li>$2x - 5 = \dfrac{3}{x}$</li>
         <li>$\dfrac{4}{x-1} + \dfrac{1}{x-2} = 3$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> $(2x - 2)(x + 4) - (x + 3)(x + 1) = 0$</p>
-      $$\begin{align}(2x^2 + 8x - 2x - 8) - (x^2 + x + 3x + 3) &= 0 \\ (2x^2 + 6x - 8) - (x^2 + 4x + 3) &= 0 \\ x^2 + 2x - 11 &= 0\end{align}$$
-      <p>Jadi $\boxed{a = 1,\; b = 2,\; c = -11}$.</p>
-      <p><strong>(b)</strong> $2x - 5 = \dfrac{3}{x}$. Kalikan kedua ruas dengan $x$:</p>
+      <p><strong>(a)</strong> $2x - 5 = \dfrac{3}{x}$. Kalikan kedua ruas dengan $x$:</p>
       $$x(2x-5) = 3 \;\Rightarrow\; 2x^2 - 5x - 3 = 0$$
       <p>Jadi $\boxed{a = 2,\; b = -5,\; c = -3}$.</p>
-      <p><strong>(c)</strong> $\dfrac{4}{x-1} + \dfrac{1}{x-2} = 3$. Kalikan kedua ruas dengan $(x-1)(x-2)$:</p>
+      <p><strong>(b)</strong> $\dfrac{4}{x-1} + \dfrac{1}{x-2} = 3$. Kalikan kedua ruas dengan $(x-1)(x-2)$:</p>
       $$\begin{align}4(x-2) + (x-1) &= 3(x-1)(x-2) \\ 5x - 9 &= 3x^2 - 9x + 6 \\ 3x^2 - 14x + 15 &= 0\end{align}$$
       <p>Jadi $\boxed{a = 3,\; b = -14,\; c = 15}$.</p>
     </div>
@@ -197,11 +192,10 @@ mjx-container { max-width: 100%; overflow-x: auto; }
 
     <div class="box box-rumus">
       <div class="box-label">• Definisi Akar Persamaan Kuadrat</div>
-      Nilai $x = k$ disebut <strong>akar</strong> (atau <strong>penyelesaian</strong>) dari persamaan $ax^2 + bx + c = 0$ apabila ketika $x$ disubstitusikan dengan $k$, persamaan tersebut menjadi <strong>bernilai nol</strong>, yaitu:
       $$ak^2 + bk + c = 0$$
-      <em>Contoh:</em> Pada $x^2 - 5x + 6 = 0$, nilai $x = 2$ adalah akar karena $2^2 - 5(2) + 6 = 4 - 10 + 6 = 0$ ✓<br>
-      Nilai $x = 1$ <strong>bukan</strong> akar karena $1^2 - 5(1) + 6 = 2 \neq 0$ ✗
     </div>
+    <p>Nilai $x = k$ disebut <strong>akar</strong> dari $ax^2 + bx + c = 0$ apabila substitusi $x = k$ menghasilkan nol.</p>
+    <p><em>Contoh:</em> Pada $x^2 - 5x + 6 = 0$: $x = 2$ adalah akar karena $4 - 10 + 6 = 0$ ✓, sedangkan $x = 1$ bukan akar karena $1 - 5 + 6 = 2 \neq 0$ ✗</p>
 
     <p>Terdapat tiga metode utama untuk menentukan akar-akar persamaan kuadrat:</p>
 
@@ -211,13 +205,10 @@ mjx-container { max-width: 100%; overflow-x: auto; }
 
     <div class="box box-rumus">
       <div class="box-label">• Metode Pemfaktoran</div>
-      Untuk $ax^2 + bx + c = 0$, cari dua bilangan $p$ dan $q$ sehingga:
-      $$p + q = b \quad \text{dan} \quad p \times q = a \cdot c$$
-      Maka:
-      $$ax^2 + bx + c = \frac{1}{a}(ax + p)(ax + q) = 0$$
-      Sehingga $x_1 = -\dfrac{p}{a}$ dan $x_2 = -\dfrac{q}{a}$<br><br>
-      <em>Catatan: Untuk $a = 1$, rumus di atas dapat disederhanakan menjadi $(x+p)(x+q) = 0$.</em>
+      Cari $p, q$ dengan $p + q = b$ dan $p \times q = a \cdot c$, maka:
+      $$\frac{1}{a}(ax + p)(ax + q) = 0 \;\Rightarrow\; x_1 = -\frac{p}{a},\quad x_2 = -\frac{q}{a}$$
     </div>
+    <p><em>Catatan: Untuk $a = 1$ berlaku $(x+p)(x+q) = 0$ langsung.</em></p>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 2</div>
@@ -279,14 +270,10 @@ mjx-container { max-width: 100%; overflow-x: auto; }
     <p>Metode ini mengubah persamaan kuadrat menjadi bentuk $(x + p)^2 = q$, kemudian diselesaikan dengan <em>mengakarkan</em> kedua ruas.</p>
 
     <div class="box box-rumus">
-      <div class="box-label">• Langkah-Langkah untuk $ax^2 + bx + c = 0$ ($a = 1$)</div>
-      <ol>
-        <li>Pindahkan $c$ ke ruas kanan: $x^2 + bx = -c$</li>
-        <li>Tambahkan $\left(\dfrac{b}{2}\right)^2$ ke kedua ruas</li>
-        <li>Bentuk menjadi $\left(x + \dfrac{b}{2}\right)^2 = -c + \left(\dfrac{b}{2}\right)^2$</li>
-        <li>Akarkan kedua ruas</li>
-      </ol>
+      <div class="box-label">• Melengkapkan Kuadrat Sempurna ($a = 1$)</div>
+      $$\left(x + \frac{b}{2}\right)^2 = \frac{b^2}{4} - c$$
     </div>
+    <p>Langkah: (1) pindah $c$ ke kanan, (2) tambah $\left(\dfrac{b}{2}\right)^2$ ke kedua ruas, (3) bentuk kuadrat sempurna, (4) akarkan kedua ruas.</p>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 4</div>
@@ -358,10 +345,10 @@ mjx-container { max-width: 100%; overflow-x: auto; }
     <p>Dengan demikian diperoleh <strong>Rumus Kuadrat (Rumus ABC)</strong>:</p>
 
     <div class="box box-rumus">
-      <div class="box-label">• Rumus ABC</div>
+      <div class="box-label">• Rumus Kuadrat (Rumus ABC)</div>
       $$x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
-      di mana $x_1 = \dfrac{-b + \sqrt{b^2-4ac}}{2a}$ &nbsp; dan &nbsp; $x_2 = \dfrac{-b - \sqrt{b^2-4ac}}{2a}$
     </div>
+    <p>di mana $x_1 = \dfrac{-b + \sqrt{b^2-4ac}}{2a}$ dan $x_2 = \dfrac{-b - \sqrt{b^2-4ac}}{2a}$.</p>
 
     <div class="box box-catatan">
       <div class="box-label">Catatan Penting</div>
@@ -554,15 +541,16 @@ eq 0$. Tentukan $m$ agar dua akar real berbeda, lalu tunjukkan untuk $m=1$ akarn
     <p>Jika $x_1$ dan $x_2$ adalah akar-akar persamaan kuadrat $ax^2 + bx + c = 0$ ($a \neq 0$), maka berlaku:</p>
 
     <div class="box box-rumus">
-      <div class="box-label">• Rumus Vieta dan Ekspresi Turunan</div>
+      <div class="box-label">• Rumus Vieta</div>
       $$x_1 + x_2 = -\frac{b}{a} \qquad x_1 \cdot x_2 = \frac{c}{a} \qquad x_1 - x_2 = \frac{\sqrt{D}}{|a|} \;(x_1 > x_2)$$
-      <ul>
-        <li>$x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1 x_2$</li>
-        <li>$x_1^2 - x_2^2 = (x_1 + x_2)(x_1 - x_2)$</li>
-        <li>$x_1^3 + x_2^3 = (x_1 + x_2)^3 - 3x_1 x_2(x_1 + x_2)$</li>
-        <li>$\dfrac{1}{x_1} + \dfrac{1}{x_2} = \dfrac{x_1 + x_2}{x_1 x_2}$</li>
-      </ul>
     </div>
+    <p>Ekspresi turunan yang sering digunakan:</p>
+    <ul>
+      <li>$x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1 x_2$</li>
+      <li>$x_1^2 - x_2^2 = (x_1 + x_2)(x_1 - x_2)$</li>
+      <li>$x_1^3 + x_2^3 = (x_1 + x_2)^3 - 3x_1 x_2(x_1 + x_2)$</li>
+      <li>$\dfrac{1}{x_1} + \dfrac{1}{x_2} = \dfrac{x_1 + x_2}{x_1 x_2}$</li>
+    </ul>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 13</div>
@@ -672,10 +660,10 @@ ight)$</li>
     <p>Jika diketahui akar-akar suatu persamaan kuadrat adalah $x_1$ dan $x_2$, maka persamaan kuadrat dapat disusun menggunakan formula:</p>
 
     <div class="box box-rumus">
-      <div class="box-label">• Formula Menyusun Persamaan Kuadrat</div>
-      $$x^2 - (x_1+x_2)x + (x_1 \cdot x_2) = 0$$
-      atau ekuivalen dengan $(x-x_1)(x-x_2)=0$.
+      <div class="box-label">• Menyusun Persamaan Kuadrat</div>
+      $$x^2 - (x_1+x_2)\,x + x_1 x_2 = 0$$
     </div>
+    <p>atau ekuivalen $(x-x_1)(x-x_2)=0$.</p>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 18</div>
