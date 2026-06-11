@@ -17,6 +17,36 @@ window.MathJax = {
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 <link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/persamaan-kuadrat/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Persamaan Kuadrat","url":"https://lutfima11.github.io/eksaktalab/materi/persamaan-kuadrat/","description":"Materi lengkap Persamaan Kuadrat SMA","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"educationalLevel":"SMA Kelas X","inLanguage":"id"}</script>
+<style>
+/* ── MOBILE OVERFLOW FIX ── */
+.soal-text { word-break: break-word; overflow-wrap: anywhere; min-width: 0; }
+.soal-item-header { align-items: flex-start; flex-wrap: nowrap; gap: .5rem; }
+.soal-num { flex-shrink: 0; }
+.soal-key-btn { flex-shrink: 0; white-space: nowrap; }
+.soal-text ol, .soal-text ul { padding-left: 1.2rem; margin: .3rem 0; }
+.soal-text li { font-size: .85rem; line-height: 1.55; margin-bottom: .2rem; }
+.penyelesaian-inner { overflow-x: auto; word-break: break-word; }
+.penyelesaian-inner mjx-container { max-width: 100%; overflow-x: auto; display: block; }
+mjx-container { max-width: 100%; overflow-x: auto; }
+.rumus-body-inner mjx-container { max-width: 100%; overflow-x: auto; display: block; }
+.contoh-question { word-break: break-word; overflow-wrap: anywhere; min-width: 0; }
+.contoh-question ol { padding-left: 1.2rem; margin: .3rem 0; }
+.contoh-question li { font-size: .85rem; line-height: 1.5; margin-bottom: .2rem; }
+@media (max-width: 600px) {
+  .soal-item-header { gap: .4rem; padding: .6rem .75rem; }
+  .soal-answer-inner { padding: .65rem .75rem .75rem 2.4rem; }
+  .contoh-header { padding: .7rem .75rem; gap: .5rem; }
+  .penyelesaian { padding: .7rem .75rem; }
+  .penyelesaian-inner { padding: .8rem .75rem; }
+  .rumus-body-inner { padding: .8rem .75rem; }
+  .page-wrap { padding: 1.25rem .85rem 4rem; }
+  .materi-hero { padding: 1.25rem 1rem; }
+  .materi-title { font-size: 1.4rem; }
+  .toc { padding: .85rem 1rem; }
+  table { font-size: .75rem; }
+  table th, table td { padding: .4rem .5rem; }
+}
+</style>
 </head>
 <body>
 
@@ -95,19 +125,24 @@ window.MathJax = {
     </ul>
   </div>
 
-  <!-- ═══════════════════════════════════
+  <!-- ══════════════════════════════════════
        A. PENGERTIAN PERSAMAAN KUADRAT
-       ═══════════════════════════════════ -->
+       ══════════════════════════════════════ -->
   <section class="section" id="bagian-a">
     <h2 class="section-title"><span class="section-badge">A</span>Pengertian Persamaan Kuadrat</h2>
 
-    <p><strong>Persamaan kuadrat</strong> adalah persamaan yang mengandung variabel dengan pangkat tertinggi dua.</p>
+    <p><strong>Persamaan kuadrat</strong> adalah persamaan yang mengandung variabel dengan pangkat tertinggi dua. Persamaan ini menghubungkan dua ruas (kiri dan kanan) yang nilainya sama.</p>
 
     <div class="box box-rumus">
       <div class="box-label">• Bentuk Umum Persamaan Kuadrat</div>
-      Misalkan $a, b, c \in \mathbb{R}$ dan $a \neq 0$, maka persamaan berbentuk:
+      Misalkan $a,\, b,\, c \in \mathbb{R}$ dan $a \neq 0$, maka persamaan berbentuk:
       $$ax^2 + bx + c = 0$$
-      disebut <strong>persamaan kuadrat</strong> dalam variabel $x$, di mana $a$ = koefisien $x^2$ ($a \neq 0$), $b$ = koefisien $x$, $c$ = konstanta.
+      disebut <strong>persamaan kuadrat</strong> dalam variabel $x$, di mana:
+      <ul>
+        <li>$a$ = koefisien dari $x^2$ &nbsp;($a \neq 0$)</li>
+        <li>$b$ = koefisien dari $x$</li>
+        <li>$c$ = konstanta (tetapan)</li>
+      </ul>
     </div>
 
     <div class="box box-catatan">
@@ -117,397 +152,460 @@ window.MathJax = {
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 1</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Ubahlah ke bentuk baku $ax^2+bx+c=0$, lalu tentukan $a$, $b$, dan $c$!</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Ubahlah persamaan berikut ke dalam bentuk baku $ax^2 + bx + c = 0$, lalu tentukan nilai $a$, $b$, dan $c$!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$(2x-2)(x+4)-(x+3)(x+1)=0$</li>
-        <li>$2x-5=\dfrac{3}{x}$</li>
-        <li>$\dfrac{4}{x-1}+\dfrac{1}{x-2}=3$</li>
+        <li>$(2x - 2)(x + 4) - (x + 3)(x + 1) = 0$</li>
+        <li>$2x - 5 = \dfrac{3}{x}$</li>
+        <li>$\dfrac{4}{x-1} + \dfrac{1}{x-2} = 3$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> $(2x^2+6x-8)-(x^2+4x+3)=0 \;\Rightarrow\; x^2+2x-11=0$. Jadi $\boxed{a=1,\;b=2,\;c=-11}$.</p>
-      <p><strong>(b)</strong> Kalikan $x$: $2x^2-5x-3=0$. Jadi $\boxed{a=2,\;b=-5,\;c=-3}$.</p>
-      <p><strong>(c)</strong> Kalikan $(x-1)(x-2)$: $4(x-2)+(x-1)=3(x^2-3x+2) \;\Rightarrow\; 3x^2-14x+15=0$. Jadi $\boxed{a=3,\;b=-14,\;c=15}$.</p>
+      <p><strong>(a)</strong> $(2x - 2)(x + 4) - (x + 3)(x + 1) = 0$</p>
+      $$\begin{align}(2x^2 + 8x - 2x - 8) - (x^2 + x + 3x + 3) &= 0 \\ (2x^2 + 6x - 8) - (x^2 + 4x + 3) &= 0 \\ x^2 + 2x - 11 &= 0\end{align}$$
+      <p>Jadi $\boxed{a = 1,\; b = 2,\; c = -11}$.</p>
+      <p><strong>(b)</strong> $2x - 5 = \dfrac{3}{x}$. Kalikan kedua ruas dengan $x$:</p>
+      $$x(2x-5) = 3 \;\Rightarrow\; 2x^2 - 5x - 3 = 0$$
+      <p>Jadi $\boxed{a = 2,\; b = -5,\; c = -3}$.</p>
+      <p><strong>(c)</strong> $\dfrac{4}{x-1} + \dfrac{1}{x-2} = 3$. Kalikan kedua ruas dengan $(x-1)(x-2)$:</p>
+      $$\begin{align}4(x-2) + (x-1) &= 3(x-1)(x-2) \\ 5x - 9 &= 3x^2 - 9x + 6 \\ 3x^2 - 14x + 15 &= 0\end{align}$$
+      <p>Jadi $\boxed{a = 3,\; b = -14,\; c = 15}$.</p>
     </div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan</div>
       <ol class="soal-list">
-        <li>Nyatakan mana yang merupakan persamaan kuadrat! Untuk yang merupakan PK, sebutkan nilai $a$, $b$, dan $c$-nya!
-          <ol type="a">
-            <li>$3x^2-x+5=0$</li>
-            <li>$4x-7=0$</li>
-            <li>$x^2=9$</li>
-            <li>$0\cdot x^2+2x-1=0$</li>
-            <li>$\dfrac{1}{2}x^2-3=0$</li>
-          </ol>
-        </li>
-        <li>Ubahlah ke bentuk baku $ax^2+bx+c=0$, lalu tentukan $a$, $b$, dan $c$!
-          <ol type="a">
-            <li>$x(x-5)=6$</li>
-            <li>$3x^2=4x-1$</li>
-            <li>$(x+2)(x-3)=4$</li>
-          </ol>
-        </li>
-        <li>Ubahlah ke bentuk baku, lalu tentukan $a$, $b$, dan $c$!
-          <ol type="a">
-            <li>$\dfrac{5}{x}-3=2x$</li>
-            <li>$\dfrac{x+1}{x-2}+\dfrac{x-2}{x+1}=3$</li>
-            <li>$(3x-1)^2-(x+2)^2=0$</li>
-          </ol>
-        </li>
-        <li>Diketahui $f(x)=(k-1)x^2+(2k+3)x-5$. Untuk nilai $k$ berapa $f(x)=0$ merupakan persamaan kuadrat? Jelaskan!</li>
-        <li>Seorang siswa menyatakan bahwa $\dfrac{1}{x^2}+\dfrac{2}{x}-3=0$ bukan persamaan kuadrat. Apakah benar? Jika salah, ubah ke bentuk baku!</li>
-        <li>Tentukan nilai $p$ agar $(p-2)x^2+(p^2-5p+6)x+(p+1)=0$ merupakan persamaan kuadrat!</li>
+        <li>Nyatakan mana yang merupakan persamaan kuadrat. Untuk yang merupakan persamaan kuadrat, sebutkan nilai $a$, $b$, dan $c$-nya!
+          <ol type="a"><li>$3x^2 - x + 5 = 0$</li><li>$4x - 7 = 0$</li><li>$x^2 = 9$</li><li>$0 \cdot x^2 + 2x - 1 = 0$</li><li>$\dfrac{1}{2}x^2 - 3 = 0$</li></ol></li>
+        <li>Ubahlah persamaan berikut ke dalam bentuk baku $ax^2 + bx + c = 0$, lalu tentukan nilai $a$, $b$, dan $c$!
+          <ol type="a"><li>$x(x-5) = 6$</li><li>$3x^2 = 4x - 1$</li><li>$(x+2)(x-3) = 4$</li></ol></li>
+        <li>Ubahlah ke bentuk baku, lalu tentukan nilai $a$, $b$, dan $c$!
+          <ol type="a"><li>$\dfrac{5}{x} - 3 = 2x$</li><li>$\dfrac{x+1}{x-2} + \dfrac{x-2}{x+1} = 3$</li><li>$(3x-1)^2 - (x+2)^2 = 0$</li></ol></li>
+        <li>Diketahui $f(x) = (k-1)x^2 + (2k+3)x - 5$. Untuk nilai $k$ berapa $f(x) = 0$ merupakan persamaan kuadrat? Jelaskan alasanmu!</li>
+        <li>Seorang siswa menyatakan bahwa persamaan $\dfrac{1}{x^2} + \dfrac{2}{x} - 3 = 0$ bukan persamaan kuadrat karena variabelnya ada di penyebut. Apakah pernyataan siswa itu benar? Jika salah, ubah ke bentuk baku dan tentukan $a$, $b$, $c$-nya!</li>
+        <li>Tentukan nilai $p$ agar $(p-2)x^2 + (p^2-5p+6)x + (p+1) = 0$ merupakan persamaan kuadrat dalam $x$!</li>
       </ol>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════
+  <!-- ══════════════════════════════════════
        B. MENYELESAIKAN PERSAMAAN KUADRAT
-       ═══════════════════════════════════ -->
+       ══════════════════════════════════════ -->
   <section class="section" id="bagian-b">
     <h2 class="section-title"><span class="section-badge">B</span>Menyelesaikan Persamaan Kuadrat</h2>
 
-    <p>Terdapat tiga metode utama untuk menentukan <strong>akar-akar</strong> persamaan kuadrat.</p>
+    <p><strong>Menyelesaikan</strong> persamaan kuadrat berarti mencari nilai $x$ (yang disebut <strong>akar</strong>) agar persamaan tersebut bernilai benar. Pada umumnya, persamaan kuadrat memiliki <strong>dua buah akar</strong> yang dinamakan $x_1$ dan $x_2$.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Definisi Akar Persamaan Kuadrat</div>
+      Nilai $x = k$ disebut <strong>akar</strong> (atau <strong>penyelesaian</strong>) dari persamaan $ax^2 + bx + c = 0$ apabila ketika $x$ disubstitusikan dengan $k$, persamaan tersebut menjadi <strong>bernilai nol</strong>, yaitu:
+      $$ak^2 + bk + c = 0$$
+      <em>Contoh:</em> Pada $x^2 - 5x + 6 = 0$, nilai $x = 2$ adalah akar karena $2^2 - 5(2) + 6 = 4 - 10 + 6 = 0$ ✓<br>
+      Nilai $x = 1$ <strong>bukan</strong> akar karena $1^2 - 5(1) + 6 = 2 \neq 0$ ✗
+    </div>
+
+    <p>Terdapat tiga metode utama untuk menentukan akar-akar persamaan kuadrat:</p>
 
     <h3 class="subsection-title">1. Pemfaktoran (Faktorisasi)</h3>
 
+    <p>Metode ini berlaku untuk semua persamaan kuadrat $ax^2 + bx + c = 0$ dengan menggunakan satu formula yang seragam, baik untuk $a = 1$, $a > 0$ maupun $a < 0$.</p>
+
     <div class="box box-rumus">
       <div class="box-label">• Metode Pemfaktoran</div>
-      Untuk $ax^2+bx+c=0$, cari dua bilangan $p$ dan $q$ sehingga $p+q=b$ dan $p\times q=a\cdot c$. Maka:
-      $$ax^2+bx+c = \tfrac{1}{a}(ax+p)(ax+q) = 0$$
-      Sehingga $x_1=-\dfrac{p}{a}$ dan $x_2=-\dfrac{q}{a}$. Untuk $a=1$ berlaku $(x+p)(x+q)=0$.
+      Untuk $ax^2 + bx + c = 0$, cari dua bilangan $p$ dan $q$ sehingga:
+      $$p + q = b \quad \text{dan} \quad p \times q = a \cdot c$$
+      Maka:
+      $$ax^2 + bx + c = \frac{1}{a}(ax + p)(ax + q) = 0$$
+      Sehingga $x_1 = -\dfrac{p}{a}$ dan $x_2 = -\dfrac{q}{a}$<br><br>
+      <em>Catatan: Untuk $a = 1$, rumus di atas dapat disederhanakan menjadi $(x+p)(x+q) = 0$.</em>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 2</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Tentukan akar-akar dengan pemfaktoran ($a=1$)!</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan akar-akar persamaan berikut dengan pemfaktoran!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$x^2-6x+8=0$</li>
-        <li>$x^2-8x+16=0$</li>
-        <li>$-x^2+x+12=0$</li>
-        <li>$\tfrac{1}{2}x^2-\tfrac{5}{2}x+3=0$</li>
+        <li>$x^2 - 6x + 8 = 0$</li>
+        <li>$x^2 - 8x + 16 = 0$</li>
+        <li>$-x^2 + x + 12 = 0$</li>
+        <li>$\dfrac{1}{2}x^2 - \dfrac{5}{2}x + 3 = 0$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> $pq=8$, $p+q=-6 \Rightarrow p=-4,q=-2$. $(x-4)(x-2)=0 \Rightarrow \boxed{x_1=4,\;x_2=2}$</p>
-      <p><strong>(b)</strong> $pq=16$, $p+q=-8 \Rightarrow p=q=-4$. $(x-4)^2=0 \Rightarrow \boxed{x_1=x_2=4}$ (akar kembar)</p>
-      <p><strong>(c)</strong> Kalikan $-1$: $x^2-x-12=0$. $p=-4,q=3$. $\boxed{x_1=4,\;x_2=-3}$</p>
-      <p><strong>(d)</strong> Kalikan 2: $x^2-5x+6=0$. $p=-2,q=-3$. $\boxed{x_1=2,\;x_2=3}$</p>
+      <p><em>(untuk $a=1$ berlaku $p \times q = c$ dan $p + q = b$)</em></p>
+      <p><strong>(a)</strong> $x^2 - 6x + 8 = 0$ &nbsp;($a=1,\; b=-6,\; c=8$)</p>
+      <p>Cari $p, q$: $p \times q = 8$ dan $p + q = -6$ $\;\Rightarrow\;$ $p = -4$, $q = -2$</p>
+      $$(x - 4)(x - 2) = 0 \;\Rightarrow\; \boxed{x_1 = 4 \text{ dan } x_2 = 2}$$
+      <p><strong>(b)</strong> $x^2 - 8x + 16 = 0$ &nbsp;($a=1,\; b=-8,\; c=16$)</p>
+      <p>Cari $p, q$: $p \times q = 16$ dan $p + q = -8$ $\;\Rightarrow\;$ $p = -4$, $q = -4$</p>
+      $$(x - 4)^2 = 0 \;\Rightarrow\; \boxed{x_1 = x_2 = 4} \quad \text{(akar kembar)}$$
+      <p><strong>(c)</strong> $-x^2 + x + 12 = 0$. Kalikan kedua ruas dengan $-1$: $x^2 - x - 12 = 0$</p>
+      <p>Cari $p, q$: $p \times q = -12$ dan $p + q = -1$ $\;\Rightarrow\;$ $p = -4$, $q = 3$</p>
+      $$(x - 4)(x + 3) = 0 \;\Rightarrow\; \boxed{x_1 = 4 \text{ dan } x_2 = -3}$$
+      <p><strong>(d)</strong> $\dfrac{1}{2}x^2 - \dfrac{5}{2}x + 3 = 0$. Kalikan kedua ruas dengan $2$: $x^2 - 5x + 6 = 0$</p>
+      <p>Cari $p, q$: $p \times q = 6$ dan $p + q = -5$ $\;\Rightarrow\;$ $p = -2$, $q = -3$</p>
+      $$(x - 2)(x - 3) = 0 \;\Rightarrow\; \boxed{x_1 = 2 \text{ dan } x_2 = 3}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 3</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Tentukan akar-akar dengan pemfaktoran ($a\neq 1$)!</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan akar-akar persamaan berikut dengan pemfaktoran!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$2x^2-7x+3=0$</li>
-        <li>$3x^2-x-4=0$</li>
-        <li>$-3x^2+5x+2=0$</li>
-        <li>$\tfrac{3}{2}x^2-\tfrac{7}{2}x+2=0$</li>
+        <li>$2x^2 - 7x + 3 = 0$</li>
+        <li>$3x^2 - x - 4 = 0$</li>
+        <li>$-3x^2 + 5x + 2 = 0$</li>
+        <li>$\dfrac{3}{2}x^2 - \dfrac{7}{2}x + 2 = 0$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> $ac=6$. $p=-1,q=-6$. $(2x-1)(x-3)=0 \Rightarrow \boxed{x_1=\tfrac{1}{2},\;x_2=3}$</p>
-      <p><strong>(b)</strong> $ac=-12$. $p=3,q=-4$. $(x+1)(3x-4)=0 \Rightarrow \boxed{x_1=-1,\;x_2=\tfrac{4}{3}}$</p>
-      <p><strong>(c)</strong> Kalikan $-1$: $3x^2-5x-2=0$. $p=1,q=-6$. $(3x+1)(x-2)=0 \Rightarrow \boxed{x_1=-\tfrac{1}{3},\;x_2=2}$</p>
-      <p><strong>(d)</strong> Kalikan 2: $3x^2-7x+4=0$. $p=-3,q=-4$. $(x-1)(3x-4)=0 \Rightarrow \boxed{x_1=1,\;x_2=\tfrac{4}{3}}$</p>
+      <p><strong>(a)</strong> $2x^2 - 7x + 3 = 0$ &nbsp;($a=2,\; b=-7,\; c=3$)</p>
+      <p>$a \cdot c = 6$. Cari $p, q$: $p \times q = 6$ dan $p + q = -7$ $\;\Rightarrow\;$ $p = -1$, $q = -6$</p>
+      $$\tfrac{1}{2}(2x-1)(2x-6)=0 \;\Rightarrow\; \tfrac{1}{2}(2x-1)\cdot 2(x-3)=0 \;\Rightarrow\; (2x-1)(x-3)=0$$
+      <p>Jadi $\boxed{x_1 = \dfrac{1}{2} \text{ dan } x_2 = 3}$.</p>
+      <p><strong>(b)</strong> $3x^2 - x - 4 = 0$ &nbsp;($a=3,\; b=-1,\; c=-4$)</p>
+      <p>$a \cdot c = -12$. Cari $p, q$: $p \times q = -12$ dan $p + q = -1$ $\;\Rightarrow\;$ $p = 3$, $q = -4$</p>
+      $$\tfrac{1}{3}(3x+3)(3x-4)=0 \;\Rightarrow\; \tfrac{1}{3}\cdot 3(x+1)(3x-4)=0 \;\Rightarrow\; (x+1)(3x-4)=0$$
+      <p>Jadi $\boxed{x_1 = -1 \text{ dan } x_2 = \dfrac{4}{3}}$.</p>
+      <p><strong>(c)</strong> $-3x^2 + 5x + 2 = 0$. Kalikan dengan $-1$: $3x^2 - 5x - 2 = 0$ &nbsp;($a=3,\; b=-5,\; c=-2$)</p>
+      <p>$a \cdot c = -6$. Cari $p, q$: $p \times q = -6$ dan $p + q = -5$ $\;\Rightarrow\;$ $p = 1$, $q = -6$</p>
+      $$\tfrac{1}{3}(3x+1)(3x-6)=0 \;\Rightarrow\; (3x+1)(x-2)=0$$
+      <p>Jadi $\boxed{x_1 = -\dfrac{1}{3} \text{ dan } x_2 = 2}$.</p>
+      <p><strong>(d)</strong> $\dfrac{3}{2}x^2 - \dfrac{7}{2}x + 2 = 0$. Kalikan dengan $2$: $3x^2 - 7x + 4 = 0$ &nbsp;($a=3,\; b=-7,\; c=4$)</p>
+      <p>$a \cdot c = 12$. Cari $p, q$: $p \times q = 12$ dan $p + q = -7$ $\;\Rightarrow\;$ $p = -3$, $q = -4$</p>
+      $$\tfrac{1}{3}(3x-3)(3x-4)=0 \;\Rightarrow\; (x-1)(3x-4)=0$$
+      <p>Jadi $\boxed{x_1 = 1 \text{ dan } x_2 = \dfrac{4}{3}}$.</p>
     </div>
 
     <h3 class="subsection-title">2. Melengkapkan Kuadrat Sempurna</h3>
 
+    <p>Metode ini mengubah persamaan kuadrat menjadi bentuk $(x + p)^2 = q$, kemudian diselesaikan dengan <em>mengakarkan</em> kedua ruas.</p>
+
     <div class="box box-rumus">
-      <div class="box-label">• Langkah-Langkah (untuk $a=1$)</div>
+      <div class="box-label">• Langkah-Langkah untuk $ax^2 + bx + c = 0$ ($a = 1$)</div>
       <ol>
-        <li>Pindahkan $c$ ke kanan: $x^2+bx=-c$</li>
+        <li>Pindahkan $c$ ke ruas kanan: $x^2 + bx = -c$</li>
         <li>Tambahkan $\left(\dfrac{b}{2}\right)^2$ ke kedua ruas</li>
-        <li>Bentuk: $\left(x+\dfrac{b}{2}\right)^2=-c+\left(\dfrac{b}{2}\right)^2$</li>
+        <li>Bentuk menjadi $\left(x + \dfrac{b}{2}\right)^2 = -c + \left(\dfrac{b}{2}\right)^2$</li>
         <li>Akarkan kedua ruas</li>
       </ol>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 4</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Selesaikan dengan melengkapkan kuadrat sempurna!</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Selesaikan persamaan berikut dengan melengkapkan kuadrat sempurna!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$x^2+6x+5=0$</li>
-        <li>$x^2-8x+12=0$</li>
-        <li>$-2x^2+6x+8=0$</li>
-        <li>$\tfrac{1}{3}x^2-2x+3=0$</li>
+        <li>$x^2 + 6x + 5 = 0$</li>
+        <li>$x^2 - 8x + 12 = 0$</li>
+        <li>$-2x^2 + 6x + 8 = 0$</li>
+        <li>$\dfrac{1}{3}x^2 - 2x + 3 = 0$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> $x^2+6x=-5$ (tambah 9): $(x+3)^2=4 \Rightarrow x=-3\pm 2 \Rightarrow \boxed{x_1=-1,\;x_2=-5}$</p>
-      <p><strong>(b)</strong> $x^2-8x=-12$ (tambah 16): $(x-4)^2=4 \Rightarrow \boxed{x_1=6,\;x_2=2}$</p>
-      <p><strong>(c)</strong> Kalikan $-\tfrac{1}{2}$: $x^2-3x-4=0$. $(x-\tfrac{3}{2})^2=\tfrac{25}{4} \Rightarrow \boxed{x_1=4,\;x_2=-1}$</p>
-      <p><strong>(d)</strong> Kalikan 3: $(x-3)^2=0 \Rightarrow \boxed{x_1=x_2=3}$ (akar kembar)</p>
+      <p><strong>(a)</strong> $x^2 + 6x + 5 = 0$</p>
+      $$\begin{align}x^2 + 6x &= -5 \quad \text{(tambah 9 ke kedua ruas)} \\ x^2 + 6x + 9 &= 4 \\ (x + 3)^2 &= 4 \\ x + 3 &= \pm 2\end{align}$$
+      <p>$x_1 = -3+2 = -1$ atau $x_2 = -3-2 = -5$. Jadi $\boxed{x_1 = -1 \text{ dan } x_2 = -5}$.</p>
+      <p><strong>(b)</strong> $x^2 - 8x + 12 = 0$</p>
+      $$\begin{align}x^2 - 8x &= -12 \quad \text{(tambah 16)} \\ (x-4)^2 &= 4 \\ x-4 &= \pm 2\end{align}$$
+      <p>$x_1 = 6$, $x_2 = 2$. Jadi $\boxed{x_1 = 6 \text{ dan } x_2 = 2}$.</p>
+      <p><strong>(c)</strong> $-2x^2 + 6x + 8 = 0$. Kalikan $-\tfrac{1}{2}$: $x^2 - 3x - 4 = 0$</p>
+      $$\begin{align}x^2 - 3x &= 4 \quad \left(\text{tambah } \tfrac{9}{4}\right) \\ \left(x - \tfrac{3}{2}\right)^2 &= \tfrac{25}{4} \\ x - \tfrac{3}{2} &= \pm\tfrac{5}{2}\end{align}$$
+      <p>$x_1 = \tfrac{3}{2}+\tfrac{5}{2}=4$, $x_2 = \tfrac{3}{2}-\tfrac{5}{2}=-1$. Jadi $\boxed{x_1 = 4 \text{ dan } x_2 = -1}$.</p>
+      <p><strong>(d)</strong> $\dfrac{1}{3}x^2 - 2x + 3 = 0$. Kalikan $3$: $x^2 - 6x + 9 = 0$</p>
+      $$x^2 - 6x = -9 \quad \text{(tambah 9)} \;\Rightarrow\; (x-3)^2 = 0 \;\Rightarrow\; x = 3$$
+      <p>Jadi $\boxed{x_1 = x_2 = 3}$ &nbsp;<em>(akar kembar)</em>.</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 5</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Selesaikan dengan melengkapkan kuadrat sempurna!</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Selesaikan persamaan berikut dengan melengkapkan kuadrat sempurna!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$2x^2+8x+5=0$</li>
-        <li>$4x^2-8x+1=0$</li>
-        <li>$-3x^2+12x-6=0$</li>
-        <li>$0{,}5x^2-3x+1=0$</li>
+        <li>$2x^2 + 8x + 5 = 0$</li>
+        <li>$4x^2 - 8x + 1 = 0$</li>
+        <li>$-3x^2 + 12x - 6 = 0$</li>
+        <li>$0{,}5x^2 - 3x + 1 = 0$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> Bagi 2: $(x+2)^2=\tfrac{3}{2} \Rightarrow \boxed{x_{1,2}=\dfrac{-4\pm\sqrt{6}}{2}}$</p>
-      <p><strong>(b)</strong> Bagi 4: $(x-1)^2=\tfrac{3}{4} \Rightarrow \boxed{x_{1,2}=\dfrac{2\pm\sqrt{3}}{2}}$</p>
-      <p><strong>(c)</strong> Kalikan $-\tfrac{1}{3}$: $(x-2)^2=2 \Rightarrow \boxed{x_{1,2}=2\pm\sqrt{2}}$</p>
-      <p><strong>(d)</strong> Kalikan 2: $(x-3)^2=7 \Rightarrow \boxed{x_{1,2}=3\pm\sqrt{7}}$</p>
+      <p><strong>(a)</strong> $2x^2 + 8x + 5 = 0$. Bagi dengan $2$:</p>
+      $$\begin{align}x^2 + 4x &= -\tfrac{5}{2} \quad \text{(tambah 4)} \\ (x+2)^2 &= \tfrac{3}{2} \\ x+2 &= \pm\tfrac{\sqrt{6}}{2}\end{align}$$
+      <p>Jadi $\boxed{x_1 = \dfrac{-4+\sqrt{6}}{2} \text{ dan } x_2 = \dfrac{-4-\sqrt{6}}{2}}$.</p>
+      <p><strong>(b)</strong> $4x^2 - 8x + 1 = 0$. Bagi dengan $4$:</p>
+      $$\begin{align}x^2 - 2x &= -\tfrac{1}{4} \quad \text{(tambah 1)} \\ (x-1)^2 &= \tfrac{3}{4} \\ x-1 &= \pm\tfrac{\sqrt{3}}{2}\end{align}$$
+      <p>Jadi $\boxed{x_1 = \dfrac{2+\sqrt{3}}{2} \text{ dan } x_2 = \dfrac{2-\sqrt{3}}{2}}$.</p>
+      <p><strong>(c)</strong> $-3x^2 + 12x - 6 = 0$. Kalikan $-\tfrac{1}{3}$: $x^2 - 4x + 2 = 0$</p>
+      $$x^2 - 4x = -2 \quad \text{(tambah 4)} \;\Rightarrow\; (x-2)^2 = 2 \;\Rightarrow\; x = 2 \pm \sqrt{2}$$
+      <p>Jadi $\boxed{x_1 = 2+\sqrt{2} \text{ dan } x_2 = 2-\sqrt{2}}$.</p>
+      <p><strong>(d)</strong> $0{,}5x^2 - 3x + 1 = 0$. Kalikan $2$: $x^2 - 6x + 2 = 0$</p>
+      $$x^2 - 6x = -2 \quad \text{(tambah 9)} \;\Rightarrow\; (x-3)^2 = 7 \;\Rightarrow\; x = 3 \pm \sqrt{7}$$
+      <p>Jadi $\boxed{x_1 = 3+\sqrt{7} \text{ dan } x_2 = 3-\sqrt{7}}$.</p>
     </div>
 
     <h3 class="subsection-title">3. Rumus Kuadrat (Rumus ABC)</h3>
 
+    <p>Akar-akar persamaan kuadrat $ax^2 + bx + c = 0$ dapat dicari menggunakan <strong>rumus kuadrat</strong>. Rumus ini diturunkan melalui metode <strong>melengkapkan kuadrat sempurna</strong>:</p>
+
+    <p><strong>Langkah 1</strong> — Bagi kedua ruas dengan $a$:</p>
+    $$x^2 + \frac{b}{a}x + \frac{c}{a} = 0$$
+    <p><strong>Langkah 2</strong> — Pindahkan $\dfrac{c}{a}$ ke ruas kanan:</p>
+    $$x^2 + \frac{b}{a}x = -\frac{c}{a}$$
+    <p><strong>Langkah 3</strong> — Tambahkan $\left(\dfrac{b}{2a}\right)^2$ ke kedua ruas:</p>
+    $$x^2 + \frac{b}{a}x + \left(\frac{b}{2a}\right)^2 = -\frac{c}{a} + \left(\frac{b}{2a}\right)^2$$
+    <p><strong>Langkah 4</strong> — Ruas kiri menjadi kuadrat sempurna, ruas kanan disederhanakan:</p>
+    $$\left(x + \frac{b}{2a}\right)^2 = \frac{b^2 - 4ac}{4a^2}$$
+    <p><strong>Langkah 5</strong> — Akarkan kedua ruas ($\sqrt{4a^2} = 2|a|$, diserap tanda $\pm$):</p>
+    $$x + \frac{b}{2a} = \pm\frac{\sqrt{b^2-4ac}}{2a}$$
+    <p><strong>Langkah 6</strong> — Isolasi $x$:</p>
+    $$x = -\frac{b}{2a} \pm \frac{\sqrt{b^2-4ac}}{2a}$$
+
+    <p>Dengan demikian diperoleh <strong>Rumus Kuadrat (Rumus ABC)</strong>:</p>
+
     <div class="box box-rumus">
       <div class="box-label">• Rumus ABC</div>
-      Diturunkan dari melengkapkan kuadrat sempurna pada $ax^2+bx+c=0$:
       $$x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+      di mana $x_1 = \dfrac{-b + \sqrt{b^2-4ac}}{2a}$ &nbsp; dan &nbsp; $x_2 = \dfrac{-b - \sqrt{b^2-4ac}}{2a}$
     </div>
 
     <div class="box box-catatan">
       <div class="box-label">Catatan Penting</div>
-      <p>Rumus ABC berlaku untuk <strong>semua</strong> kasus persamaan kuadrat. Gunakan terutama jika pemfaktoran sulit ditemukan.</p>
+      <p>Rumus ABC berlaku untuk <strong>semua</strong> kasus persamaan kuadrat. Gunakan rumus ini terutama jika pemfaktoran sulit ditemukan.</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 6</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Selesaikan dengan rumus ABC!</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Selesaikan persamaan berikut menggunakan rumus ABC!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$x^2-6x+8=0$</li>
-        <li>$x^2-9=0$</li>
+        <li>$x^2 - 6x + 8 = 0$</li>
+        <li>$x^2 - 9 = 0$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> $a=1,b=-6,c=8$: $x_{1,2}=\dfrac{6\pm\sqrt{4}}{2}=\dfrac{6\pm 2}{2} \Rightarrow \boxed{x_1=4,\;x_2=2}$</p>
-      <p><strong>(b)</strong> $a=1,b=0,c=-9$: $x_{1,2}=\dfrac{\pm 6}{2} \Rightarrow \boxed{x_1=3,\;x_2=-3}$</p>
+      <p><strong>(a)</strong> $a = 1,\; b = -6,\; c = 8$</p>
+      $$x_{1,2} = \frac{6 \pm \sqrt{36-32}}{2} = \frac{6 \pm \sqrt{4}}{2} = \frac{6 \pm 2}{2}$$
+      <p>Jadi $\boxed{x_1 = 4 \text{ dan } x_2 = 2}$.</p>
+      <p><strong>(b)</strong> $a = 1,\; b = 0,\; c = -9$</p>
+      $$x_{1,2} = \frac{0 \pm \sqrt{0-4(1)(-9)}}{2} = \frac{\pm\sqrt{36}}{2} = \frac{\pm 6}{2}$$
+      <p>Jadi $\boxed{x_1 = 3 \text{ dan } x_2 = -3}$.</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 7</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Selesaikan dengan rumus ABC!</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Selesaikan persamaan berikut menggunakan rumus ABC!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$x^2-4x-8=0$</li>
-        <li>$2x^2-8x+5=0$</li>
+        <li>$x^2 - 4x - 8 = 0$</li>
+        <li>$2x^2 - 8x + 5 = 0$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> $x_{1,2}=\dfrac{4\pm\sqrt{48}}{2}=2\pm 2\sqrt{3} \Rightarrow \boxed{x_1=2+2\sqrt{3},\;x_2=2-2\sqrt{3}}$</p>
-      <p><strong>(b)</strong> $x_{1,2}=\dfrac{8\pm\sqrt{24}}{4}=\dfrac{4\pm\sqrt{6}}{2} \Rightarrow \boxed{x_1=\dfrac{4+\sqrt{6}}{2},\;x_2=\dfrac{4-\sqrt{6}}{2}}$</p>
+      <p><strong>(a)</strong> $a = 1,\; b = -4,\; c = -8$</p>
+      $$x_{1,2} = \frac{4 \pm \sqrt{16+32}}{2} = \frac{4 \pm \sqrt{48}}{2} = \frac{4 \pm 4\sqrt{3}}{2} = 2 \pm 2\sqrt{3}$$
+      <p>Jadi $\boxed{x_1 = 2+2\sqrt{3} \text{ dan } x_2 = 2-2\sqrt{3}}$.</p>
+      <p><strong>(b)</strong> $a = 2,\; b = -8,\; c = 5$</p>
+      $$x_{1,2} = \frac{8 \pm \sqrt{64-40}}{4} = \frac{8 \pm \sqrt{24}}{4} = \frac{8 \pm 2\sqrt{6}}{4} = \frac{4 \pm \sqrt{6}}{2}$$
+      <p>Jadi $\boxed{x_1 = \dfrac{4+\sqrt{6}}{2} \text{ dan } x_2 = \dfrac{4-\sqrt{6}}{2}}$.</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 8</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Tentukan penyelesaian!</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan penyelesaian persamaan-persamaan berikut!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$(x-6)(x+1)+2(x-2)(x-3)=-6$</li>
-        <li>$x-4-\dfrac{7}{x+2}=0$</li>
+        <li>$(x-6)(x+1) + 2(x-2)(x-3) = -6$</li>
+        <li>$x - 4 - \dfrac{7}{x+2} = 0$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> $3x^2-15x+12=0 \Rightarrow x^2-5x+4=0 \Rightarrow (x-4)(x-1)=0 \Rightarrow \boxed{x_1=4,\;x_2=1}$</p>
-      <p><strong>(b)</strong> Kalikan $(x+2)$: $(x-4)(x+2)-7=0 \Rightarrow x^2-2x-15=0 \Rightarrow (x-5)(x+3)=0 \Rightarrow \boxed{x_1=5,\;x_2=-3}$ ($x\neq -2$ ✓)</p>
+      <p><strong>(a)</strong></p>
+      $$\begin{align}(x^2-5x-6) + 2(x^2-5x+6) &= -6 \\ 3x^2-15x+6 &= -6 \\ x^2-5x+4 &= 0 \\ (x-4)(x-1) &= 0\end{align}$$
+      <p>Jadi $\boxed{x_1 = 4 \text{ dan } x_2 = 1}$.</p>
+      <p><strong>(b)</strong> Kalikan kedua ruas dengan $(x+2)$:</p>
+      $$\begin{align}(x-4)(x+2) - 7 &= 0 \\ x^2-2x-8-7 &= 0 \\ x^2-2x-15 &= 0 \\ (x-5)(x+3) &= 0\end{align}$$
+      <p>Jadi $\boxed{x_1 = 5 \text{ dan } x_2 = -3}$. <em>Periksa: $x \neq -2$ ✓</em></p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 9</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$ real yang memenuhi $(x^2+2x+3)(2x^2+4x-33)=-54$.</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$ real yang memenuhi $(x^2 + 2x + 3)(2x^2 + 4x - 33) = -54$.</p>
     </div>
     <div class="penyelesaian">
-      <p>Misalkan $p=x^2+2x$: $(p+3)(2p-33)=-54 \Rightarrow 2p^2-27p-45=0 \Rightarrow (2p+3)(p-15)=0$.</p>
-      <p><strong>Kasus $p=-\tfrac{3}{2}$:</strong> $2x^2+4x+3=0$, $D=-8<0$ (tidak ada akar real).</p>
-      <p><strong>Kasus $p=15$:</strong> $x^2+2x-15=0 \Rightarrow (x+5)(x-3)=0 \Rightarrow \boxed{x_1=-5,\;x_2=3}$</p>
+      <p>Misalkan $p = x^2 + 2x$, sehingga $x^2+2x+3 = p+3$ dan $2x^2+4x-33 = 2p-33$.</p>
+      $$\begin{align}(p+3)(2p-33) &= -54 \\ 2p^2-27p-99+54 &= 0 \\ 2p^2-27p-45 &= 0 \\ (2p+3)(p-15) &= 0\end{align}$$
+      <p><strong>Kasus 1:</strong> $p = -\dfrac{3}{2}$, maka $2x^2+4x+3 = 0$. $D = 16-24 = -8 < 0$ &nbsp;<em>(tidak ada akar real)</em>.</p>
+      <p><strong>Kasus 2:</strong> $p = 15$, maka $x^2+2x-15 = 0 \;\Rightarrow\; (x+5)(x-3) = 0$.</p>
+      <p>Jadi $\boxed{x_1 = -5 \text{ atau } x_2 = 3}$.</p>
     </div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan</div>
       <ol class="soal-list">
-        <li>Selesaikan dengan pemfaktoran ($a\neq 1$)!
-          <ol type="a">
-            <li>$2x^2+5x+3=0$</li>
-            <li>$3x^2-10x+8=0$</li>
-            <li>$-2x^2+7x-3=0$</li>
-            <li>$\dfrac{3}{2}x^2+6x=0$</li>
-          </ol>
-        </li>
+        <li>Selesaikan persamaan berikut dengan pemfaktoran! ($a \neq 1$)
+          <ol type="a"><li>$2x^2 + 5x + 3 = 0$</li><li>$3x^2 - 10x + 8 = 0$</li><li>$-2x^2 + 7x - 3 = 0$</li><li>$\dfrac{3}{2}x^2+6x=0$</li></ol></li>
         <li>Selesaikan dengan melengkapkan kuadrat sempurna!
-          <ol type="a">
-            <li>$x^2-10x+21=0$</li>
-            <li>$x^2+4x-7=0$</li>
-            <li>$2x^2-6x+1=0$</li>
-          </ol>
-        </li>
+          <ol type="a"><li>$x^2 - 10x + 21 = 0$</li><li>$x^2 + 4x - 7 = 0$</li><li>$2x^2 - 6x + 1 = 0$</li></ol></li>
         <li>Selesaikan dengan rumus ABC!
-          <ol type="a">
-            <li>$x^2-3x-5=0$</li>
-            <li>$3x^2+5x-1=0$</li>
-            <li>$x^2+7x+11=0$</li>
-          </ol>
-        </li>
-        <li>Tentukan nilai $x$ yang memenuhi!
-          <ol type="a">
-            <li>$\dfrac{2x}{x-1}+\dfrac{x-1}{x+2}=3$</li>
-            <li>$(x^2-3x+1)(x^2-3x-5)=-5$</li>
-          </ol>
-        </li>
-        <li>$(x^2+x)^2-8(x^2+x)+12=0$. Gunakan substitusi $u=x^2+x$, tentukan semua nilai $x$ real!</li>
+          <ol type="a"><li>$x^2 - 3x - 5 = 0$</li><li>$3x^2 + 5x - 1 = 0$</li><li>$x^2 + 7x + 11 = 0$</li></ol></li>
+        <li>Tentukan nilai $x$ yang memenuhi persamaan berikut!
+          <ol type="a"><li>$\dfrac{2x}{x-1} + \dfrac{x-1}{x+2} = 3$</li><li>$(x^2 - 3x + 1)(x^2 - 3x - 5) = -5$</li></ol></li>
+        <li>Diketahui $(x^2 + x)^2 - 8(x^2 + x) + 12 = 0$. Gunakan substitusi $u = x^2 + x$ untuk menyelesaikan persamaan tersebut, lalu tentukan semua nilai $x$ real yang memenuhi!</li>
       </ol>
     </div>
   </section>
-
-  <!-- ═══════════════════════════════════
-       C. DISKRIMINAN
-       ═══════════════════════════════════ -->
+  <!-- ══════════════════════════════════════
+       C. DISKRIMINAN DAN JENIS-JENIS AKAR
+       ══════════════════════════════════════ -->
   <section class="section" id="bagian-c">
     <h2 class="section-title"><span class="section-badge">C</span>Diskriminan dan Jenis-Jenis Akar</h2>
 
-    <p>Sifat akar $ax^2+bx+c=0$ ditentukan oleh nilai $D=b^2-4ac$ yang disebut <strong>diskriminan</strong>.</p>
+    <p>Sifat akar persamaan kuadrat $ax^2 + bx + c = 0$ sangat ditentukan oleh nilai $b^2 - 4ac$ yang disebut <strong>diskriminan</strong> dan dinotasikan dengan $D$.</p>
 
     <div class="box box-rumus">
       <div class="box-label">• Tabel Diskriminan dan Jenis Akar</div>
       <table style="width:100%;border-collapse:collapse;font-size:.85rem;margin:.5rem 0;">
-        <thead><tr style="background:var(--navy);color:#fff;"><th style="padding:.55rem .85rem;text-align:left;font-size:.75rem;letter-spacing:.05em;">Nilai $D = b^2-4ac$</th><th style="padding:.55rem .85rem;text-align:left;font-size:.75rem;letter-spacing:.05em;">Jenis Akar</th></tr></thead>
+        <thead><tr style="background:var(--navy);color:#fff;"><th style="padding:.5rem .85rem;text-align:left;">Nilai $D = b^2-4ac$</th><th style="padding:.5rem .85rem;text-align:left;">Jenis Akar</th></tr></thead>
         <tbody>
-          <tr><td style="padding:.5rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D>0$ (kuadrat sempurna)</td><td style="padding:.5rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">Dua akar real berbeda, <strong style="color:var(--text)">rasional</strong></td></tr>
-          <tr><td style="padding:.5rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D>0$ (bukan kuadrat sempurna)</td><td style="padding:.5rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">Dua akar real berbeda, <strong style="color:var(--text)">irasional</strong></td></tr>
-          <tr><td style="padding:.5rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D=0$</td><td style="padding:.5rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">Dua akar real <strong style="color:var(--text)">sama</strong> (akar kembar)</td></tr>
-          <tr><td style="padding:.5rem .85rem;color:var(--text-2);">$D<0$</td><td style="padding:.5rem .85rem;color:var(--text-2);">Tidak ada akar real (<strong style="color:var(--text)">imajiner</strong>)</td></tr>
+          <tr><td style="padding:.45rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D > 0$ (kuadrat sempurna)</td><td style="padding:.45rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">Dua akar real berbeda, <strong style="color:var(--text)">rasional</strong></td></tr>
+          <tr><td style="padding:.45rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D > 0$ (bukan kuadrat sempurna)</td><td style="padding:.45rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">Dua akar real berbeda, <strong style="color:var(--text)">irasional</strong></td></tr>
+          <tr><td style="padding:.45rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D = 0$</td><td style="padding:.45rem .85rem;border-bottom:1px solid var(--border);color:var(--text-2);">Dua akar real <strong style="color:var(--text)">sama</strong> (akar kembar)</td></tr>
+          <tr><td style="padding:.45rem .85rem;color:var(--text-2);">$D < 0$</td><td style="padding:.45rem .85rem;color:var(--text-2);">Tidak ada akar real (<strong style="color:var(--text)">imajiner/tidak nyata</strong>)</td></tr>
         </tbody>
       </table>
     </div>
 
+    <div class="box box-catatan">
+      <div class="box-label">Catatan Penting</div>
+      <p>Kedua baris $D > 0$ sama-sama menghasilkan <strong>dua akar real yang berbeda</strong>, namun bentuk akarnya berbeda:</p>
+      <ul>
+        <li>$D > 0$ dan $D$ adalah <strong>kuadrat sempurna</strong> (misal $D = 1, 4, 9, 16, \ldots$) $\Rightarrow$ $\sqrt{D}$ bilangan bulat, sehingga akar-akarnya <strong>rasional</strong> (tidak mengandung tanda akar). <em>Contoh:</em> $x^2-5x+6=0 \;\Rightarrow\; D=1 \;\Rightarrow\; x=3$ atau $x=2$.</li>
+        <li>$D > 0$ tetapi $D$ <strong>bukan kuadrat sempurna</strong> (misal $D = 2, 3, 5, 7, \ldots$) $\Rightarrow$ $\sqrt{D}$ irasional, sehingga akar-akarnya <strong>irasional</strong> (mengandung tanda akar). <em>Contoh:</em> $x^2-4x+1=0 \;\Rightarrow\; D=12 \;\Rightarrow\; x=2\pm\sqrt{3}$.</li>
+      </ul>
+    </div>
+
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 10</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Tentukan jenis akar tanpa mencari akarnya!</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan jenis akar persamaan kuadrat berikut tanpa mencari akarnya!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$2x^2-7x+6=0$</li>
-        <li>$x^2-6x+12=0$</li>
-        <li>$x^2-4x+4=0$</li>
-        <li>$x^2-4x+1=0$</li>
+        <li>$2x^2 - 7x + 6 = 0$</li>
+        <li>$x^2 - 6x + 12 = 0$</li>
+        <li>$x^2 - 4x + 4 = 0$</li>
+        <li>$x^2 - 4x + 1 = 0$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> $D=49-48=1>0$ (kuadrat sempurna) → <strong>dua akar real rasional</strong></p>
-      <p><strong>(b)</strong> $D=36-48=-12<0$ → <strong>tidak ada akar real (imajiner)</strong></p>
-      <p><strong>(c)</strong> $D=16-16=0$ → <strong>akar kembar</strong></p>
-      <p><strong>(d)</strong> $D=16-4=12>0$ (bukan kuadrat sempurna) → <strong>dua akar real irasional</strong></p>
+      <p><strong>(a)</strong> $D = (-7)^2 - 4(2)(6) = 49 - 48 = 1 > 0$ &nbsp;(kuadrat sempurna)<br>$\Rightarrow$ <strong>Dua akar real berbeda dan rasional.</strong></p>
+      <p><strong>(b)</strong> $D = (-6)^2 - 4(1)(12) = 36 - 48 = -12 < 0$<br>$\Rightarrow$ <strong>Tidak ada akar real (imajiner).</strong></p>
+      <p><strong>(c)</strong> $D = (-4)^2 - 4(1)(4) = 16 - 16 = 0$<br>$\Rightarrow$ <strong>Dua akar real sama (akar kembar).</strong></p>
+      <p><strong>(d)</strong> $D = (-4)^2 - 4(1)(1) = 16 - 4 = 12 > 0$ &nbsp;(bukan kuadrat sempurna)<br>$\Rightarrow$ <strong>Dua akar real berbeda dan irasional.</strong></p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 11</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Tentukan nilai $p$ agar persamaan memiliki akar kembar!</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan nilai $p$ agar persamaan kuadrat berikut memiliki akar yang sama (kembar)!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$x^2-px+16=0$</li>
-        <li>$(p+3)x^2-4x+p=0$</li>
+        <li>$x^2 - px + 16 = 0$</li>
+        <li>$(p+3)x^2 - 4x + p = 0$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> $D=0$: $p^2-64=0 \Rightarrow \boxed{p=\pm 8}$</p>
-      <p><strong>(b)</strong> $D=0$ dan $p\neq -3$: $16-4p(p+3)=0 \Rightarrow (p+4)(p-1)=0 \Rightarrow \boxed{p=-4\text{ atau }p=1}$</p>
+      <p><strong>(a)</strong> Syarat akar kembar: $D = 0$</p>
+      $$\begin{align}(-p)^2 - 4(1)(16) &= 0 \\ p^2 - 64 &= 0 \\ (p-8)(p+8) &= 0\end{align}$$
+      <p>Jadi $\boxed{p = 8 \text{ atau } p = -8}$.</p>
+      <p><strong>(b)</strong> Syarat akar kembar: $D = 0$. Perhatikan juga $p+3 \neq 0 \Rightarrow p \neq -3$.</p>
+      $$\begin{align}(-4)^2 - 4(p+3)(p) &= 0 \\ 16 - 4p^2 - 12p &= 0 \\ p^2 + 3p - 4 &= 0 \\ (p+4)(p-1) &= 0\end{align}$$
+      <p>Jadi $\boxed{p = -4 \text{ atau } p = 1}$ &nbsp;(keduanya $\neq -3$, sehingga memenuhi syarat).</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 12</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Tentukan batas nilai $m$ agar persamaan tidak memiliki akar nyata!</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan batas-batas nilai $m$ agar persamaan kuadrat berikut tidak memiliki akar yang nyata!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$x^2-3x-3m=0$</li>
-        <li>$(m+1)x^2+2mx+(m-2)=0$</li>
+        <li>$x^2 - 3x - 3m = 0$</li>
+        <li>$(m+1)x^2 + 2mx + (m-2) = 0$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> $D<0$: $9+12m<0 \Rightarrow \boxed{m<-\tfrac{3}{4}}$</p>
-      <p><strong>(b)</strong> $D<0$ dan $m\neq -1$: $4m+8<0 \Rightarrow m<-2$. Karena $m<-2$ sudah mengandung $m\neq -1$: $\boxed{m<-2}$</p>
+      <p><strong>(a)</strong> Syarat tidak ada akar nyata: $D < 0$</p>
+      $$\begin{align}(-3)^2 - 4(1)(-3m) &< 0 \\ 9 + 12m &< 0 \\ m &< -\frac{3}{4}\end{align}$$
+      $$\boxed{m < -\frac{3}{4}}$$
+      <p><strong>(b)</strong> Syarat: $D < 0$ dan $m+1 \neq 0$</p>
+      $$\begin{align}(2m)^2 - 4(m+1)(m-2) &< 0 \\ 4m^2 - 4(m^2-m-2) &< 0 \\ 4m + 8 &< 0 \\ m &< -2\end{align}$$
+      <p>Karena $m < -2$ sudah mengandung $m \neq -1$, maka $\boxed{m < -2}$.</p>
     </div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan</div>
       <ol class="soal-list">
-        <li>Tentukan jenis akar persamaan kuadrat berikut tanpa mencari akarnya!
-          <ol type="a">
-            <li>$x^2-5x+6=0$</li>
-            <li>$x^2-4x+5=0$</li>
-            <li>$9x^2-12x+4=0$</li>
-            <li>$x^2-3x+1=0$</li>
-          </ol>
-        </li>
-        <li>Tentukan nilai $k$ agar $kx^2-4x+1=0$ memiliki akar kembar. Periksa agar tetap berupa persamaan kuadrat!</li>
+        <li>Tentukan jenis akar berikut tanpa mencari akarnya! (a) $x^2-5x+6=0$ &nbsp; (b) $x^2-4x+5=0$ &nbsp; (c) $9x^2-12x+4=0$ &nbsp; (d) $x^2-3x+1=0$</li>
+        <li>Tentukan nilai $k$ agar $kx^2-4x+1=0$ memiliki akar kembar. Periksa pula agar tetap berupa persamaan kuadrat!</li>
         <li>Tentukan nilai $m$ agar $x^2+2mx+(m+6)=0$ memiliki dua akar real yang berbeda!</li>
         <li>Tentukan nilai $p$ agar $(p+1)x^2-2(p-1)x+(p-2)=0$ memiliki akar-akar real!</li>
         <li>Buktikan bahwa $x^2-(m+3)x+3m=0$ selalu memiliki akar real untuk semua $m\in\mathbb{R}$!</li>
-        <li>Tentukan nilai $k$ agar $x^2+2kx+(k^2-k+2)=0$ memiliki:
-          <ol type="a">
-            <li>dua akar real berbeda</li>
-            <li>akar tidak nyata</li>
-          </ol>
-        </li>
+        <li>Tentukan nilai $k$ agar $x^2+2kx+(k^2-k+2)=0$ memiliki: (a) dua akar real berbeda, (b) akar tidak nyata!</li>
         <li>Jika $x^2-2px+(p+6)=0$ memiliki akar-akar real, tentukan nilai $p$. Tunjukkan kedua akarnya selalu positif!</li>
         <li>$(k^2-4)x^2+2(k-2)x+2=0$ memiliki akar kembar. Tentukan semua nilai $k$!</li>
-        <li>$mx^2-(m+3)x+1=0$ dengan $m\neq 0$. Tentukan $m$ agar dua akar real berbeda, lalu tunjukkan untuk $m=1$ akarnya tidak rasional!</li>
-        <li>$x^2+bx+c=0$ memiliki dua akar real. Jika jumlah kuadrat akar-akarnya sama dengan tiga kali hasil kali akar-akarnya, tentukan hubungan $b$ dan $c$ serta syarat diskriminan!</li>
+        <li>$mx^2-(m+3)x+1=0$ dengan $m
+eq 0$. Tentukan $m$ agar dua akar real berbeda, lalu tunjukkan untuk $m=1$ akarnya tidak rasional!</li>
+        <li>$x^2+bx+c=0$ memiliki dua akar real. Jika jumlah kuadrat akar = tiga kali hasil kali akar, tentukan hubungan $b$, $c$ dan syarat diskriminan!</li>
       </ol>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════
+  <!-- ══════════════════════════════════════
        D. RUMUS VIETA
-       ═══════════════════════════════════ -->
+       ══════════════════════════════════════ -->
   <section class="section" id="bagian-d">
     <h2 class="section-title"><span class="section-badge">D</span>Hubungan Akar-Akar Persamaan Kuadrat (Rumus Vieta)</h2>
 
-    <p>Jika $x_1$ dan $x_2$ adalah akar-akar $ax^2+bx+c=0$ ($a\neq 0$), maka berlaku:</p>
+    <p>Jika $x_1$ dan $x_2$ adalah akar-akar persamaan kuadrat $ax^2 + bx + c = 0$ ($a \neq 0$), maka berlaku:</p>
 
     <div class="box box-rumus">
-      <div class="box-label">• Rumus Vieta dan Turunannya</div>
-      $$x_1+x_2=-\frac{b}{a} \qquad x_1\cdot x_2=\frac{c}{a} \qquad x_1-x_2=\frac{\sqrt{D}}{|a|}\;(x_1>x_2)$$
-      Ekspresi turunan:
+      <div class="box-label">• Rumus Vieta dan Ekspresi Turunan</div>
+      $$x_1 + x_2 = -\frac{b}{a} \qquad x_1 \cdot x_2 = \frac{c}{a} \qquad x_1 - x_2 = \frac{\sqrt{D}}{|a|} \;(x_1 > x_2)$$
       <ul>
-        <li>$x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2$</li>
-        <li>$(x_1-x_2)^2=(x_1+x_2)^2-4x_1x_2$</li>
-        <li>$x_1^3+x_2^3=(x_1+x_2)^3-3x_1x_2(x_1+x_2)$</li>
-        <li>$\dfrac{1}{x_1}+\dfrac{1}{x_2}=\dfrac{x_1+x_2}{x_1x_2}$</li>
+        <li>$x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1 x_2$</li>
+        <li>$x_1^2 - x_2^2 = (x_1 + x_2)(x_1 - x_2)$</li>
+        <li>$x_1^3 + x_2^3 = (x_1 + x_2)^3 - 3x_1 x_2(x_1 + x_2)$</li>
+        <li>$\dfrac{1}{x_1} + \dfrac{1}{x_2} = \dfrac{x_1 + x_2}{x_1 x_2}$</li>
       </ul>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 13</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Jika $x_1,x_2$ akar-akar $x^2-3x+6=0$, tentukan:</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Jika $x_1$ dan $x_2$ adalah akar-akar persamaan $x^2 - 3x + 6 = 0$, tentukan nilai:</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$x_1+x_2$ dan $x_1\cdot x_2$</li>
-        <li>$x_1^2+x_2^2$</li>
-        <li>$x_1^3x_2+x_2^3x_1$</li>
-        <li>$\dfrac{x_1}{x_2}+\dfrac{x_2}{x_1}$</li>
+        <li>$x_1 + x_2$ dan $x_1 \cdot x_2$</li>
+        <li>$x_1^2 + x_2^2$</li>
+        <li>$x_1^3 x_2 + x_2^3 x_1$</li>
+        <li>$\dfrac{x_1}{x_2} + \dfrac{x_2}{x_1}$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p>$x_1+x_2=3$, $x_1x_2=6$.</p>
-      <p><strong>(a)</strong> $x_1+x_2=3$ dan $x_1x_2=6$.</p>
-      <p><strong>(b)</strong> $(x_1+x_2)^2-2x_1x_2=9-12=\boxed{-3}$</p>
-      <p><strong>(c)</strong> $x_1x_2(x_1^2+x_2^2)=6\cdot(-3)=\boxed{-18}$</p>
-      <p><strong>(d)</strong> $\dfrac{x_1^2+x_2^2}{x_1x_2}=\dfrac{-3}{6}=\boxed{-\tfrac{1}{2}}$</p>
+      <p>Dari $x^2-3x+6=0$: $x_1+x_2=3$ dan $x_1 x_2=6$.</p>
+      <p><strong>(a)</strong> $x_1+x_2=3$ dan $x_1 x_2=6$.</p>
+      <p><strong>(b)</strong> $x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2=9-12=\boxed{-3}$<br><em>Catatan: nilai negatif karena akar-akarnya imajiner ($D < 0$), namun ekspresi ini tetap dapat dihitung.</em></p>
+      <p><strong>(c)</strong> $x_1^3x_2+x_2^3x_1=x_1x_2(x_1^2+x_2^2)=6 \cdot (-3)=\boxed{-18}$</p>
+      <p><strong>(d)</strong> $\dfrac{x_1}{x_2}+\dfrac{x_2}{x_1}=\dfrac{x_1^2+x_2^2}{x_1x_2}=\dfrac{-3}{6}=\boxed{-\dfrac{1}{2}}$</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 14</div>
-      <p style="margin:0;font-size:.9rem;">Jika salah satu akar $x^2-10x+(k+3)=0$ adalah empat kali akar yang lain, tentukan $k$!</p>
+      <p style="margin:0;font-size:.9rem;">Jika salah satu akar dari persamaan $x^2 - 10x + (k+3) = 0$ adalah empat kali akar yang lain, tentukan nilai $k$!</p>
     </div>
     <div class="penyelesaian">
-      <p>$x_1=4x_2$: $5x_2=10 \Rightarrow x_2=2,\;x_1=8$. $x_1x_2=k+3 \Rightarrow \boxed{k=13}$.</p>
+      <p>Misalkan $x_1 = 4x_2$. Dari rumus Vieta: $x_1+x_2=10$ dan $x_1 x_2=k+3$.</p>
+      $$4x_2 + x_2 = 10 \;\Rightarrow\; 5x_2 = 10 \;\Rightarrow\; x_2 = 2 \text{ dan } x_1 = 8$$
+      $$x_1 \cdot x_2 = k+3 \;\Rightarrow\; 8 \cdot 2 = k+3 \;\Rightarrow\; \boxed{k = 13}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 15</div>
-      <p style="margin:0;font-size:.9rem;">Akar-akar $x^2+3x-m=0$ adalah $\alpha,\beta$. Jika $\alpha+3\beta=5$, tentukan $m$!</p>
+      <p style="margin:0;font-size:.9rem;">Jika $\alpha$ dan $\beta$ adalah akar-akar persamaan $x^2 + 3x - m = 0$ serta diketahui $\alpha + 3\beta = 5$, hitunglah nilai $m$!</p>
     </div>
     <div class="penyelesaian">
-      <p>$\alpha+\beta=-3$. Dari syarat: $-3+2\beta=5 \Rightarrow \beta=4$, $\alpha=-7$. $\alpha\beta=-m \Rightarrow \boxed{m=28}$.</p>
+      <p>Dari rumus Vieta: $\alpha+\beta=-3$ dan $\alpha\beta=-m$.</p>
+      $$\alpha + 3\beta = 5 \;\Rightarrow\; (\alpha+\beta) + 2\beta = 5 \;\Rightarrow\; -3+2\beta = 5 \;\Rightarrow\; \beta = 4$$
+      <p>Maka $\alpha = -3-4 = -7$.</p>
+      $$\alpha\beta = -m \;\Rightarrow\; (-7)(4) = -m \;\Rightarrow\; \boxed{m = 28}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 16</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Akar-akar $2x^2-6x+3=0$ adalah $x_1,x_2$. Tentukan:</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Jika $x_1$ dan $x_2$ adalah akar-akar persamaan $2x^2 - 6x + 3 = 0$, tentukan nilai:</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
         <li>kuadrat jumlah kedua akar</li>
         <li>jumlah kuadrat kedua akar</li>
@@ -515,281 +613,361 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <p>$x_1+x_2=3$, $x_1x_2=\tfrac{3}{2}$.</p>
-      <p><strong>(a)</strong> $(x_1+x_2)^2=\boxed{9}$</p>
-      <p><strong>(b)</strong> $(x_1+x_2)^2-2x_1x_2=9-3=\boxed{6}$ &nbsp;<em>(perhatikan: bukan $(x_1+x_2)^2$ langsung!)</em></p>
-      <p><strong>(c)</strong> $(x_1+x_2)^2-4x_1x_2=9-6=\boxed{3}$</p>
+      <p>Dari $2x^2-6x+3=0$: $x_1+x_2=\dfrac{6}{2}=3$ dan $x_1 x_2=\dfrac{3}{2}$.</p>
+      <p><strong>(a) Kuadrat jumlah:</strong> $(x_1+x_2)^2 = 3^2 = \boxed{9}$</p>
+      <p><strong>(b) Jumlah kuadrat:</strong> gunakan $x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2$:</p>
+      $$x_1^2+x_2^2 = 9 - 2\cdot\frac{3}{2} = 9-3 = \boxed{6}$$
+      <p><em>Perhatikan: $(x_1+x_2)^2 \neq x_1^2+x_2^2$ karena ada suku $2x_1x_2$ yang berbeda!</em></p>
+      <p><strong>(c) Kuadrat selisih:</strong> gunakan $(x_1-x_2)^2=(x_1+x_2)^2-4x_1x_2$:</p>
+      $$(x_1-x_2)^2 = 9 - 4\cdot\frac{3}{2} = 9-6 = \boxed{3}$$
     </div>
 
     <div class="box box-catatan">
-      <div class="box-label">Catatan Penting</div>
-      <p><strong>Kuadrat jumlah</strong> $(x_1+x_2)^2$ ≠ <strong>jumlah kuadrat</strong> $x_1^2+x_2^2$. Ingat selalu: $x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2$.</p>
+      <div class="box-label">Catatan Penting — Perbedaan Kuadrat Jumlah vs Jumlah Kuadrat</div>
+      <ul>
+        <li><strong>Kuadrat jumlah:</strong> $(x_1+x_2)^2 = x_1^2 + 2x_1x_2 + x_2^2$ &nbsp;← langsung dari rumus Vieta</li>
+        <li><strong>Jumlah kuadrat:</strong> $x_1^2 + x_2^2 = (x_1+x_2)^2 - 2x_1x_2$ &nbsp;← harus dikurangi $2x_1x_2$</li>
+      </ul>
+      <p>Kesalahan umum: menganggap $(x_1+x_2)^2 = x_1^2+x_2^2$. Ingat: keduanya <strong>tidak sama</strong> karena $(x_1+x_2)^2$ mengandung suku silang $2x_1x_2$.</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 17</div>
-      <p style="margin:0;font-size:.9rem;">Akar-akar $2x^2-5x+3=0$ adalah $x_1,x_2$. Tentukan PK baru yang akar-akarnya $\dfrac{x_1+1}{x_2}$ dan $\dfrac{x_2+1}{x_1}$.</p>
+      <p style="margin:0;font-size:.9rem;">Jika $x_1$ dan $x_2$ adalah akar-akar persamaan $2x^2 - 5x + 3 = 0$, tentukan persamaan kuadrat baru yang akar-akarnya $\dfrac{x_1+1}{x_2}$ dan $\dfrac{x_2+1}{x_1}$.</p>
     </div>
     <div class="penyelesaian">
-      <p>$x_1+x_2=\tfrac{5}{2}$, $x_1x_2=\tfrac{3}{2}$. $x_1^2+x_2^2=\tfrac{25}{4}-3=\tfrac{13}{4}$.</p>
-      <p>Jumlah: $\dfrac{(x_1^2+x_2^2)+(x_1+x_2)}{x_1x_2}=\dfrac{\frac{13}{4}+\frac{5}{2}}{\frac{3}{2}}=\dfrac{23}{6}$</p>
-      <p>Hasil kali: $\dfrac{x_1x_2+(x_1+x_2)+1}{x_1x_2}=\dfrac{\frac{3}{2}+\frac{5}{2}+1}{\frac{3}{2}}=\dfrac{10}{3}$</p>
-      <p>PK baru $\times 6$: $\boxed{6x^2-23x+20=0}$</p>
+      <p>Dari $2x^2-5x+3=0$: $x_1+x_2=\dfrac{5}{2}$ dan $x_1x_2=\dfrac{3}{2}$.</p>
+      <p>Misalkan $p=\dfrac{x_1+1}{x_2}$ dan $q=\dfrac{x_2+1}{x_1}$.</p>
+      <p><strong>Jumlah akar baru:</strong></p>
+      $$p+q = \frac{x_1(x_1+1)+x_2(x_2+1)}{x_1x_2} = \frac{(x_1^2+x_2^2)+(x_1+x_2)}{x_1x_2}$$
+      <p>$x_1^2+x_2^2=\left(\dfrac{5}{2}\right)^2-2\cdot\dfrac{3}{2}=\dfrac{25}{4}-3=\dfrac{13}{4}$</p>
+      $$p+q = \frac{\frac{13}{4}+\frac{5}{2}}{\frac{3}{2}} = \frac{\frac{23}{4}}{\frac{3}{2}} = \frac{23}{4}\cdot\frac{2}{3} = \frac{23}{6}$$
+      <p><strong>Hasil kali akar baru:</strong></p>
+      $$p\cdot q = \frac{(x_1+1)(x_2+1)}{x_1x_2} = \frac{x_1x_2+x_1+x_2+1}{x_1x_2} = \frac{\frac{3}{2}+\frac{5}{2}+1}{\frac{3}{2}} = \frac{5}{\frac{3}{2}} = \frac{10}{3}$$
+      <p>Persamaan kuadrat baru: $x^2-\dfrac{23}{6}x+\dfrac{10}{3}=0$. Kalikan 6:</p>
+      $$\boxed{6x^2-23x+20=0}$$
     </div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan</div>
       <ol class="soal-list">
-        <li>Jika $x_1,x_2$ akar-akar $x^2-8x+12=0$, tentukan:
-          <ol type="a">
-            <li>$x_1+x_2$ dan $x_1x_2$</li>
-            <li>$x_1^2+x_2^2$</li>
-            <li>$\dfrac{1}{x_1}+\dfrac{1}{x_2}$</li>
-          </ol>
-        </li>
-        <li>Jika $\alpha,\beta$ akar-akar $2x^2-6x+3=0$, tentukan:
-          <ol type="a">
-            <li>$\alpha^2\beta+\alpha\beta^2$</li>
-            <li>$\alpha^2+\alpha\beta+\beta^2$</li>
-            <li>$(\alpha-\beta)^2$</li>
-          </ol>
-        </li>
+        <li>Jika $x_1$ dan $x_2$ adalah akar-akar $x^2-8x+12=0$, tentukan: (a) $x_1+x_2$ dan $x_1x_2$, (b) $x_1^2+x_2^2$, (c) $\dfrac{1}{x_1}+\dfrac{1}{x_2}$</li>
+        <li>Jika $lpha$ dan $eta$ adalah akar-akar $2x^2-6x+3=0$, tentukan: (a) $lpha^2eta+lphaeta^2$, (b) $lpha^2+lphaeta+eta^2$, (c) $(lpha-eta)^2$</li>
         <li>Jika salah satu akar $x^2+px+12=0$ adalah tiga kali akar yang lain, tentukan nilai $p$ dan kedua akarnya!</li>
-        <li>Jika $\alpha,\beta$ akar-akar $x^2+5x-2=0$, tentukan $\alpha^3+\beta^3$ dan $\dfrac{\alpha^2}{\beta}+\dfrac{\beta^2}{\alpha}$!</li>
-        <li>Diketahui $\alpha+\beta=p$, $\alpha\beta=q$, $\alpha^2+\beta^2=10$, dan $\alpha^3+\beta^3=28$. Tentukan $p$ dan $q$!</li>
-        <li>Jika $x_1,x_2$ akar-akar $3x^2+6x-2=0$, tentukan:
-          <ol type="a">
-            <li>$\dfrac{x_1^2+1}{x_2}+\dfrac{x_2^2+1}{x_1}$</li>
-            <li>$\left(x_1-\dfrac{1}{x_2}\right)\!\left(x_2-\dfrac{1}{x_1}\right)$</li>
-          </ol>
-        </li>
+        <li>Jika $lpha$ dan $eta$ adalah akar-akar $x^2+5x-2=0$, tentukan $lpha^3+eta^3$ dan $\dfrac{lpha^2}{eta}+\dfrac{eta^2}{lpha}$!</li>
+        <li>Diketahui $lpha+eta=p$, $lphaeta=q$, $lpha^2+eta^2=10$, dan $lpha^3+eta^3=28$. Tentukan nilai $p$ dan $q$!</li>
+        <li>Diketahui $x_1$ dan $x_2$ adalah akar-akar $3x^2+6x-2=0$. Tanpa mencari nilai $x_1$ dan $x_2$, tentukan: (a) $\dfrac{x_1^2+1}{x_2}+\dfrac{x_2^2+1}{x_1}$, (b) $\left(x_1-\dfrac{1}{x_2}
+ight)\!\left(x_2-\dfrac{1}{x_1}
+ight)$</li>
       </ol>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════
+  <!-- ══════════════════════════════════════
        E. MENYUSUN PK BARU
-       ═══════════════════════════════════ -->
+       ══════════════════════════════════════ -->
   <section class="section" id="bagian-e">
     <h2 class="section-title"><span class="section-badge">E</span>Menyusun Persamaan Kuadrat Baru</h2>
 
+    <p>Jika diketahui akar-akar suatu persamaan kuadrat adalah $x_1$ dan $x_2$, maka persamaan kuadrat dapat disusun menggunakan formula:</p>
+
     <div class="box box-rumus">
-      <div class="box-label">• Formula Menyusun PK Baru</div>
-      Jika akar-akarnya $x_1$ dan $x_2$:
-      $$x^2-(x_1+x_2)x+(x_1\cdot x_2)=0$$
-      atau ekuivalen $(x-x_1)(x-x_2)=0$.
+      <div class="box-label">• Formula Menyusun Persamaan Kuadrat</div>
+      $$x^2 - (x_1+x_2)x + (x_1 \cdot x_2) = 0$$
+      atau ekuivalen dengan $(x-x_1)(x-x_2)=0$.
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 18</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Tentukan PK yang akar-akarnya:</p>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan persamaan kuadrat yang akar-akarnya:</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
         <li>$-3$ dan $4$</li>
         <li>$3-\sqrt{5}$ dan $3+\sqrt{5}$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <p><strong>(a)</strong> $x^2-(-3+4)x+(-3)(4)=0 \Rightarrow \boxed{x^2-x-12=0}$</p>
-      <p><strong>(b)</strong> $x_1+x_2=6$, $x_1x_2=9-5=4 \Rightarrow \boxed{x^2-6x+4=0}$</p>
+      <p><strong>(a)</strong> $x_1=-3$, $x_2=4$</p>
+      $$x^2-(-3+4)x+(-3)(4)=0 \;\Rightarrow\; \boxed{x^2-x-12=0}$$
+      <p><strong>(b)</strong> $x_1=3-\sqrt{5}$, $x_2=3+\sqrt{5}$</p>
+      $$x_1+x_2=6, \qquad x_1x_2=(3-\sqrt{5})(3+\sqrt{5})=9-5=4$$
+      $$\boxed{x^2-6x+4=0}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 19</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan PK yang akar-akarnya empat lebihnya dari akar-akar $x^2+5x-2=0$.</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan persamaan kuadrat yang akar-akarnya empat lebihnya dari akar-akar $x^2+5x-2=0$.</p>
     </div>
     <div class="penyelesaian">
-      <p>$x_1+x_2=-5$, $x_1x_2=-2$. Akar baru $\alpha=x_1+4$, $\beta=x_2+4$.</p>
-      <p>$\alpha+\beta=3$, $\alpha\beta=-2+4(-5)+16=-6$. $\boxed{x^2-3x-6=0}$</p>
-      <p><em>Cara alternatif:</em> substitusi $x=\alpha-4$ ke persamaan asal: $\alpha^2-3\alpha-6=0$ ✓</p>
+      <p>Misalkan akar-akar $x^2+5x-2=0$ adalah $x_1$ dan $x_2$. Maka $x_1+x_2=-5$ dan $x_1x_2=-2$.</p>
+      <p>Akar-akar baru: $\alpha=x_1+4$ dan $\beta=x_2+4$.</p>
+      $$\alpha+\beta=(x_1+x_2)+8=-5+8=3$$
+      $$\alpha\beta=(x_1+4)(x_2+4)=x_1x_2+4(x_1+x_2)+16=-2+4(-5)+16=-6$$
+      <p>Persamaan kuadrat baru: $\boxed{x^2-3x-6=0}$</p>
+      <p><em>Cara alternatif:</em> Karena $\alpha=x_1+4$, maka $x_1=\alpha-4$. Substitusi ke persamaan asal: $(\alpha-4)^2+5(\alpha-4)-2=0 \;\Rightarrow\; \alpha^2-3\alpha-6=0$ ✓</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 20</div>
-      <p style="margin:0;font-size:.9rem;">Akar-akar $x^2-6x+4=0$ adalah $\alpha,\beta$. Tentukan PK baru yang akar-akarnya $\dfrac{3}{\alpha}$ dan $\dfrac{3}{\beta}$.</p>
+      <p style="margin:0;font-size:.9rem;">Jika akar-akar $x^2-6x+4=0$ adalah $\alpha$ dan $\beta$, tentukan persamaan kuadrat baru yang akar-akarnya $\dfrac{3}{\alpha}$ dan $\dfrac{3}{\beta}$.</p>
     </div>
     <div class="penyelesaian">
-      <p>$\alpha+\beta=6$, $\alpha\beta=4$. Jumlah $=\dfrac{18}{4}=\dfrac{9}{2}$. Hasil kali $=\dfrac{9}{4}$.</p>
-      <p>PK baru $\times 4$: $\boxed{4x^2-18x+9=0}$</p>
+      <p>$\alpha+\beta=6$ dan $\alpha\beta=4$. Akar-akar baru: $x_1=\dfrac{3}{\alpha}$ dan $x_2=\dfrac{3}{\beta}$.</p>
+      $$x_1+x_2=\frac{3(\alpha+\beta)}{\alpha\beta}=\frac{3(6)}{4}=\frac{9}{2} \qquad x_1\cdot x_2=\frac{9}{\alpha\beta}=\frac{9}{4}$$
+      <p>Persamaan kuadrat baru: $x^2-\dfrac{9}{2}x+\dfrac{9}{4}=0$. Kalikan 4: $\boxed{4x^2-18x+9=0}$</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 21</div>
-      <p style="margin:0;font-size:.9rem;">Akar-akar $3x^2-5x+1=0$ adalah $x_1,x_2$. Susun PK yang akar-akarnya $x_1^2+x_2$ dan $x_2^2+x_1$.</p>
+      <p style="margin:0;font-size:.9rem;">Jika $x_1$ dan $x_2$ adalah akar-akar $3x^2-5x+1=0$, susunlah persamaan kuadrat yang akar-akarnya $x_1^2+x_2$ dan $x_2^2+x_1$.</p>
     </div>
     <div class="penyelesaian">
-      <p>$x_1+x_2=\tfrac{5}{3}$, $x_1x_2=\tfrac{1}{3}$. $x_1^2+x_2^2=\tfrac{19}{9}$.</p>
-      <p>Jumlah: $\tfrac{19}{9}+\tfrac{5}{3}=\tfrac{34}{9}$. Hasil kali: $\tfrac{1}{9}+\tfrac{80}{27}+\tfrac{1}{3}=\tfrac{92}{27}$.</p>
-      <p>PK baru $\times 27$: $\boxed{27x^2-102x+92=0}$</p>
+      <p>$x_1+x_2=\dfrac{5}{3}$ dan $x_1x_2=\dfrac{1}{3}$.</p>
+      <p>$x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2=\dfrac{25}{9}-\dfrac{2}{3}=\dfrac{19}{9}$</p>
+      <p><strong>Jumlah akar baru:</strong></p>
+      $$(x_1^2+x_2)+(x_2^2+x_1)=(x_1^2+x_2^2)+(x_1+x_2)=\frac{19}{9}+\frac{5}{3}=\frac{34}{9}$$
+      <p><strong>Hasil kali akar baru:</strong></p>
+      $$(x_1^2+x_2)(x_2^2+x_1)=x_1^2x_2^2+x_1^3+x_2^3+x_1x_2$$
+      <p>Hitung masing-masing:</p>
+      $$x_1^2x_2^2=(x_1x_2)^2=\frac{1}{9}$$
+      $$x_1^3+x_2^3=(x_1+x_2)^3-3x_1x_2(x_1+x_2)=\frac{125}{27}-3\cdot\frac{1}{3}\cdot\frac{5}{3}=\frac{125}{27}-\frac{5}{3}=\frac{80}{27}$$
+      $$(x_1^2+x_2)(x_2^2+x_1)=\frac{1}{9}+\frac{80}{27}+\frac{1}{3}=\frac{3+80+9}{27}=\frac{92}{27}$$
+      <p>Persamaan kuadrat baru: $x^2-\dfrac{34}{9}x+\dfrac{92}{27}=0$. Kalikan 27: $\boxed{27x^2-102x+92=0}$</p>
     </div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan</div>
       <ol class="soal-list">
-        <li>Tentukan PK yang akar-akarnya:
-          <ol type="a">
-            <li>$2$ dan $7$</li>
-            <li>$-5$ dan $3$</li>
-            <li>$2+\sqrt{3}$ dan $2-\sqrt{3}$</li>
-          </ol>
-        </li>
-        <li>Jika $x_1,x_2$ akar-akar $x^2-4x+1=0$, tentukan PK baru yang akar-akarnya:
-          <ol type="a">
-            <li>$x_1+3$ dan $x_2+3$</li>
-            <li>$2x_1$ dan $2x_2$</li>
-            <li>$\dfrac{1}{x_1}$ dan $\dfrac{1}{x_2}$</li>
-          </ol>
-        </li>
+        <li>Tentukan PK yang akar-akarnya: (a) $2$ dan $7$, (b) $-5$ dan $3$, (c) $2+\sqrt{3}$ dan $2-\sqrt{3}$</li>
+        <li>Jika $x_1$ dan $x_2$ adalah akar-akar $x^2-4x+1=0$, tentukan PK baru yang akar-akarnya: (a) $x_1+3$ dan $x_2+3$, (b) $2x_1$ dan $2x_2$, (c) $\dfrac{1}{x_1}$ dan $\dfrac{1}{x_2}$</li>
         <li>Susunlah PK yang akar-akarnya dua kurangnya dari akar-akar $x^2+7x+10=0$!</li>
-        <li>Jika $\alpha,\beta$ akar-akar $3x^2-2x-1=0$, tentukan PK baru yang akar-akarnya $\alpha^2+\beta$ dan $\beta^2+\alpha$!</li>
-        <li>Jika $\alpha,\beta$ akar-akar $x^2-3x+5=0$, tentukan PK baru yang akar-akarnya $\dfrac{\alpha+1}{\beta-1}$ dan $\dfrac{\beta+1}{\alpha-1}$!</li>
+        <li>Jika akar-akar $3x^2-2x-1=0$ adalah $lpha$ dan $eta$, tentukan PK baru yang akar-akarnya $lpha^2+eta$ dan $eta^2+lpha$!</li>
+        <li>Jika $lpha$ dan $eta$ adalah akar-akar $x^2-3x+5=0$, tentukan PK baru yang akar-akarnya $\dfrac{lpha+1}{eta-1}$ dan $\dfrac{eta+1}{lpha-1}$!</li>
       </ol>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════
+  <!-- ══════════════════════════════════════
        F. KAPITA SELEKTA
-       ═══════════════════════════════════ -->
+       ══════════════════════════════════════ -->
   <section class="section" id="bagian-f">
     <h2 class="section-title"><span class="section-badge">F</span>Kapita Selekta Persamaan Kuadrat</h2>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 22</div>
-      <p style="margin:0;font-size:.9rem;">Jika $\dfrac{1}{a}+\dfrac{1}{b}=3$ dan $ab=1$, tentukan nilai $a$ dan $b$.</p>
+      <p style="margin:0;font-size:.9rem;">Jika $\dfrac{1}{a}+\dfrac{1}{b}=3$ dan $a \cdot b=1$, tentukan nilai $a$ dan $b$.</p>
     </div>
     <div class="penyelesaian">
-      <p>$ab=1 \Rightarrow a+\tfrac{1}{a}=3 \Rightarrow a^2-3a+1=0 \Rightarrow a=\dfrac{3\pm\sqrt{5}}{2}$.</p>
-      <p>$\boxed{(a,b)=\left(\dfrac{3+\sqrt{5}}{2},\;\dfrac{3-\sqrt{5}}{2}\right)}$ atau sebaliknya.</p>
+      <p>Dari $ab=1$, maka $\dfrac{1}{b}=a$. Substitusi ke persamaan pertama:</p>
+      $$\frac{1}{a}+a=3 \;\Rightarrow\; 1+a^2=3a \;\Rightarrow\; a^2-3a+1=0 \;\Rightarrow\; a=\frac{3\pm\sqrt{5}}{2}$$
+      <p>Karena $ab=1$: jika $a=\dfrac{3+\sqrt{5}}{2}$ maka $b=\dfrac{3-\sqrt{5}}{2}$, dan sebaliknya.</p>
+      $$\boxed{(a,b)=\left(\frac{3+\sqrt{5}}{2},\,\frac{3-\sqrt{5}}{2}\right) \text{ atau } \left(\frac{3-\sqrt{5}}{2},\,\frac{3+\sqrt{5}}{2}\right)}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 23</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan $x$ yang memenuhi: $\dfrac{x+6}{x+5}-\dfrac{x+7}{x+6}=\dfrac{x+8}{x+7}-\dfrac{x+9}{x+8}$</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$ yang memenuhi: $\dfrac{x+6}{x+5}-\dfrac{x+7}{x+6}=\dfrac{x+8}{x+7}-\dfrac{x+9}{x+8}$</p>
     </div>
     <div class="penyelesaian">
-      <p>Ruas kiri $=\dfrac{1}{(x+5)(x+6)}$, ruas kanan $=\dfrac{1}{(x+7)(x+8)}$.</p>
-      <p>$(x+7)(x+8)=(x+5)(x+6) \Rightarrow 4x=-26 \Rightarrow \boxed{x=-\dfrac{13}{2}}$</p>
+      <p>Ruas kiri:</p>
+      $$\frac{x+6}{x+5}-\frac{x+7}{x+6}=\frac{(x+6)^2-(x+7)(x+5)}{(x+5)(x+6)}=\frac{x^2+12x+36-(x^2+12x+35)}{(x+5)(x+6)}=\frac{1}{(x+5)(x+6)}$$
+      <p>Ruas kanan: $\dfrac{x+8}{x+7}-\dfrac{x+9}{x+8}=\dfrac{1}{(x+7)(x+8)}$</p>
+      $$\frac{1}{(x+5)(x+6)}=\frac{1}{(x+7)(x+8)} \;\Rightarrow\; (x+7)(x+8)=(x+5)(x+6)$$
+      $$x^2+15x+56=x^2+11x+30 \;\Rightarrow\; 4x=-26 \;\Rightarrow\; \boxed{x=-\frac{13}{2}}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 24</div>
-      <p style="margin:0;font-size:.9rem;">Panjang persegi panjang 3 cm lebih dari lebarnya. Luas 54 cm². Tentukan panjang dan lebarnya!</p>
+      <p style="margin:0;font-size:.9rem;">Panjang sebuah persegi panjang adalah 3 cm lebih dari lebarnya. Jika luas persegi panjang tersebut 54 cm², tentukan panjang dan lebarnya!</p>
     </div>
     <div class="penyelesaian">
-      <p>$x(x+3)=54 \Rightarrow (x+9)(x-6)=0 \Rightarrow x=6$. <strong>Lebar = 6 cm, panjang = 9 cm.</strong> Verifikasi: $6\times 9=54$ ✓</p>
+      <p>Misalkan lebar $= x$ cm, maka panjang $= (x+3)$ cm.</p>
+      $$x(x+3)=54 \;\Rightarrow\; x^2+3x-54=0 \;\Rightarrow\; (x+9)(x-6)=0$$
+      <p>$x=-9$ (tidak memenuhi) atau $x=6$. Jadi <strong>lebar = 6 cm dan panjang = 9 cm</strong>.<br><em>Verifikasi: $6\times 9=54$ cm² ✓</em></p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 25</div>
-      <p style="margin:0;font-size:.9rem;">Jumlah dua bilangan cacah adalah 11 dan hasil kalinya 28. Tentukan kedua bilangan!</p>
+      <p style="margin:0;font-size:.9rem;">Jumlah dua bilangan cacah adalah 11 dan hasil kalinya adalah 28. Tentukan kedua bilangan tersebut!</p>
     </div>
     <div class="penyelesaian">
-      <p>$y=11-x$, $x(11-x)=28 \Rightarrow (x-4)(x-7)=0$. <strong>Kedua bilangan: 4 dan 7.</strong></p>
+      <p>Misalkan kedua bilangan adalah $x$ dan $y$.</p>
+      $$x+y=11 \;\Rightarrow\; y=11-x \qquad x\cdot y=28 \;\Rightarrow\; x(11-x)=28 \;\Rightarrow\; x^2-11x+28=0$$
+      $$(x-4)(x-7)=0 \;\Rightarrow\; x=4 \text{ atau } x=7$$
+      <p>Jadi <strong>kedua bilangan adalah 4 dan 7</strong>.</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 26</div>
-      <p style="margin:0;font-size:.9rem;">Perbandingan akar-akar $x^2-8x+k=0$ adalah $3:1$. Tentukan $k$!</p>
+      <p style="margin:0;font-size:.9rem;">Jika perbandingan akar-akar persamaan kuadrat $x^2-8x+k=0$ adalah $3:1$, tentukan nilai $k$!</p>
     </div>
     <div class="penyelesaian">
-      <p>$x_1=3m$, $x_2=m$: $4m=8 \Rightarrow m=2$. $k=x_1x_2=6\times 2=\boxed{12}$. Verifikasi: perbandingan $6:2=3:1$ ✓</p>
+      <p>Misalkan $x_1=3m$ dan $x_2=m$ (sesuai perbandingan $3:1$).</p>
+      $$x_1+x_2=8 \;\Rightarrow\; 4m=8 \;\Rightarrow\; m=2 \qquad \Rightarrow\; x_1=6,\; x_2=2$$
+      $$x_1\cdot x_2=k \;\Rightarrow\; 6\times 2=k \;\Rightarrow\; \boxed{k=12}$$
+      <p><em>Verifikasi: $x^2-8x+12=0 \;\Rightarrow\; (x-6)(x-2)=0$, perbandingan $6:2=3:1$ ✓</em></p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 27</div>
-      <p style="margin:0;font-size:.9rem;">Dua bilangan positif, selisihnya 5, jumlah kebalikannya $\dfrac{1}{6}$. Tentukan kedua bilangan!</p>
+      <p style="margin:0;font-size:.9rem;">Dua buah bilangan real positif mempunyai selisih 5. Jumlah kebalikan kedua bilangan itu adalah $\dfrac{1}{6}$. Tentukan kedua bilangan tersebut!</p>
     </div>
     <div class="penyelesaian">
-      <p>$x=y+5$, $6(x+y)=xy$. Substitusi: $y^2-7y-30=0 \Rightarrow (y-10)(y+3)=0 \Rightarrow y=10,\;x=15$.</p>
-      <p>Verifikasi: $\tfrac{1}{15}+\tfrac{1}{10}=\tfrac{1}{6}$ ✓</p>
+      <p>Misalkan $x > y > 0$, maka $x=y+5$.</p>
+      $$\frac{1}{x}+\frac{1}{y}=\frac{1}{6} \;\Rightarrow\; 6(x+y)=xy$$
+      <p>Substitusi $x=y+5$:</p>
+      $$6(2y+5)=(y+5)y \;\Rightarrow\; y^2-7y-30=0 \;\Rightarrow\; (y-10)(y+3)=0$$
+      <p>$y=-3$ (tidak memenuhi) atau $y=10$. Jadi <strong>$y=10$ dan $x=15$</strong>.<br><em>Verifikasi: $\dfrac{1}{15}+\dfrac{1}{10}=\dfrac{2+3}{30}=\dfrac{1}{6}$ ✓</em></p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 28</div>
-      <p style="margin:0;font-size:.9rem;">$m,n$ akar-akar $4x^2+px+8=0$ ($p\neq 0$). Jika $\dfrac{2}{m}+\dfrac{2}{n}=m^3+n^3$, tentukan $p^2-16$!</p>
+      <p style="margin:0;font-size:.9rem;">Misalkan $m$ dan $n$ akar-akar persamaan kuadrat $4x^2+px+8=0$ dengan $p\neq 0$, serta $\dfrac{2}{m}+\dfrac{2}{n}=m^3+n^3$. Tentukan nilai $p^2-16$!</p>
     </div>
     <div class="penyelesaian">
-      <p>$m+n=-\tfrac{p}{4}$, $mn=2$. Ruas kiri $=m+n$. $s=(m+n)$: $s^3-7s=0 \Rightarrow s^2=7$.</p>
-      <p>$\tfrac{p^2}{16}=7 \Rightarrow p^2=112$. $\boxed{p^2-16=96}$.</p>
+      <p>Dari rumus Vieta: $m+n=-\dfrac{p}{4}$ dan $mn=2$.</p>
+      <p><strong>Sederhanakan ruas kiri:</strong></p>
+      $$\frac{2}{m}+\frac{2}{n}=2\cdot\frac{m+n}{mn}=2\cdot\frac{m+n}{2}=m+n$$
+      <p><strong>Sederhanakan ruas kanan:</strong></p>
+      $$m^3+n^3=(m+n)^3-3mn(m+n)=(m+n)^3-6(m+n)$$
+      <p><strong>Substitusi:</strong> $m+n=(m+n)^3-6(m+n)$. Misalkan $s=m+n$:</p>
+      $$s=s^3-6s \;\Rightarrow\; s^3-7s=0 \;\Rightarrow\; s(s^2-7)=0$$
+      <p>Karena $p\neq 0$ maka $s\neq 0$, jadi $s^2=7$.</p>
+      $$\left(-\frac{p}{4}\right)^2=7 \;\Rightarrow\; p^2=112 \;\Rightarrow\; p^2-16=\boxed{96}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 29</div>
-      <p style="margin:0;font-size:.9rem;">$x_1,x_2$ memenuhi $x^2+3x+1=0$. Tentukan $\dfrac{1}{(3x_1+1)(x_1+3)}+\dfrac{1}{(3x_2+1)(x_2+3)}$.</p>
+      <p style="margin:0;font-size:.9rem;">Jika $x_1$ dan $x_2$ adalah nilai $x$ yang memenuhi $x^2+3x+1=0$, tentukan nilai dari $\dfrac{1}{(3x_1+1)(x_1+3)}+\dfrac{1}{(3x_2+1)(x_2+3)}$.</p>
     </div>
     <div class="penyelesaian">
-      <p>Karena $x_1^2=-3x_1-1$: $(3x_1+1)(x_1+3)=3x_1^2+10x_1+3=x_1$. Demikian $(3x_2+1)(x_2+3)=x_2$.</p>
-      <p>$\dfrac{1}{x_1}+\dfrac{1}{x_2}=\dfrac{x_1+x_2}{x_1x_2}=\dfrac{-3}{1}=\boxed{-3}$</p>
+      <p>Dari rumus Vieta: $x_1+x_2=-3$ dan $x_1x_2=1$.</p>
+      <p><strong>Kunci:</strong> Karena $x_1$ memenuhi persamaan, maka $x_1^2+3x_1+1=0$, sehingga $x_1^2=-3x_1-1$. Substitusi ke faktor penyebut:</p>
+      $$(3x_1+1)(x_1+3)=3x_1^2+10x_1+3=3(-3x_1-1)+10x_1+3=-9x_1-3+10x_1+3=x_1$$
+      <p>Demikian pula $(3x_2+1)(x_2+3)=x_2$. Maka:</p>
+      $$\frac{1}{x_1}+\frac{1}{x_2}=\frac{x_1+x_2}{x_1x_2}=\frac{-3}{1}=\boxed{-3}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 30</div>
-      <p style="margin:0;font-size:.9rem;">$a,b\in\mathbb{Z}$ dan $\sqrt{2019+2\sqrt{2018}}$ adalah solusi $x^2+ax+b=0$. Tentukan $a+b$!</p>
+      <p style="margin:0;font-size:.9rem;">Jika $a$ dan $b$ bilangan bulat sehingga $\sqrt{2019+2\sqrt{2018}}$ merupakan solusi persamaan kuadrat $x^2+ax+b=0$, tentukan nilai $a+b$!</p>
     </div>
     <div class="penyelesaian">
-      <p>$\sqrt{2019+2\sqrt{2018}}=\sqrt{2018}+1$. Akar lain $x_2=-\sqrt{2018}+1$.</p>
-      <p>$x_1+x_2=2=-a \Rightarrow a=-2$. $x_1x_2=-2017=b$. $\boxed{a+b=-2019}$.</p>
+      <p>Sederhanakan $\sqrt{2019+2\sqrt{2018}}$:</p>
+      $$2019+2\sqrt{2018}=(\sqrt{2018})^2+2\sqrt{2018}\cdot 1+1^2=(\sqrt{2018}+1)^2$$
+      <p>Jadi $x_1=\sqrt{2018}+1$. Karena $a,b\in\mathbb{Z}$ dan koefisiennya real, akar lainnya adalah konjugat: $x_2=-\sqrt{2018}+1$.</p>
+      $$x_1+x_2=2=-a \;\Rightarrow\; a=-2 \qquad x_1\cdot x_2=1-2018=-2017=b$$
+      $$a+b=-2+(-2017)=\boxed{-2019}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 31</div>
-      <p style="margin:0;font-size:.9rem;">$x_1,x_2$ akar $x^2-2x-1=0$. Cari PK yang akar-akarnya $\dfrac{x_1^2-1}{2x_1}$ dan $\dfrac{2x_2}{x_2^2-1}$!</p>
+      <p style="margin:0;font-size:.9rem;">Jika $x_1$ dan $x_2$ merupakan akar persamaan $x^2-2x-1=0$, carilah persamaan kuadrat yang akar-akarnya $\dfrac{x_1^2-1}{2x_1}$ dan $\dfrac{2x_2}{x_2^2-1}$!</p>
     </div>
     <div class="penyelesaian">
-      <p>Karena $x_1^2-2x_1-1=0$: $x_1^2-1=2x_1 \Rightarrow \alpha=\dfrac{2x_1}{2x_1}=1$. Sama, $\beta=1$.</p>
-      <p>Akar kembar 1: $\boxed{x^2-2x+1=0}$</p>
+      <p>Dari rumus Vieta: $x_1+x_2=2$ dan $x_1x_2=-1$.</p>
+      <p><em>Catatan domain:</em> Karena $x_1x_2=-1\neq 0$, maka $x_1\neq 0$ dan $x_2\neq 0$, sehingga penyebut terdefinisi.</p>
+      <p>Karena $x_1$ adalah akar: $x_1^2-2x_1-1=0$, sehingga $x_1^2-1=2x_1$.</p>
+      <p><strong>Sederhanakan akar baru pertama:</strong> $\alpha=\dfrac{x_1^2-1}{2x_1}=\dfrac{2x_1}{2x_1}=1$</p>
+      <p>Demikian pula $x_2^2-1=2x_2$, sehingga $\beta=\dfrac{2x_2}{x_2^2-1}=\dfrac{2x_2}{2x_2}=1$.</p>
+      <p>Kedua akar baru bernilai $1$, persamaan kuadrat baru (akar kembar $1$):</p>
+      $$(x-1)^2=0 \;\Rightarrow\; \boxed{x^2-2x+1=0}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 32</div>
-      <p style="margin:0;font-size:.9rem;">Akar-akar $2x^2-7x+2=0$ adalah $r,s$. Tentukan $\dfrac{r}{(r^2+1)^2}+\dfrac{s}{(s^2+1)^2}$!</p>
+      <p style="margin:0;font-size:.9rem;">Akar-akar persamaan $2x^2-7x+2=0$ adalah $r$ dan $s$. Tentukan nilai $\dfrac{r}{(r^2+1)^2}+\dfrac{s}{(s^2+1)^2}$!</p>
     </div>
     <div class="penyelesaian">
-      <p>$r+s=\tfrac{7}{2}$, $rs=1$. Karena $2r^2-7r+2=0$: $r^2+1=\tfrac{7r}{2}$.</p>
-      <p>$\dfrac{r}{(\frac{7r}{2})^2}=\dfrac{4}{49r}$. Demikian untuk $s$. $\dfrac{4}{49}\cdot\dfrac{r+s}{rs}=\dfrac{4}{49}\cdot\dfrac{7}{2}=\boxed{\dfrac{2}{7}}$</p>
+      <p>Dari rumus Vieta: $r+s=\dfrac{7}{2}$ dan $r\cdot s=1$.</p>
+      <p><strong>Kunci:</strong> Karena $r$ adalah akar: $2r^2-7r+2=0 \;\Rightarrow\; 2r^2+2=7r \;\Rightarrow\; r^2+1=\dfrac{7r}{2}$.</p>
+      $$\frac{r}{(r^2+1)^2}=\frac{r}{\left(\frac{7r}{2}\right)^2}=\frac{r}{\frac{49r^2}{4}}=\frac{4r}{49r^2}=\frac{4}{49r}$$
+      <p>Demikian pula $\dfrac{s}{(s^2+1)^2}=\dfrac{4}{49s}$. Maka:</p>
+      $$\frac{4}{49r}+\frac{4}{49s}=\frac{4}{49}\cdot\frac{r+s}{rs}=\frac{4}{49}\cdot\frac{\frac{7}{2}}{1}=\frac{4}{49}\cdot\frac{7}{2}=\frac{28}{98}=\boxed{\frac{2}{7}}$$
     </div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan</div>
       <ol class="soal-list">
-        <li>Sebuah lapangan persegi panjang memiliki panjang 5 m lebih dari lebarnya. Jika luasnya 84 m², tentukan panjang dan lebarnya!</li>
+        <li>Sebuah lapangan berbentuk persegi panjang memiliki panjang 5 m lebih dari lebarnya. Jika luasnya 84 m², tentukan panjang dan lebar lapangan tersebut!</li>
         <li>Umur Budi saat ini adalah dua kali umur adiknya. Dua tahun yang lalu, hasil kali umur mereka adalah 24. Tentukan umur Budi dan adiknya sekarang!</li>
         <li>Jumlah dua bilangan positif adalah 14 dan jumlah kuadratnya adalah 100. Tentukan kedua bilangan tersebut!</li>
-        <li>Tentukan nilai $x$ real yang memenuhi $\sqrt{x+5}+\sqrt{2x+3}=3$.<br><em>(Petunjuk: isolasi salah satu akar, kuadratkan, periksa solusi)</em></li>
-        <li>Diketahui $x_1-x_2=1$ dan $x_1^2-x_2^2=3$. Tentukan nilai $\dfrac{x_1+x_2}{x_1-x_2}$ dan susunlah persamaan kuadrat yang memenuhi!</li>
+        <li>Tentukan nilai $x$ real yang memenuhi $\sqrt{x+5}+\sqrt{2x+3}=3$. <em>(Petunjuk: kuadratkan kedua ruas setelah mengisolasi salah satu akar, lalu periksa solusi)</em></li>
+        <li>Diketahui persamaan $ax^2+bx+c=0$ memiliki akar-akar $x_1$ dan $x_2$. Jika $x_1-x_2=1$ dan $x_1^2-x_2^2=3$, tentukan nilai $\dfrac{x_1+x_2}{x_1-x_2}$ dan susunlah persamaan kuadrat sederhana yang memenuhi kondisi tersebut!</li>
       </ol>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════
+  <!-- ══════════════════════════════════════
        G. TABEL RINGKASAN
-       ═══════════════════════════════════ -->
+       ══════════════════════════════════════ -->
   <section class="section" id="bagian-g">
     <h2 class="section-title"><span class="section-badge">G</span>Tabel Ringkasan Persamaan Kuadrat</h2>
 
     <div class="box box-rumus">
-      <div class="box-label">• 1. Metode Penyelesaian</div>
+      <div class="box-label">• 1. Bentuk Umum dan Metode Penyelesaian</div>
       <table style="width:100%;border-collapse:collapse;font-size:.82rem;margin:.5rem 0;">
-        <thead><tr style="background:var(--navy);color:#fff;"><th style="padding:.55rem .7rem;text-align:left;">Metode</th><th style="padding:.55rem .7rem;text-align:left;">Rumus</th><th style="padding:.55rem .7rem;text-align:left;">Syarat / Langkah</th></tr></thead>
+        <thead><tr style="background:var(--navy);color:#fff;"><th style="padding:.5rem .7rem;text-align:left;">Metode</th><th style="padding:.5rem .7rem;text-align:left;">Rumus / Bentuk</th><th style="padding:.5rem .7rem;text-align:left;">Langkah / Syarat</th></tr></thead>
         <tbody>
-          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Bentuk baku</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$ax^2+bx+c=0$</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$a\neq 0$</td></tr>
-          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Pemfaktoran</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$\tfrac{1}{a}(ax+p)(ax+q)=0$</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$p+q=b$, $pq=ac$</td></tr>
-          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Kuadrat sempurna</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$\left(x+\tfrac{b}{2a}\right)^2=\tfrac{b^2-4ac}{4a^2}$</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Bagi $a$, lengkapi, akarkan</td></tr>
-          <tr><td style="padding:.5rem .7rem;color:var(--text-2);">Rumus ABC</td><td style="padding:.5rem .7rem;color:var(--text-2);">$x_{1,2}=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$</td><td style="padding:.5rem .7rem;color:var(--text-2);">Berlaku semua kasus</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Bentuk baku</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$ax^2+bx+c=0$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$a\neq 0$; $a,b,c\in\mathbb{R}$</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Pemfaktoran</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$\tfrac{1}{a}(ax+p)(ax+q)=0$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Cari $p,q$: $p+q=b$ dan $pq=ac$; maka $x_1=-\tfrac{p}{a}$, $x_2=-\tfrac{q}{a}$</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Kuadrat sempurna</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$\left(x+\tfrac{b}{2a}\right)^2=\tfrac{b^2-4ac}{4a^2}$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Bagi $a$, pindah $c$, tambah $\left(\tfrac{b}{2a}\right)^2$, akarkan</td></tr>
+          <tr><td style="padding:.45rem .7rem;color:var(--text-2);">Rumus ABC</td><td style="padding:.45rem .7rem;color:var(--text-2);">$x_{1,2}=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$</td><td style="padding:.45rem .7rem;color:var(--text-2);">Berlaku semua kasus; gunakan jika pemfaktoran sulit</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="box box-rumus">
-      <div class="box-label">• 2. Rumus Vieta — Hubungan Akar dan Koefisien</div>
+      <div class="box-label">• 2. Diskriminan dan Jenis-Jenis Akar</div>
       <table style="width:100%;border-collapse:collapse;font-size:.82rem;margin:.5rem 0;">
-        <thead><tr style="background:var(--navy);color:#fff;"><th style="padding:.55rem .7rem;text-align:left;">Ekspresi</th><th style="padding:.55rem .7rem;text-align:left;">Rumus</th></tr></thead>
+        <thead><tr style="background:var(--navy);color:#fff;"><th style="padding:.5rem .7rem;text-align:left;">Nilai $D=b^2-4ac$</th><th style="padding:.5rem .7rem;text-align:left;">Jenis Akar</th><th style="padding:.5rem .7rem;text-align:left;">Keterangan</th></tr></thead>
         <tbody>
-          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Jumlah akar</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1+x_2=-\dfrac{b}{a}$</td></tr>
-          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Hasil kali akar</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1\cdot x_2=\dfrac{c}{a}$</td></tr>
-          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Jumlah kuadrat</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2$</td></tr>
-          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Kuadrat selisih</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$(x_1-x_2)^2=(x_1+x_2)^2-4x_1x_2$</td></tr>
-          <tr><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Jumlah kubik</td><td style="padding:.5rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1^3+x_2^3=(x_1+x_2)^3-3x_1x_2(x_1+x_2)$</td></tr>
-          <tr><td style="padding:.5rem .7rem;color:var(--text-2);">Jumlah kebalikan</td><td style="padding:.5rem .7rem;color:var(--text-2);">$\dfrac{1}{x_1}+\dfrac{1}{x_2}=\dfrac{x_1+x_2}{x_1x_2}$</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D>0$ (kuadrat sempurna)</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Dua akar real berbeda, <strong style="color:var(--text)">rasional</strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$\sqrt{D}$ bilangan bulat; contoh $D=1,4,9,\ldots$</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D>0$ (bukan kuadrat sempurna)</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Dua akar real berbeda, <strong style="color:var(--text)">irasional</strong></td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$\sqrt{D}$ irasional; contoh $D=2,3,5,\ldots$</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D=0$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Akar kembar</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1=x_2=-\dfrac{b}{2a}$</td></tr>
+          <tr><td style="padding:.45rem .7rem;color:var(--text-2);">$D<0$</td><td style="padding:.45rem .7rem;color:var(--text-2);">Tidak ada akar real</td><td style="padding:.45rem .7rem;color:var(--text-2);">$x\notin\mathbb{R}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• 3. Syarat Berdasarkan Jenis Akar yang Diinginkan</div>
+      <table style="width:100%;border-collapse:collapse;font-size:.82rem;margin:.5rem 0;">
+        <thead><tr style="background:var(--navy);color:#fff;"><th style="padding:.5rem .7rem;text-align:left;">Kondisi yang Diinginkan</th><th style="padding:.5rem .7rem;text-align:left;">Syarat Diskriminan</th><th style="padding:.5rem .7rem;text-align:left;">Catatan</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Dua akar real berbeda</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D>0$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Jika $a$ bergantung parameter, bisa berupa pertidaksamaan</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Akar kembar</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D=0$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Perlu juga periksa $a\neq 0$</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Akar real (kembar atau berbeda)</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$D\geq 0$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Mencakup kedua kasus di atas</td></tr>
+          <tr><td style="padding:.45rem .7rem;color:var(--text-2);">Tidak ada akar real</td><td style="padding:.45rem .7rem;color:var(--text-2);">$D<0$</td><td style="padding:.45rem .7rem;color:var(--text-2);">Perlu juga syarat $a>0$ jika soal minta grafik di atas sumbu $X$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• 4. Rumus Vieta — Hubungan Akar dan Koefisien</div>
+      <table style="width:100%;border-collapse:collapse;font-size:.82rem;margin:.5rem 0;">
+        <thead><tr style="background:var(--navy);color:#fff;"><th style="padding:.5rem .7rem;text-align:left;">Ekspresi</th><th style="padding:.5rem .7rem;text-align:left;">Rumus</th><th style="padding:.5rem .7rem;text-align:left;">Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Jumlah akar</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1+x_2=-\dfrac{b}{a}$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Langsung dari koefisien</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Hasil kali akar</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1\cdot x_2=\dfrac{c}{a}$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Langsung dari koefisien</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Selisih akar</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1-x_2=\dfrac{\sqrt{D}}{|a|}$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Berlaku untuk $x_1>x_2$</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Jumlah kuadrat</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Perlu dikurangi $2x_1x_2$</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Kuadrat selisih</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$(x_1-x_2)^2=(x_1+x_2)^2-4x_1x_2$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Ekuivalen dengan $\dfrac{D}{a^2}$</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Jumlah kubik</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x_1^3+x_2^3=(x_1+x_2)^3-3x_1x_2(x_1+x_2)$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Gunakan pemfaktoran kubik</td></tr>
+          <tr><td style="padding:.45rem .7rem;color:var(--text-2);">Jumlah kebalikan</td><td style="padding:.45rem .7rem;color:var(--text-2);">$\dfrac{1}{x_1}+\dfrac{1}{x_2}=\dfrac{x_1+x_2}{x_1x_2}$</td><td style="padding:.45rem .7rem;color:var(--text-2);">Syarat: $x_1,x_2\neq 0$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• 5. Menyusun Persamaan Kuadrat Baru</div>
+      <table style="width:100%;border-collapse:collapse;font-size:.82rem;margin:.5rem 0;">
+        <thead><tr style="background:var(--navy);color:#fff;"><th style="padding:.5rem .7rem;text-align:left;">Diketahui</th><th style="padding:.5rem .7rem;text-align:left;">Formula</th><th style="padding:.5rem .7rem;text-align:left;">Langkah</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Akar-akar $x_1$ dan $x_2$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$x^2-(x_1+x_2)x+x_1x_2=0$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Hitung jumlah dan hasil kali akar baru</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Akar baru $\alpha=x_1+k$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$\alpha+\beta=(x_1+x_2)+2k$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Jumlah dan hasil kali dari Vieta asal</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Akar baru $\alpha=kx_1$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$\alpha+\beta=k(x_1+x_2)$; $\alpha\beta=k^2x_1x_2$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Skala akar</td></tr>
+          <tr><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Akar baru $\alpha=\dfrac{1}{x_1}$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">$\alpha+\beta=\dfrac{x_1+x_2}{x_1x_2}$; $\alpha\beta=\dfrac{1}{x_1x_2}$</td><td style="padding:.45rem .7rem;border-bottom:1px solid var(--border);color:var(--text-2);">Syarat: $x_1,x_2\neq 0$</td></tr>
+          <tr><td style="padding:.45rem .7rem;color:var(--text-2);">Substitusi $x=\alpha-k$</td><td style="padding:.45rem .7rem;color:var(--text-2);">Substitusikan ke persamaan asal</td><td style="padding:.45rem .7rem;color:var(--text-2);">Cara alternatif yang sering lebih cepat</td></tr>
         </tbody>
       </table>
     </div>
@@ -1198,7 +1376,7 @@ $\\boxed{a=1,\\; b=-1,\\; c=-11}$</p>
     latihanIdx++;
     const list = box.querySelector(".soal-list");
     if (!list) return;
-    const items = [...list.querySelectorAll("li")];
+    const items = [...list.children].filter(el => el.tagName === "LI");
     const newList = document.createElement("div");
     newList.className = "soal-list-accordion";
     items.forEach((li, i) => {
