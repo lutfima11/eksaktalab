@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latihan Prasyarat Matematika SMA — EksaktaLab</title>
+<meta name="description" content="Uji kesiapan masuk SMA! 20 soal diagnostik materi prasyarat Fase D (SMP) sebelum mempelajari Fase E/F.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},startup:{ready(){MathJax.startup.defaultReady();}}}</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<style>
+/* ── TOKENS ──────────────────────────────────────────── */
+:root {
+  --navy:      #0A0F1E;
+  --navy-mid:  #141929;
+  --navy-soft: #1E2640;
+  --teal:      #00BFA5;
+  --teal-dim:  #009E87;
+  --yellow:    #FFF8E1;
+  --yellow-b:  #F59E0B;
+  --green:     #ECFDF5;
+  --green-b:   #059669;
+  --blue:      #EFF6FF;
+  --blue-b:    #3B82F6;
+  --red:       #FEF2F2;
+  --red-b:     #EF4444;
+  --surface:   #FFFFFF;
+  --surface-2: #F0F4FF;
+  --surface-3: #E8EEFF;
+  --text:      #0A0F1E;
+  --text-2:    #3D4A6B;
+  --text-3:    #7B8BB2;
+  --border:    #D8E0F5;
+  --radius-sm: 8px;
+  --radius:    12px;
+  --radius-lg: 18px;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Inter', system-ui, sans-serif;
+  --display: 'Space Grotesk', system-ui, sans-serif;
+}
+[data-theme="dark"] {
+  --surface:   #0A0F1E;
+  --surface-2: #141929;
+  --surface-3: #1E2640;
+  --text:      #EEF1FF;
+  --text-2:    #A8B4D8;
+  --text-3:    #5C6A8C;
+  --border:    #263050;
+  --yellow:    #1C1A0A;
+  --yellow-b:  #D97706;
+  --green:     #052E1C;
+  --green-b:   #34D399;
+  --blue:      #0C1A35;
+  --blue-b:    #60A5FA;
+  --red:       #1C0A0A;
+  --red-b:     #F87171;
+}
+
+/* ── RESET ───────────────────────────────────────────── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  background:var(--surface);
+  color:var(--text);
+  min-height:100vh;
+  transition:background .25s,color .25s;
+}
+
+/* ── NAVBAR ──────────────────────────────────────────── */
+.navbar{
+  position:sticky;top:0;z-index:50;
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  padding:0 2rem;
+  height:60px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;
+}
+.logo{
+  display:flex;align-items:center;gap:0.65rem;
+  text-decoration:none;flex-shrink:0;
+}
+.logo-icon{
+  width:36px;height:36px;border-radius:9px;
+  background:var(--teal);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.logo-icon svg{width:18px;height:18px;}
+.logo-text{display:flex;flex-direction:column;gap:0.05rem;line-height:1;}
+.logo-name{font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--text);letter-spacing:-0.02em;}
+.logo-name em{font-style:normal;color:var(--teal);}
+.logo-tagline{font-family:var(--mono);font-size:0.5rem;font-weight:500;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;}
+
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0;}
+.btn-back{
+  font-family:var(--sans);font-size:0.78rem;font-weight:600;
+  color:var(--text-2);background:var(--surface-2);
+  border:1px solid var(--border);
+  padding:0.35rem 0.85rem;border-radius:8px;
+  cursor:pointer;transition:all .2s;text-decoration:none;
+  display:inline-flex;align-items:center;gap:0.4rem;
+}
+.btn-back:hover{border-color:var(--teal);color:var(--teal);}
+.btn-theme{
+  font-family:var(--sans);font-size:0.75rem;font-weight:600;
+  color:var(--text-2);background:var(--surface-2);
+  border:1px solid var(--border);
+  padding:0.35rem 0.8rem;border-radius:8px;
+  cursor:pointer;transition:all .2s;
+}
+.btn-theme:hover{border-color:var(--teal);color:var(--teal);}
+
+/* ── PAGE HEADER ─────────────────────────────────────── */
+.page-header{
+  background:var(--navy);
+  padding:2.5rem 2rem 2rem;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.page-header-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(0,191,165,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,191,165,.06) 1px, transparent 1px);
+  background-size:36px 36px;
+}
+.page-header-grid::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 80% at 50% 50%, transparent 30%, var(--navy) 100%);
+  z-index:1;
+}
+.page-header-content{position:relative;z-index:2;max-width:640px;margin:0 auto;}
+.page-eyebrow{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  font-family:var(--mono);font-size:0.68rem;font-weight:500;
+  color:var(--teal);letter-spacing:.12em;text-transform:uppercase;
+  background:rgba(0,191,165,.1);border:1px solid rgba(0,191,165,.25);
+  padding:0.28rem 0.7rem;border-radius:8px;margin-bottom:1rem;
+}
+.page-title{
+  font-family:var(--display);font-size:clamp(1.5rem,4vw,2.2rem);
+  font-weight:700;color:#fff;letter-spacing:-0.03em;margin-bottom:0.75rem;
+}
+.page-title em{font-style:normal;color:var(--teal);}
+.page-sub{font-size:0.9rem;color:#8FA8C8;line-height:1.6;margin-bottom:1.5rem;}
+.page-meta{
+  display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap;
+}
+.meta-pill{
+  display:inline-flex;align-items:center;gap:0.35rem;
+  font-family:var(--mono);font-size:0.65rem;font-weight:600;
+  color:#8FA8C8;letter-spacing:.06em;
+}
+.meta-pill span{color:var(--teal);}
+
+/* ── PROGRESS BAR ────────────────────────────────────── */
+.progress-wrap{
+  background:var(--surface-2);border-bottom:1px solid var(--border);
+  padding:0.9rem 2rem;
+  display:flex;align-items:center;gap:1rem;
+  position:sticky;top:60px;z-index:40;
+}
+.progress-label{
+  font-family:var(--mono);font-size:0.68rem;font-weight:600;
+  color:var(--text-3);letter-spacing:.06em;white-space:nowrap;flex-shrink:0;
+}
+.progress-bar{
+  flex:1;height:6px;background:var(--surface-3);
+  border-radius:99px;overflow:hidden;
+}
+.progress-fill{
+  height:100%;background:var(--teal);
+  border-radius:99px;
+  width:0%;transition:width .4s ease;
+}
+.progress-count{
+  font-family:var(--mono);font-size:0.75rem;font-weight:700;
+  color:var(--text);white-space:nowrap;flex-shrink:0;
+}
+.progress-count em{color:var(--teal);font-style:normal;}
+
+/* ── QUIZ WRAP ───────────────────────────────────────── */
+.quiz-wrap{max-width:780px;margin:0 auto;padding:2rem 2rem 4rem;}
+
+/* ── SECTION DIVIDER ─────────────────────────────────── */
+.section-divider{
+  display:flex;align-items:center;gap:0.75rem;
+  margin:2.5rem 0 1.25rem;
+}
+.section-tag{
+  font-family:var(--mono);font-size:0.65rem;font-weight:700;
+  background:var(--navy);color:var(--teal);
+  padding:0.2rem 0.65rem;border-radius:5px;
+  letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;
+}
+[data-theme="dark"] .section-tag{background:rgba(0,191,165,.15);color:var(--teal);}
+.section-name{
+  font-family:var(--display);font-size:0.92rem;font-weight:700;
+  color:var(--text);
+}
+.divider-line{flex:1;height:1px;background:var(--border);}
+
+/* ── QUESTION CARD ───────────────────────────────────── */
+.q-card{
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:var(--radius);padding:1.35rem 1.5rem;
+  margin-bottom:1rem;
+  transition:border-color .2s,box-shadow .2s;
+}
+.q-card.answered{border-color:rgba(0,191,165,.3);}
+.q-card.correct{border-color:var(--green-b)!important;background:var(--green);}
+.q-card.wrong{border-color:var(--red-b)!important;background:var(--red);}
+[data-theme="dark"] .q-card.correct{background:var(--green);}
+[data-theme="dark"] .q-card.wrong{background:var(--red);}
+
+.q-head{display:flex;align-items:flex-start;gap:0.85rem;margin-bottom:1rem;}
+.q-num{
+  font-family:var(--mono);font-size:0.65rem;font-weight:700;
+  color:var(--teal);background:rgba(0,191,165,.1);
+  border:1px solid rgba(0,191,165,.25);
+  padding:0.22rem 0.55rem;border-radius:5px;
+  white-space:nowrap;flex-shrink:0;margin-top:0.1rem;
+}
+.q-text{
+  font-size:0.93rem;line-height:1.7;color:var(--text);
+  font-weight:500;flex:1;
+}
+.q-img{margin:0.75rem 0 1rem;text-align:center;}
+.q-img svg{max-width:100%;height:auto;}
+
+/* ── OPTIONS ─────────────────────────────────────────── */
+.options{display:flex;flex-direction:column;gap:0.45rem;}
+.opt{
+  display:flex;align-items:flex-start;gap:0.8rem;
+  padding:0.7rem 0.95rem;border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);
+  background:var(--surface);
+  cursor:pointer;transition:all .18s;
+  font-size:0.875rem;color:var(--text);
+  text-align:left;width:100%;
+}
+.opt:hover:not(:disabled){
+  border-color:var(--teal);
+  background:rgba(0,191,165,.04);
+}
+.opt:disabled{cursor:default;}
+.opt-key{
+  font-family:var(--mono);font-size:0.68rem;font-weight:700;
+  color:var(--text-3);background:var(--surface-2);
+  border:1px solid var(--border);
+  width:22px;height:22px;border-radius:5px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:0.05rem;
+  transition:all .18s;
+}
+.opt-text{line-height:1.55;padding-top:0.02rem;flex:1;}
+
+/* State: selected */
+.opt.selected{
+  border-color:var(--blue-b);
+  background:var(--blue);
+}
+[data-theme="dark"] .opt.selected{background:var(--blue);}
+.opt.selected .opt-key{
+  background:var(--blue-b);color:#fff;border-color:var(--blue-b);
+}
+
+/* State: correct */
+.opt.is-correct{
+  border-color:var(--green-b)!important;
+  background:var(--green)!important;
+}
+.opt.is-correct .opt-key{
+  background:var(--green-b)!important;color:#fff!important;border-color:var(--green-b)!important;
+}
+
+/* State: wrong (selected but incorrect) */
+.opt.is-wrong{
+  border-color:var(--red-b)!important;
+  background:var(--red)!important;
+}
+.opt.is-wrong .opt-key{
+  background:var(--red-b)!important;color:#fff!important;border-color:var(--red-b)!important;
+}
+
+/* ── PEMBAHASAN ──────────────────────────────────────── */
+.pembahasan{
+  margin-top:1rem;padding:0.9rem 1rem;
+  border-radius:var(--radius-sm);
+  background:var(--surface-2);border:1px solid var(--border);
+  font-size:0.82rem;line-height:1.65;color:var(--text-2);
+  display:none;
+}
+.pembahasan.show{display:block;animation:fadeUp .25s ease;}
+.pembahasan strong{color:var(--text);font-weight:600;}
+.pembahasan .p-label{
+  font-family:var(--mono);font-size:0.6rem;font-weight:700;
+  color:var(--teal);letter-spacing:.08em;text-transform:uppercase;
+  display:block;margin-bottom:0.4rem;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── SUBMIT BUTTON ───────────────────────────────────── */
+.submit-wrap{text-align:center;margin:2.5rem 0 1rem;}
+.btn-submit{
+  font-family:var(--display);font-size:1rem;font-weight:700;
+  background:var(--teal);color:#fff;
+  padding:0.85rem 2.5rem;border-radius:var(--radius);
+  border:none;cursor:pointer;
+  transition:background .2s,transform .15s,box-shadow .2s;
+  box-shadow:0 4px 16px rgba(0,191,165,.25);
+}
+.btn-submit:hover{background:var(--teal-dim);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,191,165,.3);}
+.btn-submit:disabled{background:var(--border);color:var(--text-3);cursor:not-allowed;box-shadow:none;transform:none;}
+
+/* ── SCORE PANEL ─────────────────────────────────────── */
+.score-panel{
+  background:var(--navy);border-radius:var(--radius-lg);
+  padding:2.5rem 2rem;text-align:center;
+  margin:2rem 0;
+  display:none;
+  position:relative;overflow:hidden;
+}
+.score-panel.show{display:block;animation:fadeUp .4s ease;}
+.score-bg{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(0,191,165,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,191,165,.06) 1px,transparent 1px);
+  background-size:32px 32px;pointer-events:none;
+}
+.score-bg::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 70% at 50% 50%,transparent 20%,var(--navy) 100%);
+  z-index:1;
+}
+.score-inner{position:relative;z-index:2;}
+.score-eyebrow{
+  font-family:var(--mono);font-size:0.65rem;font-weight:600;
+  color:var(--teal);letter-spacing:.12em;text-transform:uppercase;
+  display:block;margin-bottom:1rem;
+}
+.score-big{
+  font-family:var(--display);font-size:clamp(3.5rem,10vw,5.5rem);
+  font-weight:700;color:#fff;letter-spacing:-0.04em;
+  line-height:1;margin-bottom:0.35rem;
+}
+.score-big em{font-style:normal;color:var(--teal);}
+.score-denom{font-family:var(--mono);font-size:1rem;color:#5C6A8C;}
+.score-label{
+  font-family:var(--display);font-size:1.15rem;font-weight:700;
+  color:#fff;margin:1rem 0 0.5rem;letter-spacing:-0.01em;
+}
+.score-msg{font-size:0.875rem;color:#8FA8C8;line-height:1.6;max-width:420px;margin:0 auto 1.75rem;}
+
+/* Score breakdown grid */
+.score-breakdown{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:0.75rem;max-width:480px;margin:0 auto 1.75rem;
+}
+.sbd-item{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius);padding:0.85rem 0.5rem;
+}
+.sbd-num{
+  font-family:var(--display);font-size:1.5rem;font-weight:700;
+  color:#fff;letter-spacing:-0.03em;
+}
+.sbd-num.green{color:#34D399;}
+.sbd-num.red{color:#F87171;}
+.sbd-lbl{font-family:var(--mono);font-size:0.58rem;font-weight:600;color:#5C6A8C;letter-spacing:.06em;text-transform:uppercase;margin-top:0.2rem;}
+
+/* Pillar breakdown */
+.pillar-breakdown{
+  display:flex;flex-direction:column;gap:0.5rem;
+  max-width:480px;margin:0 auto 1.75rem;text-align:left;
+}
+.pbd-row{
+  display:flex;align-items:center;gap:0.75rem;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--radius-sm);padding:0.6rem 0.9rem;
+}
+.pbd-tag{
+  font-family:var(--mono);font-size:0.6rem;font-weight:700;
+  color:var(--teal);white-space:nowrap;min-width:80px;
+}
+.pbd-bar-wrap{flex:1;height:6px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden;}
+.pbd-bar{height:100%;border-radius:99px;background:var(--teal);transition:width .6s ease;}
+.pbd-score{font-family:var(--mono);font-size:0.7rem;font-weight:600;color:#8FA8C8;white-space:nowrap;min-width:36px;text-align:right;}
+
+.score-actions{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;}
+.btn-retry{
+  font-family:var(--sans);font-size:0.875rem;font-weight:600;
+  background:rgba(255,255,255,.08);color:#CBD5E8;
+  padding:0.65rem 1.5rem;border-radius:var(--radius-sm);
+  border:1.5px solid rgba(255,255,255,.15);cursor:pointer;
+  transition:all .2s;
+}
+.btn-retry:hover{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.3);}
+.btn-home{
+  font-family:var(--sans);font-size:0.875rem;font-weight:600;
+  background:var(--teal);color:#fff;
+  padding:0.65rem 1.5rem;border-radius:var(--radius-sm);
+  border:none;cursor:pointer;text-decoration:none;
+  transition:background .2s,transform .15s;
+  display:inline-flex;align-items:center;gap:0.4rem;
+}
+.btn-home:hover{background:var(--teal-dim);transform:translateY(-1px);}
+
+/* ── TOAST ───────────────────────────────────────────── */
+#toast{
+  position:fixed;bottom:2rem;right:2rem;
+  background:var(--navy);color:#fff;
+  border:1px solid var(--teal);
+  padding:0.75rem 1.25rem;border-radius:var(--radius-sm);
+  font-size:0.85rem;font-weight:600;
+  display:none;z-index:200;
+  box-shadow:0 8px 24px rgba(0,0,0,.2);
+}
+#toast.show{display:block;animation:fadeUp .2s ease;}
+
+/* ── FOOTER ─────────────────────────────── */
+.site-footer{
+  background:var(--navy);
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:2.5rem 2rem 1.5rem;
+  margin-top:3rem;
+}
+.footer-grid{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:2.5rem;margin-bottom:2.5rem;
+}
+.footer-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;margin-bottom:0.85rem;}
+.footer-logo-icon{width:30px;height:30px;border-radius:8px;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.footer-logo-icon svg{width:16px;height:16px;}
+.footer-logo-name{font-family:var(--display);font-size:1rem;font-weight:700;color:#fff;letter-spacing:-.02em;}
+.footer-logo-name em{font-style:normal;color:var(--teal);}
+.footer-desc{font-size:0.8rem;color:#475569;line-height:1.65;margin-bottom:1rem;}
+.footer-kurikulum{display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.58rem;font-weight:600;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;background:rgba(0,191,165,.08);border:1px solid rgba(0,191,165,.2);padding:0.22rem 0.6rem;border-radius:4px;}
+.footer-col-title{font-family:var(--mono);font-size:0.6rem;font-weight:700;color:#475569;letter-spacing:.1em;text-transform:uppercase;margin-bottom:0.85rem;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+.footer-links a{font-size:0.82rem;color:#334155;text-decoration:none;transition:color .15s;}
+.footer-links a:hover{color:var(--teal);}
+.footer-links a.ready::after{content:'·';font-size:0.7rem;color:var(--teal);margin-left:0.35rem;}
+.footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.06);padding-top:1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;}
+.footer-copy{font-size:0.75rem;color:#334155;}
+.footer-legal{display:flex;gap:1.25rem;}
+.footer-legal a{font-size:0.75rem;color:#334155;text-decoration:none;transition:color .15s;}
+.footer-legal a:hover{color:var(--teal);}
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media(max-width:768px){
+  .navbar{padding:0 1rem;}
+  .page-header{padding:2rem 1.25rem 1.75rem;}
+  .progress-wrap{padding:0.75rem 1rem;}
+  .quiz-wrap{padding:1.5rem 1rem 3rem;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+  .score-breakdown{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:500px){
+  .logo-tagline{display:none;}
+  .page-meta{gap:0.75rem;}
+  .score-breakdown{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .footer-grid{grid-template-columns:1fr;}
+  .site-footer{padding:2rem 1.25rem;}
+  .score-actions{flex-direction:column;align-items:stretch;}
+  .btn-retry,.btn-home{text-align:center;justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <a class="logo" href="index.html">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <div class="logo-name">Eksakta<em>Lab</em></div>
+      <div class="logo-tagline">Lab. Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <a class="btn-back" href="index.html">← Beranda</a>
+    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()" title="Ganti tema">🌙</button>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="page-header-grid"></div>
+  <div class="page-header-content">
+    <div class="page-eyebrow">
+      <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="currentColor" opacity=".5"/><circle cx="4" cy="4" r="1.5" fill="currentColor"/></svg>
+      Asesmen Diagnostik Kognitif
+    </div>
+    <h1 class="page-title">Latihan Soal <em>Prasyarat</em> Matematika SMA</h1>
+    <p class="page-sub">Uji penguasaan materi Fase D (SMP) sebelum melanjutkan ke Fase E/F. Terdiri dari 20 soal yang mencakup 5 elemen utama kurikulum.</p>
+    <div class="page-meta">
+      <div class="meta-pill">📋 <span>20 Soal</span> Pilihan Ganda</div>
+      <div class="meta-pill">⏱️ Estimasi <span>25–35 Menit</span></div>
+      <div class="meta-pill">📚 Fase D → <span>E/F</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRESS -->
+<div class="progress-wrap">
+  <div class="progress-label">PROGRES</div>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-count"><em id="progressNum">0</em>/20 Dijawab</div>
+</div>
+
+<!-- QUIZ MAIN -->
+<div class="quiz-wrap" id="quizWrap">
+
+  <!-- ══════════ BAGIAN 1: BILANGAN ══════════ -->
+  <div class="section-divider">
+    <span class="section-tag">Bagian A</span>
+    <span class="section-name">Bilangan</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- Q1 -->
+  <div class="q-card" id="qc1">
+    <div class="q-head">
+      <span class="q-num">No. 01</span>
+      <div class="q-text">Hasil dari $(-3)^2 \times (-2)^3 + \dfrac{5}{2} \div \dfrac{1}{4}$ adalah ...</div>
+    </div>
+    <div class="options" id="opts1">
+      <button class="opt" onclick="pilih(1,'A')"><span class="opt-key">A</span><span class="opt-text">$-62$</span></button>
+      <button class="opt" onclick="pilih(1,'B')"><span class="opt-key">B</span><span class="opt-text">$-52$</span></button>
+      <button class="opt" onclick="pilih(1,'C')"><span class="opt-key">C</span><span class="opt-text">$-42$</span></button>
+      <button class="opt" onclick="pilih(1,'D')"><span class="opt-key">D</span><span class="opt-text">$2$</span></button>
+    </div>
+    <div class="pembahasan" id="pem1">
+      <span class="p-label">💡 Pembahasan</span>
+      $(-3)^2 = 9$, $(-2)^3 = -8$, maka $9 \times (-8) = -72$. Kemudian $\frac{5}{2} \div \frac{1}{4} = \frac{5}{2} \times 4 = 10$. Hasil akhir: $-72 + 10 = \mathbf{-62}$. Jawaban: <strong>A</strong>.
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="q-card" id="qc2">
+    <div class="q-head">
+      <span class="q-num">No. 02</span>
+      <div class="q-text">Sederhanakan: $\sqrt{48} - \sqrt{12} + \sqrt{75}$ = ...</div>
+    </div>
+    <div class="options" id="opts2">
+      <button class="opt" onclick="pilih(2,'A')"><span class="opt-key">A</span><span class="opt-text">$5\sqrt{3}$</span></button>
+      <button class="opt" onclick="pilih(2,'B')"><span class="opt-key">B</span><span class="opt-text">$6\sqrt{3}$</span></button>
+      <button class="opt" onclick="pilih(2,'C')"><span class="opt-key">C</span><span class="opt-text">$7\sqrt{3}$</span></button>
+      <button class="opt" onclick="pilih(2,'D')"><span class="opt-key">D</span><span class="opt-text">$8\sqrt{3}$</span></button>
+    </div>
+    <div class="pembahasan" id="pem2">
+      <span class="p-label">💡 Pembahasan</span>
+      $\sqrt{48} = 4\sqrt{3}$, $\sqrt{12} = 2\sqrt{3}$, $\sqrt{75} = 5\sqrt{3}$. Maka $4\sqrt{3} - 2\sqrt{3} + 5\sqrt{3} = \mathbf{7\sqrt{3}}$. Jawaban: <strong>C</strong>.
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="q-card" id="qc3">
+    <div class="q-head">
+      <span class="q-num">No. 03</span>
+      <div class="q-text">Nilai dari $2^5 \div 2^2 \times (2^3)^2$ adalah ...</div>
+    </div>
+    <div class="options" id="opts3">
+      <button class="opt" onclick="pilih(3,'A')"><span class="opt-key">A</span><span class="opt-text">$2^{11}$</span></button>
+      <button class="opt" onclick="pilih(3,'B')"><span class="opt-key">B</span><span class="opt-text">$2^{9}$</span></button>
+      <button class="opt" onclick="pilih(3,'C')"><span class="opt-key">C</span><span class="opt-text">$2^{13}$</span></button>
+      <button class="opt" onclick="pilih(3,'D')"><span class="opt-key">D</span><span class="opt-text">$2^{7}$</span></button>
+    </div>
+    <div class="pembahasan" id="pem3">
+      <span class="p-label">💡 Pembahasan</span>
+      $2^5 \div 2^2 = 2^{5-2} = 2^3$. $(2^3)^2 = 2^6$. Maka $2^3 \times 2^6 = 2^{3+6} = \mathbf{2^9}$. Jawaban: <strong>B</strong>.
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="q-card" id="qc4">
+    <div class="q-head">
+      <span class="q-num">No. 04</span>
+      <div class="q-text">Nilai dari $\dfrac{3}{4} + 1{,}75 - \dfrac{2}{5}$ adalah ...</div>
+    </div>
+    <div class="options" id="opts4">
+      <button class="opt" onclick="pilih(4,'A')"><span class="opt-key">A</span><span class="opt-text">$\dfrac{21}{10}$</span></button>
+      <button class="opt" onclick="pilih(4,'B')"><span class="opt-key">B</span><span class="opt-text">$\dfrac{43}{20}$</span></button>
+      <button class="opt" onclick="pilih(4,'C')"><span class="opt-key">C</span><span class="opt-text">$\dfrac{47}{20}$</span></button>
+      <button class="opt" onclick="pilih(4,'D')"><span class="opt-key">D</span><span class="opt-text">$2$</span></button>
+    </div>
+    <div class="pembahasan" id="pem4">
+      <span class="p-label">💡 Pembahasan</span>
+      Ubah ke pecahan: $1{,}75 = \dfrac{7}{4}$. Maka $\dfrac{3}{4} + \dfrac{7}{4} - \dfrac{2}{5} = \dfrac{10}{4} - \dfrac{2}{5} = \dfrac{5}{2} - \dfrac{2}{5} = \dfrac{25}{10} - \dfrac{4}{10} = \mathbf{\dfrac{21}{10}}$. Jawaban: <strong>A</strong>.
+    </div>
+  </div>
+
+  <!-- ══════════ BAGIAN 2: ALJABAR ══════════ -->
+  <div class="section-divider">
+    <span class="section-tag">Bagian B</span>
+    <span class="section-name">Aljabar</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="q-card" id="qc5">
+    <div class="q-head">
+      <span class="q-num">No. 05</span>
+      <div class="q-text">Faktor dari $x^2 - 5x - 14$ adalah ...</div>
+    </div>
+    <div class="options" id="opts5">
+      <button class="opt" onclick="pilih(5,'A')"><span class="opt-key">A</span><span class="opt-text">$(x+2)(x-7)$</span></button>
+      <button class="opt" onclick="pilih(5,'B')"><span class="opt-key">B</span><span class="opt-text">$(x-2)(x+7)$</span></button>
+      <button class="opt" onclick="pilih(5,'C')"><span class="opt-key">C</span><span class="opt-text">$(x+2)(x+7)$</span></button>
+      <button class="opt" onclick="pilih(5,'D')"><span class="opt-key">D</span><span class="opt-text">$(x-2)(x-7)$</span></button>
+    </div>
+    <div class="pembahasan" id="pem5">
+      <span class="p-label">💡 Pembahasan</span>
+      Cari dua bilangan yang hasil kalinya $-14$ dan jumlahnya $-5$: yaitu $+2$ dan $-7$. Maka $x^2-5x-14 = \mathbf{(x+2)(x-7)}$. Jawaban: <strong>A</strong>.
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="q-card" id="qc6">
+    <div class="q-head">
+      <span class="q-num">No. 06</span>
+      <div class="q-text">Nilai $x$ yang memenuhi persamaan $3(2x - 4) = 2(x + 6)$ adalah ...</div>
+    </div>
+    <div class="options" id="opts6">
+      <button class="opt" onclick="pilih(6,'A')"><span class="opt-key">A</span><span class="opt-text">$x = 3$</span></button>
+      <button class="opt" onclick="pilih(6,'B')"><span class="opt-key">B</span><span class="opt-text">$x = 4$</span></button>
+      <button class="opt" onclick="pilih(6,'C')"><span class="opt-key">C</span><span class="opt-text">$x = 6$</span></button>
+      <button class="opt" onclick="pilih(6,'D')"><span class="opt-key">D</span><span class="opt-text">$x = 8$</span></button>
+    </div>
+    <div class="pembahasan" id="pem6">
+      <span class="p-label">💡 Pembahasan</span>
+      $6x - 12 = 2x + 12 \Rightarrow 4x = 24 \Rightarrow x = \mathbf{6}$. Verifikasi: $3(12-4)=3(8)=24$; $2(6+6)=2(12)=24$ ✓. Jawaban: <strong>C</strong>.
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="q-card" id="qc7">
+    <div class="q-head">
+      <span class="q-num">No. 07</span>
+      <div class="q-text">Diketahui SPLDV: $2x + y = 7$ dan $x - y = 2$. Nilai $x + y$ adalah ...</div>
+    </div>
+    <div class="options" id="opts7">
+      <button class="opt" onclick="pilih(7,'A')"><span class="opt-key">A</span><span class="opt-text">$4$</span></button>
+      <button class="opt" onclick="pilih(7,'B')"><span class="opt-key">B</span><span class="opt-text">$5$</span></button>
+      <button class="opt" onclick="pilih(7,'C')"><span class="opt-key">C</span><span class="opt-text">$6$</span></button>
+      <button class="opt" onclick="pilih(7,'D')"><span class="opt-key">D</span><span class="opt-text">$7$</span></button>
+    </div>
+    <div class="pembahasan" id="pem7">
+      <span class="p-label">💡 Pembahasan</span>
+      Eliminasi: $(2x+y)+(x-y)=7+2 \Rightarrow 3x=9 \Rightarrow x=3$. Substitusi: $3-y=2 \Rightarrow y=1$. Maka $x+y = 3+1 = \mathbf{4}$. Jawaban: <strong>A</strong>.
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="q-card" id="qc8">
+    <div class="q-head">
+      <span class="q-num">No. 08</span>
+      <div class="q-text">Fungsi $f: \mathbb{R} \to \mathbb{R}$ didefinisikan dengan $f(x) = 3x - 5$. Nilai $f(4) - f(-1)$ adalah ...</div>
+    </div>
+    <div class="options" id="opts8">
+      <button class="opt" onclick="pilih(8,'A')"><span class="opt-key">A</span><span class="opt-text">$10$</span></button>
+      <button class="opt" onclick="pilih(8,'B')"><span class="opt-key">B</span><span class="opt-text">$12$</span></button>
+      <button class="opt" onclick="pilih(8,'C')"><span class="opt-key">C</span><span class="opt-text">$15$</span></button>
+      <button class="opt" onclick="pilih(8,'D')"><span class="opt-key">D</span><span class="opt-text">$20$</span></button>
+    </div>
+    <div class="pembahasan" id="pem8">
+      <span class="p-label">💡 Pembahasan</span>
+      $f(4) = 3(4)-5 = 7$. $f(-1) = 3(-1)-5 = -8$. Maka $f(4)-f(-1) = 7-(-8) = \mathbf{15}$. Jawaban: <strong>C</strong>.
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="q-card" id="qc9">
+    <div class="q-head">
+      <span class="q-num">No. 09</span>
+      <div class="q-text">Himpunan penyelesaian dari pertidaksamaan $2x - 3 > 5$ untuk $x \in \mathbb{R}$ adalah ...</div>
+    </div>
+    <div class="options" id="opts9">
+      <button class="opt" onclick="pilih(9,'A')"><span class="opt-key">A</span><span class="opt-text">$\{x \mid x > 4\}$</span></button>
+      <button class="opt" onclick="pilih(9,'B')"><span class="opt-key">B</span><span class="opt-text">$\{x \mid x < 4\}$</span></button>
+      <button class="opt" onclick="pilih(9,'C')"><span class="opt-key">C</span><span class="opt-text">$\{x \mid x > 1\}$</span></button>
+      <button class="opt" onclick="pilih(9,'D')"><span class="opt-key">D</span><span class="opt-text">$\{x \mid x < 1\}$</span></button>
+    </div>
+    <div class="pembahasan" id="pem9">
+      <span class="p-label">💡 Pembahasan</span>
+      $2x-3 > 5 \Rightarrow 2x > 8 \Rightarrow x > 4$. Himpunan penyelesaian: $\mathbf{\{x \mid x > 4\}}$. Jawaban: <strong>A</strong>.
+    </div>
+  </div>
+
+  <!-- ══════════ BAGIAN 3: GEOMETRI ══════════ -->
+  <div class="section-divider">
+    <span class="section-tag">Bagian C</span>
+    <span class="section-name">Geometri &amp; Pengukuran</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="q-card" id="qc10">
+    <div class="q-head">
+      <span class="q-num">No. 10</span>
+      <div class="q-text">Pada segitiga siku-siku berikut, panjang sisi miring $AC$ adalah ...</div>
+    </div>
+    <!-- SVG diagram: right triangle B(40,160) A(200,160) C(40,40) — legs BA=8, BC=6, hyp AC=10 -->
+    <div class="q-img">
+      <svg viewBox="0 0 280 210" width="280" height="210" xmlns="http://www.w3.org/2000/svg" style="font-family:'JetBrains Mono',monospace">
+        <!-- triangle: B=siku-siku di kiri bawah, A=kanan bawah, C=kiri atas -->
+        <polygon points="40,160 200,160 40,50" fill="rgba(0,191,165,0.06)" stroke="#00BFA5" stroke-width="2" stroke-linejoin="round"/>
+        <!-- right angle marker di B(40,160) -->
+        <polyline points="40,142 58,142 58,160" fill="none" stroke="#7B8BB2" stroke-width="1.5"/>
+        <!-- sisi AB (alas) label tengah bawah -->
+        <text x="120" y="177" fill="#3D4A6B" font-size="12" text-anchor="middle">AB = 8 cm</text>
+        <!-- sisi BC (tegak) label tengah kiri, dirotasi -->
+        <text x="11" y="108" fill="#3D4A6B" font-size="12" text-anchor="middle" transform="rotate(-90,11,108)">BC = 6 cm</text>
+        <!-- sisi AC (miring) label tengah miring -->
+        <text x="136" y="95" fill="#00BFA5" font-size="13" font-weight="700" text-anchor="middle" transform="rotate(-36,136,95)">AC = ?</text>
+        <!-- vertex labels -->
+        <text x="30" y="45" fill="#0A0F1E" font-size="13" font-weight="700" text-anchor="middle">C</text>
+        <text x="28" y="178" fill="#0A0F1E" font-size="13" font-weight="700" text-anchor="middle">B</text>
+        <text x="212" y="178" fill="#0A0F1E" font-size="13" font-weight="700" text-anchor="middle">A</text>
+      </svg>
+    </div>
+    <div class="options" id="opts10">
+      <button class="opt" onclick="pilih(10,'A')"><span class="opt-key">A</span><span class="opt-text">$8$ cm</span></button>
+      <button class="opt" onclick="pilih(10,'B')"><span class="opt-key">B</span><span class="opt-text">$10$ cm</span></button>
+      <button class="opt" onclick="pilih(10,'C')"><span class="opt-key">C</span><span class="opt-text">$12$ cm</span></button>
+      <button class="opt" onclick="pilih(10,'D')"><span class="opt-key">D</span><span class="opt-text">$14$ cm</span></button>
+    </div>
+    <div class="pembahasan" id="pem10">
+      <span class="p-label">💡 Pembahasan</span>
+      Gunakan Teorema Pythagoras: $AC = \sqrt{AB^2 + BC^2} = \sqrt{8^2 + 6^2} = \sqrt{64 + 36} = \sqrt{100} = \mathbf{10}$ cm. Jawaban: <strong>B</strong>.
+    </div>
+  </div>
+
+  <!-- Q11 -->
+  <div class="q-card" id="qc11">
+    <div class="q-head">
+      <span class="q-num">No. 11</span>
+      <div class="q-text">Sebuah tabung memiliki jari-jari alas $7$ cm dan tinggi $10$ cm. Volume tabung tersebut adalah ... (gunakan $\pi = \frac{22}{7}$)</div>
+    </div>
+    <div class="options" id="opts11">
+      <button class="opt" onclick="pilih(11,'A')"><span class="opt-key">A</span><span class="opt-text">$1.320$ cm³</span></button>
+      <button class="opt" onclick="pilih(11,'B')"><span class="opt-key">B</span><span class="opt-text">$1.430$ cm³</span></button>
+      <button class="opt" onclick="pilih(11,'C')"><span class="opt-key">C</span><span class="opt-text">$1.540$ cm³</span></button>
+      <button class="opt" onclick="pilih(11,'D')"><span class="opt-key">D</span><span class="opt-text">$1.650$ cm³</span></button>
+    </div>
+    <div class="pembahasan" id="pem11">
+      <span class="p-label">💡 Pembahasan</span>
+      $V = \pi r^2 h = \dfrac{22}{7} \times 7^2 \times 10 = \dfrac{22}{7} \times 49 \times 10 = 22 \times 7 \times 10 = \mathbf{1.540}$ cm³. Jawaban: <strong>C</strong>.
+    </div>
+  </div>
+
+  <!-- Q12 -->
+  <div class="q-card" id="qc12">
+    <div class="q-head">
+      <span class="q-num">No. 12</span>
+      <div class="q-text">Titik $P(-3, 4)$ pada koordinat Kartesius berada di kuadran ...</div>
+    </div>
+    <div class="options" id="opts12">
+      <button class="opt" onclick="pilih(12,'A')"><span class="opt-key">A</span><span class="opt-text">Kuadran I</span></button>
+      <button class="opt" onclick="pilih(12,'B')"><span class="opt-key">B</span><span class="opt-key" style="display:none"></span><span class="opt-text">Kuadran II</span></button>
+      <button class="opt" onclick="pilih(12,'C')"><span class="opt-key">C</span><span class="opt-text">Kuadran III</span></button>
+      <button class="opt" onclick="pilih(12,'D')"><span class="opt-key">D</span><span class="opt-text">Kuadran IV</span></button>
+    </div>
+    <div class="pembahasan" id="pem12">
+      <span class="p-label">💡 Pembahasan</span>
+      $x = -3 < 0$ dan $y = 4 > 0$. Kuadran II adalah untuk $x$ negatif dan $y$ positif. Maka titik $P(-3,4)$ berada di <strong>Kuadran II</strong>. Jawaban: <strong>B</strong>.
+    </div>
+  </div>
+
+  <!-- Q13 -->
+  <div class="q-card" id="qc13">
+    <div class="q-head">
+      <span class="q-num">No. 13</span>
+      <div class="q-text">Dua segitiga sebangun. Segitiga pertama memiliki sisi-sisi $3$ cm, $4$ cm, dan $5$ cm. Jika sisi terpanjang segitiga kedua adalah $15$ cm, maka keliling segitiga kedua adalah ...</div>
+    </div>
+    <div class="options" id="opts13">
+      <button class="opt" onclick="pilih(13,'A')"><span class="opt-key">A</span><span class="opt-text">$30$ cm</span></button>
+      <button class="opt" onclick="pilih(13,'B')"><span class="opt-key">B</span><span class="opt-text">$36$ cm</span></button>
+      <button class="opt" onclick="pilih(13,'C')"><span class="opt-key">C</span><span class="opt-text">$40$ cm</span></button>
+      <button class="opt" onclick="pilih(13,'D')"><span class="opt-key">D</span><span class="opt-text">$45$ cm</span></button>
+    </div>
+    <div class="pembahasan" id="pem13">
+      <span class="p-label">💡 Pembahasan</span>
+      Rasio kesebangunan: $\frac{15}{5} = 3$. Keliling segitiga pertama $= 3+4+5 = 12$ cm. Keliling segitiga kedua $= 12 \times 3 = \mathbf{36}$ cm. Jawaban: <strong>B</strong>.
+    </div>
+  </div>
+
+  <!-- ══════════ BAGIAN 4: TRIGONOMETRI ══════════ -->
+  <div class="section-divider">
+    <span class="section-tag">Bagian D</span>
+    <span class="section-name">Trigonometri</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- Q14 -->
+  <div class="q-card" id="qc14">
+    <div class="q-head">
+      <span class="q-num">No. 14</span>
+      <div class="q-text">Pada segitiga siku-siku berikut, nilai $\sin \theta$ adalah ...</div>
+    </div>
+    <div class="q-img">
+      <svg viewBox="0 0 280 215" width="280" height="215" xmlns="http://www.w3.org/2000/svg" style="font-family:'JetBrains Mono',monospace">
+        <!-- segitiga: B=siku2 kiri bawah, A=kanan bawah, C=kiri atas -->
+        <!-- BA=alas=16unit → 160px, BC=tegak=12unit → 120px, AC=miring=20unit → 200px -->
+        <!-- B(40,160), A(200,160), C(40,40) -->
+        <polygon points="40,160 200,160 40,40" fill="rgba(0,191,165,0.06)" stroke="#00BFA5" stroke-width="2" stroke-linejoin="round"/>
+        <!-- right angle marker di B -->
+        <polyline points="40,142 58,142 58,160" fill="none" stroke="#7B8BB2" stroke-width="1.5"/>
+        <!-- sudut theta di A(200,160): arc dari garis AC ke garis AB -->
+        <path d="M 170,160 A 30,30 0 0,0 151,148" fill="none" stroke="#F59E0B" stroke-width="1.8"/>
+        <text x="165" y="152" fill="#F59E0B" font-size="14" font-style="italic" text-anchor="middle">θ</text>
+        <!-- label sisi: alas AB tengah bawah -->
+        <text x="120" y="177" fill="#3D4A6B" font-size="12" text-anchor="middle">16</text>
+        <!-- label sisi: tegak BC kiri, dirotasi -->
+        <text x="11" y="103" fill="#3D4A6B" font-size="12" text-anchor="middle" transform="rotate(-90,11,103)">12</text>
+        <!-- label sisi: miring AC tengah, dirotasi sesuai kemiringan -->
+        <text x="128" y="91" fill="#00BFA5" font-size="12" font-weight="700" text-anchor="middle" transform="rotate(-37,128,91)">20</text>
+        <!-- vertex labels -->
+        <text x="28" y="38" fill="#0A0F1E" font-size="13" font-weight="700">C</text>
+        <text x="26" y="178" fill="#0A0F1E" font-size="13" font-weight="700">B</text>
+        <text x="208" y="178" fill="#0A0F1E" font-size="13" font-weight="700">A</text>
+        <!-- label "sisi depan θ" dan "sisi miring" kecil di bawah -->
+        <text x="140" y="198" fill="#7B8BB2" font-size="10" text-anchor="middle">sin θ = sisi depan ÷ sisi miring</text>
+      </svg>
+    </div>
+    <div class="options" id="opts14">
+      <button class="opt" onclick="pilih(14,'A')"><span class="opt-key">A</span><span class="opt-text">$\dfrac{3}{5}$</span></button>
+      <button class="opt" onclick="pilih(14,'B')"><span class="opt-key">B</span><span class="opt-text">$\dfrac{4}{5}$</span></button>
+      <button class="opt" onclick="pilih(14,'C')"><span class="opt-key">C</span><span class="opt-text">$\dfrac{3}{4}$</span></button>
+      <button class="opt" onclick="pilih(14,'D')"><span class="opt-key">D</span><span class="opt-text">$\dfrac{5}{3}$</span></button>
+    </div>
+    <div class="pembahasan" id="pem14">
+      <span class="p-label">💡 Pembahasan</span>
+      Dari gambar: sudut $\theta$ ada di titik $A$, sisi di hadapan $\theta$ adalah $BC = 12$, dan sisi miring $AC = 20$. Maka $\sin\theta = \dfrac{\text{sisi depan}}{\text{sisi miring}} = \dfrac{12}{20} = \mathbf{\dfrac{3}{5}}$. Jawaban: <strong>A</strong>.
+    </div>
+  </div>
+
+  <!-- Q15 -->
+  <div class="q-card" id="qc15">
+    <div class="q-head">
+      <span class="q-num">No. 15</span>
+      <div class="q-text">Besar sudut ketiga dalam segitiga yang sudut-sudutnya adalah $65°$ dan $75°$ adalah ...</div>
+    </div>
+    <div class="options" id="opts15">
+      <button class="opt" onclick="pilih(15,'A')"><span class="opt-key">A</span><span class="opt-text">$35°$</span></button>
+      <button class="opt" onclick="pilih(15,'B')"><span class="opt-key">B</span><span class="opt-text">$40°$</span></button>
+      <button class="opt" onclick="pilih(15,'C')"><span class="opt-key">C</span><span class="opt-text">$45°$</span></button>
+      <button class="opt" onclick="pilih(15,'D')"><span class="opt-key">D</span><span class="opt-text">$50°$</span></button>
+    </div>
+    <div class="pembahasan" id="pem15">
+      <span class="p-label">💡 Pembahasan</span>
+      Jumlah sudut dalam segitiga $= 180°$. Sudut ketiga $= 180° - 65° - 75° = \mathbf{40°}$. Jawaban: <strong>B</strong>.
+    </div>
+  </div>
+
+  <!-- Q16 -->
+  <div class="q-card" id="qc16">
+    <div class="q-head">
+      <span class="q-num">No. 16</span>
+      <div class="q-text">Nilai dari $\cos 60° \times \tan 45° + \sin 30°$ adalah ...</div>
+    </div>
+    <div class="options" id="opts16">
+      <button class="opt" onclick="pilih(16,'A')"><span class="opt-key">A</span><span class="opt-text">$\dfrac{1}{2}$</span></button>
+      <button class="opt" onclick="pilih(16,'B')"><span class="opt-key">B</span><span class="opt-text">$1$</span></button>
+      <button class="opt" onclick="pilih(16,'C')"><span class="opt-key">C</span><span class="opt-text">$\dfrac{3}{2}$</span></button>
+      <button class="opt" onclick="pilih(16,'D')"><span class="opt-key">D</span><span class="opt-text">$\sqrt{2}$</span></button>
+    </div>
+    <div class="pembahasan" id="pem16">
+      <span class="p-label">💡 Pembahasan</span>
+      $\cos 60° = \frac{1}{2}$, $\tan 45° = 1$, $\sin 30° = \frac{1}{2}$. Maka $\frac{1}{2} \times 1 + \frac{1}{2} = \frac{1}{2} + \frac{1}{2} = \mathbf{1}$. Jawaban: <strong>B</strong>.
+    </div>
+  </div>
+
+  <!-- ══════════ BAGIAN 5: DATA & PELUANG ══════════ -->
+  <div class="section-divider">
+    <span class="section-tag">Bagian E</span>
+    <span class="section-name">Data &amp; Peluang</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- Q17 -->
+  <div class="q-card" id="qc17">
+    <div class="q-head">
+      <span class="q-num">No. 17</span>
+      <div class="q-text">Data nilai ulangan: $60, 70, 80, 75, 85, 70, 90, 65, 70, 75$. Modus dari data tersebut adalah ...</div>
+    </div>
+    <div class="options" id="opts17">
+      <button class="opt" onclick="pilih(17,'A')"><span class="opt-key">A</span><span class="opt-text">$70$</span></button>
+      <button class="opt" onclick="pilih(17,'B')"><span class="opt-key">B</span><span class="opt-text">$72$</span></button>
+      <button class="opt" onclick="pilih(17,'C')"><span class="opt-key">C</span><span class="opt-text">$74$</span></button>
+      <button class="opt" onclick="pilih(17,'D')"><span class="opt-key">D</span><span class="opt-text">$75$</span></button>
+    </div>
+    <div class="pembahasan" id="pem17">
+      <span class="p-label">💡 Pembahasan</span>
+      Urutkan data: $60, 65, 70, 70, 70, 75, 75, 80, 85, 90$. Nilai yang paling sering muncul adalah $\mathbf{70}$ (muncul 3 kali). Jawaban: <strong>A</strong>.
+    </div>
+  </div>
+
+  <!-- Q18 -->
+  <div class="q-card" id="qc18">
+    <div class="q-head">
+      <span class="q-num">No. 18</span>
+      <div class="q-text">Data: $5, 8, 12, 7, 10, 9, 6, 11$. Median dari data ini adalah ...</div>
+    </div>
+    <div class="options" id="opts18">
+      <button class="opt" onclick="pilih(18,'A')"><span class="opt-key">A</span><span class="opt-text">$8{,}5$</span></button>
+      <button class="opt" onclick="pilih(18,'B')"><span class="opt-key">B</span><span class="opt-text">$9$</span></button>
+      <button class="opt" onclick="pilih(18,'C')"><span class="opt-key">C</span><span class="opt-text">$9{,}5$</span></button>
+      <button class="opt" onclick="pilih(18,'D')"><span class="opt-key">D</span><span class="opt-text">$10$</span></button>
+    </div>
+    <div class="pembahasan" id="pem18">
+      <span class="p-label">💡 Pembahasan</span>
+      Urutkan: $5, 6, 7, 8, 9, 10, 11, 12$. Data berjumlah 8 (genap), median $= \dfrac{x_4 + x_5}{2} = \dfrac{8+9}{2} = \mathbf{8{,}5}$. Jawaban: <strong>A</strong>.
+    </div>
+  </div>
+
+  <!-- Q19 -->
+  <div class="q-card" id="qc19">
+    <div class="q-head">
+      <span class="q-num">No. 19</span>
+      <div class="q-text">Sebuah dadu dilempar sekali. Peluang muncul bilangan prima adalah ...</div>
+    </div>
+    <div class="options" id="opts19">
+      <button class="opt" onclick="pilih(19,'A')"><span class="opt-key">A</span><span class="opt-text">$\dfrac{1}{3}$</span></button>
+      <button class="opt" onclick="pilih(19,'B')"><span class="opt-key">B</span><span class="opt-text">$\dfrac{1}{2}$</span></button>
+      <button class="opt" onclick="pilih(19,'C')"><span class="opt-key">C</span><span class="opt-text">$\dfrac{2}{3}$</span></button>
+      <button class="opt" onclick="pilih(19,'D')"><span class="opt-key">D</span><span class="opt-text">$\dfrac{5}{6}$</span></button>
+    </div>
+    <div class="pembahasan" id="pem19">
+      <span class="p-label">💡 Pembahasan</span>
+      Ruang sampel $= \{1,2,3,4,5,6\}$, $n(S) = 6$. Bilangan prima: $\{2,3,5\}$, $n(A) = 3$. Peluang $= \dfrac{3}{6} = \mathbf{\dfrac{1}{2}}$. Jawaban: <strong>B</strong>.
+    </div>
+  </div>
+
+  <!-- Q20 -->
+  <div class="q-card" id="qc20">
+    <div class="q-head">
+      <span class="q-num">No. 20</span>
+      <div class="q-text">Diagram batang berikut menunjukkan nilai ujian 30 siswa. Banyak siswa yang nilainya di atas rata-rata adalah ...</div>
+    </div>
+    <!-- Bar chart SVG: data = 60→5, 70→8, 80→10, 90→7 siswa -->
+    <!-- Canvas: viewBox 0 0 320 200. Plot area: x=55..300, y=20..155. Height=135px for 10 units → 1 unit=13.5px -->
+    <div class="q-img">
+      <svg viewBox="0 0 320 200" width="320" height="200" xmlns="http://www.w3.org/2000/svg" style="font-family:'JetBrains Mono',monospace">
+        <!-- gridlines horizontal: y=155(0), y=88.5(5), y=22(10) → setiap 2 unit = 27px -->
+        <!-- y=155=0, y=128=2, y=101=4, y=74=6, y=47=8, y=20=10 -->
+        <line x1="55" y1="155" x2="300" y2="155" stroke="#D8E0F5" stroke-width="1"/>
+        <line x1="55" y1="128" x2="300" y2="128" stroke="#D8E0F5" stroke-width="0.8" stroke-dasharray="4,3"/>
+        <line x1="55" y1="101" x2="300" y2="101" stroke="#D8E0F5" stroke-width="0.8" stroke-dasharray="4,3"/>
+        <line x1="55" y1="74"  x2="300" y2="74"  stroke="#D8E0F5" stroke-width="0.8" stroke-dasharray="4,3"/>
+        <line x1="55" y1="47"  x2="300" y2="47"  stroke="#D8E0F5" stroke-width="0.8" stroke-dasharray="4,3"/>
+        <line x1="55" y1="20"  x2="300" y2="20"  stroke="#D8E0F5" stroke-width="0.8" stroke-dasharray="4,3"/>
+        <!-- sumbu Y -->
+        <line x1="55" y1="15" x2="55" y2="158" stroke="#7B8BB2" stroke-width="1.5"/>
+        <!-- sumbu X -->
+        <line x1="52" y1="155" x2="303" y2="155" stroke="#7B8BB2" stroke-width="1.5"/>
+        <!-- y-axis labels: 0,2,4,6,8,10 -->
+        <text x="48" y="158" fill="#7B8BB2" font-size="10" text-anchor="end">0</text>
+        <text x="48" y="131" fill="#7B8BB2" font-size="10" text-anchor="end">2</text>
+        <text x="48" y="104" fill="#7B8BB2" font-size="10" text-anchor="end">4</text>
+        <text x="48" y="77"  fill="#7B8BB2" font-size="10" text-anchor="end">6</text>
+        <text x="48" y="50"  fill="#7B8BB2" font-size="10" text-anchor="end">8</text>
+        <text x="48" y="23"  fill="#7B8BB2" font-size="10" text-anchor="end">10</text>
+        <!-- BARS: lebar=40px, gap=20px, mulai x=70 -->
+        <!-- bar60: 5 siswa → 5×13.5=67.5px → y=155-67.5=87.5 -->
+        <rect x="70"  y="88"  width="40" height="67" fill="#00BFA5" opacity="0.75" rx="3"/>
+        <!-- bar70: 8 siswa → 8×13.5=108px → y=155-108=47 -->
+        <rect x="130" y="47"  width="40" height="108" fill="#00BFA5" opacity="0.85" rx="3"/>
+        <!-- bar80: 10 siswa → 10×13.5=135px → y=155-135=20 -->
+        <rect x="190" y="20"  width="40" height="135" fill="#00BFA5" rx="3"/>
+        <!-- bar90: 7 siswa → 7×13.5=94.5px → y=155-94.5=60.5 -->
+        <rect x="250" y="61"  width="40" height="94" fill="#00BFA5" opacity="0.75" rx="3"/>
+        <!-- label angka di atas bar -->
+        <text x="90"  y="83"  fill="#0A0F1E" font-size="11" font-weight="700" text-anchor="middle">5</text>
+        <text x="150" y="42"  fill="#0A0F1E" font-size="11" font-weight="700" text-anchor="middle">8</text>
+        <text x="210" y="15"  fill="#0A0F1E" font-size="11" font-weight="700" text-anchor="middle">10</text>
+        <text x="270" y="56"  fill="#0A0F1E" font-size="11" font-weight="700" text-anchor="middle">7</text>
+        <!-- x-axis labels (nilai) -->
+        <text x="90"  y="170" fill="#3D4A6B" font-size="11" text-anchor="middle">60</text>
+        <text x="150" y="170" fill="#3D4A6B" font-size="11" text-anchor="middle">70</text>
+        <text x="210" y="170" fill="#3D4A6B" font-size="11" text-anchor="middle">80</text>
+        <text x="270" y="170" fill="#3D4A6B" font-size="11" text-anchor="middle">90</text>
+        <!-- axis titles -->
+        <text x="178" y="186" fill="#7B8BB2" font-size="10" text-anchor="middle">Nilai Ujian</text>
+        <text x="12"  y="90"  fill="#7B8BB2" font-size="10" text-anchor="middle" transform="rotate(-90,12,90)">Jumlah Siswa</text>
+      </svg>
+    </div>
+    <div class="options" id="opts20">
+      <button class="opt" onclick="pilih(20,'A')"><span class="opt-key">A</span><span class="opt-text">$10$ siswa</span></button>
+      <button class="opt" onclick="pilih(20,'B')"><span class="opt-key">B</span><span class="opt-text">$12$ siswa</span></button>
+      <button class="opt" onclick="pilih(20,'C')"><span class="opt-key">C</span><span class="opt-text">$15$ siswa</span></button>
+      <button class="opt" onclick="pilih(20,'D')"><span class="opt-key">D</span><span class="opt-text">$17$ siswa</span></button>
+    </div>
+    <div class="pembahasan" id="pem20">
+      <span class="p-label">💡 Pembahasan</span>
+      Data: nilai $60$ (5 siswa), $70$ (8 siswa), $80$ (10 siswa), $90$ (7 siswa). Rata-rata $= \dfrac{60\cdot5 + 70\cdot8 + 80\cdot10 + 90\cdot7}{30} = \dfrac{300+560+800+630}{30} = \dfrac{2290}{30} \approx 76{,}3$. Siswa di atas rata-rata (nilai $\geq 80$): $10 + 7 = \mathbf{17}$ siswa. Jawaban: <strong>D</strong>.
+    </div>
+  </div>
+
+  <!-- SUBMIT -->
+  <div class="submit-wrap">
+    <button class="btn-submit" id="btnSubmit" onclick="submitKuis()" disabled>
+      Lihat Hasil &amp; Nilai →
+    </button>
+    <div style="font-size:0.78rem;color:var(--text-3);margin-top:0.75rem;" id="submitHint">Jawab semua 20 soal untuk melihat hasil.</div>
+  </div>
+
+  <!-- SCORE PANEL -->
+  <div class="score-panel" id="scorePanel">
+    <div class="score-bg"></div>
+    <div class="score-inner">
+      <span class="score-eyebrow">📋 Hasil Asesmen Diagnostik</span>
+      <div class="score-big" id="scoreNilai"><em>—</em></div>
+      <div class="score-denom">dari 100</div>
+      <div class="score-label" id="scoreLabel">—</div>
+      <div class="score-msg" id="scoreMsg">—</div>
+      <div class="score-breakdown">
+        <div class="sbd-item">
+          <div class="sbd-num" id="sbdBenar">—</div>
+          <div class="sbd-lbl">Benar</div>
+        </div>
+        <div class="sbd-item">
+          <div class="sbd-num red" id="sbdSalah">—</div>
+          <div class="sbd-lbl">Salah</div>
+        </div>
+        <div class="sbd-item">
+          <div class="sbd-num" id="sbdNilai">—</div>
+          <div class="sbd-lbl">Nilai</div>
+        </div>
+      </div>
+      <div class="pillar-breakdown" id="pillarBreakdown"></div>
+      <div class="score-actions">
+        <button class="btn-retry" onclick="resetKuis()">🔄 Ulangi Latihan</button>
+        <a class="btn-home" href="index.html">← Kembali ke Beranda</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /quiz-wrap -->
+
+<div id="toast"></div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <a class="footer-logo" href="index.html">
+        <div class="footer-logo-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="footer-logo-name">Eksakta<em>Lab</em></div>
+      </a>
+      <p class="footer-desc">Platform belajar matematika SMA yang lengkap dan gratis. Materi terstruktur, contoh soal nyata, dan latihan interaktif untuk 37 topik kurikulum nasional.</p>
+      <span class="footer-kurikulum">K-13 &amp; Kurikulum Merdeka</span>
+    </div>
+    <div>
+      <div class="footer-col-title">Belajar</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Belajar Mandiri</a></li>
+        <li><a href="index.html">Worksheet</a></li>
+        <li><a href="index.html">Latihan Soal</a></li>
+        <li><a href="index.html">Kapita Selekta</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Materi Populer</div>
+      <ul class="footer-links">
+        <li><a href="materi/fungsi-linear/" class="ready">Fungsi Linier</a></li>
+        <li><a href="materi/fungsi-komposisi-invers/" class="ready">Fungsi, Komposisi &amp; Invers</a></li>
+        <li><a href="index.html">Eksponen</a></li>
+        <li><a href="index.html">Trigonometri Dasar</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Tentang</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Tentang EksaktaLab</a></li>
+        <li><a href="index.html">Kurikulum</a></li>
+        <li><a href="index.html">Hubungi Kami</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 EksaktaLab — Gratis untuk semua siswa Indonesia</div>
+    <div class="footer-legal"><a href="#">Kebijakan Privasi</a><a href="#">Syarat Penggunaan</a></div>
+  </div>
+</footer>
+
+<script>
+/* ── DATA KUNCI JAWABAN ───────────────────────── */
+const KUNCI = {
+  1:'A', 2:'C', 3:'B', 4:'A', 5:'A',
+  6:'C', 7:'A', 8:'C', 9:'A', 10:'B',
+  11:'C', 12:'B', 13:'B', 14:'A', 15:'B',
+  16:'B', 17:'A', 18:'A', 19:'B', 20:'D'
+};
+
+/* Peta soal ke bagian (untuk breakdown per bagian) */
+const BAGIAN = {
+  'A (Bilangan)':     [1,2,3,4],
+  'B (Aljabar)':      [5,6,7,8,9],
+  'C (Geometri)':     [10,11,12,13],
+  'D (Trigonometri)': [14,15,16],
+  'E (Data & Peluang)':[17,18,19,20]
+};
+
+const jawaban = {};
+let sudahSubmit = false;
+
+/* ── PILIH JAWABAN ───────────────────────────── */
+function pilih(no, opsi) {
+  if (sudahSubmit) return;
+  jawaban[no] = opsi;
+
+  const opts = document.querySelectorAll(`#opts${no} .opt`);
+  opts.forEach(o => o.classList.remove('selected'));
+  const keys = ['A','B','C','D'];
+  const idx = keys.indexOf(opsi);
+  if (opts[idx]) opts[idx].classList.add('selected');
+
+  document.getElementById('qc'+no).classList.add('answered');
+  updateProgress();
+}
+
+/* ── UPDATE PROGRES ──────────────────────────── */
+function updateProgress() {
+  const count = Object.keys(jawaban).length;
+  document.getElementById('progressNum').textContent = count;
+  document.getElementById('progressFill').style.width = (count / 20 * 100) + '%';
+
+  const btn = document.getElementById('btnSubmit');
+  const hint = document.getElementById('submitHint');
+  if (count === 20) {
+    btn.disabled = false;
+    hint.textContent = 'Semua soal sudah dijawab. Klik tombol untuk melihat hasil!';
+    hint.style.color = 'var(--teal)';
+  } else {
+    btn.disabled = true;
+    hint.textContent = `Jawab semua 20 soal untuk melihat hasil. (${20-count} soal lagi)`;
+    hint.style.color = 'var(--text-3)';
+  }
+}
+
+/* ── SUBMIT ──────────────────────────────────── */
+function submitKuis() {
+  if (Object.keys(jawaban).length < 20) {
+    toast('Jawab semua soal terlebih dahulu!');
+    return;
+  }
+  sudahSubmit = true;
+  document.getElementById('btnSubmit').style.display = 'none';
+  document.getElementById('submitHint').style.display = 'none';
+
+  let benar = 0;
+  const keys = ['A','B','C','D'];
+
+  for (let no = 1; no <= 20; no++) {
+    const jawabanSiswa = jawaban[no];
+    const kunci = KUNCI[no];
+    const card = document.getElementById('qc'+no);
+    const opts = document.querySelectorAll(`#opts${no} .opt`);
+
+    opts.forEach(o => {
+      o.disabled = true;
+      o.classList.remove('selected');
+    });
+
+    const idxKunci = keys.indexOf(kunci);
+    const idxJawab = keys.indexOf(jawabanSiswa);
+
+    if (idxKunci >= 0 && opts[idxKunci]) opts[idxKunci].classList.add('is-correct');
+
+    if (jawabanSiswa === kunci) {
+      benar++;
+      card.classList.add('correct');
+    } else {
+      if (idxJawab >= 0 && opts[idxJawab]) opts[idxJawab].classList.add('is-wrong');
+      card.classList.add('wrong');
+    }
+
+    // Show pembahasan
+    const pem = document.getElementById('pem'+no);
+    if (pem) { pem.style.display='block'; pem.classList.add('show'); }
+  }
+
+  const salah = 20 - benar;
+  const nilai = Math.round(benar / 20 * 100);
+
+  // Score panel
+  const panel = document.getElementById('scorePanel');
+  panel.classList.add('show');
+
+  document.getElementById('scoreNilai').innerHTML = `<em>${nilai}</em>`;
+  document.getElementById('sbdBenar').textContent = benar;
+  document.getElementById('sbdSalah').textContent = salah;
+  document.getElementById('sbdNilai').textContent = nilai;
+
+  let label, msg;
+  if (nilai >= 85) {
+    label = '🏆 Sangat Siap — Fase E/F';
+    msg = 'Luar biasa! Penguasaan prasyaratmu sangat kuat. Kamu siap masuk ke materi SMA dengan percaya diri.';
+  } else if (nilai >= 70) {
+    label = '✅ Siap dengan Catatan';
+    msg = 'Bagus! Kamu sudah menguasai sebagian besar materi prasyarat. Review topik yang masih kurang sebelum melanjutkan.';
+  } else if (nilai >= 55) {
+    label = '⚠️ Perlu Penguatan';
+    msg = 'Ada beberapa konsep prasyarat yang perlu diperkuat. Pelajari kembali bagian yang salah sebelum lanjut ke Fase E/F.';
+  } else {
+    label = '🔁 Perlu Review Menyeluruh';
+    msg = 'Masih banyak materi prasyarat yang perlu diulang. Jangan khawatir — fokus perbaiki fondasi dulu agar lebih kuat di SMA!';
+  }
+  document.getElementById('scoreLabel').textContent = label;
+  document.getElementById('scoreMsg').textContent = msg;
+
+  // Pillar breakdown
+  const pbdEl = document.getElementById('pillarBreakdown');
+  pbdEl.innerHTML = '';
+  for (const [nama, soalList] of Object.entries(BAGIAN)) {
+    let b = 0;
+    soalList.forEach(n => { if (jawaban[n] === KUNCI[n]) b++; });
+    const pct = Math.round(b / soalList.length * 100);
+    pbdEl.innerHTML += `
+      <div class="pbd-row">
+        <div class="pbd-tag">${nama}</div>
+        <div class="pbd-bar-wrap"><div class="pbd-bar" style="width:${pct}%"></div></div>
+        <div class="pbd-score">${b}/${soalList.length}</div>
+      </div>`;
+  }
+
+  // Scroll to score
+  setTimeout(() => panel.scrollIntoView({behavior:'smooth', block:'start'}), 200);
+
+  // Re-render MathJax
+  if (window.MathJax && MathJax.typesetPromise) {
+    MathJax.typesetPromise();
+  }
+}
+
+/* ── RESET ───────────────────────────────────── */
+function resetKuis() {
+  sudahSubmit = false;
+  for (const k in jawaban) delete jawaban[k];
+
+  for (let no = 1; no <= 20; no++) {
+    const card = document.getElementById('qc'+no);
+    card.classList.remove('correct','wrong','answered');
+
+    const opts = document.querySelectorAll(`#opts${no} .opt`);
+    opts.forEach(o => {
+      o.disabled = false;
+      o.classList.remove('selected','is-correct','is-wrong');
+    });
+
+    const pem = document.getElementById('pem'+no);
+    if (pem) { pem.style.display='none'; pem.classList.remove('show'); }
+  }
+
+  document.getElementById('scorePanel').classList.remove('show');
+  document.getElementById('btnSubmit').style.display = '';
+  document.getElementById('submitHint').style.display = '';
+  updateProgress();
+
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+/* ── THEME ───────────────────────────────────── */
+function toggleTheme() {
+  const html = document.documentElement;
+  const btn = document.getElementById('themeBtn');
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  btn.textContent = isDark ? '🌙' : '☀️';
+}
+
+/* ── TOAST ───────────────────────────────────── */
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'show';
+  t.style.display = 'block';
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => { t.style.display = 'none'; }, 2200);
+}
+
+/* ── INIT ────────────────────────────────────── */
+updateProgress();
+</script>
+</body>
+</html>
