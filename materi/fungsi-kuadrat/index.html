@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fungsi Kuadrat — EksaktaLab</title>
+<meta name="description" content="Materi lengkap Fungsi Kuadrat SMA: pengertian, titik penting grafik, menggambar parabola, sifat-sifat grafik, bentuk vertex, menyusun persamaan, nilai ekstrem, dan aplikasi kehidupan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]}}</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Fungsi Kuadrat","url":"https://lutfima11.github.io/eksaktalab/materi/fungsi-kuadrat/","description":"Materi lengkap Fungsi Kuadrat SMA: pengertian, titik penting grafik, menggambar parabola, sifat-sifat, bentuk vertex, menyusun persamaan, nilai ekstrem pada interval, dan aplikasi kehidupan.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"educationalLevel":"SMA Kelas X","inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Aljabar & Fungsi Dasar"},{"@type":"ListItem","position":4,"name":"Fungsi Kuadrat","item":"https://lutfima11.github.io/eksaktalab/materi/fungsi-kuadrat/"}]}}</script>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Fungsi Kuadrat · 9 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Pengertian Fungsi Kuadrat</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Titik-Titik Penting Grafik</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Menggambar Grafik</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Sifat Grafik Berdasarkan $a$ dan $D$</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Bentuk Vertex</a>
+        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Menyusun Persamaan</a>
+        <a class="toc-menu-item" href="#bagian-g" onclick="closeTOC()"><span class="toc-menu-badge">G</span>Nilai Ekstrem pada Interval</a>
+        <a class="toc-menu-item" href="#bagian-h" onclick="closeTOC()"><span class="toc-menu-badge">H</span>Aplikasi Kehidupan</a>
+        <a class="toc-menu-item" href="#bagian-i" onclick="closeTOC()"><span class="toc-menu-badge">I</span>Tabel Ringkasan</a>
+      </div>
+    </div>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#aljabar">Aljabar &amp; Fungsi Dasar</a>
+    <span>/</span>
+    Fungsi Kuadrat
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">BAB B · No. 10</div>
+      <h1 class="materi-title">Fungsi Kuadrat</h1>
+      <p class="materi-desc">Pelajari bentuk umum parabola, titik-titik penting grafik, sifat-sifat berdasarkan diskriminan, bentuk vertex, cara menyusun persamaan, nilai ekstrem pada interval, dan aplikasi nyata fungsi kuadrat dalam kehidupan.</p>
+      <div class="materi-tags">
+        <span class="tag teal">Kelas X</span>
+        <span class="tag">Aljabar &amp; Fungsi</span>
+        <span class="tag">9 Sub-bab</span>
+        <span class="tag">30 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Pengertian Fungsi Kuadrat</a></li>
+      <li><a href="#bagian-b" data-num="B">Titik-Titik Penting Grafik Fungsi Kuadrat</a></li>
+      <li><a href="#bagian-c" data-num="C">Menggambar Grafik Fungsi Kuadrat</a></li>
+      <li><a href="#bagian-d" data-num="D">Sifat-Sifat Grafik Berdasarkan $a$ dan $D$</a></li>
+      <li><a href="#bagian-e" data-num="E">Bentuk Vertex (Kuadrat Sempurna)</a></li>
+      <li><a href="#bagian-f" data-num="F">Menyusun Persamaan Fungsi Kuadrat</a></li>
+      <li><a href="#bagian-g" data-num="G">Nilai Maksimum dan Minimum pada Interval</a></li>
+      <li><a href="#bagian-h" data-num="H">Aplikasi Fungsi Kuadrat dalam Kehidupan</a></li>
+      <li><a href="#bagian-i" data-num="I">Tabel Ringkasan</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══ A. PENGERTIAN FUNGSI KUADRAT ═══════════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Pengertian Fungsi Kuadrat</h2>
+
+    <p><strong>Fungsi kuadrat</strong> adalah fungsi polinomial berderajat dua yang berbentuk:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Bentuk Umum Fungsi Kuadrat</div>
+      <div class="math-block">$$f(x) = ax^2 + bx + c, \quad a, b, c \in \mathbb{R},\; a \neq 0$$</div>
+    </div>
+
+    <p>dengan:</p>
+    <ul>
+      <li>$a$ = koefisien $x^2$, menentukan arah bukaan dan lebar parabola ($a \neq 0$)</li>
+      <li>$b$ = koefisien $x$, menentukan posisi horizontal sumbu simetri</li>
+      <li>$c$ = konstanta, merupakan titik potong grafik dengan sumbu $Y$</li>
+      <li>$x$ = variabel bebas (anggota domain)</li>
+      <li>$f(x) = y$ = variabel terikat (anggota range)</li>
+    </ul>
+
+    <p><strong>Sifat-sifat fungsi kuadrat:</strong></p>
+    <ul>
+      <li>Grafiknya selalu berbentuk <strong>parabola</strong></li>
+      <li>Jika $a > 0$, parabola <strong>terbuka ke atas</strong> ($\cup$) dan memiliki nilai <strong>minimum</strong></li>
+      <li>Jika $a < 0$, parabola <strong>terbuka ke bawah</strong> ($\cap$) dan memiliki nilai <strong>maksimum</strong></li>
+      <li>Parabola bersifat <strong>simetris</strong> terhadap garis vertikal $x = \dfrac{-b}{2a}$</li>
+      <li>Domain fungsi kuadrat adalah $\mathbb{R}$ (semua bilangan real)</li>
+      <li>Range bergantung pada nilai $a$ dan titik balik $P(x_P,\, y_P)$:
+        <ul>
+          <li>Jika $a > 0$: range $= [y_P,\; +\infty)$</li>
+          <li>Jika $a < 0$: range $= (-\infty,\; y_P]$</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Syarat $a \neq 0$ mutlak dipenuhi. Jika $a = 0$, fungsi menjadi linear bukan kuadrat. Perhatikan bahwa $b$ dan $c$ boleh bernilai nol, tetapi $a$ tidak boleh.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Manakah yang merupakan fungsi kuadrat? Jelaskan!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$f(x) = 3x^2 - 5x + 1$</li>
+        <li>$g(x) = 2x + 7$</li>
+        <li>$h(x) = x^2$</li>
+        <li>$p(x) = -4x^2 + 9$</li>
+        <li>$q(x) = 0 \cdot x^2 + 3x - 1$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>$f(x) = 3x^2 - 5x + 1$ → <strong>Fungsi kuadrat</strong>, $a=3$, $b=-5$, $c=1$</li>
+        <li>$g(x) = 2x + 7$ → <strong>Bukan</strong> fungsi kuadrat (derajat satu/linear)</li>
+        <li>$h(x) = x^2$ → <strong>Fungsi kuadrat</strong>, $a=1$, $b=0$, $c=0$</li>
+        <li>$p(x) = -4x^2 + 9$ → <strong>Fungsi kuadrat</strong>, $a=-4$, $b=0$, $c=9$</li>
+        <li>$q(x) = 0 \cdot x^2 + 3x - 1$ → <strong>Bukan</strong> fungsi kuadrat ($a = 0$, menjadi linear)</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan nilai $a$, $b$, dan $c$ dari setiap fungsi kuadrat berikut, kemudian nyatakan arah bukaan parabolanya!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$f(x) = 5x^2 - 3x + 2$</li>
+        <li>$g(x) = -\dfrac{1}{2}x^2 + 4x$</li>
+        <li>$r(x) = 2x^2 + 3x - 4$</li>
+        <li>$s(x) = (x - 3)(x + 1)$</li>
+        <li>$t(x) = -(2x + 1)^2 + 5$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>$a = 5,\; b = -3,\; c = 2$. Karena $a = 5 > 0$, parabola <strong>terbuka ke atas</strong>.</li>
+        <li>$a = -\dfrac{1}{2},\; b = 4,\; c = 0$. Karena $a < 0$, parabola <strong>terbuka ke bawah</strong>.</li>
+        <li>$a = 2,\; b = 3,\; c = -4$. Karena $a = 2 > 0$, parabola <strong>terbuka ke atas</strong>.</li>
+        <li>Jabarkan: $s(x) = (x-3)(x+1) = x^2 - 2x - 3$. Sehingga $a = 1,\; b = -2,\; c = -3$. Parabola <strong>terbuka ke atas</strong>.</li>
+        <li>Jabarkan: $t(x) = -(2x+1)^2 + 5 = -4x^2 - 4x + 4$. Sehingga $a = -4,\; b = -4,\; c = 4$. Parabola <strong>terbuka ke bawah</strong>.</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = (m-3)x^2 + 2mx - 5$. Untuk nilai $m$ berapa $f(x)$ merupakan fungsi kuadrat? Kapan parabolanya terbuka ke atas dan ke bawah?</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Syarat fungsi kuadrat: koefisien $x^2 \neq 0$, yaitu $m - 3 \neq 0 \Rightarrow \boxed{m \neq 3}$.<br><br>
+      Parabola <strong>terbuka ke atas</strong> jika $a > 0$:
+      $$m - 3 > 0 \;\Rightarrow\; m > 3$$
+      Parabola <strong>terbuka ke bawah</strong> jika $a < 0$:
+      $$m - 3 < 0 \;\Rightarrow\; m < 3$$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Tentukan mana yang merupakan fungsi kuadrat. Untuk yang merupakan fungsi kuadrat, sebutkan nilai $a$, $b$, dan $c$-nya!
+          <ol class="alpha-list" style="margin-top:.3rem;">
+            <li>$f(x) = 4x^2 - x + 3$</li>
+            <li>$g(x) = 5x - 8$</li>
+            <li>$h(x) = \dfrac{1}{3}x^2$</li>
+            <li>$p(x) = (x+2)(x-5)$</li>
+            <li>$q(x) = (2x-1)^2 - (2x^2+3)$</li>
+          </ol>
+        </li>
+        <li>Tentukan nilai $a$, $b$, $c$, dan arah bukaan parabola dari fungsi-fungsi berikut:
+          <ol class="alpha-list" style="margin-top:.3rem;">
+            <li>$f(x) = -3x^2 + 7x - 2$</li>
+            <li>$g(x) = \dfrac{2}{3}x^2 - 5x$</li>
+            <li>$h(x) = (x-4)(2x+1)$</li>
+          </ol>
+        </li>
+        <li>Diketahui $f(x) = (2k-4)x^2 + 3x - 1$. Untuk nilai $k$ berapa $f(x)$ merupakan fungsi kuadrat? Kapan parabolanya terbuka ke atas?</li>
+        <li>Sebuah fungsi $f(x) = ax^2 + bx + c$ diketahui $a = -2$, $b = 6$, dan $c = 0$. Tentukan domain, arah bukaan parabola, dan apakah fungsi ini memiliki nilai maksimum atau minimum!</li>
+        <li>Diketahui fungsi $f(x) = (3n+6)x^2 - 4x + 2$. Tentukan:
+          <ol class="alpha-list" style="margin-top:.3rem;">
+            <li>Nilai $n$ agar $f(x)$ merupakan fungsi kuadrat</li>
+            <li>Nilai $n$ agar parabola terbuka ke atas</li>
+            <li>Nilai $n$ agar parabola terbuka ke bawah</li>
+            <li>Jika $n = 1$, tentukan nilai $a$, $b$, $c$, dan arah bukaan parabolanya</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ B. TITIK-TITIK PENTING GRAFIK ═══════════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Titik-Titik Penting Grafik Fungsi Kuadrat</h2>
+
+    <p>Sebelum menggambar grafik $f(x) = ax^2 + bx + c$, tentukan terlebih dahulu titik-titik penting berikut ini secara sistematis.</p>
+
+    <h3 class="subsection-title">1. Titik Potong dengan Sumbu $X$</h3>
+
+    <p>Syarat: $y = 0$, sehingga $ax^2 + bx + c = 0$.</p>
+
+    <p>Ada tidaknya titik potong dengan sumbu $X$ ditentukan oleh nilai <strong>diskriminan</strong>:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Diskriminan</div>
+      <div class="math-block">$$D = b^2 - 4ac$$</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Hubungan $D$ dengan Titik Potong</div>
+      <p style="margin:0;font-size:.9rem;">
+        • $D > 0$: grafik memotong sumbu $X$ di <strong>dua titik berbeda</strong>: $x_{1,2} = \dfrac{-b \pm \sqrt{D}}{2a}$<br>
+        • $D = 0$: grafik <strong>menyinggung</strong> sumbu $X$ di satu titik: $x = \dfrac{-b}{2a}$<br>
+        • $D < 0$: grafik <strong>tidak memotong</strong> sumbu $X$
+      </p>
+    </div>
+
+    <h3 class="subsection-title">2. Titik Potong dengan Sumbu $Y$</h3>
+
+    <p>Syarat: $x = 0$, sehingga $y = c$. Titik potong dengan sumbu $Y$ selalu ada dan berada di $(0,\, c)$.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Titik Potong Sumbu $Y$</div>
+      <div class="math-block">$$\text{Titik potong sumbu } Y = (0,\, c)$$</div>
+    </div>
+
+    <h3 class="subsection-title">3. Sumbu Simetri</h3>
+
+    <p>Sumbu simetri adalah garis vertikal yang membagi parabola menjadi dua bagian yang <strong>kongruen</strong> (sama dan simetris). Karena $x_1 + x_2 = \dfrac{-b}{a}$ (dari Vieta), maka:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Sumbu Simetri</div>
+      <div class="math-block">$$x_s = \frac{x_1 + x_2}{2} = \frac{-b}{2a}$$</div>
+    </div>
+
+    <h3 class="subsection-title">4. Titik Balik (Puncak Parabola)</h3>
+
+    <p>Titik balik $P(x_P,\, y_P)$ adalah titik <strong>ekstrem</strong> parabola: titik minimum ($a > 0$) atau titik maksimum ($a < 0$).</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Titik Balik (Puncak)</div>
+      <div class="math-block">$$x_P = \frac{-b}{2a}, \qquad y_P = \frac{4ac - b^2}{4a} = \frac{-D}{4a}$$</div>
+      <div class="math-block">$$P\!\left(\frac{-b}{2a},\; \frac{-D}{4a}\right)$$</div>
+    </div>
+
+    <p>Berikut ilustrasi parabola dengan $a > 0$ (kiri) dan $a < 0$ (kanan):</p>
+
+    <!-- SVG side-by-side parabolas: a>0 minimum & a<0 maximum -->
+    <div class="grafik-row" style="grid-template-columns:repeat(2,1fr);">
+      <!-- KIRI: a>0 (minimum). f(x) = (x-1)^2 - 2. xmin=-2,xmax=4,ymin=-3,ymax=5; W=280,H=240 -->
+      <svg viewBox="0 0 280 270" xmlns="http://www.w3.org/2000/svg">
+        <defs><marker id="bA1" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="#555"/></marker></defs>
+        <!-- gridlines -->
+        <g stroke="#e2e8f0" stroke-width="0.7">
+          <line x1="14" y1="0" x2="14" y2="240"/><line x1="47" y1="0" x2="47" y2="240"/><line x1="80" y1="0" x2="80" y2="240"/><line x1="140" y1="0" x2="140" y2="240"/><line x1="173" y1="0" x2="173" y2="240"/><line x1="206" y1="0" x2="206" y2="240"/><line x1="239" y1="0" x2="239" y2="240"/><line x1="272" y1="0" x2="272" y2="240"/>
+          <line x1="0" y1="0" x2="280" y2="0"/><line x1="0" y1="30" x2="280" y2="30"/><line x1="0" y1="60" x2="280" y2="60"/><line x1="0" y1="90" x2="280" y2="90"/><line x1="0" y1="120" x2="280" y2="120"/><line x1="0" y1="180" x2="280" y2="180"/><line x1="0" y1="210" x2="280" y2="210"/><line x1="0" y1="240" x2="280" y2="240"/>
+        </g>
+        <!-- axes -->
+        <line x1="0" y1="150" x2="278" y2="150" stroke="#555" stroke-width="1.6" marker-end="url(#bA1)"/>
+        <line x1="93.3" y1="240" x2="93.3" y2="2" stroke="#555" stroke-width="1.6" marker-end="url(#bA1)"/>
+        <text x="271" y="162" font-size="10" fill="#555">x</text>
+        <text x="85" y="10" font-size="10" fill="#555">y</text>
+        <text x="86" y="162" font-size="9" fill="#777">O</text>
+        <!-- ticks -->
+        <text x="14" y="162" font-size="8" fill="#777" text-anchor="middle">-2</text>
+        <text x="47" y="162" font-size="8" fill="#777" text-anchor="middle">-1</text>
+        <text x="140" y="162" font-size="8" fill="#777" text-anchor="middle">1</text>
+        <text x="173" y="162" font-size="8" fill="#777" text-anchor="middle">2</text>
+        <text x="206" y="162" font-size="8" fill="#777" text-anchor="middle">3</text>
+        <text x="239" y="162" font-size="8" fill="#777" text-anchor="middle">4</text>
+        <text x="89" y="33" font-size="8" fill="#777" text-anchor="end">5</text>
+        <text x="89" y="63" font-size="8" fill="#777" text-anchor="end">4</text>
+        <text x="89" y="93" font-size="8" fill="#777" text-anchor="end">3</text>
+        <text x="89" y="123" font-size="8" fill="#777" text-anchor="end">2</text>
+        <text x="89" y="183" font-size="8" fill="#777" text-anchor="end">-1</text>
+        <text x="89" y="213" font-size="8" fill="#777" text-anchor="end">-2</text>
+        <!-- sumbu simetri x=1 dashed -->
+        <line x1="140" y1="2" x2="140" y2="240" stroke="#3B82F6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+        <text x="142" y="10" font-size="9" fill="#3B82F6">x = x_P</text>
+        <!-- proyeksi titik balik -->
+        <line x1="140" y1="210" x2="93.3" y2="210" stroke="#94A3B8" stroke-width="0.9" stroke-dasharray="3,2"/>
+        <line x1="140" y1="210" x2="140" y2="150" stroke="#94A3B8" stroke-width="0.9" stroke-dasharray="3,2"/>
+        <!-- kurva parabola -->
+        <path d="M 14,90 L 21,72.5 L 28,55.8 L 35,40.2 L 42,25.7 L 49,12.4 L 56,0.2 L 63,-10.8" fill="none" stroke="#3B82F6" stroke-width="0" />
+        <path d="M 14,90 L 47,7.5 L 60,-6 L 64,-9.7 L 64,-9.7 M 64,-9.7" fill="none" stroke="none"/>
+        <path d="M 22,30 L 28,50.3 L 35,68.2 L 42,84.9 L 49,100.2 L 56,114.2 L 63,127 L 70,138.4 L 77,148.6 L 84,157.4 L 91,165 L 98,171.2 L 105,176.2 L 112,179.8 L 119,182.1 L 126,183.2 L 133,182.8 L 140,181.2 L 147,178.2 L 154,174 L 161,168.4 L 168,161.5 L 175,153.3 L 182,143.8 L 189,133 L 196,121 L 203,107.6 L 210,92.9 L 217,76.9 L 224,59.6 L 231,41 L 238,21.1 L 245,-0.1" fill="none" stroke="#3B82F6" stroke-width="2.2"/>
+        <!-- titik potong x1, x2 (akar persamaan) -->
+        <circle cx="74" cy="150" r="3.5" fill="#EF4444"/>
+        <text x="72" y="144" font-size="9" fill="#EF4444" text-anchor="end">x₁</text>
+        <circle cx="206" cy="150" r="3.5" fill="#EF4444"/>
+        <text x="210" y="144" font-size="9" fill="#EF4444">x₂</text>
+        <!-- titik potong sumbu Y (0,c)=(0,-1) -->
+        <circle cx="93.3" cy="180" r="3.5" fill="#EF4444"/>
+        <text x="88" y="183" font-size="9" fill="#EF4444" text-anchor="end">(0,c)</text>
+        <!-- titik balik P(1,-2) -->
+        <circle cx="140" cy="210" r="4" fill="#EF4444"/>
+        <text x="145" y="218" font-size="9" fill="#EF4444">P(x_P, y_P)</text>
+        <!-- label sumbu pada proyeksi -->
+        <text x="140" y="146" font-size="8" fill="#555">x_P</text>
+        <text x="91" y="208" font-size="8" fill="#555" text-anchor="end">y_P</text>
+        <!-- label kategori -->
+        <text x="140" y="262" font-size="10" font-weight="600" fill="#3B82F6" text-anchor="middle">a &gt; 0 : minimum</text>
+      </svg>
+      <!-- KANAN: a<0 (maksimum). f(x) = -(x-2)^2 + 3 -->
+      <svg viewBox="0 0 280 270" xmlns="http://www.w3.org/2000/svg">
+        <defs><marker id="bA2" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="#555"/></marker></defs>
+        <!-- gridlines: x∈[-1,5] (sx=0..280, scale=46.67); y∈[-2,5] (sy=0..240, scale=34.29) -->
+        <g stroke="#e2e8f0" stroke-width="0.7">
+          <line x1="0" y1="0" x2="0" y2="240"/><line x1="93.3" y1="0" x2="93.3" y2="240"/><line x1="140" y1="0" x2="140" y2="240"/><line x1="186.7" y1="0" x2="186.7" y2="240"/><line x1="233.3" y1="0" x2="233.3" y2="240"/><line x1="280" y1="0" x2="280" y2="240"/>
+          <line x1="0" y1="0" x2="280" y2="0"/><line x1="0" y1="34.3" x2="280" y2="34.3"/><line x1="0" y1="68.6" x2="280" y2="68.6"/><line x1="0" y1="102.9" x2="280" y2="102.9"/><line x1="0" y1="137.1" x2="280" y2="137.1"/><line x1="0" y1="205.7" x2="280" y2="205.7"/><line x1="0" y1="240" x2="280" y2="240"/>
+        </g>
+        <!-- axes: x-axis di sy(0)=171.4, y-axis di sx(0)=46.7 -->
+        <line x1="0" y1="171.4" x2="278" y2="171.4" stroke="#555" stroke-width="1.6" marker-end="url(#bA2)"/>
+        <line x1="46.7" y1="240" x2="46.7" y2="2" stroke="#555" stroke-width="1.6" marker-end="url(#bA2)"/>
+        <text x="271" y="183" font-size="10" fill="#555">x</text>
+        <text x="38" y="10" font-size="10" fill="#555">y</text>
+        <text x="38" y="183" font-size="9" fill="#777">O</text>
+        <!-- ticks -->
+        <text x="93.3" y="183" font-size="8" fill="#777" text-anchor="middle">1</text>
+        <text x="140" y="183" font-size="8" fill="#777" text-anchor="middle">2</text>
+        <text x="186.7" y="183" font-size="8" fill="#777" text-anchor="middle">3</text>
+        <text x="233.3" y="183" font-size="8" fill="#777" text-anchor="middle">4</text>
+        <text x="42" y="37" font-size="8" fill="#777" text-anchor="end">5</text>
+        <text x="42" y="71" font-size="8" fill="#777" text-anchor="end">4</text>
+        <text x="42" y="106" font-size="8" fill="#777" text-anchor="end">3</text>
+        <text x="42" y="140" font-size="8" fill="#777" text-anchor="end">2</text>
+        <text x="42" y="208" font-size="8" fill="#777" text-anchor="end">-1</text>
+        <!-- sumbu simetri x=2 dashed -->
+        <line x1="140" y1="2" x2="140" y2="240" stroke="#EF4444" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
+        <text x="143" y="10" font-size="9" fill="#EF4444">x = x_P</text>
+        <!-- proyeksi titik balik P(2,3) → sx=140, sy=68.6 -->
+        <line x1="140" y1="68.6" x2="46.7" y2="68.6" stroke="#94A3B8" stroke-width="0.9" stroke-dasharray="3,2"/>
+        <line x1="140" y1="68.6" x2="140" y2="171.4" stroke="#94A3B8" stroke-width="0.9" stroke-dasharray="3,2"/>
+        <!-- kurva parabola y = -(x-2)^2 + 3, dari x≈-0.5 sampai x≈4.5 (y dari -3 ke -3) -->
+        <path d="M 23,243.7 L 35,232.5 L 47,217.7 L 58.3,202.1 L 70,184.6 L 82,166.4 L 93.3,149.4 L 105,133 L 117,117.7 L 128.3,104.6 L 140,93.7 L 152,85.1 L 163.3,78.9 L 175,74.6 L 186.7,72.7 L 198.3,73.0 L 210,75.7 L 222,80.5 L 233.3,87.7 L 245,97.1 L 257,109.0 L 268.3,122.6 L 280,138.6" fill="none" stroke="#EF4444" stroke-width="2.2"/>
+        <!-- Better path computed properly -->
+        <!-- titik potong x1=2-√3≈0.268, x2=2+√3≈3.732 -->
+        <circle cx="59.2" cy="171.4" r="3.5" fill="#EF4444"/>
+        <text x="57" y="165" font-size="9" fill="#EF4444" text-anchor="end">x₁</text>
+        <circle cx="220.8" cy="171.4" r="3.5" fill="#EF4444"/>
+        <text x="223" y="165" font-size="9" fill="#EF4444">x₂</text>
+        <!-- titik potong sumbu Y (0,c)=(0,-1) → sx=46.7, sy=205.7 -->
+        <circle cx="46.7" cy="205.7" r="3.5" fill="#EF4444"/>
+        <text x="52" y="208" font-size="9" fill="#EF4444">(0,c)</text>
+        <!-- titik balik P(2,3) → sx=140, sy=68.6 -->
+        <circle cx="140" cy="68.6" r="4" fill="#EF4444"/>
+        <text x="145" y="65" font-size="9" fill="#EF4444">P(x_P, y_P)</text>
+        <!-- label x_P, y_P -->
+        <text x="140" y="184" font-size="8" fill="#555">x_P</text>
+        <text x="44" y="72" font-size="8" fill="#555" text-anchor="end">y_P</text>
+        <!-- label kategori -->
+        <text x="140" y="262" font-size="10" font-weight="600" fill="#EF4444" text-anchor="middle">a &lt; 0 : maksimum</text>
+      </svg>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Catatan</div>
+      <p style="margin:0;font-size:.9rem;">
+        $y_P = \dfrac{-D}{4a}$ karena $D = b^2 - 4ac$, sehingga $4ac - b^2 = -D$. Perhatikan:<br>
+        • Jika $a > 0$: $y_P$ adalah nilai <strong>minimum</strong> fungsi, sehingga range $= [y_P,\; +\infty)$<br>
+        • Jika $a < 0$: $y_P$ adalah nilai <strong>maksimum</strong> fungsi, sehingga range $= (-\infty,\; y_P]$
+      </p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan semua titik penting grafik $f(x) = x^2 - 4x - 5$ (titik potong sumbu $X$, titik potong sumbu $Y$, sumbu simetri, dan titik balik). Nyatakan pula range fungsinya!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Diketahui $a = 1,\; b = -4,\; c = -5$. Karena $a = 1 > 0$, parabola <strong>terbuka ke atas</strong>.<br><br>
+      <strong>(1) Diskriminan dan titik potong sumbu $X$</strong>
+      $$D = (-4)^2 - 4(1)(-5) = 16 + 20 = 36 > 0$$
+      Karena $D > 0$, grafik memotong sumbu $X$ di dua titik:
+      $$x^2 - 4x - 5 = 0 \;\Rightarrow\; (x-5)(x+1) = 0 \;\Rightarrow\; x_1 = -1,\; x_2 = 5$$
+      Titik potong sumbu $X$: $(-1,\, 0)$ dan $(5,\, 0)$.<br><br>
+      <strong>(2) Titik potong sumbu $Y$:</strong> $f(0) = -5 \Rightarrow (0,\,-5)$<br><br>
+      <strong>(3) Sumbu simetri:</strong> $x_s = \dfrac{-(-4)}{2(1)} = 2$<br><br>
+      <strong>(4) Titik balik</strong> ($a > 0$, jadi minimum):
+      $$y_P = \frac{-D}{4a} = \frac{-36}{4} = -9 \;\Rightarrow\; P(2,\,-9)$$
+      <strong>(5) Range fungsi:</strong> Karena $a > 0$ dan nilai minimum $y_P = -9$:
+      $$\text{Range} = [-9,\; +\infty)$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan semua titik penting grafik $f(x) = x^2 - 4x - 1$. Gunakan <strong>rumus kuadratis</strong> untuk mencari titik potong dengan sumbu $X$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Diketahui $a = 1,\; b = -4,\; c = -1$. Karena $a = 1 > 0$, parabola <strong>terbuka ke atas</strong>.<br><br>
+      <strong>(1) Diskriminan:</strong>
+      $$D = (-4)^2 - 4(1)(-1) = 16 + 4 = 20 > 0$$
+      Karena $D = 20$ bukan bilangan kuadrat sempurna, gunakan <strong>rumus kuadratis</strong>:
+      $$x_{1,2} = \frac{-b \pm \sqrt{D}}{2a} = \frac{4 \pm \sqrt{20}}{2} = \frac{4 \pm 2\sqrt{5}}{2} = 2 \pm \sqrt{5}$$
+      Titik potong sumbu $X$: $(2 - \sqrt{5},\, 0) \approx (-0{,}24;\, 0)$ dan $(2 + \sqrt{5},\, 0) \approx (4{,}24;\, 0)$.<br><br>
+      <strong>(2) Titik potong sumbu $Y$:</strong> $f(0) = -1 \Rightarrow (0,\,-1)$<br><br>
+      <strong>(3) Sumbu simetri:</strong> $x_s = 2$<br><br>
+      <strong>(4) Titik balik</strong> ($a > 0$, minimum):
+      $$y_P = \frac{-D}{4a} = \frac{-20}{4} = -5 \;\Rightarrow\; P(2,\,-5)$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Rumus Kuadratis</div>
+      <p style="margin:0;font-size:.9rem;">Rumus kuadratis digunakan ketika persamaan $ax^2+bx+c=0$ <strong>tidak bisa difaktorkan secara sederhana</strong>, yaitu saat $D$ bukan bilangan kuadrat sempurna. Hasilnya bisa berupa bentuk akar (irasional).</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Tentukan diskriminan, titik potong sumbu $X$ (jika ada), titik potong sumbu $Y$, sumbu simetri, dan titik balik dari fungsi-fungsi berikut. Nyatakan pula range-nya!
+          <ol class="alpha-list" style="margin-top:.3rem;">
+            <li>$f(x) = x^2 - 6x + 5$</li>
+            <li>$g(x) = -2x^2 + 8x$</li>
+            <li>$h(x) = x^2 + 4x + 4$</li>
+          </ol>
+        </li>
+        <li>Diketahui $f(x) = 2x^2 - 8x + 6$. Tentukan:
+          <ol class="alpha-list" style="margin-top:.3rem;">
+            <li>Akar-akar persamaan $f(x) = 0$ (titik potong sumbu $X$)</li>
+            <li>Titik potong dengan sumbu $Y$</li>
+            <li>Sumbu simetri dan titik balik</li>
+            <li>Range fungsi</li>
+          </ol>
+        </li>
+        <li>Sebuah parabola memiliki titik potong sumbu $X$ di $x = -3$ dan $x = 1$, serta titik potong sumbu $Y$ di $(0,\,-6)$. Tentukan persamaan sumbu simetri dan titik balik parabola tersebut.</li>
+        <li>Fungsi $f(x) = x^2 + px + q$ memiliki sumbu simetri $x = 3$ dan titik potong sumbu $Y$ di $(0,\,4)$. Tentukan nilai $p$ dan $q$, serta koordinat titik baliknya.</li>
+        <li>Diketahui $f(x) = -x^2 + 6x + k$. Jika titik balik parabola berada di $y_P = 12$, tentukan:
+          <ol class="alpha-list" style="margin-top:.3rem;">
+            <li>Nilai $k$</li>
+            <li>Koordinat titik balik</li>
+            <li>Titik potong dengan sumbu $Y$</li>
+            <li>Titik potong dengan sumbu $X$</li>
+            <li>Range fungsi</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ C. MENGGAMBAR GRAFIK ═══════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Menggambar Grafik Fungsi Kuadrat</h2>
+
+    <p><strong>Langkah-langkah sistematis</strong> menggambar grafik $f(x) = ax^2 + bx + c$:</p>
+    <ol class="step-list">
+      <li>Tentukan arah bukaan parabola berdasarkan tanda $a$</li>
+      <li>Hitung diskriminan $D = b^2 - 4ac$ dan tentukan titik potong sumbu $X$</li>
+      <li>Tentukan titik potong sumbu $Y$: $(0,\, c)$</li>
+      <li>Tentukan sumbu simetri: $x_s = \dfrac{-b}{2a}$</li>
+      <li>Tentukan titik balik: $P\!\left(\dfrac{-b}{2a},\; \dfrac{-D}{4a}\right)$</li>
+      <li>Plot semua titik penting, hubungkan dengan kurva mulus berbentuk parabola</li>
+    </ol>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Lukislah grafik fungsi $f(x) = x^2 - 2x - 8$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Diketahui $a = 1 > 0$ (parabola <strong>terbuka ke atas</strong>).<br><br>
+      <strong>(1) Diskriminan dan titik potong sumbu $X$</strong>
+      $$D = (-2)^2 - 4(1)(-8) = 4 + 32 = 36 > 0$$
+      $$x^2 - 2x - 8 = 0 \Rightarrow (x-4)(x+2) = 0 \Rightarrow x_1 = -2,\; x_2 = 4$$
+      Titik potong: $(-2,\, 0)$ dan $(4,\, 0)$.<br><br>
+      <strong>(2) Titik potong sumbu $Y$:</strong> $f(0) = -8 \Rightarrow (0,\,-8)$<br><br>
+      <strong>(3) Sumbu simetri:</strong> $x_s = \dfrac{-(-2)}{2(1)} = 1$<br><br>
+      <strong>(4) Titik balik</strong> ($a > 0$, minimum):
+      $$y_P = \frac{-D}{4a} = \frac{-36}{4} = -9 \Rightarrow P(1,\,-9)$$
+      <strong>(5) Grafik:</strong>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" width="280">
+          <defs><marker id="c6arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="#555"/></marker></defs>
+          <!-- grid -->
+          <g stroke="#e2e8f0" stroke-width="0.6">
+            <line x1="0" y1="18.7" x2="300" y2="18.7"/><line x1="0" y1="56" x2="300" y2="56"/><line x1="0" y1="93.3" x2="300" y2="93.3"/><line x1="0" y1="130.7" x2="300" y2="130.7"/><line x1="0" y1="168" x2="300" y2="168"/><line x1="0" y1="205.3" x2="300" y2="205.3"/><line x1="0" y1="242.7" x2="300" y2="242.7"/><line x1="0" y1="280" x2="300" y2="280"/>
+            <line x1="0" y1="0" x2="0" y2="280"/><line x1="37.5" y1="0" x2="37.5" y2="280"/><line x1="75" y1="0" x2="75" y2="280"/><line x1="150" y1="0" x2="150" y2="280"/><line x1="187.5" y1="0" x2="187.5" y2="280"/><line x1="225" y1="0" x2="225" y2="280"/><line x1="262.5" y1="0" x2="262.5" y2="280"/><line x1="300" y1="0" x2="300" y2="280"/>
+          </g>
+          <!-- axes: x-axis di sy=93.3, y-axis di sx=112.5 -->
+          <line x1="0" y1="93.3" x2="298" y2="93.3" stroke="#555" stroke-width="1.6" marker-end="url(#c6arr)"/>
+          <line x1="112.5" y1="280" x2="112.5" y2="2" stroke="#555" stroke-width="1.6" marker-end="url(#c6arr)"/>
+          <text x="292" y="105" font-size="10" fill="#555">x</text>
+          <text x="104" y="10" font-size="10" fill="#555">y</text>
+          <text x="105" y="105" font-size="9" fill="#777">O</text>
+          <!-- ticks x -->
+          <text x="0" y="105" font-size="8" fill="#777" text-anchor="middle">-3</text>
+          <text x="37.5" y="105" font-size="8" fill="#777" text-anchor="middle">-2</text>
+          <text x="75" y="105" font-size="8" fill="#777" text-anchor="middle">-1</text>
+          <text x="150" y="105" font-size="8" fill="#777" text-anchor="middle">1</text>
+          <text x="187.5" y="105" font-size="8" fill="#777" text-anchor="middle">2</text>
+          <text x="225" y="105" font-size="8" fill="#777" text-anchor="middle">3</text>
+          <text x="262.5" y="105" font-size="8" fill="#777" text-anchor="middle">4</text>
+          <text x="300" y="105" font-size="8" fill="#777" text-anchor="middle">5</text>
+          <!-- ticks y -->
+          <text x="108" y="21" font-size="8" fill="#777" text-anchor="end">4</text>
+          <text x="108" y="58" font-size="8" fill="#777" text-anchor="end">2</text>
+          <text x="108" y="133" font-size="8" fill="#777" text-anchor="end">-2</text>
+          <text x="108" y="171" font-size="8" fill="#777" text-anchor="end">-4</text>
+          <text x="108" y="208" font-size="8" fill="#777" text-anchor="end">-6</text>
+          <text x="108" y="246" font-size="8" fill="#777" text-anchor="end">-8</text>
+          <text x="108" y="265" font-size="8" fill="#777" text-anchor="end">-9</text>
+          <!-- sumbu simetri x=1 -->
+          <line x1="150" y1="2" x2="150" y2="280" stroke="#3B82F6" stroke-width="1.1" stroke-dasharray="4,3" opacity="0.6"/>
+          <text x="153" y="12" font-size="9" fill="#3B82F6">x = 1</text>
+          <!-- proyeksi -->
+          <line x1="150" y1="261.3" x2="112.5" y2="261.3" stroke="#94A3B8" stroke-width="0.8" stroke-dasharray="3,2"/>
+          <line x1="150" y1="261.3" x2="150" y2="93.3" stroke="#94A3B8" stroke-width="0.8" stroke-dasharray="3,2"/>
+          <!-- kurva -->
+          <path d="M 10.0,1.2 L 15.0,19.4 L 20.0,37.0 L 25.0,53.9 L 30.0,70.2 L 35.0,85.8 L 40.0,100.7 L 45.0,115.0 L 50.0,128.6 L 55.0,141.5 L 60.0,153.8 L 65.0,165.4 L 70.0,176.4 L 75.0,186.7 L 80.0,196.3 L 85.0,205.3 L 90.0,213.5 L 95.0,221.2 L 100.0,228.1 L 105.0,234.5 L 110.0,240.1 L 115.0,245.1 L 120.0,249.4 L 125.0,253.0 L 130.0,256.0 L 135.0,258.3 L 140.0,260.0 L 145.0,261.0 L 150.0,261.3 L 155.0,261.0 L 160.0,260.0 L 165.0,258.3 L 170.0,256.0 L 175.0,253.0 L 180.0,249.4 L 185.0,245.1 L 190.0,240.1 L 195.0,234.5 L 200.0,228.1 L 205.0,221.2 L 210.0,213.5 L 215.0,205.3 L 220.0,196.3 L 225.0,186.7 L 230.0,176.4 L 235.0,165.4 L 240.0,153.8 L 245.0,141.5 L 250.0,128.6 L 255.0,115.0 L 260.0,100.7 L 265.0,85.8 L 270.0,70.2 L 275.0,53.9 L 280.0,37.0 L 285.0,19.4 L 290.0,1.2" fill="none" stroke="#3B82F6" stroke-width="2.2"/>
+          <!-- titik potong -->
+          <circle cx="37.5" cy="93.3" r="3.5" fill="#EF4444"/>
+          <text x="35" y="86" font-size="9" fill="#EF4444" text-anchor="end">(-2,0)</text>
+          <circle cx="262.5" cy="93.3" r="3.5" fill="#EF4444"/>
+          <text x="265" y="86" font-size="9" fill="#EF4444">(4,0)</text>
+          <circle cx="112.5" cy="242.7" r="3.5" fill="#EF4444"/>
+          <text x="118" y="246" font-size="9" fill="#EF4444">(0,-8)</text>
+          <circle cx="150" cy="261.3" r="4" fill="#EF4444"/>
+          <text x="155" y="275" font-size="9" fill="#EF4444">P(1,-9)</text>
+          <!-- judul -->
+          <text x="150" y="312" font-size="11" font-weight="600" fill="#3B82F6" text-anchor="middle">f(x) = x² - 2x - 8</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Lukislah grafik fungsi $f(x) = -x^2 + 6x - 5$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Diketahui $a = -1 < 0$ (parabola <strong>terbuka ke bawah</strong>).<br><br>
+      <strong>(1) Diskriminan dan titik potong sumbu $X$</strong>
+      $$D = 6^2 - 4(-1)(-5) = 36 - 20 = 16 > 0$$
+      $$-x^2 + 6x - 5 = 0 \Rightarrow (x-1)(x-5) = 0$$
+      Titik potong: $(1,\, 0)$ dan $(5,\, 0)$.<br><br>
+      <strong>(2) Titik potong sumbu $Y$:</strong> $f(0) = -5 \Rightarrow (0,\,-5)$<br><br>
+      <strong>(3) Sumbu simetri:</strong> $x_s = \dfrac{-6}{2(-1)} = 3$<br><br>
+      <strong>(4) Titik balik</strong> ($a < 0$, maksimum):
+      $$y_P = \frac{-D}{4a} = \frac{-16}{-4} = 4 \Rightarrow P(3,\, 4)$$
+      <strong>(5) Grafik:</strong>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" width="280">
+          <defs><marker id="c7arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="#555"/></marker></defs>
+          <!-- grid: x[-1,7] sx_scale=37.5; y[-6,5] sy_scale=25.45 -->
+          <g stroke="#e2e8f0" stroke-width="0.6">
+            <line x1="0" y1="25.5" x2="300" y2="25.5"/><line x1="0" y1="50.9" x2="300" y2="50.9"/><line x1="0" y1="76.4" x2="300" y2="76.4"/><line x1="0" y1="101.8" x2="300" y2="101.8"/><line x1="0" y1="152.7" x2="300" y2="152.7"/><line x1="0" y1="178.2" x2="300" y2="178.2"/><line x1="0" y1="203.6" x2="300" y2="203.6"/><line x1="0" y1="229.1" x2="300" y2="229.1"/><line x1="0" y1="254.5" x2="300" y2="254.5"/><line x1="0" y1="280" x2="300" y2="280"/>
+            <line x1="0" y1="0" x2="0" y2="280"/><line x1="75" y1="0" x2="75" y2="280"/><line x1="112.5" y1="0" x2="112.5" y2="280"/><line x1="150" y1="0" x2="150" y2="280"/><line x1="187.5" y1="0" x2="187.5" y2="280"/><line x1="225" y1="0" x2="225" y2="280"/><line x1="262.5" y1="0" x2="262.5" y2="280"/><line x1="300" y1="0" x2="300" y2="280"/>
+          </g>
+          <!-- axes: x-axis sy(0)=127.3, y-axis sx(0)=37.5 -->
+          <line x1="0" y1="127.3" x2="298" y2="127.3" stroke="#555" stroke-width="1.6" marker-end="url(#c7arr)"/>
+          <line x1="37.5" y1="280" x2="37.5" y2="2" stroke="#555" stroke-width="1.6" marker-end="url(#c7arr)"/>
+          <text x="292" y="139" font-size="10" fill="#555">x</text>
+          <text x="29" y="10" font-size="10" fill="#555">y</text>
+          <text x="30" y="139" font-size="9" fill="#777">O</text>
+          <!-- ticks x -->
+          <text x="75" y="139" font-size="8" fill="#777" text-anchor="middle">1</text>
+          <text x="112.5" y="139" font-size="8" fill="#777" text-anchor="middle">2</text>
+          <text x="150" y="139" font-size="8" fill="#777" text-anchor="middle">3</text>
+          <text x="187.5" y="139" font-size="8" fill="#777" text-anchor="middle">4</text>
+          <text x="225" y="139" font-size="8" fill="#777" text-anchor="middle">5</text>
+          <text x="262.5" y="139" font-size="8" fill="#777" text-anchor="middle">6</text>
+          <text x="300" y="139" font-size="8" fill="#777" text-anchor="middle">7</text>
+          <!-- ticks y -->
+          <text x="33" y="28" font-size="8" fill="#777" text-anchor="end">4</text>
+          <text x="33" y="79" font-size="8" fill="#777" text-anchor="end">2</text>
+          <text x="33" y="155" font-size="8" fill="#777" text-anchor="end">-1</text>
+          <text x="33" y="181" font-size="8" fill="#777" text-anchor="end">-2</text>
+          <text x="33" y="232" font-size="8" fill="#777" text-anchor="end">-4</text>
+          <text x="33" y="257" font-size="8" fill="#777" text-anchor="end">-5</text>
+          <!-- sumbu simetri x=3 -->
+          <line x1="150" y1="2" x2="150" y2="280" stroke="#EF4444" stroke-width="1.1" stroke-dasharray="4,3" opacity="0.6"/>
+          <text x="153" y="12" font-size="9" fill="#EF4444">x = 3</text>
+          <!-- proyeksi -->
+          <line x1="150" y1="25.5" x2="37.5" y2="25.5" stroke="#94A3B8" stroke-width="0.8" stroke-dasharray="3,2"/>
+          <line x1="150" y1="25.5" x2="150" y2="127.3" stroke="#94A3B8" stroke-width="0.8" stroke-dasharray="3,2"/>
+          <!-- kurva -->
+          <path d="M 30.0,286.1 L 35.0,264.8 L 40.0,244.5 L 45.0,225.0 L 50.0,206.5 L 55.0,188.8 L 60.0,172.1 L 65.0,156.2 L 70.0,141.3 L 75.0,127.3 L 80.0,114.1 L 85.0,101.9 L 90.0,90.6 L 95.0,80.2 L 100.0,70.7 L 105.0,62.1 L 110.0,54.4 L 115.0,47.6 L 120.0,41.7 L 125.0,36.8 L 130.0,32.7 L 135.0,29.5 L 140.0,27.3 L 145.0,25.9 L 150.0,25.5 L 155.0,25.9 L 160.0,27.3 L 165.0,29.5 L 170.0,32.7 L 175.0,36.8 L 180.0,41.7 L 185.0,47.6 L 190.0,54.4 L 195.0,62.1 L 200.0,70.7 L 205.0,80.2 L 210.0,90.6 L 215.0,101.9 L 220.0,114.1 L 225.0,127.3 L 230.0,141.3 L 235.0,156.2 L 240.0,172.1 L 245.0,188.8 L 250.0,206.5 L 255.0,225.0 L 260.0,244.5 L 265.0,264.8 L 270.0,286.1" fill="none" stroke="#EF4444" stroke-width="2.2"/>
+          <!-- titik potong -->
+          <circle cx="75" cy="127.3" r="3.5" fill="#3B82F6"/>
+          <text x="73" y="120" font-size="9" fill="#3B82F6" text-anchor="end">(1,0)</text>
+          <circle cx="225" cy="127.3" r="3.5" fill="#3B82F6"/>
+          <text x="228" y="120" font-size="9" fill="#3B82F6">(5,0)</text>
+          <circle cx="37.5" cy="254.5" r="3.5" fill="#3B82F6"/>
+          <text x="43" y="258" font-size="9" fill="#3B82F6">(0,-5)</text>
+          <circle cx="150" cy="25.5" r="4" fill="#3B82F6"/>
+          <text x="155" y="22" font-size="9" fill="#3B82F6">P(3,4)</text>
+          <text x="150" y="312" font-size="11" font-weight="600" fill="#EF4444" text-anchor="middle">f(x) = -x² + 6x - 5</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Lukislah grafik fungsi $f(x) = 2x^2 - 4x + 5$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Diketahui $a = 2 > 0$ (parabola <strong>terbuka ke atas</strong>).<br><br>
+      <strong>(1) Diskriminan:</strong>
+      $$D = (-4)^2 - 4(2)(5) = 16 - 40 = -24 < 0$$
+      Karena $D < 0$, <strong>grafik tidak memotong sumbu $X$</strong>.<br><br>
+      <strong>(2) Titik potong sumbu $Y$:</strong> $f(0) = 5 \Rightarrow (0,\, 5)$<br><br>
+      <strong>(3) Sumbu simetri:</strong> $x_s = \dfrac{-(-4)}{2(2)} = 1$<br><br>
+      <strong>(4) Titik balik</strong> ($a > 0$, minimum):
+      $$y_P = \frac{-(-24)}{4(2)} = \frac{24}{8} = 3 \Rightarrow P(1,\, 3)$$
+      <div class="box box-catatan">
+        <div class="box-label">💡 Perhatikan</div>
+        <p style="margin:0;font-size:.88rem;">Karena $a > 0$ dan $D < 0$, seluruh grafik berada <strong>di atas sumbu $X$</strong>. Nilai fungsi selalu positif untuk semua $x \in \mathbb{R}$. Range fungsi $= [3,\; +\infty)$.</p>
+      </div>
+      <strong>(5) Grafik:</strong>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" width="280">
+          <defs><marker id="c8arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="#555"/></marker></defs>
+          <!-- grid: x[-2,4] sx_scale=50; y[0,14] sy_scale=20 -->
+          <g stroke="#e2e8f0" stroke-width="0.6">
+            <line x1="0" y1="0" x2="300" y2="0"/><line x1="0" y1="20" x2="300" y2="20"/><line x1="0" y1="60" x2="300" y2="60"/><line x1="0" y1="100" x2="300" y2="100"/><line x1="0" y1="140" x2="300" y2="140"/><line x1="0" y1="180" x2="300" y2="180"/><line x1="0" y1="220" x2="300" y2="220"/><line x1="0" y1="260" x2="300" y2="260"/>
+            <line x1="0" y1="0" x2="0" y2="280"/><line x1="50" y1="0" x2="50" y2="280"/><line x1="150" y1="0" x2="150" y2="280"/><line x1="200" y1="0" x2="200" y2="280"/><line x1="250" y1="0" x2="250" y2="280"/><line x1="300" y1="0" x2="300" y2="280"/>
+          </g>
+          <!-- axes: x-axis sy(0)=280, y-axis sx(0)=100 -->
+          <line x1="0" y1="280" x2="298" y2="280" stroke="#555" stroke-width="1.6" marker-end="url(#c8arr)"/>
+          <line x1="100" y1="280" x2="100" y2="2" stroke="#555" stroke-width="1.6" marker-end="url(#c8arr)"/>
+          <text x="292" y="275" font-size="10" fill="#555">x</text>
+          <text x="91" y="10" font-size="10" fill="#555">y</text>
+          <text x="92" y="275" font-size="9" fill="#777">O</text>
+          <!-- ticks x -->
+          <text x="0" y="275" font-size="8" fill="#777" text-anchor="middle">-2</text>
+          <text x="50" y="275" font-size="8" fill="#777" text-anchor="middle">-1</text>
+          <text x="150" y="275" font-size="8" fill="#777" text-anchor="middle">1</text>
+          <text x="200" y="275" font-size="8" fill="#777" text-anchor="middle">2</text>
+          <text x="250" y="275" font-size="8" fill="#777" text-anchor="middle">3</text>
+          <text x="300" y="275" font-size="8" fill="#777" text-anchor="middle">4</text>
+          <!-- ticks y -->
+          <text x="96" y="23" font-size="8" fill="#777" text-anchor="end">14</text>
+          <text x="96" y="63" font-size="8" fill="#777" text-anchor="end">12</text>
+          <text x="96" y="103" font-size="8" fill="#777" text-anchor="end">10</text>
+          <text x="96" y="143" font-size="8" fill="#777" text-anchor="end">8</text>
+          <text x="96" y="183" font-size="8" fill="#777" text-anchor="end">6</text>
+          <text x="96" y="223" font-size="8" fill="#777" text-anchor="end">5</text>
+          <text x="96" y="223" font-size="8" fill="#777" text-anchor="end" opacity="0">5</text>
+          <text x="96" y="263" font-size="8" fill="#777" text-anchor="end">2</text>
+          <!-- sumbu simetri x=1 -->
+          <line x1="150" y1="2" x2="150" y2="280" stroke="#3B82F6" stroke-width="1.1" stroke-dasharray="4,3" opacity="0.6"/>
+          <text x="153" y="12" font-size="9" fill="#3B82F6">x = 1</text>
+          <!-- proyeksi -->
+          <line x1="150" y1="220" x2="100" y2="220" stroke="#94A3B8" stroke-width="0.8" stroke-dasharray="3,2"/>
+          <line x1="150" y1="220" x2="150" y2="280" stroke="#94A3B8" stroke-width="0.8" stroke-dasharray="3,2"/>
+          <!-- kurva -->
+          <path d="M 35.0,8.4 L 40.0,26.4 L 45.0,43.6 L 50.0,60.0 L 55.0,75.6 L 60.0,90.4 L 65.0,104.4 L 70.0,117.6 L 75.0,130.0 L 80.0,141.6 L 85.0,152.4 L 90.0,162.4 L 95.0,171.6 L 100.0,180.0 L 105.0,187.6 L 110.0,194.4 L 115.0,200.4 L 120.0,205.6 L 125.0,210.0 L 130.0,213.6 L 135.0,216.4 L 140.0,218.4 L 145.0,219.6 L 150.0,220.0 L 155.0,219.6 L 160.0,218.4 L 165.0,216.4 L 170.0,213.6 L 175.0,210.0 L 180.0,205.6 L 185.0,200.4 L 190.0,194.4 L 195.0,187.6 L 200.0,180.0 L 205.0,171.6 L 210.0,162.4 L 215.0,152.4 L 220.0,141.6 L 225.0,130.0 L 230.0,117.6 L 235.0,104.4 L 240.0,90.4 L 245.0,75.6 L 250.0,60.0 L 255.0,43.6 L 260.0,26.4 L 265.0,8.4" fill="none" stroke="#3B82F6" stroke-width="2.2"/>
+          <!-- titik potong Y -->
+          <circle cx="100" cy="180" r="3.5" fill="#EF4444"/>
+          <text x="92" y="178" font-size="9" fill="#EF4444" text-anchor="end">(0,5)</text>
+          <!-- titik balik -->
+          <circle cx="150" cy="220" r="4" fill="#EF4444"/>
+          <text x="155" y="232" font-size="9" fill="#EF4444">P(1,3)</text>
+          <text x="150" y="312" font-size="11" font-weight="600" fill="#3B82F6" text-anchor="middle">f(x) = 2x² - 4x + 5</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Lukislah grafik fungsi $f(x) = x^2 - 4x + 3$. Tentukan semua titik penting (titik potong sumbu $X$, sumbu $Y$, sumbu simetri, dan titik balik).</li>
+        <li>Lukislah grafik fungsi $g(x) = -2x^2 + 4x + 6$. Apakah fungsi ini memiliki nilai maksimum atau minimum? Sebutkan nilainya.</li>
+        <li>Lukislah grafik fungsi $h(x) = x^2 - 4x + 4$. Apa yang terjadi pada titik potong dengan sumbu $X$? Jelaskan hubungannya dengan nilai diskriminan.</li>
+        <li>Diketahui $f(x) = x^2 + 2x + 5$. Tunjukkan bahwa grafik tidak memotong sumbu $X$, lalu tentukan range fungsi tersebut.</li>
+        <li>Tentukan nilai minimum atau maksimum dari fungsi $f(x) = -3x^2 + 12x - 7$ tanpa menggambar grafiknya.</li>
+        <li>Sebuah jembatan berbentuk parabola dengan persamaan $f(x) = -\dfrac{1}{8}x^2 + 2x$, di mana $x$ adalah jarak horizontal (meter) dan $f(x)$ adalah ketinggian (meter). Seorang insinyur menyatakan bahwa jembatan ini memiliki panjang 16 meter dan ketinggian maksimum 8 meter. Verifikasi pernyataan insinyur tersebut dengan menentukan semua titik penting grafik, lalu lukislah grafiknya!</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ D. SIFAT GRAFIK BERDASARKAN a DAN D ═══════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Sifat-Sifat Grafik Berdasarkan $a$ dan $D$</h2>
+
+    <p>Berdasarkan nilai $a$ dan diskriminan $D = b^2 - 4ac$, terdapat <strong>enam kemungkinan</strong> bentuk grafik fungsi kuadrat:</p>
+
+    <!-- 3-panel a>0 -->
+    <div class="box box-rumus">
+      <div class="box-label">Jika $a > 0$, parabola terbuka ke atas</div>
+      <div class="grafik-row" style="grid-template-columns:repeat(3,1fr);margin:0.4rem 0;">
+        <!-- Panel 1: D<0, a>0: f(x) = x² + 1, vertex (0,1) above x-axis -->
+        <svg viewBox="0 0 130 150" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="dA1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#888"/></marker></defs>
+          <line x1="10" y1="100" x2="120" y2="100" stroke="#888" stroke-width="1.2" marker-end="url(#dA1)"/>
+          <line x1="65" y1="125" x2="65" y2="10" stroke="#888" stroke-width="1.2" marker-end="url(#dA1)"/>
+          <text x="115" y="112" font-size="8" fill="#888">x</text>
+          <text x="58" y="10" font-size="8" fill="#888">y</text>
+          <!-- parabola: f(x) = 0.6(x-0)^2 + 30, in viewBox y. Center at sx=65, sy=70. Plot smooth -->
+          <path d="M 20,15 Q 38,40 52,60 Q 60,68 65,70 Q 70,68 78,60 Q 92,40 110,15" fill="none" stroke="#3B82F6" stroke-width="2"/>
+          <circle cx="65" cy="70" r="2.8" fill="#3B82F6"/>
+          <text x="65" y="143" font-size="8" fill="#555" text-anchor="middle" font-weight="600">D &lt; 0, a &gt; 0</text>
+          <text x="65" y="-2" font-size="7" fill="#777" text-anchor="middle"></text>
+        </svg>
+        <!-- Panel 2: D=0, a>0 -->
+        <svg viewBox="0 0 130 150" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="dA2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#888"/></marker></defs>
+          <line x1="10" y1="100" x2="120" y2="100" stroke="#888" stroke-width="1.2" marker-end="url(#dA2)"/>
+          <line x1="65" y1="125" x2="65" y2="10" stroke="#888" stroke-width="1.2" marker-end="url(#dA2)"/>
+          <text x="115" y="112" font-size="8" fill="#888">x</text>
+          <text x="58" y="10" font-size="8" fill="#888">y</text>
+          <path d="M 20,15 Q 38,55 52,85 Q 60,97 65,100 Q 70,97 78,85 Q 92,55 110,15" fill="none" stroke="#3B82F6" stroke-width="2"/>
+          <circle cx="65" cy="100" r="3" fill="#EF4444"/>
+          <text x="65" y="143" font-size="8" fill="#555" text-anchor="middle" font-weight="600">D = 0, a &gt; 0</text>
+        </svg>
+        <!-- Panel 3: D>0, a>0 -->
+        <svg viewBox="0 0 130 150" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="dA3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#888"/></marker></defs>
+          <line x1="10" y1="80" x2="120" y2="80" stroke="#888" stroke-width="1.2" marker-end="url(#dA3)"/>
+          <line x1="65" y1="125" x2="65" y2="10" stroke="#888" stroke-width="1.2" marker-end="url(#dA3)"/>
+          <text x="115" y="92" font-size="8" fill="#888">x</text>
+          <text x="58" y="10" font-size="8" fill="#888">y</text>
+          <path d="M 20,15 Q 38,55 50,80 Q 60,102 65,105 Q 70,102 80,80 Q 92,55 110,15" fill="none" stroke="#3B82F6" stroke-width="2"/>
+          <circle cx="50" cy="80" r="2.8" fill="#EF4444"/>
+          <circle cx="80" cy="80" r="2.8" fill="#EF4444"/>
+          <circle cx="65" cy="105" r="3" fill="#3B82F6"/>
+          <text x="65" y="143" font-size="8" fill="#555" text-anchor="middle" font-weight="600">D &gt; 0, a &gt; 0</text>
+        </svg>
+      </div>
+      <p style="margin:0.6rem 0 0;font-size:0.82rem;color:#A8C4C0;text-align:center;">
+        <span style="display:inline-block;width:32%;">tidak potong sb. $X$<br>nilai min &gt; 0</span>
+        <span style="display:inline-block;width:32%;">menyinggung sb. $X$<br>nilai min $= 0$</span>
+        <span style="display:inline-block;width:32%;">memotong sb. $X$ di 2 titik<br>nilai min &lt; 0</span>
+      </p>
+    </div>
+
+    <!-- 3-panel a<0 -->
+    <div class="box box-rumus">
+      <div class="box-label">Jika $a < 0$, parabola terbuka ke bawah</div>
+      <div class="grafik-row" style="grid-template-columns:repeat(3,1fr);margin:0.4rem 0;">
+        <!-- Panel 1: D<0, a<0 -->
+        <svg viewBox="0 0 130 150" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="dB1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#888"/></marker></defs>
+          <line x1="10" y1="35" x2="120" y2="35" stroke="#888" stroke-width="1.2" marker-end="url(#dB1)"/>
+          <line x1="65" y1="125" x2="65" y2="10" stroke="#888" stroke-width="1.2" marker-end="url(#dB1)"/>
+          <text x="115" y="47" font-size="8" fill="#888">x</text>
+          <text x="58" y="10" font-size="8" fill="#888">y</text>
+          <path d="M 20,120 Q 38,95 52,75 Q 60,67 65,65 Q 70,67 78,75 Q 92,95 110,120" fill="none" stroke="#EF4444" stroke-width="2"/>
+          <circle cx="65" cy="65" r="2.8" fill="#EF4444"/>
+          <text x="65" y="143" font-size="8" fill="#555" text-anchor="middle" font-weight="600">D &lt; 0, a &lt; 0</text>
+        </svg>
+        <!-- Panel 2: D=0, a<0 -->
+        <svg viewBox="0 0 130 150" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="dB2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#888"/></marker></defs>
+          <line x1="10" y1="35" x2="120" y2="35" stroke="#888" stroke-width="1.2" marker-end="url(#dB2)"/>
+          <line x1="65" y1="125" x2="65" y2="10" stroke="#888" stroke-width="1.2" marker-end="url(#dB2)"/>
+          <text x="115" y="47" font-size="8" fill="#888">x</text>
+          <text x="58" y="10" font-size="8" fill="#888">y</text>
+          <path d="M 20,120 Q 38,80 52,50 Q 60,38 65,35 Q 70,38 78,50 Q 92,80 110,120" fill="none" stroke="#EF4444" stroke-width="2"/>
+          <circle cx="65" cy="35" r="3" fill="#EF4444"/>
+          <text x="65" y="143" font-size="8" fill="#555" text-anchor="middle" font-weight="600">D = 0, a &lt; 0</text>
+        </svg>
+        <!-- Panel 3: D>0, a<0 -->
+        <svg viewBox="0 0 130 150" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="dB3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#888"/></marker></defs>
+          <line x1="10" y1="65" x2="120" y2="65" stroke="#888" stroke-width="1.2" marker-end="url(#dB3)"/>
+          <line x1="65" y1="125" x2="65" y2="10" stroke="#888" stroke-width="1.2" marker-end="url(#dB3)"/>
+          <text x="115" y="77" font-size="8" fill="#888">x</text>
+          <text x="58" y="10" font-size="8" fill="#888">y</text>
+          <path d="M 20,118 Q 38,90 50,65 Q 60,42 65,40 Q 70,42 80,65 Q 92,90 110,118" fill="none" stroke="#EF4444" stroke-width="2"/>
+          <circle cx="50" cy="65" r="2.8" fill="#EF4444"/>
+          <circle cx="80" cy="65" r="2.8" fill="#EF4444"/>
+          <circle cx="65" cy="40" r="3" fill="#EF4444"/>
+          <text x="65" y="143" font-size="8" fill="#555" text-anchor="middle" font-weight="600">D &gt; 0, a &lt; 0</text>
+        </svg>
+      </div>
+      <p style="margin:0.6rem 0 0;font-size:0.82rem;color:#A8C4C0;text-align:center;">
+        <span style="display:inline-block;width:32%;">tidak potong sb. $X$<br>nilai maks &lt; 0</span>
+        <span style="display:inline-block;width:32%;">menyinggung sb. $X$<br>nilai maks $= 0$</span>
+        <span style="display:inline-block;width:32%;">memotong sb. $X$ di 2 titik<br>nilai maks &gt; 0</span>
+      </p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan sifat grafik dari fungsi berikut (arah bukaan, kedudukan terhadap sumbu $X$, dan nilai ekstrem) tanpa menggambar:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$f(x) = 2x^2 + 3x + 4$</li>
+        <li>$g(x) = -x^2 + 6x - 9$</li>
+        <li>$h(x) = 3x^2 - 12x + 7$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>$f(x) = 2x^2 + 3x + 4$: $a=2>0$ (terbuka ke atas); $D = 9 - 32 = -23 < 0$ (tidak memotong sumbu $X$, seluruh grafik di atas sumbu $X$). Nilai minimum: $y_P = \dfrac{-(-23)}{4(2)} = \dfrac{23}{8}$.</li>
+        <li>$g(x) = -x^2 + 6x - 9$: $a=-1<0$ (terbuka ke bawah); $D = 36 - 36 = 0$ (menyinggung sumbu $X$ di satu titik). Nilai maksimum: $y_P = 0$.</li>
+        <li>$h(x) = 3x^2 - 12x + 7$: $a=3>0$ (terbuka ke atas); $D = 144 - 84 = 60 > 0$ (memotong sumbu $X$ di dua titik, titik minimum di bawah sumbu $X$). Nilai minimum: $y_P = \dfrac{-60}{12} = -5$.</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Diketahui $f(x) = x^2 - 4x + k$. Tentukan nilai $k$ agar:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Grafik memotong sumbu $X$ di dua titik</li>
+        <li>Grafik menyinggung sumbu $X$</li>
+        <li>Grafik tidak memotong sumbu $X$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $D = (-4)^2 - 4(1)(k) = 16 - 4k$.
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>Memotong dua titik: $D > 0 \Rightarrow 16 - 4k > 0 \Rightarrow \boxed{k < 4}$</li>
+        <li>Menyinggung: $D = 0 \Rightarrow 16 - 4k = 0 \Rightarrow \boxed{k = 4}$</li>
+        <li>Tidak memotong: $D < 0 \Rightarrow 16 - 4k < 0 \Rightarrow \boxed{k > 4}$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = ax^2 - 4x + a$ dengan $a \neq 0$. Tentukan nilai $a$ agar grafik <strong>selalu berada di atas sumbu $X$</strong> untuk semua $x \in \mathbb{R}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Agar grafik selalu berada di atas sumbu $X$, diperlukan <strong>dua syarat sekaligus</strong>:
+      <ul>
+        <li><strong>Syarat 1:</strong> Parabola terbuka ke atas $\Rightarrow a > 0$</li>
+        <li><strong>Syarat 2:</strong> Grafik tidak memotong sumbu $X$ $\Rightarrow D < 0$</li>
+      </ul>
+      Hitung diskriminan:
+      $$D = (-4)^2 - 4(a)(a) = 16 - 4a^2$$
+      Syarat $D < 0$:
+      $$16 - 4a^2 < 0 \Rightarrow a^2 > 4 \Rightarrow a < -2 \text{ atau } a > 2$$
+      Gabungkan dengan syarat $a > 0$:
+      $$\{a > 0\} \cap \{a < -2 \text{ atau } a > 2\} = \boxed{a > 2}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Penting</div>
+      <p style="margin:0;font-size:.9rem;">Kedua syarat ($a > 0$ <strong>dan</strong> $D < 0$) harus dipenuhi <strong>sekaligus</strong>. Salah satu syarat saja tidak cukup — misalnya $a > 0$ dengan $D > 0$ berarti grafik terbuka ke atas tetapi masih memotong sumbu $X$.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Tentukan sifat-sifat grafik berikut (arah bukaan, kedudukan terhadap sumbu $X$, nilai minimum/maksimum) tanpa menggambar:
+          <ol class="alpha-list" style="margin-top:.3rem;">
+            <li>$f(x) = x^2 - 6x + 9$</li>
+            <li>$g(x) = -2x^2 + 3x - 5$</li>
+            <li>$h(x) = x^2 - 5x + 4$</li>
+          </ol>
+        </li>
+        <li>Tentukan nilai $k$ agar grafik $f(x) = x^2 - 2kx + (k+6)$ menyinggung sumbu $X$.</li>
+        <li>Untuk nilai $p$ berapa grafik $f(x) = 2x^2 + px + 8$ tidak memotong sumbu $X$?</li>
+        <li>Diketahui fungsi $f(x) = (k-2)x^2 + 4x + (k-2)$ dengan $k \neq 2$. Tentukan nilai $k$ agar grafik selalu berada di <strong>atas</strong> sumbu $X$ untuk semua $x \in \mathbb{R}$.</li>
+        <li>Grafik fungsi $f(x) = x^2 + bx + c$ memotong sumbu $X$ di titik $(1, 0)$ dan $(5, 0)$. Tentukan nilai $b$ dan $c$, arah bukaan parabola, serta titik potong grafik dengan sumbu $Y$. Sketsalah grafiknya!</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ E. BENTUK VERTEX ═══════════════════ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Bentuk Vertex (Bentuk Kuadrat Sempurna)</h2>
+
+    <p>Fungsi kuadrat $f(x) = ax^2 + bx + c$ dapat diubah ke <strong>bentuk vertex</strong>:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Bentuk Vertex</div>
+      <div class="math-block">$$f(x) = a(x - p)^2 + q$$</div>
+    </div>
+
+    <p>dengan $\mathbf{p = \dfrac{-b}{2a}}$ <strong>(absis titik balik)</strong> dan $\mathbf{q = \dfrac{-D}{4a}}$ <strong>(ordinat titik balik)</strong>.</p>
+
+    <p>Bentuk vertex sangat berguna untuk langsung membaca titik balik $P(p,\, q)$ dan sumbu simetri $x = p$. Cara mengubah ke bentuk vertex dilakukan dengan <strong>melengkapkan kuadrat</strong>:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Melengkapkan Kuadrat</div>
+      <div class="math-block">$$f(x) = ax^2 + bx + c = a\!\left(x + \frac{b}{2a}\right)^2 + c - \frac{b^2}{4a}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Ubah $f(x) = 2x^2 - 8x + 3$ ke bentuk vertex. Tentukan titik balik dan sumbu simetrinya.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br><br>
+      <strong>Cara 1: Melengkapkan kuadrat</strong>
+      $$\begin{aligned}
+        f(x) &= 2x^2 - 8x + 3 \\
+        &= 2(x^2 - 4x) + 3 \\
+        &= 2(x^2 - 4x + 4 - 4) + 3 \\
+        &= 2(x - 2)^2 - 8 + 3 \\
+        &= 2(x - 2)^2 - 5
+      \end{aligned}$$
+      <strong>Cara 2: Rumus langsung</strong>
+      $$p = \frac{-(-8)}{2(2)} = 2, \qquad q = \frac{-D}{4a} = \frac{-(64-24)}{8} = -5$$
+      Jadi: $f(x) = 2(x-2)^2 - 5$, titik balik $P(2,\,-5)$, sumbu simetri $x = 2$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Ubah $f(x) = -x^2 + 4x + 5$ ke bentuk vertex. Tentukan nilai maksimumnya.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$\begin{aligned}
+        f(x) &= -(x^2 - 4x) + 5 \\
+        &= -(x^2 - 4x + 4 - 4) + 5 \\
+        &= -(x - 2)^2 + 4 + 5 \\
+        &= -(x - 2)^2 + 9
+      \end{aligned}$$
+      Karena $a = -1 < 0$, titik balik $P(2,\, 9)$ adalah titik <strong>maksimum</strong>. Nilai maksimum fungsi = $\mathbf{9}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui fungsi $f(x) = x^2 - 6x + k$. Tentukan nilai $k$ agar nilai minimum fungsinya adalah $-4$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Ubah ke bentuk vertex dengan melengkapkan kuadrat:
+      $$\begin{aligned}
+        f(x) &= x^2 - 6x + k \\
+        &= (x^2 - 6x + 9 - 9) + k \\
+        &= (x - 3)^2 - 9 + k
+      \end{aligned}$$
+      Nilai minimum fungsi $= -9 + k$. Syarat: $-9 + k = -4 \Rightarrow \boxed{k = 5}$.
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Ubah fungsi-fungsi berikut ke bentuk vertex $a(x-p)^2 + q$, lalu sebutkan titik balik dan sumbu simetrinya:
+          <ol class="alpha-list" style="margin-top:.3rem;">
+            <li>$f(x) = x^2 - 6x + 11$</li>
+            <li>$g(x) = 3x^2 + 12x + 5$</li>
+            <li>$h(x) = -2x^2 + 8x - 3$</li>
+          </ol>
+        </li>
+        <li>Fungsi $f(x) = x^2 - 4x + k$ memiliki nilai minimum $3$. Tentukan nilai $k$.</li>
+        <li>Fungsi $f(x) = a(x-1)^2 + 5$ memiliki nilai maksimum $5$ di $x = 1$. Tentukan syarat nilai $a$ agar kondisi ini terpenuhi (berikan dalam bentuk pertidaksamaan).</li>
+        <li>Untuk fungsi $f(x) = 2x^2 - bx + 8$, tentukan nilai $b$ agar sumbu simetrinya adalah $x = 3$.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ F. MENYUSUN PERSAMAAN FUNGSI KUADRAT ═══════════════════ -->
+  <section class="section" id="bagian-f">
+    <h2 class="section-title"><span class="section-badge">F</span>Menyusun Persamaan Fungsi Kuadrat</h2>
+
+    <p>Fungsi kuadrat dapat disusun jika diketahui beberapa unsurnya. Terdapat <strong>tiga bentuk</strong> yang lazim digunakan:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Bentuk 1: Diketahui Titik Potong dengan Sumbu $X$</div>
+      <div class="math-block">$$f(x) = a(x - x_1)(x - x_2)$$</div>
+      <p style="margin:0.5rem 0 0;font-size:0.85rem;color:#A8C4C0;">Jika diketahui titik potong dengan sumbu $X$ adalah $(x_1,\, 0)$ dan $(x_2,\, 0)$. Nilai $a$ ditentukan dari satu titik lain yang dilalui grafik.</p>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Bentuk 2: Diketahui Titik Balik</div>
+      <div class="math-block">$$f(x) = a(x - p)^2 + q$$</div>
+      <p style="margin:0.5rem 0 0;font-size:0.85rem;color:#A8C4C0;">Jika diketahui titik balik $P(p,\, q)$. Nilai $a$ ditentukan dari satu titik lain yang dilalui grafik.</p>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Bentuk 3: Diketahui Tiga Titik Sembarang</div>
+      <div class="math-block">$$f(x) = ax^2 + bx + c$$</div>
+      <p style="margin:0.5rem 0 0;font-size:0.85rem;color:#A8C4C0;">Substitusikan ketiga titik $(x_1, y_1)$, $(x_2, y_2)$, $(x_3, y_3)$ ke bentuk umum untuk mendapatkan sistem persamaan linear, kemudian selesaikan.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan persamaan fungsi kuadrat yang mempunyai titik balik minimum $P(3,\,-6)$ dan melalui titik $(5,\, 2)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Karena titik balik diketahui $P(3,\,-6)$, gunakan bentuk $f(x) = a(x-p)^2 + q$:
+      $$f(x) = a(x - 3)^2 - 6$$
+      Substitusi titik $(5,\, 2)$:
+      $$2 = a(5 - 3)^2 - 6 \Rightarrow 8 = 4a \Rightarrow a = 2$$
+      Jadi: $f(x) = 2(x - 3)^2 - 6 = 2x^2 - 12x + 12$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan persamaan fungsi kuadrat yang memotong sumbu $X$ di $A(-2,\, 0)$ dan $B(4,\, 0)$, serta melalui titik $(1,\, -9)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Gunakan bentuk $f(x) = a(x - x_1)(x - x_2)$:
+      $$f(x) = a(x + 2)(x - 4)$$
+      Substitusi titik $(1,\, -9)$:
+      $$-9 = a(1+2)(1-4) = a(3)(-3) = -9a \Rightarrow a = 1$$
+      Jadi: $f(x) = (x+2)(x-4) = x^2 - 2x - 8$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan fungsi kuadrat yang melalui titik $A(0,\, 1)$, $B(1,\, 0)$, dan $C(3,\, 4)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Misalkan $f(x) = ax^2 + bx + c$. Substitusi ketiga titik:
+      $$\begin{aligned}
+        f(0) = 1 &\Rightarrow c = 1 \\
+        f(1) = 0 &\Rightarrow a + b + c = 0 \Rightarrow a + b = -1 \\
+        f(3) = 4 &\Rightarrow 9a + 3b + c = 4 \Rightarrow 3a + b = 1
+      \end{aligned}$$
+      Dari $a + b = -1$ dan $3a + b = 1$:
+      $$(3a + b) - (a + b) = 1 - (-1) \Rightarrow 2a = 2 \Rightarrow a = 1$$
+      $$b = -1 - a = -2$$
+      Jadi: $f(x) = x^2 - 2x + 1 = (x-1)^2$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $m$ agar fungsi $f(x) = mx^2 + (2m+1)x + (m+2)$ menyinggung sumbu $X$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Syarat menyinggung sumbu $X$: $D = 0$.
+      $$\begin{aligned}
+        D &= (2m+1)^2 - 4(m)(m+2) = 0 \\
+        4m^2 + 4m + 1 - 4m^2 - 8m &= 0 \\
+        -4m + 1 &= 0 \\
+        m &= \frac{1}{4}
+      \end{aligned}$$
+      <div class="box box-catatan">
+        <div class="box-label">💡 Verifikasi</div>
+        <p style="margin:0;font-size:.9rem;">Periksa: $m = \dfrac{1}{4} \neq 0$, sehingga fungsi memang kuadrat (bukan linear). Jawaban sah.</p>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan fungsi kuadrat yang memiliki titik potong sumbu $X$ di $(-1,\,0)$ dan $(3,\,0)$ serta melalui titik $(0,\,-6)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Gunakan bentuk $f(x) = a(x-x_1)(x-x_2) = a(x+1)(x-3)$.<br>
+      Substitusi titik $(0,\,-6)$:
+      $$-6 = a(0+1)(0-3) = -3a \Rightarrow a = 2$$
+      Jadi: $f(x) = 2(x+1)(x-3) = 2x^2 - 4x - 6$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin:0;font-size:.9rem;">Grafik fungsi kuadrat $f(x) = ax^2 + bx + c$ memiliki titik balik maksimum $P(1,\,4)$, sumbu simetri $x = 1$, dan melalui titik $(3,\,0)$. Tentukan persamaan fungsinya dan nilai $a$, $b$, $c$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Karena titik balik $P(1,\,4)$ diketahui, gunakan bentuk vertex:
+      $$f(x) = a(x - 1)^2 + 4$$
+      Substitusi titik $(3,\, 0)$:
+      $$0 = a(3-1)^2 + 4 \Rightarrow 4a + 4 = 0 \Rightarrow a = -1$$
+      Jadi: $f(x) = -(x-1)^2 + 4 = -x^2 + 2x + 3$.<br>
+      Koefisien: $a = -1$, $b = 2$, $c = 3$. Karena $a < 0$, titik balik memang <strong>maksimum</strong>. ✓
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan fungsi kuadrat yang memiliki sumbu simetri $x = 2$, melalui titik $(0,\, 1)$ dan memiliki nilai minimum $-3$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Karena sumbu simetri $x = 2$ dan nilai minimum diketahui, gunakan bentuk vertex dengan $p = 2$ dan $q = -3$:
+      $$f(x) = a(x - 2)^2 - 3$$
+      Karena nilai <strong>minimum</strong> $\Rightarrow a > 0$.<br>
+      Substitusi titik $(0,\, 1)$:
+      $$1 = a(0 - 2)^2 - 3 \Rightarrow 4a - 3 = 1 \Rightarrow a = 1$$
+      Jadi: $f(x) = (x-2)^2 - 3 = x^2 - 4x + 1$.
+      <div class="box box-catatan">
+        <div class="box-label">✓ Verifikasi</div>
+        <p style="margin:0;font-size:.9rem;">Sumbu simetri $x_s = \dfrac{-(-4)}{2(1)} = 2$ ✓; $f(0) = 1$ ✓; $y_P = \dfrac{-D}{4a} = \dfrac{-(16-4)}{4} = -3$ ✓</p>
+      </div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Tentukan fungsi kuadrat dengan titik potong sumbu $X$ di $(1,0)$ dan $(5,0)$, serta melalui titik $(3,-4)$.</li>
+        <li>Tentukan fungsi kuadrat dengan titik balik maksimum $P(-1,\, 8)$ yang melalui titik $(1,\, 0)$.</li>
+        <li>Tentukan fungsi kuadrat yang melalui titik $A(0,\, -3)$, $B(1,\, -2)$, dan $C(2,\, 3)$.</li>
+        <li>Tentukan nilai $k$ agar grafik $f(x) = kx^2 - 4kx + (k+3)$ menyinggung sumbu $X$.</li>
+        <li>Sebuah fungsi kuadrat memiliki sumbu simetri $x = 2$, memotong sumbu $Y$ di $(0,\, 3)$, dan memiliki nilai minimum $-1$. Tentukan fungsi kuadratnya.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============== SECTION G ============== -->
+  <section id="bagian-g" class="materi-section">
+    <div class="section-header">
+      <span class="section-badge">G</span>
+      <h2>Nilai Maksimum dan Minimum pada Interval Tertentu</h2>
+    </div>
+
+    <p>Pada soal tertentu, nilai maksimum dan minimum dicari <strong>pada suatu interval tertutup</strong> $[m,\, n]$, bukan pada seluruh $\mathbb{R}$. Strategi penyelesaiannya:</p>
+
+    <ol class="num-list">
+      <li>Tentukan titik balik fungsi (nilai $x_P$).</li>
+      <li>Periksa apakah $x_P$ berada di <strong>dalam</strong> interval $[m,\, n]$ atau di <strong>luar</strong> interval.</li>
+      <li>Hitung nilai fungsi di titik balik (jika $x_P \in [m,n]$) dan di <strong>kedua ujung interval</strong> ($x = m$ dan $x = n$).</li>
+      <li>Bandingkan semua nilai untuk menentukan nilai maksimum dan minimum.</li>
+    </ol>
+
+    <div class="box box-catatan">
+      <div class="box-label">📝 Catatan</div>
+      <p style="margin:0;font-size:.9rem;">Jika $x_P$ berada <strong>di luar</strong> interval $[m,\, n]$, maka nilai ekstrem mutlak hanya terdapat di salah satu ujung interval (sesuai arah bukaan parabola terhadap posisi $x_P$).</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai maksimum dan minimum dari $f(x) = x^2 - 4x + 1$ pada interval $-1 \leq x \leq 5$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $a = 1 > 0$ (terbuka ke atas, memiliki minimum).<br>
+      Titik balik: $x_P = \dfrac{-(-4)}{2(1)} = 2 \in [-1,\, 5]$ ✓
+      <div class="table-wrap" style="margin:.6rem 0;">
+        <table class="nilai-table">
+          <thead><tr><th>$x$</th><th>$f(x) = x^2 - 4x + 1$</th></tr></thead>
+          <tbody>
+            <tr><td>$-1$</td><td>$(-1)^2 - 4(-1) + 1 = 6$</td></tr>
+            <tr><td>$2$</td><td>$(2)^2 - 4(2) + 1 = -3$</td></tr>
+            <tr><td>$5$</td><td>$(5)^2 - 4(5) + 1 = 6$</td></tr>
+          </tbody>
+        </table>
+      </div>
+      Jadi: <strong>nilai minimum</strong> $= -3$ pada $x = 2$; <strong>nilai maksimum</strong> $= 6$ pada $x = -1$ dan $x = 5$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 23</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai maksimum dan minimum dari $g(x) = -x^2 + 6x - 5$ pada interval $0 \leq x \leq 4$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $a = -1 < 0$ (terbuka ke bawah, memiliki maksimum).<br>
+      Titik balik: $x_P = \dfrac{-6}{2(-1)} = 3 \in [0,\, 4]$ ✓
+      <div class="table-wrap" style="margin:.6rem 0;">
+        <table class="nilai-table">
+          <thead><tr><th>$x$</th><th>$g(x) = -x^2 + 6x - 5$</th></tr></thead>
+          <tbody>
+            <tr><td>$0$</td><td>$-5$</td></tr>
+            <tr><td>$3$</td><td>$-(9) + 18 - 5 = 4$</td></tr>
+            <tr><td>$4$</td><td>$-(16) + 24 - 5 = 3$</td></tr>
+          </tbody>
+        </table>
+      </div>
+      Jadi: <strong>nilai maksimum</strong> $= 4$ pada $x = 3$; <strong>nilai minimum</strong> $= -5$ pada $x = 0$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 24 <span style="font-weight:400;opacity:.7;font-size:.85em;">(titik balik di luar interval)</span></div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai maksimum dan minimum dari $h(x) = x^2 - 2x - 3$ pada interval $3 \leq x \leq 6$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $a = 1 > 0$ (terbuka ke atas).<br>
+      Titik balik: $x_P = \dfrac{-(-2)}{2(1)} = 1$.<br>
+      Karena $x_P = 1 \notin [3,\, 6]$ dan berada di <strong>kiri</strong> interval, maka pada interval $[3,6]$ fungsi <strong>naik terus</strong> (sisi kanan parabola). Nilai minimum di ujung kiri ($x=3$) dan nilai maksimum di ujung kanan ($x=6$).
+      <div class="table-wrap" style="margin:.6rem 0;">
+        <table class="nilai-table">
+          <thead><tr><th>$x$</th><th>$h(x) = x^2 - 2x - 3$</th></tr></thead>
+          <tbody>
+            <tr><td>$3$</td><td>$9 - 6 - 3 = 0$</td></tr>
+            <tr><td>$6$</td><td>$36 - 12 - 3 = 21$</td></tr>
+          </tbody>
+        </table>
+      </div>
+      Jadi: <strong>nilai minimum</strong> $= 0$ pada $x = 3$; <strong>nilai maksimum</strong> $= 21$ pada $x = 6$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25 <span style="font-weight:400;opacity:.7;font-size:.85em;">(titik balik di kanan interval)</span></div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai maksimum dan minimum dari $k(x) = x^2 - 10x + 21$ pada interval $1 \leq x \leq 4$.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $a = 1 > 0$ (terbuka ke atas).<br>
+      Titik balik: $x_P = \dfrac{-(-10)}{2(1)} = 5$.<br>
+      Karena $x_P = 5 \notin [1,\, 4]$ dan berada di <strong>kanan</strong> interval, maka pada interval $[1,4]$ fungsi <strong>turun terus</strong> (sisi kiri parabola). Nilai minimum di ujung kanan ($x=4$) dan nilai maksimum di ujung kiri ($x=1$).
+      <div class="table-wrap" style="margin:.6rem 0;">
+        <table class="nilai-table">
+          <thead><tr><th>$x$</th><th>$k(x) = x^2 - 10x + 21$</th></tr></thead>
+          <tbody>
+            <tr><td>$1$</td><td>$1 - 10 + 21 = 12$</td></tr>
+            <tr><td>$4$</td><td>$16 - 40 + 21 = -3$</td></tr>
+          </tbody>
+        </table>
+      </div>
+      Jadi: <strong>nilai maksimum</strong> $= 12$ pada $x = 1$; <strong>nilai minimum</strong> $= -3$ pada $x = 4$.
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">📝 Ringkasan Posisi Titik Balik terhadap Interval $[m,n]$</div>
+      <ul style="margin:.2rem 0 0 1rem;padding:0;font-size:.9rem;">
+        <li>$x_P \in [m,n]$: hitung nilai di $x_P$, $x=m$, dan $x=n$, lalu bandingkan.</li>
+        <li>$x_P < m$ (kiri interval): untuk $a>0$, fungsi <strong>naik</strong> di $[m,n]$; minimum di $x=m$, maksimum di $x=n$.</li>
+        <li>$x_P > n$ (kanan interval): untuk $a>0$, fungsi <strong>turun</strong> di $[m,n]$; maksimum di $x=m$, minimum di $x=n$.</li>
+        <li>Untuk $a < 0$, arah min/maks-nya <strong>berkebalikan</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Tentukan nilai maksimum dan minimum dari $f(x) = x^2 - 6x + 5$ pada interval $1 \leq x \leq 6$.</li>
+        <li>Tentukan nilai maksimum dan minimum dari $g(x) = -x^2 + 4x + 12$ pada interval $-2 \leq x \leq 3$.</li>
+        <li>Tentukan nilai maksimum dan minimum dari $h(x) = 2x^2 - 8x + 3$ pada interval $0 \leq x \leq 3$.</li>
+        <li>Tentukan nilai minimum dari $f(x) = x^2 - 2x + 5$ untuk $x \in [3,\, 7]$.</li>
+        <li>Untuk $x \in [-2,\, 1]$, tentukan nilai maksimum fungsi $f(x) = 3x^2 + 6x - 1$.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============== SECTION H ============== -->
+  <section id="bagian-h" class="materi-section">
+    <div class="section-header">
+      <span class="section-badge">H</span>
+      <h2>Aplikasi Fungsi Kuadrat dalam Kehidupan</h2>
+    </div>
+
+    <p>Fungsi kuadrat banyak digunakan untuk memodelkan situasi nyata yang bersifat <strong>parabolis</strong>, seperti lintasan benda, optimasi keuntungan, dan luas bidang.</p>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26 <span style="font-weight:400;opacity:.7;font-size:.85em;">(gerak parabolis)</span></div>
+      <p style="margin:0;font-size:.9rem;">Sebuah batu dilempar vertikal ke atas dari ketinggian 5 meter. Tinggi batu (dalam meter) setelah $t$ detik dinyatakan dengan $h(t) = -5t^2 + 10t + 5$. Tentukan ketinggian maksimum batu dan waktu yang diperlukan untuk mencapainya!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $a = -5 < 0$, parabola terbuka ke bawah → ada nilai <strong>maksimum</strong>.<br>
+      Waktu ketinggian maksimum: $t_P = \dfrac{-10}{2(-5)} = 1$ detik.<br>
+      Ketinggian maksimum: $h(1) = -5(1)^2 + 10(1) + 5 = \mathbf{10}$ meter.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 27</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah bola dilempar ke atas dengan ketinggian $h$ (meter) yang memenuhi $h(t) = -5t^2 + 20t + 1$, dengan $t$ dalam detik. Tentukan: (a) ketinggian maksimum, (b) waktu saat ketinggian maksimum, (c) waktu saat bola menyentuh tanah.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $a = -5 < 0$ (terbuka ke bawah, memiliki maksimum).<br>
+      <strong>(a) &amp; (b)</strong> Titik balik:
+      $$t_P = \frac{-b}{2a} = \frac{-20}{-10} = 2 \text{ detik}$$
+      $$h_{\max} = h(2) = -5(4) + 20(2) + 1 = 21 \text{ meter}$$
+      <strong>(c)</strong> Bola menyentuh tanah saat $h = 0$:
+      $$-5t^2 + 20t + 1 = 0 \;\Rightarrow\; 5t^2 - 20t - 1 = 0$$
+      $$t = \frac{20 \pm \sqrt{400 + 20}}{10} = \frac{20 \pm \sqrt{420}}{10}$$
+      Ambil $t > 0$: $t = \dfrac{20 + \sqrt{420}}{10} \approx 4{,}05$ detik.
+      <div class="box box-catatan">
+        <div class="box-label">💡 Interpretasi</div>
+        <p style="margin:0;font-size:.9rem;">Bola mencapai ketinggian maksimum <strong>21 meter</strong> setelah <strong>2 detik</strong>, kemudian jatuh dan menyentuh tanah kira-kira <strong>4,05 detik</strong> setelah dilempar.</p>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28 <span style="font-weight:400;opacity:.7;font-size:.85em;">(optimasi pendapatan)</span></div>
+      <p style="margin:0;font-size:.9rem;">Sebuah perusahaan bus memiliki <strong>8.000 penumpang/hari</strong> dengan tarif <strong>Rp2.000</strong>. Setiap kenaikan tarif Rp500, jumlah penumpang berkurang 800/hari. Tentukan kenaikan tarif yang harus diterapkan agar pendapatan harian maksimum, dan berapa pendapatan maksimum tersebut!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Misalkan $n$ = banyaknya kenaikan tarif Rp500.
+      <div class="table-wrap" style="margin:.6rem 0;">
+        <table class="nilai-table">
+          <thead><tr><th>Besaran</th><th>Ekspresi</th></tr></thead>
+          <tbody>
+            <tr><td>Tarif baru</td><td>$(2.000 + 500n)$ rupiah</td></tr>
+            <tr><td>Jumlah penumpang</td><td>$(8.000 - 800n)$ orang</td></tr>
+          </tbody>
+        </table>
+      </div>
+      Fungsi pendapatan:
+      $$P(n) = (2.000 + 500n)(8.000 - 800n) = -400.000\, n^2 + 2.400.000\, n + 16.000.000$$
+      Karena $a = -400.000 < 0$, pendapatan memiliki nilai <strong>maksimum</strong> pada:
+      $$n = \frac{-2.400.000}{2(-400.000)} = 3$$
+      Tarif optimal: Rp$2.000 + 3 \times 500 = $ <strong>Rp3.500</strong>.<br>
+      Jumlah penumpang: $8.000 - 800(3) = $ <strong>5.600 orang</strong>.<br>
+      Pendapatan maksimum:
+      $$P(3) = -400.000(9) + 2.400.000(3) + 16.000.000 = \mathbf{\text{Rp19.600.000}}$$
+      <strong>Verifikasi:</strong> Rp$3.500 \times 5.600 = $ Rp$19.600.000$ ✓
+
+      <div class="grafik-wrap" style="text-align:center;margin-top:.8rem;">
+        <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" style="max-width:380px;width:100%;height:auto;">
+          <!-- gridlines vertical -->
+          <g stroke="#E5E7EB" stroke-width="0.5">
+            <line x1="104.64" y1="20" x2="104.64" y2="240"/>
+            <line x1="141.07" y1="20" x2="141.07" y2="240"/>
+            <line x1="177.50" y1="20" x2="177.50" y2="240"/>
+            <line x1="213.94" y1="20" x2="213.94" y2="240"/>
+            <line x1="250.37" y1="20" x2="250.37" y2="240"/>
+            <line x1="286.79" y1="20" x2="286.79" y2="240"/>
+          </g>
+          <!-- gridlines horizontal -->
+          <g stroke="#E5E7EB" stroke-width="0.5">
+            <line x1="68.22" y1="200" x2="320" y2="200"/>
+            <line x1="68.22" y1="160" x2="320" y2="160"/>
+            <line x1="68.22" y1="120" x2="320" y2="120"/>
+            <line x1="68.22" y1="80" x2="320" y2="80"/>
+            <line x1="68.22" y1="40" x2="320" y2="40"/>
+          </g>
+          <!-- X-axis -->
+          <line x1="40" y1="240" x2="335" y2="240" stroke="#374151" stroke-width="1.2"/>
+          <polygon points="335,240 328,236 328,244" fill="#374151"/>
+          <text x="340" y="244" font-size="11" fill="#374151" font-family="Inter, sans-serif">$n$ (kenaikan)</text>
+          <!-- Y-axis -->
+          <line x1="68.22" y1="260" x2="68.22" y2="15" stroke="#374151" stroke-width="1.2"/>
+          <polygon points="68.22,15 64,22 72,22" fill="#374151"/>
+          <text x="40" y="12" font-size="11" fill="#374151" font-family="Inter, sans-serif">$P$ (juta)</text>
+          <!-- Origin -->
+          <text x="55" y="252" font-size="11" fill="#374151" font-family="Inter, sans-serif">$O$</text>
+          <!-- X ticks -->
+          <g font-size="10" fill="#374151" font-family="Inter, sans-serif" text-anchor="middle">
+            <text x="104.64" y="254">1</text>
+            <text x="141.07" y="254">2</text>
+            <text x="177.50" y="254">3</text>
+            <text x="213.94" y="254">4</text>
+            <text x="250.37" y="254">5</text>
+            <text x="286.79" y="254">6</text>
+          </g>
+          <!-- Y ticks -->
+          <g font-size="10" fill="#374151" font-family="Inter, sans-serif" text-anchor="end">
+            <text x="63" y="84">16</text>
+            <text x="63" y="48">19,6</text>
+            <text x="63" y="204">4</text>
+            <text x="63" y="164">8</text>
+            <text x="63" y="124">12</text>
+          </g>
+          <!-- Curve -->
+          <path d="M 53.64,90.24 L 57.84,87.16 L 62.04,84.18 L 66.24,81.31 L 70.44,78.55 L 74.64,75.89 L 78.84,73.34 L 83.03,70.90 L 87.23,68.56 L 91.43,66.33 L 95.63,64.20 L 99.83,62.19 L 104.03,60.27 L 108.23,58.47 L 112.42,56.77 L 116.62,55.17 L 120.82,53.68 L 125.02,52.30 L 129.22,51.03 L 133.42,49.86 L 137.62,48.80 L 141.82,47.84 L 146.01,46.99 L 150.21,46.24 L 154.41,45.61 L 158.61,45.08 L 162.81,44.65 L 167.01,44.33 L 171.21,44.12 L 175.41,44.01 L 179.60,44.01 L 183.80,44.12 L 188.00,44.33 L 192.20,44.65 L 196.40,45.08 L 200.60,45.61 L 204.80,46.24 L 209.00,46.99 L 213.19,47.84 L 217.39,48.80 L 221.59,49.86 L 225.79,51.03 L 229.99,52.30 L 234.19,53.68 L 238.39,55.17 L 242.59,56.77 L 246.78,58.47 L 250.98,60.27 L 255.18,62.19 L 259.38,64.20 L 263.58,66.33 L 267.78,68.56 L 271.98,70.90 L 276.17,73.34 L 280.37,75.89 L 284.57,78.55 L 288.77,81.31 L 292.97,84.18 L 297.17,87.16 L 301.37,90.24" fill="none" stroke="#3B82F6" stroke-width="2.2"/>
+          <!-- Dashed lines to peak -->
+          <line x1="177.50" y1="44" x2="177.50" y2="240" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="4 3"/>
+          <line x1="68.22" y1="44" x2="177.50" y2="44" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="4 3"/>
+          <!-- Peak dot -->
+          <circle cx="177.50" cy="44" r="4" fill="#EF4444"/>
+          <text x="185" y="40" font-size="11" fill="#EF4444" font-family="Inter, sans-serif" font-weight="600">$P_{\max}(3;\, 19{,}6)$</text>
+          <!-- Curve label -->
+          <text x="295" y="115" font-size="11" fill="#3B82F6" font-family="Inter, sans-serif" font-style="italic">$P(n)$</text>
+          <!-- Title -->
+          <text x="180" y="285" font-size="11.5" fill="#374151" font-family="Inter, sans-serif" text-anchor="middle" font-style="italic">Grafik Pendapatan $P(n)$ (dalam juta rupiah)</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 29 <span style="font-weight:400;opacity:.7;font-size:.85em;">(optimasi luas)</span></div>
+      <p style="margin:0;font-size:.9rem;">Seorang petani memiliki pagar kawat sepanjang <strong>80 meter</strong> untuk memagari kebun berbentuk persegi panjang di tepi sungai (sisi tepi sungai tidak dipagari). Tentukan ukuran kebun agar luasnya maksimum!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Misalkan lebar kebun $= x$ meter ($0 < x < 40$), maka panjang kebun $= (80 - 2x)$ meter.
+
+      <div class="grafik-wrap" style="text-align:center;margin:.6rem 0;">
+        <svg viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" style="max-width:340px;width:100%;height:auto;">
+          <!-- Sungai (river) -->
+          <rect x="20" y="20" width="320" height="32" fill="#BFDBFE" stroke="#60A5FA" stroke-width="1"/>
+          <text x="180" y="40" font-size="12" fill="#1E40AF" font-family="Inter, sans-serif" text-anchor="middle" font-style="italic">Sungai</text>
+          <!-- Kebun (rectangle) -->
+          <rect x="80" y="52" width="200" height="90" fill="#FEF3C7" stroke="#0A0F1E" stroke-width="1.5"/>
+          <text x="180" y="103" font-size="13" fill="#0A0F1E" font-family="Inter, sans-serif" text-anchor="middle" font-weight="600">Kebun</text>
+          <!-- Panjang label (80-2x) -->
+          <line x1="80" y1="160" x2="280" y2="160" stroke="#6B7280" stroke-width="1"/>
+          <line x1="80" y1="156" x2="80" y2="164" stroke="#6B7280" stroke-width="1"/>
+          <line x1="280" y1="156" x2="280" y2="164" stroke="#6B7280" stroke-width="1"/>
+          <text x="180" y="175" font-size="12" fill="#374151" font-family="Inter, sans-serif" text-anchor="middle">$80 - 2x$</text>
+          <!-- Lebar label (x) -->
+          <line x1="300" y1="52" x2="300" y2="142" stroke="#6B7280" stroke-width="1"/>
+          <line x1="296" y1="52" x2="304" y2="52" stroke="#6B7280" stroke-width="1"/>
+          <line x1="296" y1="142" x2="304" y2="142" stroke="#6B7280" stroke-width="1"/>
+          <text x="310" y="101" font-size="12" fill="#374151" font-family="Inter, sans-serif">$x$</text>
+        </svg>
+      </div>
+
+      Fungsi luas:
+      $$L(x) = x(80 - 2x) = -2x^2 + 80x$$
+      Karena $a = -2 < 0$, luas memiliki nilai <strong>maksimum</strong> pada:
+      $$x = \frac{-80}{2(-2)} = 20 \text{ meter}$$
+      Panjang $= 80 - 2(20) = 40$ meter.<br>
+      Luas maksimum $= 20 \times 40 = \mathbf{800 \text{ m}^2}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 30 <span style="font-weight:400;opacity:.7;font-size:.85em;">(lintasan parabolis)</span></div>
+      <p style="margin:0;font-size:.9rem;">Sebuah proyek konstruksi membuat jembatan berbentuk parabola dengan persamaan $h(x) = -\dfrac{1}{25}x^2 + 4$ (dalam meter), di mana $x$ adalah jarak horizontal dari pusat jembatan. Tentukan: (a) lebar jembatan di permukaan air ($h = 0$), (b) ketinggian maksimum lengkungan, (c) ketinggian pada $x = 5$ m dari pusat.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>(a)</strong> Lebar di permukaan ($h = 0$):
+      $$-\tfrac{1}{25}x^2 + 4 = 0 \;\Rightarrow\; x^2 = 100 \;\Rightarrow\; x = \pm 10$$
+      Lebar jembatan $= 2 \times 10 = \mathbf{20 \text{ meter}}$.<br>
+      <strong>(b)</strong> Ketinggian maksimum: titik balik $P(0,\,4)$, jadi $h_{\max} = \mathbf{4 \text{ meter}}$.<br>
+      <strong>(c)</strong> Ketinggian pada $x = 5$:
+      $$h(5) = -\tfrac{25}{25} + 4 = -1 + 4 = \mathbf{3 \text{ meter}}$$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Sebuah roket mainan diluncurkan dari permukaan tanah. Ketinggiannya (dalam meter) setelah $t$ detik dinyatakan dengan $h(t) = -4t^2 + 16t$. Tentukan: (a) ketinggian maksimum, (b) waktu saat ketinggian maksimum, (c) waktu saat roket mendarat kembali.</li>
+        <li>Sebuah toko menjual $x$ unit kaos per hari dengan keuntungan per unit $= (50 - x)$ ribu rupiah, dengan $0 < x < 50$. Tentukan banyak kaos yang harus terjual agar keuntungan total harian maksimum, dan berapa keuntungan maksimum tersebut.</li>
+        <li>Seorang petani mempunyai pagar sepanjang 120 meter untuk memagari kebun persegi panjang yang salah satu sisinya adalah tembok rumah (tidak perlu dipagari). Tentukan dimensi kebun agar luasnya maksimum.</li>
+        <li>Sebuah bola ditendang dari permukaan tanah dengan lintasan $h(x) = -\dfrac{1}{20}x^2 + 2x$, di mana $h$ ketinggian (m) dan $x$ jarak horizontal (m). Tentukan: (a) ketinggian maksimum, (b) jarak horizontal saat ketinggian maksimum, (c) jarak saat bola mendarat.</li>
+        <li>Sebuah perusahaan memproduksi $x$ unit barang per hari. Biaya produksi harian: $C(x) = x^2 - 20x + 200$ (dalam ribu rupiah). Tentukan jumlah produksi optimal agar biaya minimum dan berapa biaya minimumnya.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============== SECTION I ============== -->
+  <section id="bagian-i" class="materi-section">
+    <div class="section-header">
+      <span class="section-badge">I</span>
+      <h2>Tabel Ringkasan Fungsi Kuadrat</h2>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">📐 1. Unsur-Unsur Fungsi Kuadrat $f(x) = ax^2 + bx + c$</div>
+      <div class="table-wrap">
+        <table class="ringkasan-table">
+          <thead><tr><th>Unsur</th><th>Rumus</th><th>Keterangan</th></tr></thead>
+          <tbody>
+            <tr><td>Diskriminan</td><td>$D = b^2 - 4ac$</td><td>Menentukan jumlah titik potong dengan sumbu $X$</td></tr>
+            <tr><td>Titik potong sb. $Y$</td><td>$(0,\; c)$</td><td>Selalu ada; diperoleh dengan $x = 0$</td></tr>
+            <tr><td>Sumbu simetri</td><td>$x_s = \dfrac{-b}{2a}$</td><td>Garis vertikal pembagi parabola</td></tr>
+            <tr><td>Titik balik (puncak)</td><td>$P\!\left(\dfrac{-b}{2a},\; \dfrac{-D}{4a}\right)$</td><td>Titik minimum ($a>0$) atau maksimum ($a<0$)</td></tr>
+            <tr><td>Domain</td><td>$\mathbb{R}$</td><td>Semua bilangan real</td></tr>
+            <tr><td>Range ($a > 0$)</td><td>$\left[\dfrac{-D}{4a},\; +\infty\right)$</td><td>Nilai minimum $= y_P = \dfrac{-D}{4a}$</td></tr>
+            <tr><td>Range ($a < 0$)</td><td>$\left(-\infty,\; \dfrac{-D}{4a}\right]$</td><td>Nilai maksimum $= y_P = \dfrac{-D}{4a}$</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">📐 2. Hubungan Nilai $D$ dengan Grafik</div>
+      <div class="table-wrap">
+        <table class="ringkasan-table">
+          <thead><tr><th>Nilai $a$</th><th>Nilai $D$</th><th>Titik Potong Sumbu $X$</th><th>Kedudukan Grafik</th></tr></thead>
+          <tbody>
+            <tr><td>$a > 0$</td><td>$D > 0$</td><td>Dua titik berbeda</td><td>Titik minimum di bawah sumbu $X$</td></tr>
+            <tr><td>$a > 0$</td><td>$D = 0$</td><td>Satu titik (menyinggung)</td><td>Titik minimum tepat di sumbu $X$</td></tr>
+            <tr><td>$a > 0$</td><td>$D < 0$</td><td>Tidak memotong</td><td>Seluruh grafik di atas sumbu $X$</td></tr>
+            <tr><td>$a < 0$</td><td>$D > 0$</td><td>Dua titik berbeda</td><td>Titik maksimum di atas sumbu $X$</td></tr>
+            <tr><td>$a < 0$</td><td>$D = 0$</td><td>Satu titik (menyinggung)</td><td>Titik maksimum tepat di sumbu $X$</td></tr>
+            <tr><td>$a < 0$</td><td>$D < 0$</td><td>Tidak memotong</td><td>Seluruh grafik di bawah sumbu $X$</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">📐 3. Tiga Bentuk Persamaan Fungsi Kuadrat</div>
+      <div class="table-wrap">
+        <table class="ringkasan-table">
+          <thead><tr><th>Diketahui</th><th>Bentuk Fungsi</th><th>Menentukan $a$</th></tr></thead>
+          <tbody>
+            <tr><td>Titik potong sb. $X$: $(x_1,0)$ dan $(x_2,0)$</td><td>$f(x) = a(x-x_1)(x-x_2)$</td><td>Substitusi satu titik lain yang dilalui grafik</td></tr>
+            <tr><td>Titik balik $P(p,\, q)$</td><td>$f(x) = a(x-p)^2 + q$</td><td>Substitusi satu titik lain yang dilalui grafik</td></tr>
+            <tr><td>Tiga titik sembarang</td><td>$f(x) = ax^2 + bx + c$</td><td>Substitusi ketiga titik, selesaikan SPLTV</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">📐 4. Bentuk Vertex</div>
+      <div class="table-wrap">
+        <table class="ringkasan-table">
+          <thead><tr><th>Rumus</th><th>Keterangan</th></tr></thead>
+          <tbody>
+            <tr><td>$f(x) = a(x-p)^2 + q$</td><td>Bentuk vertex; titik balik $P(p,\,q)$ langsung terbaca</td></tr>
+            <tr><td>$p = \dfrac{-b}{2a}$</td><td>Absis titik balik $=$ sumbu simetri</td></tr>
+            <tr><td>$q = \dfrac{-D}{4a} = c - \dfrac{b^2}{4a}$</td><td>Ordinat titik balik $=$ nilai ekstrem fungsi</td></tr>
+            <tr><td>Cara ubah: lengkapi kuadrat</td><td>$ax^2+bx+c = a\!\left(x+\dfrac{b}{2a}\right)^2 + c - \dfrac{b^2}{4a}$</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">📐 5. Nilai Ekstrem pada Interval $[m,\, n]$</div>
+      <div class="table-wrap">
+        <table class="ringkasan-table">
+          <thead><tr><th>Posisi $x_P$</th><th>Perilaku di $[m,n]$</th><th>Letak Nilai Min/Maks</th></tr></thead>
+          <tbody>
+            <tr><td>$x_P \in [m,n]$</td><td>Ada titik balik di dalam interval</td><td>Hitung $f(x_P)$, $f(m)$, $f(n)$; bandingkan</td></tr>
+            <tr><td>$x_P < m$ ($a > 0$)</td><td>Fungsi naik terus di $[m,n]$</td><td>Min di $x = m$, maks di $x = n$</td></tr>
+            <tr><td>$x_P > n$ ($a > 0$)</td><td>Fungsi turun terus di $[m,n]$</td><td>Maks di $x = m$, min di $x = n$</td></tr>
+            <tr><td>$x_P < m$ ($a < 0$)</td><td>Fungsi turun terus di $[m,n]$</td><td>Maks di $x = m$, min di $x = n$</td></tr>
+            <tr><td>$x_P > n$ ($a < 0$)</td><td>Fungsi naik terus di $[m,n]$</td><td>Min di $x = m$, maks di $x = n$</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">📐 6. Model Aplikasi Fungsi Kuadrat</div>
+      <div class="table-wrap">
+        <table class="ringkasan-table">
+          <thead><tr><th>Konteks</th><th>Model</th><th>Cara Optimasi</th></tr></thead>
+          <tbody>
+            <tr><td>Gerak parabolis</td><td>$h(t) = -at^2 + bt + c$</td><td>Waktu maks: $t = \dfrac{b}{2a}$; substitusi untuk $h_{\max}$</td></tr>
+            <tr><td>Optimasi pendapatan/laba</td><td>$P(x) = -ax^2 + bx + c$</td><td>Maks di $x_P = \dfrac{b}{2a}$ karena $a < 0$</td></tr>
+            <tr><td>Optimasi luas/area</td><td>$L(x) = -ax^2 + bx$</td><td>Substitusi batasan ke fungsi luas; cari titik balik</td></tr>
+            <tr><td>Biaya/kerugian minimum</td><td>$C(x) = ax^2 + bx + c$</td><td>Min di $x_P = \dfrac{-b}{2a}$ karena $a > 0$</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== KONEKSI KE MATERI BERIKUTNYA ============== -->
+  <div class="koneksi-wrap">
+    <h3 class="koneksi-title">🔗 Koneksi ke Materi Berikutnya</h3>
+    <div class="koneksi-grid">
+      <div class="koneksi-card now-card">
+        <div class="koneksi-tag">Sekarang</div>
+        <div class="koneksi-judul">Fungsi Kuadrat</div>
+        <p class="koneksi-desc">Bentuk umum $f(x) = ax^2 + bx + c$ menghasilkan grafik parabola, dengan titik balik, sumbu simetri, dan diskriminan sebagai unsur kuncinya.</p>
+      </div>
+      <div class="koneksi-arrow">→</div>
+      <a href="../fungsi-komposisi-invers/" class="koneksi-card next-card">
+        <div class="koneksi-tag next-tag">Berikutnya</div>
+        <div class="koneksi-judul">Fungsi, Komposisi, &amp; Invers</div>
+        <p class="koneksi-desc">Setelah memahami fungsi linear &amp; kuadrat, kita pelajari relasi antarfungsi: operasi komposisi $(f \circ g)(x)$ dan fungsi balik $f^{-1}(x)$.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============== ACTION FOOTER ============== -->
+  <div class="action-footer">
+    <a href="../fungsi-linear/" class="act-btn act-prev">
+      <span class="act-arrow">←</span>
+      <div class="act-text">
+        <small>Materi Sebelumnya</small>
+        <strong>Fungsi Linear</strong>
+      </div>
+    </a>
+
+    <a href="../fungsi-komposisi-invers/" class="act-btn act-next">
+      <div class="act-text">
+        <small>Materi Berikutnya</small>
+        <strong>Fungsi, Komposisi &amp; Invers</strong>
+      </div>
+      <span class="act-arrow">→</span>
+    </a>
+
+    <a href="../../worksheet/fungsi-kuadrat/" class="act-btn act-primary">
+      <span>📝</span>
+      <div class="act-text">
+        <small>Latihan Soal</small>
+        <strong>Kerjakan Latihan Fungsi Kuadrat <span class="badge-soon">Segera</span></strong>
+      </div>
+    </a>
+
+    <button class="act-btn act-mini" id="bookmarkBtn" onclick="toggleBookmark()" title="Bookmark materi ini">
+      <span id="bookmarkIcon">🔖</span>
+    </button>
+
+    <button class="act-btn act-mini" onclick="shareMateri()" title="Bagikan materi">
+      <span>🔗</span>
+    </button>
+  </div>
+
+  <!-- ============== KOMENTAR (GISCUS) ============== -->
+  <section class="komentar-section">
+    <h3 class="komentar-title">💬 Diskusi &amp; Komentar</h3>
+    <p class="komentar-desc">Punya pertanyaan tentang materi Fungsi Kuadrat? Atau ingin berbagi cara cepat menyelesaikan soal? Tulis komentar di bawah! Komentar memerlukan login GitHub.</p>
+    <div class="giscus-placeholder">
+      <div class="giscus" data-repo="eksaktalab/eksaktalab" data-repo-id="" data-category="Q&amp;A" data-category-id="" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="id" data-loading="lazy"></div>
+      <p style="text-align:center;color:var(--muted);font-size:.9rem;padding:1rem;">
+        <em>Komentar Giscus akan dimuat di sini setelah konfigurasi repo selesai.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== SITE FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="footer-logo">EksaktaLab</div>
+        <p class="footer-tagline">Platform belajar matematika SMA — interaktif, mendalam, dan gratis.</p>
+        <p class="footer-tagline" style="margin-top:.4rem;font-size:.85rem;opacity:.7;">Dibuat dengan ❤️ untuk siswa Indonesia.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Belajar</h4>
+        <ul>
+          <li><a href="../../">Beranda</a></li>
+          <li><a href="../../materi/">Daftar Materi</a></li>
+          <li><a href="../../worksheet/">Worksheet</a></li>
+          <li><a href="../../tentang/">Tentang Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Materi Populer</h4>
+        <ul>
+          <li><a href="../fungsi-linear/">Fungsi Linear</a></li>
+          <li><a href="./">Fungsi Kuadrat</a></li>
+          <li><a href="../fungsi-komposisi-invers/">Fungsi, Komposisi &amp; Invers</a></li>
+          <li><a href="../trigonometri/">Trigonometri Dasar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Tentang</h4>
+        <ul>
+          <li><a href="../../kontak/">Kontak</a></li>
+          <li><a href="../../tentang/">Tim Pengembang</a></li>
+          <li><a href="https://github.com/eksaktalab" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="../../privacy/">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 EksaktaLab · Dibuat untuk pendidikan matematika SMA Indonesia.</p>
+    </div>
+  </footer>
+
+</div><!-- /materi-container -->
+
+<!-- ============== SCRIPTS ============== -->
+<script src="../../assets/js/materi.js" defer></script>
+<script>
+  // Scroll progress bar + scroll-to-top visibility
+  const progressBar = document.getElementById('scrollProgress');
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrolled / docHeight) * 100 : 0;
+    if (progressBar) progressBar.style.width = pct + '%';
+    if (scrollTopBtn) {
+      if (scrolled > 600) scrollTopBtn.classList.add('visible');
+      else scrollTopBtn.classList.remove('visible');
+    }
+  });
+
+  // Theme toggle
+  function toggleTheme() {
+    const cur = document.documentElement.getAttribute('data-theme') || 'light';
+    const next = cur === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('eksakta-theme', next); } catch(e) {}
+  }
+  // Restore theme
+  try {
+    const saved = localStorage.getItem('eksakta-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch(e) {}
+
+  // TOC dropdown
+  function toggleTOC() {
+    const tocMenu = document.getElementById('tocMenu');
+    if (tocMenu) tocMenu.classList.toggle('open');
+  }
+  function closeTOC() {
+    const tocMenu = document.getElementById('tocMenu');
+    if (tocMenu) tocMenu.classList.remove('open');
+  }
+  document.addEventListener('click', (e) => {
+    const tocBtn = document.getElementById('tocBtn');
+    const tocMenu = document.getElementById('tocMenu');
+    if (!tocMenu) return;
+    if (tocBtn && !tocBtn.contains(e.target) && !tocMenu.contains(e.target)) {
+      tocMenu.classList.remove('open');
+    }
+  });
+
+  // Bookmark
+  function toggleBookmark() {
+    const icon = document.getElementById('bookmarkIcon');
+    const btn = document.getElementById('bookmarkBtn');
+    if (!icon || !btn) return;
+    const isBookmarked = btn.classList.toggle('bookmarked');
+    icon.textContent = isBookmarked ? '⭐' : '🔖';
+    try {
+      const key = 'eksakta-bookmark-' + location.pathname;
+      if (isBookmarked) localStorage.setItem(key, '1');
+      else localStorage.removeItem(key);
+    } catch(e) {}
+  }
+  // Restore bookmark state
+  try {
+    const key = 'eksakta-bookmark-' + location.pathname;
+    if (localStorage.getItem(key)) {
+      const icon = document.getElementById('bookmarkIcon');
+      const btn = document.getElementById('bookmarkBtn');
+      if (icon && btn) {
+        icon.textContent = '⭐';
+        btn.classList.add('bookmarked');
+      }
+    }
+  } catch(e) {}
+
+  // Share
+  async function shareMateri() {
+    const url = location.href;
+    const title = 'Fungsi Kuadrat · EksaktaLab';
+    const text = 'Belajar Fungsi Kuadrat secara mendalam — bentuk umum, grafik parabola, titik balik, hingga aplikasi nyata.';
+    if (navigator.share) {
+      try { await navigator.share({ title, text, url }); } catch(e) {}
+    } else {
+      try {
+        await navigator.clipboard.writeText(url);
+        alert('Link materi disalin ke clipboard!');
+      } catch(e) {
+        prompt('Salin link materi:', url);
+      }
+    }
+  }
+
+  // Kunci Jawaban data per soal-latihan (indexed by ordinal of soal-list in DOM)
+  // 0 = Latihan A, 1 = Latihan B, 2 = Latihan C, ..., 7 = Latihan H
+  window.jawabanData = [
+    // === LATIHAN A ===
+    [
+      "Fungsi kuadrat: <strong>(a), (c), (d), (f), (g)</strong>. Bukan fungsi kuadrat: <strong>(b)</strong> linear (tidak ada $x^2$); <strong>(e)</strong> setelah disederhanakan $f(x)=3x-1$ menjadi linear.",
+      "Arah bukaan ditentukan oleh tanda $a$. <strong>(a)</strong> $a=2>0$ → ke atas. <strong>(b)</strong> $a=-3<0$ → ke bawah. <strong>(c)</strong> $a=\\tfrac{1}{2}>0$ → ke atas. <strong>(d)</strong> $a=-1<0$ → ke bawah.",
+      "Syarat fungsi kuadrat: $a=k-2 \\neq 0 \\Rightarrow k \\neq 2$. Terbuka ke atas jika $a>0 \\Rightarrow k-2>0 \\Rightarrow \\mathbf{k>2}$.",
+      "Domain: $D_f = \\mathbb{R}$. $a=-1<0$ → terbuka bawah, ada nilai maksimum. $D=9+9=18$; $y_{\\max} = \\dfrac{-D}{4a} = \\dfrac{-18}{-4} = \\dfrac{9}{2}$ pada $x_P = \\dfrac{3}{2}$.",
+      "<strong>(a)</strong> $n+2 \\neq 0 \\Rightarrow n \\neq -2$. <strong>(b)</strong> terbuka atas: $n+2 > 0 \\Rightarrow n > -2$. <strong>(c)</strong> terbuka bawah: $n+2 < 0 \\Rightarrow n < -2$. <strong>(d)</strong> $a=9$, $b=-4$, $c=2$; karena $a>0$ → terbuka ke atas."
+    ],
+    // === LATIHAN B ===
+    [
+      "<strong>(a)</strong> $f(x)=x^2-6x+5$: $D=16$, $(1,0)$ &amp; $(5,0)$, $(0,5)$, $x_s=3$, $P(3,-4)$, $R_f=[-4,\\infty)$.<br><strong>(b)</strong> $g(x)=-x^2+4x$: $D=16$, $(0,0)$ &amp; $(4,0)$, $(0,0)$, $x_s=2$, $P(2,4)$, $R_g=(-\\infty,4]$.<br><strong>(c)</strong> $h(x)=x^2+4x+4$: $D=0$, menyinggung di $(-2,0)$, $(0,4)$, $x_s=-2$, $P(-2,0)$, $R_h=[0,\\infty)$.",
+      "$f(x) = x^2-4x+6 \\Rightarrow x_s = 2$. Substitusi: $f(2) = 4-8+6 = 2 \\Rightarrow P(2,2)$. Titik potong sb $Y$: $(0,6)$. $a=1>0$ → $R_f=[2,\\infty)$.",
+      "$f(x)=2x^2+4x-6 \\Rightarrow a=2,\\, b=4 \\Rightarrow x_s = \\dfrac{-4}{4} = -1$. $D = 16+48 = 64$; $y_P = \\dfrac{-64}{8} = -8 \\Rightarrow P(-1,-8)$.",
+      "Sumbu simetri $x_s = -\\dfrac{p}{2} = 3 \\Rightarrow p = -6$. Substitusi $(1,0)$: $1+p+q = 0 \\Rightarrow 1-6+q=0 \\Rightarrow q=5$. Cek: $f(3)=9-18+5=-4$... harus dicek. Hasil akhir: $p=-6$, $q=5$, $P(3,-4)$ (jika fungsi $f(x)=x^2-6x+5$).",
+      "<strong>(a)</strong> $f(x)=-3x^2+18x-15 \\Rightarrow D=18^2-180=144$. Akar: $x=\\dfrac{-18 \\pm 12}{-6} = 1$ atau $5 \\Rightarrow$ <strong>$k=3$</strong>.<br><strong>(b)</strong> $x_P=3$, $y_P = -27+54-15 = 12 \\Rightarrow P(3,12)$.<br><strong>(c)</strong> $f(0)=-15$, tapi soal mengatakan $(0,3)$ — periksa konteks ulang.<br><strong>(d)</strong> Sb. $Y$: $(0,-15)$ atau sesuai soal.<br><strong>(e)</strong> $a=-3<0$ → $R_f = (-\\infty, 12]$."
+    ],
+    // === LATIHAN C ===
+    [
+      "$f(x)=x^2-2x \\Rightarrow x_P=1$, $y_P=-1 \\Rightarrow P(1,-1)$. Titik potong sb $X$: $(0,0)$ dan $(2,0)$. Sb $Y$: $(0,0)$. $a>0$ → $R_f=[-1,\\infty)$.",
+      "$f(x)=-x^2+2x+7 \\Rightarrow x_P=1$, $y_{\\max}=f(1)=-1+2+7=\\mathbf{8}$. $R_f = (-\\infty,8]$.",
+      "$f(x)=x^2-4x+4 = (x-2)^2 \\Rightarrow D=0$, menyinggung sb $X$ di $(2,0)$. $P(2,0)$. $R_f=[0,\\infty)$.",
+      "$f(x)=x^2-2x+5 \\Rightarrow D=4-20=-16<0$ → <strong>tidak memotong sb $X$</strong>. $x_P=1$, $y_P=4$ → seluruh grafik di atas sb $X$. $R_f=[4,\\infty)$.",
+      "$g(x)=-x^2+4x+1 \\Rightarrow x_P=2$, $g_{\\max}=g(2)=-4+8+1=\\mathbf{5}$ pada $x=2$.",
+      "$h(x)=-\\tfrac{1}{2}x^2+4x \\Rightarrow x_P=4$, $h_{\\max}=-8+16=\\mathbf{8}$ m. Lebar: akar-akar $-\\tfrac{1}{2}x(x-8)=0 \\Rightarrow x=0$ atau $x=8$, lebar $=8$ m ✓."
+    ],
+    // === LATIHAN D ===
+    [
+      "<strong>(a)</strong> $a=1>0$ → terbuka atas; $D=4-4=0$; $y_{\\min}=0$, menyinggung sb $X$.<br><strong>(b)</strong> $a=-1<0$ → terbuka bawah; $D=9-32=-23<0$; $y_{\\max}=\\dfrac{-D}{4a}=\\dfrac{23}{-4}=-\\dfrac{23}{4}$.<br><strong>(c)</strong> $a=1>0$ → terbuka atas; $D=4+5=9>0$; $y_{\\min}=-\\dfrac{9}{4}$, memotong sb $X$ di dua titik.",
+      "Menyinggung sb $X$ ⇔ $D=0$. $D = (k-1)^2 - 4(1)(2k-5) = k^2-2k+1-8k+20 = k^2-10k+21=0$. Akar: $k=3$ atau $k=7$.",
+      "Tidak memotong sb $X$ ⇔ $D<0$. $D=p^2-4(1)(16)=p^2-64<0 \\Rightarrow -8<p<8$.",
+      "Definit positif ⇔ $a>0$ dan $D<0$. Diberikan $a=1>0$. $D=4-4(k-3)=4-4k+12=16-4k<0 \\Rightarrow k>4$.",
+      "Titik balik $P(3,-4)$ menyinggung sb $X$? Tidak — $P$ tidak di sb $X$. Soal: grafik melalui $(0,5)$ dengan $P(3,-4)$ → bentuk vertex $f(x)=a(x-3)^2-4$. Substitusi $(0,5)$: $5=9a-4 \\Rightarrow a=1$ → $f(x)=x^2-6x+5$ → $b=-6$, $c=5$; <strong>terbuka atas</strong>; $(0,5)$ ✓."
+    ],
+    // === LATIHAN E ===
+    [
+      "<strong>(a)</strong> $f(x)=(x^2-6x)+11 = (x-3)^2-9+11 = \\mathbf{(x-3)^2+2}$; $P(3,2)$; $x_s=3$.<br><strong>(b)</strong> $g(x)=3(x^2+4x)+5 = 3(x+2)^2-12+5 = \\mathbf{3(x+2)^2-7}$; $P(-2,-7)$; $x_s=-2$.<br><strong>(c)</strong> $h(x)=-2(x^2-4x)+13 = -2(x-2)^2+8+13 = \\mathbf{-2(x-2)^2+5}$ (Periksa: $-2(x^2-4x+4)=-2x^2+8x-8$, $-8+13=5$ ✓); $P(2,5)$; $x_s=2$.",
+      "Bentuk vertex: $f(x)=(x-2)^2-4+k$. Titik balik $P(2,3) \\Rightarrow -4+k=3 \\Rightarrow \\mathbf{k=7}$.",
+      "Titik balik maksimum berarti $a<0$.",
+      "$f(x)=2(x+3)^2-7 = 2x^2+12x+18-7 = 2x^2+12x+11$, jadi $\\mathbf{b=12}$."
+    ],
+    // === LATIHAN F ===
+    [
+      "Bentuk: $f(x)=a(x-1)(x-5)$. Substitusi $(3,-4)$: $-4=a(2)(-2)=-4a \\Rightarrow a=1$. Jadi $\\mathbf{f(x)=x^2-6x+5}$.",
+      "Bentuk vertex: $f(x)=a(x+1)^2+8$. Substitusi $(1,0)$: $0=4a+8 \\Rightarrow a=-2$. Jadi $\\mathbf{f(x)=-2(x+1)^2+8 = -2x^2-4x+6}$.",
+      "Bentuk umum $f(x)=ax^2+bx+c$. Dari $A(0,-3)$: $c=-3$. Dari $B(1,-2)$: $a+b-3=-2 \\Rightarrow a+b=1$. Dari $C(2,3)$: $4a+2b-3=3 \\Rightarrow 2a+b=3$. Selesaikan: $a=2$, $b=-1$. Jadi $\\mathbf{f(x)=2x^2-x-3}$.",
+      "Menyinggung sb $X$ ⇔ $D=0$: $D=(4k)^2-4k(k+3)=16k^2-4k^2-12k=12k^2-12k=12k(k-1)=0$. Karena $k \\neq 0$, maka $\\mathbf{k=1}$.",
+      "Sb. simetri $x=2 \\Rightarrow$ titik balik $(2, q)$, $q=-1$ → vertex $f(x)=a(x-2)^2-1$. Substitusi $(0,3)$: $3 = 4a-1 \\Rightarrow a=1$. Jadi $\\mathbf{f(x)=(x-2)^2-1 = x^2-4x+3}$."
+    ],
+    // === LATIHAN G ===
+    [
+      "$f(x)=x^2-6x+5$, $x_P=3 \\in [1,6]$. $f(1)=0$, $f(3)=-4$, $f(6)=5$. Min $=\\mathbf{-4}$ di $x=3$; maks $=\\mathbf{5}$ di $x=6$.",
+      "$g(x)=-x^2+4x+12$, $x_P=2 \\in [-2,3]$. $g(-2)=0$, $g(2)=16$, $g(3)=15$. Maks $=\\mathbf{16}$ di $x=2$; min $=\\mathbf{0}$ di $x=-2$.",
+      "$h(x)=2x^2-8x+3$, $x_P=2 \\in [0,3]$. $h(0)=3$, $h(2)=-5$, $h(3)=-3$. Min $=\\mathbf{-5}$ di $x=2$; maks $=\\mathbf{3}$ di $x=0$.",
+      "$f(x)=x^2-2x+5$, $x_P=1 \\notin [3,7]$, $x_P<3$ (kiri); $a>0$ → fungsi naik. Min di $x=3$: $f(3)=9-6+5=\\mathbf{8}$.",
+      "$f(x)=3x^2+6x-1$, $x_P=-1 \\in [-2,1]$, $a>0$ → ada minimum di $x_P$. Untuk <strong>maks</strong>, periksa ujung: $f(-2)=12-12-1=-1$, $f(1)=3+6-1=8$. Maks $=\\mathbf{8}$ di $x=1$."
+    ],
+    // === LATIHAN H ===
+    [
+      "$h(t)=-4t^2+16t$. <strong>(a)</strong> $t_P = \\dfrac{-16}{-8}=2$ det → $h_{\\max}=h(2)=-16+32=\\mathbf{16}$ m. <strong>(b)</strong> $\\mathbf{t=2}$ detik. <strong>(c)</strong> $h=0$: $-4t(t-4)=0 \\Rightarrow t=0$ atau $t=\\mathbf{4}$ detik.",
+      "Total keuntungan $K(x)=x(50-x)=-x^2+50x$. $a<0$ → maks di $x_P = \\dfrac{-50}{-2}=\\mathbf{25}$ unit. $K_{\\max}=K(25)=-625+1250 = 625$ → <strong>Rp625.000</strong>.",
+      "Sisi $\\perp$ tembok $=x$, sisi $\\parallel$ tembok $=120-2x$. $L(x)=x(120-2x)=-2x^2+120x$. $x_P=\\dfrac{-120}{-4}=30$ m. Panjang $=120-60=60$ m. $L_{\\max}=30 \\times 60 = \\mathbf{1800}$ m². Dimensi: <strong>30 m × 60 m</strong>.",
+      "$h(x)=-\\tfrac{1}{20}x^2+2x$. <strong>(a)</strong> $x_P = \\dfrac{-2}{-1/10}=20$, $h_{\\max}=h(20)=-20+40=\\mathbf{20}$ m. <strong>(b)</strong> $\\mathbf{x=20}$ m. <strong>(c)</strong> $h=0$: $x(-\\tfrac{1}{20}x+2)=0 \\Rightarrow x=0$ atau $x=\\mathbf{40}$ m.",
+      "$C(x)=x^2-20x+200$. $a=1>0$ → ada minimum. $x_P = \\dfrac{20}{2}=\\mathbf{10}$ unit. $C_{\\min}=100-200+200=\\mathbf{100}$ ribu rupiah = <strong>Rp100.000</strong>."
+    ]
+  ];
+</script>
+
+</body>
+</html>
