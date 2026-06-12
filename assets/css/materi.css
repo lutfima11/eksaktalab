@@ -250,7 +250,7 @@ li strong,p strong{color:var(--text);}
   overflow:visible; /* was hidden — diubah agar child overflow-x:auto bisa scroll di HP */
   border:1px solid rgba(0,191,165,.2);
   background:var(--navy);
-  transition:border-color .2s, box-shadow .2s;
+  transition:border-color .18s;
   /* tetap clip radius tanpa blok scroll */
   contain:layout style;
 }
@@ -260,11 +260,9 @@ li strong,p strong{color:var(--text);}
 }
 .rumus-wrap:hover{
   border-color:rgba(0,191,165,.5);
-  box-shadow:0 4px 20px rgba(0,191,165,.08);
 }
 .rumus-wrap.open{
   border-color:rgba(0,191,165,.6);
-  box-shadow:0 6px 24px rgba(0,191,165,.12);
 }
 
 /* Header rumus */
@@ -512,16 +510,14 @@ li strong,p strong{color:var(--text);}
   overflow:visible; /* was hidden — diubah agar math di dalamnya bisa scroll di HP */
   border:1px solid var(--border);
   background:var(--surface);
-  transition:border-color .2s, box-shadow .2s;
+  transition:border-color .18s;
   contain:layout style;
 }
 .contoh-wrap:hover{
-  border-color:rgba(0,191,165,.35);
-  box-shadow:0 4px 20px rgba(0,191,165,.07);
+  border-color:rgba(0,191,165,.5);
 }
 .contoh-wrap.open{
-  border-color:rgba(0,191,165,.45);
-  box-shadow:0 6px 24px rgba(0,191,165,.09);
+  border-color:rgba(0,191,165,.6);
 }
 
 /* Header */
