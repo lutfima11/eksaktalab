@@ -90,11 +90,11 @@
         <div class="footer-logo-icon">${logoSVG}</div>
         <div class="footer-logo-name">Eksakta<em>Lab</em></div>
       </a>
-      <span class="footer-badge">Laboratorium Belajar Matematika</span>
       <p class="footer-desc">
         Platform belajar matematika yang lengkap dan gratis
         untuk semua siswa Indonesia.
       </p>
+      <span class="footer-badge">Laboratorium Belajar Matematika</span>
 
     </div>
 
