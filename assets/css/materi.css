@@ -85,6 +85,44 @@ body{font-family:var(--sans);background:var(--surface);color:var(--text);line-he
 .nav-btn.active{background:var(--teal);color:#fff;border-color:var(--teal);}
 .nav-btn.active:hover{background:var(--teal-dim);}
 
+/* Nav tabs — khusus halaman home */
+.nav-tabs{
+  display:flex;gap:0.15rem;
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  padding:3px;border-radius:10px;
+}
+.nav-tab{
+  font-family:var(--sans);font-size:0.8rem;font-weight:600;
+  color:var(--text-3);
+  padding:0.35rem 0.9rem;border-radius:8px;
+  border:none;background:transparent;
+  cursor:pointer;white-space:nowrap;
+  transition:all .2s;
+}
+.nav-tab:hover{color:var(--text);}
+.nav-tab.active{background:var(--navy);color:#fff;}
+[data-theme="dark"] .nav-tab.active{background:var(--teal);color:#fff;}
+/* Tablet: sembunyikan label teks tab, sisakan icon */
+@media(max-width:768px){
+  .nav-tabs{ display:none; }
+  .nav-select{ display:flex !important; }
+}
+/* Nav select — muncul di tablet/hp sebagai pengganti tabs */
+.nav-select{
+  display:none;
+  font-family:var(--sans);font-size:0.78rem;font-weight:600;
+  color:var(--text-2);background:var(--surface-2);
+  border:1px solid var(--border);
+  padding:0 0.75rem;height:34px;border-radius:8px;
+  cursor:pointer;transition:all .2s;
+  -webkit-appearance:none;appearance:none;
+  padding-right:1.8rem;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpolyline points='2,4 6,8 10,4' fill='none' stroke='%237B8BB2' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 0.5rem center;
+}
+
 /* Progress pill di navbar — dihapus, cukup bar tipis */
 
 /* ── LAYOUT ─────────────────────────────── */
@@ -922,6 +960,7 @@ tr:hover td{background:var(--surface-2);}
   .nav-logo-name{ font-size:0.95rem; }
   .nav-logo-icon{ width:30px; height:30px; }
   .nav-btn{ height:30px; padding:0 0.6rem; font-size:0.72rem; }
+  .nav-select{ height:30px; font-size:0.72rem; }
 }
 @media(max-width:360px){
   .nav-logo-name{ font-size:0.85rem; }

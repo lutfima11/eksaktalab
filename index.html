@@ -524,30 +524,31 @@ body{
   <meta name="twitter:description" content="Platform belajar matematika SMA terlengkap. Materi, contoh soal, dan latihan untuk 37 topik kurikulum nasional.">
   <!-- Schema.org -->
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/","description":"Platform belajar matematika SMA terlengkap","inLanguage":"id"}</script>
+<link rel="stylesheet" href="assets/css/materi.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
 <header class="navbar">
-  <a class="logo" href="#">
-    <div class="logo-icon">
+  <a class="nav-logo" href="#">
+    <div class="nav-logo-icon">
       <svg viewBox="0 0 24 24" fill="none">
         <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
         <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
-    <div class="logo-text">
-      <div class="logo-name">Eksakta<em>Lab</em></div>
-      <div class="logo-tagline">Lab. Belajar Matematika</div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
     </div>
   </a>
 
   <nav class="nav-tabs" id="desktopNav">
-    <button class="tab active" onclick="switchView('materi',this)">📚 Belajar Mandiri</button>
-    <button class="tab" onclick="switchView('worksheet',this)">📄 Worksheet</button>
-    <button class="tab" onclick="switchView('latihan',this)">✏️ Latihan Soal</button>
-    <button class="tab" onclick="switchView('kapita',this)">🔬 Kapita Selekta</button>
-    <button class="tab" onclick="switchView('video',this)">🎓 TKA – UTBK</button>
+    <button class="nav-tab active" onclick="switchView('materi',this)">📚 Belajar Mandiri</button>
+    <button class="nav-tab" onclick="switchView('worksheet',this)">📄 Worksheet</button>
+    <button class="nav-tab" onclick="switchView('latihan',this)">✏️ Latihan Soal</button>
+    <button class="nav-tab" onclick="switchView('kapita',this)">🔬 Kapita Selekta</button>
+    <button class="nav-tab" onclick="switchView('video',this)">🎓 TKA – UTBK</button>
   </nav>
 
   <div class="nav-right">
@@ -558,7 +559,7 @@ body{
       <option value="kapita">🔬 Kapita Selekta</option>
       <option value="video">🎓 TKA – UTBK</option>
     </select>
-    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()" title="Ganti tema">🌙</button>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
   </div>
 </header>
 
@@ -1080,8 +1081,7 @@ function toggleTheme() {
   </button>
 </nav>
 
-<!-- FOOTER -->
-<footer class="site-footer">
+<!-- FOOTER -->\n<footer class="site-footer">
   <div class="footer-grid">
     <div>
       <a class="footer-logo" href="./">
@@ -1095,18 +1095,18 @@ function toggleTheme() {
       <div class="footer-col-title">Belajar</div>
       <ul class="footer-links">
         <li><a href="#">Belajar Mandiri</a></li>
+        <li><a href="latihan-prasyarat.html">Latihan Prasyarat</a></li>
         <li><a href="#">Worksheet</a></li>
         <li><a href="#">Latihan Soal</a></li>
-        <li><a href="#">Kapita Selekta</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Materi Populer</div>
       <ul class="footer-links">
-        <li><a href="materi/fungsi-linear/" class="ready">Fungsi Linier</a></li>
-        <li><a href="materi/fungsi-komposisi-invers/" class="ready">Fungsi, Komposisi &amp; Invers</a></li>
-        <li><a href="#">Eksponen</a></li>
-        <li><a href="#">Trigonometri Dasar</a></li>
+        <li><a href="materi/fungsi-linear/" class="ready">Fungsi Linear</a></li>
+        <li><a href="materi/persamaan-kuadrat/" class="ready">Persamaan Kuadrat</a></li>
+        <li><a href="materi/fungsi-komposisi-invers/" class="ready">Fungsi Komposisi &amp; Invers</a></li>
+        <li><a href="materi/eksponen/" class="ready">Eksponen</a></li>
       </ul>
     </div>
     <div>

@@ -489,26 +489,30 @@ body{
   .btn-retry,.btn-home{text-align:center;justify-content:center;}
 }
 </style>
+<link rel="stylesheet" href="assets/css/materi.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
 <header class="navbar">
-  <a class="logo" href="index.html">
-    <div class="logo-icon">
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-icon">
       <svg viewBox="0 0 24 24" fill="none">
         <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
         <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
-    <div class="logo-text">
-      <div class="logo-name">Eksakta<em>Lab</em></div>
-      <div class="logo-tagline">Lab. Belajar Matematika</div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
     </div>
   </a>
   <div class="nav-right">
-    <a class="btn-back" href="index.html">← Lihat Semua Materi</a>
-    <button class="btn-theme" id="themeBtn" onclick="toggleTheme()" title="Ganti tema">🌙</button>
+    <a class="nav-btn" href="index.html">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+      Semua Materi
+    </a>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
   </div>
 </header>
 
@@ -1085,18 +1089,18 @@ body{
       <div class="footer-col-title">Belajar</div>
       <ul class="footer-links">
         <li><a href="index.html">Belajar Mandiri</a></li>
+        <li><a href="latihan-prasyarat.html">Latihan Prasyarat</a></li>
         <li><a href="index.html">Worksheet</a></li>
         <li><a href="index.html">Latihan Soal</a></li>
-        <li><a href="index.html">Kapita Selekta</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Materi Populer</div>
       <ul class="footer-links">
-        <li><a href="materi/fungsi-linear/" class="ready">Fungsi Linier</a></li>
-        <li><a href="materi/fungsi-komposisi-invers/" class="ready">Fungsi, Komposisi &amp; Invers</a></li>
-        <li><a href="index.html">Eksponen</a></li>
-        <li><a href="index.html">Trigonometri Dasar</a></li>
+        <li><a href="materi/fungsi-linear/" class="ready">Fungsi Linear</a></li>
+        <li><a href="materi/persamaan-kuadrat/" class="ready">Persamaan Kuadrat</a></li>
+        <li><a href="materi/fungsi-komposisi-invers/" class="ready">Fungsi Komposisi &amp; Invers</a></li>
+        <li><a href="materi/eksponen/" class="ready">Eksponen</a></li>
       </ul>
     </div>
     <div>
