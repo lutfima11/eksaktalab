@@ -1107,12 +1107,13 @@ tr:hover td{background:var(--surface-2);}
 .site-footer{
   background:var(--navy);
   color:#8FA8C8;
-  padding:3rem 2rem 1.5rem;
+  padding:3rem 0 1.5rem;
   margin-top:3rem;
 }
 .footer-grid{
+  max-width:1100px;margin:0 auto;
   display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;
-  padding-bottom:2rem;
+  padding:0 2rem 2rem;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 .footer-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;margin-bottom:.75rem;}
@@ -1135,7 +1136,8 @@ tr:hover td{background:var(--surface-2);}
 .footer-links a:hover,.footer-links a.ready{color:var(--teal);}
 .footer-links a.ready::after{content:'·';font-size:0.7rem;color:var(--teal);margin-left:0.35rem;}
 .footer-bottom{
-  margin-top:1.25rem;
+  max-width:1100px;margin:1.25rem auto 0;
+  padding:0 2rem;
   display:flex;align-items:center;justify-content:space-between;
   font-size:.75rem;gap:1rem;flex-wrap:wrap;
 }
