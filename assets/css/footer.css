@@ -5,13 +5,25 @@
             <script src="/assets/js/footer.js"></script>
    ═══════════════════════════════════════════════════════ */
 
-/* ── WRAPPER ─────────────────────────────────────────── */
+/* ── TOKEN FOOTER SENDIRI (tidak ikut light/dark halaman) */
 .site-footer {
-  background: var(--navy);
-  color: var(--text);
-  font-family: var(--sans);
-  padding: 52px 48px 32px;
-  margin-top: auto;
+  --f-bg:      #111827;
+  --f-bg-line: #1f2937;
+  --f-text:    #f9fafb;
+  --f-muted:   #9ca3af;
+  --f-dim:     #6b7280;
+  --f-teal:    #00BFA5;
+  --f-border:  #1f2937;
+  --f-mono:    'JetBrains Mono', monospace;
+  --f-sans:    'Inter', system-ui, sans-serif;
+  --f-display: 'Space Grotesk', system-ui, sans-serif;
+
+  background:   var(--f-bg);
+  color:        var(--f-text);
+  font-family:  var(--f-sans);
+  padding:      52px 48px 32px;
+  margin-top:   auto;
+  border-top:   1px solid var(--f-border);
 }
 
 /* ── GRID KOLOM ──────────────────────────────────────── */
@@ -34,7 +46,7 @@
 .footer-logo-icon {
   width: 36px;
   height: 36px;
-  background: var(--teal);
+  background: var(--f-teal);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -48,30 +60,30 @@
 }
 
 .footer-logo-name {
-  font-family: var(--display);
+  font-family: var(--f-display);
   font-size: 18px;
   font-weight: 700;
-  color: var(--text);
+  color: var(--f-text);
   letter-spacing: -0.02em;
 }
 
 .footer-logo-name em {
   font-style: normal;
-  color: var(--teal);
+  color: var(--f-teal);
 }
 
 .footer-logo-tag {
-  font-family: var(--mono);
+  font-family: var(--f-mono);
   font-size: 10px;
   font-weight: 500;
-  color: var(--text-3);
+  color: var(--f-dim);
   letter-spacing: 0.06em;
   margin-bottom: 16px;
 }
 
 .footer-desc {
   font-size: 13.5px;
-  color: var(--text-2);
+  color: var(--f-muted);
   line-height: 1.7;
   margin: 0 0 18px 0;
   max-width: 260px;
@@ -79,11 +91,11 @@
 
 .footer-badge {
   display: inline-block;
-  font-family: var(--mono);
+  font-family: var(--f-mono);
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.08em;
-  color: var(--teal);
+  color: var(--f-teal);
   background: rgba(0, 191, 165, 0.1);
   border: 1px solid rgba(0, 191, 165, 0.25);
   padding: 4px 12px;
@@ -92,12 +104,12 @@
 
 /* ── KOLOM NAVIGASI ──────────────────────────────────── */
 .footer-col-title {
-  font-family: var(--mono);
+  font-family: var(--f-mono);
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--f-teal);
   margin-bottom: 16px;
 }
 
@@ -112,19 +124,19 @@
 
 .footer-links li a {
   font-size: 13.5px;
-  color: var(--text-2);
+  color: var(--f-muted);
   text-decoration: none;
   transition: color 0.15s;
 }
 
 .footer-links li a:hover {
-  color: var(--teal);
+  color: var(--f-teal);
 }
 
 /* ── GARIS BAWAH ─────────────────────────────────────── */
 .footer-divider {
   border: none;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--f-bg-line);
   margin: 0 0 24px 0;
 }
 
@@ -137,30 +149,24 @@
 }
 
 .footer-copy {
-  font-family: var(--mono);
+  font-family: var(--f-mono);
   font-size: 11.5px;
-  color: var(--text-3);
+  color: var(--f-dim);
   letter-spacing: 0.02em;
 }
 
 .footer-copy strong {
-  color: var(--text-2);
+  color: var(--f-muted);
   font-weight: 500;
 }
 
 .footer-open-access {
-  font-family: var(--mono);
+  font-family: var(--f-mono);
   font-size: 10px;
   font-weight: 500;
-  color: var(--text-3);
+  color: var(--f-dim);
   letter-spacing: 0.06em;
   opacity: 0.6;
-}
-
-/* ── DARK MODE (ikut :root yang sudah ada) ───────────── */
-[data-theme="dark"] .site-footer {
-  background: var(--navy);
-  border-top: 1px solid var(--border);
 }
 
 /* ── RESPONSIVE ──────────────────────────────────────── */
