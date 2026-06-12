@@ -381,6 +381,36 @@ body{
 }
 #toast.show{display:block;animation:fadeUp .2s ease;}
 
+/* ── FOOTER ─────────────────────────────── */
+.site-footer{
+  background:var(--navy);
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:3rem 2rem 1.5rem;
+  margin-top:3rem;
+}
+.footer-grid{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:2.5rem;margin-bottom:2.5rem;
+}
+.footer-logo{ display:flex;align-items:center;gap:0.6rem;text-decoration:none;margin-bottom:0.85rem; }
+.footer-logo-icon{ width:30px;height:30px;border-radius:8px;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+.footer-logo-icon svg{width:16px;height:16px;}
+.footer-logo-name{ font-family:var(--display);font-size:1rem;font-weight:700;color:#fff;letter-spacing:-.02em; }
+.footer-logo-name em{font-style:normal;color:var(--teal);}
+.footer-desc{font-size:0.8rem;color:#94A3B8;line-height:1.65;margin-bottom:1rem;}
+.footer-kurikulum{ display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.58rem;font-weight:600;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;background:rgba(0,191,165,.08);border:1px solid rgba(0,191,165,.2);padding:0.22rem 0.6rem;border-radius:4px; }
+.footer-col-title{ font-family:var(--mono);font-size:0.6rem;font-weight:700;color:#64748B;letter-spacing:.1em;text-transform:uppercase;margin-bottom:0.85rem; }
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+.footer-links a{font-size:0.82rem;color:#CBD5E1;text-decoration:none;transition:color .15s;}
+.footer-links a:hover{color:var(--teal);}
+.footer-links a.ready::after{content:'·';font-size:0.7rem;color:var(--teal);margin-left:0.35rem;}
+.footer-bottom{ max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.06);padding-top:1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem; }
+.footer-copy{font-size:0.75rem;color:#94A3B8;}
+.footer-legal{display:flex;gap:1.25rem;}
+.footer-legal a{font-size:0.75rem;color:#94A3B8;text-decoration:none;transition:color .15s;}
+.footer-legal a:hover{color:var(--teal);}
+
 /* ── RESPONSIVE ──────────────────────────────────────── */
 /* ── TABLET LANDSCAPE (≤1024px) ─────────── */
 @media(max-width:1024px){
@@ -446,37 +476,6 @@ body{
   box-shadow:0 4px 16px rgba(0,191,165,.12);
 }
 
-/* ── FOOTER ─────────────────────────────── */
-.site-footer{
-  background:var(--navy);
-  border-top:1px solid rgba(255,255,255,.06);
-  padding:3rem 2rem 1.5rem;
-  margin-top:3rem;
-}
-.footer-grid{
-  max-width:1100px;margin:0 auto;
-  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:2.5rem;margin-bottom:2.5rem;
-}
-@media(max-width:768px){ .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;} }
-@media(max-width:480px){ .footer-grid{grid-template-columns:1fr;gap:1.5rem;} .site-footer{padding:2rem 1.25rem 5.5rem;} }
-.footer-logo{ display:flex;align-items:center;gap:0.6rem;text-decoration:none;margin-bottom:0.85rem; }
-.footer-logo-icon{ width:30px;height:30px;border-radius:8px;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0; }
-.footer-logo-icon svg{width:16px;height:16px;}
-.footer-logo-name{ font-family:var(--display);font-size:1rem;font-weight:700;color:#fff;letter-spacing:-.02em; }
-.footer-logo-name em{font-style:normal;color:var(--teal);}
-.footer-desc{font-size:0.8rem;color:#94A3B8;line-height:1.65;margin-bottom:1rem;}
-.footer-kurikulum{ display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.58rem;font-weight:600;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;background:rgba(0,191,165,.08);border:1px solid rgba(0,191,165,.2);padding:0.22rem 0.6rem;border-radius:4px; }
-.footer-col-title{ font-family:var(--mono);font-size:0.6rem;font-weight:700;color:#64748B;letter-spacing:.1em;text-transform:uppercase;margin-bottom:0.85rem; }
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
-.footer-links a{font-size:0.82rem;color:#CBD5E1;text-decoration:none;transition:color .15s;}
-.footer-links a:hover{color:var(--teal);}
-.footer-links a.ready::after{content:'·';font-size:0.7rem;color:var(--teal);margin-left:0.35rem;}
-.footer-bottom{ max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.06);padding-top:1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem; }
-.footer-copy{font-size:0.75rem;color:#94A3B8;}
-.footer-legal{display:flex;gap:1.25rem;}
-.footer-legal a{font-size:0.75rem;color:#94A3B8;text-decoration:none;transition:color .15s;}
-.footer-legal a:hover{color:var(--teal);}
 /* ── BOTTOM NAV ─────────────────────────── */
 .bottom-nav{ display:none;position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border);padding:0.4rem 0 calc(0.4rem + env(safe-area-inset-bottom));z-index:100;box-shadow:0 -4px 20px rgba(0,0,0,.08); }
 @media(max-width:500px){ .bottom-nav{display:flex;} .main-wrap{padding:1.5rem 1rem 6rem;} }
@@ -1081,7 +1080,8 @@ function toggleTheme() {
   </button>
 </nav>
 
-<!-- FOOTER -->\n<footer class="site-footer">
+<!-- FOOTER -->
+<footer class="site-footer">
   <div class="footer-grid">
     <div>
       <a class="footer-logo" href="./">
