@@ -494,10 +494,7 @@ li strong,p strong{color:var(--text);}
   cursor:pointer;user-select:none;
   transition:background .2s;
   position:relative;
-  border-radius:var(--radius) var(--radius) 0 0;
-}
-.contoh-wrap:not(.open) .contoh-header{
-  border-radius:var(--radius);
+  border-radius:calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
 }
 .contoh-header:hover{background:var(--surface-3);}
 
