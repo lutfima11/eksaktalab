@@ -1111,7 +1111,6 @@ tr:hover td{background:var(--surface-2);}
   margin-top:3rem;
 }
 .footer-grid{
-  max-width:1100px;margin:0 auto;
   display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;
   padding-bottom:2rem;
   border-bottom:1px solid rgba(255,255,255,.08);
@@ -1134,8 +1133,9 @@ tr:hover td{background:var(--surface-2);}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:.45rem;}
 .footer-links a{font-size:.82rem;color:#8FA8C8;text-decoration:none;transition:color .2s;}
 .footer-links a:hover,.footer-links a.ready{color:var(--teal);}
+.footer-links a.ready::after{content:'·';font-size:0.7rem;color:var(--teal);margin-left:0.35rem;}
 .footer-bottom{
-  max-width:1100px;margin:1.25rem auto 0;
+  margin-top:1.25rem;
   display:flex;align-items:center;justify-content:space-between;
   font-size:.75rem;gap:1rem;flex-wrap:wrap;
 }

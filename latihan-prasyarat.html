@@ -448,7 +448,7 @@ body{
   margin-top:3rem;
 }
 .footer-grid{
-  max-width:1100px;margin:0 auto;
+  
   display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
   gap:2.5rem;margin-bottom:2.5rem;
 }
@@ -464,7 +464,7 @@ body{
 .footer-links a{font-size:0.82rem;color:#CBD5E1;text-decoration:none;transition:color .15s;}
 .footer-links a:hover{color:var(--teal);}
 .footer-links a.ready::after{content:'·';font-size:0.7rem;color:var(--teal);margin-left:0.35rem;}
-.footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.06);padding-top:1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;}
+.footer-bottom{margin-top:1.25rem;border-top:1px solid rgba(255,255,255,.06);padding-top:1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;}
 .footer-copy{font-size:0.75rem;color:#94A3B8;}
 .footer-legal{display:flex;gap:1.25rem;}
 .footer-legal a{font-size:0.75rem;color:#94A3B8;text-decoration:none;transition:color .15s;}
@@ -1331,7 +1331,7 @@ function toggleTheme() {
   const btn = document.getElementById('themeBtn');
   const isDark = html.getAttribute('data-theme') === 'dark';
   html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  btn.textContent = isDark ? '🌙' : '☀️';
+  btn.textContent = isDark ? '🌙 Gelap' : '☀️ Terang';
 }
 
 /* ── TOAST ───────────────────────────────────── */
