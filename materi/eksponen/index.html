@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/materi.css">
 <style>
-/* Box definisi/metode — teal muda, border kiri, untuk narasi + formula */
 .box.box-definisi {
   border-left: 3px solid var(--teal);
   background: rgba(0,191,165,.05);
@@ -456,18 +455,19 @@ window.MathJax = {
     <h3 class="subsection-title">2. Merasionalkan Penyebut</h3>
     <p>Merasionalkan penyebut adalah proses mengubah pecahan yang penyebutnya memuat bentuk akar menjadi pecahan yang penyebutnya berupa bilangan rasional.</p>
 
-    <div class="box box-rumus">
-      <div class="box-label">• Merasionalkan Penyebut</div>
-      <p style="margin-bottom:.3rem;"><strong>Kasus 1: Penyebut berbentuk</strong> $\sqrt{b}$</p>
+    <div class="box box-definisi">
+      <div class="box-label">Merasionalkan Penyebut</div>
+      <p><strong>Kasus 1: Penyebut berbentuk $\sqrt{b}$</strong></p>
       <div class="math-block">$$\frac{a}{\sqrt{b}} = \frac{a}{\sqrt{b}} \times \frac{\sqrt{b}}{\sqrt{b}} = \frac{a\sqrt{b}}{b}, \quad b > 0.$$</div>
-      <p style="margin-top:.9rem;margin-bottom:.3rem;"><strong>Kasus 2: Penyebut berbentuk</strong> $\sqrt{a} \pm \sqrt{b}$ &nbsp;<em>(menggunakan konjugat/sekawan)</em></p>
+      <p style="margin-top:1rem;"><strong>Kasus 2: Penyebut berbentuk $\sqrt{a} \pm \sqrt{b}$</strong> (menggunakan konjugat/sekawan)</p>
       <div class="math-block">$$\frac{p}{\sqrt{a}+\sqrt{b}} = \frac{p(\sqrt{a}-\sqrt{b})}{a-b}, \qquad \frac{p}{\sqrt{a}-\sqrt{b}} = \frac{p(\sqrt{a}+\sqrt{b})}{a-b}.$$</div>
-      <p style="margin-top:.9rem;margin-bottom:.3rem;"><strong>Kasus 3: Penyebut berbentuk</strong> $c \pm \sqrt{b}$</p>
+      <p>Pasangan $(\sqrt{a}+\sqrt{b})$ dan $(\sqrt{a}-\sqrt{b})$ saling disebut <strong>bentuk akar konjugat(sekawan)</strong>.</p>
+      <p style="margin-top:1rem;"><strong>Kasus 3: Penyebut berbentuk $c \pm \sqrt{b}$</strong></p>
       <div class="math-block">$$\frac{p}{c+\sqrt{b}} = \frac{p(c-\sqrt{b})}{c^2-b}, \qquad \frac{p}{c-\sqrt{b}} = \frac{p(c+\sqrt{b})}{c^2-b}.$$</div>
     </div>
 
-    <div class="box box-definisi">
-      <div class="box-label">Identitas Konjugat</div>
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan</div>
       <p style="margin:0;font-size:.9rem;">Identitas aljabar yang mendasari penggunaan konjugat adalah:
         $$(\sqrt{a}+\sqrt{b})(\sqrt{a}-\sqrt{b}) = a - b, \qquad (c+\sqrt{b})(c-\sqrt{b}) = c^2 - b.$$
         Identitas ini memastikan bahwa penyebut hasil perkalian adalah bilangan rasional.</p>
@@ -573,9 +573,9 @@ window.MathJax = {
       <p>Khususnya, untuk $m = 1$: $\;a^{\frac{1}{n}} = \sqrt[n]{a}$.</p>
     </div>
 
-    <div class="box box-definisi">
-      <div class="box-label">Perluasan ke $a &lt; 0$</div>
-      <p>Apabila $n$ <strong>ganjil</strong>, definisi dapat diperluas ke $a &lt; 0$ karena akar ke-$n$ dari bilangan negatif tetap terdefinisi dalam $\mathbb{R}$. Misalnya:
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Perluasan ke $a &lt; 0$</div>
+      <p style="margin:0;font-size:.9rem;">Apabila $n$ <strong>ganjil</strong>, definisi dapat diperluas ke $a &lt; 0$ karena akar ke-$n$ dari bilangan negatif tetap terdefinisi dalam $\mathbb{R}$. Misalnya:
         $$(-32)^{\frac{3}{5}} = \left(\sqrt[5]{-32}\right)^3 = (-2)^3 = -8.$$
         Sebaliknya, jika $n$ <strong>genap</strong> dan $a &lt; 0$, maka $a^{\frac{m}{n}}$ <strong>tidak terdefinisi</strong> dalam $\mathbb{R}$.</p>
     </div>
@@ -790,9 +790,9 @@ window.MathJax = {
       <div class="math-block">$$a^{f(x)} \geq a^{g(x)} \;\Longleftrightarrow\; f(x) \leq g(x)$$</div>
     </div>
 
-    <div class="box box-definisi">
-      <div class="box-label">Langkah Umum</div>
-      <p>Langkah umum: (i) nyatakan kedua ruas dalam basis yang sama, (ii) terapkan sifat monoton sesuai nilai basis, (iii) selesaikan pertidaksamaan yang diperoleh.</p>
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Langkah Umum</div>
+      <p style="margin:0;font-size:.9rem;">Langkah umum: (i) nyatakan kedua ruas dalam basis yang sama, (ii) terapkan sifat monoton sesuai nilai basis, (iii) selesaikan pertidaksamaan yang diperoleh.</p>
     </div>
 
     <div class="box box-contoh">
@@ -1002,15 +1002,15 @@ window.MathJax = {
 
     <h3 class="subsection-title">2. Transformasi Grafik Fungsi Eksponen</h3>
 
-    <div class="box box-definisi">
-      <div class="box-label">Logika Praktis Mengingat Arah Transformasi</div>
-      <p><strong>Jika yang diubah adalah variabel $x$</strong> (berada di dalam fungsi), arahnya <em>berlawanan</em>:
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Logika Praktis Mengingat Arah Transformasi</div>
+      <p style="margin:0;font-size:.88rem;"><strong>Jika yang diubah adalah variabel $x$</strong> (berada di dalam fungsi), arahnya <em>berlawanan</em>:
         $y = 2^{x+3}$: tanda "$+3$" pada $x$ → geser ke <strong>kiri</strong> 3 satuan.
-        $y = 2^{x-3}$: tanda "$-3$" pada $x$ → geser ke <strong>kanan</strong> 3 satuan.</p>
-      <p><strong>Jika yang diubah adalah nilai $y$ atau $f(x)$</strong> (berada di luar fungsi), arahnya <em>bersesuaian</em>:
+        $y = 2^{x-3}$: tanda "$-3$" pada $x$ → geser ke <strong>kanan</strong> 3 satuan.<br>
+        <strong>Jika yang diubah adalah nilai $y$ atau $f(x)$</strong> (berada di luar fungsi), arahnya <em>bersesuaian</em>:
         $y = 2^x + 3$: penambahan 3 pada $y$ → geser ke <strong>atas</strong> 3 satuan.
-        $y = 2^x - 3$: pengurangan 3 pada $y$ → geser ke <strong>bawah</strong> 3 satuan.</p>
-      <p><strong>Tanda negatif:</strong>
+        $y = 2^x - 3$: pengurangan 3 pada $y$ → geser ke <strong>bawah</strong> 3 satuan.<br>
+        <strong>Tanda negatif:</strong>
         $y = 2^{-x}$: tanda negatif pada $x$ → cermin terhadap <strong>sumbu-$Y$</strong>.
         $y = -2^{x}$: tanda negatif pada $f(x)$ → cermin terhadap <strong>sumbu-$X$</strong>.</p>
     </div>
