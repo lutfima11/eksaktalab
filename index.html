@@ -78,29 +78,29 @@ body{
   display:flex;align-items:center;justify-content:space-between;
   gap:1rem;
 }
-.logo{
+.nav-logo{
   display:flex;align-items:center;gap:0.65rem;
   text-decoration:none;
   flex-shrink:0;
 }
-.logo-icon{
+.nav-logo-icon{
   width:36px;height:36px;border-radius:9px;
   background:var(--teal);
   display:flex;align-items:center;justify-content:center;
   flex-shrink:0;
 }
-.logo-icon svg{width:18px;height:18px;}
-.logo-text{
+.nav-logo-icon svg{width:18px;height:18px;}
+.nav-logo-text{
   display:flex;flex-direction:column;gap:0.05rem;
   line-height:1;
 }
-.logo-name{
+.nav-logo-name{
   font-family:var(--display);
   font-size:1.15rem;font-weight:700;
   color:var(--text);letter-spacing:-0.02em;
 }
-.logo-name em{font-style:normal;color:var(--teal);}
-.logo-tagline{
+.nav-logo-name em{font-style:normal;color:var(--teal);}
+.nav-logo-tag{
   font-family:var(--mono);
   font-size:0.5rem;font-weight:500;
   color:var(--text-3);
@@ -411,6 +411,7 @@ body{
 /* ── SMALL MOBILE (≤500px) ─────────────── */
 @media(max-width:500px){
   .nav-tabs{display:none;}
+  .nav-select{display:none;}
   .main-wrap{padding:1.5rem 1rem 6rem;}
   .hero{padding:2.5rem 1rem 2rem;}
   .hero-title{font-size:1.6rem;}
@@ -425,7 +426,7 @@ body{
 /* ── VERY SMALL (≤360px) ───────────────── */
 @media(max-width:360px){
   .hero-title{font-size:1.4rem;}
-  .logo-tagline{display:none;}
+  .nav-logo-tag{display:none;}
   .hero-cta{flex-direction:column;align-items:stretch;}
   .btn-primary,.btn-ghost{text-align:center;}
 }
@@ -485,9 +486,28 @@ body{
 .bottom-nav-item .bn-label{font-family:var(--mono);font-size:0.5rem;font-weight:600;color:var(--text-3);letter-spacing:.04em;text-transform:uppercase;}
 .bottom-nav-item.active .bn-label{color:var(--teal);}
 
-/* ── TABLET: sembunyikan tab, pakai bottom nav ── */
-@media(max-width:768px){
+/* ── NAV SELECT (tablet) ────────────────── */
+.nav-select{
+  display:none;
+  font-family:var(--sans);font-size:0.78rem;font-weight:600;
+  color:var(--text);
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:0.3rem 1.8rem 0.3rem 0.7rem;
+  cursor:pointer;outline:none;
+  appearance:none;
+  -webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2300BFA5' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 0.5rem center;
+  transition:border-color .2s;
+  flex-shrink:0;
+}
+.nav-select:focus{ border-color:var(--teal); }
+@media(max-width:768px) and (min-width:501px){
   .nav-tabs{ display:none; }
+  .nav-select{ display:block; }
 }
 </style>
   <link rel="canonical" href="https://lutfima11.github.io/eksaktalab/">
@@ -532,6 +552,13 @@ body{
   </nav>
 
   <div class="nav-right">
+    <select class="nav-select" id="navSelect" onchange="switchViewSelect(this.value)">
+      <option value="materi">📚 Belajar Mandiri</option>
+      <option value="worksheet">📄 Worksheet</option>
+      <option value="latihan">✏️ Latihan Soal</option>
+      <option value="kapita">🔬 Kapita Selekta</option>
+      <option value="video">🎓 TKA – UTBK</option>
+    </select>
     <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
   </div>
 </header>
@@ -997,6 +1024,10 @@ function switchView(name, el, isMobile) {
   document.querySelectorAll('#bottomNav .bottom-nav-item').forEach((t, i) => {
     t.classList.toggle('active', views[i] === name);
   });
+  // Sync dropdown select
+  const sel = document.getElementById('navSelect');
+  if (sel) sel.value = name;
+
   // Toggle views
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   const target = document.getElementById(name + '-view');
@@ -1009,6 +1040,9 @@ function switchView(name, el, isMobile) {
   if (statsBar) statsBar.style.display = name === 'materi' ? '' : 'none';
 }
 
+function switchViewSelect(name) {
+  switchView(name, null, false);
+}
 
 function toast(msg) {
   const t = document.getElementById('toast');
