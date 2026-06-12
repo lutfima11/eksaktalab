@@ -1180,157 +1180,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 5. BOX LATIHAN → accordion soal + kunci jawaban
   const jawabanData = {
-    // Bagian A
+    // A — Pengertian PK
     0: [
-      `<p><strong>(a)</strong> $3x^2-x+5=0$ → <strong>Persamaan kuadrat</strong>. $a=3,\\; b=-1,\\; c=5$</p>
-<p><strong>(b)</strong> $4x-7=0$ → <strong>Bukan</strong> persamaan kuadrat. Koefisien $x^2$ nol, ini persamaan linear.</p>
-<p><strong>(c)</strong> $x^2=9 \\Rightarrow x^2-9=0$ → <strong>Persamaan kuadrat</strong>. $a=1,\\; b=0,\\; c=-9$</p>
-<p><strong>(d)</strong> $0\\cdot x^2+2x-1=0$ → <strong>Bukan</strong> persamaan kuadrat. $a=0$, syarat tidak terpenuhi.</p>
-<p><strong>(e)</strong> $\\dfrac{1}{2}x^2-3=0$ → <strong>Persamaan kuadrat</strong>. $a=\\dfrac{1}{2},\\; b=0,\\; c=-3$</p>`,
-      `<p><strong>(a)</strong> $x(x-5)=6 \\Rightarrow x^2-5x-6=0$. $\\boxed{a=1,\\; b=-5,\\; c=-6}$</p>
-<p><strong>(b)</strong> $3x^2=4x-1 \\Rightarrow 3x^2-4x+1=0$. $\\boxed{a=3,\\; b=-4,\\; c=1}$</p>
-<p><strong>(c)</strong> $(x+2)(x-3)=4 \\Rightarrow x^2-x-6-4=0 \\Rightarrow x^2-x-10=0$. $\\boxed{a=1,\\; b=-1,\\; c=-10}$</p>`,
-      `<p><strong>(a)</strong> $\\dfrac{5}{x}-3=2x$, kalikan $x$: $5-3x=2x^2 \\Rightarrow 2x^2+3x-5=0$. $\\boxed{a=2,\\; b=3,\\; c=-5}$</p>
-<p><strong>(b)</strong> $\\dfrac{x+1}{x-2}+\\dfrac{x-2}{x+1}=3$, kalikan $(x-2)(x+1)$: $(x+1)^2+(x-2)^2=3(x-2)(x+1)$
-$$2x^2-2x+5=3x^2-3x-6 \\Rightarrow x^2-x-11=0$$
-$\\boxed{a=1,\\; b=-1,\\; c=-11}$</p>
-<p><strong>(c)</strong> $(3x-1)^2-(x+2)^2=0$: $(9x^2-6x+1)-(x^2+4x+4)=0 \\Rightarrow 8x^2-10x-3=0$. $\\boxed{a=8,\\; b=-10,\\; c=-3}$</p>`,
-      `<p>Syarat persamaan kuadrat: koefisien $x^2 \\neq 0$, yaitu $k-1\\neq 0$.</p>
-<p>$\\boxed{f(x)=0 \\text{ merupakan persamaan kuadrat untuk semua } k\\in\\mathbb{R},\\; k\\neq 1}$</p>`,
-      `<p>Pernyataan siswa <strong>salah</strong>. Kalikan dengan $x^2$ ($x\\neq 0$):</p>
-<p>$1+2x-3x^2=0 \\Rightarrow 3x^2-2x-1=0$</p>
-<p>Ini adalah persamaan kuadrat dengan $\\boxed{a=3,\\; b=-2,\\; c=-1}$.</p>`,
-      `<p>Syarat PK: koefisien $x^2 \\neq 0 \\Rightarrow p-2\\neq 0$.</p>
-<p>$\\boxed{p\\neq 2}$</p>
-<p><em>Catatan: koefisien $x$ yaitu $p^2-5p+6=(p-2)(p-3)$ boleh nol, syaratnya hanya $p\\neq 2$.</em></p>`,
+      { jawaban: `(a) PK, $a=3,\\, b=-1,\\, c=5$ &nbsp;|&nbsp; (b) Bukan PK (linear) &nbsp;|&nbsp; (c) PK, $a=1,\\, b=0,\\, c=-9$ &nbsp;|&nbsp; (d) Bukan PK ($a=0$) &nbsp;|&nbsp; (e) PK, $a=\\tfrac{1}{2},\\, b=0,\\, c=-3$` },
+      { jawaban: `(a) $x^2-5x-6=0$, $a=1,\\,b=-5,\\,c=-6$ &nbsp;|&nbsp; (b) $3x^2-4x+1=0$, $a=3,\\,b=-4,\\,c=1$ &nbsp;|&nbsp; (c) $x^2-x-10=0$, $a=1,\\,b=-1,\\,c=-10$` },
+      { jawaban: `(a) $2x^2+3x-5=0$, $a=2,\\,b=3,\\,c=-5$ &nbsp;|&nbsp; (b) $x^2-x-11=0$, $a=1,\\,b=-1,\\,c=-11$ &nbsp;|&nbsp; (c) $8x^2-10x-3=0$, $a=8,\\,b=-10,\\,c=-3$` },
+      { jawaban: `$k\\neq 1$ (koefisien $x^2$ harus $\\neq 0$, yaitu $k-1\\neq 0$)` },
+      { jawaban: `Pernyataan <strong>salah</strong>. Kalikan $x^2$: $3x^2-2x-1=0$, sehingga $a=3,\\, b=-2,\\, c=-1$` },
+      { jawaban: `$p\\neq 2$` },
     ],
-    // Bagian B
+    // B — Menyelesaikan PK
     1: [
-      `<p><strong>(a)</strong> $2x^2+5x+3=0$. $ac=6$, cari $p,q$: $pq=6$, $p+q=5 \\Rightarrow p=2,q=3$. $(x+1)(2x+3)=0$. $\\boxed{x_1=-1,\\; x_2=-\\dfrac{3}{2}}$</p>
-<p><strong>(b)</strong> $3x^2-10x+8=0$. $ac=24$, $p=-4,q=-6$. $(3x-4)(x-2)=0$. $\\boxed{x_1=\\dfrac{4}{3},\\; x_2=2}$</p>
-<p><strong>(c)</strong> $-2x^2+7x-3=0 \\xrightarrow{\\times(-1)} 2x^2-7x+3=0$. $ac=6$, $p=-1,q=-6$. $(2x-1)(x-3)=0$. $\\boxed{x_1=\\dfrac{1}{2},\\; x_2=3}$</p>
-<p><strong>(d)</strong> $\\dfrac{3}{2}x^2+6x=0 \\xrightarrow{\\times\\frac{2}{3}} x^2+4x=0 \\Rightarrow x(x+4)=0$. $\\boxed{x_1=0,\\; x_2=-4}$</p>`,
-      `<p><strong>(a)</strong> $x^2-10x+21=0$. Tambah 25: $(x-5)^2=4 \\Rightarrow x=5\\pm 2$. $\\boxed{x_1=7,\\; x_2=3}$</p>
-<p><strong>(b)</strong> $x^2+4x-7=0$. Tambah 4: $(x+2)^2=11 \\Rightarrow x+2=\\pm\\sqrt{11}$. $\\boxed{x_1=-2+\\sqrt{11},\\; x_2=-2-\\sqrt{11}}$</p>
-<p><strong>(c)</strong> $2x^2-6x+1=0$. Bagi 2: $x^2-3x=-\\tfrac{1}{2}$. Tambah $\\tfrac{9}{4}$: $\\left(x-\\tfrac{3}{2}\\right)^2=\\tfrac{7}{4}$. $\\boxed{x_1=\\dfrac{3+\\sqrt{7}}{2},\\; x_2=\\dfrac{3-\\sqrt{7}}{2}}$</p>`,
-      `<p><strong>(a)</strong> $x^2-3x-5=0$. $x_{1,2}=\\dfrac{3\\pm\\sqrt{9+20}}{2}=\\dfrac{3\\pm\\sqrt{29}}{2}$. $\\boxed{x_1=\\dfrac{3+\\sqrt{29}}{2},\\; x_2=\\dfrac{3-\\sqrt{29}}{2}}$</p>
-<p><strong>(b)</strong> $3x^2+5x-1=0$. $x_{1,2}=\\dfrac{-5\\pm\\sqrt{25+12}}{6}=\\dfrac{-5\\pm\\sqrt{37}}{6}$. $\\boxed{x_1=\\dfrac{-5+\\sqrt{37}}{6},\\; x_2=\\dfrac{-5-\\sqrt{37}}{6}}$</p>
-<p><strong>(c)</strong> $x^2+7x+11=0$. $x_{1,2}=\\dfrac{-7\\pm\\sqrt{49-44}}{2}=\\dfrac{-7\\pm\\sqrt{5}}{2}$. $\\boxed{x_1=\\dfrac{-7+\\sqrt{5}}{2},\\; x_2=\\dfrac{-7-\\sqrt{5}}{2}}$</p>`,
-      `<p><strong>(a)</strong> $\\dfrac{2x}{x-1}+\\dfrac{x-1}{x+2}=3$, kalikan $(x-1)(x+2)$: $2x(x+2)+(x-1)^2=3(x-1)(x+2)$</p>
-<p>$3x^2+2x+1=3x^2+3x-6 \\Rightarrow x=7$. Karena $7\\neq 1$ dan $7\\neq -2$: $\\boxed{\\text{HP}=\\{7\\}}$</p>
-<p><strong>(b)</strong> $(x^2-3x+1)(x^2-3x-5)=-5$. Misal $u=x^2-3x$: $(u+1)(u-5)=-5 \\Rightarrow u^2-4u=0 \\Rightarrow u=0$ atau $u=4$.</p>
-<p>$u=0$: $x(x-3)=0 \\Rightarrow x=0$ atau $x=3$.<br>$u=4$: $(x-4)(x+1)=0 \\Rightarrow x=4$ atau $x=-1$.<br>$\\boxed{x\\in\\{-1,\\;0,\\;3,\\;4\\}}$</p>`,
-      `<p>Misal $u=x^2+x$: $u^2-8u+12=0 \\Rightarrow (u-2)(u-6)=0$.</p>
-<p><strong>Kasus $u=2$:</strong> $x^2+x-2=0 \\Rightarrow (x+2)(x-1)=0 \\Rightarrow x=-2$ atau $x=1$.</p>
-<p><strong>Kasus $u=6$:</strong> $x^2+x-6=0 \\Rightarrow (x+3)(x-2)=0 \\Rightarrow x=-3$ atau $x=2$.</p>
-<p>$\\boxed{x\\in\\{-3,\\;-2,\\;1,\\;2\\}}$</p>`,
+      { jawaban: `(a) $x_1=-1,\\; x_2=-\\tfrac{3}{2}$ &nbsp;|&nbsp; (b) $x_1=\\tfrac{4}{3},\\; x_2=2$ &nbsp;|&nbsp; (c) $x_1=\\tfrac{1}{2},\\; x_2=3$ &nbsp;|&nbsp; (d) $x_1=0,\\; x_2=-4$` },
+      { jawaban: `(a) $x_1=7,\\; x_2=3$ &nbsp;|&nbsp; (b) $x_{1,2}=-2\\pm\\sqrt{11}$ &nbsp;|&nbsp; (c) $x_{1,2}=\\dfrac{3\\pm\\sqrt{7}}{2}$` },
+      { jawaban: `(a) $x_{1,2}=\\dfrac{3\\pm\\sqrt{29}}{2}$ &nbsp;|&nbsp; (b) $x_{1,2}=\\dfrac{-5\\pm\\sqrt{37}}{6}$ &nbsp;|&nbsp; (c) $x_{1,2}=\\dfrac{-7\\pm\\sqrt{5}}{2}$` },
+      { jawaban: `(a) $x=7$ &nbsp;|&nbsp; (b) $x\\in\\{-1,\\;0,\\;3,\\;4\\}$` },
+      { jawaban: `$x\\in\\{-3,\\;-2,\\;1,\\;2\\}$` },
     ],
-    // Bagian C
+    // C — Diskriminan
     2: [
-      `<p><strong>(a)</strong> $D=25-24=1>0$ (kuadrat sempurna) → <strong>Dua akar real berbeda, rasional.</strong></p>
-<p><strong>(b)</strong> $D=16-20=-4<0$ → <strong>Tidak ada akar real (imajiner).</strong></p>
-<p><strong>(c)</strong> $D=144-144=0$ → <strong>Dua akar real sama (akar kembar).</strong></p>
-<p><strong>(d)</strong> $D=9-4=5>0$ (bukan kuadrat sempurna) → <strong>Dua akar real berbeda, irasional.</strong></p>`,
-      `<p>Syarat akar kembar: $D=0$ dan $k\\neq 0$.</p>
-<p>$(-4)^2-4k(1)=0 \\Rightarrow 16-4k=0 \\Rightarrow k=4$.</p>
-<p>Karena $k=4\\neq 0$, syarat PK terpenuhi. $\\boxed{k=4}$</p>`,
-      `<p>Syarat $D>0$: $(2m)^2-4(m+6)>0 \\Rightarrow 4m^2-4m-24>0 \\Rightarrow m^2-m-6>0 \\Rightarrow (m-3)(m+2)>0$.</p>
-<p>$\\boxed{m<-2 \\text{ atau } m>3}$</p>`,
-      `<p>Syarat $D\\geq 0$ dan $p\\neq -1$: $[-2(p-1)]^2-4(p+1)(p-2)\\geq 0$</p>
-<p>$4(p-1)^2-4(p^2-p-2)\\geq 0 \\Rightarrow -4p+12\\geq 0 \\Rightarrow p\\leq 3$.</p>
-<p>Digabung dengan $p\\neq -1$: $\\boxed{p\\leq 3,\\; p\\neq -1}$</p>`,
-      `<p><strong>Bukti:</strong> Hitung diskriminan: $D=[-(m+3)]^2-4(1)(3m)=(m+3)^2-12m=m^2-6m+9=(m-3)^2$.</p>
-<p>Karena $(m-3)^2\\geq 0$ untuk semua $m\\in\\mathbb{R}$, maka $D\\geq 0$ selalu, sehingga persamaan selalu memiliki akar real. $\\blacksquare$</p>`,
-      `<p>Hitung $D=(2k)^2-4(k^2-k+2)=4k^2-4k^2+4k-8=4k-8$.</p>
-<p><strong>(a)</strong> $D>0$: $4k-8>0 \\Rightarrow \\boxed{k>2}$</p>
-<p><strong>(b)</strong> $D<0$: $4k-8<0 \\Rightarrow \\boxed{k<2}$</p>`,
-      `<p><strong>Langkah 1 — Syarat akar real ($D\\geq 0$):</strong></p>
-<p>$(-2p)^2-4(p+6)\\geq 0 \\Rightarrow 4p^2-4p-24\\geq 0 \\Rightarrow (p-3)(p+2)\\geq 0$</p>
-<p>$\\boxed{p\\leq -2 \\text{ atau } p\\geq 3}$</p>
-<p><strong>Langkah 2 — Kedua akar positif:</strong> Syarat: $x_1+x_2=2p>0$ dan $x_1x_2=p+6>0$, yaitu $p>0$ dan $p>-6$.</p>
-<p>Iris dengan syarat akar real: $p\\geq 3$. Untuk $p\\geq 3$: $x_1+x_2\\geq 6>0$ dan $x_1x_2\\geq 9>0$. Terbukti. $\\blacksquare$</p>`,
-      `<p>Syarat: $D=0$ dan $k^2-4\\neq 0$ (yaitu $k\\neq\\pm 2$).</p>
-<p>$[2(k-2)]^2-4(k^2-4)(2)=0 \\Rightarrow 4k^2-16k+16-8k^2+32=0 \\Rightarrow -4k^2-16k+48=0$</p>
-<p>$k^2+4k-12=0 \\Rightarrow (k+6)(k-2)=0 \\Rightarrow k=-6$ atau $k=2$.</p>
-<p>Karena $k\\neq\\pm 2$, maka $k=2$ ditolak. $\\boxed{k=-6}$</p>`,
-      `<p>Syarat $D>0$: $(m+3)^2-4m>0 \\Rightarrow m^2+2m+9>0$.</p>
-<p>Diskriminan $m^2+2m+9$: $\\Delta=4-36=-32<0$ dan koefisien $m^2>0$, sehingga $m^2+2m+9>0$ untuk semua $m$.</p>
-<p>$\\boxed{\\text{Berlaku untuk semua } m\\in\\mathbb{R},\\; m\\neq 0}$</p>
-<p>Untuk $m=1$: $x^2-4x+1=0$, $D=12$. $x=2\\pm\\sqrt{3}$. Karena $\\sqrt{3}$ irasional, akar-akarnya tidak rasional. $\\blacksquare$</p>`,
-      `<p>Dari Vieta: $x_1+x_2=-b$, $x_1x_2=c$. Kondisi: $x_1^2+x_2^2=3x_1x_2$.</p>
-<p>$(x_1+x_2)^2-2x_1x_2=3x_1x_2 \\Rightarrow b^2-2c=3c \\Rightarrow b^2=5c$.</p>
-<p>Syarat $D\\geq 0$: $b^2-4c\\geq 0 \\Rightarrow 5c-4c\\geq 0 \\Rightarrow c\\geq 0$.</p>
-<p>$\\boxed{b^2=5c \\text{ dan } c\\geq 0}$</p>`,
+      { jawaban: `(a) $D=1>0$ (kuadrat sempurna) → dua akar real rasional &nbsp;|&nbsp; (b) $D=-4<0$ → imajiner &nbsp;|&nbsp; (c) $D=0$ → akar kembar &nbsp;|&nbsp; (d) $D=5>0$ → dua akar real irasional` },
+      { jawaban: `$k=4$` },
+      { jawaban: `$m<-2$ atau $m>3$` },
+      { jawaban: `$p\\leq 3,\\; p\\neq -1$` },
+      { jawaban: `$D=(m-3)^2\\geq 0$ untuk semua $m\\in\\mathbb{R}$ ✓` },
+      { jawaban: `(a) $k>2$ &nbsp;|&nbsp; (b) $k<2$` },
+      { jawaban: `$p\\leq -2$ atau $p\\geq 3$; kedua akar positif terbukti untuk $p\\geq 3$` },
+      { jawaban: `$k=-6$` },
+      { jawaban: `Berlaku untuk semua $m\\neq 0$; untuk $m=1$: $x=2\\pm\\sqrt{3}$ (irasional)` },
+      { jawaban: `$b^2=5c$ dan $c\\geq 0$` },
     ],
-    // Bagian D
+    // D — Rumus Vieta
     3: [
-      `<p>$x_1+x_2=8$, $x_1x_2=12$.</p>
-<p><strong>(a)</strong> $\\boxed{x_1+x_2=8}$ dan $\\boxed{x_1x_2=12}$</p>
-<p><strong>(b)</strong> $x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2=64-24=\\boxed{40}$</p>
-<p><strong>(c)</strong> $\\dfrac{1}{x_1}+\\dfrac{1}{x_2}=\\dfrac{8}{12}=\\boxed{\\dfrac{2}{3}}$</p>`,
-      `<p>$\\alpha+\\beta=3$, $\\alpha\\beta=\\tfrac{3}{2}$.</p>
-<p><strong>(a)</strong> $\\alpha\\beta(\\alpha+\\beta)=\\tfrac{3}{2}\\cdot 3=\\boxed{\\dfrac{9}{2}}$</p>
-<p><strong>(b)</strong> $(\\alpha+\\beta)^2-\\alpha\\beta=9-\\tfrac{3}{2}=\\boxed{\\dfrac{15}{2}}$</p>
-<p><strong>(c)</strong> $(\\alpha+\\beta)^2-4\\alpha\\beta=9-6=\\boxed{3}$</p>`,
-      `<p>$x_1=3m$, $x_2=m$. Dari Vieta: $x_1x_2=12 \\Rightarrow 3m^2=12 \\Rightarrow m=\\pm 2$.</p>
-<p>Jika $m=2$: $x_1=6$, $x_2=2$, $p=-(6+2)=-8$.</p>
-<p>Jika $m=-2$: $x_1=-6$, $x_2=-2$, $p=-(-6-2)=8$.</p>
-<p>$\\boxed{p=8 \\text{ atau } p=-8}$, dengan akar-akar $(6,2)$ atau $(-6,-2)$.</p>`,
-      `<p>$\\alpha+\\beta=-5$, $\\alpha\\beta=-2$. $\\alpha^2+\\beta^2=25+4=29$.</p>
-<p><strong>(i)</strong> $\\alpha^3+\\beta^3=(\\alpha+\\beta)(\\alpha^2-\\alpha\\beta+\\beta^2)=(-5)(29+2)=(-5)(31)=\\boxed{-155}$</p>
-<p><strong>(ii)</strong> $\\dfrac{\\alpha^2}{\\beta}+\\dfrac{\\beta^2}{\\alpha}=\\dfrac{\\alpha^3+\\beta^3}{\\alpha\\beta}=\\dfrac{-155}{-2}=\\boxed{\\dfrac{155}{2}}$</p>`,
-      `<p>Dari $\\alpha^2+\\beta^2=10$: $p^2-2q=10 \\Rightarrow q=\\dfrac{p^2-10}{2}$ ...(1)</p>
-<p>Dari $\\alpha^3+\\beta^3=28$: $p(10-q)=28$ ...(2)</p>
-<p>Substitusi (1) ke (2): $p(30-p^2)=56 \\Rightarrow p^3-30p+56=0$.</p>
-<p>Uji $p=4$: $64-120+56=0$ ✓. Maka $q=\\dfrac{16-10}{2}=3$.</p>
-<p>$\\boxed{p=4 \\text{ dan } q=3}$</p>`,
-      `<p>$x_1+x_2=-2$, $x_1x_2=-\\tfrac{2}{3}$. $x_1^2+x_2^2=4+\\tfrac{4}{3}=\\tfrac{16}{3}$.</p>
-<p><strong>(a)</strong> $\\dfrac{x_1^2+1}{x_2}+\\dfrac{x_2^2+1}{x_1}=\\dfrac{(x_1^3+x_2^3)+(x_1+x_2)}{x_1x_2}$</p>
-<p>$x_1^3+x_2^3=(-2)^3-3(-\\tfrac{2}{3})(-2)=-8-4=-12$</p>
-<p>$=\\dfrac{-12+(-2)}{-\\frac{2}{3}}=\\dfrac{-14}{-\\frac{2}{3}}=\\boxed{21}$</p>
-<p><strong>(b)</strong> $\\left(x_1-\\dfrac{1}{x_2}\\right)\\left(x_2-\\dfrac{1}{x_1}\\right)=x_1x_2-1-1+\\dfrac{1}{x_1x_2}=-\\tfrac{2}{3}-2-\\tfrac{3}{2}=-\\dfrac{4+12+9}{6}=\\boxed{-\\dfrac{25}{6}}$</p>`,
+      { jawaban: `(a) $x_1+x_2=8,\\; x_1x_2=12$ &nbsp;|&nbsp; (b) $x_1^2+x_2^2=40$ &nbsp;|&nbsp; (c) $\\dfrac{1}{x_1}+\\dfrac{1}{x_2}=\\dfrac{2}{3}$` },
+      { jawaban: `(a) $\\tfrac{9}{2}$ &nbsp;|&nbsp; (b) $\\tfrac{15}{2}$ &nbsp;|&nbsp; (c) $3$` },
+      { jawaban: `$p=\\pm 8$; akar-akar $(6,2)$ atau $(-6,-2)$` },
+      { jawaban: `$\\alpha^3+\\beta^3=-155$; $\\dfrac{\\alpha^2}{\\beta}+\\dfrac{\\beta^2}{\\alpha}=\\dfrac{155}{2}$` },
+      { jawaban: `$p=4,\\; q=3$` },
+      { jawaban: `(a) $21$ &nbsp;|&nbsp; (b) $-\\dfrac{25}{6}$` },
     ],
-    // Bagian E
+    // E — Menyusun PK Baru
     4: [
-      `<p><strong>(a)</strong> $x_1=2$, $x_2=7$: $x^2-9x+14=0$. $\\boxed{x^2-9x+14=0}$</p>
-<p><strong>(b)</strong> $x_1=-5$, $x_2=3$: $x^2+2x-15=0$. $\\boxed{x^2+2x-15=0}$</p>
-<p><strong>(c)</strong> $x_1+x_2=4$, $x_1x_2=(2+\\sqrt{3})(2-\\sqrt{3})=1$. $\\boxed{x^2-4x+1=0}$</p>`,
-      `<p>$x_1+x_2=4$, $x_1x_2=1$.</p>
-<p><strong>(a)</strong> Jumlah $=4+6=10$, hasil kali $=1+12+9=22$. $\\boxed{x^2-10x+22=0}$</p>
-<p><strong>(b)</strong> Jumlah $=2(4)=8$, hasil kali $=4(1)=4$. $\\boxed{x^2-8x+4=0}$</p>
-<p><strong>(c)</strong> Jumlah $=\\dfrac{4}{1}=4$, hasil kali $=\\dfrac{1}{1}=1$. $\\boxed{x^2-4x+1=0}$ <em>(sama dengan asal, karena $x_1x_2=1$)</em></p>`,
-      `<p>$x_1+x_2=-7$, $x_1x_2=10$. Akar baru $\\alpha=x_1-2$, $\\beta=x_2-2$.</p>
-<p>$\\alpha+\\beta=-7-4=-11$. $\\alpha\\beta=10-2(-7)+4=28$.</p>
-<p>$\\boxed{x^2+11x+28=0}$</p>`,
-      `<p>$\\alpha+\\beta=\\tfrac{2}{3}$, $\\alpha\\beta=-\\tfrac{1}{3}$. $\\alpha^2+\\beta^2=\\tfrac{4}{9}+\\tfrac{2}{3}=\\tfrac{10}{9}$.</p>
-<p>Jumlah akar baru $=\\tfrac{10}{9}+\\tfrac{2}{3}=\\tfrac{16}{9}$.</p>
-<p>Hasil kali: $\\alpha^3+\\beta^3=\\tfrac{8}{27}+\\tfrac{2}{9}=\\tfrac{14}{27}$. $(\\alpha^2+\\beta)(\\beta^2+\\alpha)=\\tfrac{1}{9}+\\tfrac{14}{27}-\\tfrac{1}{3}=\\tfrac{8}{27}$.</p>
-<p>PK baru $\\times 27$: $\\boxed{27x^2-48x+8=0}$</p>`,
-      `<p>$\\alpha+\\beta=3$, $\\alpha\\beta=5$. $\\alpha^2+\\beta^2=9-10=-1$.</p>
-<p>Jumlah akar baru: $S=\\dfrac{(\\alpha^2-1)+(\\beta^2-1)}{\\alpha\\beta-(\\alpha+\\beta)+1}=\\dfrac{-1-2}{5-3+1}=\\dfrac{-3}{3}=-1$.</p>
-<p>Hasil kali: $P=\\dfrac{(\\alpha+1)(\\beta+1)}{(\\alpha-1)(\\beta-1)}=\\dfrac{5+3+1}{5-3+1}=\\dfrac{9}{3}=3$.</p>
-<p>$\\boxed{x^2+x+3=0}$</p>`,
+      { jawaban: `(a) $x^2-9x+14=0$ &nbsp;|&nbsp; (b) $x^2+2x-15=0$ &nbsp;|&nbsp; (c) $x^2-4x+1=0$` },
+      { jawaban: `(a) $x^2-10x+22=0$ &nbsp;|&nbsp; (b) $x^2-8x+4=0$ &nbsp;|&nbsp; (c) $x^2-4x+1=0$` },
+      { jawaban: `$x^2+11x+28=0$` },
+      { jawaban: `$27x^2-48x+8=0$` },
+      { jawaban: `$x^2+x+3=0$` },
     ],
-    // Bagian F
+    // F — Kapita Selekta
     5: [
-      `<p>Misal lebar $=x$ m, panjang $=(x+5)$ m. $x(x+5)=84 \\Rightarrow x^2+5x-84=0 \\Rightarrow (x+12)(x-7)=0$.</p>
-<p>$x=7$ (positif). Verifikasi: $7\\times 12=84$ ✓. $\\boxed{\\text{Lebar}=7\\text{ m},\\;\\text{panjang}=12\\text{ m}}$</p>`,
-      `<p>Misal umur adik $=x$, Budi $=2x$. Dua tahun lalu: $(2x-2)(x-2)=24$.</p>
-<p>$2x^2-6x-20=0 \\Rightarrow x^2-3x-10=0 \\Rightarrow (x-5)(x+2)=0 \\Rightarrow x=5$.</p>
-<p>Verifikasi: $(8)(3)=24$ ✓. $\\boxed{\\text{Adik}=5\\text{ tahun},\\;\\text{Budi}=10\\text{ tahun}}$</p>`,
-      `<p>$x+y=14 \\Rightarrow y=14-x$. $x^2+(14-x)^2=100 \\Rightarrow 2x^2-28x+96=0 \\Rightarrow x^2-14x+48=0$.</p>
-<p>$(x-6)(x-8)=0 \\Rightarrow x=6$ atau $x=8$. Verifikasi: $6+8=14$ ✓, $36+64=100$ ✓.</p>
-<p>$\\boxed{\\text{Kedua bilangan adalah }6\\text{ dan }8}$</p>`,
-      `<p>Isolasi: $\\sqrt{x+5}=3-\\sqrt{2x+3}$. Kuadratkan: $x+5=9-6\\sqrt{2x+3}+(2x+3)$.</p>
-<p>$6\\sqrt{2x+3}=x+7$. Kuadratkan lagi: $36(2x+3)=(x+7)^2 \\Rightarrow x^2-58x-59=0 \\Rightarrow (x-59)(x+1)=0$.</p>
-<p>Uji $x=59$: $\\sqrt{64}+\\sqrt{121}=8+11=19\\neq 3$ ✗.<br>Uji $x=-1$: $\\sqrt{4}+\\sqrt{1}=2+1=3$ ✓.</p>
-<p>$\\boxed{x=-1}$</p>`,
-      `<p>$x_1^2-x_2^2=(x_1+x_2)(x_1-x_2)=3$ dan $x_1-x_2=1$, sehingga $x_1+x_2=3$.</p>
-<p>$\\dfrac{x_1+x_2}{x_1-x_2}=\\dfrac{3}{1}=\\boxed{3}$</p>
-<p>Dari $x_1+x_2=3$, $x_1-x_2=1$: $x_1=2$, $x_2=1$. $x_1x_2=2$.</p>
-<p>PK: $\\boxed{x^2-3x+2=0}$. Verifikasi: $(x-2)(x-1)=0$ ✓.</p>`,
+      { jawaban: `Lebar $=7$ m, panjang $=12$ m` },
+      { jawaban: `Adik $=5$ tahun, Budi $=10$ tahun` },
+      { jawaban: `$6$ dan $8$` },
+      { jawaban: `$x=-1$` },
+      { jawaban: `$\\dfrac{x_1+x_2}{x_1-x_2}=3$; PK: $x^2-3x+2=0$` },
     ],
   };
+
 
   let latihanIdx = 0;
   document.querySelectorAll(".box.box-latihan").forEach(box => {
@@ -1342,7 +1248,8 @@ $\\boxed{a=1,\\; b=-1,\\; c=-11}$</p>
     const newList = document.createElement("div");
     newList.className = "soal-list-accordion";
     items.forEach((li, i) => {
-      const jawaban = answers[i] || "";
+      const ans = answers[i] || {};
+      const jawaban = ans.jawaban || "";
       const item = document.createElement("div");
       item.className = "soal-item";
       item.innerHTML = `
