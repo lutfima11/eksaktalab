@@ -20,11 +20,16 @@
      maka root = "../../"
      Halaman di root (index.html) → root = "./"           */
   function getRootPath() {
-    const depth = window.location.pathname
+    const parts = window.location.pathname
       .replace(/\/$/, '/index.html')
       .split('/')
-      .filter(Boolean).length - 1;
-    return depth > 0 ? '../'.repeat(depth) : './';
+      .filter(Boolean);
+    parts.pop(); // hapus nama file
+    // Di GitHub Pages (*.github.io), segmen pertama adalah nama repo — skip
+    const base = window.location.hostname.endsWith('.github.io')
+      ? parts.slice(1)
+      : parts;
+    return base.length > 0 ? '../'.repeat(base.length) : './';
   }
 
   const root = getRootPath();
