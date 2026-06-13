@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id" data-theme="light">
 <head>
+<script src="../../assets/js/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Persamaan Kuadrat – EksaktaLab</title>
@@ -1073,13 +1074,7 @@ window.addEventListener("scroll", () => {
 });
 
 // ── Theme ──
-function toggleTheme() {
-  const html = document.documentElement;
-  const btn  = document.getElementById("themeBtn");
-  const dark = html.getAttribute("data-theme") === "dark";
-  html.setAttribute("data-theme", dark ? "light" : "dark");
-  btn.textContent = dark ? "🌙 Gelap" : "☀️ Terang";
-}
+
 
 // ── TOC ──
 function toggleTOC() { document.getElementById("tocDropdown").classList.toggle("open"); }
