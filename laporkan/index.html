@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laporkan Kesalahan — EksaktaLab</title>
+<meta name="description" content="Temukan kesalahan di EksaktaLab? Bantu kami memperbaikinya dengan melaporkannya di sini.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/footer.css">
+<style>
+:root {
+  --navy:      #0A0F1E;
+  --navy-mid:  #141929;
+  --navy-soft: #1E2640;
+  --teal:      #00BFA5;
+  --teal-dim:  #009E87;
+  --yellow:    #FFF8E1;
+  --yellow-b:  #F59E0B;
+  --red:       #FEF2F2;
+  --red-b:     #EF4444;
+  --surface:   #FFFFFF;
+  --surface-2: #F0F4FF;
+  --surface-3: #E8EEFF;
+  --text:      #0A0F1E;
+  --text-2:    #3D4A6B;
+  --text-3:    #7B8BB2;
+  --border:    #D8E0F5;
+  --radius-sm: 8px;
+  --radius:    12px;
+  --radius-lg: 18px;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Inter', system-ui, sans-serif;
+  --display: 'Space Grotesk', system-ui, sans-serif;
+}
+[data-theme="dark"] {
+  --surface:   #0A0F1E;
+  --surface-2: #141929;
+  --surface-3: #1E2640;
+  --text:      #EEF1FF;
+  --text-2:    #A8B4D8;
+  --text-3:    #5C6A8C;
+  --border:    #263050;
+  --yellow:    #1C1A0A;
+  --yellow-b:  #D97706;
+  --red:       #1C0A0A;
+  --red-b:     #F87171;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--surface);color:var(--text);min-height:100vh;transition:background .25s,color .25s;}
+
+/* NAVBAR */
+.navbar{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border);padding:0 2rem;height:60px;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;flex-shrink:0;}
+.nav-logo-icon{width:36px;height:36px;border-radius:9px;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.nav-logo-icon svg{width:18px;height:18px;}
+.nav-logo-text{display:flex;flex-direction:column;gap:0.05rem;line-height:1;}
+.nav-logo-name{font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--text);letter-spacing:-0.02em;}
+.nav-logo-name em{font-style:normal;color:var(--teal);}
+.nav-logo-tag{font-family:var(--mono);font-size:0.5rem;font-weight:500;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0;}
+.nav-btn{font-family:var(--sans);font-size:0.75rem;font-weight:600;color:var(--text-2);background:var(--surface-2);border:1px solid var(--border);padding:0.35rem 0.8rem;border-radius:8px;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;}
+.nav-btn:hover{border-color:var(--teal);color:var(--teal);}
+
+/* HERO */
+.page-hero{background:var(--navy);padding:4rem 2rem 3.5rem;text-align:center;position:relative;overflow:hidden;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,191,165,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,191,165,.07) 1px,transparent 1px);background-size:40px 40px;background-position:center center;}
+.hero-grid::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,191,165,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(0,191,165,.22) 1px,transparent 1px);background-size:200px 200px;background-position:center center;}
+.hero-grid::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 50%,transparent 40%,var(--navy) 100%);z-index:1;}
+.hero-content{position:relative;z-index:2;max-width:680px;margin:0 auto;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.72rem;font-weight:500;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;background:rgba(0,191,165,.1);border:1px solid rgba(0,191,165,.25);padding:0.3rem 0.75rem;border-radius:8px;margin-bottom:1.25rem;}
+.hero-title{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.1;color:#fff;letter-spacing:-0.03em;margin-bottom:1rem;}
+.hero-title em{font-style:normal;color:var(--teal);}
+.hero-sub{font-size:1rem;line-height:1.65;color:#8FA8C8;max-width:480px;margin:0 auto;}
+
+/* CONTENT */
+.page-wrap{max-width:780px;margin:0 auto;padding:3.5rem 2rem;}
+
+.section-label{font-family:var(--mono);font-size:0.7rem;font-weight:500;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;margin-bottom:0.6rem;}
+.section-title{font-family:var(--display);font-size:1.4rem;font-weight:700;color:var(--text);letter-spacing:-0.02em;margin-bottom:0.75rem;}
+.section-desc{font-size:0.9rem;line-height:1.75;color:var(--text-2);margin-bottom:1.5rem;}
+
+/* Info banner */
+.info-banner{
+  display:flex;gap:0.85rem;align-items:flex-start;
+  background:var(--yellow);border:1px solid var(--yellow-b);
+  border-radius:var(--radius);padding:1rem 1.25rem;
+  margin-bottom:2rem;
+}
+[data-theme="dark"] .info-banner{background:rgba(245,158,11,.08);}
+.info-banner-icon{font-size:1.2rem;flex-shrink:0;margin-top:1px;}
+.info-banner p{font-size:0.85rem;line-height:1.65;color:var(--text-2);}
+.info-banner strong{color:var(--text);}
+
+/* Form */
+.form-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form-group{margin-bottom:1.1rem;}
+.form-label{display:block;font-size:0.8rem;font-weight:600;color:var(--text-2);margin-bottom:0.4rem;letter-spacing:.01em;}
+.form-label .required{color:var(--red-b);margin-left:2px;}
+.form-input,.form-textarea,.form-select{
+  width:100%;font-family:var(--sans);font-size:0.875rem;
+  color:var(--text);background:var(--surface);
+  border:1px solid var(--border);border-radius:var(--radius-sm);
+  padding:0.6rem 0.85rem;outline:none;
+  transition:border-color .2s,box-shadow .2s;
+}
+.form-input:focus,.form-textarea:focus,.form-select:focus{
+  border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,191,165,.1);
+}
+.form-textarea{resize:vertical;min-height:110px;line-height:1.6;}
+.form-select{
+  cursor:pointer;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2300BFA5' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 0.75rem center;
+}
+.form-hint{font-size:0.75rem;color:var(--text-3);margin-top:0.3rem;}
+
+/* Jenis kesalahan chips */
+.error-types{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.5rem;}
+.error-chip{
+  font-family:var(--mono);font-size:0.72rem;font-weight:500;
+  background:var(--surface);border:1px solid var(--border);
+  color:var(--text-2);padding:0.3rem 0.75rem;border-radius:20px;
+  cursor:pointer;transition:all .15s;user-select:none;
+}
+.error-chip:hover,.error-chip.active{background:rgba(0,191,165,.1);border-color:var(--teal);color:var(--teal);}
+
+.divider{border:none;border-top:1px solid var(--border);margin:1.5rem 0;}
+
+.btn-submit{
+  width:100%;font-family:var(--sans);font-size:0.875rem;font-weight:600;
+  background:var(--teal);color:#fff;
+  padding:0.75rem;border-radius:var(--radius-sm);border:none;
+  cursor:pointer;transition:background .2s,transform .15s;
+}
+.btn-submit:hover{background:var(--teal-dim);transform:translateY(-1px);}
+.btn-submit:disabled{background:var(--text-3);cursor:not-allowed;transform:none;}
+
+/* Success */
+.form-success{display:none;text-align:center;padding:3rem 1.5rem;}
+.success-icon{font-size:3rem;margin-bottom:1rem;}
+.form-success h3{font-family:var(--display);font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;}
+.form-success p{font-size:0.875rem;color:var(--text-2);line-height:1.65;margin-bottom:1.25rem;}
+.btn-back{font-family:var(--sans);font-size:0.8rem;font-weight:600;color:var(--teal);background:rgba(0,191,165,.1);border:1px solid rgba(0,191,165,.25);padding:0.5rem 1.25rem;border-radius:var(--radius-sm);cursor:pointer;transition:background .2s;}
+.btn-back:hover{background:rgba(0,191,165,.18);}
+
+/* Responsive */
+@media(max-width:768px){
+  .navbar{padding:0 1rem;}
+  .page-hero{padding:3rem 1.25rem 2.5rem;}
+  .page-wrap{padding:2.5rem 1.25rem;}
+  .form-row{grid-template-columns:1fr;}
+  .form-card{padding:1.5rem;}
+}
+@media(max-width:500px){
+  .nav-logo-tag{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <a class="nav-logo" href="../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <a class="nav-btn" href="../">← Beranda</a>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Laporkan Kesalahan</div>
+    <h1 class="hero-title">Bantu Kami Jadi<br>Lebih <em>Akurat</em></h1>
+    <p class="hero-sub">Temukan typo, rumus salah, atau soal yang keliru? Laporan kamu sangat berarti bagi ribuan siswa lain.</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<main class="page-wrap">
+
+  <div class="info-banner">
+    <div class="info-banner-icon">💡</div>
+    <p><strong>Setiap laporan ditinjau langsung oleh tim.</strong> Kami akan memverifikasi dan memperbaiki kesalahan secepat mungkin. Terima kasih sudah membantu menjaga kualitas EksaktaLab!</p>
+  </div>
+
+  <div class="section-label">Form Laporan</div>
+  <div class="section-title">Detail Kesalahan</div>
+  <div class="section-desc">Semakin detail laporanmu, semakin cepat kami bisa memperbaikinya.</div>
+
+  <div class="form-card">
+    <form id="reportForm" onsubmit="handleSubmit(event)">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="nama">Nama <span class="required">*</span></label>
+          <input class="form-input" type="text" id="nama" placeholder="Nama kamu" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" placeholder="(opsional)">
+          <div class="form-hint">Untuk notifikasi saat laporan diperbaiki</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="halaman">Halaman / Topik <span class="required">*</span></label>
+        <input class="form-input" type="text" id="halaman" placeholder="Contoh: Fungsi Kuadrat, Eksponen, Latihan Soal..." required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Jenis Kesalahan <span class="required">*</span></label>
+        <div class="error-types" id="errorTypes">
+          <div class="error-chip" onclick="toggleChip(this)">Typo / Ejaan</div>
+          <div class="error-chip" onclick="toggleChip(this)">Rumus Salah</div>
+          <div class="error-chip" onclick="toggleChip(this)">Jawaban Keliru</div>
+          <div class="error-chip" onclick="toggleChip(this)">Gambar / Grafik</div>
+          <div class="error-chip" onclick="toggleChip(this)">Langkah Penyelesaian</div>
+          <div class="error-chip" onclick="toggleChip(this)">Link Rusak</div>
+          <div class="error-chip" onclick="toggleChip(this)">Lainnya</div>
+        </div>
+        <input type="hidden" id="jenisKesalahan">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="deskripsi">Deskripsi Kesalahan <span class="required">*</span></label>
+        <textarea class="form-textarea" id="deskripsi" placeholder="Jelaskan kesalahan yang kamu temukan. Sertakan teks asli dan yang seharusnya benar jika memungkinkan..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="koreksi">Koreksi yang Benar (opsional)</label>
+        <textarea class="form-textarea" id="koreksi" placeholder="Tuliskan versi yang menurutmu benar..." style="min-height:80px;"></textarea>
+      </div>
+
+      <div class="divider"></div>
+
+      <button class="btn-submit" type="submit" id="submitBtn">Kirim Laporan →</button>
+    </form>
+
+    <div class="form-success" id="formSuccess">
+      <div class="success-icon">🙏</div>
+      <h3>Laporan Diterima!</h3>
+      <p>Terima kasih sudah membantu meningkatkan kualitas EksaktaLab. Tim kami akan segera meninjau laporanmu.</p>
+      <button class="btn-back" onclick="resetForm()">Kirim Laporan Lain</button>
+    </div>
+  </div>
+
+</main>
+
+<div id="eksaktalab-footer"></div>
+<script src="../assets/js/footer.js"></script>
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const btn = document.getElementById('themeBtn');
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  btn.textContent = isDark ? '🌙 Gelap' : '☀️ Terang';
+}
+
+function toggleChip(el) {
+  el.classList.toggle('active');
+  const selected = [...document.querySelectorAll('.error-chip.active')].map(c => c.textContent);
+  document.getElementById('jenisKesalahan').value = selected.join(', ');
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('reportForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+
+function resetForm() {
+  document.getElementById('reportForm').reset();
+  document.querySelectorAll('.error-chip').forEach(c => c.classList.remove('active'));
+  document.getElementById('jenisKesalahan').value = '';
+  document.getElementById('reportForm').style.display = 'block';
+  document.getElementById('formSuccess').style.display = 'none';
+}
+</script>
+</body>
+</html>

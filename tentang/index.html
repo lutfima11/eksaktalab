@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tentang Kami — EksaktaLab</title>
+<meta name="description" content="Pelajari lebih lanjut tentang EksaktaLab, platform belajar matematika SMA gratis untuk semua siswa Indonesia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/footer.css">
+<style>
+/* ── TOKENS ──────────────────────────────────────────── */
+:root {
+  --navy:      #0A0F1E;
+  --navy-mid:  #141929;
+  --navy-soft: #1E2640;
+  --teal:      #00BFA5;
+  --teal-dim:  #009E87;
+  --surface:   #FFFFFF;
+  --surface-2: #F0F4FF;
+  --surface-3: #E8EEFF;
+  --text:      #0A0F1E;
+  --text-2:    #3D4A6B;
+  --text-3:    #7B8BB2;
+  --border:    #D8E0F5;
+  --radius-sm: 8px;
+  --radius:    12px;
+  --radius-lg: 18px;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Inter', system-ui, sans-serif;
+  --display: 'Space Grotesk', system-ui, sans-serif;
+}
+[data-theme="dark"] {
+  --surface:   #0A0F1E;
+  --surface-2: #141929;
+  --surface-3: #1E2640;
+  --text:      #EEF1FF;
+  --text-2:    #A8B4D8;
+  --text-3:    #5C6A8C;
+  --border:    #263050;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--surface);color:var(--text);min-height:100vh;transition:background .25s,color .25s;}
+
+/* ── NAVBAR ── */
+.navbar{
+  position:sticky;top:0;z-index:50;
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  padding:0 2rem;height:60px;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;flex-shrink:0;}
+.nav-logo-icon{width:36px;height:36px;border-radius:9px;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.nav-logo-icon svg{width:18px;height:18px;}
+.nav-logo-text{display:flex;flex-direction:column;gap:0.05rem;line-height:1;}
+.nav-logo-name{font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--text);letter-spacing:-0.02em;}
+.nav-logo-name em{font-style:normal;color:var(--teal);}
+.nav-logo-tag{font-family:var(--mono);font-size:0.5rem;font-weight:500;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0;}
+.nav-btn{
+  font-family:var(--sans);font-size:0.75rem;font-weight:600;
+  color:var(--text-2);background:var(--surface-2);
+  border:1px solid var(--border);
+  padding:0.35rem 0.8rem;border-radius:8px;
+  cursor:pointer;transition:all .2s;text-decoration:none;
+  display:inline-flex;align-items:center;gap:0.4rem;
+}
+.nav-btn:hover{border-color:var(--teal);color:var(--teal);}
+
+/* ── HERO ── */
+.page-hero{
+  background:var(--navy);
+  padding:4rem 2rem 3.5rem;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.hero-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(0,191,165,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,191,165,.07) 1px,transparent 1px);
+  background-size:40px 40px;background-position:center center;}
+.hero-grid::after{content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(0,191,165,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(0,191,165,.22) 1px,transparent 1px);
+  background-size:200px 200px;background-position:center center;}
+.hero-grid::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 80% at 50% 50%,transparent 40%,var(--navy) 100%);z-index:1;}
+.hero-content{position:relative;z-index:2;max-width:680px;margin:0 auto;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  font-family:var(--mono);font-size:0.72rem;font-weight:500;
+  color:var(--teal);letter-spacing:.12em;text-transform:uppercase;
+  background:rgba(0,191,165,.1);border:1px solid rgba(0,191,165,.25);
+  padding:0.3rem 0.75rem;border-radius:8px;margin-bottom:1.25rem;
+}
+.hero-title{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.1;color:#fff;letter-spacing:-0.03em;margin-bottom:1rem;}
+.hero-title em{font-style:normal;color:var(--teal);}
+.hero-sub{font-size:1rem;line-height:1.65;color:#8FA8C8;max-width:480px;margin:0 auto;}
+
+/* ── CONTENT ── */
+.page-wrap{max-width:860px;margin:0 auto;padding:3.5rem 2rem;}
+
+.section{margin-bottom:3rem;}
+.section-label{
+  font-family:var(--mono);font-size:0.7rem;font-weight:500;
+  color:var(--teal);letter-spacing:.12em;text-transform:uppercase;
+  margin-bottom:0.6rem;
+}
+.section h2{
+  font-family:var(--display);font-size:1.5rem;font-weight:700;
+  color:var(--text);letter-spacing:-0.02em;margin-bottom:1rem;
+}
+.section p{font-size:0.95rem;line-height:1.75;color:var(--text-2);margin-bottom:0.85rem;}
+
+/* Value cards */
+.value-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-top:1.5rem;}
+.value-card{
+  background:var(--surface-2);border:1px solid var(--border);
+  border-radius:var(--radius);padding:1.25rem;
+  transition:border-color .2s,transform .2s;
+}
+.value-card:hover{border-color:var(--teal);transform:translateY(-2px);}
+.value-icon{font-size:1.6rem;margin-bottom:0.65rem;}
+.value-title{font-family:var(--display);font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:0.35rem;}
+.value-desc{font-size:0.85rem;line-height:1.65;color:var(--text-2);}
+
+/* Team */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1.25rem;margin-top:1.5rem;}
+.team-card{
+  background:var(--surface-2);border:1px solid var(--border);
+  border-radius:var(--radius);padding:1.5rem 1rem;
+  text-align:center;
+  transition:border-color .2s,transform .2s;
+}
+.team-card:hover{border-color:var(--teal);transform:translateY(-2px);}
+.team-avatar{
+  width:56px;height:56px;border-radius:50%;
+  background:linear-gradient(135deg,var(--teal),#0066cc);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-size:1.2rem;font-weight:700;color:#fff;
+  margin:0 auto 0.75rem;
+}
+.team-name{font-family:var(--display);font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:0.2rem;}
+.team-role{font-size:0.78rem;color:var(--text-3);}
+
+/* Stats */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;}
+.stat-box{
+  background:var(--surface-2);border:1px solid var(--border);
+  border-radius:var(--radius);padding:1.25rem;text-align:center;
+  transition:border-color .2s;
+}
+.stat-box:hover{border-color:var(--teal);}
+.stat-big{font-family:var(--display);font-size:2rem;font-weight:700;color:var(--teal);letter-spacing:-0.03em;}
+.stat-lbl{font-size:0.78rem;color:var(--text-3);margin-top:0.2rem;text-transform:uppercase;letter-spacing:.05em;}
+
+/* Divider */
+.divider{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .navbar{padding:0 1rem;}
+  .page-hero{padding:3rem 1.25rem 2.5rem;}
+  .page-wrap{padding:2.5rem 1.25rem;}
+  .stat-row{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:500px){
+  .nav-logo-tag{display:none;}
+  .stat-row{grid-template-columns:1fr 1fr;}
+  .stat-row .stat-box:last-child{grid-column:1/-1;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <a class="nav-logo" href="../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <a class="nav-btn" href="../">← Beranda</a>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Tentang EksaktaLab</div>
+    <h1 class="hero-title">Belajar Matematika<br>Harusnya <em>Gratis</em></h1>
+    <p class="hero-sub">Kami percaya setiap siswa Indonesia berhak mendapatkan materi belajar berkualitas tanpa biaya apapun.</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<main class="page-wrap">
+
+  <!-- Misi -->
+  <section class="section">
+    <div class="section-label">Misi Kami</div>
+    <h2>Kenapa EksaktaLab Ada?</h2>
+    <p>EksaktaLab lahir dari keyakinan sederhana: akses ke pendidikan berkualitas tidak seharusnya dibatasi oleh biaya. Kami membangun platform belajar matematika SMA yang lengkap, terstruktur, dan sepenuhnya gratis — untuk semua siswa Indonesia, dari Sabang sampai Merauke.</p>
+    <p>Mulai dari materi belajar mandiri, latihan soal, hingga persiapan TKA dan UTBK — semua tersedia tanpa perlu mendaftar atau membayar.</p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Stats -->
+  <section class="section">
+    <div class="section-label">Dalam Angka</div>
+    <h2>EksaktaLab Hari Ini</h2>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-big">37<span style="color:var(--teal)">+</span></div><div class="stat-lbl">Topik Materi</div></div>
+      <div class="stat-box"><div class="stat-big">100<span style="color:var(--teal)">%</span></div><div class="stat-lbl">Gratis</div></div>
+      <div class="stat-box"><div class="stat-big">SMA</div><div class="stat-lbl">Jenjang</div></div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Nilai -->
+  <section class="section">
+    <div class="section-label">Nilai Kami</div>
+    <h2>Yang Kami Pegang Teguh</h2>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="value-icon">📖</div>
+        <div class="value-title">Akses Terbuka</div>
+        <div class="value-desc">Semua konten bebas diakses siapa pun, tanpa perlu akun atau pembayaran.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🎯</div>
+        <div class="value-title">Kurikulum Nasional</div>
+        <div class="value-desc">Materi disusun sesuai kurikulum Merdeka dan SNBT untuk relevansi maksimal.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔬</div>
+        <div class="value-title">Berbasis Pemahaman</div>
+        <div class="value-desc">Bukan menghafal rumus — kami fokus pada pemahaman konsep yang mendalam.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <div class="value-title">Terus Berkembang</div>
+        <div class="value-desc">Konten diperbarui secara rutin mengikuti perkembangan kurikulum dan kebutuhan siswa.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Tim -->
+  <section class="section">
+    <div class="section-label">Tim</div>
+    <h2>Di Balik EksaktaLab</h2>
+    <p>EksaktaLab dibangun oleh tim kecil yang bersemangat meningkatkan kualitas pendidikan matematika di Indonesia.</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">L</div>
+        <div class="team-name">Lutfi</div>
+        <div class="team-role">Founder & Pengembang</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="eksaktalab-footer"></div>
+<script src="../assets/js/footer.js"></script>
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const btn = document.getElementById('themeBtn');
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  btn.textContent = isDark ? '🌙 Gelap' : '☀️ Terang';
+}
+</script>
+</body>
+</html>
