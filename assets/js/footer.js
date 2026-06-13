@@ -36,11 +36,11 @@
     {
       title: 'Belajar',
       links: [
-        { label: 'Belajar Mandiri',  href: '#' },
-        { label: 'Worksheet',        href: '#' },
-        { label: 'Latihan Soal',     href: '#' },
-        { label: 'Kapita Selekta',   href: '#' },
-        { label: 'TKA dan UTBK',     href: '#' },
+        { label: 'Belajar Mandiri',  href: 'index.html#materi' },
+        { label: 'Worksheet',        href: 'index.html#worksheet' },
+        { label: 'Latihan Soal',     href: 'index.html#latihan' },
+        { label: 'Kapita Selekta',   href: 'index.html#kapita' },
+        { label: 'TKA dan UTBK',     href: 'index.html#video' },
       ],
     },
     {
@@ -109,7 +109,6 @@
       &copy; ${new Date().getFullYear()} <strong>EksaktaLab</strong>
       &mdash; Gratis untuk semua siswa Indonesia
     </div>
-    <div class="footer-open-access">EKSAKTALAB &middot; OPEN ACCESS</div>
   </div>
 </footer>`;
   }
