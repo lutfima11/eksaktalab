@@ -221,8 +221,12 @@ body{
   display:flex;flex-direction:column;align-items:center;
   padding:1rem 2.5rem;
   border-right:1px solid var(--border);
+  transition:background .2s,transform .2s;
+  cursor:default;
 }
 .stat-item:last-child{border-right:none;}
+.stat-item:hover{background:var(--surface);transform:translateY(-2px);}
+.stat-item:hover .stat-num{color:var(--teal);}
 .stat-num{
   font-family:var(--display);font-size:1.5rem;font-weight:700;
   color:var(--text);letter-spacing:-0.03em;
