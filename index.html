@@ -1018,8 +1018,12 @@ function switchViewSelect(name) {
 // Buka view sesuai hash URL (misal: index.html#worksheet)
 (function () {
   const valid = ['materi','worksheet','latihan','kapita','video'];
-  const hash = window.location.hash.replace('#','');
-  if (valid.includes(hash)) switchView(hash, null, false);
+  function openFromHash() {
+    const hash = window.location.hash.replace('#','');
+    if (valid.includes(hash)) switchView(hash, null, false);
+  }
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
 })();
 
 function toast(msg) {
