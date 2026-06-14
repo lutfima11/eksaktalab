@@ -309,197 +309,179 @@ window.MathJax = {
 
     <p>Berikut ilustrasi parabola dengan $a > 0$ (kiri) dan $a < 0$ (kanan):</p>
 
-    <!-- SVG side-by-side parabolas: a>0 minimum & a<0 maximum -->
-    <div class="grafik-row" style="grid-template-columns:repeat(2,1fr);">
-      <!-- KIRI: a>0 (minimum). f(x) = (x-1)^2 - 2. xmin=-2,xmax=4,ymin=-3,ymax=5; W=280,H=240 -->
-      <svg viewBox="0 0 280 270" xmlns="http://www.w3.org/2000/svg">
-        <defs><marker id="bA1" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="#555"/></marker></defs>
-        <!-- gridlines -->
-        <g stroke="#e2e8f0" stroke-width="0.7">
-          <line x1="14" y1="0" x2="14" y2="240"/><line x1="47" y1="0" x2="47" y2="240"/><line x1="80" y1="0" x2="80" y2="240"/><line x1="140" y1="0" x2="140" y2="240"/><line x1="173" y1="0" x2="173" y2="240"/><line x1="206" y1="0" x2="206" y2="240"/><line x1="239" y1="0" x2="239" y2="240"/><line x1="272" y1="0" x2="272" y2="240"/>
-          <line x1="0" y1="0" x2="280" y2="0"/><line x1="0" y1="30" x2="280" y2="30"/><line x1="0" y1="60" x2="280" y2="60"/><line x1="0" y1="90" x2="280" y2="90"/><line x1="0" y1="120" x2="280" y2="120"/><line x1="0" y1="180" x2="280" y2="180"/><line x1="0" y1="210" x2="280" y2="210"/><line x1="0" y1="240" x2="280" y2="240"/>
-        </g>
-        <!-- axes -->
-        <line x1="0" y1="150" x2="278" y2="150" stroke="#555" stroke-width="1.6" marker-end="url(#bA1)"/>
-        <line x1="93.3" y1="240" x2="93.3" y2="2" stroke="#555" stroke-width="1.6" marker-end="url(#bA1)"/>
-        <text x="271" y="162" font-size="10" fill="#555">x</text>
-        <text x="85" y="10" font-size="10" fill="#555">y</text>
-        <text x="86" y="162" font-size="9" fill="#777">O</text>
-        <!-- ticks -->
-        <text x="14" y="162" font-size="8" fill="#777" text-anchor="middle">-2</text>
-        <text x="47" y="162" font-size="8" fill="#777" text-anchor="middle">-1</text>
-        <text x="140" y="162" font-size="8" fill="#777" text-anchor="middle">1</text>
-        <text x="173" y="162" font-size="8" fill="#777" text-anchor="middle">2</text>
-        <text x="206" y="162" font-size="8" fill="#777" text-anchor="middle">3</text>
-        <text x="239" y="162" font-size="8" fill="#777" text-anchor="middle">4</text>
-        <text x="89" y="33" font-size="8" fill="#777" text-anchor="end">5</text>
-        <text x="89" y="63" font-size="8" fill="#777" text-anchor="end">4</text>
-        <text x="89" y="93" font-size="8" fill="#777" text-anchor="end">3</text>
-        <text x="89" y="123" font-size="8" fill="#777" text-anchor="end">2</text>
-        <text x="89" y="183" font-size="8" fill="#777" text-anchor="end">-1</text>
-        <text x="89" y="213" font-size="8" fill="#777" text-anchor="end">-2</text>
-        <!-- sumbu simetri x=1 dashed -->
-        <line x1="140" y1="2" x2="140" y2="240" stroke="#3B82F6" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
-        <text x="142" y="10" font-size="9" fill="#3B82F6">x = x_P</text>
-        <!-- proyeksi titik balik -->
-        <line x1="140" y1="210" x2="93.3" y2="210" stroke="#94A3B8" stroke-width="0.9" stroke-dasharray="3,2"/>
-        <line x1="140" y1="210" x2="140" y2="150" stroke="#94A3B8" stroke-width="0.9" stroke-dasharray="3,2"/>
-        <!-- kurva parabola -->
-        <path d="M 14,90 L 21,72.5 L 28,55.8 L 35,40.2 L 42,25.7 L 49,12.4 L 56,0.2 L 63,-10.8" fill="none" stroke="#3B82F6" stroke-width="0" />
-        <path d="M 14,90 L 47,7.5 L 60,-6 L 64,-9.7 L 64,-9.7 M 64,-9.7" fill="none" stroke="none"/>
-        <path d="M 22,30 L 28,50.3 L 35,68.2 L 42,84.9 L 49,100.2 L 56,114.2 L 63,127 L 70,138.4 L 77,148.6 L 84,157.4 L 91,165 L 98,171.2 L 105,176.2 L 112,179.8 L 119,182.1 L 126,183.2 L 133,182.8 L 140,181.2 L 147,178.2 L 154,174 L 161,168.4 L 168,161.5 L 175,153.3 L 182,143.8 L 189,133 L 196,121 L 203,107.6 L 210,92.9 L 217,76.9 L 224,59.6 L 231,41 L 238,21.1 L 245,-0.1" fill="none" stroke="#3B82F6" stroke-width="2.2"/>
-        <!-- titik potong x1, x2 (akar persamaan) -->
-        <circle cx="74" cy="150" r="3.5" fill="#EF4444"/>
-        <text x="72" y="144" font-size="9" fill="#EF4444" text-anchor="end">x₁</text>
-        <circle cx="206" cy="150" r="3.5" fill="#EF4444"/>
-        <text x="210" y="144" font-size="9" fill="#EF4444">x₂</text>
-        <!-- titik potong sumbu Y (0,c)=(0,-1) -->
-        <circle cx="93.3" cy="180" r="3.5" fill="#EF4444"/>
-        <text x="88" y="183" font-size="9" fill="#EF4444" text-anchor="end">(0,c)</text>
-        <!-- titik balik P(1,-2) -->
-        <circle cx="140" cy="210" r="4" fill="#EF4444"/>
-        <text x="145" y="218" font-size="9" fill="#EF4444">P(x_P, y_P)</text>
-        <!-- label sumbu pada proyeksi -->
-        <text x="140" y="146" font-size="8" fill="#555">x_P</text>
-        <text x="91" y="208" font-size="8" fill="#555" text-anchor="end">y_P</text>
-        <!-- label kategori -->
-        <text x="140" y="262" font-size="10" font-weight="600" fill="#3B82F6" text-anchor="middle">a &gt; 0 : minimum</text>
-      </svg>
-      <!-- KANAN: a<0 (maksimum). f(x) = -(x-2)^2 + 3 -->
-      <svg viewBox="0 0 280 270" xmlns="http://www.w3.org/2000/svg">
-        <defs><marker id="bA2" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="#555"/></marker></defs>
-        <!-- gridlines: x∈[-1,5] (sx=0..280, scale=46.67); y∈[-2,5] (sy=0..240, scale=34.29) -->
-        <g stroke="#e2e8f0" stroke-width="0.7">
-          <line x1="0" y1="0" x2="0" y2="240"/><line x1="93.3" y1="0" x2="93.3" y2="240"/><line x1="140" y1="0" x2="140" y2="240"/><line x1="186.7" y1="0" x2="186.7" y2="240"/><line x1="233.3" y1="0" x2="233.3" y2="240"/><line x1="280" y1="0" x2="280" y2="240"/>
-          <line x1="0" y1="0" x2="280" y2="0"/><line x1="0" y1="34.3" x2="280" y2="34.3"/><line x1="0" y1="68.6" x2="280" y2="68.6"/><line x1="0" y1="102.9" x2="280" y2="102.9"/><line x1="0" y1="137.1" x2="280" y2="137.1"/><line x1="0" y1="205.7" x2="280" y2="205.7"/><line x1="0" y1="240" x2="280" y2="240"/>
-        </g>
-        <!-- axes: x-axis di sy(0)=171.4, y-axis di sx(0)=46.7 -->
-        <line x1="0" y1="171.4" x2="278" y2="171.4" stroke="#555" stroke-width="1.6" marker-end="url(#bA2)"/>
-        <line x1="46.7" y1="240" x2="46.7" y2="2" stroke="#555" stroke-width="1.6" marker-end="url(#bA2)"/>
-        <text x="271" y="183" font-size="10" fill="#555">x</text>
-        <text x="38" y="10" font-size="10" fill="#555">y</text>
-        <text x="38" y="183" font-size="9" fill="#777">O</text>
-        <!-- ticks -->
-        <text x="93.3" y="183" font-size="8" fill="#777" text-anchor="middle">1</text>
-        <text x="140" y="183" font-size="8" fill="#777" text-anchor="middle">2</text>
-        <text x="186.7" y="183" font-size="8" fill="#777" text-anchor="middle">3</text>
-        <text x="233.3" y="183" font-size="8" fill="#777" text-anchor="middle">4</text>
-        <text x="42" y="37" font-size="8" fill="#777" text-anchor="end">5</text>
-        <text x="42" y="71" font-size="8" fill="#777" text-anchor="end">4</text>
-        <text x="42" y="106" font-size="8" fill="#777" text-anchor="end">3</text>
-        <text x="42" y="140" font-size="8" fill="#777" text-anchor="end">2</text>
-        <text x="42" y="208" font-size="8" fill="#777" text-anchor="end">-1</text>
-        <!-- sumbu simetri x=2 dashed -->
-        <line x1="140" y1="2" x2="140" y2="240" stroke="#EF4444" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.7"/>
-        <text x="143" y="10" font-size="9" fill="#EF4444">x = x_P</text>
-        <!-- proyeksi titik balik P(2,3) → sx=140, sy=68.6 -->
-        <line x1="140" y1="68.6" x2="46.7" y2="68.6" stroke="#94A3B8" stroke-width="0.9" stroke-dasharray="3,2"/>
-        <line x1="140" y1="68.6" x2="140" y2="171.4" stroke="#94A3B8" stroke-width="0.9" stroke-dasharray="3,2"/>
-        <!-- kurva parabola y = -(x-2)^2 + 3, dari x≈-0.5 sampai x≈4.5 (y dari -3 ke -3) -->
-        <path d="M 23,243.7 L 35,232.5 L 47,217.7 L 58.3,202.1 L 70,184.6 L 82,166.4 L 93.3,149.4 L 105,133 L 117,117.7 L 128.3,104.6 L 140,93.7 L 152,85.1 L 163.3,78.9 L 175,74.6 L 186.7,72.7 L 198.3,73.0 L 210,75.7 L 222,80.5 L 233.3,87.7 L 245,97.1 L 257,109.0 L 268.3,122.6 L 280,138.6" fill="none" stroke="#EF4444" stroke-width="2.2"/>
-        <!-- Better path computed properly -->
-        <!-- titik potong x1=2-√3≈0.268, x2=2+√3≈3.732 -->
-        <circle cx="59.2" cy="171.4" r="3.5" fill="#EF4444"/>
-        <text x="57" y="165" font-size="9" fill="#EF4444" text-anchor="end">x₁</text>
-        <circle cx="220.8" cy="171.4" r="3.5" fill="#EF4444"/>
-        <text x="223" y="165" font-size="9" fill="#EF4444">x₂</text>
-        <!-- titik potong sumbu Y (0,c)=(0,-1) → sx=46.7, sy=205.7 -->
-        <circle cx="46.7" cy="205.7" r="3.5" fill="#EF4444"/>
-        <text x="52" y="208" font-size="9" fill="#EF4444">(0,c)</text>
-        <!-- titik balik P(2,3) → sx=140, sy=68.6 -->
-        <circle cx="140" cy="68.6" r="4" fill="#EF4444"/>
-        <text x="145" y="65" font-size="9" fill="#EF4444">P(x_P, y_P)</text>
-        <!-- label x_P, y_P -->
-        <text x="140" y="184" font-size="8" fill="#555">x_P</text>
-        <text x="44" y="72" font-size="8" fill="#555" text-anchor="end">y_P</text>
-        <!-- label kategori -->
-        <text x="140" y="262" font-size="10" font-weight="600" fill="#EF4444" text-anchor="middle">a &lt; 0 : maksimum</text>
-      </svg>
-    </div>
+    <!-- SVG side-by-side parabolas (satu SVG lebar, computed numerik) -->
+    <svg viewBox="0 0 680 310" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:800px;display:block;margin:auto;">
+  <defs>
+    <marker id="tbA" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,1 L0,7 L8,4z" fill="var(--text-2,#555)"/>
+    </marker>
+  </defs>
 
-    <div class="box box-catatan">
-      <div class="box-label">💡 Catatan</div>
-      <p style="margin:0;font-size:.9rem;">
-        $y_P = \dfrac{-D}{4a}$ karena $D = b^2 - 4ac$, sehingga $4ac - b^2 = -D$. Perhatikan:<br>
-        • Jika $a > 0$: $y_P$ adalah nilai <strong>minimum</strong> fungsi, sehingga range $= [y_P,\; +\infty)$<br>
-        • Jika $a < 0$: $y_P$ adalah nilai <strong>maksimum</strong> fungsi, sehingga range $= (-\infty,\; y_P]$
-      </p>
-    </div>
+  <!-- ═══════════════════════════════════════════════
+       PANEL KIRI: a>0, f(x)=x²-2x-1, vertex P(1,-2)
+       Origin(92.0,198.9)
+  ════════════════════════════════════════════════════ -->
 
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 4</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan semua titik penting grafik $f(x) = x^2 - 4x - 5$ (titik potong sumbu $X$, titik potong sumbu $Y$, sumbu simetri, dan titik balik). Nyatakan pula range fungsinya!</p>
-    </div>
-    <div class="penyelesaian">
-      
-      Diketahui $a = 1,\; b = -4,\; c = -5$. Karena $a = 1 > 0$, parabola <strong>terbuka ke atas</strong>.<br><br>
-      <strong>(1) Diskriminan dan titik potong sumbu $X$</strong>
-      $$D = (-4)^2 - 4(1)(-5) = 16 + 20 = 36 > 0$$
-      Karena $D > 0$, grafik memotong sumbu $X$ di dua titik:
-      $$x^2 - 4x - 5 = 0 \;\Rightarrow\; (x-5)(x+1) = 0 \;\Rightarrow\; x_1 = -1,\; x_2 = 5$$
-      Titik potong sumbu $X$: $(-1,\, 0)$ dan $(5,\, 0)$.<br><br>
-      <strong>(2) Titik potong sumbu $Y$:</strong> $f(0) = -5 \Rightarrow (0,\,-5)$<br><br>
-      <strong>(3) Sumbu simetri:</strong> $x_s = \dfrac{-(-4)}{2(1)} = 2$<br><br>
-      <strong>(4) Titik balik</strong> ($a > 0$, jadi minimum):
-      $$y_P = \frac{-D}{4a} = \frac{-36}{4} = -9 \;\Rightarrow\; P(2,\,-9)$$
-      <strong>(5) Range fungsi:</strong> Karena $a > 0$ dan nilai minimum $y_P = -9$:
-      $$\text{Range} = [-9,\; +\infty)$$
-    </div>
+  <!-- grid kiri -->
+  <g stroke="var(--border,#e2e8f0)" stroke-width="0.55">
+    <line x1="32.0" y1="20" x2="32.0" y2="290"/>
+    <line x1="92.0"    y1="20" x2="92.0"    y2="290"/>
+    <line x1="152.0" y1="20" x2="152.0" y2="290"/>
+    <line x1="212.0" y1="20" x2="212.0" y2="290"/>
+    <line x1="272.0" y1="20" x2="272.0" y2="290"/>
+    <line x1="20" y1="68.8"  x2="320" y2="68.8"/>
+    <line x1="20" y1="101.3"  x2="320" y2="101.3"/>
+    <line x1="20" y1="133.9"  x2="320" y2="133.9"/>
+    <line x1="20" y1="166.4"  x2="320" y2="166.4"/>
+    <line x1="20" y1="198.9"     x2="320" y2="198.9"/>
+    <line x1="20" y1="231.4" x2="320" y2="231.4"/>
+    <line x1="20" y1="264.0" x2="320" y2="264.0"/>
+  </g>
 
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 5</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan semua titik penting grafik $f(x) = x^2 - 4x - 1$. Gunakan <strong>rumus kuadratis</strong> untuk mencari titik potong dengan sumbu $X$!</p>
-    </div>
-    <div class="penyelesaian">
-      
-      Diketahui $a = 1,\; b = -4,\; c = -1$. Karena $a = 1 > 0$, parabola <strong>terbuka ke atas</strong>.<br><br>
-      <strong>(1) Diskriminan:</strong>
-      $$D = (-4)^2 - 4(1)(-1) = 16 + 4 = 20 > 0$$
-      Karena $D = 20$ bukan bilangan kuadrat sempurna, gunakan <strong>rumus kuadratis</strong>:
-      $$x_{1,2} = \frac{-b \pm \sqrt{D}}{2a} = \frac{4 \pm \sqrt{20}}{2} = \frac{4 \pm 2\sqrt{5}}{2} = 2 \pm \sqrt{5}$$
-      Titik potong sumbu $X$: $(2 - \sqrt{5},\, 0) \approx (-0{,}24;\, 0)$ dan $(2 + \sqrt{5},\, 0) \approx (4{,}24;\, 0)$.<br><br>
-      <strong>(2) Titik potong sumbu $Y$:</strong> $f(0) = -1 \Rightarrow (0,\,-1)$<br><br>
-      <strong>(3) Sumbu simetri:</strong> $x_s = 2$<br><br>
-      <strong>(4) Titik balik</strong> ($a > 0$, minimum):
-      $$y_P = \frac{-D}{4a} = \frac{-20}{4} = -5 \;\Rightarrow\; P(2,\,-5)$$
-    </div>
+  <!-- sumbu kiri -->
+  <line x1="20" y1="198.9" x2="322" y2="198.9" stroke="var(--text-2,#555)" stroke-width="1.6" marker-end="url(#tbA)"/>
+  <line x1="92.0" y1="293" x2="92.0" y2="17" stroke="var(--text-2,#555)" stroke-width="1.6" marker-end="url(#tbA)"/>
+  <text x="319" y="210.9" font-size="12" fill="var(--text-2,#555)" font-family="serif" font-style="italic">x</text>
+  <text x="84.0" y="16" font-size="12" fill="var(--text-2,#555)" font-family="serif" font-style="italic" text-anchor="middle">y</text>
+  <text x="88.0" y="209.9" font-size="9" fill="var(--text-3,#888)" text-anchor="end">O</text>
 
-    <div class="box box-catatan">
-      <div class="box-label">💡 Rumus Kuadratis</div>
-      <p style="margin:0;font-size:.9rem;">Rumus kuadratis digunakan ketika persamaan $ax^2+bx+c=0$ <strong>tidak bisa difaktorkan secara sederhana</strong>, yaitu saat $D$ bukan bilangan kuadrat sempurna. Hasilnya bisa berupa bentuk akar (irasional).</p>
-    </div>
+  <!-- tick labels kiri-x -->
+  <text x="32.0" y="210.9" font-size="9" fill="var(--text-3,#888)" text-anchor="middle">−1</text>
+  <text x="152.0"  y="210.9" font-size="9" fill="var(--text-3,#888)" text-anchor="middle">1</text>
+  <text x="212.0"  y="210.9" font-size="9" fill="var(--text-3,#888)" text-anchor="middle">2</text>
+  <text x="272.0"  y="210.9" font-size="9" fill="var(--text-3,#888)" text-anchor="middle">3</text>
 
-    <div class="box box-latihan">
-      <div class="box-label">Soal Latihan</div>
-      <ol class="soal-list">
-        <li>Tentukan diskriminan, titik potong sumbu $X$ (jika ada), titik potong sumbu $Y$, sumbu simetri, dan titik balik dari fungsi-fungsi berikut. Nyatakan pula range-nya!
-          <ol class="alpha-list" style="margin-top:.3rem;">
-            <li>$f(x) = x^2 - 6x + 5$</li>
-            <li>$g(x) = -2x^2 + 8x$</li>
-            <li>$h(x) = x^2 + 4x + 4$</li>
-          </ol>
-        </li>
-        <li>Diketahui $f(x) = 2x^2 - 8x + 6$. Tentukan:
-          <ol class="alpha-list" style="margin-top:.3rem;">
-            <li>Akar-akar persamaan $f(x) = 0$ (titik potong sumbu $X$)</li>
-            <li>Titik potong dengan sumbu $Y$</li>
-            <li>Sumbu simetri dan titik balik</li>
-            <li>Range fungsi</li>
-          </ol>
-        </li>
-        <li>Sebuah parabola memiliki titik potong sumbu $X$ di $x = -3$ dan $x = 1$, serta titik potong sumbu $Y$ di $(0,\,-6)$. Tentukan persamaan sumbu simetri dan titik balik parabola tersebut. <em>(Petunjuk: gunakan sifat simetri titik potong sumbu $X$)</em></li>
-        <li>Fungsi $f(x) = x^2 + px + q$ memiliki sumbu simetri $x = 3$ dan titik potong sumbu $Y$ di $(0,\,4)$. Tentukan nilai $p$ dan $q$, serta koordinat titik baliknya.</li>
-        <li>Diketahui $f(x) = -x^2 + 6x + k$. Jika titik balik parabola berada di $y_P = 12$, tentukan:
-          <ol class="alpha-list" style="margin-top:.3rem;">
-            <li>Nilai $k$</li>
-            <li>Koordinat titik balik</li>
-            <li>Titik potong dengan sumbu $Y$</li>
-            <li>Titik potong dengan sumbu $X$</li>
-            <li>Range fungsi</li>
-          </ol>
-        </li>
-      </ol>
-    </div>
+  <!-- tick labels kiri-y -->
+  <text x="87.0" y="72.3"  font-size="9" fill="var(--text-3,#888)" text-anchor="end">4</text>
+  <text x="87.0" y="104.8"  font-size="9" fill="var(--text-3,#888)" text-anchor="end">3</text>
+  <text x="87.0" y="137.4"  font-size="9" fill="var(--text-3,#888)" text-anchor="end">2</text>
+  <text x="87.0" y="169.9"  font-size="9" fill="var(--text-3,#888)" text-anchor="end">1</text>
+  <text x="87.0" y="234.9" font-size="9" fill="var(--text-3,#888)" text-anchor="end">−1</text>
+
+  <!-- sumbu simetri x=1 (biru dashed) -->
+  <line x1="152.0" y1="17" x2="152.0" y2="293" stroke="#3B82F6" stroke-width="1.3" stroke-dasharray="5,3" opacity="0.9"/>
+
+  <!-- label x=x_P kiri -->
+  <text x="156.0" y="30" font-size="10" fill="#3B82F6" font-family="serif" font-style="italic">x = x<tspan font-size="7.5" dy="2">P</tspan></text>
+
+  <!-- label a>0: minimum (kanan atas panel kiri) -->
+  <text x="295" y="42" font-size="11" font-weight="700" fill="#3B82F6" font-family="serif" font-style="italic" text-anchor="end">a &gt; 0 : minimum</text>
+
+  <!-- proyeksi horizontal y_P: dari vertex ke sumbu Y -->
+  <line x1="92.0" y1="264.0" x2="152.0" y2="264.0" stroke="#94A3B8" stroke-width="0.9" stroke-dasharray="4,3"/>
+
+  <!-- kurva parabola kiri -->
+  <path d="M 26.0,120.5 L 30.8,131.2 L 35.6,141.5 L 40.3,151.3 L 45.1,160.8 L 49.9,169.8 L 54.7,178.4 L 59.5,186.6 L 64.2,194.4 L 69.0,201.8 L 73.8,208.7 L 78.6,215.3 L 83.4,221.4 L 88.1,227.1 L 92.9,232.4 L 97.7,237.3 L 102.5,241.8 L 107.3,245.9 L 112.0,249.5 L 116.8,252.8 L 121.6,255.6 L 126.4,258.0 L 131.2,260.0 L 135.9,261.6 L 140.7,262.8 L 145.5,263.6 L 150.3,263.9 L 155.1,263.9 L 159.8,263.4 L 164.6,262.5 L 169.4,261.2 L 174.2,259.5 L 178.9,257.4 L 183.7,254.9 L 188.5,251.9 L 193.3,248.6 L 198.1,244.8 L 202.8,240.6 L 207.6,236.0 L 212.4,231.0 L 217.2,225.6 L 222.0,219.7 L 226.7,213.5 L 231.5,206.8 L 236.3,199.8 L 241.1,192.3 L 245.9,184.4 L 250.6,176.0 L 255.4,167.3 L 260.2,158.2 L 265.0,148.6 L 269.8,138.7 L 274.5,128.3 L 279.3,117.5 L 284.1,106.3 L 288.9,94.7 L 293.7,82.6 L 298.4,70.2 L 303.2,57.3 L 308.0,44.1" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- titik x₁ (di sumbu X) -->
+  <circle cx="67.1" cy="198.9" r="4.2" fill="#EF4444" stroke="white" stroke-width="1.5"/>
+  <!-- label x₁ di atas-kiri dot, tidak tumpang tindih -->
+  <text x="60.1" y="191.9" font-size="10.5" fill="#EF4444" text-anchor="end" font-family="serif" font-style="italic">x<tspan font-size="7.5" dy="2">1</tspan></text>
+
+  <!-- titik x₂ (di sumbu X) -->
+  <circle cx="236.9" cy="198.9" r="4.2" fill="#EF4444" stroke="white" stroke-width="1.5"/>
+  <!-- label x₂ di atas-kanan dot -->
+  <text x="243.9" y="191.9" font-size="10.5" fill="#EF4444" font-family="serif" font-style="italic">x<tspan font-size="7.5" dy="2">2</tspan></text>
+
+  <!-- titik (0,c) di sumbu Y -->
+  <circle cx="92.0" cy="231.4" r="4.2" fill="#EF4444" stroke="white" stroke-width="1.5"/>
+  <!-- label (0,c) di kiri dot -->
+  <text x="84.0" y="235.4" font-size="10" fill="#EF4444" text-anchor="end" font-family="serif">(0, c)</text>
+
+  <!-- titik vertex P(1,-2) -->
+  <circle cx="152.0" cy="264.0" r="4.2" fill="#EF4444" stroke="white" stroke-width="1.5"/>
+  <!-- label P(xP,yP) di bawah-kanan vertex, dengan clearance -->
+  <text x="160.0" y="269.0" font-size="10" fill="#EF4444" font-family="serif" font-style="italic">P(x<tspan font-size="7.5" dy="2">P</tspan><tspan dy="-2">, y<tspan font-size="7.5" dy="2">P</tspan><tspan dy="-2">)</tspan></tspan></text>
+
+  <!-- label xP di sumbu X (bawah garis simetri) -->
+  <text x="152.0" y="210.9" font-size="9" fill="var(--text-3,#777)" text-anchor="middle" font-family="serif" font-style="italic">x<tspan font-size="6.5" dy="2">P</tspan></text>
+
+  <!-- label yP di sumbu Y -->
+  <text x="87.0" y="267.5" font-size="9" fill="var(--text-3,#777)" text-anchor="end" font-family="serif" font-style="italic">y<tspan font-size="6.5" dy="2">P</tspan></text>
+
+
+  <!-- ═══════════════════════════════════════════════
+       PANEL KANAN: a<0, f(x)=-(x-2)²+3, vertex P(2,3)
+       Origin(377.6,218.0)
+  ════════════════════════════════════════════════════ -->
+
+  <!-- grid kanan -->
+  <g stroke="var(--border,#e2e8f0)" stroke-width="0.55">
+    <line x1="377.6"    y1="20" x2="377.6"    y2="290"/>
+    <line x1="436.5" y1="20" x2="436.5" y2="290"/>
+    <line x1="495.3" y1="20" x2="495.3" y2="290"/>
+    <line x1="554.1" y1="20" x2="554.1" y2="290"/>
+    <line x1="612.9" y1="20" x2="612.9" y2="290"/>
+    <line x1="360" y1="74.0"  x2="665" y2="74.0"/>
+    <line x1="360" y1="110.0"  x2="665" y2="110.0"/>
+    <line x1="360" y1="146.0"  x2="665" y2="146.0"/>
+    <line x1="360" y1="182.0"  x2="665" y2="182.0"/>
+    <line x1="360" y1="218.0"     x2="665" y2="218.0"/>
+    <line x1="360" y1="254.0" x2="665" y2="254.0"/>
+  </g>
+
+  <!-- sumbu kanan -->
+  <line x1="360" y1="218.0" x2="662" y2="218.0" stroke="var(--text-2,#555)" stroke-width="1.6" marker-end="url(#tbA)"/>
+  <line x1="377.6" y1="293" x2="377.6" y2="17" stroke="var(--text-2,#555)" stroke-width="1.6" marker-end="url(#tbA)"/>
+  <text x="659" y="230.0" font-size="12" fill="var(--text-2,#555)" font-family="serif" font-style="italic">x</text>
+  <text x="369.6" y="16" font-size="12" fill="var(--text-2,#555)" font-family="serif" font-style="italic" text-anchor="middle">y</text>
+  <text x="373.6" y="229.0" font-size="9" fill="var(--text-3,#888)" text-anchor="end">O</text>
+
+  <!-- tick labels kanan-x -->
+  <text x="436.5" y="230.0" font-size="9" fill="var(--text-3,#888)" text-anchor="middle">1</text>
+  <text x="495.3" y="230.0" font-size="9" fill="var(--text-3,#888)" text-anchor="middle">2</text>
+  <text x="554.1" y="230.0" font-size="9" fill="var(--text-3,#888)" text-anchor="middle">3</text>
+  <text x="612.9" y="230.0" font-size="9" fill="var(--text-3,#888)" text-anchor="middle">4</text>
+
+  <!-- tick labels kanan-y -->
+  <text x="372.6" y="77.5"  font-size="9" fill="var(--text-3,#888)" text-anchor="end">4</text>
+  <text x="372.6" y="113.5"  font-size="9" fill="var(--text-3,#888)" text-anchor="end">3</text>
+  <text x="372.6" y="149.5"  font-size="9" fill="var(--text-3,#888)" text-anchor="end">2</text>
+  <text x="372.6" y="185.5"  font-size="9" fill="var(--text-3,#888)" text-anchor="end">1</text>
+  <text x="372.6" y="257.5" font-size="9" fill="var(--text-3,#888)" text-anchor="end">−1</text>
+
+  <!-- sumbu simetri x=2 (merah dashed) -->
+  <line x1="495.3" y1="17" x2="495.3" y2="293" stroke="#EF4444" stroke-width="1.3" stroke-dasharray="5,3" opacity="0.9"/>
+
+  <!-- label x=x_P kanan -->
+  <text x="499.3" y="30" font-size="10" fill="#EF4444" font-family="serif" font-style="italic">x = x<tspan font-size="7.5" dy="2">P</tspan></text>
+
+  <!-- label a<0: maksimum (kanan atas panel kanan) -->
+  <text x="635" y="42" font-size="11" font-weight="700" fill="#EF4444" font-family="serif" font-style="italic" text-anchor="end">a &lt; 0 : maksimum</text>
+
+  <!-- proyeksi horizontal y_P: dari vertex P(2,3) ke sumbu Y -->
+  <line x1="377.6" y1="110.0" x2="495.3" y2="110.0" stroke="#94A3B8" stroke-width="0.9" stroke-dasharray="4,3"/>
+
+  <!-- kurva parabola kanan -->
+  <path d="M 371.8,268.8 L 376.1,257.9 L 380.3,247.5 L 384.6,237.4 L 388.9,227.7 L 393.2,218.4 L 397.5,209.5 L 401.8,201.0 L 406.1,192.8 L 410.3,185.1 L 414.6,177.7 L 418.9,170.7 L 423.2,164.1 L 427.5,157.8 L 431.8,152.0 L 436.1,146.5 L 440.4,141.4 L 444.6,136.7 L 448.9,132.4 L 453.2,128.4 L 457.5,124.9 L 461.8,121.7 L 466.1,118.9 L 470.4,116.5 L 474.7,114.4 L 478.9,112.8 L 483.2,111.5 L 487.5,110.6 L 491.8,110.1 L 496.1,110.0 L 500.4,110.3 L 504.7,110.9 L 509.0,111.9 L 513.2,113.4 L 517.5,115.1 L 521.8,117.3 L 526.1,119.9 L 530.4,122.8 L 534.7,126.1 L 539.0,129.8 L 543.3,133.9 L 547.5,138.4 L 551.8,143.2 L 556.1,148.5 L 560.4,154.1 L 564.7,160.1 L 569.0,166.5 L 573.3,173.2 L 577.5,180.4 L 581.8,187.9 L 586.1,195.8 L 590.4,204.1 L 594.7,212.8 L 599.0,221.9 L 603.3,231.3 L 607.6,241.1 L 611.8,251.3 L 616.1,261.9 L 620.4,272.9 L 624.7,284.2" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- titik x₁ (di sumbu X) -->
+  <circle cx="393.4" cy="218.0" r="4.2" fill="#EF4444" stroke="white" stroke-width="1.5"/>
+  <!-- label x₁ di atas-kiri dot -->
+  <text x="386.4" y="211.0" font-size="10.5" fill="#EF4444" text-anchor="end" font-family="serif" font-style="italic">x<tspan font-size="7.5" dy="2">1</tspan></text>
+
+  <!-- titik x₂ (di sumbu X) -->
+  <circle cx="597.2" cy="218.0" r="4.2" fill="#EF4444" stroke="white" stroke-width="1.5"/>
+  <!-- label x₂ di atas-kanan dot -->
+  <text x="604.2" y="211.0" font-size="10.5" fill="#EF4444" font-family="serif" font-style="italic">x<tspan font-size="7.5" dy="2">2</tspan></text>
+
+  <!-- titik (0,c) di sumbu Y -->
+  <circle cx="377.6" cy="254.0" r="4.2" fill="#EF4444" stroke="white" stroke-width="1.5"/>
+  <!-- label (0,c) di kiri dot (ada space ke kiri sumbu Y) -->
+  <text x="385.6" y="258.0" font-size="10" fill="#EF4444" font-family="serif">(0, c)</text>
+
+  <!-- titik vertex P(2,3) -->
+  <circle cx="495.3" cy="110.0" r="4.2" fill="#EF4444" stroke="white" stroke-width="1.5"/>
+  <!-- label P(xP,yP) di kanan atas vertex -->
+  <text x="503.3" y="106.0" font-size="10" fill="#EF4444" font-family="serif" font-style="italic">P(x<tspan font-size="7.5" dy="2">P</tspan><tspan dy="-2">, y<tspan font-size="7.5" dy="2">P</tspan><tspan dy="-2">)</tspan></tspan></text>
+
+  <!-- label xP di sumbu X -->
+  <text x="495.3" y="230.0" font-size="9" fill="var(--text-3,#777)" text-anchor="middle" font-family="serif" font-style="italic">x<tspan font-size="6.5" dy="2">P</tspan></text>
+
+  <!-- label yP di sumbu Y -->
+  <text x="372.6" y="113.5" font-size="9" fill="var(--text-3,#777)" text-anchor="end" font-family="serif" font-style="italic">y<tspan font-size="6.5" dy="2">P</tspan></text>
+
+</svg>
   </section>
 
   <!-- ═══ C. MENGGAMBAR GRAFIK ═══════════════════ -->
