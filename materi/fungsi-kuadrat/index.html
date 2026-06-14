@@ -1542,55 +1542,59 @@ window.MathJax = {
 
   <!-- ============== KONEKSI KE MATERI BERIKUTNYA ============== -->
   <div class="koneksi-wrap">
-    <h3 class="koneksi-title">🔗 Koneksi ke Materi Berikutnya</h3>
-    <div class="koneksi-grid">
-      <div class="koneksi-card now-card">
-        <div class="koneksi-tag">Sekarang</div>
-        <div class="koneksi-judul">Fungsi Kuadrat</div>
-        <p class="koneksi-desc">Bentuk umum $f(x) = ax^2 + bx + c$ menghasilkan grafik parabola, dengan titik balik, sumbu simetri, dan diskriminan sebagai unsur kuncinya.</p>
+    <div class="koneksi-header">
+      <div class="koneksi-icon">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </div>
-      <div class="koneksi-arrow">→</div>
-      <a href="../fungsi-komposisi-invers/" class="koneksi-card next-card">
-        <div class="koneksi-tag next-tag">Berikutnya</div>
-        <div class="koneksi-judul">Fungsi, Komposisi, &amp; Invers</div>
-        <p class="koneksi-desc">Setelah memahami fungsi linear &amp; kuadrat, kita pelajari relasi antarfungsi: operasi komposisi $(f \circ g)(x)$ dan fungsi balik $f^{-1}(x)$.</p>
-      </a>
+      <span class="koneksi-label">Koneksi ke Materi Berikutnya</span>
+    </div>
+    <div class="koneksi-body">
+      <p class="koneksi-text">Pada <strong>Fungsi, Komposisi &amp; Invers</strong>, fungsi kuadrat $f(x) = ax^2 + bx + c$ yang sudah kamu kuasai menjadi salah satu contoh fungsi yang bisa dikomposisi dan dicari inversnya — memperluas pemahaman dari sekadar menggambar grafik ke operasi antarfungsi.</p>
+      <div class="koneksi-comparison">
+        <div class="koneksi-card current">
+          <div class="koneksi-card-label">Sekarang</div>
+          <div class="koneksi-card-formula">$f(x) = ax^2 + bx + c$</div>
+          <div class="koneksi-card-desc">Grafik parabola<br>Titik balik, diskriminan</div>
+        </div>
+        <div class="koneksi-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10h12M12 5l5 5-5 5"/></svg>
+        </div>
+        <div class="koneksi-card next">
+          <div class="koneksi-card-label">Berikutnya</div>
+          <div class="koneksi-card-formula">$(f \circ g)(x),\; f^{-1}(x)$</div>
+          <div class="koneksi-card-desc">Komposisi fungsi<br>Fungsi invers</div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- ============== ACTION FOOTER ============== -->
   <div class="action-footer">
-    <a href="../fungsi-linear/" class="act-btn act-prev">
-      <span class="act-arrow">←</span>
-      <div class="act-text">
-        <small>Materi Sebelumnya</small>
-        <strong>Fungsi Linear</strong>
-      </div>
-    </a>
-
-    <a href="../fungsi-komposisi-invers/" class="act-btn act-next">
-      <div class="act-text">
-        <small>Materi Berikutnya</small>
-        <strong>Fungsi, Komposisi &amp; Invers</strong>
-      </div>
-      <span class="act-arrow">→</span>
-    </a>
-
-    <a href="../../worksheet/fungsi-kuadrat/" class="act-btn act-primary">
-      <span>📝</span>
-      <div class="act-text">
-        <small>Latihan Soal</small>
-        <strong>Kerjakan Latihan Fungsi Kuadrat <span class="badge-soon">Segera</span></strong>
-      </div>
-    </a>
-
-    <button class="act-btn act-mini" id="bookmarkBtn" onclick="toggleBookmark()" title="Bookmark materi ini">
-      <span id="bookmarkIcon">🔖</span>
-    </button>
-
-    <button class="act-btn act-mini" onclick="shareMateri()" title="Bagikan materi">
-      <span>🔗</span>
-    </button>
+    <div class="footer-nav">
+      <a class="nav-btn" href="../fungsi-linear/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Fungsi Linear
+      </a>
+      <a class="nav-btn" href="../fungsi-komposisi-invers/">
+        Fungsi Komposisi &amp; Invers
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <div class="footer-actions">
+      <a class="nav-btn primary" href="#">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="10" height="10" rx="2"/><line x1="5" y1="5" x2="9" y2="5"/><line x1="5" y1="7.5" x2="8" y2="7.5"/><line x1="5" y1="10" x2="7" y2="10"/></svg>
+        Kerjakan Latihan Soal Fungsi Kuadrat
+        <span class="coming-soon">Segera</span>
+      </a>
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
   </div>
 
   <!-- ============== KOMENTAR (GISCUS) ============== -->
