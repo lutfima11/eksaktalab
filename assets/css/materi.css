@@ -1172,10 +1172,51 @@ mjx-container[display="true"] {
   -webkit-overflow-scrolling: touch;
 }
 
-/* 3. Box-definisi (inline style di persamaan-kuadrat) */
+/* 3. Box-definisi */
 .box.box-definisi {
+  border-left: 3px solid var(--teal);
+  background: rgba(0,191,165,.05);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: .9rem 1.1rem;
+  margin: 1rem 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+[data-theme="dark"] .box.box-definisi {
+  background: rgba(0,191,165,.07);
+}
+.box.box-definisi .box-label {
+  font-family: var(--mono);
+  font-size: .65rem;
+  font-weight: 700;
+  color: var(--teal);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.box.box-definisi .box-label::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 6px rgba(0,191,165,.5);
+  flex-shrink: 0;
+}
+.box.box-definisi p, .box.box-definisi li {
+  font-size: .9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: .4rem;
+}
+.box.box-definisi p:last-child { margin-bottom: 0; }
+.box.box-definisi em { color: var(--text-3); }
+.box.box-definisi ol, .box.box-definisi ul {
+  padding-left: 1.3rem;
+  margin: .3rem 0;
 }
 
 /* 4. Box-contoh — overflow dibiarkan visible agar marker list (a,b,c) tidak terpotong */
