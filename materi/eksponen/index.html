@@ -935,53 +935,52 @@ window.MathJax = {
     <p>Grafik $f(x) = a^x$ memiliki dua perilaku berbeda bergantung nilai $a$:</p>
 
     <div class="grafik-wrap">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="100%" style="max-width:540px;background-color:transparent;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" width="100%" height="100%">
         <defs>
-          <marker id="arr-f1" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-            <path d="M0,1 L6,3.5 L0,6z" fill="#555"/>
+          <marker id="arrow-axis" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 1.5 L 9 5 L 0 8.5 L 2 5 z" fill="#000" />
           </marker>
-          <marker id="arr-f1l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto">
-            <path d="M7,1 L1,3.5 L7,6z" fill="#555"/>
+          <marker id="arrow-curve" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1.5 L 9 5 L 0 8.5 L 2 5 z" fill="#8B0000" />
           </marker>
+          <style>
+            .title { font-family: 'Times New Roman', Times, serif; font-size: 28px; fill: #000; text-anchor: middle; }
+            .label-axis { font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 20px; fill: #000; }
+            .label-math { font-family: 'Times New Roman', Times, serif; font-size: 19px; fill: #000; }
+            .formula { font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 26px; fill: #8B0000; }
+            .monoton { font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 24px; fill: #8E8E8E; }
+          </style>
         </defs>
 
-        <!-- Panel kiri: a > 1 -->
-        <rect x="10" y="10" width="260" height="280" rx="10" fill="#F0F4FF" stroke="#D8E0F5" stroke-width="1.2"/>
-        <text x="140" y="35" text-anchor="middle" font-size="14" font-weight="bold" fill="#0A0F1E">a &gt; 1</text>
-        <text x="210" y="220" font-size="11" fill="#7B8BB2" font-style="italic">monoton naik</text>
-        <!-- Sumbu panel kiri -->
-        <line x1="35" y1="240" x2="255" y2="240" stroke="#555" stroke-width="1.8" marker-start="url(#arr-f1l)" marker-end="url(#arr-f1)"/>
-        <line x1="115" y1="265" x2="115" y2="45" stroke="#555" stroke-width="1.8" marker-start="url(#arr-f1l)" marker-end="url(#arr-f1)"/>
-        <text x="258" y="246" font-size="11" fill="#555">x</text>
-        <text x="107" y="42" font-size="11" fill="#555">y</text>
-        <text x="100" y="254" font-size="11" fill="#555">O</text>
-        <!-- Asimtot -->
-        <line x1="35" y1="240" x2="255" y2="240" stroke="#D8E0F5" stroke-dasharray="5,4" stroke-width="1"/>
-        <!-- Kurva a=2 naik -->
-        <path d="M50,238 C65,236 75,228 85,220 C95,212 100,200 105,188 C110,176 112,160 115,148 C118,132 124,110 136,85 C148,60 165,42 185,28" stroke="#EF4444" stroke-width="2.2" fill="none" marker-end="url(#arr-f1)"/>
-        <!-- Titik (0,1) -->
-        <circle cx="115" cy="200" r="4" fill="#0A0F1E"/>
-        <text x="120" y="196" font-size="10" fill="#0A0F1E">(0, 1)</text>
-        <text x="175" y="28" font-size="11" fill="#EF4444">f(x)=aˣ</text>
+        <g transform="translate(15, 15)">
+          <rect width="435" height="490" rx="35" ry="35" fill="#F5F5F5" stroke="#C2C2C2" stroke-width="3" />
+          <text x="217" y="60" class="title">a &gt; 1</text>
+          <line x1="198" y1="455" x2="198" y2="120" stroke="#000" stroke-width="2" marker-end="url(#arrow-axis)" />
+          <text x="193" y="102" class="label-axis" text-anchor="middle">y</text>
+          <line x1="35" y1="290" x2="395" y2="290" stroke="#000" stroke-width="2" marker-end="url(#arrow-axis)" />
+          <text x="408" y="295" class="label-axis">x</text>
+          <text x="188" y="305" class="label-axis" text-anchor="end">O</text>
+          <path d="M 35,271 C 90,260 150,238 198,212 C 240,189 265,152 281,128" fill="none" stroke="#8B0000" stroke-width="3" marker-end="url(#arrow-curve)" />
+          <circle cx="198" cy="212" r="5" fill="#000" />
+          <text x="190" y="193" class="label-math" text-anchor="end">(0, 1)</text>
+          <text x="268" y="95" class="formula">f(x) = a<tspan dy="-10" font-size="16">x</tspan></text>
+          <text x="215" y="260" class="monoton">monoton naik</text>
+        </g>
 
-        <!-- Panel kanan: 0 < a < 1 -->
-        <rect x="290" y="10" width="260" height="280" rx="10" fill="#F0F4FF" stroke="#D8E0F5" stroke-width="1.2"/>
-        <text x="420" y="35" text-anchor="middle" font-size="14" font-weight="bold" fill="#0A0F1E">0 &lt; a &lt; 1</text>
-        <text x="300" y="220" font-size="11" fill="#7B8BB2" font-style="italic">monoton turun</text>
-        <!-- Sumbu panel kanan -->
-        <line x1="315" y1="240" x2="535" y2="240" stroke="#555" stroke-width="1.8" marker-start="url(#arr-f1l)" marker-end="url(#arr-f1)"/>
-        <line x1="395" y1="265" x2="395" y2="45" stroke="#555" stroke-width="1.8" marker-start="url(#arr-f1l)" marker-end="url(#arr-f1)"/>
-        <text x="538" y="246" font-size="11" fill="#555">x</text>
-        <text x="387" y="42" font-size="11" fill="#555">y</text>
-        <text x="380" y="254" font-size="11" fill="#555">O</text>
-        <!-- Asimtot -->
-        <line x1="315" y1="240" x2="535" y2="240" stroke="#D8E0F5" stroke-dasharray="5,4" stroke-width="1"/>
-        <!-- Kurva a=1/2 turun -->
-        <path d="M310,28 C330,42 345,60 360,85 C372,110 378,132 381,148 C384,160 386,176 391,188 C396,200 401,212 411,220 C421,228 431,236 446,238" stroke="#EF4444" stroke-width="2.2" fill="none" marker-start="url(#arr-f1l)"/>
-        <!-- Titik (0,1) -->
-        <circle cx="395" cy="200" r="4" fill="#0A0F1E"/>
-        <text x="400" y="196" font-size="10" fill="#0A0F1E">(0, 1)</text>
-        <text x="308" y="28" font-size="11" fill="#EF4444">f(x)=aˣ</text>
+        <g transform="translate(470, 15)">
+          <rect width="435" height="490" rx="35" ry="35" fill="#F5F5F5" stroke="#C2C2C2" stroke-width="3" />
+          <text x="217" y="60" class="title">0 &lt; a &lt; 1</text>
+          <line x1="198" y1="455" x2="198" y2="120" stroke="#000" stroke-width="2" marker-end="url(#arrow-axis)" />
+          <text x="193" y="102" class="label-axis" text-anchor="middle">y</text>
+          <line x1="35" y1="290" x2="395" y2="290" stroke="#000" stroke-width="2" marker-end="url(#arrow-axis)" />
+          <text x="408" y="295" class="label-axis">x</text>
+          <text x="188" y="305" class="label-axis" text-anchor="end">O</text>
+          <path d="M 115,134 C 131,158 156,189 198,212 C 246,238 306,260 393,275" fill="none" stroke="#8B0000" stroke-width="3" marker-end="url(#arrow-curve)" />
+          <circle cx="198" cy="212" r="5" fill="#000" />
+          <text x="208" y="193" class="label-math" text-anchor="start">(0, 1)</text>
+          <text x="268" y="200" class="formula">f(x) = a<tspan dy="-10" font-size="16">x</tspan></text>
+          <text x="215" y="335" class="monoton">monoton turun</text>
+        </g>
       </svg>
     </div>
 
