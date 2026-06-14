@@ -935,51 +935,65 @@ window.MathJax = {
     <p>Grafik $f(x) = a^x$ memiliki dua perilaku berbeda bergantung nilai $a$:</p>
 
     <div class="grafik-wrap">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" width="100%" height="100%">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="100%" style="max-width:780px;">
         <defs>
-          <marker id="arrow-axis" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <path d="M 0 1.5 L 9 5 L 0 8.5 L 2 5 z" fill="#000" />
+          <marker id="fexp-axis" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+            <path d="M0,1 L6,3.5 L0,6z" fill="#888"/>
           </marker>
-          <marker id="arrow-curve" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M 0 1.5 L 9 5 L 0 8.5 L 2 5 z" fill="#8B0000" />
+          <marker id="fexp-curve-r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+            <path d="M0,1 L6,3.5 L0,6z" fill="#C0392B"/>
           </marker>
-          <style>
-            .title { font-family: 'Times New Roman', Times, serif; font-size: 28px; fill: #000; text-anchor: middle; }
-            .label-axis { font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 20px; fill: #000; }
-            .label-math { font-family: 'Times New Roman', Times, serif; font-size: 19px; fill: #000; }
-            .formula { font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 26px; fill: #8B0000; }
-            .monoton { font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 24px; fill: #8E8E8E; }
-          </style>
+          <marker id="fexp-curve-l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto">
+            <path d="M7,1 L1,3.5 L7,6z" fill="#C0392B"/>
+          </marker>
         </defs>
 
+        <!-- Panel kiri: a > 1 -->
         <g transform="translate(15, 15)">
-          <rect width="435" height="490" rx="35" ry="35" fill="#F5F5F5" stroke="#C2C2C2" stroke-width="3" />
-          <text x="217" y="60" class="title">a &gt; 1</text>
-          <line x1="198" y1="455" x2="198" y2="120" stroke="#000" stroke-width="2" marker-end="url(#arrow-axis)" />
-          <text x="193" y="102" class="label-axis" text-anchor="middle">y</text>
-          <line x1="35" y1="290" x2="395" y2="290" stroke="#000" stroke-width="2" marker-end="url(#arrow-axis)" />
-          <text x="408" y="295" class="label-axis">x</text>
-          <text x="188" y="305" class="label-axis" text-anchor="end">O</text>
-          <path d="M 35,271 C 90,260 150,238 198,212 C 240,189 265,152 281,128" fill="none" stroke="#8B0000" stroke-width="3" marker-end="url(#arrow-curve)" />
-          <circle cx="198" cy="212" r="5" fill="#000" />
-          <text x="190" y="193" class="label-math" text-anchor="end">(0, 1)</text>
-          <text x="268" y="95" class="formula">f(x) = a<tspan dy="-10" font-size="16">x</tspan></text>
-          <text x="215" y="260" class="monoton">monoton naik</text>
+          <rect width="400" height="430" rx="14" ry="14" fill="none" stroke="#D8E0F5" stroke-width="1.5"/>
+          <!-- Judul -->
+          <text x="200" y="46" font-family="Inter,sans-serif" font-size="22" font-weight="600" fill="#888" text-anchor="middle">a &gt; 1</text>
+          <!-- Sumbu Y -->
+          <line x1="160" y1="400" x2="160" y2="70" stroke="#888" stroke-width="1.2" marker-end="url(#fexp-axis)"/>
+          <text x="153" y="62" font-family="Inter,sans-serif" font-size="15" fill="#888" text-anchor="middle">y</text>
+          <!-- Sumbu X -->
+          <line x1="30" y1="265" x2="375" y2="265" stroke="#888" stroke-width="1.2" marker-end="url(#fexp-axis)"/>
+          <text x="382" y="270" font-family="Inter,sans-serif" font-size="15" fill="#888">x</text>
+          <!-- O -->
+          <text x="148" y="281" font-family="Inter,sans-serif" font-size="14" fill="#888" text-anchor="end">O</text>
+          <!-- Kurva naik: dari kiri bawah mendekati asimtot, naik tajam ke kanan -->
+          <path d="M 30,248 C 80,237 130,220 160,200 C 195,177 222,144 240,115" fill="none" stroke="#C0392B" stroke-width="2.5" stroke-linecap="round" marker-end="url(#fexp-curve-r)"/>
+          <!-- Titik (0,1) -->
+          <circle cx="160" cy="200" r="5" fill="#888"/>
+          <text x="148" y="191" font-family="Inter,sans-serif" font-size="13" fill="#888" text-anchor="end">(0, 1)</text>
+          <!-- Label formula -->
+          <text x="248" y="100" font-family="Inter,sans-serif" font-size="18" font-style="italic" fill="#C0392B">f(x) = a<tspan dy="-7" font-size="12">x</tspan></text>
+          <!-- Keterangan -->
+          <text x="200" y="330" font-family="Inter,sans-serif" font-size="15" font-style="italic" fill="#777" text-anchor="middle">monoton naik</text>
         </g>
 
-        <g transform="translate(470, 15)">
-          <rect width="435" height="490" rx="35" ry="35" fill="#F5F5F5" stroke="#C2C2C2" stroke-width="3" />
-          <text x="217" y="60" class="title">0 &lt; a &lt; 1</text>
-          <line x1="198" y1="455" x2="198" y2="120" stroke="#000" stroke-width="2" marker-end="url(#arrow-axis)" />
-          <text x="193" y="102" class="label-axis" text-anchor="middle">y</text>
-          <line x1="35" y1="290" x2="395" y2="290" stroke="#000" stroke-width="2" marker-end="url(#arrow-axis)" />
-          <text x="408" y="295" class="label-axis">x</text>
-          <text x="188" y="305" class="label-axis" text-anchor="end">O</text>
-          <path d="M 115,134 C 131,158 156,189 198,212 C 246,238 306,260 393,275" fill="none" stroke="#8B0000" stroke-width="3" marker-end="url(#arrow-curve)" />
-          <circle cx="198" cy="212" r="5" fill="#000" />
-          <text x="208" y="193" class="label-math" text-anchor="start">(0, 1)</text>
-          <text x="268" y="200" class="formula">f(x) = a<tspan dy="-10" font-size="16">x</tspan></text>
-          <text x="215" y="335" class="monoton">monoton turun</text>
+        <!-- Panel kanan: 0 < a < 1 -->
+        <g transform="translate(445, 15)">
+          <rect width="400" height="430" rx="14" ry="14" fill="none" stroke="#D8E0F5" stroke-width="1.5"/>
+          <!-- Judul -->
+          <text x="200" y="46" font-family="Inter,sans-serif" font-size="22" font-weight="600" fill="#888" text-anchor="middle">0 &lt; a &lt; 1</text>
+          <!-- Sumbu Y -->
+          <line x1="160" y1="400" x2="160" y2="70" stroke="#888" stroke-width="1.2" marker-end="url(#fexp-axis)"/>
+          <text x="153" y="62" font-family="Inter,sans-serif" font-size="15" fill="#888" text-anchor="middle">y</text>
+          <!-- Sumbu X -->
+          <line x1="30" y1="265" x2="375" y2="265" stroke="#888" stroke-width="1.2" marker-end="url(#fexp-axis)"/>
+          <text x="382" y="270" font-family="Inter,sans-serif" font-size="15" fill="#888">x</text>
+          <!-- O -->
+          <text x="148" y="281" font-family="Inter,sans-serif" font-size="14" fill="#888" text-anchor="end">O</text>
+          <!-- Kurva turun: dari kiri atas turun, mendekati asimtot ke kanan -->
+          <path d="M 85,112 C 105,138 132,172 160,200 C 194,232 250,248 370,258" fill="none" stroke="#C0392B" stroke-width="2.5" stroke-linecap="round" marker-end="url(#fexp-curve-r)"/>
+          <!-- Titik (0,1) -->
+          <circle cx="160" cy="200" r="5" fill="#888"/>
+          <text x="170" y="191" font-family="Inter,sans-serif" font-size="13" fill="#888">(0, 1)</text>
+          <!-- Label formula -->
+          <text x="220" y="175" font-family="Inter,sans-serif" font-size="18" font-style="italic" fill="#C0392B">f(x) = a<tspan dy="-7" font-size="12">x</tspan></text>
+          <!-- Keterangan -->
+          <text x="200" y="330" font-family="Inter,sans-serif" font-size="15" font-style="italic" fill="#777" text-anchor="middle">monoton turun</text>
         </g>
       </svg>
     </div>
@@ -1051,10 +1065,10 @@ window.MathJax = {
       </div>
 
       <div class="grafik-wrap">
-        <svg viewBox="0 0 340 290" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:320px;background-color:transparent;">
+        <svg viewBox="0 0 340 290" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:320px;">
           <defs>
-            <marker id="arr-g28" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker>
-            <marker id="arr-g28l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M7,1 L1,3.5 L7,6z" fill="#555"/></marker>
+            <marker id="arr-g28" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#888"/></marker>
+            <marker id="arr-g28l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M7,1 L1,3.5 L7,6z" fill="#888"/></marker>
           </defs>
           <!-- Grid -->
           <g stroke="#e2e8f0" stroke-width="0.6">
@@ -1067,35 +1081,35 @@ window.MathJax = {
             <line x1="20" y1="115" x2="320" y2="115"/><line x1="20" y1="85" x2="320" y2="85"/>
             <line x1="20" y1="55" x2="320" y2="55"/><line x1="20" y1="25" x2="320" y2="25"/>
           </g>
-          <!-- Axes: origin=(120,265), scale=30 vertical, 30 horizontal -->
-          <line x1="20" y1="265" x2="325" y2="265" stroke="#555" stroke-width="1.8" marker-start="url(#arr-g28l)" marker-end="url(#arr-g28)"/>
-          <line x1="120" y1="282" x2="120" y2="18" stroke="#555" stroke-width="1.8" marker-start="url(#arr-g28l)" marker-end="url(#arr-g28)"/>
-          <text x="328" y="271" font-size="11" fill="#555">x</text>
-          <text x="112" y="15" font-size="11" fill="#555">y</text>
-          <text x="104" y="278" font-size="10" fill="#555">O</text>
-          <!-- Axis ticks x -->
-          <text x="60" y="278" text-anchor="middle" font-size="10" fill="#777">-3</text>
-          <text x="90" y="278" text-anchor="middle" font-size="10" fill="#777">-2</text>
-          <text x="150" y="278" text-anchor="middle" font-size="10" fill="#777">1</text>
-          <text x="180" y="278" text-anchor="middle" font-size="10" fill="#777">2</text>
-          <text x="210" y="278" text-anchor="middle" font-size="10" fill="#777">3</text>
-          <!-- Axis ticks y: scale 30px per unit, origin y=265 -->
-          <text x="108" y="239" text-anchor="end" font-size="10" fill="#777">1</text>
-          <text x="108" y="209" text-anchor="end" font-size="10" fill="#777">2</text>
-          <text x="108" y="179" text-anchor="end" font-size="10" fill="#777">3</text>
-          <text x="108" y="149" text-anchor="end" font-size="10" fill="#777">4</text>
-          <text x="108" y="89" text-anchor="end" font-size="10" fill="#777">6</text>
-          <text x="108" y="59" text-anchor="end" font-size="10" fill="#777">7</text>
-          <text x="108" y="29" text-anchor="end" font-size="10" fill="#777">8</text>
-          <!-- Asimtot -->
+          <!-- Axes: origin=(120,265) -->
+          <line x1="20" y1="265" x2="325" y2="265" stroke="#888" stroke-width="1.2" marker-start="url(#arr-g28l)" marker-end="url(#arr-g28)"/>
+          <line x1="120" y1="282" x2="120" y2="18" stroke="#888" stroke-width="1.2" marker-start="url(#arr-g28l)" marker-end="url(#arr-g28)"/>
+          <text x="328" y="270" font-family="Inter,sans-serif" font-size="11" fill="#888">x</text>
+          <text x="112" y="14" font-family="Inter,sans-serif" font-size="11" fill="#888">y</text>
+          <text x="104" y="278" font-family="Inter,sans-serif" font-size="10" fill="#888">O</text>
+          <!-- Ticks x -->
+          <text x="60"  y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−3</text>
+          <text x="90"  y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−2</text>
+          <text x="150" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
+          <text x="180" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">2</text>
+          <text x="210" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
+          <!-- Ticks y -->
+          <text x="108" y="239" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
+          <text x="108" y="209" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">2</text>
+          <text x="108" y="179" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
+          <text x="108" y="149" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">4</text>
+          <text x="108" y="89"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">6</text>
+          <text x="108" y="59"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">7</text>
+          <text x="108" y="29"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">8</text>
+          <!-- Asimtot y=0 -->
           <line x1="20" y1="265" x2="320" y2="265" stroke="#D8E0F5" stroke-dasharray="5,3" stroke-width="1"/>
-          <!-- Curve f(x)=2^x: origin(120,265), x_px=120+30x, y_px=265-30*2^x -->
-          <!-- x=-3: (30, 261.25), x=-2:(60,257.5), x=-1:(90,250), x=0:(120,235), x=1:(150,205), x=2:(180,145), x=3:(210,25) -->
-          <polyline points="30,261 60,257 90,250 120,235 150,205 180,145 210,25" stroke="#3B82F6" stroke-width="2.2" fill="none" stroke-linejoin="round" marker-end="url(#arr-g28)"/>
-          <!-- Key point (0,1) -->
-          <circle cx="120" cy="235" r="4.5" fill="#EF4444"/>
-          <text x="128" y="231" font-size="10" fill="#EF4444">(0,1)</text>
-          <text x="192" y="24" font-size="11" fill="#3B82F6">f(x)=2ˣ</text>
+          <!-- Kurva f(x)=2^x — cubic bezier presisi -->
+          <path d="M 15.0,262.3 C 25.0,261.7 35.0,260.9 45.0,259.7 C 55.0,258.5 65.0,256.8 75.0,254.4 C 85.0,251.9 95.0,248.7 105.0,243.8 C 115.0,238.9 125.0,232.4 135.0,222.6 C 145.0,212.8 155.0,199.8 165.0,180.1 C 175.0,160.5 185.0,134.5 195.0,95.3 C 200.0,75.7 205.0,52.7 210.0,25.0" stroke="#3B82F6" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-g28)"/>
+          <!-- Titik (0,1) -->
+          <circle cx="120" cy="235" r="4" fill="#EF4444"/>
+          <text x="128" y="231" font-family="Inter,sans-serif" font-size="9" fill="#EF4444">(0, 1)</text>
+          <!-- Label kurva -->
+          <text x="215" y="24" font-family="Inter,sans-serif" font-size="10" fill="#3B82F6">f(x) = 2ˣ</text>
         </svg>
       </div>
 
@@ -1150,10 +1164,10 @@ window.MathJax = {
       </div>
 
       <div class="grafik-wrap">
-        <svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;background-color:transparent;">
+        <svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
           <defs>
-            <marker id="arr-g29" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker>
-            <marker id="arr-g29l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M7,1 L1,3.5 L7,6z" fill="#555"/></marker>
+            <marker id="arr-g29" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#888"/></marker>
+            <marker id="arr-g29l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M7,1 L1,3.5 L7,6z" fill="#888"/></marker>
           </defs>
           <!-- Grid -->
           <g stroke="#e2e8f0" stroke-width="0.6">
@@ -1167,37 +1181,37 @@ window.MathJax = {
             <line x1="20" y1="75" x2="340" y2="75"/><line x1="20" y1="40" x2="340" y2="40"/>
           </g>
           <!-- Axes: origin=(155,285), Δx=35px/unit, Δy=35px/unit -->
-          <line x1="20" y1="285" x2="345" y2="285" stroke="#555" stroke-width="1.8" marker-start="url(#arr-g29l)" marker-end="url(#arr-g29)"/>
-          <line x1="155" y1="305" x2="155" y2="12" stroke="#555" stroke-width="1.8" marker-start="url(#arr-g29l)" marker-end="url(#arr-g29)"/>
-          <text x="348" y="291" font-size="11" fill="#555">x</text>
-          <text x="147" y="10" font-size="11" fill="#555">y</text>
-          <text x="138" y="298" font-size="10" fill="#555">O</text>
-          <!-- x ticks -->
-          <text x="50" y="298" text-anchor="middle" font-size="10" fill="#777">-3</text>
-          <text x="85" y="298" text-anchor="middle" font-size="10" fill="#777">-2</text>
-          <text x="120" y="298" text-anchor="middle" font-size="10" fill="#777">-1</text>
-          <text x="190" y="298" text-anchor="middle" font-size="10" fill="#777">1</text>
-          <text x="225" y="298" text-anchor="middle" font-size="10" fill="#777">2</text>
-          <text x="260" y="298" text-anchor="middle" font-size="10" fill="#777">3</text>
-          <!-- y ticks: 1=250, 3=180, 9=75 -->
-          <text x="143" y="254" text-anchor="end" font-size="10" fill="#777">1</text>
-          <text x="143" y="184" text-anchor="end" font-size="10" fill="#777">3</text>
-          <text x="143" y="114" text-anchor="end" font-size="10" fill="#777">6</text>
-          <text x="143" y="79" text-anchor="end" font-size="10" fill="#777">9</text>
-          <!-- Asimtot -->
+          <line x1="20" y1="285" x2="345" y2="285" stroke="#888" stroke-width="1.2" marker-start="url(#arr-g29l)" marker-end="url(#arr-g29)"/>
+          <line x1="155" y1="305" x2="155" y2="12" stroke="#888" stroke-width="1.2" marker-start="url(#arr-g29l)" marker-end="url(#arr-g29)"/>
+          <text x="348" y="291" font-family="Inter,sans-serif" font-size="11" fill="#888">x</text>
+          <text x="147" y="10"  font-family="Inter,sans-serif" font-size="11" fill="#888">y</text>
+          <text x="138" y="298" font-family="Inter,sans-serif" font-size="10" fill="#888">O</text>
+          <!-- Ticks x -->
+          <text x="50"  y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−3</text>
+          <text x="85"  y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−2</text>
+          <text x="120" y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−1</text>
+          <text x="190" y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
+          <text x="225" y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">2</text>
+          <text x="260" y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
+          <!-- Ticks y -->
+          <text x="143" y="254" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
+          <text x="143" y="184" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
+          <text x="143" y="114" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">6</text>
+          <text x="143" y="79"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">9</text>
+          <!-- Asimtot y=0 -->
           <line x1="20" y1="285" x2="340" y2="285" stroke="#D8E0F5" stroke-dasharray="5,3" stroke-width="1"/>
-          <!-- Axis of symmetry (y-axis) dashed -->
+          <!-- Sumbu simetri (sumbu-Y) -->
           <line x1="155" y1="12" x2="155" y2="305" stroke="#D8E0F5" stroke-dasharray="4,3" stroke-width="1"/>
-          <!-- f(x)=(1/3)^x: x=-3→(50,40), x=-2→(85,75), x=-1→(120,180), x=0→(155,250), x=1→(190,262.5), x=2→(225,269), x=3→(260,271) -->
-          <polyline points="50,40 85,75 120,180 155,250 190,263 225,269 260,271" stroke="#EF4444" stroke-width="2.2" fill="none" stroke-linejoin="round" marker-start="url(#arr-g29l)"/>
-          <!-- g(x)=3^x: x=-3→(50,271), x=-2→(85,269), x=-1→(120,263), x=0→(155,250), x=1→(190,180), x=2→(225,75), x=3→(260,40) -->
-          <polyline points="50,271 85,269 120,263 155,250 190,180 225,75 260,40" stroke="#3B82F6" stroke-width="2.2" fill="none" stroke-linejoin="round" marker-end="url(#arr-g29)"/>
-          <!-- Labels -->
-          <text x="30" y="36" font-size="11" fill="#EF4444">f(x)=(1/3)ˣ</text>
-          <text x="250" y="36" font-size="11" fill="#3B82F6">g(x)=3ˣ</text>
-          <!-- Titik (0,1) -->
-          <circle cx="155" cy="250" r="4" fill="#0A0F1E"/>
-          <text x="162" y="247" font-size="10" fill="#0A0F1E">(0,1)</text>
+          <!-- f(x)=(1/3)^x: turun — cubic bezier presisi, masuk dari atas kiri -->
+          <path d="M 88.5,2.8 C 99.0,95.8 109.5,145.4 120.0,180.0 C 131.7,218.5 143.3,237.2 155.0,250.0 C 166.7,262.8 178.3,269.1 190.0,273.3 C 201.7,277.6 213.3,279.7 225.0,281.1 C 236.7,282.5 248.3,283.2 260.0,283.7" stroke="#EF4444" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#arr-g29l)"/>
+          <!-- g(x)=3^x: naik — cubic bezier presisi, cerminan f terhadap sumbu-Y -->
+          <path d="M 50.0,283.7 C 61.7,283.2 73.3,282.5 85.0,281.1 C 96.7,279.7 108.3,277.6 120.0,273.3 C 131.7,269.1 143.3,262.8 155.0,250.0 C 166.7,237.2 178.3,218.5 190.0,180.0 C 199.8,147.7 209.6,102.1 219.4,20.8" stroke="#3B82F6" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-g29)"/>
+          <!-- Titik perpotongan (0,1) -->
+          <circle cx="155" cy="250" r="4" fill="#00BFA5"/>
+          <text x="162" y="246" font-family="Inter,sans-serif" font-size="9" fill="#00BFA5">(0, 1)</text>
+          <!-- Label kurva -->
+          <text x="22"  y="36" font-family="Inter,sans-serif" font-size="10" fill="#EF4444">f(x) = (⅓)ˣ</text>
+          <text x="248" y="36" font-family="Inter,sans-serif" font-size="10" fill="#3B82F6">g(x) = 3ˣ</text>
         </svg>
       </div>
 
