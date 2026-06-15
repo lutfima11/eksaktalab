@@ -326,30 +326,27 @@ window.MathJax = {
       $$x^2-5x+6 \neq 0 \implies (x-2)(x-3) \neq 0$$
       $$x \neq 2 \quad \text{dan} \quad x \neq 3$$
       $$D_f = \mathbb{R} \setminus \{2,\, 3\}$$
-<div style="margin-top:.75rem;">
-      <svg viewBox="0 0 320 60" xmlns="http://www.w3.org/2000/svg" width="300" style="max-width:100%;">
-        <defs><marker id="nl2" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker></defs>
-        <!-- Garis bilangan -->
-        <line x1="15" y1="28" x2="305" y2="28" stroke="#555" stroke-width="1.8" marker-end="url(#nl2)"/>
-        <line x1="305" y1="28" x2="15" y2="28" stroke="#555" stroke-width="1.8" marker-end="url(#nl2)"/>
-        <!-- Interval hijau: seluruh garis kecuali x=2 dan x=3 -->
-        <line x1="18" y1="28" x2="302" y2="28" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
-        <!-- Titik kosong x=2 dan x=3 -->
-        <circle cx="152" cy="28" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
-        <circle cx="192" cy="28" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
-        <!-- Tick dan label -->
-        <line x1="112" y1="22" x2="112" y2="34" stroke="#555" stroke-width="1.2"/>
-        <text x="112" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
-        <line x1="152" y1="22" x2="152" y2="34" stroke="#555" stroke-width="1.2"/>
-        <text x="152" y="48" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">2</text>
-        <line x1="192" y1="22" x2="192" y2="34" stroke="#555" stroke-width="1.2"/>
-        <text x="192" y="48" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">3</text>
-        <!-- Label domain -->
-        <text x="74" y="16" font-family="Inter,sans-serif" font-size="10" fill="#059669">———</text>
-        <text x="220" y="16" font-family="Inter,sans-serif" font-size="10" fill="#059669">———</text>
-        <text x="172" y="16" font-family="Inter,sans-serif" font-size="9" fill="#EF4444" text-anchor="middle">x≠2, x≠3</text>
-      </svg>
-    </div>
+      <div class="grafik-wrap" style="margin-top:.75rem;">
+        <svg viewBox="0 0 320 75" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:320px;">
+          <defs><marker id="nl2" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker></defs>
+          <line x1="15" y1="38" x2="308" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl2)"/>
+          <line x1="308" y1="38" x2="15" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl2)"/>
+          <line x1="18" y1="38" x2="308" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+          <circle cx="180" cy="38" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
+          <circle cx="220" cy="38" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
+          <line x1="100" y1="32" x2="100" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="100" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
+          <line x1="140" y1="32" x2="140" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="140" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">1</text>
+          <line x1="180" y1="32" x2="180" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="180" y="58" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">2</text>
+          <line x1="220" y1="32" x2="220" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="220" y="58" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">3</text>
+          <line x1="260" y1="32" x2="260" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="260" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">4</text>
+          <text x="160" y="72" font-family="Inter,sans-serif" font-size="10" fill="#059669" text-anchor="middle">semua x, kecuali x = 2 dan x = 3</text>
+        </svg>
+      </div>
     </div>
 
     <div class="box box-contoh">
@@ -360,29 +357,35 @@ window.MathJax = {
       <br>
       Syarat: ekspresi dalam akar $\geq 0$.
       $$2x - 8 \geq 0 \implies 2x \geq 8 \implies x \geq 4$$
-      $$D_f = [4,\, +\infty)$$
-<div style="margin-top:.75rem;">
-      <svg viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg" width="280" style="max-width:100%;">
-        <defs><marker id="nl3r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#059669"/></marker><marker id="nl3" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker></defs>
-        <line x1="15" y1="28" x2="288" y2="28" stroke="#555" stroke-width="1.8" marker-end="url(#nl3)"/>
-        <line x1="288" y1="28" x2="15" y2="28" stroke="#555" stroke-width="1.8" marker-end="url(#nl3)"/>
-        <!-- Interval hijau: x≥4 -->
-        <line x1="160" y1="28" x2="285" y2="28" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-end="url(#nl3r)"/>
-        <!-- Titik tertutup x=4 -->
-        <circle cx="160" cy="28" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
-        <!-- Ticks -->
-        <line x1="80" y1="22" x2="80" y2="34" stroke="#555" stroke-width="1.2"/>
-        <text x="80" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
-        <line x1="120" y1="22" x2="120" y2="34" stroke="#555" stroke-width="1.2"/>
-        <text x="120" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">2</text>
-        <line x1="160" y1="22" x2="160" y2="34" stroke="#555" stroke-width="1.2"/>
-        <text x="160" y="48" font-family="Georgia,serif" font-size="11" fill="#059669" text-anchor="middle">4</text>
-        <line x1="200" y1="22" x2="200" y2="34" stroke="#555" stroke-width="1.2"/>
-        <text x="200" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">6</text>
-        <!-- Label -->
-        <text x="222" y="16" font-family="Inter,sans-serif" font-size="10" fill="#059669" text-anchor="middle">{x ≥ 4}</text>
-      </svg>
-    </div>
+      $$D_f = \{x \in \mathbb{R} \mid x \geq 4\}$$
+      <div class="grafik-wrap" style="margin-top:.75rem;">
+        <svg viewBox="0 0 320 75" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:320px;">
+          <defs>
+            <marker id="nl3" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker>
+            <marker id="nl3r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#059669"/></marker>
+          </defs>
+          <line x1="15" y1="38" x2="308" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl3)"/>
+          <line x1="308" y1="38" x2="15" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl3)"/>
+          <!-- Interval hijau: x≥4, origin=60, scale=40 → x=0:60, x=1:100, x=2:140, x=3:180, x=4:220 -->
+          <line x1="220" y1="38" x2="305" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-end="url(#nl3r)"/>
+          <!-- Titik tertutup x=4 -->
+          <circle cx="220" cy="38" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
+          <!-- Ticks -->
+          <line x1="60" y1="32" x2="60" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="60" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
+          <line x1="100" y1="32" x2="100" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="100" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">1</text>
+          <line x1="140" y1="32" x2="140" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="140" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">2</text>
+          <line x1="180" y1="32" x2="180" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="180" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">3</text>
+          <line x1="220" y1="32" x2="220" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="220" y="58" font-family="Georgia,serif" font-size="11" fill="#059669" text-anchor="middle">4</text>
+          <line x1="260" y1="32" x2="260" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="260" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">5</text>
+          <text x="160" y="72" font-family="Inter,sans-serif" font-size="10" fill="#059669" text-anchor="middle">x ≥ 4</text>
+        </svg>
+      </div>
     </div>
 
     <div class="box box-contoh">
@@ -394,33 +397,31 @@ window.MathJax = {
       Syarat: $-x^2+4x+5 \geq 0$. Kalikan $-1$ (balik tanda ketidaksamaan):
       $$x^2-4x-5 \leq 0 \implies (x-5)(x+1) \leq 0$$
       $$-1 \leq x \leq 5$$
-      $$D_f = [-1,\, 5]$$
-<div style="margin-top:.75rem;">
-      <svg viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg" width="280" style="max-width:100%;">
-        <defs><marker id="nl4" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker></defs>
-        <line x1="15" y1="28" x2="285" y2="28" stroke="#555" stroke-width="1.8" marker-end="url(#nl4)"/>
-        <line x1="285" y1="28" x2="15" y2="28" stroke="#555" stroke-width="1.8" marker-end="url(#nl4)"/>
-        <!-- Interval hijau: -1 ≤ x ≤ 5 -->
-        <!-- origin=120, scale=30 → x=-1: px=90, x=5: px=270 -->
-        <line x1="90" y1="28" x2="270" y2="28" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
-        <!-- Titik tertutup di -1 dan 5 -->
-        <circle cx="90" cy="28" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
-        <circle cx="270" cy="28" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
-        <!-- Ticks: origin=120, scale=30 -->
-        <line x1="30" y1="22" x2="30" y2="34" stroke="#555" stroke-width="1.2"/>
-        <text x="30" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">-3</text>
-        <line x1="90" y1="22" x2="90" y2="34" stroke="#555" stroke-width="1.2"/>
-        <text x="90" y="48" font-family="Georgia,serif" font-size="11" fill="#059669" text-anchor="middle">-1</text>
-        <line x1="120" y1="22" x2="120" y2="34" stroke="#555" stroke-width="1.2"/>
-        <text x="120" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
-        <line x1="180" y1="22" x2="180" y2="34" stroke="#555" stroke-width="1.2"/>
-        <text x="180" y="48" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">2</text>
-        <line x1="270" y1="22" x2="270" y2="34" stroke="#555" stroke-width="1.2"/>
-        <text x="270" y="48" font-family="Georgia,serif" font-size="11" fill="#059669" text-anchor="middle">5</text>
-        <!-- Label -->
-        <text x="180" y="14" font-family="Inter,sans-serif" font-size="10" fill="#059669" text-anchor="middle">{-1 ≤ x ≤ 5}</text>
-      </svg>
-    </div>
+      $$D_f = \{x \in \mathbb{R} \mid -1 \leq x \leq 5\}$$
+      <div class="grafik-wrap" style="margin-top:.75rem;">
+        <svg viewBox="0 0 320 75" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:320px;">
+          <defs><marker id="nl4" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker></defs>
+          <line x1="15" y1="38" x2="308" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl4)"/>
+          <line x1="308" y1="38" x2="15" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl4)"/>
+          <!-- origin=80, scale=40: x=-1→40, x=0→80, x=1→120, x=2→160, x=3→200, x=4→240, x=5→280 -->
+          <line x1="40" y1="38" x2="280" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+          <!-- Titik tertutup di -1 dan 5 -->
+          <circle cx="40" cy="38" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
+          <circle cx="280" cy="38" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
+          <!-- Ticks -->
+          <line x1="40" y1="32" x2="40" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="40" y="58" font-family="Georgia,serif" font-size="11" fill="#059669" text-anchor="middle">-1</text>
+          <line x1="80" y1="32" x2="80" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="80" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
+          <line x1="160" y1="32" x2="160" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="160" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">2</text>
+          <line x1="240" y1="32" x2="240" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="240" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">4</text>
+          <line x1="280" y1="32" x2="280" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="280" y="58" font-family="Georgia,serif" font-size="11" fill="#059669" text-anchor="middle">5</text>
+          <text x="160" y="72" font-family="Inter,sans-serif" font-size="10" fill="#059669" text-anchor="middle">-1 ≤ x ≤ 5</text>
+        </svg>
+      </div>
     </div>
 
     <div class="box box-contoh">
@@ -432,45 +433,40 @@ window.MathJax = {
       Penyebut mengandung akar, syarat: $x^2 - x - 6 > 0$.
       $$(x-3)(x+2) > 0$$
       Titik kritis $x = -2$ dan $x = 3$. Uji tanda: positif di $x < -2$ dan $x > 3$.
-      $$D_f = (-\infty,\, -2) \cup (3,\, +\infty)$$
-<div style="margin-top:.75rem;">
-      <svg viewBox="0 0 320 90" xmlns="http://www.w3.org/2000/svg" width="300" style="max-width:100%;">
-        <defs>
-          <marker id="nl5l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M6,1 L0,3.5 L6,6z" fill="#059669"/></marker>
-          <marker id="nl5r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#059669"/></marker>
-          <marker id="nl5" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker>
-        </defs>
-        <line x1="15" y1="38" x2="308" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl5)"/>
-        <line x1="308" y1="38" x2="15" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl5)"/>
-        <!-- Uji tanda: 3 zona -->
-        <!-- Zona 1: x<-2 → positif (+) → hijau
-             Zona 2: -2<x<3 → negatif (-) → merah
-             Zona 3: x>3 → positif (+) → hijau
-             origin=160, scale=35: x=-2→px=90, x=3→px=265 -->
-        <!-- Interval kiri: x<-2 (terbuka) -->
-        <line x1="22" y1="38" x2="89" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-start="url(#nl5l)"/>
-        <!-- Interval kanan: x>3 (terbuka) -->
-        <line x1="266" y1="38" x2="305" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-end="url(#nl5r)"/>
-        <!-- Interval tengah: -2<x<3 (negatif) -->
-        <line x1="91" y1="38" x2="264" y2="38" stroke="#EF4444" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
-        <!-- Titik kritis terbuka x=-2 dan x=3 -->
-        <circle cx="90"  cy="38" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
-        <circle cx="265" cy="38" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
-        <!-- Ticks -->
-        <line x1="160" y1="32" x2="160" y2="44" stroke="#555" stroke-width="1.2"/>
-        <text x="160" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
-        <line x1="90" y1="32" x2="90" y2="44" stroke="#555" stroke-width="1.2"/>
-        <text x="90" y="58" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">-2</text>
-        <line x1="265" y1="32" x2="265" y2="44" stroke="#555" stroke-width="1.2"/>
-        <text x="265" y="58" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">3</text>
-        <!-- Tanda uji tanda -->
-        <text x="48"  y="25" font-family="Georgia,serif" font-size="13" fill="#059669" text-anchor="middle">(+)</text>
-        <text x="178" y="25" font-family="Georgia,serif" font-size="13" fill="#EF4444" text-anchor="middle">(−)</text>
-        <text x="285" y="25" font-family="Georgia,serif" font-size="13" fill="#059669" text-anchor="middle">(+)</text>
-        <!-- Label domain -->
-        <text x="160" y="78" font-family="Inter,sans-serif" font-size="10" fill="#059669" text-anchor="middle">{x < -2 atau x > 3}</text>
-      </svg>
-    </div>
+      $$D_f = \{x \in \mathbb{R} \mid x < -2 \text{ atau } x > 3\}$$
+      <div class="grafik-wrap" style="margin-top:.75rem;">
+        <svg viewBox="0 0 320 90" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:320px;">
+          <defs>
+            <marker id="nl5l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M6,1 L0,3.5 L6,6z" fill="#059669"/></marker>
+            <marker id="nl5r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#059669"/></marker>
+            <marker id="nl5" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker>
+          </defs>
+          <line x1="15" y1="46" x2="308" y2="46" stroke="#555" stroke-width="1.8" marker-end="url(#nl5)"/>
+          <line x1="308" y1="46" x2="15" y2="46" stroke="#555" stroke-width="1.8" marker-end="url(#nl5)"/>
+          <!-- origin=100, scale=50: x=-2→0... pakai origin=160, scale=40: x=-2→80, x=0→160, x=3→280 -->
+          <!-- Interval kiri: x<-2 (terbuka) -->
+          <line x1="18" y1="46" x2="79" y2="46" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-start="url(#nl5l)"/>
+          <!-- Interval kanan: x>3 (terbuka) -->
+          <line x1="281" y1="46" x2="305" y2="46" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-end="url(#nl5r)"/>
+          <!-- Interval tengah: -2<x<3 (negatif) -->
+          <line x1="81" y1="46" x2="279" y2="46" stroke="#EF4444" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+          <!-- Titik terbuka x=-2 dan x=3 -->
+          <circle cx="80" cy="46" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
+          <circle cx="280" cy="46" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
+          <!-- Tanda uji tanda -->
+          <text x="42" y="34" font-family="Georgia,serif" font-size="12" fill="#059669" text-anchor="middle">(+)</text>
+          <text x="180" y="34" font-family="Georgia,serif" font-size="12" fill="#EF4444" text-anchor="middle">(−)</text>
+          <text x="293" y="34" font-family="Georgia,serif" font-size="12" fill="#059669" text-anchor="middle">(+)</text>
+          <!-- Ticks -->
+          <line x1="80" y1="40" x2="80" y2="52" stroke="#555" stroke-width="1.2"/>
+          <text x="80" y="66" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">-2</text>
+          <line x1="160" y1="40" x2="160" y2="52" stroke="#555" stroke-width="1.2"/>
+          <text x="160" y="66" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
+          <line x1="280" y1="40" x2="280" y2="52" stroke="#555" stroke-width="1.2"/>
+          <text x="280" y="66" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">3</text>
+          <text x="160" y="82" font-family="Inter,sans-serif" font-size="10" fill="#059669" text-anchor="middle">x &lt; -2 atau x &gt; 3</text>
+        </svg>
+      </div>
     </div>
 
     <div class="box box-contoh">
@@ -485,7 +481,36 @@ window.MathJax = {
         <li>Syarat penyebut: $x-1 \neq 0 \Rightarrow x \neq 1$</li>
       </ul>
       Irisan kedua syarat:
-      $$D_f = [-4,\, +\infty) \setminus \{1\}$$
+      $$D_f = \{x \in \mathbb{R} \mid x \geq -4, \, x \neq 1\}$$
+      <div class="grafik-wrap" style="margin-top:.75rem;">
+        <svg viewBox="0 0 320 75" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:320px;">
+          <defs>
+            <marker id="nl6" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker>
+            <marker id="nl6r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#059669"/></marker>
+          </defs>
+          <line x1="15" y1="38" x2="308" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl6)"/>
+          <line x1="308" y1="38" x2="15" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl6)"/>
+          <!-- origin=60, scale=50: x=-4→60, x=-1→210... pakai origin=100, scale=40: x=-4→-60... -->
+          <!-- origin=180, scale=40: x=-4→20, x=-3→60... x=-4→20, x=0→180-(-4*40)=340 terlalu jauh -->
+          <!-- pakai origin=100, scale=35: x=-4→100-4*35=-40 negatif... -->
+          <!-- pakai origin=240, scale=40: x=-4→240-4*40=80, x=0→240, x=1→280 -->
+          <line x1="80" y1="38" x2="305" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-end="url(#nl6r)"/>
+          <!-- Titik tertutup x=-4 -->
+          <circle cx="80" cy="38" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
+          <!-- Titik kosong x=1 -->
+          <circle cx="280" cy="38" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
+          <!-- Ticks -->
+          <line x1="80" y1="32" x2="80" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="80" y="58" font-family="Georgia,serif" font-size="11" fill="#059669" text-anchor="middle">-4</text>
+          <line x1="160" y1="32" x2="160" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="160" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">-2</text>
+          <line x1="240" y1="32" x2="240" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="240" y="58" font-family="Georgia,serif" font-size="11" fill="#94A3B8" text-anchor="middle">0</text>
+          <line x1="280" y1="32" x2="280" y2="44" stroke="#555" stroke-width="1.2"/>
+          <text x="280" y="58" font-family="Georgia,serif" font-size="11" fill="#EF4444" text-anchor="middle">1</text>
+          <text x="160" y="72" font-family="Inter,sans-serif" font-size="10" fill="#059669" text-anchor="middle">x ≥ -4, kecuali x = 1</text>
+        </svg>
+      </div>
     </div>
 
     <div class="box box-latihan">
