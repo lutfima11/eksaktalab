@@ -290,7 +290,9 @@ window.MathJax = {
 
     <h3 class="subsection-title">3. Sumbu Simetri</h3>
 
-    <p>Sumbu simetri adalah garis vertikal yang membagi parabola menjadi dua bagian yang <strong>kongruen</strong> (sama dan simetris). Karena $x_1 + x_2 = \dfrac{-b}{a}$ (dari Vieta), maka:</p>
+    <p>Sumbu simetri adalah garis vertikal yang membagi parabola menjadi dua bagian yang <strong>kongruen</strong> (sama dan simetris). Persamaan sumbu simetri diturunkan dari sifat bahwa $x_1$ dan $x_2$ (akar-akar) berjarak sama terhadap sumbu simetri.</p>
+
+    <p>Karena $x_1 + x_2 = \dfrac{-b}{a}$ (dari Vieta), maka:</p>
 
     <div class="box box-rumus">
       <div class="box-label">Sumbu Simetri</div>
@@ -485,6 +487,55 @@ window.MathJax = {
 </svg>
     </div>
 
+    <div class="box box-catatan">
+      <div class="box-label">💡 Catatan Penting</div>
+      <p style="margin:0 0 .4rem;">$y_P = \dfrac{-D}{4a}$ karena $D = b^2 - 4ac$, sehingga $4ac - b^2 = -D$. Perhatikan:</p>
+      <ul style="margin:.3rem 0 0;padding-left:1.5rem;">
+        <li>Jika $a > 0$: $y_P$ adalah nilai <strong>minimum</strong> fungsi, sehingga range $= [y_P,\; +\infty)$</li>
+        <li>Jika $a < 0$: $y_P$ adalah nilai <strong>maksimum</strong> fungsi, sehingga range $= (-\infty,\; y_P]$</li>
+      </ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan semua titik penting grafik $f(x) = x^2 - 4x - 5$ (titik potong sumbu $X$, titik potong sumbu $Y$, sumbu simetri, dan titik balik). Nyatakan pula range fungsinya!</p>
+    </div>
+    <div class="penyelesaian">
+      Diketahui: $a = 1,\; b = -4,\; c = -5$. Karena $a = 1 > 0$, parabola <strong>terbuka ke atas</strong>.<br><br>
+      <strong>(1) Diskriminan dan titik potong sumbu $X$</strong>
+      $$D = (-4)^2 - 4(1)(-5) = 16 + 20 = 36 > 0$$
+      Karena $D > 0$, grafik memotong sumbu $X$ di dua titik:
+      $$x^2 - 4x - 5 = 0 \;\Rightarrow\; (x-5)(x+1) = 0 \;\Rightarrow\; x_1 = -1,\; x_2 = 5$$
+      Titik potong sumbu $X$: $(-1,\, 0)$ dan $(5,\, 0)$.<br><br>
+      <strong>(2) Titik potong sumbu $Y$</strong>
+      $$f(0) = (0)^2 - 4(0) - 5 = -5 \qquad \Rightarrow \quad (0,\, -5)$$
+      <strong>(3) Sumbu simetri</strong>
+      $$x_s = \frac{-b}{2a} = \frac{-(-4)}{2(1)} = 2$$
+      <strong>(4) Titik balik</strong> &nbsp;($a > 0$, jadi <strong>minimum</strong>)
+      $$y_P = \frac{-D}{4a} = \frac{-36}{4(1)} = -9 \qquad \Rightarrow \quad P(2,\, -9)$$
+      <strong>(5) Range fungsi</strong><br>
+      Karena $a > 0$ (parabola terbuka ke atas) dan nilai minimum $y_P = -9$, maka:
+      $$\text{Range} = [-9,\; +\infty)$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan semua titik penting grafik $f(x) = x^2 - 4x - 1$. Gunakan <strong>rumus kuadratis</strong> untuk mencari titik potong dengan sumbu $X$!</p>
+    </div>
+    <div class="penyelesaian">
+      Diketahui: $a = 1,\; b = -4,\; c = -1$. Karena $a = 1 > 0$, parabola <strong>terbuka ke atas</strong>.<br><br>
+      <strong>(1) Diskriminan dan titik potong sumbu $X$</strong>
+      $$D = (-4)^2 - 4(1)(-1) = 16 + 4 = 20 > 0$$
+      Karena $D = 20$ bukan bilangan kuadrat sempurna, gunakan <strong>rumus kuadratis</strong>:
+      $$x_{1,2} = \frac{-b \pm \sqrt{D}}{2a} = \frac{4 \pm \sqrt{20}}{2} = \frac{4 \pm 2\sqrt{5}}{2} = 2 \pm \sqrt{5}$$
+      Titik potong sumbu $X$: $(2 - \sqrt{5},\, 0) \approx (-0{,}24;\, 0)$ dan $(2 + \sqrt{5},\, 0) \approx (4{,}24;\, 0)$.<br><br>
+      <strong>(2) Titik potong sumbu $Y$:</strong> $f(0) = -1 \;\Rightarrow\; (0,\,-1)$<br><br>
+      <strong>(3) Sumbu simetri:</strong>
+      $$x_s = \frac{-(-4)}{2(1)} = 2$$
+      <strong>(4) Titik balik</strong> &nbsp;($a > 0$, jadi <strong>minimum</strong>)
+      $$y_P = \frac{-D}{4a} = \frac{-20}{4} = -5 \qquad \Rightarrow \quad P(2,\,-5)$$
+    </div>
+
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan</div>
       <ol class="soal-list">
@@ -503,7 +554,7 @@ window.MathJax = {
             <li>Range fungsi</li>
           </ol>
         </li>
-        <li>Sebuah parabola memiliki titik potong sumbu $X$ di $x = -3$ dan $x = 1$, serta titik potong sumbu $Y$ di $(0,\,-6)$. Tentukan persamaan sumbu simetri dan koordinat titik balik parabola tersebut.</li>
+        <li>Sebuah parabola memiliki titik potong sumbu $X$ di $x = -3$ dan $x = 1$, serta titik potong sumbu $Y$ di $(0,\,-6)$. Tentukan persamaan sumbu simetri dan titik balik parabola tersebut. <em>(Petunjuk: gunakan sifat simetri titik potong sumbu $X$)</em></li>
         <li>Fungsi $f(x) = x^2 + px + q$ memiliki sumbu simetri $x = 3$ dan titik potong sumbu $Y$ di $(0,\,4)$. Tentukan nilai $p$ dan $q$, serta koordinat titik baliknya.</li>
         <li>Diketahui $f(x) = -x^2 + 6x + k$. Jika koordinat $y$ titik balik parabola adalah $y_P = 12$, tentukan:
           <ol class="alpha-list" style="margin-top:.3rem;">
@@ -515,6 +566,11 @@ window.MathJax = {
           </ol>
         </li>
       </ol>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Rumus kuadratis digunakan ketika persamaan $ax^2+bx+c=0$ <strong>tidak bisa difaktorkan secara sederhana</strong>, yaitu saat $D$ bukan bilangan kuadrat sempurna. Hasilnya bisa berupa bentuk akar (irasional).</p>
     </div>
   </section>
 
@@ -754,7 +810,7 @@ window.MathJax = {
   <section class="section" id="bagian-d">
     <h2 class="section-title"><span class="section-badge">D</span>Sifat-Sifat Grafik Berdasarkan $a$ dan $D$</h2>
 
-    <p>Berdasarkan nilai $a$ dan diskriminan $D = b^2 - 4ac$, terdapat <strong>enam kemungkinan</strong> bentuk grafik fungsi kuadrat:</p>
+    <p>Berdasarkan nilai $a$ dan diskriminan $D = b^2 - 4ac$, terdapat <strong>enam kemungkinan</strong> bentuk grafik:</p>
 
     <!-- 3-panel a>0 -->
     <div class="box box-rumus">
@@ -1012,7 +1068,7 @@ window.MathJax = {
         </li>
         <li>Fungsi $f(x) = x^2 - 4x + k$ memiliki nilai minimum $3$. Tentukan nilai $k$.</li>
         <li>Fungsi $f(x) = a(x-1)^2 + 5$ memiliki nilai maksimum $5$ di $x = 1$. Tentukan syarat nilai $a$ agar kondisi ini terpenuhi (berikan dalam bentuk pertidaksamaan).</li>
-        <li>Untuk fungsi $f(x) = 2x^2 - bx + 8$, tentukan nilai $b$ agar sumbu simetrinya adalah $x = 3$.</li>
+        <li>Selesaikan: untuk fungsi $f(x) = 2x^2 - bx + 8$, tentukan nilai $b$ agar sumbu simetrinya adalah $x = 3$.</li>
       </ol>
     </div>
   </section>
