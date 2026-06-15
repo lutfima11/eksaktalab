@@ -100,7 +100,7 @@ window.MathJax = {
         <span class="tag teal">Kelas X</span>
         <span class="tag">Aljabar &amp; Fungsi</span>
         <span class="tag">7 Sub-bab</span>
-        <span class="tag">19 Contoh Soal</span>
+        <span class="tag">34 Contoh Soal</span>
       </div>
     </div>
   </div>
@@ -332,6 +332,25 @@ window.MathJax = {
       <strong>Cara cepat:</strong> $m = -\dfrac{a}{b} = -\dfrac{3}{-4} = \dfrac{3}{4}$ ✓
     </div>
 
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Tangga sebuah gedung memiliki tanjakan sejauh 4 m secara horizontal dan naik setinggi 3 m secara vertikal. Tentukan gradien (kemiringan) tangga tersebut!</p>
+    </div>
+    <div class="penyelesaian">
+      $$m = \frac{\Delta y}{\Delta x} = \frac{3}{4} = \mathbf{0{,}75}$$
+      Artinya, setiap 4 m jarak horizontal, tangga naik 3 m secara vertikal.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah lereng bukit memiliki titik awal di ketinggian 120 m dan titik akhir di ketinggian 195 m setelah menempuh jarak horizontal 300 m. Tentukan gradien lereng tersebut dan nyatakan dalam persen!</p>
+    </div>
+    <div class="penyelesaian">
+      $$m = \frac{\Delta y}{\Delta x} = \frac{195 - 120}{300} = \frac{75}{300} = \frac{1}{4} = 0{,}25$$
+      Dalam persen: $0{,}25 \times 100\% = \mathbf{25\%}$.<br>
+      Artinya setiap 100 m jarak horizontal, lereng naik 25 m.
+    </div>
+
     <h3 class="subsection-title">3. Jenis-Jenis Gradien</h3>
     <!-- SVG: 4 panel jenis gradien -->
     <div class="grafik-row">
@@ -417,7 +436,7 @@ window.MathJax = {
       <li><strong>Titik potong sumbu $X$</strong>: substitusi $y = 0$, selesaikan untuk $x$</li>
       <li><strong>Buat tabel</strong> pasangan titik $(x, y)$</li>
       <li><strong>Plot</strong> kedua titik pada bidang Cartesius</li>
-      <li><strong>Hubungkan</strong> kedua titik dengan garis lurus</li>
+      <li><strong>Hubungkan</strong> kedua titik dengan garis lurus (diperpanjang ke kedua arah)</li>
     </ol>
 
     <div class="box box-catatan">
@@ -426,14 +445,14 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 9</div>
+      <div class="box-label">📘 Contoh 11</div>
       <p style="margin:0;font-size:.9rem;">Gambarlah grafik $y = 2x + 4$ pada bidang Cartesius.</p>
     </div>
     <div class="penyelesaian">
       <br>
-      Titik potong sumbu $Y$ ($x=0$): $y = 4 \Rightarrow (0, 4)$<br>
-      Titik potong sumbu $X$ ($y=0$): $0 = 2x + 4 \Rightarrow x = -2 \Rightarrow (-2, 0)$<br><br>
-      <strong>Tabel:</strong>
+      <strong>(1) Titik potong sumbu $Y$</strong> ($x=0$): $y = 2(0) + 4 = 4 \Rightarrow$ Titik: $(0, 4)$<br>
+      <strong>(2) Titik potong sumbu $X$</strong> ($y=0$): $0 = 2x + 4 \Rightarrow x = -2 \Rightarrow$ Titik: $(-2, 0)$<br><br>
+      <strong>(3) Tabel:</strong>
       <div class="table-wrap" style="margin-top:.5rem;">
         <table>
           <thead><tr><th>$x$</th><th>$y$</th><th>$(x, y)$</th></tr></thead>
@@ -443,6 +462,7 @@ window.MathJax = {
           </tbody>
         </table>
       </div>
+      <strong>(4) Grafik:</strong>
 <div class="grafik-wrap" style="margin-top:1rem;">
         <svg viewBox="0 0 220 230" xmlns="http://www.w3.org/2000/svg" width="220">
           <defs><marker id="bx" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="#555"/></marker></defs>
@@ -460,33 +480,21 @@ window.MathJax = {
           <text x="202" y="180" font-size="11" fill="#555">x</text>
           <text x="82" y="12" font-size="11" fill="#555">y</text>
           <text x="74" y="182" font-size="10" fill="#555">O</text>
-          <!-- ticks x -->
           <text x="118" y="182" font-size="9" fill="#777" text-anchor="middle">1</text>
           <text x="146" y="182" font-size="9" fill="#777" text-anchor="middle">2</text>
           <text x="62"  y="182" font-size="9" fill="#777" text-anchor="middle">-1</text>
           <text x="34"  y="182" font-size="9" fill="#777" text-anchor="middle">-2</text>
-          <!-- ticks y: cy=170-28*y -->
-          <text x="80" y="174" font-size="9" fill="#777" text-anchor="end">0</text>
           <text x="80" y="146" font-size="9" fill="#777" text-anchor="end">1</text>
           <text x="80" y="118" font-size="9" fill="#777" text-anchor="end">2</text>
           <text x="80" y="90"  font-size="9" fill="#777" text-anchor="end">3</text>
           <text x="80" y="62"  font-size="9" fill="#777" text-anchor="end">4</text>
           <text x="80" y="198" font-size="9" fill="#777" text-anchor="end">-1</text>
-          <!-- y=2x+4: cx=90+28x, cy=170-28y=170-28(2x+4)=170-56x-112=58-56x
-               x=-2.5→cx=20, cy=58-56(-2.5)=58+140=198
-               x=1.5→cx=132, cy=58-84=-26 (clip) → x=1.2→cx=123.6≈124, cy=58-67.2=-9 clip
-               use x=1.1→cx=120.8≈121, cy=58-61.6=-3.6 still off
-               Better: x=1→cx=118, cy=58-56=2 still off
-               x=0.9→cx=115, cy=58-50.4=7.6≈8 OK -->
           <line x1="20" y1="198" x2="115" y2="8" stroke="#3B82F6" stroke-width="2.2"/>
           <text x="118" y="7" font-size="10" fill="#3B82F6">y=2x+4</text>
-          <!-- (0,4): cx=90, cy=58 -->
           <circle cx="90" cy="58" r="5" fill="#EF4444"/>
           <text x="96" y="55" font-size="9" fill="#EF4444">(0, 4)</text>
-          <!-- (-2,0): cx=34, cy=170 -->
           <circle cx="34" cy="170" r="5" fill="#EF4444"/>
           <text x="10" y="160" font-size="9" fill="#EF4444">(-2, 0)</text>
-          <!-- dashed -->
           <line x1="90" y1="58" x2="90" y2="170" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,3"/>
           <line x1="34" y1="170" x2="90" y2="170" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,3"/>
         </svg>
@@ -494,14 +502,126 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 10</div>
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Gambarlah grafik $3x + 2y = 12$ pada bidang Cartesius.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(1) Titik potong sumbu $Y$</strong> ($x=0$): $2y = 12 \Rightarrow y = 6 \Rightarrow$ Titik: $(0, 6)$<br>
+      <strong>(2) Titik potong sumbu $X$</strong> ($y=0$): $3x = 12 \Rightarrow x = 4 \Rightarrow$ Titik: $(4, 0)$<br><br>
+      <strong>(3) Tabel:</strong>
+      <div class="table-wrap" style="margin-top:.5rem;">
+        <table>
+          <thead><tr><th>$x$</th><th>$y$</th><th>$(x, y)$</th></tr></thead>
+          <tbody>
+            <tr><td>$0$</td><td>$6$</td><td>$(0, 6)$</td></tr>
+            <tr><td>$4$</td><td>$0$</td><td>$(4, 0)$</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <strong>(4) Grafik:</strong>
+      <div class="grafik-wrap" style="margin-top:1rem;">
+        <svg viewBox="0 0 220 230" xmlns="http://www.w3.org/2000/svg" width="220">
+          <defs><marker id="c12x" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="#555"/></marker></defs>
+          <g stroke="#e2e8f0" stroke-width="0.8">
+            <line x1="40" y1="10" x2="40" y2="220"/><line x1="70" y1="10" x2="70" y2="220"/>
+            <line x1="100" y1="10" x2="100" y2="220"/><line x1="130" y1="10" x2="130" y2="220"/>
+            <line x1="160" y1="10" x2="160" y2="220"/>
+            <line x1="10" y1="40"  x2="210" y2="40"/><line x1="10" y1="70"  x2="210" y2="70"/>
+            <line x1="10" y1="100" x2="210" y2="100"/><line x1="10" y1="130" x2="210" y2="130"/>
+            <line x1="10" y1="160" x2="210" y2="160"/><line x1="10" y1="190" x2="210" y2="190"/>
+          </g>
+          <!-- origin=(40,190), scale=30; x: cx=40+30x; y: cy=190-30y -->
+          <line x1="10" y1="190" x2="208" y2="190" stroke="#555" stroke-width="1.8" marker-end="url(#c12x)"/>
+          <line x1="40" y1="220" x2="40" y2="12" stroke="#555" stroke-width="1.8" marker-end="url(#c12x)"/>
+          <text x="202" y="200" font-size="11" fill="#555">x</text>
+          <text x="32" y="12" font-size="11" fill="#555">y</text>
+          <text x="24" y="202" font-size="10" fill="#555">O</text>
+          <text x="70"  y="202" font-size="9" fill="#777" text-anchor="middle">1</text>
+          <text x="100" y="202" font-size="9" fill="#777" text-anchor="middle">2</text>
+          <text x="130" y="202" font-size="9" fill="#777" text-anchor="middle">3</text>
+          <text x="160" y="202" font-size="9" fill="#777" text-anchor="middle">4</text>
+          <text x="30" y="163" font-size="9" fill="#777" text-anchor="end">1</text>
+          <text x="30" y="133" font-size="9" fill="#777" text-anchor="end">2</text>
+          <text x="30" y="103" font-size="9" fill="#777" text-anchor="end">3</text>
+          <text x="30" y="73"  font-size="9" fill="#777" text-anchor="end">4</text>
+          <text x="30" y="43"  font-size="9" fill="#777" text-anchor="end">5</text>
+          <!-- 3x+2y=12: (0,6)→(40,10); (4,0)→(160,190) -->
+          <line x1="30" y1="22" x2="172" y2="198" stroke="#3B82F6" stroke-width="2.2"/>
+          <text x="130" y="18" font-size="10" fill="#3B82F6">3x+2y=12</text>
+          <circle cx="40" cy="10" r="5" fill="#EF4444"/>
+          <text x="46" y="15" font-size="9" fill="#EF4444">(0, 6)</text>
+          <circle cx="160" cy="190" r="5" fill="#EF4444"/>
+          <text x="140" y="180" font-size="9" fill="#EF4444">(4, 0)</text>
+          <line x1="40" y1="10" x2="40" y2="190" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="40" y1="190" x2="160" y2="190" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,3"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Gambarlah grafik $y = -\dfrac{1}{2}x$ pada bidang Cartesius.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Karena garis melalui titik asal $O(0,0)$, pilih satu titik lain, misalnya $x = 4$:
+      $$y = -\frac{1}{2}(4) = -2 \quad \Rightarrow \quad \text{Titik: }(4,\,-2)$$
+      <strong>Tabel:</strong>
+      <div class="table-wrap" style="margin-top:.5rem;">
+        <table>
+          <thead><tr><th>$x$</th><th>$y$</th><th>$(x, y)$</th></tr></thead>
+          <tbody>
+            <tr><td>$0$</td><td>$0$</td><td>$(0, 0)$</td></tr>
+            <tr><td>$4$</td><td>$-2$</td><td>$(4, -2)$</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grafik-wrap" style="margin-top:1rem;">
+        <svg viewBox="0 0 230 200" xmlns="http://www.w3.org/2000/svg" width="220">
+          <defs><marker id="c13x" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="#555"/></marker></defs>
+          <g stroke="#e2e8f0" stroke-width="0.8">
+            <line x1="60" y1="10" x2="60" y2="190"/><line x1="90" y1="10" x2="90" y2="190"/>
+            <line x1="120" y1="10" x2="120" y2="190"/><line x1="150" y1="10" x2="150" y2="190"/>
+            <line x1="180" y1="10" x2="180" y2="190"/>
+            <line x1="10" y1="50"  x2="215" y2="50"/><line x1="10" y1="80"  x2="215" y2="80"/>
+            <line x1="10" y1="110" x2="215" y2="110"/><line x1="10" y1="140" x2="215" y2="140"/>
+            <line x1="10" y1="170" x2="215" y2="170"/>
+          </g>
+          <!-- origin=(90,110), scale=30; x: cx=90+30x; y: cy=110-30y -->
+          <line x1="10" y1="110" x2="213" y2="110" stroke="#555" stroke-width="1.8" marker-end="url(#c13x)"/>
+          <line x1="90" y1="193" x2="90" y2="12" stroke="#555" stroke-width="1.8" marker-end="url(#c13x)"/>
+          <text x="207" y="120" font-size="11" fill="#555">x</text>
+          <text x="82" y="12" font-size="11" fill="#555">y</text>
+          <text x="74" y="122" font-size="10" fill="#555">O</text>
+          <text x="60"  y="122" font-size="9" fill="#777" text-anchor="middle">-1</text>
+          <text x="120" y="122" font-size="9" fill="#777" text-anchor="middle">1</text>
+          <text x="150" y="122" font-size="9" fill="#777" text-anchor="middle">2</text>
+          <text x="180" y="122" font-size="9" fill="#777" text-anchor="middle">3</text>
+          <text x="80" y="83"  font-size="9" fill="#777" text-anchor="end">1</text>
+          <text x="80" y="53"  font-size="9" fill="#777" text-anchor="end">2</text>
+          <text x="80" y="143" font-size="9" fill="#777" text-anchor="end">-1</text>
+          <text x="80" y="173" font-size="9" fill="#777" text-anchor="end">-2</text>
+          <!-- y=-0.5x: (0,0)→(90,110); (-1,0.5)→(60,95); (4,-2)→(210,170) -->
+          <line x1="48" y1="83" x2="210" y2="170" stroke="#3B82F6" stroke-width="2.2"/>
+          <text x="182" y="162" font-size="10" fill="#3B82F6">y=−½x</text>
+          <circle cx="90" cy="110" r="5" fill="#EF4444"/>
+          <text x="95" y="105" font-size="9" fill="#EF4444">(0, 0)</text>
+          <circle cx="210" cy="170" r="5" fill="#EF4444"/>
+          <text x="185" y="185" font-size="9" fill="#EF4444">(4, −2)</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
       <p style="margin:0;font-size:.9rem;">Gambarlah grafik $f(x) = \dfrac{3}{2}x - 3$ dan tentukan luas segitiga yang dibentuk oleh garis tersebut dengan sumbu $X$ dan sumbu $Y$!</p>
     </div>
     <div class="penyelesaian">
       <br>
-      Titik potong sumbu $Y$ ($x=0$): $y = -3 \Rightarrow (0, -3)$<br>
-      Titik potong sumbu $X$ ($y=0$): $0 = \dfrac{3}{2}x - 3 \Rightarrow x = 2 \Rightarrow (2, 0)$<br><br>
-      Luas segitiga (alas $= 2$, tinggi $= 3$):
+      <strong>Titik potong sumbu $Y$</strong> ($x=0$): $y = -3 \Rightarrow (0, -3)$<br>
+      <strong>Titik potong sumbu $X$</strong> ($y=0$): $0 = \dfrac{3}{2}x - 3 \Rightarrow x = 2 \Rightarrow (2, 0)$<br><br>
+      <strong>Luas segitiga</strong> yang terbentuk (alas $= 2$, tinggi $= 3$):
       $$L = \frac{1}{2} \times 2 \times 3 = \mathbf{3}\text{ satuan luas}$$
 <div class="grafik-wrap" style="margin-top:1rem;">
         <svg viewBox="0 0 230 295" xmlns="http://www.w3.org/2000/svg" width="220">
@@ -558,12 +678,25 @@ window.MathJax = {
       </div>
     </div>
 
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui dua fungsi $f(x) = 2x - 4$ dan $g(x) = -x + 2$. Gambarlah kedua grafik dalam satu bidang Cartesius, kemudian tentukan koordinat titik potong keduanya!</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>Titik-titik untuk $f(x) = 2x - 4$:</strong> $(0,\,-4)$ dan $(2,\,0)$<br>
+      <strong>Titik-titik untuk $g(x) = -x + 2$:</strong> $(0,\,2)$ dan $(2,\,0)$<br><br>
+      <strong>Titik potong</strong> (samakan $f(x) = g(x)$):
+      $$2x - 4 = -x + 2 \Rightarrow 3x = 6 \Rightarrow x = 2,\; y = 0$$
+      Kedua garis berpotongan di titik $\boldsymbol{(2,\, 0)}$.
+    </div>
+
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan</div>
       <ol class="soal-list">
         <li>Gambarlah grafik $y = -x + 5$ pada bidang Cartesius. Tentukan titik potong sumbu $X$ dan sumbu $Y$.</li>
         <li>Gambarlah grafik $2x - 3y = 6$ menggunakan metode dua titik intercept.</li>
-        <li>Diketahui grafik fungsi linear melalui titik $(0,-2)$ dan memiliki gradien $3$. Gambarlah grafiknya.</li>
+        <li>Diketahui grafik fungsi linear melalui titik $(0,-2)$ dan memiliki gradien $3$. Gambarlah grafiknya dan tentukan satu titik lain yang dilalui garis tersebut.</li>
         <li>Gambarlah dua grafik $y = 2x$ dan $y = 2x + 3$ dalam satu bidang Cartesius. Apa yang dapat kamu simpulkan?</li>
       </ol>
     </div>
@@ -573,52 +706,84 @@ window.MathJax = {
   <section class="section" id="bagian-d">
     <h2 class="section-title"><span class="section-badge">D</span>Menentukan Persamaan Garis Lurus</h2>
 
+    <p>Terdapat beberapa cara menentukan persamaan garis lurus bergantung informasi yang diketahui.</p>
+
     <h3 class="subsection-title">1. Diketahui Gradien dan Satu Titik</h3>
+    <p>Persamaan garis melalui titik $A(x_1, y_1)$ dengan gradien $m$:</p>
     <div class="box box-rumus">
       <div class="box-label">Rumus</div>
       <div class="math-block">$$y - y_1 = m(x - x_1)$$</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 11</div>
+      <div class="box-label">📘 Contoh 16</div>
       <p style="margin:0;font-size:.9rem;">Tentukan persamaan garis dengan gradien $3$ yang melalui titik $P(2, -4)$.</p>
     </div>
     <div class="penyelesaian">
-      
-      $$y - (-4) = 3(x - 2) \Rightarrow y + 4 = 3x - 6$$
+      <br>
+      Gunakan rumus $y - y_1 = m(x - x_1)$ dengan $m = 3$ dan $(x_1, y_1) = (2, -4)$:
+      $$y - (-4) = 3(x - 2)$$
+      $$y + 4 = 3x - 6$$
       $$y = 3x - 10$$
     </div>
 
     <h3 class="subsection-title">2. Diketahui Dua Titik</h3>
+    <p>Persamaan garis melalui titik $A(x_1, y_1)$ dan titik $B(x_2, y_2)$:</p>
     <div class="box box-rumus">
       <div class="box-label">Rumus</div>
       <div class="math-block">$$\frac{y - y_1}{y_2 - y_1} = \frac{x - x_1}{x_2 - x_1}$$</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 12</div>
+      <div class="box-label">📘 Contoh 17</div>
       <p style="margin:0;font-size:.9rem;">Tentukan persamaan garis yang melalui titik $P(-2, 3)$ dan titik $Q(2, -5)$.</p>
     </div>
     <div class="penyelesaian">
       <br>
-      Hitung gradien: $m = \dfrac{-5-3}{2-(-2)} = \dfrac{-8}{4} = -2$<br><br>
-      Gunakan rumus persamaan garis melalui $P(-2, 3)$:
-      $$y - 3 = -2(x + 2) \Rightarrow y = -2x - 1$$
+      <strong>Langkah 1:</strong> Hitung gradien.
+      $$m = \frac{-5 - 3}{2 - (-2)} = \frac{-8}{4} = -2$$
+      <strong>Langkah 2:</strong> Gunakan rumus persamaan garis.
+      $$\frac{y - 3}{-5 - 3} = \frac{x - (-2)}{2 - (-2)}$$
+      $$\frac{y - 3}{-8} = \frac{x + 2}{4}$$
+      $$4(y - 3) = -8(x + 2)$$
+      $$y - 3 = -2x - 4$$
+      $$y = -2x - 1$$
     </div>
 
-    <h3 class="subsection-title">3. Bentuk Intercept</h3>
+    <h3 class="subsection-title">3. Bentuk Intercept (Titik Potong Dua Sumbu)</h3>
+    <p>Jika garis memotong sumbu $X$ di titik $(a, 0)$ dan sumbu $Y$ di titik $(0, b)$:</p>
     <div class="box box-rumus">
-      <div class="box-label">Rumus (titik potong sumbu X di $(a,0)$ dan sumbu Y di $(0,b)$)</div>
+      <div class="box-label">Rumus</div>
       <div class="math-block">$$\frac{x}{a} + \frac{y}{b} = 1$$</div>
     </div>
 
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;"><strong>Cara cepat membaca intercept:</strong> Dari bentuk $\dfrac{x}{a} + \dfrac{y}{b} = 1$, titik potong sumbu $X$ langsung terbaca sebagai $(a,0)$ dan titik potong sumbu $Y$ sebagai $(0,b)$. Ubah persamaan ke bentuk ini terlebih dahulu. Contoh: $3x + 5y = 15 \Rightarrow \dfrac{x}{5} + \dfrac{y}{3} = 1$, sehingga titik potong sumbu $X$ adalah $(5,0)$ dan sumbu $Y$ adalah $(0,3)$.</p>
+    </div>
+
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 13</div>
-      <p style="margin:0;font-size:.9rem;">Sebuah garis memotong sumbu $X$ di $(5, 0)$ dan sumbu $Y$ di $(0, 3)$. Tentukan persamaan garisnya!</p>
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah garis memotong sumbu $X$ di titik $(5, 0)$ dan sumbu $Y$ di titik $(0, 3)$. Tentukan persamaan garisnya!</p>
     </div>
     <div class="penyelesaian">
-      
+      <br>
+      Diketahui $a = 5$ dan $b = 3$, gunakan bentuk intercept:
       $$\frac{x}{5} + \frac{y}{3} = 1 \Rightarrow 3x + 5y = 15$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan persamaan garis yang melalui titik $P(6, 0)$ dan $Q(0, 4)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Garis melalui $P(6, 0)$ dan $Q(0, 4)$. Misalkan $(x_1, y_1) = (6, 0)$ dan $(x_2, y_2) = (0, 4)$.<br><br>
+      <strong>Gradien:</strong>
+      $$m = \frac{4 - 0}{0 - 6} = \frac{4}{-6} = -\frac{2}{3}$$
+      <strong>Persamaan garis</strong> (gunakan titik $P(6,0)$):
+      $$y - 0 = -\frac{2}{3}(x - 6)$$
+      $$y = -\frac{2}{3}x + 4$$
     </div>
 
     <div class="box box-latihan">
@@ -631,11 +796,46 @@ window.MathJax = {
         <li>Sebuah garis memotong sumbu $X$ di $(6,0)$ dan sumbu $Y$ di $(0,-3)$. Tulis dalam bentuk intercept, lalu ubah ke bentuk $y = mx + c$.</li>
       </ol>
     </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan persamaan garis yang melalui titik $A(1, -2)$ dan memiliki:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>gradien $4$</li>
+        <li>sejajar sumbu $X$</li>
+        <li>sejajar sumbu $Y$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>Gradien $m = 4$, melalui $A(1,-2)$:
+          $$y - (-2) = 4(x - 1) \Rightarrow y = 4x - 6$$
+        </li>
+        <li>Sejajar sumbu $X$ berarti $m = 0$, sehingga $y = -2$ (nilai $y$ tetap).</li>
+        <li>Sejajar sumbu $Y$ berarti gradien tak terdefinisi, sehingga $x = 1$ (nilai $x$ tetap).</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah garis $\ell$ melalui titik $P(0, 5)$ dan $Q(k, 2)$. Jika gradien garis $\ell$ adalah $-\dfrac{3}{4}$, tentukan nilai $k$!</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Gunakan rumus gradien dengan $(x_1, y_1) = (0, 5)$ dan $(x_2, y_2) = (k, 2)$:
+      $$m = \frac{2 - 5}{k - 0} = -\frac{3}{4}$$
+      $$\frac{-3}{k} = -\frac{3}{4}$$
+      $$k = 4$$
+      Jadi $k = \mathbf{4}$.
+    </div>
+
   </section>
 
   <!-- ═══ E. KEDUDUKAN DUA GARIS ══════════ -->
   <section class="section" id="bagian-e">
     <h2 class="section-title"><span class="section-badge">E</span>Kedudukan Dua Garis Lurus</h2>
+
+    <p>Dua buah garis lurus di bidang koordinat dapat memiliki empat kemungkinan kedudukan:</p>
 
     <div class="table-wrap">
       <table>
@@ -713,33 +913,109 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 14</div>
+      <div class="box-label">📘 Contoh 22</div>
       <p style="margin:0;font-size:.9rem;">Tentukan persamaan garis yang melalui titik $A(2, 5)$ dan <strong>sejajar</strong> dengan garis $y = 3x - 4$.</p>
     </div>
     <div class="penyelesaian">
       <br>
-      Gradien $y = 3x - 4$ adalah $m_1 = 3$. Karena sejajar, $m_2 = 3$.
+      Gradien $y = 3x - 4$ adalah $m_1 = 3$. Karena sejajar, $m_2 = m_1 = 3$.<br><br>
+      Persamaan garis melalui $A(2, 5)$ dengan $m = 3$:
       $$y - 5 = 3(x - 2) \Rightarrow y = 3x - 1$$
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 15</div>
+      <div class="box-label">📘 Contoh 23</div>
       <p style="margin:0;font-size:.9rem;">Tentukan persamaan garis yang melalui titik $B(4, -1)$ dan <strong>tegak lurus</strong> dengan garis $y = 2x + 7$.</p>
     </div>
     <div class="penyelesaian">
       <br>
-      $m_1 = 2$, maka $m_2 = -\dfrac{1}{2}$
-      $$y + 1 = -\frac{1}{2}(x - 4) \Rightarrow y = -\frac{1}{2}x + 1$$
+      Gradien $y = 2x + 7$ adalah $m_1 = 2$. Karena tegak lurus:
+      $$m_2 = -\frac{1}{m_1} = -\frac{1}{2}$$
+      Persamaan garis melalui $B(4, -1)$ dengan $m = -\dfrac{1}{2}$:
+      $$y - (-1) = -\frac{1}{2}(x - 4)$$
+      $$y + 1 = -\frac{1}{2}x + 2$$
+      $$y = -\frac{1}{2}x + 1$$
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 16</div>
+      <div class="box-label">📘 Contoh 24</div>
       <p style="margin:0;font-size:.9rem;">Tentukan titik potong garis $y = 2x + 1$ dan garis $y = -x + 7$.</p>
     </div>
     <div class="penyelesaian">
-      
+      <br>
+      Samakan kedua persamaan:
       $$2x + 1 = -x + 7 \Rightarrow 3x = 6 \Rightarrow x = 2$$
-      Substitusi: $y = 2(2) + 1 = 5$. Titik potong: $(2,\,5)$.
+      Substitusi $x = 2$ ke $y = 2x + 1$: $y = 2(2) + 1 = 5$.<br>
+      Jadi titik potong kedua garis adalah $\boldsymbol{(2,\,5)}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui garis $g: 2x - 4y + 8 = 0$ dan garis $h: x - 2y + 3 = 0$. Tentukan kedudukan kedua garis tersebut!</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Ubah ke bentuk $y = mx + c$:
+      <ul style="margin:.4rem 0;">
+        <li>Garis $g$: $2x - 4y + 8 = 0 \Rightarrow y = \dfrac{1}{2}x + 2$, sehingga $m_1 = \dfrac{1}{2}$, $c_1 = 2$</li>
+        <li>Garis $h$: $x - 2y + 3 = 0 \Rightarrow y = \dfrac{1}{2}x + \dfrac{3}{2}$, sehingga $m_2 = \dfrac{1}{2}$, $c_2 = \dfrac{3}{2}$</li>
+      </ul>
+      Karena $m_1 = m_2 = \dfrac{1}{2}$ dan $c_1 \neq c_2$, maka garis $g$ dan $h$ <strong>sejajar</strong>.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan kedudukan garis $p: 4x - 2y + 6 = 0$ dan garis $q: 2x - y + 3 = 0$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Sederhanakan kedua persamaan:
+      <ul style="margin:.4rem 0;">
+        <li>Garis $p$: $4x - 2y + 6 = 0 \Rightarrow 2x - y + 3 = 0 \Rightarrow y = 2x + 3$</li>
+        <li>Garis $q$: $2x - y + 3 = 0 \Rightarrow y = 2x + 3$</li>
+      </ul>
+      Persamaan keduanya identik: $m_1 = m_2 = 2$ dan $c_1 = c_2 = 3$. Jadi garis $p$ dan $q$ <strong>berimpit</strong>.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 27</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui garis $g: y = 3x - 1$ dan garis $h$ tegak lurus terhadap $g$ dan melalui titik $(6, 2)$. Tentukan persamaan garis $h$ dan koordinat titik potong $g$ dan $h$!</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>Gradien $h$:</strong> Karena $g \perp h$ dan $m_g = 3$:
+      $$m_h = -\frac{1}{3}$$
+      <strong>Persamaan $h$</strong> melalui $(6, 2)$:
+      $$y - 2 = -\frac{1}{3}(x - 6) \Rightarrow y = -\frac{1}{3}x + 4$$
+      <strong>Titik potong $g$ dan $h$</strong> (samakan):
+      $$3x - 1 = -\frac{1}{3}x + 4$$
+      $$3x + \frac{1}{3}x = 5$$
+      $$\frac{10}{3}x = 5 \Rightarrow x = \frac{3}{2},\quad y = 3\left(\frac{3}{2}\right) - 1 = \frac{7}{2}$$
+      Titik potong: $\boldsymbol{\left(\dfrac{3}{2},\,\dfrac{7}{2}\right)}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui garis $\ell_1: (a+2)x - 3y + 6 = 0$ dan $\ell_2: 4x + (a-1)y - 8 = 0$. Tentukan apakah kedua garis tersebut saling sejajar!</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Ubah ke bentuk $y = mx + c$:
+      <ul style="margin:.4rem 0;">
+        <li>$\ell_1$: $m_1 = \dfrac{a+2}{3}$</li>
+        <li>$\ell_2$: $m_2 = -\dfrac{4}{a-1}$</li>
+      </ul>
+      Syarat sejajar $m_1 = m_2$:
+      $$\frac{a+2}{3} = -\frac{4}{a-1}$$
+      $$(a+2)(a-1) = -12$$
+      $$a^2 + a - 2 = -12$$
+      $$a^2 + a + 10 = 0$$
+      Diskriminan: $D = 1 - 40 = -39 < 0$, tidak ada solusi real. Artinya kedua garis <strong>tidak bisa sejajar</strong> untuk nilai $a$ real mana pun.
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Jika diskriminan negatif, perlu dicek kembali apakah syarat yang digunakan sudah tepat. Soal semacam ini melatih ketelitian dalam manipulasi aljabar.</p>
     </div>
 
     <div class="box box-latihan">
@@ -748,8 +1024,9 @@ window.MathJax = {
         <li>Tentukan persamaan garis yang melalui $A(3,-2)$ dan <strong>sejajar</strong> dengan garis $y = -4x + 1$.</li>
         <li>Tentukan persamaan garis yang melalui $B(-1,3)$ dan <strong>tegak lurus</strong> dengan garis $y = \frac{1}{3}x - 2$.</li>
         <li>Tentukan titik potong garis $3x - y = 1$ dan $x + 2y = 12$.</li>
-        <li>Tentukan kedudukan garis $g: 3x - 6y + 12 = 0$ dan $h: x - 2y - 4 = 0$.</li>
+        <li>Tentukan kedudukan garis $g: 3x - 6y + 12 = 0$ dan $h: x - 2y - 4 = 0$ (sejajar, berpotongan, tegak lurus, atau berimpit).</li>
         <li>Diketahui garis $p: y = 2x - 3$ dan $q: ax + y + 1 = 0$ saling tegak lurus. Tentukan nilai $a$.</li>
+        <li>Tiga garis berikut diberikan: $\ell_1: y = 3x + 1$, $\ell_2: 3y = -x + 9$, $\ell_3: y = 3x - 5$. Tentukan pasangan garis yang sejajar, berpotongan tegak lurus, dan berpotongan biasa.</li>
       </ol>
     </div>
   </section>
@@ -758,37 +1035,94 @@ window.MathJax = {
   <section class="section" id="bagian-f">
     <h2 class="section-title"><span class="section-badge">F</span>Aplikasi Fungsi Linear dalam Kehidupan</h2>
 
+    <p>Fungsi linear sering digunakan untuk memodelkan situasi nyata di mana dua besaran berubah secara proporsional.</p>
+
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 17 — Ongkos Taksi</div>
-      <p style="margin:0;font-size:.9rem;">Sebuah taksi online mengenakan tarif awal Rp10.000 dan tarif Rp3.000 per km. Buat model fungsi linearnya dan hitung ongkos untuk jarak 12 km!</p>
+      <div class="box-label">📘 Contoh 29</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah taksi online mengenakan tarif awal Rp10.000 dan tarif Rp3.000 per km. Jika $y$ menyatakan total ongkos (rupiah) dan $x$ menyatakan jarak (km), buatlah model fungsi linearnya dan hitung ongkos untuk jarak 12 km!</p>
     </div>
     <div class="penyelesaian">
       <br>
-      Model: $y = 3.000x + 10.000$<br>
-      Untuk $x = 12$: $y = 3.000(12) + 10.000 = \text{Rp}46.000$
+      Model fungsi linear:
+      $$y = 3.000x + 10.000$$
+      Untuk $x = 12$ km:
+      $$y = 3.000(12) + 10.000 = 36.000 + 10.000 = \mathbf{46.000}$$
+      Jadi ongkos untuk jarak 12 km adalah <strong>Rp46.000</strong>.
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 18 — Lilin Terbakar</div>
-      <p style="margin:0;font-size:.9rem;">Sebuah lilin panjangnya 24 cm. Setiap jam panjangnya berkurang 3 cm. Kapan lilin habis?</p>
+      <div class="box-label">📘 Contoh 30</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah lilin panjangnya 24 cm. Setiap jam panjangnya berkurang 3 cm. Buat persamaan panjang lilin ($y$ cm) setelah $x$ jam, dan tentukan kapan lilin habis!</p>
     </div>
     <div class="penyelesaian">
       <br>
-      Model: $y = -3x + 24$<br>
-      Lilin habis saat $y = 0$: $0 = -3x + 24 \Rightarrow x = \mathbf{8}\text{ jam}$
+      Model fungsi linear:
+      $$y = -3x + 24$$
+      Lilin habis saat $y = 0$:
+      $$0 = -3x + 24 \Rightarrow 3x = 24 \Rightarrow x = 8$$
+      Jadi lilin habis terbakar setelah <strong>8 jam</strong>.
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 19 — Break-Even Point</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Seorang pedagang membeli buah Rp8.000/kg, biaya transportasi Rp20.000, dan menjual Rp15.000/kg. Tentukan titik impas!</p>
+      <div class="box-label">📘 Contoh 31</div>
+      <p style="margin:0;font-size:.9rem;">Pada menit ke-3 mesin pompa menghasilkan 11 liter air, dan pada menit ke-6 menghasilkan 17 liter. Jika laju pompa selalu tetap, tentukan persamaan volume air terhadap waktu!</p>
     </div>
     <div class="penyelesaian">
       <br>
-      Fungsi biaya: $C(x) = 8.000x + 20.000$<br>
-      Fungsi pendapatan: $R(x) = 15.000x$<br><br>
-      Titik impas ($C = R$):
-      $$8.000x + 20.000 = 15.000x \Rightarrow x \approx 2{,}86 \text{ kg}$$
-      Jadi harus menjual minimal <strong>3 kg</strong> agar tidak rugi.
+      Titik-titik yang diketahui: $(3, 11)$ dan $(6, 17)$.<br><br>
+      <strong>Gradien:</strong>
+      $$m = \frac{17 - 11}{6 - 3} = \frac{6}{3} = 2$$
+      <strong>Persamaan garis:</strong>
+      $$\frac{y - 11}{17 - 11} = \frac{x - 3}{6 - 3}$$
+      $$\frac{y - 11}{6} = \frac{x - 3}{3}$$
+      $$y - 11 = 2(x - 3)$$
+      $$y = 2x + 5$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;"><strong>Interpretasi:</strong> Gradien $m = 2$ berarti setiap 1 menit, volume air bertambah 2 liter. Konstanta $c = 5$ berarti volume awal (saat $x = 0$) adalah 5 liter.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 32</div>
+      <p style="margin:0;font-size:.9rem;">Suhu dalam Fahrenheit ($F$) dan Celsius ($C$) dihubungkan oleh $C = \dfrac{5}{9}(F - 32)$. Tentukan suhu dalam Fahrenheit jika $C = 100^\circ$!</p>
+    </div>
+    <div class="penyelesaian">
+      $$100 = \frac{5}{9}(F - 32)$$
+      $$900 = 5(F - 32)$$
+      $$180 = F - 32$$
+      $$F = 212$$
+      Jadi $100^\circ C = \mathbf{212^\circ F}$.
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Persamaan konversi suhu $C = \dfrac{5}{9}(F - 32)$ adalah contoh fungsi linear dengan $F$ sebagai variabel bebas dan $C$ sebagai variabel terikat. Grafiknya adalah garis lurus dengan gradien $\dfrac{5}{9}$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 33</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Seorang pedagang membeli buah dengan harga Rp8.000 per kg. Biaya transportasi tetap Rp20.000. Jika ia menjual buah seharga Rp15.000 per kg, tentukan:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Fungsi biaya $C(x)$ dan fungsi pendapatan $R(x)$ untuk $x$ kg buah</li>
+        <li>Titik impas (break-even point)</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>Fungsi biaya (modal + ongkos):
+          $$C(x) = 8.000x + 20.000$$
+          Fungsi pendapatan:
+          $$R(x) = 15.000x$$
+        </li>
+        <li>Titik impas terjadi saat $C(x) = R(x)$:
+          $$8.000x + 20.000 = 15.000x$$
+          $$20.000 = 7.000x$$
+          $$x \approx 2{,}86 \text{ kg}$$
+          Jadi pedagang harus menjual minimal <strong>3 kg</strong> agar tidak rugi.
+        </li>
+      </ol>
 <div class="grafik-wrap" style="margin-top:1rem;">
         <svg viewBox="0 0 290 230" xmlns="http://www.w3.org/2000/svg" width="280">
           <defs><marker id="ex" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="#555"/></marker></defs>
@@ -841,49 +1175,143 @@ window.MathJax = {
       </div>
     </div>
 
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 34</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sebuah mobil melaju dengan kecepatan konstan. Pada jam ke-1 posisinya 80 km dari kota A, dan pada jam ke-3 posisinya 200 km dari kota A. Tentukan:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Persamaan posisi $s$ (km) sebagai fungsi waktu $t$ (jam)</li>
+        <li>Kecepatan mobil</li>
+        <li>Posisi awal mobil saat $t = 0$</li>
+        <li>Waktu saat mobil mencapai jarak 320 km dari kota A</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Dua titik diketahui: $(1, 80)$ dan $(3, 200)$.
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li><strong>Gradien (kecepatan):</strong>
+          $$m = \frac{200 - 80}{3 - 1} = \frac{120}{2} = 60$$
+          Persamaan posisi melalui $(1, 80)$:
+          $$s - 80 = 60(t - 1) \Rightarrow s = 60t + 20$$
+        </li>
+        <li>Kecepatan mobil = gradien $= \mathbf{60}$ km/jam.</li>
+        <li>Posisi awal ($t = 0$): $s = 60(0) + 20 = \mathbf{20}$ km dari kota A.</li>
+        <li>Saat $s = 320$:
+          $$320 = 60t + 20 \Rightarrow t = \frac{300}{60} = \mathbf{5}\text{ jam}$$
+        </li>
+      </ol>
+    </div>
+
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan</div>
       <ol class="soal-list">
         <li>Sebuah konter pulsa menjual paket data dengan harga awal Rp5.000 ditambah Rp2.000 per GB. Buatlah model fungsi linearnya dan tentukan harga untuk paket 8 GB.</li>
-        <li>Sebuah tangki berisi 200 liter air. Air dipompa keluar sebesar 25 liter per jam. Kapan tangki kosong?</li>
-        <li>Pada hari ke-2 setelah panen berat buah 480 kg. Pada hari ke-5, tinggal 390 kg. Kapan gudang kosong?</li>
-        <li>Titik beku air $= 273\,\mathrm{K} = 0^\circ\mathrm{C}$ dan titik didih $= 373\,\mathrm{K} = 100^\circ\mathrm{C}$. Tentukan konversi $K = f(C)$ dan hitung $25^\circ C$ dalam Kelvin.</li>
-        <li>Biaya produksi $C = 500x + 8.000$ (ribu rupiah), harga jual Rp1.500 ribu per unit. Berapa unit minimum agar tidak rugi?</li>
+        <li>Sebuah tangki berisi 200 liter air. Air dipompa keluar sebesar 25 liter per jam. Buatlah model fungsi linear untuk volume air ($V$ liter) terhadap waktu ($t$ jam), dan tentukan kapan tangki kosong.</li>
+        <li>Pada hari ke-2 setelah panen, berat buah yang tersisa di gudang adalah 480 kg. Pada hari ke-5, beratnya tinggal 390 kg. Anggap pengurangan berlangsung linear. Tentukan persamaan berat ($W$ kg) terhadap hari ($t$), lalu prediksi kapan gudang kosong.</li>
+        <li>Titik beku air pada skala Kelvin adalah $273\,\mathrm{K}$ dan titik didihnya $373\,\mathrm{K}$. Titik yang sama pada Celsius adalah $0^\circ\mathrm{C}$ dan $100^\circ\mathrm{C}$. Tentukan persamaan konversi $K = f(C)$ dan hitung suhu $25^\circ\mathrm{C}$ dalam Kelvin.</li>
+        <li>Sebuah pabrik memproduksi $x$ unit barang per hari dengan biaya total $C = 500x + 8.000$ (dalam ribuan rupiah). Jika harga jual per unit adalah Rp1.500 ribu, tentukan fungsi pendapatan $R(x)$ dan berapa unit minimum yang harus dijual agar tidak rugi?</li>
       </ol>
     </div>
   </section>
 
   <!-- ═══ G. RINGKASAN ═════════════════════ -->
   <section class="section" id="bagian-g">
-    <h2 class="section-title"><span class="section-badge">G</span>Tabel Ringkasan</h2>
+    <h2 class="section-title"><span class="section-badge">G</span>Tabel Ringkasan Fungsi Linear</h2>
 
-    <h3 class="subsection-title">Bentuk Umum &amp; Unsur-Unsur</h3>
+    <h3 class="subsection-title">1. Bentuk Umum dan Unsur-Unsur Fungsi Linear</h3>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Unsur</th><th>Rumus / Nilai</th><th>Keterangan</th></tr></thead>
         <tbody>
           <tr><td>Bentuk umum</td><td>$f(x) = mx + c$</td><td>$m \neq 0$; $m, c \in \mathbb{R}$</td></tr>
-          <tr><td>Titik potong sumbu $Y$</td><td>$(0, c)$</td><td>Substitusi $x = 0$</td></tr>
-          <tr><td>Titik potong sumbu $X$</td><td>$\left(-\dfrac{c}{m}, 0\right)$</td><td>Substitusi $y = 0$</td></tr>
+          <tr><td>Gradien</td><td>$m$</td><td>Koefisien $x$; menentukan arah dan kemiringan garis</td></tr>
+          <tr><td>Titik potong sumbu $Y$</td><td>$(0, c)$</td><td>Diperoleh dengan substitusi $x = 0$</td></tr>
+          <tr><td>Titik potong sumbu $X$</td><td>$\left(-\dfrac{c}{m}, 0\right)$</td><td>Diperoleh dengan substitusi $y = 0$</td></tr>
           <tr><td>Domain</td><td>$\mathbb{R}$</td><td>Semua bilangan real</td></tr>
           <tr><td>Range</td><td>$\mathbb{R}$</td><td>Semua bilangan real</td></tr>
         </tbody>
       </table>
     </div>
 
-    <h3 class="subsection-title">Menentukan Persamaan Garis</h3>
+    <h3 class="subsection-title">2. Gradien (Kemiringan Garis)</h3>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Diketahui</th><th>Rumus</th></tr></thead>
+        <thead><tr><th>Diketahui</th><th>Rumus</th><th>Keterangan</th></tr></thead>
         <tbody>
-          <tr><td>Gradien $m$ dan titik $(x_1, y_1)$</td><td>$y - y_1 = m(x - x_1)$</td></tr>
-          <tr><td>Dua titik $(x_1,y_1)$ dan $(x_2,y_2)$</td><td>$\dfrac{y-y_1}{y_2-y_1} = \dfrac{x-x_1}{x_2-x_1}$</td></tr>
-          <tr><td>Intercept $(a,0)$ dan $(0,b)$</td><td>$\dfrac{x}{a} + \dfrac{y}{b} = 1$</td></tr>
-          <tr><td>Sejajar garis $m_1$, melalui $(x_1,y_1)$</td><td>$y - y_1 = m_1(x - x_1)$</td></tr>
-          <tr><td>Tegak lurus garis $m_1$, melalui $(x_1,y_1)$</td><td>$y - y_1 = -\dfrac{1}{m_1}(x - x_1)$</td></tr>
+          <tr><td>Dua titik $A(x_1,y_1)$ dan $B(x_2,y_2)$</td><td>$m = \dfrac{y_2 - y_1}{x_2 - x_1}$</td><td>Perubahan $y$ dibagi perubahan $x$</td></tr>
+          <tr><td>Sudut inklinasi $\alpha$</td><td>$m = \tan\alpha$</td><td>$0^\circ \leq \alpha &lt; 180^\circ$; $\alpha \neq 90^\circ$</td></tr>
+          <tr><td>Dari $y = mx + c$</td><td>$m$ = koefisien $x$</td><td>Langsung terbaca</td></tr>
+          <tr><td>Dari $ax + by = c$</td><td>$m = -\dfrac{a}{b}$</td><td>Ubah ke bentuk $y = mx + c$ terlebih dahulu</td></tr>
         </tbody>
       </table>
     </div>
+
+    <h3 class="subsection-title">3. Jenis-Jenis Gradien</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Nilai $m$</th><th>Arah Garis</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>$m > 0$</td><td>Naik (↗)</td><td>Nilai $y$ bertambah seiring $x$ bertambah</td></tr>
+          <tr><td>$m &lt; 0$</td><td>Turun (↘)</td><td>Nilai $y$ berkurang seiring $x$ bertambah</td></tr>
+          <tr><td>$m = 0$</td><td>Horizontal (→)</td><td>Garis sejajar sumbu $X$; fungsi konstan</td></tr>
+          <tr><td>$m$ tak terdefinisi</td><td>Vertikal (↑)</td><td>Garis sejajar sumbu $Y$; bukan fungsi</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">4. Titik Potong Dua Garis</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Langkah</th><th>Penjelasan</th></tr></thead>
+        <tbody>
+          <tr><td>1. Samakan kedua persamaan</td><td>Selesaikan $m_1 x + c_1 = m_2 x + c_2$ untuk mendapat nilai $x$</td></tr>
+          <tr><td>2. Substitusi nilai $x$</td><td>Masukkan $x$ ke salah satu persamaan untuk mendapat $y$</td></tr>
+          <tr><td>3. Tulis titik potong</td><td>Titik potong adalah $(x, y)$ yang memenuhi keduanya</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">5. Menentukan Persamaan Garis Lurus</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Diketahui</th><th>Rumus</th><th>Langkah</th></tr></thead>
+        <tbody>
+          <tr><td>Gradien $m$ dan satu titik $(x_1, y_1)$</td><td>$y - y_1 = m(x - x_1)$</td><td>Substitusi langsung</td></tr>
+          <tr><td>Dua titik $(x_1,y_1)$ dan $(x_2,y_2)$</td><td>$\dfrac{y-y_1}{y_2-y_1} = \dfrac{x-x_1}{x_2-x_1}$</td><td>Hitung $m$ dahulu, lalu gunakan rumus titik-gradien</td></tr>
+          <tr><td>Titik potong sumbu: $(a,0)$ dan $(0,b)$</td><td>$\dfrac{x}{a} + \dfrac{y}{b} = 1$</td><td>Bentuk intercept; baca $a$ dan $b$ langsung</td></tr>
+          <tr><td>Sejajar garis $y = m_1 x + c$ melalui $(x_1,y_1)$</td><td>$y - y_1 = m_1(x - x_1)$</td><td>Gunakan $m = m_1$ (gradien sama)</td></tr>
+          <tr><td>Tegak lurus garis $y = m_1 x + c$ melalui $(x_1,y_1)$</td><td>$y - y_1 = -\dfrac{1}{m_1}(x - x_1)$</td><td>Gunakan $m = -\dfrac{1}{m_1}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">6. Kedudukan Dua Garis Lurus</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Kedudukan</th><th>Syarat Gradien</th><th>Syarat Konstanta</th><th>Titik Potong</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Sejajar</strong> ($g \parallel h$)</td><td>$m_1 = m_2$</td><td>$c_1 \neq c_2$</td><td>Tidak ada</td></tr>
+          <tr><td><strong>Berpotongan</strong></td><td>$m_1 \neq m_2$</td><td>Bebas</td><td>Tepat satu titik</td></tr>
+          <tr><td><strong>Tegak lurus</strong> ($g \perp h$)</td><td>$m_1 \times m_2 = -1$</td><td>Bebas</td><td>Tepat satu titik ($90^\circ$)</td></tr>
+          <tr><td><strong>Berimpit</strong></td><td>$m_1 = m_2$</td><td>$c_1 = c_2$</td><td>Tak hingga titik</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">7. Model Aplikasi Fungsi Linear</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Konteks</th><th>Model</th><th>Interpretasi</th></tr></thead>
+        <tbody>
+          <tr><td>Pertumbuhan / penurunan linear</td><td>$y = mx + c$</td><td>$m$ = laju perubahan per satuan; $c$ = nilai awal</td></tr>
+          <tr><td>Fungsi biaya</td><td>$C(x) = px + k$</td><td>$p$ = biaya per unit; $k$ = biaya tetap</td></tr>
+          <tr><td>Fungsi pendapatan</td><td>$R(x) = hx$</td><td>$h$ = harga jual per unit</td></tr>
+          <tr><td>Titik impas (BEP)</td><td>$C(x) = R(x)$</td><td>Selesaikan persamaan; cari $x$ impas</td></tr>
+          <tr><td>Konversi satuan</td><td>$y = mx + c$</td><td>$m$ = faktor konversi; $c$ = selisih titik acuan</td></tr>
+        </tbody>
+      </table>
+    </div>
+
   </section>
 
   <!-- KONEKSI KE MATERI BERIKUTNYA -->
@@ -1203,7 +1631,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban:`$m = -1$` },
       { jawaban:`$m = 0$` },
       { jawaban:`$m = -\\dfrac{3}{5}$, titik potong sumbu $X$: $(10,0)$, sumbu $Y$: $(0,6)$` },
-      { jawaban:`$m = 15\\%$` },
+      { jawaban:`$m = \\dfrac{3}{20} = 0{,}15 = 15\\%$` },
     ],
     // C — Grafik
     1: [
@@ -1225,18 +1653,19 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban:`$y = -4x + 10$` },
       { jawaban:`$y = -3x$` },
       { jawaban:`$(2,\\,5)$` },
-      { jawaban:`<strong>Sejajar</strong>` },
+      { jawaban:`<strong>Sejajar</strong> ($m_g = m_h = \\frac{1}{2}$, $c_g \\neq c_h$)` },
       { jawaban:`$a = \\dfrac{1}{2}$` },
+      { jawaban:`$\\ell_1 \\parallel \\ell_3$ (sejajar); $\\ell_1 \\perp \\ell_2$ dan $\\ell_2 \\perp \\ell_3$ (tegak lurus); tidak ada yang berpotongan biasa` },
     ],
     // F — Aplikasi
     4: [
       { jawaban:`$H(x) = 2.000x + 5.000$;&nbsp; $H(8) = \\text{Rp}21.000$` },
-      { jawaban:`Tangki kosong saat $t = 8$ jam` },
-      { jawaban:`Gudang kosong hari ke-$18$` },
-      { jawaban:`$K = C + 273$;&nbsp; $25^\\circ C = 298\\,\\text{K}$` },
-      { jawaban:`Minimal $x = 8$ unit` },
+      { jawaban:`$V(t) = 200 - 25t$;&nbsp; tangki kosong saat $t = 8$ jam` },
+      { jawaban:`$W(t) = -30t + 540$;&nbsp; gudang kosong pada hari ke-$18$` },
+      { jawaban:`$K = C + 273$;&nbsp; $25^\\circ\\text{C} = 298\\,\\text{K}$` },
+      { jawaban:`$R(x) = 1.500x$;&nbsp; minimal $x = 8$ unit agar tidak rugi` },
     ],
-  };;
+  };
 
   let latihanIdx = 0;
   document.querySelectorAll('.box.box-latihan').forEach(box => {
