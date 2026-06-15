@@ -360,14 +360,11 @@ window.MathJax = {
       $$D_f = \{x \in \mathbb{R} \mid x \geq 4\}$$
       <div class="grafik-wrap" style="margin-top:.75rem;">
         <svg viewBox="0 0 320 75" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:320px;">
-          <defs>
-            <marker id="nl3" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker>
-            <marker id="nl3r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#059669"/></marker>
-          </defs>
+          <defs><marker id="nl3" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker></defs>
           <line x1="15" y1="38" x2="308" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl3)"/>
           <line x1="308" y1="38" x2="15" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl3)"/>
-          <!-- Interval hijau: x≥4, origin=60, scale=40 → x=0:60, x=1:100, x=2:140, x=3:180, x=4:220 -->
-          <line x1="220" y1="38" x2="305" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-end="url(#nl3r)"/>
+          <!-- Interval hijau: x≥4, origin=60, scale=40: x=0→60, x=1→100, x=2→140, x=3→180, x=4→220 -->
+          <line x1="220" y1="38" x2="305" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
           <!-- Titik tertutup x=4 -->
           <circle cx="220" cy="38" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
           <!-- Ticks -->
@@ -403,8 +400,8 @@ window.MathJax = {
           <defs><marker id="nl4" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker></defs>
           <line x1="15" y1="38" x2="308" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl4)"/>
           <line x1="308" y1="38" x2="15" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl4)"/>
-          <!-- origin=80, scale=40: x=-1→40, x=0→80, x=1→120, x=2→160, x=3→200, x=4→240, x=5→280 -->
-          <line x1="40" y1="38" x2="280" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+          <!-- origin=80, scale=40: x=-1→40, x=0→80, x=2→160, x=4→240, x=5→280 -->
+          <line x1="40" y1="38" x2="280" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
           <!-- Titik tertutup di -1 dan 5 -->
           <circle cx="40" cy="38" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
           <circle cx="280" cy="38" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
@@ -436,20 +433,16 @@ window.MathJax = {
       $$D_f = \{x \in \mathbb{R} \mid x < -2 \text{ atau } x > 3\}$$
       <div class="grafik-wrap" style="margin-top:.75rem;">
         <svg viewBox="0 0 320 90" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:320px;">
-          <defs>
-            <marker id="nl5l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M6,1 L0,3.5 L6,6z" fill="#059669"/></marker>
-            <marker id="nl5r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#059669"/></marker>
-            <marker id="nl5" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker>
-          </defs>
+          <defs><marker id="nl5" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker></defs>
           <line x1="15" y1="46" x2="308" y2="46" stroke="#555" stroke-width="1.8" marker-end="url(#nl5)"/>
           <line x1="308" y1="46" x2="15" y2="46" stroke="#555" stroke-width="1.8" marker-end="url(#nl5)"/>
-          <!-- origin=100, scale=50: x=-2→0... pakai origin=160, scale=40: x=-2→80, x=0→160, x=3→280 -->
-          <!-- Interval kiri: x<-2 (terbuka) -->
-          <line x1="18" y1="46" x2="79" y2="46" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-start="url(#nl5l)"/>
-          <!-- Interval kanan: x>3 (terbuka) -->
-          <line x1="281" y1="46" x2="305" y2="46" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-end="url(#nl5r)"/>
-          <!-- Interval tengah: -2<x<3 (negatif) -->
-          <line x1="81" y1="46" x2="279" y2="46" stroke="#EF4444" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+          <!-- origin=160, scale=40: x=-2→80, x=0→160, x=3→280 -->
+          <!-- Interval kiri: x<-2 -->
+          <line x1="18" y1="46" x2="80" y2="46" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+          <!-- Interval kanan: x>3 -->
+          <line x1="280" y1="46" x2="305" y2="46" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+          <!-- Interval tengah: -2<x<3 (tidak termasuk domain) -->
+          <line x1="80" y1="46" x2="280" y2="46" stroke="#EF4444" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
           <!-- Titik terbuka x=-2 dan x=3 -->
           <circle cx="80" cy="46" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
           <circle cx="280" cy="46" r="6" fill="var(--surface-2,#fff)" stroke="#EF4444" stroke-width="2.2"/>
@@ -484,17 +477,11 @@ window.MathJax = {
       $$D_f = \{x \in \mathbb{R} \mid x \geq -4, \, x \neq 1\}$$
       <div class="grafik-wrap" style="margin-top:.75rem;">
         <svg viewBox="0 0 320 75" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:320px;">
-          <defs>
-            <marker id="nl6" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker>
-            <marker id="nl6r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#059669"/></marker>
-          </defs>
+          <defs><marker id="nl6" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#555"/></marker></defs>
           <line x1="15" y1="38" x2="308" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl6)"/>
           <line x1="308" y1="38" x2="15" y2="38" stroke="#555" stroke-width="1.8" marker-end="url(#nl6)"/>
-          <!-- origin=60, scale=50: x=-4→60, x=-1→210... pakai origin=100, scale=40: x=-4→-60... -->
-          <!-- origin=180, scale=40: x=-4→20, x=-3→60... x=-4→20, x=0→180-(-4*40)=340 terlalu jauh -->
-          <!-- pakai origin=100, scale=35: x=-4→100-4*35=-40 negatif... -->
-          <!-- pakai origin=240, scale=40: x=-4→240-4*40=80, x=0→240, x=1→280 -->
-          <line x1="80" y1="38" x2="305" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.7" marker-end="url(#nl6r)"/>
+          <!-- origin=240, scale=40: x=-4→80, x=-2→160, x=0→240, x=1→280 -->
+          <line x1="80" y1="38" x2="305" y2="38" stroke="#059669" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
           <!-- Titik tertutup x=-4 -->
           <circle cx="80" cy="38" r="6" fill="#059669" stroke="#059669" stroke-width="2"/>
           <!-- Titik kosong x=1 -->
