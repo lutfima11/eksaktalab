@@ -884,19 +884,6 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Fungsi kuadrat secara alami <strong>tidak bijektif</strong> pada seluruh $\mathbb{R}$. Invers fungsi kuadrat hanya valid jika domain dibatasi sehingga fungsinya menjadi injektif, misalnya $x \geq -\dfrac{b}{2a}$ (diambil tanda $+$) atau $x \leq -\dfrac{b}{2a}$ (tanda $-$).</p>
     </div>
 
-    <h3 class="subsection-title">3. Domain dan Range Fungsi Invers</h3>
-
-    <p><strong>Ilustrasi pada beberapa jenis fungsi:</strong></p>
-
-    <p><strong>a. Fungsi Linear</strong> $f(x) = ax + b$, &ensp; $D_f = \mathbb{R}$, &ensp; $R_f = \mathbb{R}$</p>
-    $$D_{f^{-1}} = \mathbb{R} \qquad \text{dan} \qquad R_{f^{-1}} = \mathbb{R}$$
-
-    <p><strong>b. Fungsi Akar</strong> $f(x) = \sqrt{x - k}$, &ensp; $D_f = [k, +\infty)$, &ensp; $R_f = [0, +\infty)$</p>
-    $$D_{f^{-1}} = [0, +\infty) \qquad \text{dan} \qquad R_{f^{-1}} = [k, +\infty)$$
-    <p>(memang benar: $f^{-1}(x) = x^2 + k$ dengan $x \geq 0$)</p>
-
-    <p><strong>c. Fungsi Pecahan Linear</strong> $f(x) = \dfrac{ax+b}{cx+d}$, &ensp; $D_f = \mathbb{R} \setminus \!\left\{-\dfrac{d}{c}\right\}$, &ensp; $R_f = \mathbb{R} \setminus \!\left\{\dfrac{a}{c}\right\}$</p>
-    $$D_{f^{-1}} = \mathbb{R} \setminus \!\left\{\frac{a}{c}\right\} \qquad \text{dan} \qquad R_{f^{-1}} = \mathbb{R} \setminus \!\left\{-\frac{d}{c}\right\}$$
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 17</div>
@@ -919,38 +906,44 @@ window.MathJax = {
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 18</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan invers dari: (a) $f(x) = 3x - 5$ &nbsp;&nbsp; (b) $g(x) = \dfrac{1}{3}x + \dfrac{3}{4}$</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan invers dari:<br>
+      a. $f(x) = 3x - 5$<br>
+      b. $g(x) = \dfrac{1}{3}x + \dfrac{3}{4}$</p>
     </div>
     <div class="penyelesaian">
       <br>
-      (a) $y=3x-5 \Rightarrow x=\dfrac{y+5}{3}$, jadi $f^{-1}(x)=\dfrac{x+5}{3}$<br>
+      <strong>a.</strong> $y=3x-5 \Rightarrow x=\dfrac{y+5}{3}$, jadi $f^{-1}(x)=\dfrac{x+5}{3}$<br>
       Verifikasi: $(f^{-1} \circ f)(x) = f^{-1}[3x-5] = \dfrac{3x}{3} = x$ ✓<br><br>
-      (b) $12y=4x+9 \Rightarrow x=\dfrac{12y-9}{4}$, jadi $g^{-1}(x)=\dfrac{12x-9}{4}$
+      <strong>b.</strong> $12y=4x+9 \Rightarrow x=\dfrac{12y-9}{4}$, jadi $g^{-1}(x)=\dfrac{12x-9}{4}$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 19</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan invers dari: (a) $f(x) = \dfrac{2x-3}{x-1}$ &nbsp;&nbsp; (b) $g(x) = \dfrac{2-3x}{2x-4}$</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan invers dari:<br>
+      a. $f(x) = \dfrac{2x-3}{x-1}$<br>
+      b. $g(x) = \dfrac{2-3x}{2x-4}$</p>
     </div>
     <div class="penyelesaian">
       <br>
-      (a) $y(x-1)=2x-3 \Rightarrow x(y-2)=y-3$<br>
+      <strong>a.</strong> $y(x-1)=2x-3 \Rightarrow x(y-2)=y-3$<br>
       $\Rightarrow f^{-1}(x)=\dfrac{x-3}{x-2}$<br><br>
-      (b) $y(2x-4)=2-3x \Rightarrow x(2y+3)=4y+2$<br>
+      <strong>b.</strong> $y(2x-4)=2-3x \Rightarrow x(2y+3)=4y+2$<br>
       $\Rightarrow g^{-1}(x)=\dfrac{4x+2}{2x+3}$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 20</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan invers dari: (a) $f(x) = x^2 - 6x + 5$ &nbsp;&nbsp; (b) $f(x) = 2x^2 - 8x + 4$</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan invers dari:<br>
+      a. $f(x) = x^2 - 6x + 5$<br>
+      b. $f(x) = 2x^2 - 8x + 4$</p>
     </div>
     <div class="penyelesaian">
       <br>
-      (a) Misalkan $y = x^2 - 6x + 5$, lengkapi kuadrat sempurna:
+      <strong>a.</strong> Misalkan $y = x^2 - 6x + 5$, lengkapi kuadrat sempurna:
       $$y - 5 + 9 = x^2 - 6x + 9 \implies y + 4 = (x-3)^2 \implies x = 3 \pm \sqrt{y+4}$$
       Jadi $f^{-1}(x) = 3 \pm \sqrt{x+4}$.<br><br>
 
-      (b) Misalkan $y = 2x^2 - 8x + 4$:
+      <strong>b.</strong> Misalkan $y = 2x^2 - 8x + 4$:
       $$\frac{y}{2} = x^2 - 4x + 2 \implies \frac{y}{2} + 2 = x^2 - 4x + 4 = (x-2)^2$$
       $$x - 2 = \pm\sqrt{\frac{y}{2}+2} = \pm\frac{\sqrt{2y+8}}{2} \implies x = \frac{4 \pm \sqrt{2y+8}}{2}$$
       Jadi $f^{-1}(x) = \dfrac{4 \pm \sqrt{2x+8}}{2}$.
@@ -979,7 +972,7 @@ window.MathJax = {
       $$a = f(2) = \frac{2(2)+5}{2-1} = \frac{9}{1} = \mathbf{9}$$
     </div>
 
-    <h3 class="subsection-title">4. Invers Fungsi Eksponen dan Logaritma</h3>
+    <h3 class="subsection-title">3. Invers Fungsi Eksponen dan Logaritma</h3>
 
     <p><strong>a. Fungsi Eksponen</strong> $f(x) = a^{bx+c}$</p>
     <p>Dari $y = a^{bx+c}$ diperoleh $bx + c = \log_a y$, sehingga:</p>
@@ -1008,7 +1001,7 @@ window.MathJax = {
       (b) $3^y=2x+5 \Rightarrow g^{-1}(x)=\dfrac{3^x-5}{2}$, $D_{g^{-1}}=\{x \in \mathbb{R}\}$
     </div>
 
-    <h3 class="subsection-title">5. Fungsi Invers Diri Sendiri (Involusi)</h3>
+    <h3 class="subsection-title">4. Fungsi Invers Diri Sendiri (Involusi)</h3>
 
     <p>Suatu fungsi disebut <strong>involusi</strong> (atau <em>self-inverse</em>) jika $f = f^{-1}$, yaitu $f(f(x)) = x$ untuk semua $x$ pada domainnya.</p>
 
