@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logaritma – EksaktaLab</title>
+<meta name="description" content="Materi lengkap Logaritma SMA: pengertian, sifat-sifat, persamaan, pertidaksamaan, fungsi logaritma, dan aplikasi. Dilengkapi 30 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/logaritma/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/logaritma/">
+<meta property="og:title" content="Logaritma – EksaktaLab">
+<meta property="og:description" content="Materi lengkap Logaritma SMA: pengertian, sifat-sifat, persamaan, pertidaksamaan, fungsi, dan aplikasi. Dilengkapi 30 contoh soal.">
+<meta property="og:site_name" content="EksaktaLab">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Logaritma – EksaktaLab">
+<meta name="twitter:description" content="Materi lengkap Logaritma SMA: pengertian, sifat-sifat, persamaan, pertidaksamaan, fungsi, dan aplikasi.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Logaritma","url":"https://lutfima11.github.io/eksaktalab/materi/logaritma/","description":"Materi lengkap Logaritma SMA: pengertian, sifat-sifat, persamaan, pertidaksamaan, fungsi logaritma, dan aplikasi.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"educationalLevel":"SMA Kelas X","inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Aljabar & Fungsi"},{"@type":"ListItem","position":4,"name":"Logaritma","item":"https://lutfima11.github.io/eksaktalab/materi/logaritma/"}]}}</script>
+<style>
+th mjx-container { color: #fff !important; }
+th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
+</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Logaritma · 8 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Pengertian Logaritma</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Sifat-Sifat Logaritma</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Menyatakan dalam Bentuk Lain</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Persamaan Logaritma</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Pertidaksamaan Logaritma</a>
+        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Fungsi Logaritma</a>
+        <a class="toc-menu-item" href="#bagian-g" onclick="closeTOC()"><span class="toc-menu-badge">G</span>Aplikasi Logaritma</a>
+        <a class="toc-menu-item" href="#bagian-h" onclick="closeTOC()"><span class="toc-menu-badge">H</span>Tabel Ringkasan</a>
+      </div>
+    </div>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a><span>/</span>
+    <a href="../../#materi">Materi</a><span>/</span>
+    <a href="../../#aljabar">Aljabar &amp; Fungsi</a><span>/</span>
+    Logaritma
+  </div>
+
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">BAB A · No.4</div>
+      <h1 class="materi-title">Logaritma</h1>
+      <p class="materi-desc">Pelajari operasi invers dari eksponen: definisi, sembilan sifat dasar, persamaan, pertidaksamaan, fungsi logaritma, hingga aplikasinya dalam sains dan kehidupan nyata.</p>
+      <div class="materi-tags">
+        <span class="tag teal">Kelas X</span>
+        <span class="tag">Aljabar &amp; Fungsi</span>
+        <span class="tag">8 Sub-bab</span>
+        <span class="tag">30 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Pengertian Logaritma</a></li>
+      <li><a href="#bagian-b" data-num="B">Sifat-Sifat Logaritma</a></li>
+      <li><a href="#bagian-c" data-num="C">Menyatakan dalam Bentuk Lain</a></li>
+      <li><a href="#bagian-d" data-num="D">Persamaan Logaritma</a></li>
+      <li><a href="#bagian-e" data-num="E">Pertidaksamaan Logaritma</a></li>
+      <li><a href="#bagian-f" data-num="F">Fungsi Logaritma</a></li>
+      <li><a href="#bagian-g" data-num="G">Aplikasi Logaritma</a></li>
+      <li><a href="#bagian-h" data-num="H">Tabel Ringkasan</a></li>
+    </ul>
+  </div>
+
+
+  <!-- ═══ A. PENGERTIAN LOGARITMA ═══════════════════════════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Pengertian Logaritma</h2>
+
+    <p>Logaritma merupakan <strong>operasi invers dari perpangkatan</strong>. Jika $a^c = b$, maka pertanyaan <em>"berapakah nilai $c$?"</em> dijawab oleh logaritma.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Definisi Logaritma</div>
+      <div class="math-block">$${}^{a}\!\log b = c \;\Longleftrightarrow\; a^c = b$$</div>
+      <p style="margin:.5rem 0 0;font-size:.9rem;">Bilangan $a$ disebut <strong>basis</strong> (bilangan pokok), $b$ disebut <strong>numerus</strong>, dan $c$ adalah <strong>hasil logaritma</strong>.</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <ul style="margin:0;font-size:.9rem;">
+        <li>Basis $a$ harus <strong>positif</strong> dan <strong>tidak sama dengan 1</strong> ($a > 0,\; a \neq 1$).</li>
+        <li>Numerus $b$ harus <strong>positif</strong> ($b > 0$) — syarat agar logaritma terdefinisi.</li>
+        <li>Jika basis tidak ditulis, basis dianggap $10$: $\log b = {}^{10}\!\log b$.</li>
+        <li>Jika basis $a = e \approx 2{,}718\ldots$, maka ${}^{e}\!\log b$ ditulis $\ln b$ (logaritma natural).</li>
+      </ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Ubahlah setiap bentuk berikut dari notasi eksponen ke logaritma atau sebaliknya.<br>
+      a. $2^5 = 32$<br>
+      b. $5^{-2} = \dfrac{1}{25}$<br>
+      c. ${}^{3}\!\log 81 = 4$<br>
+      d. ${}^{7}\!\log \sqrt{7} = \dfrac{1}{2}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> $2^5 = 32 \;\Longleftrightarrow\; {}^{2}\!\log 32 = 5$<br><br>
+      <strong>b.</strong> $5^{-2} = \dfrac{1}{25} \;\Longleftrightarrow\; {}^{5}\!\log\dfrac{1}{25} = -2$<br><br>
+      <strong>c.</strong> ${}^{3}\!\log 81 = 4 \;\Longleftrightarrow\; 3^4 = 81$<br><br>
+      <strong>d.</strong> ${}^{7}\!\log\sqrt{7} = \dfrac{1}{2} \;\Longleftrightarrow\; 7^{1/2} = \sqrt{7}$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Hitunglah nilai setiap logaritma berikut.<br>
+      a. ${}^{2}\!\log 64$<br>
+      b. ${}^{3}\!\log 243$<br>
+      c. ${}^{5}\!\log \dfrac{1}{125}$<br>
+      d. ${}^{4}\!\log 8$<br>
+      e. ${}^{9}\!\log 27$<br>
+      f. $\log 0{,}001$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> Misalkan ${}^{2}\!\log 64 = x$, maka $2^x = 64 = 2^6$, sehingga $x = \mathbf{6}$.<br><br>
+      <strong>b.</strong> $3^x = 243 = 3^5$, sehingga $x = \mathbf{5}$.<br><br>
+      <strong>c.</strong> $5^x = \dfrac{1}{125} = 5^{-3}$, sehingga $x = \mathbf{-3}$.<br><br>
+      <strong>d.</strong> $4^x = 8 \Rightarrow (2^2)^x = 2^3 \Rightarrow 2x = 3 \Rightarrow x = \mathbf{\dfrac{3}{2}}$<br><br>
+      <strong>e.</strong> $9^x = 27 \Rightarrow (3^2)^x = 3^3 \Rightarrow 2x = 3 \Rightarrow x = \mathbf{\dfrac{3}{2}}$<br><br>
+      <strong>f.</strong> $\log 0{,}001 = {}^{10}\!\log 10^{-3} = \mathbf{-3}$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Ubahlah ke notasi logaritma: (a) $3^4 = 81$ &nbsp; (b) $7^{-2} = \frac{1}{49}$ &nbsp; (c) $\left(\frac{1}{2}\right)^3 = \frac{1}{8}$ &nbsp; (d) $10^5 = 100.000$</li>
+        <li>Ubahlah ke notasi eksponen: (a) ${}^{4}\!\log 64 = 3$ &nbsp; (b) ${}^{5}\!\log \frac{1}{5} = -1$ &nbsp; (c) ${}^{9}\!\log 3 = \frac{1}{2}$ &nbsp; (d) $\log 10.000 = 4$</li>
+        <li>Tentukan nilai: (a) ${}^{4}\!\log 256$ &nbsp; (b) ${}^{6}\!\log 216$ &nbsp; (c) ${}^{2}\!\log \frac{1}{32}$ &nbsp; (d) ${}^{25}\!\log 5$ &nbsp; (e) ${}^{27}\!\log 9$ &nbsp; (f) $\log 0{,}0001$</li>
+        <li>Tentukan nilai $x$: (a) ${}^{x}\!\log 81 = 4$ &nbsp; (b) ${}^{3}\!\log x = -4$ &nbsp; (c) ${}^{2}\!\log x = 0$ &nbsp; (d) ${}^{x}\!\log 125 = 3$</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ═══ B. SIFAT-SIFAT LOGARITMA ══════════════════════════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Sifat-Sifat Logaritma</h2>
+
+    <p>Terdapat <strong>sembilan sifat dasar</strong> logaritma yang wajib dikuasai. Seluruh sifat berlaku dengan syarat $a > 0$, $a \neq 1$, dan semua numerus positif.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Sembilan Sifat Dasar Logaritma</div>
+      <div class="table-wrap" style="margin-top:.5rem;">
+        <table>
+          <thead><tr><th>No.</th><th>Rumus</th><th>Nama</th></tr></thead>
+          <tbody>
+            <tr><td>S1</td><td>${}^{a}\!\log a = 1$</td><td>Log basis = numerus</td></tr>
+            <tr><td>S2</td><td>${}^{a}\!\log 1 = 0$</td><td>Log dengan numerus 1</td></tr>
+            <tr><td>S3</td><td>${}^{a}\!\log(p \cdot q) = {}^{a}\!\log p + {}^{a}\!\log q$</td><td>Perkalian → penjumlahan</td></tr>
+            <tr><td>S4</td><td>${}^{a}\!\log\dfrac{p}{q} = {}^{a}\!\log p - {}^{a}\!\log q$</td><td>Pembagian → pengurangan</td></tr>
+            <tr><td>S5</td><td>${}^{a}\!\log p^n = n \cdot {}^{a}\!\log p$</td><td>Pangkat sebagai faktor</td></tr>
+            <tr><td>S6</td><td>${}^{a}\!\log b = \dfrac{{}^{n}\!\log b}{{}^{n}\!\log a}$</td><td>Pergantian basis</td></tr>
+            <tr><td>S7</td><td>${}^{a}\!\log b = \dfrac{1}{{}^{b}\!\log a}$ &nbsp; $(b \neq 1)$</td><td>Kebalikan basis &amp; numerus</td></tr>
+            <tr><td>S8</td><td>${}^{a}\!\log b \cdot {}^{b}\!\log c = {}^{a}\!\log c$</td><td>Rantai logaritma</td></tr>
+            <tr><td>S9</td><td>$a^{{}^{a}\!\log b} = b$</td><td>Invers eksponen-logaritma</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin:.6rem 0 0;font-size:.85rem;">Sifat S8 dapat diperluas: ${}^{a}\!\log b \cdot {}^{b}\!\log c \cdot {}^{c}\!\log d = {}^{a}\!\log d$.</p>
+    </div>
+
+    <h3 class="subsection-title">1. Pembuktian Sifat-Sifat Dasar</h3>
+
+    <p>Seluruh pembuktian menggunakan definisi: ${}^{a}\!\log b = c \Leftrightarrow a^c = b$.</p>
+
+    <div class="box box-definisi">
+      <div class="box-label">Bukti S1 &amp; S2</div>
+      <p style="margin:0;font-size:.9rem;">
+        <strong>S1:</strong> Misalkan ${}^{a}\!\log a = x$, maka $a = a^x$. Karena $a = a^1$, diperoleh $x = 1$. &nbsp;$\square$<br>
+        <strong>S2:</strong> Misalkan ${}^{a}\!\log 1 = x$, maka $1 = a^x$. Karena $a^0 = 1$, diperoleh $x = 0$. &nbsp;$\square$
+      </p>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Bukti S3 — Perkalian</div>
+      <p style="margin:0;font-size:.9rem;">Misalkan ${}^{a}\!\log p = x$ dan ${}^{a}\!\log q = y$, sehingga $p = a^x$ dan $q = a^y$. Maka:</p>
+      $$p \cdot q = a^x \cdot a^y = a^{x+y}$$
+      <p style="margin:0;font-size:.9rem;">Berdasarkan definisi, ${}^{a}\!\log(p \cdot q) = x + y = {}^{a}\!\log p + {}^{a}\!\log q$. &nbsp;$\square$</p>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Bukti S6 — Pergantian Basis</div>
+      <p style="margin:0;font-size:.9rem;">Misalkan ${}^{a}\!\log b = x$, sehingga $b = a^x$. Logaritmakan kedua ruas dengan basis $n$:</p>
+      $${}^{n}\!\log b = {}^{n}\!\log a^x = x \cdot {}^{n}\!\log a$$
+      <p style="margin:0;font-size:.9rem;">Karena $a \neq 1$, maka ${}^{n}\!\log a \neq 0$, sehingga $x = \dfrac{{}^{n}\!\log b}{{}^{n}\!\log a}$. &nbsp;$\square$</p>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Bukti S8 — Rantai Logaritma</div>
+      <p style="margin:0;font-size:.9rem;">Terapkan S6 untuk mengubah ke basis $n$ yang sama:</p>
+      $${}^{a}\!\log b \cdot {}^{b}\!\log c = \frac{{}^{n}\!\log b}{{}^{n}\!\log a} \cdot \frac{{}^{n}\!\log c}{{}^{n}\!\log b} = \frac{{}^{n}\!\log c}{{}^{n}\!\log a} = {}^{a}\!\log c \qquad \square$$
+    </div>
+
+    <h3 class="subsection-title">2. Penjumlahan dan Pengurangan (S3 &amp; S4)</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Sederhanakanlah setiap bentuk berikut.<br>
+      a. $\log 4 + \log 25$<br>
+      b. ${}^{2}\!\log 48 - {}^{2}\!\log 3$<br>
+      c. ${}^{6}\!\log 9 + {}^{6}\!\log 4$<br>
+      d. ${}^{5}\!\log 50 - {}^{5}\!\log 2$<br>
+      e. ${}^{3}\!\log 54 + {}^{3}\!\log 2 - {}^{3}\!\log 4$<br>
+      f. ${}^{2}\!\log 3 + {}^{2}\!\log 10 - {}^{2}\!\log 15$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> $\log 4 + \log 25 = \log(4 \times 25) = \log 100 = \mathbf{2}$<br><br>
+      <strong>b.</strong> ${}^{2}\!\log 48 - {}^{2}\!\log 3 = {}^{2}\!\log\dfrac{48}{3} = {}^{2}\!\log 16 = \mathbf{4}$<br><br>
+      <strong>c.</strong> ${}^{6}\!\log 9 + {}^{6}\!\log 4 = {}^{6}\!\log(9 \times 4) = {}^{6}\!\log 36 = \mathbf{2}$<br><br>
+      <strong>d.</strong> ${}^{5}\!\log 50 - {}^{5}\!\log 2 = {}^{5}\!\log\dfrac{50}{2} = {}^{5}\!\log 25 = \mathbf{2}$<br><br>
+      <strong>e.</strong> ${}^{3}\!\log 54 + {}^{3}\!\log 2 - {}^{3}\!\log 4 = {}^{3}\!\log\dfrac{54 \times 2}{4} = {}^{3}\!\log 27 = \mathbf{3}$<br><br>
+      <strong>f.</strong> ${}^{2}\!\log 3 + {}^{2}\!\log 10 - {}^{2}\!\log 15 = {}^{2}\!\log\dfrac{3 \times 10}{15} = {}^{2}\!\log 2 = \mathbf{1}$
+    </div>
+
+    <h3 class="subsection-title">3. Sifat Pangkat (S5)</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Hitunglah atau sederhanakanlah.<br>
+      a. ${}^{5}\!\log 125$<br>
+      b. $2\,{}^{3}\!\log 6 - {}^{3}\!\log 4$<br>
+      c. $3\,{}^{2}\!\log 4 + 2\,{}^{2}\!\log 8$<br>
+      d. $\dfrac{1}{2}\log 36 - \log 3$<br>
+      e. $3\,{}^{5}\!\log 2 + {}^{5}\!\log 4 - {}^{5}\!\log 32$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> ${}^{5}\!\log 125 = {}^{5}\!\log 5^3 = 3 \cdot {}^{5}\!\log 5 = \mathbf{3}$<br><br>
+      <strong>b.</strong> $2\,{}^{3}\!\log 6 = {}^{3}\!\log 36$, lalu ${}^{3}\!\log 36 - {}^{3}\!\log 4 = {}^{3}\!\log 9 = \mathbf{2}$<br><br>
+      <strong>c.</strong> $3\,{}^{2}\!\log 4 = {}^{2}\!\log 64$, &nbsp; $2\,{}^{2}\!\log 8 = {}^{2}\!\log 64$, &nbsp; lalu $6 + 6 = \mathbf{12}$<br><br>
+      <strong>d.</strong> $\dfrac{1}{2}\log 36 = \log\sqrt{36} = \log 6$, &nbsp; lalu $\log 6 - \log 3 = \log 2 = \mathbf{\log 2}$<br><br>
+      <strong>e.</strong> ${}^{5}\!\log 8 + {}^{5}\!\log 4 - {}^{5}\!\log 32 = {}^{5}\!\log\dfrac{8 \times 4}{32} = {}^{5}\!\log 1 = \mathbf{0}$
+    </div>
+
+    <h3 class="subsection-title">4. Pergantian Basis (S6 &amp; S7)</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Hitunglah nilai setiap logaritma berikut.<br>
+      a. ${}^{27}\!\log 81$<br>
+      b. ${}^{8}\!\log 32$<br>
+      c. ${}^{4}\!\log 2 + {}^{8}\!\log 4$<br>
+      d. ${}^{9}\!\log 27 + {}^{3}\!\log 9$<br>
+      e. ${}^{16}\!\log 8 - {}^{4}\!\log 8$<br>
+      f. $\dfrac{{}^{2}\!\log 27}{{}^{2}\!\log 9}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> ${}^{27}\!\log 81 = \dfrac{{}^{3}\!\log 81}{{}^{3}\!\log 27} = \dfrac{4}{3} = \mathbf{\dfrac{4}{3}}$<br><br>
+      <strong>b.</strong> ${}^{8}\!\log 32 = \dfrac{{}^{2}\!\log 32}{{}^{2}\!\log 8} = \dfrac{5}{3} = \mathbf{\dfrac{5}{3}}$<br><br>
+      <strong>c.</strong> ${}^{4}\!\log 2 = \dfrac{1}{2}$, &nbsp; ${}^{8}\!\log 4 = \dfrac{2}{3}$, &nbsp; jumlah $= \dfrac{1}{2}+\dfrac{2}{3} = \mathbf{\dfrac{7}{6}}$<br><br>
+      <strong>d.</strong> ${}^{9}\!\log 27 = \dfrac{3}{2}$, &nbsp; ${}^{3}\!\log 9 = 2$, &nbsp; jumlah $= \mathbf{\dfrac{7}{2}}$<br><br>
+      <strong>e.</strong> ${}^{16}\!\log 8 = \dfrac{3}{4}$, &nbsp; ${}^{4}\!\log 8 = \dfrac{3}{2}$, &nbsp; selisih $= \mathbf{-\dfrac{3}{4}}$<br><br>
+      <strong>f.</strong> $\dfrac{{}^{2}\!\log 3^3}{{}^{2}\!\log 3^2} = \dfrac{3\,{}^{2}\!\log 3}{2\,{}^{2}\!\log 3} = \mathbf{\dfrac{3}{2}}$
+    </div>
+
+    <h3 class="subsection-title">5. Rantai Logaritma dan Sifat S9 (S8 &amp; S9)</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Hitunglah.<br>
+      a. ${}^{2}\!\log 3 \cdot {}^{3}\!\log 8$<br>
+      b. ${}^{2}\!\log 3 \cdot {}^{3}\!\log 4 \cdot {}^{4}\!\log 16$<br>
+      c. ${}^{2}\!\log 5 \cdot {}^{5}\!\log 9 \cdot {}^{3}\!\log 4$<br>
+      d. $3^{{}^{3}\!\log 7}$<br>
+      e. $5^{2\,{}^{5}\!\log 3} - 2^{{}^{2}\!\log 9}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> Sifat S8: ${}^{2}\!\log 3 \cdot {}^{3}\!\log 8 = {}^{2}\!\log 8 = 3$, &nbsp; jadi $= \mathbf{3}$<br><br>
+      <strong>b.</strong> Rantai tiga: ${}^{2}\!\log 3 \cdot {}^{3}\!\log 4 \cdot {}^{4}\!\log 16 = {}^{2}\!\log 16 = \mathbf{4}$<br><br>
+      <strong>c.</strong> ${}^{2}\!\log 5 \cdot {}^{5}\!\log 9 = {}^{2}\!\log 9 = 2\,{}^{2}\!\log 3$, lalu $\cdot\, {}^{3}\!\log 4 = 2 \cdot {}^{2}\!\log 4 = 2 \times 2 = \mathbf{4}$<br><br>
+      <strong>d.</strong> Sifat S9: $3^{{}^{3}\!\log 7} = \mathbf{7}$<br><br>
+      <strong>e.</strong> $5^{2\,{}^{5}\!\log 3} = 5^{{}^{5}\!\log 9} = 9$; &nbsp; $2^{{}^{2}\!\log 9} = 9$; &nbsp; jadi $9 - 9 = \mathbf{0}$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Sederhanakan: (a) $\log 8 + \log 125$ &nbsp; (b) ${}^{3}\!\log 72 - {}^{3}\!\log 8$ &nbsp; (c) ${}^{6}\!\log 12 + {}^{6}\!\log 3$ &nbsp; (d) ${}^{2}\!\log 40 - {}^{2}\!\log 5$</li>
+        <li>Hitung: (a) $3\,{}^{2}\!\log 4 - {}^{2}\!\log 8$ &nbsp; (b) $\frac{1}{2}\log 9 + \log 5$ &nbsp; (c) $2\,{}^{3}\!\log 6 + {}^{3}\!\log 9 - {}^{3}\!\log 12$ &nbsp; (d) ${}^{5}\!\log 3 + {}^{5}\!\log 50 - {}^{5}\!\log 6$</li>
+        <li>Gunakan pergantian basis: (a) ${}^{4}\!\log 32$ &nbsp; (b) ${}^{25}\!\log 125$ &nbsp; (c) ${}^{9}\!\log 81 + {}^{3}\!\log 27$ &nbsp; (d) ${}^{4}\!\log 8 - {}^{8}\!\log 4$</li>
+        <li>Hitung rantai: (a) ${}^{3}\!\log 5 \cdot {}^{5}\!\log 27$ &nbsp; (b) ${}^{2}\!\log 7 \cdot {}^{7}\!\log 4$ &nbsp; (c) ${}^{2}\!\log 3 \cdot {}^{3}\!\log 5 \cdot {}^{5}\!\log 8$ &nbsp; (d) $\dfrac{1}{{}^{8}\!\log 2} + \dfrac{1}{{}^{4}\!\log 2}$</li>
+        <li>Hitung: (a) $4^{{}^{4}\!\log 9} - 5^{{}^{5}\!\log 7}$ &nbsp; (b) $3^{2\,{}^{3}\!\log 5} + 2^{3\,{}^{2}\!\log 4}$</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ═══ C. MENYATAKAN DALAM BENTUK LAIN ═══════════════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Menyatakan Logaritma dalam Bentuk Lain</h2>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Strategi Kunci</div>
+      <ul style="margin:0;font-size:.9rem;">
+        <li><strong>Faktorkan</strong> numerus menjadi perkalian bilangan yang nilainya sudah diketahui.</li>
+        <li>Gunakan <strong>S3/S4</strong> untuk mengubah perkalian/pembagian menjadi penjumlahan/pengurangan.</li>
+        <li>Gunakan <strong>S6</strong> untuk ganti basis: ${}^{a}\!\log b = \dfrac{\log b}{\log a}$.</li>
+        <li>Ingat: $\log 5 = 1 - \log 2$ &nbsp; (karena $\log 10 = 1$ dan $10 = 2 \times 5$).</li>
+      </ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $\log 2 = a$ dan $\log 3 = b$. Nyatakan dalam $a$ dan $b$:<br>
+      a. $\log 6$<br>
+      b. $\log 15$<br>
+      c. $\log 0{,}18$<br>
+      d. ${}^{6}\!\log 5$<br>
+      e. ${}^{4}\!\log 15$<br>
+      f. ${}^{15}\!\log 8$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> $\log 6 = \log(2 \times 3) = \log 2 + \log 3 = \mathbf{a + b}$<br><br>
+      <strong>b.</strong> $\log 5 = 1 - a$, &nbsp; maka $\log 15 = \log 3 + \log 5 = b + (1-a) = \mathbf{1 - a + b}$<br><br>
+      <strong>c.</strong> $0{,}18 = \dfrac{2 \cdot 3^2}{10^2}$, &nbsp; maka $\log 0{,}18 = \log 2 + 2\log 3 - 2 = \mathbf{a + 2b - 2}$<br><br>
+      <strong>d.</strong> ${}^{6}\!\log 5 = \dfrac{\log 5}{\log 6} = \dfrac{1-a}{a+b} = \mathbf{\dfrac{1-a}{a+b}}$<br><br>
+      <strong>e.</strong> ${}^{4}\!\log 15 = \dfrac{\log 15}{\log 4} = \dfrac{1-a+b}{2a} = \mathbf{\dfrac{1-a+b}{2a}}$<br><br>
+      <strong>f.</strong> ${}^{15}\!\log 8 = \dfrac{\log 8}{\log 15} = \dfrac{3a}{1-a+b} = \mathbf{\dfrac{3a}{1-a+b}}$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $\log 2 = a$ dan $\log 5 = b$. Nyatakan dalam $a$ dan $b$:<br>
+      a. $\log 50$<br>
+      b. $\log 0{,}4$<br>
+      c. ${}^{4}\!\log 25$<br>
+      d. ${}^{50}\!\log 8$<br>
+      e. ${}^{20}\!\log 250$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> $\log 50 = \log(2 \times 5^2) = \log 2 + 2\log 5 = \mathbf{a + 2b}$<br><br>
+      <strong>b.</strong> $\log 0{,}4 = \log\dfrac{4}{10} = 2\log 2 - 1 = \mathbf{2a - 1}$<br><br>
+      <strong>c.</strong> ${}^{4}\!\log 25 = \dfrac{\log 25}{\log 4} = \dfrac{2b}{2a} = \mathbf{\dfrac{b}{a}}$<br><br>
+      <strong>d.</strong> ${}^{50}\!\log 8 = \dfrac{\log 8}{\log 50} = \dfrac{3a}{a+2b} = \mathbf{\dfrac{3a}{a+2b}}$<br><br>
+      <strong>e.</strong> $\log 20 = 2a + b$, &nbsp; $\log 250 = a + 3b$, &nbsp; maka ${}^{20}\!\log 250 = \mathbf{\dfrac{a+3b}{2a+b}}$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Diketahui $\log 2 = a$ dan $\log 3 = b$. Nyatakan: (a) $\log 72$ &nbsp; (b) $\log 0{,}15$ &nbsp; (c) ${}^{12}\!\log 5$</li>
+        <li>Diketahui ${}^{2}\!\log 3 = p$ dan ${}^{2}\!\log 5 = q$. Tentukan ${}^{60}\!\log 15$ dalam $p$ dan $q$.</li>
+        <li>Diketahui ${}^{3}\!\log 5 = m$. Tentukan ${}^{9}\!\log 125 + {}^{5}\!\log 27$ dalam $m$.</li>
+        <li>Diketahui $\log 2 = a$ dan $\log 3 = b$. Tentukan $\log 48 + \log 0{,}25 - \log 18$ dalam $a$ dan $b$.</li>
+        <li>Diketahui ${}^{3}\!\log 5 = m$ dan ${}^{3}\!\log 7 = n$. Nyatakan ${}^{3}\!\log 245 - {}^{3}\!\log 63$ dalam $m$ dan $n$.</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ═══ D. PERSAMAAN LOGARITMA ════════════════════════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Persamaan Logaritma</h2>
+
+    <p>Persamaan logaritma adalah persamaan yang di dalamnya terdapat logaritma dari suatu fungsi yang mengandung variabel $x$.</p>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Syarat Wajib Persamaan Logaritma</div>
+      <p style="margin:0;font-size:.9rem;">Logaritma ${}^{a}\!\log f(x)$ terdefinisi jika dan hanya jika:<br>
+      (1) <strong>Basis:</strong> $a > 0$ dan $a \neq 1$<br>
+      (2) <strong>Numerus:</strong> $f(x) > 0$<br><br>
+      Nilai $x$ yang menghasilkan numerus $\leq 0$ atau basis tidak valid <strong>wajib dibuang</strong> dari himpunan penyelesaian (<em>ekstraneous solution</em>).</p>
+    </div>
+
+    <h3 class="subsection-title">1. Tipe 1 — Numerus Mengandung $x$, Basis dan Ruas Kanan Konstan</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">Rumus Tipe 1</div>
+      <div class="math-block">$${}^{a}\!\log f(x) = k \;\Longleftrightarrow\; f(x) = a^k$$</div>
+      <p style="margin:.3rem 0 0;font-size:.85rem;">Ubah ke bentuk eksponen, selesaikan $f(x) = a^k$, lalu periksa syarat $f(x) > 0$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan himpunan penyelesaian dari:<br>
+      a. ${}^{3}\!\log(2x - 1) = 3$<br>
+      b. $\log(x^2 - 3x) = 1$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> Ubah ke eksponen: $2x - 1 = 3^3 = 27 \Rightarrow x = 14$.<br>
+      Periksa: $2(14) - 1 = 27 > 0$ ✓ &nbsp; Jadi $\text{HP} = \{\mathbf{14}\}$.<br><br>
+      <strong>b.</strong> $x^2 - 3x = 10^1 = 10 \Rightarrow x^2 - 3x - 10 = 0 \Rightarrow (x-5)(x+2) = 0$<br>
+      $x = 5$ atau $x = -2$. Periksa numerus $x^2 - 3x > 0$:<br>
+      &nbsp;&nbsp;$x = 5$: $25 - 15 = 10 > 0$ ✓ &nbsp; $x = -2$: $4 + 6 = 10 > 0$ ✓<br>
+      Jadi $\text{HP} = \{\mathbf{-2,\; 5}\}$.
+    </div>
+
+    <h3 class="subsection-title">2. Tipe 2 — Basis Sama, Kedua Ruas Logaritma</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">Rumus Tipe 2</div>
+      <div class="math-block">$${}^{a}\!\log f(x) = {}^{a}\!\log g(x) \;\Longleftrightarrow\; f(x) = g(x)$$</div>
+      <p style="margin:.3rem 0 0;font-size:.85rem;">Berlaku dengan syarat $f(x) > 0$ <strong>dan</strong> $g(x) > 0$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan himpunan penyelesaian dari:<br>
+      a. ${}^{3}\!\log(3x-5)^2 = {}^{3}\!\log(18-2x)$<br>
+      b. $2\,{}^{2}\!\log(x+3) = 1 + {}^{2}\!\log(x+7)$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> Samakan numerus: $(3x-5)^2 = 18-2x \Rightarrow 9x^2 - 28x + 7 = 0$<br>
+      $$x = \frac{28 \pm \sqrt{784-252}}{18} = \frac{14 \pm \sqrt{133}}{9}$$
+      Periksa syarat $(3x-5)^2 > 0$ dan $18-2x > 0$ ($x < 9$): kedua nilai memenuhi.<br>
+      Jadi $\text{HP} = \left\{\dfrac{14-\sqrt{133}}{9},\;\dfrac{14+\sqrt{133}}{9}\right\}$.<br><br>
+      <strong>b.</strong> Ubah $1 = {}^{2}\!\log 2$, lalu gunakan S3 dan S5:
+      $${}^{2}\!\log(x+3)^2 = {}^{2}\!\log 2(x+7)$$
+      $(x+3)^2 = 2(x+7) \Rightarrow x^2 + 4x - 5 = 0 \Rightarrow (x+5)(x-1) = 0$<br>
+      $x = -5$: $x+3 = -2 < 0$ — <strong>buang</strong>. &nbsp; $x = 1$: $1+3 = 4 > 0$ ✓<br>
+      Jadi $\text{HP} = \{\mathbf{1}\}$.
+    </div>
+
+    <h3 class="subsection-title">3. Tipe 3 — Bentuk Kuadrat dalam Logaritma</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">Rumus Tipe 3</div>
+      <div class="math-block">$$A\bigl({}^{a}\!\log f(x)\bigr)^2 + B\,{}^{a}\!\log f(x) + C = 0$$</div>
+      <p style="margin:.3rem 0 0;font-size:.85rem;">Misalkan $t = {}^{a}\!\log f(x)$, selesaikan persamaan kuadrat $At^2 + Bt + C = 0$, lalu kembalikan ke $x$ dengan $f(x) = a^t$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan himpunan penyelesaian dari:<br>
+      a. $({}^{2}\!\log x)^2 - 3\,{}^{2}\!\log x - 4 = 0$<br>
+      b. $({}^{3}\!\log x)^2 - 2\,({}^{3}\!\log x^2) - 8 = 0$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> Misalkan $t = {}^{2}\!\log x$:
+      $$t^2 - 3t - 4 = 0 \Rightarrow (t-4)(t+1) = 0 \Rightarrow t = 4 \text{ atau } t = -1$$
+      $t=4$: $x = 2^4 = 16$ ✓ &nbsp;&nbsp; $t=-1$: $x = 2^{-1} = \dfrac{1}{2}$ ✓<br>
+      Jadi $\text{HP} = \left\{\dfrac{1}{2},\; 16\right\}$.<br><br>
+      <strong>b.</strong> ${}^{3}\!\log x^2 = 2\,{}^{3}\!\log x$, sehingga persamaan menjadi $({}^{3}\!\log x)^2 - 4\,{}^{3}\!\log x - 8 = 0$.<br>
+      Misalkan $t = {}^{3}\!\log x$: $t^2 - 4t - 8 = 0 \Rightarrow t = 2 \pm 2\sqrt{3}$<br>
+      Jadi $\text{HP} = \left\{3^{2-2\sqrt{3}},\; 3^{2+2\sqrt{3}}\right\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Selesaikan $({}^{3}\!\log x)^2 - {}^{3}\!\log x^3 - 10 = 0$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      ${}^{3}\!\log x^3 = 3\,{}^{3}\!\log x$, sehingga: $({}^{3}\!\log x)^2 - 3\,{}^{3}\!\log x - 10 = 0$.<br>
+      Misalkan $p = {}^{3}\!\log x$:
+      $$p^2 - 3p - 10 = 0 \Rightarrow (p-5)(p+2) = 0$$
+      $p=5$: $x = 3^5 = \mathbf{243}$ ✓ &nbsp;&nbsp; $p=-2$: $x = 3^{-2} = \mathbf{\dfrac{1}{9}}$ ✓<br>
+      Jadi $\text{HP} = \left\{\dfrac{1}{9},\; 243\right\}$.
+    </div>
+
+    <h3 class="subsection-title">4. Tipe 4 — Basis Mengandung $x$</h3>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Syarat Tipe 4</div>
+      <p style="margin:0;font-size:.9rem;">Jika basis memuat variabel, wajib periksa: basis $> 0$, basis $\neq 1$, numerus $> 0$. Ubah ke bentuk eksponen, lalu verifikasi semua syarat.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Selesaikan ${}^{(x-2)}\!\log(2x^2-7x+5) = 2$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>Syarat:</strong> $x - 2 > 0 \Rightarrow x > 2$; &nbsp; $x - 2 \neq 1 \Rightarrow x \neq 3$; &nbsp; $2x^2-7x+5 > 0$.<br><br>
+      Ubah ke eksponen: $2x^2 - 7x + 5 = (x-2)^2 = x^2 - 4x + 4$
+      $$x^2 - 3x + 1 = 0 \Rightarrow x = \frac{3 \pm \sqrt{5}}{2}$$
+      $x_1 = \dfrac{3+\sqrt{5}}{2} \approx 2{,}618 > 2$ dan $\neq 3$ ✓ &nbsp;&nbsp; $x_2 = \dfrac{3-\sqrt{5}}{2} \approx 0{,}382 < 2$ — <strong>buang</strong>.<br>
+      Jadi $\text{HP} = \left\{\dfrac{3+\sqrt{5}}{2}\right\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Selesaikan ${}^{3x+4}\!\log(2x+1)^2 + {}^{2x+1}\!\log(6x^2+11x+4) = 4$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Faktorkan $6x^2+11x+4 = (3x+4)(2x+1)$, maka:
+      $${}^{3x+4}\!\log(2x+1)^2 + {}^{2x+1}\!\log(3x+4) + {}^{2x+1}\!\log(2x+1) = 4$$
+      Karena ${}^{2x+1}\!\log(2x+1) = 1$ (S1) dan ${}^{2x+1}\!\log(3x+4) = \dfrac{1}{{}^{3x+4}\!\log(2x+1)}$ (S7), misalkan $m = {}^{3x+4}\!\log(2x+1)$:
+      $$2m + \frac{1}{m} + 1 = 4 \Rightarrow 2m^2 - 3m + 1 = 0 \Rightarrow (2m-1)(m-1) = 0$$
+      <strong>Kasus 1</strong> ($m = \frac{1}{2}$): $(2x+1)^2 = 3x+4 \Rightarrow 4x^2+x-3=0 \Rightarrow x = \frac{3}{4}$ atau $x=-1$.<br>
+      &nbsp;&nbsp;$x=-1$: basis $= 1$ — <strong>buang</strong>. &nbsp; $x=\frac{3}{4}$: semua syarat terpenuhi ✓<br>
+      <strong>Kasus 2</strong> ($m = 1$): $2x+1 = 3x+4 \Rightarrow x = -3$. Basis $= 3(-3)+4 = -5 < 0$ — <strong>buang</strong>.<br>
+      Jadi $\text{HP} = \left\{\dfrac{3}{4}\right\}$.
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Tentukan HP dari: (a) ${}^{5}\!\log(3x-2) = 2$ &nbsp; (b) $\log(x^2-7x) = \log 8$ &nbsp; (c) ${}^{2}\!\log(x^2-5x+6)=1$ &nbsp; (d) ${}^{3}\!\log(x+1)+{}^{3}\!\log(x-1)=3$</li>
+        <li>Selesaikan: (a) $({}^{3}\!\log x)^2 + 5\,{}^{3}\!\log x - 6 = 0$ &nbsp; (b) $2(\log x)^2 - 5\log x - 3 = 0$</li>
+        <li>Selesaikan: (a) ${}^{3}\!\log(x+4) = {}^{9}\!\log(26-x^2)$ &nbsp; (b) ${}^{4}\!\log(x+2) = {}^{2}\!\log(x-1)$</li>
+        <li>Jumlah semua nilai $x$ yang memenuhi ${}^{5}\!\log(x^2+x) = {}^{5}\!\log(6x-4)$ adalah $\ldots$</li>
+        <li>Diketahui $p$ dan $q$ adalah akar-akar dari $(\log x)^2 - \log x^3 + 2 = 0$ dengan $p > q > 0$. Tentukan $\dfrac{\log p}{\log q} + \dfrac{\log q}{\log p}$.</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ═══ E. PERTIDAKSAMAAN LOGARITMA ══════════════════════════════ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Pertidaksamaan Logaritma</h2>
+
+    <p>Kunci utama penyelesaian pertidaksamaan logaritma adalah memahami <strong>sifat monotonitas</strong> fungsi logaritma dan selalu memeriksa <strong>syarat numerus</strong>.</p>
+
+    <h3 class="subsection-title">1. Sifat Monotonitas</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Kondisi Basis</th><th>Pertidaksamaan</th><th>Hasil</th></tr></thead>
+        <tbody>
+          <tr><td>$a > 1$</td><td>${}^{a}\!\log f(x) > {}^{a}\!\log g(x)$</td><td>$f(x) > g(x)$</td></tr>
+          <tr><td>$a > 1$</td><td>${}^{a}\!\log f(x) < {}^{a}\!\log g(x)$</td><td>$f(x) < g(x)$</td></tr>
+          <tr><td>$0 < a < 1$</td><td>${}^{a}\!\log f(x) > {}^{a}\!\log g(x)$</td><td>$f(x) < g(x)$</td></tr>
+          <tr><td>$0 < a < 1$</td><td>${}^{a}\!\log f(x) < {}^{a}\!\log g(x)$</td><td>$f(x) > g(x)$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <ul style="margin:0;font-size:.9rem;">
+        <li>Syarat numerus ($f(x)>0$ dan $g(x)>0$) <em>selalu</em> diperiksa terlepas dari tanda pertidaksamaan.</li>
+        <li>Jika ruas kanan bukan logaritma, ubah dulu: misal ${}^{2}\!\log(3x-1) > 3 \Leftrightarrow {}^{2}\!\log(3x-1) > {}^{2}\!\log 8$.</li>
+        <li>HP = (penyelesaian pertidaksamaan) $\cap$ (semua syarat numerus).</li>
+      </ul>
+    </div>
+
+    <h3 class="subsection-title">2. Basis $a > 1$ (Arah Tetap)</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{2}\!\log(3x-2) > 3$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Ubah ruas kanan: ${}^{2}\!\log(3x-2) > {}^{2}\!\log 8$.<br>
+      Basis $2 > 1$, arah <strong>tetap</strong>: $3x - 2 > 8 \Rightarrow x > \dfrac{10}{3}$. &nbsp;(1)<br>
+      Syarat numerus: $3x - 2 > 0 \Rightarrow x > \dfrac{2}{3}$. &nbsp;(2)<br>
+      Irisan (1) $\cap$ (2): $\boxed{\text{HP} = \left\{x \mid x > \dfrac{10}{3}\right\}}$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{3}\!\log(x^2-4) < {}^{3}\!\log(3x)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Basis $3 > 1$, arah <strong>tetap</strong>:
+      $$x^2 - 4 < 3x \Rightarrow x^2 - 3x - 4 < 0 \Rightarrow (x-4)(x+1) < 0 \Rightarrow -1 < x < 4 \tag{1}$$
+      Syarat numerus: $x^2-4 > 0 \Rightarrow x < -2$ atau $x > 2$ (2); &nbsp; $3x > 0 \Rightarrow x > 0$ (3).<br>
+      Irisan: $(-1<x<4)\cap(x>2)\cap(x>0) = \boxed{\{x \mid 2 < x < 4\}}$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{2}\!\log(3x-6) \leq {}^{2}\!\log(2x+4)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Basis $2 > 1$, arah <strong>tetap</strong>: $3x-6 \leq 2x+4 \Rightarrow x \leq 10$. (1)<br>
+      Syarat: $3x-6 > 0 \Rightarrow x > 2$ (2); &nbsp; $2x+4 > 0 \Rightarrow x > -2$ (3).<br>
+      Irisan: $\boxed{\text{HP} = \{x \mid 2 < x \leq 10\}}$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{3}\!\log(x-4) + {}^{3}\!\log(x-2) < {}^{3}\!\log(4x-8)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Gabung kiri: ${}^{3}\!\log(x-4)(x-2) < {}^{3}\!\log(4x-8)$.<br>
+      Basis $3>1$, arah <strong>tetap</strong>:
+      $$(x-4)(x-2) < 4x-8 \Rightarrow x^2-10x+16 < 0 \Rightarrow (x-8)(x-2)<0 \Rightarrow 2<x<8 \tag{1}$$
+      Syarat: $x-4>0\Rightarrow x>4$ (2); $x-2>0$ (3); $4x-8>0\Rightarrow x>2$ (4).<br>
+      Irisan: $(2<x<8)\cap(x>4) = \boxed{\{x \mid 4 < x < 8\}}$
+    </div>
+
+    <h3 class="subsection-title">3. Basis $0 < a < 1$ (Arah Berbalik)</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{1/3}\!\log(2x+1) \geq -2$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Ubah ruas kanan: $-2 = {}^{1/3}\!\log\left(\tfrac{1}{3}\right)^{-2} = {}^{1/3}\!\log 9$.<br>
+      Basis $\frac{1}{3} < 1$, arah <strong>berbalik</strong>: $2x+1 \leq 9 \Rightarrow x \leq 4$. (1)<br>
+      Syarat: $2x+1 > 0 \Rightarrow x > -\frac{1}{2}$. (2)<br>
+      Irisan: $\boxed{\text{HP} = \left\{x \mid -\dfrac{1}{2} < x \leq 4\right\}}$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan HP dari $2\,{}^{1/2}\!\log(x-5) \leq {}^{1/2}\!\log(x^2-8x+7)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Gunakan S5: $2\,{}^{1/2}\!\log(x-5) = {}^{1/2}\!\log(x-5)^2$.<br>
+      Basis $\frac{1}{2}<1$, arah <strong>berbalik</strong>:
+      $$(x-5)^2 \geq x^2-8x+7 \Rightarrow -10x+25 \geq -8x+7 \Rightarrow x \leq 9 \tag{1}$$
+      Syarat: $x-5>0\Rightarrow x>5$ (2); &nbsp; $x^2-8x+7>0\Rightarrow x<1$ atau $x>7$ (3).<br>
+      Irisan: $(-\infty,9]\cap(5,\infty)\cap(x>7) = \boxed{\{x \mid 7 < x \leq 9\}}$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 21 <span style="font-weight:400;font-size:.8rem;">(Tipe UTBK)</span></div>
+      <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{1/3}\!\log(2x^2-3x-2) \geq {}^{1/3}\!\log(x+2)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Basis $\frac{1}{3}<1$, arah <strong>berbalik</strong>:
+      $$2x^2-3x-2 \leq x+2 \Rightarrow 2x^2-4x-4 \leq 0 \Rightarrow x^2-2x-2 \leq 0$$
+      Akar: $x = 1 \pm \sqrt{3}$, sehingga $1-\sqrt{3} \leq x \leq 1+\sqrt{3}$. (1)<br>
+      Syarat: $2x^2-3x-2>0\Rightarrow(2x+1)(x-2)>0\Rightarrow x<-\frac{1}{2}$ atau $x>2$ (2); &nbsp; $x+2>0\Rightarrow x>-2$ (3).<br>
+      Catatan: $1-\sqrt{3}\approx-0{,}73$, $1+\sqrt{3}\approx 2{,}73$.<br>
+      Irisan:
+      $$\boxed{\text{HP} = \left\{x \mid 1-\sqrt{3} \leq x < -\tfrac{1}{2} \;\text{ atau }\; 2 < x \leq 1+\sqrt{3}\right\}}$$
+    </div>
+
+    <h3 class="subsection-title">4. Pertidaksamaan Bentuk Kuadrat</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x > 0$ yang memenuhi $({}^{3}\!\log x)^2 - 2\,{}^{3}\!\log x - 3 \leq 0$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Misalkan $t = {}^{3}\!\log x$:
+      $$t^2 - 2t - 3 \leq 0 \Rightarrow (t-3)(t+1) \leq 0 \Rightarrow -1 \leq t \leq 3$$
+      Kembalikan ke $x$: $3^{-1} \leq x \leq 3^3$, yaitu $\dfrac{1}{3} \leq x \leq 27$.<br>
+      Syarat $x > 0$ terpenuhi. &nbsp; $\boxed{\text{HP} = \left\{x \mid \dfrac{1}{3} \leq x \leq 27\right\}}$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 23</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{1/2}\!\log(x^2-6x+8) > {}^{1/2}\!\log(x-2)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Basis $\frac{1}{2}<1$, arah <strong>berbalik</strong>:
+      $$x^2-6x+8 < x-2 \Rightarrow x^2-7x+10<0 \Rightarrow (x-2)(x-5)<0 \Rightarrow 2<x<5 \tag{1}$$
+      Syarat: $x^2-6x+8>0\Rightarrow(x-4)(x-2)>0\Rightarrow x<2$ atau $x>4$ (2); &nbsp; $x-2>0\Rightarrow x>2$ (3).<br>
+      Irisan: $(2<x<5)\cap(x>4)\cap(x>2) = \boxed{\{x \mid 4 < x < 5\}}$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Tentukan HP dari: (a) ${}^{2}\!\log(4x-3)>2$ &nbsp; (b) ${}^{3}\!\log(5x-1)\leq 3$ &nbsp; (c) ${}^{1/4}\!\log(2x+1)<-1$</li>
+        <li>Tentukan HP dari: (a) ${}^{5}\!\log(x+3)>{}^{5}\!\log(2x-1)$ &nbsp; (b) ${}^{1/2}\!\log(3x-1)\leq{}^{1/2}\!\log(x+5)$</li>
+        <li>Tentukan HP dari ${}^{3}\!\log(x^2-5x)\leq{}^{3}\!\log(x-1)$.</li>
+        <li>Tentukan HP dari: (a) $({}^{2}\!\log x)^2-5\,{}^{2}\!\log x+6\leq 0$ &nbsp; (b) $({}^{3}\!\log x)^2+{}^{3}\!\log x-2>0$</li>
+        <li>Tentukan HP dari ${}^{1/3}\!\log(x^2-4x+3)\geq{}^{1/3}\!\log(x+1)$ untuk $x$ positif.</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ═══ F. FUNGSI LOGARITMA ════════════════════════════════════════ -->
+  <section class="section" id="bagian-f">
+    <h2 class="section-title"><span class="section-badge">F</span>Fungsi Logaritma</h2>
+
+    <h3 class="subsection-title">1. Definisi dan Sifat Dasar</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">Fungsi Logaritma</div>
+      <div class="math-block">$$f(x) = {}^{a}\!\log x, \qquad a > 0,\; a \neq 1, \qquad D_f = (0,\,+\infty)$$</div>
+    </div>
+
+    <ul>
+      <li><strong>Domain:</strong> $D_f = (0,\,+\infty)$</li>
+      <li><strong>Range:</strong> $R_f = \mathbb{R}$</li>
+      <li><strong>Asimtot vertikal:</strong> garis $x = 0$ (sumbu-$Y$)</li>
+      <li><strong>Titik potong sumbu-$X$:</strong> $(1,\,0)$ karena ${}^{a}\!\log 1 = 0$ untuk setiap $a$</li>
+      <li><strong>Jika $a > 1$:</strong> fungsi <strong>monoton naik</strong></li>
+      <li><strong>Jika $0 < a < 1$:</strong> fungsi <strong>monoton turun</strong></li>
+    </ul>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Fungsi logaritma adalah <strong>invers</strong> dari fungsi eksponen $g(x) = a^x$. Grafik $y = {}^{a}\!\log x$ diperoleh dengan mencerminkan grafik $y = a^x$ terhadap garis $y = x$.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Grafik $f(x) = {}^{2}\!\log x$ dan $g(x) = {}^{1/2}\!\log x$</h3>
+
+    <!-- Tabel titik bantu -->
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>$x$</th><th>$f(x) = {}^{2}\!\log x$</th><th>$g(x) = {}^{1/2}\!\log x$</th></tr></thead>
+        <tbody>
+          <tr><td>$\frac{1}{4}$</td><td>$-2$</td><td>$2$</td></tr>
+          <tr><td>$\frac{1}{2}$</td><td>$-1$</td><td>$1$</td></tr>
+          <tr><td>$1$</td><td>$0$</td><td>$0$</td></tr>
+          <tr><td>$2$</td><td>$1$</td><td>$-1$</td></tr>
+          <tr><td>$4$</td><td>$2$</td><td>$-2$</td></tr>
+          <tr><td>$8$</td><td>$3$</td><td>$-3$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SVG: grafik log_2(x) dan log_{1/2}(x) -->
+    <div class="grafik-wrap">
+      <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" width="460">
+        <defs>
+          <marker id="ax" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#94A3B8"/>
+          </marker>
+        </defs>
+        <!-- Grid -->
+        <line x1="60" y1="20" x2="60" y2="280" stroke="#1E293B" stroke-width="0.4" stroke-dasharray="2,4"/>
+        <line x1="60" y1="20" x2="420" y2="280" stroke="none"/>
+        <!-- Sumbu X dan Y -->
+        <line x1="40" y1="150" x2="420" y2="150" stroke="#94A3B8" stroke-width="1.2" marker-end="url(#ax)"/>
+        <line x1="60" y1="280" x2="60" y2="20" stroke="#94A3B8" stroke-width="1.2" marker-end="url(#ax)"/>
+        <!-- Label sumbu -->
+        <text x="425" y="154" font-family="Inter,sans-serif" font-size="12" fill="#94A3B8">x</text>
+        <text x="55" y="16" font-family="Inter,sans-serif" font-size="12" fill="#94A3B8">y</text>
+        <!-- Asimtot vertikal x=0 -->
+        <line x1="60" y1="30" x2="60" y2="270" stroke="#475569" stroke-width="1" stroke-dasharray="4,3"/>
+        <!-- Skala: x=1 → px=110, x=2→160, x=4→210, x=8→280; y=1→100, y=0→150, y=-1→200 -->
+        <!-- Titik sumbu X -->
+        <text x="108" y="165" font-family="Inter,sans-serif" font-size="10" fill="#64748B">1</text>
+        <text x="158" y="165" font-family="Inter,sans-serif" font-size="10" fill="#64748B">2</text>
+        <text x="208" y="165" font-family="Inter,sans-serif" font-size="10" fill="#64748B">4</text>
+        <text x="278" y="165" font-family="Inter,sans-serif" font-size="10" fill="#64748B">8</text>
+        <!-- Titik sumbu Y -->
+        <text x="44" y="104" font-family="Inter,sans-serif" font-size="10" fill="#64748B">2</text>
+        <text x="44" y="154" font-family="Inter,sans-serif" font-size="10" fill="#64748B">0</text>
+        <text x="40" y="204" font-family="Inter,sans-serif" font-size="10" fill="#64748B">-2</text>
+        <!-- Kurva f(x)=log_2(x) — naik, biru -->
+        <!-- Titik: (1/4,-2)→(72,250),(1/2,-1)→(85,200),(1,0)→(110,150),(2,1)→(160,100),(4,2)→(210,50),(8,3)→(280,0) → clamp ke 30 -->
+        <polyline points="72,250 85,200 110,150 160,100 210,50 280,30" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linejoin="round"/>
+        <text x="285" y="28" font-family="Inter,sans-serif" font-size="11" fill="#3B82F6">${}^{2}\!\log x$ (naik)</text>
+        <!-- Kurva g(x)=log_{1/2}(x) — turun, merah -->
+        <polyline points="72,50 85,100 110,150 160,200 210,250 280,270" fill="none" stroke="#EF4444" stroke-width="2" stroke-linejoin="round"/>
+        <text x="285" y="275" font-family="Inter,sans-serif" font-size="11" fill="#EF4444">${}^{1/2}\!\log x$ (turun)</text>
+        <!-- Titik (1,0) -->
+        <circle cx="110" cy="150" r="4" fill="#fff" stroke="#00BFA5" stroke-width="2"/>
+        <text x="113" y="145" font-family="Inter,sans-serif" font-size="10" fill="#00BFA5">(1, 0)</text>
+      </svg>
+    </div>
+    <p style="font-size:.85rem;color:var(--text-muted);">Perhatikan: ${}^{1/2}\!\log x = -{}^{2}\!\log x$ (Sifat S7), sehingga kedua grafik simetri terhadap sumbu-$X$. Kedua grafik melewati titik $(1,\,0)$.</p>
+
+    <h3 class="subsection-title">3. Transformasi Fungsi Logaritma</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Bentuk Fungsi</th><th>Transformasi dari $f(x) = {}^{a}\!\log x$</th><th>Asimtot Vertikal</th></tr></thead>
+        <tbody>
+          <tr><td>$y = {}^{a}\!\log(x-h)$</td><td>Geser kanan $h$ (jika $h>0$), kiri $|h|$ (jika $h<0$)</td><td>$x = h$</td></tr>
+          <tr><td>$y = {}^{a}\!\log x + k$</td><td>Geser atas $k$ (jika $k>0$), bawah $|k|$ (jika $k<0$)</td><td>$x = 0$</td></tr>
+          <tr><td>$y = -{}^{a}\!\log x$</td><td>Refleksi terhadap sumbu-$X$</td><td>$x = 0$</td></tr>
+          <tr><td>$y = {}^{a}\!\log(-x)$</td><td>Refleksi terhadap sumbu-$Y$; domain $x < 0$</td><td>$x = 0$</td></tr>
+          <tr><td>$y = k\,{}^{a}\!\log x$</td><td>Dilatasi vertikal faktor $k$</td><td>$x = 0$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">4. Menentukan Titik Potong dan Asimtot</h3>
+
+    <p>Untuk $y = {}^{a}\!\log f(x)$:</p>
+    <ul>
+      <li><strong>Domain:</strong> $f(x) > 0$</li>
+      <li><strong>Asimtot vertikal:</strong> dari persamaan $f(x) = 0$</li>
+      <li><strong>Titik potong sumbu-$X$:</strong> selesaikan $f(x) = 1$ (karena ${}^{a}\!\log 1 = 0$)</li>
+      <li><strong>Titik potong sumbu-$Y$:</strong> hitung $y = {}^{a}\!\log f(0)$ jika $f(0) > 0$</li>
+    </ul>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Sketsa grafik $y = {}^{2}\!\log x$: tentukan domain, titik potong, dan asimtot.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>Domain:</strong> $x > 0$, yaitu $D = (0,+\infty)$.<br>
+      <strong>Asimtot vertikal:</strong> $x = 0$.<br>
+      <strong>Titik potong sumbu-$X$:</strong> $y=0 \Rightarrow {}^{2}\!\log x = 0 \Rightarrow x = 1$. Titik: $(1,\,0)$.<br>
+      <strong>Titik potong sumbu-$Y$:</strong> $x=0$ tidak di domain — tidak ada.<br>
+      Gunakan tabel titik bantu di atas untuk membuat sketsa.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain, asimtot, dan titik potong grafik:<br>
+      a. $g(x) = {}^{3}\!\log(x-2) + 1$<br>
+      b. $h(x) = {}^{3}\!\log(4-x)$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> Domain: $x-2>0 \Rightarrow D_g=(2,+\infty)$. &nbsp; Asimtot: $x=2$.<br>
+      Titik potong sumbu-$X$: ${}^{3}\!\log(x-2)+1=0 \Rightarrow x-2=3^{-1}=\frac{1}{3} \Rightarrow x=\frac{7}{3}$. Titik: $\left(\frac{7}{3},0\right)$.<br>
+      Titik potong sumbu-$Y$: $x=0\notin D_g$ — tidak ada.<br>
+      Transformasi: $f(x)={}^{3}\!\log x$ digeser 2 satuan kanan dan 1 satuan atas.<br><br>
+      <strong>b.</strong> Domain: $4-x>0 \Rightarrow x<4$, yaitu $D_h=(-\infty,4)$. &nbsp; Asimtot: $x=4$.<br>
+      Titik potong sumbu-$X$: $4-x=1 \Rightarrow x=3$. Titik: $(3,0)$.<br>
+      Titik potong sumbu-$Y$: $h(0)={}^{3}\!\log 4$. Titik: $(0,\,{}^{3}\!\log 4)$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan titik potong dengan sumbu-$X$ dari $y = {}^{3}\!\log(2x^2-12x+17)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Titik potong sumbu-$X$: $y=0 \Rightarrow 2x^2-12x+17=1$
+      $$2x^2-12x+16=0 \Rightarrow x^2-6x+8=0 \Rightarrow (x-4)(x-2)=0$$
+      $x=4$: $2(16)-12(4)+17=1>0$ ✓ &nbsp;&nbsp; $x=2$: $2(4)-12(2)+17=1>0$ ✓<br>
+      Titik potong: $T_1(2,\;0)$ dan $T_2(4,\;0)$.
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Sketsa grafik $y={}^{2}\!\log(x-1)$. Tentukan domain, asimtot, dan titik potong sumbu-$X$.</li>
+        <li>Tentukan domain dan titik potong dari $y={}^{5}\!\log(3x-6)$.</li>
+        <li>Diketahui $f(x)={}^{3}\!\log(x^2-4x+3)$. Tentukan titik potong dengan sumbu-$X$ dan periksa syarat numerus.</li>
+        <li>Sketsa $f(x)={}^{2}\!\log x$ dan $g(x)={}^{2}\!\log(x+2)-1$ pada satu bidang. Jelaskan transformasinya.</li>
+        <li>Tentukan titik potong $y={}^{1/2}\!\log(x^2-5x+4)$ dengan sumbu-$X$ dan domain fungsinya.</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ═══ G. APLIKASI LOGARITMA ═════════════════════════════════════ -->
+  <section class="section" id="bagian-g">
+    <h2 class="section-title"><span class="section-badge">G</span>Aplikasi Logaritma</h2>
+
+    <p>Logaritma digunakan luas dalam berbagai bidang sains dan teknik untuk menghitung pertumbuhan, peluruhan, skala intensitas, dan pH.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Rumus-Rumus Aplikasi</div>
+      <div class="table-wrap" style="margin-top:.5rem;">
+        <table>
+          <thead><tr><th>Bidang</th><th>Rumus</th><th>Keterangan</th></tr></thead>
+          <tbody>
+            <tr><td>Pertumbuhan/Peluruhan</td><td>$t = \dfrac{\log(N/N_0)}{\log r}$</td><td>$r$: faktor perubahan per periode</td></tr>
+            <tr><td>Skala Richter</td><td>$M = \log\!\left(\dfrac{I}{I_0}\right)$</td><td>$I_0$: intensitas referensi</td></tr>
+            <tr><td>pH Larutan</td><td>$\text{pH} = -\log[\text{H}^+]$</td><td>Asam: pH $<7$; Basa: pH $>7$</td></tr>
+            <tr><td>Desibel (Suara)</td><td>$L = 10\log\!\left(\dfrac{I}{I_0}\right)$</td><td>$I_0 = 10^{-12}$ W/m²</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 27</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah kota berpenduduk 200.000 jiwa tumbuh 5% per tahun. Setelah berapa tahun penduduknya mencapai 400.000 jiwa? &nbsp;($\log 2 = 0{,}3010$; $\log 1{,}05 = 0{,}0212$)</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Model: $N(t) = 200.000 \times (1{,}05)^t$. Syarat: $N(t) = 400.000$:
+      $$(1{,}05)^t = 2 \Rightarrow t \cdot \log 1{,}05 = \log 2 \Rightarrow t = \frac{0{,}3010}{0{,}0212} \approx \mathbf{14{,}2 \text{ tahun}}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Intensitas gempa A adalah $10^{6{,}5}$ kali $I_0$ dan gempa B adalah $10^8$ kali $I_0$. Berapa kali lebih kuat gempa B dibanding A?</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      $M_A = 6{,}5$, $M_B = 8$. Selisih: $M_B - M_A = 1{,}5$.<br>
+      Gempa B lebih kuat $10^{1{,}5} = 10\sqrt{10} \approx \mathbf{31{,}6}$ kali.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 29</div>
+      <p style="margin:0;font-size:.9rem;">Suatu larutan memiliki $[\text{H}^+] = 5 \times 10^{-4}$ mol/L. Tentukan pH-nya. &nbsp;($\log 5 = 0{,}699$)</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      $$\text{pH} = -\log(5 \times 10^{-4}) = -(\log 5 + \log 10^{-4}) = -(0{,}699 - 4) = \mathbf{3{,}301}$$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li><strong>(Pertumbuhan Bakteri)</strong> Koloni bakteri berjumlah 500 sel dan tumbuh 20% per jam. (a) Tuliskan model $N(t)$. (b) Tentukan waktu agar mencapai 5.000 sel. &nbsp;($\log 2 = 0{,}3010$; $\log 1{,}2 = 0{,}0792$)</li>
+        <li><strong>(Peluruhan Radioaktif)</strong> Zat radioaktif memiliki waktu paruh 1.600 tahun, massa awal 200 gram. (a) Tuliskan model $M(t)$. (b) Tentukan waktu hingga massa tersisa 25 gram. &nbsp;($\log 2 = 0{,}3010$)</li>
+        <li><strong>(Skala Richter)</strong> Gempa tercatat $10^{7{,}2}$ kali $I_0$. (a) Tentukan skala Richternya. (b) Berapa kali lebih kuat dari gempa 5,7 SR? &nbsp;($10^{1{,}5} \approx 31{,}6$)</li>
+        <li><strong>(pH)</strong> Diketahui $\log 2 = 0{,}3010$, $\log 3 = 0{,}4771$. (a) Tentukan pH larutan dengan $[\text{H}^+] = 3 \times 10^{-3}$ mol/L. (b) Larutan basa dengan $[\text{OH}^-] = 2 \times 10^{-5}$ mol/L. Tentukan pH-nya (gunakan pH + pOH = 14).</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ═══ H. TABEL RINGKASAN ════════════════════════════════════════ -->
+  <section class="section" id="bagian-h">
+    <h2 class="section-title"><span class="section-badge">H</span>Tabel Ringkasan</h2>
+
+    <h3 class="subsection-title">1. Definisi dan Syarat</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Konsep</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Definisi</td><td>${}^{a}\!\log b = c \;\Longleftrightarrow\; a^c = b$</td></tr>
+          <tr><td>Syarat basis</td><td>$a > 0$ dan $a \neq 1$</td></tr>
+          <tr><td>Syarat numerus</td><td>$b > 0$</td></tr>
+          <tr><td>Logaritma desimal</td><td>Basis $a = 10$: ditulis $\log b$</td></tr>
+          <tr><td>Logaritma natural</td><td>Basis $a = e$: ditulis $\ln b$; $\ln e = 1$, $e^{\ln x} = x$</td></tr>
+          <tr><td>Perubahan basis</td><td>${}^{a}\!\log b = \dfrac{\ln b}{\ln a} = \dfrac{\log b}{\log a}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">2. Sembilan Sifat Dasar</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>No.</th><th>Rumus</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>S1</td><td>${}^{a}\!\log a = 1$</td><td>Log basis sama dengan numerus</td></tr>
+          <tr><td>S2</td><td>${}^{a}\!\log 1 = 0$</td><td>Log dengan numerus 1</td></tr>
+          <tr><td>S3</td><td>${}^{a}\!\log(pq) = {}^{a}\!\log p + {}^{a}\!\log q$</td><td>Perkalian → penjumlahan</td></tr>
+          <tr><td>S4</td><td>${}^{a}\!\log\frac{p}{q} = {}^{a}\!\log p - {}^{a}\!\log q$</td><td>Pembagian → pengurangan</td></tr>
+          <tr><td>S5</td><td>${}^{a}\!\log p^n = n\,{}^{a}\!\log p$</td><td>Pangkat sebagai faktor</td></tr>
+          <tr><td>S6</td><td>${}^{a}\!\log b = \dfrac{{}^{n}\!\log b}{{}^{n}\!\log a}$</td><td>Pergantian basis</td></tr>
+          <tr><td>S7</td><td>${}^{a}\!\log b = \dfrac{1}{{}^{b}\!\log a}$</td><td>Kebalikan basis &amp; numerus</td></tr>
+          <tr><td>S8</td><td>${}^{a}\!\log b \cdot {}^{b}\!\log c = {}^{a}\!\log c$</td><td>Rantai logaritma</td></tr>
+          <tr><td>S9</td><td>$a^{{}^{a}\!\log b} = b$</td><td>Invers eksponen-logaritma</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">3. Persamaan dan Pertidaksamaan</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tipe</th><th>Strategi Penyelesaian</th></tr></thead>
+        <tbody>
+          <tr><td>Tipe 1</td><td>${}^{a}\!\log f(x) = k \Rightarrow f(x) = a^k$, periksa numerus</td></tr>
+          <tr><td>Tipe 2</td><td>Samakan basis, lalu ${}^{a}\!\log f(x) = {}^{a}\!\log g(x) \Rightarrow f(x)=g(x)$</td></tr>
+          <tr><td>Tipe 3</td><td>Misalkan $t = {}^{a}\!\log f(x)$, selesaikan persamaan kuadrat dalam $t$</td></tr>
+          <tr><td>Tipe 4</td><td>Basis mengandung $x$: periksa semua syarat (basis $>0$, $\neq 1$, numerus $>0$)</td></tr>
+          <tr><td>Pertidaksamaan, $a>1$</td><td>Arah pertidaksamaan <strong>tetap</strong></td></tr>
+          <tr><td>Pertidaksamaan, $0<a<1$</td><td>Arah pertidaksamaan <strong>berbalik</strong></td></tr>
+          <tr><td>HP</td><td>Selalu irisan penyelesaian ∩ semua syarat numerus</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">4. Grafik Fungsi $f(x) = {}^{a}\!\log x$</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Sifat</th><th>$a > 1$</th><th>$0 < a < 1$</th></tr></thead>
+        <tbody>
+          <tr><td>Domain</td><td>$x > 0$</td><td>$x > 0$</td></tr>
+          <tr><td>Range</td><td>$\mathbb{R}$</td><td>$\mathbb{R}$</td></tr>
+          <tr><td>Asimtot vertikal</td><td>$x = 0$</td><td>$x = 0$</td></tr>
+          <tr><td>Titik tetap</td><td>$(1,0)$ dan $(a,1)$</td><td>$(1,0)$ dan $(a,1)$</td></tr>
+          <tr><td>Monotonitas</td><td>Naik</td><td>Turun</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- ═══ KONEKSI ══════════════════════════════════════════════════ -->
+  <div class="koneksi-wrap">
+    <div class="koneksi-header">
+      <span class="koneksi-icon">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 7h10M8 3l4 4-4 4"/>
+        </svg>
+      </span>
+      <span class="koneksi-label">Koneksi ke Materi Berikutnya</span>
+    </div>
+    <div class="koneksi-body">
+      <p class="koneksi-text">
+        Logaritma adalah <strong>fondasi penting</strong> untuk kalkulus. Fungsi logaritma natural $\ln x$ menjadi pusat pembahasan turunan dan integral, sementara sifat-sifat logaritma digunakan intensif dalam menyelesaikan persamaan diferensial eksponensial.
+      </p>
+      <div class="koneksi-comparison">
+        <div class="koneksi-card current">
+          <div class="koneksi-card-label">Sekarang</div>
+          <div class="koneksi-card-formula">${}^{a}\!\log b = c$</div>
+          <div class="koneksi-card-desc">Invers eksponen<br>Sifat &amp; penerapan</div>
+        </div>
+        <div class="koneksi-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10h12M12 5l5 5-5 5"/></svg>
+        </div>
+        <div class="koneksi-card next">
+          <div class="koneksi-card-label">Berikutnya</div>
+          <div class="koneksi-card-formula">$\dfrac{d}{dx}\ln x = \dfrac{1}{x}$</div>
+          <div class="koneksi-card-desc">Turunan log natural<br>Aturan rantai</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ ACTION FOOTER ════════════════════════════════════════════ -->
+  <div class="action-footer">
+    <div class="footer-nav">
+      <a class="nav-btn" href="../eksponen/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Eksponen
+      </a>
+      <a class="nav-btn" href="../../">
+        Semua Materi
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <div class="footer-actions">
+      <a class="nav-btn primary" href="#">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="10" height="10" rx="2"/><line x1="5" y1="5" x2="9" y2="5"/><line x1="5" y1="7.5" x2="8" y2="7.5"/><line x1="5" y1="10" x2="7" y2="10"/></svg>
+        Kerjakan Latihan Soal Logaritma
+        <span class="coming-soon">Segera</span>
+      </a>
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══ KOMENTAR ══════════════════════════════════════════════════ -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Giscus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi ini? Tulis di kolom diskusi. Login dengan akun GitHub gratis.</p>
+    <div class="giscus-wrap">
+      <div class="giscus-placeholder">
+        <div class="ph-icon">💬</div>
+        <p>Sistem komentar menggunakan <strong>Giscus</strong> — gratis, tanpa iklan, berbasis GitHub Discussions.<br><br>
+        Untuk mengaktifkan, konfigurasikan repo di <code>giscus.app</code> lalu tempel script-nya di sini.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+function toggleTOC() { document.getElementById('tocDropdown').classList.toggle('open'); }
+function closeTOC()  { document.getElementById('tocDropdown').classList.remove('open'); }
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Logaritma — EksaktaLab',
+      text:  'Belajar Logaritma di EksaktaLab, lengkap dengan contoh soal!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+</script>
+
+</body>
+</html>
