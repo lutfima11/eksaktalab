@@ -1252,274 +1252,183 @@ th mjx-container svg * { fill: #fff !important; }
     </div>
   </div>
 
-  <!-- ═══ ACTION FOOTER ════════════════════════════════════════════ -->
+  <!-- ACTION FOOTER -->
   <div class="action-footer">
+    <!-- Baris 1: Prev / Next -->
     <div class="footer-nav">
-      <a class="footer-nav-btn prev" href="../fungsi-eksponen/">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 7H2M6 3l-4 4 4 4"/></svg>
+      <a class="nav-btn" href="../fungsi-eksponen/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
         Fungsi Eksponen
       </a>
-      <a class="footer-nav-btn next" href="../logaritma/">
+      <a class="nav-btn" href="../logaritma/">
         Logaritma
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
       </a>
     </div>
-    <a class="footer-latihan-btn" href="#">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="7" cy="7" r="5.5"/><path d="M7 4v3l2 1.5"/></svg>
-      Latihan Soal Barisan &amp; Deret
-    </a>
+    <!-- Baris 2: Actions -->
+    <div class="footer-actions">
+      <a class="nav-btn primary" href="#">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="10" height="10" rx="2"/><line x1="5" y1="5" x2="9" y2="5"/><line x1="5" y1="7.5" x2="8" y2="7.5"/><line x1="5" y1="10" x2="7" y2="10"/></svg>
+        Kerjakan Latihan Soal Barisan &amp; Deret
+        <span class="coming-soon">Segera</span>
+      </a>
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
   </div>
 
-  <!-- ═══ KOMENTAR GISCUS ══════════════════════════════════════════ -->
-  <div class="giscus-wrap">
-    <script src="https://giscus.app/client.js"
-      data-repo="lutfima11/eksaktalab"
-      data-repo-id="R_kgDOO2mdog"
-      data-category="General"
-      data-category-id="DIC_kwDOO2mdog4Cr2WT"
-      data-mapping="pathname"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="bottom"
-      data-theme="preferred_color_scheme"
-      data-lang="id"
-      crossorigin="anonymous"
-      async>
-    </script>
+  <!-- SECTION KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Giscus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi Barisan dan Deret? Tulis di kolom diskusi. Login dengan akun GitHub gratis.</p>
+    <div class="giscus-wrap">
+      <div class="giscus-placeholder">
+        <div class="ph-icon">💬</div>
+        <p>
+          Sistem komentar menggunakan <strong>Giscus</strong> — gratis, tanpa iklan, berbasis GitHub Discussions.<br><br>
+          Untuk mengaktifkan, konfigurasikan repo di <code>giscus.app</code> lalu tempel script-nya di sini.
+        </p>
+      </div>
+    </div>
   </div>
 
 </div><!-- /page-wrap -->
 
-<div id="eksaktalab-footer"></div>
-<script src="../../assets/js/footer.js"></script>
-
 <script>
-// ── SCROLL PROGRESS BAR ──────────────────────────────────────
+// ── Scroll progress bar + scroll-to-top ──
 window.addEventListener('scroll', () => {
-  const bar = document.getElementById('scroll-bar');
-  if (!bar) return;
-  const h = document.documentElement;
-  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-  bar.style.width = pct + '%';
-});
-
-// ── SCROLL TO TOP ────────────────────────────────────────────
-window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
   const btn = document.getElementById('scroll-top');
-  if (btn) btn.style.opacity = window.scrollY > 400 ? '1' : '0';
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
 });
 
-// ── TOC DROPDOWN ─────────────────────────────────────────────
+// ── TOC Dropdown ──
 function toggleTOC() {
-  document.getElementById('tocDropdown')?.classList.toggle('open');
+  document.getElementById('tocDropdown').classList.toggle('open');
 }
 function closeTOC() {
-  document.getElementById('tocDropdown')?.classList.remove('open');
+  document.getElementById('tocDropdown').classList.remove('open');
 }
 document.addEventListener('click', e => {
-  const toc = document.getElementById('tocDropdown');
-  if (toc && !toc.contains(e.target)) toc.classList.remove('open');
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
 });
 
-// ── THEME BUTTON SYNC ─────────────────────────────────────────
-function syncThemeBtn() {
-  const btn = document.getElementById('themeBtn');
-  if (!btn) return;
-  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-  btn.textContent = dark ? '☀️ Terang' : '🌙 Gelap';
+// ── Bookmark ──
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
 }
-syncThemeBtn();
-const _orig = window.toggleTheme;
-window.toggleTheme = function() { if (_orig) _orig(); syncThemeBtn(); };
 
-// ── ACCORDION ENGINE (Rumus + Contoh) ────────────────────────
-(function() {
-  function chevronSVG() {
-    return `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="3,5 7,9 11,5"/></svg>`;
+// ── Share ──
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Barisan dan Deret — EksaktaLab',
+      text:  'Belajar Barisan dan Deret di EksaktaLab, lengkap dengan 44 contoh soal!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
   }
-
-  function makeToggle(wrap, header, statusEl, body, innerEl) {
-    function open() {
-      const h = innerEl.scrollHeight;
-      body.style.maxHeight = h + 'px';
-      wrap.classList.add('open');
-      header.setAttribute('aria-expanded', 'true');
-      if (statusEl) statusEl.textContent = 'Sembunyikan';
-    }
-    function close() {
-      body.style.maxHeight = '0';
-      wrap.classList.remove('open');
-      header.setAttribute('aria-expanded', 'false');
-      if (statusEl) statusEl.textContent = 'Lihat rumus';
-    }
-    header.addEventListener('click', () => wrap.classList.contains('open') ? close() : open());
-    header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); wrap.classList.contains('open') ? close() : open(); } });
-    body.style.maxHeight = '0';
-    body.style.overflow = 'hidden';
-    body.style.transition = 'max-height .35s ease';
-  }
-
-  // 1. BOX RUMUS → accordion teal
-  document.querySelectorAll('.box.box-rumus').forEach((box) => {
-    const labelEl  = box.querySelector('.box-label');
-    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
-    let bodyHTML = '';
-    box.childNodes.forEach(n => {
-      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
-    });
-    const wrap = document.createElement('div');
-    wrap.className = 'rumus-wrap';
-    wrap.innerHTML = `
-      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
-        <span class="rumus-badge">Rumus</span>
-        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
-        <span class="rumus-status">Lihat rumus</span>
-        <span class="rumus-chevron">${chevronSVG()}</span>
-      </div>
-      <div class="rumus-body">
-        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
-      </div>`;
-    const header    = wrap.querySelector('.rumus-header');
-    const statusEl  = wrap.querySelector('.rumus-status');
-    const bodyInner = wrap.querySelector('.rumus-body-inner');
-    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
-    box.replaceWith(wrap);
-  });
-
-  // 2. BOX CONTOH → accordion navy/teal
-  let counter = 0;
-  document.querySelectorAll('.box.box-contoh').forEach(box => {
-    counter++;
-    const labelEl  = box.querySelector('.box-label');
-    const numMatch = labelEl?.textContent.match(/\d+/);
-    const num      = numMatch ? numMatch[0] : String(counter);
-    let qHTML = '';
-    box.childNodes.forEach(n => {
-      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
-    });
-    const sib      = box.nextElementSibling;
-    const hasSolve = sib?.classList.contains('penyelesaian');
-    const solveHTML = hasSolve ? sib.innerHTML : '';
-    if (hasSolve) sib.remove();
-
-    const wrap = document.createElement('div');
-    wrap.className = 'contoh-wrap';
-    wrap.innerHTML = `
-      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
-        <span class="contoh-num">📘 Contoh ${num}</span>
-        <span class="contoh-chevron">${chevronSVG()}</span>
-      </div>
-      <div class="contoh-body">
-        <div class="contoh-body-inner">
-          <div class="contoh-soal">${qHTML.trim()}</div>
-          ${hasSolve ? `<div class="penyelesaian-inner">${solveHTML}</div>` : ''}
-        </div>
-      </div>`;
-    const header    = wrap.querySelector('.contoh-header');
-    const bodyInner = wrap.querySelector('.contoh-body-inner');
-    makeToggle(wrap, header, null, wrap.querySelector('.contoh-body'), bodyInner);
-    box.replaceWith(wrap);
-  });
-
-  // 3. BOX LATIHAN → tambah tombol lihat jawaban
-  const jawabanData = {
-    // B — Aritmatika (10 soal)
-    0: [
-      { jawaban: `$U_{25} = 101$ &nbsp;|&nbsp; $S_{20} = 860$` },
-      { jawaban: `$a = 5,\\; b = 5,\\; U_{20} = 100$` },
-      { jawaban: `$x = 31$` },
-      { jawaban: `$a = 2,\\; b = 6,\\; U_{10} = 56$` },
-      { jawaban: `$S_{15} = 720$ kursi` },
-      { jawaban: `$U_4 = \\dfrac{75}{4} = 18{,}75$` },
-      { jawaban: `$11,\\; 13,\\; 15$` },
-      { jawaban: `$n = 16$ suku, $\\;b = \\dfrac{38}{15}$` },
-      { jawaban: `$U_4 = 25$` },
-      { jawaban: `(a) Hari ke-227 &nbsp;|&nbsp; (b) $S_{227} = 412.005$ paket &nbsp;|&nbsp; (c) $n_{\\max} = 134$ hari` },
-    ],
-    // C — Geometri (10 soal)
-    1: [
-      { jawaban: `$U_8 = 4374,\\; S_5 = 242$` },
-      { jawaban: `$S_\\infty = 27$` },
-      { jawaban: `$a = 2,\\; r = 3$` },
-      { jawaban: `$n = 9,\\; S_9 = 1022$` },
-      { jawaban: `$r = 2,\\; U_5 = 32$` },
-      { jawaban: `$x = 3,\\; r = 2$` },
-      { jawaban: `$2,\\; 6,\\; 18$ atau $18,\\; 6,\\; 2$` },
-      { jawaban: `$r = \\dfrac{2}{3},\\; a = 5$` },
-      { jawaban: `$768$ bakteri` },
-      { jawaban: `$L = 90$ m` },
-    ],
-    // D — Tak Hingga (10 soal)
-    2: [
-      { jawaban: `$S_\\infty = 18$` },
-      { jawaban: `$r = \\dfrac{1}{3}$` },
-      { jawaban: `$U_3 = \\dfrac{3}{4}$` },
-      { jawaban: `$a = 12$` },
-      { jawaban: `$0{,}\\overline{27} = \\dfrac{3}{11}$` },
-      { jawaban: `$U_4 = \\dfrac{1}{2}$` },
-      { jawaban: `$\\dfrac{3}{2}$` },
-      { jawaban: `$a = \\dfrac{128}{5},\\; r = \\dfrac{1}{5}$` },
-      { jawaban: `$L = 90$ m` },
-      { jawaban: `$S_\\infty = 200$ cm²` },
-    ],
-    // E — Aplikasi (10 soal)
-    3: [
-      { jawaban: `Rp 105.000` },
-      { jawaban: `Rp 87.000.000` },
-      { jawaban: `$M_5 \\approx 552.050$ jiwa` },
-      { jawaban: `Rp 13.600.000` },
-      { jawaban: `Rp 145.800.000` },
-      { jawaban: `$81$ gram` },
-      { jawaban: `$i = 10\\%$ per tahun` },
-      { jawaban: `$L = 90$ m` },
-      { jawaban: `Rp 7.374.000` },
-      { jawaban: `$189$ cm` },
-    ],
-    // F — Pengayaan (7 soal)
-    4: [
-      { jawaban: `$U_n = 3n+4$; $S_n = \\dfrac{3n^2+11n}{2}$; $U_{10}=34$; $S_{10}=205$` },
-      { jawaban: `$b=4,\\; a=5,\\; U_n=4n+1,\\; U_7=29$` },
-      { jawaban: `$U_1=5,\\; U_5=13,\\; U_{10}=23$` },
-      { jawaban: `$b=4,\\; a=3,\\; S_{10}=210$` },
-      { jawaban: `$r=2,\\; a=3,\\; U_8=384$` },
-      { jawaban: `$p=2,\\; q=1,\\; S_n=2n^2+n$` },
-      { jawaban: `$r=2,\\; a=3,\\; S_8=765,\\; S_\\infty$ tidak ada (divergen)` },
-    ],
-  };
-
-  let latihanIdx = 0;
-  document.querySelectorAll('.box.box-latihan').forEach(box => {
-    const answers = jawabanData[latihanIdx] || [];
-    latihanIdx++;
-    const list = box.querySelector('.soal-list');
-    if (!list) return;
-    const items = [...list.children].filter(el => el.tagName === 'LI');
-    const newItems = items.map((li, i) => {
-      const ans = answers[i];
-      if (!ans) return li.outerHTML;
-      const id = `ans-${latihanIdx-1}-${i}`;
-      return `<li class="soal-item">
-        <div class="soal-text">${li.innerHTML}</div>
-        <div class="soal-answer" id="${id}" style="display:none;">
-          <span class="answer-label">Jawaban:</span> ${ans.jawaban}
-        </div>
-        <button class="soal-toggle-btn" onclick="toggleAns('${id}', this)">Lihat jawaban</button>
-      </li>`;
-    });
-    list.innerHTML = newItems.join('');
-  });
-
-  window.toggleAns = function(id, btn) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const hidden = el.style.display === 'none';
-    el.style.display = hidden ? 'block' : 'none';
-    btn.textContent = hidden ? 'Sembunyikan' : 'Lihat jawaban';
-    if (hidden && window.MathJax) MathJax.typesetPromise([el]);
-  };
-})();
+}
 </script>
 
+<!-- jawabanData dan accordion engine dari materi.js -->
+<script>
+window.jawabanData = {
+  // 0 — Latihan B: Barisan dan Deret Aritmatika (10 soal)
+  0: [
+    { jawaban: `$U_{25} = 101$ &nbsp;|&nbsp; $S_{20} = 860$` },
+    { jawaban: `$a = 5,\; b = 5,\; U_{20} = 100$` },
+    { jawaban: `$x = 31$` },
+    { jawaban: `$a = 2,\; b = 6,\; U_{10} = 56$` },
+    { jawaban: `$S_{15} = 720$ kursi` },
+    { jawaban: `$U_4 = \dfrac{75}{4} = 18{,}75$` },
+    { jawaban: `$11,\; 13,\; 15$` },
+    { jawaban: `$n = 16$ suku, $\;b = \dfrac{38}{15}$` },
+    { jawaban: `$U_4 = 25$` },
+    { jawaban: `(a) Hari ke-227 &nbsp;|&nbsp; (b) $S_{227} = 412.005$ paket &nbsp;|&nbsp; (c) $n_{\max} = 134$ hari` },
+  ],
+  // 1 — Latihan C: Barisan dan Deret Geometri (10 soal)
+  1: [
+    { jawaban: `$U_8 = 4374,\; S_5 = 242$` },
+    { jawaban: `$S_\infty = 27$` },
+    { jawaban: `$a = 2,\; r = 3$` },
+    { jawaban: `$n = 9,\; S_9 = 1022$` },
+    { jawaban: `$r = 2,\; U_5 = 32$` },
+    { jawaban: `$x = 3,\; r = 2$` },
+    { jawaban: `$2,\; 6,\; 18$ atau $18,\; 6,\; 2$` },
+    { jawaban: `$r = \dfrac{2}{3},\; a = 5$` },
+    { jawaban: `$768$ bakteri` },
+    { jawaban: `$L = 90$ m` },
+  ],
+  // 2 — Latihan D: Deret Geometri Tak Hingga (10 soal)
+  2: [
+    { jawaban: `$S_\infty = 18$` },
+    { jawaban: `$r = \dfrac{1}{3}$` },
+    { jawaban: `$U_3 = \dfrac{3}{4}$` },
+    { jawaban: `$a = 12$` },
+    { jawaban: `$0{,}\overline{27} = \dfrac{3}{11}$` },
+    { jawaban: `$U_4 = \dfrac{1}{2}$` },
+    { jawaban: `$\dfrac{3}{2}$` },
+    { jawaban: `$a = \dfrac{128}{5},\; r = \dfrac{1}{5}$` },
+    { jawaban: `$L = 90$ m` },
+    { jawaban: `$S_\infty = 200$ cm²` },
+  ],
+  // 3 — Latihan E: Aplikasi Barisan dan Deret (10 soal)
+  3: [
+    { jawaban: `Rp 105.000` },
+    { jawaban: `Rp 87.000.000` },
+    { jawaban: `$M_5 \approx 552.050$ jiwa` },
+    { jawaban: `Rp 13.600.000` },
+    { jawaban: `Rp 145.800.000` },
+    { jawaban: `$81$ gram` },
+    { jawaban: `$i = 10\%$ per tahun` },
+    { jawaban: `$L = 90$ m` },
+    { jawaban: `Rp 7.374.000` },
+    { jawaban: `$189$ cm` },
+  ],
+  // 4 — Latihan Pengayaan (7 soal)
+  4: [
+    { jawaban: `$U_n = 3n+4$; $S_n = \dfrac{3n^2+11n}{2}$; $U_{10}=34$; $S_{10}=205$` },
+    { jawaban: `$b=4,\; a=5,\; U_n=4n+1,\; U_7=29$` },
+    { jawaban: `$U_1=5,\; U_5=13,\; U_{10}=23$` },
+    { jawaban: `$b=4,\; a=3,\; S_{10}=210$` },
+    { jawaban: `$r=2,\; a=3,\; U_8=384$` },
+    { jawaban: `$p=2,\; q=1,\; S_n=2n^2+n$` },
+    { jawaban: `$r=2,\; a=3,\; S_8=765,\; S_\infty$ tidak ada (deret divergen)` },
+  ],
+};
+</script>
+<script src="../../assets/js/materi.js"></script>
+
+<!-- FOOTER -->
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
 </body>
 </html>
