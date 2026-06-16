@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barisan dan Deret – EksaktaLab</title>
+<meta name="description" content="Materi lengkap Barisan dan Deret SMA: barisan aritmatika, geometri, deret tak hingga, dan aplikasinya. Dilengkapi 44 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="canonical" href="https://web.eksaktalab.my.id/materi/barisan-deret/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://web.eksaktalab.my.id/materi/barisan-deret/">
+<meta property="og:title" content="Barisan dan Deret – EksaktaLab">
+<meta property="og:description" content="Materi lengkap Barisan dan Deret SMA: barisan aritmatika, geometri, deret tak hingga, dan aplikasinya. Dilengkapi 44 contoh soal dan pembahasan.">
+<meta property="og:site_name" content="EksaktaLab">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Barisan dan Deret – EksaktaLab">
+<meta name="twitter:description" content="Materi lengkap Barisan dan Deret SMA: barisan aritmatika, geometri, deret tak hingga, dan aplikasinya.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Barisan dan Deret","url":"https://web.eksaktalab.my.id/materi/barisan-deret/","description":"Materi lengkap Barisan dan Deret SMA: barisan aritmatika, geometri, deret tak hingga, dan aplikasinya.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/"},"educationalLevel":"SMA Kelas XI","inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://web.eksaktalab.my.id/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://web.eksaktalab.my.id/"},{"@type":"ListItem","position":3,"name":"Barisan dan Deret","item":"https://web.eksaktalab.my.id/materi/barisan-deret/"}]}}</script>
+<style>
+th mjx-container { color: #fff !important; }
+th mjx-container svg,
+th mjx-container svg * { fill: #fff !important; }
+</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Barisan dan Deret · 7 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Pengertian Barisan dan Deret</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Barisan dan Deret Aritmatika</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Barisan dan Deret Geometri</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Deret Geometri Tak Hingga</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Aplikasi Barisan dan Deret</a>
+        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Pengayaan</a>
+        <a class="toc-menu-item" href="#bagian-g" onclick="closeTOC()"><span class="toc-menu-badge">G</span>Ringkasan</a>
+      </div>
+    </div>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<!-- Floating scroll to top -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#aljabar">Aljabar &amp; Fungsi</a>
+    <span>/</span>
+    Barisan dan Deret
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">BAB V · No.18</div>
+      <h1 class="materi-title">Barisan dan Deret</h1>
+      <p class="materi-desc">Pelajari pola bilangan dalam barisan aritmatika dan geometri, deret tak hingga, hingga aplikasinya pada bunga bank, pertumbuhan populasi, dan lintasan bola.</p>
+      <div class="materi-tags">
+        <span class="tag teal">Kelas XI</span>
+        <span class="tag">Aljabar</span>
+        <span class="tag">7 Sub-bab</span>
+        <span class="tag">44 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOC inline -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Pengertian Barisan dan Deret</a></li>
+      <li><a href="#bagian-b" data-num="B">Barisan dan Deret Aritmatika</a></li>
+      <li><a href="#bagian-c" data-num="C">Barisan dan Deret Geometri</a></li>
+      <li><a href="#bagian-d" data-num="D">Deret Geometri Tak Hingga</a></li>
+      <li><a href="#bagian-e" data-num="E">Aplikasi Barisan dan Deret</a></li>
+      <li><a href="#bagian-f" data-num="F">Pengayaan</a></li>
+      <li><a href="#bagian-g" data-num="G">Ringkasan</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══ A. PENGERTIAN BARISAN DAN DERET ═══════════════════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Pengertian Barisan dan Deret</h2>
+
+    <h3 class="subsection-title">1. Apa Itu Barisan Bilangan?</h3>
+
+    <p>Perhatikan susunan bilangan berikut:</p>
+    $$2,\quad 4,\quad 6,\quad 8,\quad 10,\quad \ldots$$
+    <p>Tampak bahwa setiap bilangan berikutnya bertambah 2. Ada <strong>pola</strong> yang jelas dan teratur di sini.</p>
+
+    <p>Sekarang perhatikan contoh lain:</p>
+    $$3,\quad 9,\quad 27,\quad 81,\quad 243,\quad \ldots$$
+    <p>Setiap bilangan diperoleh dengan mengalikan bilangan sebelumnya dengan 3. Ini juga sebuah pola yang teratur.</p>
+
+    <p>Kedua contoh di atas adalah contoh <strong>barisan bilangan</strong> — susunan bilangan yang mengikuti aturan (pola) tertentu. Setiap bilangan dalam barisan disebut <strong>suku</strong>. Suku pertama ditulis $U_1$, suku kedua $U_2$, suku ketiga $U_3$, dan seterusnya. Suku ke-$n$ ditulis $U_n$.</p>
+
+    <p>Contoh barisan dan suku-sukunya:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Barisan</th><th>$U_1$</th><th>$U_2$</th><th>$U_3$</th><th>$U_4$</th><th>$U_5$</th><th>Pola</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$1,\; 3,\; 5,\; 7,\; 9,\; \ldots$</td><td>1</td><td>3</td><td>5</td><td>7</td><td>9</td><td>ditambah 2 setiap suku</td></tr>
+          <tr><td>$2,\; 6,\; 18,\; 54,\; \ldots$</td><td>2</td><td>6</td><td>18</td><td>54</td><td>162</td><td>dikali 3 setiap suku</td></tr>
+          <tr><td>$1,\; 4,\; 9,\; 16,\; 25,\; \ldots$</td><td>1</td><td>4</td><td>9</td><td>16</td><td>25</td><td>bilangan kuadrat</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">2. Apa Itu Deret Bilangan?</h3>
+
+    <p>Jika suku-suku suatu barisan dijumlahkan, hasilnya disebut <strong>deret bilangan</strong>. Misalnya:</p>
+    <div class="table-wrap">
+      <table>
+        <tbody>
+          <tr><td>Barisan:</td><td>$2,\quad 4,\quad 6,\quad 8,\quad 10$</td></tr>
+          <tr><td>Deretnya:</td><td>$2 + 4 + 6 + 8 + 10 = 30$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Jumlah $n$ suku pertama dari suatu deret dilambangkan dengan $S_n$. Sehingga:</p>
+    $$S_n = U_1 + U_2 + U_3 + \cdots + U_n$$
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Perbedaan Penting</div>
+      <p style="margin:0;font-size:.9rem;"><strong>Barisan</strong> $\to$ suku-suku dipisahkan tanda koma: $\;2,\; 5,\; 8,\; 11,\; \ldots$<br>
+      <strong>Deret</strong> $\to$ suku-suku dijumlahkan: $\;2 + 5 + 8 + 11 + \cdots$</p>
+    </div>
+
+    <h3 class="subsection-title">3. Hubungan Suku ke-$n$ dan Jumlah $n$ Suku</h3>
+
+    <p>Dari definisi $S_n = U_1 + U_2 + \cdots + U_{n-1} + U_n$, kita dapat melihat bahwa:</p>
+    $$S_{n-1} = U_1 + U_2 + \cdots + U_{n-1}$$
+    <p>Sehingga $U_n = S_n - S_{n-1}$. Hubungan ini sangat berguna ketika rumus $S_n$ diketahui tetapi rumus $U_n$ tidak diketahui secara langsung.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Hubungan $U_n$ dan $S_n$</div>
+      $$U_1 = S_1 \qquad \text{dan} \qquad U_n = S_n - S_{n-1} \quad \text{untuk } n \geq 2$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $S_n = 3n^2 + n$. Tentukan $U_1$ dan $U_3$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>$U_1 = S_1 = 3(1)^2 + 1 = 4$</li>
+        <li>$S_3 = 3(9) + 3 = 30$ dan $S_2 = 3(4) + 2 = 14$, sehingga $U_3 = S_3 - S_2 = 30 - 14 = 16$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $S_n = an^2 + bn$. Jika $U_3 = 11$ dan $U_5 = 19$, tentukan nilai $a$, $b$, dan $S_{10}$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Karena $U_n = S_n - S_{n-1} = an^2 + bn - a(n-1)^2 - b(n-1) = 2an - a + b$, maka:
+      $$U_3 = 5a + b = 11 \quad \cdots(1)$$
+      $$U_5 = 9a + b = 19 \quad \cdots(2)$$
+      Dari $(2) - (1)$: $4a = 8 \Rightarrow a = 2$. Substitusi ke (1): $b = 1$.
+      $$S_{10} = 2(100) + 1(10) = 210$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui jumlah $n$ suku pertama suatu barisan dinyatakan oleh $S_n = 2n^2 + n$. Tentukan nilai $U_1$, $U_2$, $U_3$, dan $U_n$ untuk $n \geq 2$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Untuk $U_1$, gunakan $U_1 = S_1$:
+      $$U_1 = S_1 = 2(1)^2 + 1 = 3$$
+      Untuk $n \geq 2$, gunakan $U_n = S_n - S_{n-1}$:
+      $$S_n = 2n^2 + n$$
+      $$S_{n-1} = 2(n-1)^2 + (n-1) = 2n^2 - 4n + 2 + n - 1 = 2n^2 - 3n + 1$$
+      $$U_n = S_n - S_{n-1} = (2n^2 + n) - (2n^2 - 3n + 1) = 4n - 1$$
+      Cek kecocokan dengan $U_1$: $4(1)-1 = 3$ ✓<br><br>
+      Nilai suku-suku awal:
+      $$U_2 = 4(2)-1 = 7, \qquad U_3 = 4(3)-1 = 11$$
+    </div>
+
+  </section>
+
+  <!-- ═══ B. BARISAN DAN DERET ARITMATIKA ══════════════════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Barisan dan Deret Aritmatika</h2>
+
+    <h3 class="subsection-title">1. Mengenal Barisan Aritmatika</h3>
+
+    <p>Bayangkan seorang tukang batu yang menyusun batu bata dalam beberapa baris. Baris pertama 5 batu, baris kedua 8 batu, baris ketiga 11 batu, baris keempat 14 batu, dan seterusnya. Setiap baris selalu bertambah 3 batu dari baris sebelumnya.</p>
+    $$5,\quad 8,\quad 11,\quad 14,\quad 17,\quad \ldots$$
+
+    <p>Inilah contoh <strong>barisan aritmatika</strong> — barisan yang setiap sukunya bertambah (atau berkurang) dengan nilai yang <strong>sama dan tetap</strong>. Nilai tetap itu disebut <strong>beda</strong>, dilambangkan $b$.</p>
+
+    <p>Perhatikan contoh-contoh berikut:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Barisan</th><th>Beda ($b$)</th><th>Jenis</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$3,\; 7,\; 11,\; 15,\; 19,\; \ldots$</td><td>$+4$</td><td>naik</td></tr>
+          <tr><td>$20,\; 17,\; 14,\; 11,\; 8,\; \ldots$</td><td>$-3$</td><td>turun</td></tr>
+          <tr><td>$5,\; 5,\; 5,\; 5,\; \ldots$</td><td>$0$</td><td>konstan</td></tr>
+          <tr><td>$2,\; 4,\; 8,\; 16,\; \ldots$</td><td>tidak tetap</td><td><strong>bukan</strong> aritmatika</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Cara mudah mengidentifikasi:</strong> Hitung selisih $U_2 - U_1$, $U_3 - U_2$, $U_4 - U_3$. Jika ketiga selisih itu sama, barisan tersebut adalah aritmatika.</p>
+
+    <h3 class="subsection-title">2. Penurunan Rumus Suku ke-$n$</h3>
+
+    <p>Misalkan suku pertama adalah $a$ dan bedanya $b$. Terlihat bahwa pada $U_n$, nilai $b$ ditambahkan sebanyak $(n-1)$ kali, karena dari suku ke-1 ke suku ke-$n$ terdapat $(n-1)$ langkah:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>$U_1$</th><th>$U_2$</th><th>$U_3$</th><th>$U_4$</th><th>$\cdots$</th><th>$U_n$</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$a$</td><td>$a+b$</td><td>$a+2b$</td><td>$a+3b$</td><td>$\cdots$</td><td>$a+(n{-}1)b$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Suku ke-$n$ Barisan Aritmatika</div>
+      $$U_n = a + (n-1)\,b$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">di mana $a = U_1$ adalah suku pertama dan $b = U_2 - U_1$ adalah beda.</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Untuk mengenali barisan aritmatika, periksa apakah selisih setiap dua suku berurutan sama.<br>
+      Jika $b &gt; 0$: barisan <strong>naik</strong> &nbsp;|&nbsp; Jika $b &lt; 0$: barisan <strong>turun</strong> &nbsp;|&nbsp; Jika $b = 0$: barisan <strong>konstan</strong></p>
+    </div>
+
+    <h3 class="subsection-title">3. Jumlah $n$ Suku Pertama Deret Aritmatika</h3>
+
+    <p>Jumlah $n$ suku pertama deret aritmatika diturunkan sebagai berikut:</p>
+    $$S_n = a + (a+b) + (a+2b) + \cdots + U_n$$
+    $$S_n = U_n + (U_n-b) + (U_n-2b) + \cdots + a$$
+    <p>Menjumlahkan kedua baris: $2S_n = \underbrace{(a+U_n) + (a+U_n) + \cdots + (a+U_n)}_{n \text{ kali}}$</p>
+    <p>Sehingga $2S_n = n\,(a+U_n)$, dan:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Jumlah $n$ Suku Pertama Deret Aritmatika</div>
+      $$S_n = \frac{n}{2}(a + U_n) \qquad \text{atau} \qquad S_n = \frac{n}{2}\bigl[2a + (n-1)\,b\bigr]$$
+    </div>
+
+    <h3 class="subsection-title">4. Suku Tengah Barisan Aritmatika</h3>
+
+    <p>Jika suatu barisan aritmatika memiliki $n$ suku dengan $n$ <strong>ganjil</strong>, maka terdapat suku tengah:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Suku Tengah</div>
+      $$U_T = U_{\frac{n+1}{2}} = \frac{a + U_n}{2}$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">Suku tengah adalah rata-rata dari suku pertama dan suku terakhir.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Diketahui barisan aritmatika $3,\; 7,\; 11,\; 15,\; 19,\; \ldots$</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Tentukan suku ke-20!</li>
+        <li>Tentukan jumlah 15 suku pertama!</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Diketahui $a = 3$ dan $b = 7 - 3 = 4$.
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>$U_{20} = a + (20-1)b = 3 + 19 \cdot 4 = 3 + 76 = 79$</li>
+        <li>$S_{15} = \dfrac{15}{2}\bigl[2(3) + (15-1)(4)\bigr] = \dfrac{15}{2}\bigl[6 + 56\bigr] = \dfrac{15}{2} \cdot 62 = 465$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Suatu barisan aritmatika diketahui $U_3 = 12$ dan $U_6 = 27$. Tentukan suku ke-9 dan jumlah 9 suku pertama!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Dari $U_n = a + (n-1)b$:
+      $$U_3 = a + 2b = 12 \quad \cdots (1)$$
+      $$U_6 = a + 5b = 27 \quad \cdots (2)$$
+      Dari $(2) - (1)$: $3b = 15$, sehingga $b = 5$. Substitusi ke $(1)$: $a = 2$.
+      $$U_9 = 2 + 8 \cdot 5 = 42$$
+      $$S_9 = \frac{9}{2}(a + U_9) = \frac{9}{2}(2 + 42) = \frac{9}{2} \cdot 44 = 198$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Hitunglah nilai dari $2 + 5 + 8 + 11 + \cdots + 50$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $a = 2$, $b = 3$, $U_n = 50$. Tentukan $n$:
+      $$50 = 2 + (n-1) \cdot 3 \;\Rightarrow\; 48 = 3(n-1) \;\Rightarrow\; n = 17$$
+      $$S_{17} = \frac{17}{2}(2 + 50) = \frac{17}{2} \cdot 52 = 442$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $S_n = 2n^2 + 4n$. Tentukan $U_5$ dan beda barisan tersebut!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$S_5 = 2(25) + 4(5) = 70$$
+      $$S_4 = 2(16) + 4(4) = 48$$
+      $$U_5 = S_5 - S_4 = 70 - 48 = 22$$
+      Untuk beda: $U_1 = S_1 = 6$, $\;U_2 = S_2 - S_1 = 16 - 6 = 10$, maka $b = 10 - 6 = 4$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Di antara bilangan 4 dan 28 disisipkan 5 bilangan sehingga membentuk barisan aritmatika. Tentukan kelima bilangan yang disisipkan tersebut!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Setelah penyisipan, barisan memiliki $2 + 5 = 7$ suku, dengan $U_1 = 4$ dan $U_7 = 28$.
+      $$U_7 = a + 6b \;\Rightarrow\; 28 = 4 + 6b \;\Rightarrow\; b = 4$$
+      Kelima bilangan yang disisipkan: $8,\; 12,\; 16,\; 20,\; 24$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Suku ke-8 suatu barisan aritmatika adalah 33 dan bedanya 4. Tentukan suku pertama dan jumlah 10 suku pertamanya!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$U_8 = a + 7b \;\Rightarrow\; 33 = a + 7(4) \;\Rightarrow\; a = 33 - 28 = 5$$
+      $$S_{10} = \frac{10}{2}\bigl[2(5) + (10-1)(4)\bigr] = 5\bigl[10 + 36\bigr] = 5 \times 46 = 230$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Jumlah $n$ suku pertama suatu barisan aritmatika dinyatakan sebagai $S_n = 4n^2 - 2n$. Tentukan suku tengah jika barisan tersebut memiliki 11 suku!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$U_1 = S_1 = 4 - 2 = 2$$
+      $$U_2 = S_2 - S_1 = (16-4) - 2 = 10$$
+      $$b = U_2 - U_1 = 10 - 2 = 8$$
+      Suku tengah ke-6 (posisi tengah dari 11 suku):
+      $$U_6 = a + 5b = 2 + 5(8) = 42$$
+      Verifikasi: $U_T = \dfrac{a + U_{11}}{2} = \dfrac{2 + (2+10\cdot8)}{2} = \dfrac{2+82}{2} = 42$ ✓
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui barisan aritmatika dengan suku positif. Jumlah tiga suku pertama adalah 21 dan hasil kali suku pertama dan suku ketiga adalah 45. Tentukan suku ke-10!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Misalkan tiga suku pertama adalah $a-b,\; a,\; a+b$.
+      $$(a-b) + a + (a+b) = 21 \;\Rightarrow\; 3a = 21 \;\Rightarrow\; a = 7$$
+      $$(a-b)(a+b) = 45 \;\Rightarrow\; a^2 - b^2 = 45$$
+      $$49 - b^2 = 45 \;\Rightarrow\; b^2 = 4 \;\Rightarrow\; b = \pm 2$$
+      Karena suku positif dan $a = 7$, ambil $b = 2$ (barisan naik) atau $b = -2$ (barisan turun, tetap positif untuk 10 suku pertama).<br><br>
+      Suku ke-10 dari suku pertama $U_1 = a - b$:
+      $$U_{10} = (7-2) + 9(2) = 5 + 18 = 23 \quad \text{(untuk } b = 2\text{)}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah perusahaan konstruksi membangun jembatan dengan susunan tiang baja. Baris pertama menggunakan 8 tiang, setiap baris berikutnya bertambah 3 tiang. Total anggaran untuk tiang adalah Rp 480.000.000 dan setiap tiang berharga Rp 2.000.000. Jika perusahaan ingin memaksimalkan baris yang dapat dibangun, berapa baris maksimum yang bisa dibuat dan berapa sisa anggarannya?</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Total tiang yang dapat dibeli: $\dfrac{480.000.000}{2.000.000} = 240$ tiang.<br><br>
+      Jumlah tiang untuk $n$ baris: $S_n = \dfrac{n}{2}[2(8)+(n-1)(3)] = \dfrac{n(3n+13)}{2}$<br><br>
+      Syarat: $S_n \leq 240$:
+      $$\frac{n(3n+13)}{2} \leq 240 \;\Rightarrow\; 3n^2 + 13n - 480 \leq 0$$
+      Dengan rumus kuadrat: $n = \dfrac{-13 \pm \sqrt{169 + 5760}}{6} = \dfrac{-13 \pm \sqrt{5929}}{6} = \dfrac{-13 \pm 77}{6}$<br><br>
+      Ambil $n$ positif: $n = \dfrac{64}{6} \approx 10{,}67$, maka $n_{\max} = 10$.<br><br>
+      Tiang yang digunakan: $S_{10} = \dfrac{10(30+13)}{2} = \dfrac{10 \times 43}{2} = 215$ tiang.<br><br>
+      Sisa tiang: $240 - 215 = 25$ tiang $\;\Rightarrow\;$ sisa anggaran $= 25 \times 2.000.000 = \text{Rp 50.000.000}$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan B</div>
+      <ol class="soal-list">
+        <li>Diketahui barisan aritmatika $5,\; 9,\; 13,\; 17,\; \ldots$ Tentukan suku ke-25 dan jumlah 20 suku pertama!</li>
+        <li>Suku ke-7 suatu barisan aritmatika adalah 35 dan suku ke-12 adalah 60. Tentukan suku pertama, beda, dan suku ke-20!</li>
+        <li>Diketahui $3 + 7 + 11 + \cdots + x = 136$. Tentukan nilai $x$!</li>
+        <li>Jumlah $n$ suku pertama suatu deret aritmatika adalah $S_n = 3n^2 - n$. Tentukan suku pertama, beda, dan suku ke-10!</li>
+        <li>Sebuah gedung bioskop memiliki 15 baris kursi. Baris pertama terdapat 20 kursi, setiap baris berikutnya bertambah 4 kursi. Berapa total kursi dalam gedung tersebut?</li>
+        <li>Di antara bilangan 3 dan 45 disisipkan 7 bilangan sehingga membentuk barisan aritmatika. Tentukan bilangan ke-4 dari barisan yang terbentuk!</li>
+        <li>Suatu barisan aritmatika mempunyai jumlah tiga suku berurutan sama dengan 39 dan hasil kali suku pertama serta suku ketiga adalah 165. Tentukan ketiga suku tersebut!</li>
+        <li>Suku pertama barisan aritmatika adalah $-8$ dan suku terakhirnya $30$. Jika jumlah semua sukunya $176$, tentukan banyaknya suku dan bedanya!</li>
+        <li>Jumlah tiga suku pertama barisan aritmatika adalah $27$ dan jumlah lima buah suku pertama barisan tersebut adalah $85$, maka suku ke-$4$ barisan tersebut adalah …</li>
+        <li>Sebuah perusahaan logistik memiliki rencana pengiriman paket selama $n$ hari. Pada hari pertama dikirim 120 paket, setiap hari berikutnya bertambah 15 paket. Kapasitas gudang maksimal adalah 3.500 paket per hari. Biaya operasional per paket adalah Rp 8.000.
+          <ol class="alpha-list" style="margin-top:.3rem;">
+            <li>Pada hari keberapa pengiriman pertama kali mencapai atau melampaui kapasitas gudang?</li>
+            <li>Berapa total paket yang dikirim dari hari ke-1 hingga hari tersebut?</li>
+            <li>Jika perusahaan ingin menghemat biaya operasional total tidak lebih dari Rp 1.200.000.000 selama pengiriman, berapa hari maksimum operasional yang bisa dijalankan?</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ C. BARISAN DAN DERET GEOMETRI ════════════════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Barisan dan Deret Geometri</h2>
+
+    <h3 class="subsection-title">1. Mengenal Barisan Geometri</h3>
+
+    <p>Bayangkan selembar kertas dilipat menjadi dua bagian. Setelah 1 lipatan ada 2 lapisan, setelah 2 lipatan ada 4 lapisan, setelah 3 lipatan ada 8 lapisan, dan seterusnya.</p>
+    $$1,\quad 2,\quad 4,\quad 8,\quad 16,\quad 32,\quad \ldots$$
+
+    <p><strong>Barisan geometri</strong> adalah barisan bilangan yang perbandingan (rasio) antara dua suku yang berurutan selalu <strong>tetap (konstan)</strong>. Perbandingan tetap itu disebut <strong>rasio</strong>, dilambangkan $r$.</p>
+    $$r = \frac{U_2}{U_1} = \frac{U_3}{U_2} = \frac{U_4}{U_3} = \cdots$$
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Barisan</th><th>Rasio ($r$)</th><th>Sifat</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$2,\; 6,\; 18,\; 54,\; \ldots$</td><td>$r = 3$</td><td>membesar</td></tr>
+          <tr><td>$64,\; 32,\; 16,\; 8,\; \ldots$</td><td>$r = \tfrac{1}{2}$</td><td>mengecil</td></tr>
+          <tr><td>$1,\; -2,\; 4,\; -8,\; \ldots$</td><td>$r = -2$</td><td>tanda berganti-ganti</td></tr>
+          <tr><td>$3,\; 6,\; 9,\; 12,\; \ldots$</td><td>tidak tetap</td><td><strong>bukan</strong> geometri</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Cara mudah mengidentifikasi:</strong> Hitung $\dfrac{U_2}{U_1}$, $\dfrac{U_3}{U_2}$, $\dfrac{U_4}{U_3}$. Jika ketiga rasio itu sama, barisan tersebut adalah geometri.</p>
+
+    <h3 class="subsection-title">2. Penurunan Rumus Suku ke-$n$</h3>
+
+    <p>Misalkan suku pertama adalah $a$ dan rasionya $r$. Terlihat bahwa pada $U_n$, nilai $r$ dikalikan sebanyak $(n-1)$ kali. Pangkat $r$ selalu satu kurang dari nomor suku:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>$U_1$</th><th>$U_2$</th><th>$U_3$</th><th>$U_4$</th><th>$\cdots$</th><th>$U_n$</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$a$</td><td>$ar$</td><td>$ar^2$</td><td>$ar^3$</td><td>$\cdots$</td><td>$ar^{n-1}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Suku ke-$n$ Barisan Geometri</div>
+      $$U_n = a \cdot r^{n-1}$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">di mana $a = U_1$ adalah suku pertama dan $r = \dfrac{U_2}{U_1}$ adalah rasio ($r \neq 0$).</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Cara membedakan aritmatika dan geometri</div>
+      <p style="margin:0;font-size:.9rem;"><strong>Aritmatika</strong>: selisih berurutan <strong>sama</strong> $\;\Rightarrow\;$ $U_n - U_{n-1} = b$ (tetap)<br>
+      <strong>Geometri</strong>: rasio berurutan <strong>sama</strong> $\;\Rightarrow\;$ $\dfrac{U_n}{U_{n-1}} = r$ (tetap)<br><br>
+      Jika $|r| &gt; 1$: barisan <strong>divergen (membesar)</strong> &nbsp;|&nbsp; Jika $|r| &lt; 1$: barisan <strong>konvergen (mengecil)</strong></p>
+    </div>
+
+    <h3 class="subsection-title">3. Jumlah $n$ Suku Pertama Deret Geometri</h3>
+
+    <p>Untuk menurunkan rumus $S_n$, perhatikan:</p>
+    $$S_n = a + ar + ar^2 + \cdots + ar^{n-1}$$
+    $$r \cdot S_n = ar + ar^2 + \cdots + ar^{n-1} + ar^n$$
+    <p>Mengurangkan: $S_n - r \cdot S_n = a - ar^n$, sehingga $S_n(1-r) = a(1-r^n)$.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Jumlah $n$ Suku Pertama Deret Geometri</div>
+      $$S_n = \frac{a(r^n - 1)}{r - 1} = \frac{a(1 - r^n)}{1 - r}, \qquad r \neq 1$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">Jika $r = 1$, maka $S_n = na$.</p>
+    </div>
+
+    <h3 class="subsection-title">4. Suku Tengah Barisan Geometri</h3>
+
+    <p>Jika suatu barisan geometri memiliki $n$ suku dengan $n$ <strong>ganjil</strong>:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Suku Tengah Barisan Geometri</div>
+      $$U_T = \sqrt{a \cdot U_n} = \sqrt{U_1 \cdot U_n}$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">Suku tengah adalah <strong>rata-rata geometri</strong> dari suku pertama dan suku terakhir.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Diketahui barisan geometri $2,\; 6,\; 18,\; 54,\; \ldots$</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Tentukan suku ke-8!</li>
+        <li>Tentukan jumlah 6 suku pertama!</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Diketahui $a = 2$ dan $r = \dfrac{6}{2} = 3$.
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>$U_8 = 2 \cdot 3^{8-1} = 2 \cdot 3^7 = 2 \cdot 2187 = 4374$</li>
+        <li>$S_6 = \dfrac{2(3^6 - 1)}{3 - 1} = \dfrac{2(729-1)}{2} = 728$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Suatu barisan geometri diketahui $U_3 = 12$ dan $U_6 = 96$. Tentukan nilai $a$, $r$, dan $S_5$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$U_3 = ar^2 = 12 \quad \cdots (1)$$
+      $$U_6 = ar^5 = 96 \quad \cdots (2)$$
+      Bagi $(2)$ dengan $(1)$: $r^3 = \dfrac{96}{12} = 8 \;\Rightarrow\; r = 2$<br>
+      Dari $(1)$: $a \cdot 4 = 12 \;\Rightarrow\; a = 3$.
+      $$S_5 = \frac{3(2^5 - 1)}{2 - 1} = 3(32-1) = 93$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Tiga bilangan membentuk barisan geometri. Jumlah ketiga bilangan adalah 14 dan hasil kalinya adalah 64. Tentukan ketiga bilangan tersebut!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Misalkan ketiga bilangan adalah $\dfrac{a}{r},\; a,\; ar$.
+      $$\frac{a}{r} \cdot a \cdot ar = 64 \;\Rightarrow\; a^3 = 64 \;\Rightarrow\; a = 4$$
+      $$\frac{4}{r} + 4 + 4r = 14 \;\Rightarrow\; 4 + 4r + 4r^2 = 14r$$
+      $$4r^2 - 10r + 4 = 0 \;\Rightarrow\; 2r^2 - 5r + 2 = 0 \;\Rightarrow\; (2r - 1)(r - 2) = 0$$
+      Jadi $r = \dfrac{1}{2}$ atau $r = 2$.<br><br>
+      Ketiga bilangan: $8,\; 4,\; 2$ atau $2,\; 4,\; 8$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Hitunglah nilai dari $3 + 6 + 12 + \cdots + 384$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $a = 3$, $r = 2$, $U_n = 384$. Tentukan $n$:
+      $$384 = 3 \cdot 2^{n-1} \;\Rightarrow\; 2^{n-1} = 128 = 2^7 \;\Rightarrow\; n = 8$$
+      $$S_8 = \frac{3(2^8 - 1)}{2-1} = 3(256 - 1) = 765$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Barisan $3,\; 3\sqrt{2},\; 6,\; 6\sqrt{2},\; \ldots$ diteruskan sampai 11 suku. Tentukan suku tengahnya!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $a = 3$, $r = \dfrac{3\sqrt{2}}{3} = \sqrt{2}$.
+      $$U_{11} = 3 \cdot (\sqrt{2})^{10} = 3 \cdot 2^5 = 96$$
+      $$U_T = \sqrt{a \cdot U_{11}} = \sqrt{3 \cdot 96} = \sqrt{288} = 12\sqrt{2}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Barisan geometri diketahui $U_1 = 5$ dan $r = 3$. Tentukan $U_6$ dan $S_5$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$U_6 = 5 \cdot 3^{6-1} = 5 \cdot 243 = 1215$$
+      $$S_5 = \frac{5(3^5-1)}{3-1} = \frac{5(243-1)}{2} = \frac{5 \times 242}{2} = 605$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Suku kedua barisan geometri adalah 6 dan suku kelima adalah 162. Tentukan $a$, $r$, dan $S_6$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$U_2 = ar = 6 \quad \cdots(1)$$
+      $$U_5 = ar^4 = 162 \quad \cdots(2)$$
+      Bagi (2) dengan (1): $r^3 = \dfrac{162}{6} = 27 \;\Rightarrow\; r = 3$. Dari (1): $a = \dfrac{6}{3} = 2$.
+      $$S_6 = \frac{2(3^6-1)}{3-1} = \frac{2(729-1)}{2} = 728$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui barisan geometri dengan semua suku positif. Jumlah suku ke-3 dan ke-5 adalah 180, sedangkan hasil kali suku ke-2 dan ke-6 adalah 2304. Tentukan suku ke-4!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$U_3 + U_5 = ar^2 + ar^4 = ar^2(1+r^2) = 180 \quad\cdots(1)$$
+      $$U_2 \cdot U_6 = ar \cdot ar^5 = a^2r^6 = 2304 \quad\cdots(2)$$
+      Dari (2): $(ar^3)^2 = 2304 \;\Rightarrow\; ar^3 = 48$ (positif).<br><br>
+      Suku ke-4: $U_4 = ar^3 = 48$<br><br>
+      Verifikasi dari (1): $ar^2(1+r^2) = \dfrac{48}{r}(1+r^2) = 180$, sehingga $48r^2 - 180r + 48 = 0$, $(4r-1)(r-4) = 0$, $r = 4$ atau $r = \dfrac{1}{4}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah virus menyebar di kota. Hari pertama ada 4 orang terinfeksi, dan setiap harinya jumlah orang yang terinfeksi menjadi 3 kali lipat hari sebelumnya. Kapasitas rumah sakit hanya 10.000 tempat tidur. Pada hari keberapa jumlah kumulatif orang terinfeksi pertama kali melebihi kapasitas tersebut? Jika pada hari itu pemerintah memberlakukan lockdown sehingga rasio penyebaran turun menjadi $\frac{1}{2}$, berapa total orang terinfeksi setelah lockdown berjalan tanpa batas waktu?</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Bagian 1:</strong> Total infeksi kumulatif $S_n = \dfrac{4(3^n-1)}{3-1} = 2(3^n - 1)$.<br><br>
+      Syarat $S_n > 10.000$:
+      $$2(3^n-1) > 10.000 \;\Rightarrow\; 3^n > 5001$$
+      $3^7 = 2187 &lt; 5001$ dan $3^8 = 6561 &gt; 5001$, jadi lockdown diberlakukan pada <strong>hari ke-8</strong>.<br><br>
+      Jumlah terinfeksi di hari ke-8: $U_8 = 4 \cdot 3^7 = 4 \cdot 2187 = 8748$ orang.<br><br>
+      <strong>Bagian 2:</strong> Setelah lockdown, deret geometri tak hingga baru dimulai dari $U_8 = 8748$ dengan rasio $r = \dfrac{1}{2}$.
+      $$S_{\text{lockdown}} = \frac{8748}{1 - \tfrac{1}{2}} = 8748 \times 2 = 17.496$$
+      Total infeksi $= S_7 + S_{\text{lockdown}}$:
+      $$S_7 = 2(3^7-1) = 2(2187-1) = 4372$$
+      $$\text{Total} = 4372 + 17.496 = 21.868 \text{ orang}$$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan C</div>
+      <ol class="soal-list">
+        <li>Diketahui barisan geometri $2,\; 6,\; 18,\; 54,\; \ldots$ Tentukan nilai suku ke-8 dan jumlah 5 suku pertama dari barisan tersebut!</li>
+        <li>Tentukan jumlah tak hingga dari deret geometri $18 + 6 + 2 + \frac{2}{3} + \cdots$!</li>
+        <li>Suku ke-3 suatu barisan geometri bernilai 18 dan suku ke-6 bernilai 486. Tentukan suku pertama dan rasio dari barisan tersebut!</li>
+        <li>Diketahui deret geometri $2 + 4 + 8 + \cdots + 512$. Tentukan banyak suku pada deret tersebut dan hitunglah jumlah keseluruhannya!</li>
+        <li>Jumlah $n$ suku pertama suatu deret geometri dinyatakan dengan rumus $S_n = 2^{n+1} - 2$. Tentukan rasio dan nilai suku ke-5 dari barisan tersebut!</li>
+        <li>Tiga bilangan $(x-1),\; (x+1),$ dan $(3x-1)$ membentuk suatu barisan geometri yang naik. Tentukan nilai $x$ yang memenuhi dan rasio barisan tersebut!</li>
+        <li>Tiga buah bilangan membentuk barisan geometri. Jumlah ketiga bilangan tersebut adalah 26 dan hasil kali ketiganya adalah 216. Tentukan ketiga bilangan tersebut!</li>
+        <li>Jumlah sampai tak hingga dari suatu deret geometri adalah 15, sedangkan jumlah suku-suku pada urutan ganjilnya ($U_1 + U_3 + U_5 + \dots$) adalah 9. Tentukan rasio dan suku pertama deret geometri tersebut!</li>
+        <li>Suatu koloni bakteri akan membelah diri menjadi dua setiap 20 menit. Jika pada pukul 08.00 terdapat 15 bakteri, dan akibat pemberian zat kimia ada $\frac{1}{5}$ dari total bakteri mati tepat pada pukul 09.00, berapakah jumlah bakteri yang hidup pada pukul 10.00?</li>
+        <li>Sebuah bola tenis dijatuhkan dari lantai gedung dengan ketinggian 10 meter. Setiap kali menyentuh tanah, bola memantul kembali ke atas dengan ketinggian $\frac{4}{5}$ dari tinggi sebelumnya. Tentukan panjang total lintasan yang ditempuh bola tersebut dari awal dijatuhkan hingga benar-benar berhenti!</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ D. DERET GEOMETRI TAK HINGGA ═════════════════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Deret Geometri Tak Hingga</h2>
+
+    <h3 class="subsection-title">1. Mengenal Deret Geometri Tak Hingga</h3>
+
+    <p>Bayangkan kamu memegang <strong>satu potong batang kayu</strong>. Kamu memotongnya menjadi dua bagian sama besar, lalu mengambil satu bagian ($\tfrac{1}{2}$ batang). Dari sisa batang kayu yang ada, kamu potong lagi menjadi dua dan ambil satu bagian lagi ($\tfrac{1}{4}$ batang). Begitu seterusnya tanpa henti:</p>
+    $$\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \cdots$$
+
+    <p>Meskipun proses memotong dilakukan <strong>tak terbatas kali</strong>, total batang kayu yang kamu ambil <strong>tidak pernah melebihi 1 batang kayu utuh</strong> — bahkan mendekati tepat 1 batang kayu. Inilah contoh nyata deret geometri tak hingga yang <strong>konvergen</strong>.</p>
+
+    <p>Sebaliknya, bayangkan potongan batang kayu yang justru <strong>bertambah besar</strong> setiap kali — tentu saja batang kayu yang dibutuhkan akan terus bertambah tanpa batas. Inilah gambaran deret yang <strong>divergen</strong>.</p>
+
+    <p><strong>Kunci perbedaannya ada pada rasio $r$:</strong></p>
+    <ul>
+      <li>Jika $|r| &lt; 1$: setiap potongan semakin <strong>kecil</strong> mendekati nol $\;\Rightarrow\;$ deret <strong>konvergen</strong></li>
+      <li>Jika $|r| \geq 1$: potongan tidak mengecil $\;\Rightarrow\;$ deret <strong>divergen</strong></li>
+    </ul>
+
+    <h3 class="subsection-title">2. Penurunan Rumus Deret Geometri Tak Hingga</h3>
+
+    <p>Dari rumus $S_n = \dfrac{a(1-r^n)}{1-r}$ (untuk $r \neq 1$), kita amati apa yang terjadi ketika $n \to \infty$:</p>
+    <ul>
+      <li>Jika $|r| &lt; 1$, maka $r^n \to 0$ saat $n \to \infty$</li>
+      <li>Sehingga $S_n \to \dfrac{a(1-0)}{1-r} = \dfrac{a}{1-r}$</li>
+    </ul>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Deret Geometri Tak Hingga (Konvergen)</div>
+      $$S_\infty = \frac{a}{1-r}, \qquad \text{syarat: } |r| < 1 \;\; (-1 < r < 1)$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">Jika $|r| \geq 1$, deret <strong>divergen</strong> dan jumlahnya tidak berhingga.</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;"><strong>Syarat konvergensi:</strong> $-1 &lt; r &lt; 1$ atau $|r| &lt; 1$.<br><br>
+      Deret geometri tak hingga sering muncul pada masalah <strong>lintasan bola memantul</strong> dan <strong>pecahan desimal berulang</strong>. Rumus ini hanya berlaku bila syarat di atas terpenuhi — selalu periksa nilai $r$ terlebih dahulu!</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">Suatu deret geometri tak hingga diketahui suku pertamanya 6 dan rasionya $\dfrac{1}{3}$. Tentukan jumlah tak hingganya!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $a = 6$, $r = \dfrac{1}{3}$. Karena $|r| &lt; 1$, deret konvergen.
+      $$S_\infty = \frac{6}{1 - \dfrac{1}{3}} = \frac{6}{\dfrac{2}{3}} = 6 \cdot \frac{3}{2} = 9$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 23</div>
+      <p style="margin:0;font-size:.9rem;">Jumlah tak hingga suatu deret geometri adalah 20 dan suku pertamanya 8. Tentukan rasio dan suku ke-4!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$S_\infty = \frac{a}{1-r} \;\Rightarrow\; 20 = \frac{8}{1-r} \;\Rightarrow\; 1-r = \frac{8}{20} = \frac{2}{5} \;\Rightarrow\; r = \frac{3}{5}$$
+      $$U_4 = 8 \cdot \left(\frac{3}{5}\right)^3 = 8 \cdot \frac{27}{125} = \frac{216}{125}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Ubahlah $0{,}3\overline{6} = 0{,}3666\ldots$ menjadi pecahan biasa!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $0{,}3\overline{6} = 0{,}3 + 0{,}06 + 0{,}006 + 0{,}0006 + \cdots$<br><br>
+      Bagian berulangnya: $a = 0{,}06$, $r = 0{,}1$, maka:
+      $$\text{Bagian berulang} = \frac{0{,}06}{1 - 0{,}1} = \frac{0{,}06}{0{,}9} = \frac{1}{15}$$
+      $$0{,}3\overline{6} = 0{,}3 + \frac{1}{15} = \frac{3}{10} + \frac{1}{15} = \frac{9}{30} + \frac{2}{30} = \frac{11}{30}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah bola dijatuhkan dari ketinggian 25 m. Setiap kali menyentuh lantai, bola memantul setinggi $\dfrac{3}{5}$ dari ketinggian sebelumnya. Tentukan panjang total lintasan bola!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Pantul pertama: $25 \times \dfrac{3}{5} = 15$ m, pantul kedua: $15 \times \dfrac{3}{5} = 9$ m, dst.<br><br>
+      Lintasan <strong>turun</strong>: deret geometri tak hingga dengan $a = 25$, $r = \dfrac{3}{5}$
+      $$S_{\text{turun}} = \frac{25}{1 - \dfrac{3}{5}} = \frac{25}{\dfrac{2}{5}} = \frac{125}{2}$$
+      Lintasan <strong>naik</strong>: $a = 15$, $r = \dfrac{3}{5}$
+      $$S_{\text{naik}} = \frac{15}{1 - \dfrac{3}{5}} = \frac{15}{\dfrac{2}{5}} = \frac{75}{2}$$
+      $$\text{Total} = \frac{125}{2} + \frac{75}{2} = \frac{200}{2} = 100 \text{ m}$$
+      Cara cepat (rumus lintasan bola):
+      $$L = h \cdot \frac{1+r}{1-r} = 25 \cdot \frac{1 + \tfrac{3}{5}}{1 - \tfrac{3}{5}} = 25 \cdot \frac{\tfrac{8}{5}}{\tfrac{2}{5}} = 25 \cdot 4 = 100 \text{ m}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Suatu deret geometri tak hingga diketahui suku pertamanya 24 dan rasionya $\dfrac{1}{3}$. Tentukan jumlah suku-suku <strong>bernomor genap</strong>!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Suku-suku bernomor genap: $U_2 + U_4 + U_6 + \cdots = ar + ar^3 + ar^5 + \cdots$<br><br>
+      Ini adalah deret geometri tak hingga baru dengan suku pertama $ar$ dan rasio $r^2$:
+      $$S_{\text{genap}} = \frac{ar}{1 - r^2} = \frac{24 \cdot \frac{1}{3}}{1 - \left(\frac{1}{3}\right)^2} = \frac{8}{1 - \frac{1}{9}} = \frac{8}{\frac{8}{9}} = 9$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 27</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan jumlah tak hingga deret geometri $16 + 8 + 4 + 2 + \cdots$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $a = 16$, $r = \dfrac{8}{16} = \dfrac{1}{2}$. Karena $|r| &lt; 1$, deret konvergen.
+      $$S_\infty = \frac{16}{1 - \dfrac{1}{2}} = \frac{16}{\dfrac{1}{2}} = 32$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah mesin pabrik mengalami getaran yang makin melemah. Getaran pertama bergerak sejauh 120 cm, dan setiap getaran berikutnya berjarak $\dfrac{3}{4}$ dari getaran sebelumnya. Namun karena mesin masih menyala, setelah berhenti total mesin mulai bergetar lagi dengan getaran pertama sebesar 40 cm dan rasio yang sama. Jika siklus ini berulang terus tanpa batas, tentukan total jarak getaran keseluruhan mesin!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Siklus 1:</strong> $a_1 = 120$, $r = \dfrac{3}{4}$:
+      $$S_1 = \frac{120}{1 - \frac{3}{4}} = \frac{120}{\frac{1}{4}} = 480 \text{ cm}$$
+      <strong>Siklus 2:</strong> $a_2 = 40$, $r = \dfrac{3}{4}$:
+      $$S_2 = \frac{40}{\frac{1}{4}} = 160 \text{ cm}$$
+      Perhatikan pola suku awal tiap siklus: $120, 40, \dfrac{40}{3}, \ldots$ — ini sendiri adalah barisan geometri dengan rasio $\dfrac{1}{3}$.<br><br>
+      Total jarak = deret geometri tak hingga dengan suku pertama $S_1 = 480$ dan rasio $\dfrac{1}{3}$:
+      $$\text{Total} = \frac{480}{1 - \frac{1}{3}} = \frac{480}{\frac{2}{3}} = 480 \times \frac{3}{2} = 720 \text{ cm}$$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan D</div>
+      <ol class="soal-list">
+        <li>Tentukan jumlah tak hingga dari deret geometri $12 + 4 + \dfrac{4}{3} + \dfrac{4}{9} + \cdots$</li>
+        <li>Suku pertama dari suatu deret geometri tak hingga adalah $10$ dan jumlah tak hingganya adalah $15$. Tentukan rasio dari deret tersebut!</li>
+        <li>Diketahui jumlah tak hingga deret geometri adalah $16$ dan rasionya adalah $\dfrac{1}{4}$. Tentukan nilai suku ke-3 dari deret tersebut!</li>
+        <li>Jumlah suatu deret geometri tak hingga adalah $24$, sedangkan jumlah suku-suku pada urutan genapnya ($U_2 + U_4 + U_6 + \dots$) adalah $8$. Tentukan suku pertama deret tersebut!</li>
+        <li>Ubahlah bentuk desimal berulang $0{,}\overline{27} = 0{,}272727\ldots$ menjadi pecahan biasa yang paling sederhana dengan menggunakan konsep deret geometri tak hingga!</li>
+        <li>Jumlah deret geometri tak hingga adalah $8$. Jika jumlah dua suku pertamanya adalah $6$ dan rasionya bernilai positif, tentukan nilai suku ke-4 dari deret tersebut!</li>
+        <li>Tentukan nilai dari operasi notasi sigma berikut:
+          $$\sum_{n=1}^{\infty} \left( \frac{1}{2^n} + \frac{1}{3^n} \right)$$</li>
+        <li>Suatu deret geometri tak hingga konvergen mempunyai jumlah $S_\infty = 32$. Jika setiap suku pada deret tersebut dikuadratkan, jumlah deret baru yang terbentuk menjadi $\dfrac{2048}{3}$. Tentukan suku pertama dan rasio deret semula!</li>
+        <li>Sebuah bola tenis dijatuhkan tegak lurus dari ketinggian $18\text{ m}$. Setiap kali menyentuh lantai, bola memantul mencapai ketinggian $\dfrac{2}{3}$ dari ketinggian sebelumnya. Tentukan panjang total lintasan yang dilalui bola tersebut sejak dijatuhkan hingga benar-benar berhenti!</li>
+        <li>Sebuah persegi memiliki panjang sisi $10\text{ cm}$. Di dalam persegi tersebut dibuat persegi kedua dengan cara menghubungkan titik-titik tengah dari keempat sisi persegi pertama. Di dalam persegi kedua, dibuat lagi persegi ketiga dengan cara yang sama, dan proses ini dilanjutkan terus-menerus hingga tak terhingga. Tentukan jumlah luas seluruh persegi yang terbentuk!</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ E. APLIKASI BARISAN DAN DERET ════════════════════════════ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Aplikasi Barisan dan Deret</h2>
+
+    <p>Barisan dan deret bukan sekadar kumpulan angka di atas kertas — keduanya hadir nyata dalam kehidupan sehari-hari dan menjadi alat penting untuk memahami serta memecahkan berbagai permasalahan di dunia nyata. Mulai dari menghitung cicilan rumah, memprediksi pertumbuhan penduduk, hingga menganalisis peluruhan zat radioaktif, semuanya menggunakan konsep yang telah kita pelajari.</p>
+
+    <p>Secara umum, pilihan jenis barisan dalam pemodelan mengikuti pola berikut:</p>
+    <ul>
+      <li>Gunakan <strong>barisan aritmatika</strong> jika perubahan bersifat <em>tetap/konstan</em> (bertambah atau berkurang dengan jumlah yang sama setiap periode).</li>
+      <li>Gunakan <strong>barisan geometri</strong> jika perubahan bersifat <em>persentase/proporsional</em> (bertambah atau berkurang dengan faktor pengali yang sama setiap periode).</li>
+      <li>Gunakan <strong>deret geometri tak hingga</strong> jika proses terus berulang dengan rasio $|r| &lt; 1$ hingga nilai mendekati nol.</li>
+    </ul>
+
+    <h3 class="subsection-title">1. Bunga Tunggal dan Bunga Majemuk</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Bunga Tunggal (pola aritmatika)</div>
+      $$M_n = M_0(1 + i \cdot n)$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">$M_n$ = besar modal setelah $n$ periode &nbsp;|&nbsp; $M_0$ = modal awal &nbsp;|&nbsp; $i$ = suku bunga per periode &nbsp;|&nbsp; $n$ = banyaknya periode</p>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Bunga Majemuk (pola geometri)</div>
+      $$M_n = M_0(1 + i)^n$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">$M_n$ = besar modal setelah $n$ periode &nbsp;|&nbsp; $M_0$ = modal awal &nbsp;|&nbsp; $i$ = suku bunga per periode &nbsp;|&nbsp; $n$ = banyaknya periode</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;"><strong>Bunga Tunggal:</strong> Bunga dihitung secara tetap berdasarkan modal awal ($M_0$), sehingga besar bunga tidak berubah di setiap periodenya.<br><br>
+      <strong>Bunga Majemuk:</strong> Bunga dihitung berdasarkan modal yang telah terakumulasi dengan bunga pada periode sebelumnya (bunga berbunga).</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 29</div>
+      <p style="margin:0;font-size:.9rem;">Pak Budi meminjam uang di koperasi sebesar Rp 5.000.000 dengan bunga tunggal 3% per bulan. Jika dilunasi setelah 8 bulan, berapa total pengembaliannya?</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$M_8 = 5.000.000\,(1 + 0{,}03 \times 8) = 5.000.000 \times 1{,}24 = \text{Rp 6.200.000}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 30</div>
+      <p style="margin:0;font-size:.9rem;">Santi menyimpan Rp 4.000.000 di bank dengan bunga majemuk 2% per bulan. Berapa tabungan Santi setelah 6 bulan? ($(1{,}02)^6 \approx 1{,}1262$)</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$M_6 = 4.000.000 \times (1{,}02)^6 \approx 4.000.000 \times 1{,}1262 = \text{Rp 4.504.800}$$
+    </div>
+
+    <h3 class="subsection-title">2. Pertumbuhan dan Peluruhan</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Pertumbuhan Aritmatika</div>
+      $$M_n = M_0 + b \cdot n$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">$M_n$ = nilai setelah $n$ periode &nbsp;|&nbsp; $M_0$ = nilai awal &nbsp;|&nbsp; $b$ = pertambahan tetap setiap periode &nbsp;|&nbsp; $n$ = banyaknya periode</p>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Pertumbuhan Geometri</div>
+      $$M_n = M_0 \cdot r^n \quad (r > 1) \qquad \text{atau} \qquad M_n = M_0(1+p)^n$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">$r$ = rasio (faktor pengali tetap) &nbsp;|&nbsp; $p$ = persentase pertumbuhan per periode (desimal), sehingga $r = 1 + p$</p>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Peluruhan Aritmatika</div>
+      $$M_n = M_0 - b \cdot n$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">$b$ = pengurangan tetap setiap periode</p>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Peluruhan Geometri</div>
+      $$M_n = M_0 \cdot r^n \quad (0 < r < 1) \qquad \text{atau} \qquad M_n = M_0(1-p)^n$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">$r$ = rasio, $0 &lt; r &lt; 1$ untuk peluruhan &nbsp;|&nbsp; $p$ = persentase penurunan per periode, sehingga $r = 1 - p$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 31</div>
+      <p style="margin:0;font-size:.9rem;">Populasi bakteri membelah dua setiap 20 menit. Jika mula-mula terdapat 50 bakteri, berapa banyak bakteri setelah 2 jam?</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Dalam 2 jam $= 120$ menit $\;\Rightarrow\; n = \dfrac{120}{20} = 6$ kali pembelahan.
+      $$M_6 = 50 \times 2^6 = 50 \times 64 = 3200 \text{ bakteri}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 32</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah mobil dibeli seharga Rp 200.000.000. Setiap tahun nilainya menyusut 10% dari nilai tahun sebelumnya. Berapa nilai mobil setelah 4 tahun? ($(0{,}9)^4 = 0{,}6561$)</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$M_4 = 200.000.000 \times (1 - 0{,}1)^4 = 200.000.000 \times (0{,}9)^4 = 200.000.000 \times 0{,}6561 = \text{Rp 131.220.000}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 33</div>
+      <p style="margin:0;font-size:.9rem;">Seorang karyawan memiliki gaji awal Rp 3.000.000 per bulan. Setiap tahun gajinya naik Rp 500.000. Berapa gaji karyawan tersebut pada tahun ke-6?</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Ini adalah barisan aritmatika dengan $a = 3.000.000$ dan $b = 500.000$.
+      $$U_6 = 3.000.000 + (6-1)(500.000) = 3.000.000 + 2.500.000 = \text{Rp 5.500.000}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 34</div>
+      <p style="margin:0;font-size:.9rem;">Modal sebesar Rp 6.000.000 ditabung dengan bunga majemuk 5% per tahun. Berapa jumlah tabungan setelah 3 tahun? ($(1{,}05)^3 = 1{,}1576$)</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$M_3 = 6.000.000 \times (1{,}05)^3 = 6.000.000 \times 1{,}1576 = \text{Rp 6.945.600}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 35</div>
+      <p style="margin:0;font-size:.9rem;">Dua orang menabung dengan skema berbeda. Andi menabung Rp 5.000.000 dengan bunga majemuk 8% per tahun. Budi menabung Rp 7.000.000 dengan bunga tunggal 12% per tahun. Setelah berapa tahun tabungan Andi akan melebihi tabungan Budi? ($(1{,}08)^n$: $n=3\to1{,}2597$, $n=4\to1{,}3605$, $n=5\to1{,}4693$, $n=6\to1{,}5869$)</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Tabungan Andi: $M_A = 5.000.000 \times (1{,}08)^n$<br>
+      Tabungan Budi: $M_B = 7.000.000 \times (1 + 0{,}12n)$<br><br>
+      Pemeriksaan nilai $M_A > M_B$:
+      $$n=3: \quad M_A = 6.298.500 &lt; M_B = 9.520.000$$
+      $$n=4: \quad M_A = 6.802.500 &lt; M_B = 10.360.000$$
+      $$n=5: \quad M_A = 7.346.500 &lt; M_B = 11.200.000$$
+      $$n=6: \quad M_A = 7.934.500 &lt; M_B = 12.040.000$$
+      Persamaan: $5.000.000 \times (1{,}08)^n = 7.000.000(1+0{,}12n)$, diselesaikan secara numerik menunjukkan persilangan sekitar $n \approx 19$ tahun.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 36</div>
+      <p style="margin:0;font-size:.9rem;">Seorang pengusaha mendirikan pabrik dengan modal awal Rp 500.000.000. Keuntungan tahun pertama sebesar Rp 50.000.000 dan meningkat 20% setiap tahunnya (bunga majemuk). Biaya operasional tetap Rp 30.000.000 per tahun. Jika seluruh keuntungan bersih diinvestasikan kembali dengan bunga majemuk 6% per tahun, dalam berapa tahun modal akan bertumbuh menjadi dua kali lipat? Analisis kelayakan investasi ini! ($(1{,}06)^5=1{,}3382$, $(1{,}06)^{10}=1{,}7908$, $(1{,}06)^{12}=2{,}0122$)</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Keuntungan bersih tahun ke-$n$: $L_n = 50.000.000 \times (1{,}2)^{n-1} - 30.000.000$<br><br>
+      Tahun 1: $L_1 = 50 - 30 = 20$ juta. Tahun 2: $L_2 = 60 - 30 = 30$ juta. Tahun 3: $L_3 = 72 - 30 = 42$ juta.<br><br>
+      Modal awal 500 juta tumbuh dengan bunga majemuk 6%: $500 \times (1{,}06)^n$<br><br>
+      Syarat dua kali lipat ($= 1.000$ juta):
+      $$500 \times (1{,}06)^n = 1000 \;\Rightarrow\; (1{,}06)^n = 2$$
+      Dari data: $(1{,}06)^{12} = 2{,}0122 &gt; 2$, maka modal menjadi dua kali lipat dalam $12 \text{ tahun}$.<br><br>
+      <strong>Analisis:</strong> Investasi ini layak karena keuntungan bersih terus meningkat (geometri dengan $r=1{,}2$) sementara biaya tetap, sehingga laba bersih akan semakin besar dan mempercepat pertumbuhan modal.
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan E</div>
+      <ol class="soal-list">
+        <li>Seseorang menabung di bank dengan selisih kenaikan simpanan antar bulan tetap. Jika pada bulan pertama ia menabung Rp50.000,00 dan pada bulan kedua Rp55.000,00, berapakah besar uang yang ia tabungkan tepat pada bulan ke-12?</li>
+        <li>Gaji awal seorang karyawan adalah Rp3.500.000,00 per bulan. Jika setiap tahun ia mendapatkan kenaikan gaji tetap sebesar Rp250.000,00 per bulan, berapakah total seluruh gaji yang diterima karyawan tersebut selama 2 tahun pertama bekerja?</li>
+        <li>Penduduk kota X pada tahun 2020 berjumlah 500.000 jiwa dan bertambah 2% setiap tahunnya. Perkirakan jumlah penduduk kota tersebut pada tahun 2025! (Gunakan $(1{,}02)^5 \approx 1{,}1041$)</li>
+        <li>Rina menginvestasikan uang sebesar Rp10.000.000,00 dengan bunga tunggal 1,5% per bulan. Berapakah total saldo tabungan Rina setelah 2 tahun?</li>
+        <li>Sebuah mobil dibeli dengan harga Rp200.000.000,00. Jika nilai jual mobil tersebut mengalami penyusutan (depresiasi) sebesar 10% setiap tahun dari harga tahun sebelumnya, tentukan harga jual mobil tersebut setelah 3 tahun!</li>
+        <li>Suatu zat radioaktif memiliki massa awal 256 gram. Zat tersebut menyusut menjadi $\frac{3}{4}$ dari massa sebelumnya setiap 10 tahun. Berapakah massa zat yang tersisa setelah 40 tahun?</li>
+        <li>Pak Budi menabung Rp8.000.000,00 di bank dengan bunga majemuk. Setelah 5 tahun, uang tersebut berkembang menjadi Rp12.884.320,00. Tentukan besar suku bunga per tahun yang diberikan bank tersebut! (Gunakan $(1{,}61054)^{1/5} \approx 1{,}10$)</li>
+        <li>Sebuah bola dijatuhkan dari ketinggian 18 meter. Setiap kali memantul, bola mencapai ketinggian $\frac{2}{3}$ dari ketinggian sebelumnya. Tentukan panjang total lintasan bola tersebut sampai benar-benar berhenti!</li>
+        <li>Seorang nasabah meminjam uang di bank sebesar Rp10.000.000,00 dengan bunga majemuk 2% per bulan. Jika ia mulai mencicil pinjaman tersebut sebesar Rp1.500.000,00 pada setiap akhir bulan, berapakah sisa hutang nasabah tersebut tepat setelah cicilan kedua?</li>
+        <li>Seutas tali dipotong menjadi 6 bagian yang panjangnya membentuk barisan geometri. Jika potongan tali terpendek adalah 3 cm dan potongan tali terpanjang adalah 96 cm, kemudian tiap bagian tersebut dipotong lagi menjadi dua bagian yang sama panjang, berapakah total panjang seluruh tali mula-mula?</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ F. PENGAYAAN ══════════════════════════════════════════════ -->
+  <section class="section" id="bagian-f">
+    <h2 class="section-title"><span class="section-badge">F</span>Pengayaan: Bentuk Linier $U_n$, Bentuk Kuadrat $S_n$, Beda, dan Rasio</h2>
+
+    <p>Bagian pengayaan ini membahas tiga topik lanjutan: (1) menurunkan rumus $U_n$ ke bentuk linier dan $S_n$ ke bentuk kuadrat langsung dari definisi, (2) sifat selisih suku (rahasia beda), dan (3) sifat perbandingan suku (rahasia rasio).</p>
+
+    <h3 class="subsection-title">1. Penurunan Bentuk $U_n = bn + (a - b)$ dan $S_n = \dfrac{b}{2}n^2 + \left(a - \dfrac{b}{2}\right)n$</h3>
+
+    <p>Kita mulai dari rumus $U_n = a + (n-1)b$ dan manipulasi aljabarnya:</p>
+    $$U_n = a + (n-1)b = a + bn - b = bn + a - b$$
+
+    <div class="box box-rumus">
+      <div class="box-label">• Bentuk Linier Suku ke-$n$ Barisan Aritmatika</div>
+      $$U_n = bn + (a - b)$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">di mana koefisien $n$ adalah beda $b$, dan konstanta adalah $(a - b)$.</p>
+    </div>
+
+    <p><strong>Cara membaca $a$ dan $b$ dari rumus $U_n$:</strong><br>
+    Jika diketahui $U_n = pn + q$ (bentuk linier dalam $n$), maka:
+    $$b = p \qquad \text{dan} \qquad a - b = q \;\Rightarrow\; a = p + q$$
+    Contoh cepat: $U_n = 3n + 4 \;\Rightarrow\; b = 3$ dan $a = 3 + 4 = 7$, sehingga barisan: $7,\; 10,\; 13,\; \ldots$</p>
+
+    <p>Dari rumus $S_n = \dfrac{n}{2}\bigl[2a + (n-1)b\bigr]$ dan dikembangkan:</p>
+    $$S_n = \frac{b}{2}n^2 + \frac{2a - b}{2}\,n = \frac{b}{2}n^2 + \left(a - \frac{b}{2}\right)n$$
+
+    <div class="box box-rumus">
+      <div class="box-label">• Bentuk Kuadrat Jumlah $n$ Suku Pertama Deret Aritmatika</div>
+      $$S_n = \frac{b}{2}n^2 + \left(a - \frac{b}{2}\right)n$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">di mana koefisien $n^2$ adalah $\dfrac{b}{2}$, dan koefisien $n$ adalah $\left(a - \dfrac{b}{2}\right)$.</p>
+    </div>
+
+    <p><strong>Cara membaca $a$ dan $b$ dari rumus $S_n$:</strong><br>
+    Jika diketahui $S_n = \alpha n^2 + \beta n$ (bentuk kuadrat dalam $n$), dengan membandingkan:
+    $$\frac{b}{2} = \alpha \;\Rightarrow\; b = 2\alpha \qquad \text{dan} \qquad a - \frac{b}{2} = \beta \;\Rightarrow\; a = \alpha + \beta$$</p>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Ringkasan membaca koefisien</div>
+      <p style="margin:0;font-size:.9rem;">
+      $$S_n = \underbrace{\alpha}_{\frac{b}{2}} n^2 + \underbrace{\beta}_{a\,-\,\frac{b}{2}} n \quad\Longrightarrow\quad b = 2\alpha, \quad a = \alpha + \beta$$
+      $$U_n = \underbrace{p}_{b}\, n + \underbrace{q}_{a\,-\,b} \quad\Longrightarrow\quad b = p, \quad a = p + q$$
+      </p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 37</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui barisan $1,\; 3,\; 5,\; \ldots$ dengan $a = 1$ dan $b = 2$. Turunkan rumus $U_n$ ke bentuk linier dan $S_n$ ke bentuk kuadrat, kemudian verifikasi dengan $n = 3$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Rumus $U_n$ bentuk linier:</strong>
+      $$U_n = bn + (a - b) = 2n + (1 - 2) = 2n - 1$$
+      <strong>Rumus $S_n$ bentuk kuadrat:</strong>
+      $$S_n = \frac{b}{2}n^2 + \left(a - \frac{b}{2}\right)n = \frac{2}{2}n^2 + \left(1 - \frac{2}{2}\right)n = n^2 + 0 \cdot n = n^2$$
+      <strong>Verifikasi</strong> $n = 3$: $U_3 = 2(3)-1 = 5$ ✓ &nbsp; dan &nbsp; $S_3 = 3^2 = 9 = 1+3+5$ ✓
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 38</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $S_n = 4n^2 + 5n$. Tentukan nilai $b$, $a$, dan rumus $U_n$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Dari $S_n = 4n^2 + 5n$: $\alpha = 4$, $\beta = 5$.
+      $$b = 2\alpha = 2 \times 4 = 8$$
+      $$a = \alpha + \beta = 4 + 5 = 9$$
+      Rumus $U_n$ bentuk linier:
+      $$U_n = bn + (a - b) = 8n + (9 - 8) = 8n + 1$$
+      Verifikasi: $U_1 = 8(1)+1 = 9 = a$ ✓ &nbsp; $U_2 - U_1 = 17 - 9 = 8 = b$ ✓
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 39</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $U_n = 4n - 5$. Tentukan $b$, $a$, dan rumus $S_n$ bentuk kuadrat!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Dari $U_n = 4n - 5$: $p = 4$, $q = -5$.
+      $$b = p = 4$$
+      $$a = p + q = 4 + (-5) = -1$$
+      Rumus $S_n$ bentuk kuadrat:
+      $$S_n = \frac{b}{2}n^2 + \left(a - \frac{b}{2}\right)n = \frac{4}{2}n^2 + \left(-1 - \frac{4}{2}\right)n = 2n^2 - 3n$$
+      Verifikasi: $S_3 = 2(9) - 3(3) = 18 - 9 = 9 = (-1) + 3 + 7 = 9$ ✓
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 40</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $S_n = 2n^2 - 3n$. Tentukan $b$, $a$, rumus $U_n$, dan nilai $U_4$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      $\alpha = 2$, $\beta = -3$.
+      $$b = 2(2) = 4$$
+      $$a = 2 + (-3) = -1$$
+      $$U_n = 4n + (-1 - 4) = 4n - 5$$
+      $$U_4 = 4(4) - 5 = 11$$
+    </div>
+
+    <h3 class="subsection-title">2. Rahasia Beda: Selisih Suku pada Barisan Aritmatika</h3>
+
+    <p>Bentuk linier $U_n = bn + (a-b)$ memperlihatkan bahwa $U_n$ adalah fungsi linear terhadap $n$. Dari sini kita dapat menurunkan sifat selisih antar suku secara langsung:</p>
+    $$U_n - U_k = [bn + (a-b)] - [bk + (a-b)] = bn - bk = b(n-k)$$
+
+    <div class="box box-rumus">
+      <div class="box-label">• Sifat Selisih Suku Barisan Aritmatika (Rahasia Beda)</div>
+      $$U_n - U_k = (n - k)\,b$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">Selisih dua suku mana pun sama dengan selisih nomor sukunya dikali beda.</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan</div>
+      <p style="margin:0;font-size:.9rem;">Sifat ini memungkinkan kita menentukan beda $b$ secara langsung dari dua suku yang diketahui tanpa perlu mencari suku pertama terlebih dahulu:
+      $$b = \frac{U_n - U_k}{n - k}$$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 41</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui barisan aritmatika $2,\; 4,\; 6,\; 8,\; \ldots$ ($b = 2$). Verifikasikan bahwa $U_3 - U_1 = 2b$ dan $U_4 - U_1 = 3b$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$U_3 - U_1 = 6 - 2 = 4 = (3-1) \times 2 = 2b \quad \checkmark$$
+      $$U_4 - U_1 = 8 - 2 = 6 = (4-1) \times 2 = 3b \quad \checkmark$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 42</div>
+      <p style="margin:0;font-size:.9rem;">Barisan aritmatika diketahui $U_3 = 10$ dan $U_7 = 26$. Tentukan $b$, $a$, dan $U_{10}$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Menggunakan rahasia beda:
+      $$U_7 - U_3 = (7-3)\,b \;\Rightarrow\; 26 - 10 = 4b \;\Rightarrow\; b = 4$$
+      $$a = U_3 - (3-1)b = 10 - 2(4) = 10 - 8 = 2$$
+      $$U_{10} = 4(10) + (2-4) = 40 - 2 = 38$$
+    </div>
+
+    <h3 class="subsection-title">3. Rahasia Rasio: Perbandingan Suku pada Barisan Geometri</h3>
+
+    <p>Pada barisan geometri, analog dengan rahasia beda pada aritmatika, terdapat sifat perbandingan antar suku yang diturunkan langsung dari $U_n = ar^{n-1}$:</p>
+    $$\frac{U_n}{U_k} = \frac{a \cdot r^{n-1}}{a \cdot r^{k-1}} = r^{(n-1)-(k-1)} = r^{n-k}$$
+
+    <div class="box box-rumus">
+      <div class="box-label">• Sifat Perbandingan Suku Barisan Geometri (Rahasia Rasio)</div>
+      $$\frac{U_n}{U_k} = r^{n-k}$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">Perbandingan dua suku mana pun sama dengan rasio dipangkatkan selisih nomor sukunya.</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan</div>
+      <p style="margin:0;font-size:.9rem;">Sifat ini memungkinkan kita menentukan rasio $r$ secara langsung tanpa mencari suku pertama:
+      $$r^{n-k} = \frac{U_n}{U_k} \;\Rightarrow\; r = \left(\frac{U_n}{U_k}\right)^{\!\frac{1}{n-k}}$$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 43</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui barisan geometri $2,\; 4,\; 8,\; 16,\; \ldots$ ($r = 2$). Verifikasikan bahwa $\dfrac{U_3}{U_1} = r^2$ dan $\dfrac{U_4}{U_1} = r^3$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$\frac{U_3}{U_1} = \frac{8}{2} = 4 = 2^{3-1} = r^2 \quad \checkmark$$
+      $$\frac{U_4}{U_1} = \frac{16}{2} = 8 = 2^{4-1} = r^3 \quad \checkmark$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 44</div>
+      <p style="margin:0;font-size:.9rem;">Barisan geometri diketahui $U_2 = 4$ dan $U_4 = 16$. Tentukan $r$, $a$, dan $U_6$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Menggunakan rahasia rasio:
+      $$\frac{U_4}{U_2} = r^{4-2} = r^2 \;\Rightarrow\; \frac{16}{4} = r^2 \;\Rightarrow\; r = 2$$
+      $$a = \frac{U_2}{r} = \frac{4}{2} = 2$$
+      $$U_6 = U_4 \cdot r^{6-4} = 16 \times 2^2 = 16 \times 4 = 64$$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan Pengayaan</div>
+      <ol class="soal-list">
+        <li>Diketahui barisan aritmatika $7,\; 10,\; 13,\; \ldots$ ($a=7$, $b=3$). Turunkan rumus $U_n$ ke bentuk $bn+(a-b)$ dan $S_n$ ke bentuk kuadrat, kemudian hitung $U_{10}$ dan $S_{10}$!</li>
+        <li>Diketahui $S_n = 2n^2 + 3n$. Tentukan nilai $b$, $a$, rumus $U_n$ (bentuk linier), dan $U_7$!</li>
+        <li>Diketahui jumlah $n$ suku pertama suatu barisan adalah $S_n = n^2 + 4n$. Tentukan suku ke-1 ($U_1$), suku ke-5 ($U_5$), dan suku ke-10 ($U_{10}$)!</li>
+        <li>Barisan aritmatika diketahui $U_3 = 11$ dan $U_7 = 27$. Gunakan rahasia beda untuk menentukan $b$, $a$, dan $S_{10}$!</li>
+        <li>Barisan geometri diketahui $U_3 = 12$ dan $U_6 = 96$. Gunakan rahasia rasio untuk menentukan $r$, $a$, dan $U_8$!</li>
+        <li>Diketahui $S_n = pn^2 + qn$ dengan $U_2 = 7$ dan $U_4 = 15$. Tentukan nilai $p$, $q$, dan rumus $S_n$!</li>
+        <li>Suatu barisan geometri memiliki suku-suku positif. Diketahui $U_2 + U_4 = 30$ dan $U_3 + U_5 = 60$. Gunakan rahasia rasio untuk menentukan $r$, $a$, jumlah delapan suku pertama $S_8$, dan jumlah tak hingga $S_\infty$ jika ada!</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ G. RINGKASAN ══════════════════════════════════════════════ -->
+  <section class="section" id="bagian-g">
+    <h2 class="section-title"><span class="section-badge">G</span>Ringkasan Barisan dan Deret</h2>
+
+    <h3 class="subsection-title">1. Perbandingan Barisan Aritmatika dan Geometri</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Unsur</th><th>Aritmatika</th><th>Geometri</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ciri khas</td><td>Selisih tetap: $b = U_n - U_{n-1}$</td><td>Rasio tetap: $r = \dfrac{U_n}{U_{n-1}}$</td></tr>
+          <tr><td>Suku ke-$n$</td><td>$U_n = a + (n-1)b$</td><td>$U_n = ar^{n-1}$</td></tr>
+          <tr><td>Jumlah $n$ suku</td><td>$S_n = \dfrac{n}{2}[2a+(n-1)b]$</td><td>$S_n = \dfrac{a(r^n-1)}{r-1}$, $\;r\neq 1$</td></tr>
+          <tr><td>Suku tengah ($n$ ganjil)</td><td>$U_T = \dfrac{a + U_n}{2}$</td><td>$U_T = \sqrt{a \cdot U_n}$</td></tr>
+          <tr><td>Hubungan $U_n$, $S_n$</td><td colspan="2" style="text-align:center;">$U_n = S_n - S_{n-1}$ ($n \geq 2$), &nbsp; $U_1 = S_1$</td></tr>
+          <tr><td>Jumlah tak hingga</td><td>Tidak ada</td><td>$S_\infty = \dfrac{a}{1-r}$, $\;|r| &lt; 1$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">2. Syarat dan Identifikasi</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Kondisi</th><th>Aritmatika</th><th>Geometri</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Tiga suku $p, q, r$ membentuk barisan</td><td>$2q = p + r$</td><td>$q^2 = p \cdot r$</td></tr>
+          <tr><td>Penyelesaian tiga bilangan</td><td>Misal: $a-b,\; a,\; a+b$</td><td>Misal: $\dfrac{a}{r},\; a,\; ar$</td></tr>
+          <tr><td>Barisan naik</td><td>$b &gt; 0$</td><td>$r &gt; 1$ (dengan $a &gt; 0$)</td></tr>
+          <tr><td>Barisan turun</td><td>$b &lt; 0$</td><td>$0 &lt; r &lt; 1$ (dengan $a &gt; 0$)</td></tr>
+          <tr><td>Konvergensi deret tak hingga</td><td>Tidak konvergen</td><td>$-1 &lt; r &lt; 1$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">3. Rumus Aplikasi Barisan dan Deret</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Konteks</th><th>Pola</th><th>Rumus</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Bunga tunggal</td><td>Aritmatika</td><td>$M_n = M_0(1 + in)$</td></tr>
+          <tr><td>Bunga majemuk</td><td>Geometri</td><td>$M_n = M_0(1+i)^n$</td></tr>
+          <tr><td>Pertumbuhan konstan</td><td>Aritmatika</td><td>$M_n = M_0 + bn$</td></tr>
+          <tr><td>Pertumbuhan persentase</td><td>Geometri</td><td>$M_n = M_0(1+p)^n$</td></tr>
+          <tr><td>Peluruhan konstan</td><td>Aritmatika</td><td>$M_n = M_0 - bn$</td></tr>
+          <tr><td>Peluruhan persentase</td><td>Geometri</td><td>$M_n = M_0(1-p)^n$</td></tr>
+          <tr><td>Lintasan bola (total)</td><td>Geometri tak hingga</td><td>$L = \left(\dfrac{1+r}{1-r}\right)h$</td></tr>
+          <tr><td>Desimal berulang $0{,}\overline{d}$</td><td>Geometri tak hingga</td><td>$\dfrac{d}{99\ldots9}$ (sebanyak digit $d$)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <!-- ═══ KONEKSI KE MATERI BERIKUTNYA ═════════════════════════════ -->
+  <div class="koneksi-wrap">
+    <div class="koneksi-header">
+      <span class="koneksi-icon">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 7h10M8 3l4 4-4 4"/>
+        </svg>
+      </span>
+      <span class="koneksi-label">Koneksi ke Materi Berikutnya</span>
+    </div>
+    <div class="koneksi-body">
+      <p class="koneksi-text">
+        <strong>Barisan dan Deret</strong> adalah fondasi penting untuk memahami <strong>Limit dan Kalkulus</strong>. Konsep konvergensi deret tak hingga $S_\infty = \dfrac{a}{1-r}$ yang dipelajari di sini adalah bentuk paling sederhana dari gagasan <em>limit</em> dalam kalkulus.
+      </p>
+      <div class="koneksi-comparison">
+        <div class="koneksi-card current">
+          <div class="koneksi-card-label">Sekarang</div>
+          <div class="koneksi-card-formula">$S_\infty = \dfrac{a}{1-r}$</div>
+          <div class="koneksi-card-desc">Deret geometri<br>tak hingga</div>
+        </div>
+        <div class="koneksi-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10h12M12 5l5 5-5 5"/></svg>
+        </div>
+        <div class="koneksi-card next">
+          <div class="koneksi-card-label">Berikutnya</div>
+          <div class="koneksi-card-formula">$\lim_{n\to\infty} a_n = L$</div>
+          <div class="koneksi-card-desc">Limit barisan<br>&amp; fungsi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ ACTION FOOTER ════════════════════════════════════════════ -->
+  <div class="action-footer">
+    <div class="footer-nav">
+      <a class="footer-nav-btn prev" href="../fungsi-eksponen/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 7H2M6 3l-4 4 4 4"/></svg>
+        Fungsi Eksponen
+      </a>
+      <a class="footer-nav-btn next" href="../logaritma/">
+        Logaritma
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+    <a class="footer-latihan-btn" href="#">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="7" cy="7" r="5.5"/><path d="M7 4v3l2 1.5"/></svg>
+      Latihan Soal Barisan &amp; Deret
+    </a>
+  </div>
+
+  <!-- ═══ KOMENTAR GISCUS ══════════════════════════════════════════ -->
+  <div class="giscus-wrap">
+    <script src="https://giscus.app/client.js"
+      data-repo="lutfima11/eksaktalab"
+      data-repo-id="R_kgDOO2mdog"
+      data-category="General"
+      data-category-id="DIC_kwDOO2mdog4Cr2WT"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="preferred_color_scheme"
+      data-lang="id"
+      crossorigin="anonymous"
+      async>
+    </script>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+
+<script>
+// ── SCROLL PROGRESS BAR ──────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const bar = document.getElementById('scroll-bar');
+  if (!bar) return;
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  bar.style.width = pct + '%';
+});
+
+// ── SCROLL TO TOP ────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('scroll-top');
+  if (btn) btn.style.opacity = window.scrollY > 400 ? '1' : '0';
+});
+
+// ── TOC DROPDOWN ─────────────────────────────────────────────
+function toggleTOC() {
+  document.getElementById('tocDropdown')?.classList.toggle('open');
+}
+function closeTOC() {
+  document.getElementById('tocDropdown')?.classList.remove('open');
+}
+document.addEventListener('click', e => {
+  const toc = document.getElementById('tocDropdown');
+  if (toc && !toc.contains(e.target)) toc.classList.remove('open');
+});
+
+// ── THEME BUTTON SYNC ─────────────────────────────────────────
+function syncThemeBtn() {
+  const btn = document.getElementById('themeBtn');
+  if (!btn) return;
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  btn.textContent = dark ? '☀️ Terang' : '🌙 Gelap';
+}
+syncThemeBtn();
+const _orig = window.toggleTheme;
+window.toggleTheme = function() { if (_orig) _orig(); syncThemeBtn(); };
+
+// ── ACCORDION ENGINE (Rumus + Contoh) ────────────────────────
+(function() {
+  function chevronSVG() {
+    return `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="3,5 7,9 11,5"/></svg>`;
+  }
+
+  function makeToggle(wrap, header, statusEl, body, innerEl) {
+    function open() {
+      const h = innerEl.scrollHeight;
+      body.style.maxHeight = h + 'px';
+      wrap.classList.add('open');
+      header.setAttribute('aria-expanded', 'true');
+      if (statusEl) statusEl.textContent = 'Sembunyikan';
+    }
+    function close() {
+      body.style.maxHeight = '0';
+      wrap.classList.remove('open');
+      header.setAttribute('aria-expanded', 'false');
+      if (statusEl) statusEl.textContent = 'Lihat rumus';
+    }
+    header.addEventListener('click', () => wrap.classList.contains('open') ? close() : open());
+    header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); wrap.classList.contains('open') ? close() : open(); } });
+    body.style.maxHeight = '0';
+    body.style.overflow = 'hidden';
+    body.style.transition = 'max-height .35s ease';
+  }
+
+  // 1. BOX RUMUS → accordion teal
+  document.querySelectorAll('.box.box-rumus').forEach((box) => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+    let bodyHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body">
+        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
+      </div>`;
+    const header    = wrap.querySelector('.rumus-header');
+    const statusEl  = wrap.querySelector('.rumus-status');
+    const bodyInner = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+    box.replaceWith(wrap);
+  });
+
+  // 2. BOX CONTOH → accordion navy/teal
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+    let qHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+    if (hasSolve) sib.remove();
+
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-num">📘 Contoh ${num}</span>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="contoh-soal">${qHTML.trim()}</div>
+          ${hasSolve ? `<div class="penyelesaian-inner">${solveHTML}</div>` : ''}
+        </div>
+      </div>`;
+    const header    = wrap.querySelector('.contoh-header');
+    const bodyInner = wrap.querySelector('.contoh-body-inner');
+    makeToggle(wrap, header, null, wrap.querySelector('.contoh-body'), bodyInner);
+    box.replaceWith(wrap);
+  });
+
+  // 3. BOX LATIHAN → tambah tombol lihat jawaban
+  const jawabanData = {
+    // B — Aritmatika (10 soal)
+    0: [
+      { jawaban: `$U_{25} = 101$ &nbsp;|&nbsp; $S_{20} = 860$` },
+      { jawaban: `$a = 5,\\; b = 5,\\; U_{20} = 100$` },
+      { jawaban: `$x = 31$` },
+      { jawaban: `$a = 2,\\; b = 6,\\; U_{10} = 56$` },
+      { jawaban: `$S_{15} = 720$ kursi` },
+      { jawaban: `$U_4 = \\dfrac{75}{4} = 18{,}75$` },
+      { jawaban: `$11,\\; 13,\\; 15$` },
+      { jawaban: `$n = 16$ suku, $\\;b = \\dfrac{38}{15}$` },
+      { jawaban: `$U_4 = 25$` },
+      { jawaban: `(a) Hari ke-227 &nbsp;|&nbsp; (b) $S_{227} = 412.005$ paket &nbsp;|&nbsp; (c) $n_{\\max} = 134$ hari` },
+    ],
+    // C — Geometri (10 soal)
+    1: [
+      { jawaban: `$U_8 = 4374,\\; S_5 = 242$` },
+      { jawaban: `$S_\\infty = 27$` },
+      { jawaban: `$a = 2,\\; r = 3$` },
+      { jawaban: `$n = 9,\\; S_9 = 1022$` },
+      { jawaban: `$r = 2,\\; U_5 = 32$` },
+      { jawaban: `$x = 3,\\; r = 2$` },
+      { jawaban: `$2,\\; 6,\\; 18$ atau $18,\\; 6,\\; 2$` },
+      { jawaban: `$r = \\dfrac{2}{3},\\; a = 5$` },
+      { jawaban: `$768$ bakteri` },
+      { jawaban: `$L = 90$ m` },
+    ],
+    // D — Tak Hingga (10 soal)
+    2: [
+      { jawaban: `$S_\\infty = 18$` },
+      { jawaban: `$r = \\dfrac{1}{3}$` },
+      { jawaban: `$U_3 = \\dfrac{3}{4}$` },
+      { jawaban: `$a = 12$` },
+      { jawaban: `$0{,}\\overline{27} = \\dfrac{3}{11}$` },
+      { jawaban: `$U_4 = \\dfrac{1}{2}$` },
+      { jawaban: `$\\dfrac{3}{2}$` },
+      { jawaban: `$a = \\dfrac{128}{5},\\; r = \\dfrac{1}{5}$` },
+      { jawaban: `$L = 90$ m` },
+      { jawaban: `$S_\\infty = 200$ cm²` },
+    ],
+    // E — Aplikasi (10 soal)
+    3: [
+      { jawaban: `Rp 105.000` },
+      { jawaban: `Rp 87.000.000` },
+      { jawaban: `$M_5 \\approx 552.050$ jiwa` },
+      { jawaban: `Rp 13.600.000` },
+      { jawaban: `Rp 145.800.000` },
+      { jawaban: `$81$ gram` },
+      { jawaban: `$i = 10\\%$ per tahun` },
+      { jawaban: `$L = 90$ m` },
+      { jawaban: `Rp 7.374.000` },
+      { jawaban: `$189$ cm` },
+    ],
+    // F — Pengayaan (7 soal)
+    4: [
+      { jawaban: `$U_n = 3n+4$; $S_n = \\dfrac{3n^2+11n}{2}$; $U_{10}=34$; $S_{10}=205$` },
+      { jawaban: `$b=4,\\; a=5,\\; U_n=4n+1,\\; U_7=29$` },
+      { jawaban: `$U_1=5,\\; U_5=13,\\; U_{10}=23$` },
+      { jawaban: `$b=4,\\; a=3,\\; S_{10}=210$` },
+      { jawaban: `$r=2,\\; a=3,\\; U_8=384$` },
+      { jawaban: `$p=2,\\; q=1,\\; S_n=2n^2+n$` },
+      { jawaban: `$r=2,\\; a=3,\\; S_8=765,\\; S_\\infty$ tidak ada (divergen)` },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+    const items = [...list.children].filter(el => el.tagName === 'LI');
+    const newItems = items.map((li, i) => {
+      const ans = answers[i];
+      if (!ans) return li.outerHTML;
+      const id = `ans-${latihanIdx-1}-${i}`;
+      return `<li class="soal-item">
+        <div class="soal-text">${li.innerHTML}</div>
+        <div class="soal-answer" id="${id}" style="display:none;">
+          <span class="answer-label">Jawaban:</span> ${ans.jawaban}
+        </div>
+        <button class="soal-toggle-btn" onclick="toggleAns('${id}', this)">Lihat jawaban</button>
+      </li>`;
+    });
+    list.innerHTML = newItems.join('');
+  });
+
+  window.toggleAns = function(id, btn) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const hidden = el.style.display === 'none';
+    el.style.display = hidden ? 'block' : 'none';
+    btn.textContent = hidden ? 'Sembunyikan' : 'Lihat jawaban';
+    if (hidden && window.MathJax) MathJax.typesetPromise([el]);
+  };
+})();
+</script>
+
+</body>
+</html>
