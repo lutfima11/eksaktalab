@@ -1095,66 +1095,260 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
 </div><!-- /page-wrap -->
 
 <script>
-// ── Share title/text untuk materi.js ──────
-window.SHARE_TITLE = 'Logaritma — EksaktaLab';
-window.SHARE_TEXT  = 'Belajar Logaritma di EksaktaLab, lengkap dengan contoh soal!';
+// ── Scroll progress bar + scroll-to-top ──
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
 
-// ── SOAL LATIHAN: jawabanData ──
+// ── TOC Dropdown ──────────────────────────
+function toggleTOC() { document.getElementById('tocDropdown').classList.toggle('open'); }
+function closeTOC()  { document.getElementById('tocDropdown').classList.remove('open'); }
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+// ── Theme toggle ──────────────────────────
+function toggleTheme() {
+  const html = document.documentElement;
+  const btn  = document.getElementById('themeBtn');
+  const dark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', dark ? 'light' : 'dark');
+  btn.textContent = dark ? '🌙 Gelap' : '☀️ Terang';
+}
+
+// ── Bookmark ──────────────────────────────
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ─────────────────────────────────
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Logaritma — EksaktaLab',
+      text:  'Belajar Logaritma di EksaktaLab, lengkap dengan contoh soal!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+
+// ── SHARED HELPERS ────────────────────────
+const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+  <polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) {
+      MathJax.typesetPromise([typesetEl]).catch(() => {});
+    }
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  // ── 1. BOX RUMUS → accordion teal ────────
+  document.querySelectorAll('.box.box-rumus').forEach(box => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+
+    let bodyHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body">
+        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
+      </div>`;
+
+    const header    = wrap.querySelector('.rumus-header');
+    const statusEl  = wrap.querySelector('.rumus-status');
+    const bodyInner = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+    box.replaceWith(wrap);
+  });
+
+  // ── 2. BOX CONTOH → accordion navy/teal ──
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+
+    let qHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const sib       = box.nextElementSibling;
+    const hasSolve  = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header">
+            <span class="solve-dot"></span>
+            <span class="solve-title">Penyelesaian</span>
+          </div>
+          <div class="penyelesaian-inner">
+            ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
+          </div>
+        </div>
+      </div>`;
+
+    const header = wrap.querySelector('.contoh-header');
+    const pi     = wrap.querySelector('.penyelesaian-inner');
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+    });
+
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+  // ── 3. Buka / Tutup Semua per section ────
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+
+    const updateBtn = () => {
+      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
+    };
+    updateBtn();
+
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+  // ── 4. BOX CATATAN — hapus class .box agar tidak dapat border default
+  document.querySelectorAll('.box.box-catatan').forEach(box => {
+    box.classList.remove('box');
+  });
+
+  // ── 5. SOAL LATIHAN → accordion kunci jawaban ──
   const jawabanData = {
     // A — Pengertian Logaritma
     0: [
-      { jawaban: `(a) ${}^{3}\!\log 81 = 4$ &nbsp;|&nbsp; (b) ${}^{7}\!\log \tfrac{1}{49} = -2$ &nbsp;|&nbsp; (c) ${}^{1/2}\!\log \tfrac{1}{8} = 3$ &nbsp;|&nbsp; (d) ${}^{10}\!\log 100.000 = 5$` },
-      { jawaban: `(a) $4^3 = 64$ &nbsp;|&nbsp; (b) $5^{-1} = \tfrac{1}{5}$ &nbsp;|&nbsp; (c) $9^{1/2} = 3$ &nbsp;|&nbsp; (d) $10^4 = 10.000$` },
-      { jawaban: `(a) $4$ &nbsp;|&nbsp; (b) $3$ &nbsp;|&nbsp; (c) $-5$ &nbsp;|&nbsp; (d) $\dfrac{1}{2}$ &nbsp;|&nbsp; (e) $\dfrac{2}{3}$ &nbsp;|&nbsp; (f) $-4$` },
-      { jawaban: `(a) $x = 3$ &nbsp;|&nbsp; (b) $x = \dfrac{1}{81}$ &nbsp;|&nbsp; (c) $x = 1$ &nbsp;|&nbsp; (d) $x = 5$` },
+      { jawaban:`(a) ${}^{3}\!\log 81 = 4$ &nbsp;|&nbsp; (b) ${}^{7}\!\log \tfrac{1}{49} = -2$ &nbsp;|&nbsp; (c) ${}^{1/2}\!\log \tfrac{1}{8} = 3$ &nbsp;|&nbsp; (d) ${}^{10}\!\log 100.000 = 5$` },
+      { jawaban:`(a) $4^3 = 64$ &nbsp;|&nbsp; (b) $5^{-1} = \tfrac{1}{5}$ &nbsp;|&nbsp; (c) $9^{1/2} = 3$ &nbsp;|&nbsp; (d) $10^4 = 10.000$` },
+      { jawaban:`(a) $4$ &nbsp;|&nbsp; (b) $3$ &nbsp;|&nbsp; (c) $-5$ &nbsp;|&nbsp; (d) $\dfrac{1}{2}$ &nbsp;|&nbsp; (e) $\dfrac{2}{3}$ &nbsp;|&nbsp; (f) $-4$` },
+      { jawaban:`(a) $x = 3$ &nbsp;|&nbsp; (b) $x = \dfrac{1}{81}$ &nbsp;|&nbsp; (c) $x = 1$ &nbsp;|&nbsp; (d) $x = 5$` },
     ],
     // B — Sifat-Sifat Logaritma
     1: [
-      { jawaban: `(a) $3$ &nbsp;|&nbsp; (b) $2$ &nbsp;|&nbsp; (c) $2$ &nbsp;|&nbsp; (d) $3$` },
-      { jawaban: `(a) $4$ &nbsp;|&nbsp; (b) $\log 3 + \dfrac{1}{2}$ &nbsp;|&nbsp; (c) $4$ &nbsp;|&nbsp; (d) $2$` },
-      { jawaban: `(a) $\dfrac{5}{2}$ &nbsp;|&nbsp; (b) $\dfrac{3}{2}$ &nbsp;|&nbsp; (c) $5$ &nbsp;|&nbsp; (d) $\dfrac{5}{12}$` },
-      { jawaban: `(a) $3$ &nbsp;|&nbsp; (b) $2$ &nbsp;|&nbsp; (c) $3$ &nbsp;|&nbsp; (d) $5$` },
-      { jawaban: `(a) $2$ &nbsp;|&nbsp; (b) $9 + 8 = 17$` },
+      { jawaban:`(a) $3$ &nbsp;|&nbsp; (b) $2$ &nbsp;|&nbsp; (c) $2$ &nbsp;|&nbsp; (d) $3$` },
+      { jawaban:`(a) $4$ &nbsp;|&nbsp; (b) $\log 3 + \dfrac{1}{2}$ &nbsp;|&nbsp; (c) $4$ &nbsp;|&nbsp; (d) $2$` },
+      { jawaban:`(a) $\dfrac{5}{2}$ &nbsp;|&nbsp; (b) $\dfrac{3}{2}$ &nbsp;|&nbsp; (c) $5$ &nbsp;|&nbsp; (d) $\dfrac{5}{12}$` },
+      { jawaban:`(a) $3$ &nbsp;|&nbsp; (b) $2$ &nbsp;|&nbsp; (c) $3$ &nbsp;|&nbsp; (d) $5$` },
+      { jawaban:`(a) $2$ &nbsp;|&nbsp; (b) $9 + 8 = 17$` },
     ],
     // C — Menyatakan dalam Bentuk Lain
     2: [
-      { jawaban: `(a) $\log 72 = 3a + 2b - 1$ &nbsp;|&nbsp; (b) $\log 0{,}15 = b - a - 1$ &nbsp;|&nbsp; (c) ${}^{12}\!\log 5 = \dfrac{1-a}{2a+b}$` },
-      { jawaban: `${}^{60}\!\log 15 = \dfrac{p+q}{2+p+q}$` },
-      { jawaban: `${}^{9}\!\log 125 + {}^{5}\!\log 27 = \dfrac{5m}{2} + \dfrac{3}{m}$` },
-      { jawaban: `$\log 48 + \log 0{,}25 - \log 18 = 4a - b - 2$` },
-      { jawaban: `${}^{3}\!\log 245 - {}^{3}\!\log 63 = 2m - n + 1$` },
+      { jawaban:`(a) $\log 72 = 3a + 2b - 1$ &nbsp;|&nbsp; (b) $\log 0{,}15 = b - a - 1$ &nbsp;|&nbsp; (c) ${}^{12}\!\log 5 = \dfrac{1-a}{2a+b}$` },
+      { jawaban:`${}^{60}\!\log 15 = \dfrac{p+q}{2+p+q}$` },
+      { jawaban:`${}^{9}\!\log 125 + {}^{5}\!\log 27 = \dfrac{5m}{2} + \dfrac{3}{m}$` },
+      { jawaban:`$\log 48 + \log 0{,}25 - \log 18 = 4a - b - 2$` },
+      { jawaban:`${}^{3}\!\log 245 - {}^{3}\!\log 63 = 2m - n + 1$` },
     ],
     // D — Persamaan Logaritma
     3: [
-      { jawaban: `(a) $\text{HP} = \{9\}$ &nbsp;|&nbsp; (b) $\text{HP} = \{-1, 8\}$ &nbsp;|&nbsp; (c) $\text{HP} = \{1, 4\}$ &nbsp;|&nbsp; (d) $\text{HP} = \{\sqrt{26}\}$ (karena $x > 1$)` },
-      { jawaban: `(a) $\text{HP} = \left\{\dfrac{1}{27}, 3\right\}$ &nbsp;|&nbsp; (b) $\text{HP} = \left\{\dfrac{1}{\sqrt{10}}, 10^3\right\}$` },
-      { jawaban: `(a) $\text{HP} = \{\sqrt{3}\}$ &nbsp;|&nbsp; (b) $\text{HP} = \{3\}$` },
-      { jawaban: `$x_1 + x_2 = 7$ (yaitu $x = 2$ dan $x = 5$; jumlah $= 7$)` },
-      { jawaban: `Akar-akar $p = 100$, $q = 10$, sehingga $\dfrac{\log p}{\log q} + \dfrac{\log q}{\log p} = 2 + \dfrac{1}{2} = \dfrac{5}{2}$` },
+      { jawaban:`(a) $\text{HP} = \{9\}$ &nbsp;|&nbsp; (b) $\text{HP} = \{-1, 8\}$ &nbsp;|&nbsp; (c) $\text{HP} = \{1, 4\}$ &nbsp;|&nbsp; (d) $\text{HP} = \{\sqrt{26}\}$` },
+      { jawaban:`(a) $\text{HP} = \left\{\dfrac{1}{27}, 3\right\}$ &nbsp;|&nbsp; (b) $\text{HP} = \left\{\dfrac{1}{\sqrt{10}}, 10^3\right\}$` },
+      { jawaban:`(a) $\text{HP} = \{\sqrt{3}\}$ &nbsp;|&nbsp; (b) $\text{HP} = \{3\}$` },
+      { jawaban:`$x_1 + x_2 = 7$` },
+      { jawaban:`$\dfrac{\log p}{\log q} + \dfrac{\log q}{\log p} = \dfrac{5}{2}$` },
     ],
     // E — Pertidaksamaan Logaritma
     4: [
-      { jawaban: `(a) $\text{HP} = \left\{x \mid x > \dfrac{7}{4}\right\}$ &nbsp;|&nbsp; (b) $\text{HP} = \left\{x \mid \dfrac{1}{5} < x \leq \dfrac{28}{5}\right\}$ &nbsp;|&nbsp; (c) $\text{HP} = \left\{x \mid x > \dfrac{15}{2}\right\}$` },
-      { jawaban: `(a) $\text{HP} = \left\{x \mid \dfrac{1}{3} < x < 4\right\}$ &nbsp;|&nbsp; (b) $\text{HP} = \left\{x \mid \dfrac{1}{3} < x \leq 3\right\}$` },
-      { jawaban: `$\text{HP} = \{x \mid 1 < x < 5\}$ (irisan semua syarat)` },
-      { jawaban: `(a) $\text{HP} = \left\{x \mid \dfrac{1}{4} \leq x \leq 8\right\}$ &nbsp;|&nbsp; (b) $\text{HP} = \left\{x \mid 0 < x < \dfrac{1}{9}\right\}$ atau $x > 3$` },
-      { jawaban: `$\text{HP} = \left\{x \mid 1 < x < \dfrac{3}{1}\right\} = \{x \mid 1 < x < 3\}$` },
+      { jawaban:`(a) $x > \dfrac{7}{4}$ &nbsp;|&nbsp; (b) $\dfrac{1}{5} < x \leq \dfrac{28}{5}$ &nbsp;|&nbsp; (c) $x > \dfrac{15}{2}$` },
+      { jawaban:`(a) $\dfrac{1}{3} < x < 4$ &nbsp;|&nbsp; (b) $\dfrac{1}{3} < x \leq 3$` },
+      { jawaban:`$1 < x < 5$` },
+      { jawaban:`(a) $\dfrac{1}{4} \leq x \leq 8$ &nbsp;|&nbsp; (b) $0 < x < \dfrac{1}{9}$ atau $x > 3$` },
+      { jawaban:`$1 < x < 3$` },
     ],
     // F — Fungsi Logaritma
     5: [
-      { jawaban: `Domain: $x > 1$; asimtot vertikal: $x = 1$; titik potong sumbu-$X$: $(2, 0)$` },
-      { jawaban: `Domain: $x > 2$; titik potong sumbu-$X$: $\left(\dfrac{7}{3}, 0\right)$` },
-      { jawaban: `Numerus $x^2-4x+3 > 0 \Rightarrow x < 1$ atau $x > 3$; titik potong sumbu-$X$: $f(x)=0 \Rightarrow x^2-4x+3=1 \Rightarrow x=1\pm\sqrt{3}$; hanya $x=1+\sqrt{3}$ memenuhi syarat domain.` },
-      { jawaban: `$g(x) = {}^{2}\!\log(x+2) - 1$: geser kiri 2 satuan lalu turun 1 satuan dari $f(x) = {}^{2}\!\log x$; asimtot $g$: $x = -2$.` },
-      { jawaban: `Domain: $x < 1$ atau $x > 4$ (dari $x^2-5x+4>0$); titik potong sumbu-$X$: $x^2-5x+4=1 \Rightarrow (x-1)(x-4)=0$; titik: $x=1$ dan $x=4$ — keduanya di batas domain, bukan di dalam domain (cek: tidak memenuhi). Tidak ada titik potong nyata di dalam domain.` },
+      { jawaban:`Domain: $x > 1$; asimtot: $x = 1$; potong sumbu-$X$: $(2, 0)$` },
+      { jawaban:`Domain: $x > 2$; potong sumbu-$X$: $\left(\dfrac{7}{3}, 0\right)$` },
+      { jawaban:`Potong sumbu-$X$: $x = 1+\sqrt{3}$ (yang memenuhi syarat domain)` },
+      { jawaban:`Geser kiri 2 satuan lalu turun 1 satuan; asimtot $g$: $x = -2$` },
+      { jawaban:`Domain: $x < 1$ atau $x > 4$; tidak ada titik potong sumbu-$X$ di dalam domain` },
     ],
     // G — Aplikasi Logaritma
     6: [
-      { jawaban: `(a) $N(t) = 500 \times (1{,}2)^t$ &nbsp;|&nbsp; (b) $t = \dfrac{\log 10}{\log 1{,}2} = \dfrac{1}{0{,}0792} \approx \mathbf{12{,}6}$ jam` },
-      { jawaban: `(a) $M(t) = 200 \times \left(\dfrac{1}{2}\right)^{t/1600}$ &nbsp;|&nbsp; (b) $\dfrac{1}{2}^{t/1600} = \dfrac{1}{8} = \dfrac{1}{2^3} \Rightarrow \dfrac{t}{1600} = 3 \Rightarrow t = \mathbf{4.800}$ tahun` },
-      { jawaban: `(a) $M_A = 7{,}2$ SR &nbsp;|&nbsp; (b) Selisih $= 7{,}2 - 5{,}7 = 1{,}5$; lebih kuat $10^{1{,}5} \approx \mathbf{31{,}6}$ kali` },
-      { jawaban: `(a) $\text{pH} = -(\log 3 - 3) = 3 - 0{,}4771 = \mathbf{2{,}52}$ &nbsp;|&nbsp; (b) $\text{pOH} = -(\log 2 - 5) = 4{,}699$; $\text{pH} = 14 - 4{,}699 = \mathbf{9{,}30}$` },
+      { jawaban:`(a) $N(t) = 500 \times (1{,}2)^t$ &nbsp;|&nbsp; (b) $t \approx 12{,}6$ jam` },
+      { jawaban:`(a) $M(t) = 200 \times \left(\dfrac{1}{2}\right)^{t/1600}$ &nbsp;|&nbsp; (b) $t = 4.800$ tahun` },
+      { jawaban:`(a) $7{,}2$ SR &nbsp;|&nbsp; (b) $\approx 31{,}6$ kali lebih kuat` },
+      { jawaban:`(a) $\text{pH} \approx 2{,}52$ &nbsp;|&nbsp; (b) $\text{pH} \approx 9{,}30$` },
     ],
   };
 
@@ -1171,7 +1365,7 @@ document.addEventListener('DOMContentLoaded', () => {
     newList.className = 'soal-list-accordion';
 
     items.forEach((li, i) => {
-      const ans = answers[i] || {};
+      const ans     = answers[i] || {};
       const jawaban = ans.jawaban || '';
 
       const item = document.createElement('div');
@@ -1206,15 +1400,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     list.replaceWith(newList);
   });
+
 });
-
 </script>
-
 
 <!-- FOOTER -->
 <div id="eksaktalab-footer"></div>
 <script src="../../assets/js/footer.js"></script>
-<script src="../../assets/js/materi.js"></script>
 <script src="../../assets/js/protect.js"></script>
 </body>
 </html>
