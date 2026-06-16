@@ -1094,8 +1094,9 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
 
 </div><!-- /page-wrap -->
 
+
 <script>
-// ── Scroll progress bar + scroll-to-top ──
+// ── Scroll progress bar tipis + scroll-to-top ──
 window.addEventListener('scroll', () => {
   const el  = document.documentElement;
   const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
@@ -1105,22 +1106,20 @@ window.addEventListener('scroll', () => {
   else btn.classList.remove('visible');
 });
 
+// ── Theme toggle ──────────────────────────
+
+
 // ── TOC Dropdown ──────────────────────────
-function toggleTOC() { document.getElementById('tocDropdown').classList.toggle('open'); }
-function closeTOC()  { document.getElementById('tocDropdown').classList.remove('open'); }
+function toggleTOC() {
+  document.getElementById('tocDropdown').classList.toggle('open');
+}
+function closeTOC() {
+  document.getElementById('tocDropdown').classList.remove('open');
+}
 document.addEventListener('click', e => {
   const dd = document.getElementById('tocDropdown');
   if (dd && !dd.contains(e.target)) dd.classList.remove('open');
 });
-
-// ── Theme toggle ──────────────────────────
-function toggleTheme() {
-  const html = document.documentElement;
-  const btn  = document.getElementById('themeBtn');
-  const dark = html.getAttribute('data-theme') === 'dark';
-  html.setAttribute('data-theme', dark ? 'light' : 'dark');
-  btn.textContent = dark ? '🌙 Gelap' : '☀️ Terang';
-}
 
 // ── Bookmark ──────────────────────────────
 let bookmarked = false;
@@ -1174,8 +1173,8 @@ function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── 1. BOX RUMUS → accordion teal ────────
-  document.querySelectorAll('.box.box-rumus').forEach(box => {
+  // ── 1. BOX RUMUS → accordion hijau ───────
+  document.querySelectorAll('.box.box-rumus').forEach((box, i) => {
     const labelEl  = box.querySelector('.box-label');
     const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
 
@@ -1197,10 +1196,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="rumus-body-inner">${bodyHTML.trim()}</div>
       </div>`;
 
-    const header    = wrap.querySelector('.rumus-header');
-    const statusEl  = wrap.querySelector('.rumus-status');
+    const header   = wrap.querySelector('.rumus-header');
+    const statusEl = wrap.querySelector('.rumus-status');
     const bodyInner = wrap.querySelector('.rumus-body-inner');
     makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+
     box.replaceWith(wrap);
   });
 
@@ -1217,8 +1217,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
     });
 
-    const sib       = box.nextElementSibling;
-    const hasSolve  = sib?.classList.contains('penyelesaian');
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
     const solveHTML = hasSolve ? sib.innerHTML : '';
 
     const wrap = document.createElement('div');
@@ -1241,8 +1241,9 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>`;
 
-    const header = wrap.querySelector('.contoh-header');
-    const pi     = wrap.querySelector('.penyelesaian-inner');
+    const header   = wrap.querySelector('.contoh-header');
+    const pi       = wrap.querySelector('.penyelesaian-inner');
+
     const doToggle = () => {
       const open = wrap.classList.toggle('open');
       header.setAttribute('aria-expanded', open);
@@ -1289,12 +1290,7 @@ document.addEventListener('DOMContentLoaded', () => {
     wraps[0].before(tw);
   });
 
-  // ── 4. BOX CATATAN — hapus class .box agar tidak dapat border default
-  document.querySelectorAll('.box.box-catatan').forEach(box => {
-    box.classList.remove('box');
-  });
-
-  // ── 5. SOAL LATIHAN → accordion kunci jawaban ──
+  // ── 4. SOAL LATIHAN → accordion kunci jawaban ──
   const jawabanData = {
     // A — Pengertian Logaritma
     0: [
@@ -1365,7 +1361,7 @@ document.addEventListener('DOMContentLoaded', () => {
     newList.className = 'soal-list-accordion';
 
     items.forEach((li, i) => {
-      const ans     = answers[i] || {};
+      const ans   = answers[i] || {};
       const jawaban = ans.jawaban || '';
 
       const item = document.createElement('div');
@@ -1387,7 +1383,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const toggle = () => {
         const open = item.classList.toggle('open');
         if (open && window.MathJax) {
-          MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(() => {});
+          MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
         }
       };
       header.addEventListener('click', toggle);
