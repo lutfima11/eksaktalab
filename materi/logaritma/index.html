@@ -1095,49 +1095,9 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
 </div><!-- /page-wrap -->
 
 <script>
-window.addEventListener('scroll', () => {
-  const el  = document.documentElement;
-  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
-  document.getElementById('scroll-bar').style.width = pct + '%';
-  const btn = document.getElementById('scroll-top');
-  if (pct > 30) btn.classList.add('visible');
-  else btn.classList.remove('visible');
-});
-
-function toggleTOC() { document.getElementById('tocDropdown').classList.toggle('open'); }
-function closeTOC()  { document.getElementById('tocDropdown').classList.remove('open'); }
-document.addEventListener('click', e => {
-  const dd = document.getElementById('tocDropdown');
-  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-});
-
-let bookmarked = false;
-function toggleBookmark() {
-  bookmarked = !bookmarked;
-  const btn = document.getElementById('bookmarkBtn');
-  btn.classList.toggle('bookmarked', bookmarked);
-  btn.innerHTML = bookmarked
-    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
-    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
-}
-
-function shareMateri() {
-  if (navigator.share) {
-    navigator.share({
-      title: 'Logaritma — EksaktaLab',
-      text:  'Belajar Logaritma di EksaktaLab, lengkap dengan contoh soal!',
-      url:   window.location.href
-    });
-  } else {
-    navigator.clipboard.writeText(window.location.href).then(() => {
-      const btn = document.querySelector('[onclick="shareMateri()"]');
-      const ori = btn.innerHTML;
-      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
-      btn.classList.add('active');
-      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
-    });
-  }
-}
+// ── Share title/text untuk materi.js ──────
+window.SHARE_TITLE = 'Logaritma — EksaktaLab';
+window.SHARE_TEXT  = 'Belajar Logaritma di EksaktaLab, lengkap dengan contoh soal!';
 
 // ── SOAL LATIHAN: jawabanData ──
 document.addEventListener('DOMContentLoaded', () => {
