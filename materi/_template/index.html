@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- EDIT: Ganti judul materi -->
+<title>JUDUL MATERI – EksaktaLab</title>
+<meta name="description" content="DESKRIPSI SINGKAT MATERI. Dilengkapi N contoh soal dan pembahasan.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+
+<!-- MathJax — render LaTeX di dalam $...$ dan $$...$$ -->
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<!-- EDIT: Ganti slug URL sesuai nama folder materi -->
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/SLUG-MATERI/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/SLUG-MATERI/">
+<meta property="og:title" content="JUDUL MATERI – EksaktaLab">
+<meta property="og:description" content="DESKRIPSI SINGKAT MATERI.">
+<meta property="og:site_name" content="EksaktaLab">
+<meta property="og:locale" content="id_ID">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="JUDUL MATERI – EksaktaLab">
+<meta name="twitter:description" content="DESKRIPSI SINGKAT MATERI.">
+
+<!-- EDIT: Sesuaikan data schema (nama, url, kelas, breadcrumb) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "JUDUL MATERI",
+  "url": "https://lutfima11.github.io/eksaktalab/materi/SLUG-MATERI/",
+  "description": "DESKRIPSI SINGKAT MATERI.",
+  "provider": { "@type": "Organization", "name": "EksaktaLab", "url": "https://lutfima11.github.io/eksaktalab/" },
+  "educationalLevel": "SMA Kelas X",
+  "inLanguage": "id",
+  "isPartOf": { "@type": "WebSite", "name": "EksaktaLab", "url": "https://lutfima11.github.io/eksaktalab/" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://lutfima11.github.io/eksaktalab/" },
+      { "@type": "ListItem", "position": 2, "name": "Materi", "item": "https://lutfima11.github.io/eksaktalab/" },
+      { "@type": "ListItem", "position": 3, "name": "KATEGORI" },
+      { "@type": "ListItem", "position": 4, "name": "JUDUL MATERI", "item": "https://lutfima11.github.io/eksaktalab/materi/SLUG-MATERI/" }
+    ]
+  }
+}
+</script>
+
+<!-- FIX: MathJax di dalam <th> agar terlihat pada background navy -->
+<style>
+th mjx-container { color: #fff !important; }
+th mjx-container svg,
+th mjx-container svg * { fill: #fff !important; }
+</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- ═══ NAVBAR ═══════════════════════════════════════════════════════ -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <!-- EDIT: Ganti teks header dan tambahkan item sesuai jumlah sub-bab -->
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <!-- EDIT: Sesuaikan judul dan jumlah sub-bab -->
+        <div class="toc-menu-header">JUDUL MATERI · N Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>SUB-BAB A</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>SUB-BAB B</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>SUB-BAB C</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Tabel Ringkasan</a>
+      </div>
+    </div>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<!-- Floating scroll-to-top -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- ═══ BREADCRUMB ════════════════════════════════════════════════ -->
+  <!-- EDIT: Sesuaikan kategori dan nama materi -->
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#KATEGORI-ID">KATEGORI</a>
+    <span>/</span>
+    JUDUL MATERI
+  </div>
+
+  <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+  <!-- EDIT: eyebrow (BAB X · No.Y), judul, deskripsi, tag kelas/kategori -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">BAB X · No.Y</div>
+      <h1 class="materi-title">JUDUL MATERI</h1>
+      <p class="materi-desc">DESKRIPSI SATU-DUA KALIMAT tentang cakupan materi dan relevansinya.</p>
+      <div class="materi-tags">
+        <span class="tag teal">Kelas X</span>   <!-- EDIT: Kelas X / XI / XII -->
+        <span class="tag">KATEGORI</span>
+        <span class="tag">N Sub-bab</span>
+        <span class="tag">N Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TOC (daftar isi inline) ══════════════════════════════════ -->
+  <!-- EDIT: Sesuaikan link dan label sub-bab -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">SUB-BAB A</a></li>
+      <li><a href="#bagian-b" data-num="B">SUB-BAB B</a></li>
+      <li><a href="#bagian-c" data-num="C">SUB-BAB C</a></li>
+      <li><a href="#bagian-d" data-num="D">Tabel Ringkasan</a></li>
+    </ul>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       A. SUB-BAB PERTAMA
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>SUB-BAB A</h2>
+
+    <!-- Paragraf pembuka -->
+    <p>Tuliskan penjelasan konsep di sini. Gunakan <strong>cetak tebal</strong> untuk istilah kunci dan $f(x)$ untuk simbol matematika inline.</p>
+
+    <!-- ── Box Definisi: untuk definisi formal ── -->
+    <div class="box box-definisi">
+      <div class="box-label">JUDUL DEFINISI</div>
+      <p style="margin:0;">Isi definisi formal. Contoh: fungsi $f: A \to B$ adalah...</p>
+    </div>
+
+    <!-- ── Box Rumus: untuk formula utama ── -->
+    <div class="box box-rumus">
+      <div class="box-label">JUDUL RUMUS</div>
+      <div class="math-block">$$\text{RUMUS UTAMA}$$</div>
+    </div>
+
+    <!-- ── Box Catatan: untuk peringatan atau hal penting ── -->
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Tuliskan catatan atau peringatan penting di sini.</p>
+    </div>
+
+    <!-- Subseksi (opsional) -->
+    <h3 class="subsection-title">1. JUDUL SUBSEKSI</h3>
+    <p>Isi penjelasan subseksi pertama.</p>
+
+    <!-- ── Box Contoh + Penyelesaian ── -->
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Teks soal contoh pertama. Tuliskan permasalahan secara jelas.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>Langkah 1 —</strong> Penjelasan langkah pertama.<br><br>
+      <strong>Langkah 2 —</strong> Penjelasan langkah kedua:
+      $$\text{RUMUS ANTARA}$$
+      Jadi, hasilnya adalah $\text{HASIL}$.
+    </div>
+
+    <!-- Contoh dengan sub-poin a. b. -->
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai dari:<br>
+      a. SOAL PERTAMA<br>
+      b. SOAL KEDUA</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>a.</strong> Penyelesaian soal pertama.<br><br>
+      <strong>b.</strong> Penyelesaian soal kedua.
+    </div>
+
+    <!-- ── Box Latihan: untuk soal latihan mandiri ── -->
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan</div>
+      <ol class="soal-list">
+        <li>Soal latihan pertama.</li>
+        <li>Soal latihan kedua.</li>
+        <li>Soal latihan ketiga.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       B. SUB-BAB KEDUA
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>SUB-BAB B</h2>
+
+    <p>Pengantar sub-bab B.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">JUDUL RUMUS B</div>
+      <div class="math-block">$$\text{RUMUS}$$</div>
+    </div>
+
+    <h3 class="subsection-title">1. JUDUL SUBSEKSI B1</h3>
+    <p>Isi penjelasan.</p>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Teks soal.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Penyelesaian.
+      $$\text{LANGKAH}$$
+    </div>
+
+    <h3 class="subsection-title">2. JUDUL SUBSEKSI B2</h3>
+    <p>Isi penjelasan.</p>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Teks soal.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Penyelesaian.
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       C. SUB-BAB KETIGA
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>SUB-BAB C</h2>
+
+    <p>Pengantar sub-bab C.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">JUDUL RUMUS C</div>
+      <div class="math-block">$$\text{RUMUS}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Teks soal.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Penyelesaian.
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       D. TABEL RINGKASAN
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Tabel Ringkasan</h2>
+
+    <h3 class="subsection-title">1. JUDUL TABEL 1</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Kolom 1</th><th>Kolom 2</th><th>Kolom 3</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Baris 1A</td><td>$\text{formula}$</td><td>Keterangan</td></tr>
+          <tr><td>Baris 2A</td><td>$\text{formula}$</td><td>Keterangan</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">2. JUDUL TABEL 2</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Konsep</th><th>Rumus</th><th>Contoh</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Konsep 1</td><td>$\text{rumus}$</td><td>Contoh penerapan</td></tr>
+          <tr><td>Konsep 2</td><td>$\text{rumus}$</td><td>Contoh penerapan</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+
+  <!-- ═══ KONEKSI KE MATERI BERIKUTNYA ═════════════════════════════ -->
+  <!-- EDIT: Sesuaikan isi koneksi dan materi berikutnya -->
+  <div class="koneksi-wrap">
+    <div class="koneksi-header">
+      <span class="koneksi-icon">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 7h10M8 3l4 4-4 4"/>
+        </svg>
+      </span>
+      <span class="koneksi-label">Koneksi ke Materi Berikutnya</span>
+    </div>
+    <div class="koneksi-body">
+      <p class="koneksi-text">
+        JUDUL MATERI adalah <strong>fondasi</strong> untuk MATERI BERIKUTNYA. Konsep KONSEP KUNCI yang dipelajari di sini akan muncul kembali saat membahas PENERAPAN.
+      </p>
+      <div class="koneksi-comparison">
+        <div class="koneksi-card current">
+          <div class="koneksi-card-label">Sekarang</div>
+          <div class="koneksi-card-formula">$\text{RUMUS SEKARANG}$</div>
+          <div class="koneksi-card-desc">DESKRIPSI SINGKAT<br>materi sekarang</div>
+        </div>
+        <div class="koneksi-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10h12M12 5l5 5-5 5"/></svg>
+        </div>
+        <div class="koneksi-card next">
+          <div class="koneksi-card-label">Berikutnya</div>
+          <div class="koneksi-card-formula">$\text{RUMUS BERIKUTNYA}$</div>
+          <div class="koneksi-card-desc">DESKRIPSI SINGKAT<br>materi berikutnya</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ ACTION FOOTER ════════════════════════════════════════════ -->
+  <!-- EDIT: Sesuaikan href prev/next dan teks latihan soal -->
+  <div class="action-footer">
+    <div class="footer-nav">
+      <a class="nav-btn" href="../MATERI-SEBELUMNYA/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        MATERI SEBELUMNYA
+      </a>
+      <a class="nav-btn" href="../MATERI-BERIKUTNYA/">
+        MATERI BERIKUTNYA
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <div class="footer-actions">
+      <a class="nav-btn primary" href="#">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="10" height="10" rx="2"/><line x1="5" y1="5" x2="9" y2="5"/><line x1="5" y1="7.5" x2="8" y2="7.5"/><line x1="5" y1="10" x2="7" y2="10"/></svg>
+        Kerjakan Latihan Soal JUDUL MATERI
+        <span class="coming-soon">Segera</span>
+      </a>
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══ KOMENTAR (Giscus) ════════════════════════════════════════ -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Giscus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi ini? Tulis di kolom diskusi. Login dengan akun GitHub gratis.</p>
+    <div class="giscus-wrap">
+      <div class="giscus-placeholder">
+        <div class="ph-icon">💬</div>
+        <p>
+          Sistem komentar menggunakan <strong>Giscus</strong> — gratis, tanpa iklan, berbasis GitHub Discussions.<br><br>
+          Untuk mengaktifkan, konfigurasikan repo di <code>giscus.app</code> lalu tempel script-nya di sini.
+        </p>
+      </div>
+      <!-- Setelah dikonfigurasi, hapus div.giscus-placeholder di atas dan paste script Giscus di sini: -->
+      <!-- <script src="https://giscus.app/client.js"
+        data-repo="USERNAME/REPO"
+        data-repo-id="REPO_ID"
+        data-category="Announcements"
+        data-category-id="CATEGORY_ID"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="id"
+        crossorigin="anonymous"
+        async>
+      </script> -->
+    </div>
+  </div>
+
+</div><!-- /page-wrap -->
+
+
+<!-- ═══ SCRIPTS ══════════════════════════════════════════════════════ -->
+<script>
+// ── Scroll progress bar + scroll-to-top ──
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+// ── TOC Dropdown ──
+function toggleTOC() {
+  document.getElementById('tocDropdown').classList.toggle('open');
+}
+function closeTOC() {
+  document.getElementById('tocDropdown').classList.remove('open');
+}
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+// ── Bookmark ──
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ──
+// EDIT: Ganti judul dan teks share sesuai materi
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'JUDUL MATERI — EksaktaLab',
+      text:  'Belajar JUDUL MATERI di EksaktaLab, lengkap dengan contoh soal!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+</script>
+
+</body>
+</html>
