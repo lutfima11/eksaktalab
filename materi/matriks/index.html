@@ -1254,6 +1254,147 @@ function shareMateri() {
   else { navigator.clipboard.writeText(location.href).then(() => alert('Link disalin!')); }
 }
 
+// ── SHARED HELPERS ────────────────────────
+const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+  <polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) {
+      MathJax.typesetPromise([typesetEl]).catch(() => {});
+    }
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── 1. BOX RUMUS → accordion hijau ───────
+  document.querySelectorAll('.box.box-rumus').forEach((box) => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+
+    let bodyHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body">
+        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
+      </div>`;
+
+    const header    = wrap.querySelector('.rumus-header');
+    const statusEl  = wrap.querySelector('.rumus-status');
+    const bodyInner = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+
+    box.replaceWith(wrap);
+  });
+
+  // ── 2. BOX CONTOH → accordion navy/teal ──
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+
+    let qHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const sib       = box.nextElementSibling;
+    const hasSolve  = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header">
+            <span class="solve-dot"></span>
+            <span class="solve-title">Penyelesaian</span>
+          </div>
+          <div class="penyelesaian-inner">
+            ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
+          </div>
+        </div>
+      </div>`;
+
+    const header = wrap.querySelector('.contoh-header');
+    const pi     = wrap.querySelector('.penyelesaian-inner');
+
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+    });
+
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+  // ── 3. Buka / Tutup Semua per section ────
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+
+    const updateBtn = () => {
+      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
+    };
+    updateBtn();
+
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+});
+
 // Soal Latihan accordion
 document.addEventListener('DOMContentLoaded', () => {
   const jawabanData = {
