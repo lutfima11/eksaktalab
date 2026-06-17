@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistem Persamaan Linear – EksaktaLab</title>
+<meta name="description" content="Materi lengkap Sistem Persamaan Linear SMA: PLSV, SPLDV (grafik, substitusi, eliminasi, campuran), dan SPLTV. Dilengkapi 36 contoh soal, soal latihan, dan kunci jawaban.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/sistem-persamaan-linear/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/sistem-persamaan-linear/">
+<meta property="og:title" content="Sistem Persamaan Linear – EksaktaLab">
+<meta property="og:description" content="Materi lengkap Sistem Persamaan Linear SMA: PLSV, SPLDV, dan SPLTV. Dilengkapi 36 contoh soal dan kunci jawaban latihan.">
+<meta property="og:site_name" content="EksaktaLab">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sistem Persamaan Linear – EksaktaLab">
+<meta name="twitter:description" content="Materi lengkap Sistem Persamaan Linear SMA: PLSV, SPLDV, dan SPLTV.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Sistem Persamaan Linear","url":"https://lutfima11.github.io/eksaktalab/materi/sistem-persamaan-linear/","description":"Materi lengkap Sistem Persamaan Linear SMA: PLSV, SPLDV, dan SPLTV.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"educationalLevel":"SMA Kelas X","inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Aljabar"},{"@type":"ListItem","position":4,"name":"Sistem Persamaan Linear","item":"https://lutfima11.github.io/eksaktalab/materi/sistem-persamaan-linear/"}]}}</script>
+<style>
+th mjx-container { color: #fff !important; }
+th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
+</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Sistem Persamaan Linear · 4 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Persamaan Linear Satu Variabel</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Persamaan Linear Dua Variabel</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Persamaan Linear Tiga Variabel</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Tabel Ringkasan</a>
+      </div>
+    </div>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">&#127769; Gelap</button>
+  </div>
+</nav>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#aljabar">Aljabar</a>
+    <span>/</span>
+    Sistem Persamaan Linear
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">BAB B &middot; No.03</div>
+      <h1 class="materi-title">Sistem Persamaan Linear</h1>
+      <p class="materi-desc">Pelajari persamaan dan sistem persamaan linear dari satu, dua, hingga tiga variabel &mdash; lengkap dengan empat metode penyelesaian SPLDV, kondisi khusus sistem, dan penerapan dalam soal cerita.</p>
+      <div class="materi-tags">
+        <span class="tag teal">Kelas X</span>
+        <span class="tag">Aljabar</span>
+        <span class="tag">4 Sub-bab</span>
+        <span class="tag">36 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Persamaan Linear Satu Variabel (PLSV)</a></li>
+      <li><a href="#bagian-b" data-num="B">Persamaan &amp; Sistem Persamaan Linear Dua Variabel</a></li>
+      <li><a href="#bagian-c" data-num="C">Sistem Persamaan Linear Tiga Variabel (SPLTV)</a></li>
+      <li><a href="#bagian-d" data-num="D">Tabel Ringkasan</a></li>
+    </ul>
+  </div>
+
+
+  <!-- ═══ A. PLSV ═══════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Persamaan Linear Satu Variabel (PLSV)</h2>
+
+    <p><strong>Persamaan linear satu variabel (PLSV)</strong> adalah persamaan yang memuat tepat satu variabel dengan pangkat tertinggi satu. Bentuk umumnya:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Bentuk Umum PLSV</div>
+      <div class="math-block">$$ax + b = 0, \quad a \neq 0,\quad a, b \in \mathbb{R}$$</div>
+      <p>dengan $a$ = <strong>koefisien</strong>, $b$ = <strong>konstanta</strong>, $x$ = <strong>variabel</strong>. Penyelesaiannya:</p>
+      <div class="math-block">$$x = -\dfrac{b}{a}$$</div>
+    </div>
+
+    <p><strong>Sifat-sifat yang digunakan:</strong> kedua ruas dapat ditambah, dikurangi, dikali, atau dibagi bilangan yang sama (bukan nol); suku yang memuat variabel dikumpulkan di satu ruas.</p>
+
+    <div class="box box-catatan">
+      <div class="box-label">&#9888; Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Penyelesaian PLSV selalu <strong>tunggal</strong> (tepat satu nilai). Himpunan penyelesaiannya ditulis $\text{HP} = \{x_0\}$.</p>
+    </div>
+
+    <h3 class="subsection-title">1. Metode Penyelesaian PLSV</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian dari $3x - 7 = 2$!</p>
+    </div>
+    <div class="penyelesaian">
+      $$\begin{align*} 3x - 7 &= 2 \\ 3x &= 9 \\ x &= 3 \end{align*}$$
+      Jadi $\text{HP} = \{3\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian dari $5x + 4 = 2x - 8$!</p>
+    </div>
+    <div class="penyelesaian">
+      $$\begin{align*} 5x - 2x &= -8 - 4 \\ 3x &= -12 \\ x &= -4 \end{align*}$$
+      Jadi $\text{HP} = \{-4\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Selesaikan $4(x - 3) = 2(x + 1) - 6$!</p>
+    </div>
+    <div class="penyelesaian">
+      $$\begin{align*} 4x - 12 &= 2x - 4 \\ 2x &= 8 \\ x &= 4 \end{align*}$$
+      Jadi $\text{HP} = \{4\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Selesaikan $\dfrac{2x+1}{3} - \dfrac{x-2}{2} = 1$!</p>
+    </div>
+    <div class="penyelesaian">
+      Kalikan kedua ruas dengan KPK $= 6$:
+      $$\begin{align*} 2(2x+1) - 3(x-2) &= 6 \\ 4x+2-3x+6 &= 6 \\ x &= -2 \end{align*}$$
+      Jadi $\text{HP} = \{-2\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$: $\dfrac{2x - 5}{3} - \dfrac{3(x + 2)}{4} = \dfrac{5x - 19}{6}$</p>
+    </div>
+    <div class="penyelesaian">
+      Kalikan kedua ruas dengan KPK $= 12$:
+      $$\begin{align*} 4(2x-5) - 9(x+2) &= 2(5x-19) \\ 8x-20-9x-18 &= 10x-38 \\ -x-38 &= 10x-38 \\ -11x = 0 \implies x = 0 \end{align*}$$
+      Jadi $\text{HP} = \{0\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$: $-2\!\left[\dfrac{3x-1}{4} - \dfrac{1}{2}\!\left(x - \dfrac{2x+3}{3}\right)\right] = \dfrac{5}{6}(x-4) + 1$</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Langkah 1 &mdash;</strong> Sederhanakan ekspresi terdalam:
+      $$x - \frac{2x+3}{3} = \frac{3x-(2x+3)}{3} = \frac{x-3}{3}$$
+      <strong>Langkah 2 &mdash;</strong> Substitusikan dan sederhanakan:
+      $$-2\!\left[\frac{3x-1}{4} - \frac{x-3}{6}\right] = \frac{5x-14}{6} \implies -\frac{3x-1}{2}+\frac{x-3}{3} = \frac{5x-14}{6}$$
+      Kalikan dengan 6:
+      $$\begin{align*} -3(3x-1)+2(x-3) &= 5x-14 \\ -7x-3 &= 5x-14 \\ 11 &= 12x \implies x = \frac{11}{12} \end{align*}$$
+      Jadi $\text{HP} = \left\{\dfrac{11}{12}\right\}$.
+    </div>
+
+    <h3 class="subsection-title">2. Penerapan PLSV dalam Soal Cerita</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Jika dua kali suatu bilangan dikurangi 9 sama dengan bilangan itu ditambah 3, tentukanlah bilangan tersebut!</p>
+    </div>
+    <div class="penyelesaian">
+      Misalkan bilangan $= x$: $\quad 2x - 9 = x + 3 \implies x = 12$<br><br>
+      Jadi bilangan tersebut adalah $\mathbf{12}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Umur Andi sekarang tiga kali umur adiknya. Lima tahun kemudian, jumlah umur keduanya adalah 50 tahun. Berapakah umur Andi sekarang?</p>
+    </div>
+    <div class="penyelesaian">
+      Misalkan umur adik $= x$, umur Andi $= 3x$. Lima tahun kemudian:
+      $$(3x+5)+(x+5) = 50 \implies 4x = 40 \implies x = 10$$
+      Jadi umur Andi $= 3 \times 10 = \mathbf{30}$ tahun.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Panjang suatu persegi panjang 5 cm lebih dari lebarnya. Jika kelilingnya 58 cm, tentukan luas persegi panjang tersebut!</p>
+    </div>
+    <div class="penyelesaian">
+      Misalkan lebar $= x$ cm, panjang $= (x+5)$ cm:
+      $$2(x+5+x) = 58 \implies 4x = 48 \implies x = 12$$
+      Lebar $= 12$ cm, panjang $= 17$ cm, sehingga luas $= 12 \times 17 = \mathbf{204}$ cm$^2$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Keran A mengisi bak dalam 12 menit, keran B menguras bak dalam 20 menit. Bak kosong dan kedua keran dibuka bersamaan. Berapa menit bak terisi penuh?</p>
+    </div>
+    <div class="penyelesaian">
+      Misalkan waktu $= t$ menit. Agar bak terisi penuh:
+      $$\frac{t}{12} - \frac{t}{20} = 1$$
+      Kalikan dengan $60$: $5t - 3t = 60 \implies t = 30$<br><br>
+      Jadi bak terisi penuh dalam $\mathbf{30}$ menit.
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan A</div>
+      <ol class="soal-list">
+        <li>Tentukan penyelesaian dari persamaan $7x - 5 = 3x + 11$.</li>
+        <li>Tentukan nilai $n$ yang memenuhi persamaan $3(n - 2) = n + 10$.</li>
+        <li>Selesaikan persamaan $5(2x - 3) - 3(x + 4) = 0$.</li>
+        <li>Selesaikan persamaan $\dfrac{3x-2}{4} + \dfrac{x+1}{3} = 2$.</li>
+        <li>Jika $2(3x + 4) = 4x - 12$, tentukan nilai dari $x + 5$.</li>
+        <li>Tiga bilangan bulat berurutan memiliki jumlah 75. Tentukan ketiga bilangan tersebut!</li>
+        <li>Sebuah persegi panjang memiliki panjang $(3x - 2)$ cm dan lebar $(x + 1)$ cm. Jika kelilingnya 44 cm, tentukan luas persegi panjang tersebut!</li>
+        <li>Tentukan nilai $y$ dari persamaan: $\dfrac{2y - 1}{2} - \dfrac{y + 3}{3} = \dfrac{y - 2}{4}$.</li>
+        <li>Sebuah tangki berisi air penuh. Pertama, $\frac{1}{3}$ bagian air digunakan untuk menyiram kebun. Kemudian, $\frac{1}{4}$ dari <strong>sisa</strong> air digunakan untuk mencuci motor. Jika air yang tersisa 45 liter, tentukan kapasitas total tangki!</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <!-- ═══ B. SPLDV ══════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Persamaan &amp; Sistem Persamaan Linear Dua Variabel</h2>
+
+    <h3 class="subsection-title">1. Persamaan Linear Dua Variabel (PLDV)</h3>
+    <p>PLDV adalah persamaan yang memuat tepat dua variabel dengan pangkat tertinggi satu.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Bentuk Umum PLDV &amp; SPLDV</div>
+      <p>PLDV: $\quad ax + by = c, \quad a, b \neq 0$</p>
+      <p>SPLDV:</p>
+      <div class="math-block">$$\begin{cases} a_1 x + b_1 y = c_1 \\ a_2 x + b_2 y = c_2 \end{cases}$$</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">&#9888; Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Satu persamaan PLDV memiliki <strong>tak hingga banyaknya penyelesaian</strong>. Untuk mendapatkan nilai $(x, y)$ yang tunggal, diperlukan setidaknya dua persamaan yang saling berkaitan.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Metode Penyelesaian SPLDV</h3>
+    <p>Terdapat empat metode: grafik (fondasi visual), substitusi, eliminasi, dan campuran.</p>
+
+    <p><strong>a. Metode Grafik</strong> &mdash; menggambar kedua PLDV pada bidang Cartesius; titik potong adalah penyelesaian.</p>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Dengan metode grafik, tentukan penyelesaian dari $2x + 5y = 20$ dan $x - y = 3$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Garis $2x + 5y = 20$:</strong> titik bantu $(0,\,4)$ dan $(10,\,0)$.<br>
+      <strong>Garis $x - y = 3$:</strong> titik bantu $(0,\,-3)$ dan $(3,\,0)$.
+      <div class="grafik-wrap">
+        <svg viewBox="-15 -55 155 115" width="340" height="230" font-family="Inter,sans-serif" font-size="7.5">
+          <defs>
+            <marker id="ax1" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="rgba(150,170,200,.6)"/></marker>
+            <marker id="ax2" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M7,1 L1,3.5 L7,6z" fill="rgba(150,170,200,.6)"/></marker>
+          </defs>
+          <line x1="-13" y1="0" x2="135" y2="0" stroke="rgba(150,170,200,.4)" stroke-width="1" marker-start="url(#ax2)" marker-end="url(#ax1)"/>
+          <line x1="0" y1="-52" x2="0" y2="58" stroke="rgba(150,170,200,.4)" stroke-width="1" marker-start="url(#ax2)" marker-end="url(#ax1)"/>
+          <text x="131" y="4" fill="rgba(150,170,200,.6)">x</text>
+          <text x="3" y="-46" fill="rgba(150,170,200,.6)">y</text>
+          <text x="24" y="8" fill="rgba(150,170,200,.5)">2</text>
+          <text x="48" y="8" fill="rgba(150,170,200,.5)">4</text>
+          <text x="72" y="8" fill="rgba(150,170,200,.5)">6</text>
+          <text x="96" y="8" fill="rgba(150,170,200,.5)">8</text>
+          <text x="117" y="8" fill="rgba(150,170,200,.5)">10</text>
+          <text x="-12" y="-44" fill="rgba(150,170,200,.5)">4</text>
+          <text x="-12" y="-20" fill="rgba(150,170,200,.5)">2</text>
+          <text x="-12" y="28" fill="rgba(150,170,200,.5)">-2</text>
+          <!-- 2x+5y=20: svg (0,4)=>(0,-48) dan (10,0)=>(120,0), 1 unit=12px -->
+          <line x1="0" y1="-48" x2="120" y2="0" stroke="#00bfa5" stroke-width="2"/>
+          <text x="88" y="-14" fill="#00bfa5">2x+5y=20</text>
+          <!-- x-y=3: y=x-3, (0,-3)=>(0,36) dan (8.3,5.3)=>(100,-64) -->
+          <line x1="0" y1="36" x2="99" y2="-51" stroke="#ff6b35" stroke-width="2"/>
+          <text x="72" y="-41" fill="#ff6b35">x&#8722;y=3</text>
+          <!-- titik potong (5,2)=>svg(60,-24) -->
+          <line x1="60" y1="0" x2="60" y2="-24" stroke="rgba(255,255,255,.25)" stroke-dasharray="3,2" stroke-width="1"/>
+          <line x1="0" y1="-24" x2="60" y2="-24" stroke="rgba(255,255,255,.25)" stroke-dasharray="3,2" stroke-width="1"/>
+          <circle cx="60" cy="-24" r="4.5" fill="#fff" stroke="#fff" stroke-width="1"/>
+          <text x="63" y="-26" fill="#fff" font-weight="700">P(5, 2)</text>
+        </svg>
+      </div>
+      Titik potong kedua garis adalah $P(5,\,2)$, sehingga $\text{HP} = \{(5,\,2)\}$.
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">&#9888; Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Metode grafik berguna untuk membangun intuisi visual, namun hasilnya kurang akurat jika penyelesaian bukan bilangan bulat. Gunakan metode aljabar untuk ketelitian lebih tinggi.</p>
+    </div>
+
+    <p><strong>b. Metode Substitusi</strong> &mdash; nyatakan satu variabel dari satu persamaan, substitusikan ke persamaan lain. Cocok jika ada koefisien $= 1$ atau $-1$.</p>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Dengan metode substitusi, tentukan penyelesaian dari $3x + y = 3$ dan $2x - 3y = 13$!</p>
+    </div>
+    <div class="penyelesaian">
+      Dari persamaan (1): $y = 3 - 3x \quad\cdots(*)$<br><br>
+      Substitusi ke (2):
+      $$2x - 3(3-3x) = 13 \implies 11x = 22 \implies x = 2$$
+      Substitusi $x=2$ ke $(*)$: $y = 3-6 = -3$<br><br>
+      Verifikasi: $3(2)+(-3)=3$ &#10003;&ensp; $2(2)-3(-3)=13$ &#10003;<br><br>
+      Jadi $\text{HP} = \{(2,\,-3)\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Dengan metode substitusi, tentukan penyelesaian dari $\dfrac{x-2}{3}+\dfrac{y+1}{4}=2$ dan $3x-\dfrac{2y-1}{2}=11$!</p>
+    </div>
+    <div class="penyelesaian">
+      Sederhanakan (1) $\times 12$: $4x+3y=29 \quad\cdots(1a)$<br>
+      Sederhanakan (2) $\times 2$: $6x-2y=21 \quad\cdots(2a)$<br><br>
+      Dari $(2a)$: $y = \dfrac{6x-21}{2}$. Substitusi ke $(1a)$:
+      $$8x+18x-63 = 58 \implies x = \frac{121}{26}$$
+      Substitusi balik: $y = \dfrac{45}{13}$<br><br>
+      Jadi $\text{HP} = \left\{\!\left(\dfrac{121}{26},\,\dfrac{45}{13}\right)\!\right\}$.
+    </div>
+
+    <p><strong>c. Metode Eliminasi</strong> &mdash; samakan koefisien satu variabel, lalu jumlahkan/kurangkan kedua persamaan. Cocok jika koefisien mudah disamakan.</p>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Dengan metode eliminasi, tentukan penyelesaian dari $2x - 3y = 2$ dan $5x + 2y = -14$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Eliminasi $x$ (&#215;5 dan &#215;2):</strong>
+      $$10x-15y=10 \quad\text{dan}\quad 10x+4y=-28 \implies -19y=38 \implies y=-2$$
+      <strong>Eliminasi $y$ (&#215;2 dan &#215;3):</strong>
+      $$4x-6y=4 \quad\text{dan}\quad 15x+6y=-42 \implies 19x=-38 \implies x=-2$$
+      Jadi $\text{HP} = \{(-2,\,-2)\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Dengan metode eliminasi, tentukan penyelesaian dari $6x + y = 11$ dan $x + 3y = -1$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Eliminasi $y$ (&#215;3 dan &#215;1):</strong>
+      $$18x+3y=33 \quad\text{dan}\quad x+3y=-1 \implies 17x=34 \implies x=2$$
+      Substitusi $x=2$ ke (1): $y = 11-12 = -1$<br><br>
+      Jadi $\text{HP} = \{(2,\,-1)\}$.
+    </div>
+
+    <p><strong>d. Metode Campuran (Eliminasi + Substitusi)</strong> &mdash; paling umum dipakai di soal ujian; fleksibel untuk berbagai bentuk.</p>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian dari $4x + y = 5600$ dan $5x + 3y = 8400$!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Langkah 1 &mdash; Eliminasi $y$ (&#215;3 dan &#215;1):</strong>
+      $$12x+3y=16800 \quad\text{dan}\quad 5x+3y=8400 \implies 7x=8400 \implies x=1200$$
+      <strong>Langkah 2 &mdash; Substitusi $x=1200$ ke (1):</strong>
+      $$4(1200)+y=5600 \implies y=800$$
+      Jadi $\text{HP} = \{(1200,\,800)\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian dari: $\dfrac{6}{x-1}+\dfrac{10}{y+2}=4$ dan $\dfrac{10}{x-1}-\dfrac{5}{y+2}=\dfrac{5}{2}$</p>
+    </div>
+    <div class="penyelesaian">
+      Misalkan $u=\dfrac{1}{x-1}$ dan $v=\dfrac{1}{y+2}$:
+      $$\begin{cases} 6u+10v=4 \\ 10u-5v=2{,}5 \end{cases}$$
+      <strong>Langkah 1 &mdash; Eliminasi $v$ (pers. (2)&#215;2):</strong>
+      $$6u+10v=4 \quad\text{dan}\quad 20u-10v=5 \implies 26u=9 \implies u=\tfrac{9}{26}$$
+      <strong>Langkah 2 &mdash; Substitusi ke (1):</strong> $v=\tfrac{5}{26}$<br><br>
+      <strong>Langkah 3 &mdash; Kembalikan ke $x$ dan $y$:</strong><br>
+      $\dfrac{9}{26}=\dfrac{1}{x-1} \implies x=\dfrac{35}{9}$ &ensp;&ensp; $\dfrac{5}{26}=\dfrac{1}{y+2} \implies y=\dfrac{16}{5}$<br><br>
+      Jadi $\text{HP} = \left\{\!\left(\dfrac{35}{9},\,\dfrac{16}{5}\right)\!\right\}$.
+    </div>
+
+    <h3 class="subsection-title">3. Kondisi Khusus SPLDV</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Tiga Kemungkinan Penyelesaian SPLDV</div>
+      <p style="margin:.4rem 0;font-size:.9rem;">Setiap PLDV merepresentasikan sebuah garis lurus. Terdapat tiga kemungkinan:</p>
+      <ul style="margin:.3rem 0;padding-left:1.3rem;font-size:.9rem;">
+        <li>$\dfrac{a_1}{a_2} \neq \dfrac{b_1}{b_2}$: dua garis <strong>berpotongan</strong> &#8658; tepat satu penyelesaian</li>
+        <li>$\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} \neq \dfrac{c_1}{c_2}$: dua garis <strong>sejajar</strong> &#8658; tidak ada penyelesaian</li>
+        <li>$\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} = \dfrac{c_1}{c_2}$: dua garis <strong>berimpit</strong> &#8658; tak hingga penyelesaian</li>
+      </ul>
+      <p style="margin:.4rem 0;font-size:.9rem;">Secara aljabar: eliminasi menghasilkan $0=k\;(k\neq 0)$ &#8658; tidak ada penyelesaian; $0=0$ &#8658; tak hingga penyelesaian.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui sistem persamaan $ax + 2y = 5$ dan $15x - 5y = 14$. Tentukan nilai $a$ agar sistem <strong>tidak memiliki penyelesaian</strong>!</p>
+    </div>
+    <div class="penyelesaian">
+      Syarat tidak ada penyelesaian: $\dfrac{a}{15}=\dfrac{2}{-5}\neq\dfrac{5}{14}$<br><br>
+      Dari $\dfrac{a}{15}=\dfrac{2}{-5}$: $-5a=30 \implies a=-6$<br><br>
+      Periksa: $\dfrac{5}{14}\neq\dfrac{2}{-5}$ &#10003; (kontradiksi terkonfirmasi)<br><br>
+      Jadi $a = \mathbf{-6}$.
+    </div>
+
+    <h3 class="subsection-title">4. Penerapan SPLDV dalam Soal Cerita</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Dua buah bilangan mempunyai jumlah 45 dan selisihnya 5. Tentukanlah kedua bilangan tersebut!</p>
+    </div>
+    <div class="penyelesaian">
+      $$\begin{cases} x+y=45 \\ x-y=5 \end{cases}$$
+      Jumlahkan: $2x=50 \implies x=25$;&ensp; substitusi: $y=20$.<br><br>
+      Verifikasi: $25+20=45$ &#10003;&ensp; $25-20=5$ &#10003;<br><br>
+      Jadi kedua bilangan adalah $\mathbf{25}$ dan $\mathbf{20}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 20</div>
+      <p style="margin:0;font-size:.9rem;">Dalam gedung pertunjukan terdapat 400 penonton. Harga tiket kelas I Rp7.000 dan kelas II Rp5.000. Total penjualan Rp2.300.000. Berapa penonton tiap kelas?</p>
+    </div>
+    <div class="penyelesaian">
+      $$\begin{cases} x+y=400 \\ 7x+5y=2300 \end{cases}$$
+      Eliminasi $y$ (pers. (1)&#215;5): $-2x=-300 \implies x=150$;&ensp; $y=250$<br><br>
+      Jadi penonton kelas I $= \mathbf{150}$ dan kelas II $= \mathbf{250}$ orang.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;">Pembilang suatu pecahan ditambah 1 dan penyebutnya dikurangi 3 menghasilkan $\frac{1}{2}$. Jika penyebutnya ditambah 1 (pembilang tetap), hasilnya $\frac{1}{5}$. Tentukan pecahan tersebut!</p>
+    </div>
+    <div class="penyelesaian">
+      $$\frac{a+1}{b-3}=\frac{1}{2} \implies 2a-b=-5 \quad\cdots(1)$$
+      $$\frac{a}{b+1}=\frac{1}{5} \implies 5a-b=1 \quad\cdots(2)$$
+      $(2)-(1)$: $3a=6 \implies a=2$;&ensp; dari (1): $b=9$<br><br>
+      Jadi pecahan tersebut adalah $\dfrac{2}{9}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">Lima tahun yang lalu umur Ali sama dengan tiga kali umur Wati. Lima tahun kemudian, umur Ali menjadi dua kali umur Wati. Berapakah umur Ali dan Wati sekarang?</p>
+    </div>
+    <div class="penyelesaian">
+      Lima tahun lalu: $A-3W=-10 \quad\cdots(1)$<br>
+      Lima tahun kemudian: $A-2W=5 \quad\cdots(2)$<br><br>
+      $(2)-(1)$: $W=15$ tahun;&ensp; dari (2): $A=35$ tahun<br><br>
+      Jadi umur Ali $\mathbf{35}$ tahun dan Wati $\mathbf{15}$ tahun.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 23</div>
+      <p style="margin:0;font-size:.9rem;">Enam tahun yang lalu jumlah umur ayah dan ibu sama dengan 54 tahun. Sekarang umur ayah adalah $\frac{6}{5}$ dari umur ibu. Tentukan masing-masing umur ayah dan ibu lima tahun yang akan datang!</p>
+    </div>
+    <div class="penyelesaian">
+      $A+B=66 \quad\cdots(1)$ &ensp; dan &ensp; $5A-6B=0 \quad\cdots(2)$<br><br>
+      Eliminasi $A$ (pers. (1)&#215;5 &#8722; pers. (2)): $11B=330 \implies B=30$;&ensp; $A=36$<br><br>
+      Lima tahun kemudian: ayah $=\mathbf{41}$ tahun;&ensp; ibu $=\mathbf{35}$ tahun.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Keran A dan B bersama-sama mengisi bak dalam 6 menit. Laju keran A adalah $\frac{2}{3}$ kali laju keran B. Tentukan waktu masing-masing keran mengisi bak secara mandiri!</p>
+    </div>
+    <div class="penyelesaian">
+      $p+q=\tfrac{1}{6}$ dan $p=\tfrac{2}{3}q$. Substitusi:
+      $$\tfrac{5}{3}q=\tfrac{1}{6} \implies q=\tfrac{1}{10};\quad p=\tfrac{1}{15}$$
+      Verifikasi: $\tfrac{1}{15}+\tfrac{1}{10}=\tfrac{1}{6}$ &#10003;<br><br>
+      Jadi keran A $= \mathbf{15}$ menit dan keran B $= \mathbf{10}$ menit.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 25</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Kantin menjual paket nasi ayam dan nasi ikan. Senin: 5 nasi ayam + 3 nasi ikan = Rp87.000. Selasa: 3 nasi ayam + 7 nasi ikan = Rp99.000.<br>
+      a. Tentukan harga masing-masing paket!<br>
+      b. Rabu target Rp120.000 dan terjual 6 nasi ayam, berapa nasi ikan?<br>
+      c. Kamis: diskon 10% nasi ikan, total 10 paket perbandingan 3:2. Berapa pendapatan?</p>
+    </div>
+    <div class="penyelesaian">
+      $$\begin{cases} 5x+3y=87000 \\ 3x+7y=99000 \end{cases}$$
+      Eliminasi $x$ (&#215;3 dan &#215;5): $-26y=-234000 \implies y=9000$;&ensp; substitusi: $x=12000$<br><br>
+      <strong>a.</strong> Nasi ayam $= \mathbf{Rp12.000}$, nasi ikan $= \mathbf{Rp9.000}$.<br><br>
+      <strong>b.</strong> $6(12000)+n(9000)=120000 \implies n\approx5{,}3$. Minimal $\mathbf{6}$ paket nasi ikan.<br><br>
+      <strong>c.</strong> 6 nasi ayam + 4 nasi ikan (diskon 10% = Rp8.100).<br>
+      Pendapatan $= 6(12000)+4(8100) = 72000+32400 = \mathbf{Rp104.400}$.
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan B</div>
+      <ol class="soal-list">
+        <li>Tentukan penyelesaian sistem persamaan $4x + 3y = 10$ dan $2x - y = 0$ menggunakan metode eliminasi!</li>
+        <li>Tentukan penyelesaian sistem persamaan $3x - 2y = 4$ dan $5x + y = 21$ menggunakan metode substitusi!</li>
+        <li>Sebuah angkutan memuat 48 penumpang (dewasa dan anak-anak). Tiket dewasa Rp12.000 dan tiket anak-anak Rp7.000. Total pendapatan Rp451.000. Tentukan banyak masing-masing penumpang!</li>
+        <li>Tentukan nilai $a$ agar sistem persamaan berikut memiliki <strong>tak hingga banyak penyelesaian</strong>: $\begin{cases} 6x+ay=9 \\ 4x+3y=6 \end{cases}$</li>
+        <li>Di sebuah tempat parkir terdapat 60 kendaraan (roda dua dan roda empat) dengan total roda 160 buah. Tarif motor Rp3.000 dan mobil Rp7.000. Tentukan total pendapatan saat semua kendaraan keluar!</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <!-- ═══ C. SPLTV ══════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Sistem Persamaan Linear Tiga Variabel (SPLTV)</h2>
+
+    <h3 class="subsection-title">1. Persamaan Linear Tiga Variabel (PLTV)</h3>
+    <p>PLTV adalah persamaan yang memuat tiga variabel dengan pangkat tertinggi satu. Secara geometris, satu PLTV membentuk sebuah <strong>bidang datar</strong> dalam ruang tiga dimensi.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Bentuk Umum PLTV &amp; SPLTV</div>
+      <p>PLTV: $\quad ax + by + cz = d, \quad a,b,c \neq 0$</p>
+      <p>SPLTV:</p>
+      <div class="math-block">$$\begin{cases} a_1 x + b_1 y + c_1 z = d_1 \\ a_2 x + b_2 y + c_2 z = d_2 \\ a_3 x + b_3 y + c_3 z = d_3 \end{cases}$$</div>
+    </div>
+
+    <h3 class="subsection-title">2. Metode Penyelesaian SPLTV</h3>
+    <p>Strategi utama: <strong>reduksi bertahap</strong> &mdash; eliminasi satu variabel dari dua pasang persamaan sehingga terbentuk SPLDV, selesaikan SPLDV, lalu substitusi akhir.</p>
+
+    <div class="box box-catatan">
+      <div class="box-label">&#9888; Tips</div>
+      <p style="margin:0;font-size:.9rem;">Pilih variabel dengan koefisien $1$, $-1$, atau yang sama untuk dieliminasi terlebih dahulu agar perhitungan menjadi lebih sederhana.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian sistem persamaan: $x + 3y - 3z = -7$,&ensp; $2x - 2y + z = 8$,&ensp; $2x + y + z = 5$</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>L1 &mdash; Eliminasi $x$ dari (2) dan (3):</strong>
+      $$2x-2y+z=8 \;\text{dan}\; 2x+y+z=5 \implies -3y=3 \implies y=-1$$
+      <strong>L2 &mdash; Eliminasi $x$ dari (1)&#215;2 dikurangi (2):</strong>
+      $$2x+6y-6z=-14 \;\text{dan}\; 2x-2y+z=8 \implies 8y-7z=-22$$
+      <strong>L3 &mdash; Substitusi $y=-1$:</strong> $-8-7z=-22 \implies z=2$<br>
+      <strong>L4 &mdash; Substitusi $y=-1$, $z=2$ ke (1):</strong> $x-3-6=-7 \implies x=2$<br><br>
+      Jadi $\text{HP} = \{(2,\,-1,\,2)\}$. Verifikasi: $(1):-7$ &#10003;&ensp; $(2):8$ &#10003;&ensp; $(3):5$ &#10003;
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 27</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian sistem persamaan: $2x + y + 3z = 1$,&ensp; $2x - 3y + 4z = -5$,&ensp; $x + 2y - z = 7$</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>L1 &mdash; Eliminasi $x$ dari (1)&#8722;(2):</strong> $4y-z=6 \quad\cdots(4)$<br>
+      <strong>L2 &mdash; Eliminasi $x$ dari (1) dan 2&#215;(3):</strong> $-3y+5z=-13 \quad\cdots(5)$<br>
+      <strong>L3 &mdash; Dari (4)&#215;5 + (5):</strong> $17y=17 \implies y=1$;&ensp; dari (4): $z=-2$<br>
+      <strong>L4 &mdash; Dari (1):</strong> $2x+1-6=1 \implies x=3$<br><br>
+      Jadi $\text{HP} = \{(3,\,1,\,-2)\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian sistem persamaan: $2x + 3y - 3z = 10$,&ensp; $2x - y + 2z = 1$,&ensp; $4x + 4y + z = 11$</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>L1 &mdash; Eliminasi $z$ dari (1) dan (3)&#215;3:</strong> $14x+15y=43 \quad\cdots(4)$<br>
+      <strong>L2 &mdash; Eliminasi $z$ dari (2) dan (3)&#215;2:</strong> $-6x-9y=-21 \implies 2x+3y=7 \quad\cdots(5)$<br>
+      <strong>L3 &mdash; Dari (4) dan (5)&#215;7:</strong> $-6y=-6 \implies y=1$;&ensp; dari (5): $x=2$<br>
+      <strong>L4 &mdash; Dari (1):</strong> $4+3-3z=10 \implies z=-1$<br><br>
+      Jadi $\text{HP} = \{(2,\,1,\,-1)\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 29</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$, $y$, dan $z$ dari: $\dfrac{1}{x}+\dfrac{2}{y}-\dfrac{1}{z}=1$,&ensp; $\dfrac{2}{x}-\dfrac{1}{y}+\dfrac{1}{z}=3$,&ensp; $\dfrac{1}{x}+\dfrac{1}{y}+\dfrac{1}{z}=2$</p>
+    </div>
+    <div class="penyelesaian">
+      Misalkan $p=\tfrac{1}{x}$, $q=\tfrac{1}{y}$, $r=\tfrac{1}{z}$:
+      $$\begin{cases} p+2q-r=1 \\ 2p-q+r=3 \\ p+q+r=2 \end{cases}$$
+      $(1)+(2)$: $3p+q=4$;&ensp; $(2)-(3)$: $p-2q=1 \implies p=1+2q$<br>
+      Substitusi: $3(1+2q)+q=4 \implies q=\tfrac{1}{7}$;&ensp; $p=\tfrac{9}{7}$;&ensp; $r=\tfrac{4}{7}$<br><br>
+      Jadi $x=\dfrac{7}{9}$,&ensp; $y=7$,&ensp; $z=\dfrac{7}{4}$.
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">&#9888; Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Teknik substitusi variabel seperti $p=\dfrac{1}{x}$ sangat berguna untuk menyederhanakan sistem persamaan yang melibatkan variabel dalam bentuk pecahan. Sistem tersebut <strong>bukan</strong> linear dalam $x, y, z$, namun menjadi <strong>linear</strong> dalam $p, q, r$ setelah substitusi.</p>
+    </div>
+
+    <h3 class="subsection-title">3. Penerapan SPLTV dalam Soal Cerita</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 30</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah taman segitiga memiliki keliling 36 m. Sisi pertama 4 m lebih panjang dari sisi kedua. Sisi ketiga sama dengan dua kali sisi kedua dikurangi 2 m. Tentukan panjang masing-masing sisi!</p>
+    </div>
+    <div class="penyelesaian">
+      $x=y+4$;&ensp; $z=2y-2$. Substitusi ke $x+y+z=36$:
+      $$(y+4)+y+(2y-2)=36 \implies 4y=34 \implies y=8{,}5$$
+      $x=12{,}5$;&ensp; $z=15$. Verifikasi: $12{,}5+8{,}5+15=36$ &#10003;<br><br>
+      Jadi sisi pertama $=\mathbf{12{,}5}$ m, sisi kedua $=\mathbf{8{,}5}$ m, sisi ketiga $=\mathbf{15}$ m.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 31</div>
+      <p style="margin:0;font-size:.9rem;">Toko A: 2 kg beras + 1 kg gula + 1 kg minyak = Rp47.000. Toko B: 1 kg beras + 2 kg gula + 1 kg minyak = Rp43.000. Toko C: 1 kg beras + 1 kg gula + 2 kg minyak = Rp45.000. Tentukan harga tiap kg!</p>
+    </div>
+    <div class="penyelesaian">
+      $(1)-(2)$: $x-y=4000$;&ensp; $(2)-(3)$: $y-z=-2000 \implies z=y+2000$<br>
+      Dari $x=y+4000$, substitusi ke (1): $3y+z=39000$;&ensp; lalu $y=9250$, $x=13250$, $z=11250$<br><br>
+      Jadi beras Rp13.250/kg, gula Rp9.250/kg, minyak Rp11.250/kg.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 32</div>
+      <p style="margin:0;font-size:.9rem;">Jumlah tiga bilangan adalah 60. Bilangan kedua = $2\times$ bilangan pertama $- 6$. Bilangan ketiga = bilangan pertama + bilangan kedua $- 6$. Tentukan ketiga bilangan!</p>
+    </div>
+    <div class="penyelesaian">
+      $y=2x-6$;&ensp; $z=x+y-6=3x-12$. Substitusi ke $x+y+z=60$:
+      $$6x-18=60 \implies x=13$$
+      $y=20$,&ensp; $z=27$. Verifikasi: $13+20+27=60$ &#10003;<br><br>
+      Jadi ketiga bilangan adalah $\mathbf{13}$, $\mathbf{20}$, dan $\mathbf{27}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 33</div>
+      <p style="margin:0;font-size:.9rem;">Seorang pengusaha menyimpan modal di tiga bank. Modal bank A = 2&#215; modal bank B. Modal bank C = modal bank A &#8722; Rp5.000.000. Total modal Rp55.000.000. Tentukan modal di masing-masing bank!</p>
+    </div>
+    <div class="penyelesaian">
+      $x=2y$;&ensp; $z=x-5=2y-5$. Substitusi ke $x+y+z=55$ (juta):
+      $$5y-5=55 \implies y=12$$
+      $x=24$,&ensp; $z=19$ juta rupiah.<br><br>
+      Jadi bank A $=$ Rp24.000.000, bank B $=$ Rp12.000.000, bank C $=$ Rp19.000.000.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 34</div>
+      <p style="margin:0;font-size:.9rem;">Pak Budi dan Pak Candra (tanpa Pak Dodi) menyelesaikan proyek dalam 12 hari. Pak Budi dan Pak Dodi (tanpa Pak Candra) dalam 10 hari. Ketiganya bersama dalam 6 hari. Berapa hari masing-masing menyelesaikan sendiri?</p>
+    </div>
+    <div class="penyelesaian">
+      Misalkan $p=\tfrac{1}{x}$, $q=\tfrac{1}{y}$, $r=\tfrac{1}{z}$ (bagian per hari):
+      $$\begin{cases} p+q=\tfrac{1}{12} & \cdots(1) \\ p+r=\tfrac{1}{10} & \cdots(2) \\ p+q+r=\tfrac{1}{6} & \cdots(3) \end{cases}$$
+      $(3)-(1)$: $r=\tfrac{1}{12}$;&ensp; dari (2): $p=\tfrac{1}{60}$;&ensp; dari (1): $q=\tfrac{1}{15}$<br><br>
+      Verifikasi: $\tfrac{1}{60}+\tfrac{1}{15}+\tfrac{1}{12}=\tfrac{1+4+5}{60}=\tfrac{1}{6}$ &#10003;<br><br>
+      Jadi Pak Budi $=\mathbf{60}$ hari, Pak Candra $=\mathbf{15}$ hari, Pak Dodi $=\mathbf{12}$ hari.
+    </div>
+
+    <h3 class="subsection-title">4. Kondisi Khusus pada SPLTV</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 35</div>
+      <p style="margin:0;font-size:.9rem;">Periksa apakah sistem berikut memiliki penyelesaian: $x+y+z=6$,&ensp; $2x+2y+2z=10$,&ensp; $x-y+z=2$</p>
+    </div>
+    <div class="penyelesaian">
+      Persamaan (2): $x+y+z=5$. Namun persamaan (1): $x+y+z=6$. Karena $5 \neq 6$, terdapat <strong>kontradiksi</strong>.<br><br>
+      Sistem ini <strong>tidak memiliki penyelesaian</strong> (inkonsisten).
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 36</div>
+      <p style="margin:0;font-size:.9rem;">Periksa apakah sistem berikut memiliki satu, tak hingga, atau tidak ada penyelesaian: $x+y+z=6$,&ensp; $2x+2y+2z=12$,&ensp; $x-y+z=2$</p>
+    </div>
+    <div class="penyelesaian">
+      Persamaan (2) identik dengan persamaan (1) setelah disederhanakan &#8658; hanya dua persamaan bebas secara linear.<br><br>
+      Eliminasi $(1)-(3)$: $2y=4 \implies y=2$. Dari (1): $x+z=4 \implies z=4-x$ untuk sembarang $x$.<br><br>
+      Karena eliminasi menghasilkan $0=0$, sistem memiliki <strong>tak hingga penyelesaian</strong>:
+      $$\{(x,\,2,\,4-x) \mid x \in \mathbb{R}\}$$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan C</div>
+      <ol class="soal-list">
+        <li>Tentukan penyelesaian sistem persamaan: $x+y-z=2$,&ensp; $2x-y+3z=9$,&ensp; $x+2y-z=3$.</li>
+        <li>Tentukan penyelesaian sistem persamaan: $3x+y-2z=1$,&ensp; $x-2y+z=-3$,&ensp; $2x+3y-z=4$.</li>
+        <li>Jumlah tiga bilangan adalah 100. Bilangan pertama ditambah dua kali bilangan kedua sama dengan 80. Dua kali bilangan pertama dikurangi bilangan ketiga sama dengan 10. Tentukan ketiga bilangan tersebut!</li>
+        <li>Tentukan nilai $p$, $q$, dan $r$ dari sistem: $\dfrac{2}{p}-\dfrac{1}{q}+\dfrac{3}{r}=4$,&ensp; $\dfrac{1}{p}+\dfrac{2}{q}-\dfrac{1}{r}=2$,&ensp; $\dfrac{1}{p}+\dfrac{1}{q}+\dfrac{1}{r}=3$.</li>
+        <li>Pedagang menjual apel, mangga, dan jeruk. Harga: 2 apel+1 mangga+3 jeruk=Rp79.000;&ensp; 1 apel+3 mangga+2 jeruk=Rp82.000;&ensp; 3 apel+2 mangga+1 jeruk=Rp73.000. Tentukan harga per kg masing-masing!</li>
+        <li>Keran A, B, dan C bersama mengisi kolam dalam 4 jam. Keran A dan B bersama mengisi dalam 6 jam. Keran B dan C bersama mengisi dalam 5 jam. Tentukan waktu masing-masing keran jika bekerja sendiri, dan periksa hasilnya!</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <!-- ═══ D. TABEL RINGKASAN ════════════════════════════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Tabel Ringkasan</h2>
+
+    <h3 class="subsection-title">1. Persamaan Linear: Jenis dan Bentuk Umum</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Jenis</th><th>Bentuk Umum</th><th>Jml. Penyelesaian</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>PLSV</td><td>$ax+b=0$, $a\neq 0$</td><td>Selalu <strong>tepat satu</strong></td><td>$x=-\frac{b}{a}$;&ensp; HP$=\{x_0\}$</td></tr>
+          <tr><td>PLDV</td><td>$ax+by=c$, $a,b\neq 0$</td><td>Tak hingga</td><td>Satu persamaan &#8594; satu garis lurus</td></tr>
+          <tr><td>SPLDV</td><td>Dua PLDV bersamaan</td><td>$0$, $1$, atau $\infty$</td><td>Bergantung posisi relatif dua garis</td></tr>
+          <tr><td>PLTV</td><td>$ax+by+cz=d$, $a,b,c\neq 0$</td><td>Tak hingga</td><td>Satu persamaan &#8594; satu bidang datar</td></tr>
+          <tr><td>SPLTV</td><td>Tiga PLTV bersamaan</td><td>$0$, $1$, atau $\infty$</td><td>Bergantung perpotongan tiga bidang</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">2. Metode Penyelesaian SPLDV</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Metode</th><th>Langkah Utama</th><th>Kapan Digunakan</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Grafik</strong></td><td>Gambar kedua garis; titik potong = penyelesaian</td><td>Membangun intuisi visual; kurang akurat untuk solusi non-bulat</td></tr>
+          <tr><td><strong>Substitusi</strong></td><td>Nyatakan satu variabel, substitusikan ke persamaan lain</td><td>Cocok jika ada koefisien $=1$ atau $-1$</td></tr>
+          <tr><td><strong>Eliminasi</strong></td><td>Samakan koefisien, jumlah/kurangkan kedua persamaan</td><td>Cocok jika koefisien mudah disamakan</td></tr>
+          <tr><td><strong>Campuran</strong></td><td>Eliminasi untuk satu variabel, substitusi untuk yang kedua</td><td>Paling umum di soal ujian; fleksibel</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">3. Kondisi Khusus SPLDV</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Kondisi</th><th>Syarat Rasio</th><th>Geometri</th><th>Hasil Eliminasi</th></tr></thead>
+        <tbody>
+          <tr><td>Tepat satu penyelesaian</td><td>$\frac{a_1}{a_2}\neq\frac{b_1}{b_2}$</td><td>Dua garis <strong>berpotongan</strong></td><td>Nilai $x,y$ spesifik</td></tr>
+          <tr><td>Tidak ada penyelesaian</td><td>$\frac{a_1}{a_2}=\frac{b_1}{b_2}\neq\frac{c_1}{c_2}$</td><td>Dua garis <strong>sejajar</strong></td><td>$0=k$, $k\neq 0$</td></tr>
+          <tr><td>Tak hingga penyelesaian</td><td>$\frac{a_1}{a_2}=\frac{b_1}{b_2}=\frac{c_1}{c_2}$</td><td>Dua garis <strong>berimpit</strong></td><td>$0=0$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">4. Metode Penyelesaian SPLTV</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>No.</th><th>Langkah</th><th>Penjelasan</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Eliminasi Tahap I</strong></td><td>Pilih satu variabel; eliminasi pada dua pasang persamaan berbeda &#8594; hasilkan SPLDV</td></tr>
+          <tr><td>2</td><td><strong>Selesaikan SPLDV</strong></td><td>Eliminasi, substitusi, atau campuran</td></tr>
+          <tr><td>3</td><td><strong>Substitusi Akhir</strong></td><td>Masukkan dua nilai yang ditemukan ke salah satu persamaan awal</td></tr>
+          <tr><td>4</td><td><strong>Verifikasi</strong></td><td>Cek ketiga nilai ke semua persamaan awal</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">5. Kondisi Khusus SPLTV</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Kondisi</th><th>Indikator Aljabar</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Tepat satu penyelesaian</td><td>Eliminasi menghasilkan nilai $x,y,z$ spesifik</td><td>Sistem konsisten dan bebas</td></tr>
+          <tr><td>Tidak ada penyelesaian</td><td>Eliminasi menghasilkan $0=k$, $k\neq 0$</td><td>Sistem inkonsisten; ada kontradiksi</td></tr>
+          <tr><td>Tak hingga penyelesaian</td><td>Eliminasi menghasilkan $0=0$</td><td>Sistem konsisten bergantung</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">6. Teknik Substitusi Variabel (Bentuk Tidak Standar)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Bentuk Asli</th><th>Substitusi</th><th>Hasil</th></tr></thead>
+        <tbody>
+          <tr><td>$\frac{a}{x}+\frac{b}{y}=c$</td><td>$u=\frac{1}{x}$, $v=\frac{1}{y}$</td><td>$au+bv=c$ (menjadi linear)</td></tr>
+          <tr><td>$\frac{a}{x-p}+\frac{b}{y-q}=c$</td><td>$u=\frac{1}{x-p}$, $v=\frac{1}{y-q}$</td><td>Pergeseran sebelum substitusi variabel baru</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">7. Langkah Pemodelan Soal Cerita</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>No.</th><th>Langkah</th><th>Penjelasan</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Tetapkan variabel</strong></td><td>Tentukan simbol untuk setiap besaran yang belum diketahui</td></tr>
+          <tr><td>2</td><td><strong>Buat model</strong></td><td>Terjemahkan informasi soal menjadi sistem persamaan linear</td></tr>
+          <tr><td>3</td><td><strong>Selesaikan</strong></td><td>Pilih metode yang paling efisien</td></tr>
+          <tr><td>4</td><td><strong>Interpretasi</strong></td><td>Pastikan jawaban sesuai konteks (jumlah barang harus bilangan bulat positif)</td></tr>
+          <tr><td>5</td><td><strong>Verifikasi</strong></td><td>Substitusikan kembali ke persamaan asal untuk memeriksa kebenaran</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+
+  <!-- KONEKSI KE MATERI BERIKUTNYA -->
+  <div class="koneksi-wrap">
+    <div class="koneksi-header">
+      <span class="koneksi-icon">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 7h10M8 3l4 4-4 4"/>
+        </svg>
+      </span>
+      <span class="koneksi-label">Koneksi ke Materi Berikutnya</span>
+    </div>
+    <div class="koneksi-body">
+      <p class="koneksi-text">
+        Sistem Persamaan Linear adalah <strong>fondasi</strong> Program Linear. Kemampuan memodelkan situasi nyata ke dalam persamaan dan menemukan solusinya akan sangat dibutuhkan saat membahas optimasi pada Program Linear.
+      </p>
+      <div class="koneksi-comparison">
+        <div class="koneksi-card current">
+          <div class="koneksi-card-label">Sekarang</div>
+          <div class="koneksi-card-formula">$\begin{cases}ax+by=c\\dx+ey=f\end{cases}$</div>
+          <div class="koneksi-card-desc">Mencari solusi<br>persis dari sistem</div>
+        </div>
+        <div class="koneksi-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10h12M12 5l5 5-5 5"/></svg>
+        </div>
+        <div class="koneksi-card next">
+          <div class="koneksi-card-label">Berikutnya</div>
+          <div class="koneksi-card-formula">$ax+by \leq c$</div>
+          <div class="koneksi-card-desc">Daerah penyelesaian<br>&amp; nilai optimum</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <div class="footer-nav">
+      <a class="nav-btn" href="../eksponen/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Eksponen
+      </a>
+      <a class="nav-btn" href="../program-linear/">
+        Program Linear
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <div class="footer-actions">
+      <a class="nav-btn primary" href="#">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="10" height="10" rx="2"/><line x1="5" y1="5" x2="9" y2="5"/><line x1="5" y1="7.5" x2="8" y2="7.5"/><line x1="5" y1="10" x2="7" y2="10"/></svg>
+        Kerjakan Latihan Soal SPL
+        <span class="coming-soon">Segera</span>
+      </a>
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Giscus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi ini? Tulis di kolom diskusi. Login dengan akun GitHub gratis.</p>
+    <div class="giscus-wrap">
+      <div class="giscus-placeholder">
+        <div class="ph-icon">&#128172;</div>
+        <p>
+          Sistem komentar menggunakan <strong>Giscus</strong> &mdash; gratis, tanpa iklan, berbasis GitHub Discussions.<br><br>
+          Untuk mengaktifkan, konfigurasikan repo di <code>giscus.app</code> lalu tempel script-nya di sini.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── Scroll progress bar + scroll-to-top ──
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+// ── TOC Dropdown ──
+function toggleTOC() {
+  document.getElementById('tocDropdown').classList.toggle('open');
+}
+function closeTOC() {
+  document.getElementById('tocDropdown').classList.remove('open');
+}
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+// ── Bookmark ──
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ──
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Sistem Persamaan Linear \u2014 EksaktaLab',
+      text:  'Belajar Sistem Persamaan Linear di EksaktaLab, lengkap dengan 36 contoh soal dan kunci jawaban!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+
+// ── SHARED HELPERS ──
+const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11"><polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) {
+      MathJax.typesetPromise([typesetEl]).catch(() => {});
+    }
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── 1. BOX RUMUS \u2192 accordion ──
+  document.querySelectorAll('.box.box-rumus').forEach((box) => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[\u2022\s]+/, '').trim() : 'Rumus';
+    let bodyHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body">
+        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
+      </div>`;
+    const header    = wrap.querySelector('.rumus-header');
+    const statusEl  = wrap.querySelector('.rumus-status');
+    const bodyInner = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+    box.replaceWith(wrap);
+  });
+
+  // ── 2. BOX CONTOH \u2192 accordion ──
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+    let qHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+    const sib       = box.nextElementSibling;
+    const hasSolve  = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header">
+            <span class="solve-dot"></span>
+            <span class="solve-title">Penyelesaian</span>
+          </div>
+          <div class="penyelesaian-inner">
+            ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
+          </div>
+        </div>
+      </div>`;
+    const header = wrap.querySelector('.contoh-header');
+    const pi     = wrap.querySelector('.penyelesaian-inner');
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+    });
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+  // ── 3. Buka/Tutup Semua per section ──
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+    const updateBtn = () => {
+      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
+    };
+    updateBtn();
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+  // ── 4. SOAL LATIHAN \u2192 accordion kunci jawaban ──
+  const jawabanData = {
+    0: [
+      { jawaban: `$\\text{HP} = \\{4\\}$<br><small>$7x-3x=11+5 \\Rightarrow 4x=16 \\Rightarrow x=4$</small>` },
+      { jawaban: `$\\text{HP} = \\{8\\}$<br><small>$3n-6=n+10 \\Rightarrow 2n=16 \\Rightarrow n=8$</small>` },
+      { jawaban: `$\\text{HP} = \\left\\{\\dfrac{27}{7}\\right\\}$<br><small>$10x-15-3x-12=0 \\Rightarrow 7x=27$</small>` },
+      { jawaban: `$\\text{HP} = \\{2\\}$<br><small>Kalikan dengan 12: $3(3x-2)+4(x+1)=24 \\Rightarrow 13x=26$</small>` },
+      { jawaban: `$x+5 = -5$<br><small>$6x+8=4x-12 \\Rightarrow x=-10$, maka $x+5=-5$</small>` },
+      { jawaban: `Ketiga bilangan: $24$, $25$, $26$<br><small>$3x+3=75 \\Rightarrow x=24$</small>` },
+      { jawaban: `$L = \\dfrac{1647}{16} \\approx 102{,}94$ cm$^2$<br><small>$2[(3x-2)+(x+1)]=44 \\Rightarrow x=\\tfrac{23}{4}$; $p=\\tfrac{61}{4}$, $l=\\tfrac{27}{4}$, $L=\\tfrac{61\\times27}{16}$</small>` },
+      { jawaban: `$\\text{HP} = \\left\\{\\dfrac{12}{5}\\right\\}$<br><small>Kalikan dengan 12: $6(2y-1)-4(y+3)=3(y-2) \\Rightarrow 5y=12$</small>` },
+      { jawaban: `Kapasitas tangki $= 90$ liter<br><small>Setelah berkebun: $\\tfrac{2}{3}x$. Setelah motor: $\\tfrac{2}{3}x\\cdot\\tfrac{3}{4}=\\tfrac{1}{2}x=45 \\Rightarrow x=90$</small>` },
+    ],
+    1: [
+      { jawaban: `$\\text{HP} = \\{(1,\\,2)\\}$<br><small>Eliminasi $y$ (pers.(1)+3&#215;pers.(2)): $10x=10 \\Rightarrow x=1$; substitusi: $y=2$</small>` },
+      { jawaban: `$\\text{HP} = \\left\\{\\left(\\dfrac{46}{13},\\,\\dfrac{43}{13}\\right)\\right\\}$<br><small>Dari (2): $y=21-5x$; substitusi ke (1): $13x=46$</small>` },
+      { jawaban: `Dewasa $= 23$ orang, anak-anak $= 25$ orang<br><small>$x+y=48$ dan $12x+7y=451$. Eliminasi: $-5x=-115 \\Rightarrow x=23$, $y=25$</small>` },
+      { jawaban: `$a = \\dfrac{9}{2}$<br><small>Syarat berimpit: $\\tfrac{6}{4}=\\tfrac{a}{3}=\\tfrac{9}{6} \\Rightarrow a=\\tfrac{9}{2}$</small>` },
+      { jawaban: `Total pendapatan $= \\text{Rp}260.000$<br><small>$x+y=60$ dan $2x+4y=160 \\Rightarrow y=20$ mobil, $x=40$ motor. Pendapatan $=40(3000)+20(7000)$</small>` },
+    ],
+    2: [
+      { jawaban: `$\\text{HP} = \\left\\{\\left(\\dfrac{13}{5},\\;1,\\;\\dfrac{8}{5}\\right)\\right\\}$<br><small>$(3)-(1)$: $y=1$. Eliminasi $z$ dari (1)&#215;3+(2): $5x+2=15 \\Rightarrow x=\\tfrac{13}{5}$. Dari (1): $z=\\tfrac{8}{5}$</small>` },
+      { jawaban: `$\\text{HP} = \\left\\{\\left(-\\dfrac{1}{7},\\;\\dfrac{10}{7},\\;0\\right)\\right\\}$<br><small>$(2)+(3)$: $3x+y=1$. Dari (1)+(2)&#215;2: $5x-3y=-5$. Selesaikan: $x=-\\tfrac{1}{7}$, $y=\\tfrac{10}{7}$, $z=0$</small>` },
+      { jawaban: `$x=28$, $y=26$, $z=46$<br><small>Dari (2): $x=80-2y$; dari (3): $z=150-4y$. Substitusi ke (1): $5y=130 \\Rightarrow y=26$</small>` },
+      { jawaban: `$p=1$, $q=1$, $r=1$<br><small>Misalkan $a=\\tfrac{1}{p}$, $b=\\tfrac{1}{q}$, $c=\\tfrac{1}{r}$. Eliminasi $a$: $b=c$. Lanjut: $c=1$, $b=1$, $a=1$</small>` },
+      { jawaban: `Apel Rp10.000/kg, Mangga Rp14.000/kg, Jeruk Rp15.000/kg<br><small>Eliminasi $x$ dari (1)&#8722;(2)&#215;2: $5y+z=85$. Dari (1)&#215;3&#8722;(3)&#215;2: $-y+7z=91$. SPLDV: $y=14$, $z=15$, $x=10$</small>` },
+      { jawaban: `Keran A $= 20$ jam, Keran B $= \\dfrac{60}{7} \\approx 8{,}57$ jam, Keran C $= 12$ jam<br><small>$r=\\tfrac{1}{4}-\\tfrac{1}{6}=\\tfrac{1}{12}$; $q=\\tfrac{1}{5}-\\tfrac{1}{12}=\\tfrac{7}{60}$; $p=\\tfrac{1}{6}-\\tfrac{7}{60}=\\tfrac{1}{20}$. Verifikasi: $\\tfrac{1}{20}+\\tfrac{7}{60}+\\tfrac{1}{12}=\\tfrac{1}{4}$ &#10003;</small>` },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+    const items   = [...list.querySelectorAll('li')];
+    const newList = document.createElement('div');
+    newList.className = 'soal-list-accordion';
+    items.forEach((li, i) => {
+      const jawaban = answers[i]?.jawaban || '';
+      const item = document.createElement('div');
+      item.className = 'soal-item';
+      item.innerHTML = `
+        <div class="soal-item-header" role="button" tabindex="0">
+          <span class="soal-num">${i+1}</span>
+          <span class="soal-text">${li.innerHTML}</span>
+          <button class="soal-key-btn" tabindex="-1">Kunci</button>
+        </div>
+        <div class="soal-answer">
+          <div class="soal-answer-inner">
+            <div class="soal-answer-label">Jawaban</div>
+            ${jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
+          </div>
+        </div>`;
+      const header = item.querySelector('.soal-item-header');
+      const toggle = () => {
+        const open = item.classList.toggle('open');
+        if (open && window.MathJax) {
+          MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
+        }
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+      newList.appendChild(item);
+    });
+    list.replaceWith(newList);
+  });
+
+});
+</script>
+
+<!-- FOOTER -->
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+</body>
+</html>
