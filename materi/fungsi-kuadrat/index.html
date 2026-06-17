@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id" data-theme="light">
 <head>
 <script src="../../assets/js/theme.js"></script>
@@ -1689,42 +1689,32 @@ window.MathJax = {
   <div class="komentar-section">
     <div class="komentar-header">
       <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
-      <span class="komentar-badge">Giscus</span>
+      <span class="komentar-badge">Disqus</span>
     </div>
-    <p class="komentar-desc">Punya pertanyaan tentang materi Fungsi Kuadrat? Tulis di kolom diskusi. Login dengan akun GitHub gratis.</p>
-    <div class="giscus-wrap">
-      <!-- 
-        CARA AKTIVASI GISCUS:
-        1. Buka https://giscus.app
-        2. Masukkan repo GitHub kamu (misal: username/eksaktalab)
-        3. Aktifkan GitHub Discussions di repo
-        4. Copy script yang dihasilkan, ganti placeholder di bawah ini
-      -->
-      <div class="giscus-placeholder">
-        <div class="ph-icon">💬</div>
-        <p>
-          Sistem komentar menggunakan <strong>Giscus</strong> — gratis, tanpa iklan, berbasis GitHub Discussions.<br><br>
-          Untuk mengaktifkan, konfigurasikan repo di <code>giscus.app</code> lalu tempel script-nya di sini.
-        </p>
-      </div>
-      <!-- Setelah dikonfigurasi, hapus div.giscus-placeholder di atas dan paste script Giscus di sini: -->
-      <!-- <script src="https://giscus.app/client.js"
-        data-repo="USERNAME/REPO"
-        data-repo-id="REPO_ID"
-        data-category="Announcements"
-        data-category-id="CATEGORY_ID"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="id"
-        crossorigin="anonymous"
-        async>
-      </script> -->
-    </div>
-  </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi Fungsi Kuadrat? Tulis di kolom diskusi. Login dengan akun Google.</p>
+        <div id="disqus_thread"></div>
+    <script>
+    (function() {
+      var disqusLoaded = false;
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !disqusLoaded) {
+          disqusLoaded = true;
+          observer.disconnect();
+          var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://eksaktalab.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      }, { threshold: 0.1 });
+      var thread = document.getElementById('disqus_thread');
+      if (thread) observer.observe(thread);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
   <!-- ============== SITE FOOTER ============== -->
   
