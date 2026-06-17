@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Limit Fungsi – EksaktaLab</title>
+<meta name="description" content="Materi lengkap Limit Fungsi SMA: definisi limit, sifat-sifat limit, limit berhingga aljabar, limit tak hingga, dan limit trigonometri. Dilengkapi 36 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/limit-fungsi/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/limit-fungsi/">
+<meta property="og:title" content="Limit Fungsi – EksaktaLab">
+<meta property="og:description" content="Materi lengkap Limit Fungsi SMA: definisi, sifat, limit berhingga, limit tak hingga, dan trigonometri.">
+<meta property="og:site_name" content="EksaktaLab">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Limit Fungsi – EksaktaLab">
+<meta name="twitter:description" content="Materi lengkap Limit Fungsi SMA: definisi, sifat, limit berhingga, limit tak hingga, dan trigonometri.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Limit Fungsi","url":"https://lutfima11.github.io/eksaktalab/materi/limit-fungsi/","description":"Materi lengkap Limit Fungsi SMA: definisi limit, sifat-sifat, limit berhingga aljabar, limit tak hingga, dan limit trigonometri.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"educationalLevel":"SMA Kelas XI","inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Kalkulus"},{"@type":"ListItem","position":4,"name":"Limit Fungsi","item":"https://lutfima11.github.io/eksaktalab/materi/limit-fungsi/"}]}}</script>
+<style>
+th mjx-container { color: #fff !important; }
+th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
+/* Approach table */
+.approach-table { width:100%; border-collapse:collapse; font-size:.88rem; margin:.6rem 0; }
+.approach-table th, .approach-table td { border:1px solid var(--border); padding:.4rem .7rem; text-align:center; }
+.approach-table th { background:var(--surface-2); font-weight:600; }
+.approach-table .highlight { font-weight:700; color:var(--accent); }
+/* grafik-wrap */
+.grafik-wrap { overflow-x:auto; text-align:center; margin:.8rem 0; }
+.grafik-wrap svg { max-width:100%; height:auto; display:inline-block; }
+/* grafik pair */
+.grafik-pair { display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin:1rem 0; }
+.grafik-pair .grafik-wrap { flex:1; min-width:180px; max-width:320px; }
+/* limit row */
+.limit-row { display:flex; gap:1rem; flex-wrap:wrap; margin:.5rem 0; }
+.limit-row .box-rumus { flex:1; min-width:200px; }
+/* rules box */
+.rules-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:.8rem; margin:.5rem 0; }
+@media(max-width:600px){.rules-grid{grid-template-columns:1fr;}}
+/* kaidah cepat */
+.kaidah-box { display:flex; gap:1rem; flex-wrap:wrap; margin:.6rem 0; }
+.kaidah-item { flex:1; min-width:140px; border:1.5px solid var(--border); border-radius:6px; padding:.5rem .8rem; font-size:.88rem; text-align:center; }
+.kaidah-item strong { display:block; font-size:.8rem; color:var(--text-3); margin-bottom:.2rem; }
+ol.step-list { padding-left:1.4rem; line-height:1.9; }
+ol.step-list li { margin-bottom:.25rem; }
+</style>
+</head>
+<body>
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Limit Fungsi · 5 Sub-bab</div>
+        <a class="toc-menu-item" href="#pengantar" onclick="closeTOC()"><span class="toc-menu-badge">☆</span>Pengantar: Apa itu Limit?</a>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Limit Fungsi</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Limit Berhingga Fungsi Aljabar</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Limit di Tak Hingga</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Limit Fungsi Trigonometri</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Tabel Ringkasan</a>
+      </div>
+    </div>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a><span>/</span>
+    <a href="../../#materi">Materi</a><span>/</span>
+    <a href="../../#kalkulus">Kalkulus</a><span>/</span>
+    Limit Fungsi
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">BAB D · No.18</div>
+      <h1 class="materi-title">Limit Fungsi</h1>
+      <p class="materi-desc">Pelajari konsep dasar limit, syarat keberadaan limit, sifat-sifat limit, teknik menghitung limit berhingga dan tak hingga fungsi aljabar, serta limit fungsi trigonometri — fondasi seluruh kalkulus.</p>
+      <div class="materi-tags">
+        <span class="tag teal">Kelas XI</span>
+        <span class="tag">Kalkulus</span>
+        <span class="tag">5 Sub-bab</span>
+        <span class="tag">36 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#pengantar" data-num="☆">Pengantar: Apa itu Limit?</a></li>
+      <li><a href="#bagian-a" data-num="A">Limit Fungsi</a></li>
+      <li><a href="#bagian-b" data-num="B">Limit Berhingga Fungsi Aljabar</a></li>
+      <li><a href="#bagian-c" data-num="C">Limit Fungsi Aljabar di Tak Hingga</a></li>
+      <li><a href="#bagian-d" data-num="D">Limit Fungsi Trigonometri</a></li>
+      <li><a href="#bagian-e" data-num="E">Tabel Ringkasan</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══ PENGANTAR ═══════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--text-3);">★</span>Pengantar: Apa itu Limit?</h2>
+
+    <p>Bayangkan kamu berjalan mendekati sebuah tembok. Semakin dekat langkahmu, semakin jelas kamu bisa melihat tekstur temboknya — meskipun kamu belum menyentuhnya. Itulah inti dari <strong>limit</strong>: kita ingin tahu <em>ke mana</em> suatu nilai menuju, bukan apakah ia benar-benar sampai di sana.</p>
+
+    <p>Konsep limit adalah fondasi dari seluruh kalkulus. Tanpa limit, turunan (diferensial) dan integral tidak akan bisa didefinisikan dengan tepat. Limit menjawab pertanyaan: <em>"Jika $x$ mendekati suatu nilai tertentu, ke nilai berapakah $f(x)$ mendekati?"</em></p>
+
+    <h3 class="subsection-title">Ide Dasar</h3>
+
+    <p>Perhatikan fungsi $f(x) = \dfrac{x^2 - 4}{x - 2}$. Fungsi ini <strong>tidak terdefinisi</strong> di $x = 2$ karena menyebabkan pembagian oleh nol. Namun, perhatikan apa yang terjadi pada $f(x)$ saat $x$ <em>mendekati</em> 2:</p>
+
+    <!-- Tabel nilai pendekatan -->
+    <div style="overflow-x:auto;margin:.8rem 0;">
+      <table class="approach-table">
+        <thead><tr>
+          <th>$x$</th><th>1,90</th><th>1,99</th><th>1,999</th>
+          <th class="highlight">⋯ 2 ⋯</th>
+          <th>2,001</th><th>2,01</th><th>2,1</th>
+        </tr></thead>
+        <tbody><tr>
+          <th>$f(x)$</th><td>3,90</td><td>3,99</td><td>3,999</td>
+          <td class="highlight">⋯</td>
+          <td>4,001</td><td>4,01</td><td>4,1</td>
+        </tr></tbody>
+      </table>
+    </div>
+
+    <!-- Grafik f(x) = (x²-4)/(x-2) = x+2 dengan lubang di (2,4) -->
+    <div class="grafik-wrap">
+      <svg viewBox="0 0 280 210" width="280" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="px" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#555"/></marker>
+          <marker id="py" markerWidth="6" markerHeight="6" refX="3" refY="5" orient="auto"><path d="M0,0 L6,0 L3,6z" fill="#555"/></marker>
+        </defs>
+        <!-- grid -->
+        <g stroke="#e2e8f0" stroke-width="0.6">
+          <line x1="55" y1="10" x2="55" y2="195"/>
+          <line x1="95" y1="10" x2="95" y2="195"/>
+          <line x1="135" y1="10" x2="135" y2="195"/>
+          <line x1="175" y1="10" x2="175" y2="195"/>
+          <line x1="215" y1="10" x2="215" y2="195"/>
+          <line x1="15" y1="155" x2="265" y2="155"/>
+          <line x1="15" y1="115" x2="265" y2="115"/>
+          <line x1="15" y1="75" x2="265" y2="75"/>
+          <line x1="15" y1="35" x2="265" y2="35"/>
+        </g>
+        <!-- axes -->
+        <line x1="15" y1="195" x2="265" y2="195" stroke="#555" stroke-width="1.6" marker-end="url(#px)"/>
+        <line x1="15" y1="200" x2="15" y2="10" stroke="#555" stroke-width="1.6" marker-end="url(#py)"/>
+        <!-- axis labels -->
+        <text x="268" y="199" font-size="10" fill="#555">x</text>
+        <text x="9" y="10" font-size="10" fill="#555">y</text>
+        <text x="10" y="199" font-size="9" fill="#888">O</text>
+        <!-- tick marks x: 1,2,3,4 -->
+        <text x="55" y="207" font-size="9" fill="#777" text-anchor="middle">1</text>
+        <text x="95" y="207" font-size="9" fill="#777" text-anchor="middle">2</text>
+        <text x="135" y="207" font-size="9" fill="#777" text-anchor="middle">3</text>
+        <text x="175" y="207" font-size="9" fill="#777" text-anchor="middle">4</text>
+        <!-- tick marks y: 1,2,3,4,5 (scale: 40px per unit, origin at y=195) -->
+        <text x="10" y="158" font-size="9" fill="#777" text-anchor="end">1</text>
+        <text x="10" y="118" font-size="9" fill="#777" text-anchor="end">2</text>
+        <text x="10" y="78" font-size="9" fill="#777" text-anchor="end">3</text>
+        <text x="10" y="38" font-size="9" fill="#777" text-anchor="end">4</text>
+        <!-- f(x) = x+2 (scale: x→ 40px per unit from x=15; y→195-40y) -->
+        <!-- At x=0: y=2 → (15,115); At x=1.85: y=3.85 → (89,41) -->
+        <!-- At x=2.15: y=4.15 → (101,29); At x=3.8: y=5.8 → (167,-37) clip -->
+        <line x1="15" y1="115" x2="87" y2="42" stroke="#2563eb" stroke-width="2.2"/>
+        <line x1="103" y1="26" x2="190" y2="-9" stroke="#2563eb" stroke-width="2.2" clip-path="url(#clip-graph)"/>
+        <clipPath id="clip-graph"><rect x="0" y="0" width="280" height="210"/></clipPath>
+        <line x1="103" y1="26" x2="230" y2="-30" stroke="#2563eb" stroke-width="2.2" clip-path="url(#clip-graph)"/>
+        <!-- dashed lines to (2,4): x=95, y=195-4*40=35 -->
+        <line x1="95" y1="195" x2="95" y2="35" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+        <line x1="15" y1="35" x2="95" y2="35" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+        <!-- open circle at (2,4) → (95,35) -->
+        <circle cx="95" cy="35" r="5" fill="white" stroke="#2563eb" stroke-width="2"/>
+        <!-- label -->
+        <text x="100" y="33" font-size="9" fill="#555">(2, 4)</text>
+        <text x="155" y="55" font-size="9" fill="#2563eb">y = x+2</text>
+      </svg>
+    </div>
+
+    <p>Terlihat bahwa $f(x)$ mendekati <strong>4</strong> baik dari kiri maupun dari kanan. Maka kita tuliskan:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Contoh Limit</div>
+      <div class="math-block">$$\lim_{x \to 2} f(x) = \lim_{x \to 2} \frac{x^2 - 4}{x - 2} = 4$$</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Peta Materi: Alur Belajar Limit Fungsi</div>
+      <p style="margin:.3rem 0 .5rem;">Materi dalam modul ini disusun secara bertahap:</p>
+      <ol style="padding-left:1.3rem;line-height:2;">
+        <li><strong>Limit Fungsi</strong> — memahami definisi limit fungsi, limit kiri-kanan, dan sifat-sifat/teorema limit fungsi</li>
+        <li><strong>Limit Berhingga Fungsi Aljabar</strong> — cara menghitungnya (substitusi, faktorisasi, perkalian sekawan)</li>
+        <li><strong>Limit Fungsi Aljabar di Tak Hingga</strong> — limit untuk $x \to \infty$ dan selisih akar</li>
+        <li><strong>Limit Fungsi Trigonometri</strong> — rumus dasar $\lim_{x\to 0}\frac{\sin x}{x} = 1$ dan pengembangannya</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ A. LIMIT FUNGSI ═══════════════════════════════════════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Limit Fungsi</h2>
+
+    <h3 class="subsection-title">1. Definisi Limit Fungsi</h3>
+    <p>Dari ilustrasi pada pengantar, secara umum limit fungsi didefinisikan sebagai berikut. Misalkan $f$ sebuah fungsi $f : \mathbb{R} \to \mathbb{R}$, dan $L$, $a$ bilangan real:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Definisi Limit</div>
+      <div class="math-block">$$\lim_{x \to a} f(x) = L$$</div>
+      <p style="margin:.4rem 0 0;font-size:.9rem;">jika dan hanya jika $f(x)$ mendekati $L$ untuk semua $x$ mendekati $a$.</p>
+    </div>
+    <p>Dibaca: <em>"limit fungsi $f(x)$ untuk $x$ mendekati $a$ sama dengan $L$"</em>.</p>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Limit <strong>tidak</strong> menanyakan nilai $f(a)$, melainkan nilai yang <em>didekati</em> oleh $f(x)$ saat $x$ mendekati $a$. Bisa saja $f(a)$ tidak terdefinisi, namun limitnya tetap ada — seperti contoh $f(x) = \dfrac{x^2-4}{x-2}$ di atas yang tidak terdefinisi di $x=2$, namun limitnya adalah $4$.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Syarat Suatu Fungsi Mempunyai Limit</h3>
+    <p>Suatu limit dikatakan <strong>ada</strong> apabila <em>limit kiri</em> dan <em>limit kanan</em>nya sama.</p>
+
+    <div class="limit-row">
+      <div class="box box-rumus" style="flex:1;min-width:200px;">
+        <div class="box-label">Limit Kiri</div>
+        <div class="math-block">$$\lim_{x \to a^-} f(x) = L$$</div>
+        <p style="margin:.3rem 0 0;font-size:.85rem;text-align:center;">($x$ mendekati $a$ dari kiri, $x &lt; a$)</p>
+      </div>
+      <div class="box box-rumus" style="flex:1;min-width:200px;">
+        <div class="box-label">Limit Kanan</div>
+        <div class="math-block">$$\lim_{x \to a^+} f(x) = L$$</div>
+        <p style="margin:.3rem 0 0;font-size:.85rem;text-align:center;">($x$ mendekati $a$ dari kanan, $x > a$)</p>
+      </div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Syarat Limit Ada</div>
+      <div class="math-block">$$\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L \implies \lim_{x \to a} f(x) = L$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Apakah fungsi berikut mempunyai limit untuk $x$ mendekati 1?
+      $$f(x) = \begin{cases} x^2 & \text{jika } x \leq 1 \\ x + 1 & \text{jika } x > 1 \end{cases}$$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Hitung limit kiri dan limit kanan secara terpisah.<br><br>
+      <strong>Limit kiri</strong> (gunakan $f(x)=x^2$, karena $x\leq 1$):
+      $$\lim_{x \to 1^-} f(x) = \lim_{x \to 1^-} x^2 = 1^2 = 1$$
+      <strong>Limit kanan</strong> (gunakan $f(x)=x+1$, karena $x>1$):
+      $$\lim_{x \to 1^+} f(x) = \lim_{x \to 1^+} (x+1) = 1+1 = 2$$
+
+      <!-- Grafik ilustrasi -->
+      <div class="grafik-wrap" style="margin-top:1rem;">
+        <svg viewBox="0 0 230 200" width="230" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="a1x" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#555"/></marker>
+            <marker id="a1y" markerWidth="6" markerHeight="6" refX="3" refY="5" orient="auto"><path d="M0,0 L6,0 L3,6z" fill="#555"/></marker>
+          </defs>
+          <g stroke="#e2e8f0" stroke-width="0.6">
+            <line x1="50" y1="10" x2="50" y2="188"/><line x1="100" y1="10" x2="100" y2="188"/>
+            <line x1="150" y1="10" x2="150" y2="188"/><line x1="200" y1="10" x2="200" y2="188"/>
+            <line x1="5" y1="138" x2="220" y2="138"/><line x1="5" y1="88" x2="220" y2="88"/>
+            <line x1="5" y1="38" x2="220" y2="38"/>
+          </g>
+          <line x1="5" y1="188" x2="222" y2="188" stroke="#555" stroke-width="1.6" marker-end="url(#a1x)"/>
+          <line x1="5" y1="192" x2="5" y2="8" stroke="#555" stroke-width="1.6" marker-end="url(#a1y)"/>
+          <text x="224" y="192" font-size="9" fill="#555">x</text>
+          <text x="0" y="8" font-size="9" fill="#555">y</text>
+          <text x="2" y="192" font-size="8" fill="#888">O</text>
+          <text x="50" y="197" font-size="9" fill="#777" text-anchor="middle">1</text>
+          <text x="100" y="197" font-size="9" fill="#777" text-anchor="middle">2</text>
+          <text x="2" y="141" font-size="8" fill="#777" text-anchor="end">1</text>
+          <text x="2" y="91" font-size="8" fill="#777" text-anchor="end">2</text>
+          <text x="2" y="41" font-size="8" fill="#777" text-anchor="end">3</text>
+          <!-- f(x)=x² for x in [0,1]: at x=0→(5,188); x=1→(50,138). Sample points -->
+          <!-- scale: 45px/unit x from x=5; 50px/unit y from y=188 -->
+          <!-- Curve x²: (0,0)→(5,188); (0.5,0.25)→(27.5,175.5); (1,1)→(50,138) -->
+          <path d="M5,188 Q27,178 50,138" fill="none" stroke="#2563eb" stroke-width="2.2"/>
+          <!-- f(x)=x+1 for x>1: at x=1→(50,138)[open]; x=2.4→(113,68) -->
+          <line x1="50" y1="138" x2="120" y2="63" stroke="#2563eb" stroke-width="2.2"/>
+          <!-- Solid dot at (1,1) = (50,138) -->
+          <circle cx="50" cy="138" r="4" fill="#2563eb"/>
+          <!-- Open dot at (1,2) = (50,88) -->
+          <circle cx="50" cy="88" r="4.5" fill="white" stroke="#2563eb" stroke-width="2"/>
+          <!-- dashed lines: limit kiri=1 -->
+          <line x1="50" y1="188" x2="50" y2="138" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="5" y1="138" x2="50" y2="138" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+          <!-- dashed: limit kanan=2 -->
+          <line x1="5" y1="88" x2="50" y2="88" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+          <!-- labels -->
+          <text x="56" y="85" font-size="8" fill="#e53e3e">lim⁺ = 2</text>
+          <text x="56" y="141" font-size="8" fill="#059669">lim⁻ = 1</text>
+          <text x="10" y="130" font-size="8" fill="#2563eb">y=x²</text>
+          <text x="88" y="58" font-size="8" fill="#2563eb">y=x+1</text>
+        </svg>
+      </div>
+
+      Karena limit kiri $\neq$ limit kanan ($1 \neq 2$), maka $\displaystyle\lim_{x\to 1} f(x)$ <strong>tidak ada</strong>.
+    </div>
+
+    <h3 class="subsection-title">3. Sifat-Sifat Limit Fungsi</h3>
+    <p>Sifat-sifat berikut merupakan teorema yang sangat berguna untuk mempermudah penyelesaian limit. Misalkan $\displaystyle\lim_{x\to a} f(x) = F$, $\displaystyle\lim_{x\to a} g(x) = G$, dan $k$ adalah konstanta.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Teorema Sifat-Sifat Limit</div>
+      <ol style="padding-left:1.4rem;line-height:2.4;">
+        <li>$\displaystyle\lim_{x\to a} k = k$</li>
+        <li>$\displaystyle\lim_{x\to a} k\,f(x) = k \cdot \lim_{x\to a} f(x) = k \cdot F$</li>
+        <li>$\displaystyle\lim_{x\to a} \bigl[f(x) \pm g(x)\bigr] = \lim_{x\to a} f(x) \pm \lim_{x\to a} g(x) = F \pm G$</li>
+        <li>$\displaystyle\lim_{x\to a} \bigl[f(x) \cdot g(x)\bigr] = F \cdot G$</li>
+        <li>$\displaystyle\lim_{x\to a} \frac{f(x)}{g(x)} = \frac{F}{G}$, $\quad G \neq 0$</li>
+        <li>$\displaystyle\lim_{x\to a} \bigl[f(x)\bigr]^n = F^n$</li>
+        <li>$\displaystyle\lim_{x\to a} \sqrt[n]{f(x)} = \sqrt[n]{F}$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai limit berikut menggunakan sifat-sifat limit.<br>
+      (a) $\displaystyle\lim_{x\to 2} 5$ &emsp;
+      (b) $\displaystyle\lim_{x\to 3} 2x^3$ &emsp;
+      (c) $\displaystyle\lim_{x\to 1} (x^2 + x)$ &emsp;
+      (d) $\displaystyle\lim_{x\to 3} \dfrac{x^2 - 1}{x + 1}$ &emsp;
+      (e) $\displaystyle\lim_{x\to 3} \sqrt[3]{x^2 - 1}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Sifat (1): $\displaystyle\lim_{x\to 2} 5 = \boxed{5}$<br><br>
+      <strong>(b)</strong> Sifat (2): $\displaystyle\lim_{x\to 3} 2x^3 = 2 \cdot 3^3 = 2 \cdot 27 = \boxed{54}$<br><br>
+      <strong>(c)</strong> Sifat (3) dan (2):
+      $$\lim_{x\to 1}(x^2 + x) = \lim_{x\to 1} x^2 + \lim_{x\to 1} x = 1^2 + 1 = \boxed{2}$$
+      <strong>(d)</strong> Sifat (5), (3), dan (1):
+      $$\lim_{x\to 3}\frac{x^2-1}{x+1} = \frac{\lim_{x\to 3}x^2 - \lim_{x\to 3}1}{\lim_{x\to 3}x + \lim_{x\to 3}1} = \frac{3^2 - 1}{3 + 1} = \frac{8}{4} = \boxed{2}$$
+      <strong>(e)</strong> Sifat (7) dan (3):
+      $$\lim_{x\to 3}\sqrt[3]{x^2-1} = \sqrt[3]{\lim_{x\to 3}x^2 - \lim_{x\to 3}1} = \sqrt[3]{3^2 - 1} = \sqrt[3]{8} = \boxed{2}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Jika diketahui $\displaystyle\lim_{x\to 2} f(x) = 5$ dan $\displaystyle\lim_{x\to 2} g(x) = -4$, hitunglah nilai:<br>
+      (a) $\lim_{x\to 2}\left[2f(x) + 3g(x)\right]^2$ &emsp;
+      (b) $\lim_{x\to 2}\left[g^2(x) - 6\right]^3$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Sifat (2), (3), dan (6):
+      $$\lim_{x\to 2}\left[2f(x)+3g(x)\right]^2 = \left[2\lim_{x\to 2}f(x) + 3\lim_{x\to 2}g(x)\right]^2 = \left[2(5)+3(-4)\right]^2 = (-2)^2 = \boxed{4}$$
+      <strong>(b)</strong> Sifat (4) dan (6):
+      $$\lim_{x\to 2}\left[g^2(x)-6\right]^3 = \left[\left(\lim_{x\to 2}g(x)\right)^2 - 6\right]^3 = \left[(-4)^2 - 6\right]^3 = [10]^3 = \boxed{1000}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Dengan teorema limit, hitunglah:<br>
+      (a) $\displaystyle\lim_{x\to 2}\left[\frac{x^2+2x-8}{x^2-6x+8}\right]^2 \left[\frac{x^2+6x-16}{x^2+x-6}\right]^3$<br><br>
+      (b) $\displaystyle\lim_{x\to 3}\left[\frac{x^2+3x-18}{x^2-7x+12}\right]\sqrt{\frac{x^2+2x-15}{x^2-5x+6}}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Faktorkan pembilang dan penyebut, lalu gunakan sifat (5) dan (6):
+      $$\begin{align*} &\left[\lim_{x\to 2}\frac{x^2+2x-8}{x^2-6x+8}\right]^2\left[\lim_{x\to 2}\frac{x^2+6x-16}{x^2+x-6}\right]^3 \\ &= \left[\lim_{x\to 2}\frac{(x+4)(x-2)}{(x-4)(x-2)}\right]^2\left[\lim_{x\to 2}\frac{(x+8)(x-2)}{(x+3)(x-2)}\right]^3 \\ &= \left[\lim_{x\to 2}\frac{x+4}{x-4}\right]^2\left[\lim_{x\to 2}\frac{x+8}{x+3}\right]^3 = \left[\frac{6}{-2}\right]^2\left[\frac{10}{5}\right]^3 = (-3)^2 \cdot 2^3 = 9 \cdot 8 = \boxed{72} \end{align*}$$
+
+      <strong>(b)</strong> Faktorkan pembilang dan penyebut, lalu gunakan sifat (5) dan (7):
+      $$\begin{align*} &\left[\lim_{x\to 3}\frac{(x+6)(x-3)}{(x-4)(x-3)}\right]\sqrt{\lim_{x\to 3}\frac{(x+5)(x-3)}{(x-2)(x-3)}} = \left[\frac{3+6}{3-4}\right]\sqrt{\frac{3+5}{3-2}} = (-9)\sqrt{8} = -9 \cdot 2\sqrt{2} = \boxed{-18\sqrt{2}} \end{align*}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Untuk fungsi-fungsi yang kontinu di $x = a$, penerapan sifat-sifat limit di atas sama dengan langsung mensubstitusi $x = a$ ke dalam fungsi. Jadi, selama $f(a)$ terdefinisi, kita dapat langsung menghitung $\displaystyle\lim_{x\to a} f(x) = f(a)$.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan — Bagian A</div>
+      <ol class="soal-list">
+        <li>Diketahui fungsi $f(x) = \begin{cases} 2x + 1 & \text{jika } x &lt; 2 \\ x^2 - 1 & \text{jika } x \geq 2 \end{cases}$. Tentukan $\displaystyle\lim_{x \to 2^-} f(x)$, $\displaystyle\lim_{x \to 2^+} f(x)$, dan $\displaystyle\lim_{x\to 2} f(x)$ (jika ada).</li>
+        <li>Diketahui fungsi $g(x) = \begin{cases} x^2 + 3 & \text{jika } x \leq 1 \\ 4x & \text{jika } x > 1 \end{cases}$. (a) Tentukan $\displaystyle\lim_{x \to 1^-} g(x)$ dan $\displaystyle\lim_{x \to 1^+} g(x)$. (b) Apakah $\displaystyle\lim_{x\to 1} g(x)$ ada? (c) Apakah $g(1)$ terdefinisi dan nilainya sama dengan limit di $x = 1$?</li>
+        <li>Perhatikan grafik fungsi $h(x)$: untuk $x &lt; 0$ berlaku $h(x) = -x+1$ (lingkaran terbuka di $(0,1)$), untuk $x > 0$ berlaku $h(x) = x+2$ (lingkaran terbuka di $(0,2)$), dan $h(0) = 3$ (titik penuh). Tentukan: (a) $\displaystyle\lim_{x \to 0^-} h(x)$ dan $\displaystyle\lim_{x \to 0^+} h(x)$, (b) $h(0)$, (c) apakah $\displaystyle\lim_{x\to 0} h(x)$ ada?
+          <div class="grafik-wrap" style="margin:.6rem 0;">
+            <svg viewBox="0 0 260 180" width="260" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="la1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#555"/></marker>
+                <marker id="la2" markerWidth="6" markerHeight="6" refX="3" refY="5" orient="auto"><path d="M0,0 L6,0 L3,6z" fill="#555"/></marker>
+              </defs>
+              <g stroke="#e2e8f0" stroke-width="0.6">
+                <line x1="30" y1="10" x2="30" y2="168"/><line x1="80" y1="10" x2="80" y2="168"/>
+                <line x1="130" y1="10" x2="130" y2="168"/><line x1="180" y1="10" x2="180" y2="168"/>
+                <line x1="5" y1="118" x2="248" y2="118"/><line x1="5" y1="68" x2="248" y2="68"/>
+                <line x1="5" y1="18" x2="248" y2="18"/>
+              </g>
+              <line x1="5" y1="168" x2="250" y2="168" stroke="#555" stroke-width="1.6" marker-end="url(#la1)"/>
+              <line x1="130" y1="172" x2="130" y2="8" stroke="#555" stroke-width="1.6" marker-end="url(#la2)"/>
+              <text x="252" y="172" font-size="9" fill="#555">x</text>
+              <text x="124" y="8" font-size="9" fill="#555">y</text>
+              <text x="126" y="176" font-size="8" fill="#888">O</text>
+              <!-- tick marks -->
+              <text x="30" y="176" font-size="8" fill="#777" text-anchor="middle">−2</text>
+              <text x="80" y="176" font-size="8" fill="#777" text-anchor="middle">−1</text>
+              <text x="180" y="176" font-size="8" fill="#777" text-anchor="middle">1</text>
+              <text x="230" y="176" font-size="8" fill="#777" text-anchor="middle">2</text>
+              <text x="124" y="121" font-size="8" fill="#777" text-anchor="end">1</text>
+              <text x="124" y="71" font-size="8" fill="#777" text-anchor="end">2</text>
+              <text x="124" y="21" font-size="8" fill="#777" text-anchor="end">3</text>
+              <!-- h(x) = -x+1 for x<0: at x=-2→(30,88); x=0→(130,118) [open] -->
+              <!-- scale: x: 50px/unit from x=130; y: 50px/unit from y=168 -->
+              <line x1="30" y1="68" x2="128" y2="118" stroke="#2563eb" stroke-width="2.2"/>
+              <!-- h(x) = x+2 for x>0: at x=0→(130,68)[open]; x=2→(230,68-100=-32)clip -->
+              <line x1="132" y1="68" x2="240" y2="18" stroke="#2563eb" stroke-width="2.2"/>
+              <!-- open circles at (0,1)=(130,118) and (0,2)=(130,68) -->
+              <circle cx="130" cy="118" r="4.5" fill="white" stroke="#2563eb" stroke-width="2"/>
+              <circle cx="130" cy="68" r="4.5" fill="white" stroke="#2563eb" stroke-width="2"/>
+              <!-- solid dot at (0,3) = (130,18) -->
+              <circle cx="130" cy="18" r="4" fill="#2563eb"/>
+              <text x="136" y="16" font-size="8" fill="#555">(0, 3)</text>
+              <text x="55" y="80" font-size="8" fill="#2563eb">y=−x+1</text>
+              <text x="160" y="44" font-size="8" fill="#2563eb">y=x+2</text>
+            </svg>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ B. LIMIT BERHINGGA FUNGSI ALJABAR ════════════════════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Limit Berhingga Fungsi Aljabar</h2>
+
+    <p><strong>Limit berhingga fungsi aljabar</strong> adalah limit dari suatu fungsi aljabar ketika $x$ mendekati suatu bilangan real $a$, dan hasilnya adalah bilangan real yang <em>berhingga</em>.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Definisi</div>
+      <div class="math-block">$$\lim_{x\to a} f(x) = L, \quad L \in \mathbb{R}$$</div>
+    </div>
+
+    <h3 class="subsection-title">1. Menghitung Limit Berhingga Fungsi Aljabar</h3>
+    <p>Ketika menghitung $\displaystyle\lim_{x\to a} f(x)$, ada dua kemungkinan yang terjadi saat $x = a$ disubstitusikan langsung ke $f(x)$:</p>
+
+    <h3 class="subsection-title">a. Bentuk Normal (Bukan $\tfrac{0}{0}$)</h3>
+    <p>Substitusi $x = a$ langsung menghasilkan bilangan yang terdefinisi.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Teknik 1: Substitusi Langsung</div>
+      <p style="margin:.3rem 0 0;font-size:.9rem;">Jika $f(a)$ terdefinisi, maka $\lim_{x\to a} f(x) = f(a)$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Hitunglah $\lim_{x\to 3}(2x^2 - 5x + 1)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      $$\lim_{x\to 3}(2x^2 - 5x + 1) = 2(3)^2 - 5(3) + 1 = 18 - 15 + 1 = \boxed{4}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Hitunglah nilai-nilai limit berikut menggunakan substitusi langsung.<br>
+      (a) $\displaystyle\lim_{x\to 4}\frac{x^2 - 3x + 1}{2x + 5}$ &emsp;
+      (b) $\displaystyle\lim_{x\to 2}\sqrt{3x^2 - 2x + 1}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Substitusi $x = 4$ (penyebut $\neq 0$):
+      $$\lim_{x\to 4}\frac{x^2 - 3x + 1}{2x + 5} = \frac{4^2 - 3(4) + 1}{2(4) + 5} = \frac{16 - 12 + 1}{13} = \boxed{\dfrac{5}{13}}$$
+      <strong>(b)</strong> Substitusi $x = 2$ (nilai di dalam akar $> 0$):
+      $$\lim_{x\to 2}\sqrt{3x^2 - 2x + 1} = \sqrt{3(4) - 4 + 1} = \sqrt{9} = \boxed{3}$$
+    </div>
+
+    <h3 class="subsection-title">b. Bentuk Tak Tentu $\tfrac{0}{0}$</h3>
+    <p>Substitusi $x = a$ menghasilkan $\tfrac{0}{0}$, yang <em>tidak memiliki makna</em>. Terdapat 3 cara untuk menghitung nilai limitnya:</p>
+    <ul>
+      <li><strong>Faktorisasi</strong> — untuk fungsi rasional (pembilang dan penyebut berbentuk polinomial)</li>
+      <li><strong>Perkalian Sekawan/konjugat</strong> — untuk fungsi yang melibatkan akar</li>
+      <li><strong>Dalil L'Hôpital</strong> (pengayaan) — menurunkan pembilang dan penyebut secara terpisah</li>
+    </ul>
+
+    <div class="box box-rumus">
+      <div class="box-label">Teknik 2: Faktorisasi</div>
+      <p style="margin:.3rem 0 0;font-size:.9rem;">Jika substitusi langsung menghasilkan bentuk $\tfrac{0}{0}$, faktorkan pembilang dan penyebut, sederhanakan faktor yang sama, lalu substitusikan $x = a$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to 3} \frac{x^2 + 2x - 15}{x^2 - 4x + 3}$ &emsp;
+      (b) $\displaystyle\lim_{x\to 4} \frac{x^2 - 8x + 16}{x^2 - 6x + 8}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Cek: $\frac{9+6-15}{9-12+3} = \frac{0}{0}$ (bentuk tak tentu, gunakan faktorisasi):
+      $$\lim_{x\to 3} \frac{x^2 + 2x - 15}{x^2 - 4x + 3} = \lim_{x\to 3} \frac{(x+5)(x-3)}{(x-1)(x-3)} = \lim_{x\to 3} \frac{x+5}{x-1} = \frac{3+5}{3-1} = \boxed{4}$$
+      <strong>(b)</strong> Cek: $\frac{16-32+16}{16-24+8} = \frac{0}{0}$ (bentuk tak tentu):
+      $$\lim_{x\to 4} \frac{x^2 - 8x + 16}{x^2 - 6x + 8} = \lim_{x\to 4} \frac{(x-4)(x-4)}{(x-4)(x-2)} = \lim_{x\to 4} \frac{x-4}{x-2} = \frac{4-4}{4-2} = \boxed{0}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to 1} \frac{x^4 + 3x^2 - 4}{x^2 + x - 2}$ &emsp;
+      (b) $\displaystyle\lim_{x\to 2} \frac{x^3 + 3x^2 - 10x}{x^3 - 4x^2 + 4x}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Misalkan $p = x^2$:
+      $$\begin{align*} \lim_{x\to 1} \frac{x^4 + 3x^2 - 4}{x^2 + x - 2} &= \lim_{x\to 1} \frac{(p+4)(p-1)}{(x+2)(x-1)} = \lim_{x\to 1} \frac{(x^2+4)(x^2-1)}{(x+2)(x-1)} \\ &= \lim_{x\to 1} \frac{(x^2+4)(x+1)(x-1)}{(x+2)(x-1)} = \lim_{x\to 1} \frac{(x^2+4)(x+1)}{x+2} = \frac{(1+4)(1+1)}{1+2} = \boxed{\dfrac{10}{3}} \end{align*}$$
+      <strong>(b)</strong>
+      $$\begin{align*} \lim_{x\to 2} \frac{x^3 + 3x^2 - 10x}{x^3 - 4x^2 + 4x} &= \lim_{x\to 2} \frac{x(x^2+3x-10)}{x(x^2-4x+4)} = \lim_{x\to 2} \frac{(x+5)(x-2)}{(x-2)^2} = \lim_{x\to 2} \frac{x+5}{x-2} = \frac{7}{0} = \boxed{\infty} \end{align*}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Jika setelah faktorisasi penyebut tetap nol tetapi pembilang <strong>tidak</strong> nol, maka hasilnya adalah <strong>tak hingga</strong>. Ini berbeda dengan bentuk $\tfrac{0}{0}$ yang tak tentu.
+      $$\frac{k}{0} = \pm\infty \quad (k \neq 0), \qquad \text{Contoh: } \lim_{x\to 2}\frac{x+5}{x-2} = \frac{7}{0} = \infty$$
+      Semakin kecil penyebutnya, semakin besar nilai pecahan tersebut — tanpa batas.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to 3} \frac{x^3 - 7x^2 + 12x}{x^3 - 27}$ &emsp;
+      (b) $\displaystyle\lim_{x\to -2} \frac{2x^3 + 16}{x^2 + 6x + 8}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong>
+      $$\begin{align*} \lim_{x\to 3} \frac{x^3 - 7x^2 + 12x}{x^3 - 27} &= \lim_{x\to 3} \frac{x(x^2-7x+12)}{(x-3)(x^2+3x+9)} = \lim_{x\to 3} \frac{x(x-3)(x-4)}{(x-3)(x^2+3x+9)} \\ &= \lim_{x\to 3} \frac{x(x-4)}{x^2+3x+9} = \frac{3(3-4)}{9+9+9} = \frac{-3}{27} = \boxed{-\dfrac{1}{9}} \end{align*}$$
+      <strong>(b)</strong>
+      $$\begin{align*} \lim_{x\to -2} \frac{2x^3 + 16}{x^2 + 6x + 8} &= \lim_{x\to -2} \frac{2(x+2)(x^2-2x+4)}{(x+4)(x+2)} = \lim_{x\to -2} \frac{2(x^2-2x+4)}{x+4} = \frac{2(4+4+4)}{-2+4} = \frac{24}{2} = \boxed{12} \end{align*}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to 2} \frac{(x-2)^2 + 3(x-2)}{2x - 4}$ &emsp;
+      (b) $\displaystyle\lim_{x\to 2} \frac{x^2 - 4}{3x - 6} + \frac{(x-2)^2}{x^2 - 4}$ &emsp;
+      (c) $\displaystyle\lim_{x\to 1} \frac{x^3 - 3x + 2}{(x-1)^2 + 2(x^2 - 1)}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Misalkan $h = x - 2$:
+      $$\lim_{x\to 2} \frac{(x-2)^2 + 3(x-2)}{2(x-2)} = \lim_{h \to 0} \frac{h^2 + 3h}{2h} = \lim_{h \to 0} \frac{h(h + 3)}{2h} = \lim_{h \to 0} \frac{h + 3}{2} = \frac{3}{2} = \boxed{\dfrac{3}{2}}$$
+      <strong>(b)</strong> Misalkan $h = x - 2$:
+      $$\begin{align*} \lim_{h\to 0}\left(\frac{h(h+4)}{3h} + \frac{h^2}{h(h+4)}\right) = \lim_{h\to 0}\left(\frac{h+4}{3} + \frac{h}{h+4}\right) = \frac{4}{3} + 0 = \boxed{\dfrac{4}{3}} \end{align*}$$
+      <strong>(c)</strong> Misalkan $h = x - 1$:
+      $$\lim_{x\to 1} \frac{x^3 - 3x + 2}{(x-1)^2 + 2(x^2-1)} = \lim_{h \to 0} \frac{h^2(h+3)}{h(3h+4)} = \lim_{h \to 0} \frac{h(h+3)}{3h+4} = \frac{0}{4} = \boxed{0}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Untuk limit $\displaystyle\lim_{x\to a} f(x)$ yang menghasilkan bentuk $\tfrac{0}{0}$, misalkan $h = x - a$ sehingga $x = a + h$ dan $h \to 0$ ketika $x \to a$. Substitusi ini mengubah setiap suku $(x - a)$ menjadi $h$, sehingga faktor persekutuan di pembilang dan penyebut lebih mudah terlihat dan dicoret.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah nilai $a$ dan $b$ jika $\displaystyle\lim_{x\to 2}\frac{x^2 + ax + b}{x^2 - x - 2} = \frac{5}{3}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Faktorkan penyebut: $x^2 - x - 2 = (x-2)(x+1)$. Penyebut nol di $x = 2$. Agar limit berhingga, pembilang <strong>harus</strong> nol di $x = 2$:
+      $$(2)^2 + a(2) + b = 0 \implies b = -4 - 2a \quad \cdots (1)$$
+      Tulis $x^2 + ax + b = (x-2)(x-r)$. Dengan mengembangkan: $a = -(2+r)$, $b = 2r$. Substitusikan ke nilai limit:
+      $$\lim_{x\to 2}\frac{(x-2)(x-r)}{(x-2)(x+1)} = \lim_{x\to 2}\frac{x-r}{x+1} = \frac{2-r}{3} = \frac{5}{3}$$
+      $$2 - r = 5 \implies r = -3$$
+      Maka: $a = -(2+(-3)) = 1$ dan $b = 2(-3) = -6$.
+
+      Verifikasi: $\displaystyle\lim_{x\to 2}\frac{x^2+x-6}{x^2-x-2} = \lim_{x\to 2}\frac{(x+3)(x-2)}{(x+1)(x-2)} = \frac{5}{3}$ ✓
+      $$\boxed{a = 1,\quad b = -6}$$
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Teknik 3: Perkalian Sekawan/Konjugat</div>
+      <p style="margin:.3rem 0 0;font-size:.9rem;">Jika substitusi langsung menghasilkan bentuk $\tfrac{0}{0}$, kalikan pembilang dan penyebut dengan bentuk sekawannya, sederhanakan, lalu substitusikan $x = a$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to 3} \frac{x^2 + 3x - 18}{\sqrt{x} - \sqrt{3}}$ &emsp;
+      (b) $\displaystyle\lim_{x\to 4} \frac{\sqrt{x} - 2}{x^2 - 16}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Kalikan dengan sekawan $\dfrac{\sqrt{x}+\sqrt{3}}{\sqrt{x}+\sqrt{3}}$:
+      $$\begin{align*} \lim_{x\to 3} \frac{x^2 + 3x - 18}{\sqrt{x} - \sqrt{3}} &= \lim_{x\to 3} \frac{(x+6)(x-3)}{\sqrt{x}-\sqrt{3}} \cdot \frac{\sqrt{x}+\sqrt{3}}{\sqrt{x}+\sqrt{3}} = \lim_{x\to 3} \frac{(x+6)(x-3)(\sqrt{x}+\sqrt{3})}{x - 3} \\ &= \lim_{x\to 3} (x+6)(\sqrt{x}+\sqrt{3}) = (3+6)(\sqrt{3}+\sqrt{3}) = 9 \cdot 2\sqrt{3} = \boxed{18\sqrt{3}} \end{align*}$$
+      <strong>(b)</strong> Kalikan dengan sekawan $\dfrac{\sqrt{x}+2}{\sqrt{x}+2}$:
+      $$\begin{align*} \lim_{x\to 4} \frac{\sqrt{x}-2}{x^2-16} &= \lim_{x\to 4} \frac{\sqrt{x}-2}{(x-4)(x+4)} \cdot \frac{\sqrt{x}+2}{\sqrt{x}+2} = \lim_{x\to 4} \frac{x-4}{(x-4)(x+4)(\sqrt{x}+2)} \\ &= \lim_{x\to 4} \frac{1}{(x+4)(\sqrt{x}+2)} = \frac{1}{(4+4)(\sqrt{4}+2)} = \frac{1}{8 \cdot 4} = \boxed{\dfrac{1}{32}} \end{align*}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to 2} \frac{2-\sqrt{x+2}}{3-\sqrt{3x+3}}$ &emsp;
+      (b) $\displaystyle\lim_{x\to 3} \frac{\sqrt{x}-\sqrt{3}}{\sqrt{x+1}-2}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Kalikan dengan sekawan masing-masing:
+      $$\begin{align*} \lim_{x\to 2}\frac{2-\sqrt{x+2}}{3-\sqrt{3x+3}} &= \lim_{x\to 2}\frac{(4-(x+2))(3+\sqrt{3x+3})}{(9-(3x+3))(2+\sqrt{x+2})} = \lim_{x\to 2}\frac{(2-x)(3+\sqrt{3x+3})}{3(2-x)(2+\sqrt{x+2})} \\ &= \lim_{x\to 2}\frac{3+\sqrt{3x+3}}{3(2+\sqrt{x+2})} = \frac{3+\sqrt{9}}{3(2+\sqrt{4})} = \frac{6}{3 \cdot 4} = \boxed{\dfrac{1}{2}} \end{align*}$$
+      <strong>(b)</strong> Kalikan dengan dua sekawan:
+      $$\begin{align*} \lim_{x\to 3}\frac{\sqrt{x}-\sqrt{3}}{\sqrt{x+1}-2} &= \lim_{x\to 3}\frac{(x-3)(\sqrt{x+1}+2)}{(x-3)(\sqrt{x}+\sqrt{3})} = \lim_{x\to 3}\frac{\sqrt{x+1}+2}{\sqrt{x}+\sqrt{3}} = \frac{\sqrt{4}+2}{\sqrt{3}+\sqrt{3}} = \frac{4}{2\sqrt{3}} = \boxed{\dfrac{2\sqrt{3}}{3}} \end{align*}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to 4} \frac{(x-4)^2}{\left(\sqrt{x}-2\right)\bigl[(x-4)^2 + 2(x-4)\bigr]}$ &emsp;
+      (b) $\displaystyle\lim_{x\to 9} \frac{(x-9)^2 + 4(x-9)}{\sqrt{x} - 3}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Misalkan $h = x - 4$. Kalikan dengan sekawan $\dfrac{\sqrt{h+4}+2}{\sqrt{h+4}+2}$:
+      $$\begin{align*} &= \lim_{h\to 0}\frac{h^2}{(\sqrt{h+4}-2)(h^2+2h)} \cdot \frac{\sqrt{h+4}+2}{\sqrt{h+4}+2} = \lim_{h\to 0}\frac{h^2(\sqrt{h+4}+2)}{h \cdot h(h+2)} = \lim_{h\to 0}\frac{\sqrt{h+4}+2}{h+2} = \frac{\sqrt{4}+2}{0+2} = \frac{4}{2} = \boxed{2} \end{align*}$$
+      <strong>(b)</strong> Misalkan $h = x - 9$. Kalikan dengan sekawan $\dfrac{\sqrt{h+9}+3}{\sqrt{h+9}+3}$:
+      $$\begin{align*} \lim_{h\to 0}\frac{h^2 + 4h}{\sqrt{h+9}-3} &= \lim_{h\to 0}\frac{h(h+4)(\sqrt{h+9}+3)}{h} = \lim_{h\to 0}(h+4)(\sqrt{h+9}+3) = 4(\sqrt{9}+3) = 4 \cdot 6 = \boxed{24} \end{align*}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Gabungan <strong>pemisalan</strong> $h = x - a$ dan <strong>perkalian sekawan</strong> sangat berguna saat ekspresi memuat sekaligus faktor $(x-a)^n$ <em>dan</em> bentuk akar.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil dari $\displaystyle\lim_{x\to 0} \frac{\sqrt{1+\sqrt{1+x}}-\sqrt{2}}{x}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Rasionalisasi lapisan luar terlebih dahulu dengan sekawan $\sqrt{1+\sqrt{1+x}}+\sqrt{2}$:
+      $$\begin{align*} \lim_{x\to 0}\frac{\sqrt{1+\sqrt{1+x}}-\sqrt{2}}{x} &= \lim_{x\to 0}\frac{\bigl(1+\sqrt{1+x}\bigr)-2}{x\bigl(\sqrt{1+\sqrt{1+x}}+\sqrt{2}\bigr)} = \lim_{x\to 0}\frac{\sqrt{1+x}-1}{x\bigl(\sqrt{1+\sqrt{1+x}}+\sqrt{2}\bigr)} \end{align*}$$
+      Kemudian rasionalisasi lapisan dalam dengan sekawan $\sqrt{1+x}+1$:
+      $$\begin{align*} &= \lim_{x\to 0}\frac{(1+x)-1}{x\bigl(\sqrt{1+\sqrt{1+x}}+\sqrt{2}\bigr)\bigl(\sqrt{1+x}+1\bigr)} = \lim_{x\to 0}\frac{1}{\bigl(\sqrt{1+\sqrt{1+x}}+\sqrt{2}\bigr)\bigl(\sqrt{1+x}+1\bigr)} \\ &= \frac{1}{(\sqrt{2}+\sqrt{2})(1+1)} = \frac{1}{2\sqrt{2}\cdot 2} = \boxed{\dfrac{1}{4\sqrt{2}} = \dfrac{\sqrt{2}}{8}} \end{align*}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Untuk <strong>akar bersarang</strong>, rasionalisasi dilakukan <strong>dari lapisan luar ke dalam</strong> secara bertahap. Setiap kali sekawan digunakan, pembilang menjadi ekspresi di dalam lapisan berikutnya yang kemudian dapat dirasionalisasi kembali.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah nilai dari $\displaystyle\lim_{x\to 2} \frac{\sqrt{x^2+5}-3}{x^2-2x}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Cek substitusi: $x=2$ menghasilkan $\tfrac{\sqrt{9}-3}{0} = \tfrac{0}{0}$. Kalikan dengan sekawan $\sqrt{x^2+5}+3$, lalu faktorkan:
+      $$\begin{align*} \lim_{x\to 2}\frac{\sqrt{x^2+5}-3}{x^2-2x} &= \lim_{x\to 2}\frac{(x^2+5)-9}{x(x-2)\bigl(\sqrt{x^2+5}+3\bigr)} = \lim_{x\to 2}\frac{x^2-4}{x(x-2)\bigl(\sqrt{x^2+5}+3\bigr)} \\ &= \lim_{x\to 2}\frac{(x-2)(x+2)}{x(x-2)\bigl(\sqrt{x^2+5}+3\bigr)} = \lim_{x\to 2}\frac{x+2}{x\bigl(\sqrt{x^2+5}+3\bigr)} = \frac{4}{2(\sqrt{9}+3)} = \frac{4}{12} = \boxed{\dfrac{1}{3}} \end{align*}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah nilai $a$ dan $b$ yang memenuhi $\displaystyle\lim_{x\to 3}\frac{\sqrt{x+a}-\sqrt{b-x}}{x-3} = \dfrac{1}{2}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Agar kedua akar terdefinisi dan limit berhingga, <strong>keduanya</strong> harus nol di $x=3$:
+      $$\sqrt{3+a} - \sqrt{b-3} = 0 \implies 3 + a = b - 3 \implies b = a + 6 \quad \cdots (1)$$
+      Tulis pembilang sebagai selisih dua akar lalu kalikan dengan sekawan $\sqrt{x+a}+\sqrt{b-x}$:
+      $$\begin{align*} \lim_{x\to 3}\frac{\sqrt{x+a}-\sqrt{b-x}}{x-3} &= \lim_{x\to 3}\frac{(x+a)-(b-x)}{(x-3)\bigl(\sqrt{x+a}+\sqrt{b-x}\bigr)} = \lim_{x\to 3}\frac{2x+a-b}{(x-3)\bigl(\sqrt{x+a}+\sqrt{b-x}\bigr)} \end{align*}$$
+      Substitusi $b = a+6$: $2x + a - b = 2(x-3)$. Maka:
+      $$\lim_{x\to 3}\frac{2(x-3)}{(x-3)\bigl(\sqrt{x+a}+\sqrt{b-x}\bigr)} = \frac{2}{2\sqrt{3+a}} = \frac{1}{\sqrt{3+a}} = \frac{1}{2}$$
+      $$\sqrt{3+a} = 2 \implies a = 1, \quad b = 7$$
+      Verifikasi: $\displaystyle\lim_{x\to 3}\frac{\sqrt{x+1}-\sqrt{7-x}}{x-3} = \lim_{x\to 3}\frac{2(x-3)}{(x-3)\cdot 2\sqrt{x+1}} = \frac{1}{\sqrt{4}} = \frac{1}{2}$ ✓
+      $$\boxed{a = 1,\quad b = 7}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Hitunglah $\displaystyle\lim_{x\to 1} \dfrac{\sqrt[3]{x^2} - 2\sqrt[3]{x} + 1}{(x-1)^2}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Misalkan $\sqrt[3]{x} = p$, maka $x = p^3$ dan $x \to 1 \Rightarrow p \to 1$:
+      $$\begin{align*} \lim_{x\to 1} \frac{\sqrt[3]{x^2} - 2\sqrt[3]{x} + 1}{(x-1)^2} &= \lim_{p \to 1} \frac{p^2 - 2p + 1}{(p^3-1)^2} = \lim_{p \to 1} \frac{(p-1)^2}{\left[(p-1)(p^2+p+1)\right]^2} \\ &= \lim_{p \to 1} \frac{1}{(p^2+p+1)^2} = \frac{1}{(1+1+1)^2} = \boxed{\dfrac{1}{9}} \end{align*}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Untuk limit yang melibatkan akar pangkat tiga, gunakan substitusi $\sqrt[3]{x} = p$.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan — Bagian B (Set 1)</div>
+      <ol class="soal-list">
+        <li>Tentukanlah nilai setiap limit berikut menggunakan substitusi langsung: (a) $\displaystyle\lim_{x\to -1}\frac{x^2 + 4x + 3}{x + 1}$, (b) $\displaystyle\lim_{x\to 3}\frac{x^2 - 9}{x - 3}$.</li>
+        <li>Tentukanlah nilai setiap limit berikut menggunakan faktorisasi: (a) $\displaystyle\lim_{x\to 4}\frac{x^2 - 8x + 16}{x^2 - 3x - 4}$, (b) $\displaystyle\lim_{x\to -2}\frac{x^3 + 8}{x^2 + 5x + 6}$.</li>
+        <li>Tentukanlah nilai setiap limit berikut menggunakan perkalian sekawan: (a) $\displaystyle\lim_{x\to 4}\frac{x^2 - 16}{\sqrt{x} - 2}$, (b) $\displaystyle\lim_{x\to 5}\frac{\sqrt{x - 1} - 2}{x^2 - 7x + 10}$.</li>
+      </ol>
+    </div>
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan — Bagian B (Set 2)</div>
+      <ol class="soal-list">
+        <li>Tentukanlah nilai setiap limit berikut: (a) $\displaystyle\lim_{x\to 0}\frac{\sqrt{1 + \sqrt{1 + x}} - \sqrt{2}}{x}$, (b) $\displaystyle\lim_{x\to 4}\frac{\sqrt{x^2 + 9} - 5}{x^2 - 6x + 8}$.</li>
+        <li>Jika $\displaystyle\lim_{x\to 2}\frac{x^2 + ax + b}{x^2 - x - 2} = \dfrac{4}{3}$, tentukan nilai $a$ dan $b$.</li>
+        <li>Jika $\displaystyle\lim_{x\to 4}\frac{\sqrt{x + a} - \sqrt{b - x}}{x - 4} = \dfrac{1}{4}$, tentukan nilai $a$ dan $b$, kemudian verifikasi jawabanmu.</li>
+        <li>Tentukanlah $\displaystyle\lim_{x\to 8}\dfrac{\sqrt[3]{x} - 2}{x - 8}$. (Gunakan substitusi $\sqrt[3]{x} = p$.)</li>
+        <li>Diketahui $\displaystyle\lim_{x\to a}\frac{x^2 - (a+2)x + 2a}{\sqrt{x - a} \cdot (x - a)} = k$. Nyatakan $k$ dalam $a$, dan tentukan nilai $a$ agar $k = 4$.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ C. LIMIT DI TAK HINGGA ═══════════════════════════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Limit Fungsi Aljabar di Tak Hingga</h2>
+
+    <p><strong>Limit fungsi aljabar di tak hingga</strong> membahas perilaku $f(x)$ ketika $x$ tumbuh tanpa batas menuju $+\infty$ atau $-\infty$.</p>
+
+    <h3 class="subsection-title">1. Perbedaan Limit Tak Hingga dan Limit di Tak Hingga</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">Dua Jenis Limit yang Berbeda</div>
+      <ul style="margin:.4rem 0 0;padding-left:1.3rem;line-height:2.3;">
+        <li><strong>Limit tak hingga</strong> (<em>infinite limit</em>): $x$ mendekati bilangan real tertentu, tetapi <em>hasilnya</em> tak hingga. Contoh: $\displaystyle\lim_{x\to 0}\dfrac{1}{x^2} = \infty$.</li>
+        <li><strong>Limit di tak hingga</strong> (<em>limit at infinity</em>): $x$ <em>sendiri</em> yang mendekati $\pm\infty$. Contoh: $\displaystyle\lim_{x\to\infty}\dfrac{1}{x} = 0$.</li>
+      </ul>
+    </div>
+
+    <p><strong>Teorema kunci:</strong> Jika $a \neq 0$ dan $n > 0$, maka $\displaystyle\lim_{x\to\infty}\frac{a}{x^n} = 0$. Ketika $x \to \infty$, suku berpangkat rendah mengecil jauh lebih cepat, sehingga dapat diabaikan.</p>
+
+    <h3 class="subsection-title">2. Limit Fungsi Rasional di Tak Hingga</h3>
+    <p>Untuk $\displaystyle\lim_{x\to\infty}\frac{f(x)}{g(x)}$, bagi pembilang dan penyebut dengan $x^n$ di mana $n$ adalah pangkat tertinggi yang muncul.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Teknik 1: Bagi dengan Pangkat Tertinggi</div>
+      <p style="margin:.3rem 0 .6rem;font-size:.9rem;">Bagi semua suku dengan $x^n$, lalu gunakan teorema kunci sehingga suku-suku $\dfrac{k}{x^m} \to 0$.</p>
+      <p style="margin:.3rem 0 0;font-size:.9rem;font-weight:600;">Kaidah cepat</p>
+      <div class="kaidah-box">
+        <div class="kaidah-item">
+          <strong>Derajat pembilang &lt; penyebut</strong>
+          Hasil = $0$
+        </div>
+        <div class="kaidah-item">
+          <strong>Derajat pembilang = penyebut</strong>
+          Hasil = rasio koefisien tertinggi
+        </div>
+        <div class="kaidah-item">
+          <strong>Derajat pembilang &gt; penyebut</strong>
+          Hasil = $\pm\infty$
+        </div>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil dari setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to\infty}\frac{6x^3 + 4x + 6}{4x^2 + 2x^3 - 3x}$ &emsp;
+      (b) $\displaystyle\lim_{x\to\infty}\frac{2x^3-4x^2+3x^5}{x^3-2x^2-4}$ &emsp;
+      (c) $\displaystyle\lim_{x\to\infty}\frac{5x^2 - 3}{2x^4 + x - 1}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Pangkat tertinggi $x^3$ ($p = q = 3$), bagi dengan $x^3$:
+      $$\lim_{x\to\infty}\frac{6x^3+4x+6}{4x^2+2x^3-3x} = \lim_{x\to\infty}\frac{6+\frac{4}{x^2}+\frac{6}{x^3}}{\frac{4}{x}+2-\frac{3}{x^2}} = \frac{6+0+0}{0+2-0} = \boxed{3}$$
+      <strong>(b)</strong> Pangkat tertinggi $x^5$ di pembilang, sedangkan penyebut hanya $x^3$ ($p > q$):
+      $$\lim_{x\to\infty}\frac{2x^3-4x^2+3x^5}{x^3-2x^2-4} = \lim_{x\to\infty}\frac{\frac{2}{x^2}-\frac{4}{x^3}+3}{1-\frac{2}{x}-\frac{4}{x^3}} \to \boxed{\infty}$$
+      <strong>(c)</strong> Derajat pembilang $p = 2$ lebih kecil dari penyebut $q = 4$:
+      $$\lim_{x\to\infty}\frac{5x^2-3}{2x^4+x-1} = \boxed{0}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai dari $\displaystyle\lim_{x\to\infty}\frac{(2x^2-3)(2x^3-x)}{x^4+6x^5-3x^2+4}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Uraikan pembilang: $(2x^2-3)(2x^3-x) = 4x^5-8x^3+3x$. Pangkat tertinggi $x^5$ ($p = q = 5$):
+      $$\lim_{x\to\infty}\frac{4x^5-8x^3+3x}{x^4+6x^5-3x^2+4} = \frac{4}{6} = \boxed{\dfrac{2}{3}}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah nilai dari $\displaystyle\lim_{x\to\infty}\frac{(3x^2-2x+1)(x^3+4x-5)}{(2x^4-x^2+3)(x+2)-6x^5+10}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>Pembilang:</strong>
+      $$\begin{align*} (3x^2-2x+1)(x^3+4x-5) &= 3x^5 - 2x^4 + 13x^3 - 23x^2 + 14x - 5 \end{align*}$$
+      <strong>Penyebut:</strong>
+      $$\begin{align*} (2x^4-x^2+3)(x+2) - 6x^5 + 10 &= -4x^5 + 4x^4 - x^3 - 2x^2 + 3x + 16 \end{align*}$$
+      Pangkat tertinggi di pembilang maupun penyebut adalah $x^5$ ($p = q = 5$). Terapkan kaidah cepat:
+      $$\lim_{x\to\infty}\frac{3x^5 - 2x^4 + \cdots}{-4x^5 + 4x^4 + \cdots} = \frac{3}{-4} = \boxed{-\dfrac{3}{4}}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Soal ini sengaja menyembunyikan derajat sesungguhnya di balik dua lapis perkalian di penyebut. Cara cepat <em>hanya berlaku setelah</em> seluruh uraian selesai.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil dari setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{4x^2 + 3x - 1}}{2x - 5}$ &emsp;
+      (b) $\displaystyle\lim_{x\to\infty}\frac{3x + 1}{\sqrt{9x^2 - x + 4}}$ &emsp;
+      (c) $\displaystyle\lim_{x\to\infty}\left(\sqrt{x^2 + 5x} - x\right)$ &emsp;
+      (d) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{4x^2+x}-3x}{\sqrt{x^2+2}+x}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Untuk $x>0$: $\sqrt{4x^2+3x-1} = x\sqrt{4+\frac{3}{x}-\frac{1}{x^2}}$:
+      $$\lim_{x\to\infty}\frac{x\sqrt{4+\frac{3}{x}-\frac{1}{x^2}}}{x\left(2-\frac{5}{x}\right)} = \frac{\sqrt{4+0-0}}{2-0} = \frac{2}{2} = \boxed{1}$$
+      <strong>(b)</strong> Untuk $x>0$: $\sqrt{9x^2-x+4} = x\sqrt{9-\frac{1}{x}+\frac{4}{x^2}}$:
+      $$\lim_{x\to\infty}\frac{x\left(3+\frac{1}{x}\right)}{x\sqrt{9-\frac{1}{x}+\frac{4}{x^2}}} = \frac{3+0}{\sqrt{9-0+0}} = \frac{3}{3} = \boxed{1}$$
+      <strong>(c)</strong> Kalikan dengan sekawan $\dfrac{\sqrt{x^2+5x}+x}{\sqrt{x^2+5x}+x}$:
+      $$\begin{align*} \lim_{x\to\infty}\left(\sqrt{x^2+5x}-x\right) &= \lim_{x\to\infty}\frac{5x}{\sqrt{x^2+5x}+x} = \lim_{x\to\infty}\frac{5x}{x\left(\sqrt{1+\frac{5}{x}}+1\right)} = \frac{5}{\sqrt{1}+1} = \boxed{\dfrac{5}{2}} \end{align*}$$
+      <strong>(d)</strong> Bagi pembilang dan penyebut dengan $x$:
+      $$\lim_{x\to\infty}\frac{x\left(\sqrt{4+\frac{1}{x}}-3\right)}{x\left(\sqrt{1+\frac{2}{x^2}}+1\right)} = \frac{\sqrt{4}-3}{\sqrt{1}+1} = \frac{2-3}{1+1} = \boxed{-\dfrac{1}{2}}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Jika $x\to+\infty$, faktorkan $x$ keluar dari dalam akar: $\sqrt{ax^2+\cdots} = x\sqrt{a+\cdots}$ sehingga $x$ dapat dicoret. Suku-suku yang tersisa di dalam akar menuju 0, dan nilai limit bergantung hanya pada koefisien tertinggi.</p>
+    </div>
+
+    <h3 class="subsection-title">3. Limit Bentuk $(\sqrt{\phantom{x}} - \sqrt{\phantom{x}})$ di Tak Hingga</h3>
+    <p>Substitusi langsung menghasilkan $\infty - \infty$ yang tak tentu. Tekniknya adalah mengalikan dengan sekawan untuk menghilangkan bentuk akar.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Teknik 2: Sekawan untuk Selisih Akar</div>
+      <div class="math-block">$$\lim_{x\to\infty}\!\left(\sqrt{ax^2+bx+c}-\sqrt{dx^2+ex+f}\right) = \begin{cases} +\infty & \text{jika } a > d \\ \dfrac{b-e}{2\sqrt{a}} & \text{jika } a = d \\ -\infty & \text{jika } a < d \end{cases}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 23</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah $\displaystyle\lim_{x\to\infty}(\sqrt{3x+2}-\sqrt{3x-4})$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Kedua akar linear ($a = c = 3$). Kalikan dengan sekawan:
+      $$\begin{align*} \lim_{x\to\infty}(\sqrt{3x+2}-\sqrt{3x-4}) &= \lim_{x\to\infty}\frac{(3x+2)-(3x-4)}{\sqrt{3x+2}+\sqrt{3x-4}} = \lim_{x\to\infty}\frac{6}{\sqrt{3x+2}+\sqrt{3x-4}} = \frac{6}{2\sqrt{3}} = \frac{6\sqrt{3}}{6} = \boxed{\sqrt{3}} \end{align*}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil dari setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to\infty}\left(\sqrt{4x^2+3x-5}-\sqrt{4x^2-7x+2}\right)$ &emsp;
+      (b) $\displaystyle\lim_{x\to\infty}\left(\sqrt{3x^2+8x-2}-\sqrt{3x^2+2x+5}\right)$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Koefisien $x^2$ sama ($a = d = 4$), gunakan kaidah cepat dengan $b = 3$, $e = -7$:
+      $$= \lim_{x\to\infty}\frac{(4x^2+3x-5)-(4x^2-7x+2)}{\sqrt{4x^2+3x-5}+\sqrt{4x^2-7x+2}} = \lim_{x\to\infty}\frac{10x-7}{\sqrt{4x^2+3x-5}+\sqrt{4x^2-7x+2}} = \frac{10}{\sqrt{4}+\sqrt{4}} = \frac{10}{4} = \boxed{\dfrac{5}{2}}$$
+      <strong>(b)</strong> Koefisien $x^2$ sama ($a = d = 3$), $b = 8$, $e = 2$:
+      $$= \frac{b-e}{2\sqrt{a}} = \frac{8-2}{2\sqrt{3}} = \frac{6}{2\sqrt{3}} = \boxed{\sqrt{3}}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah nilai dari $\displaystyle\lim_{x\to\infty}\left(\sqrt{4x^2-5x+3}-(2x-1)\right)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Ubah ekspresi linear menjadi bentuk akar: $(2x-1) = \sqrt{(2x-1)^2} = \sqrt{4x^2-4x+1}$, sehingga:
+      $$\lim_{x\to\infty}\left(\sqrt{4x^2-5x+3}-\sqrt{4x^2-4x+1}\right) = \frac{(-5)-(-4)}{2\sqrt{4}} = \frac{-1}{4} = \boxed{-\dfrac{1}{4}}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Jika salah satu suku berbentuk <em>polinomial linear</em> (misal $2x - 1$) bukan akar, <strong>ubah dulu</strong> menjadi $\sqrt{(2x-1)^2}$ agar rumus sekawan bisa diterapkan. Pastikan $x > 0$ agar $\sqrt{(2x-1)^2} = 2x-1$ (positif).</p>
+    </div>
+
+    <h3 class="subsection-title">4. Kondisi Khusus: Limit di $-\infty$</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah nilai dari $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{4x^2+3x}}{2x+1}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Untuk $x \to -\infty$, berlaku $x &lt; 0$ sehingga $\sqrt{x^2} = |x| = -x$. Faktorkan $x^2$ dari dalam akar, lalu keluarkan $|x| = -x$:
+      $$\begin{align*} \lim_{x\to-\infty}\frac{\sqrt{4x^2+3x}}{2x+1} &= \lim_{x\to-\infty}\frac{\sqrt{x^2\!\left(4+\frac{3}{x}\right)}}{x\!\left(2+\frac{1}{x}\right)} = \lim_{x\to-\infty}\frac{|x|\sqrt{4+\frac{3}{x}}}{x\!\left(2+\frac{1}{x}\right)} \\ &= \lim_{x\to-\infty}\frac{-x\sqrt{4+\frac{3}{x}}}{x\!\left(2+\frac{1}{x}\right)} = \frac{-\sqrt{4+0}}{2+0} = \boxed{-1} \end{align*}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Untuk $x \to -\infty$, selalu ingat bahwa $\sqrt{x^2} = |x| = \mathbf{-x}$ (bukan $+x$), karena $x$ bernilai negatif. Kelupaan tanda ini adalah kesalahan paling umum pada tipe soal ini.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 27</div>
+      <p style="margin:0;font-size:.9rem;">Jika $\displaystyle\lim_{x\to\infty}\left(\sqrt{x^2+ax+4} - bx\right) = 5$, tentukan nilai $a$ dan $b$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Agar limit tidak menuju $\pm\infty$, koefisien $x^2$ di bawah akar harus sama dengan $b^2$, yaitu $b^2 = 1$, sehingga $b = 1$ (diambil positif).<br><br>
+      Dengan $b = 1$, kalikan dengan sekawan $\dfrac{\sqrt{x^2+ax+4}+x}{\sqrt{x^2+ax+4}+x}$:
+      $$\begin{align*} \lim_{x\to\infty}\left(\sqrt{x^2+ax+4}-x\right) &= \lim_{x\to\infty}\frac{ax+4}{\sqrt{x^2+ax+4}+x} = \lim_{x\to\infty}\frac{x\!\left(a+\frac{4}{x}\right)}{x\!\left(\sqrt{1+\frac{a}{x}+\frac{4}{x^2}}+1\right)} = \frac{a}{2} \end{align*}$$
+      Samakan dengan nilai limit yang diberikan: $\dfrac{a}{2} = 5 \implies a = 10$.
+      $$\boxed{a = 10,\quad b = 1}$$
+      Verifikasi: $\displaystyle\lim_{x\to\infty}\left(\sqrt{x^2+10x+4}-x\right) = \dfrac{10}{2} = 5$ ✓
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah nilai dari $\displaystyle\lim_{x\to\infty} x\!\left(\sqrt{x^2+6x}-x\right)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Rasionalisasi bagian dalam kurung terlebih dahulu:
+      $$\begin{align*} \lim_{x\to\infty} x\!\left(\sqrt{x^2+6x}-x\right) &= \lim_{x\to\infty} x \cdot \frac{(x^2+6x)-x^2}{\sqrt{x^2+6x}+x} = \lim_{x\to\infty} \frac{6x^2}{\sqrt{x^2+6x}+x} \\ &= \lim_{x\to\infty} \frac{6x^2}{x\!\left(\sqrt{1+\frac{6}{x}}+1\right)} = \lim_{x\to\infty} \frac{6x}{\sqrt{1+\frac{6}{x}}+1} \to \boxed{+\infty} \end{align*}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Bandingkan dengan $\displaystyle\lim_{x\to\infty}\!\left(\sqrt{x^2+6x}-x\right) = \dfrac{6}{2} = 3$ yang berhingga. Faktor $x$ di depan menaikkan laju pertumbuhan satu tingkat, sehingga hasil akhirnya tak hingga. Pada soal ujian, tipe ini sering dimodifikasi menjadi $\displaystyle\lim_{x\to\infty} x^k\!\left(\sqrt{x^2+bx}-x\right)$ — perhatikan baik-baik nilai $k$-nya.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan — Bagian C (Set 1)</div>
+      <ol class="soal-list">
+        <li>Tentukan nilai dari limit berikut: (a) $\displaystyle\lim_{x\to\infty}\frac{4x^3 - 7x + 2}{3x^3 + 5x^2 - 1}$, (b) $\displaystyle\lim_{x\to\infty}\frac{5x^2 + 3x - 4}{2x^4 - x + 6}$, (c) $\displaystyle\lim_{x\to\infty}\frac{6x^5 - 4x^3 + 1}{2x^3 + x - 8}$.</li>
+        <li>Tentukan nilai dari limit berikut: (a) $\displaystyle\lim_{x\to\infty}\frac{(2x - 1)(3x + 4)}{x^2 + 7x - 5}$, (b) $\displaystyle\lim_{x\to\infty}\frac{x^3 - 2x}{(x-1)(x^2+x+3)}$, (c) $\displaystyle\lim_{x\to\infty}\frac{(x^2+3)(2x-1)}{(x+4)(3x^2-x+2)}$.</li>
+        <li>Tentukan nilai dari limit berikut: (a) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{9x^2 - 4x + 1}}{3x + 5}$, (b) $\displaystyle\lim_{x\to\infty}\frac{2x - 3}{\sqrt{4x^2 + 6x - 2}}$, (c) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{16x^4 + x^2} - 3x^2}{x^2 - 1}$.</li>
+        <li>Tentukan nilai dari limit berikut: (a) $\displaystyle\lim_{x\to\infty}\left(\sqrt{x^2 + 8x - 3} - \sqrt{x^2 - 4x + 1}\right)$, (b) $\displaystyle\lim_{x\to\infty}\left(\sqrt{4x^2 + 6x - 1} - \sqrt{4x^2 - 2x + 5}\right)$, (c) $\displaystyle\lim_{x\to\infty}\left(\sqrt{9x^2 + 3x + 2} - \sqrt{9x^2 - 9x + 4}\right)$.</li>
+      </ol>
+    </div>
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan — Bagian C (Set 2)</div>
+      <ol class="soal-list">
+        <li>Tentukan nilai dari limit berikut: (a) $\displaystyle\lim_{x\to\infty}\left(\sqrt{x^2 + 10x + 3} - (x + 3)\right)$, (b) $\displaystyle\lim_{x\to\infty}\left(\sqrt{4x^2 - 8x + 5} - (2x - 1)\right)$, (c) $\displaystyle\lim_{x\to\infty}\left(\sqrt{9x^2 + 6x - 4} - (3x + 2)\right)$.</li>
+        <li>Tentukan nilai dari limit berikut (perhatikan $x \to -\infty$): (a) $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{x^2 - 3x}}{x + 2}$, (b) $\displaystyle\lim_{x\to-\infty}\frac{3x + 1}{\sqrt{9x^2 + 6x - 4}}$, (c) $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{4x^2 + x + 5}}{1 - 2x}$.</li>
+        <li>Tentukan nilai dari limit berikut: (a) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x+1}-\sqrt{x}}{\sqrt{x+2}-\sqrt{x+1}}$, (b) $\displaystyle\lim_{x\to\infty}\left[\left(\sqrt{x^2+4x+1}-(x+2)\right)\cdot x\right]$, (c) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x^2+3x}-x}{\sqrt{x+2}-\sqrt{x}}$.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ D. LIMIT FUNGSI TRIGONOMETRI ════════════════════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Limit Fungsi Trigonometri</h2>
+
+    <p><strong>Limit fungsi trigonometri</strong> mempelajari perilaku fungsi-fungsi seperti $\sin x$, $\cos x$, dan $\tan x$ ketika $x$ mendekati suatu nilai. Berbeda dengan fungsi aljabar, fungsi trigonometri memiliki rumus-rumus khusus yang menjadi dasar seluruh perhitungan limit trigonometri, terutama di sekitar $x \to 0$.</p>
+
+    <h3 class="subsection-title">1. Penurunan Rumus Dasar</h3>
+
+    <p>Misalkan $x$ dalam radian dan $0 &lt; x &lt; \dfrac{\pi}{2}$. Dari perbandingan luas segitiga dan juring lingkaran diperoleh ketidaksamaan:</p>
+    $$\sin x < x < \tan x$$
+    <p>Dengan membagi seluruh bagian dengan $\sin x > 0$:</p>
+    $$1 < \frac{x}{\sin x} < \frac{1}{\cos x}$$
+    <p>Karena $\displaystyle\lim_{x\to 0}\cos x = 1$, berdasarkan <strong>Teorema Apit</strong> (<em>Squeeze Theorem</em>), nilai $\dfrac{x}{\sin x}$ terjepit menuju $1$.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Empat Rumus Dasar Limit Trigonometri</div>
+      <p style="margin:.3rem 0 .5rem;font-size:.85rem;font-style:italic;">(berlaku untuk $x$ dalam radian)</p>
+      <div class="math-block">$$\lim_{x\to 0}\frac{\sin x}{x} = 1 \qquad \lim_{x\to 0}\frac{x}{\sin x} = 1 \qquad \lim_{x\to 0}\frac{\tan x}{x} = 1 \qquad \lim_{x\to 0}\frac{x}{\tan x} = 1$$</div>
+    </div>
+
+    <h3 class="subsection-title">2. Pengembangan Rumus Dasar</h3>
+    <p>Dari keempat rumus di atas, dapat dikembangkan rumus-rumus berikut untuk berbagai bentuk:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Rumus Pengembangan</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem;margin:.5rem 0;font-size:.88rem;">
+        <div style="text-align:center;">
+          <strong>(1)</strong><br>
+          $\displaystyle\lim_{x\to 0}\frac{\sin ax}{bx} = \frac{a}{b}$<br>
+          $\displaystyle\lim_{x\to 0}\frac{bx}{\sin ax} = \frac{b}{a}$
+        </div>
+        <div style="text-align:center;">
+          <strong>(2)</strong><br>
+          $\displaystyle\lim_{x\to 0}\frac{\tan ax}{bx} = \frac{a}{b}$<br>
+          $\displaystyle\lim_{x\to 0}\frac{bx}{\tan ax} = \frac{b}{a}$
+        </div>
+        <div style="text-align:center;">
+          <strong>(3)</strong><br>
+          $\displaystyle\lim_{x\to 0}\frac{\sin ax}{\tan bx} = \frac{a}{b}$<br>
+          $\displaystyle\lim_{x\to 0}\frac{\tan bx}{\sin ax} = \frac{b}{a}$
+        </div>
+      </div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Cara Cepat Membaca Rasio</div>
+      <p style="margin:0;font-size:.9rem;">Setiap kali muncul pasangan $\dfrac{\sin(\ldots)}{(\ldots)}$ atau $\dfrac{\tan(\ldots)}{(\ldots)}$ dengan argumen yang sama di atas dan bawah saat $x\to 0$, nilainya langsung $= 1$. Untuk koefisien berbeda, hasilnya adalah rasio koefisien: $\dfrac{\sin ax}{bx} \to \dfrac{a}{b}$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 29</div>
+      <p style="margin:0;font-size:.9rem;">Hitunglah $\displaystyle\lim_{x\to 0}\frac{\sin 3x}{5x}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Gunakan rumus pengembangan (1) dengan $a = 3$ dan $b = 5$:
+      $$\lim_{x\to 0}\frac{\sin 3x}{5x} = \frac{3}{5} = \boxed{\dfrac{3}{5}}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 30</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br>
+      (a) $\displaystyle\lim_{x\to 0}\left[\frac{\sin 4x}{3x} - \frac{\tan 2x}{\sin 6x} + \frac{8x}{\tan 2x}\right]$<br>
+      (b) $\displaystyle\lim_{x\to 0}\frac{\sin^2 6x}{3x \cdot \tan 4x}$<br>
+      (c) $\displaystyle\lim_{x\to 0}\frac{2\tan^2 3x \cdot \sin 2x}{4x^2 \cdot \sin 6x}$<br>
+      (d) $\displaystyle\lim_{x\to 0}\frac{6\sin^3 2x}{\sin 4x \cdot \sin 3x}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Terapkan rumus langsung pada setiap suku:
+      $$\frac{4}{3} - \frac{2}{6} + \frac{8}{2} = \frac{4}{3} - \frac{1}{3} + 4 = 1 + 4 = \boxed{5}$$
+      <strong>(b)</strong> Urai menjadi dua rasio:
+      $$\lim_{x\to 0}\frac{\sin 6x}{3x}\cdot\frac{\sin 6x}{\tan 4x} = \left(\frac{6}{3}\right)\left(\frac{6}{4}\right) = 2 \cdot \frac{3}{2} = \boxed{3}$$
+      <strong>(c)</strong> Susun ulang faktor-faktornya:
+      $$\lim_{x\to 0}2\cdot\frac{\tan 3x}{4x}\cdot\frac{\tan 3x}{x}\cdot\frac{\sin 2x}{\sin 6x} = 2\cdot\frac{3}{4}\cdot\frac{3}{1}\cdot\frac{2}{6} = 2\cdot\frac{3}{4}\cdot3\cdot\frac{1}{3} = \boxed{\dfrac{3}{2}}$$
+      <strong>(d)</strong> Perhatikan $\sin 2x \to 0$ saat $x \to 0$, sehingga perkalian dengan konstanta tetap menghasilkan 0:
+      $$\lim_{x\to 0}6\cdot\frac{\sin 2x}{\sin 4x}\cdot\frac{\sin 2x}{\sin 3x}\cdot\sin 2x = 6\cdot\frac{2}{4}\cdot\frac{2}{3}\cdot 0 = \boxed{0}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Untuk limit trigonometri berbentuk <strong>jumlah atau campuran</strong>, bagi setiap suku (atau pembilang dan penyebut) dengan pangkat $x$ yang sesuai agar muncul pasangan $\dfrac{\sin(\cdot)}{(\cdot)}$ yang nilainya $= 1$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 31</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br>
+      (a) $\displaystyle\lim_{x\to 0}\left[\frac{\sin 2x + 4x}{\sin 3x + \tan x}\right]$ &emsp;
+      (b) $\displaystyle\lim_{x\to 0}\left[\frac{6x^2 + \sin^2 3x}{\tan^2 2x - x^2}\right]$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Bagi pembilang dan penyebut dengan $x$:
+      $$\lim_{x\to 0}\frac{\frac{\sin 2x}{x}+4}{\frac{\sin 3x}{x}+\frac{\tan x}{x}} = \frac{2+4}{3+1} = \frac{6}{4} = \boxed{\dfrac{3}{2}}$$
+      <strong>(b)</strong> Bagi pembilang dan penyebut dengan $x^2$:
+      $$\lim_{x\to 0}\frac{6+\left(\frac{\sin 3x}{x}\right)^2}{\left(\frac{\tan 2x}{x}\right)^2-1} = \frac{6+9}{4-1} = \frac{15}{3} = \boxed{5}$$
+    </div>
+
+    <h3 class="subsection-title">3. Limit Trigonometri untuk $x \to a \neq 0$</h3>
+    <p>Jika variabel mendekati nilai bukan nol, kita tidak bisa langsung memakai rumus di atas. Kuncinya adalah melakukan substitusi $p = x - a$ sehingga $p \to 0$:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Teknik Substitusi $p = x - a$</div>
+      <p style="margin:.3rem 0 .5rem;font-size:.9rem;">Jika $x \to a$, misalkan $p = x - a$ sehingga $x = p + a$ dan $p \to 0$. Setiap suku $(x - a)$ menjadi $p$, dan rumus dasar bisa diterapkan.</p>
+      <div class="math-block">$$\lim_{x\to a}\frac{\sin a(x-a)}{b(x-a)} = \lim_{p\to 0}\frac{\sin ap}{bp} = \frac{a}{b}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 32</div>
+      <p style="margin:0;font-size:.9rem;">Hitunglah $\displaystyle\lim_{x\to 3}\frac{5\sin(x-3)}{2(x-3)}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Misalkan $p = x - 3$, maka $p \to 0$:
+      $$\lim_{x\to 3}\frac{5\sin(x-3)}{2(x-3)} = \lim_{p\to 0}\frac{5\sin p}{2p} = \frac{5}{2} = \boxed{\dfrac{5}{2}}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 33</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br>
+      (a) $\displaystyle\lim_{x\to 2}\frac{3\sin(x-2)}{4x-8}$ &emsp;
+      (b) $\displaystyle\lim_{x\to 3}\frac{6\tan^2(2x-6)}{(3x-9)^2}$ &emsp;
+      (c) $\displaystyle\lim_{x\to 1}\frac{\tan(2x^2-6x+4)}{3x^2-9x+6}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Faktorkan penyebut: $4x - 8 = 4(x-2)$, lalu terapkan rumus:
+      $$\lim_{x\to 2}\frac{3\sin(x-2)}{4(x-2)} = 3\cdot\frac{1}{4} = \boxed{\dfrac{3}{4}}$$
+      <strong>(b)</strong> Faktorkan: $6x - 6 = 6(x-3)$ dan $3x-9 = 3(x-3)$:
+      $$\lim_{x\to 3}6\left(\frac{\tan 2(x-3)}{3(x-3)}\right)^2 = 6\left(\frac{2}{3}\right)^2 = 6\cdot\frac{4}{9} = \boxed{\dfrac{8}{3}}$$
+      <strong>(c)</strong> Faktorkan: $2x^2-6x+4 = 2(x-1)(x-2)$ dan $3x^2-9x+6 = 3(x-1)(x-2)$, sehingga faktor $(x-2)$ dapat dicoret:
+      $$\lim_{x\to 1}\frac{\tan 2(x-1)(x-2)}{3(x-1)(x-2)} = \lim_{x\to 1}\frac{\tan 2(x-1)}{3(x-1)} = \frac{2}{3} = \boxed{\dfrac{2}{3}}$$
+    </div>
+
+    <h3 class="subsection-title">4. Limit Trigonometri dengan Identitas Cosinus Ganda</h3>
+    <p>Untuk limit yang melibatkan bentuk $1 - \cos(\cdot)$ atau selisih cosinus, sering perlu menggunakan identitas berikut untuk mengubahnya menjadi bentuk $\sin$:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Identitas Cosinus Ganda yang Sering Digunakan</div>
+      <ol style="padding-left:1.4rem;line-height:2.5;">
+        <li>$1 - \cos 2\alpha = 2\sin^2\alpha$</li>
+        <li>$\cos 2\alpha - 1 = -2\sin^2\alpha$</li>
+        <li>$1 - \cos^2\alpha = \sin^2\alpha$</li>
+        <li>$\cos A - \cos B = -2\sin\dfrac{A+B}{2}\cdot\sin\dfrac{A-B}{2}$</li>
+      </ol>
+    </div>
+    <p>Setelah menggunakan identitas ini, bentuk $\sin^2(\cdot)$ atau $\sin(\cdot)$ yang muncul dapat diselesaikan dengan rumus dasar limit trigonometri.</p>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 34</div>
+      <p style="margin:0;font-size:.9rem;">Hitunglah $\displaystyle\lim_{x\to 0}\frac{1 - \cos 4x}{x^2}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      Gunakan identitas $1 - \cos 4x = 2\sin^2 2x$:
+      $$\lim_{x\to 0}\frac{1-\cos 4x}{x^2} = \lim_{x\to 0}\frac{2\sin^2 2x}{x^2} = 2\left(\frac{\sin 2x}{x}\right)^2 \to 2\cdot 2^2 = \boxed{8}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 35</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br>
+      (a) $\displaystyle\lim_{x\to 0}\frac{1-\cos 6x}{\cos 8x - 1}$ &emsp;
+      (b) $\displaystyle\lim_{x\to 0}\frac{3\cos 4x - 3}{2\sin^2 3x}$ &emsp;
+      (c) $\displaystyle\lim_{x\to 0}\frac{4 - 4\cos 2x}{1 - \cos^2 3x}$<br>
+      (d) $\displaystyle\lim_{x\to 0}\frac{2 - 2\cos^2 6x}{3\cos^2 2x - 3}$ &emsp;
+      (e) $\displaystyle\lim_{x\to 0}\frac{\cos 5x - \cos 3x}{1 - \cos 8x}$ &emsp;
+      (f) $\displaystyle\lim_{x\to 0}\frac{3\cos 6x - 3\cos 2x}{1 - \cos^2 2x}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Gunakan $1-\cos 2\theta = 2\sin^2\theta$:
+      $$\lim_{x\to 0}\frac{1-\cos 6x}{\cos 8x-1} = \lim_{x\to 0}\frac{2\sin^2 3x}{-2\sin^2 4x} = -\lim_{x\to 0}\left(\frac{\sin 3x}{\sin 4x}\right)^2 = -\left(\frac{3}{4}\right)^2 = \boxed{-\dfrac{9}{16}}$$
+      <strong>(b)</strong> Gunakan $\cos 4x - 1 = -2\sin^2 2x$:
+      $$\lim_{x\to 0}\frac{3\cos 4x-3}{2\sin^2 3x} = \lim_{x\to 0}\frac{-3\cdot 2\sin^2 2x}{2\sin^2 3x} = -3\left(\frac{2}{3}\right)^2 = -3\cdot\frac{4}{9} = \boxed{-\dfrac{4}{3}}$$
+      <strong>(c)</strong> Gunakan $1-\cos 2x = 2\sin^2 x$ dan $1-\cos^2 3x = \sin^2 3x$:
+      $$\lim_{x\to 0}\frac{4(1-\cos 2x)}{1-\cos^2 3x} = \lim_{x\to 0}\frac{4\cdot 2\sin^2 x}{\sin^2 3x} = 8\left(\frac{1}{3}\right)^2 = \frac{8}{9} = \boxed{\dfrac{8}{9}}$$
+      <strong>(d)</strong> Gunakan $2-2\cos^2\theta = 2\sin^2\theta$ dan $\cos^2 2x - 1 = -\sin^2 2x$:
+      $$\lim_{x\to 0}\frac{2\sin^2 6x}{-3\sin^2 2x} = -\frac{2}{3}\left(\frac{6}{2}\right)^2 = -\frac{2}{3}\cdot 9 = \boxed{-6}$$
+      <strong>(e)</strong> Gunakan $\cos A - \cos B = -2\sin\dfrac{A+B}{2}\sin\dfrac{A-B}{2}$ dan $1-\cos 8x = 2\sin^2 4x$:
+      $$\lim_{x\to 0}\frac{\cos 5x-\cos 3x}{1-\cos 8x} = \lim_{x\to 0}\frac{-2\sin 4x\sin x}{2\sin^2 4x} = \lim_{x\to 0}\frac{-\sin x}{\sin 4x} = -\frac{1}{4} = \boxed{-\dfrac{1}{4}}$$
+      <strong>(f)</strong> Gunakan $\cos 6x - \cos 2x = -2\sin 4x\sin 2x$ dan $1-\cos^2 2x = \sin^2 2x$:
+      $$\lim_{x\to 0}\frac{3(\cos 6x-\cos 2x)}{\sin^2 2x} = \lim_{x\to 0}\frac{-6\sin 4x\sin 2x}{\sin^2 2x} = \lim_{x\to 0}\frac{-6\sin 4x}{\sin 2x} = -6\cdot\frac{4}{2} = \boxed{-12}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Strategi Menggunakan Identitas Cos Ganda</div>
+      <ol style="margin:.4rem 0 0;padding-left:1.3rem;line-height:2.1;">
+        <li>Identifikasi pola $1 - \cos(\cdot)$ atau selisih $\cos A - \cos B$.</li>
+        <li>Ubah ke bentuk $\sin^2(\cdot)$ menggunakan identitas yang sesuai.</li>
+        <li>Susun ulang menjadi pasangan $\left(\dfrac{\sin(\cdot)}{(\cdot)}\right)^n$ yang nilainya $({\text{rasio}})^n$.</li>
+      </ol>
+    </div>
+
+    <h3 class="subsection-title">5. Limit Trigonometri untuk $x \to \frac{\pi}{2}$ atau $x \to \frac{\pi}{4}$</h3>
+    <p>Untuk sudut-sudut khusus (bukan mendekati 0), kita tidak bisa langsung memakai rumus pengembangan. Strateginya adalah menggunakan <strong>identitas trigonometri</strong> untuk mengeliminasi bentuk $\tfrac{0}{0}$, lalu substitusi langsung.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Identitas untuk Sudut Khusus</div>
+      <ul style="margin:.3rem 0 0;padding-left:1.3rem;line-height:2.3;">
+        <li>Rumus sudut ganda: $\sin 2A = 2\sin A\cos A$, $\quad \cos 2A = 1-2\sin^2 A$</li>
+        <li>Rumus jumlah sinus: $\sin A + \sin B = 2\sin\dfrac{A+B}{2}\cos\dfrac{A-B}{2}$</li>
+        <li>Rumus jumlah cosinus: $\cos A + \cos B = 2\cos\dfrac{A+B}{2}\cos\dfrac{A-B}{2}$</li>
+      </ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 36</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br>
+      (a) $\displaystyle\lim_{x\to\frac{\pi}{2}}\frac{3\sin 4x}{\cos x}$ &emsp;
+      (b) $\displaystyle\lim_{x\to\frac{\pi}{4}}\frac{\sin 6x + \sin 2x}{\cos 5x + \cos x}$ &emsp;
+      (c) $\displaystyle\lim_{x\to\frac{\pi}{2}}\frac{1-\sin x}{\cos^2 x}$</p>
+    </div>
+    <div class="penyelesaian">
+      <br>
+      <strong>(a)</strong> Gunakan $\sin 4x = 2\sin 2x\cos 2x = 4\sin x\cos x\cos 2x$ agar faktor $\cos x$ bisa dicoret:
+      $$\begin{align*} \lim_{x\to\frac{\pi}{2}}\frac{3\sin 4x}{\cos x} &= \lim_{x\to\frac{\pi}{2}}\frac{3\cdot 4\sin x\cos x\cos 2x}{\cos x} = \lim_{x\to\frac{\pi}{2}}12\sin x\cos 2x = 12\sin\frac{\pi}{2}\cos\pi = 12\cdot 1\cdot(-1) = \boxed{-12} \end{align*}$$
+      <strong>(b)</strong> Gunakan rumus jumlah sinus dan cosinus untuk menyederhanakan:
+      $$\begin{align*} \lim_{x\to\frac{\pi}{4}}\frac{\sin 6x+\sin 2x}{\cos 5x+\cos x} &= \lim_{x\to\frac{\pi}{4}}\frac{2\sin 4x\cos 2x}{2\cos 3x\cos 2x} = \lim_{x\to\frac{\pi}{4}}\frac{\sin 4x}{\cos 3x} = \frac{\sin\pi}{\cos\frac{3\pi}{4}} = \frac{0}{-\frac{\sqrt{2}}{2}} = \boxed{0} \end{align*}$$
+      <strong>(c)</strong> Cek: substitusi $x = \tfrac{\pi}{2}$ memberikan $\tfrac{0}{0}$. Gunakan $\cos^2 x = (1-\sin x)(1+\sin x)$:
+      $$\lim_{x\to\frac{\pi}{2}}\frac{1-\sin x}{\cos^2 x} = \lim_{x\to\frac{\pi}{2}}\frac{1-\sin x}{(1-\sin x)(1+\sin x)} = \lim_{x\to\frac{\pi}{2}}\frac{1}{1+\sin x} = \frac{1}{1+1} = \boxed{\dfrac{1}{2}}$$
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan — Bagian D</div>
+      <ol class="soal-list">
+        <li>Tentukanlah nilai setiap limit berikut menggunakan rumus dasar: (a) $\displaystyle\lim_{x\to 0}\frac{\sin 7x}{3x}$, (b) $\displaystyle\lim_{x\to 0}\frac{4x}{\tan 2x}$, (c) $\displaystyle\lim_{x\to 0}\frac{\sin 5x}{\tan 3x}$.</li>
+        <li>Tentukanlah nilai limit berikut ($x \to 0$): (a) $\displaystyle\lim_{x\to 0}\frac{\sin 5x \cdot \tan 3x}{2x^2}$, (b) $\displaystyle\lim_{x\to 0}\frac{4\sin^2 2x - \sin^2 x}{\tan^2 3x}$, (c) $\displaystyle\lim_{x\to 0}\left[\frac{\sin 2x + 3x}{\tan 4x - x}\right]$.</li>
+        <li>Tentukanlah nilai limit berikut ($x \to a \neq 0$): (a) $\displaystyle\lim_{x\to \pi}\frac{\sin(x-\pi)}{2(x-\pi)}$, (b) $\displaystyle\lim_{x\to 2}\frac{\sin(x^2-4)}{x^2+2x-8}$, (c) $\displaystyle\lim_{x\to 3}\frac{2-2\cos^2(x-3)}{(x^2-9)^2}$.</li>
+        <li>Tentukanlah nilai setiap limit berikut menggunakan identitas cosinus ganda: (a) $\displaystyle\lim_{x\to 0}\frac{1-\cos 4x}{\sin^2 3x}$, (b) $\displaystyle\lim_{x\to 0}\frac{1-\cos 6x}{\cos 10x-1}$, (c) $\displaystyle\lim_{x\to 0}\frac{\cos 3x - \cos 7x}{1 - \cos 4x}$.</li>
+        <li>Tentukanlah nilai setiap limit berikut: (a) $\displaystyle\lim_{x\to\frac{\pi}{2}}\frac{\cos x}{\frac{\pi}{2}-x}$, (b) $\displaystyle\lim_{x\to\frac{\pi}{4}}\frac{1-\tan x}{\sin x - \cos x}$.</li>
+        <li>Buktikan bahwa $\displaystyle\lim_{x\to 0}\frac{1-\cos x}{x^2} = \dfrac{1}{2}$. (Gunakan identitas $1-\cos x = 2\sin^2\frac{x}{2}$.)</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ E. TABEL RINGKASAN ═══════════════════════════════════════════ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Tabel Ringkasan Limit Fungsi</h2>
+
+    <h3 class="subsection-title">1. Definisi dan Syarat Limit</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Konsep</th><th>Notasi / Syarat</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Definisi limit</td><td>$\displaystyle\lim_{x\to a} f(x) = L$</td><td>$f(x)$ mendekati $L$ saat $x$ mendekati $a$</td></tr>
+          <tr><td>Limit kiri</td><td>$\displaystyle\lim_{x \to a^-} f(x) = L$</td><td>$x$ mendekati $a$ dari kiri ($x &lt; a$)</td></tr>
+          <tr><td>Limit kanan</td><td>$\displaystyle\lim_{x \to a^+} f(x) = L$</td><td>$x$ mendekati $a$ dari kanan ($x > a$)</td></tr>
+          <tr><td>Syarat limit ada</td><td>$\displaystyle\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x)$</td><td>Limit kiri dan kanan harus sama</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">2. Teknik Menghitung Limit Berhingga</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Teknik</th><th>Kapan Digunakan</th><th>Langkah</th></tr></thead>
+        <tbody>
+          <tr><td>Substitusi langsung</td><td>$f(a)$ terdefinisi</td><td>Substitusi $x = a$ langsung ke $f(x)$</td></tr>
+          <tr><td>Faktorisasi</td><td>Bentuk $\tfrac{0}{0}$, polinomial</td><td>Faktorkan pembilang dan penyebut, coret faktor sekutu, lalu substitusi</td></tr>
+          <tr><td>Perkalian sekawan</td><td>Bentuk $\tfrac{0}{0}$ dengan akar</td><td>Kalikan dengan bentuk sekawan, sederhanakan, lalu substitusi</td></tr>
+          <tr><td>Substitusi $\sqrt[n]{x}=p$</td><td>Akar pangkat $n$</td><td>Ganti $x = p^n$, sederhanakan, lalu substitusi</td></tr>
+          <tr><td>Pemisalan $h = x-a$</td><td>Ekspresi memuat $(x-a)^n$ dan akar</td><td>Ganti $x-a$ dengan $h$, sederhanakan, substitusi $h\to 0$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">3. Limit di Tak Hingga (Fungsi Rasional)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Kondisi Derajat</th><th>Hasil Limit</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Pembilang $&lt;$ penyebut</td><td>$0$</td><td>Penyebut tumbuh lebih cepat</td></tr>
+          <tr><td>Pembilang $=$ penyebut</td><td>$\dfrac{a_n}{b_n}$ (rasio koef. tertinggi)</td><td>Hasil bergantung pada koefisien tertinggi</td></tr>
+          <tr><td>Pembilang $>$ penyebut</td><td>$\pm\infty$</td><td>Pembilang tumbuh lebih cepat</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">4. Limit Selisih Akar di Tak Hingga</h3>
+    <div class="math-block" style="margin:.5rem 0;">$$\lim_{x\to\infty}\Bigl(\sqrt{ax^2+bx+c}-\sqrt{dx^2+ex+f}\Bigr)$$</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Kondisi ($a$ vs $d$)</th><th>Hasil</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>$a > d$</td><td>$+\infty$</td><td>Akar pertama dominan</td></tr>
+          <tr><td>$a = d$</td><td>$\dfrac{b-e}{2\sqrt{a}}$</td><td>Gunakan perkalian sekawan</td></tr>
+          <tr><td>$a &lt; d$</td><td>$-\infty$</td><td>Akar kedua dominan</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">5. Rumus Dasar Limit Trigonometri ($x \to 0$)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Rumus</th><th>Nilai</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>$\displaystyle\lim_{x\to 0}\dfrac{\sin x}{x}$</td><td>$1$</td><td>Rumus dasar sinus</td></tr>
+          <tr><td>$\displaystyle\lim_{x\to 0}\dfrac{\tan x}{x}$</td><td>$1$</td><td>Rumus dasar tangen</td></tr>
+          <tr><td>$\displaystyle\lim_{x\to 0}\dfrac{\sin ax}{bx}$</td><td>$\dfrac{a}{b}$</td><td>Variasi koefisien sinus</td></tr>
+          <tr><td>$\displaystyle\lim_{x\to 0}\dfrac{\tan ax}{bx}$</td><td>$\dfrac{a}{b}$</td><td>Variasi koefisien tangen</td></tr>
+          <tr><td>$\displaystyle\lim_{x\to 0}\dfrac{\sin ax}{\sin bx}$</td><td>$\dfrac{a}{b}$</td><td>Rasio dua sinus</td></tr>
+          <tr><td>$\displaystyle\lim_{x\to 0}\dfrac{\tan ax}{\tan bx}$</td><td>$\dfrac{a}{b}$</td><td>Rasio dua tangen</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">6. Identitas Cosinus Ganda yang Sering Digunakan</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Identitas</th><th>Kegunaan dalam Limit</th></tr></thead>
+        <tbody>
+          <tr><td>$1 - \cos 2\alpha = 2\sin^2\alpha$</td><td>Ubah $1-\cos(\cdot)$ ke bentuk $\sin^2(\cdot)$</td></tr>
+          <tr><td>$\cos 2\alpha = 1 - 2\sin^2\alpha$</td><td>Alternatif bentuk ganda</td></tr>
+          <tr><td>$\cos A - \cos B = -2\sin\dfrac{A+B}{2}\sin\dfrac{A-B}{2}$</td><td>Ubah selisih cosinus ke bentuk sinus</td></tr>
+          <tr><td>$\sin A + \sin B = 2\sin\dfrac{A+B}{2}\cos\dfrac{A-B}{2}$</td><td>Ubah jumlah sinus untuk sudut khusus</td></tr>
+          <tr><td>$\cos^2 x = (1-\sin x)(1+\sin x)$</td><td>Eliminasi bentuk $\tfrac{0}{0}$ saat $x \to \dfrac{\pi}{2}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Koneksi ke materi berikutnya -->
+    <div class="koneksi-wrap" style="margin-top:2rem;">
+      <p class="koneksi-text">
+        Limit Fungsi adalah <strong>fondasi mutlak</strong> Turunan (Diferensial). Definisi turunan
+        $f'(a) = \displaystyle\lim_{h \to 0}\dfrac{f(a+h)-f(a)}{h}$
+        sepenuhnya bergantung pada konsep limit yang dipelajari di sini.
+      </p>
+      <div class="koneksi-comparison">
+        <div class="koneksi-card current">
+          <div class="koneksi-card-label">Sekarang</div>
+          <div class="koneksi-card-formula">$\displaystyle\lim_{x \to a} f(x)$</div>
+          <div class="koneksi-card-desc">Nilai pendekatan<br>fungsi di titik $a$</div>
+        </div>
+        <div style="display:flex;align-items:center;font-size:1.5rem;color:var(--text-3);">→</div>
+        <div class="koneksi-card next">
+          <div class="koneksi-card-label">Berikutnya</div>
+          <div class="koneksi-card-formula">$f'(x)$</div>
+          <div class="koneksi-card-desc">Laju perubahan<br>sesaat fungsi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTION FOOTER -->
+  <div class="footer-nav">
+    <a class="nav-btn" href="../barisan-deret/">← Barisan &amp; Deret</a>
+    <a class="nav-btn" href="../turunan/">Turunan →</a>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── TOC Dropdown ──────────────────────────────────────────────────────
+function toggleTOC() { document.getElementById('tocDropdown').classList.toggle('open'); }
+function closeTOC()  { document.getElementById('tocDropdown').classList.remove('open'); }
+document.addEventListener('click', e => {
+  if (!document.getElementById('tocDropdown').contains(e.target)) closeTOC();
+});
+
+// ── Scroll progress + scroll-top button ───────────────────────────────
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('scroll-bar');
+  if (el) {
+    const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+    el.style.width = pct + '%';
+  }
+  const btn = document.getElementById('scroll-top');
+  if (btn) btn.style.opacity = window.scrollY > 400 ? '1' : '0';
+});
+
+// ── Share ─────────────────────────────────────────────────────────────
+function shareMateri() {
+  if (navigator.share) { navigator.share({ title: 'Limit Fungsi – EksaktaLab', url: location.href }); }
+  else { navigator.clipboard.writeText(location.href).then(() => alert('Link disalin!')); }
+}
+
+// ── Soal Latihan Accordion ────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const jawabanData = {
+    // Bagian A
+    0: [
+      { jawaban: `Limit kiri: $\\lim_{x\\to 2^-}(2x+1)=5$. Limit kanan: $\\lim_{x\\to 2^+}(x^2-1)=3$. Karena $5\\neq 3$, maka $\\lim_{x\\to 2}f(x)$ <strong>tidak ada</strong>.` },
+      { jawaban: `(a) $\\lim_{x\\to 1^-}g(x)=1^2+3=4$; $\\lim_{x\\to 1^+}g(x)=4(1)=4$. (b) Karena limit kiri = limit kanan = 4, maka $\\lim_{x\\to 1}g(x)=4$ ada. (c) $g(1)=1^2+3=4$ (terdefinisi). Nilainya sama dengan limitnya.` },
+      { jawaban: `(a) $\\lim_{x\\to 0^-}h(x)=-(0)+1=1$; $\\lim_{x\\to 0^+}h(x)=0+2=2$. (b) $h(0)=3$. (c) Karena $\\lim^-\\neq\\lim^+$ ($1\\neq 2$), maka $\\lim_{x\\to 0}h(x)$ <strong>tidak ada</strong>.` },
+    ],
+    // Bagian B Set 1
+    1: [
+      { jawaban: `(a) Substitusi $x=-1$: $\\frac{(-1)^2+4(-1)+3}{(-1)+1}=\\frac{0}{0}$. Faktorisasi: $\\lim_{x\\to-1}\\frac{(x+1)(x+3)}{x+1}=\\lim_{x\\to-1}(x+3)=2$. (b) Substitusi $x=3$: $\\frac{0}{0}$. Faktorisasi: $\\lim_{x\\to 3}\\frac{(x-3)(x+3)}{x-3}=\\lim_{x\\to 3}(x+3)=6$.` },
+      { jawaban: `(a) Substitusi $x=4$: $\\frac{0}{0}$. $\\lim_{x\\to 4}\\frac{(x-4)^2}{(x-4)(x+1)}=\\lim_{x\\to 4}\\frac{x-4}{x+1}=\\frac{0}{5}=0$. (b) Substitusi $x=-2$: $\\frac{0}{0}$. $\\lim_{x\\to-2}\\frac{2(x+2)(x^2-2x+4)}{(x+2)(x+3)}=\\lim_{x\\to-2}\\frac{2(x^2-2x+4)}{x+3}=\\frac{2(12)}{1}=24$.` },
+      { jawaban: `(a) Kalikan dengan sekawan $\\frac{\\sqrt{x}+2}{\\sqrt{x}+2}$: $\\lim_{x\\to 4}\\frac{(x-4)(\\sqrt{x}+2)}{(\\sqrt{x}-2)(\\sqrt{x}+2)(x+4)}\\cdot(x+4)$... $=\\lim_{x\\to 4}(\\sqrt{x}+2)(x+4)/(x+4) $... Jawab: $\\lim_{x\\to 4}(\\sqrt{x}+2)=4$... Lebih teliti: $\\frac{x^2-16}{\\sqrt{x}-2}=\\frac{(x-4)(x+4)}{\\sqrt{x}-2}\\cdot\\frac{\\sqrt{x}+2}{\\sqrt{x}+2}=(x+4)(\\sqrt{x}+2)=8\\cdot 4=\\boxed{32}$. (b) Kalikan dengan sekawan $\\frac{\\sqrt{x-1}+2}{\\sqrt{x-1}+2}$: $\\lim_{x\\to 5}\\frac{(x-1)-4}{(x-5)(x-2)(\\sqrt{x-1}+2)}=\\lim_{x\\to 5}\\frac{x-5}{(x-5)(x-2)(\\sqrt{x-1}+2)}=\\frac{1}{(3)(4)}=\\frac{1}{12}$.` },
+    ],
+    // Bagian B Set 2
+    2: [
+      { jawaban: `(a) $\\dfrac{\\sqrt{2}}{8}$ (seperti Contoh 15). (b) Kalikan dengan sekawan $\\sqrt{x^2+9}+5$: $\\lim_{x\\to 4}\\frac{x^2-16}{(x-4)(x-2)(\\sqrt{x^2+9}+5)}=\\lim_{x\\to 4}\\frac{x+4}{(x-2)(\\sqrt{x^2+9}+5)}=\\frac{8}{(2)(10)}=\\frac{2}{5}$.` },
+      { jawaban: `Penyebut $x^2-x-2=(x-2)(x+1)$ nol di $x=2$. Agar limit berhingga: $4+2a+b=0$. Tulis pembilang $(x-2)(x-r)$, sehingga $\\frac{2-r}{3}=\\frac{4}{3}\\Rightarrow r=-2$. Maka $a=0, b=-4$.` },
+      { jawaban: `Syarat: $4+a=b-4\\Rightarrow b=a+8$. Dengan sekawan: $\\frac{1}{\\sqrt{4+a}}=\\frac{1}{4}\\Rightarrow\\sqrt{4+a}=4\\Rightarrow a=12, b=20$. Verifikasi: $\\lim_{x\\to 4}\\frac{\\sqrt{x+12}-\\sqrt{20-x}}{x-4}=\\frac{2(x-4)}{(x-4)\\cdot 2\\sqrt{x+12}}=\\frac{1}{\\sqrt{16}}=\\frac{1}{4}$ ✓.` },
+      { jawaban: `Misalkan $p=\\sqrt[3]{x}$, maka $x=p^3$, $x\\to 8\\Rightarrow p\\to 2$: $\\lim_{p\\to 2}\\frac{p-2}{p^3-8}=\\lim_{p\\to 2}\\frac{p-2}{(p-2)(p^2+2p+4)}=\\frac{1}{4+4+4}=\\frac{1}{12}$.` },
+      { jawaban: `Faktorkan: $x^2-(a+2)x+2a=(x-a)(x-2)$. Maka $\\lim_{x\\to a}\\frac{(x-a)(x-2)}{\\sqrt{x-a}(x-a)}=\\lim_{x\\to a}\\frac{x-2}{\\sqrt{x-a}}$. Biarkan $h=x-a$: $\\lim_{h\\to 0}\\frac{h+a-2}{\\sqrt{h}}\\to\\infty$ kecuali $a=2$. Jika $a=2$: $\\lim_{h\\to 0}\\frac{h}{\\sqrt{h}}=\\lim_{h\\to 0}\\sqrt{h}=0$. Jadi $k=0$ dan $k=4$ tidak mungkin dari rumus ini (periksa ulang soal).` },
+    ],
+    // Bagian C Set 1
+    3: [
+      { jawaban: `(a) $p=q=3$: $\\frac{4}{3}$. (b) $p<q$: $0$. (c) $p>q$: $\\infty$.` },
+      { jawaban: `(a) Uraikan: $\\frac{6x^2+5x-4}{x^2+7x-5}$, $p=q=2$: $6$. (b) Uraikan: $\\frac{x^3-2x}{x^3+...}$, $p=q=3$: $1$. (c) Uraikan: $\\frac{2x^3+...}{3x^3+...}$, $p=q=3$: $\\frac{2}{3}$.` },
+      { jawaban: `(a) $\\frac{\\sqrt{9}}{3}=1$. (b) $\\frac{2}{\\sqrt{4}}=1$. (c) $\\frac{\\sqrt{16x^4}-3x^2}{x^2}=\\frac{4x^2-3x^2}{x^2}=1$ (untuk suku pertama dominan).` },
+      { jawaban: `(a) $a=d=1$: $\\frac{8-(-4)}{2\\cdot 1}=6$. (b) $a=d=4$: $\\frac{6-(-2)}{2\\cdot 2}=2$. (c) $a=d=9$: $\\frac{3-(-9)}{2\\cdot 3}=2$.` },
+    ],
+    // Bagian C Set 2
+    4: [
+      { jawaban: `(a) Ubah $(x+3)=\\sqrt{(x+3)^2}=\\sqrt{x^2+6x+9}$. Kaidah: $\\frac{10-6}{2\\cdot 1}=2$. (b) Ubah $(2x-1)=\\sqrt{4x^2-4x+1}$. Kaidah: $\\frac{(-8)-(-4)}{2\\cdot 2}=-1$. (c) Ubah $(3x+2)=\\sqrt{9x^2+12x+4}$. Kaidah: $\\frac{6-12}{2\\cdot 3}=-1$.` },
+      { jawaban: `(a) $x<0$, $\\sqrt{x^2}=-x$: $\\frac{-x\\sqrt{1-3/x}}{x+2}\\to\\frac{-1}{0^+}=-\\infty$... lebih teliti: $\\frac{|x|\\sqrt{1-3/x}}{x+2}=\\frac{-x\\sqrt{1-3/x}}{x(1+2/x)}\\to\\frac{-1}{1}=-1$. (b) $x\\to-\\infty$: $\\frac{3x+1}{|x|\\sqrt{9+...}}=\\frac{x(3+1/x)}{-x\\sqrt{9}}\\to\\frac{3}{-3}=-1$. (c) $x<0$: $\\frac{|x|\\sqrt{4+...}}{1-2x}=\\frac{-x\\cdot 2}{1-2x}\\to\\frac{-x\\cdot 2}{-2x}=1$.` },
+      { jawaban: `(a) Kalikan dua sekawan: $\\frac{(x+1)-x}{(\\sqrt{x+2}-\\sqrt{x+1})(\\sqrt{x+1}+\\sqrt{x})}\\cdot\\frac{\\sqrt{x+2}+\\sqrt{x+1}}{\\sqrt{x+2}+\\sqrt{x+1}}=\\frac{\\sqrt{x+2}+\\sqrt{x+1}}{\\sqrt{x+1}+\\sqrt{x}}\\to 1$. (b) $x(\\sqrt{x^2+4x+1}-(x+2))=x\\cdot\\frac{-3}{\\sqrt{x^2+4x+1}+(x+2)}\\to x\\cdot\\frac{-3}{2x}=-\\frac{3}{2}$. (c) $\\frac{3x/2}{\\sqrt{x}/2}\\to\\sqrt{x}\\to\\infty$... lebih teliti: $\\frac{\\frac{3}{2}\\cdot\\frac{1}{\\sqrt{x}}}{\\frac{1}{2\\sqrt{x}}}=3$.` },
+    ],
+    // Bagian D
+    5: [
+      { jawaban: `(a) $\\frac{7}{3}$. (b) $\\frac{4}{2}=2$. (c) $\\frac{5}{3}$.` },
+      { jawaban: `(a) $\\frac{\\sin 5x}{x}\\cdot\\frac{\\tan 3x}{x}\\cdot\\frac{1}{2}=5\\cdot 3\\cdot\\frac{1}{2}=\\frac{15}{2}$. (b) $\\frac{4\\sin^2 2x-\\sin^2 x}{\\tan^2 3x}=\\frac{4(2)^2-(1)^2}{(3)^2}=\\frac{15}{9}=\\frac{5}{3}$. (c) Bagi dengan $x$: $\\frac{2+3}{4-1}=\\frac{5}{3}$.` },
+      { jawaban: `(a) Misalkan $p=x-\\pi$: $\\frac{1}{2}$. (b) Faktorkan $x^2-4=(x-2)(x+2)$ dan $x^2+2x-8=(x-2)(x+4)$: $\\lim_{x\\to 2}\\frac{\\sin(x-2)(x+2)}{(x-2)(x+4)}=\\frac{1\\cdot 4}{6}=\\frac{2}{3}$. (c) $\\frac{2-2\\cos^2(x-3)}{((x-3)(x+3))^2}=\\frac{2\\sin^2(x-3)}{(x-3)^2(x+3)^2}\\to\\frac{2}{36}=\\frac{1}{18}$.` },
+      { jawaban: `(a) $1-\\cos 4x=2\\sin^2 2x$, $\\sin^2 3x$: $2(2/3)^2=\\frac{8}{9}$. (b) $\\frac{2\\sin^2 3x}{-2\\sin^2 5x}=-\\left(\\frac{3}{5}\\right)^2=-\\frac{9}{25}$. (c) $\\cos 3x-\\cos 7x=-2\\sin 5x\\sin(-2x)=4\\sin 5x\\sin 2x$... $\\frac{4\\sin 5x\\sin 2x}{2\\sin^2 2x}=\\frac{2\\sin 5x}{\\sin 2x}=\\frac{2\\cdot 5}{2}=5$.` },
+      { jawaban: `(a) Misalkan $p=x-\\pi/2$: $\\lim_{p\\to 0}\\frac{\\cos(p+\\pi/2)}{\\pi/2-(p+\\pi/2)}=\\lim_{p\\to 0}\\frac{-\\sin p}{-p}=1$. (b) $1-\\tan x=\\frac{\\cos x-\\sin x}{\\cos x}$, $\\sin x-\\cos x=-(\\cos x-\\sin x)$: $\\lim_{x\\to\\pi/4}\\frac{-(\\sin x-\\cos x)\\cos x}{\\cos x(\\sin x-\\cos x)}$... sebenarnya $\\frac{\\cos x-\\sin x}{\\cos x}\\cdot\\frac{1}{\\sin x-\\cos x}=\\frac{-(\\sin x-\\cos x)}{\\cos x(\\sin x-\\cos x)}=\\frac{-1}{\\cos(\\pi/4)}=-\\sqrt{2}$.` },
+      { jawaban: `$\\frac{1-\\cos x}{x^2}=\\frac{2\\sin^2(x/2)}{x^2}=\\frac{2\\sin^2(x/2)}{4(x/2)^2}=\\frac{1}{2}\\left(\\frac{\\sin(x/2)}{x/2}\\right)^2\\to\\frac{1}{2}\\cdot 1^2=\\frac{1}{2}$ ✓` },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+    const items = [...list.querySelectorAll('li')];
+    const newList = document.createElement('div');
+    newList.className = 'soal-list-accordion';
+    items.forEach((li, i) => {
+      const ans = answers[i] || {};
+      const item = document.createElement('div');
+      item.className = 'soal-item';
+      item.innerHTML = `
+        <div class="soal-item-header" role="button" tabindex="0">
+          <span class="soal-num">${i+1}</span>
+          <span class="soal-text">${li.innerHTML}</span>
+          <button class="soal-key-btn" tabindex="-1">Kunci</button>
+        </div>
+        <div class="soal-answer">
+          <div class="soal-answer-inner">
+            <div class="soal-answer-label">Jawaban</div>
+            ${ans.jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
+          </div>
+        </div>`;
+      const header = item.querySelector('.soal-item-header');
+      const toggle = () => {
+        const open = item.classList.toggle('open');
+        if (open && window.MathJax) MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' '){e.preventDefault();toggle();} });
+      newList.appendChild(item);
+    });
+    list.replaceWith(newList);
+  });
+});
+</script>
+
+<!-- FOOTER -->
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+</body>
+</html>
