@@ -708,20 +708,25 @@ tr:hover td{background:var(--surface-2);}
 .step-list{list-style:none;padding-left:0;counter-reset:step;}
 .step-list li{
   counter-increment:step;
-  padding:0.4rem 0 0.4rem 2rem;
+  padding:0.55rem 0 0.55rem 3rem;
   position:relative;
-  font-size:0.9rem;color:var(--text-2);
+  font-size:0.93rem;color:var(--text-2);
+  line-height:1.65;
+  margin-bottom:0.5rem;
 }
+.step-list li:last-child{margin-bottom:0;}
 .step-list li::before{
   content:counter(step);
-  position:absolute;left:0;top:0.4rem;
-  width:18px;height:18px;
+  position:absolute;left:0;top:0.5rem;
+  width:26px;height:26px;
   border-radius:50%;
   background:var(--teal);color:#fff;
-  font-size:0.65rem;font-weight:700;font-family:var(--mono);
+  font-size:0.75rem;font-weight:700;font-family:var(--mono);
   display:flex;align-items:center;justify-content:center;
-  text-align:center;line-height:18px;
+  box-shadow:0 2px 8px rgba(0,191,165,.3);
 }
+/* step-list di dalam box-definisi */
+.box.box-definisi ol.step-list{padding-left:0;}
 
 /* ── PENYELESAIAN ───────────────────────── */
 .penyelesaian{
