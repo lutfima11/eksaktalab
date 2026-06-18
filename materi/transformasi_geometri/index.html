@@ -1415,31 +1415,44 @@ ol.step-list li { margin-bottom:.25rem; }
       </table>
     </div>
 
-    <!-- Koneksi ke materi berikutnya -->
-    <div class="koneksi-wrap" style="margin-top:2rem;">
-      <p class="koneksi-text">
-        Transformasi Geometri dengan matriks adalah <strong>fondasi aljabar linear</strong>. Konsep perkalian matriks transformasi, determinan (perubahan luas), dan invers yang dipelajari di sini langsung terhubung dengan representasi matriks dalam grafika komputer, robotika, dan analisis data modern.
-      </p>
-      <div class="koneksi-comparison">
-        <div class="koneksi-card current">
-          <div class="koneksi-card-label">Sekarang</div>
-          <div class="koneksi-card-formula">$\mathbf{x}' = M\,\mathbf{x}$</div>
-          <div class="koneksi-card-desc">Transformasi titik<br>dan kurva pada bidang</div>
-        </div>
-        <div style="display:flex;align-items:center;font-size:1.5rem;color:var(--text-3);">→</div>
-        <div class="koneksi-card next">
-          <div class="koneksi-card-label">Berikutnya</div>
-          <div class="koneksi-card-formula">$A\mathbf{x} = \mathbf{b}$</div>
-          <div class="koneksi-card-desc">Sistem persamaan<br>linear dengan matriks</div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- ACTION FOOTER -->
   <div class="footer-nav">
     <a class="nav-btn" href="../matriks/">← Matriks</a>
     <a class="nav-btn" href="../limit-fungsi/">Limit Fungsi →</a>
+  </div>
+
+  <!-- KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Disqus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi Transformasi Geometri? Tulis di kolom diskusi. Login dengan akun Google.</p>
+    <div id="disqus_thread"></div>
+    <script>
+    (function() {
+      var disqusLoaded = false;
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !disqusLoaded) {
+          disqusLoaded = true;
+          observer.disconnect();
+          var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://eksaktalab.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      }, { threshold: 0.1 });
+      var thread = document.getElementById('disqus_thread');
+      if (thread) observer.observe(thread);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 
 </div><!-- /page-wrap -->
