@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trigonometri 1 – EksaktaLab</title>
+<meta name="description" content="Materi lengkap Trigonometri 1 SMA: perbandingan trigonometri, sudut istimewa, trigonometri di semua kuadran, identitas trigonometri, dan fungsi trigonometri. Dilengkapi 45 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<style>
+th mjx-container { color: #fff !important; }
+th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
+</style>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/trigonometri1/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/trigonometri1/">
+<meta property="og:title" content="Trigonometri 1 – EksaktaLab">
+<meta property="og:description" content="Materi lengkap Trigonometri 1 SMA: perbandingan trigonometri, sudut istimewa, trigonometri di semua kuadran, identitas trigonometri, dan fungsi trigonometri.">
+<meta property="og:site_name" content="EksaktaLab">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Trigonometri 1 – EksaktaLab">
+<meta name="twitter:description" content="Materi lengkap Trigonometri 1 SMA: perbandingan trigonometri, sudut istimewa, identitas, dan fungsi trigonometri.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Trigonometri 1","url":"https://lutfima11.github.io/eksaktalab/materi/trigonometri1/","description":"Materi lengkap Trigonometri 1 SMA: perbandingan trigonometri, sudut istimewa, trigonometri di semua kuadran, identitas trigonometri, dan fungsi trigonometri.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"educationalLevel":"SMA Kelas X","inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Trigonometri"},{"@type":"ListItem","position":4,"name":"Trigonometri 1","item":"https://lutfima11.github.io/eksaktalab/materi/trigonometri1/"}]}}</script>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Trigonometri 1 · 6 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Perbandingan Trigonometri</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Sudut-sudut Istimewa</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Trigonometri di Semua Kuadran</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Identitas Trigonometri</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Fungsi Trigonometri</a>
+        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Ringkasan</a>
+      </div>
+    </div>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#trigonometri">Trigonometri</a>
+    <span>/</span>
+    Trigonometri 1
+  </div>
+
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">BAB T · No.01</div>
+      <h1 class="materi-title">Trigonometri 1</h1>
+      <p class="materi-desc">Pelajari perbandingan trigonometri pada segitiga siku-siku, sudut istimewa, sifat di semua kuadran, identitas trigonometri, serta grafik fungsi sin, cos, dan tan.</p>
+      <div class="materi-tags">
+        <span class="tag teal">Kelas X</span>
+        <span class="tag">Trigonometri</span>
+        <span class="tag">6 Sub-bab</span>
+        <span class="tag">45 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Perbandingan Trigonometri</a></li>
+      <li><a href="#bagian-b" data-num="B">Perbandingan Trigonometri Sudut-sudut Istimewa</a></li>
+      <li><a href="#bagian-c" data-num="C">Rumus Perbandingan Trigonometri di Semua Kuadran</a></li>
+      <li><a href="#bagian-d" data-num="D">Identitas Trigonometri</a></li>
+      <li><a href="#bagian-e" data-num="E">Fungsi Trigonometri</a></li>
+      <li><a href="#bagian-f" data-num="F">Ringkasan</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Apa itu Trigonometri?</h2>
+
+    <p>Bagaimana cara mengukur tinggi sebuah pohon tanpa memanjatnya? Atau mengetahui jarak ke sebuah menara tanpa berjalan ke sana? Trigonometri memberikan jawabannya — cukup dengan sudut dan satu ukuran yang diketahui.</p>
+
+    <p>Kata <em>trigonometri</em> berasal dari bahasa Yunani: <em>trigonon</em> (segitiga) dan <em>metron</em> (ukuran). Secara sederhana, ini adalah <strong>ilmu tentang hubungan antara sudut dan sisi segitiga</strong>. Ilmu ini juga menjadi dasar untuk memahami gelombang, getaran, dan banyak fenomena alam lainnya.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Sudut Menentukan Perbandingan</h3>
+
+    <p>Perhatikan segitiga siku-siku. Selama sudutnya sama, <em>perbandingan</em> panjang sisi-sisinya selalu tetap — tidak peduli seberapa besar atau kecil segitiganya. Inilah inti trigonometri: setiap sudut punya perbandingan sisi yang unik dan tetap.</p>
+
+    <p>Perbandingan inilah yang kita sebut <strong>sinus</strong>, <strong>cosinus</strong>, dan <strong>tangen</strong>. Dengan mengetahui satu sudut dan satu sisi, kita bisa menentukan semua sisi lainnya.</p>
+
+    <h3 class="subsection-title">Sejarah Singkat</h3>
+
+    <p>Trigonometri lahir dari kebutuhan manusia mengamati langit. Bangsa <strong>Babilonia</strong> (±2000 SM) sudah mencatat tabel sudut untuk memprediksi gerak bintang. Matematikawan Yunani <strong>Hipparchus</strong> (190–120 SM) kemudian menyusun tabel sistematis pertama dan dijuluki <em>Bapak Trigonometri</em>.</p>
+
+    <p>Ilmuwan Islam seperti <strong>Al-Battani</strong> dan <strong>Al-Biruni</strong> (abad 9–11 M) memperkenalkan sinus dan cosinus dalam bentuk yang kita gunakan saat ini, lalu diterapkan dalam navigasi dan geografi. Warisan inilah yang berkembang menjadi trigonometri modern.</p>
+
+    <div class="box box-definisi">
+      <div class="box-label">Peta Materi: Alur Belajar Trigonometri 1</div>
+      <p style="margin:0 0 .5rem 0;">Materi dalam modul ini disusun secara bertahap, dari yang paling konkret hingga yang paling umum:</p>
+      <ol style="margin:0;padding-left:1.2rem;line-height:1.9;">
+        <li><strong>Perbandingan Trigonometri</strong> — mendefinisikan sin, cos, tan (dan kebalikannya) pada segitiga siku-siku sebagai titik awal</li>
+        <li><strong>Sudut-sudut Istimewa</strong> — menghitung nilai tepat untuk $0^\circ$, $30^\circ$, $45^\circ$, $60^\circ$, $90^\circ$ tanpa kalkulator</li>
+        <li><strong>Trigonometri di Semua Kuadran</strong> — memperluas definisi ke sudut di atas $90^\circ$ menggunakan lingkaran satuan</li>
+        <li><strong>Identitas Trigonometri</strong> — menemukan hubungan aljabar antar perbandingan yang berlaku universal</li>
+        <li><strong>Fungsi Trigonometri</strong> — memahami grafik, periode, dan transformasi fungsi sin, cos, tan</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ A. PERBANDINGAN TRIGONOMETRI ═════════════════════════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Perbandingan Trigonometri</h2>
+
+    <h3 class="subsection-title">1. Definisi pada Segitiga Siku-Siku</h3>
+
+    <p>Pada segitiga siku-siku $ABC$ dengan sudut siku-siku di $C$, didefinisikan enam perbandingan trigonometri terhadap sudut $\alpha$ di $A$ dan sudut $\beta$ di $B$, dengan $\alpha + \beta = 90^\circ$.</p>
+
+    <div class="box box-definisi">
+      <div class="box-label">Segitiga Siku-Siku ABC</div>
+      <div style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;margin:0;">
+        <div style="flex:0 0 auto;">
+          <svg viewBox="0 0 200 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg">
+            <line x1="20" y1="140" x2="160" y2="140" stroke="currentColor" stroke-width="2"/>
+            <line x1="160" y1="140" x2="160" y2="20" stroke="currentColor" stroke-width="2"/>
+            <line x1="20" y1="140" x2="160" y2="20" stroke="currentColor" stroke-width="2"/>
+            <rect x="148" y="128" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M40,140 A20,20 0 0,1 31,121" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <text x="46" y="130" font-size="13" fill="currentColor" font-style="italic">α</text>
+            <path d="M160,50 A18,18 0 0,1 144,43" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <text x="138" y="60" font-size="13" fill="currentColor" font-style="italic">β</text>
+            <text x="85" y="155" font-size="13" fill="currentColor" font-style="italic">b</text>
+            <text x="167" y="85" font-size="13" fill="currentColor" font-style="italic">a</text>
+            <text x="80" y="72" font-size="13" fill="currentColor" font-style="italic">c</text>
+            <text x="8" y="144" font-size="13" fill="currentColor" font-weight="bold">A</text>
+            <text x="163" y="15" font-size="13" fill="currentColor" font-weight="bold">B</text>
+            <text x="163" y="155" font-size="13" fill="currentColor" font-weight="bold">C</text>
+          </svg>
+        </div>
+        <div style="flex:1;min-width:180px;">
+          <p style="margin:0 0 .4rem 0;font-size:.9rem;"><strong>Keterangan sisi:</strong></p>
+          <p style="margin:0 0 .2rem 0;font-size:.9rem;">$a = BC$ — depan $\alpha$, samping $\beta$</p>
+          <p style="margin:0 0 .2rem 0;font-size:.9rem;">$b = AC$ — samping $\alpha$, depan $\beta$</p>
+          <p style="margin:0 0 .6rem 0;font-size:.9rem;">$c = AB$ — miring (<em>hypotenuse</em>)</p>
+          <p style="margin:0 0 .4rem 0;font-size:.9rem;"><strong>Keterangan sudut:</strong></p>
+          <p style="margin:0 0 .2rem 0;font-size:.9rem;">$\alpha$ — sudut di titik $A$</p>
+          <p style="margin:0 0 .2rem 0;font-size:.9rem;">$\beta$ — sudut di titik $B$</p>
+          <p style="margin:0;font-size:.9rem;">$\alpha + \beta = 90^\circ$ (saling komplementer)</p>
+        </div>
+      </div>
+    </div>
+
+    <p>Dari gambar tersebut, keenam perbandingan trigonometri didefinisikan sebagai berikut.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="4">Perbandingan Utama</th>
+            <th colspan="4">Kebalikannya</th>
+          </tr>
+          <tr>
+            <th>Nama</th><th>Definisi</th><th>$\alpha$</th><th>$\beta$</th>
+            <th>Nama</th><th>Definisi</th><th>$\alpha$</th><th>$\beta$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$\sin$</td><td>$\dfrac{\text{depan}}{\text{miring}}$</td><td>$\dfrac{a}{c}$</td><td>$\dfrac{b}{c}$</td>
+            <td>$\csc$</td><td>$\dfrac{\text{miring}}{\text{depan}}$</td><td>$\dfrac{c}{a}$</td><td>$\dfrac{c}{b}$</td>
+          </tr>
+          <tr>
+            <td>$\cos$</td><td>$\dfrac{\text{samping}}{\text{miring}}$</td><td>$\dfrac{b}{c}$</td><td>$\dfrac{a}{c}$</td>
+            <td>$\sec$</td><td>$\dfrac{\text{miring}}{\text{samping}}$</td><td>$\dfrac{c}{b}$</td><td>$\dfrac{c}{a}$</td>
+          </tr>
+          <tr>
+            <td>$\tan$</td><td>$\dfrac{\text{depan}}{\text{samping}}$</td><td>$\dfrac{a}{b}$</td><td>$\dfrac{b}{a}$</td>
+            <td>$\cot$</td><td>$\dfrac{\text{samping}}{\text{depan}}$</td><td>$\dfrac{b}{a}$</td><td>$\dfrac{a}{b}$</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Cara Hafal & Hubungan Penting</div>
+      <p style="margin:0 0 .5rem 0;font-size:.9rem;"><strong>1. Cara hafal perbandingan utama:</strong></p>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;text-align:center;"><em><strong>"Sin = De/Mi, &nbsp;Cos = Sa/Mi, &nbsp;Tan = De/Sa"</strong></em><br><small>(De = depan, Sa = samping, Mi = miring)</small></p>
+      <p style="margin:.6rem 0 .3rem 0;font-size:.9rem;"><strong>2. Kebalikan (resiprokal):</strong> cukup <em>balik</em> pecahannya.</p>
+      <div class="math-block">$$\csc\alpha = \frac{1}{\sin\alpha}, \qquad \sec\alpha = \frac{1}{\cos\alpha}, \qquad \cot\alpha = \frac{1}{\tan\alpha}$$</div>
+      <p style="margin:.4rem 0 .3rem 0;font-size:.9rem;"><strong>3. Hubungan tan dan cot dengan sin &amp; cos:</strong></p>
+      <div class="math-block">$$\tan\alpha = \frac{\sin\alpha}{\cos\alpha} \qquad\qquad \cot\alpha = \frac{\cos\alpha}{\sin\alpha}$$</div>
+      <p style="margin:.4rem 0 .3rem 0;font-size:.9rem;"><strong>4. Relasi komplementer</strong> (karena $\alpha + \beta = 90^\circ$ dan $\beta = 90^\circ - \alpha$):</p>
+      <div class="math-block">$$\sin\alpha = \cos(90^\circ-\alpha), \quad \cos\alpha = \sin(90^\circ-\alpha), \quad \tan\alpha = \cot(90^\circ-\alpha)$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan keenam perbandingan trigonometri untuk sudut $\alpha$ dan $\beta$ dari segitiga siku-siku $ABC$ dengan $a = BC = 3$, $b = AC = 4$, $c = AB = 5$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .5rem 0;">Diketahui: $a = BC = 3$, $b = AC = 4$, $c = AB = 5$ (segitiga siku-siku 3-4-5).</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th colspan="3">Utama</th><th colspan="3">Kebalikan</th></tr>
+            <tr><th></th><th>$\alpha$</th><th>$\beta$</th><th></th><th>$\alpha$</th><th>$\beta$</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>$\sin$</td><td>$\dfrac{3}{5}$</td><td>$\dfrac{4}{5}$</td><td>$\csc$</td><td>$\dfrac{5}{3}$</td><td>$\dfrac{5}{4}$</td></tr>
+            <tr><td>$\cos$</td><td>$\dfrac{4}{5}$</td><td>$\dfrac{3}{5}$</td><td>$\sec$</td><td>$\dfrac{5}{4}$</td><td>$\dfrac{5}{3}$</td></tr>
+            <tr><td>$\tan$</td><td>$\dfrac{3}{4}$</td><td>$\dfrac{4}{3}$</td><td>$\cot$</td><td>$\dfrac{4}{3}$</td><td>$\dfrac{3}{4}$</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui segitiga $ABC$ siku-siku di $B$, dengan $AB = \sqrt{12}$ cm dan $AC = 4$ cm. Tentukan $\cos A$, $\tan C$, dan $\csc A$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Cari $BC$ dengan Pythagoras:</p>
+      <div class="math-block">$$BC^2 = AC^2 - AB^2 = 16 - 12 = 4 \implies BC = 2 \text{ cm}$$</div>
+      <ol class="alpha-list" style="margin:.4rem 0 0 0;">
+        <li>$\cos A = \dfrac{AB}{AC} = \dfrac{\sqrt{12}}{4} = \dfrac{\sqrt{3}}{2}$</li>
+        <li>$\tan C = \dfrac{AB}{BC} = \dfrac{\sqrt{12}}{2} = \sqrt{3}$</li>
+        <li>$\csc A = \dfrac{AC}{BC} = \dfrac{4}{2} = 2$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui segitiga $PQR$ siku-siku di $Q$, dengan $\sin P = \dfrac{5}{13}$. Tentukan $\cos P$, $\tan P$, $\cot R$, dan $\sec R$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Dari $\sin P = \dfrac{5}{13}$, maka sisi depan $P = QR = 5$ dan sisi miring $PR = 13$.</p>
+      <p style="margin:0 0 .4rem 0;">Sisi samping $P$: $PQ = \sqrt{13^2 - 5^2} = \sqrt{144} = 12$.</p>
+      <ol class="alpha-list" style="margin:.4rem 0 0 0;">
+        <li>$\cos P = \dfrac{PQ}{PR} = \dfrac{12}{13}$, &emsp; $\tan P = \dfrac{QR}{PQ} = \dfrac{5}{12}$</li>
+        <li>Untuk sudut $R$: sisi depan $= PQ = 12$, sisi samping $= QR = 5$, miring $= 13$.</li>
+        <li>$\cot R = \dfrac{5}{12}$, &emsp; $\sec R = \dfrac{13}{5}$</li>
+      </ol>
+      <p style="margin:.5rem 0 0 0;font-size:.85rem;font-style:italic;">Perhatikan: $\tan P = \cot R$, sesuai relasi komplementer $P + R = 90^\circ$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Jika koordinat $A(6, 3)$ dan $\alpha$ adalah sudut antara $OA$ dan sumbu $X$, maka nilai $\sin\alpha$ adalah …</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Dari koordinat $A(6, 3)$: $x = 6$, $y = 3$.</p>
+      <p style="margin:0 0 .4rem 0;">Hitung sisi miring:</p>
+      <div class="math-block">$$OA = \sqrt{6^2 + 3^2} = \sqrt{36 + 9} = \sqrt{45} = 3\sqrt{5}$$</div>
+      <p style="margin:.3rem 0 .3rem 0;">Karena $\sin\alpha = \dfrac{y}{OA}$, maka:</p>
+      <div class="math-block">$$\sin\alpha = \frac{3}{3\sqrt{5}} = \frac{1}{\sqrt{5}} = \frac{\sqrt{5}}{5}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah pohon berdiri tegak di tepi sungai. Dari titik $A$ di seberang sungai, sudut elevasi puncak pohon adalah $30^\circ$. Pengamat kemudian mundur sejauh 20 m, dan sudut elevasi menjadi $15^\circ$. Tentukan tinggi pohon! &ensp;<em>(Gunakan: $\tan 15^\circ = 2 - \sqrt{3}$, $\tan 30^\circ = \dfrac{1}{\sqrt{3}}$)</em></p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Misalkan tinggi pohon $= h$ dan lebar sungai $= d$.</p>
+      <div class="math-block">$$\tan 30^\circ = \frac{h}{d} \implies d = h\sqrt{3}$$</div>
+      <div class="math-block">$$\tan 15^\circ = \frac{h}{d+20} \implies d + 20 = \frac{h}{2-\sqrt{3}} = h(2+\sqrt{3})$$</div>
+      <p style="margin:.3rem 0 .3rem 0;">Substitusi $d = h\sqrt{3}$:</p>
+      <div class="math-block">$$h\sqrt{3} + 20 = h(2+\sqrt{3}) \implies 20 = 2h \implies \boxed{h = 10 \text{ m}}$$</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Sudut Elevasi vs Sudut Depresi</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;"><strong>Sudut Elevasi:</strong> sudut antara garis horizontal dan garis pandang <em>ke atas</em> menuju objek.</p>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;"><strong>Sudut Depresi:</strong> sudut antara garis horizontal dan garis pandang <em>ke bawah</em> menuju objek.</p>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Keduanya <strong>selalu diukur dari garis horizontal</strong>.</p>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;"><strong>Sifat penting:</strong> sudut elevasi dari $A$ ke $B$ <strong>sama besar</strong> dengan sudut depresi dari $B$ ke $A$.</p>
+      <p style="margin:0;font-size:.9rem;"><strong>Rumus:</strong> $\tan\theta = \dfrac{\text{sisi vertikal}}{\text{sisi horizontal}}$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 6</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Sebuah tangga disandarkan pada dinding vertikal. Diketahui $\tan\alpha = \dfrac{3}{4}$ di mana $\alpha$ adalah sudut antara tangga dan lantai, serta panjang tangga adalah 10 m. Tentukan:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Tinggi puncak tangga pada dinding ($t$)</li>
+        <li>Jarak kaki tangga dari dinding ($d$)</li>
+        <li>Nilai $\sin\alpha$, $\cos\alpha$, dan $\csc\alpha$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Dari $\tan\alpha = \dfrac{3}{4}$, misalkan sisi depan $= 3k$ dan sisi samping $= 4k$. Sisi miring $= 5k$. Karena panjang tangga $= 10$ m: $5k = 10 \implies k = 2$.</p>
+      <ol class="alpha-list" style="margin:.4rem 0 0 0;">
+        <li>Tinggi puncak tangga: $t = 3k = 6$ <strong>m</strong></li>
+        <li>Jarak kaki tangga: $d = 4k = 8$ <strong>m</strong></li>
+        <li>$\sin\alpha = \dfrac{6}{10} = \dfrac{3}{5}$, &emsp; $\cos\alpha = \dfrac{8}{10} = \dfrac{4}{5}$, &emsp; $\csc\alpha = \dfrac{10}{6} = \dfrac{5}{3}$</li>
+      </ol>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan A</div>
+      <ol class="soal-list">
+        <li>Pada segitiga siku-siku $PQR$ siku-siku di $R$, diketahui $PQ = 13$ dan $QR = 5$. Tentukan keenam perbandingan trigonometri sudut $P$!</li>
+        <li>Segitiga $ABC$ siku-siku di $B$, $BC = 5$ cm, $AC = 13$ cm. Tentukan $\sin A$, $\cos C$, dan $\tan A$!</li>
+        <li>Jika koordinat $A(6, 8)$ dan $\alpha$ adalah sudut antara $OA$ dan sumbu-$X$ positif, tentukan $\sin\alpha$, $\cos\alpha$, $\tan\alpha$, dan $\csc\alpha$!</li>
+        <li>Segitiga siku-siku $KLM$ siku-siku di $L$, dengan $KM = 2\sqrt{7}$ cm dan $KL = 2$ cm. (a) Tentukan panjang $LM$. (b) Tentukan keenam perbandingan trigonometri sudut $K$ dan sudut $M$. (c) Verifikasi bahwa $\sin K = \cos M$ dan $\tan K = \cot M$.</li>
+        <li>Diketahui segitiga $RST$ siku-siku di $S$, dengan $\cos R = \dfrac{3}{5}$ dan keliling segitiga $= 36$ cm. (a) Tentukan nilai $\sin R$, $\tan R$, dan $\cot T$. (b) Tentukan panjang sisi $RS$, $ST$, dan $RT$. (c) Hitunglah luas segitiga $RST$!</li>
+        <li>Diketahui segitiga $ABC$ siku-siku di $C$, dengan $\tan A = \dfrac{3}{4}$. (a) Tentukan $\sin A$, $\cos A$, $\sec A$, dan $\csc A$. (b) Jika $BC = 9$ cm, tentukan panjang $AB$ dan $AC$. (c) Hitunglah nilai dari $\dfrac{\sec A + \csc A}{\tan A + \cot A}$!</li>
+        <li>Diketahui segitiga $PQR$ siku-siku di $Q$, dengan $\sin P = \dfrac{2\sqrt{5}}{5}$. (a) Tentukan $\cos P$, $\tan P$, $\sec P$, $\csc P$, dan $\cot P$. (b) Buktikan bahwa $\sin^2 P + \cos^2 P = 1$. (c) Jika $PR = 3\sqrt{5}$ cm, tentukan panjang $PQ$ dan $QR$.</li>
+        <li>Sebuah pohon patah dan bagian atasnya menyentuh tanah, membentuk segitiga siku-siku. Jarak ujung pohon ke pangkal adalah $12$ m, dan panjang bagian pohon yang patah adalah $15$ m. (a) Tentukan tinggi titik patah dari tanah. (b) Tentukan keenam perbandingan trigonometri sudut yang dibentuk antara bagian pohon yang miring dengan tanah. (c) Berapakah tinggi pohon sebelum patah?</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ B. SUDUT ISTIMEWA ══════════════════════════════════════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Perbandingan Trigonometri Sudut-sudut Istimewa</h2>
+
+    <p>Sudut-sudut istimewa adalah $0^\circ$, $30^\circ$, $45^\circ$, $60^\circ$, dan $90^\circ$. Nilai-nilai perbandingan trigonometrinya dapat diturunkan secara geometri dan dirangkum dalam tabel berikut:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Sudut $\alpha$</th><th>$0^\circ$</th><th>$30^\circ$</th><th>$45^\circ$</th><th>$60^\circ$</th><th>$90^\circ$</th>
+            <th>Sudut $\alpha$</th><th>$0^\circ$</th><th>$30^\circ$</th><th>$45^\circ$</th><th>$60^\circ$</th><th>$90^\circ$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$\sin\alpha$</td><td>$0$</td><td>$\dfrac{1}{2}$</td><td>$\dfrac{1}{2}\sqrt{2}$</td><td>$\dfrac{1}{2}\sqrt{3}$</td><td>$1$</td>
+            <td>$\csc\alpha$</td><td><em>t.t.</em></td><td>$2$</td><td>$\sqrt{2}$</td><td>$\dfrac{2}{3}\sqrt{3}$</td><td>$1$</td>
+          </tr>
+          <tr>
+            <td>$\cos\alpha$</td><td>$1$</td><td>$\dfrac{1}{2}\sqrt{3}$</td><td>$\dfrac{1}{2}\sqrt{2}$</td><td>$\dfrac{1}{2}$</td><td>$0$</td>
+            <td>$\sec\alpha$</td><td>$1$</td><td>$\dfrac{2}{3}\sqrt{3}$</td><td>$\sqrt{2}$</td><td>$2$</td><td><em>t.t.</em></td>
+          </tr>
+          <tr>
+            <td>$\tan\alpha$</td><td>$0$</td><td>$\dfrac{1}{3}\sqrt{3}$</td><td>$1$</td><td>$\sqrt{3}$</td><td><em>t.t.</em></td>
+            <td>$\cot\alpha$</td><td><em>t.t.</em></td><td>$\sqrt{3}$</td><td>$1$</td><td>$\dfrac{1}{3}\sqrt{3}$</td><td>$0$</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Cara Hafal Nilai Sudut Istimewa</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;"><strong>1. Cara hafal nilai $\sin$:</strong></p>
+      <div class="math-block">$$\sin 0^\circ, 30^\circ, 45^\circ, 60^\circ, 90^\circ \;=\; \frac{\sqrt{0}}{2},\; \frac{\sqrt{1}}{2},\; \frac{\sqrt{2}}{2},\; \frac{\sqrt{3}}{2},\; \frac{\sqrt{4}}{2}$$</div>
+      <p style="margin:0 0 .4rem 0;font-size:.85rem;font-style:italic;">(pola bilangan di bawah akar: 0, 1, 2, 3, 4 — semuanya dibagi 2)</p>
+      <p style="margin:.3rem 0 .3rem 0;font-size:.9rem;"><strong>2. Nilai $\cos$:</strong> urutan $\sin$ dibaca terbalik.</p>
+      <p style="margin:.3rem 0 .3rem 0;font-size:.9rem;"><strong>3. Nilai $\tan$:</strong> diturunkan dari $\tan\alpha = \dfrac{\sin\alpha}{\cos\alpha}$.</p>
+      <p style="margin:.3rem 0 .3rem 0;font-size:.9rem;"><strong>4. Kebalikan (resiprokal):</strong> cukup <em>balik</em> pecahannya.</p>
+      <p style="margin:.3rem 0 0 0;font-size:.9rem;"><strong>5. Nilai <em>t.t.</em> (tidak terdefinisi)</strong> muncul apabila penyebut bernilai nol.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 7</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Tentukan nilai dari:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$6\sin 60^\circ + 8\cos 30^\circ - 2\tan 60^\circ$</li>
+        <li>$12\sin 30^\circ \cdot \cos 30^\circ \cdot \tan 45^\circ$</li>
+        <li>$\sec 30^\circ$, $\csc 45^\circ$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin:0;">
+        <li>$6 \cdot \dfrac{1}{2}\sqrt{3} + 8 \cdot \dfrac{1}{2}\sqrt{3} - 2\sqrt{3} = 3\sqrt{3} + 4\sqrt{3} - 2\sqrt{3} = \mathbf{5\sqrt{3}}$</li>
+        <li>$12 \cdot \dfrac{1}{2} \cdot \dfrac{1}{2}\sqrt{3} \cdot 1 = \mathbf{3\sqrt{3}}$</li>
+        <li>$\sec 30^\circ = \dfrac{1}{\cos 30^\circ} = \dfrac{2}{\sqrt{3}} = \dfrac{2\sqrt{3}}{3}$ &ensp;;  &ensp; $\csc 45^\circ = \dfrac{1}{\sin 45^\circ} = \sqrt{2}$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai dari: $\dfrac{\sin^2 30^\circ - \cos^2 30^\circ + 2\sin 45^\circ \sin 45^\circ}{4\cos^2 30^\circ - 2}$</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Substitusikan nilai sudut istimewa: $\sin 30^\circ = \dfrac{1}{2}$, $\cos 30^\circ = \dfrac{\sqrt{3}}{2}$, $\sin 45^\circ = \dfrac{\sqrt{2}}{2}$.</p>
+      <p style="margin:0 0 .3rem 0;">Hitung pembilang:</p>
+      <div class="math-block">$$\left(\frac{1}{2}\right)^2 - \left(\frac{\sqrt{3}}{2}\right)^2 + 2 \cdot \frac{\sqrt{2}}{2} \cdot \frac{\sqrt{2}}{2} = \frac{1}{4} - \frac{3}{4} + 1 = \frac{1}{2}$$</div>
+      <p style="margin:0 0 .3rem 0;">Hitung penyebut:</p>
+      <div class="math-block">$$4 \cdot \left(\frac{\sqrt{3}}{2}\right)^2 - 2 = 4 \cdot \frac{3}{4} - 2 = 1$$</div>
+      <div class="math-block">$$\text{Hasil} = \frac{\tfrac{1}{2}}{1} = \boxed{\dfrac{1}{2}}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah segitiga $ABC$ siku-siku di $B$. Diketahui $\angle A = 30^\circ$ dan sisi $BC = \sqrt{12}$ cm. Tentukan panjang $AC$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Sisi $BC$ adalah depan sudut $A$, dan sisi $AC$ adalah sisi miring.</p>
+      <div class="math-block">$$\sin 30^\circ = \frac{BC}{AC} \implies \frac{1}{2} = \frac{\sqrt{12}}{AC} \implies AC = 2\sqrt{12} = \boxed{4\sqrt{3} \text{ cm}}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Seseorang melihat puncak menara dengan sudut elevasi $60^\circ$. Jika tinggi menara 90 m, tentukan jarak orang tersebut ke kaki menara!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Misalkan jarak orang ke menara $= d$.</p>
+      <div class="math-block">$$\tan 60^\circ = \frac{90}{d} \implies \sqrt{3} = \frac{90}{d} \implies d = \frac{90}{\sqrt{3}} = \frac{90\sqrt{3}}{3} = \boxed{30\sqrt{3} \text{ m}}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $\angle DAC = \angle BAC = 30^\circ$, $AB = 6$, $DC = 2\sqrt{5}$, sudut siku-siku di $B$ (pada $\triangle ABC$) dan di $D$ (pada $\triangle ADC$). Tentukan nilai $p = AD$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 1:</strong> Cari $AC$ menggunakan $\triangle ABC$.</p>
+      <div class="math-block">$$\cos 30^\circ = \frac{AB}{AC} \implies \frac{\sqrt{3}}{2} = \frac{6}{AC} \implies AC = \frac{12}{\sqrt{3}} = 4\sqrt{3}$$</div>
+      <p style="margin:.3rem 0 .3rem 0;"><strong>Langkah 2:</strong> Cari $AD = p$ menggunakan $\triangle ADC$ (Pythagoras, siku-siku di $D$).</p>
+      <div class="math-block">$$p^2 + (2\sqrt{5})^2 = (4\sqrt{3})^2 \implies p^2 + 20 = 48 \implies p^2 = 28 \implies \boxed{p = 2\sqrt{7}}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui segitiga $ABC$ dengan $\angle B = 45^\circ$ dan $CT$ adalah garis tinggi dari titik $C$. Jika $BC = a$ dan $AT = \dfrac{3}{2}a\sqrt{2}$, tentukan panjang $AC$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 1:</strong> Cari $CT$ dari $\triangle BCT$ (siku-siku di $T$, $\angle CBT = 45^\circ$, $BC = a$).</p>
+      <div class="math-block">$$CT = BC \cdot \sin 45^\circ = a \cdot \frac{\sqrt{2}}{2} = \frac{a\sqrt{2}}{2}$$</div>
+      <p style="margin:.3rem 0 .3rem 0;"><strong>Langkah 2:</strong> Cari $AC$ dari $\triangle ACT$ (siku-siku di $T$).</p>
+      <div class="math-block">$$AC^2 = AT^2 + CT^2 = \left(\frac{3a\sqrt{2}}{2}\right)^2 + \left(\frac{a\sqrt{2}}{2}\right)^2 = \frac{18a^2}{4} + \frac{2a^2}{4} = 5a^2 \implies \boxed{AC = a\sqrt{5}}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Seberkas sinar datang dengan sudut datang $45^\circ$, menembus plat kaca setebal $12$ cm membentuk sudut bias $30^\circ$. Tentukan lebar penyimpangan cahaya ($t$)! &ensp;<em>(Gunakan: $\sin 15^\circ = \dfrac{1}{4}(\sqrt{6}-\sqrt{2})$)</em></p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Diketahui: $d = 12$ cm, $i = 45^\circ$, $r = 30^\circ$. Rumus: $t = \dfrac{d \cdot \sin(i - r)}{\cos r}$.</p>
+      <div class="math-block">$$t = \frac{12 \cdot \sin(45^\circ - 30^\circ)}{\cos 30^\circ} = \frac{12 \cdot \frac{1}{4}(\sqrt{6}-\sqrt{2})}{\frac{1}{2}\sqrt{3}} = \frac{3(\sqrt{6}-\sqrt{2})}{\frac{\sqrt{3}}{2}} = \frac{6(\sqrt{6}-\sqrt{2})}{\sqrt{3}}$$</div>
+      <div class="math-block">$$t = \frac{6\sqrt{6}}{\sqrt{3}} - \frac{6\sqrt{2}}{\sqrt{3}} = 6\sqrt{2} - 2\sqrt{6} \implies \boxed{t = 6\sqrt{2} - 2\sqrt{6} \text{ cm}}$$</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan B</div>
+      <ol class="soal-list">
+        <li>Tentukan nilai dari $\sec^2 30^\circ + \csc^2 45^\circ - \cot^2 60^\circ$!</li>
+        <li>Tentukan nilai dari $\dfrac{\sin^2 60^\circ - \cos^2 60^\circ}{2\cos 30^\circ \cdot \tan 60^\circ}$!</li>
+        <li>Segitiga $ABC$ siku-siku di $B$, besar sudut $C = 60^\circ$, dan $AC = 12$ cm. Tentukan panjang $AB$ dan $BC$!</li>
+        <li>Seorang anak menaikkan layang-layang dengan benang sepanjang 120 m. Jika sudut yang dibentuk benang dengan arah mendatar adalah $45^\circ$, tentukan tinggi layang-layang dan jarak mendatar dari anak ke titik di bawah layang-layang!</li>
+        <li>Diketahui segitiga $KLM$ dengan $\angle L = 45^\circ$ dan $KT$ adalah garis tinggi dari titik $K$. Jika $KL = b$ dan $TM = \dfrac{5}{2}b\sqrt{2}$, tentukan panjang $KM$!</li>
+        <li>Tentukan nilai dari: $\dfrac{\sin^3 60^\circ + \cos^3 30^\circ}{\sin 45^\circ \cdot \cos 45^\circ + \tan^2 60^\circ - \sec 60^\circ}$</li>
+        <li>Sebuah mercusuar setinggi $40$ m berdiri tegak di atas tebing setinggi $h$ meter. Dari posisi kapal, sudut elevasi puncak mercusuar adalah $60^\circ$ dan sudut elevasi kaki mercusuar adalah $30^\circ$. (a) Tentukan nilai $d$ (jarak horizontal kapal ke kaki mercusuar) dan $h$. (b) Tentukan sudut depresi pengamat di puncak mercusuar saat melihat kapal. (c) Jika kapal bergerak hingga sudut elevasi puncak menjadi $45^\circ$, tentukan jarak horizontal baru dan seberapa jauh kapal telah bergerak!</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ C. SEMUA KUADRAN ══════════════════════════════════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Rumus Perbandingan Trigonometri di Semua Kuadran</h2>
+
+    <h3 class="subsection-title">1. Memperluas ke Semua Sudut: Lingkaran Satuan</h3>
+
+    <p>Definisi sin dan cos menggunakan segitiga siku-siku hanya berlaku untuk sudut $0^\circ$ hingga $90^\circ$. Untuk sudut seperti $\sin 150^\circ$, $\cos 240^\circ$, atau $\tan 315^\circ$, kita menggunakan <strong>lingkaran satuan</strong> — lingkaran berjari-jari 1 yang berpusat di titik asal.</p>
+
+    <div class="box box-definisi">
+      <div class="box-label">Definisi via Lingkaran Satuan</div>
+      <div style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;margin:0;">
+        <div style="flex:0 0 auto;">
+          <svg viewBox="0 0 200 200" width="180" height="180" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.4"/>
+            <line x1="20" y1="100" x2="185" y2="100" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr)"/>
+            <line x1="100" y1="185" x2="100" y2="15" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr)"/>
+            <defs>
+              <marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L0,6 L7,3z" fill="currentColor"/>
+              </marker>
+            </defs>
+            <!-- P at ~50 degrees -->
+            <line x1="100" y1="100" x2="145" y2="55" stroke="#00BFA5" stroke-width="2"/>
+            <line x1="145" y1="55" x2="145" y2="100" stroke="currentColor" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+            <line x1="100" y1="55" x2="145" y2="55" stroke="currentColor" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+            <circle cx="145" cy="55" r="3.5" fill="#00BFA5"/>
+            <text x="148" y="52" font-size="10" fill="currentColor">P(cos α, sin α)</text>
+            <path d="M115,100 A15,15 0 0,0 107,88" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <text x="117" y="94" font-size="10" fill="currentColor" font-style="italic">α</text>
+            <text x="182" y="113" font-size="10" fill="currentColor" font-style="italic">x</text>
+            <text x="104" y="14" font-size="10" fill="currentColor" font-style="italic">y</text>
+            <text x="87" y="113" font-size="9" fill="currentColor">O</text>
+            <text x="167" y="113" font-size="9" fill="currentColor">1</text>
+            <text x="25" y="113" font-size="9" fill="currentColor">-1</text>
+            <text x="104" y="35" font-size="9" fill="currentColor">1</text>
+            <text x="104" y="180" font-size="9" fill="currentColor">-1</text>
+          </svg>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <p style="margin:0 0 .4rem 0;font-size:.9rem;">Untuk setiap sudut $\alpha$ yang diukur dari sumbu-$X$ positif berlawanan arah jarum jam, titik $P$ pada lingkaran satuan memiliki koordinat:</p>
+          <div class="math-block">$$P = (\cos\alpha,\; \sin\alpha)$$</div>
+          <p style="margin:.3rem 0 0 0;font-size:.9rem;">sehingga berlaku: $\cos\alpha = x$-koordinat, $\sin\alpha = y$-koordinat. Definisi ini berlaku untuk <strong>semua</strong> nilai sudut.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Identitas Pythagoras Paling Dasar</div>
+      <p style="margin:0;font-size:.9rem;">Karena jari-jari $= 1$, berlaku teorema Pythagoras:</p>
+      <div class="math-block">$$x^2 + y^2 = 1 \;\Longrightarrow\; \cos^2\!\alpha + \sin^2\!\alpha = 1$$</div>
+      <p style="margin:.3rem 0 0 0;font-size:.9rem;">Inilah <strong>identitas Pythagoras</strong> yang paling mendasar dalam trigonometri.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Tanda di Setiap Kuadran</h3>
+
+    <p>Tanda nilai trigonometri bergantung pada tanda koordinat $x$ (cos) dan $y$ (sin) di tiap kuadran.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Kuadran</th><th>Interval</th><th>$\sin$</th><th>$\cos$</th><th>$\tan$</th><th>$\csc$</th><th>$\sec$</th><th>$\cot$</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>I</td><td>$0^\circ < \alpha < 90^\circ$</td><td>$+$</td><td>$+$</td><td>$+$</td><td>$+$</td><td>$+$</td><td>$+$</td></tr>
+          <tr><td>II</td><td>$90^\circ < \alpha < 180^\circ$</td><td>$+$</td><td>$-$</td><td>$-$</td><td>$+$</td><td>$-$</td><td>$-$</td></tr>
+          <tr><td>III</td><td>$180^\circ < \alpha < 270^\circ$</td><td>$-$</td><td>$-$</td><td>$+$</td><td>$-$</td><td>$-$</td><td>$+$</td></tr>
+          <tr><td>IV</td><td>$270^\circ < \alpha < 360^\circ$</td><td>$-$</td><td>$+$</td><td>$-$</td><td>$-$</td><td>$+$</td><td>$-$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Jembatan "Semua Sinus Tangen Cosinus"</div>
+      <p style="margin:0 0 .5rem 0;font-size:.9rem;">Cara mudah mengingat — dari kuadran I ke IV (searah jarum jam dari kanan atas):</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;border:2px solid currentColor;border-radius:6px;overflow:hidden;max-width:300px;text-align:center;font-weight:600;font-size:.95rem;">
+        <div style="padding:.6rem;border-right:1px solid currentColor;border-bottom:1px solid currentColor;">Sinus</div>
+        <div style="padding:.6rem;border-bottom:1px solid currentColor;">Semua</div>
+        <div style="padding:.6rem;border-right:1px solid currentColor;">Tangen</div>
+        <div style="padding:.6rem;">Cosinus</div>
+      </div>
+      <p style="margin:.5rem 0 0 0;font-size:.85rem;">Nama yang disebutkan = yang bernilai <strong>positif</strong> di kuadran tersebut. csc, sec, cot selalu bertanda sama dengan pasangannya.</p>
+    </div>
+
+    <h3 class="subsection-title">3. Aturan Pelurus dan Penyiku</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th></th><th>Aturan Pelurus</th><th>Aturan Penyiku</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Bentuk sudut</strong></td><td>$k \cdot 180^\circ \pm \alpha$ ($k$ bulat genap atau bukan kelipatan)</td><td>$k \cdot 90^\circ \pm \alpha$ ($k$ ganjil)</td></tr>
+          <tr><td><strong>Fungsi</strong></td><td><strong>Tetap</strong>: $\sin \to \sin$, $\cos \to \cos$, $\tan \to \tan$</td><td><strong>Bertukar</strong>: $\sin \leftrightarrow \cos$, $\tan \leftrightarrow \cot$</td></tr>
+          <tr><td><strong>Tanda</strong></td><td colspan="2">Ditentukan oleh <strong>kuadran</strong> tempat sudut berada</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Bentuk Sudut</th><th>Kuadran</th><th>Jenis</th><th>$\sin$</th><th>$\cos$</th><th>$\tan$</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$90^\circ - \alpha$</td><td>I</td><td>Penyiku</td><td>$\cos\alpha$</td><td>$\sin\alpha$</td><td>$\cot\alpha$</td></tr>
+          <tr><td>$90^\circ + \alpha$</td><td>II</td><td>Penyiku</td><td>$+\cos\alpha$</td><td>$-\sin\alpha$</td><td>$-\cot\alpha$</td></tr>
+          <tr><td>$180^\circ - \alpha$</td><td>II</td><td>Pelurus</td><td>$+\sin\alpha$</td><td>$-\cos\alpha$</td><td>$-\tan\alpha$</td></tr>
+          <tr><td>$180^\circ + \alpha$</td><td>III</td><td>Pelurus</td><td>$-\sin\alpha$</td><td>$-\cos\alpha$</td><td>$+\tan\alpha$</td></tr>
+          <tr><td>$270^\circ - \alpha$</td><td>III</td><td>Penyiku</td><td>$-\cos\alpha$</td><td>$-\sin\alpha$</td><td>$+\cot\alpha$</td></tr>
+          <tr><td>$270^\circ + \alpha$</td><td>IV</td><td>Penyiku</td><td>$-\cos\alpha$</td><td>$+\sin\alpha$</td><td>$-\cot\alpha$</td></tr>
+          <tr><td>$360^\circ - \alpha$</td><td>IV</td><td>Pelurus</td><td>$-\sin\alpha$</td><td>$+\cos\alpha$</td><td>$-\tan\alpha$</td></tr>
+          <tr><td>$360^\circ + \alpha$</td><td>I</td><td>Pelurus</td><td>$+\sin\alpha$</td><td>$+\cos\alpha$</td><td>$+\tan\alpha$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 14</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Tentukan nilai dari ekspresi berikut menggunakan aturan pelurus (fungsi tetap):</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\cos 150^\circ$</li>
+        <li>$\sin 225^\circ$</li>
+        <li>$\tan 240^\circ$</li>
+        <li>$\csc 300^\circ$</li>
+        <li>$\cot 120^\circ$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\cos 150^\circ = \cos(180^\circ - 30^\circ)$. Kuadran II: $\cos < 0$. $\implies -\cos 30^\circ = -\dfrac{\sqrt{3}}{2}$</li>
+        <li>$\sin 225^\circ = \sin(180^\circ + 45^\circ)$. Kuadran III: $\sin < 0$. $\implies -\sin 45^\circ = -\dfrac{\sqrt{2}}{2}$</li>
+        <li>$\tan 240^\circ = \tan(180^\circ + 60^\circ)$. Kuadran III: $\tan > 0$. $\implies +\tan 60^\circ = \sqrt{3}$</li>
+        <li>$\sin 300^\circ = \sin(360^\circ - 60^\circ) = -\sin 60^\circ = -\dfrac{\sqrt{3}}{2}$. $\implies \csc 300^\circ = -\dfrac{2\sqrt{3}}{3}$</li>
+        <li>$\tan 120^\circ = \tan(180^\circ - 60^\circ) = -\tan 60^\circ = -\sqrt{3}$. $\implies \cot 120^\circ = -\dfrac{\sqrt{3}}{3}$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 15</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Tentukan nilai dari ekspresi berikut menggunakan aturan penyiku (fungsi bertukar):</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\sin(90^\circ + 60^\circ)$</li>
+        <li>$\cos(270^\circ - 30^\circ)$</li>
+        <li>$\tan(90^\circ - 45^\circ)$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin:0;">
+        <li>Kuadran II, penyiku → $\sin \to \cos$. Tanda: $\sin > 0$ di kuadran II. $\implies +\cos 60^\circ = \dfrac{1}{2}$</li>
+        <li>Kuadran III, penyiku → $\cos \to \sin$. Tanda: $\cos < 0$ di kuadran III. $\implies -\sin 30^\circ = -\dfrac{1}{2}$</li>
+        <li>Kuadran I, penyiku → $\tan \to \cot$. Tanda: $\tan > 0$ di kuadran I. $\implies +\cot 45^\circ = 1$</li>
+      </ol>
+    </div>
+
+    <h3 class="subsection-title">4. Periodisitas — Menyederhanakan Sudut Besar</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Sifat Periodisitas</div>
+      <div class="math-block">$$\sin(\alpha \pm k \cdot 360^\circ) = \sin\alpha \qquad \cos(\alpha \pm k \cdot 360^\circ) = \cos\alpha \qquad \tan(\alpha \pm k \cdot 180^\circ) = \tan\alpha$$</div>
+      <p style="margin:.3rem 0 0 0;font-size:.9rem;">dengan $k$ bilangan bulat positif.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 16</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Tentukan nilai dari:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\cos 930^\circ$</li>
+        <li>$\sin 1215^\circ$</li>
+        <li>$\tan 600^\circ$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\cos 930^\circ = \cos(930^\circ - 720^\circ) = \cos 210^\circ = \cos(180^\circ + 30^\circ) = -\cos 30^\circ = -\dfrac{1}{2}\sqrt{3}$</li>
+        <li>$\sin 1215^\circ = \sin(1215^\circ - 1080^\circ) = \sin 135^\circ = \sin(180^\circ - 45^\circ) = \sin 45^\circ = \dfrac{1}{2}\sqrt{2}$</li>
+        <li>$\tan 600^\circ = \tan(600^\circ - 360^\circ) = \tan 240^\circ = \tan(180^\circ + 60^\circ) = \tan 60^\circ = \sqrt{3}$</li>
+      </ol>
+    </div>
+
+    <h3 class="subsection-title">5. Sudut Negatif</h3>
+
+    <p>Sudut negatif terbentuk ketika pengukuran dilakukan <strong>searah jarum jam</strong> dari sumbu-$X$ positif. Titik $P$ untuk sudut $\alpha$ dan titik $Q$ untuk sudut $-\alpha$ simetri terhadap sumbu-$X$.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Sifat Fungsi Genap &amp; Ganjil</div>
+      <div class="math-block">$$\sin(-\alpha) = -\sin\alpha \quad (\text{fungsi ganjil}) \qquad \cos(-\alpha) = \cos\alpha \quad (\text{fungsi genap})$$</div>
+      <div class="math-block">$$\tan(-\alpha) = -\tan\alpha \quad (\text{fungsi ganjil})$$</div>
+      <p style="margin:.3rem 0 0 0;font-size:.9rem;">Berlaku juga: $\csc(-\alpha) = -\csc\alpha$, &ensp; $\sec(-\alpha) = \sec\alpha$, &ensp; $\cot(-\alpha) = -\cot\alpha$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 17</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Tentukan nilai dari:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\sin(-30^\circ)$</li>
+        <li>$\cos(-135^\circ)$</li>
+        <li>$\tan(-240^\circ)$</li>
+        <li>$\sin(-315^\circ)$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\sin(-30^\circ) = -\sin 30^\circ = -\dfrac{1}{2}$</li>
+        <li>$\cos(-135^\circ) = \cos 135^\circ = \cos(180^\circ - 45^\circ) = -\cos 45^\circ = -\dfrac{1}{2}\sqrt{2}$</li>
+        <li>$\tan(-240^\circ) = -\tan 240^\circ = -\tan(180^\circ + 60^\circ) = -\tan 60^\circ = -\sqrt{3}$</li>
+        <li>$\sin(-315^\circ) = -\sin 315^\circ = -\sin(360^\circ - 45^\circ) = -(-\sin 45^\circ) = \dfrac{1}{2}\sqrt{2}$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Sederhanakan: $\dfrac{\sin(-\alpha) \cdot \cos(-\alpha)}{\tan(-\alpha)}$</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="math-block">$$\frac{(-\sin\alpha)(\cos\alpha)}{-\tan\alpha} = \frac{-\sin\alpha\cos\alpha}{-\dfrac{\sin\alpha}{\cos\alpha}} = \frac{-\sin\alpha\cos\alpha \cdot \cos\alpha}{-\sin\alpha} = \boxed{\cos^2\alpha}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Jika $\cos\alpha = \dfrac{1}{3}$ dan $\alpha$ berada di kuadran IV, tentukan $\sin\alpha$, $\tan\alpha$, dan $\sec\alpha$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Dari $\cos\alpha = \dfrac{1}{3}$, segitiga bantu: samping $= 1$, miring $= 3$, depan $= \sqrt{9-1} = 2\sqrt{2}$.</p>
+      <p style="margin:0;">Kuadran IV: $\sin\alpha < 0$. Jadi:</p>
+      <div class="math-block">$$\sin\alpha = -\frac{2\sqrt{2}}{3}, \qquad \tan\alpha = -2\sqrt{2}, \qquad \sec\alpha = 3$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 20</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $\tan A = -\dfrac{p}{\sqrt{1-p^2}}$ dan $90^\circ < A < 180^\circ$. Tentukan nilai $\sin A$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Dari $\tan A = -\dfrac{p}{\sqrt{1-p^2}}$, sisi depan $= p$, samping $= \sqrt{1-p^2}$. Sisi miring: $r = \sqrt{p^2 + (1-p^2)} = 1$.</p>
+      <p style="margin:0;">Kuadran II: $\sin A > 0$. $\implies \sin A = \dfrac{p}{1} = \boxed{p}$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $\tan(x + 90^\circ) = -0{,}75$ dan $x$ adalah sudut lancip. Tentukan nilai $\cos(90^\circ - x)$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Aturan penyiku: $\tan(x + 90^\circ) = -\cot x$. Maka $-\cot x = -\dfrac{3}{4} \implies \cot x = \dfrac{3}{4} \implies \tan x = \dfrac{4}{3}$.</p>
+      <p style="margin:0 0 .4rem 0;">Segitiga bantu ($x$ lancip): depan $= 4$, samping $= 3$, miring $= 5$. Relasi komplementer: $\cos(90^\circ - x) = \sin x$.</p>
+      <div class="math-block">$$\sin x = \frac{4}{5} \implies \cos(90^\circ - x) = \boxed{\frac{4}{5}}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">Sederhanakan: $\dfrac{\sin(270^\circ - \alpha) \cdot \tan(180^\circ + \alpha) \cdot \sec(-\alpha)}{\cos(90^\circ + \alpha) \cdot \cot(360^\circ - \alpha)}$</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Terapkan aturan pelurus/penyiku pada setiap faktor:</p>
+      <div class="math-block">$$\sin(270^\circ - \alpha) = -\cos\alpha, \quad \tan(180^\circ + \alpha) = \tan\alpha, \quad \sec(-\alpha) = \sec\alpha$$</div>
+      <div class="math-block">$$\cos(90^\circ + \alpha) = -\sin\alpha, \quad \cot(360^\circ - \alpha) = -\cot\alpha$$</div>
+      <div class="math-block">$$= \frac{(-\cos\alpha)(\tan\alpha)\left(\dfrac{1}{\cos\alpha}\right)}{(-\sin\alpha)\!\left(-\dfrac{\cos\alpha}{\sin\alpha}\right)} = \frac{-\tan\alpha}{\cos\alpha} = \boxed{-\frac{\sin\alpha}{\cos^2\alpha}}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 23</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Diketahui $\sin\alpha = \dfrac{3}{5}$ dan $180^\circ < \alpha < 270^\circ$.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Tentukan nilai semua perbandingan trigonometri dari $\alpha$.</li>
+        <li>Tentukan nilai dari $\sin(180^\circ + \alpha) + \cos(90^\circ - \alpha) - \tan(360^\circ - \alpha)$.</li>
+        <li>Jika $\beta = 90^\circ - \alpha$, tentukan nilai $\cos\beta$ dan identifikasi kuadran $\beta$.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin:0;">
+        <li>Kuadran III: $\sin\alpha < 0$. Jadi $\sin\alpha = -\dfrac{3}{5}$. Segitiga bantu: depan $= 3$, miring $= 5$, samping $= 4$. Karena Kuadran III: $\cos\alpha = -\dfrac{4}{5}$, $\tan\alpha = \dfrac{3}{4}$, $\csc\alpha = -\dfrac{5}{3}$, $\sec\alpha = -\dfrac{5}{4}$, $\cot\alpha = \dfrac{4}{3}$.</li>
+        <li>$-\sin\alpha + \sin\alpha - (-\tan\alpha) = 0 + \tan\alpha = \dfrac{3}{4}$</li>
+        <li>$\cos\beta = \cos(90^\circ - \alpha) = \sin\alpha = -\dfrac{3}{5}$. Kuadran III (karena $\alpha \in (180^\circ, 270^\circ)$ maka $\beta \in (-180^\circ, -90^\circ)$).</li>
+      </ol>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan C</div>
+      <ol class="soal-list">
+        <li>Tentukan nilai dari: $\sin 135^\circ + \cos 210^\circ + \tan 315^\circ$!</li>
+        <li>Tentukan nilai dari masing-masing ekspresi: (a) $\sin(-30^\circ)$, (b) $\cos(-60^\circ)$, (c) $\tan(-45^\circ)$!</li>
+        <li>Tentukan nilai dari $\sin(-315^\circ)$ dan $\cos\!\left(-\dfrac{4}{3}\pi\right)$!</li>
+        <li>Tentukan nilai dari $\cos\dfrac{5}{3}\pi$, $\sin\dfrac{7}{6}\pi$, dan $\tan\dfrac{5}{4}\pi$!</li>
+        <li>Jika $\sin\alpha = \dfrac{2}{3}$ dan $\alpha$ di kuadran II, tentukan $\cos\alpha$, $\tan\alpha$, $\csc\alpha$, dan $\sec\alpha$!</li>
+        <li>Tentukan nilai dari ekspresi berikut tanpa kalkulator: $\sin(-210^\circ) + \cos(-120^\circ) - \tan(-300^\circ)$</li>
+        <li>Sederhanakan ekspresi berikut: $\dfrac{\sin(180^\circ + x) \cdot \cos(360^\circ - x) + \cos(90^\circ + x) \cdot \sin(180^\circ - x)}{\tan(180^\circ + x) \cdot \cos(90^\circ - x)}$</li>
+        <li>Sederhanakan: $\dfrac{\sin(-x) \cdot \tan(180^\circ + x) \cdot \cos(-x)}{\cos(90^\circ + x) \cdot \sin(360^\circ - x)}$</li>
+        <li>Tentukan nilai dari: $\sin 870^\circ - \cos(-600^\circ) + \tan 675^\circ$</li>
+        <li>Sederhanakan: $\dfrac{\csc(180^\circ + \alpha) \cdot \sec(90^\circ - \alpha)}{\cot(360^\circ - \alpha) \cdot \sec(180^\circ + \alpha)}$</li>
+        <li>Diketahui $\cos\alpha = p$ di mana $p > 0$ dan $\alpha$ berada di kuadran IV. Nyatakan: (a) $\sin\alpha$ dan $\tan\alpha$, (b) $\sin(180^\circ - \alpha)$ dan $\cos(90^\circ + \alpha)$, (c) $\tan(360^\circ - \alpha) + \sin(180^\circ + \alpha)$, (d) $\cos(-\alpha) - \sin(-\alpha) \cdot \tan(-\alpha)$ — semua dalam $p$. Verifikasi dengan $p = \dfrac{1}{2}$.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ D. IDENTITAS TRIGONOMETRI ════════════════════════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Identitas Trigonometri</h2>
+
+    <p>Identitas trigonometri adalah persamaan yang melibatkan fungsi-fungsi trigonometri dan berlaku untuk <strong>semua nilai sudut</strong> yang terdefinisi. Berbeda dengan persamaan biasa, identitas selalu benar — itulah mengapa kita perlu <em>membuktikan</em>, bukan sekadar <em>menyelesaikan</em>.</p>
+
+    <h3 class="subsection-title">1. Identitas Dasar</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Identitas Kebalikan (Resiprokal)</div>
+      <div class="math-block">$$\csc\alpha = \frac{1}{\sin\alpha} \qquad \sec\alpha = \frac{1}{\cos\alpha} \qquad \cot\alpha = \frac{1}{\tan\alpha}$$</div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Identitas Perbandingan</div>
+      <div class="math-block">$$\tan\alpha = \frac{\sin\alpha}{\cos\alpha} \qquad \cot\alpha = \frac{\cos\alpha}{\sin\alpha}$$</div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Identitas Pythagoras</div>
+      <div class="math-block">$$\sin^2\alpha + \cos^2\alpha = 1 \qquad 1 + \tan^2\alpha = \sec^2\alpha \qquad \cot^2\alpha + 1 = \csc^2\alpha$$</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Bentuk-bentuk Turunan yang Sering Dipakai</div>
+      <div class="math-block">$$\sin^2\alpha = 1 - \cos^2\alpha \qquad \cos^2\alpha = 1 - \sin^2\alpha$$</div>
+      <div class="math-block">$$\tan^2\alpha = \sec^2\alpha - 1 \qquad \cot^2\alpha = \csc^2\alpha - 1$$</div>
+      <p style="margin:.3rem 0 0 0;font-size:.9rem;">Hafal juga fakta pemfaktoran: $1 - \sin^2\alpha = (1-\sin\alpha)(1+\sin\alpha)$ dan seterusnya.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Strategi Membuktikan Identitas</h3>
+
+    <div class="box box-definisi">
+      <div class="box-label">Panduan Strategi Pembuktian Identitas</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Membuktikan identitas <strong>berbeda</strong> dengan menyelesaikan persamaan. Kita <strong>tidak boleh</strong> memindahkan suku dari satu ruas ke ruas lain.</p>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;"><strong>Lima langkah strategis:</strong></p>
+      <ol style="margin:0;padding-left:1.2rem;font-size:.9rem;line-height:1.9;">
+        <li><strong>Mulai dari ruas yang lebih kompleks.</strong></li>
+        <li><strong>Ubah semua ke sinus dan cosinus.</strong></li>
+        <li><strong>Sederhanakan pecahan.</strong></li>
+        <li><strong>Gunakan identitas Pythagoras.</strong></li>
+        <li><strong>Kalikan dengan konjugat</strong> jika ada bentuk $(1 \pm \sin\alpha)$ atau $(1 \pm \cos\alpha)$ di penyebut.</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Sederhanakan: $\dfrac{\sin\alpha}{\csc\alpha} + \dfrac{\cos\alpha}{\sec\alpha}$</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="math-block">$$\sin\alpha \cdot \sin\alpha + \cos\alpha \cdot \cos\alpha = \sin^2\alpha + \cos^2\alpha = \boxed{1}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Jika $\sin\alpha = \dfrac{4}{5}$ dan $\alpha$ di kuadran II, tentukan nilai $\tan^2\alpha + \sec^2\alpha$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">$\cos^2\alpha = 1 - \dfrac{16}{25} = \dfrac{9}{25}$. Kuadran II: $\cos\alpha = -\dfrac{3}{5}$. Maka $\tan\alpha = -\dfrac{4}{3}$, $\sec\alpha = -\dfrac{5}{3}$.</p>
+      <div class="math-block">$$\tan^2\alpha + \sec^2\alpha = \frac{16}{9} + \frac{25}{9} = \boxed{\frac{41}{9}}$$</div>
+      <p style="margin:.3rem 0 0 0;font-size:.85rem;font-style:italic;">Alternatif cepat: $2\tan^2\alpha + 1 = 2 \cdot \dfrac{16}{9} + 1 = \dfrac{41}{9}$ ✓</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $\tan^2\alpha - \sin^2\alpha = \tan^2\alpha \cdot \sin^2\alpha$!</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="math-block">$$\text{Ruas kiri} = \frac{\sin^2\alpha}{\cos^2\alpha} - \sin^2\alpha = \sin^2\alpha\!\left(\frac{1}{\cos^2\alpha} - 1\right) = \frac{\sin^2\alpha(1 - \cos^2\alpha)}{\cos^2\alpha} = \frac{\sin^2\alpha \cdot \sin^2\alpha}{\cos^2\alpha} = \tan^2\alpha \cdot \sin^2\alpha \quad\square$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 27</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $3 + 5\sin^2\alpha = 8 - 5\cos^2\alpha$!</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="math-block">$$\text{Ruas kiri} = 3 + 5(1 - \cos^2\alpha) = 3 + 5 - 5\cos^2\alpha = 8 - 5\cos^2\alpha = \text{Ruas kanan} \quad\square$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $\sec^2\alpha - \sin^2\alpha \cdot \sec^2\alpha = 1$!</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="math-block">$$\text{Ruas kiri} = \sec^2\alpha(1 - \sin^2\alpha) = \sec^2\alpha \cdot \cos^2\alpha = \frac{1}{\cos^2\alpha} \cdot \cos^2\alpha = 1 = \text{Ruas kanan} \quad\square$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 29</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $\dfrac{1-\sin\alpha}{\cos\alpha} = \dfrac{\cos\alpha}{1+\sin\alpha}$!</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="math-block">$$\text{Ruas kiri} = \frac{1-\sin\alpha}{\cos\alpha} \cdot \frac{1+\sin\alpha}{1+\sin\alpha} = \frac{1 - \sin^2\alpha}{\cos\alpha(1+\sin\alpha)} = \frac{\cos^2\alpha}{\cos\alpha(1+\sin\alpha)} = \frac{\cos\alpha}{1+\sin\alpha} = \text{Ruas kanan} \quad\square$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 30</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $\tan\alpha - \cot\alpha = \dfrac{1 - 2\cos^2\alpha}{\sin\alpha\cos\alpha}$!</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="math-block">$$\tan\alpha - \cot\alpha = \frac{\sin\alpha}{\cos\alpha} - \frac{\cos\alpha}{\sin\alpha} = \frac{\sin^2\alpha - \cos^2\alpha}{\sin\alpha\cos\alpha} = \frac{(1 - \cos^2\alpha) - \cos^2\alpha}{\sin\alpha\cos\alpha} = \frac{1 - 2\cos^2\alpha}{\sin\alpha\cos\alpha} \quad\square$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 31</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $\dfrac{\sec\alpha - \csc\alpha}{\sec\alpha + \csc\alpha} = \dfrac{\tan\alpha - 1}{\tan\alpha + 1}$!</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="math-block">$$\frac{\dfrac{1}{\cos\alpha} - \dfrac{1}{\sin\alpha}}{\dfrac{1}{\cos\alpha} + \dfrac{1}{\sin\alpha}} = \frac{\sin\alpha - \cos\alpha}{\sin\alpha + \cos\alpha} = \frac{\dfrac{\sin\alpha}{\cos\alpha} - 1}{\dfrac{\sin\alpha}{\cos\alpha} + 1} = \frac{\tan\alpha - 1}{\tan\alpha + 1} \quad\square$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 32</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $\dfrac{1}{1-\sin\alpha} + \dfrac{1}{1+\sin\alpha} = 2\sec^2\alpha$!</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="math-block">$$\text{Ruas kiri} = \frac{(1+\sin\alpha) + (1-\sin\alpha)}{(1-\sin\alpha)(1+\sin\alpha)} = \frac{2}{1-\sin^2\alpha} = \frac{2}{\cos^2\alpha} = 2\sec^2\alpha = \text{Ruas kanan} \quad\square$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 33</div>
+      <p style="margin:0;font-size:.9rem;">Jika $\cot\alpha = \dfrac{5}{12}$ dan $\alpha$ di kuadran III, tentukan nilai $\csc^2\alpha - \sec^2\alpha$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Segitiga bantu: samping $= 5$, depan $= 12$, miring $= 13$. Kuadran III: $\sin\alpha = -\dfrac{12}{13}$, $\cos\alpha = -\dfrac{5}{13}$.</p>
+      <div class="math-block">$$\csc^2\alpha - \sec^2\alpha = \frac{169}{144} - \frac{169}{25} = 169\!\left(\frac{1}{144} - \frac{1}{25}\right) = 169 \cdot \frac{-119}{3600} = \boxed{-\frac{20111}{3600}}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 34</div>
+      <p style="margin:0;font-size:.9rem;">Jika $\sin\alpha + \cos\alpha = m$ dan $\sec\alpha + \csc\alpha = n$, tunjukkan bahwa $n(m^2 - 1) = 2m$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Kuadratkan $m$: $m^2 = 1 + 2\sin\alpha\cos\alpha \implies m^2 - 1 = 2\sin\alpha\cos\alpha$.</p>
+      <p style="margin:0 0 .4rem 0;">$n = \dfrac{1}{\cos\alpha} + \dfrac{1}{\sin\alpha} = \dfrac{\sin\alpha + \cos\alpha}{\sin\alpha\cos\alpha} = \dfrac{m}{\sin\alpha\cos\alpha}$.</p>
+      <div class="math-block">$$n(m^2 - 1) = \frac{m}{\sin\alpha\cos\alpha} \cdot 2\sin\alpha\cos\alpha = 2m \quad\square$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 35</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa: $\dfrac{\sin\alpha + \cos\alpha}{\sin\alpha - \cos\alpha} + \dfrac{\sin\alpha - \cos\alpha}{\sin\alpha + \cos\alpha} = \dfrac{2}{1 - 2\cos^2\alpha}$</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Samakan penyebut:</p>
+      <div class="math-block">$$\text{Pembilang} = (\sin\alpha+\cos\alpha)^2 + (\sin\alpha-\cos\alpha)^2 = 2\sin^2\alpha + 2\cos^2\alpha = 2$$</div>
+      <div class="math-block">$$\text{Penyebut} = \sin^2\alpha - \cos^2\alpha = (1-\cos^2\alpha) - \cos^2\alpha = 1 - 2\cos^2\alpha$$</div>
+      <div class="math-block">$$\text{Ruas kiri} = \frac{2}{1-2\cos^2\alpha} = \text{Ruas kanan} \quad\square$$</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan D</div>
+      <ol class="soal-list">
+        <li>Sederhanakan ekspresi berikut: (a) $(\sin\alpha + \cos\alpha)^2 - 2\sin\alpha\cos\alpha$, (b) $\dfrac{\cos^2\alpha}{1 - \sin\alpha}$, (c) $\sin\alpha\csc\alpha + \cos\alpha\sec\alpha - \tan\alpha\cot\alpha$!</li>
+        <li>Jika $\sin\alpha = \dfrac{3}{5}$ dan $\alpha$ di kuadran II, tentukan: (a) $\cos\alpha$ dan $\tan\alpha$, (b) $\sec^2\alpha - \tan^2\alpha$, (c) $\csc^2\alpha - \cot^2\alpha$!</li>
+        <li>Buktikan bahwa: (a) $(\sin\alpha + \cos\alpha)^2 = 1 + 2\sin\alpha\cos\alpha$, (b) $\sin^4\alpha + \sin^2\alpha\cos^2\alpha = \sin^2\alpha$!</li>
+        <li>Buktikan bahwa $\sin^4\alpha - \cos^4\alpha = \sin^2\alpha - \cos^2\alpha$!</li>
+        <li>Buktikan bahwa $\dfrac{\tan\alpha}{1 - \tan^2\alpha} = \dfrac{\sin\alpha\cos\alpha}{\cos^2\alpha - \sin^2\alpha}$!</li>
+        <li>Buktikan dengan cara dari kedua ruas: $\dfrac{\csc\alpha - \sin\alpha}{\csc\alpha + \sin\alpha} = \dfrac{\cos^2\alpha}{1 + \sin^2\alpha}$</li>
+        <li>Jika $\tan\alpha + \cot\alpha = k$, buktikan bahwa: (a) $\sin^2\alpha\cos^2\alpha = \dfrac{1}{k^2}$, (b) $\sin^4\alpha + \cos^4\alpha = 1 - \dfrac{2}{k^2}$!</li>
+        <li>Buktikan identitas berikut: $\dfrac{1 + \tan^2\alpha}{1 + \cot^2\alpha} = \tan^2\alpha$. Kemudian buktikan juga $\dfrac{\sec^2\alpha}{\csc^2\alpha} = \tan^2\alpha$.</li>
+        <li>Diketahui $\sec\alpha - \tan\alpha = p$. (a) Tunjukkan bahwa $\sec\alpha + \tan\alpha = \dfrac{1}{p}$. (b) Nyatakan $\sin\alpha$ dan $\cos\alpha$ dalam $p$. (c) Sederhanakan $\dfrac{\tan^2\alpha}{1 + \tan^2\alpha}$!</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ E. FUNGSI TRIGONOMETRI ═══════════════════════════════════════ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Fungsi Trigonometri</h2>
+
+    <h3 class="subsection-title">1. Grafik Fungsi Trigonometri Dasar</h3>
+
+    <p>Grafik fungsi trigonometri digambarkan pada koordinat Cartesius dengan sumbu-$X$ sebagai nilai sudut dan sumbu-$Y$ sebagai nilai fungsi. Tiga komponen penting: nilai maksimum, nilai minimum, dan periode.</p>
+
+    <p><strong>(a) Grafik $y = \sin x$</strong></p>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Grafik y = sin x</div>
+      <div style="overflow-x:auto;">
+        <svg viewBox="0 0 460 160" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="80" x2="450" y2="80" stroke="currentColor" stroke-width="1.5" marker-end="url(#a1)"/>
+          <line x1="30" y1="150" x2="30" y2="10" stroke="currentColor" stroke-width="1.5" marker-end="url(#a1)"/>
+          <defs>
+            <marker id="a1" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="currentColor"/></marker>
+          </defs>
+          <!-- sin curve: one full period from x=30 to x=430 (400px = 360°) -->
+          <!-- scale: 400/360 = 10/9 px per degree; amplitude = 55px -->
+          <path d="M30,80 C80,80 100,25 130,25 C160,25 180,80 230,80 C280,80 300,135 330,135 C360,135 380,80 430,80" fill="none" stroke="#00BFA5" stroke-width="2.2"/>
+          <line x1="30" y1="25" x2="440" y2="25" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+          <line x1="30" y1="135" x2="440" y2="135" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+          <!-- x labels -->
+          <text x="129" y="96" font-size="10" fill="currentColor" text-anchor="middle">90°</text>
+          <text x="229" y="96" font-size="10" fill="currentColor" text-anchor="middle">180°</text>
+          <text x="329" y="96" font-size="10" fill="currentColor" text-anchor="middle">270°</text>
+          <text x="429" y="96" font-size="10" fill="currentColor" text-anchor="middle">360°</text>
+          <text x="22" y="29" font-size="10" fill="currentColor" text-anchor="end">1</text>
+          <text x="22" y="139" font-size="10" fill="currentColor" text-anchor="end">-1</text>
+          <text x="440" y="96" font-size="10" fill="currentColor">x</text>
+          <text x="34" y="12" font-size="10" fill="currentColor">y</text>
+          <text x="380" y="20" font-size="11" fill="#00BFA5">y = sin x</text>
+        </svg>
+      </div>
+    </div>
+
+    <p><strong>(b) Grafik $y = \cos x$</strong></p>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Grafik y = cos x</div>
+      <div style="overflow-x:auto;">
+        <svg viewBox="0 0 460 160" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="80" x2="450" y2="80" stroke="currentColor" stroke-width="1.5" marker-end="url(#a2)"/>
+          <line x1="30" y1="150" x2="30" y2="10" stroke="currentColor" stroke-width="1.5" marker-end="url(#a2)"/>
+          <defs>
+            <marker id="a2" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="currentColor"/></marker>
+          </defs>
+          <!-- cos curve starts at y=25 (max) -->
+          <path d="M30,25 C80,25 100,80 130,80 C160,80 180,135 230,135 C280,135 300,80 330,80 C360,80 380,25 430,25" fill="none" stroke="#F59E0B" stroke-width="2.2"/>
+          <line x1="30" y1="25" x2="440" y2="25" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+          <line x1="30" y1="135" x2="440" y2="135" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+          <text x="129" y="96" font-size="10" fill="currentColor" text-anchor="middle">90°</text>
+          <text x="229" y="96" font-size="10" fill="currentColor" text-anchor="middle">180°</text>
+          <text x="329" y="96" font-size="10" fill="currentColor" text-anchor="middle">270°</text>
+          <text x="429" y="96" font-size="10" fill="currentColor" text-anchor="middle">360°</text>
+          <text x="22" y="29" font-size="10" fill="currentColor" text-anchor="end">1</text>
+          <text x="22" y="139" font-size="10" fill="currentColor" text-anchor="end">-1</text>
+          <text x="440" y="96" font-size="10" fill="currentColor">x</text>
+          <text x="34" y="12" font-size="10" fill="currentColor">y</text>
+          <text x="380" y="20" font-size="11" fill="#F59E0B">y = cos x</text>
+        </svg>
+      </div>
+    </div>
+
+    <p><strong>(c) Grafik $y = \tan x$</strong></p>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Grafik y = tan x</div>
+      <div style="overflow-x:auto;">
+        <svg viewBox="0 0 460 200" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="100" x2="450" y2="100" stroke="currentColor" stroke-width="1.5" marker-end="url(#a3)"/>
+          <line x1="30" y1="190" x2="30" y2="10" stroke="currentColor" stroke-width="1.5" marker-end="url(#a3)"/>
+          <defs>
+            <marker id="a3" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="currentColor"/></marker>
+          </defs>
+          <!-- tan: period 180°, asimtot di 90° dan 270° -->
+          <!-- 0–90°: x=30 to x=230; 90–180: x=230 to x=330; 180–360: x=330 to x=430 (approx) -->
+          <!-- First branch: 0 to near 90 -->
+          <path d="M30,100 C80,100 115,60 148,45 C165,38 182,25 195,15" fill="none" stroke="var(--text-1,#334155)" stroke-width="2"/>
+          <!-- Second branch: from near 90 to 180 -->
+          <path d="M265,185 C278,175 295,162 312,140 C328,120 340,100 390,100 C415,100 425,95 430,92" fill="none" stroke="var(--text-1,#334155)" stroke-width="2"/>
+          <!-- asimtot at 90° (x≈230) and 270° (x≈430) -->
+          <line x1="230" y1="10" x2="230" y2="190" stroke="currentColor" stroke-width="1" stroke-dasharray="5,3" opacity="0.5"/>
+          <line x1="430" y1="10" x2="430" y2="190" stroke="currentColor" stroke-width="1" stroke-dasharray="5,3" opacity="0.5"/>
+          <text x="129" y="116" font-size="10" fill="currentColor" text-anchor="middle">90°</text>
+          <text x="329" y="116" font-size="10" fill="currentColor" text-anchor="middle">270°</text>
+          <text x="229" y="116" font-size="10" fill="currentColor" text-anchor="middle">180°</text>
+          <text x="22" y="104" font-size="10" fill="currentColor" text-anchor="end">0</text>
+          <text x="440" y="104" font-size="10" fill="currentColor">x</text>
+          <text x="34" y="12" font-size="10" fill="currentColor">y</text>
+          <text x="310" y="20" font-size="11" fill="currentColor">y = tan x</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Fungsi</th><th>Maks</th><th>Min</th><th>Periode</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$y = \sin x$</td><td>$1$</td><td>$-1$</td><td>$360^\circ$</td></tr>
+          <tr><td>$y = \cos x$</td><td>$1$</td><td>$-1$</td><td>$360^\circ$</td></tr>
+          <tr><td>$y = \tan x$</td><td colspan="2"><em>tidak terbatas (unbounded)</em></td><td>$180^\circ$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">2. Fungsi Trigonometri Sederhana</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Bentuk Umum Fungsi Trigonometri Sederhana</div>
+      <div class="math-block">$$y = k\sin(ax \pm \alpha) \qquad y = k\cos(ax \pm \alpha) \qquad y = k\tan(ax \pm \alpha)$$</div>
+      <ul style="margin:.4rem 0 0 0;padding-left:1.2rem;font-size:.9rem;line-height:1.9;">
+        <li>Nilai <strong>maksimum</strong> $= k$ dan nilai <strong>minimum</strong> $= -k$</li>
+        <li><strong>Periode</strong> $= \dfrac{360^\circ}{a}$ (sin &amp; cos) atau $\dfrac{180^\circ}{a}$ (tan)</li>
+        <li>Jika $+\alpha$: grafik <strong>geser kiri</strong>; jika $-\alpha$: grafik <strong>geser kanan</strong></li>
+      </ul>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan untuk Bentuk $y = p + k\sin(ax)$</div>
+      <p style="margin:0;font-size:.9rem;">Untuk fungsi bentuk $y = p + k\sin(ax)$, nilai maks $= p + k$ dan min $= p - k$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 36</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Tentukan amplitudo, nilai maksimum, nilai minimum, dan periode dari:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$y = 3\sin x$</li>
+        <li>$y = -2\cos x$</li>
+        <li>$y = 1 + 4\sin 2x$</li>
+        <li>$y = -3 + 2\cos 3x$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin:0;">
+        <li>Amplitudo $= 3$, maks $= 3$, min $= -3$, periode $= 360^\circ$.</li>
+        <li>Amplitudo $= 2$. Tanda negatif membalik grafik: maks $= 2$, min $= -2$, periode $= 360^\circ$.</li>
+        <li>Amplitudo $= 4$. Maks $= 1 + 4 = 5$, min $= 1 - 4 = -3$, periode $= \dfrac{360^\circ}{2} = 180^\circ$.</li>
+        <li>Amplitudo $= 2$. Karena ada tanda $-$ di depan, grafik terbalik. Maks $= -3 + 2 = -1$, min $= -3 - 2 = -5$, periode $= \dfrac{360^\circ}{3} = 120^\circ$.</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 37</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Tentukan nilai maksimum, minimum, dan periode dari:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$y = 5\sin(3x - 60^\circ)$</li>
+        <li>$y = 3\cos(2x + 45^\circ)$</li>
+        <li>$y = 6\tan 2x$</li>
+        <li>$y = 4 + 2\cos 5x$</li>
+        <li>$y = 5 - 3\cos\!\left(\tfrac{1}{3}x + \pi\right)$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th>Fungsi</th><th>Maks</th><th>Min</th><th>Periode</th></tr></thead>
+          <tbody>
+            <tr><td>(a)</td><td>$y = 5\sin(3x - 60^\circ)$</td><td>$5$</td><td>$-5$</td><td>$120^\circ$</td></tr>
+            <tr><td>(b)</td><td>$y = 3\cos(2x + 45^\circ)$</td><td>$3$</td><td>$-3$</td><td>$180^\circ$</td></tr>
+            <tr><td>(c)</td><td>$y = 6\tan 2x$</td><td colspan="2"><em>tidak terbatas</em></td><td>$90^\circ$</td></tr>
+            <tr><td>(d)</td><td>$y = 4 + 2\cos 5x$</td><td>$6$</td><td>$2$</td><td>$72^\circ$</td></tr>
+            <tr><td>(e)</td><td>$y = 5 - 3\cos\!\left(\tfrac{1}{3}x + \pi\right)$</td><td>$8$</td><td>$2$</td><td>$1080^\circ$</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin:.4rem 0 0 0;font-size:.85rem;font-style:italic;">Untuk (e): tanda $-$ di depan cosinus membalik. Maks saat $\cos = -1$: $5-3(-1) = 8$; min saat $\cos = 1$: $5-3(1) = 2$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 38</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai maksimum dan minimum dari $f(x) = \dfrac{24}{5 + 3\sin x}$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .3rem 0;">Maks terjadi saat penyebut <strong>terkecil</strong> ($\sin x = -1$): $f_{\max} = \dfrac{24}{5-3} = \dfrac{24}{2} = \mathbf{12}$</p>
+      <p style="margin:0;">Min terjadi saat penyebut <strong>terbesar</strong> ($\sin x = 1$): $f_{\min} = \dfrac{24}{5+3} = \dfrac{24}{8} = \mathbf{3}$</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 39</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Tentukan nilai maksimum dan minimum dari:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$f(x) = \dfrac{3}{2 - \sin x}$</li>
+        <li>$g(x) = \dfrac{8}{3 + 5\cos x}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin:0;">
+        <li>Maks saat $\sin x = 1$: $f_{\max} = \dfrac{3}{2-1} = 3$. Min saat $\sin x = -1$: $f_{\min} = \dfrac{3}{2+1} = 1$.</li>
+        <li>Penyebut $3 + 5\cos x$ berada antara $-2$ dan $8$. Penyebut bisa negatif! Min (paling negatif) saat penyebut $= -2$: $g_{\min} = \dfrac{8}{-2} = -4$. Maks saat penyebut $= 8$: $g_{\max} = \dfrac{8}{8} = 1$.</li>
+      </ol>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Perhatian Fungsi Pecah</div>
+      <p style="margin:0;font-size:.9rem;">Fungsi bentuk $\dfrac{k}{a \pm b\sin x}$ harus diperiksa tanda penyebutnya. Jika penyebut bisa berganti tanda, fungsi tidak terdefinisi di beberapa titik dan perlu dianalisis lebih hati-hati.</p>
+    </div>
+
+    <h3 class="subsection-title">3. Menentukan Persamaan Fungsi dari Grafik</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Langkah Menentukan Persamaan dari Grafik</div>
+      <ol style="margin:0;padding-left:1.2rem;font-size:.9rem;line-height:1.9;">
+        <li>Tentukan amplitudo: $k = \dfrac{\text{maks} - \text{min}}{2}$</li>
+        <li>Tentukan periode dari grafik, lalu hitung $a = \dfrac{360^\circ}{\text{periode}}$</li>
+        <li>Tentukan pergeseran vertikal: $c = \dfrac{\text{maks} + \text{min}}{2}$</li>
+        <li>Tentukan pergeseran fase $\alpha$ dari posisi maksimum/titik nol naik</li>
+        <li>Tuliskan persamaan: $y = k\sin a(x - \alpha) + c$ atau $y = k\cos a(x - \alpha) + c$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 40</div>
+      <p style="margin:0;font-size:.9rem;">Lukislah grafik $f(x) = 2\cos x$ pada interval $0^\circ &lt; x \leq 360^\circ$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Amplitudo $= 2$, periode $= 360^\circ$. Titik kunci: $(0^\circ, 2)$, $(90^\circ, 0)$, $(180^\circ, -2)$, $(270^\circ, 0)$, $(360^\circ, 2)$.</p>
+      <div style="overflow-x:auto;">
+        <svg viewBox="0 0 460 180" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="90" x2="450" y2="90" stroke="currentColor" stroke-width="1.5" marker-end="url(#a40)"/>
+          <line x1="30" y1="170" x2="30" y2="10" stroke="currentColor" stroke-width="1.5" marker-end="url(#a40)"/>
+          <defs><marker id="a40" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3z" fill="currentColor"/></marker></defs>
+          <!-- f(x)=2cos x, amplitude=65px -->
+          <path d="M30,25 C80,25 100,90 130,90 C160,90 180,155 230,155 C280,155 300,90 330,90 C360,90 380,25 430,25" fill="none" stroke="#E11D48" stroke-width="2.2"/>
+          <!-- g(x)=cos x, amplitude=32px -->
+          <path d="M30,58 C80,58 100,90 130,90 C160,90 180,122 230,122 C280,122 300,90 330,90 C360,90 380,58 430,58" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.5"/>
+          <line x1="30" y1="25" x2="440" y2="25" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.3"/>
+          <line x1="30" y1="155" x2="440" y2="155" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.3"/>
+          <text x="129" y="106" font-size="10" fill="currentColor" text-anchor="middle">90°</text>
+          <text x="229" y="106" font-size="10" fill="currentColor" text-anchor="middle">180°</text>
+          <text x="329" y="106" font-size="10" fill="currentColor" text-anchor="middle">270°</text>
+          <text x="429" y="106" font-size="10" fill="currentColor" text-anchor="middle">360°</text>
+          <text x="22" y="29" font-size="10" fill="currentColor" text-anchor="end">2</text>
+          <text x="22" y="159" font-size="10" fill="currentColor" text-anchor="end">-2</text>
+          <text x="22" y="62" font-size="10" fill="currentColor" text-anchor="end">1</text>
+          <text x="22" y="126" font-size="10" fill="currentColor" text-anchor="end">-1</text>
+          <text x="440" y="94" font-size="10" fill="currentColor">x</text>
+          <text x="34" y="12" font-size="10" fill="currentColor">y</text>
+          <text x="350" y="18" font-size="10" fill="#E11D48">f: y=2cos x</text>
+          <text x="350" y="32" font-size="10" fill="currentColor" opacity="0.6">g: y=cos x</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 41</div>
+      <p style="margin:0;font-size:.9rem;">Lukislah grafik $f(x) = \sin(x - 45^\circ)$ pada interval $0^\circ &lt; x \leq 360^\circ$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Grafik $y = \sin x$ digeser ke kanan sejauh $45^\circ$. Titik kunci bergeser: nol naik di $45^\circ$, puncak di $135^\circ$, nol turun di $225^\circ$, lembah di $315^\circ$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 42</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan periode dan letak asimtot vertikal dari $f(x) = \tan\!\left(\dfrac{1}{2}x\right)$ pada interval $[0^\circ, 360^\circ]$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">$a = \dfrac{1}{2}$, periode $= \dfrac{180^\circ}{1/2} = 360^\circ$.</p>
+      <p style="margin:0;">Asimtot saat $\dfrac{1}{2}x = 90^\circ \implies x = 180^\circ$. Dalam $[0^\circ, 360^\circ]$, asimtot di $x = 180^\circ$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 43</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah grafik fungsi sinus memiliki nilai maks $= 3$, nilai min $= -3$, titik nol naik pertama di $x = 75^\circ$, dan berikutnya di $x = 255^\circ$. Tentukan persamaan fungsinya!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 1:</strong> Amplitudo $k = 3$.</p>
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 2:</strong> Periode $= 255^\circ - 75^\circ = 180^\circ$, $a = \dfrac{360^\circ}{180^\circ} = 2$.</p>
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 3:</strong> Nol naik di $75^\circ$ (geser kanan $75^\circ$):</p>
+      <div class="math-block">$$\boxed{y = 3\sin\bigl(2(x-75^\circ)\bigr) = 3\sin(2x - 150^\circ)}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 44</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah grafik fungsi trigonometri memiliki nilai maks $= 3$ di $x = 60^\circ$, nilai min $= -1$ di $x = 240^\circ$, dan garis tengah $y = 1$. Tentukan persamaan fungsinya dalam bentuk $y = k\cos(a(x - \alpha)) + c$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 1:</strong> $k = \dfrac{3-(-1)}{2} = 2$, $c = \dfrac{3+(-1)}{2} = 1$.</p>
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 2:</strong> $\dfrac{T}{2} = 240^\circ - 60^\circ = 180^\circ \implies T = 360^\circ \implies a = 1$.</p>
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 3:</strong> Maks cosinus standar di $x = 0^\circ$, grafik ini di $x = 60^\circ$ → geser kanan $60^\circ$.</p>
+      <div class="math-block">$$\boxed{y = 2\cos(x - 60^\circ) + 1}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 45</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah grafik fungsi trigonometri memiliki: maks $= 4$, min $= -2$, periode $= 240^\circ$, dan melewati titik $(30^\circ,\, 1)$. Tentukan persamaannya dalam bentuk $y = k\sin(ax + b) + c$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 1:</strong> $k = \dfrac{4-(-2)}{2} = 3$, $c = \dfrac{4+(-2)}{2} = 1$.</p>
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 2:</strong> $a = \dfrac{360^\circ}{240^\circ} = \dfrac{3}{2}$.</p>
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 3:</strong> Substitusi $(30^\circ, 1)$ ke $1 = 3\sin\!\left(\dfrac{3}{2} \cdot 30^\circ + b\right) + 1$:</p>
+      <div class="math-block">$$0 = 3\sin(45^\circ + b) \implies 45^\circ + b = 0^\circ \implies b = -45^\circ$$</div>
+      <div class="math-block">$$\boxed{y = 3\sin\!\left(\frac{3}{2}x - 45^\circ\right) + 1}$$</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan E</div>
+      <ol class="soal-list">
+        <li>Tentukan nilai maksimum, minimum, dan periode dari: (a) $y = 4\sin\!\left(\frac{1}{2}x - 30^\circ\right)$, (b) $y = 2 - 5\cos 3x$, (c) $f(x) = \dfrac{10}{3 - 2\cos x}$!</li>
+        <li>Lukislah grafik $f(x) = 3\sin 2x$ pada interval $0^\circ \leq x \leq 360^\circ$ dengan membuat tabel nilai terlebih dahulu!</li>
+        <li>Lukislah grafik $f(x) = 2\cos(x + 30^\circ)$ pada interval $0^\circ \leq x \leq 360^\circ$ dan bandingkan dengan $y = \cos x$! Jelaskan pengaruh koefisien 2 dan pergeseran $30^\circ$.</li>
+        <li>Lukislah grafik $f(x) = 2\tan\!\left(\dfrac{1}{3}x\right)$ pada $0^\circ \leq x \leq 360^\circ$. Tentukan: (a) periode, (b) letak asimtot vertikal, (c) perbedaan dengan $y = \tan x$.</li>
+        <li>Tentukan persamaan fungsi sinus dengan amplitudo 4, periode $120^\circ$, dan pergeseran ke kanan sejauh $20^\circ$. Kemudian tentukan nilai fungsi tersebut pada $x = 50^\circ$!</li>
+        <li>Sebuah grafik fungsi trigonometri memiliki nilai maks $= 5$, min $= -5$, titik nol naik pertama di $x = 30^\circ$, dan titik nol naik berikutnya di $x = 210^\circ$. (a) Tentukan amplitudo, periode, dan nilai $a$. (b) Tentukan persamaan fungsi dalam bentuk $y = k\sin(ax + b)$. (c) Verifikasi dengan mensubstitusi $x = 30^\circ$.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ F. RINGKASAN ══════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-f">
+    <h2 class="section-title"><span class="section-badge">F</span>Ringkasan</h2>
+
+    <h3 class="subsection-title">Perbandingan Trigonometri Dasar</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Nama</th><th>Definisi</th><th>Kebalikan</th></tr></thead>
+        <tbody>
+          <tr><td>$\sin\alpha = \dfrac{\text{depan}}{\text{miring}}$</td><td>$\cos\alpha = \dfrac{\text{samping}}{\text{miring}}$</td><td>$\tan\alpha = \dfrac{\text{depan}}{\text{samping}}$</td></tr>
+          <tr><td>$\csc\alpha = \dfrac{1}{\sin\alpha}$</td><td>$\sec\alpha = \dfrac{1}{\cos\alpha}$</td><td>$\cot\alpha = \dfrac{1}{\tan\alpha}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">Nilai Sudut Istimewa</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th></th><th>$0^\circ$</th><th>$30^\circ$</th><th>$45^\circ$</th><th>$60^\circ$</th><th>$90^\circ$</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$\sin$</td><td>$0$</td><td>$\dfrac{1}{2}$</td><td>$\dfrac{\sqrt{2}}{2}$</td><td>$\dfrac{\sqrt{3}}{2}$</td><td>$1$</td></tr>
+          <tr><td>$\cos$</td><td>$1$</td><td>$\dfrac{\sqrt{3}}{2}$</td><td>$\dfrac{\sqrt{2}}{2}$</td><td>$\dfrac{1}{2}$</td><td>$0$</td></tr>
+          <tr><td>$\tan$</td><td>$0$</td><td>$\dfrac{\sqrt{3}}{3}$</td><td>$1$</td><td>$\sqrt{3}$</td><td><em>t.t.</em></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">Tanda di Setiap Kuadran</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--border);border-radius:8px;overflow:hidden;max-width:320px;text-align:center;font-size:.9rem;margin:.5rem 0;">
+      <div style="padding:.6rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);"><strong>II</strong><br><small>sin (+)</small></div>
+      <div style="padding:.6rem;border-bottom:1px solid var(--border);"><strong>I</strong><br><small>semua (+)</small></div>
+      <div style="padding:.6rem;border-right:1px solid var(--border);"><strong>III</strong><br><small>tan (+)</small></div>
+      <div style="padding:.6rem;"><strong>IV</strong><br><small>cos (+)</small></div>
+    </div>
+
+    <h3 class="subsection-title">Identitas Pythagoras</h3>
+    <div class="math-block">$$\sin^2\alpha + \cos^2\alpha = 1 \qquad 1 + \tan^2\alpha = \sec^2\alpha \qquad \cot^2\alpha + 1 = \csc^2\alpha$$</div>
+
+    <h3 class="subsection-title">Sudut Negatif</h3>
+    <div class="math-block">$$\sin(-\alpha) = -\sin\alpha \qquad \cos(-\alpha) = \cos\alpha \qquad \tan(-\alpha) = -\tan\alpha$$</div>
+
+    <h3 class="subsection-title">Fungsi Trigonometri Sederhana $y = k\sin a(x \pm \alpha)$</h3>
+    <div class="math-block">$$\text{Maks} = k \qquad \text{Min} = -k \qquad \text{Periode} = \frac{360^\circ}{a}$$</div>
+  </section>
+
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <div class="footer-nav">
+      <a class="nav-btn" href="../eksponen/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Eksponen
+      </a>
+      <a class="nav-btn" href="../trigonometri2/">
+        Trigonometri 2
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <div class="footer-actions">
+      <a class="nav-btn primary" href="#">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="10" height="10" rx="2"/><line x1="5" y1="5" x2="9" y2="5"/><line x1="5" y1="7.5" x2="8" y2="7.5"/><line x1="5" y1="10" x2="7" y2="10"/></svg>
+        Kerjakan Latihan Soal Trigonometri 1
+        <span class="coming-soon">Segera</span>
+      </a>
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Disqus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi ini? Tulis di kolom diskusi. Login dengan akun Google.</p>
+    <div id="disqus_thread"></div>
+    <script>
+    (function() {
+      var disqusLoaded = false;
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !disqusLoaded) {
+          disqusLoaded = true;
+          observer.disconnect();
+          var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://eksaktalab.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      }, { threshold: 0.1 });
+      var thread = document.getElementById('disqus_thread');
+      if (thread) observer.observe(thread);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── Scroll progress + scroll-to-top ──────────────────────────────────
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible'); else btn.classList.remove('visible');
+});
+
+// ── TOC Dropdown ──────────────────────────────────────────────────────
+function toggleTOC() { document.getElementById('tocDropdown').classList.toggle('open'); }
+function closeTOC()  { document.getElementById('tocDropdown').classList.remove('open'); }
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+// ── Theme Toggle ──────────────────────────────────────────────────────
+function toggleTheme() {
+  const html = document.documentElement;
+  const btn  = document.getElementById('themeBtn');
+  const dark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', dark ? 'light' : 'dark');
+  btn.textContent = dark ? '🌙 Gelap' : '☀️ Terang';
+}
+
+// ── Bookmark ──────────────────────────────────────────────────────────
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? '<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan'
+    : '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan';
+}
+
+// ── Share ─────────────────────────────────────────────────────────────
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({ title: 'Trigonometri 1 \u2014 EksaktaLab', text: 'Materi lengkap Trigonometri 1 SMA: sin, cos, tan, identitas, dan fungsi trigonometri.', url: window.location.href });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!';
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+
+// ── SHARED HELPERS ────────────────────────────────────────────────────
+const chevronSVG = () => '<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11"><polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) MathJax.typesetPromise([typesetEl]).catch(() => {});
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); } });
+}
+
+// ── 1. BOX RUMUS → accordion ──────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.box.box-rumus').forEach(box => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+    let bodyHTML = '';
+    box.childNodes.forEach(n => { if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || ''); });
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML =
+      '<div class="rumus-header" role="button" aria-expanded="false" tabindex="0">' +
+        '<span class="rumus-badge">Rumus</span>' +
+        '<span class="rumus-title">' + (titleTxt || 'Rumus Utama') + '</span>' +
+        '<span class="rumus-status">Lihat rumus</span>' +
+        '<span class="rumus-chevron">' + chevronSVG() + '</span>' +
+      '</div>' +
+      '<div class="rumus-body"><div class="rumus-body-inner">' + bodyHTML.trim() + '</div></div>';
+    const header = wrap.querySelector('.rumus-header');
+    const status = wrap.querySelector('.rumus-status');
+    const inner  = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, status, wrap.querySelector('.rumus-body'), inner);
+    box.replaceWith(wrap);
+  });
+
+// ── 2. BOX CONTOH → accordion ─────────────────────────────────────────
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+    let qHTML = '';
+    box.childNodes.forEach(n => { if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || ''); });
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML =
+      '<div class="contoh-header" role="button" aria-expanded="false" tabindex="0">' +
+        '<span class="contoh-badge">Contoh ' + num + '</span>' +
+        '<div class="contoh-question">' + qHTML.trim() + '</div>' +
+        '<span class="contoh-chevron">' + chevronSVG() + '</span>' +
+      '</div>' +
+      '<div class="contoh-body">' +
+        '<div class="contoh-body-inner">' +
+          '<div class="solve-header"><span class="solve-dot"></span><span class="solve-title">Penyelesaian</span></div>' +
+          '<div class="penyelesaian-inner">' +
+            (solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>') +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    const header = wrap.querySelector('.contoh-header');
+    const pi     = wrap.querySelector('.penyelesaian-inner');
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); } });
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+// ── 3. BUKA / TUTUP SEMUA per section ─────────────────────────────────
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+    const updateBtn = () => { btn.innerHTML = chevronSVG() + ' ' + (allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'); };
+    updateBtn();
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+// ── 4. SOAL LATIHAN → accordion kunci jawaban ─────────────────────────
+  const jawabanData = {
+    // Latihan A (index 0)
+    0: [
+      { jawaban: 'Dari Pythagoras: $PR = 13$, $QR = 5$, $PQ = 12$. $\\sin P = \\dfrac{5}{13}$, $\\cos P = \\dfrac{12}{13}$, $\\tan P = \\dfrac{5}{12}$, $\\csc P = \\dfrac{13}{5}$, $\\sec P = \\dfrac{13}{12}$, $\\cot P = \\dfrac{12}{5}$.' },
+      { jawaban: '$AB = 12$ (Pythagoras). $\\sin A = \\dfrac{5}{13}$, $\\cos C = \\dfrac{5}{13}$, $\\tan A = \\dfrac{5}{12}$.' },
+      { jawaban: '$OA = \\sqrt{36+64} = 10$. $\\sin\\alpha = \\dfrac{8}{10} = \\dfrac{4}{5}$, $\\cos\\alpha = \\dfrac{6}{10} = \\dfrac{3}{5}$, $\\tan\\alpha = \\dfrac{4}{3}$, $\\csc\\alpha = \\dfrac{5}{4}$.' },
+      { jawaban: '(a) $LM = \\sqrt{(2\\sqrt{7})^2 - 2^2} = \\sqrt{24} = 2\\sqrt{6}$. (b) $\\sin K = \\dfrac{2\\sqrt{6}}{2\\sqrt{7}} = \\dfrac{\\sqrt{6}}{\\sqrt{7}}$, dst. (c) Terbukti dari relasi komplementer $K + M = 90^\\circ$.' },
+      { jawaban: 'Dari $\\cos R = \\dfrac{3}{5}$: $\\sin R = \\dfrac{4}{5}$, $\\tan R = \\dfrac{4}{3}$, $\\cot T = \\dfrac{4}{3}$. Sisi $RT = 15k$, $RS = 9k$, $ST = 12k$. Keliling $36 \\Rightarrow k = 1$. Luas $= \\dfrac{1}{2} \\cdot 9 \\cdot 12 = 54$ cm².' },
+      { jawaban: '(a) $\\sin A = \\dfrac{3}{5}$, $\\cos A = \\dfrac{4}{5}$, $\\sec A = \\dfrac{5}{4}$, $\\csc A = \\dfrac{5}{3}$. (b) $BC = 9$ (depan), $AB = 15$, $AC = 12$. (c) $\\dfrac{5/4 + 5/3}{3/4 + 4/3} = \\dfrac{35/12}{25/12} = \\dfrac{7}{5}$.' },
+      { jawaban: '$\\sin P = \\dfrac{2\\sqrt{5}}{5}$. Depan $= 2\\sqrt{5}$, miring $= 5$, samping $= \\sqrt{25-20} = \\sqrt{5}$. $\\cos P = \\dfrac{\\sqrt{5}}{5}$, $\\tan P = 2$, $\\sec P = \\sqrt{5}$, $\\csc P = \\dfrac{\\sqrt{5}}{2}$, $\\cot P = \\dfrac{1}{2}$. (b) $\\sin^2 P + \\cos^2 P = \\dfrac{4}{5} + \\dfrac{1}{5} = 1$ ✓. (c) $PQ = 3$, $QR = 6$.' },
+      { jawaban: '(a) $9 + BC^2 = 15^2 \\Rightarrow BC = 12$ m. $\\sin = \\dfrac{12}{15} = \\dfrac{4}{5}$, $\\cos = \\dfrac{9}{15} = \\dfrac{3}{5}$, $\\tan = \\dfrac{4}{3}$, $\\csc = \\dfrac{5}{4}$, $\\sec = \\dfrac{5}{3}$, $\\cot = \\dfrac{3}{4}$. (c) Tinggi pohon $= 12 + 15 = 27$ m.' },
+    ],
+    // Latihan B (index 1)
+    1: [
+      { jawaban: '$\\sec^2 30^\\circ = \\dfrac{4}{3}$, $\\csc^2 45^\\circ = 2$, $\\cot^2 60^\\circ = \\dfrac{1}{3}$. Hasil $= \\dfrac{4}{3} + 2 - \\dfrac{1}{3} = 3$.' },
+      { jawaban: 'Pembilang $= \\dfrac{3}{4} - \\dfrac{1}{4} = \\dfrac{1}{2}$. Penyebut $= 2 \\cdot \\dfrac{\\sqrt{3}}{2} \\cdot \\sqrt{3} = 3$. Hasil $= \\dfrac{1}{6}$.' },
+      { jawaban: '$\\sin C = \\cos A = \\sin 30^\\circ = \\dfrac{1}{2}$. Jadi $AB = 2 \\cdot BC \\Rightarrow BC = \\dfrac{AC}{2} = 6$, $AB = 6\\sqrt{3}$.' },
+      { jawaban: 'Tinggi $= 120 \\sin 45^\\circ = 60\\sqrt{2}$ m. Jarak mendatar $= 120 \\cos 45^\\circ = 60\\sqrt{2}$ m.' },
+      { jawaban: '$CT = KL \\sin 45^\\circ = \\dfrac{b\\sqrt{2}}{2}$. $KM^2 = CT^2 + TM^2 = \\dfrac{b^2}{2} + \\dfrac{25b^2}{2} = 13b^2 \\Rightarrow KM = b\\sqrt{13}$.' },
+      { jawaban: 'Pembilang $= \\dfrac{3\\sqrt{3}}{8} + \\dfrac{3\\sqrt{3}}{8} = \\dfrac{3\\sqrt{3}}{4}$. Penyebut $= \\dfrac{1}{2} + 3 - 2 = \\dfrac{3}{2}$. Hasil $= \\dfrac{\\sqrt{3}}{2}$.' },
+      { jawaban: '(a) $h = d\\tan 30^\\circ = \\dfrac{d}{\\sqrt{3}}$ dan $h + 40 = d\\tan 60^\\circ = d\\sqrt{3}$. Selisih: $40 = d\\sqrt{3} - \\dfrac{d}{\\sqrt{3}} = \\dfrac{2d}{\\sqrt{3}} \\Rightarrow d = 20\\sqrt{3}$ m, $h = 20$ m. (b) Sudut depresi $= 60^\\circ$. (c) Jarak baru $= 40\\sqrt{3}$ m, bergerak $20\\sqrt{3}$ m.' },
+    ],
+    // Latihan C (index 2)
+    2: [
+      { jawaban: '$\\dfrac{\\sqrt{2}}{2} + \\left(-\\dfrac{\\sqrt{3}}{2}\\right) + (-1) = \\dfrac{\\sqrt{2}-\\sqrt{3}}{2} - 1$.' },
+      { jawaban: '(a) $-\\dfrac{1}{2}$, (b) $\\dfrac{1}{2}$, (c) $-1$.' },
+      { jawaban: '$\\sin(-315^\\circ) = \\dfrac{\\sqrt{2}}{2}$. $\\cos\\!\\left(-\\dfrac{4\\pi}{3}\\right) = \\cos\\dfrac{4\\pi}{3} = -\\dfrac{1}{2}$.' },
+      { jawaban: '$\\cos\\dfrac{5\\pi}{3} = \\dfrac{1}{2}$, $\\sin\\dfrac{7\\pi}{6} = -\\dfrac{1}{2}$, $\\tan\\dfrac{5\\pi}{4} = 1$.' },
+      { jawaban: '$\\cos\\alpha = -\\dfrac{\\sqrt{5}}{3}$, $\\tan\\alpha = -\\dfrac{2\\sqrt{5}}{5}$, $\\csc\\alpha = \\dfrac{3}{2}$, $\\sec\\alpha = -\\dfrac{3\\sqrt{5}}{5}$.' },
+      { jawaban: '$\\sin(-210^\\circ) = \\dfrac{1}{2}$. $\\cos(-120^\\circ) = -\\dfrac{1}{2}$. $\\tan(-300^\\circ) = -\\sqrt{3}$. Hasil $= \\dfrac{1}{2} - \\dfrac{1}{2} - (-\\sqrt{3}) = \\sqrt{3}$.' },
+      { jawaban: 'Pembilang $= (-\\sin x)(\\cos x) + (-\\sin x)(\\sin x) = -\\sin x(\\cos x + \\sin x)$. Penyebut $= \\tan x \\cdot \\sin x = \\dfrac{\\sin^2 x}{\\cos x}$. Hasil $= -\\cos x \\cdot \\dfrac{\\cos x + \\sin x}{\\sin x} = -(\\cot x + 1) \\cdot \\cos x$... Sederhanakan: $\\dfrac{-\\sin x(\\cos x + \\sin x)}{\\frac{\\sin^2 x}{\\cos x}} = \\dfrac{-\\cos x(\\cos x + \\sin x)}{\\sin x}$.' },
+      { jawaban: '$= \\dfrac{(-\\sin x)(\\tan x)(\\cos x)}{(-\\sin x)(-\\sin x)} = \\dfrac{-\\sin^2 x}{\\sin^2 x} \\cdot \\dfrac{\\cos x \\cdot \\tan x}{1}$... $= \\dfrac{(-\\sin x)(\\tan x)(\\cos x)}{\\sin^2 x} = -\\tan x \\cdot \\dfrac{\\cos x}{\\sin x} = -1$.' },
+      { jawaban: '$\\sin 870^\\circ = \\sin 150^\\circ = \\dfrac{1}{2}$. $\\cos(-600^\\circ) = \\cos 600^\\circ = \\cos 240^\\circ = -\\dfrac{1}{2}$. $\\tan 675^\\circ = \\tan 315^\\circ = -1$. Hasil $= \\dfrac{1}{2} - (-\\dfrac{1}{2}) + (-1) = 0$.' },
+      { jawaban: '$\\csc(180^\\circ+\\alpha) = -\\csc\\alpha$, $\\sec(90^\\circ-\\alpha) = \\csc\\alpha$, $\\cot(360^\\circ-\\alpha) = -\\cot\\alpha$, $\\sec(180^\\circ+\\alpha) = -\\sec\\alpha$. Hasil $= \\dfrac{(-\\csc\\alpha)(\\csc\\alpha)}{(-\\cot\\alpha)(-\\sec\\alpha)} = \\dfrac{-\\csc^2\\alpha}{\\cot\\alpha \\sec\\alpha} = \\dfrac{-1}{\\sin^2\\alpha} \\cdot \\dfrac{\\sin\\alpha\\cos\\alpha}{1/\\cos\\alpha} = -\\dfrac{\\cos^2\\alpha}{\\sin\\alpha}$.' },
+      { jawaban: '(a) $\\sin\\alpha = -\\sqrt{1-p^2}$, $\\tan\\alpha = -\\dfrac{\\sqrt{1-p^2}}{p}$. (b) $\\sin(180^\\circ-\\alpha) = \\sin\\alpha = -\\sqrt{1-p^2}$; $\\cos(90^\\circ+\\alpha) = -\\sin\\alpha = \\sqrt{1-p^2}$. (c) $\\dfrac{\\sqrt{1-p^2}}{p} + \\sqrt{1-p^2} = \\sqrt{1-p^2}\\left(\\dfrac{1}{p}+1\\right)$. (d) $p - (-\\sqrt{1-p^2})\\left(-\\dfrac{\\sqrt{1-p^2}}{p}\\right) = p - \\dfrac{1-p^2}{p} = \\dfrac{2p^2-1}{p}$.' },
+    ],
+    // Latihan D (index 3)
+    3: [
+      { jawaban: '(a) $1$. (b) $1 + \\sin\\alpha$. (c) $1 + 1 - 1 = 1$.' },
+      { jawaban: '(a) $\\cos\\alpha = -\\dfrac{4}{5}$, $\\tan\\alpha = -\\dfrac{3}{4}$. (b) $\\sec^2\\alpha - \\tan^2\\alpha = 1$. (c) $\\csc^2\\alpha - \\cot^2\\alpha = 1$.' },
+      { jawaban: '(a) $(\\sin\\alpha+\\cos\\alpha)^2 = \\sin^2\\alpha + 2\\sin\\alpha\\cos\\alpha + \\cos^2\\alpha = 1 + 2\\sin\\alpha\\cos\\alpha$ ✓. (b) $\\sin^4\\alpha + \\sin^2\\alpha\\cos^2\\alpha = \\sin^2\\alpha(\\sin^2\\alpha+\\cos^2\\alpha) = \\sin^2\\alpha$ ✓.' },
+      { jawaban: '$\\sin^4\\alpha - \\cos^4\\alpha = (\\sin^2\\alpha-\\cos^2\\alpha)(\\sin^2\\alpha+\\cos^2\\alpha) = (\\sin^2\\alpha-\\cos^2\\alpha) \\cdot 1 = \\sin^2\\alpha - \\cos^2\\alpha$ ✓.' },
+      { jawaban: '$\\dfrac{\\tan\\alpha}{1-\\tan^2\\alpha} = \\dfrac{\\sin\\alpha/\\cos\\alpha}{1-\\sin^2\\alpha/\\cos^2\\alpha} = \\dfrac{\\sin\\alpha\\cos\\alpha}{\\cos^2\\alpha-\\sin^2\\alpha}$ ✓.' },
+      { jawaban: '$\\dfrac{\\csc\\alpha-\\sin\\alpha}{\\csc\\alpha+\\sin\\alpha} = \\dfrac{(1-\\sin^2\\alpha)/\\sin\\alpha}{(1+\\sin^2\\alpha)/\\sin\\alpha} = \\dfrac{\\cos^2\\alpha}{1+\\sin^2\\alpha}$ ✓.' },
+      { jawaban: 'Dari $\\tan\\alpha+\\cot\\alpha = \\dfrac{1}{\\sin\\alpha\\cos\\alpha} = k$, maka $\\sin\\alpha\\cos\\alpha = \\dfrac{1}{k}$. (a) $\\sin^2\\alpha\\cos^2\\alpha = \\dfrac{1}{k^2}$ ✓. (b) $(\\sin^2\\alpha+\\cos^2\\alpha)^2 - 2\\sin^2\\alpha\\cos^2\\alpha = 1 - \\dfrac{2}{k^2}$ ✓.' },
+      { jawaban: '$\\dfrac{1+\\tan^2\\alpha}{1+\\cot^2\\alpha} = \\dfrac{\\sec^2\\alpha}{\\csc^2\\alpha} = \\dfrac{\\sin^2\\alpha}{\\cos^2\\alpha} = \\tan^2\\alpha$ ✓.' },
+      { jawaban: '(a) $(\\sec\\alpha-\\tan\\alpha)(\\sec\\alpha+\\tan\\alpha) = \\sec^2\\alpha-\\tan^2\\alpha = 1 \\Rightarrow \\sec\\alpha+\\tan\\alpha = \\dfrac{1}{p}$ ✓. (b) $\\sin\\alpha = \\dfrac{1/p - p}{1/p + p} = \\dfrac{1-p^2}{1+p^2}$, $\\cos\\alpha = \\dfrac{2p}{1+p^2}$. (c) $\\dfrac{\\tan^2\\alpha}{1+\\tan^2\\alpha} = \\dfrac{\\sec^2\\alpha-1}{\\sec^2\\alpha} = 1 - \\cos^2\\alpha = \\sin^2\\alpha$.' },
+    ],
+    // Latihan E (index 4)
+    4: [
+      { jawaban: '(a) Maks $= 4$, min $= -4$, periode $= 720^\\circ$. (b) Maks $= 2-(-5) = 7$... maks $= 2+5 = 7$, min $= 2-5 = -3$, periode $= 120^\\circ$. (c) Maks saat $\\cos x = -1$: $f = \\dfrac{10}{3+2} = 2$... maks $= 2$... Ulang: min penyebut = $3-2=1 \\Rightarrow f_{\\max} = 10$; maks penyebut $= 5 \\Rightarrow f_{\\min} = 2$.' },
+      { jawaban: 'Tabel nilai: $x = 0^\\circ, 45^\\circ, 90^\\circ, 135^\\circ, \\ldots$; $f = 0, 3, 0, -3, 0, 3, 0, -3, 0$. Amplitudo $3$, periode $180^\\circ$.' },
+      { jawaban: 'Koefisien 2: amplitudo menjadi 2 kali lebih besar. Pergeseran $30^\\circ$ ke kiri: grafik bergerak $30^\\circ$ ke kiri dibanding $y = \\cos x$.' },
+      { jawaban: '(a) Periode $= \\dfrac{180^\\circ}{1/3} = 540^\\circ$. (b) Asimtot saat $\\dfrac{x}{3} = 90^\\circ \\Rightarrow x = 270^\\circ$. Dalam $[0^\\circ, 360^\\circ]$: asimtot di $x = 270^\\circ$. (c) Lebih landai dari $y = \\tan x$ (koef 2 mempercuram), periode 3× lebih panjang.' },
+      { jawaban: '$y = 4\\sin\\!\\left(3(x-20^\\circ)\\right) = 4\\sin(3x-60^\\circ)$. Pada $x = 50^\\circ$: $y = 4\\sin(150^\\circ-60^\\circ) = 4\\sin 90^\\circ = 4$.' },
+      { jawaban: '(a) Amplitudo $= 5$, periode $= 180^\\circ$, $a = 2$. (b) $y = 5\\sin(2x - 60^\\circ)$ (karena nol naik di $30^\\circ \\Rightarrow$ fase $2 \\cdot 30^\\circ = 60^\\circ$). (c) $y(30^\\circ) = 5\\sin(60^\\circ - 60^\\circ) = 5 \\cdot 0 = 0$ ✓.' },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+    const items   = [...list.querySelectorAll('li')];
+    const newList = document.createElement('div');
+    newList.className = 'soal-list-accordion';
+    items.forEach((li, i) => {
+      const jawaban = answers[i]?.jawaban || '';
+      const item = document.createElement('div');
+      item.className = 'soal-item';
+      item.innerHTML =
+        '<div class="soal-item-header" role="button" tabindex="0">' +
+          '<span class="soal-num">' + (i+1) + '</span>' +
+          '<span class="soal-text">' + li.innerHTML + '</span>' +
+          '<button class="soal-key-btn" tabindex="-1">Kunci</button>' +
+        '</div>' +
+        '<div class="soal-answer">' +
+          '<div class="soal-answer-inner">' +
+            '<div class="soal-answer-label">Jawaban</div>' +
+            (jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>') +
+          '</div>' +
+        '</div>';
+      const header = item.querySelector('.soal-item-header');
+      const toggle = () => {
+        const open = item.classList.toggle('open');
+        if (open && window.MathJax) MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(() => {});
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+      newList.appendChild(item);
+    });
+    list.replaceWith(newList);
+  });
+
+});
+</script>
+
+<!-- FOOTER -->
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+</body>
+</html>
