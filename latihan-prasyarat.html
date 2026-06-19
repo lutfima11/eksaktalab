@@ -1300,6 +1300,14 @@ function toast(msg) {
 
 /* ── INIT ────────────────────────────────────── */
 updateProgress();
+
+/* ── SYNC PROGRESS-WRAP TOP ─────────────────── */
+function syncProgressTop() {
+  const navH = document.querySelector('.navbar').offsetHeight;
+  document.querySelector('.progress-wrap').style.top = navH + 'px';
+}
+syncProgressTop();
+window.addEventListener('resize', syncProgressTop);
 </script>
 
 <!-- FOOTER -->
