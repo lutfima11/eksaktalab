@@ -1140,7 +1140,7 @@ body{
 </div><!-- /quiz-wrap -->
 
 <button class="sticky-next hidden" id="stickyNext" onclick="gulirKeSoalBerikutnya()">
-  ↓ Soal Belum Dijawab <span class="sn-badge" id="stickyBadge">20</span>
+  ↓ Soal Belum Dijawab
 </button>
 
 <div id="toast"></div>
@@ -1204,8 +1204,6 @@ function updateProgress() {
   // Update sticky button
   const sisa = 20 - count;
   const stickyBtn = document.getElementById('stickyNext');
-  const stickyBadge = document.getElementById('stickyBadge');
-  stickyBadge.textContent = sisa;
   if (sisa === 0 || sudahSubmit) {
     stickyBtn.classList.add('hidden');
   } else {
