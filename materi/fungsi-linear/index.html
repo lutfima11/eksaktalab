@@ -127,6 +127,74 @@ th mjx-container svg * { fill: #fff !important; }
      <div class="box box-definisi">
       <p>Perubahan yang tetap pada $x$ selalu menghasilkan perubahan yang tetap pula pada $y$.</p>
     </div>
+    <div class="grafik-wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="100%" style="max-width:480px; background-color:transparent;">
+    <defs>
+      <style>
+        .axis-line { stroke: #000000; }
+        .label-text { fill: #000000; font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
+        .text-desc { fill: #000000; font-family: 'Liberation Sans', Arial, sans-serif; }
+        .line-blue { stroke: #0A25B0; }
+        .line-red-dash { stroke: #BA2626; }
+        .line-red-label { fill: #BA2626; font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
+        .point-dot { fill: #000000; }
+        
+        /* Pengaturan saat perangkat/browser dalam keadaan Dark Mode */
+        @media (prefers-color-scheme: dark) {
+          .axis-line { stroke: #ffffff; }
+          #arrow-black path { fill: #ffffff; }
+          .label-text { fill: #ffffff; }
+          .text-desc { fill: #ffffff; }
+          .line-blue { stroke: #3B59FF; } /* Warna biru sedikit lebih terang agar kontras di latar gelap */
+          #arrow-blue path { fill: #3B59FF; }
+          .line-red-dash { stroke: #FF5C5C; } /* Warna merah disesuaikan agar nyaman di mata saat gelap */
+          .line-red-label { fill: #FF5C5C; }
+          .point-dot { fill: #ffffff; }
+        }
+      </style>
+
+      <marker id="arrow-black" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="black" />
+      </marker>
+      <marker id="arrow-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 2 L 7 5 L 0 8 z" fill="#0A25B0" />
+      </marker>
+    </defs>
+
+    <line x1="25" y1="480" x2="520" y2="480" class="axis-line" stroke-width="2" marker-end="url(#arrow-black)" />
+    <text x="535" y="485" class="label-text" font-size="26">x</text>
+    
+    <line x1="60" y1="510" x2="60" y2="50" class="axis-line" stroke-width="2" marker-end="url(#arrow-black)" />
+    <text x="50" y="35" class="label-text" font-size="26">y</text>
+    
+    <text x="35" y="505" class="label-text" font-size="28">O</text>
+
+    <line x1="60" y1="430" x2="480" y2="105" class="line-blue" stroke-width="3" stroke-linecap="round" />
+
+    <line x1="135" y1="372" x2="245" y2="372" class="line-red-dash" stroke-width="1.5" stroke-dasharray="6,5" />
+    <line x1="245" y1="372" x2="245" y2="287" class="line-red-dash" stroke-width="1.5" stroke-dasharray="6,5" />
+
+    <line x1="245" y1="287" x2="363" y2="287" class="line-red-dash" stroke-width="1.5" stroke-dasharray="6,5" />
+    <line x1="363" y1="287" x2="363" y2="195" class="line-red-dash" stroke-width="1.5" stroke-dasharray="6,5" />
+
+    <circle cx="135" cy="372" r="6" class="point-dot" />
+    <circle cx="245" cy="287" r="6" class="point-dot" />
+    <circle cx="363" cy="195" r="6" class="point-dot" />
+
+    <text x="175" y="400" class="line-red-label" font-size="22">Δx</text>
+    <text x="258" y="340" class="line-red-label" font-size="22">Δy</text>
+    
+    <text x="293" y="315" class="line-red-label" font-size="22">Δx</text>
+    <text x="378" y="235" class="line-red-label" font-size="22">Δy</text>
+
+    <g class="text-desc" font-size="21">
+      <text x="355" y="340">Setiap langkah <tspan font-family="Cambria, 'Times New Roman', serif" font-style="italic">Δx</tspan></text>
+      <text x="355" y="370">yang sama selalu</text>
+      <text x="355" y="400">menghasilkan <tspan font-family="Cambria, 'Times New Roman', serif" font-style="italic">Δy</tspan></text>
+      <text x="355" y="430">yang sama</text>
+    </g>
+  </svg>
+</div>
 
     <h3 class="subsection-title">Sejarah Singkat</h3>
 
