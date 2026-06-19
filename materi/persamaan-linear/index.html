@@ -133,7 +133,7 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
           cx = 150 + 1.714*40 = 218.6 ≈ 219
           cy = 310 - 3.143*40 = 184.3 ≈ 184
       -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 430" width="100%" style="max-width:440px; background-color:transparent;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="80 80 390 280" width="100%" style="max-width:420px; background-color:transparent;">
         <defs>
           <style>
             .spl-axis { stroke: var(--text-main, #334155); }
@@ -161,30 +161,6 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
         <line x1="150" y1="418" x2="150" y2="82" class="spl-axis" stroke-width="2.2"
               marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
 
-        <!-- Label sumbu -->
-        <text x="492" y="315" class="spl-label">x</text>
-        <text x="138" y="76" class="spl-label">y</text>
-        <text x="124" y="330" class="spl-label">O</text>
-
-        <!-- Tick marks sumbu X: x=1..8 -->
-        <text x="186" y="326" class="spl-tick" text-anchor="middle">1</text>
-        <text x="226" y="326" class="spl-tick" text-anchor="middle">2</text>
-        <text x="266" y="326" class="spl-tick" text-anchor="middle">3</text>
-        <text x="306" y="326" class="spl-tick" text-anchor="middle">4</text>
-        <text x="346" y="326" class="spl-tick" text-anchor="middle">5</text>
-        <text x="386" y="326" class="spl-tick" text-anchor="middle">6</text>
-        <text x="426" y="326" class="spl-tick" text-anchor="middle">7</text>
-        <text x="466" y="326" class="spl-tick" text-anchor="middle">8</text>
-
-        <!-- Tick marks sumbu Y: y=-2,-1,1,2,3,4,5 -->
-        <text x="138" y="394" class="spl-tick" text-anchor="end">-2</text>
-        <text x="138" y="354" class="spl-tick" text-anchor="end">-1</text>
-        <text x="138" y="274" class="spl-tick" text-anchor="end">1</text>
-        <text x="138" y="234" class="spl-tick" text-anchor="end">2</text>
-        <text x="138" y="194" class="spl-tick" text-anchor="end">3</text>
-        <text x="138" y="154" class="spl-tick" text-anchor="end">4</text>
-        <text x="138" y="114" class="spl-tick" text-anchor="end">5</text>
-
         <!--
           Garis 1: x + 2y = 8, y=(8-x)/2
           x=-0.5 → y=4.25 → cx=130, cy=140
@@ -193,36 +169,22 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
         <line x1="130" y1="140" x2="470" y2="310"
               class="spl-line1" stroke-width="2.8"
               marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
-        <text x="108" y="128" style="fill:#2563EB; font-family:Inter,sans-serif; font-size:14px;">x + 2y = 8</text>
 
         <!--
           Garis 2: 3x - y = 2, y=3x-2
-          x=0.67 → y=0   → cx=177, cy=310
-          x=2.67 → y=6   → cx=257, cy=70  (clip)
-          pakai: x=0.5 → y=-0.5 → cx=170, cy=330
-                 x=2.4 → y=5.2  → cx=246, cy=102
+          x=0.5 → y=-0.5 → cx=170, cy=330
+          x=2.4 → y=5.2  → cx=246, cy=102
         -->
         <line x1="165" y1="338" x2="248" y2="102"
               class="spl-line2" stroke-width="2.8"
               marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
-        <text x="252" y="92" style="fill:#DC2626; font-family:Inter,sans-serif; font-size:14px;">3x − y = 2</text>
 
         <!--
           Titik potong: x=12/7≈1.714, y=22/7≈3.143
           cx = 150 + 1.714*40 = 218.6
           cy = 310 - 3.143*40 = 184.3
         -->
-        <line x1="219" y1="310" x2="219" y2="184" class="spl-dash" stroke-width="1.3" stroke-dasharray="5,4"/>
-        <line x1="150" y1="184" x2="219" y2="184" class="spl-dash" stroke-width="1.3" stroke-dasharray="5,4"/>
         <circle cx="219" cy="184" r="5.5" class="spl-dot"/>
-        <text x="228" y="178" style="fill:var(--text-main,#334155); font-family:Inter,sans-serif; font-size:13px; font-weight:600;">(x₀, y₀)</text>
-        <text x="212" y="324" class="spl-tick" text-anchor="middle">x₀</text>
-        <text x="136" y="188" class="spl-tick" text-anchor="end">y₀</text>
-
-        <!-- Catatan pojok kanan bawah -->
-        <text x="300" y="370" class="spl-tick" style="font-size:12px; fill:#64748b;">Setiap garis = satu kondisi</text>
-        <text x="300" y="386" class="spl-tick" style="font-size:12px; fill:#64748b;">Titik potong = solusi</text>
-        <text x="300" y="402" class="spl-tick" style="font-size:12px; fill:#64748b;">yang memenuhi keduanya</text>
       </svg>
     </div>
 
