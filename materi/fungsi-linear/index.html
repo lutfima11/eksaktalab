@@ -125,26 +125,19 @@ th mjx-container svg * { fill: #fff !important; }
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="100%" style="max-width:420px; background-color:transparent;">
     <defs>
       <style>
-        .axis-line-fixed { stroke: #475569; }
-        .arrow-path-fixed { fill: #475569; }
-        .label-black-fixed { fill: #334155; font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
-        .label-red-fixed { fill: #DC2626; font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
-        .label-sub-fixed { font-size: 12px; }
+        .axis-line-fixed { stroke: var(--text-main, #334155); }
+        .arrow-path-fixed { fill: var(--text-main, #334155); }
+        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
         .line-blue-fixed { stroke: #2563EB; }
         .arrow-blue-fixed { fill: #2563EB; }
-        .line-red-fixed { stroke: #DC2626; }
-        .line-pink-fixed { stroke: #F87171; opacity: 0.6; }
-        .point-dot-fixed { fill: #1E293B; stroke: #475569; stroke-width: 1; }
         
-        /* Teknik override jika sistem tema EksaktaLab menggunakan atribut data-theme */
-        [data-theme="dark"] .axis-line-fixed { stroke: #CBD5E1; }
-        [data-theme="dark"] .arrow-path-fixed { fill: #CBD5E1; }
-        [data-theme="dark"] .label-black-fixed { fill: #F1F5F9; }
+        /* Dukungan Dark Mode otomatis */
+        @media (prefers-color-scheme: dark) {
+          .line-blue-fixed { stroke: #60A5FA; }
+          .arrow-blue-fixed { fill: #60A5FA; }
+        }
         [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
         [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
-        [data-theme="dark"] .label-red-fixed { fill: #F87171; }
-        [data-theme="dark"] .point-dot-fixed { fill: #FFFFFF; stroke: #FFFFFF; }
       </style>
 
       <marker id="arrow-fixed-black" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -168,31 +161,9 @@ th mjx-container svg * { fill: #fff !important; }
       <path d="M 210 400 A 40 40 0 0 0 200 370" fill="none" class="axis-line-fixed" stroke-width="1.5" />
       <text x="218" y="388" class="label-black-fixed" style="font-size: 22px;">α</text>
       
-      <line x1="84" y1="477" x2="476" y2="124" class="line-blue-fixed" stroke-width="3" marker-start="url(#arrow-fixed-blue)" marker-end="url(#arrow-fixed-blue)" />
+      <line x1="84" y1="477" x2="476" y2="124" class="line-blue-fixed" stroke-width="3.5" marker-start="url(#arrow-fixed-blue)" marker-end="url(#arrow-fixed-blue)" />
       
-      <line x1="170" y1="310" x2="270" y2="310" class="line-pink-fixed" stroke-width="1.5" stroke-dasharray="5,5" />
-      <line x1="170" y1="190" x2="405" y2="190" class="line-pink-fixed" stroke-width="1.5" stroke-dasharray="5,5" />
-      <line x1="270" y1="310" x2="270" y2="400" class="line-pink-fixed" stroke-width="1.5" stroke-dasharray="5,5" />
-      <line x1="405" y1="190" x2="405" y2="400" class="line-pink-fixed" stroke-width="1.5" stroke-dasharray="5,5" />
-      
-      <line x1="270" y1="310" x2="405" y2="310" class="line-red-fixed" stroke-width="3" />
-      
-      <line x1="405" y1="310" x2="405" y2="190" class="line-red-fixed" stroke-width="3" />
-      
-      <circle cx="270" cy="310" r="6" class="point-dot-fixed" />
-      <circle cx="405" cy="190" r="6" class="point-dot-fixed" />
-      
-      <text x="130" y="315" class="label-red-fixed" style="font-size: 22px;">y<tspan class="label-sub-fixed">1</tspan></text>
-      <text x="130" y="195" class="label-red-fixed" style="font-size: 22px;">y<tspan class="label-sub-fixed">2</tspan></text>
-      
-      <text x="258" y="425" class="label-red-fixed" style="font-size: 22px;">x<tspan class="label-sub-fixed">1</tspan></text>
-      <text x="393" y="425" class="label-red-fixed" style="font-size: 22px;">x<tspan class="label-sub-fixed">2</tspan></text>
-      
-      <text x="178" y="282" class="label-black-fixed" style="font-size: 22px;">A(x<tspan class="label-sub-fixed">1</tspan>, y<tspan class="label-sub-fixed">1</tspan>)</text>
-      <text x="280" y="172" class="label-black-fixed" style="font-size: 22px;">B(x<tspan class="label-sub-fixed">2</tspan>, y<tspan class="label-sub-fixed">2</tspan>)</text>
-      
-      <text x="325" y="340" class="label-red-fixed" style="font-size: 24px;">Δx</text>
-      <text x="417" y="255" class="label-red-fixed" style="font-size: 24px;">Δy</text>
+      <text x="320" y="230" class="label-black-fixed" style="font-size: 24px; font-weight: 600;">y = mx + c</text>
 
     </g>
   </svg>
@@ -328,54 +299,81 @@ th mjx-container svg * { fill: #fff !important; }
 
 
     <div class="grafik-wrap">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="100%" style="max-width:480px;background-color:transparent;">
-        <defs>
-          <marker id="arrow-black" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="black" />
-          </marker>
-          <marker id="arrow-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M 0 2 L 7 5 L 0 8 z" fill="#0A25B0" />
-          </marker>
-        </defs>
-<!-- Sumbu X -->
-        <line x1="50" y1="400" x2="510" y2="400" stroke="black" stroke-width="2" marker-start="url(#arrow-black)" marker-end="url(#arrow-black)" />
-        <text x="525" y="405" class="label label-black">x</text>
-        <!-- Sumbu Y -->
-        <line x1="170" y1="500" x2="170" y2="70" stroke="black" stroke-width="2" marker-start="url(#arrow-black)" marker-end="url(#arrow-black)" />
-        <text x="162" y="55" class="label label-black">y</text>
-        <!-- Label O -->
-        <text x="142" y="422" class="label label-black" style="font-size:18px;">O</text>
-        <!-- Sudut α -->
-        <path d="M 210 400 A 40 40 0 0 0 200 370" fill="none" stroke="black" stroke-width="1.5" />
-        <text x="218" y="388" class="label label-black" style="font-size: 20px;">α</text>
-        <!-- Garis biru melewati O, A, B -->
-        <line x1="84" y1="477" x2="476" y2="124" stroke="#0A25B0" stroke-width="2" marker-start="url(#arrow-blue)" marker-end="url(#arrow-blue)" />
-        <!-- Proyeksi putus-putus merah muda -->
-        <line x1="170" y1="310" x2="270" y2="310" stroke="#B24444" stroke-width="1.2" stroke-dasharray="5,5" />
-        <line x1="170" y1="190" x2="405" y2="190" stroke="#B24444" stroke-width="1.2" stroke-dasharray="5,5" />
-        <line x1="270" y1="310" x2="270" y2="400" stroke="#B24444" stroke-width="1.2" stroke-dasharray="5,5" />
-        <line x1="405" y1="190" x2="405" y2="400" stroke="#B24444" stroke-width="1.2" stroke-dasharray="5,5" />
-        <!-- Δx horisontal merah -->
-        <line x1="270" y1="310" x2="405" y2="310" stroke="#A51D1D" stroke-width="2" />
-        <!-- Δy vertikal merah -->
-        <line x1="405" y1="310" x2="405" y2="190" stroke="#A51D1D" stroke-width="2" />
-        <!-- Titik A dan B -->
-        <circle cx="270" cy="310" r="5" fill="black" />
-        <circle cx="405" cy="190" r="5" fill="black" />
-        <!-- Label y₁, y₂ -->
-        <text x="135" y="315" class="label label-red">y<tspan class="label-sub">1</tspan></text>
-        <text x="135" y="195" class="label label-red">y<tspan class="label-sub">2</tspan></text>
-        <!-- Label x₁, x₂ -->
-        <text x="258" y="422" class="label label-red">x<tspan class="label-sub">1</tspan></text>
-        <text x="393" y="422" class="label label-red">x<tspan class="label-sub">2</tspan></text>
-        <!-- Label A dan B -->
-        <text x="178" y="282" class="label label-black">A(x<tspan class="label-sub">1</tspan>, y<tspan class="label-sub">1</tspan>)</text>
-        <text x="280" y="172" class="label label-black">B(x<tspan class="label-sub">2</tspan>, y<tspan class="label-sub">2</tspan>)</text>
-        <!-- Label Δx dan Δy -->
-        <text x="318" y="335" class="label label-red">Δx</text>
-        <text x="417" y="255" class="label label-red">Δy</text>
-      </svg>
-    </div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="100%" style="max-width:420px; background-color:transparent;">
+    <defs>
+      <style>
+        .axis-line-fixed { stroke: #475569; }
+        .arrow-path-fixed { fill: #475569; }
+        .label-black-fixed { fill: #334155; font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
+        .label-red-fixed { fill: #DC2626; font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
+        .label-sub-fixed { font-size: 12px; }
+        .line-blue-fixed { stroke: #2563EB; }
+        .arrow-blue-fixed { fill: #2563EB; }
+        .line-red-fixed { stroke: #DC2626; }
+        .line-pink-fixed { stroke: #F87171; opacity: 0.6; }
+        .point-dot-fixed { fill: #1E293B; stroke: #475569; stroke-width: 1; }
+        
+        /* Teknik override jika sistem tema EksaktaLab menggunakan atribut data-theme */
+        [data-theme="dark"] .axis-line-fixed { stroke: #CBD5E1; }
+        [data-theme="dark"] .arrow-path-fixed { fill: #CBD5E1; }
+        [data-theme="dark"] .label-black-fixed { fill: #F1F5F9; }
+        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
+        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
+        [data-theme="dark"] .label-red-fixed { fill: #F87171; }
+        [data-theme="dark"] .point-dot-fixed { fill: #FFFFFF; stroke: #FFFFFF; }
+      </style>
+
+      <marker id="arrow-fixed-black" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-path-fixed" />
+      </marker>
+      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 2 L 7 5 L 0 8 z" class="arrow-blue-fixed" />
+      </marker>
+    </defs>
+
+    <g transform="translate(75, 45) scale(0.75)">
+      
+      <line x1="50" y1="400" x2="510" y2="400" class="axis-line-fixed" stroke-width="2.5" marker-start="url(#arrow-fixed-black)" marker-end="url(#arrow-fixed-black)" />
+      <text x="525" y="405" class="label-black-fixed" style="font-size: 26px;">x</text>
+      
+      <line x1="170" y1="500" x2="170" y2="70" class="axis-line-fixed" stroke-width="2.5" marker-start="url(#arrow-fixed-black)" marker-end="url(#arrow-fixed-black)" />
+      <text x="162" y="55" class="label-black-fixed" style="font-size: 26px;">y</text>
+      
+      <text x="142" y="425" class="label-black-fixed" style="font-size:22px;">O</text>
+      
+      <path d="M 210 400 A 40 40 0 0 0 200 370" fill="none" class="axis-line-fixed" stroke-width="1.5" />
+      <text x="218" y="388" class="label-black-fixed" style="font-size: 22px;">α</text>
+      
+      <line x1="84" y1="477" x2="476" y2="124" class="line-blue-fixed" stroke-width="3" marker-start="url(#arrow-fixed-blue)" marker-end="url(#arrow-fixed-blue)" />
+      
+      <line x1="170" y1="310" x2="270" y2="310" class="line-pink-fixed" stroke-width="1.5" stroke-dasharray="5,5" />
+      <line x1="170" y1="190" x2="405" y2="190" class="line-pink-fixed" stroke-width="1.5" stroke-dasharray="5,5" />
+      <line x1="270" y1="310" x2="270" y2="400" class="line-pink-fixed" stroke-width="1.5" stroke-dasharray="5,5" />
+      <line x1="405" y1="190" x2="405" y2="400" class="line-pink-fixed" stroke-width="1.5" stroke-dasharray="5,5" />
+      
+      <line x1="270" y1="310" x2="405" y2="310" class="line-red-fixed" stroke-width="3" />
+      
+      <line x1="405" y1="310" x2="405" y2="190" class="line-red-fixed" stroke-width="3" />
+      
+      <circle cx="270" cy="310" r="6" class="point-dot-fixed" />
+      <circle cx="405" cy="190" r="6" class="point-dot-fixed" />
+      
+      <text x="130" y="315" class="label-red-fixed" style="font-size: 22px;">y<tspan class="label-sub-fixed">1</tspan></text>
+      <text x="130" y="195" class="label-red-fixed" style="font-size: 22px;">y<tspan class="label-sub-fixed">2</tspan></text>
+      
+      <text x="258" y="425" class="label-red-fixed" style="font-size: 22px;">x<tspan class="label-sub-fixed">1</tspan></text>
+      <text x="393" y="425" class="label-red-fixed" style="font-size: 22px;">x<tspan class="label-sub-fixed">2</tspan></text>
+      
+      <text x="178" y="282" class="label-black-fixed" style="font-size: 22px;">A(x<tspan class="label-sub-fixed">1</tspan>, y<tspan class="label-sub-fixed">1</tspan>)</text>
+      <text x="280" y="172" class="label-black-fixed" style="font-size: 22px;">B(x<tspan class="label-sub-fixed">2</tspan>, y<tspan class="label-sub-fixed">2</tspan>)</text>
+      
+      <text x="325" y="340" class="label-red-fixed" style="font-size: 24px;">Δx</text>
+      <text x="417" y="255" class="label-red-fixed" style="font-size: 24px;">Δy</text>
+
+    </g>
+  </svg>
+</div>
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Catatan</div>
