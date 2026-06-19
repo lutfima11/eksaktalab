@@ -60,13 +60,14 @@
 
 /* ── RESET ───────────────────────────────────────────── */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
 body{
   font-family:var(--sans);
   background:var(--surface);
   color:var(--text);
   min-height:100vh;
   transition:background .25s,color .25s;
+  overflow-x:hidden;
 }
 
 /* ── NAVBAR ──────────────────────────────────────────── */
@@ -183,7 +184,7 @@ body{
 .progress-count em{color:var(--teal);font-style:normal;}
 
 /* ── QUIZ WRAP ───────────────────────────────────────── */
-.quiz-wrap{max-width:780px;margin:0 auto;padding:2rem 2rem 4rem;}
+.quiz-wrap{max-width:780px;margin:0 auto;padding:2rem 2rem 4rem;overflow-x:hidden;}
 
 /* ── SECTION DIVIDER ─────────────────────────────────── */
 .section-divider{
@@ -227,9 +228,12 @@ body{
 .q-text{
   font-size:0.93rem;line-height:1.7;color:var(--text);
   font-weight:500;flex:1;
+  word-break:break-word;
+  overflow-wrap:break-word;
+  min-width:0;
 }
-.q-img{margin:0.75rem 0 1rem;text-align:center;}
-.q-img svg{max-width:100%;height:auto;}
+.q-img{margin:0.75rem 0 1rem;text-align:center;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.q-img svg{max-width:100%;height:auto;display:block;margin:0 auto;}
 
 /* ── OPTIONS ─────────────────────────────────────────── */
 .options{display:flex;flex-direction:column;gap:0.45rem;}
@@ -256,7 +260,7 @@ body{
   flex-shrink:0;margin-top:0.05rem;
   transition:all .18s;
 }
-.opt-text{line-height:1.55;padding-top:0.02rem;flex:1;}
+.opt-text{line-height:1.55;padding-top:0.02rem;flex:1;min-width:0;word-break:break-word;overflow-wrap:break-word;}
 
 /* State: selected */
 .opt.selected{
@@ -293,6 +297,10 @@ body{
   background:var(--surface-2);border:1px solid var(--border);
   font-size:0.82rem;line-height:1.65;color:var(--text-2);
   display:none;
+  overflow-x:auto;
+  word-break:break-word;
+  overflow-wrap:break-word;
+  -webkit-overflow-scrolling:touch;
 }
 .pembahasan.show{display:block;animation:fadeUp .25s ease;}
 .pembahasan strong{color:var(--text);font-weight:600;}
@@ -357,7 +365,7 @@ body{
 /* Score breakdown grid */
 .score-breakdown{
   display:grid;grid-template-columns:repeat(3,1fr);
-  gap:0.75rem;max-width:480px;margin:0 auto 1.75rem;
+  gap:0.75rem;max-width:min(480px,100%);margin:0 auto 1.75rem;
 }
 .sbd-item{
   background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
@@ -374,7 +382,7 @@ body{
 /* Pillar breakdown */
 .pillar-breakdown{
   display:flex;flex-direction:column;gap:0.5rem;
-  max-width:480px;margin:0 auto 1.75rem;text-align:left;
+  max-width:min(480px,100%);margin:0 auto 1.75rem;text-align:left;
 }
 .pbd-row{
   display:flex;align-items:center;gap:0.75rem;
@@ -383,7 +391,8 @@ body{
 }
 .pbd-tag{
   font-family:var(--mono);font-size:0.6rem;font-weight:700;
-  color:var(--teal);white-space:nowrap;min-width:80px;
+  color:var(--teal);white-space:nowrap;min-width:70px;
+  flex-shrink:0;
 }
 .pbd-bar-wrap{flex:1;height:6px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden;}
 .pbd-bar{height:100%;border-radius:99px;background:var(--teal);transition:width .6s ease;}
@@ -471,23 +480,83 @@ body{
 .footer-legal a{font-size:0.75rem;color:#94A3B8;text-decoration:none;transition:color .15s;}
 .footer-legal a:hover{color:var(--teal);}
 
+/* ── NAV BTN (alias btn-back) ────────────────────────── */
+.nav-btn{
+  font-family:var(--sans);font-size:0.78rem;font-weight:600;
+  color:var(--text-2);background:var(--surface-2);
+  border:1px solid var(--border);
+  padding:0.35rem 0.85rem;border-radius:8px;
+  cursor:pointer;transition:all .2s;text-decoration:none;
+  display:inline-flex;align-items:center;gap:0.4rem;
+  white-space:nowrap;
+}
+.nav-btn:hover{border-color:var(--teal);color:var(--teal);}
+
+/* ── MATHJAX / FORMULA OVERFLOW FIX ─────────────────── */
+.q-text,
+.opt-text,
+.pembahasan{
+  max-width:100%;
+}
+/* MathJax SVG agar tidak keluar container */
+.MathJax, mjx-container{
+  max-width:100%;
+}
+
 /* ── RESPONSIVE ──────────────────────────────────────── */
 @media(max-width:768px){
   .navbar{padding:0 1rem;}
   .page-header{padding:2rem 1.25rem 1.75rem;}
   .progress-wrap{padding:0.75rem 1rem;gap:0.65rem;}
   .quiz-wrap{padding:1.5rem 1rem 3rem;}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;padding:0 2rem 2rem;}
+  /* Footer: 2 kolom di tablet */
+  .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem;padding:0 1.25rem 1.5rem;}
   .score-breakdown{grid-template-columns:repeat(3,1fr);}
   .progress-label{display:none;}
   .progress-bar{min-width:0;}
+  /* Pillar breakdown tag lebih ringkas di tablet */
+  .pbd-tag{min-width:60px;font-size:0.56rem;}
+  /* Card padding lebih kecil */
+  .q-card{padding:1rem 1rem;}
+  /* Score panel padding */
+  .score-panel{padding:2rem 1.25rem;}
+  /* Sticky button tidak terlalu dekat sudut */
+  .sticky-next{bottom:1rem;right:1rem;}
+
 }
 @media(max-width:500px){
   .nav-logo-tag{display:none;}
-  .page-meta{gap:0.75rem;}
+  /* Navbar: sembunyikan label tombol, tampilkan ikon saja */
+  .nav-btn{font-size:0.72rem;padding:0.3rem 0.6rem;}
+  .page-meta{gap:0.6rem;}
+  .page-meta .meta-pill{font-size:0.6rem;}
   .score-breakdown{grid-template-columns:repeat(3,minmax(0,1fr));}
   .score-actions{flex-direction:column;align-items:stretch;}
   .btn-retry,.btn-home{text-align:center;justify-content:center;}
+  /* Footer: 1 kolom di HP */
+  .footer-grid{grid-template-columns:1fr;gap:1.25rem;padding:0 1rem 1.25rem;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:0.5rem;padding:0 1rem;padding-top:1rem;}
+  .footer-legal{gap:0.75rem;}
+  /* Pillar breakdown: biarkan tag wrap jika perlu */
+  .pbd-row{flex-wrap:wrap;gap:0.4rem 0.6rem;}
+  .pbd-tag{white-space:normal;min-width:unset;width:100%;margin-bottom:0.1rem;}
+  .pbd-bar-wrap{flex:1;}
+  /* Score panel lebih compact */
+  .score-panel{padding:1.5rem 1rem;}
+  .score-msg{font-size:0.82rem;}
+  /* Pembahasan font sedikit lebih kecil agar tidak overflow */
+  .pembahasan{font-size:0.78rem;}
+  /* q-card jarak lebih kecil */
+  .q-card{padding:0.9rem 0.85rem;margin-bottom:0.75rem;}
+  .q-head{gap:0.6rem;}
+  .q-text{font-size:0.875rem;}
+  /* Section divider */
+  .section-divider{margin:1.75rem 0 1rem;}
+  .section-name{font-size:0.85rem;}
+  /* Sticky button lebih kecil di HP */
+  .sticky-next{font-size:0.7rem;padding:0.45rem 0.9rem;bottom:0.85rem;right:0.85rem;}
+  /* Progress */
+  .progress-count{font-size:0.7rem;}
 }
 </style>
 <link rel="stylesheet" href="assets/css/materi.css">
@@ -736,7 +805,7 @@ body{
       <div class="q-text">Pada segitiga siku-siku berikut, panjang sisi miring $AC$ adalah ...</div>
     </div>
     <div class="q-img">
-      <svg viewBox="0 0 340 250" width="340" height="250" xmlns="http://www.w3.org/2000/svg" style="font-family:'JetBrains Mono',monospace">
+      <svg viewBox="0 0 340 250" xmlns="http://www.w3.org/2000/svg" style="font-family:'JetBrains Mono',monospace;width:100%;max-width:340px;height:auto">
         <polygon points="100,30 100,200 300,200" fill="rgba(0,191,165,0.08)" stroke="#00BFA5" stroke-width="2" stroke-linejoin="round"/>
         <polyline points="100,182 118,182 118,200" fill="none" stroke="#7B8BB2" stroke-width="1.5"/>
         <text x="88" y="117" fill="#3D4A6B" font-size="12" text-anchor="middle" transform="rotate(-90,88,117)">BC = 6 cm</text>
@@ -827,7 +896,7 @@ body{
       <div class="q-text">Perhatikan garis bilangan berikut. Pertidaksamaan yang sesuai dengan garis bilangan tersebut adalah ...</div>
     </div>
     <div class="q-img">
-      <svg viewBox="0 0 320 80" width="320" height="80" xmlns="http://www.w3.org/2000/svg" style="font-family:'JetBrains Mono',monospace">
+      <svg viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg" style="font-family:'JetBrains Mono',monospace;width:100%;max-width:320px;height:auto">
         <!-- garis sumbu -->
         <line x1="20" y1="40" x2="300" y2="40" stroke="#7B8BB2" stroke-width="1.5"/>
         <!-- panah kanan -->
@@ -973,7 +1042,7 @@ body{
     <!-- Bar chart SVG: data = 60→5, 70→8, 80→10, 90→7 siswa -->
     <!-- Canvas: viewBox 0 0 320 200. Plot area: x=55..300, y=20..155. Height=135px for 10 units → 1 unit=13.5px -->
     <div class="q-img">
-      <svg viewBox="0 0 320 200" width="320" height="200" xmlns="http://www.w3.org/2000/svg" style="font-family:'JetBrains Mono',monospace">
+      <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" style="font-family:'JetBrains Mono',monospace;width:100%;max-width:320px;height:auto">
         <!-- gridlines horizontal: y=155(0), y=88.5(5), y=22(10) → setiap 2 unit = 27px -->
         <!-- y=155=0, y=128=2, y=101=4, y=74=6, y=47=8, y=20=10 -->
         <line x1="55" y1="155" x2="300" y2="155" stroke="#D8E0F5" stroke-width="1"/>
