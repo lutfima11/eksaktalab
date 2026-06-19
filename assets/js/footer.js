@@ -98,9 +98,7 @@
       <p class="footer-desc">
         Platform belajar matematika yang lengkap dan gratis
         untuk semua siswa Indonesia.
-      </p>
-      <p class="footer-sponsor">
-        Disponsori oleh <strong>SMA IT Insan Sejahtera Sumedang</strong>
+        Disponsori oleh <strong>SMA IT Insan Sejahtera Sumedang</strong>.
       </p>
       <span class="footer-badge">Laboratorium Belajar Matematika</span>
 
