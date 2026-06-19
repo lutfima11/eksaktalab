@@ -118,34 +118,30 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="100%" style="max-width:420px; background-color:transparent;">
     <defs>
       <style>
-        .axis-line-fixed { stroke: var(--text-main, #334155); }
+        /* Menggunakan sistem penamaan & warna dari template kedua */
+        .axis-line-fixed { stroke: var(--text-main, #334155); stroke-width: 2.5; stroke-linecap: round; }
         .arrow-path-fixed { fill: var(--text-main, #334155); }
-        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
-        .line-blue-fixed { stroke: #2563EB; }
-        .arrow-blue-fixed { fill: #2563EB; }
+        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
+        .label-italic { font-style: italic; }
         
-        /* Tambahan class dari grafik pertama dengan penyesuaian warna kontainer baru */
+        /* Warna spesifik untuk elemen grafik pertama */
         .line-red-fixed { stroke: #b91c1c; stroke-width: 3.5; stroke-linecap: round; }
-        .line-blue-old-fixed { stroke: #1d4ed8; stroke-width: 3.5; stroke-linecap: round; }
+        .line-blue-fixed { stroke: #1d4ed8; stroke-width: 3.5; stroke-linecap: round; }
         .guide-line-fixed { stroke: #cbd5e1; stroke-width: 1.5; stroke-dasharray: 5 5; }
         .intersection-dot-fixed { fill: #000000; }
         .text-note-fixed { fill: #64748b; font-family: Arial, Helvetica, sans-serif; font-size: 20px; }
         .label-grey-fixed { fill: #94a3b8; font-family: Cambria, 'Times New Roman', serif; font-size: 22px; font-style: italic; }
 
-        /* Dukungan Dark Mode otomatis */
+        /* Otomatis Dark Mode sesuai template kedua */
         @media (prefers-color-scheme: dark) {
-          .line-blue-fixed { stroke: #60A5FA; }
-          .arrow-blue-fixed { fill: #60A5FA; }
           .line-red-fixed { stroke: #ef4444; }
-          .line-blue-old-fixed { stroke: #3b82f6; }
+          .line-blue-fixed { stroke: #3b82f6; }
           .guide-line-fixed { stroke: #475569; }
           .intersection-dot-fixed { fill: #ffffff; }
           .text-note-fixed { fill: #94a3b8; }
         }
-        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
-        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
         [data-theme="dark"] .line-red-fixed { stroke: #ef4444; }
-        [data-theme="dark"] .line-blue-old-fixed { stroke: #3b82f6; }
+        [data-theme="dark"] .line-blue-fixed { stroke: #3b82f6; }
         [data-theme="dark"] .guide-line-fixed { stroke: #475569; }
         [data-theme="dark"] .intersection-dot-fixed { fill: #ffffff; }
         [data-theme="dark"] .text-note-fixed { fill: #94a3b8; }
@@ -154,37 +150,33 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <marker id="arrow-fixed-black" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
         <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-path-fixed" />
       </marker>
-      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 2 L 7 5 L 0 8 z" class="arrow-blue-fixed" />
-      </marker>
     </defs>
 
     <g transform="translate(75, 45) scale(0.75)">
       
-      <line x1="50" y1="400" x2="510" y2="400" class="axis-line-fixed" stroke-width="2.5" marker-start="url(#arrow-fixed-black)" marker-end="url(#arrow-fixed-black)" />
-      <text x="525" y="405" class="label-black-fixed" style="font-size: 26px;">x</text>
-      
-      <line x1="170" y1="500" x2="170" y2="70" class="axis-line-fixed" stroke-width="2.5" marker-start="url(#arrow-fixed-black)" marker-end="url(#arrow-fixed-black)" />
-      <text x="162" y="55" class="label-black-fixed" style="font-size: 26px;">y</text>
-      
-      <text x="142" y="425" class="label-black-fixed" style="font-size:22px;">O</text>
-      
-      <path d="M 210 400 A 40 40 0 0 0 200 370" fill="none" class="axis-line-fixed" stroke-width="1.5" />
-      <text x="222" y="392" class="label-black-fixed" style="font-size: 22px;">α</text>
-      
-      <line x1="84" y1="477" x2="476" y2="124" class="line-blue-fixed" stroke-width="3.5" marker-start="url(#arrow-fixed-blue)" marker-end="url(#arrow-fixed-blue)" />
-      <text x="260" y="195" class="label-black-fixed" style="font-size: 24px; font-weight: 600;">y = mx + c</text>
+      <line x1="180" y1="220" x2="180" y2="440" class="guide-line-fixed" />
+      <line x1="180" y1="220" x2="90" y2="220" class="guide-line-fixed" />
 
-      <line x1="180" y1="220" x2="180" y2="400" class="guide-line-fixed" /> <line x1="180" y1="220" x2="170" y2="220" class="guide-line-fixed" /> <text x="172" y="425" class="label-grey-fixed">x₀</text>
-      <text x="135" y="226" class="label-grey-fixed">y₀</text>
+      <line x1="50" y1="440" x2="600" y2="440" class="axis-line-fixed" marker-end="url(#arrow-fixed-black)" />
+      <text x="615" y="448" class="label-black-fixed label-italic" style="font-size: 28px;">x</text>
+      
+      <line x1="90" y1="475" x2="90" y2="50" class="axis-line-fixed" marker-end="url(#arrow-fixed-black)" />
+      <text x="82" y="35" class="label-black-fixed label-italic" style="font-size: 28px;">y</text>
+      
+      <text x="52" y="468" class="label-black-fixed" style="font-size: 28px;">O</text>
+
+      <text x="168" y="460" class="label-grey-fixed">x₀</text>
+      <text x="55" y="226" class="label-grey-fixed">y₀</text>
 
       <line x1="135" y1="410" x2="225" y2="30" class="line-red-fixed" />
-      <line x1="90" y1="166" x2="510" y2="395" class="line-blue-old-fixed" /> <circle cx="180" cy="220" r="7" class="intersection-dot-fixed" />
-      <text x="200" y="225" class="label-black-fixed" style="font-size: 26px; font-style: normal;">(x₀, y₀)</text>
+      <line x1="90" y1="166" x2="580" y2="460" class="line-blue-fixed" />
 
-      <text x="280" y="70" class="text-note-fixed">Setiap garis = satu kondisi</text>
-      <text x="280" y="96" class="text-note-fixed">Titik potong = solusi</text>
-      <text x="280" y="122" class="text-note-fixed">yang memenuhi keduanya</text>
+      <circle cx="180" cy="220" r="7" class="intersection-dot-fixed" />
+      <text x="200" y="225" class="label-black-fixed" style="font-size: 28px;">(x₀, y₀)</text>
+
+      <text x="350" y="100" class="text-note-fixed">Setiap garis = satu kondisi</text>
+      <text x="350" y="126" class="text-note-fixed">Titik potong = solusi</text>
+      <text x="350" y="152" class="text-note-fixed">yang memenuhi keduanya</text>
 
     </g>
   </svg>
