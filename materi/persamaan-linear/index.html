@@ -115,54 +115,114 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
     <p>Setiap persamaan linear dengan dua variabel merepresentasikan sebuah <strong>garis lurus</strong> di bidang koordinat. Ketika dua persamaan diberikan sekaligus, kita memiliki dua garis. Penyelesaian sistem adalah pasangan $(x, y)$ yang memenuhi <em>keduanya</em> — secara geometris, ini adalah <strong>titik potong</strong> kedua garis tersebut.</p>
 
     <div class="grafik-wrap">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" width="100%" style="max-width:460px; background-color:transparent;">
+      <!--
+        Koordinat: origin O = (150, 310), skala 1 unit = 40px
+        cx(x) = 150 + x*40
+        cy(y) = 310 - y*40
+
+        Garis 1: x + 2y = 8  →  y = (8-x)/2
+          x=-1 → y=4.5 → (110, 130)
+          x=8  → y=0   → (470, 310)
+
+        Garis 2: 3x - y = 2  →  y = 3x - 2
+          x=0  → y=-2  → (150, 390)
+          x=4  → y=10  → (310, -90) ← terlalu tinggi, clip di y=1.5 → x=(1.5+2)/3=7/6≈1.17
+          pakai: x=0.67 → y=0 → (177, 310)  dan  x=2.5 → y=5.5 → (250, 90)
+
+        Titik potong: x=12/7≈1.714, y=22/7≈3.143
+          cx = 150 + 1.714*40 = 218.6 ≈ 219
+          cy = 310 - 3.143*40 = 184.3 ≈ 184
+      -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 430" width="100%" style="max-width:440px; background-color:transparent;">
         <defs>
           <style>
             .spl-axis { stroke: var(--text-main, #334155); }
             .spl-arrow { fill: var(--text-main, #334155); }
             .spl-label { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; font-style: italic; font-size: 20px; }
-            .spl-sublabel { fill: var(--text-3, #64748b); font-family: Inter, sans-serif; font-style: normal; font-size: 14px; }
+            .spl-tick  { fill: var(--text-3, #64748b); font-family: Inter, sans-serif; font-size: 13px; }
             .spl-line1 { stroke: #2563EB; }
             .spl-line2 { stroke: #DC2626; }
-            .spl-dot { fill: #0f172a; }
-            .spl-dash { stroke: #94a3b8; }
-            [data-theme="dark"] .spl-dot { fill: #f1f5f9; }
+            .spl-dot   { fill: #1e293b; }
+            .spl-dash  { stroke: #94a3b8; }
+            [data-theme="dark"] .spl-dot  { fill: #f1f5f9; }
             [data-theme="dark"] .spl-dash { stroke: #475569; }
             [data-theme="dark"] .spl-line1 { stroke: #60A5FA; }
             [data-theme="dark"] .spl-line2 { stroke: #F87171; }
           </style>
-          <marker id="spl-arrowhead" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <marker id="spl-arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="spl-arrow"/>
           </marker>
         </defs>
 
-        <!-- Axes -->
-        <line x1="40" y1="340" x2="480" y2="340" class="spl-axis" stroke-width="2.2" marker-start="url(#spl-arrowhead)" marker-end="url(#spl-arrowhead)"/>
-        <line x1="140" y1="390" x2="140" y2="30" class="spl-axis" stroke-width="2.2" marker-start="url(#spl-arrowhead)" marker-end="url(#spl-arrowhead)"/>
-        <text x="490" y="345" class="spl-label">x</text>
-        <text x="130" y="22" class="spl-label">y</text>
-        <text x="115" y="360" class="spl-label">O</text>
+        <!-- Sumbu X: dari x=-1 (cx=110) sampai x=8.5 (cx=490) -->
+        <line x1="100" y1="310" x2="488" y2="310" class="spl-axis" stroke-width="2.2"
+              marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
+        <!-- Sumbu Y: dari y=-2.5 (cy=410) sampai y=5.5 (cy=90) -->
+        <line x1="150" y1="418" x2="150" y2="82" class="spl-axis" stroke-width="2.2"
+              marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
 
-        <!-- Garis 1: x + 2y = 8 → y = (8-x)/2 → at x=0: y=4→(140,180); at x=7: y=0.5→(420,320) -->
-        <line x1="140" y1="180" x2="450" y2="325" class="spl-line1" stroke-width="2.8" marker-start="url(#spl-arrowhead)" marker-end="url(#spl-arrowhead)"/>
-        <text x="148" y="168" style="fill:#2563EB; font-family:Inter,sans-serif; font-size:15px; font-style:normal;">$x + 2y = 8$</text>
+        <!-- Label sumbu -->
+        <text x="492" y="315" class="spl-label">x</text>
+        <text x="138" y="76" class="spl-label">y</text>
+        <text x="124" y="330" class="spl-label">O</text>
 
-        <!-- Garis 2: 3x - y = 2 → y = 3x - 2 → at x=0.8: y=0.4→(220,327); at x=2.5: y=5.5→(360,60) -->
-        <line x1="218" y1="327" x2="360" y2="57" class="spl-line2" stroke-width="2.8" marker-start="url(#spl-arrowhead)" marker-end="url(#spl-arrowhead)"/>
-        <text x="365" y="50" style="fill:#DC2626; font-family:Inter,sans-serif; font-size:15px; font-style:normal;">$3x - y = 2$</text>
+        <!-- Tick marks sumbu X: x=1..8 -->
+        <text x="186" y="326" class="spl-tick" text-anchor="middle">1</text>
+        <text x="226" y="326" class="spl-tick" text-anchor="middle">2</text>
+        <text x="266" y="326" class="spl-tick" text-anchor="middle">3</text>
+        <text x="306" y="326" class="spl-tick" text-anchor="middle">4</text>
+        <text x="346" y="326" class="spl-tick" text-anchor="middle">5</text>
+        <text x="386" y="326" class="spl-tick" text-anchor="middle">6</text>
+        <text x="426" y="326" class="spl-tick" text-anchor="middle">7</text>
+        <text x="466" y="326" class="spl-tick" text-anchor="middle">8</text>
 
-        <!-- Intersection: x=12/7≈1.71, y=22/7≈3.14 → pixel: (140+1.71*70, 340-3.14*70) = (260, 120) -->
-        <line x1="260" y1="340" x2="260" y2="120" class="spl-dash" stroke-width="1.4" stroke-dasharray="5,4"/>
-        <line x1="140" y1="120" x2="260" y2="120" class="spl-dash" stroke-width="1.4" stroke-dasharray="5,4"/>
-        <circle cx="260" cy="120" r="6" class="spl-dot"/>
-        <text x="268" y="112" style="fill:var(--text-main,#334155); font-family:Inter,sans-serif; font-size:14px; font-style:normal; font-weight:600;">$(x_0,\,y_0)$</text>
-        <text x="253" y="356" class="spl-sublabel">$x_0$</text>
-        <text x="98" y="124" class="spl-sublabel">$y_0$</text>
+        <!-- Tick marks sumbu Y: y=-2,-1,1,2,3,4,5 -->
+        <text x="138" y="394" class="spl-tick" text-anchor="end">-2</text>
+        <text x="138" y="354" class="spl-tick" text-anchor="end">-1</text>
+        <text x="138" y="274" class="spl-tick" text-anchor="end">1</text>
+        <text x="138" y="234" class="spl-tick" text-anchor="end">2</text>
+        <text x="138" y="194" class="spl-tick" text-anchor="end">3</text>
+        <text x="138" y="154" class="spl-tick" text-anchor="end">4</text>
+        <text x="138" y="114" class="spl-tick" text-anchor="end">5</text>
 
-        <!-- Legend note -->
-        <text x="310" y="240" class="spl-sublabel" style="font-size:12px;">Setiap garis = satu kondisi</text>
-        <text x="310" y="258" class="spl-sublabel" style="font-size:12px;">Titik potong = solusi</text>
-        <text x="310" y="276" class="spl-sublabel" style="font-size:12px;">yang memenuhi keduanya</text>
+        <!--
+          Garis 1: x + 2y = 8, y=(8-x)/2
+          x=-0.5 → y=4.25 → cx=130, cy=140
+          x=8    → y=0    → cx=470, cy=310
+        -->
+        <line x1="130" y1="140" x2="470" y2="310"
+              class="spl-line1" stroke-width="2.8"
+              marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
+        <text x="108" y="128" style="fill:#2563EB; font-family:Inter,sans-serif; font-size:14px;">x + 2y = 8</text>
+
+        <!--
+          Garis 2: 3x - y = 2, y=3x-2
+          x=0.67 → y=0   → cx=177, cy=310
+          x=2.67 → y=6   → cx=257, cy=70  (clip)
+          pakai: x=0.5 → y=-0.5 → cx=170, cy=330
+                 x=2.4 → y=5.2  → cx=246, cy=102
+        -->
+        <line x1="165" y1="338" x2="248" y2="102"
+              class="spl-line2" stroke-width="2.8"
+              marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
+        <text x="252" y="92" style="fill:#DC2626; font-family:Inter,sans-serif; font-size:14px;">3x − y = 2</text>
+
+        <!--
+          Titik potong: x=12/7≈1.714, y=22/7≈3.143
+          cx = 150 + 1.714*40 = 218.6
+          cy = 310 - 3.143*40 = 184.3
+        -->
+        <line x1="219" y1="310" x2="219" y2="184" class="spl-dash" stroke-width="1.3" stroke-dasharray="5,4"/>
+        <line x1="150" y1="184" x2="219" y2="184" class="spl-dash" stroke-width="1.3" stroke-dasharray="5,4"/>
+        <circle cx="219" cy="184" r="5.5" class="spl-dot"/>
+        <text x="228" y="178" style="fill:var(--text-main,#334155); font-family:Inter,sans-serif; font-size:13px; font-weight:600;">(x₀, y₀)</text>
+        <text x="212" y="324" class="spl-tick" text-anchor="middle">x₀</text>
+        <text x="136" y="188" class="spl-tick" text-anchor="end">y₀</text>
+
+        <!-- Catatan pojok kanan bawah -->
+        <text x="300" y="370" class="spl-tick" style="font-size:12px; fill:#64748b;">Setiap garis = satu kondisi</text>
+        <text x="300" y="386" class="spl-tick" style="font-size:12px; fill:#64748b;">Titik potong = solusi</text>
+        <text x="300" y="402" class="spl-tick" style="font-size:12px; fill:#64748b;">yang memenuhi keduanya</text>
       </svg>
     </div>
 
