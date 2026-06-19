@@ -906,10 +906,15 @@ tr:hover td{background:var(--surface-2);}
 [data-theme="dark"] .grafik-wrap svg,
 [data-theme="dark"] .grafik-row svg { background:#1E2640; border-color:#334155; }
 
-/* Grid */
+/* Grid — target <g stroke="#e2e8f0"> (bukan <line>), sangat lembut di dark mode */
+[data-theme="dark"] .grafik-wrap svg g[stroke="#e2e8f0"],
+[data-theme="dark"] .grafik-row svg g[stroke="#e2e8f0"],
+[data-theme="dark"] .grafik-wrap svg g[stroke="#E2E8F0"],
+[data-theme="dark"] .grafik-row svg g[stroke="#E2E8F0"],
 [data-theme="dark"] .grafik-wrap svg line[stroke="#e2e8f0"],
 [data-theme="dark"] .grafik-row svg line[stroke="#e2e8f0"],
-[data-theme="dark"] .grafik-wrap svg line[stroke="#E2E8F0"] { stroke:#2D3A52 !important; }
+[data-theme="dark"] .grafik-wrap svg line[stroke="#E2E8F0"],
+[data-theme="dark"] .grafik-row svg line[stroke="#E2E8F0"] { stroke: rgba(255,255,255,0.07) !important; }
 
 /* Sumbu */
 [data-theme="dark"] .grafik-wrap svg line[stroke="#555"],
