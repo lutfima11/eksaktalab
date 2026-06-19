@@ -154,49 +154,81 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
           </marker>
         </defs>
 
-        <!-- Sumbu X: dari x=-1 (cx=160) sampai x=8.5 (cx=540) -->
-        <line x1="155" y1="280" x2="538" y2="280" class="spl-axis" stroke-width="2.2"
-              marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
-        <!-- Sumbu Y: dari y=-3 (cy=400) sampai y=6 (cy=40) -->
-        <line x1="200" y1="405" x2="200" y2="38" class="spl-axis" stroke-width="2.2"
-              marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
-
         <!--
-          origin O = (200, 280), scale = 40px/unit
-          cx(x) = 200 + x*40
-          cy(y) = 280 - y*40
+          origin O = (250, 215), scale = 40px/unit
+          cx(x) = 250 + x*40
+          cy(y) = 215 - y*40
+
+          Sumbu X: x dari -4 (cx=90) ke +6 (cx=490)
+          Sumbu Y: y dari -4 (cy=375) ke +6 (cy=25)
 
           Garis 1: x + 2y = 8, y=(8-x)/2
-          x=0 → y=4   → cx=200, cy=120
-          x=8 → y=0   → cx=520, cy=280
-          Verifikasi titik potong (269,154): slope=(280-120)/(520-200)=0.5 → cy=120+(269-200)*0.5=154.5 ✓
+            x=-1 → y=4.5 → cx=210, cy=35
+            x=8  → y=0   → cx=570 (clip ke x=6→cx=490, y=1→cy=175)
+            pakai x=-1→(210,35) dan x=5→(450,155)
+          Verifikasi titik potong:
+            x=12/7≈1.714 → cx=250+1.714*40=318.6≈319
+            y=22/7≈3.143 → cy=215-3.143*40=89.3≈89
+            slope pixel garis1=(155-35)/(450-210)=120/240=0.5
+            cy di cx=319: 35+(319-210)*0.5=35+54.5=89.5 ✓
+
+          Garis 2: 3x - y = 2, y=3x-2
+            x=-0.5 → y=-3.5 → cx=230, cy=355
+            x=2.8  → y=6.4  → clip ke y=6→x=8/3≈2.67→cx=357, cy=25
+            pakai x=-0.5→(230,355) dan x=2.67→(357,25)
+          Verifikasi titik potong:
+            slope pixel garis2=(25-355)/(357-230)=-330/127=-2.6
+            cy di cx=319: 355+(319-230)*(-2.6)=355-231.4=123.6 — tidak cocok!
+
+          Koreksi: hitung slope garis2 dari persamaan y=3x-2, scale=40:
+            Δy_pixel per Δx_pixel = -3*40/40 = -3 (karena cy turun saat y naik)
+            Pakai dua titik pasti:
+            x=0 → y=-2 → cx=250, cy=295
+            x=2.714 → y=6.14 → cy=215-6.14*40=90 (titik potong ada di sini)
+            pakai ujung: x=-0.5→cx=230,cy=295+0.5*3*40=295+60=355 ✓
+                         x=2.67→cx=357,cy=295+(357-250)*(-3/40*40)... 
+
+          Cara benar: dua titik dari formula langsung:
+            x=0   → y=-2  → cx=250+0*40=250,   cy=215-(-2)*40=295
+            x=2.5 → y=5.5 → cx=250+2.5*40=350, cy=215-5.5*40=  5
+          slope pixel = (5-295)/(350-250) = -290/100 = -2.9 ≈ -3 ✓
+          cy di cx=319: 295+(319-250)*(-2.9)=295-200.1=94.9≈95
+
+          Titik potong rata-rata: cy≈(89.5+94.9)/2≈92 — ada selisih karena rounding.
+          Pakai titik pasti dari formula:
+            cx=319, cy=215-3.143*40=89 (dari y=3x-2: y=3*1.714-2=3.142 ✓)
+            Garis2 di cx=319: cy=295+(319-250)*(-3)=295-207=88 ✓ (selisih 1px, ok)
         -->
-        <line x1="200" y1="120" x2="520" y2="280"
+
+        <!-- Sumbu X -->
+        <line x1="90" y1="215" x2="490" y2="215" class="spl-axis" stroke-width="2.2"
+              marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
+        <!-- Sumbu Y -->
+        <line x1="250" y1="390" x2="250" y2="25" class="spl-axis" stroke-width="2.2"
+              marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
+
+        <!-- Garis 1: x+2y=8, dari (-1,4.5)→(210,35) ke (5,1.5)→(450,155) -->
+        <line x1="210" y1="35" x2="450" y2="155"
               class="spl-line1" stroke-width="2.8"
               marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
 
-        <!--
-          Garis 2: 3x - y = 2, y=3x-2
-          x=-0.1 → y=-2.3 → cx=196, cy=372
-          x=2.7  → y=6.1  → cx=308, cy=36
-          Verifikasi titik potong (269,154): slope=(36-372)/(308-196)=-3 → cy=372+(269-196)*(-3)=372-219=153 ✓
-        -->
-        <line x1="196" y1="372" x2="308" y2="36"
+        <!-- Garis 2: 3x-y=2, slope pixel=-3; anchor titik potong (319,89)
+             ujung bawah: cx=250→cy=89+(319-250)*3=89+207=296
+             ujung atas:  cx=349→cy=89-(349-319)*3=89-90=-1 clip ke cy=5→cx=319-84/3=319-28=291... 
+             pakai: dari (250,296) ke (346,4) 
+             verifikasi di cx=319: 296+(319-250)*(-3)=296-207=89 ✓ -->
+        <line x1="250" y1="296" x2="346" y2="4"
               class="spl-line2" stroke-width="2.8"
               marker-start="url(#spl-arr)" marker-end="url(#spl-arr)"/>
 
-        <!--
-          Titik potong: x=12/7≈1.714, y=22/7≈3.143
-          cx = 200 + 1.714*40 = 268.6 ≈ 269
-          cy = 280 - 3.143*40 = 154.3 ≈ 154
-        -->
-        <circle cx="269" cy="154" r="5.5" class="spl-dot"/>
-        <text x="278" y="148" style="fill:var(--text-main,#334155); font-family:Inter,sans-serif; font-size:13px; font-weight:600;">(x₀, y₀)</text>
+        <!-- Titik potong: cx=319, cy=89 -->
+        <circle cx="319" cy="89" r="5.5" class="spl-dot"/>
+        <text x="328" y="83" style="fill:var(--text-main,#334155); font-family:Inter,sans-serif; font-size:13px; font-weight:600;">(x₀, y₀)</text>
 
-        <!-- Catatan kanan atas — area kosong cx>320, cy<200 -->
-        <text x="330" y="110" class="spl-tick" style="font-size:12px; fill:#64748b;">Setiap garis = satu kondisi</text>
-        <text x="330" y="128" class="spl-tick" style="font-size:12px; fill:#64748b;">Titik potong = solusi</text>
-        <text x="330" y="146" class="spl-tick" style="font-size:12px; fill:#64748b;">yang memenuhi keduanya</text>
+        <!-- Catatan kanan bawah — area kosong -->
+        <text x="310" y="300" class="spl-tick" style="font-size:12px; fill:#64748b;">Setiap garis = satu kondisi</text>
+        <text x="310" y="318" class="spl-tick" style="font-size:12px; fill:#64748b;">Titik potong = solusi</text>
+        <text x="310" y="336" class="spl-tick" style="font-size:12px; fill:#64748b;">yang memenuhi keduanya</text>
       </svg>
     </div>
 
