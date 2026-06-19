@@ -121,96 +121,70 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
         .axis-line-fixed { stroke: var(--text-main, #334155); }
         .arrow-path-fixed { fill: var(--text-main, #334155); }
         .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
-        .label-fixed { fill: var(--text-main, #334155); font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 16px; }
-        .label-red-fixed { fill: #DC2626; font-family: Cambria, 'Times New Roman', serif; font-style: italic; font-size: 22px; }
-        .grid-line-fixed { stroke: #CBD5E1; opacity: 0.5; }
-        .line-A-fixed { stroke: #2563EB; }
-        .arrow-A-fixed { fill: #2563EB; }
-        .line-B-fixed { stroke: #DC2626; }
-        .arrow-B-fixed { fill: #DC2626; }
-        .point-intersection-fixed { fill: #1E293B; stroke: #475569; stroke-width: 1; }
+        .line-blue-fixed { stroke: #2563EB; }
+        .arrow-blue-fixed { fill: #2563EB; }
+        
+        /* Tambahan class dari grafik pertama dengan penyesuaian warna kontainer baru */
+        .line-red-fixed { stroke: #b91c1c; stroke-width: 3.5; stroke-linecap: round; }
+        .line-blue-old-fixed { stroke: #1d4ed8; stroke-width: 3.5; stroke-linecap: round; }
+        .guide-line-fixed { stroke: #cbd5e1; stroke-width: 1.5; stroke-dasharray: 5 5; }
+        .intersection-dot-fixed { fill: #000000; }
+        .text-note-fixed { fill: #64748b; font-family: Arial, Helvetica, sans-serif; font-size: 20px; }
+        .label-grey-fixed { fill: #94a3b8; font-family: Cambria, 'Times New Roman', serif; font-size: 22px; font-style: italic; }
 
-        /* Dukungan Dark Mode Otomatis */
+        /* Dukungan Dark Mode otomatis */
         @media (prefers-color-scheme: dark) {
-          .line-A-fixed { stroke: #60A5FA; }
-          .arrow-A-fixed { fill: #60A5FA; }
-          .line-B-fixed { stroke: #F87171; }
-          .arrow-B-fixed { fill: #F87171; }
-          .grid-line-fixed { stroke: #475569; opacity: 0.4; }
-          .point-intersection-fixed { fill: #FFFFFF; stroke: #FFFFFF; }
+          .line-blue-fixed { stroke: #60A5FA; }
+          .arrow-blue-fixed { fill: #60A5FA; }
+          .line-red-fixed { stroke: #ef4444; }
+          .line-blue-old-fixed { stroke: #3b82f6; }
+          .guide-line-fixed { stroke: #475569; }
+          .intersection-dot-fixed { fill: #ffffff; }
+          .text-note-fixed { fill: #94a3b8; }
         }
-        [data-theme="dark"] .line-A-fixed { stroke: #60A5FA; }
-        [data-theme="dark"] .arrow-A-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .line-B-fixed { stroke: #F87171; }
-        [data-theme="dark"] .arrow-B-fixed { fill: #F87171; }
-        [data-theme="dark"] .grid-line-fixed { stroke: #475569; opacity: 0.4; }
-        [data-theme="dark"] .point-intersection-fixed { fill: #FFFFFF; stroke: #FFFFFF; }
+        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
+        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .line-red-fixed { stroke: #ef4444; }
+        [data-theme="dark"] .line-blue-old-fixed { stroke: #3b82f6; }
+        [data-theme="dark"] .guide-line-fixed { stroke: #475569; }
+        [data-theme="dark"] .intersection-dot-fixed { fill: #ffffff; }
+        [data-theme="dark"] .text-note-fixed { fill: #94a3b8; }
       </style>
 
       <marker id="arrow-fixed-black" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
         <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-path-fixed" />
       </marker>
-      <marker id="arrow-fixed-A" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 2 L 7 5 L 0 8 z" class="arrow-A-fixed" />
-      </marker>
-      <marker id="arrow-fixed-B" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 2 L 7 5 L 0 8 z" class="arrow-B-fixed" />
+      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 2 L 7 5 L 0 8 z" class="arrow-blue-fixed" />
       </marker>
     </defs>
 
-    <g transform="translate(65, 45) scale(0.75)">
+    <g transform="translate(75, 45) scale(0.75)">
+      
+      <line x1="50" y1="400" x2="510" y2="400" class="axis-line-fixed" stroke-width="2.5" marker-start="url(#arrow-fixed-black)" marker-end="url(#arrow-fixed-black)" />
+      <text x="525" y="405" class="label-black-fixed" style="font-size: 26px;">x</text>
+      
+      <line x1="170" y1="500" x2="170" y2="70" class="axis-line-fixed" stroke-width="2.5" marker-start="url(#arrow-fixed-black)" marker-end="url(#arrow-fixed-black)" />
+      <text x="162" y="55" class="label-black-fixed" style="font-size: 26px;">y</text>
+      
+      <text x="142" y="425" class="label-black-fixed" style="font-size:22px;">O</text>
+      
+      <path d="M 210 400 A 40 40 0 0 0 200 370" fill="none" class="axis-line-fixed" stroke-width="1.5" />
+      <text x="222" y="392" class="label-black-fixed" style="font-size: 22px;">α</text>
+      
+      <line x1="84" y1="477" x2="476" y2="124" class="line-blue-fixed" stroke-width="3.5" marker-start="url(#arrow-fixed-blue)" marker-end="url(#arrow-fixed-blue)" />
+      <text x="260" y="195" class="label-black-fixed" style="font-size: 24px; font-weight: 600;">y = mx + c</text>
 
-      <g>
-        <line x1="50" y1="410" x2="550" y2="410" class="grid-line-fixed" />
-        <line x1="50" y1="360" x2="550" y2="360" class="grid-line-fixed" />
-        <line x1="50" y1="310" x2="550" y2="310" class="grid-line-fixed" />
-        <line x1="50" y1="260" x2="550" y2="260" class="grid-line-fixed" />
-        <line x1="50" y1="210" x2="550" y2="210" class="grid-line-fixed" />
-        <line x1="50" y1="160" x2="550" y2="160" class="grid-line-fixed" />
-        <line x1="50" y1="110" x2="550" y2="110" class="grid-line-fixed" />
-        <line x1="50" y1="60" x2="550" y2="60" class="grid-line-fixed" />
-        <line x1="100" y1="50" x2="100" y2="450" class="grid-line-fixed" />
-        <line x1="150" y1="50" x2="150" y2="450" class="grid-line-fixed" />
-        <line x1="200" y1="50" x2="200" y2="450" class="grid-line-fixed" />
-        <line x1="250" y1="50" x2="250" y2="450" class="grid-line-fixed" />
-        <line x1="300" y1="50" x2="300" y2="450" class="grid-line-fixed" />
-        <line x1="350" y1="50" x2="350" y2="450" class="grid-line-fixed" />
-        <line x1="400" y1="50" x2="400" y2="450" class="grid-line-fixed" />
-        <line x1="450" y1="50" x2="450" y2="450" class="grid-line-fixed" />
-        <line x1="500" y1="50" x2="500" y2="450" class="grid-line-fixed" />
-      </g>
+      <line x1="180" y1="220" x2="180" y2="400" class="guide-line-fixed" /> <line x1="180" y1="220" x2="170" y2="220" class="guide-line-fixed" /> <text x="172" y="425" class="label-grey-fixed">x₀</text>
+      <text x="135" y="226" class="label-grey-fixed">y₀</text>
 
-      <line x1="50" y1="410" x2="560" y2="410" class="axis-line-fixed" stroke-width="2.5" marker-start="url(#arrow-fixed-black)" marker-end="url(#arrow-fixed-black)" />
-      <text x="575" y="415" class="label-black-fixed" style="font-size: 26px;">x</text>
+      <line x1="135" y1="410" x2="225" y2="30" class="line-red-fixed" />
+      <line x1="90" y1="166" x2="510" y2="395" class="line-blue-old-fixed" /> <circle cx="180" cy="220" r="7" class="intersection-dot-fixed" />
+      <text x="200" y="225" class="label-black-fixed" style="font-size: 26px; font-style: normal;">(x₀, y₀)</text>
 
-      <line x1="100" y1="460" x2="100" y2="40" class="axis-line-fixed" stroke-width="2.5" marker-start="url(#arrow-fixed-black)" marker-end="url(#arrow-fixed-black)" />
-      <text x="92" y="25" class="label-black-fixed" style="font-size: 26px;">y</text>
-
-      <text x="80" y="432" class="label-fixed">0</text>
-      <text x="145" y="432" class="label-fixed">1</text>
-      <text x="195" y="432" class="label-fixed">2</text>
-      <text x="245" y="432" class="label-fixed">3</text>
-      <text x="295" y="432" class="label-fixed">4</text>
-      <text x="345" y="432" class="label-fixed">5</text>
-      <text x="395" y="432" class="label-fixed">6</text>
-      <text x="445" y="432" class="label-fixed">7</text>
-      <text x="495" y="432" class="label-fixed">8</text>
-      <text x="80" y="365" class="label-fixed">1</text>
-      <text x="80" y="315" class="label-fixed">2</text>
-      <text x="80" y="265" class="label-fixed">3</text>
-      <text x="80" y="215" class="label-fixed">4</text>
-      <text x="80" y="165" class="label-fixed">5</text>
-      <text x="80" y="115" class="label-fixed">6</text>
-      <text x="80" y="65" class="label-fixed">7</text>
-
-      <line x1="60" y1="450" x2="260" y2="210" class="line-A-fixed" stroke-width="3" marker-start="url(#arrow-fixed-A)" marker-end="url(#arrow-fixed-A)" />
-
-      <line x1="60" y1="230" x2="520" y2="20" class="line-B-fixed" stroke-width="3" marker-start="url(#arrow-fixed-B)" marker-end="url(#arrow-fixed-B)" />
-
-      <circle cx="200" y="310" r="6" class="point-intersection-fixed" />
-      <line x1="100" y1="310" x2="200" y2="310" stroke="#F87171" stroke-width="2" stroke-dasharray="5,5" />
-      <line x1="200" y1="310" x2="200" y2="410" stroke="#F87171" stroke-width="2" stroke-dasharray="5,5" />
-      <text x="180" y="335" class="label-red-fixed">P(2,2)</text>
+      <text x="280" y="70" class="text-note-fixed">Setiap garis = satu kondisi</text>
+      <text x="280" y="96" class="text-note-fixed">Titik potong = solusi</text>
+      <text x="280" y="122" class="text-note-fixed">yang memenuhi keduanya</text>
 
     </g>
   </svg>
