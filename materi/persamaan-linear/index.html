@@ -130,7 +130,6 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
         .text-note-fixed { fill: #64748b; font-family: Arial, Helvetica, sans-serif; font-size: 20px; }
         .label-grey-fixed { fill: #94a3b8; font-family: Cambria, 'Times New Roman', serif; font-size: 22px; font-style: italic; }
 
-        /* Otomatis Dark Mode */
         @media (prefers-color-scheme: dark) {
           .line-red-fixed { stroke: #ef4444; }
           .line-blue-fixed { stroke: #3b82f6; }
@@ -207,30 +206,48 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
   <section class="section" id="bagian-a">
     <h2 class="section-title"><span class="section-badge">A</span>Persamaan Linear Satu Variabel (PLSV)</h2>
 
-    <p><strong>Persamaan linear satu variabel (PLSV)</strong> adalah persamaan yang memuat tepat satu variabel dengan pangkat tertinggi satu. Bentuk umumnya:</p>
+    <p><strong>Persamaan linear satu variabel (PLSV)</strong> adalah persamaan yang memuat tepat satu variabel dengan pangkat tertinggi satu. Bentuk umumnya adalah:</p>
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Bentuk Umum PLSV</div>
       <div class="math-block">$$ax + b = 0, \quad a \neq 0,\quad a, b \in \mathbb{R}$$</div>
-      <p>dengan $a$ = <strong>koefisien</strong>, $b$ = <strong>konstanta</strong>, $x$ = <strong>variabel</strong>. Penyelesaiannya:</p>
-      <div class="math-block">$$x = -\dfrac{b}{a}$$</div>
+      <p>dengan:</p>
+      <ul>
+        <li>$a$ = <strong>koefisien</strong> dari variabel $x$</li>
+        <li>$b$ = <strong>konstanta</strong></li>
+        <li>$x$ = <strong>variabel</strong> (peubah) yang dicari nilainya</li>
+      </ul>
+      <p><strong>Penyelesaian</strong> PLSV adalah nilai $x$ yang memenuhi persamaan tersebut, yaitu:</p>
+      <div class="math-block">$$ax + b = 0 \implies x = -\dfrac{b}{a}$$</div>
     </div>
 
-    <p><strong>Sifat-sifat yang digunakan:</strong> kedua ruas dapat ditambah, dikurangi, dikali, atau dibagi bilangan yang sama (bukan nol); suku yang memuat variabel dikumpulkan di satu ruas.</p>
+    <p><strong>Sifat-sifat yang digunakan dalam menyelesaikan PLSV:</strong></p>
+    <ul>
+      <li>Kedua ruas dapat ditambah atau dikurangi bilangan yang sama</li>
+      <li>Kedua ruas dapat dikalikan atau dibagi bilangan yang sama (bukan nol)</li>
+      <li>Suku-suku yang memuat variabel dikumpulkan di satu ruas</li>
+    </ul>
 
     <div class="box box-catatan">
       <div class="box-label">&#9888; Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Penyelesaian PLSV selalu <strong>tunggal</strong> (tepat satu nilai). Himpunan penyelesaiannya ditulis $\text{HP} = \{x_0\}$.</p>
+      <p style="margin:0;font-size:.9rem;">Penyelesaian PLSV selalu <strong>tunggal</strong> (tepat satu nilai), karena derajat persamaannya satu. Himpunan penyelesaiannya ditulis $\text{HP} = \{x_0\}$ untuk suatu nilai $x_0$.</p>
     </div>
 
     <h3 class="subsection-title">1. Metode Penyelesaian PLSV</h3>
+
+    <p>Langkah-langkah menyelesaikan PLSV:</p>
+    <ul>
+      <li>Pindahkan semua suku yang memuat variabel ke ruas kiri</li>
+      <li>Pindahkan semua konstanta ke ruas kanan</li>
+      <li>Sederhanakan koefisien variabel</li>
+    </ul>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 1</div>
       <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian dari $3x - 7 = 2$!</p>
     </div>
     <div class="penyelesaian">
-      $$\begin{align*} 3x - 7 &= 2 \\ 3x &= 9 \\ x &= 3 \end{align*}$$
+      $$\begin{align*} 3x - 7 &= 2 \\ 3x &= 2 + 7 \\ 3x &= 9 \\ x &= 3 \end{align*}$$
       Jadi $\text{HP} = \{3\}$.
     </div>
 
@@ -239,7 +256,7 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian dari $5x + 4 = 2x - 8$!</p>
     </div>
     <div class="penyelesaian">
-      $$\begin{align*} 5x - 2x &= -8 - 4 \\ 3x &= -12 \\ x &= -4 \end{align*}$$
+      $$\begin{align*} 5x + 4 &= 2x - 8 \\ 5x - 2x &= -8 - 4 \\ 3x &= -12 \\ x &= -4 \end{align*}$$
       Jadi $\text{HP} = \{-4\}$.
     </div>
 
@@ -248,7 +265,7 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <p style="margin:0;font-size:.9rem;">Selesaikan $4(x - 3) = 2(x + 1) - 6$!</p>
     </div>
     <div class="penyelesaian">
-      $$\begin{align*} 4x - 12 &= 2x - 4 \\ 2x &= 8 \\ x &= 4 \end{align*}$$
+      $$\begin{align*} 4x - 12 &= 2x + 2 - 6 \\ 4x - 12 &= 2x - 4 \\ 4x - 2x &= -4 + 12 \\ 2x &= 8 \\ x &= 4 \end{align*}$$
       Jadi $\text{HP} = \{4\}$.
     </div>
 
@@ -257,43 +274,54 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <p style="margin:0;font-size:.9rem;">Selesaikan $\dfrac{2x+1}{3} - \dfrac{x-2}{2} = 1$!</p>
     </div>
     <div class="penyelesaian">
-      Kalikan kedua ruas dengan KPK $= 6$:
-      $$\begin{align*} 2(2x+1) - 3(x-2) &= 6 \\ 4x+2-3x+6 &= 6 \\ x &= -2 \end{align*}$$
+      Kalikan kedua ruas dengan KPK dari penyebut, yaitu $6$:
+      $$\begin{align*} 6 \cdot \frac{2x+1}{3} - 6 \cdot \frac{x-2}{2} &= 6 \cdot 1 \\ 2(2x+1) - 3(x-2) &= 6 \\ 4x + 2 - 3x + 6 &= 6 \\ x + 8 &= 6 \\ x &= -2 \end{align*}$$
       Jadi $\text{HP} = \{-2\}$.
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 5</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$: $\dfrac{2x - 5}{3} - \dfrac{3(x + 2)}{4} = \dfrac{5x - 19}{6}$</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$ yang memenuhi persamaan linear berikut: $\dfrac{2x - 5}{3} - \dfrac{3(x + 2)}{4} = \dfrac{5x - 19}{6}$</p>
     </div>
     <div class="penyelesaian">
-      Kalikan kedua ruas dengan KPK $= 12$:
-      $$\begin{align*} 4(2x-5) - 9(x+2) &= 2(5x-19) \\ 8x-20-9x-18 &= 10x-38 \\ -x-38 &= 10x-38 \\ -11x = 0 \implies x = 0 \end{align*}$$
+      Kalikan kedua ruas dengan KPK dari penyebut, yaitu $12$:
+      $$\begin{align*} 12\cdot \frac{2x - 5}{3} - 12\cdot \frac{3(x + 2)}{4} &= 12\cdot \frac{5x - 19}{6} \\ 4(2x-5) - 9(x+2) &= 2(5x-19) \\ 8x - 20 - 9x - 18 &= 10x - 38 \\ -x - 38 &= 10x - 38 \\ -11x &= 0 \\ x &= 0 \end{align*}$$
       Jadi $\text{HP} = \{0\}$.
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 6</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$: $-2\!\left[\dfrac{3x-1}{4} - \dfrac{1}{2}\!\left(x - \dfrac{2x+3}{3}\right)\right] = \dfrac{5}{6}(x-4) + 1$</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$ yang memenuhi persamaan linear berikut: $-2\!\left[\dfrac{3x-1}{4} - \dfrac{1}{2}\!\left(x - \dfrac{2x+3}{3}\right)\right] = \dfrac{5}{6}(x-4) + 1$</p>
     </div>
     <div class="penyelesaian">
-      <strong>Langkah 1 &mdash;</strong> Sederhanakan ekspresi terdalam:
-      $$x - \frac{2x+3}{3} = \frac{3x-(2x+3)}{3} = \frac{x-3}{3}$$
-      <strong>Langkah 2 &mdash;</strong> Substitusikan dan sederhanakan:
-      $$-2\!\left[\frac{3x-1}{4} - \frac{x-3}{6}\right] = \frac{5x-14}{6} \implies -\frac{3x-1}{2}+\frac{x-3}{3} = \frac{5x-14}{6}$$
-      Kalikan dengan 6:
-      $$\begin{align*} -3(3x-1)+2(x-3) &= 5x-14 \\ -7x-3 &= 5x-14 \\ 11 &= 12x \implies x = \frac{11}{12} \end{align*}$$
+      Sederhanakan bentuk pecahan secara bertahap, dimulai dari tanda kurung paling dalam.<br><br>
+      <strong>Langkah 1 &mdash;</strong> Sederhanakan ekspresi di dalam kurung terdalam: $x - \dfrac{2x+3}{3}$<br><br>
+      Samakan penyebut:
+      $$x - \frac{2x+3}{3} = \frac{3x}{3} - \frac{2x+3}{3} = \frac{3x - (2x+3)}{3} = \frac{x-3}{3}$$
+      <strong>Langkah 2 &mdash;</strong> Substitusikan kembali dan sederhanakan kurung luar:
+      $$\begin{align*} -2\!\left[ \frac{3x - 1}{4} - \frac{1}{2}\!\left(\frac{x - 3}{3}\right) \right] &= \frac{5(x - 4)}{6} + \frac{6}{6} \\ -2\!\left[ \frac{3x - 1}{4} - \frac{x - 3}{6} \right] &= \frac{5x - 14}{6} \\ -\frac{3x - 1}{2} + \frac{x - 3}{3} &= \frac{5x - 14}{6} \end{align*}$$
+      Kalikan kedua ruas dengan $6$ (KPK dari 2, 3, dan 6):
+      $$\begin{align*} -3(3x - 1) + 2(x - 3) &= 5x - 14 \\ -9x + 3 + 2x - 6 &= 5x - 14 \\ -7x - 3 &= 5x - 14 \\ -3 + 14 &= 5x + 7x \\ 11 &= 12x \\ x &= \frac{11}{12} \end{align*}$$
       Jadi $\text{HP} = \left\{\dfrac{11}{12}\right\}$.
     </div>
 
     <h3 class="subsection-title">2. Penerapan PLSV dalam Soal Cerita</h3>
+
+    <p>Langkah-langkah menyelesaikan soal cerita dengan PLSV:</p>
+    <ul>
+      <li>Tetapkan variabel untuk besaran yang dicari</li>
+      <li>Buat model matematika (persamaan linear)</li>
+      <li>Selesaikan persamaan</li>
+      <li>Tuliskan jawaban sesuai konteks soal</li>
+    </ul>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 7</div>
       <p style="margin:0;font-size:.9rem;">Jika dua kali suatu bilangan dikurangi 9 sama dengan bilangan itu ditambah 3, tentukanlah bilangan tersebut!</p>
     </div>
     <div class="penyelesaian">
-      Misalkan bilangan $= x$: $\quad 2x - 9 = x + 3 \implies x = 12$<br><br>
+      Misalkan bilangan tersebut adalah $x$, maka:
+      $$\begin{align*} 2x - 9 &= x + 3 \\ 2x - x &= 3 + 9 \\ x &= 12 \end{align*}$$
       Jadi bilangan tersebut adalah $\mathbf{12}$.
     </div>
 
@@ -302,9 +330,10 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <p style="margin:0;font-size:.9rem;">Umur Andi sekarang tiga kali umur adiknya. Lima tahun kemudian, jumlah umur keduanya adalah 50 tahun. Berapakah umur Andi sekarang?</p>
     </div>
     <div class="penyelesaian">
-      Misalkan umur adik $= x$, umur Andi $= 3x$. Lima tahun kemudian:
-      $$(3x+5)+(x+5) = 50 \implies 4x = 40 \implies x = 10$$
-      Jadi umur Andi $= 3 \times 10 = \mathbf{30}$ tahun.
+      Misalkan umur adik sekarang $= x$ tahun, maka umur Andi sekarang $= 3x$ tahun.<br><br>
+      Lima tahun kemudian: umur adik $= x + 5$, umur Andi $= 3x + 5$.
+      $$\begin{align*} (3x + 5) + (x + 5) &= 50 \\ 4x + 10 &= 50 \\ 4x &= 40 \\ x &= 10 \end{align*}$$
+      Jadi umur Andi sekarang $= 3x = 3 \times 10 = \mathbf{30}$ tahun.
     </div>
 
     <div class="box box-contoh">
@@ -312,20 +341,28 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <p style="margin:0;font-size:.9rem;">Panjang suatu persegi panjang 5 cm lebih dari lebarnya. Jika kelilingnya 58 cm, tentukan luas persegi panjang tersebut!</p>
     </div>
     <div class="penyelesaian">
-      Misalkan lebar $= x$ cm, panjang $= (x+5)$ cm:
-      $$2(x+5+x) = 58 \implies 4x = 48 \implies x = 12$$
-      Lebar $= 12$ cm, panjang $= 17$ cm, sehingga luas $= 12 \times 17 = \mathbf{204}$ cm$^2$.
+      Misalkan $l = x$ cm, maka $p = (x+5)$ cm.<br><br>
+      Keliling $= 2(\text{panjang} + \text{lebar})$:
+      $$\begin{align*} 2(x+5+x) &= 58 \\ 2(2x+5) &= 58 \\ 4x + 10 &= 58 \\ 4x &= 48 \\ x &= 12 \end{align*}$$
+      Jadi lebar $= 12$ cm dan panjang $= 17$ cm, sehingga luas $= 12 \times 17 = \mathbf{204}$ cm$^2$.
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 10</div>
-      <p style="margin:0;font-size:.9rem;">Keran A mengisi bak dalam 12 menit, keran B menguras bak dalam 20 menit. Bak kosong dan kedua keran dibuka bersamaan. Berapa menit bak terisi penuh?</p>
+      <p style="margin:0;font-size:.9rem;">Dua keran A dan B mengaliri bak mandi. Keran A mengisi bak dalam 12 menit, keran B menguras bak dalam 20 menit. Jika bak kosong dan kedua keran dibuka bersamaan, berapa menit waktu yang diperlukan untuk mengisi bak hingga penuh?</p>
     </div>
     <div class="penyelesaian">
-      Misalkan waktu $= t$ menit. Agar bak terisi penuh:
+      Misalkan $t$ = waktu (menit) yang diperlukan hingga bak penuh.<br><br>
+      Dalam $t$ menit:
+      <ul>
+        <li>Keran A mengisi $\dfrac{t}{12}$ bagian bak</li>
+        <li>Keran B menguras $\dfrac{t}{20}$ bagian bak</li>
+      </ul>
+      Agar bak terisi penuh (= 1 bak penuh):
       $$\frac{t}{12} - \frac{t}{20} = 1$$
-      Kalikan dengan $60$: $5t - 3t = 60 \implies t = 30$<br><br>
-      Jadi bak terisi penuh dalam $\mathbf{30}$ menit.
+      Kalikan kedua ruas dengan KPK dari 12 dan 20, yaitu 60:
+      $$\begin{align*} 5t - 3t &= 60 \\ 2t &= 60 \\ t &= 30 \end{align*}$$
+      Jadi waktu yang diperlukan untuk mengisi bak hingga penuh adalah $\mathbf{30}$ menit.
     </div>
 
     <div class="box box-latihan">
@@ -351,32 +388,54 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
     <h2 class="section-title"><span class="section-badge">B</span>Persamaan &amp; Sistem Persamaan Linear Dua Variabel</h2>
 
     <h3 class="subsection-title">1. Persamaan Linear Dua Variabel (PLDV)</h3>
-    <p>PLDV adalah persamaan yang memuat tepat dua variabel dengan pangkat tertinggi satu.</p>
+    <p>Persamaan linear dua variabel (PLDV) adalah persamaan yang memuat tepat dua variabel dengan pangkat tertinggi masing-masing variabel adalah satu. Bentuk umumnya adalah:</p>
 
     <div class="box box-rumus">
-      <div class="box-label">&bull; Bentuk Umum PLDV &amp; SPLDV</div>
-      <p>PLDV: $\quad ax + by = c, \quad a, b \neq 0$</p>
-      <p>SPLDV:</p>
-      <div class="math-block">$$\begin{cases} a_1 x + b_1 y = c_1 \\ a_2 x + b_2 y = c_2 \end{cases}$$</div>
+      <div class="box-label">&bull; Bentuk Umum PLDV</div>
+      <div class="math-block">$$ax + by = c, \quad a, b \neq 0, \quad a, b, c \in \mathbb{R}$$</div>
+      <p>dengan keterangan:</p>
+      <ul>
+        <li>$a, b$ = <strong>koefisien</strong> dari variabel $x$ dan $y$</li>
+        <li>$x, y$ = <strong>variabel</strong> (peubah)</li>
+        <li>$c$ = <strong>konstanta</strong></li>
+      </ul>
     </div>
+
+    <p><strong>Penyelesaian</strong> PLDV adalah pasangan nilai $(x, y)$ yang membuat persamaan menjadi benar. Secara geometris, seluruh pasangan penyelesaian tersebut membentuk satu lintasan garis lurus.</p>
 
     <div class="box box-catatan">
       <div class="box-label">&#9888; Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Satu persamaan PLDV memiliki <strong>tak hingga banyaknya penyelesaian</strong>. Untuk mendapatkan nilai $(x, y)$ yang tunggal, diperlukan setidaknya dua persamaan yang saling berkaitan.</p>
+      <p style="margin:0;font-size:.9rem;">Satu persamaan PLDV memiliki <strong>tak hingga banyaknya penyelesaian</strong>. Untuk mendapatkan nilai $(x, y)$ yang spesifik (tunggal), diperlukan setidaknya dua persamaan linear yang saling berkaitan.</p>
     </div>
 
-    <h3 class="subsection-title">2. Metode Penyelesaian SPLDV</h3>
-    <p>Terdapat empat metode: grafik (fondasi visual), substitusi, eliminasi, dan campuran.</p>
+    <h3 class="subsection-title">2. Sistem Persamaan Linear Dua Variabel (SPLDV)</h3>
+    <p>Sistem Persamaan linear Dua Variabel (SPLDV) adalah gabungan dari dua atau lebih PLDV yang dicari solusi persekutuan di antara keduanya. Bentuk umum SPLDV:</p>
 
-    <p><strong>a. Metode Grafik</strong> &mdash; menggambar kedua PLDV pada bidang Cartesius; titik potong adalah penyelesaian.</p>
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Bentuk Umum SPLDV</div>
+      <div class="math-block">$$\begin{cases} a_1 x + b_1 y = c_1 \\ a_2 x + b_2 y = c_2 \end{cases}$$</div>
+    </div>
+
+    <h3 class="subsection-title">3. Metode Penyelesaian SPLDV</h3>
+    <p>Untuk menentukan pasangan $(x, y)$ yang memenuhi sistem persamaan linear, terdapat empat metode yang dapat digunakan. Metode grafik diperkenalkan pertama sebagai fondasi <strong>pemahaman visual</strong>, diikuti oleh metode-metode aljabar yang lebih presisi.</p>
+
+    <p><strong>a. Metode Grafik</strong> &mdash; dilakukan dengan <strong>menggambar</strong> grafik kedua PLDV pada bidang koordinat Cartesius. Titik persekutuan (titik potong) dari kedua garis tersebut merupakan penyelesaian dari SPLDV. Metode ini sangat berguna untuk <strong>membangun intuisi visual</strong> tentang apa artinya "penyelesaian" sebuah sistem persamaan.</p>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 11</div>
       <p style="margin:0;font-size:.9rem;">Dengan metode grafik, tentukan penyelesaian dari $2x + 5y = 20$ dan $x - y = 3$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Garis $2x + 5y = 20$:</strong> titik bantu $(0,\,4)$ dan $(10,\,0)$.<br>
-      <strong>Garis $x - y = 3$:</strong> titik bantu $(0,\,-3)$ dan $(3,\,0)$.
+      <strong>Garis $2x + 5y = 20$:</strong>
+      <div class="table-wrap" style="margin:.5rem 0;">
+        <table><thead><tr><th>$x$</th><th>$y$</th><th>$(x,\,y)$</th></tr></thead>
+        <tbody><tr><td>$0$</td><td>$4$</td><td>$(0,\,4)$</td></tr><tr><td>$10$</td><td>$0$</td><td>$(10,\,0)$</td></tr></tbody></table>
+      </div>
+      <strong>Garis $x - y = 3$:</strong>
+      <div class="table-wrap" style="margin:.5rem 0;">
+        <table><thead><tr><th>$x$</th><th>$y$</th><th>$(x,\,y)$</th></tr></thead>
+        <tbody><tr><td>$0$</td><td>$-3$</td><td>$(0,\,-3)$</td></tr><tr><td>$3$</td><td>$0$</td><td>$(3,\,0)$</td></tr></tbody></table>
+      </div>
       <div class="grafik-wrap">
         <svg viewBox="-15 -55 155 115" width="340" height="230" font-family="Inter,sans-serif" font-size="7.5">
           <defs>
@@ -395,13 +454,10 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
           <text x="-12" y="-44" fill="rgba(150,170,200,.5)">4</text>
           <text x="-12" y="-20" fill="rgba(150,170,200,.5)">2</text>
           <text x="-12" y="28" fill="rgba(150,170,200,.5)">-2</text>
-          <!-- 2x+5y=20: svg (0,4)=>(0,-48) dan (10,0)=>(120,0), 1 unit=12px -->
           <line x1="0" y1="-48" x2="120" y2="0" stroke="#00bfa5" stroke-width="2"/>
           <text x="88" y="-14" fill="#00bfa5">2x+5y=20</text>
-          <!-- x-y=3: y=x-3, (0,-3)=>(0,36) dan (8.3,5.3)=>(100,-64) -->
           <line x1="0" y1="36" x2="99" y2="-51" stroke="#ff6b35" stroke-width="2"/>
           <text x="72" y="-41" fill="#ff6b35">x&#8722;y=3</text>
-          <!-- titik potong (5,2)=>svg(60,-24) -->
           <line x1="60" y1="0" x2="60" y2="-24" stroke="rgba(255,255,255,.25)" stroke-dasharray="3,2" stroke-width="1"/>
           <line x1="0" y1="-24" x2="60" y2="-24" stroke="rgba(255,255,255,.25)" stroke-dasharray="3,2" stroke-width="1"/>
           <circle cx="60" cy="-24" r="4.5" fill="#fff" stroke="#fff" stroke-width="1"/>
@@ -413,10 +469,17 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
 
     <div class="box box-catatan">
       <div class="box-label">&#9888; Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Metode grafik berguna untuk membangun intuisi visual, namun hasilnya kurang akurat jika penyelesaian bukan bilangan bulat. Gunakan metode aljabar untuk ketelitian lebih tinggi.</p>
+      <p style="margin:0;font-size:.9rem;">Metode grafik memiliki kelemahan: titik potong kadang sulit dibaca dengan tepat jika tidak bilangan bulat. Untuk hasil yang lebih akurat, gunakan metode substitusi atau eliminasi. Namun metode ini sangat bermanfaat untuk memahami <strong>mengapa</strong> dua persamaan bisa memiliki tepat satu, tak hingga, atau nol penyelesaian — yaitu tergantung pada posisi relatif kedua garisnya.</p>
     </div>
 
-    <p><strong>b. Metode Substitusi</strong> &mdash; nyatakan satu variabel dari satu persamaan, substitusikan ke persamaan lain. Cocok jika ada koefisien $= 1$ atau $-1$.</p>
+    <p><strong>b. Metode Substitusi</strong> &mdash; dilakukan dengan cara <strong>mengganti</strong> (mensubstitusi) salah satu variabel ke persamaan yang lain.</p>
+    <p><strong>Langkah-langkah:</strong></p>
+    <ul>
+      <li>Pilih salah satu persamaan, nyatakan $x$ dalam bentuk $y$ (atau sebaliknya)</li>
+      <li>Substitusikan ke persamaan yang lain</li>
+      <li>Selesaikan persamaan satu variabel yang diperoleh</li>
+      <li>Substitusikan nilai yang ditemukan untuk mencari variabel lainnya</li>
+    </ul>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 12</div>
@@ -424,10 +487,14 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
     </div>
     <div class="penyelesaian">
       Dari persamaan (1): $y = 3 - 3x \quad\cdots(*)$<br><br>
-      Substitusi ke (2):
-      $$2x - 3(3-3x) = 13 \implies 11x = 22 \implies x = 2$$
-      Substitusi $x=2$ ke $(*)$: $y = 3-6 = -3$<br><br>
-      Verifikasi: $3(2)+(-3)=3$ &#10003;&ensp; $2(2)-3(-3)=13$ &#10003;<br><br>
+      Substitusi $(*)$ ke persamaan (2):
+      $$\begin{align*} 2x - 3(3 - 3x) &= 13 \\ 2x - 9 + 9x &= 13 \\ 11x &= 22 \\ x &= 2 \end{align*}$$
+      Substitusi $x = 2$ ke $(*)$: $y = 3 - 3(2) = -3$<br><br>
+      <strong>Verifikasi:</strong>
+      <ul>
+        <li>Persamaan (1): $3(2) + (-3) = 6 - 3 = 3$ &#10003;</li>
+        <li>Persamaan (2): $2(2) - 3(-3) = 4 + 9 = 13$ &#10003;</li>
+      </ul>
       Jadi $\text{HP} = \{(2,\,-3)\}$.
     </div>
 
@@ -436,15 +503,25 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <p style="margin:0;font-size:.9rem;">Dengan metode substitusi, tentukan penyelesaian dari $\dfrac{x-2}{3}+\dfrac{y+1}{4}=2$ dan $3x-\dfrac{2y-1}{2}=11$!</p>
     </div>
     <div class="penyelesaian">
-      Sederhanakan (1) $\times 12$: $4x+3y=29 \quad\cdots(1a)$<br>
-      Sederhanakan (2) $\times 2$: $6x-2y=21 \quad\cdots(2a)$<br><br>
-      Dari $(2a)$: $y = \dfrac{6x-21}{2}$. Substitusi ke $(1a)$:
-      $$8x+18x-63 = 58 \implies x = \frac{121}{26}$$
+      Sederhanakan persamaan (1) dengan mengalikan kedua ruas dengan 12:
+      $$\begin{align*} 4(x - 2) + 3(y + 1) &= 24 \\ 4x - 8 + 3y + 3 &= 24 \\ 4x + 3y &= 29 \quad\cdots(1a) \end{align*}$$
+      Sederhanakan persamaan (2) dengan mengalikan kedua ruas dengan 2:
+      $$\begin{align*} 6x - (2y - 1) &= 22 \\ 6x - 2y + 1 &= 22 \\ 6x - 2y &= 21 \quad\cdots(2a) \end{align*}$$
+      Dari persamaan (2a): $y = \dfrac{6x - 21}{2} \quad\cdots(*)$<br><br>
+      Substitusi $(*)$ ke persamaan (1a):
+      $$\begin{align*} 4x + 3\!\left(\frac{6x - 21}{2}\right) &= 29 \\ 8x + 18x - 63 &= 58 \\ 26x &= 121 \\ x &= \frac{121}{26} \end{align*}$$
       Substitusi balik: $y = \dfrac{45}{13}$<br><br>
       Jadi $\text{HP} = \left\{\!\left(\dfrac{121}{26},\,\dfrac{45}{13}\right)\!\right\}$.
     </div>
 
-    <p><strong>c. Metode Eliminasi</strong> &mdash; samakan koefisien satu variabel, lalu jumlahkan/kurangkan kedua persamaan. Cocok jika koefisien mudah disamakan.</p>
+    <p><strong>c. Metode Eliminasi</strong> &mdash; dilakukan dengan cara <strong>menghilangkan</strong> satu variabel dengan cara menjumlahkan atau mengurangkan kedua persamaan (setelah disamakan koefisiennya).</p>
+    <p><strong>Langkah-langkah:</strong></p>
+    <ul>
+      <li>Samakan koefisien salah satu variabel (kalikan dengan bilangan yang sesuai)</li>
+      <li>Jumlahkan atau kurangkan kedua persamaan untuk menghilangkan variabel tersebut</li>
+      <li>Selesaikan persamaan satu variabel yang diperoleh</li>
+      <li>Substitusikan nilai yang ditemukan untuk mencari variabel lainnya</li>
+    </ul>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 14</div>
@@ -465,11 +542,11 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
     <div class="penyelesaian">
       <strong>Eliminasi $y$ (&#215;3 dan &#215;1):</strong>
       $$18x+3y=33 \quad\text{dan}\quad x+3y=-1 \implies 17x=34 \implies x=2$$
-      Substitusi $x=2$ ke (1): $y = 11-12 = -1$<br><br>
+      Substitusi $x=2$ ke persamaan (1): $6(2) + y = 11 \implies y = -1$<br><br>
       Jadi $\text{HP} = \{(2,\,-1)\}$.
     </div>
 
-    <p><strong>d. Metode Campuran (Eliminasi + Substitusi)</strong> &mdash; paling umum dipakai di soal ujian; fleksibel untuk berbagai bentuk.</p>
+    <p><strong>d. Metode Campuran (Eliminasi + Substitusi)</strong> &mdash; dalam praktik, eliminasi dan substitusi sering digunakan bersamaan. Metode ini disebut <strong>campuran</strong> karena terdiri atas dua langkah yang berbeda secara eksplisit: <em>Langkah 1</em> menggunakan eliminasi untuk menyisakan satu variabel, kemudian <em>Langkah 2</em> menggunakan substitusi untuk menemukan variabel kedua.</p>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 16</div>
@@ -478,71 +555,83 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
     <div class="penyelesaian">
       <strong>Langkah 1 &mdash; Eliminasi $y$ (&#215;3 dan &#215;1):</strong>
       $$12x+3y=16800 \quad\text{dan}\quad 5x+3y=8400 \implies 7x=8400 \implies x=1200$$
-      <strong>Langkah 2 &mdash; Substitusi $x=1200$ ke (1):</strong>
+      <strong>Langkah 2 &mdash; Substitusi $x=1200$ ke persamaan (1):</strong>
       $$4(1200)+y=5600 \implies y=800$$
       Jadi $\text{HP} = \{(1200,\,800)\}$.
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 17</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian dari: $\dfrac{6}{x-1}+\dfrac{10}{y+2}=4$ dan $\dfrac{10}{x-1}-\dfrac{5}{y+2}=\dfrac{5}{2}$</p>
+      <p style="margin:0;font-size:.9rem;">Dengan metode campuran (eliminasi dan substitusi), tentukan penyelesaian dari sistem persamaan: $\dfrac{6}{x-1}+\dfrac{10}{y+2}=4$ dan $\dfrac{10}{x-1}-\dfrac{5}{y+2}=\dfrac{5}{2}$</p>
     </div>
     <div class="penyelesaian">
-      Misalkan $u=\dfrac{1}{x-1}$ dan $v=\dfrac{1}{y+2}$:
-      $$\begin{cases} 6u+10v=4 \\ 10u-5v=2{,}5 \end{cases}$$
+      Misalkan $u=\dfrac{1}{x-1}$ dan $v=\dfrac{1}{y+2}$. Sistem persamaan menjadi:
+      $$\begin{cases} 6u+10v=4 \quad\cdots(1) \\ 10u-5v=2{,}5 \quad\cdots(2) \end{cases}$$
       <strong>Langkah 1 &mdash; Eliminasi $v$ (pers. (2)&#215;2):</strong>
       $$6u+10v=4 \quad\text{dan}\quad 20u-10v=5 \implies 26u=9 \implies u=\tfrac{9}{26}$$
-      <strong>Langkah 2 &mdash; Substitusi ke (1):</strong> $v=\tfrac{5}{26}$<br><br>
-      <strong>Langkah 3 &mdash; Kembalikan ke $x$ dan $y$:</strong><br>
-      $\dfrac{9}{26}=\dfrac{1}{x-1} \implies x=\dfrac{35}{9}$ &ensp;&ensp; $\dfrac{5}{26}=\dfrac{1}{y+2} \implies y=\dfrac{16}{5}$<br><br>
+      <strong>Langkah 2 &mdash; Substitusi $u=\dfrac{9}{26}$ ke persamaan (1):</strong> $v=\tfrac{5}{26}$<br><br>
+      <strong>Langkah 3 &mdash; Kembalikan ke variabel $x$ dan $y$:</strong><br>
+      Dari $u = \dfrac{1}{x-1}$: $9(x-1)=26 \implies x=\dfrac{35}{9}$<br>
+      Dari $v = \dfrac{1}{y+2}$: $5(y+2)=26 \implies y=\dfrac{16}{5}$<br><br>
       Jadi $\text{HP} = \left\{\!\left(\dfrac{35}{9},\,\dfrac{16}{5}\right)\!\right\}$.
     </div>
 
-    <h3 class="subsection-title">3. Kondisi Khusus SPLDV</h3>
+    <h3 class="subsection-title">4. Kondisi Khusus SPLDV</h3>
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Tiga Kemungkinan Penyelesaian SPLDV</div>
-      <p style="margin:.4rem 0;font-size:.9rem;">Setiap PLDV merepresentasikan sebuah garis lurus. Terdapat tiga kemungkinan:</p>
+      <p>Secara <strong>geometris</strong>, setiap PLDV merepresentasikan sebuah garis lurus. Penyelesaian SPLDV adalah titik potong kedua garis tersebut. Terdapat tiga kemungkinan:</p>
       <ul style="margin:.3rem 0;padding-left:1.3rem;font-size:.9rem;">
-        <li>$\dfrac{a_1}{a_2} \neq \dfrac{b_1}{b_2}$: dua garis <strong>berpotongan</strong> &#8658; tepat satu penyelesaian</li>
-        <li>$\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} \neq \dfrac{c_1}{c_2}$: dua garis <strong>sejajar</strong> &#8658; tidak ada penyelesaian</li>
-        <li>$\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} = \dfrac{c_1}{c_2}$: dua garis <strong>berimpit</strong> &#8658; tak hingga penyelesaian</li>
+        <li>Dua garis <strong>berpotongan</strong> di satu titik $\Rightarrow$ tepat satu penyelesaian. Syarat: $\dfrac{a_1}{a_2} \neq \dfrac{b_1}{b_2}$</li>
+        <li>Dua garis <strong>sejajar</strong> (tidak berpotongan) $\Rightarrow$ tidak ada penyelesaian. Syarat: $\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} \neq \dfrac{c_1}{c_2}$</li>
+        <li>Dua garis <strong>berimpit</strong> (identik) $\Rightarrow$ tak hingga penyelesaian. Syarat: $\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} = \dfrac{c_1}{c_2}$</li>
       </ul>
-      <p style="margin:.4rem 0;font-size:.9rem;">Secara aljabar: eliminasi menghasilkan $0=k\;(k\neq 0)$ &#8658; tidak ada penyelesaian; $0=0$ &#8658; tak hingga penyelesaian.</p>
+      <p style="margin:.4rem 0;font-size:.9rem;">Secara <strong>aljabar</strong>, jika proses eliminasi menghasilkan $0 = k$ dengan $k \neq 0$ &#8658; tidak ada penyelesaian. Jika menghasilkan $0 = 0$ &#8658; tak hingga penyelesaian.</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 18</div>
-      <p style="margin:0;font-size:.9rem;">Diketahui sistem persamaan $ax + 2y = 5$ dan $15x - 5y = 14$. Tentukan nilai $a$ agar sistem <strong>tidak memiliki penyelesaian</strong>!</p>
+      <p style="margin:0;font-size:.9rem;">Diketahui sistem persamaan $ax + 2y = 5$ dan $15x - 5y = 14$. Tentukan nilai $a$ agar sistem persamaan tersebut <strong>tidak memiliki penyelesaian</strong>!</p>
     </div>
     <div class="penyelesaian">
-      Syarat tidak ada penyelesaian: $\dfrac{a}{15}=\dfrac{2}{-5}\neq\dfrac{5}{14}$<br><br>
-      Dari $\dfrac{a}{15}=\dfrac{2}{-5}$: $-5a=30 \implies a=-6$<br><br>
-      Periksa: $\dfrac{5}{14}\neq\dfrac{2}{-5}$ &#10003; (kontradiksi terkonfirmasi)<br><br>
+      Agar tidak ada penyelesaian, kedua garis harus sejajar. Syaratnya:
+      $$\frac{a_1}{a_2} = \frac{b_1}{b_2} \neq \frac{c_1}{c_2} \implies \frac{a}{15} = \frac{2}{-5} \neq \frac{5}{14}$$
+      Dari $\dfrac{a}{15} = \dfrac{2}{-5}$:
+      $$-5a = 30 \implies a = -6$$
+      Periksa: $\dfrac{5}{14} \neq \dfrac{2}{-5}$ &#10003; (kontradiksi terkonfirmasi)<br><br>
       Jadi $a = \mathbf{-6}$.
     </div>
 
-    <h3 class="subsection-title">4. Penerapan SPLDV dalam Soal Cerita</h3>
+    <h3 class="subsection-title">5. Penerapan SPLDV dalam Soal Cerita</h3>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 19</div>
-      <p style="margin:0;font-size:.9rem;">Dua buah bilangan mempunyai jumlah 45 dan selisihnya 5. Tentukanlah kedua bilangan tersebut!</p>
+      <p style="margin:0;font-size:.9rem;">Jika dua buah bilangan mempunyai jumlah 45 dan selisihnya 5, tentukanlah kedua bilangan tersebut!</p>
     </div>
     <div class="penyelesaian">
-      $$\begin{cases} x+y=45 \\ x-y=5 \end{cases}$$
-      Jumlahkan: $2x=50 \implies x=25$;&ensp; substitusi: $y=20$.<br><br>
-      Verifikasi: $25+20=45$ &#10003;&ensp; $25-20=5$ &#10003;<br><br>
-      Jadi kedua bilangan adalah $\mathbf{25}$ dan $\mathbf{20}$.
+      Misalkan kedua bilangan adalah $x$ dan $y$, maka:
+      $$\begin{cases} x+y=45 \quad\cdots(1) \\ x-y=5 \quad\cdots(2) \end{cases}$$
+      Eliminasi variabel $y$ dengan menjumlahkan (1) dan (2):
+      $$2x = 50 \implies x = 25$$
+      Substitusi ke (1): $25 + y = 45 \implies y = 20$<br><br>
+      <strong>Verifikasi:</strong>
+      <ul>
+        <li>Jumlah: $25 + 20 = 45$ &#10003;</li>
+        <li>Selisih: $25 - 20 = 5$ &#10003;</li>
+      </ul>
+      Jadi kedua bilangan tersebut adalah $\mathbf{25}$ dan $\mathbf{20}$.
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 20</div>
-      <p style="margin:0;font-size:.9rem;">Dalam gedung pertunjukan terdapat 400 penonton. Harga tiket kelas I Rp7.000 dan kelas II Rp5.000. Total penjualan Rp2.300.000. Berapa penonton tiap kelas?</p>
+      <p style="margin:0;font-size:.9rem;">Dalam sebuah gedung pertunjukan terdapat 400 penonton. Harga tiket kelas I Rp7.000 dan kelas II Rp5.000. Total penjualan tiket Rp2.300.000. Berapa banyak penonton kelas I dan kelas II?</p>
     </div>
     <div class="penyelesaian">
-      $$\begin{cases} x+y=400 \\ 7x+5y=2300 \end{cases}$$
-      Eliminasi $y$ (pers. (1)&#215;5): $-2x=-300 \implies x=150$;&ensp; $y=250$<br><br>
-      Jadi penonton kelas I $= \mathbf{150}$ dan kelas II $= \mathbf{250}$ orang.
+      Misalkan $x$ = penonton kelas I, $y$ = penonton kelas II, maka:
+      $$\begin{cases} x + y = 400 \quad\cdots(1) \\ 7000x + 5000y = 2.300.000 \quad\cdots(2) \end{cases}$$
+      Eliminasi persamaan (2) dibagi 1000: $7x + 5y = 2300$<br><br>
+      Eliminasi $y$ (pers. (1)&#215;5): $5x+5y=2000$ dan $7x+5y=2300 \implies -2x=-300 \implies x=150$&ensp; $y=250$<br><br>
+      Jadi penonton kelas I sebanyak $\mathbf{150}$ orang dan kelas II sebanyak $\mathbf{250}$ orang.
     </div>
 
     <div class="box box-contoh">
@@ -550,9 +639,10 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <p style="margin:0;font-size:.9rem;">Pembilang suatu pecahan ditambah 1 dan penyebutnya dikurangi 3 menghasilkan $\frac{1}{2}$. Jika penyebutnya ditambah 1 (pembilang tetap), hasilnya $\frac{1}{5}$. Tentukan pecahan tersebut!</p>
     </div>
     <div class="penyelesaian">
-      $$\frac{a+1}{b-3}=\frac{1}{2} \implies 2a-b=-5 \quad\cdots(1)$$
-      $$\frac{a}{b+1}=\frac{1}{5} \implies 5a-b=1 \quad\cdots(2)$$
-      $(2)-(1)$: $3a=6 \implies a=2$;&ensp; dari (1): $b=9$<br><br>
+      Misalkan pecahan tersebut adalah $\dfrac{a}{b}$, maka:
+      $$\frac{a+1}{b-3} = \frac{1}{2} \implies 2a - b = -5 \quad\cdots(1)$$
+      $$\frac{a}{b+1} = \frac{1}{5} \implies 5a - b = 1 \quad\cdots(2)$$
+      Kurangkan (1) dari (2): $3a = 6 \implies a = 2$&ensp; dan dari (1): $b = 9$<br><br>
       Jadi pecahan tersebut adalah $\dfrac{2}{9}$.
     </div>
 
@@ -561,10 +651,11 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <p style="margin:0;font-size:.9rem;">Lima tahun yang lalu umur Ali sama dengan tiga kali umur Wati. Lima tahun kemudian, umur Ali menjadi dua kali umur Wati. Berapakah umur Ali dan Wati sekarang?</p>
     </div>
     <div class="penyelesaian">
-      Lima tahun lalu: $A-3W=-10 \quad\cdots(1)$<br>
-      Lima tahun kemudian: $A-2W=5 \quad\cdots(2)$<br><br>
-      $(2)-(1)$: $W=15$ tahun;&ensp; dari (2): $A=35$ tahun<br><br>
-      Jadi umur Ali $\mathbf{35}$ tahun dan Wati $\mathbf{15}$ tahun.
+      Misalkan $A$ = umur Ali sekarang, $W$ = umur Wati sekarang.<br><br>
+      <em>Lima tahun lalu:</em> $A - 5 = 3(W - 5) \implies A - 3W = -10 \quad\cdots(1)$<br>
+      <em>Lima tahun kemudian:</em> $A + 5 = 2(W + 5) \implies A - 2W = 5 \quad\cdots(2)$<br><br>
+      Kurangkan (1) dari (2): $W = 15$ tahun;&ensp; dari (2): $A = 35$ tahun<br><br>
+      Jadi umur Ali sekarang $\mathbf{35}$ tahun dan umur Wati $\mathbf{15}$ tahun.
     </div>
 
     <div class="box box-contoh">
@@ -572,36 +663,44 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <p style="margin:0;font-size:.9rem;">Enam tahun yang lalu jumlah umur ayah dan ibu sama dengan 54 tahun. Sekarang umur ayah adalah $\frac{6}{5}$ dari umur ibu. Tentukan masing-masing umur ayah dan ibu lima tahun yang akan datang!</p>
     </div>
     <div class="penyelesaian">
-      $A+B=66 \quad\cdots(1)$ &ensp; dan &ensp; $5A-6B=0 \quad\cdots(2)$<br><br>
-      Eliminasi $A$ (pers. (1)&#215;5 &#8722; pers. (2)): $11B=330 \implies B=30$;&ensp; $A=36$<br><br>
-      Lima tahun kemudian: ayah $=\mathbf{41}$ tahun;&ensp; ibu $=\mathbf{35}$ tahun.
+      Misalkan $A$ = umur ayah sekarang, $B$ = umur ibu sekarang.
+      $$\begin{align*} (A-6)+(B-6) &= 54 \implies A + B = 66 \quad\cdots(1) \\ A &= \tfrac{6}{5}B \implies 5A - 6B = 0 \quad\cdots(2) \end{align*}$$
+      Eliminasi $A$ (pers. (1)&#215;5 &#8722; pers. (2)): $11B = 330 \implies B = 30$;&ensp; $A = 36$<br><br>
+      Lima tahun yang akan datang: ayah $= 36 + 5 = \mathbf{41}$ tahun;&ensp; ibu $= 30 + 5 = \mathbf{35}$ tahun.
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 24</div>
-      <p style="margin:0;font-size:.9rem;">Keran A dan B bersama-sama mengisi bak dalam 6 menit. Laju keran A adalah $\frac{2}{3}$ kali laju keran B. Tentukan waktu masing-masing keran mengisi bak secara mandiri!</p>
+      <p style="margin:0;font-size:.9rem;">Keran A dan keran B bersama-sama dapat mengisi sebuah bak dalam 6 menit. Laju pengisian keran A adalah $\dfrac{2}{3}$ kali laju keran B. Tentukan waktu yang dibutuhkan masing-masing keran untuk mengisi bak secara mandiri!</p>
     </div>
     <div class="penyelesaian">
-      $p+q=\tfrac{1}{6}$ dan $p=\tfrac{2}{3}q$. Substitusi:
-      $$\tfrac{5}{3}q=\tfrac{1}{6} \implies q=\tfrac{1}{10};\quad p=\tfrac{1}{15}$$
-      Verifikasi: $\tfrac{1}{15}+\tfrac{1}{10}=\tfrac{1}{6}$ &#10003;<br><br>
-      Jadi keran A $= \mathbf{15}$ menit dan keran B $= \mathbf{10}$ menit.
+      Misalkan $p$ = laju keran A (bak/menit) dan $q$ = laju keran B (bak/menit), maka:
+      $$\begin{cases} p + q = \dfrac{1}{6} \quad\cdots(1) \\ p = \dfrac{2}{3}\,q \quad\cdots(2) \end{cases}$$
+      Substitusi (2) ke (1):
+      $$\tfrac{5}{3}q = \tfrac{1}{6} \implies q = \tfrac{1}{10};\quad p = \tfrac{1}{15}$$
+      <strong>Verifikasi:</strong> $p + q = \dfrac{1}{15} + \dfrac{1}{10} = \dfrac{2+3}{30} = \dfrac{1}{6}$ &#10003;<br><br>
+      Jadi keran A membutuhkan $\mathbf{15}$ menit dan keran B membutuhkan $\mathbf{10}$ menit untuk mengisi bak secara mandiri.
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 25</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Kantin menjual paket nasi ayam dan nasi ikan. Senin: 5 nasi ayam + 3 nasi ikan = Rp87.000. Selasa: 3 nasi ayam + 7 nasi ikan = Rp99.000.<br>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sebuah kantin sekolah menjual dua jenis paket makan siang: paket nasi ayam dan paket nasi ikan. Senin: terjual 5 nasi ayam + 3 nasi ikan = Rp87.000. Selasa: terjual 3 nasi ayam + 7 nasi ikan = Rp99.000.<br>
       a. Tentukan harga masing-masing paket!<br>
-      b. Rabu target Rp120.000 dan terjual 6 nasi ayam, berapa nasi ikan?<br>
-      c. Kamis: diskon 10% nasi ikan, total 10 paket perbandingan 3:2. Berapa pendapatan?</p>
+      b. Jika pada hari Rabu kantin menargetkan pendapatan Rp120.000 dan terjual 6 paket nasi ayam, berapa paket nasi ikan yang harus terjual?<br>
+      c. Pada hari Kamis, pengelola memberikan diskon 10% untuk nasi ikan. Jika total terjual 10 paket dengan perbandingan nasi ayam dan nasi ikan adalah 3:2, berapa pendapatan hari Kamis?</p>
     </div>
     <div class="penyelesaian">
-      $$\begin{cases} 5x+3y=87000 \\ 3x+7y=99000 \end{cases}$$
-      Eliminasi $x$ (&#215;3 dan &#215;5): $-26y=-234000 \implies y=9000$;&ensp; substitusi: $x=12000$<br><br>
-      <strong>a.</strong> Nasi ayam $= \mathbf{Rp12.000}$, nasi ikan $= \mathbf{Rp9.000}$.<br><br>
-      <strong>b.</strong> $6(12000)+n(9000)=120000 \implies n\approx5{,}3$. Minimal $\mathbf{6}$ paket nasi ikan.<br><br>
-      <strong>c.</strong> 6 nasi ayam + 4 nasi ikan (diskon 10% = Rp8.100).<br>
-      Pendapatan $= 6(12000)+4(8100) = 72000+32400 = \mathbf{Rp104.400}$.
+      Misalkan $x$ = harga paket nasi ayam (Rp) dan $y$ = harga paket nasi ikan (Rp), maka:
+      $$\begin{cases} 5x + 3y = 87.000 \quad\cdots(1) \\ 3x + 7y = 99.000 \quad\cdots(2) \end{cases}$$
+      Eliminasi $x$ (&#215;3 dan &#215;5): $-26y=-234.000 \implies y=9.000$;&ensp; substitusi: $x=12.000$<br><br>
+      <strong>Verifikasi ke (2):</strong> $3(12.000) + 7(9.000) = 36.000 + 63.000 = 99.000$ &#10003;<br><br>
+      <strong>a.</strong> Harga paket nasi ayam $= \mathbf{Rp12.000}$ dan paket nasi ikan $= \mathbf{Rp9.000}$.<br><br>
+      <strong>b.</strong> Misalkan paket nasi ikan yang terjual $= n$:
+      $$6(12.000) + n(9.000) = 120.000 \implies 9.000n = 48.000 \implies n \approx 5{,}3$$
+      Karena jumlah paket harus bilangan bulat, maka harus terjual minimal $\mathbf{6}$ paket nasi ikan.<br><br>
+      <strong>c.</strong> Dari 10 paket dengan perbandingan nasi ayam : nasi ikan $= 3 : 2$: 6 nasi ayam dan 4 nasi ikan.<br>
+      Harga nasi ikan setelah diskon $10\% = 0{,}9 \times 9.000 = \text{Rp}8.100$<br>
+      Pendapatan: $6(12.000) + 4(8.100) = 72.000 + 32.400 = \mathbf{Rp104.400}$.
     </div>
 
     <div class="box box-latihan">
@@ -609,7 +708,7 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <ol class="soal-list">
         <li>Tentukan penyelesaian sistem persamaan $4x + 3y = 10$ dan $2x - y = 0$ menggunakan metode eliminasi!</li>
         <li>Tentukan penyelesaian sistem persamaan $3x - 2y = 4$ dan $5x + y = 21$ menggunakan metode substitusi!</li>
-        <li>Sebuah angkutan memuat 48 penumpang (dewasa dan anak-anak). Tiket dewasa Rp12.000 dan tiket anak-anak Rp7.000. Total pendapatan Rp451.000. Tentukan banyak masing-masing penumpang!</li>
+        <li>Sebuah angkutan memuat 48 penumpang yang terdiri atas orang dewasa dan anak-anak. Harga tiket dewasa Rp12.000 dan tiket anak-anak Rp7.000. Jika total pendapatan adalah Rp451.000, tentukan banyak masing-masing penumpang!</li>
         <li>Tentukan nilai $a$ agar sistem persamaan berikut memiliki <strong>tak hingga banyak penyelesaian</strong>: $\begin{cases} 6x+ay=9 \\ 4x+3y=6 \end{cases}$</li>
         <li>Di sebuah tempat parkir terdapat 60 kendaraan (roda dua dan roda empat) dengan total roda 160 buah. Tarif motor Rp3.000 dan mobil Rp7.000. Tentukan total pendapatan saat semua kendaraan keluar!</li>
       </ol>
@@ -623,58 +722,91 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
     <h2 class="section-title"><span class="section-badge">C</span>Sistem Persamaan Linear Tiga Variabel (SPLTV)</h2>
 
     <h3 class="subsection-title">1. Persamaan Linear Tiga Variabel (PLTV)</h3>
-    <p>PLTV adalah persamaan yang memuat tiga variabel dengan pangkat tertinggi satu. Secara geometris, satu PLTV membentuk sebuah <strong>bidang datar</strong> dalam ruang tiga dimensi.</p>
+    <p>Persamaan linear tiga variabel (PLTV) adalah persamaan yang memuat tiga variabel dengan pangkat tertinggi masing-masing variabel adalah satu. Bentuk umumnya adalah:</p>
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Bentuk Umum PLTV &amp; SPLTV</div>
-      <p>PLTV: $\quad ax + by + cz = d, \quad a,b,c \neq 0$</p>
+      <p>PLTV: $\quad ax + by + cz = d, \quad a, b, c \neq 0, \quad a, b, c, d \in \mathbb{R}$</p>
+      <p>dengan keterangan:</p>
+      <ul>
+        <li>$a, b, c$ = <strong>koefisien</strong> dari variabel $x, y,$ dan $z$</li>
+        <li>$x, y, z$ = <strong>variabel</strong> (peubah)</li>
+        <li>$d$ = <strong>konstanta</strong></li>
+      </ul>
+      <p><strong>Penyelesaian</strong> PLTV adalah pasangan berurutan $(x, y, z)$ yang memenuhi persamaan tersebut. Secara geometris, sebuah PLTV membentuk sebuah <strong>bidang datar</strong> dalam ruang tiga dimensi.</p>
       <p>SPLTV:</p>
       <div class="math-block">$$\begin{cases} a_1 x + b_1 y + c_1 z = d_1 \\ a_2 x + b_2 y + c_2 z = d_2 \\ a_3 x + b_3 y + c_3 z = d_3 \end{cases}$$</div>
     </div>
 
+    <div class="box box-catatan">
+      <div class="box-label">&#9888; Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Sama seperti PLDV, sebuah <strong>PLTV tunggal</strong> memiliki tak hingga banyaknya penyelesaian. Untuk mendapatkan penyelesaian yang spesifik, diperlukan minimal tiga persamaan yang saling terkait.</p>
+    </div>
+
     <h3 class="subsection-title">2. Metode Penyelesaian SPLTV</h3>
-    <p>Strategi utama: <strong>reduksi bertahap</strong> &mdash; eliminasi satu variabel dari dua pasang persamaan sehingga terbentuk SPLDV, selesaikan SPLDV, lalu substitusi akhir.</p>
+    <p>Strategi umum yang paling efektif adalah dengan <strong>mereduksi</strong> sistem menjadi SPLDV melalui langkah-langkah berikut:</p>
+    <ul>
+      <li><strong>Eliminasi Tahap I</strong>: Pilih satu variabel untuk dihilangkan. Lakukan eliminasi pada dua pasang persamaan (misal pers. 1 &amp; 2, dan pers. 2 &amp; 3) sehingga terbentuk <strong>SPLDV</strong> (dua persamaan dengan dua variabel).</li>
+      <li><strong>Selesaikan SPLDV</strong>: Cari nilai dua variabel tersebut menggunakan metode eliminasi, substitusi, atau campuran.</li>
+      <li><strong>Substitusi Akhir</strong>: Masukkan dua nilai variabel yang sudah ditemukan ke salah satu persamaan awal untuk mendapatkan nilai variabel ketiga.</li>
+    </ul>
 
     <div class="box box-catatan">
       <div class="box-label">&#9888; Tips</div>
-      <p style="margin:0;font-size:.9rem;">Pilih variabel dengan koefisien $1$, $-1$, atau yang sama untuk dieliminasi terlebih dahulu agar perhitungan menjadi lebih sederhana.</p>
+      <p style="margin:0;font-size:.9rem;">Pilihlah variabel yang memiliki koefisien 1, $-1$, atau koefisien yang sama untuk dieliminasi terlebih dahulu agar perhitungan aljabar menjadi lebih sederhana.</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 26</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian sistem persamaan: $x + 3y - 3z = -7$,&ensp; $2x - 2y + z = 8$,&ensp; $2x + y + z = 5$</p>
+      <p style="margin:0;font-size:.9rem;">Dengan metode campuran, tentukan penyelesaian sistem persamaan: $x + 3y - 3z = -7$,&ensp; $2x - 2y + z = 8$,&ensp; $2x + y + z = 5$</p>
     </div>
     <div class="penyelesaian">
-      <strong>L1 &mdash; Eliminasi $x$ dari (2) dan (3):</strong>
-      $$2x-2y+z=8 \;\text{dan}\; 2x+y+z=5 \implies -3y=3 \implies y=-1$$
-      <strong>L2 &mdash; Eliminasi $x$ dari (1)&#215;2 dikurangi (2):</strong>
-      $$2x+6y-6z=-14 \;\text{dan}\; 2x-2y+z=8 \implies 8y-7z=-22$$
-      <strong>L3 &mdash; Substitusi $y=-1$:</strong> $-8-7z=-22 \implies z=2$<br>
-      <strong>L4 &mdash; Substitusi $y=-1$, $z=2$ ke (1):</strong> $x-3-6=-7 \implies x=2$<br><br>
-      Jadi $\text{HP} = \{(2,\,-1,\,2)\}$. Verifikasi: $(1):-7$ &#10003;&ensp; $(2):8$ &#10003;&ensp; $(3):5$ &#10003;
+      Misalkan: $(1):\; x + 3y - 3z = -7 \qquad (2):\; 2x - 2y + z = 8 \qquad (3):\; 2x + y + z = 5$<br><br>
+      <strong>Langkah 1 &mdash; Eliminasi $x$ dari (2) dan (3):</strong>
+      $$2x-2y+z=8 \;\text{dan}\; 2x+y+z=5 \implies -3y=3 \implies y=-1 \quad\cdots(4)$$
+      <strong>Langkah 2 &mdash; Eliminasi $x$ dari (1) dan (2) untuk mendapat persamaan dalam $y$ dan $z$:</strong><br>
+      Kalikan (1) dengan 2 dan (2) dengan 1:
+      $$2x+6y-6z=-14 \;\text{dan}\; 2x-2y+z=8 \implies 8y-7z=-22 \quad\cdots(5)$$
+      <strong>Langkah 3 &mdash; Substitusi (4) ke (5):</strong>
+      $$8(-1)-7z=-22 \implies -8-7z=-22 \implies z=2 \quad\cdots(6)$$
+      <strong>Langkah 4 &mdash; Substitusi (4) dan (6) ke (1):</strong>
+      $$x+3(-1)-3(2)=-7 \implies x-3-6=-7 \implies x=2$$
+      Jadi $\text{HP} = \{(2,\,-1,\,2)\}$.<br><br>
+      <strong>Verifikasi:</strong>
+      <ul>
+        <li>$(1)$: $2 + 3(-1) - 3(2) = 2 - 3 - 6 = -7$ &#10003;</li>
+        <li>$(2)$: $2(2) - 2(-1) + 2 = 4 + 2 + 2 = 8$ &#10003;</li>
+        <li>$(3)$: $2(2) + (-1) + 2 = 4 - 1 + 2 = 5$ &#10003;</li>
+      </ul>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 27</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian sistem persamaan: $2x + y + 3z = 1$,&ensp; $2x - 3y + 4z = -5$,&ensp; $x + 2y - z = 7$</p>
+      <p style="margin:0;font-size:.9rem;">Dengan metode campuran, tentukan penyelesaian sistem persamaan: $2x + y + 3z = 1$,&ensp; $2x - 3y + 4z = -5$,&ensp; $x + 2y - z = 7$</p>
     </div>
     <div class="penyelesaian">
-      <strong>L1 &mdash; Eliminasi $x$ dari (1)&#8722;(2):</strong> $4y-z=6 \quad\cdots(4)$<br>
-      <strong>L2 &mdash; Eliminasi $x$ dari (1) dan 2&#215;(3):</strong> $-3y+5z=-13 \quad\cdots(5)$<br>
-      <strong>L3 &mdash; Dari (4)&#215;5 + (5):</strong> $17y=17 \implies y=1$;&ensp; dari (4): $z=-2$<br>
-      <strong>L4 &mdash; Dari (1):</strong> $2x+1-6=1 \implies x=3$<br><br>
+      $(1):\; 2x + y + 3z = 1 \quad (2):\; 2x - 3y + 4z = -5 \quad (3):\; x + 2y - z = 7$<br><br>
+      <strong>Langkah 1 &mdash; Eliminasi $x$ dari (1) dan (2):</strong>
+      $$4y - z = 6 \quad\cdots(4)$$
+      <strong>Langkah 2 &mdash; Eliminasi $x$ dari (1) dan (3) (kalikan (3) dengan 2):</strong>
+      $$2x+y+3z=1 \;\text{dan}\; 2x+4y-2z=14 \implies -3y+5z=-13 \quad\cdots(5)$$
+      <strong>Langkah 3 &mdash; Dari (4)&#215;5 dan (5):</strong> $17y=17 \implies y=1$;&ensp; dari (4): $z=-2$<br>
+      <strong>Langkah 4 &mdash; Dari (1):</strong> $2x+1+3(-2)=1 \implies 2x-5=1 \implies x=3$<br><br>
       Jadi $\text{HP} = \{(3,\,1,\,-2)\}$.
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 28</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian sistem persamaan: $2x + 3y - 3z = 10$,&ensp; $2x - y + 2z = 1$,&ensp; $4x + 4y + z = 11$</p>
+      <p style="margin:0;font-size:.9rem;">Dengan metode campuran, tentukan penyelesaian sistem persamaan: $2x + 3y - 3z = 10$,&ensp; $2x - y + 2z = 1$,&ensp; $4x + 4y + z = 11$</p>
     </div>
     <div class="penyelesaian">
-      <strong>L1 &mdash; Eliminasi $z$ dari (1) dan (3)&#215;3:</strong> $14x+15y=43 \quad\cdots(4)$<br>
-      <strong>L2 &mdash; Eliminasi $z$ dari (2) dan (3)&#215;2:</strong> $-6x-9y=-21 \implies 2x+3y=7 \quad\cdots(5)$<br>
-      <strong>L3 &mdash; Dari (4) dan (5)&#215;7:</strong> $-6y=-6 \implies y=1$;&ensp; dari (5): $x=2$<br>
-      <strong>L4 &mdash; Dari (1):</strong> $4+3-3z=10 \implies z=-1$<br><br>
+      $(1):\; 2x+3y-3z=10 \quad (2):\; 2x-y+2z=1 \quad (3):\; 4x+4y+z=11$<br><br>
+      <strong>Langkah 1 &mdash; Eliminasi $z$ dari (1) dan (3) (&#215;1 dan &#215;3):</strong>
+      $$2x+3y-3z=10 \;\text{dan}\; 12x+12y+3z=33 \implies 14x+15y=43 \quad\cdots(4)$$
+      <strong>Langkah 2 &mdash; Eliminasi $z$ dari (2) dan (3) (&#215;1 dan &#215;2):</strong>
+      $$2x-y+2z=1 \;\text{dan}\; 8x+8y+2z=22 \implies -6x-9y=-21 \implies 2x+3y=7 \quad\cdots(5)$$
+      <strong>Langkah 3 &mdash; Dari (4) dan (5)&#215;7:</strong> $-6y=-6 \implies y=1$;&ensp; dari (5): $x=2$<br>
+      <strong>Langkah 4 &mdash; Dari (1):</strong> $4+3-3z=10 \implies z=-1$<br><br>
       Jadi $\text{HP} = \{(2,\,1,\,-1)\}$.
     </div>
 
@@ -683,10 +815,13 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$, $y$, dan $z$ dari: $\dfrac{1}{x}+\dfrac{2}{y}-\dfrac{1}{z}=1$,&ensp; $\dfrac{2}{x}-\dfrac{1}{y}+\dfrac{1}{z}=3$,&ensp; $\dfrac{1}{x}+\dfrac{1}{y}+\dfrac{1}{z}=2$</p>
     </div>
     <div class="penyelesaian">
-      Misalkan $p=\tfrac{1}{x}$, $q=\tfrac{1}{y}$, $r=\tfrac{1}{z}$:
-      $$\begin{cases} p+2q-r=1 \\ 2p-q+r=3 \\ p+q+r=2 \end{cases}$$
-      $(1)+(2)$: $3p+q=4$;&ensp; $(2)-(3)$: $p-2q=1 \implies p=1+2q$<br>
-      Substitusi: $3(1+2q)+q=4 \implies q=\tfrac{1}{7}$;&ensp; $p=\tfrac{9}{7}$;&ensp; $r=\tfrac{4}{7}$<br><br>
+      Misalkan $p=\tfrac{1}{x}$, $q=\tfrac{1}{y}$, $r=\tfrac{1}{z}$, maka sistem menjadi:
+      $$\begin{cases} p + 2q - r = 1 \quad\cdots(1) \\ 2p - q + r = 3 \quad\cdots(2) \\ p + q + r = 2 \quad\cdots(3) \end{cases}$$
+      <strong>Eliminasi $r$ dari (1) dan (2):</strong> $(1)+(2):\; 3p + q = 4 \quad\cdots(4)$<br>
+      <strong>Eliminasi $r$ dari (2) dan (3):</strong> $(2)-(3):\; p - 2q = 1 \quad\cdots(5)$<br><br>
+      Dari (5): $p = 1 + 2q$. Substitusi ke (4):
+      $$3(1+2q)+q=4 \implies 7q=1 \implies q=\tfrac{1}{7}$$
+      Maka $p = \tfrac{9}{7}$ dan dari (3): $r = 2 - \tfrac{9}{7} - \tfrac{1}{7} = \tfrac{4}{7}$<br><br>
       Jadi $x=\dfrac{7}{9}$,&ensp; $y=7$,&ensp; $z=\dfrac{7}{4}$.
     </div>
 
@@ -699,42 +834,47 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 30</div>
-      <p style="margin:0;font-size:.9rem;">Sebuah taman segitiga memiliki keliling 36 m. Sisi pertama 4 m lebih panjang dari sisi kedua. Sisi ketiga sama dengan dua kali sisi kedua dikurangi 2 m. Tentukan panjang masing-masing sisi!</p>
+      <p style="margin:0;font-size:.9rem;">Sebuah taman berbentuk segitiga memiliki keliling 36 m. Sisi pertama 4 m lebih panjang dari sisi kedua. Sisi ketiga sama dengan dua kali sisi kedua dikurangi 2 m. Tentukan panjang masing-masing sisi taman tersebut!</p>
     </div>
     <div class="penyelesaian">
-      $x=y+4$;&ensp; $z=2y-2$. Substitusi ke $x+y+z=36$:
-      $$(y+4)+y+(2y-2)=36 \implies 4y=34 \implies y=8{,}5$$
-      $x=12{,}5$;&ensp; $z=15$. Verifikasi: $12{,}5+8{,}5+15=36$ &#10003;<br><br>
-      Jadi sisi pertama $=\mathbf{12{,}5}$ m, sisi kedua $=\mathbf{8{,}5}$ m, sisi ketiga $=\mathbf{15}$ m.
+      Misalkan sisi pertama $= x$ m, sisi kedua $= y$ m, sisi ketiga $= z$ m, maka: $x=y+4$;&ensp; $z=2y-2$<br><br>
+      Substitusi ke $x+y+z=36$:
+      $$(y+4)+y+(2y-2)=36 \implies 4y+2=36 \implies 4y=34 \implies y=8{,}5$$
+      $x=12{,}5$;&ensp; $z=15$<br><br>
+      <strong>Verifikasi:</strong> $12{,}5+8{,}5+15=36$ &#10003;<br><br>
+      Jadi sisi pertama $=\mathbf{12{,}5}$ m, sisi kedua $=\mathbf{8{,}5}$ m, dan sisi ketiga $=\mathbf{15}$ m.
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 31</div>
-      <p style="margin:0;font-size:.9rem;">Toko A: 2 kg beras + 1 kg gula + 1 kg minyak = Rp47.000. Toko B: 1 kg beras + 2 kg gula + 1 kg minyak = Rp43.000. Toko C: 1 kg beras + 1 kg gula + 2 kg minyak = Rp45.000. Tentukan harga tiap kg!</p>
+      <p style="margin:0;font-size:.9rem;">Toko A, B, dan C menjual barang yang sama. Di toko A, harga 2 kg beras, 1 kg gula, dan 1 kg minyak Rp47.000. Di toko B, harga 1 kg beras, 2 kg gula, dan 1 kg minyak Rp43.000. Di toko C, harga 1 kg beras, 1 kg gula, dan 2 kg minyak Rp45.000. Tentukan harga tiap kg beras, gula, dan minyak!</p>
     </div>
     <div class="penyelesaian">
-      $(1)-(2)$: $x-y=4000$;&ensp; $(2)-(3)$: $y-z=-2000 \implies z=y+2000$<br>
-      Dari $x=y+4000$, substitusi ke (1): $3y+z=39000$;&ensp; lalu $y=9250$, $x=13250$, $z=11250$<br><br>
-      Jadi beras Rp13.250/kg, gula Rp9.250/kg, minyak Rp11.250/kg.
+      $$\begin{cases} 2x + y + z = 47000 \quad\cdots(1) \\ x + 2y + z = 43000 \quad\cdots(2) \\ x + y + 2z = 45000 \quad\cdots(3) \end{cases}$$
+      $(1)-(2)$: $x-y=4000 \quad\cdots(4)$&ensp; dan &ensp; $(2)-(3)$: $y-z=-2000 \implies z=y+2000$<br>
+      Dari $x=y+4000$, substitusi ke (1): $3y+z=39000$;&ensp; lalu $y=9.250$, $x=13.250$, $z=11.250$<br><br>
+      Jadi harga beras $\mathbf{Rp13.250}$/kg, gula $\mathbf{Rp9.250}$/kg, dan minyak $\mathbf{Rp11.250}$/kg.
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 32</div>
-      <p style="margin:0;font-size:.9rem;">Jumlah tiga bilangan adalah 60. Bilangan kedua = $2\times$ bilangan pertama $- 6$. Bilangan ketiga = bilangan pertama + bilangan kedua $- 6$. Tentukan ketiga bilangan!</p>
+      <p style="margin:0;font-size:.9rem;">Jumlah tiga bilangan adalah 60. Bilangan kedua sama dengan dua kali bilangan pertama dikurangi 6. Bilangan ketiga sama dengan bilangan pertama ditambah bilangan kedua dikurangi 6. Tentukan ketiga bilangan tersebut!</p>
     </div>
     <div class="penyelesaian">
       $y=2x-6$;&ensp; $z=x+y-6=3x-12$. Substitusi ke $x+y+z=60$:
       $$6x-18=60 \implies x=13$$
-      $y=20$,&ensp; $z=27$. Verifikasi: $13+20+27=60$ &#10003;<br><br>
+      $y=20$,&ensp; $z=27$.<br><br>
+      <strong>Verifikasi:</strong> $13+20+27=60$ &#10003;<br><br>
       Jadi ketiga bilangan adalah $\mathbf{13}$, $\mathbf{20}$, dan $\mathbf{27}$.
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 33</div>
-      <p style="margin:0;font-size:.9rem;">Seorang pengusaha menyimpan modal di tiga bank. Modal bank A = 2&#215; modal bank B. Modal bank C = modal bank A &#8722; Rp5.000.000. Total modal Rp55.000.000. Tentukan modal di masing-masing bank!</p>
+      <p style="margin:0;font-size:.9rem;">Seorang pengusaha menyimpan modal di tiga bank berbeda. Modal di bank A 2 kali modal di bank B. Modal di bank C Rp5.000.000 lebih sedikit dari modal di bank A. Jika total modal Rp55.000.000, tentukan modal di masing-masing bank!</p>
     </div>
     <div class="penyelesaian">
-      $x=2y$;&ensp; $z=x-5=2y-5$. Substitusi ke $x+y+z=55$ (juta):
+      Misalkan modal di bank A, B, C berturut-turut $x$, $y$, $z$ (dalam jutaan rupiah):<br>
+      $x=2y$;&ensp; $z=x-5=2y-5$. Substitusi ke $x+y+z=55$:
       $$5y-5=55 \implies y=12$$
       $x=24$,&ensp; $z=19$ juta rupiah.<br><br>
       Jadi bank A $=$ Rp24.000.000, bank B $=$ Rp12.000.000, bank C $=$ Rp19.000.000.
@@ -742,24 +882,36 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 34</div>
-      <p style="margin:0;font-size:.9rem;">Pak Budi dan Pak Candra (tanpa Pak Dodi) menyelesaikan proyek dalam 12 hari. Pak Budi dan Pak Dodi (tanpa Pak Candra) dalam 10 hari. Ketiganya bersama dalam 6 hari. Berapa hari masing-masing menyelesaikan sendiri?</p>
+      <p style="margin:0;font-size:.9rem;">Pak Budi, Pak Candra, dan Pak Dodi bekerja bersama menyelesaikan sebuah proyek. Jika Pak Budi dan Pak Candra bekerja bersama tanpa Pak Dodi, proyek selesai dalam 12 hari. Jika Pak Budi dan Pak Dodi bekerja bersama tanpa Pak Candra, proyek selesai dalam 10 hari. Jika ketiganya bekerja bersama, proyek selesai dalam 6 hari. Berapa hari masing-masing orang menyelesaikan proyek tersebut jika bekerja sendiri?</p>
     </div>
     <div class="penyelesaian">
-      Misalkan $p=\tfrac{1}{x}$, $q=\tfrac{1}{y}$, $r=\tfrac{1}{z}$ (bagian per hari):
-      $$\begin{cases} p+q=\tfrac{1}{12} & \cdots(1) \\ p+r=\tfrac{1}{10} & \cdots(2) \\ p+q+r=\tfrac{1}{6} & \cdots(3) \end{cases}$$
-      $(3)-(1)$: $r=\tfrac{1}{12}$;&ensp; dari (2): $p=\tfrac{1}{60}$;&ensp; dari (1): $q=\tfrac{1}{15}$<br><br>
-      Verifikasi: $\tfrac{1}{60}+\tfrac{1}{15}+\tfrac{1}{12}=\tfrac{1+4+5}{60}=\tfrac{1}{6}$ &#10003;<br><br>
-      Jadi Pak Budi $=\mathbf{60}$ hari, Pak Candra $=\mathbf{15}$ hari, Pak Dodi $=\mathbf{12}$ hari.
+      Misalkan kecepatan kerja Pak Budi, Pak Candra, dan Pak Dodi berturut-turut $\dfrac{1}{x}$, $\dfrac{1}{y}$, dan $\dfrac{1}{z}$ bagian per hari.<br><br>
+      Misalkan $p=\dfrac{1}{x}$, $q=\dfrac{1}{y}$, $r=\dfrac{1}{z}$:
+      $$\begin{cases} p + q = \dfrac{1}{12} \quad\cdots(1) \\ p + r = \dfrac{1}{10} \quad\cdots(2) \\ p + q + r = \dfrac{1}{6} \quad\cdots(3) \end{cases}$$
+      Dari (1) dan (3): $r=\dfrac{1}{6}-\dfrac{1}{12}=\dfrac{1}{12} \quad\cdots(4)$<br>
+      Substitusi (4) ke (2): $p=\dfrac{1}{10}-\dfrac{1}{12}=\dfrac{1}{60} \quad\cdots(5)$<br>
+      Substitusi (5) ke (1): $q=\dfrac{1}{12}-\dfrac{1}{60}=\dfrac{1}{15} \quad\cdots(6)$<br><br>
+      <strong>Verifikasi:</strong> $\dfrac{1}{60}+\dfrac{1}{15}+\dfrac{1}{12}=\dfrac{1+4+5}{60}=\dfrac{1}{6}$ &#10003;<br><br>
+      Jadi Pak Budi $=\mathbf{60}$ hari, Pak Candra $=\mathbf{15}$ hari, Pak Dodi $=\mathbf{12}$ hari jika bekerja sendiri.
     </div>
 
     <h3 class="subsection-title">4. Kondisi Khusus pada SPLTV</h3>
+
+    <p>Seperti halnya SPLDV, SPLTV juga dapat memiliki kondisi:</p>
+    <ul>
+      <li><strong>Tepat satu penyelesaian</strong>: sistem konsisten dan bebas</li>
+      <li><strong>Tidak ada penyelesaian</strong>: sistem inkonsisten (garis/bidang tidak berpotongan di satu titik)</li>
+      <li><strong>Tak hingga penyelesaian</strong>: sistem konsisten dan bergantung (persamaan yang tidak bebas secara linear)</li>
+    </ul>
 
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 35</div>
       <p style="margin:0;font-size:.9rem;">Periksa apakah sistem berikut memiliki penyelesaian: $x+y+z=6$,&ensp; $2x+2y+2z=10$,&ensp; $x-y+z=2$</p>
     </div>
     <div class="penyelesaian">
-      Persamaan (2): $x+y+z=5$. Namun persamaan (1): $x+y+z=6$. Karena $5 \neq 6$, terdapat <strong>kontradiksi</strong>.<br><br>
+      Perhatikan persamaan (1) dan (2):
+      $$2x + 2y + 2z = 10 \implies x + y + z = 5$$
+      Namun persamaan (1) menyatakan $x + y + z = 6$. Karena $5 \neq 6$, terdapat <strong>kontradiksi</strong>.<br><br>
       Sistem ini <strong>tidak memiliki penyelesaian</strong> (inkonsisten).
     </div>
 
@@ -768,9 +920,10 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <p style="margin:0;font-size:.9rem;">Periksa apakah sistem berikut memiliki satu, tak hingga, atau tidak ada penyelesaian: $x+y+z=6$,&ensp; $2x+2y+2z=12$,&ensp; $x-y+z=2$</p>
     </div>
     <div class="penyelesaian">
-      Persamaan (2) identik dengan persamaan (1) setelah disederhanakan &#8658; hanya dua persamaan bebas secara linear.<br><br>
-      Eliminasi $(1)-(3)$: $2y=4 \implies y=2$. Dari (1): $x+z=4 \implies z=4-x$ untuk sembarang $x$.<br><br>
-      Karena eliminasi menghasilkan $0=0$, sistem memiliki <strong>tak hingga penyelesaian</strong>:
+      Persamaan (2) identik dengan persamaan (1) setelah disederhanakan ($x+y+z=6$), sehingga sistem ini hanya memiliki <strong>dua persamaan yang bebas secara linear</strong>, yaitu (1) dan (3).<br><br>
+      Eliminasi $(1)-(3)$: $(x+y+z)-(x-y+z) = 6-2 \implies 2y=4 \implies y=2$<br><br>
+      Substitusi $y=2$ ke persamaan (1): $x+z=4$, sehingga $z=4-x$ untuk sembarang nilai $x$.<br><br>
+      Karena proses eliminasi menghasilkan $0=0$, sistem memiliki <strong>tak hingga penyelesaian</strong>:
       $$\{(x,\,2,\,4-x) \mid x \in \mathbb{R}\}$$
     </div>
 
@@ -781,8 +934,8 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
         <li>Tentukan penyelesaian sistem persamaan: $3x+y-2z=1$,&ensp; $x-2y+z=-3$,&ensp; $2x+3y-z=4$.</li>
         <li>Jumlah tiga bilangan adalah 100. Bilangan pertama ditambah dua kali bilangan kedua sama dengan 80. Dua kali bilangan pertama dikurangi bilangan ketiga sama dengan 10. Tentukan ketiga bilangan tersebut!</li>
         <li>Tentukan nilai $p$, $q$, dan $r$ dari sistem: $\dfrac{2}{p}-\dfrac{1}{q}+\dfrac{3}{r}=4$,&ensp; $\dfrac{1}{p}+\dfrac{2}{q}-\dfrac{1}{r}=2$,&ensp; $\dfrac{1}{p}+\dfrac{1}{q}+\dfrac{1}{r}=3$.</li>
-        <li>Pedagang menjual apel, mangga, dan jeruk. Harga: 2 apel+1 mangga+3 jeruk=Rp79.000;&ensp; 1 apel+3 mangga+2 jeruk=Rp82.000;&ensp; 3 apel+2 mangga+1 jeruk=Rp73.000. Tentukan harga per kg masing-masing!</li>
-        <li>Keran A, B, dan C bersama mengisi kolam dalam 4 jam. Keran A dan B bersama mengisi dalam 6 jam. Keran B dan C bersama mengisi dalam 5 jam. Tentukan waktu masing-masing keran jika bekerja sendiri, dan periksa hasilnya!</li>
+        <li>Pedagang menjual apel, mangga, dan jeruk. Harga: 2 kg apel+1 kg mangga+3 kg jeruk=Rp79.000;&ensp; 1 kg apel+3 kg mangga+2 kg jeruk=Rp82.000;&ensp; 3 kg apel+2 kg mangga+1 kg jeruk=Rp73.000. Tentukan harga per kg masing-masing!</li>
+        <li>Keran A, B, dan C bersama-sama dapat mengisi sebuah kolam dalam 4 jam. Keran A dan B bersama-sama (tanpa C) dapat mengisi kolam dalam 6 jam. Keran B dan C bersama-sama (tanpa A) dapat mengisi kolam dalam 5 jam. Tentukan waktu yang dibutuhkan masing-masing keran jika bekerja sendiri, dan periksa hasilnya!</li>
       </ol>
     </div>
 
@@ -800,9 +953,9 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
         <tbody>
           <tr><td>PLSV</td><td>$ax+b=0$, $a\neq 0$</td><td>Selalu <strong>tepat satu</strong></td><td>$x=-\frac{b}{a}$;&ensp; HP$=\{x_0\}$</td></tr>
           <tr><td>PLDV</td><td>$ax+by=c$, $a,b\neq 0$</td><td>Tak hingga</td><td>Satu persamaan &#8594; satu garis lurus</td></tr>
-          <tr><td>SPLDV</td><td>Dua PLDV bersamaan</td><td>$0$, $1$, atau $\infty$</td><td>Bergantung posisi relatif dua garis</td></tr>
+          <tr><td>SPLDV</td><td>$\begin{cases} a_1x+b_1y=c_1 \\ a_2x+b_2y=c_2 \end{cases}$</td><td>$0$, $1$, atau $\infty$</td><td>Bergantung pada posisi relatif dua garis</td></tr>
           <tr><td>PLTV</td><td>$ax+by+cz=d$, $a,b,c\neq 0$</td><td>Tak hingga</td><td>Satu persamaan &#8594; satu bidang datar</td></tr>
-          <tr><td>SPLTV</td><td>Tiga PLTV bersamaan</td><td>$0$, $1$, atau $\infty$</td><td>Bergantung perpotongan tiga bidang</td></tr>
+          <tr><td>SPLTV</td><td>$\begin{cases} a_1x+b_1y+c_1z=d_1 \\ a_2x+b_2y+c_2z=d_2 \\ a_3x+b_3y+c_3z=d_3 \end{cases}$</td><td>$0$, $1$, atau $\infty$</td><td>Bergantung pada perpotongan tiga bidang</td></tr>
         </tbody>
       </table>
     </div>
@@ -812,10 +965,10 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <table>
         <thead><tr><th>Metode</th><th>Langkah Utama</th><th>Kapan Digunakan</th></tr></thead>
         <tbody>
-          <tr><td><strong>Grafik</strong></td><td>Gambar kedua garis; titik potong = penyelesaian</td><td>Membangun intuisi visual; kurang akurat untuk solusi non-bulat</td></tr>
-          <tr><td><strong>Substitusi</strong></td><td>Nyatakan satu variabel, substitusikan ke persamaan lain</td><td>Cocok jika ada koefisien $=1$ atau $-1$</td></tr>
-          <tr><td><strong>Eliminasi</strong></td><td>Samakan koefisien, jumlah/kurangkan kedua persamaan</td><td>Cocok jika koefisien mudah disamakan</td></tr>
-          <tr><td><strong>Campuran</strong></td><td>Eliminasi untuk satu variabel, substitusi untuk yang kedua</td><td>Paling umum di soal ujian; fleksibel</td></tr>
+          <tr><td><strong>Grafik</strong></td><td>Gambar kedua garis pada bidang Cartesius; titik potong = penyelesaian</td><td>Membangun <strong>intuisi visual</strong>; kurang akurat jika solusi bukan bilangan bulat</td></tr>
+          <tr><td><strong>Substitusi</strong></td><td>Nyatakan satu variabel dari satu persamaan, substitusikan ke persamaan lain</td><td>Cocok jika salah satu koefisien $= 1$ atau $-1$ sehingga mudah dinyatakan</td></tr>
+          <tr><td><strong>Eliminasi</strong></td><td>Samakan koefisien satu variabel, lalu jumlah/kurangkan kedua persamaan</td><td>Cocok jika koefisien mudah disamakan (misal: sama besar atau kelipatan)</td></tr>
+          <tr><td><strong>Campuran</strong></td><td>Eliminasi untuk mendapat satu variabel, lalu substitusi untuk variabel kedua</td><td>Paling umum digunakan di soal ujian; fleksibel untuk berbagai bentuk</td></tr>
         </tbody>
       </table>
     </div>
@@ -825,9 +978,9 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <table>
         <thead><tr><th>Kondisi</th><th>Syarat Rasio</th><th>Geometri</th><th>Hasil Eliminasi</th></tr></thead>
         <tbody>
-          <tr><td>Tepat satu penyelesaian</td><td>$\frac{a_1}{a_2}\neq\frac{b_1}{b_2}$</td><td>Dua garis <strong>berpotongan</strong></td><td>Nilai $x,y$ spesifik</td></tr>
-          <tr><td>Tidak ada penyelesaian</td><td>$\frac{a_1}{a_2}=\frac{b_1}{b_2}\neq\frac{c_1}{c_2}$</td><td>Dua garis <strong>sejajar</strong></td><td>$0=k$, $k\neq 0$</td></tr>
-          <tr><td>Tak hingga penyelesaian</td><td>$\frac{a_1}{a_2}=\frac{b_1}{b_2}=\frac{c_1}{c_2}$</td><td>Dua garis <strong>berimpit</strong></td><td>$0=0$</td></tr>
+          <tr><td>Tepat satu penyelesaian</td><td>$\frac{a_1}{a_2}\neq\frac{b_1}{b_2}$</td><td>Dua garis <strong>berpotongan</strong></td><td>Nilai $x$ dan $y$ yang spesifik</td></tr>
+          <tr><td>Tidak ada penyelesaian</td><td>$\frac{a_1}{a_2}=\frac{b_1}{b_2}\neq\frac{c_1}{c_2}$</td><td>Dua garis <strong>sejajar</strong></td><td>Kontradiksi: $0=k$, $k\neq 0$</td></tr>
+          <tr><td>Tak hingga penyelesaian</td><td>$\frac{a_1}{a_2}=\frac{b_1}{b_2}=\frac{c_1}{c_2}$</td><td>Dua garis <strong>berimpit</strong></td><td>Identitas: $0=0$</td></tr>
         </tbody>
       </table>
     </div>
@@ -837,9 +990,9 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <table>
         <thead><tr><th>No.</th><th>Langkah</th><th>Penjelasan</th></tr></thead>
         <tbody>
-          <tr><td>1</td><td><strong>Eliminasi Tahap I</strong></td><td>Pilih satu variabel; eliminasi pada dua pasang persamaan berbeda &#8594; hasilkan SPLDV</td></tr>
-          <tr><td>2</td><td><strong>Selesaikan SPLDV</strong></td><td>Eliminasi, substitusi, atau campuran</td></tr>
-          <tr><td>3</td><td><strong>Substitusi Akhir</strong></td><td>Masukkan dua nilai yang ditemukan ke salah satu persamaan awal</td></tr>
+          <tr><td>1</td><td><strong>Eliminasi Tahap I</strong></td><td>Pilih satu variabel untuk dihilangkan. Lakukan eliminasi pada <strong>dua pasang</strong> persamaan berbeda &#8594; hasilkan SPLDV (dua persamaan, dua variabel)</td></tr>
+          <tr><td>2</td><td><strong>Selesaikan SPLDV</strong></td><td>Gunakan eliminasi, substitusi, atau campuran untuk mencari dua nilai variabel</td></tr>
+          <tr><td>3</td><td><strong>Substitusi Akhir</strong></td><td>Masukkan dua nilai yang sudah ditemukan ke salah satu persamaan awal untuk mendapatkan variabel ketiga</td></tr>
           <tr><td>4</td><td><strong>Verifikasi</strong></td><td>Cek ketiga nilai ke semua persamaan awal</td></tr>
         </tbody>
       </table>
@@ -850,9 +1003,9 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
       <table>
         <thead><tr><th>Kondisi</th><th>Indikator Aljabar</th><th>Keterangan</th></tr></thead>
         <tbody>
-          <tr><td>Tepat satu penyelesaian</td><td>Eliminasi menghasilkan nilai $x,y,z$ spesifik</td><td>Sistem konsisten dan bebas</td></tr>
-          <tr><td>Tidak ada penyelesaian</td><td>Eliminasi menghasilkan $0=k$, $k\neq 0$</td><td>Sistem inkonsisten; ada kontradiksi</td></tr>
-          <tr><td>Tak hingga penyelesaian</td><td>Eliminasi menghasilkan $0=0$</td><td>Sistem konsisten bergantung</td></tr>
+          <tr><td>Tepat satu penyelesaian</td><td>Proses eliminasi menghasilkan nilai $x$, $y$, $z$ yang spesifik</td><td>Sistem konsisten dan bebas</td></tr>
+          <tr><td>Tidak ada penyelesaian</td><td>Eliminasi menghasilkan $0=k$, $k\neq 0$</td><td>Sistem inkonsisten; ada kontradiksi antar persamaan</td></tr>
+          <tr><td>Tak hingga penyelesaian</td><td>Eliminasi menghasilkan $0=0$</td><td>Sistem konsisten bergantung; satu persamaan adalah kombinasi linear yang lain</td></tr>
         </tbody>
       </table>
     </div>
@@ -860,9 +1013,9 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
     <h3 class="subsection-title">6. Teknik Substitusi Variabel (Bentuk Tidak Standar)</h3>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Bentuk Asli</th><th>Substitusi</th><th>Hasil</th></tr></thead>
+        <thead><tr><th>Bentuk Asli</th><th>Substitusi</th><th>Contoh</th></tr></thead>
         <tbody>
-          <tr><td>$\frac{a}{x}+\frac{b}{y}=c$</td><td>$u=\frac{1}{x}$, $v=\frac{1}{y}$</td><td>$au+bv=c$ (menjadi linear)</td></tr>
+          <tr><td>$\frac{a}{x}+\frac{b}{y}=c$</td><td>$u=\frac{1}{x}$, $v=\frac{1}{y}$</td><td>Sistem menjadi $au+bv=c$ yang linear</td></tr>
           <tr><td>$\frac{a}{x-p}+\frac{b}{y-q}=c$</td><td>$u=\frac{1}{x-p}$, $v=\frac{1}{y-q}$</td><td>Pergeseran sebelum substitusi variabel baru</td></tr>
         </tbody>
       </table>
@@ -875,8 +1028,8 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
         <tbody>
           <tr><td>1</td><td><strong>Tetapkan variabel</strong></td><td>Tentukan simbol untuk setiap besaran yang belum diketahui</td></tr>
           <tr><td>2</td><td><strong>Buat model</strong></td><td>Terjemahkan informasi soal menjadi sistem persamaan linear</td></tr>
-          <tr><td>3</td><td><strong>Selesaikan</strong></td><td>Pilih metode yang paling efisien</td></tr>
-          <tr><td>4</td><td><strong>Interpretasi</strong></td><td>Pastikan jawaban sesuai konteks (jumlah barang harus bilangan bulat positif)</td></tr>
+          <tr><td>3</td><td><strong>Selesaikan</strong></td><td>Pilih metode yang paling efisien sesuai bentuk koefisien</td></tr>
+          <tr><td>4</td><td><strong>Interpretasi</strong></td><td>Pastikan jawaban sesuai konteks (misal: jumlah barang harus bilangan bulat positif)</td></tr>
           <tr><td>5</td><td><strong>Verifikasi</strong></td><td>Substitusikan kembali ke persamaan asal untuk memeriksa kebenaran</td></tr>
         </tbody>
       </table>
@@ -1019,7 +1172,7 @@ function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── 1. BOX RUMUS \u2192 accordion ──
+  // ── 1. BOX RUMUS → accordion ──
   document.querySelectorAll('.box.box-rumus').forEach((box) => {
     const labelEl  = box.querySelector('.box-label');
     const titleTxt = labelEl ? labelEl.textContent.replace(/^[\u2022\s]+/, '').trim() : 'Rumus';
@@ -1046,7 +1199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     box.replaceWith(wrap);
   });
 
-  // ── 2. BOX CONTOH \u2192 accordion ──
+  // ── 2. BOX CONTOH → accordion ──
   let counter = 0;
   document.querySelectorAll('.box.box-contoh').forEach(box => {
     counter++;
@@ -1122,7 +1275,7 @@ document.addEventListener('DOMContentLoaded', () => {
     wraps[0].before(tw);
   });
 
-  // ── 4. SOAL LATIHAN \u2192 accordion kunci jawaban ──
+  // ── 4. SOAL LATIHAN → accordion kunci jawaban ──
   const jawabanData = {
     0: [
       { jawaban: `$\\text{HP} = \\{4\\}$<br><small>$7x-3x=11+5 \\Rightarrow 4x=16 \\Rightarrow x=4$</small>` },
