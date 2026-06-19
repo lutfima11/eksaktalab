@@ -121,6 +121,63 @@ th mjx-container svg * { fill: #fff !important; }
     <p>Kata <em>linear</em> berasal dari bahasa Latin <em>linea</em>, yang berarti <strong>garis</strong>. Secara sederhana, fungsi linear adalah <strong>aturan yang menghubungkan dua besaran dengan kecepatan perubahan yang selalu sama</strong>, sehingga jika digambar, hasilnya selalu berupa garis lurus.</p>
 
     <h3 class="subsection-title">Ide Dasar: Perubahan yang Tetap</h3>
+    <div class="grafik-wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" style="max-width:400px; background-color:transparent;">
+    <defs>
+      <style>
+        /* MODE TERANG (DEFAULT) */
+        .intro-axis { stroke: #1E293B; stroke-width: 2; }
+        .intro-arrow { fill: #1E293B; }
+        .intro-grid { stroke: #E2E8F0; stroke-width: 1; }
+        .intro-line { stroke: #3B82F6; stroke-width: 3.5; stroke-linecap: round; }
+        .intro-text { fill: #0F172A; font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+        .intro-math { fill: #0F172A; font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
+        .intro-accent { fill: #EF4444; stroke: #EF4444; stroke-width: 1.5; }
+        
+        /* MODE GELAP (DARK MODE) */
+        @media (prefers-color-scheme: dark) {
+          .intro-axis { stroke: #94A3B8; }
+          .intro-arrow { fill: #94A3B8; }
+          .intro-grid { stroke: #334155; }
+          .intro-line { stroke: #60A5FA; }
+          .intro-text { fill: #F1F5F9; }
+          .intro-math { fill: #F1F5F9; }
+          .intro-accent { fill: #F87171; stroke: #F87171; }
+        }
+      </style>
+
+      <marker id="intro-arrow-head" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 2 L 8 5 L 0 8 z" class="intro-arrow" />
+      </marker>
+    </defs>
+
+    <line x1="50" y1="120" x2="450" y2="120" class="intro-grid" />
+    <line x1="50" y1="210" x2="450" y2="210" class="intro-grid" />
+    <line x1="50" y1="300" x2="450" y2="300" class="intro-grid" />
+    <line x1="140" y1="50" x2="140" y2="350" class="intro-grid" />
+    <line x1="240" y1="50" x2="240" y2="350" class="intro-grid" />
+    <line x1="340" y1="50" x2="340" y2="350" class="intro-grid" />
+
+    <line x1="50" y1="300" x2="460" y2="300" class="intro-axis" marker-end="url(#intro-arrow-head)" />
+    <line x1="140" y1="350" x2="140" y2="40" class="intro-axis" marker-end="url(#intro-arrow-head)" />
+    
+    <text x="475" y="306" class="intro-math" font-size="22">x</text>
+    <text x="133" y="28" class="intro-math" font-size="22">y</text>
+    <text x="118" y="322" class="intro-math" font-size="18">O</text>
+
+    <line x1="70" y1="350" x2="420" y2="70" class="intro-line" />
+
+    <g opacity="0.85">
+      <line x1="240" y1="214" x2="340" y2="214" class="intro-accent" stroke-dasharray="4,4" />
+      <line x1="340" y1="214" x2="340" y2="134" class="intro-accent" stroke-dasharray="4,4" />
+      <circle cx="240" cy="214" r="4" class="intro-accent" />
+      <circle cx="340" cy="134" r="4" class="intro-accent" />
+    </g>
+
+    <rect x="250" y="65" width="160" height="35" rx="6" fill="none" />
+    <text x="210" y="85" class="intro-text" font-size="18">f(x) = mx + c</text>
+  </svg>
+</div>
 
     <p>Perhatikan dua besaran yang saling berhubungan, misalnya waktu dan posisi, atau bulan dan jumlah tabungan. Selama setiap kenaikan satu unit pada besaran pertama selalu diikuti kenaikan (atau penurunan) yang <strong>sama besar</strong> pada besaran kedua, hubungan itu disebut linear:</p>
 
