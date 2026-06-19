@@ -102,6 +102,80 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
     </div>
   </div>
 
+<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Saat Satu Persamaan Tidak Cukup</h2>
+
+    <p>Bayangkan kamu membeli 3 buku dan 2 pensil dengan total Rp17.000, lalu temanmu membeli 2 buku dan 5 pensil dari toko yang sama dengan total Rp19.000. Bisakah kamu menemukan harga sebuah buku dan sebuah pensil? Satu persamaan saja tidak cukup — kamu memerlukan dua persamaan yang bekerja bersama. Inilah inti dari <strong>sistem persamaan linear</strong>: menggunakan beberapa kondisi sekaligus untuk menyempitkan kemungkinan hingga ditemukan jawaban yang pasti.</p>
+
+    <p>Kata <em>sistem</em> berarti sekumpulan persamaan yang harus dipenuhi secara <strong>bersamaan</strong>. Selama setiap persamaan hanya memuat variabel berpangkat satu, sistem itu disebut sistem persamaan linear, dan matematika menyediakan cara-cara yang elegan untuk menyelesaikannya.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Dua Syarat, Satu Titik Temu</h3>
+
+    <p>Setiap persamaan linear dengan dua variabel merepresentasikan sebuah <strong>garis lurus</strong> di bidang koordinat. Ketika dua persamaan diberikan sekaligus, kita memiliki dua garis. Penyelesaian sistem adalah pasangan $(x, y)$ yang memenuhi <em>keduanya</em> — secara geometris, ini adalah <strong>titik potong</strong> kedua garis tersebut.</p>
+
+    <div class="grafik-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" width="100%" style="max-width:460px; background-color:transparent;">
+        <defs>
+          <style>
+            .spl-axis { stroke: var(--text-main, #334155); }
+            .spl-arrow { fill: var(--text-main, #334155); }
+            .spl-label { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; font-style: italic; font-size: 20px; }
+            .spl-sublabel { fill: var(--text-3, #64748b); font-family: Inter, sans-serif; font-style: normal; font-size: 14px; }
+            .spl-line1 { stroke: #2563EB; }
+            .spl-line2 { stroke: #DC2626; }
+            .spl-dot { fill: #0f172a; }
+            .spl-dash { stroke: #94a3b8; }
+            [data-theme="dark"] .spl-dot { fill: #f1f5f9; }
+            [data-theme="dark"] .spl-dash { stroke: #475569; }
+            [data-theme="dark"] .spl-line1 { stroke: #60A5FA; }
+            [data-theme="dark"] .spl-line2 { stroke: #F87171; }
+          </style>
+          <marker id="spl-arrowhead" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="spl-arrow"/>
+          </marker>
+        </defs>
+
+        <!-- Axes -->
+        <line x1="40" y1="340" x2="480" y2="340" class="spl-axis" stroke-width="2.2" marker-start="url(#spl-arrowhead)" marker-end="url(#spl-arrowhead)"/>
+        <line x1="140" y1="390" x2="140" y2="30" class="spl-axis" stroke-width="2.2" marker-start="url(#spl-arrowhead)" marker-end="url(#spl-arrowhead)"/>
+        <text x="490" y="345" class="spl-label">x</text>
+        <text x="130" y="22" class="spl-label">y</text>
+        <text x="115" y="360" class="spl-label">O</text>
+
+        <!-- Garis 1: x + 2y = 8 → y = (8-x)/2 → at x=0: y=4→(140,180); at x=7: y=0.5→(420,320) -->
+        <line x1="140" y1="180" x2="450" y2="325" class="spl-line1" stroke-width="2.8" marker-start="url(#spl-arrowhead)" marker-end="url(#spl-arrowhead)"/>
+        <text x="148" y="168" style="fill:#2563EB; font-family:Inter,sans-serif; font-size:15px; font-style:normal;">$x + 2y = 8$</text>
+
+        <!-- Garis 2: 3x - y = 2 → y = 3x - 2 → at x=0.8: y=0.4→(220,327); at x=2.5: y=5.5→(360,60) -->
+        <line x1="218" y1="327" x2="360" y2="57" class="spl-line2" stroke-width="2.8" marker-start="url(#spl-arrowhead)" marker-end="url(#spl-arrowhead)"/>
+        <text x="365" y="50" style="fill:#DC2626; font-family:Inter,sans-serif; font-size:15px; font-style:normal;">$3x - y = 2$</text>
+
+        <!-- Intersection: x=12/7≈1.71, y=22/7≈3.14 → pixel: (140+1.71*70, 340-3.14*70) = (260, 120) -->
+        <line x1="260" y1="340" x2="260" y2="120" class="spl-dash" stroke-width="1.4" stroke-dasharray="5,4"/>
+        <line x1="140" y1="120" x2="260" y2="120" class="spl-dash" stroke-width="1.4" stroke-dasharray="5,4"/>
+        <circle cx="260" cy="120" r="6" class="spl-dot"/>
+        <text x="268" y="112" style="fill:var(--text-main,#334155); font-family:Inter,sans-serif; font-size:14px; font-style:normal; font-weight:600;">$(x_0,\,y_0)$</text>
+        <text x="253" y="356" class="spl-sublabel">$x_0$</text>
+        <text x="98" y="124" class="spl-sublabel">$y_0$</text>
+
+        <!-- Legend note -->
+        <text x="310" y="240" class="spl-sublabel" style="font-size:12px;">Setiap garis = satu kondisi</text>
+        <text x="310" y="258" class="spl-sublabel" style="font-size:12px;">Titik potong = solusi</text>
+        <text x="310" y="276" class="spl-sublabel" style="font-size:12px;">yang memenuhi keduanya</text>
+      </svg>
+    </div>
+
+    <p>Intuisi visual ini penting: sistem yang memiliki <strong>tepat satu solusi</strong> berarti kedua garisnya berpotongan di satu titik; sistem yang <strong>tidak memiliki solusi</strong> berarti kedua garisnya sejajar; dan sistem yang memiliki <strong>tak hingga solusi</strong> berarti kedua garisnya berimpit.</p>
+
+    <h3 class="subsection-title">Sejarah Singkat</h3>
+
+    <p>Gagasan menyelesaikan beberapa persamaan sekaligus sudah ada sejak ribuan tahun lalu. Naskah matematika Tiongkok kuno <strong><em>Jiuzhang Suanshu</em></strong> (<em>Sembilan Bab Seni Matematika</em>, sekitar abad ke-1 SM) memuat metode penyusunan koefisien dalam bentuk matriks kolom yang diselesaikan dengan cara yang sangat mirip dengan eliminasi modern.</p>
+
+    <p>Di dunia Islam, <strong>Al-Khawarizmi</strong> (abad ke-9 M) dalam karyanya <em>Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala</em> meletakkan dasar aljabar sistematis yang mencakup teknik manipulasi persamaan. Nama karyanya itulah yang kemudian melahirkan kata "aljabar" (<em>al-jabr</em>) yang kita gunakan hingga sekarang.</p>
+
+    <p>Notasi dan metode formal yang kita pelajari hari ini — eliminasi, substitusi, dan representasi grafik — disempurnakan oleh para matematikawan Eropa pada abad ke-17 hingga ke-19, dan kemudian berkembang menjadi bidang <strong>aljabar linear</strong> yang menjadi fondasi ilmu komputer, teknik, dan ekonomi modern.</p>
+
   <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
@@ -113,6 +187,7 @@ th mjx-container svg, th mjx-container svg * { fill: #fff !important; }
     </ul>
   </div>
 
+  </section>
 
   <!-- ═══ A. PLSV ═══════════════════════════════════════════════════ -->
   <section class="section" id="bagian-a">
