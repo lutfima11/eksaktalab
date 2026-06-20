@@ -1,0 +1,46 @@
+/* ── PERSAMAAN LINEAR PAGE ── */
+.axis-line-fixed { stroke: var(--text-main, #334155); stroke-width: 2.5; stroke-linecap: round; }
+.arrow-path-fixed { fill: var(--text-main, #334155); }
+.label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
+.label-italic { font-style: italic; }
+.line-red-fixed { stroke: #b91c1c; stroke-width: 3.5; stroke-linecap: round; }
+.line-blue-fixed { stroke: #1d4ed8; stroke-width: 3.5; stroke-linecap: round; }
+.guide-line-fixed { stroke: #cbd5e1; stroke-width: 1.5; stroke-dasharray: 5 5; }
+.intersection-dot-fixed { fill: #000000; }
+.text-note-fixed { fill: #64748b; font-family: Arial, Helvetica, sans-serif; font-size: 20px; }
+.label-grey-fixed { fill: #94a3b8; font-family: Cambria, 'Times New Roman', serif; font-size: 22px; font-style: italic; }
+@media (prefers-color-scheme: dark) {
+.line-red-fixed { stroke: #ef4444; }
+.line-blue-fixed { stroke: #3b82f6; }
+.guide-line-fixed { stroke: #475569; }
+.intersection-dot-fixed { fill: #ffffff; }
+.text-note-fixed { fill: #94a3b8; }
+}
+[data-theme="dark"] .line-red-fixed { stroke: #ef4444; }
+[data-theme="dark"] .line-blue-fixed { stroke: #3b82f6; }
+[data-theme="dark"] .guide-line-fixed { stroke: #475569; }
+[data-theme="dark"] .intersection-dot-fixed { fill: #ffffff; }
+[data-theme="dark"] .text-note-fixed { fill: #94a3b8; }
+/* Menggunakan warna utama dari sistem template sebelumnya */
+.rect-edge { stroke: var(--text-main, #334155); stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.text-main-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
+.text-bold { font-weight: bold; }
+.text-italic { font-style: italic; }
+/* Otomatis Dark Mode */
+.rect-edge { stroke: #cbd5e1; }
+[data-theme="dark"] .rect-edge { stroke: #cbd5e1; }
+.svg-grid-g10 { stroke: #cbd5e1; stroke-width: 0.8; }
+[data-theme="dark"] .svg-grid-g10 { stroke: #334155; }
+@media (prefers-color-scheme: dark) { .svg-grid-g10 { stroke: #334155; } }
+.svg-axis-g10 { stroke: var(--text-main, #334155); stroke-width: 1.8; }
+.svg-arrow-g10 { fill: var(--text-main, #334155); }
+.svg-label-g10 { fill: var(--text-main, #334155); }
+.svg-tick-g10  { fill: var(--text-2, #64748b); }
+.tri-edge { stroke: var(--text-main,#334155); stroke-width:2.5; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.tri-fill { fill: var(--accent-soft,rgba(14,165,233,.08)); stroke: var(--text-main,#334155); stroke-width:2.5; }
+.tri-label { fill: var(--text-main,#334155); font-family: Cambria,'Times New Roman',serif; font-size:16px; font-style:italic; }
+.tri-val   { fill: var(--accent,#0ea5e9); font-family: Arial,sans-serif; font-size:13px; font-weight:600; }
+.tri-note  { fill: var(--text-2,#64748b); font-family: Arial,sans-serif; font-size:12px; }
+[data-theme="dark"] .tri-fill   { fill: rgba(56,189,248,.1); stroke:#94a3b8; }
+[data-theme="dark"] .tri-edge   { stroke:#94a3b8; }
+[data-theme="dark"] .tri-label  { fill:#e2e8f0; }

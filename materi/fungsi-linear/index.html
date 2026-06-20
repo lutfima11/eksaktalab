@@ -4,12 +4,16 @@
 <script src="../../assets/js/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fungsi Linear – EksaktaLab</title>
+<title>Fungsi Linear — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
 <meta name="description" content="Materi lengkap Fungsi Linear SMA: pengertian, gradien, menggambar grafik, persamaan garis lurus, kedudukan dua garis, dan aplikasi kehidupan. Dilengkapi 34 contoh soal dan pembahasan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/materi.css">
 <link rel="stylesheet" href="../../assets/css/footer.css">
+<link rel="stylesheet" href="../../assets/css/materi-fungsi-linear.css">
 <script>
 window.MathJax = {
   tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
@@ -20,13 +24,15 @@ window.MathJax = {
 <link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/fungsi-linear/">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/fungsi-linear/">
-  <meta property="og:title" content="Fungsi Linear – EksaktaLab">
+  <meta property="og:title" content="Fungsi Linear — EksaktaLab">
   <meta property="og:description" content="Materi lengkap Fungsi Linear SMA: pengertian, gradien, menggambar grafik, persamaan garis lurus, kedudukan dua garis, dan aplikasi kehidupan. Dilengkapi 34 contoh soal dan pembahasan.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
   <meta property="og:site_name" content="EksaktaLab">
   <meta property="og:locale" content="id_ID">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fungsi Linear – EksaktaLab">
+  <meta name="twitter:title" content="Fungsi Linear — EksaktaLab">
   <meta name="twitter:description" content="Materi lengkap Fungsi Linear SMA: pengertian, gradien, menggambar grafik, persamaan garis lurus, kedudukan dua garis, dan aplikasi kehidupan.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Fungsi Linear","url":"https://lutfima11.github.io/eksaktalab/materi/fungsi-linear/","description":"Materi lengkap Fungsi Linear SMA: pengertian, gradien, menggambar grafik, persamaan garis lurus, kedudukan dua garis, dan aplikasi kehidupan.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Aljabar 0026 Fungsi Dasar"},{"@type":"ListItem","position":4,"name":"Fungsi Linear","item":"https://lutfima11.github.io/eksaktalab/materi/fungsi-linear/"}]}}</script>
 </head>
 <body>
@@ -115,22 +121,6 @@ window.MathJax = {
    <div class="grafik-wrap">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="100%" style="max-width:420px; background-color:transparent;">
     <defs>
-      <style>
-        .axis-line-fixed { stroke: var(--text-main, #334155); }
-        .arrow-path-fixed { fill: var(--text-main, #334155); }
-        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
-        .line-blue-fixed { stroke: #2563EB; }
-        .arrow-blue-fixed { fill: #2563EB; }
-        
-        /* Dukungan Dark Mode otomatis */
-        @media (prefers-color-scheme: dark) {
-          .line-blue-fixed { stroke: #60A5FA; }
-          .arrow-blue-fixed { fill: #60A5FA; }
-        }
-        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
-        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
-      </style>
-
       <marker id="arrow-fixed-black" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
         <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-path-fixed" />
       </marker>
@@ -292,29 +282,6 @@ window.MathJax = {
     <div class="grafik-wrap">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="100%" style="max-width:420px; background-color:transparent;">
     <defs>
-      <style>
-        .axis-line-fixed { stroke: #475569; }
-        .arrow-path-fixed { fill: #475569; }
-        .label-black-fixed { fill: #334155; font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
-        .label-red-fixed { fill: #DC2626; font-family: Cambria, 'Times New Roman', serif; font-style: italic; }
-        .label-sub-fixed { font-size: 12px; }
-        .line-blue-fixed { stroke: #2563EB; }
-        .arrow-blue-fixed { fill: #2563EB; }
-        .line-red-fixed { stroke: #DC2626; }
-        .line-pink-fixed { stroke: #F87171; opacity: 0.6; }
-        .point-dot-fixed { fill: #1E293B; stroke: #475569; stroke-width: 1; }
-        
-        /* Teknik override jika sistem tema EksaktaLab menggunakan atribut data-theme */
-        [data-theme="dark"] .axis-line-fixed { stroke: #CBD5E1; }
-        [data-theme="dark"] .arrow-path-fixed { fill: #CBD5E1; }
-        [data-theme="dark"] .label-black-fixed { fill: #F1F5F9; }
-        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
-        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
-        [data-theme="dark"] .label-red-fixed { fill: #F87171; }
-        [data-theme="dark"] .point-dot-fixed { fill: #FFFFFF; stroke: #FFFFFF; }
-      </style>
-
       <marker id="arrow-fixed-black" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
         <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-path-fixed" />
       </marker>

@@ -5,6 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EksaktaLab — Laboratorium Belajar Matematika SMA</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
 <meta name="description" content="Platform belajar matematika SMA terlengkap. Materi, contoh soal, dan latihan untuk 37 topik kurikulum nasional.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -19,12 +22,14 @@
   <meta property="og:url" content="https://lutfima11.github.io/eksaktalab/">
   <meta property="og:title" content="EksaktaLab — Laboratorium Belajar Matematika SMA">
   <meta property="og:description" content="Platform belajar matematika SMA terlengkap. Materi, contoh soal, dan latihan untuk 37 topik kurikulum nasional.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
   <meta property="og:site_name" content="EksaktaLab">
   <meta property="og:locale" content="id_ID">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="EksaktaLab — Laboratorium Belajar Matematika SMA">
   <meta name="twitter:description" content="Platform belajar matematika SMA terlengkap. Materi, contoh soal, dan latihan untuk 37 topik kurikulum nasional.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
   <!-- Schema.org -->
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/","description":"Platform belajar matematika SMA terlengkap","inLanguage":"id"}</script>
 </head>
@@ -238,7 +243,7 @@
           <div class="card-info"><div class="card-name">Trigonometri Analitik</div><div class="card-meta">Trigonometri</div></div>
           <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </a>
-        <a class="materi-card" href="materi/grafik-fungsi-trigonometri/">
+        <a class="materi-card available" href="materi/grafik-fungsi-trigonometri/">
           <span class="card-num">22</span>
           <div class="card-info"><div class="card-name">Grafik Fungsi Trigonometri <span class="card-badge">Tersedia</span></div><div class="card-meta">Trigonometri</div></div>
           <svg class="card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -337,119 +342,113 @@
   </div><!-- /materi-view -->
 
   <!-- ═══ VIEW: WORKSHEET ════════════════════════════ -->
-  <div class="view" id="worksheet-view">
+    <div class="view" id="worksheet-view">
     <div class="section-head">
       <h2>Worksheet</h2>
       <p>Unduh lembar kerja PDF per materi untuk latihan mandiri atau digunakan di kelas.</p>
     </div>
     <div class="chapter-group">
-      <div class="chapter-label"><span class="chapter-tag">BAB A</span><span class="chapter-title-text">Bilangan</span></div>
+      <div class="chapter-label"><span class="chapter-tag">FASE 1</span><span class="chapter-title-text">Bilangan &amp; Bernalar</span></div>
       <div class="file-list">
-        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Eksponen &amp; Logaritma</div><div class="file-desc">14 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Barisan &amp; Deret</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Logika Matematika</div><div class="file-desc">10 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Eksponen</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Logaritma</div><div class="file-desc">10 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Barisan & Deret</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
       </div>
     </div>
     <div class="chapter-group">
-      <div class="chapter-label"><span class="chapter-tag">BAB B</span><span class="chapter-title-text">Aljabar &amp; Fungsi</span></div>
+      <div class="chapter-label"><span class="chapter-tag">FASE 2</span><span class="chapter-title-text">Aljabar &amp; Fungsi</span></div>
       <div class="file-list">
+        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Fungsi, Komposisi & Invers</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Sistem Persamaan Linier</div><div class="file-desc">14 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Fungsi Linier</div><div class="file-desc">15 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Sistem Pertidaksamaan Linier</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Persamaan Kuadrat</div><div class="file-desc">14 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Fungsi, Komposisi &amp; Invers</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Persamaan Nilai Mutlak</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Fungsi Kuadrat</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Matriks</div><div class="file-desc">10 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Program Linier</div><div class="file-desc">10 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
       </div>
     </div>
     <div class="chapter-group">
-      <div class="chapter-label"><span class="chapter-tag">BAB C</span><span class="chapter-title-text">Geometri</span></div>
-      <div class="file-list">
-        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Transformasi Geometri</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Vektor</div><div class="file-desc">10 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
-      </div>
-    </div>
-    <div class="chapter-group">
-      <div class="chapter-label"><span class="chapter-tag">BAB D</span><span class="chapter-title-text">Trigonometri</span></div>
+      <div class="chapter-label"><span class="chapter-tag">FASE 3</span><span class="chapter-title-text">Trigonometri</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Trigonometri Dasar</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Trigonometri Analitik</div><div class="file-desc">10 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Grafik Fungsi Trigonometri</div><div class="file-desc">10 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
       </div>
     </div>
     <div class="chapter-group">
-      <div class="chapter-label"><span class="chapter-tag">BAB E</span><span class="chapter-title-text">Kalkulus</span></div>
+      <div class="chapter-label"><span class="chapter-tag">FASE 4</span><span class="chapter-title-text">Geometri</span></div>
+      <div class="file-list">
+        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Transformasi Geometri</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
+      </div>
+    </div>
+    <div class="chapter-group">
+      <div class="chapter-label"><span class="chapter-tag">FASE 5</span><span class="chapter-title-text">Kalkulus</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Limit Fungsi</div><div class="file-desc">10 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Turunan Fungsi</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Integral</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
       </div>
     </div>
     <div class="chapter-group">
-      <div class="chapter-label"><span class="chapter-tag">BAB F</span><span class="chapter-title-text">Statistika &amp; Peluang</span></div>
+      <div class="chapter-label"><span class="chapter-tag">FASE 6</span><span class="chapter-title-text">Statistika &amp; Peluang</span></div>
       <div class="file-list">
-        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Statistika Deskriptif</div><div class="file-desc">10 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Kombinatorika &amp; Peluang</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Kombinatorika</div><div class="file-desc">12 soal</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
       </div>
     </div>
   </div>
 
-  <!-- ═══ VIEW: LATIHAN ══════════════════════════════ -->
   <div class="view" id="latihan-view">
     <div class="section-head">
       <h2>Latihan Soal</h2>
       <p>5 paket soal per materi. Kerjakan langsung di browser, dapat nilai dan pembahasan instan.</p>
     </div>
     <div class="chapter-group">
-      <div class="chapter-label"><span class="chapter-tag">BAB A</span><span class="chapter-title-text">Bilangan</span></div>
+      <div class="chapter-label"><span class="chapter-tag">FASE 1</span><span class="chapter-title-text">Bilangan &amp; Bernalar</span></div>
       <div class="file-list">
-        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Eksponen &amp; Logaritma</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Barisan &amp; Deret</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Logika Matematika</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Eksponen</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Logaritma</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Barisan & Deret</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
       </div>
     </div>
     <div class="chapter-group">
-      <div class="chapter-label"><span class="chapter-tag">BAB B</span><span class="chapter-title-text">Aljabar &amp; Fungsi</span></div>
+      <div class="chapter-label"><span class="chapter-tag">FASE 2</span><span class="chapter-title-text">Aljabar &amp; Fungsi</span></div>
       <div class="file-list">
+        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Fungsi, Komposisi & Invers</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Sistem Persamaan Linier</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Fungsi Linier</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Sistem Pertidaksamaan Linier</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Persamaan Kuadrat</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Fungsi, Komposisi &amp; Invers</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Persamaan Nilai Mutlak</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Fungsi Kuadrat</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Matriks</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Program Linier</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
       </div>
     </div>
     <div class="chapter-group">
-      <div class="chapter-label"><span class="chapter-tag">BAB C</span><span class="chapter-title-text">Geometri</span></div>
-      <div class="file-list">
-        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Transformasi Geometri</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Vektor</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
-      </div>
-    </div>
-    <div class="chapter-group">
-      <div class="chapter-label"><span class="chapter-tag">BAB D</span><span class="chapter-title-text">Trigonometri</span></div>
+      <div class="chapter-label"><span class="chapter-tag">FASE 3</span><span class="chapter-title-text">Trigonometri</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Trigonometri Dasar</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Trigonometri Analitik</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Grafik Fungsi Trigonometri</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
       </div>
     </div>
     <div class="chapter-group">
-      <div class="chapter-label"><span class="chapter-tag">BAB E</span><span class="chapter-title-text">Kalkulus</span></div>
+      <div class="chapter-label"><span class="chapter-tag">FASE 4</span><span class="chapter-title-text">Geometri</span></div>
+      <div class="file-list">
+        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Transformasi Geometri</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
+      </div>
+    </div>
+    <div class="chapter-group">
+      <div class="chapter-label"><span class="chapter-tag">FASE 5</span><span class="chapter-title-text">Kalkulus</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Limit Fungsi</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Turunan Fungsi</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Integral</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
       </div>
     </div>
     <div class="chapter-group">
-      <div class="chapter-label"><span class="chapter-tag">BAB F</span><span class="chapter-title-text">Statistika &amp; Peluang</span></div>
+      <div class="chapter-label"><span class="chapter-tag">FASE 6</span><span class="chapter-title-text">Statistika &amp; Peluang</span></div>
       <div class="file-list">
-        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Statistika Deskriptif</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
-        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Kombinatorika &amp; Peluang</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
+        <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Kombinatorika</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
       </div>
     </div>
   </div>
 
-  <!-- ═══ VIEW: KAPITA ═══════════════════════════════ -->
-  <div class="view" id="kapita-view">
+<div class="view" id="kapita-view">
     <div class="section-head">
       <h2>Kapita Selekta</h2>
       <p>Materi pengayaan dan eksplorasi lintas topik. Setiap soal dilengkapi penyelesaian langkah demi langkah.</p>

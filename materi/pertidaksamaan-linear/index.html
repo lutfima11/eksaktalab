@@ -4,7 +4,10 @@
 <script src="../../assets/js/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pertidaksamaan Linear – EksaktaLab</title>
+<title>Pertidaksamaan Linear — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
 <meta name="description" content="Materi lengkap Pertidaksamaan Linear SMA: pengertian notasi, pertidaksamaan satu variabel, dua variabel, dan sistem pertidaksamaan. Dilengkapi 28 contoh soal dan pembahasan lengkap.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -20,13 +23,15 @@ window.MathJax = {
 <link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/pertidaksamaan-linear/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/pertidaksamaan-linear/">
-<meta property="og:title" content="Pertidaksamaan Linear – EksaktaLab">
+<meta property="og:title" content="Pertidaksamaan Linear — EksaktaLab">
 <meta property="og:description" content="Materi lengkap Pertidaksamaan Linear SMA: notasi, satu variabel, dua variabel, dan sistem pertidaksamaan. Dilengkapi 28 contoh soal dan pembahasan.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
 <meta property="og:site_name" content="EksaktaLab">
 <meta property="og:locale" content="id_ID">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pertidaksamaan Linear – EksaktaLab">
+<meta name="twitter:title" content="Pertidaksamaan Linear — EksaktaLab">
 <meta name="twitter:description" content="Materi lengkap Pertidaksamaan Linear SMA: notasi, satu variabel, dua variabel, dan sistem pertidaksamaan.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Pertidaksamaan Linear","url":"https://lutfima11.github.io/eksaktalab/materi/pertidaksamaan-linear/","description":"Materi lengkap Pertidaksamaan Linear SMA: pengertian notasi, pertidaksamaan satu variabel, dua variabel, dan sistem pertidaksamaan.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Aljabar &amp; Fungsi"},{"@type":"ListItem","position":4,"name":"Pertidaksamaan Linear","item":"https://lutfima11.github.io/eksaktalab/materi/pertidaksamaan-linear/"}]}}</script>
 </head>
 <body>
@@ -1263,10 +1268,35 @@ window.MathJax = {
   </section>
 
   <!-- ACTION FOOTER -->
-  <div class="footer-nav">
-    <a class="nav-btn" href="../persamaan-linear/">← Persamaan Linear</a>
-    <a class="nav-btn" href="../fungsi-linear/">Fungsi Linear →</a>
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <div class="footer-nav">
+      <a class="nav-btn" href="../persamaan-linear/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Persamaan Linear
+      </a>
+      <a class="nav-btn" href="../fungsi-linear/">
+        Fungsi Linear
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <div class="footer-actions">
+      <a class="nav-btn primary" href="#">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="10" height="10" rx="2"/><line x1="5" y1="5" x2="9" y2="5"/><line x1="5" y1="7.5" x2="8" y2="7.5"/><line x1="5" y1="10" x2="7" y2="10"/></svg>
+        Kerjakan Latihan Soal Pertidaksamaan Linear
+        <span class="coming-soon">Segera</span>
+      </a>
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
   </div>
+
 
   <!-- SECTION KOMENTAR -->
   <div class="komentar-section">
@@ -1303,69 +1333,71 @@ window.MathJax = {
 </div><!-- /page-wrap -->
 
 <script>
-// TOC Dropdown
-function toggleTOC() {
-  document.getElementById('tocDropdown').classList.toggle('open');
-}
-function closeTOC() {
-  document.getElementById('tocDropdown').classList.remove('open');
-}
-document.addEventListener('click', e => {
-  if (!document.getElementById('tocDropdown').contains(e.target)) closeTOC();
-});
-
-// Scroll bar progress
+// ── Scroll progress + scroll-to-top ────────────────────────────────────
 window.addEventListener('scroll', () => {
-  const el = document.getElementById('scroll-bar');
-  if (el) {
-    const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
-    el.style.width = pct + '%';
-  }
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
   const btn = document.getElementById('scroll-top');
-  if (btn) btn.style.opacity = window.scrollY > 400 ? '1' : '0';
+  if (pct > 30) btn.classList.add('visible'); else btn.classList.remove('visible');
 });
 
-// Share
+// ── TOC Dropdown ───────────────────────────────────────────────────────────────
+function toggleTOC() { document.getElementById('tocDropdown').classList.toggle('open'); }
+function closeTOC()  { document.getElementById('tocDropdown').classList.remove('open'); }
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+
+// ── Bookmark ──────────────────────────────────────────────────────────────────
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ────────────────────────────────────────────────────────────────────────────────
 function shareMateri() {
   if (navigator.share) {
-    navigator.share({ title: 'Pertidaksamaan Linear – EksaktaLab', url: location.href });
+    navigator.share({ title: 'Pertidaksamaan Linear — EksaktaLab', text: 'Pelajari pertidaksamaan linear di EksaktaLab, lengkap dengan contoh soal dan pembahasan.', url: window.location.href });
   } else {
-    navigator.clipboard.writeText(location.href).then(() => alert('Link disalin!'));
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
   }
 }
 
-// ── SHARED HELPERS ────────────────────────
-const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
-  <polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>`;
+// ── SHARED HELPERS ──────────────────────────────────────────────────────────────────
+const chevronSVG = () => '<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11"><polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
 function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
   const doToggle = () => {
     const open = wrap.classList.toggle('open');
     header.setAttribute('aria-expanded', open);
     if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
-    if (open && window.MathJax && typesetEl) {
-      MathJax.typesetPromise([typesetEl]).catch(() => {});
-    }
+    if (open && window.MathJax && typesetEl) MathJax.typesetPromise([typesetEl]).catch(() => {});
   };
   header.addEventListener('click', doToggle);
-  header.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
-  });
+  header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); } });
 }
 
+// ── 1. BOX RUMUS → accordion ──────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-
-  // ── 1. BOX RUMUS → accordion hijau ───────
-  document.querySelectorAll('.box.box-rumus').forEach((box, i) => {
+  document.querySelectorAll('.box.box-rumus').forEach(box => {
     const labelEl  = box.querySelector('.box-label');
     const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
-
     let bodyHTML = '';
-    box.childNodes.forEach(n => {
-      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
-    });
-
+    box.childNodes.forEach(n => { if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || ''); });
     const wrap = document.createElement('div');
     wrap.className = 'rumus-wrap';
     wrap.innerHTML = `
@@ -1375,35 +1407,26 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="rumus-status">Lihat rumus</span>
         <span class="rumus-chevron">${chevronSVG()}</span>
       </div>
-      <div class="rumus-body">
-        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
-      </div>`;
-
-    const header    = wrap.querySelector('.rumus-header');
-    const statusEl  = wrap.querySelector('.rumus-status');
-    const bodyInner = wrap.querySelector('.rumus-body-inner');
-    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
-
+      <div class="rumus-body"><div class="rumus-body-inner">${bodyHTML.trim()}</div></div>`;
+    const header = wrap.querySelector('.rumus-header');
+    const status = wrap.querySelector('.rumus-status');
+    const inner  = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, status, wrap.querySelector('.rumus-body'), inner);
     box.replaceWith(wrap);
   });
 
-  // ── 2. BOX CONTOH → accordion navy/teal ──
+// ── 2. BOX CONTOH → accordion ───────────────────────────────────────────────────
   let counter = 0;
   document.querySelectorAll('.box.box-contoh').forEach(box => {
     counter++;
     const labelEl  = box.querySelector('.box-label');
     const numMatch = labelEl?.textContent.match(/\d+/);
     const num      = numMatch ? numMatch[0] : String(counter);
-
     let qHTML = '';
-    box.childNodes.forEach(n => {
-      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
-    });
-
-    const sib       = box.nextElementSibling;
-    const hasSolve  = sib?.classList.contains('penyelesaian');
+    box.childNodes.forEach(n => { if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || ''); });
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
     const solveHTML = hasSolve ? sib.innerHTML : '';
-
     const wrap = document.createElement('div');
     wrap.className = 'contoh-wrap';
     wrap.innerHTML = `
@@ -1414,49 +1437,36 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
       <div class="contoh-body">
         <div class="contoh-body-inner">
-          <div class="solve-header">
-            <span class="solve-dot"></span>
-            <span class="solve-title">Penyelesaian</span>
-          </div>
+          <div class="solve-header"><span class="solve-dot"></span><span class="solve-title">Penyelesaian</span></div>
           <div class="penyelesaian-inner">
             ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
           </div>
         </div>
       </div>`;
-
     const header = wrap.querySelector('.contoh-header');
     const pi     = wrap.querySelector('.penyelesaian-inner');
-
     const doToggle = () => {
       const open = wrap.classList.toggle('open');
       header.setAttribute('aria-expanded', open);
       if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
     };
     header.addEventListener('click', doToggle);
-    header.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
-    });
-
+    header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); } });
     box.replaceWith(wrap);
     if (hasSolve) sib.remove();
   });
 
-  // ── 3. Buka / Tutup Semua per section ────
+// ── 3. BUKA / TUTUP SEMUA per section ─────────────────────────────────────────────
   document.querySelectorAll('.section').forEach(sec => {
     const wraps = [...sec.querySelectorAll('.contoh-wrap')];
     if (!wraps.length) return;
     let allOpen = false;
-
     const tw  = document.createElement('div');
     tw.className = 'toggle-all-wrap';
     const btn = document.createElement('button');
     btn.className = 'btn-toggle-all';
-
-    const updateBtn = () => {
-      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
-    };
+    const updateBtn = () => { btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`; };
     updateBtn();
-
     btn.addEventListener('click', () => {
       allOpen = !allOpen;
       wraps.forEach(w => {
@@ -1468,15 +1478,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       updateBtn();
     });
-
     tw.appendChild(btn);
     wraps[0].before(tw);
   });
 
-});
-
-// Soal Latihan Accordion — kunci jawaban
-document.addEventListener('DOMContentLoaded', () => {
+// ── 4. SOAL LATIHAN → accordion kunci jawaban ─────────────────────────────────────────
   const jawabanData = {
     // Bagian B latihan
     0: [
@@ -1512,14 +1518,11 @@ document.addEventListener('DOMContentLoaded', () => {
     latihanIdx++;
     const list = box.querySelector('.soal-list');
     if (!list) return;
-
-    const items = [...list.querySelectorAll('li')];
+    const items   = [...list.querySelectorAll('li')];
     const newList = document.createElement('div');
     newList.className = 'soal-list-accordion';
-
     items.forEach((li, i) => {
-      const ans = answers[i] || {};
-      const jawaban = ans.jawaban || '';
+      const jawaban = answers[i]?.jawaban || '';
       const item = document.createElement('div');
       item.className = 'soal-item';
       item.innerHTML = `
@@ -1537,18 +1540,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const header = item.querySelector('.soal-item-header');
       const toggle = () => {
         const open = item.classList.toggle('open');
-        if (open && window.MathJax) {
-          MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
-        }
+        if (open && window.MathJax) MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(() => {});
       };
       header.addEventListener('click', toggle);
-      header.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
-      });
+      header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
       newList.appendChild(item);
     });
     list.replaceWith(newList);
   });
+
 });
 </script>
 

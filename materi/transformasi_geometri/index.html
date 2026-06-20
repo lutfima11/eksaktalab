@@ -4,7 +4,10 @@
 <script src="../../assets/js/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Transformasi Geometri – EksaktaLab</title>
+<title>Transformasi Geometri — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
 <meta name="description" content="Materi lengkap Transformasi Geometri SMA: translasi, rotasi, refleksi, dilatasi, dan komposisi transformasi. Dilengkapi 48 contoh soal dan pembahasan lengkap dengan ilustrasi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -17,14 +20,19 @@ window.MathJax = {
 };
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/transformasi-geometri/">
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/transformasi_geometri/">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/transformasi-geometri/">
-<meta property="og:title" content="Transformasi Geometri – EksaktaLab">
+<meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/transformasi_geometri/">
+<meta property="og:title" content="Transformasi Geometri — EksaktaLab">
 <meta property="og:description" content="Materi lengkap Transformasi Geometri SMA: translasi, rotasi, refleksi, dilatasi, dan komposisi transformasi.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
 <meta property="og:site_name" content="EksaktaLab">
 <meta property="og:locale" content="id_ID">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Transformasi Geometri","url":"https://lutfima11.github.io/eksaktalab/materi/transformasi-geometri/","description":"Materi lengkap Transformasi Geometri SMA: translasi, rotasi, refleksi, dilatasi, dan komposisi transformasi.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id"}</script>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Transformasi Geometri — EksaktaLab">
+<meta name="twitter:description" content="Materi lengkap Transformasi Geometri SMA: translasi, rotasi, refleksi, dilatasi, dan komposisi transformasi.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Transformasi Geometri","url":"https://lutfima11.github.io/eksaktalab/materi/transformasi_geometri/","description":"Materi lengkap Transformasi Geometri SMA: translasi, rotasi, refleksi, dilatasi, dan komposisi transformasi.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id"}</script>
 <link rel="stylesheet" href="../../assets/css/materi-transformasi.css">
 </head>
 <body>
@@ -1386,10 +1394,35 @@ window.MathJax = {
   </section>
 
   <!-- ACTION FOOTER -->
-  <div class="footer-nav">
-    <a class="nav-btn" href="../matriks/">← Matriks</a>
-    <a class="nav-btn" href="../limit-fungsi/">Limit Fungsi →</a>
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <div class="footer-nav">
+      <a class="nav-btn" href="../matriks/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Matriks
+      </a>
+      <a class="nav-btn" href="../limit-fungsi/">
+        Limit Fungsi
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <div class="footer-actions">
+      <a class="nav-btn primary" href="#">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="10" height="10" rx="2"/><line x1="5" y1="5" x2="9" y2="5"/><line x1="5" y1="7.5" x2="8" y2="7.5"/><line x1="5" y1="10" x2="7" y2="10"/></svg>
+        Kerjakan Latihan Soal Transformasi Geometri
+        <span class="coming-soon">Segera</span>
+      </a>
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
   </div>
+
 
   <!-- KOMENTAR -->
   <div class="komentar-section">
@@ -1426,60 +1459,71 @@ window.MathJax = {
 </div><!-- /page-wrap -->
 
 <script>
-// ── TOC Dropdown ──────────────────────────────────────────────────────
+// ── Scroll progress + scroll-to-top ────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible'); else btn.classList.remove('visible');
+});
+
+// ── TOC Dropdown ───────────────────────────────────────────────────────────────
 function toggleTOC() { document.getElementById('tocDropdown').classList.toggle('open'); }
 function closeTOC()  { document.getElementById('tocDropdown').classList.remove('open'); }
 document.addEventListener('click', e => {
-  if (!document.getElementById('tocDropdown').contains(e.target)) closeTOC();
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
 });
 
-// ── Scroll progress + scroll-top button ───────────────────────────────
-window.addEventListener('scroll', () => {
-  const el = document.getElementById('scroll-bar');
-  if (el) {
-    const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
-    el.style.width = pct + '%';
-  }
-  const btn = document.getElementById('scroll-top');
-  if (btn) btn.style.opacity = window.scrollY > 400 ? '1' : '0';
-});
 
-// ── Share ─────────────────────────────────────────────────────────────
-function shareMateri() {
-  if (navigator.share) { navigator.share({ title: 'Transformasi Geometri – EksaktaLab', url: location.href }); }
-  else { navigator.clipboard.writeText(location.href).then(() => alert('Link disalin!')); }
+// ── Bookmark ──────────────────────────────────────────────────────────────────
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
 }
 
-// ── SHARED HELPERS ────────────────────────────────────────────────────
-const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
-  <polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>`;
+// ── Share ────────────────────────────────────────────────────────────────────────────────
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({ title: 'Transformasi Geometri — EksaktaLab', text: 'Pelajari transformasi geometri di EksaktaLab, lengkap dengan contoh soal dan pembahasan.', url: window.location.href });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+
+// ── SHARED HELPERS ──────────────────────────────────────────────────────────────────
+const chevronSVG = () => '<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11"><polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
 function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
   const doToggle = () => {
     const open = wrap.classList.toggle('open');
     header.setAttribute('aria-expanded', open);
     if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
-    if (open && window.MathJax && typesetEl) {
-      MathJax.typesetPromise([typesetEl]).catch(() => {});
-    }
+    if (open && window.MathJax && typesetEl) MathJax.typesetPromise([typesetEl]).catch(() => {});
   };
   header.addEventListener('click', doToggle);
-  header.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
-  });
+  header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); } });
 }
 
+// ── 1. BOX RUMUS → accordion ──────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-
-  // ── 1. BOX RUMUS → accordion hijau ───────
-  document.querySelectorAll('.box.box-rumus').forEach((box) => {
+  document.querySelectorAll('.box.box-rumus').forEach(box => {
     const labelEl  = box.querySelector('.box-label');
     const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
     let bodyHTML = '';
-    box.childNodes.forEach(n => {
-      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
-    });
+    box.childNodes.forEach(n => { if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || ''); });
     const wrap = document.createElement('div');
     wrap.className = 'rumus-wrap';
     wrap.innerHTML = `
@@ -1489,17 +1533,15 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="rumus-status">Lihat rumus</span>
         <span class="rumus-chevron">${chevronSVG()}</span>
       </div>
-      <div class="rumus-body">
-        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
-      </div>`;
-    const header    = wrap.querySelector('.rumus-header');
-    const statusEl  = wrap.querySelector('.rumus-status');
-    const bodyInner = wrap.querySelector('.rumus-body-inner');
-    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+      <div class="rumus-body"><div class="rumus-body-inner">${bodyHTML.trim()}</div></div>`;
+    const header = wrap.querySelector('.rumus-header');
+    const status = wrap.querySelector('.rumus-status');
+    const inner  = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, status, wrap.querySelector('.rumus-body'), inner);
     box.replaceWith(wrap);
   });
 
-  // ── 2. BOX CONTOH → accordion navy/teal ──
+// ── 2. BOX CONTOH → accordion ───────────────────────────────────────────────────
   let counter = 0;
   document.querySelectorAll('.box.box-contoh').forEach(box => {
     counter++;
@@ -1507,11 +1549,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const numMatch = labelEl?.textContent.match(/\d+/);
     const num      = numMatch ? numMatch[0] : String(counter);
     let qHTML = '';
-    box.childNodes.forEach(n => {
-      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
-    });
-    const sib       = box.nextElementSibling;
-    const hasSolve  = sib?.classList.contains('penyelesaian');
+    box.childNodes.forEach(n => { if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || ''); });
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
     const solveHTML = hasSolve ? sib.innerHTML : '';
     const wrap = document.createElement('div');
     wrap.className = 'contoh-wrap';
@@ -1523,10 +1563,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
       <div class="contoh-body">
         <div class="contoh-body-inner">
-          <div class="solve-header">
-            <span class="solve-dot"></span>
-            <span class="solve-title">Penyelesaian</span>
-          </div>
+          <div class="solve-header"><span class="solve-dot"></span><span class="solve-title">Penyelesaian</span></div>
           <div class="penyelesaian-inner">
             ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
           </div>
@@ -1540,14 +1577,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
     };
     header.addEventListener('click', doToggle);
-    header.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
-    });
+    header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); } });
     box.replaceWith(wrap);
     if (hasSolve) sib.remove();
   });
 
-  // ── 3. Buka / Tutup Semua per section ────
+// ── 3. BUKA / TUTUP SEMUA per section ─────────────────────────────────────────────
   document.querySelectorAll('.section').forEach(sec => {
     const wraps = [...sec.querySelectorAll('.contoh-wrap')];
     if (!wraps.length) return;
@@ -1556,9 +1591,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tw.className = 'toggle-all-wrap';
     const btn = document.createElement('button');
     btn.className = 'btn-toggle-all';
-    const updateBtn = () => {
-      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
-    };
+    const updateBtn = () => { btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`; };
     updateBtn();
     btn.addEventListener('click', () => {
       allOpen = !allOpen;
@@ -1575,72 +1608,69 @@ document.addEventListener('DOMContentLoaded', () => {
     wraps[0].before(tw);
   });
 
-});
-
-// ── Soal Latihan Accordion ────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  const kunci = {
+// ── 4. SOAL LATIHAN → accordion kunci jawaban ─────────────────────────────────────────
+  const jawabanData = {
     0: [ // Bagian B
-      {j:'$P\'(1,3)$'},
-      {j:'$Q = Q\'- T = (-1,7)-(-3,4)=(2,3)$'},
-      {j:'$T=\\begin{bmatrix}3\\\\5\\end{bmatrix}$; $B\'=(-2+3,5+5)=\\boxed{B\'(1,10)}$'},
-      {j:'$x=x\'-3, y=y\'+1$: $2(x\'-3)+3(y\'+1)-6=0\\Rightarrow 2x\'+3y\'-9=0$'},
-      {j:'$y=x^2+6x+5=(x+3)^2-4$, puncak $(-3,-4)$. Dengan $T=\\begin{bmatrix}2\\\\-3\\end{bmatrix}$: $x=x\'-2,y=y\'+3$. Substitusi: $y\'=x\'^2+2x\'-3$; puncak $(-1,-4)$.'},
-      {j:'$(3a-1+a)=7\\Rightarrow 4a=8\\Rightarrow a=2$; $(2b+b-1)=4\\Rightarrow 3b=5\\Rightarrow b=5/3$.'},
-      {j:'$T_{tot}=\\begin{bmatrix}a+2\\\\1+b\\end{bmatrix}$. $3x-y+(4-3(a+2)+(1+b))=4-3a-6+1+b=-3a+b-1$. Bandingkan dengan $-4$: $-3a+b-1=-4\\Rightarrow -3a+b=-3$. Dengan $a+2b=4$... $a+b=2$? Periksa ulang: $(a+b)+(a-b)=?$... $a=-3+b\\Rightarrow (-3+b)+2b=4\\Rightarrow 3b=7\\Rightarrow b=7/3, a=-2/3$. Jadi $a+b=5/3$.'},
+      {jawaban:'$P\'(1,3)$'},
+      {jawaban:'$Q = Q\'- T = (-1,7)-(-3,4)=(2,3)$'},
+      {jawaban:'$T=\\begin{bmatrix}3\\\\5\\end{bmatrix}$; $B\'=(-2+3,5+5)=\\boxed{B\'(1,10)}$'},
+      {jawaban:'$x=x\'-3, y=y\'+1$: $2(x\'-3)+3(y\'+1)-6=0\\Rightarrow 2x\'+3y\'-9=0$'},
+      {jawaban:'$y=x^2+6x+5=(x+3)^2-4$, puncak $(-3,-4)$. Dengan $T=\\begin{bmatrix}2\\\\-3\\end{bmatrix}$: $x=x\'-2,y=y\'+3$. Substitusi: $y\'=x\'^2+2x\'-3$; puncak $(-1,-4)$.'},
+      {jawaban:'$(3a-1+a)=7\\Rightarrow 4a=8\\Rightarrow a=2$; $(2b+b-1)=4\\Rightarrow 3b=5\\Rightarrow b=5/3$.'},
+      {jawaban:'$T_{tot}=\\begin{bmatrix}a+2\\\\1+b\\end{bmatrix}$. $3x-y+(4-3(a+2)+(1+b))=4-3a-6+1+b=-3a+b-1$. Bandingkan dengan $-4$: $-3a+b-1=-4\\Rightarrow -3a+b=-3$. Dengan $a+2b=4$... $a+b=2$? Periksa ulang: $(a+b)+(a-b)=?$... $a=-3+b\\Rightarrow (-3+b)+2b=4\\Rightarrow 3b=7\\Rightarrow b=7/3, a=-2/3$. Jadi $a+b=5/3$.'},
     ],
     1: [ // Bagian C
-      {j:'$\\theta=120°$: $\\begin{bmatrix}-1/2&-\\sqrt3/2\\\\\\sqrt3/2&-1/2\\end{bmatrix}\\begin{bmatrix}3\\sqrt3\\\\-1\\end{bmatrix}=\\begin{bmatrix}-3\\sqrt3/2\\cdot(-1)-\\sqrt3/2\\cdot(-1)\\\\...\\end{bmatrix}$... $A\'(-3\\sqrt3/2+\\sqrt3/2, 9/2+1/2)=(-\\sqrt3,5)$.'},
-      {j:'$R_{-90°}=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}$; $(4-2,−2-1)=(2,-3)$; $\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}\\begin{bmatrix}2\\\\-3\\end{bmatrix}=\\begin{bmatrix}-3\\\\-2\\end{bmatrix}$; $C\'=(2-3,-2+1)=(-1,-1)$... Tambah pusat: $C\'=(-3+2,-2+1)=(-1,-1)$.'},
-      {j:'$R_{270°}=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}$; invers=$R_{-270°}=R_{90°}=\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}$. $\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}\\begin{bmatrix}4-(-2)\\\\1-3\\end{bmatrix}+\\begin{bmatrix}-2\\\\3\\end{bmatrix}=\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}\\begin{bmatrix}6\\\\-2\\end{bmatrix}+...=\\begin{bmatrix}2\\\\6\\end{bmatrix}+\\begin{bmatrix}-2\\\\3\\end{bmatrix}=B(0,9)$.'},
-      {j:'Invers $R_{60°}$: $x=x\'\\cos60°+y\'\\sin60°$, $y=-x\'\\sin60°+y\'\\cos60°$. Substitusi ke $y=\\sqrt3 x+1$...'},
-      {j:'$R_{-90°}$: invers $x=y\'$, $y=-x\'$. $y\' - 2(-x\')+4=0\\Rightarrow 2x\'+y\'+4=0$.'},
-      {j:'$P\'=(−1,2)$; $P\'\'=(−2,−1)$; rotasi tunggal: $R_{180°}$.'},
-      {j:'$R_{180°}$ terhadap $G(1,2)$: invers $x=2\\cdot1-x\'=2-x\'$, $y=2\\cdot2-y\'=4-y\'$. Substitusi ke $y=x^2-4x+3$: $(4-y\')=(2-x\')^2-4(2-x\')+3=x\'^2-8x\'+4-8+4x\'+3$. $y\'=-x\'^2+4x\'-3$.'},
-      {j:'Total sudut $=45°+135°=180°$. $R_{180°}$ terhadap $P(1,1)$: $K\'=2\\cdot1-2\\sqrt2+2\\cdot1-0=(2-2\\sqrt2,2)$... $\\begin{bmatrix}-1&0\\\\0&-1\\end{bmatrix}\\begin{bmatrix}2\\sqrt2-1\\\\-1\\end{bmatrix}+\\begin{bmatrix}1\\\\1\\end{bmatrix}=\\begin{bmatrix}2-2\\sqrt2\\\\2\\end{bmatrix}$.'},
-      {j:'$g\'$ setelah $R_{90°}$ terhadap $O$: $-x\'+y\'+4=0$. Lalu $R_{90°}$ terhadap $P(2,0)$: invers $x\'=(y\'\')+2=y\'\'$... Bayangan akhir: $x+y-4=0$.'},
+      {jawaban:'$\\theta=120°$: $\\begin{bmatrix}-1/2&-\\sqrt3/2\\\\\\sqrt3/2&-1/2\\end{bmatrix}\\begin{bmatrix}3\\sqrt3\\\\-1\\end{bmatrix}=\\begin{bmatrix}-3\\sqrt3/2\\cdot(-1)-\\sqrt3/2\\cdot(-1)\\\\...\\end{bmatrix}$... $A\'(-3\\sqrt3/2+\\sqrt3/2, 9/2+1/2)=(-\\sqrt3,5)$.'},
+      {jawaban:'$R_{-90°}=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}$; $(4-2,−2-1)=(2,-3)$; $\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}\\begin{bmatrix}2\\\\-3\\end{bmatrix}=\\begin{bmatrix}-3\\\\-2\\end{bmatrix}$; $C\'=(2-3,-2+1)=(-1,-1)$... Tambah pusat: $C\'=(-3+2,-2+1)=(-1,-1)$.'},
+      {jawaban:'$R_{270°}=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}$; invers=$R_{-270°}=R_{90°}=\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}$. $\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}\\begin{bmatrix}4-(-2)\\\\1-3\\end{bmatrix}+\\begin{bmatrix}-2\\\\3\\end{bmatrix}=\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}\\begin{bmatrix}6\\\\-2\\end{bmatrix}+...=\\begin{bmatrix}2\\\\6\\end{bmatrix}+\\begin{bmatrix}-2\\\\3\\end{bmatrix}=B(0,9)$.'},
+      {jawaban:'Invers $R_{60°}$: $x=x\'\\cos60°+y\'\\sin60°$, $y=-x\'\\sin60°+y\'\\cos60°$. Substitusi ke $y=\\sqrt3 x+1$...'},
+      {jawaban:'$R_{-90°}$: invers $x=y\'$, $y=-x\'$. $y\' - 2(-x\')+4=0\\Rightarrow 2x\'+y\'+4=0$.'},
+      {jawaban:'$P\'=(−1,2)$; $P\'\'=(−2,−1)$; rotasi tunggal: $R_{180°}$.'},
+      {jawaban:'$R_{180°}$ terhadap $G(1,2)$: invers $x=2\\cdot1-x\'=2-x\'$, $y=2\\cdot2-y\'=4-y\'$. Substitusi ke $y=x^2-4x+3$: $(4-y\')=(2-x\')^2-4(2-x\')+3=x\'^2-8x\'+4-8+4x\'+3$. $y\'=-x\'^2+4x\'-3$.'},
+      {jawaban:'Total sudut $=45°+135°=180°$. $R_{180°}$ terhadap $P(1,1)$: $K\'=2\\cdot1-2\\sqrt2+2\\cdot1-0=(2-2\\sqrt2,2)$... $\\begin{bmatrix}-1&0\\\\0&-1\\end{bmatrix}\\begin{bmatrix}2\\sqrt2-1\\\\-1\\end{bmatrix}+\\begin{bmatrix}1\\\\1\\end{bmatrix}=\\begin{bmatrix}2-2\\sqrt2\\\\2\\end{bmatrix}$.'},
+      {jawaban:'$g\'$ setelah $R_{90°}$ terhadap $O$: $-x\'+y\'+4=0$. Lalu $R_{90°}$ terhadap $P(2,0)$: invers $x\'=(y\'\')+2=y\'\'$... Bayangan akhir: $x+y-4=0$.'},
     ],
     2: [ // Bagian D
-      {j:'(a) $(2\\cdot2-4,−7)=(0,-7)$. (b) $(4,2\\cdot3+7)=(4,13)$. (c) $(-7,4)$. (d) $(7,-4)$.'},
-      {j:'$M_{y=x}$ bersifat involusi: $(p,q)=(q,p)$. Karena $A\'=(5,-2)$, maka $A=(p,q)=(-2,5)$, jadi $p=-2,q=5$.'},
-      {j:'Refleksi sumbu-$Y$: $x\'=-x$. $-x=-5\\Rightarrow x=5$... wait, $C\'=(-x,y)=(-5,6)\\Rightarrow x=5,y=6$. $2m-1=5\\Rightarrow m=3$; $m+3=6$ ✓. $C(5,6)$.'},
-      {j:'Dari $M_{y=x}$: $x=y\'$, $y=x\'$. $4y\'-3x\'+12=0\\Rightarrow 3x-4y-12=0$.'},
-      {j:'Refleksi sumbu-$X$: $y\'=-y$, $x\'=x$. $(x)^2+(-y)^2-6x+4(-y)-3=x^2+y^2-6x-4y-3=0$.'},
-      {j:'$M=M_Y\\cdot M_{y=-x}=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}$. $\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}\\begin{bmatrix}2\\\\-1\\end{bmatrix}=\\begin{bmatrix}-1\\\\-2\\end{bmatrix}$.'},
-      {j:'$M_{y=x}\\cdot M_{y=-x}=\\begin{bmatrix}0&1\\\\1&0\\end{bmatrix}\\begin{bmatrix}0&-1\\\\-1&0\\end{bmatrix}=\\begin{bmatrix}-1&0\\\\0&-1\\end{bmatrix}$ = rotasi $180°$ terhadap $O$.'},
-      {j:'Langkah 1: refleksi sumbu-$X$ → $y_1=-y$. Substitusi: $-y_1=x^2-2x+3\\Rightarrow y_1=-x^2+2x-3$. Langkah 2: refleksi $y=1$ → $y\'\'=2-y_1=-2-(-x^2+2x-3)=x^2-2x+1$. $y=x^2-2x+1=(x-1)^2$.'},
+      {jawaban:'(a) $(2\\cdot2-4,−7)=(0,-7)$. (b) $(4,2\\cdot3+7)=(4,13)$. (c) $(-7,4)$. (d) $(7,-4)$.'},
+      {jawaban:'$M_{y=x}$ bersifat involusi: $(p,q)=(q,p)$. Karena $A\'=(5,-2)$, maka $A=(p,q)=(-2,5)$, jadi $p=-2,q=5$.'},
+      {jawaban:'Refleksi sumbu-$Y$: $x\'=-x$. $-x=-5\\Rightarrow x=5$... wait, $C\'=(-x,y)=(-5,6)\\Rightarrow x=5,y=6$. $2m-1=5\\Rightarrow m=3$; $m+3=6$ ✓. $C(5,6)$.'},
+      {jawaban:'Dari $M_{y=x}$: $x=y\'$, $y=x\'$. $4y\'-3x\'+12=0\\Rightarrow 3x-4y-12=0$.'},
+      {jawaban:'Refleksi sumbu-$X$: $y\'=-y$, $x\'=x$. $(x)^2+(-y)^2-6x+4(-y)-3=x^2+y^2-6x-4y-3=0$.'},
+      {jawaban:'$M=M_Y\\cdot M_{y=-x}=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}$. $\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}\\begin{bmatrix}2\\\\-1\\end{bmatrix}=\\begin{bmatrix}-1\\\\-2\\end{bmatrix}$.'},
+      {jawaban:'$M_{y=x}\\cdot M_{y=-x}=\\begin{bmatrix}0&1\\\\1&0\\end{bmatrix}\\begin{bmatrix}0&-1\\\\-1&0\\end{bmatrix}=\\begin{bmatrix}-1&0\\\\0&-1\\end{bmatrix}$ = rotasi $180°$ terhadap $O$.'},
+      {jawaban:'Langkah 1: refleksi sumbu-$X$ → $y_1=-y$. Substitusi: $-y_1=x^2-2x+3\\Rightarrow y_1=-x^2+2x-3$. Langkah 2: refleksi $y=1$ → $y\'\'=2-y_1=-2-(-x^2+2x-3)=x^2-2x+1$. $y=x^2-2x+1=(x-1)^2$.'},
     ],
     3: [ // Bagian E
-      {j:'$P\'(-12,20)$.'},
-      {j:'$Q\'=(x\'-(k-1)m,y\'-(k-1)n)/k=(10-2\\cdot2,−4+2\\cdot0)/2=(6/2,-4/2)... $ lebih tepat: $Q=(x\'-k\\cdot m+m)/... $; $Q=A+(Q\'-A)/k=(2,0)+((10,-4)-(2,0))/2=(2+4,-0+(-2))=(6,-2)$.'},
-      {j:'Pusat $B(1,3)$, $k=3$: $x\'=3(x-1)+1=3x-2$, $y\'=3(y-3)+3=3y-6$. Maka $x=(x\'+2)/3$, $y=(y\'+6)/3$. Substitusi: $3(x\'+2)/3-(y\'+6)/3+6=0\\Rightarrow (x\'+2-y\'-6+18)/3=0\\Rightarrow x\'-y\'+14=0$. Gradien tetap ($3x-y=0$: gradien 3; $x-y+14=0$: gradien 1... periksa). Sebenarnya: $3x-y+6=0$, $y=3x+6$. Bayangan: $y\'=3x\'-12+6+...$'},
-      {j:'$P\'=(-4,-1),Q\'=(-2,-1),R\'=(-2,3)$. Luas asal $=8$; luas bayangan $=k^2\\cdot 8=4\\cdot 8=32$.'},
-      {j:'Pusat $A(1,-2)$, $k=3$: setiap titik dilatasi dari $A$ → jari-jari baru $= 3\\cdot 3=9$; pusat tetap $(1,-2)$. $(x-1)^2+(y+2)^2=81$.'},
-      {j:'$x\'=3x,y\'=3y$: $x^2/36+y^2/81=1$. Sumbu mayor $2b\'=18$ (dari $\\sqrt{81}=9$, semula $3$); sumbu minor $2a\'=12$ (dari $\\sqrt{36}=6$, semula $2$) — keduanya 3 kali lipat.'},
-      {j:'Bayangan dilatasi $k=3$ pusat $O$: $3ax-3\\cdot3y+4=0\\Rightarrow 3ax/3-y+4/3... $ lebih tepat: $x=x\'/3,y=y\'/3$, substitusi ke bayangan $2x\'-by\'+12=0$: $2(3x)-b(3y)+12=0\\Rightarrow 6x-3by+12=0\\Rightarrow 2x-by+4=0$. Bandingkan dengan asal $ax-3y+4=0$: $a=2,b=3$.'},
-      {j:'(a) $D_1$ pada $R(4,1)$: $R\'=A+(1/2)(R-A)=(1,-1)+(1/2)(3,2)=(2.5,0)$. $D_2$ pada $R\'$: $R\'\'=B+3(R\'-B)=(3,2)+3(-0.5,-2)=(3-1.5,2-6)=(1.5,-4)$. (b) $D_2$ pada $R(4,1)$: $R\'=B+3(R-B)=(3,2)+3(1,-1)=(6,-1)$. $D_1$ pada $R\'$: $R\'\'=A+(1/2)(R\'-A)=(1,-1)+(1/2)(5,0)=(3.5,-1)$. (c) $(1.5,-4)\\neq(3.5,-1)$: tidak komutatif.'},
+      {jawaban:'$P\'(-12,20)$.'},
+      {jawaban:'$Q\'=(x\'-(k-1)m,y\'-(k-1)n)/k=(10-2\\cdot2,−4+2\\cdot0)/2=(6/2,-4/2)... $ lebih tepat: $Q=(x\'-k\\cdot m+m)/... $; $Q=A+(Q\'-A)/k=(2,0)+((10,-4)-(2,0))/2=(2+4,-0+(-2))=(6,-2)$.'},
+      {jawaban:'Pusat $B(1,3)$, $k=3$: $x\'=3(x-1)+1=3x-2$, $y\'=3(y-3)+3=3y-6$. Maka $x=(x\'+2)/3$, $y=(y\'+6)/3$. Substitusi: $3(x\'+2)/3-(y\'+6)/3+6=0\\Rightarrow (x\'+2-y\'-6+18)/3=0\\Rightarrow x\'-y\'+14=0$. Gradien tetap ($3x-y=0$: gradien 3; $x-y+14=0$: gradien 1... periksa). Sebenarnya: $3x-y+6=0$, $y=3x+6$. Bayangan: $y\'=3x\'-12+6+...$'},
+      {jawaban:'$P\'=(-4,-1),Q\'=(-2,-1),R\'=(-2,3)$. Luas asal $=8$; luas bayangan $=k^2\\cdot 8=4\\cdot 8=32$.'},
+      {jawaban:'Pusat $A(1,-2)$, $k=3$: setiap titik dilatasi dari $A$ → jari-jari baru $= 3\\cdot 3=9$; pusat tetap $(1,-2)$. $(x-1)^2+(y+2)^2=81$.'},
+      {jawaban:'$x\'=3x,y\'=3y$: $x^2/36+y^2/81=1$. Sumbu mayor $2b\'=18$ (dari $\\sqrt{81}=9$, semula $3$); sumbu minor $2a\'=12$ (dari $\\sqrt{36}=6$, semula $2$) — keduanya 3 kali lipat.'},
+      {jawaban:'Bayangan dilatasi $k=3$ pusat $O$: $3ax-3\\cdot3y+4=0\\Rightarrow 3ax/3-y+4/3... $ lebih tepat: $x=x\'/3,y=y\'/3$, substitusi ke bayangan $2x\'-by\'+12=0$: $2(3x)-b(3y)+12=0\\Rightarrow 6x-3by+12=0\\Rightarrow 2x-by+4=0$. Bandingkan dengan asal $ax-3y+4=0$: $a=2,b=3$.'},
+      {jawaban:'(a) $D_1$ pada $R(4,1)$: $R\'=A+(1/2)(R-A)=(1,-1)+(1/2)(3,2)=(2.5,0)$. $D_2$ pada $R\'$: $R\'\'=B+3(R\'-B)=(3,2)+3(-0.5,-2)=(3-1.5,2-6)=(1.5,-4)$. (b) $D_2$ pada $R(4,1)$: $R\'=B+3(R-B)=(3,2)+3(1,-1)=(6,-1)$. $D_1$ pada $R\'$: $R\'\'=A+(1/2)(R\'-A)=(1,-1)+(1/2)(5,0)=(3.5,-1)$. (c) $(1.5,-4)\\neq(3.5,-1)$: tidak komutatif.'},
     ],
     4: [ // Bagian F
-      {j:'$M_{y=-x}$: $A\'=(-6,2)$. $R_{-90°}=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}$: $A\'\'=\\begin{bmatrix}2\\\\6\\end{bmatrix}$. Jadi $A\'\'(2,6)$.'},
-      {j:'Dilatasi $k=-2$: $B\'=(-8,-2)$. Translasi: $(-8+3,-2-5)=(-5,-7)$.'},
-      {j:'$T=M_X\\cdot D_3=\\begin{bmatrix}3&0\\\\0&-3\\end{bmatrix}$. Invers: $x=x\'/3,y=-y\'/3$. Substitusi: $2x\'/3-3(-y\'/3)+6=0\\Rightarrow 2x\'+3y\'+18=0$.'},
-      {j:'$R_{180°}$: $(x,y)\\to(-x,-y)$, jadi $y=-x^2+1$ jadi $-y=(-x)^2+1=x^2+1\\to y=-x^2-1$... Setelah $R_{180°}$: $y\'=-(-x\')^2-1=-x\'^2-1$... Lalu $M_{y=x}$: tukar $x\'\\leftrightarrow y\'$: $x=−y^2−1$.'},
-      {j:'$T=D_{1/2}\\cdot R_{90°}\\cdot M_Y=\\frac{1}{2}\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}\\begin{bmatrix}-1&0\\\\0&1\\end{bmatrix}=\\frac{1}{2}\\begin{bmatrix}0&-1\\\\-1&0\\end{bmatrix}=\\begin{bmatrix}0&-1/2\\\\-1/2&0\\end{bmatrix}$. $K\'=\\begin{bmatrix}0&-1/2\\\\-1/2&0\\end{bmatrix}\\begin{bmatrix}8\\\\-4\\end{bmatrix}=\\begin{bmatrix}2\\\\-4\\end{bmatrix}$.'},
-      {j:'$M=\\begin{bmatrix}1&2\\\\0&1\\end{bmatrix}$. Hubungan: $x\'=x+2y,y\'=y$. Invers: $x=x\'-2y\'=x\'-2y,y=y\'$. Substitusi ke $g$: $4(x\'-2y\')-y\'+2=0\\Rightarrow 4x\'-9y\'+2=0$. Lalu $M_Y$: $x\'\\to -x\'$: $-4x-9y+2=0\\Rightarrow 4x+9y-2=0$.'},
+      {jawaban:'$M_{y=-x}$: $A\'=(-6,2)$. $R_{-90°}=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}$: $A\'\'=\\begin{bmatrix}2\\\\6\\end{bmatrix}$. Jadi $A\'\'(2,6)$.'},
+      {jawaban:'Dilatasi $k=-2$: $B\'=(-8,-2)$. Translasi: $(-8+3,-2-5)=(-5,-7)$.'},
+      {jawaban:'$T=M_X\\cdot D_3=\\begin{bmatrix}3&0\\\\0&-3\\end{bmatrix}$. Invers: $x=x\'/3,y=-y\'/3$. Substitusi: $2x\'/3-3(-y\'/3)+6=0\\Rightarrow 2x\'+3y\'+18=0$.'},
+      {jawaban:'$R_{180°}$: $(x,y)\\to(-x,-y)$, jadi $y=-x^2+1$ jadi $-y=(-x)^2+1=x^2+1\\to y=-x^2-1$... Setelah $R_{180°}$: $y\'=-(-x\')^2-1=-x\'^2-1$... Lalu $M_{y=x}$: tukar $x\'\\leftrightarrow y\'$: $x=−y^2−1$.'},
+      {jawaban:'$T=D_{1/2}\\cdot R_{90°}\\cdot M_Y=\\frac{1}{2}\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}\\begin{bmatrix}-1&0\\\\0&1\\end{bmatrix}=\\frac{1}{2}\\begin{bmatrix}0&-1\\\\-1&0\\end{bmatrix}=\\begin{bmatrix}0&-1/2\\\\-1/2&0\\end{bmatrix}$. $K\'=\\begin{bmatrix}0&-1/2\\\\-1/2&0\\end{bmatrix}\\begin{bmatrix}8\\\\-4\\end{bmatrix}=\\begin{bmatrix}2\\\\-4\\end{bmatrix}$.'},
+      {jawaban:'$M=\\begin{bmatrix}1&2\\\\0&1\\end{bmatrix}$. Hubungan: $x\'=x+2y,y\'=y$. Invers: $x=x\'-2y\'=x\'-2y,y=y\'$. Substitusi ke $g$: $4(x\'-2y\')-y\'+2=0\\Rightarrow 4x\'-9y\'+2=0$. Lalu $M_Y$: $x\'\\to -x\'$: $-4x-9y+2=0\\Rightarrow 4x+9y-2=0$.'},
     ],
   };
 
-  let idx = 0;
+  let latihanIdx = 0;
   document.querySelectorAll('.box.box-latihan').forEach(box => {
-    const ans = kunci[idx] || [];
-    idx++;
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
     const list = box.querySelector('.soal-list');
     if (!list) return;
-    const items = [...list.querySelectorAll('li')];
+    const items   = [...list.querySelectorAll('li')];
     const newList = document.createElement('div');
     newList.className = 'soal-list-accordion';
     items.forEach((li, i) => {
-      const a = ans[i] || {};
+      const jawaban = answers[i]?.jawaban || '';
       const item = document.createElement('div');
       item.className = 'soal-item';
       item.innerHTML = `
@@ -1652,20 +1682,21 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="soal-answer">
           <div class="soal-answer-inner">
             <div class="soal-answer-label">Jawaban</div>
-            ${a.j || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
+            ${jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
           </div>
         </div>`;
-      const hdr = item.querySelector('.soal-item-header');
+      const header = item.querySelector('.soal-item-header');
       const toggle = () => {
         const open = item.classList.toggle('open');
-        if (open && window.MathJax) MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
+        if (open && window.MathJax) MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(() => {});
       };
-      hdr.addEventListener('click', toggle);
-      hdr.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' '){e.preventDefault();toggle();} });
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
       newList.appendChild(item);
     });
     list.replaceWith(newList);
   });
+
 });
 </script>
 

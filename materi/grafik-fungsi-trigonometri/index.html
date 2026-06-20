@@ -4,7 +4,10 @@
 <script src="../../assets/js/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grafik Fungsi Trigonometri – EksaktaLab</title>
+<title>Grafik Fungsi Trigonometri — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
 <meta name="description" content="Materi Grafik Fungsi Trigonometri: grafik y = sin x, cos x, tan x, fungsi trigonometri sederhana (amplitudo, periode), dan cara menentukan persamaan fungsi dari grafik.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -20,13 +23,15 @@ window.MathJax = {
 <link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/grafik-fungsi-trigonometri/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/grafik-fungsi-trigonometri/">
-<meta property="og:title" content="Grafik Fungsi Trigonometri – EksaktaLab">
+<meta property="og:title" content="Grafik Fungsi Trigonometri — EksaktaLab">
 <meta property="og:description" content="Grafik y = sin x, cos x, tan x, transformasi fungsi trigonometri sederhana, dan menentukan persamaan fungsi dari grafik.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
 <meta property="og:site_name" content="EksaktaLab">
 <meta property="og:locale" content="id_ID">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Grafik Fungsi Trigonometri – EksaktaLab">
+<meta name="twitter:title" content="Grafik Fungsi Trigonometri — EksaktaLab">
 <meta name="twitter:description" content="Grafik y=sin x, cos x, tan x, amplitudo, periode, dan menentukan persamaan fungsi dari grafik.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Grafik Fungsi Trigonometri","url":"https://lutfima11.github.io/eksaktalab/materi/grafik-fungsi-trigonometri/","description":"Grafik fungsi sin, cos, tan, transformasi fungsi trigonometri sederhana, dan cara menentukan persamaan fungsi dari grafik.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Trigonometri"},{"@type":"ListItem","position":4,"name":"Grafik Fungsi Trigonometri","item":"https://lutfima11.github.io/eksaktalab/materi/grafik-fungsi-trigonometri/"}]}}</script>
 </head>
 <body>
@@ -527,14 +532,6 @@ document.addEventListener('click', e => {
   if (dd && !dd.contains(e.target)) dd.classList.remove('open');
 });
 
-// ── Theme Toggle ──────────────────────────────────────────────────────
-function toggleTheme() {
-  const html = document.documentElement;
-  const btn  = document.getElementById('themeBtn');
-  const dark = html.getAttribute('data-theme') === 'dark';
-  html.setAttribute('data-theme', dark ? 'light' : 'dark');
-  btn.textContent = dark ? '🌙 Gelap' : '☀️ Terang';
-}
 
 // ── Bookmark ──────────────────────────────────────────────────────────
 let bookmarked = false;

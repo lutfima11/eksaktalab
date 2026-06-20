@@ -4,7 +4,10 @@
 <script src="../../assets/js/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kombinatorika – EksaktaLab</title>
+<title>Kombinatorika — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
 <meta name="description" content="Materi lengkap Kaidah Pencacahan dan Kombinatorika SMA: aturan perkalian & penjumlahan, permutasi, kombinasi, Segitiga Pascal, dan Binomial Newton. Dilengkapi 49 contoh soal dan pembahasan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -21,13 +24,15 @@ window.MathJax = {
 <link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/kombinatorika/">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/kombinatorika/">
-<meta property="og:title" content="Kombinatorika – EksaktaLab">
+<meta property="og:title" content="Kombinatorika — EksaktaLab">
 <meta property="og:description" content="Materi lengkap Kaidah Pencacahan dan Kombinatorika SMA: aturan perkalian, permutasi, kombinasi, Binomial Newton.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
 <meta property="og:site_name" content="EksaktaLab">
 <meta property="og:locale" content="id_ID">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kombinatorika – EksaktaLab">
+<meta name="twitter:title" content="Kombinatorika — EksaktaLab">
 <meta name="twitter:description" content="Materi lengkap Kaidah Pencacahan dan Kombinatorika SMA dilengkapi 53 contoh soal.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Kombinatorika","url":"https://lutfima11.github.io/eksaktalab/materi/kombinatorika/","description":"Materi lengkap Kaidah Pencacahan dan Kombinatorika SMA.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Statistika"},{"@type":"ListItem","position":4,"name":"Kombinatorika","item":"https://lutfima11.github.io/eksaktalab/materi/kombinatorika/"}]}}</script>
 </head>
 <body>
@@ -1189,13 +1194,6 @@ window.addEventListener('scroll', () => {
   const btn = document.getElementById('scroll-top');
   if (pct > 30) btn.classList.add('visible'); else btn.classList.remove('visible');
 });
-function toggleTheme() {
-  const html = document.documentElement;
-  const btn  = document.getElementById('themeBtn');
-  const dark = html.getAttribute('data-theme') === 'dark';
-  html.setAttribute('data-theme', dark ? 'light' : 'dark');
-  btn.textContent = dark ? '🌙 Gelap' : '☀️ Terang';
-}
 function toggleTOC() { document.getElementById('tocDropdown').classList.toggle('open'); }
 function closeTOC()  { document.getElementById('tocDropdown').classList.remove('open'); }
 document.addEventListener('click', e => {
