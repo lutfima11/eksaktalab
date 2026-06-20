@@ -539,87 +539,21 @@ window.MathJax = {
           $$\begin{align*}(\sqrt{50} - \sqrt{2})(\sqrt{27} + \sqrt{12}) &= (5\sqrt{2} - \sqrt{2})(3\sqrt{3} + 2\sqrt{3}) \\ &= 4\sqrt{2} \times 5\sqrt{3} \\ &= 20\sqrt{6}.\end{align*}$$</li>
       </ol>
     </div>
-
-    <h3 class="subsection-title">2. Merasionalkan Penyebut</h3>
-    <p>Merasionalkan penyebut adalah proses mengubah pecahan yang penyebutnya memuat bentuk akar menjadi pecahan yang penyebutnya berupa bilangan rasional.</p>
-
-    <div class="box box-definisi">
-      <div class="box-label">Merasionalkan Penyebut</div>
-      <p><strong>Kasus 1: Penyebut berbentuk $\sqrt{b}$</strong></p>
-      <div class="math-block">$$\frac{a}{\sqrt{b}} = \frac{a}{\sqrt{b}} \times \frac{\sqrt{b}}{\sqrt{b}} = \frac{a\sqrt{b}}{b}, \quad b > 0.$$</div>
-      <p style="margin-top:1rem;"><strong>Kasus 2: Penyebut berbentuk $\sqrt{a} \pm \sqrt{b}$</strong> (menggunakan konjugat/sekawan)</p>
-      <div class="math-block">$$\frac{p}{\sqrt{a}+\sqrt{b}} = \frac{p(\sqrt{a}-\sqrt{b})}{a-b}, \qquad \frac{p}{\sqrt{a}-\sqrt{b}} = \frac{p(\sqrt{a}+\sqrt{b})}{a-b}.$$</div>
-      <p>Pasangan $(\sqrt{a}+\sqrt{b})$ dan $(\sqrt{a}-\sqrt{b})$ saling disebut <strong>bentuk akar konjugat(sekawan)</strong>.</p>
-      <p style="margin-top:1rem;"><strong>Kasus 3: Penyebut berbentuk $c \pm \sqrt{b}$</strong></p>
-      <div class="math-block">$$\frac{p}{c+\sqrt{b}} = \frac{p(c-\sqrt{b})}{c^2-b}, \qquad \frac{p}{c-\sqrt{b}} = \frac{p(c+\sqrt{b})}{c^2-b}.$$</div>
-    </div>
-
-    <div class="box box-catatan">
-      <div class="box-label">⚠ Catatan</div>
-      <p style="margin:0;font-size:.9rem;">Identitas aljabar yang mendasari penggunaan konjugat adalah:
-        $$(\sqrt{a}+\sqrt{b})(\sqrt{a}-\sqrt{b}) = a - b, \qquad (c+\sqrt{b})(c-\sqrt{b}) = c^2 - b.$$
-        Identitas ini memastikan bahwa penyebut hasil perkalian adalah bilangan rasional.</p>
-    </div>
-
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 10</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
-      <ol class="alpha-list" style="margin:0;">
-        <li>$\dfrac{3}{\sqrt{6}}$</li>
-        <li>$\dfrac{\sqrt{2}}{\sqrt{10}}$</li>
-        <li>$\dfrac{6}{\sqrt{8}}$</li>
-        <li>$\dfrac{\sqrt{12}}{4\sqrt{2}}$</li>
-        <li>$\dfrac{5}{\sqrt{5}}$</li>
-      </ol>
-    </div>
-    <div class="penyelesaian">
-      
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$\dfrac{3}{\sqrt{6}} = \dfrac{3\sqrt{6}}{6} = \dfrac{\sqrt{6}}{2}$</li>
-        <li>$\dfrac{\sqrt{2}}{\sqrt{10}} = \dfrac{\sqrt{2} \cdot \sqrt{10}}{10} = \dfrac{\sqrt{20}}{10} = \dfrac{2\sqrt{5}}{10} = \dfrac{\sqrt{5}}{5}$</li>
-        <li>$\dfrac{6}{\sqrt{8}} = \dfrac{6}{2\sqrt{2}} = \dfrac{3}{\sqrt{2}} = \dfrac{3\sqrt{2}}{2}$</li>
-        <li>$\dfrac{\sqrt{12}}{4\sqrt{2}} = \dfrac{2\sqrt{3}}{4\sqrt{2}} = \dfrac{\sqrt{3}}{2\sqrt{2}} = \dfrac{\sqrt{6}}{4}$</li>
-        <li>$\dfrac{5}{\sqrt{5}} = \dfrac{5\sqrt{5}}{5} = \sqrt{5}$</li>
-      </ol>
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 11</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
-      <ol class="alpha-list" style="margin:0;">
-        <li>$\dfrac{2}{\sqrt{6}-\sqrt{2}}$</li>
-        <li>$\dfrac{\sqrt{6}}{\sqrt{6}+\sqrt{3}}$</li>
-        <li>$\dfrac{5}{2\sqrt{3}-\sqrt{2}}$</li>
-        <li>$\dfrac{\sqrt{6}+\sqrt{3}}{\sqrt{6}-\sqrt{3}}$</li>
-      </ol>
-    </div>
-    <div class="penyelesaian">
-      
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>Kalikan dengan konjugat $(\sqrt{6}+\sqrt{2})$:
-          $$\frac{2}{\sqrt{6}-\sqrt{2}} \times \frac{\sqrt{6}+\sqrt{2}}{\sqrt{6}+\sqrt{2}} = \frac{2(\sqrt{6}+\sqrt{2})}{6-2} = \frac{\sqrt{6}+\sqrt{2}}{2}.$$</li>
-        <li>Kalikan dengan konjugat $(\sqrt{6}-\sqrt{3})$:
-          $$\frac{\sqrt{6}}{\sqrt{6}+\sqrt{3}} \times \frac{\sqrt{6}-\sqrt{3}}{\sqrt{6}-\sqrt{3}} = \frac{6-\sqrt{18}}{3} = \frac{6-3\sqrt{2}}{3} = 2 - \sqrt{2}.$$</li>
-        <li>Kalikan dengan konjugat $(2\sqrt{3}+\sqrt{2})$:
-          $$\frac{5}{2\sqrt{3}-\sqrt{2}} \times \frac{2\sqrt{3}+\sqrt{2}}{2\sqrt{3}+\sqrt{2}} = \frac{5(2\sqrt{3}+\sqrt{2})}{12-2} = \frac{2\sqrt{3}+\sqrt{2}}{2}.$$</li>
-        <li>Kalikan dengan konjugat $(\sqrt{6}+\sqrt{3})$:
-          $$\frac{\sqrt{6}+\sqrt{3}}{\sqrt{6}-\sqrt{3}} \times \frac{\sqrt{6}+\sqrt{3}}{\sqrt{6}+\sqrt{3}} = \frac{(\sqrt{6}+\sqrt{3})^2}{3} = \frac{9 + 6\sqrt{2}}{3} = 3 + 2\sqrt{2}.$$</li>
-      </ol>
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 12</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah bentuk sederhana dari $\sqrt[4]{49-20\sqrt{6}}$.</p>
     </div>
     <div class="penyelesaian">
-       Cari $p, q &gt; 0$ sedemikian sehingga $49 - 20\sqrt{6} = (\sqrt{p} - \sqrt{q})^2 = p + q - 2\sqrt{pq}$. Dari sini: $p + q = 49$ dan $pq = 600 = 25 \times 24$. Pilih $p = 25$, $q = 24$:
+      Cari $p, q &gt; 0$ sedemikian sehingga: 
+      $$\begin{align*}49 - 20\sqrt{6} &= (\sqrt{p} - \sqrt{q})^2 \\ &= p + q - 2\sqrt{pq} \end{align*}$$ 
+      Dari sini: $p + q = 49$ dan $pq = 600 = 25 \times 24$. Pilih $p = 25$, $q = 24$:
       $$\sqrt{49-20\sqrt{6}} = \sqrt{25} - \sqrt{24} = 5 - 2\sqrt{6}.$$
       Dengan demikian:
       $$\sqrt[4]{49-20\sqrt{6}} = \sqrt{5-2\sqrt{6}} = \sqrt{(\sqrt{3}-\sqrt{2})^2} = \sqrt{3} - \sqrt{2}.$$
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 13</div>
+      <div class="box-label">📘 Contoh 11</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar bertingkat berikut menggunakan sifat $\sqrt[p]{\sqrt[q]{a}} = \sqrt[pq]{a}$.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\sqrt{\sqrt[3]{64}}$</li>
@@ -633,6 +567,68 @@ window.MathJax = {
         <li>$\sqrt{\sqrt[3]{64}} = \sqrt[2 \cdot 3]{64} = \sqrt[6]{64} = \sqrt[6]{2^6} = 2.$</li>
         <li>$\sqrt[3]{\sqrt{729}} = \sqrt[3 \cdot 2]{729} = \sqrt[6]{729} = \sqrt[6]{3^6} = 3.$</li>
         <li>$\sqrt[2]{\sqrt[4]{a^8}} = \sqrt[2 \cdot 4]{a^8} = \sqrt[8]{a^8} = a^{\frac{8}{8}} = a.$</li>
+      </ol>
+    </div>
+
+    <h3 class="subsection-title">2. Merasionalkan Penyebut</h3>
+    <p>Merasionalkan penyebut adalah proses mengubah pecahan yang penyebutnya memuat bentuk akar menjadi pecahan yang penyebutnya berupa bilangan rasional.</p>
+      <p><strong>Kasus 1: Penyebut berbentuk $\sqrt{b}$</strong></p>
+      <div class="box box-definisi">
+      <div class="math-block">$$\frac{a}{\sqrt{b}} = \frac{a}{\sqrt{b}} \times \frac{\sqrt{b}}{\sqrt{b}} = \frac{a\sqrt{b}}{b}, \quad b > 0.$$</div>
+      </div>
+      <p><strong>Kasus 2: Penyebut berbentuk $\sqrt{a} \pm \sqrt{b}$</strong> (menggunakan konjugat/sekawan)</p>
+      <div class="box box-definisi">
+      <div class="math-block">$$\frac{p}{\sqrt{a}+\sqrt{b}} = \frac{p(\sqrt{a}-\sqrt{b})}{a-b}, \qquad \frac{p}{\sqrt{a}-\sqrt{b}} = \frac{p(\sqrt{a}+\sqrt{b})}{a-b}.$$</div>
+      <p>Pasangan $(\sqrt{a}+\sqrt{b})$ dan $(\sqrt{a}-\sqrt{b})$ saling disebut <strong>bentuk akar konjugat(sekawan)</strong>.</p>
+      </div>
+      <p style="margin-top:1rem;"><strong>Kasus 3: Penyebut berbentuk $c \pm \sqrt{b}$</strong></p>
+      <div class="box box-definisi">
+      <div class="math-block">$$\frac{p}{c+\sqrt{b}} = \frac{p(c-\sqrt{b})}{c^2-b}, \qquad \frac{p}{c-\sqrt{b}} = \frac{p(c+\sqrt{b})}{c^2-b}.$$</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan</div>
+      <p style="margin:0;font-size:.9rem;">Identitas aljabar yang mendasari penggunaan konjugat adalah:
+        $$(\sqrt{a}+\sqrt{b})(\sqrt{a}-\sqrt{b}) = a - b, \qquad (c+\sqrt{b})(c-\sqrt{b}) = c^2 - b.$$
+        Identitas ini memastikan bahwa penyebut hasil perkalian adalah bilangan rasional.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\dfrac{3}{\sqrt{6}}$</li>
+        <li>$\dfrac{\sqrt{2}}{\sqrt{10}}$</li>
+        <li>$\dfrac{\sqrt{12}}{4\sqrt{2}}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>$\dfrac{3}{\sqrt{6}} = \dfrac{3\sqrt{6}}{6} = \dfrac{\sqrt{6}}{2}$</li>
+        <li>$\dfrac{\sqrt{2}}{\sqrt{10}} = \dfrac{\sqrt{2} \cdot \sqrt{10}}{10} = \dfrac{\sqrt{20}}{10} = \dfrac{2\sqrt{5}}{10} = \dfrac{\sqrt{5}}{5}$</li>
+        <li>$\dfrac{\sqrt{12}}{4\sqrt{2}} = \dfrac{2\sqrt{3}}{4\sqrt{2}} = \dfrac{\sqrt{3}}{2\sqrt{2}} = \dfrac{\sqrt{6}}{4}$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\dfrac{2}{\sqrt{6}-\sqrt{2}}$</li>
+        <li>$\dfrac{\sqrt{6}}{\sqrt{6}+\sqrt{3}}$</li>
+        <li>$\dfrac{\sqrt{6}+\sqrt{3}}{\sqrt{6}-\sqrt{3}}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>Kalikan dengan konjugat $(\sqrt{6}+\sqrt{2})$:
+          $$\begin{align*}\frac{2}{\sqrt{6}-\sqrt{2}} \times \frac{\sqrt{6}+\sqrt{2}}{\sqrt{6}+\sqrt{2}} &= \frac{2(\sqrt{6}+\sqrt{2})}{6-2} \\ &= \frac{\sqrt{6}+\sqrt{2}}{2}.\end{align*}$$</li>
+        <li>Kalikan dengan konjugat $(\sqrt{6}-\sqrt{3})$:
+          $$\begin{align*}\frac{\sqrt{6}}{\sqrt{6}+\sqrt{3}} \times \frac{\sqrt{6}-\sqrt{3}}{\sqrt{6}-\sqrt{3}} &= \frac{6-\sqrt{18}}{3} \\ &= \frac{6-3\sqrt{2}}{3} \\ &= 2 - \sqrt{2}.\end{align*}$$</li>
+        <li>Kalikan dengan konjugat $(\sqrt{6}+\sqrt{3})$:
+          $$\begin{align*}\frac{\sqrt{6}+\sqrt{3}}{\sqrt{6}-\sqrt{3}} \times \frac{\sqrt{6}+\sqrt{3}}{\sqrt{6}+\sqrt{3}} &= \frac{(\sqrt{6}+\sqrt{3})^2}{3} \\ &= \frac{9 + 6\sqrt{2}}{3} \\ &= 3 + 2\sqrt{2}.\end{align*}$$</li>
       </ol>
     </div>
 
