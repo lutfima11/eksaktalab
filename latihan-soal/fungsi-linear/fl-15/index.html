@@ -4,7 +4,7 @@
 <script src="../../../assets/js/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FL-15 Fungsi Linear 15 — EksaktaLab</title>
+<title>Latihan Soal FL-15 — EksaktaLab</title>
 <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -20,6 +20,7 @@ window.MathJax = {
 /* ── NAVBAR override untuk quiz (navy, bukan surface) ── */
 .navbar{background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08);}
 .nav-logo-tag{color:rgba(255,255,255,.4);}
+.nav-logo-name{color:#fff;}
 .nav-btn{border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.07);color:rgba(255,255,255,.8);}
 .nav-btn:hover{background:rgba(255,255,255,.13);color:#fff;border-color:rgba(255,255,255,.25);}
 
@@ -249,28 +250,25 @@ body{
 .q-confirm-btn:disabled{opacity:.4;cursor:not-allowed;}
 
 /* PEMBAHASAN */
-.q-pem{margin-top:1rem;display:none;border-radius:var(--radius-sm);border:1.5px solid var(--border);overflow:hidden;}
+.q-pem{margin-top:1rem;display:none;border-radius:var(--radius-sm);border:1.5px solid var(--border);overflow:hidden;background:var(--surface);}
 .q-pem.show{display:block;animation:fadeUp .2s ease;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
-.q-pem-hd{display:flex;align-items:center;justify-content:space-between;padding:.65rem 1rem;cursor:pointer;font-size:.8rem;font-weight:600;color:var(--text);background:var(--surface-2);transition:background .18s;user-select:none;}
-.q-pem-hd.ok{background:var(--green);border-bottom:1px solid var(--green-b);}
-.q-pem-hd.ng{background:var(--red);border-bottom:1px solid var(--red-b);}
-.q-pem-hd-l{display:flex;align-items:center;gap:.45rem;}
-.q-pem-ico{
-  width:18px;height:18px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;
-}
+.q-pem-hd{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;cursor:pointer;background:transparent;transition:background .18s;user-select:none;}
+.q-pem-hd.ok{background:var(--green);}
+.q-pem-hd.ng{background:var(--red);}
+.q-pem-hd-l{display:flex;align-items:center;gap:.5rem;}
+.q-pem-ico{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .q-pem-ico.ok{background:var(--green-b);}
 .q-pem-ico.ng{background:var(--red-b);}
 .q-pem-ico svg{width:10px;height:10px;stroke:#fff;stroke-width:2.5;}
-.q-pem-verdict{font-weight:700;}
+.q-pem-verdict{font-size:.85rem;font-weight:700;}
 .q-pem-verdict.ok{color:var(--green-b);}
 .q-pem-verdict.ng{color:var(--red-b);}
-.q-pem-toggle{font-size:.7rem;color:var(--text-3);display:flex;align-items:center;gap:.25rem;}
-.q-pem-toggle svg{width:11px;height:11px;transition:transform .2s;}
-.q-pem.open .q-pem-toggle svg{transform:rotate(180deg);}
-.q-pem-body{padding:.9rem 1rem;background:var(--surface);display:none;font-size:.845rem;color:var(--text-2);line-height:1.7;}
-.q-pem.open .q-pem-body{display:block;}
+.q-pem-toggle{display:flex;align-items:center;gap:.3rem;font-size:.73rem;color:var(--text-3);font-weight:600;}
+.q-pem-toggle svg{width:12px;height:12px;transition:transform .2s;}
+.q-pem.open .q-pem-toggle svg{width:12px;height:12px;transition:transform .2s;}
+.q-pem-body{max-height:0;overflow:hidden;opacity:0;transition:max-height .4s cubic-bezier(.4,0,.2,1),opacity .35s ease;background:var(--surface);}
+.q-pem.open .q-pem-body{max-height:2000px;opacity:1;}
 .q-pem-body-lbl{
   font-family:var(--mono);font-size:.58rem;font-weight:700;
   color:var(--teal);text-transform:uppercase;letter-spacing:.08em;
@@ -327,10 +325,6 @@ body{
   background:rgba(0,0,0,.5);z-index:55;
 }
 /* ── BENAR SALAH — card list style ── */
-.q-bs-head{display:flex;align-items:center;justify-content:space-between;padding:.4rem 0;margin-bottom:.5rem;}
-.q-bs-head-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;}
-.q-bs-head-cols{display:flex;gap:1rem;}
-.q-bs-head-col{font-family:var(--mono);font-size:.6rem;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;width:56px;text-align:center;}
 .q-bs-list{display:flex;flex-direction:column;gap:.45rem;}
 .q-bs-item{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.7rem 1rem;border-radius:var(--radius-sm);border:1.5px solid var(--border);background:var(--surface);transition:all .18s;}
 .q-bs-item.item-ok{border-color:var(--green-b);background:var(--green);}
@@ -455,65 +449,118 @@ body{
    TABLET PORTRAIT  601–900px
    Sidebar collapse ke icon-only strip vertikal kiri
 ═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   TABLET LANDSCAPE + SMALL DESKTOP  901–1100px
+═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   MOBILE  ≤600px — strip bawah
+═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   SMALL MOBILE  ≤480px
+═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   VERY SMALL  ≤360px
+═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   TOUCH DEVICE — matikan hover state
+═══════════════════════════════════════════════════════ */
+.q-pem-body-inner{border-top:1px solid var(--border);padding:.9rem 1rem;font-size:.845rem;color:var(--text-2);line-height:1.7;}
+
+.q-pem-solve-hd{
+  display:flex;align-items:center;gap:.5rem;
+  padding:.5rem 1rem;
+  background:rgba(0,191,165,.05);
+  border-bottom:1px solid rgba(0,191,165,.1);
+}
+.q-pem-solve-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+.q-pem-solve-title{font-family:var(--mono);font-size:.62rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.07em;}
+
 @media(min-width:601px) and (max-width:900px){
-  /* Body: normal scroll */
+  /* Body: flex column, tinggi viewport */
   body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;}
 
-  /* Layout: sidebar tipis icon-only */
-  .q-layout{flex-direction:row;overflow:hidden;flex:1;min-height:0;}
+  /* Progress bar */
+  .q-progress-bar{flex-shrink:0;}
 
-  /* Sidebar: icon-only 56px */
+  /* Navbar + breadcrumb: tidak menyusut */
+  .navbar{flex-shrink:0;position:relative;}
+  .q-breadcrumb{flex-shrink:0;}
+
+  /* Layout: row, sidebar kiri + konten kanan */
+  .q-layout{
+    flex:1;flex-direction:row;
+    overflow:hidden;min-height:0;display:flex;
+  }
+
+  /* Sidebar: icon-only 48px collapsed */
   .q-sidebar{
-    width:56px;flex-shrink:0;
-    display:flex;flex-direction:column;overflow:hidden;
+    width:48px;flex-shrink:0;
+    display:flex;flex-direction:column;
+    overflow:hidden;
     transition:width .22s ease;
+    z-index:10;
   }
   .q-sidebar:hover{
     width:200px;
-    box-shadow:4px 0 20px rgba(0,0,0,.12);
+    box-shadow:4px 0 24px rgba(0,0,0,.13);
     z-index:30;position:relative;
   }
 
-  /* Sidebar head: nomor soal tetap grid 4 col, hide label saat collapsed */
-  .q-sb-head{padding:.65rem .6rem .5rem;}
+  /* Sidebar head */
+  .q-sb-head{padding:.6rem .5rem .5rem;}
   .q-sb-label{
     font-size:.55rem;white-space:nowrap;overflow:hidden;
-    opacity:0;transition:opacity .15s;
+    opacity:0;transition:opacity .15s;height:0;margin:0;
   }
-  .q-sidebar:hover .q-sb-label{opacity:1;}
-  .q-num-grid{grid-template-columns:repeat(2,1fr);gap:4px;}
-  .q-sidebar:hover .q-num-grid{grid-template-columns:repeat(4,1fr);}
-  .q-num-btn{width:32px;height:32px;font-size:.67rem;}
+  .q-sidebar:hover .q-sb-label{opacity:1;height:auto;margin-bottom:.5rem;}
 
-  /* Tip + legend: hide saat collapsed */
+  /* Grid nomor: 1 kolom saat collapsed, 4 kolom saat hover */
+  .q-num-grid{grid-template-columns:repeat(1,1fr);gap:4px;}
+  .q-sidebar:hover .q-num-grid{grid-template-columns:repeat(4,1fr);}
+  .q-num-btn{
+    width:34px;height:34px;font-size:.68rem;
+    border-radius:6px;
+  }
+  /* Saat collapsed: tombol centered di 48px */
+  .q-sidebar:not(:hover) .q-num-btn{
+    width:32px;height:32px;
+    margin:0 auto;
+  }
+
+  /* Tip + legend: hidden collapsed, tampil hover */
   .q-sb-tip{display:none;}
   .q-sidebar:hover .q-sb-tip{display:block;}
   .q-sb-legend{display:none;}
   .q-sidebar:hover .q-sb-legend{display:block;}
 
-  /* Content: scroll internal */
-  .q-content{overflow-y:auto;padding:1.25rem 1.25rem 1.5rem;}
+  /* Content: flex:1, scroll internal — KUNCI */
+  .q-content{
+    flex:1;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    padding:1.25rem 1.4rem 1.5rem;
+    min-height:0;
+  }
 
-  /* Nav desktop: tampil normal */
-  .q-nav{display:flex;padding:.8rem 1.25rem;}
-  .q-nav-btn{height:38px;padding:0 1rem 0 1rem;font-size:.79rem;}
+  /* Nav bawah desktop: tampil, flex-shrink:0 */
+  .q-nav{
+    display:flex;flex-shrink:0;
+    padding:.8rem 1.25rem;
+  }
+  .q-nav-btn{height:38px;padding:0 1rem;font-size:.79rem;}
 
   /* Mobile strip + mob-nav: sembunyikan */
   .q-mob-strip{display:none !important;}
   .q-mob-nav{display:none !important;}
   .q-sb-fab{display:none !important;}
 
-  /* Breadcrumb */
-  .q-breadcrumb{padding:.5rem 1.25rem;}
+  /* Breadcrumb padding */
+  .q-breadcrumb{padding:.45rem 1rem;font-size:.68rem;}
 
-  /* Soal text */
-  .q-text{font-size:.9rem;}
-  .q-opt{padding:.65rem .9rem;font-size:.86rem;}
+  /* Soal */
+  .q-text{font-size:.92rem;}
+  .q-opt{padding:.68rem .95rem;font-size:.875rem;}
 }
-
-/* ═══════════════════════════════════════════════════════
-   TABLET LANDSCAPE + SMALL DESKTOP  901–1100px
-═══════════════════════════════════════════════════════ */
 @media(min-width:901px) and (max-width:1100px){
   /* Sidebar sedikit lebih sempit */
   .q-sidebar{width:180px;}
@@ -522,32 +569,78 @@ body{
   .q-content{padding:1.25rem 1.5rem;}
   .q-nav{padding:.8rem 1.5rem;}
 }
-
-/* ═══════════════════════════════════════════════════════
-   MOBILE  ≤600px — strip bawah
-═══════════════════════════════════════════════════════ */
 @media(max-width:600px){
-  body{height:auto;overflow-x:hidden;overflow-y:auto;display:block;}
-  .q-layout{flex-direction:column;overflow:visible;min-height:0;}
+  /* Body: flex column, tinggi viewport penuh */
+  body{
+    height:100dvh;
+    display:flex;flex-direction:column;
+    overflow:hidden;
+  }
+
+  /* Layout: flex column, isi sisa ruang */
+  .q-layout{
+    flex:1;
+    flex-direction:column;
+    overflow:hidden;
+    min-height:0;
+    display:flex;
+  }
+
+  /* Sidebar: hidden */
   .q-sidebar{display:none !important;}
   .q-sb-overlay{display:none !important;}
   .q-sb-fab{display:none !important;}
-  .q-content{overflow-y:visible;padding:1.1rem 1rem 1rem;}
-  .q-nav{display:none;}
-  .q-mob-strip{display:flex;}
-  .q-mob-nav{display:flex;}
+
+  /* Content: scroll internal — kunci utama */
+  .q-content{
+    flex:1;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    padding:1.1rem 1rem 1.25rem;
+    min-height:0;
+  }
+
+  /* Nav desktop: hilang */
+  .q-nav{display:none !important;}
+
+  /* Strip nomor: sticky bawah, tidak ikut scroll konten */
+  .q-mob-strip{
+    display:flex;
+    flex-shrink:0;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    padding:.5rem .9rem;
+    background:var(--surface-2);
+    border-top:1px solid var(--border);
+  }
+  .q-mob-strip::-webkit-scrollbar{display:none;}
+
+  /* Nav mobile: sticky bawah */
+  .q-mob-nav{
+    display:flex;
+    flex-shrink:0;
+    padding:.65rem .9rem .75rem;
+    background:var(--surface);
+    border-top:1px solid var(--border);
+  }
+
+
+  /* Navbar + breadcrumb: tidak boleh menyusut */
+  .navbar{flex-shrink:0;position:relative;top:auto;}
+  .q-breadcrumb{flex-shrink:0;}
+  .q-progress-bar{flex-shrink:0;}
+  /* Breadcrumb */
   .q-breadcrumb{padding:.45rem 1rem;font-size:.67rem;gap:.3rem;}
+
+  /* Progress bar */
   #scroll-bar{top:60px;}
 }
-
-/* ═══════════════════════════════════════════════════════
-   SMALL MOBILE  ≤480px
-═══════════════════════════════════════════════════════ */
 @media(max-width:480px){
   .nav-logo-tag{display:none;}
-  .q-content{padding:.9rem .9rem 1rem;}
-  .q-text{font-size:.88rem;line-height:1.65;}
-  .q-soal-meta{margin-bottom:.75rem;}
+  .q-content{padding:.9rem .9rem 1.1rem;}
+  .q-text{font-size:.875rem;line-height:1.65;}
+  .q-soal-meta{margin-bottom:.7rem;}
   .q-tandai{font-size:.66rem;padding:.18rem .5rem;}
   .q-type{font-size:.55rem;}
   .q-opt{padding:.6rem .8rem;font-size:.845rem;gap:.65rem;}
@@ -558,25 +651,21 @@ body{
   .q-bs-btns{width:100%;justify-content:flex-end;}
   .q-bs-btn{flex:1;height:36px;font-size:.7rem;}
   .q-pem-hd{padding:.55rem .85rem;font-size:.76rem;}
-  .q-pem-body{padding:.75rem .85rem;font-size:.815rem;}
+  .q-pem-body-inner{padding:.75rem .85rem;font-size:.815rem;}
   .q-mob-nav{padding:.55rem .85rem .7rem;}
   .q-mob-nav-btn{height:36px;padding:0 .85rem;font-size:.76rem;}
   .q-mob-nav-ctr{font-size:.68rem;}
-  .q-mob-strip{padding:.45rem .85rem;}
+  .q-mob-strip{padding:.42rem .85rem;}
   .q-mob-num{width:30px;height:30px;font-size:.67rem;border-radius:6px;}
   .q-score{padding:1.5rem .9rem 2rem;gap:.4rem;}
   .q-score-ring{width:90px;height:90px;}
   .q-score-num{font-size:1.8rem;}
   .q-score-label{font-size:1rem;}
-  .q-score-msg{font-size:.78rem;margin-bottom:.6rem;}
+  .q-score-msg{font-size:.78rem;}
   .q-score-grid{gap:.45rem;max-width:100%;}
   .q-score-item-n{font-size:1.2rem;}
   .q-score-btn{height:34px;padding:0 .85rem;font-size:.76rem;}
 }
-
-/* ═══════════════════════════════════════════════════════
-   VERY SMALL  ≤360px
-═══════════════════════════════════════════════════════ */
 @media(max-width:360px){
   .q-content{padding:.75rem .75rem 1rem;}
   .q-text{font-size:.84rem;}
@@ -584,10 +673,6 @@ body{
   .q-mob-num{width:28px;height:28px;font-size:.64rem;}
   .q-mob-nav-btn{font-size:.72rem;padding:0 .7rem;}
 }
-
-/* ═══════════════════════════════════════════════════════
-   TOUCH DEVICE — matikan hover state
-═══════════════════════════════════════════════════════ */
 @media(hover:none){
   .q-opt:hover:not(:disabled){border-color:var(--border);background:var(--surface);}
   .q-mma-opt:hover:not(:disabled){border-color:var(--border);background:var(--surface);}
@@ -821,17 +906,20 @@ function renderQ(i){
     html+=`<div class="q-pem show open" id="pem${i}">
       <div class="q-pem-hd ${vc}" onclick="togglePem(${i})">
         <div class="q-pem-hd-l">
-          <div class="q-pem-ico ${vc}"><svg viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round">${ip}</svg></div>
+          <div class="q-pem-ico ${vc}"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">${ip}</svg></div>
           <span class="q-pem-verdict ${vc}">${vt}</span>
         </div>
         <span class="q-pem-toggle">Sembunyikan Pembahasan<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></span>
       </div>
-      <div class="q-pem-body"><span class="q-pem-body-lbl">Pembahasan</span>${q.p}</div>
+      <div class="q-pem-body">
+        <div class="q-pem-solve-hd"><span class="q-pem-solve-dot"></span><span class="q-pem-solve-title">Pembahasan</span></div>
+        <div class="q-pem-body-inner">${q.p}</div>
+      </div>
     </div>`;
   }
 
   const wrap=document.getElementById('q-content');
-  wrap.innerHTML=html;wrap.scrollTop=0;
+  wrap.innerHTML=html;wrap.scrollTop=0;const qc=document.getElementById('q-content');if(qc)qc.scrollTop=0;
   if(window.MathJax)MathJax.typesetPromise([wrap]).catch(()=>{});
 }
 
@@ -864,7 +952,7 @@ function renderBS(q,i,answered){
   const ua=S.answers[i]; // array per-pernyataan atau null
   const temp=S.bsTemp&&S.bsTemp[i]?S.bsTemp[i]:Array(ps.length).fill(null);
 
-  let h='<div class="q-bs-head"><span class="q-bs-head-lbl">Pernyataan</span><div class="q-bs-head-cols"><span class="q-bs-head-col">Benar</span><span class="q-bs-head-col">Salah</span></div></div>';
+  let h='';
   h+='<div class="q-bs-list">';
   ps.forEach((p,pi)=>{
     const cur=answered?(ua?ua[pi]:null):(temp[pi]);
