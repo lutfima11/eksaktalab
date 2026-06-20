@@ -241,11 +241,7 @@ body{
 .q-mma-opt.wrong{border-color:var(--red-b)!important;background:var(--red)!important;}
 .q-mma-opt.wrong .q-checkbox{background:var(--red-b)!important;border-color:var(--red-b)!important;}
 .q-mma-opt.missed{border-color:var(--green-b)!important;opacity:.55;}
-.q-confirm-btn{
-  margin-top:.85rem;height:36px;padding:0 1.25rem;border-radius:var(--radius-sm);
-  background:var(--teal);color:var(--navy);font-size:.8rem;font-weight:700;
-  font-family:var(--sans);border:none;cursor:pointer;transition:all .2s;
-}
+.q-confirm-btn{margin-top:.85rem;height:38px;padding:0 1.25rem;border-radius:var(--radius-sm);background:var(--teal);color:#fff;font-size:.8rem;font-weight:700;font-family:var(--sans);border:none;cursor:pointer;transition:all .2s;}
 .q-confirm-btn:hover{background:var(--teal-dim);}
 .q-confirm-btn:disabled{opacity:.4;cursor:not-allowed;}
 
@@ -327,14 +323,9 @@ body{
 .q-bs-btn.sel-s{border-color:var(--teal);background:rgba(0,191,165,.12);color:var(--teal);}
 .q-bs-btn.cor{border-color:var(--green-b)!important;background:var(--green-b)!important;color:#fff!important;}
 .q-bs-btn.wrg{border-color:var(--red-b)!important;background:var(--red-b)!important;color:#fff!important;}
-.q-bs-confirm{
-  margin-top:.85rem;height:38px;padding:0 1.25rem;border-radius:99px;
-  background:var(--teal);color:#fff;font-size:.8rem;font-weight:700;
-  font-family:var(--sans);border:none;cursor:pointer;transition:all .2s;
-  box-shadow:0 4px 14px rgba(0,191,165,.25);
-}
+.q-bs-confirm{margin-top:.85rem;height:38px;padding:0 1.25rem;border-radius:var(--radius-sm);background:var(--teal);color:#fff;font-size:.8rem;font-weight:700;font-family:var(--sans);border:none;cursor:pointer;transition:all .2s;}
 .q-bs-confirm:hover{background:var(--teal-dim);}
-.q-bs-confirm:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;}
+.q-bs-confirm:disabled{opacity:.4;cursor:not-allowed;}
 
 /* ═══════════════════════════════════════════════════════
    RESPONSIVE — MOBILE
@@ -451,6 +442,8 @@ body{
 /* ── PEMBAHASAN ACCORDION — style contoh-header materi ── */
 .q-pem{margin-top:1rem;display:none;border-radius:var(--radius-sm);border:1.5px solid var(--border);overflow:hidden;background:var(--surface);}
 .q-pem.show{display:block;animation:fadeUp .2s ease;}
+.q-pem.pem-ok{border-color:var(--green-b);}
+.q-pem.pem-ng{border-color:var(--red-b);}
 .q-pem-hd{
   display:flex;align-items:center;gap:.75rem;
   padding:.75rem 1rem;
@@ -459,10 +452,9 @@ body{
   transition:background .2s;
 }
 .q-pem-hd:hover{background:var(--surface-2);}
-.q-pem-hd.ok{border-bottom:1px solid var(--green-b);}
-.q-pem-hd.ng{border-bottom:1px solid var(--red-b);}
-.q-pem.open .q-pem-hd{border-bottom:none;}
-/* Badge verdict — seperti contoh-badge */
+.q-pem-hd.ok{background:rgba(0,180,80,.06);}
+.q-pem-hd.ng{background:rgba(220,50,50,.05);}
+.q-pem.open /* Badge verdict — seperti contoh-badge */
 .q-pem-badge{
   font-family:var(--mono);font-size:.62rem;font-weight:700;
   padding:.22rem .6rem;border-radius:5px;
@@ -931,10 +923,9 @@ function renderQ(i){
     const vt=ok?'Jawaban Benar!':'Jawaban Salah';
     const ip=ok?'<polyline points="2,6 5,9 10,3"/>'
                 :'<line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/>';
-    html+=`<div class="q-pem show open" id="pem${i}">
+    html+=`<div class="q-pem show open pem-${vc}" id="pem${i}">
       <div class="q-pem-hd ${vc}" onclick="togglePem(${i})">
         <span class="q-pem-badge ${vc}">${vt}</span>
-        <span class="q-pem-label">Pembahasan</span>
         <span class="q-pem-chevron"><svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,4 6,8 10,4"/></svg></span>
       </div>
       <div class="q-pem-body">

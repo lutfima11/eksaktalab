@@ -241,11 +241,7 @@ body{
 .q-mma-opt.wrong{border-color:var(--red-b)!important;background:var(--red)!important;}
 .q-mma-opt.wrong .q-checkbox{background:var(--red-b)!important;border-color:var(--red-b)!important;}
 .q-mma-opt.missed{border-color:var(--green-b)!important;opacity:.55;}
-.q-confirm-btn{
-  margin-top:.85rem;height:36px;padding:0 1.25rem;border-radius:var(--radius-sm);
-  background:var(--teal);color:var(--navy);font-size:.8rem;font-weight:700;
-  font-family:var(--sans);border:none;cursor:pointer;transition:all .2s;
-}
+.q-confirm-btn{margin-top:.85rem;height:38px;padding:0 1.25rem;border-radius:var(--radius-sm);background:var(--teal);color:#fff;font-size:.8rem;font-weight:700;font-family:var(--sans);border:none;cursor:pointer;transition:all .2s;}
 .q-confirm-btn:hover{background:var(--teal-dim);}
 .q-confirm-btn:disabled{opacity:.4;cursor:not-allowed;}
 
@@ -327,14 +323,9 @@ body{
 .q-bs-btn.sel-s{border-color:var(--teal);background:rgba(0,191,165,.12);color:var(--teal);}
 .q-bs-btn.cor{border-color:var(--green-b)!important;background:var(--green-b)!important;color:#fff!important;}
 .q-bs-btn.wrg{border-color:var(--red-b)!important;background:var(--red-b)!important;color:#fff!important;}
-.q-bs-confirm{
-  margin-top:.85rem;height:38px;padding:0 1.25rem;border-radius:99px;
-  background:var(--teal);color:#fff;font-size:.8rem;font-weight:700;
-  font-family:var(--sans);border:none;cursor:pointer;transition:all .2s;
-  box-shadow:0 4px 14px rgba(0,191,165,.25);
-}
+.q-bs-confirm{margin-top:.85rem;height:38px;padding:0 1.25rem;border-radius:var(--radius-sm);background:var(--teal);color:#fff;font-size:.8rem;font-weight:700;font-family:var(--sans);border:none;cursor:pointer;transition:all .2s;}
 .q-bs-confirm:hover{background:var(--teal-dim);}
-.q-bs-confirm:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;}
+.q-bs-confirm:disabled{opacity:.4;cursor:not-allowed;}
 
 /* ═══════════════════════════════════════════════════════
    RESPONSIVE — MOBILE
@@ -451,6 +442,8 @@ body{
 /* ── PEMBAHASAN ACCORDION — style contoh-header materi ── */
 .q-pem{margin-top:1rem;display:none;border-radius:var(--radius-sm);border:1.5px solid var(--border);overflow:hidden;background:var(--surface);}
 .q-pem.show{display:block;animation:fadeUp .2s ease;}
+.q-pem.pem-ok{border-color:var(--green-b);}
+.q-pem.pem-ng{border-color:var(--red-b);}
 .q-pem-hd{
   display:flex;align-items:center;gap:.75rem;
   padding:.75rem 1rem;
@@ -459,10 +452,9 @@ body{
   transition:background .2s;
 }
 .q-pem-hd:hover{background:var(--surface-2);}
-.q-pem-hd.ok{border-bottom:1px solid var(--green-b);}
-.q-pem-hd.ng{border-bottom:1px solid var(--red-b);}
-.q-pem.open .q-pem-hd{border-bottom:none;}
-/* Badge verdict — seperti contoh-badge */
+.q-pem-hd.ok{background:rgba(0,180,80,.06);}
+.q-pem-hd.ng{background:rgba(220,50,50,.05);}
+.q-pem.open /* Badge verdict — seperti contoh-badge */
 .q-pem-badge{
   font-family:var(--mono);font-size:.62rem;font-weight:700;
   padding:.22rem .6rem;border-radius:5px;
@@ -708,6 +700,168 @@ body{
   .q-mob-nav-btn.next:hover{background:transparent;color:var(--teal);}
   .q-bs-btn:hover:not(:disabled){border-color:var(--border);color:var(--text-3);background:var(--surface-2);}
 }
+
+
+/* ═══════════════════════════════════════════════════════
+   TIMER
+═══════════════════════════════════════════════════════ */
+.ujian-timer-wrap{
+  margin:.75rem .75rem 0;
+  padding:.6rem .85rem;
+  border-radius:var(--radius-sm);
+  background:var(--navy);
+  border:1px solid rgba(0,191,165,.2);
+  display:flex;align-items:center;gap:.5rem;
+  flex-shrink:0;
+}
+[data-theme="light"] .ujian-timer-wrap{background:rgba(13,27,46,.06);}
+.ujian-timer-icon{width:14px;height:14px;stroke:var(--teal);fill:none;}
+.ujian-timer-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;}
+#ujian-timer{
+  font-family:var(--mono);font-size:1.35rem;font-weight:700;
+  color:#fff;letter-spacing:-.02em;margin-left:auto;
+}
+[data-theme="light"] #ujian-timer{color:var(--navy);}
+.timer-urgent .ujian-timer-wrap{border-color:var(--red-b);animation:timerPulse 1s ease infinite;}
+.timer-urgent #ujian-timer{color:var(--red-b);}
+@keyframes timerPulse{0%,100%{opacity:1;}50%{opacity:.6;}}
+
+/* ═══════════════════════════════════════════════════════
+   UJIAN RESULT PAGE
+═══════════════════════════════════════════════════════ */
+.ujian-result{
+  flex:1;display:flex;flex-direction:column;
+  overflow-y:auto;background:var(--surface);
+}
+
+/* HERO SKOR */
+.ur-hero{
+  background:var(--navy);
+  padding:2.5rem 2rem 2rem;
+  text-align:center;
+  display:flex;flex-direction:column;align-items:center;gap:.6rem;
+  flex-shrink:0;position:relative;overflow:hidden;
+}
+.ur-hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(0,191,165,.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,191,165,.06) 1px,transparent 1px);
+  background-size:32px 32px;pointer-events:none;
+}
+.ur-grade{
+  width:72px;height:72px;border-radius:50%;
+  border:3px solid;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-size:1.8rem;font-weight:700;
+  position:relative;z-index:1;
+}
+.ur-nilai{
+  font-family:var(--display);font-size:3rem;font-weight:700;
+  color:#fff;letter-spacing:-.05em;line-height:1;
+  position:relative;z-index:1;
+}
+.ur-nilai span{font-size:1.2rem;color:rgba(255,255,255,.4);}
+.ur-label{
+  font-size:.9rem;color:rgba(255,255,255,.7);
+  position:relative;z-index:1;
+}
+.ur-stats{
+  display:flex;gap:1rem;margin-top:.5rem;
+  position:relative;z-index:1;
+}
+.ur-stat{
+  display:flex;flex-direction:column;align-items:center;gap:.15rem;
+  min-width:56px;
+}
+.ur-stat span{font-family:var(--display);font-size:1.4rem;font-weight:700;color:#fff;line-height:1;}
+.ur-stat{font-size:.65rem;font-family:var(--mono);color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;}
+.ur-stat.g span{color:var(--green-b);}
+.ur-stat.r span{color:var(--red-b);}
+.ur-stat.m span{color:rgba(255,255,255,.4);}
+.ur-actions{
+  display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;
+  margin-top:.75rem;position:relative;z-index:1;
+}
+.ur-btn{
+  display:inline-flex;align-items:center;gap:.45rem;
+  height:38px;padding:0 1.1rem;border-radius:var(--radius-sm);
+  background:var(--teal);color:var(--navy);
+  font-family:var(--sans);font-size:.8rem;font-weight:700;
+  border:none;cursor:pointer;text-decoration:none;
+  transition:all .2s;white-space:nowrap;
+}
+.ur-btn:hover{background:var(--teal-dim);}
+.ur-btn.secondary{
+  background:rgba(255,255,255,.1);color:#fff;
+  border:1px solid rgba(255,255,255,.2);
+}
+.ur-btn.secondary:hover{background:rgba(255,255,255,.18);}
+
+/* REVIEW SOAL */
+.ur-review{padding:1.5rem;display:flex;flex-direction:column;gap:1rem;}
+.ur-review-title{
+  display:flex;align-items:center;justify-content:space-between;
+  font-family:var(--display);font-size:1rem;font-weight:700;color:var(--text);
+}
+.ur-expand-all{
+  font-size:.72rem;font-weight:600;font-family:var(--sans);
+  color:var(--teal);background:none;border:none;cursor:pointer;
+  padding:.2rem .4rem;
+}
+.ur-review-list{display:flex;flex-direction:column;gap:.75rem;}
+
+/* Review item */
+.rv-item{
+  border:1.5px solid var(--border);border-radius:var(--radius-sm);
+  background:var(--surface);overflow:hidden;
+}
+.rv-item.rv-benar{border-color:var(--green-b);}
+.rv-item.rv-salah{border-color:var(--red-b);}
+.rv-item.rv-kosong{border-color:var(--border);opacity:.7;}
+.rv-item-head{
+  display:flex;align-items:center;gap:.6rem;
+  padding:.55rem .85rem;background:var(--surface-2);
+  border-bottom:1px solid var(--border);
+}
+.rv-item.rv-benar .rv-item-head{background:var(--green);}
+.rv-item.rv-salah .rv-item-head{background:var(--red);}
+.rv-num{font-family:var(--mono);font-size:.65rem;font-weight:700;color:var(--text-3);}
+.rv-type{font-family:var(--mono);font-size:.58rem;color:var(--text-3);background:var(--surface-3);padding:.1rem .4rem;border-radius:4px;}
+.rv-status{margin-left:auto;font-family:var(--mono);font-size:.62rem;font-weight:700;}
+.rv-item.rv-benar .rv-status{color:var(--green-b);}
+.rv-item.rv-salah .rv-status{color:var(--red-b);}
+.rv-item.rv-kosong .rv-status{color:var(--text-3);}
+.rv-soal{padding:.65rem .85rem;font-size:.875rem;color:var(--text);line-height:1.6;font-weight:500;}
+
+/* Pembahasan accordion dalam review */
+.rv-pem-wrap{border-top:1px solid var(--border);}
+.rv-pem-hd{
+  display:flex;align-items:center;gap:.5rem;
+  padding:.5rem .85rem;cursor:pointer;
+  background:var(--surface-2);
+  transition:background .18s;user-select:none;
+}
+.rv-pem-hd:hover{background:var(--surface-3);}
+.rv-pem-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+.rv-pem-title{font-family:var(--mono);font-size:.6rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;flex:1;}
+.rv-pem-chevron svg{width:11px;height:11px;transition:transform .2s;stroke-width:2.2;}
+.rv-pem-wrap.open .rv-pem-chevron svg{transform:rotate(180deg);}
+.rv-pem-body{
+  max-height:0;overflow:hidden;opacity:0;
+  transition:max-height .35s cubic-bezier(.4,0,.2,1),opacity .3s ease;
+  padding:0 .85rem;font-size:.835rem;color:var(--text-2);line-height:1.7;
+}
+.rv-pem-wrap.open .rv-pem-body{max-height:1000px;opacity:1;padding:.8rem .85rem;}
+
+/* Mobile responsive result */
+@media(max-width:600px){
+  .ur-hero{padding:1.75rem 1.25rem 1.5rem;}
+  .ur-grade{width:56px;height:56px;font-size:1.4rem;}
+  .ur-nilai{font-size:2.4rem;}
+  .ur-stats{gap:.65rem;}
+  .ur-stat span{font-size:1.15rem;}
+  .ur-review{padding:1rem;}
+}
 </style>
 </head>
 <body>
@@ -762,6 +916,12 @@ body{
     <div class="q-sb-head">
       <div class="q-sb-label">Daftar Soal</div>
       <div class="q-num-grid" id="q-grid"></div>
+    </div>
+    <!-- TIMER UJIAN -->
+    <div class="ujian-timer-wrap" id="ujian-timer-wrap">
+      <svg class="ujian-timer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15,15"/></svg>
+      <span class="ujian-timer-lbl">Waktu</span>
+      <span id="ujian-timer">--:--</span>
     </div>
     <div class="q-sb-tip">
       <div class="q-sb-tip-lbl">
@@ -831,6 +991,8 @@ window.addEventListener('scroll', () => {
   if (sb) sb.style.width = pct + '%';
 });
 
+const UJIAN_MODE = true;
+const UJIAN_MINUTES = 15;
 const PAKET_ID = 'kuis-kilat';
 const TIPS = {
   pg:  'Pilih satu jawaban yang paling tepat.',
@@ -859,7 +1021,7 @@ function init(){
   S.correct=Array(data.soal.length).fill(null);
   S.marked=Array(data.soal.length).fill(false);
   document.getElementById('q-tot').textContent=data.soal.length;
-  buildGrid();buildMobStrip();renderQ(0);
+  buildGrid();buildMobStrip();renderQ(0);initTimer();initReloadGuard();
 }
 
 function buildGrid(){
@@ -925,16 +1087,15 @@ function renderQ(i){
   else html+=renderPG(q,i,answered);
 
   // pembahasan
-  if(answered){
+  if(answered && !IS_UJIAN){
     const ok=S.correct[i];
     const vc=ok?'ok':'ng';
     const vt=ok?'Jawaban Benar!':'Jawaban Salah';
     const ip=ok?'<polyline points="2,6 5,9 10,3"/>'
                 :'<line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/>';
-    html+=`<div class="q-pem show open" id="pem${i}">
+    html+=`<div class="q-pem show open pem-${vc}" id="pem${i}">
       <div class="q-pem-hd ${vc}" onclick="togglePem(${i})">
         <span class="q-pem-badge ${vc}">${vt}</span>
-        <span class="q-pem-label">Pembahasan</span>
         <span class="q-pem-chevron"><svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,4 6,8 10,4"/></svg></span>
       </div>
       <div class="q-pem-body">
@@ -1146,7 +1307,7 @@ function updateMobNav(i){
   if(cur)  cur.textContent = i + 1;
   if(next){
     if(isLast){
-      next.innerHTML = 'Lihat Nilai<span class="q-mob-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="2,7 5,9.5 8,4"/></svg></span>';
+      next.innerHTML = 'Selesai & Nilai<span class="q-mob-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="2,7 5,9.5 8,4"/></svg></span>';
       next.onclick = showScore;
     } else {
       next.innerHTML = 'Selanjutnya<span class="q-mob-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span>';
@@ -1156,6 +1317,187 @@ function updateMobNav(i){
   // Auto-scroll strip ke nomor aktif
   const mn = document.getElementById('mn'+i);
   if(mn) mn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+
+
+// ══════════════════════════════════════════════════════════════════
+//  UJIAN MODE — Timer, No-Pembahasan, Hasil Page, Share, Reload Guard
+// ══════════════════════════════════════════════════════════════════
+
+const IS_UJIAN = (typeof UJIAN_MODE !== 'undefined') && UJIAN_MODE === true;
+const UJIAN_DURATION = (typeof UJIAN_MINUTES !== 'undefined') ? UJIAN_MINUTES * 60 : 45 * 60;
+const SESSION_KEY = 'ujian_timer_' + PAKET_ID;
+
+// ── Timer ────────────────────────────────────────────────────────
+let timerInterval = null;
+let timeLeft = UJIAN_DURATION;
+
+function initTimer() {
+  if (!IS_UJIAN) return;
+
+  // Restore dari sessionStorage
+  const saved = sessionStorage.getItem(SESSION_KEY);
+  if (saved) {
+    timeLeft = parseInt(saved);
+  } else {
+    timeLeft = UJIAN_DURATION;
+    sessionStorage.setItem(SESSION_KEY, timeLeft);
+  }
+
+  renderTimer();
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    sessionStorage.setItem(SESSION_KEY, timeLeft);
+    renderTimer();
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      sessionStorage.removeItem(SESSION_KEY);
+      autoSubmitUjian();
+    }
+  }, 1000);
+}
+
+function renderTimer() {
+  const el = document.getElementById('ujian-timer');
+  if (!el) return;
+  const m = Math.floor(Math.abs(timeLeft) / 60).toString().padStart(2, '0');
+  const s = (Math.abs(timeLeft) % 60).toString().padStart(2, '0');
+  el.textContent = `${m}:${s}`;
+  // Warna: merah jika < 5 menit
+  el.parentElement.classList.toggle('timer-urgent', timeLeft < 300 && timeLeft > 0);
+  el.parentElement.classList.toggle('timer-done', timeLeft <= 0);
+}
+
+function autoSubmitUjian() {
+  // Submit semua yang sudah dijawab, null yang belum
+  S.correct = S.soal.map((_, i) => {
+    if (S.answers[i] === null) return false;
+    return S.correct[i];
+  });
+  showUjianResult();
+}
+
+// ── Reload / Exit Guard ──────────────────────────────────────────
+function initReloadGuard() {
+  if (!IS_UJIAN) return;
+  window.addEventListener('beforeunload', (e) => {
+    if (S.done) return;
+    e.preventDefault();
+    e.returnValue = 'Ujian sedang berlangsung. Yakin ingin meninggalkan halaman? Progres tidak akan tersimpan.';
+    return e.returnValue;
+  });
+}
+
+// ── Halaman Hasil Ujian ──────────────────────────────────────────
+function showUjianResult() {
+  S.done = true;
+  if (timerInterval) clearInterval(timerInterval);
+  sessionStorage.removeItem(SESSION_KEY);
+
+  const total = S.soal.length;
+  const benar = S.correct.filter(c => c === true).length;
+  const salah = S.correct.filter(c => c === false).length;
+  const kosong = S.answers.filter(a => a === null).length;
+  const nilai = Math.round((benar / total) * 100);
+
+  let grade = 'D', gradeColor = 'var(--red-b)', label = 'Perlu Belajar Lebih Giat';
+  if (nilai >= 90) { grade = 'A'; gradeColor = 'var(--green-b)'; label = 'Sangat Memuaskan! 🎉'; }
+  else if (nilai >= 80) { grade = 'B'; gradeColor = 'var(--teal)'; label = 'Baik Sekali!'; }
+  else if (nilai >= 70) { grade = 'C'; gradeColor = '#D97706'; label = 'Cukup Baik'; }
+  else if (nilai >= 60) { grade = 'C-'; gradeColor = '#EA580C'; label = 'Cukup'; }
+
+  // Share text untuk WA
+  const shareText = `📊 Hasil Ujian EksaktaLab\n` +
+    `📚 ${document.title.replace('Latihan Soal ', '').replace(' — EksaktaLab', '')}\n` +
+    `🎯 Nilai: ${nilai}/100 (${grade})\n` +
+    `✅ Benar: ${benar}  ❌ Salah: ${salah}  ⬜ Kosong: ${kosong}\n` +
+    `🔗 Coba sekarang: ${window.location.href}`;
+  const waURL = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+
+  // Build review soal
+  let reviewHTML = '';
+  S.soal.forEach((q, i) => {
+    const ok = S.correct[i];
+    const ans = S.answers[i];
+    const statusCls = ok === true ? 'rv-benar' : (ans === null ? 'rv-kosong' : 'rv-salah');
+    const statusLabel = ok === true ? 'Benar' : (ans === null ? 'Tidak Dijawab' : 'Salah');
+    const typeLabel = { pg: 'Pilihan Ganda', bs: 'Benar / Salah', mma: 'Multiple Answer' }[q.type] || 'Pilihan Ganda';
+
+    reviewHTML += `<div class="rv-item ${statusCls}">
+      <div class="rv-item-head">
+        <span class="rv-num">No. ${i + 1}</span>
+        <span class="rv-type">${typeLabel}</span>
+        <span class="rv-status">${statusLabel}</span>
+      </div>
+      <div class="rv-soal">${q.q}</div>
+      <div class="rv-pem-wrap">
+        <div class="rv-pem-hd" onclick="this.parentElement.classList.toggle('open')">
+          <span class="rv-pem-dot"></span>
+          <span class="rv-pem-title">Pembahasan</span>
+          <span class="rv-pem-chevron"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></span>
+        </div>
+        <div class="rv-pem-body">${q.p}</div>
+      </div>
+    </div>`;
+  });
+
+  document.getElementById('q-layout').innerHTML = `
+    <div class="ujian-result" id="ujian-result">
+      <div class="ur-hero">
+        <div class="ur-grade" style="border-color:${gradeColor};color:${gradeColor}">${grade}</div>
+        <div class="ur-nilai">${nilai}<span>/100</span></div>
+        <div class="ur-label">${label}</div>
+        <div class="ur-stats">
+          <div class="ur-stat g"><span>${benar}</span>Benar</div>
+          <div class="ur-stat r"><span>${salah}</span>Salah</div>
+          <div class="ur-stat m"><span>${kosong}</span>Kosong</div>
+          <div class="ur-stat"><span>${total}</span>Total</div>
+        </div>
+        <div class="ur-actions">
+          <a class="ur-btn" href="${waURL}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Bagikan ke WhatsApp
+          </a>
+          <button class="ur-btn secondary" onclick="navigator.clipboard.writeText('${shareText.replace(/'/g, "\\'")}').then(()=>{this.textContent='✓ Disalin!';setTimeout(()=>this.textContent='Salin Hasil',2000)})">
+            Salin Hasil
+          </button>
+          <button class="ur-btn secondary" onclick="window.location.reload()">↺ Ulangi</button>
+          <a class="ur-btn secondary" href="../">← Kembali</a>
+        </div>
+      </div>
+
+      <div class="ur-review">
+        <div class="ur-review-title">
+          <span>Review Soal</span>
+          <button class="ur-expand-all" onclick="toggleAllReview(this)">Buka Semua Pembahasan</button>
+        </div>
+        <div class="ur-review-list">${reviewHTML}</div>
+      </div>
+    </div>`;
+
+  document.getElementById('q-nav').style.display = 'none';
+  const mobStrip = document.getElementById('q-mob-strip');
+  const mobNav = document.getElementById('q-mob-nav');
+  if (mobStrip) mobStrip.style.display = 'none';
+  if (mobNav) mobNav.style.display = 'none';
+  document.getElementById('q-prog').style.width = '100%';
+
+  // Typeset MathJax
+  if (window.MathJax) MathJax.typesetPromise([document.getElementById('ujian-result')]).catch(() => {});
+}
+
+function toggleAllReview(btn) {
+  const items = document.querySelectorAll('.rv-pem-wrap');
+  const allOpen = [...items].every(el => el.classList.contains('open'));
+  items.forEach(el => el.classList.toggle('open', !allOpen));
+  btn.textContent = allOpen ? 'Buka Semua Pembahasan' : 'Tutup Semua';
+}
+
+// Override showScore untuk mode ujian
+const _origShowScore = showScore;
+function showScore() {
+  if (IS_UJIAN) { showUjianResult(); }
+  else { _origShowScore(); }
 }
 
 init();
