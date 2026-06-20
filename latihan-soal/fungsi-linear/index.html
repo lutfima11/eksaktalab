@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latihan Soal Fungsi Linear — EksaktaLab</title>
+<meta name="description" content="Latihan soal Fungsi Linear dengan 20 paket soal variatif: pilihan ganda, benar-salah, kecukupan data, dan sesi ujian komprehensif. Tingkat Beginner hingga Expert.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/latihan-soal/fungsi-linear/">
+<style>
+/* ─── RESET & LAYOUT ────────────────────────────────────── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--surface);color:var(--text);line-height:1.7;font-size:16px;overflow-x:hidden;}
+
+/* ─── NAVBAR ────────────────────────────────────────────── */
+.navbar{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border);padding:0 2rem;height:60px;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;flex-shrink:0;}
+.nav-logo-icon{width:36px;height:36px;border-radius:9px;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.nav-logo-icon svg{width:18px;height:18px;}
+.nav-logo-text{display:flex;flex-direction:column;gap:0.05rem;line-height:1;}
+.nav-logo-name{font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--text);letter-spacing:-0.02em;}
+.nav-logo-name em{font-style:normal;color:var(--teal);}
+.nav-logo-tag{font-family:var(--mono);font-size:0.5rem;font-weight:500;color:var(--text-3);letter-spacing:.08em;text-transform:uppercase;}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0;}
+.nav-btn{height:34px;padding:0 0.85rem;border-radius:8px;border:1px solid var(--border);font-family:var(--sans);font-size:0.78rem;font-weight:600;display:inline-flex;align-items:center;gap:0.4rem;white-space:nowrap;cursor:pointer;text-decoration:none;background:var(--surface-2);color:var(--text-2);transition:all .2s;}
+.nav-btn:hover{border-color:var(--teal);color:var(--teal);}
+
+/* ─── PAGE HERO ─────────────────────────────────────────── */
+.page-hero{background:var(--navy);padding:2.5rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,191,165,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,191,165,.06) 1px,transparent 1px);background-size:36px 36px;pointer-events:none;}
+.hero-grid::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 50%,transparent 30%,var(--navy) 100%);z-index:1;}
+.hero-content{position:relative;z-index:2;max-width:640px;margin:0 auto;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.68rem;font-weight:500;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;background:rgba(0,191,165,.1);border:1px solid rgba(0,191,165,.25);padding:0.28rem 0.7rem;border-radius:8px;margin-bottom:1rem;}
+.hero-title{font-family:var(--display);font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;color:#fff;letter-spacing:-0.03em;margin-bottom:0.75rem;}
+.hero-title em{font-style:normal;color:var(--teal);}
+.hero-desc{font-size:0.9rem;color:#8FA8C8;line-height:1.6;margin-bottom:1.5rem;}
+.hero-stats{display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap;}
+.hero-stat{display:inline-flex;align-items:center;gap:0.35rem;font-family:var(--mono);font-size:0.65rem;font-weight:600;color:#8FA8C8;letter-spacing:.06em;}
+.hero-stat strong{color:var(--teal);font-style:normal;}
+
+/* ─── BREADCRUMB ────────────────────────────────────────── */
+
+
+/* ─── MAIN WRAP ─────────────────────────────────────────── */
+.main-wrap{max-width:860px;margin:0 auto;padding:2.5rem 2rem 5rem;}
+
+/* ─── SECTION HEADING ───────────────────────────────────── */
+.sec-head{margin-bottom:1.25rem;}
+.sec-label{font-family:var(--mono);font-size:0.65rem;font-weight:700;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:0.3rem;}
+.sec-title{font-family:var(--display);font-size:1.1rem;font-weight:700;color:var(--text);letter-spacing:-.02em;}
+.sec-desc{font-size:0.83rem;color:var(--text-3);margin-top:0.2rem;}
+
+/* ─── MODE SELECTOR TABS ────────────────────────────────── */
+.mode-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+.mode-tab{display:flex;align-items:center;gap:0.5rem;padding:0.55rem 1rem;border-radius:var(--radius-sm);border:1.5px solid var(--border);background:var(--surface-2);color:var(--text-2);font-size:0.82rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:var(--sans);}
+.mode-tab svg{width:15px;height:15px;flex-shrink:0;}
+.mode-tab:hover{border-color:var(--teal);color:var(--teal);}
+.mode-tab.active{border-color:var(--teal);background:rgba(0,191,165,.08);color:var(--teal);}
+
+/* ─── VIEW PANELS ───────────────────────────────────────── */
+.view-panel{display:none;}
+.view-panel.active{display:block;animation:fadeIn .2s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+/* ─── PAKET GRID ────────────────────────────────────────── */
+.paket-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.9rem;margin-bottom:2rem;}
+
+/* ─── PAKET CARD ────────────────────────────────────────── */
+.paket-card{border:1.5px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.15rem 1rem;background:var(--surface);cursor:pointer;transition:all .22s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:0.55rem;}
+.paket-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(0,191,165,.05) 0%,transparent 60%);pointer-events:none;}
+.paket-card:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.07);}
+.paket-card.locked{opacity:0.55;cursor:not-allowed;}
+.paket-card.locked:hover{transform:none;border-color:var(--border);box-shadow:none;}
+.paket-card.done{border-color:var(--green-b);background:var(--green);}
+[data-theme="dark"] .paket-card.done{background:var(--green);}
+
+/* top row: kode + level badge */
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:0.4rem;}
+.card-kode{font-family:var(--mono);font-size:0.68rem;font-weight:700;color:var(--teal);letter-spacing:.08em;}
+.level-badge{font-size:0.6rem;font-weight:700;font-family:var(--mono);letter-spacing:.06em;padding:0.15rem 0.5rem;border-radius:4px;flex-shrink:0;}
+.badge-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .badge-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.badge-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .badge-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.badge-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .badge-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* card body */
+.card-title{font-family:var(--display);font-size:0.92rem;font-weight:700;color:var(--text);line-height:1.3;letter-spacing:-.01em;}
+.card-soal{font-family:var(--mono);font-size:0.65rem;color:var(--text-3);margin-top:0.3rem;}
+
+/* start btn */
+.card-btn{margin-top:0.75rem;display:flex;align-items:center;justify-content:space-between;width:100%;padding:0 0.9rem;height:36px;border-radius:8px;background:transparent;color:var(--teal);font-size:0.78rem;font-weight:600;font-family:var(--sans);border:1.5px solid rgba(0,191,165,.3);cursor:pointer;transition:all .2s;letter-spacing:.01em;}
+.card-btn:hover{background:var(--teal);color:#fff;border-color:var(--teal);}
+.card-btn-arrow{width:20px;height:20px;border-radius:5px;background:rgba(0,191,165,.12);display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;}
+.card-btn-arrow svg{width:10px;height:10px;}
+.card-btn:hover .card-btn-arrow{background:rgba(255,255,255,.2);}
+.paket-card.locked .card-btn{color:var(--text-3);border-color:var(--border);cursor:not-allowed;}
+.paket-card.locked .card-btn:hover{background:transparent;color:var(--text-3);border-color:var(--border);}
+.paket-card.locked .card-btn-arrow{background:var(--surface-3);}
+.done-check{width:16px;height:16px;background:var(--green-b);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.done-check svg{width:9px;height:9px;stroke:#fff;}
+
+/* ─── LEVEL FILTER ──────────────────────────────────────── */
+.filter-row{display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem;}
+.filter-label{font-size:0.75rem;font-weight:600;color:var(--text-3);font-family:var(--mono);}
+.filter-btn{height:28px;padding:0 0.7rem;border-radius:6px;border:1px solid var(--border);background:var(--surface-2);color:var(--text-3);font-size:0.72rem;font-weight:600;font-family:var(--mono);cursor:pointer;transition:all .18s;}
+.filter-btn:hover,.filter-btn.active{border-color:var(--teal);color:var(--teal);background:rgba(0,191,165,.06);}
+
+/* ─── SUB-MATERI FILTER ─────────────────────────────────── */
+.sub-filter{display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.sub-chip{display:flex;align-items:center;gap:0.35rem;height:30px;padding:0 0.8rem;border-radius:99px;border:1.5px solid var(--border);background:var(--surface-2);color:var(--text-2);font-size:0.73rem;font-weight:600;cursor:pointer;transition:all .18s;font-family:var(--sans);}
+.sub-chip:hover{border-color:var(--teal);color:var(--teal);}
+.sub-chip.active{border-color:var(--teal);background:rgba(0,191,165,.08);color:var(--teal);}
+.sub-chip-dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;}
+
+/* ─── UJIAN / SESI KOMPREHENSIF ─────────────────────────── */
+.ujian-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-bottom:2rem;}
+.ujian-card{border:1.5px solid var(--border);border-radius:var(--radius);padding:1.25rem;background:var(--surface);position:relative;overflow:hidden;transition:all .22s;}
+.ujian-card:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.07);}
+.ujian-card.featured{border-color:rgba(0,191,165,.3);}
+.ujian-eyebrow{font-family:var(--mono);font-size:0.6rem;font-weight:700;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:0.5rem;}
+.ujian-title{font-family:var(--display);font-size:0.95rem;font-weight:700;color:var(--text);letter-spacing:-.01em;margin-bottom:0.35rem;}
+.ujian-desc{font-size:0.8rem;color:var(--text-3);line-height:1.55;margin-bottom:0.9rem;}
+.ujian-meta{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:0;}
+.ujian-meta-item{display:flex;align-items:center;gap:0.25rem;font-size:0.68rem;font-family:var(--mono);color:var(--text-3);}
+.ujian-meta-item svg{width:11px;height:11px;}
+.ujian-badge{position:absolute;top:0.85rem;right:0.85rem;font-size:0.6rem;font-weight:700;font-family:var(--mono);background:rgba(0,191,165,.12);color:var(--teal);border:1px solid rgba(0,191,165,.25);padding:0.18rem 0.5rem;border-radius:4px;letter-spacing:.06em;}
+.ujian-start-btn{margin-top:0.85rem;display:flex;align-items:center;justify-content:space-between;width:100%;padding:0 0.9rem;height:36px;border-radius:8px;background:transparent;color:var(--teal);font-size:0.78rem;font-weight:600;font-family:var(--sans);border:1.5px solid rgba(0,191,165,.3);cursor:pointer;transition:all .2s;letter-spacing:.01em;}
+.ujian-start-btn:hover{background:var(--teal);color:#fff;border-color:var(--teal);}
+.ujian-start-btn:hover .card-btn-arrow{background:rgba(255,255,255,.2);}
+.ujian-coming{margin-top:0.85rem;display:flex;align-items:center;justify-content:center;gap:0.4rem;width:100%;padding:0 0.9rem;height:36px;border-radius:8px;background:var(--surface-2);color:var(--text-3);font-size:0.75rem;font-weight:600;font-family:var(--sans);border:1.5px solid var(--border);}
+
+/* ─── QUIZ MODAL OVERLAY ────────────────────────────────── */
+.quiz-overlay{position:fixed;inset:0;background:rgba(10,15,30,.88);z-index:100;display:flex;align-items:flex-start;justify-content:center;overflow-y:auto;padding:2rem 1rem 3rem;opacity:0;pointer-events:none;transition:opacity .25s;}
+.quiz-overlay.open{opacity:1;pointer-events:all;}
+
+.quiz-modal{width:100%;max-width:700px;background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden;transform:translateY(20px);transition:transform .25s;margin:auto;}
+.quiz-overlay.open .quiz-modal{transform:translateY(0);}
+
+/* modal header */
+.qm-header{background:var(--navy);padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:relative;overflow:hidden;}
+.qm-header-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,191,165,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,191,165,.05) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;}
+.qm-header-content{position:relative;z-index:1;}
+.qm-eyebrow{font-family:var(--mono);font-size:0.62rem;font-weight:700;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:0.25rem;}
+.qm-title{font-family:var(--display);font-size:1.05rem;font-weight:700;color:#fff;letter-spacing:-.02em;}
+.qm-close{position:relative;z-index:1;width:32px;height:32px;border-radius:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;}
+.qm-close:hover{background:rgba(255,255,255,.16);}
+.qm-close svg{width:14px;height:14px;stroke:#fff;}
+
+/* progress sticky */
+.qm-progress{background:var(--surface-2);border-bottom:1px solid var(--border);padding:0.7rem 1.5rem;display:flex;align-items:center;gap:0.85rem;position:sticky;top:0;z-index:5;}
+.qm-progress-label{font-family:var(--mono);font-size:0.65rem;font-weight:600;color:var(--text-3);white-space:nowrap;flex-shrink:0;}
+.qm-progress-bar{flex:1;height:5px;background:var(--surface-3);border-radius:99px;overflow:hidden;}
+.qm-progress-fill{height:100%;background:var(--teal);border-radius:99px;width:0%;transition:width .35s ease;}
+.qm-progress-count{font-family:var(--mono);font-size:0.72rem;font-weight:700;color:var(--text);white-space:nowrap;flex-shrink:0;}
+.qm-progress-count em{color:var(--teal);font-style:normal;}
+
+/* quiz body */
+.qm-body{padding:1.5rem;overflow-x:hidden;}
+
+/* question card */
+.qm-q-wrap{margin-bottom:1.25rem;}
+.qm-q-num{font-family:var(--mono);font-size:0.62rem;font-weight:700;color:var(--teal);letter-spacing:.08em;margin-bottom:0.45rem;display:flex;align-items:center;gap:0.5rem;}
+.qm-q-type{font-size:0.6rem;background:var(--surface-2);border:1px solid var(--border);color:var(--text-3);padding:0.1rem 0.45rem;border-radius:4px;}
+.qm-q-text{font-size:0.93rem;font-weight:500;color:var(--text);line-height:1.7;}
+
+/* options */
+.qm-options{display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+.qm-opt{display:flex;align-items:flex-start;gap:0.75rem;padding:0.7rem 0.95rem;border-radius:var(--radius-sm);border:1.5px solid var(--border);background:var(--surface);cursor:pointer;transition:all .18s;font-size:0.875rem;color:var(--text);text-align:left;width:100%;}
+.qm-opt:hover:not(:disabled){border-color:var(--teal);background:rgba(0,191,165,.04);}
+.qm-opt:disabled{cursor:default;}
+.qm-opt-key{font-family:var(--mono);font-size:0.68rem;font-weight:700;color:var(--text-3);background:var(--surface-2);border:1px solid var(--border);width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.05rem;transition:all .18s;}
+.qm-opt-text{line-height:1.55;flex:1;}
+.qm-opt.is-correct{border-color:var(--green-b)!important;background:var(--green)!important;}
+.qm-opt.is-correct .qm-opt-key{background:var(--green-b)!important;color:#fff!important;border-color:var(--green-b)!important;}
+.qm-opt.is-wrong{border-color:var(--red-b)!important;background:var(--red)!important;}
+.qm-opt.is-wrong .qm-opt-key{background:var(--red-b)!important;color:#fff!important;border-color:var(--red-b)!important;}
+
+/* benar-salah options */
+.bs-options{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;}
+.bs-opt{padding:0.75rem 1rem;border-radius:var(--radius-sm);border:1.5px solid var(--border);background:var(--surface);cursor:pointer;font-size:0.875rem;font-weight:600;transition:all .18s;text-align:center;}
+.bs-opt:hover:not(:disabled){border-color:var(--teal);}
+.bs-opt.benar:hover:not(:disabled){border-color:var(--green-b);background:var(--green);}
+.bs-opt.salah:hover:not(:disabled){border-color:var(--red-b);background:var(--red);}
+.bs-opt.correct-benar{border-color:var(--green-b)!important;background:var(--green)!important;color:var(--green-b);}
+.bs-opt.correct-salah{border-color:var(--red-b)!important;background:var(--red)!important;color:var(--red-b);}
+
+/* pembahasan in quiz */
+.qm-pembahasan{margin-top:1rem;padding:0.85rem 1rem;border-radius:var(--radius-sm);background:var(--surface-2);border:1px solid var(--border);font-size:0.82rem;color:var(--text-2);line-height:1.65;display:none;}
+.qm-pembahasan.show{display:block;animation:fadeIn .2s ease;}
+.qm-p-label{font-family:var(--mono);font-size:0.6rem;font-weight:700;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:0.35rem;}
+
+/* nav buttons */
+.qm-nav{display:flex;align-items:center;justify-content:space-between;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+.qm-btn{height:36px;padding:0 1rem;border-radius:8px;border:1.5px solid var(--border);background:var(--surface-2);color:var(--text-2);font-size:0.8rem;font-weight:600;font-family:var(--sans);cursor:pointer;display:inline-flex;align-items:center;gap:0.35rem;transition:all .2s;}
+.qm-btn:hover{border-color:var(--teal);color:var(--teal);}
+.qm-btn.primary{background:var(--teal);color:var(--navy);border-color:var(--teal);}
+.qm-btn.primary:hover{background:var(--teal-dim);}
+.qm-btn svg{width:13px;height:13px;}
+.qm-q-counter{font-family:var(--mono);font-size:0.72rem;color:var(--text-3);}
+
+/* score panel inside modal */
+.qm-score{text-align:center;padding:1.5rem 1rem 0.5rem;}
+.qm-score-circle{width:110px;height:110px;border-radius:50%;background:var(--navy);border:3px solid var(--teal);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1.25rem;position:relative;}
+.qm-score-num{font-family:var(--display);font-size:2.2rem;font-weight:700;color:#fff;line-height:1;letter-spacing:-.04em;}
+.qm-score-denom{font-family:var(--mono);font-size:0.65rem;color:var(--teal);margin-top:0.2rem;}
+.qm-score-label{font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--text);letter-spacing:-.02em;margin-bottom:0.35rem;}
+.qm-score-msg{font-size:0.85rem;color:var(--text-3);max-width:320px;margin:0 auto 1.5rem;line-height:1.6;}
+.qm-score-breakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:0.6rem;max-width:340px;margin:0 auto 1.5rem;}
+.qm-sbd-item{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.65rem 0.4rem;text-align:center;}
+.qm-sbd-num{font-family:var(--display);font-size:1.35rem;font-weight:700;color:var(--text);}
+.qm-sbd-num.green{color:var(--green-b);}
+.qm-sbd-num.red{color:var(--red-b);}
+.qm-sbd-lbl{font-family:var(--mono);font-size:0.55rem;font-weight:700;color:var(--text-3);letter-spacing:.06em;text-transform:uppercase;margin-top:0.15rem;}
+.qm-score-actions{display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;padding-bottom:0.5rem;}
+
+/* ─── COMING SOON BAND ──────────────────────────────────── */
+.coming-band{background:var(--surface-2);border:1.5px dashed var(--border);border-radius:var(--radius);padding:1.75rem;text-align:center;margin-bottom:2rem;}
+.coming-band-icon{font-size:2rem;margin-bottom:0.65rem;}
+.coming-band-title{font-family:var(--display);font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.25rem;}
+.coming-band-desc{font-size:0.82rem;color:var(--text-3);}
+.coming-tag{display:inline-flex;align-items:center;gap:0.3rem;font-family:var(--mono);font-size:0.62rem;font-weight:700;color:var(--yellow-b);background:var(--yellow);border:1px solid rgba(245,158,11,.25);padding:0.18rem 0.55rem;border-radius:4px;letter-spacing:.06em;margin-bottom:0.75rem;}
+
+/* ─── RESPONSIVE ────────────────────────────────────────── */
+@media(max-width:768px){
+  .navbar{padding:0 1rem;}
+  .page-hero{padding:2rem 1.25rem 1.75rem;}
+  .main-wrap{padding:2rem 1.25rem 4rem;}
+  .ujian-grid{grid-template-columns:1fr 1fr;}
+  .qm-header{padding:1rem 1.25rem;}
+  .qm-body{padding:1.25rem;}
+}
+@media(max-width:500px){
+  .nav-logo-tag{display:none;}
+  .page-hero{padding:1.75rem 1rem 1.5rem;}
+  .main-wrap{padding:1.75rem 1rem 3rem;}
+  .paket-grid{grid-template-columns:1fr 1fr;}
+  .ujian-grid{grid-template-columns:1fr;}
+  .mode-tabs{gap:0.35rem;}
+  .mode-tab{padding:0.45rem 0.7rem;font-size:0.75rem;}
+  .bs-options{grid-template-columns:1fr;}
+  .quiz-overlay{padding:0.75rem 0.5rem 2rem;}
+  .qm-header{padding:1rem 1rem;}
+  .qm-body{padding:1rem;}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <a class="nav-btn" href="../../materi/fungsi-linear/">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="8,2 3,6.5 8,11"/></svg>
+      Materi
+    </a>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">&#128218; Latihan Soal · Fungsi Linear</div>
+    <h1 class="hero-title">Berlatih <em>Fungsi Linear</em></h1>
+    <p class="hero-desc">20 paket soal variatif mulai dari konsep dasar hingga soal kompetisi. Pilih mode berlatih sesuai kebutuhanmu — atau tantang diri dengan sesi ujian komprehensif.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>20</strong> Paket Soal</div>
+      <div class="hero-stat"><strong>3</strong> Mode Berlatih</div>
+      <div class="hero-stat"><strong>4</strong> Sesi Ujian</div>
+      <div class="hero-stat"><strong>Beginner → Expert</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="main-wrap">
+
+  <!-- ── MODE SELECTOR ──────────────────────────────────── -->
+  <div class="mode-tabs">
+    <button class="mode-tab active" data-view="berlatih" onclick="switchView('berlatih',this)">
+      <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1.5" y="2" width="12" height="11" rx="2"/><line x1="5" y1="5" x2="10" y2="5"/><line x1="5" y1="7.5" x2="9" y2="7.5"/><line x1="5" y1="10" x2="7.5" y2="10"/></svg>
+      Paket Berlatih
+    </button>
+    <button class="mode-tab" data-view="sub" onclick="switchView('sub',this)">
+      <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="7.5" cy="7.5" r="5.5"/><line x1="7.5" y1="5" x2="7.5" y2="8"/><circle cx="7.5" cy="9.5" r=".6" fill="currentColor"/></svg>
+      Per Sub-Materi
+    </button>
+    <button class="mode-tab" data-view="ujian" onclick="switchView('ujian',this)">
+      <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 2h9a1 1 0 0 1 1 1v10l-2-1.5L9 13l-1.5-1.5L6 13l-2-1.5L2 13V3a1 1 0 0 1 1-1z"/><line x1="5" y1="5.5" x2="10" y2="5.5"/><line x1="5" y1="8" x2="8" y2="8"/></svg>
+      Sesi Ujian
+    </button>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       VIEW 1 — PAKET BERLATIH
+  ════════════════════════════════════════════════════════ -->
+  <div class="view-panel active" id="view-berlatih">
+
+    <div class="sec-head">
+      <div class="sec-label">&#128218; Paket Berlatih</div>
+      <div class="sec-title">20 Paket Soal Variatif</div>
+      <div class="sec-desc">Setiap paket berisi 10 soal. Selesaikan paket untuk membuka paket berikutnya.</div>
+    </div>
+
+    <div class="filter-row">
+      <span class="filter-label">LEVEL:</span>
+      <button class="filter-btn active" onclick="filterPaket('semua',this)">Semua</button>
+      <button class="filter-btn" onclick="filterPaket('beginner',this)">Beginner</button>
+      <button class="filter-btn" onclick="filterPaket('intermediate',this)">Intermediate</button>
+      <button class="filter-btn" onclick="filterPaket('expert',this)">Expert</button>
+    </div>
+
+    <div class="paket-grid" id="paket-grid">
+      <!-- Paket 01–07: Beginner -->
+      <div class="paket-card" data-level="beginner" data-paket="1" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-01</span><span class="level-badge badge-beginner">BEGINNER</span></div>
+        <div class="card-title">Fungsi Linear 1</div>
+<button class="card-btn" onclick="openQuiz(1)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="beginner" data-paket="2" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-02</span><span class="level-badge badge-beginner">BEGINNER</span></div>
+        <div class="card-title">Fungsi Linear 2</div>
+<button class="card-btn" onclick="openQuiz(2)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="beginner" data-paket="3" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-03</span><span class="level-badge badge-beginner">BEGINNER</span></div>
+        <div class="card-title">Fungsi Linear 3</div>
+<button class="card-btn" onclick="openQuiz(3)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="beginner" data-paket="4" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-04</span><span class="level-badge badge-beginner">BEGINNER</span></div>
+        <div class="card-title">Fungsi Linear 4</div>
+<button class="card-btn" onclick="openQuiz(4)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="beginner" data-paket="5" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-05</span><span class="level-badge badge-beginner">BEGINNER</span></div>
+        <div class="card-title">Fungsi Linear 5</div>
+<button class="card-btn" onclick="openQuiz(5)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="beginner" data-paket="6" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-06</span><span class="level-badge badge-beginner">BEGINNER</span></div>
+        <div class="card-title">Fungsi Linear 6</div>
+<button class="card-btn" onclick="openQuiz(6)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="beginner" data-paket="7" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-07</span><span class="level-badge badge-beginner">BEGINNER</span></div>
+        <div class="card-title">Fungsi Linear 7</div>
+<button class="card-btn" onclick="openQuiz(7)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <!-- Paket 08–13: Intermediate -->
+      <div class="paket-card" data-level="intermediate" data-paket="8" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-08</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div>
+        <div class="card-title">Fungsi Linear 8</div>
+<button class="card-btn" onclick="openQuiz(8)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="intermediate" data-paket="9" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-09</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div>
+        <div class="card-title">Fungsi Linear 9</div>
+<button class="card-btn" onclick="openQuiz(9)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="intermediate" data-paket="10" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-10</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div>
+        <div class="card-title">Fungsi Linear 10</div>
+<button class="card-btn" onclick="openQuiz(10)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="intermediate" data-paket="11" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-11</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div>
+        <div class="card-title">Fungsi Linear 11</div>
+<button class="card-btn" onclick="openQuiz(11)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="intermediate" data-paket="12" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-12</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div>
+        <div class="card-title">Fungsi Linear 12</div>
+<button class="card-btn" onclick="openQuiz(12)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="intermediate" data-paket="13" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-13</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div>
+        <div class="card-title">Fungsi Linear 13</div>
+<button class="card-btn" onclick="openQuiz(13)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <!-- Paket 14–20: Expert -->
+      <div class="paket-card" data-level="expert" data-paket="14" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-14</span><span class="level-badge badge-expert">EXPERT</span></div>
+        <div class="card-title">Fungsi Linear 14</div>
+<button class="card-btn" onclick="openQuiz(14)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="expert" data-paket="15" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-15</span><span class="level-badge badge-expert">EXPERT</span></div>
+        <div class="card-title">Fungsi Linear 15</div>
+<button class="card-btn" onclick="openQuiz(15)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="expert" data-paket="16" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-16</span><span class="level-badge badge-expert">EXPERT</span></div>
+        <div class="card-title">Fungsi Linear 16</div>
+<button class="card-btn" onclick="openQuiz(16)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="expert" data-paket="17" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-17</span><span class="level-badge badge-expert">EXPERT</span></div>
+        <div class="card-title">Fungsi Linear 17</div>
+<button class="card-btn" onclick="openQuiz(17)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="expert" data-paket="18" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-18</span><span class="level-badge badge-expert">EXPERT</span></div>
+        <div class="card-title">Fungsi Linear 18</div>
+<button class="card-btn" onclick="openQuiz(18)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="expert" data-paket="19" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-19</span><span class="level-badge badge-expert">EXPERT</span></div>
+        <div class="card-title">Fungsi Linear 19</div>
+<button class="card-btn" onclick="openQuiz(19)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+      <div class="paket-card" data-level="expert" data-paket="20" data-locked="false">
+        <div class="card-top"><span class="card-kode">FL-20</span><span class="level-badge badge-expert">EXPERT</span></div>
+        <div class="card-title">Fungsi Linear 20</div>
+<button class="card-btn" onclick="openQuiz(20)"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+
+    </div><!-- /paket-grid -->
+  </div><!-- /view-berlatih -->
+
+  <!-- ══════════════════════════════════════════════════════
+       VIEW 2 — PER SUB-MATERI
+  ════════════════════════════════════════════════════════ -->
+  <div class="view-panel" id="view-sub">
+    <div class="sec-head">
+      <div class="sec-label">&#128218; Per Sub-Materi</div>
+      <div class="sec-title">Pilih Topik yang Ingin Didalami</div>
+      <div class="sec-desc">Latihan terfokus berdasarkan sub-bab materi. Ideal untuk memperkuat konsep yang belum dikuasai.</div>
+    </div>
+    <div class="sub-filter">
+      <button class="sub-chip active" onclick="filterSub('semua',this)"><span class="sub-chip-dot"></span>Semua</button>
+      <button class="sub-chip" onclick="filterSub('A',this)"><span class="sub-chip-dot"></span>A · Konsep Dasar</button>
+      <button class="sub-chip" onclick="filterSub('B',this)"><span class="sub-chip-dot"></span>B · Gradien</button>
+      <button class="sub-chip" onclick="filterSub('C',this)"><span class="sub-chip-dot"></span>C · Persamaan Garis</button>
+      <button class="sub-chip" onclick="filterSub('D',this)"><span class="sub-chip-dot"></span>D · Hubungan Dua Garis</button>
+      <button class="sub-chip" onclick="filterSub('E',this)"><span class="sub-chip-dot"></span>E · Aplikasi</button>
+    </div>
+
+    <div class="paket-grid" id="sub-grid">
+      <div class="paket-card" data-sub="A"><div class="card-top"><span class="card-kode">FL-A1</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Definisi & Domain Fungsi Linear</div>
+<button class="card-btn" onclick="openQuiz('A1')"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+
+      <div class="paket-card" data-sub="A"><div class="card-top"><span class="card-kode">FL-A2</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Nilai Fungsi & Substitusi</div>
+<button class="card-btn" onclick="openQuiz('A2')"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+
+      <div class="paket-card" data-sub="B"><div class="card-top"><span class="card-kode">FL-B1</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Menghitung Gradien</div>
+<button class="card-btn" onclick="openQuiz('B1')"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+
+      <div class="paket-card" data-sub="B"><div class="card-top"><span class="card-kode">FL-B2</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Makna Gradien & Interpretasi</div>
+<button class="card-btn" onclick="openQuiz('B2')"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+
+      <div class="paket-card" data-sub="C"><div class="card-top"><span class="card-kode">FL-C1</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Bentuk y=mx+c</div>
+<button class="card-btn" onclick="openQuiz('C1')"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+
+      <div class="paket-card" data-sub="C"><div class="card-top"><span class="card-kode">FL-C2</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Persamaan dari Dua Titik</div>
+<button class="card-btn" onclick="openQuiz('C2')"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+
+      <div class="paket-card" data-sub="D"><div class="card-top"><span class="card-kode">FL-D1</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Sejajar & Tegak Lurus</div>
+<button class="card-btn" onclick="openQuiz('D1')"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+
+      <div class="paket-card" data-sub="D"><div class="card-top"><span class="card-kode">FL-D2</span><span class="level-badge badge-expert">EXPERT</span></div><div class="card-title">Titik Potong & Sistem Garis</div>
+<button class="card-btn" onclick="openQuiz('D2')"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+
+      <div class="paket-card" data-sub="E"><div class="card-top"><span class="card-kode">FL-E1</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Aplikasi Kehidupan Sehari-hari</div>
+<button class="card-btn" onclick="openQuiz('E1')"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+
+      <div class="paket-card" data-sub="E"><div class="card-top"><span class="card-kode">FL-E2</span><span class="level-badge badge-expert">EXPERT</span></div><div class="card-title">Model Matematika Lanjut</div>
+<button class="card-btn" onclick="openQuiz('E2')"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       VIEW 4 — SESI UJIAN
+  ════════════════════════════════════════════════════════ -->
+  <div class="view-panel" id="view-ujian">
+    <div class="sec-head">
+      <div class="sec-label">&#128218; Sesi Ujian</div>
+      <div class="sec-title">Uji Kemampuanmu Secara Komprehensif</div>
+      <div class="sec-desc">Soal terseleksi dengan timer. Nilai, umpan balik, dan analisis kelemahan tersedia setelah selesai.</div>
+    </div>
+
+    <div class="ujian-grid">
+
+      <div class="ujian-card featured">
+        <div class="ujian-badge">POPULER</div>
+        <div class="ujian-eyebrow">Ujian Standar</div>
+        <div class="ujian-title">Ujian Akhir Fungsi Linear</div>
+        <div class="ujian-desc">Mencakup seluruh sub-bab. Campuran pilihan ganda, benar-salah, dan kecukupan data. Cocok untuk ujian sekolah.</div>
+        <div class="ujian-meta">
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 1v5l3 3"/><circle cx="6" cy="6" r="5"/></svg>45 menit</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="3" width="10" height="7" rx="1.5"/><line x1="3" y1="5.5" x2="9" y2="5.5"/><line x1="3" y1="7.5" x2="7" y2="7.5"/></svg>20 soal</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="5"/><polyline points="3,6 5,8 9,4"/></svg>Ada Nilai</div>
+        </div>
+        <button class="ujian-start-btn" onclick="openQuiz('ujian-akhir')">
+          <span>Mulai Ujian</span>
+          <span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span>
+        </button>
+      </div>
+
+      <div class="ujian-card">
+        <div class="ujian-eyebrow">Ujian Cepat</div>
+        <div class="ujian-title">Kuis Kilat 10 Soal</div>
+        <div class="ujian-desc">Uji pemahaman dalam waktu singkat. Cocok untuk warm-up sebelum belajar mendalam.</div>
+        <div class="ujian-meta">
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 1v5l3 3"/><circle cx="6" cy="6" r="5"/></svg>15 menit</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="3" width="10" height="7" rx="1.5"/><line x1="3" y1="5.5" x2="9" y2="5.5"/><line x1="3" y1="7.5" x2="7" y2="7.5"/></svg>10 soal</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="5"/><polyline points="3,6 5,8 9,4"/></svg>Ada Nilai</div>
+        </div>
+        <button class="ujian-start-btn" onclick="openQuiz('kuis-kilat')">
+          <span>Mulai Kuis</span>
+          <span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span>
+        </button>
+      </div>
+
+      <div class="ujian-card">
+        <div class="ujian-badge coming-tag" style="position:static;display:inline-flex;margin-bottom:.65rem;">Segera</div>
+        <div class="ujian-eyebrow">Tryout UTBK</div>
+        <div class="ujian-title">Simulasi TKA Fungsi Linear</div>
+        <div class="ujian-desc">Format dan tingkat kesulitan menyerupai soal TKA sesungguhnya. Kecukupan data dan analisis mendalam.</div>
+        <div class="ujian-meta">
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 1v5l3 3"/><circle cx="6" cy="6" r="5"/></svg>60 menit</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="3" width="10" height="7" rx="1.5"/><line x1="3" y1="5.5" x2="9" y2="5.5"/><line x1="3" y1="7.5" x2="7" y2="7.5"/></svg>25 soal</div>
+        </div>
+        <div class="ujian-coming">&#128338; Sedang Disiapkan</div>
+      </div>
+
+      <div class="ujian-card">
+        <div class="ujian-badge coming-tag" style="position:static;display:inline-flex;margin-bottom:.65rem;">Segera</div>
+        <div class="ujian-eyebrow">Diagnostik</div>
+        <div class="ujian-title">Tes Pemetaan Kemampuan</div>
+        <div class="ujian-desc">Identifikasi celah pemahaman secara otomatis. Hasil: laporan topik kuat &amp; lemah dengan rekomendasi paket latihan.</div>
+        <div class="ujian-meta">
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 1v5l3 3"/><circle cx="6" cy="6" r="5"/></svg>20 menit</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="3" width="10" height="7" rx="1.5"/><line x1="3" y1="5.5" x2="9" y2="5.5"/><line x1="3" y1="7.5" x2="7" y2="7.5"/></svg>15 soal</div>
+        </div>
+        <div class="ujian-coming">&#128338; Sedang Disiapkan</div>
+      </div>
+
+    </div>
+  </div><!-- /view-ujian -->
+
+</div><!-- /main-wrap -->
+
+<!-- QUIZ MODAL -->
+<div class="quiz-overlay" id="quizOverlay" onclick="handleOverlayClick(event)">
+  <div class="quiz-modal" id="quizModal">
+
+    <div class="qm-header">
+      <div class="qm-header-grid"></div>
+      <div class="qm-header-content">
+        <div class="qm-eyebrow" id="qm-eyebrow">FL-01 · Beginner</div>
+        <div class="qm-title" id="qm-title">Mengenal Fungsi Linear</div>
+      </div>
+      <button class="qm-close" onclick="closeQuiz()" title="Tutup">
+        <svg viewBox="0 0 14 14" fill="none"><line x1="2" y1="2" x2="12" y2="12" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="2" x2="2" y2="12" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="qm-progress" id="qm-progress-wrap">
+      <span class="qm-progress-label">PROGRESS</span>
+      <div class="qm-progress-bar"><div class="qm-progress-fill" id="qm-progress-fill"></div></div>
+      <span class="qm-progress-count"><em id="qm-cur">1</em>/<span id="qm-tot">10</span></span>
+    </div>
+
+    <div class="qm-body" id="qm-body">
+      <!-- content injected by JS -->
+    </div>
+
+  </div>
+</div>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+
+<script>
+// ── Scroll progress ──────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const el = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  const btn = document.getElementById('scroll-top');
+  if (pct > 25) btn.classList.add('visible'); else btn.classList.remove('visible');
+});
+
+// ── View switching ───────────────────────────────────────
+function switchView(id, btn) {
+  document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.mode-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('view-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── Level filter (paket berlatih) ────────────────────────
+function filterPaket(level, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#paket-grid .paket-card').forEach(card => {
+    if (level === 'semua' || card.dataset.level === level) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// ── Sub-materi filter ────────────────────────────────────
+function filterSub(sub, btn) {
+  document.querySelectorAll('.sub-chip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#sub-grid .paket-card').forEach(card => {
+    if (sub === 'semua' || card.dataset.sub === sub) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+
+// ── QUIZ DATA ────────────────────────────────────────────
+const quizDB = {
+  // Paket 1 — Mengenal Fungsi Linear
+  1: {
+    title: 'Mengenal Fungsi Linear',
+    kode: 'FL-01',
+    level: 'Beginner',
+    soal: [
+      { type: 'pg', q: 'Manakah yang merupakan fungsi linear?', opts: ['$f(x) = x^2 + 1$', '$f(x) = 3x - 2$', '$f(x) = \\frac{1}{x}$', '$f(x) = \\sqrt{x}$'], jawab: 1, p: 'Fungsi linear berbentuk $f(x) = mx + c$ dengan derajat tertinggi variabel adalah 1. Hanya $f(x) = 3x - 2$ yang memenuhi bentuk ini.' },
+      { type: 'pg', q: 'Jika $f(x) = 4x - 3$, maka nilai $f(2)$ adalah...', opts: ['3', '5', '7', '11'], jawab: 1, p: '$f(2) = 4(2) - 3 = 8 - 3 = 5$.' },
+      { type: 'pg', q: 'Fungsi linear $f(x) = 2x + 6$ memotong sumbu-$x$ di titik...', opts: ['$(−3, 0)$', '$(3, 0)$', '$(0, 6)$', '$(6, 0)$'], jawab: 0, p: 'Titik potong sumbu-$x$: $f(x) = 0 \\Rightarrow 2x + 6 = 0 \\Rightarrow x = -3$. Jadi titiknya $(-3, 0)$.' },
+      { type: 'bs', q: 'Pernyataan: Fungsi $f(x) = 5$ adalah fungsi linear dengan gradien 0.', jawab: 'BENAR', p: 'Fungsi konstan $f(x) = c$ bisa ditulis $f(x) = 0 \\cdot x + 5$, sehingga ini fungsi linear dengan gradien $m = 0$.' },
+      { type: 'pg', q: 'Gradien garis yang melalui titik $A(1, 3)$ dan $B(3, 9)$ adalah...', opts: ['2', '3', '4', '6'], jawab: 1, p: '$m = \\frac{9-3}{3-1} = \\frac{6}{2} = 3$.' },
+      { type: 'bs', q: 'Pernyataan: Garis $y = 4$ adalah garis horizontal.', jawab: 'BENAR', p: 'Garis $y = 4$ sejajar sumbu-$x$, sehingga merupakan garis horizontal.' },
+      { type: 'pg', q: 'Nilai $y$-intercept dari $f(x) = -3x + 8$ adalah...', opts: ['−3', '3', '−8', '8'], jawab: 3, p: '$y$-intercept adalah nilai $f(0) = -3(0) + 8 = 8$.' },
+      { type: 'pg', q: 'Manakah persamaan garis yang melalui titik $(0, 2)$ dengan gradien 3?', opts: ['$y = 2x + 3$', '$y = 3x + 2$', '$y = 3x - 2$', '$y = 2x - 3$'], jawab: 1, p: 'Bentuk $y = mx + c$ dengan $m=3$ dan $c=2$ (karena melalui $(0,2)$): $y = 3x + 2$.' },
+      { type: 'bs', q: 'Pernyataan: Garis $x = -2$ memiliki gradien yang tidak terdefinisi.', jawab: 'BENAR', p: 'Garis vertikal $x = k$ tidak memiliki gradien yang terdefinisi karena $\\Delta x = 0$.' },
+      { type: 'pg', q: 'Jika $f(x) = mx + 3$ dan $f(2) = 7$, maka nilai $m$ adalah...', opts: ['1', '2', '3', '4'], jawab: 1, p: '$f(2) = 2m + 3 = 7 \\Rightarrow 2m = 4 \\Rightarrow m = 2$.' },
+    ]
+  },
+  // Kuis Kilat
+  'kuis-kilat': {
+    title: 'Kuis Kilat 10 Soal',
+    kode: 'KILAT',
+    level: 'Campuran',
+    soal: [
+      { type: 'pg', q: 'Gradien garis $y = 5x - 3$ adalah...', opts: ['−3', '3', '5', '−5'], jawab: 2, p: 'Dalam bentuk $y = mx + c$, koefisien $x$ adalah gradien. Jadi $m = 5$.' },
+      { type: 'pg', q: 'Titik potong sumbu-$y$ dari garis $3x + 2y = 12$ adalah...', opts: ['$(4, 0)$', '$(0, 6)$', '$(0, 4)$', '$(6, 0)$'], jawab: 1, p: 'Substitusi $x=0$: $2y = 12 \\Rightarrow y = 6$. Jadi $(0, 6)$.' },
+      { type: 'bs', q: 'Pernyataan: Dua garis dengan gradien sama pasti sejajar.', jawab: 'BENAR', p: 'Dua garis $y = m_1 x + c_1$ dan $y = m_2 x + c_2$ sejajar jika $m_1 = m_2$ dan $c_1 \\neq c_2$. Jika gradien sama dan $y$-intercept berbeda, maka sejajar.' },
+      { type: 'pg', q: 'Persamaan garis melalui $(2, 5)$ dengan gradien 3 adalah...', opts: ['$y = 3x - 1$', '$y = 3x + 1$', '$y = 3x + 5$', '$y = 3x - 5$'], jawab: 0, p: '$y - 5 = 3(x - 2) \\Rightarrow y = 3x - 6 + 5 = 3x - 1$.' },
+      { type: 'pg', q: 'Garis yang tegak lurus $y = 2x + 1$ dan melalui $(0, 3)$ adalah...', opts: ['$y = 2x + 3$', '$y = -\\frac{1}{2}x + 3$', '$y = \\frac{1}{2}x + 3$', '$y = -2x + 3$'], jawab: 1, p: 'Tegak lurus: $m = -\\frac{1}{2}$. Melalui $(0,3)$: $y = -\\frac{1}{2}x + 3$.' },
+      { type: 'bs', q: 'Pernyataan: Gradien garis yang melalui $(a, b)$ dan $(a, c)$ dengan $b \\neq c$ tidak terdefinisi.', jawab: 'BENAR', p: 'Kedua titik memiliki $x$ yang sama ($\\Delta x = 0$), sehingga $m = \\frac{\\Delta y}{0}$ tidak terdefinisi. Ini garis vertikal.' },
+      { type: 'pg', q: 'Nilai $f(-3)$ untuk $f(x) = -2x + 4$ adalah...', opts: ['−2', '10', '−10', '2'], jawab: 1, p: '$f(-3) = -2(-3) + 4 = 6 + 4 = 10$.' },
+      { type: 'pg', q: 'Titik potong garis $y = x + 2$ dan $y = -x + 6$ adalah...', opts: ['$(1, 5)$', '$(2, 4)$', '$(3, 5)$', '$(4, 2)$'], jawab: 1, p: '$x + 2 = -x + 6 \\Rightarrow 2x = 4 \\Rightarrow x = 2$, $y = 4$. Titik $(2, 4)$.' },
+      { type: 'bs', q: 'Pernyataan: Fungsi $f(x) = -x$ memiliki grafik yang melewati kuadran II dan IV.', jawab: 'BENAR', p: '$f(x) = -x$ memiliki gradien negatif, melewati kuadran II $(x<0, y>0)$ dan kuadran IV $(x>0, y<0)$.' },
+      { type: 'pg', q: 'Dari persamaan $ax + by = c$, gradien garisnya adalah...', opts: ['$\\frac{a}{b}$', '$-\\frac{a}{b}$', '$\\frac{c}{b}$', '$-\\frac{c}{b}$'], jawab: 1, p: '$ax + by = c \\Rightarrow y = -\\frac{a}{b}x + \\frac{c}{b}$. Gradiennya $m = -\\frac{a}{b}$.' },
+    ]
+  },
+  'ujian-akhir': {
+    title: 'Ujian Akhir Fungsi Linear',
+    kode: 'UJIAN',
+    level: 'Komprehensif',
+    soal: [
+      { type: 'pg', q: 'Gradien garis yang melalui $(-1, 4)$ dan $(3, -4)$ adalah...', opts: ['$-2$', '$2$', '$-\\frac{1}{2}$', '$\\frac{1}{2}$'], jawab: 0, p: '$m = \\frac{-4-4}{3-(-1)} = \\frac{-8}{4} = -2$.' },
+      { type: 'pg', q: 'Persamaan garis yang sejajar $2x - y + 5 = 0$ dan melalui $(3, 1)$ adalah...', opts: ['$y = 2x - 5$', '$y = 2x + 5$', '$2x + y - 5 = 0$', '$y = -2x + 7$'], jawab: 0, p: 'Gradien $2x - y + 5 = 0 \\Rightarrow y = 2x + 5$, jadi $m = 2$. Garis: $y - 1 = 2(x-3) \\Rightarrow y = 2x - 5$.' },
+      { type: 'bs', q: 'Pernyataan: Garis $y = 3x + 5$ memotong sumbu-$x$ di titik $\\left(-\\frac{5}{3}, 0\\right)$.', jawab: 'BENAR', p: 'Set $y = 0$: $3x + 5 = 0 \\Rightarrow x = -\\frac{5}{3}$. Benar.' },
+      { type: 'pg', q: 'Titik potong garis $3x + 2y = 12$ dan $x - y = 1$ adalah...', opts: ['$(2, 3)$', '$(3, \\frac{3}{2})$', '$(\\frac{14}{5}, \\frac{9}{5})$', '$(4, 0)$'], jawab: 2, p: 'Dari $x = y+1$, substitusi: $3(y+1) + 2y = 12 \\Rightarrow 5y = 9 \\Rightarrow y = \\frac{9}{5}$, $x = \\frac{14}{5}$.' },
+      { type: 'pg', q: 'Garis tegak lurus terhadap $y = \\frac{3}{4}x - 2$ memiliki gradien...', opts: ['$\\frac{3}{4}$', '$-\\frac{4}{3}$', '$\\frac{4}{3}$', '$-\\frac{3}{4}$'], jawab: 1, p: 'Jika $m_1 \\cdot m_2 = -1$ dan $m_1 = \\frac{3}{4}$, maka $m_2 = -\\frac{4}{3}$.' },
+      { type: 'bs', q: 'Pernyataan: Titik $(2, 7)$ terletak pada garis $y = 3x + 1$.', jawab: 'BENAR', p: '$f(2) = 3(2) + 1 = 7$. Benar, titik tersebut ada pada garis.' },
+      { type: 'pg', q: 'Suatu perusahaan memproduksi barang dengan biaya $C(x) = 5000x + 200.000$ (rupiah) untuk $x$ unit. Berapa biaya untuk 100 unit?', opts: ['Rp 700.000', 'Rp 1.000.000', 'Rp 700.000', 'Rp 700.200'], jawab: 0, p: '$C(100) = 5000(100) + 200.000 = 500.000 + 200.000 = 700.000$.' },
+      { type: 'pg', q: 'Jika $f(x) = ax + b$, $f(1) = 5$, dan $f(3) = 11$, maka $a + b$ adalah...', opts: ['5', '6', '7', '8'], jawab: 2, p: '$a + b = 5$ dan $3a + b = 11$. Kurangi: $2a = 6 \\Rightarrow a = 3$, $b = 2$. $a + b = 5$.' },
+      { type: 'bs', q: 'Pernyataan: Dua garis $y = 2x + 3$ dan $2y = 4x - 6$ adalah sejajar.', jawab: 'BENAR', p: 'Garis kedua: $y = 2x - 3$. Gradien sama ($m=2$), $y$-intercept berbeda. Sejajar.' },
+      { type: 'pg', q: 'Daerah himpunan penyelesaian $y > 2x - 3$ di bawah ini, mana yang termasuk?', opts: ['$(0, -4)$', '$(2, 0)$', '$(1, 5)$', '$(3, 1)$'], jawab: 2, p: 'Cek $(1, 5)$: $5 > 2(1) - 3 = -1$. Benar. Titik lain tidak memenuhi.' },
+      { type: 'pg', q: 'Persamaan garis yang melalui $(4, 0)$ dan $(0, -3)$ adalah...', opts: ['$3x - 4y - 12 = 0$', '$3x + 4y - 12 = 0$', '$4x - 3y + 12 = 0$', '$4x + 3y - 12 = 0$'], jawab: 0, p: 'Bentuk intercept: $\\frac{x}{4} + \\frac{y}{-3} = 1 \\Rightarrow 3x - 4y = 12 \\Rightarrow 3x - 4y - 12 = 0$.' },
+      { type: 'pg', q: 'Nilai $k$ agar garis $kx - 3y + 6 = 0$ melalui titik $(3, 5)$ adalah...', opts: ['$3$', '$4$', '$\\frac{9}{3}$', '$\\frac{14}{3} - 2$'], jawab: 0, p: 'Substitusi $(3,5)$: $3k - 15 + 6 = 0 \\Rightarrow 3k = 9 \\Rightarrow k = 3$.' },
+      { type: 'bs', q: 'Pernyataan: Garis $x + y = 5$ dan $x - y = 1$ berpotongan di $(3, 2)$.', jawab: 'BENAR', p: 'Jumlahkan: $2x = 6 \\Rightarrow x = 3$, $y = 2$. Berpotongan di $(3,2)$.' },
+      { type: 'pg', q: 'Gradien garis $ax - 2y = 6$ jika garis tersebut melalui $(0, -3)$ dan $(2, 0)$ adalah...', opts: ['$\\frac{3}{2}$', '$-\\frac{2}{3}$', '$\\frac{2}{3}$', '$3$'], jawab: 0, p: '$m = \\frac{0-(-3)}{2-0} = \\frac{3}{2}$.' },
+      { type: 'pg', q: 'Panjang segmen garis pada sumbu-$x$ antara $y = 2x - 4$ dan $y = -x + 8$ adalah...', opts: ['2', '4', '5', '6'], jawab: 3, p: 'Potong sumbu $x$: $2x-4=0 \\Rightarrow x=2$ dan $-x+8=0 \\Rightarrow x=8$. Panjang $= 8-2 = 6$.' },
+      { type: 'bs', q: 'Pernyataan: Fungsi $f(x) = 2x + 1$ adalah fungsi linear yang naik (increasing).', jawab: 'BENAR', p: 'Gradien $m = 2 > 0$, sehingga fungsi naik.' },
+      { type: 'pg', q: 'Tiga titik $A(0, 2)$, $B(1, 4)$, $C(2, 6)$ bersifat...', opts: ['Tidak segaris', 'Segaris', 'Membentuk segitiga siku-siku', 'Tidak dapat ditentukan'], jawab: 1, p: '$m_{AB} = \\frac{4-2}{1-0} = 2$, $m_{BC} = \\frac{6-4}{2-1} = 2$. Gradien sama, ketiga titik segaris.' },
+      { type: 'pg', q: 'Jika $f$ adalah fungsi linear dengan $f(0) = -2$ dan $f(1) = 1$, maka $f(4)$ adalah...', opts: ['7', '8', '10', '12'], jawab: 2, p: '$m = 1 - (-2) = 3$. $f(x) = 3x - 2$. $f(4) = 12 - 2 = 10$.' },
+      { type: 'bs', q: 'Pernyataan: Grafik $y = -2x + 4$ dan $y = -2x - 1$ tidak berpotongan.', jawab: 'BENAR', p: 'Gradien keduanya sama ($m = -2$), $y$-intercept berbeda (4 dan −1). Garis sejajar, tidak berpotongan.' },
+      { type: 'pg', q: 'Persamaan garis yang melalui titik potong $x + y = 3$ dan $2x - y = 6$ dengan gradien $-2$ adalah...', opts: ['$y = -2x + 9$', '$y = -2x - 9$', '$y = -2x + 5$', '$y = -2x - 3$'], jawab: 0, p: 'Titik potong: $3x = 9 \\Rightarrow x = 3, y = 0$. Garis: $y - 0 = -2(x - 3) \\Rightarrow y = -2x + 6$. Cek jawaban: $y = -2x + 6$... sesuaikan pilihan: melalui $(3,0)$ dengan $m=-2$, $y = -2x + 6$.' },
+    ]
+  }
+};
+
+// Buat data sederhana untuk paket 2–20 & sub-materi (placeholder soal dari paket 1)
+for (let i = 2; i <= 20; i++) {
+  if (!quizDB[i]) {
+    quizDB[i] = Object.assign({}, quizDB[1], {
+      kode: 'FL-' + String(i).padStart(2,'0'),
+      title: document.querySelector('[data-paket="' + i + '"] .card-title')?.textContent || 'Paket ' + i
+    });
+  }
+}
+['A1','A2','B1','B2','C1','C2','D1','D2','E1','E2'].forEach(k => {
+  quizDB[k] = Object.assign({}, quizDB[1], {
+    kode: 'FL-' + k,
+    title: document.querySelector('[data-sub]')?.querySelector('.card-title')?.textContent || 'Sub-materi ' + k
+  });
+});
+
+// ── Quiz State ───────────────────────────────────────────
+let state = { paket: null, soal: [], cur: 0, answers: [], done: false };
+
+function openQuiz(paketId) {
+  const data = quizDB[paketId];
+  if (!data) { alert('Soal sedang disiapkan. Kembali lagi segera!'); return; }
+  state = { paket: paketId, soal: data.soal, cur: 0, answers: Array(data.soal.length).fill(null), done: false };
+  document.getElementById('qm-eyebrow').textContent = data.kode + ' · ' + data.level;
+  document.getElementById('qm-title').textContent = data.title;
+  document.getElementById('qm-tot').textContent = data.soal.length;
+  renderQuestion();
+  document.getElementById('quizOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeQuiz() {
+  document.getElementById('quizOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('quizOverlay')) closeQuiz();
+}
+
+function renderQuestion() {
+  const soal = state.soal;
+  const i = state.cur;
+  const q = soal[i];
+  const pct = (i / soal.length) * 100;
+  document.getElementById('qm-progress-fill').style.width = pct + '%';
+  document.getElementById('qm-cur').textContent = i + 1;
+
+  let html = '<div class="qm-q-wrap">';
+  html += '<div class="qm-q-num">Soal ' + (i+1) + '<span class="qm-q-type">' + (q.type === 'pg' ? 'Pilihan Ganda' : 'Benar / Salah') + '</span></div>';
+  html += '<div class="qm-q-text">' + q.q + '</div>';
+
+  if (q.type === 'pg') {
+    const keys = ['A','B','C','D'];
+    html += '<div class="qm-options">';
+    q.opts.forEach((opt, oi) => {
+      html += '<button class="qm-opt" onclick="pilihJawaban(' + oi + ',this)">';
+      html += '<span class="qm-opt-key">' + keys[oi] + '</span>';
+      html += '<span class="qm-opt-text">' + opt + '</span>';
+      html += '</button>';
+    });
+    html += '</div>';
+  } else {
+    // Benar-Salah
+    html += '<div class="bs-options">';
+    html += '<button class="bs-opt benar" onclick="pilihBS(\'BENAR\',this)">&#10003; BENAR</button>';
+    html += '<button class="bs-opt salah" onclick="pilihBS(\'SALAH\',this)">&#10007; SALAH</button>';
+    html += '</div>';
+  }
+
+  html += '<div class="qm-pembahasan" id="q-pem"><span class="qm-p-label">PEMBAHASAN</span>' + q.p + '</div>';
+  html += '</div>';
+
+  // nav
+  html += '<div class="qm-nav">';
+  html += '<button class="qm-btn" onclick="prevQ()"' + (i === 0 ? ' disabled style="opacity:.4;pointer-events:none"' : '') + '>';
+  html += '<svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="8,2 3,6.5 8,11"/></svg>Sebelumnya</button>';
+  html += '<span class="qm-q-counter">' + (i+1) + ' / ' + soal.length + '</span>';
+  if (i < soal.length - 1) {
+    html += '<button class="qm-btn" id="btn-next" onclick="nextQ()">Berikutnya<svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,6.5 5,11"/></svg></button>';
+  } else {
+    html += '<button class="qm-btn primary" id="btn-selesai" onclick="selesai()">Lihat Nilai &#128196;</button>';
+  }
+  html += '</div>';
+
+  document.getElementById('qm-body').innerHTML = html;
+
+  if (typeof MathJax !== 'undefined') {
+    MathJax.typesetPromise([document.getElementById('qm-body')]).catch(() => {});
+  }
+}
+
+function pilihJawaban(idx, btn) {
+  const q = state.soal[state.cur];
+  if (state.answers[state.cur] !== null) return;
+  state.answers[state.cur] = idx;
+  const opts = document.querySelectorAll('.qm-opt');
+  opts.forEach(b => { b.disabled = true; });
+  if (idx === q.jawab) {
+    btn.classList.add('is-correct');
+  } else {
+    btn.classList.add('is-wrong');
+    opts[q.jawab].classList.add('is-correct');
+  }
+  const pem = document.getElementById('q-pem');
+  if (pem) {
+    pem.classList.add('show');
+    if (typeof MathJax !== 'undefined') MathJax.typesetPromise([pem]).catch(() => {});
+  }
+}
+
+function pilihBS(val, btn) {
+  const q = state.soal[state.cur];
+  if (state.answers[state.cur] !== null) return;
+  state.answers[state.cur] = val;
+  const bsBtns = document.querySelectorAll('.bs-opt');
+  bsBtns.forEach(b => { b.disabled = true; });
+  const correct = q.jawab;
+  if (val === correct) {
+    btn.classList.add('correct-' + val.toLowerCase());
+  } else {
+    btn.classList.add('correct-' + val.toLowerCase()); // wrong pick
+    bsBtns.forEach(b => {
+      if (b.textContent.includes(correct)) b.classList.add('correct-' + correct.toLowerCase());
+    });
+  }
+  const pem = document.getElementById('q-pem');
+  if (pem) {
+    pem.classList.add('show');
+    if (typeof MathJax !== 'undefined') MathJax.typesetPromise([pem]).catch(() => {});
+  }
+}
+
+function nextQ() {
+  if (state.cur < state.soal.length - 1) { state.cur++; renderQuestion(); }
+}
+
+function prevQ() {
+  if (state.cur > 0) { state.cur--; renderQuestion(); }
+}
+
+function selesai() {
+  const soal = state.soal;
+  let benar = 0;
+  soal.forEach((q, i) => {
+    const ans = state.answers[i];
+    if (ans !== null) {
+      if (q.type === 'pg' && ans === q.jawab) benar++;
+      if (q.type === 'bs' && ans === q.jawab) benar++;
+    }
+  });
+  const total = soal.length;
+  const nilai = Math.round((benar / total) * 100);
+  const salah = total - benar;
+
+  let label = 'Bagus!';
+  let msg = 'Terus berlatih untuk hasil lebih baik.';
+  if (nilai >= 90) { label = 'Luar Biasa! 🎉'; msg = 'Penguasaan materi sangat baik. Coba paket yang lebih tinggi!'; }
+  else if (nilai >= 75) { label = 'Sangat Baik!'; msg = 'Hampir sempurna. Teliti soal yang salah.'; }
+  else if (nilai >= 60) { label = 'Cukup Baik'; msg = 'Ulas kembali materi dan coba lagi.'; }
+  else { label = 'Perlu Latihan Lagi'; msg = 'Pelajari ulang materinya, kamu pasti bisa!'; }
+
+  let html = '<div class="qm-score">';
+  html += '<div class="qm-score-circle"><div class="qm-score-num">' + nilai + '</div><div class="qm-score-denom">dari 100</div></div>';
+  html += '<div class="qm-score-label">' + label + '</div>';
+  html += '<div class="qm-score-msg">' + msg + '</div>';
+  html += '<div class="qm-score-breakdown">';
+  html += '<div class="qm-sbd-item"><div class="qm-sbd-num green">' + benar + '</div><div class="qm-sbd-lbl">Benar</div></div>';
+  html += '<div class="qm-sbd-item"><div class="qm-sbd-num red">' + salah + '</div><div class="qm-sbd-lbl">Salah</div></div>';
+  html += '<div class="qm-sbd-item"><div class="qm-sbd-num">' + total + '</div><div class="qm-sbd-lbl">Total</div></div>';
+  html += '</div>';
+  html += '<div class="qm-score-actions">';
+  html += '<button class="qm-btn" onclick="openQuiz(' + JSON.stringify(state.paket) + ')">&#8635; Ulangi</button>';
+  html += '<button class="qm-btn primary" onclick="closeQuiz()">&#128218; Selesai</button>';
+  html += '</div></div>';
+
+  document.getElementById('qm-body').innerHTML = html;
+  document.getElementById('qm-progress-fill').style.width = '100%';
+}
+
+// keyboard ESC to close
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeQuiz();
+});
+</script>
+</body>
+</html>
