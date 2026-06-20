@@ -108,152 +108,7 @@ window.MathJax = {
       </div>
     </div>
   </div>
-<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
-  <section class="section" id="pengantar">
-    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Bagaimana Sesuatu Berubah secara Tetap?</h2>
 
-    <p>Bayangkan selembar kertas yang dilipat dua berulang kali. Setelah lipatan pertama, ketebalannya dua kali lipat. Setelah lipatan kedua, empat kali lipat. Setelah lipatan ke-10, lebih dari seribu kali lipat. Setelah lipatan ke-42 — secara teoritis — ketebalannya melebihi jarak dari Bumi ke Bulan. Inilah kekuatan eksponen: pertumbuhan yang berlipat ganda setiap langkah, sehingga hasilnya melampaui imajinasi jauh lebih cepat dari yang kita duga.</p>
-
-    <p>Eksponen bukan sekadar cara cepat menulis perkalian berulang. Ia adalah bahasa yang digunakan alam untuk menggambarkan fenomena yang paling mendasar: perkembangbiakan bakteri yang menggandakan diri setiap jam, peluruhan zat radioaktif yang meluruh setengahnya setiap periode, pertumbuhan bunga majemuk yang menggelembungkan tabungan dari tahun ke tahun. Semua ini — dan masih banyak lagi — mengikuti pola yang sama: <strong>fungsi eksponen</strong>.</p>
-
-    <h3 class="subsection-title">Ide Dasar: Pertumbuhan Berlipat vs Pertumbuhan Tetap</h3>
-    <p>Perbedaan antara pertumbuhan linear dan pertumbuhan eksponen terasa dramatis ketika kita membandingkan keduanya secara visual.</p>
-   <div class="grafik-wrap">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="100%" style="max-width:420px; background-color:transparent;">
-    <defs>
-      <style>
-        .axis-line-fixed { stroke: var(--text-main, #334155); }
-        .grid-line-fixed { stroke: var(--text-muted, #e2e8f0); opacity: 0.6; }
-        .arrow-path-fixed { fill: var(--text-main, #334155); }
-        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
-        
-        /* Warna dinamis kurva */
-        .line-blue-fixed { stroke: #0014b3; }
-        .line-red-fixed { stroke: #b30000; }
-        .text-blue-fixed { fill: #0014b3; font-family: Cambria, 'Times New Roman', serif; }
-        .text-red-fixed { fill: #b30000; font-family: Cambria, 'Times New Roman', serif; }
-        .dot-fixed { fill: #800040; }
-
-        /* Dukungan Dark Mode otomatis */
-        @media (prefers-color-scheme: dark) {
-          .grid-line-fixed { stroke: #334155; opacity: 0.4; }
-          .line-blue-fixed { stroke: #60A5FA; }
-          .line-red-fixed { stroke: #F87171; }
-          .text-blue-fixed { fill: #60A5FA; }
-          .text-red-fixed { fill: #F87171; }
-          .dot-fixed { fill: #F472B6; }
-        }
-        [data-theme="dark"] .grid-line-fixed { stroke: #334155; opacity: 0.4; }
-        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
-        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
-        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .text-red-fixed { fill: #F87171; }
-        [data-theme="dark"] .dot-fixed { fill: #F472B6; }
-      </style>
-
-      <marker id="arrow-fixed-black" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-path-fixed" />
-      </marker>
-    </defs>
-
-    <g transform="translate(45, 55) scale(0.72)">
-      
-      <g class="grid-line-fixed" stroke-width="1">
-        <line x1="180" y1="50" x2="180" y2="570" />
-        <line x1="250" y1="50" x2="250" y2="570" />
-        <line x1="320" y1="50" x2="320" y2="570" />
-        <line x1="390" y1="50" x2="390" y2="570" />
-        <line x1="460" y1="50" x2="460" y2="570" />
-        <line x1="530" y1="50" x2="530" y2="570" />
-        <line x1="110" y1="510" x2="530" y2="510" />
-        <line x1="110" y1="450" x2="530" y2="450" />
-        <line x1="110" y1="390" x2="530" y2="390" />
-        <line x1="110" y1="330" x2="530" y2="330" />
-        <line x1="110" y1="270" x2="530" y2="270" />
-        <line x1="110" y1="210" x2="530" y2="210" />
-        <line x1="110" y1="150" x2="530" y2="150" />
-        <line x1="110" y1="90" x2="530" y2="90" />
-      </g>
-
-      <line x1="110" y1="270" x2="390" y2="270" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,5" />
-      <line x1="390" y1="270" x2="390" y2="570" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,5" />
-
-      <g class="axis-line-fixed" stroke-width="2.5">
-        <line x1="110" y1="590" x2="110" y2="40" marker-end="url(#arrow-fixed-black)" />
-        <line x1="90" y1="570" x2="580" y2="570" marker-end="url(#arrow-fixed-black)" />
-      </g>
-
-      <g class="axis-line-fixed" stroke-width="1.5">
-        <line x1="110" y1="565" x2="110" y2="575" />
-        <line x1="180" y1="565" x2="180" y2="575" />
-        <line x1="250" y1="565" x2="250" y2="575" />
-        <line x1="320" y1="565" x2="320" y2="575" />
-        <line x1="390" y1="565" x2="390" y2="575" />
-        <line x1="460" y1="565" x2="460" y2="575" />
-        <line x1="530" y1="565" x2="530" y2="575" />
-        <line x1="105" y1="510" x2="115" y2="510" />
-        <line x1="105" y1="450" x2="115" y2="450" />
-        <line x1="105" y1="390" x2="115" y2="390" />
-        <line x1="105" y1="330" x2="115" y2="330" />
-        <line x1="105" y1="270" x2="115" y2="270" />
-        <line x1="105" y1="210" x2="115" y2="210" />
-        <line x1="105" y1="150" x2="115" y2="150" />
-        <line x1="105" y1="90" x2="115" y2="90" />
-      </g>
-
-      <g class="label-black-fixed" font-size="16" text-anchor="middle">
-        <text x="92" y="588" font-size="22">O</text>
-        <text x="180" y="592" font-style="normal">1</text>
-        <text x="250" y="592" font-style="normal">2</text>
-        <text x="320" y="592" font-style="normal">3</text>
-        <text x="390" y="592" font-style="normal">4</text>
-        <text x="460" y="592" font-style="normal">5</text>
-        <text x="530" y="592" font-style="normal">6</text>
-
-        <text x="88" y="515" font-style="normal">1</text>
-        <text x="88" y="455" font-style="normal">2</text>
-        <text x="88" y="395" font-style="normal">3</text>
-        <text x="88" y="335" font-style="normal">4</text>
-        <text x="88" y="275" font-style="normal">5</text>
-        <text x="88" y="215" font-style="normal">6</text>
-        <text x="88" y="155" font-style="normal">7</text>
-        <text x="88" y="95" font-style="normal">8</text>
-      </g>
-
-      <text x="110" y="25" class="label-black-fixed" font-size="22" font-weight="bold" font-style="normal" text-anchor="middle">Nilai (Juta Rp)</text>
-      <text x="595" y="576" class="label-black-fixed" font-size="22" font-weight="bold" font-style="normal" text-anchor="start">Waktu (Tahun)</text>
-
-      <path d="M 110 450 L 530 180" class="line-blue-fixed" stroke-width="3" fill="none" />
-
-      <path d="M 110 510 C 190 480, 290 410, 390 270 C 435 207, 470 120, 502 50" class="line-red-fixed" stroke-width="3" fill="none" />
-
-      <circle cx="390" cy="270" r="6" class="dot-fixed" />
-
-      <g class="text-blue-fixed" font-style="italic">
-        <text x="130" y="325" font-size="20" font-weight="bold">y = 2 + 0,75x</text>
-        <text x="130" y="350" font-size="15">(Tabungan Flat)</text>
-      </g>
-
-      <g class="text-red-fixed" font-style="italic" text-anchor="middle">
-        <text x="380" y="115" font-size="20" font-weight="bold">y = 1,5<tspan dy="-8" font-size="14">x</tspan></text>
-        <text x="380" y="128" font-size="15" dy="8">(Bunga Majemuk)</text>
-      </g>
-
-      <text x="400" y="280" class="label-black-fixed" font-size="16" font-weight="bold" font-style="normal" text-anchor="start">Titik Salip (4, 5)</text>
-
-    </g>
-  </svg>
-</div>
-
-    <p>Keduanya dimulai dari nilai yang hampir sama, tetapi fungsi eksponen segera meninggalkan fungsi linear jauh di belakang. Tidak ada fungsi linear yang bisa mengimbangi fungsi eksponen dalam jangka panjang — bahkan fungsi eksponen dengan basis mendekati 1 sekalipun.</p>
-
-    <h3 class="subsection-title">Sejarah Singkat</h3>
-
-    <p>Gagasan tentang perkalian berulang dan notasi pangkat sudah digunakan sejak zaman Yunani kuno, terutama dalam konteks geometri. Namun formalisasi <strong>notasi eksponen</strong> $a^n$ baru dilakukan oleh <strong>René Descartes</strong> pada abad ke-17, meskipun beberapa simbol awal sudah muncul dalam karya <strong>Nicolas Chuquet</strong> (1484).</p>
-
-    <p>Langkah besar berikutnya datang dari <strong>John Napier</strong> (1614) yang menemukan <em>logaritma</em> — invers dari eksponen — sebagai alat untuk menyederhanakan perhitungan astronomi dan navigasi yang rumit. Penemuan ini merevolusi cara ilmuwan dan pedagang melakukan kalkulasi selama dua abad sebelum kalkulator mekanik ada.</p>
-
-    <p>Fungsi eksponen dalam bentuk modernnya — termasuk bilangan <em>e</em> ≈ 2,718 yang ditemukan oleh <strong>Jacob Bernoulli</strong> (1683) saat mempelajari bunga majemuk — menjadi salah satu konsep paling sentral dalam kalkulus, fisika, biologi, dan ekonomi. <strong>Leonhard Euler</strong> kemudian mengabadikan konstanta ini dengan huruf <em>e</em>, yang kini dikenal sebagai <em>bilangan Euler</em>.</p>
   <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
@@ -283,30 +138,29 @@ window.MathJax = {
 
     <h3 class="subsection-title">1. Pangkat Bulat Positif</h3>
     <p>Berdasarkan definisi di atas, berlaku sifat-sifat berikut untuk setiap $a, b \in \mathbb{R}$ dengan $a \neq 0$, $b \neq 0$, serta $m, n \in \mathbb{Z}^+$:</p>
-    <div class="box box-definisi">
-      <div class="box-label">Sifat-Sifat Pangkat Bulat Positif</div>
-    <ol>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Sifat-Sifat Pangkat Bulat Positif</div>
+      <ol>
         <li>$a^m \cdot a^n = a^{m+n}$</li>
         <li>$\dfrac{a^m}{a^n} = a^{m-n}$ &nbsp;<em>(untuk $m &gt; n$)</em></li>
         <li>$\left(a^m\right)^n = a^{mn}$</li>
         <li>$(a \cdot b)^n = a^n \cdot b^n$</li>
         <li>$\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$</li>
-      </ol>  
-      <p></p>
+      </ol>
     </div>
 
     <h3 class="subsection-title">2. Pangkat Nol dan Pangkat Bulat Negatif</h3>
     <p>Definisi pangkat diperluas ke bilangan bulat non-positif sebagai berikut:</p>
 
-    <div class="box box-definisi">
-      <div class="box-label">Sifat-Sifat Pangkat Nol dan Negatif</div>
+    <div class="box box-rumus">
+      <div class="box-label">• Pangkat Nol dan Negatif</div>
       <p>Untuk setiap $a \neq 0$, $b \neq 0$, dan $n \in \mathbb{Z}^+$, berlaku:</p>
       <ol start="6">
         <li>$a^0 = 1$</li>
         <li>$a^{-n} = \dfrac{1}{a^n}$</li>
         <li>$\left(\dfrac{a}{b}\right)^{-n} = \left(\dfrac{b}{a}\right)^n = \dfrac{b^n}{a^n}$</li>
       </ol>
-    <p>di mana $n \in \mathbb{Z}^+$ pada sifat (7) dan (8) digunakan untuk menyatakan eksponen negatif $-n$, sedangkan sifat (6) berlaku untuk semua $a \neq 0$</p>
     </div>
 
     <div class="box box-catatan">
@@ -329,11 +183,11 @@ window.MathJax = {
       
       <ol class="alpha-list" style="margin-top:.4rem;">
         <li>Dengan menggunakan sifat (1) kemudian sifat (2):
-          $$\begin{align*} \frac{3^2 \times 3^5}{3^4} &= \frac{3^{2+5}}{3^4} \\ &= \frac{3^7}{3^4} \\ &= 3^{7-4} \\ &= 3^3 = 27 \end{align*}$$</li>
+          $$\frac{3^2 \times 3^5}{3^4} = \frac{3^{2+5}}{3^4} = \frac{3^7}{3^4} = 3^{7-4} = 3^3 = 27.$$</li>
         <li>Karena $8 = 2^3$ dan $4 = 2^2$, diperoleh:
-          $$\begin{align*} \frac{2^4 \times 8^3}{4} &= \frac{2^4 \times (2^3)^3}{2^2} \\ &= \frac{2^4 \times 2^9}{2^2} \\ &= \frac{2^{13}}{2^2} \\ &= 2^{11} \end{align*}$$</li>
+          $$\frac{2^4 \times 8^3}{4} = \frac{2^4 \times (2^3)^3}{2^2} = \frac{2^4 \times 2^9}{2^2} = \frac{2^{13}}{2^2} = 2^{11}.$$</li>
         <li>Karena $6 = 2 \cdot 3$ dan $18 = 2 \cdot 3^2$, diperoleh:
-          $$\begin{align*} \frac{6^4 \times 3^2}{18^3} &= \frac{(2 \cdot 3)^4 \times 3^2}{(2 \cdot 3^2)^3} \\ &= \frac{2^4 \cdot 3^4 \cdot 3^2}{2^3 \cdot 3^6} \\ &= 2^{4-3} \cdot 3^{4+2-6} \\ &= 2^1 \cdot 3^0 = 2 \end{align*}$$</li>
+          $$\frac{6^4 \times 3^2}{18^3} = \frac{(2 \cdot 3)^4 \times 3^2}{(2 \cdot 3^2)^3} = \frac{2^4 \cdot 3^4 \cdot 3^2}{2^3 \cdot 3^6} = 2^{4-3} \cdot 3^{4+2-6} = 2^1 \cdot 3^0 = 2.$$</li>
       </ol>
     </div>
 
@@ -350,11 +204,11 @@ window.MathJax = {
       
       <ol class="alpha-list" style="margin-top:.4rem;">
         <li>Dengan menerapkan sifat (3) lalu sifat (2):
-          $$\begin{align*} \frac{(a^3)^4 \times b^8}{(b^2)^3 \cdot a^6} &= \frac{a^{12} \cdot b^8}{b^6 \cdot a^6} \\ &= a^{12-6} \cdot b^{8-6} \\ &= a^6 b^2 \end{align*}$$</li>
+          $$\frac{(a^3)^4 \times b^8}{(b^2)^3 \cdot a^6} = \frac{a^{12} \cdot b^8}{b^6 \cdot a^6} = a^{12-6} \cdot b^{8-6} = a^6 b^2.$$</li>
         <li>Dengan menyederhanakan isi kurung terlebih dahulu:
-          $$\begin{align*} \left[\frac{p^4 \cdot q^5}{(pq)^3}\right]^3 &= \left[\frac{p^4 q^5}{p^3 q^3}\right]^3 \\ &= \left[p^{4-3}\, q^{5-3}\right]^3 \\ &= \left[p\, q^2\right]^3 \\ &= p^3 q^6 \end{align*}$$</li>
+          $$\left[\frac{p^4 \cdot q^5}{(pq)^3}\right]^3 = \left[\frac{p^4 q^5}{p^3 q^3}\right]^3 = \left[p^{4-3}\, q^{5-3}\right]^3 = \left[p\, q^2\right]^3 = p^3 q^6.$$</li>
         <li>Dengan menguraikan $(a^2b)^3 = a^6 b^3$, sehingga penyebut menjadi $b \cdot a^6 b^3 = a^6 b^4$:
-          $$\begin{align*} \left[\frac{(ab)^5 \cdot a^3}{b(a^2 b)^3}\right]^2 &= \left[\frac{a^5 b^5 \cdot a^3}{a^6 b^4}\right]^2 \\ &= \left[\frac{a^8 b^5}{a^6 b^4}\right]^2 \\ &= \left[a^2 b\right]^2 \\ &= a^4 b^2 \end{align*}$$</li>
+          $$\left[\frac{(ab)^5 \cdot a^3}{b(a^2 b)^3}\right]^2 = \left[\frac{a^5 b^5 \cdot a^3}{a^6 b^4}\right]^2 = \left[\frac{a^8 b^5}{a^6 b^4}\right]^2 = \left[a^2 b\right]^2 = a^4 b^2.$$</li>
       </ol>
     </div>
 
@@ -370,9 +224,9 @@ window.MathJax = {
       
       <ol class="alpha-list" style="margin-top:.4rem;">
         <li>Faktorkan pembilang dengan memisahkan faktor persekutuan $ab$:
-          $$\begin{align*} \frac{a^2 b + ab^2}{ab} &= \frac{ab(a + b)}{ab} \\ &= a + b \end{align*}$$</li>
+          $$\frac{a^2 b + ab^2}{ab} = \frac{ab(a + b)}{ab} = a + b.$$</li>
         <li>Faktorkan pembilang dengan $(ab)^3 = a^3 b^3$ dan penyebut dengan $b^2$:
-          $$\begin{align*} \frac{a^5 b^3 + a^3 b^5}{a^2 b^2 + b^4} &= \frac{(ab)^3(a^2 + b^2)}{b^2(a^2 + b^2)} \\ &= \frac{(ab)^3}{b^2} \\ &= a^3 b \end{align*}$$</li>
+          $$\frac{a^5 b^3 + a^3 b^5}{a^2 b^2 + b^4} = \frac{(ab)^3(a^2 + b^2)}{b^2(a^2 + b^2)} = \frac{(ab)^3}{b^2} = a^3 b.$$</li>
       </ol>
     </div>
 
@@ -388,9 +242,9 @@ window.MathJax = {
       
       <ol class="alpha-list" style="margin-top:.4rem;">
         <li>Uraikan $10^3 = (5 \cdot 2)^3 = 5^3 \cdot 2^3$, kemudian terapkan sifat pangkat negatif:
-          $$\begin{align*} \left[\frac{5 \cdot 2^{-4}}{5^3 \cdot 2^3}\right]^{-1} &= \left[5^{1-3} \cdot 2^{-4-3}\right]^{-1} \\ &= \left[5^{-2} \cdot 2^{-7}\right]^{-1} \\ &= 5^{2} \cdot 2^{7} \\ &= 25 \times 128 \\ &= 3200 \end{align*}$$</li>
+          $$\left[\frac{5 \cdot 2^{-4}}{5^3 \cdot 2^3}\right]^{-1} = \left[5^{1-3} \cdot 2^{-4-3}\right]^{-1} = \left[5^{-2} \cdot 2^{-7}\right]^{-1} = 5^{2} \cdot 2^{7} = 25 \times 128 = 3200.$$</li>
         <li>Uraikan $6 = 3 \cdot 2$ dan $12 = 3 \cdot 2^2$:
-          $$\begin{align*} \left[\frac{(3 \cdot 2)^2 \cdot 3}{(3 \cdot 2^2)^3 \cdot 2^{-4}}\right]^3 &= \left[\frac{3^3 \cdot 2^2}{3^3 \cdot 2^{6-4}}\right]^3 \\ &= \left[\frac{3^3 \cdot 2^2}{3^3 \cdot 2^2}\right]^3 \\ &= 1^3 \\ &= 1 \end{align*}$$</li>
+          $$\left[\frac{(3 \cdot 2)^2 \cdot 3}{(3 \cdot 2^2)^3 \cdot 2^{-4}}\right]^3 = \left[\frac{3^3 \cdot 2^2}{3^3 \cdot 2^{6-4}}\right]^3 = \left[\frac{3^3 \cdot 2^2}{3^3 \cdot 2^2}\right]^3 = 1^3 = 1.$$</li>
       </ol>
     </div>
 
@@ -407,11 +261,11 @@ window.MathJax = {
       
       <ol class="alpha-list" style="margin-top:.4rem;">
         <li>Nyatakan setiap faktor ke dalam faktor prima dan pangkat 10: $0{,}03 = 3 \times 10^{-2}$ dan $0{,}0027 = 3^3 \times 10^{-4}$.
-          $$\begin{align*} &=(3 \times 10^{-2})^6 \times (3^3 \times 10^{-4})^{-3} \\ &= 3^6 \cdot 10^{-12} \times 3^{-9} \cdot 10^{12} \\ &= 3^{6-9} \cdot 10^{0} \\ &= 3^{-3} \\ &= \frac{1}{27} \end{align*}$$</li>
+          $$\begin{aligned}(3 \times 10^{-2})^6 \times (3^3 \times 10^{-4})^{-3} &= 3^6 \cdot 10^{-12} \times 3^{-9} \cdot 10^{12} \\ &= 3^{6-9} \cdot 10^{0} = 3^{-3} = \frac{1}{27}.\end{aligned}$$</li>
         <li>Nyatakan: $200 = 2 \times 10^2$, $0{,}8 = 2^3 \times 10^{-1}$, $0{,}016 = 2^4 \times 10^{-3}$.
-          $$\begin{align*} &=\frac{(2 \times 10^2)^{-3} \cdot (2^3 \times 10^{-1})^4}{(2^4 \times 10^{-3})^2} \\ &= \frac{2^{-3} \cdot 10^{-6} \cdot 2^{12} \cdot 10^{-4}}{2^8 \cdot 10^{-6}} \\ &= \frac{2^9 \cdot 10^{-10}}{2^8 \cdot 10^{-6}} \\ &= 2 \cdot 10^{-4} \\ &= \frac{1}{5000} \end{align*}$$</li>
+          $$\begin{aligned}\frac{(2 \times 10^2)^{-3} \cdot (2^3 \times 10^{-1})^4}{(2^4 \times 10^{-3})^2} &= \frac{2^{-3} \cdot 10^{-6} \cdot 2^{12} \cdot 10^{-4}}{2^8 \cdot 10^{-6}} = \frac{2^9 \cdot 10^{-10}}{2^8 \cdot 10^{-6}} = 2 \cdot 10^{-4} = \frac{1}{5000}.\end{aligned}$$</li>
         <li>Berdasarkan sifat pangkat nol ($a^0 = 1$ untuk $a \neq 0$) dan $0^n = 0$ untuk $n &gt; 0$:
-          $$\begin{align*} 6^0 + 0^6 + (2 \times 4)^0 &= 1 + 0 + 1 \\ &= 2 \end{align*}$$</li>
+          $$6^0 + 0^6 + (2 \times 4)^0 = 1 + 0 + 1 = 2.$$</li>
       </ol>
     </div>
 
@@ -419,11 +273,11 @@ window.MathJax = {
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan A</div>
       <ol class="soal-list">
-        <li>Sederhanakanlah: <br><br> (a) $\dfrac{(2a^2)^3 \times b^4}{4a^3 b}$ <br><br> (b) $\left[\dfrac{x^3 y^{-2}}{x^{-1} y^3}\right]^2$ <br><br> (c) $\dfrac{a^{-2} b^3 \cdot a^5 b^{-1}}{(ab)^2}$</li>
+        <li>Sederhanakanlah: (a) $\dfrac{(2a^2)^3 \times b^4}{4a^3 b}$, &nbsp;(b) $\left[\dfrac{x^3 y^{-2}}{x^{-1} y^3}\right]^2$, &nbsp;(c) $\dfrac{a^{-2} b^3 \cdot a^5 b^{-1}}{(ab)^2}$</li>
         <li>Hitunglah nilai dari $\left[\dfrac{5^3 \cdot 2^{-2}}{10^2}\right]^{-1}$.</li>
         <li>Tentukanlah nilai $x$ yang memenuhi $4^{x+1} + 4^{x+2} + 4^{x+3} + 4^{x+4} = 170$.</li>
         <li>Diketahui $a^2 + a^{-2} = 23$ dengan $a &gt; 0$. Tentukanlah nilai dari $a - a^{-1}$.</li>
-        <li>Buktikanlah bahwa $\dfrac{2^{n+2} + 2^{n+1}}{2^{n+3} + 2^{n+1}} = \dfrac{3}{5}$ untuk setiap $n \in \mathbb{Z}^+$.</li>
+        <li>Buktikanlah bahwa $\dfrac{2^{n+2} + 2^{n+1}}{2^{n+3} - 2^{n+1}} = \dfrac{1}{2}$ untuk setiap $n \in \mathbb{Z}^+$.</li>
       </ol>
     </div>
 
@@ -441,8 +295,9 @@ window.MathJax = {
     </div>
 
     <p>Untuk $n = 2$, ditulis $\sqrt{a}$ (akar kuadrat). Bilangan $a$ disebut <strong>radikan</strong> dan $n$ disebut <strong>indeks akar</strong>.</p>
-    <div class="box box-definisi">
-      <div class="box-label">Sifat-Sifat Bentuk Akar</div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Sifat-Sifat Bentuk Akar</div>
       <p>Untuk $a, b \geq 0$, $m, n$ bilangan riil (koefisien), $p, q \in \mathbb{Z}^+$ ($p,q \geq 2$), dan $b \neq 0$, berlaku:</p>
       <ol>
         <li>$m\sqrt[p]{a} + n\sqrt[p]{a} = (m+n)\sqrt[p]{a}$ &nbsp;&nbsp;<em>(penjumlahan akar senama)</em></li>
@@ -513,9 +368,10 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
        Langkah pertama adalah menyederhanakan setiap suku menjadi bentuk $c\sqrt{r}$ dengan $r$ bebas dari faktor kuadrat sempurna.
-        <br><br>
-        <p>a.</p>$$\begin{align*} &=\sqrt{32} + \sqrt{8} - \sqrt{50} - \sqrt{18} \\ &= 4\sqrt{2} + 2\sqrt{2} - 5\sqrt{2} - 3\sqrt{2} \\ &= (4 + 2 - 5 - 3)\sqrt{2} \\ &= -2\sqrt{2}.\end{align*}$$<br>
-        <p>b.</p>$$\begin{align*} &=2\sqrt{27} - \sqrt{12} + 3\sqrt{48} \\ &= 2(3\sqrt{3}) - 2\sqrt{3} + 3(4\sqrt{3}) \\ &= 6\sqrt{3} - 2\sqrt{3} + 12\sqrt{3} \\ &= 16\sqrt{3}.\end{align*}$$
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>$$\begin{aligned}&\sqrt{32} + \sqrt{8} - \sqrt{50} - \sqrt{18} \\ &= 4\sqrt{2} + 2\sqrt{2} - 5\sqrt{2} - 3\sqrt{2} \\ &= (4 + 2 - 5 - 3)\sqrt{2} = -2\sqrt{2}.\end{aligned}$$</li>
+        <li>$$\begin{aligned}&2\sqrt{27} - \sqrt{12} + 3\sqrt{48} \\ &= 2(3\sqrt{3}) - 2\sqrt{3} + 3(4\sqrt{3}) \\ &= 6\sqrt{3} - 2\sqrt{3} + 12\sqrt{3} = 16\sqrt{3}.\end{aligned}$$</li>
+      </ol>
     </div>
 
     <div class="box box-contoh">
@@ -531,29 +387,95 @@ window.MathJax = {
     <div class="penyelesaian">
       
       <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$$\begin{align*}\sqrt{6} \times \sqrt{3} &= \sqrt{18} \\ &= \sqrt{9 \times 2} \\ &= 3\sqrt{2} \end{align*}$$</li>
-        <li>$$\begin{align*}2\sqrt{8} \times 3\sqrt{50} &= 6\sqrt{8 \times 50} \\ &= 6\sqrt{400} \\ &= 6 \times 20 \\ &= 120 \end{align*}$$</li>
+        <li>$\sqrt{6} \times \sqrt{3} = \sqrt{18} = \sqrt{9 \times 2} = 3\sqrt{2}$</li>
+        <li>$2\sqrt{8} \times 3\sqrt{50} = 6\sqrt{8 \times 50} = 6\sqrt{400} = 6 \times 20 = 120$</li>
         <li>Dengan metode FOIL (sifat distributif ganda):
-          $$\begin{align*}(\sqrt{2} + \sqrt{3})(\sqrt{6} + 2) &= \sqrt{12} + 2\sqrt{2} + \sqrt{18} + 2\sqrt{3} \\ &= 2\sqrt{3} + 2\sqrt{2} + 3\sqrt{2} + 2\sqrt{3} \\ &= 4\sqrt{3} + 5\sqrt{2}.\end{align*}$$</li>
+          $$\begin{aligned}(\sqrt{2} + \sqrt{3})(\sqrt{6} + 2) &= \sqrt{12} + 2\sqrt{2} + \sqrt{18} + 2\sqrt{3} \\ &= 2\sqrt{3} + 2\sqrt{2} + 3\sqrt{2} + 2\sqrt{3} = 4\sqrt{3} + 5\sqrt{2}.\end{aligned}$$</li>
         <li>Sederhanakan terlebih dahulu: $\sqrt{50} = 5\sqrt{2}$, $\sqrt{27} = 3\sqrt{3}$, $\sqrt{12} = 2\sqrt{3}$.
-          $$\begin{align*}(\sqrt{50} - \sqrt{2})(\sqrt{27} + \sqrt{12}) &= (5\sqrt{2} - \sqrt{2})(3\sqrt{3} + 2\sqrt{3}) \\ &= 4\sqrt{2} \times 5\sqrt{3} \\ &= 20\sqrt{6}.\end{align*}$$</li>
+          $$(\sqrt{50} - \sqrt{2})(\sqrt{27} + \sqrt{12}) = (5\sqrt{2} - \sqrt{2})(3\sqrt{3} + 2\sqrt{3}) = 4\sqrt{2} \times 5\sqrt{3} = 20\sqrt{6}.$$</li>
       </ol>
     </div>
+
+    <h3 class="subsection-title">2. Merasionalkan Penyebut</h3>
+    <p>Merasionalkan penyebut adalah proses mengubah pecahan yang penyebutnya memuat bentuk akar menjadi pecahan yang penyebutnya berupa bilangan rasional.</p>
+
+    <div class="box box-definisi">
+      <div class="box-label">Merasionalkan Penyebut</div>
+      <p><strong>Kasus 1: Penyebut berbentuk $\sqrt{b}$</strong></p>
+      <div class="math-block">$$\frac{a}{\sqrt{b}} = \frac{a}{\sqrt{b}} \times \frac{\sqrt{b}}{\sqrt{b}} = \frac{a\sqrt{b}}{b}, \quad b > 0.$$</div>
+      <p style="margin-top:1rem;"><strong>Kasus 2: Penyebut berbentuk $\sqrt{a} \pm \sqrt{b}$</strong> (menggunakan konjugat/sekawan)</p>
+      <div class="math-block">$$\frac{p}{\sqrt{a}+\sqrt{b}} = \frac{p(\sqrt{a}-\sqrt{b})}{a-b}, \qquad \frac{p}{\sqrt{a}-\sqrt{b}} = \frac{p(\sqrt{a}+\sqrt{b})}{a-b}.$$</div>
+      <p>Pasangan $(\sqrt{a}+\sqrt{b})$ dan $(\sqrt{a}-\sqrt{b})$ saling disebut <strong>bentuk akar konjugat(sekawan)</strong>.</p>
+      <p style="margin-top:1rem;"><strong>Kasus 3: Penyebut berbentuk $c \pm \sqrt{b}$</strong></p>
+      <div class="math-block">$$\frac{p}{c+\sqrt{b}} = \frac{p(c-\sqrt{b})}{c^2-b}, \qquad \frac{p}{c-\sqrt{b}} = \frac{p(c+\sqrt{b})}{c^2-b}.$$</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan</div>
+      <p style="margin:0;font-size:.9rem;">Identitas aljabar yang mendasari penggunaan konjugat adalah:
+        $$(\sqrt{a}+\sqrt{b})(\sqrt{a}-\sqrt{b}) = a - b, \qquad (c+\sqrt{b})(c-\sqrt{b}) = c^2 - b.$$
+        Identitas ini memastikan bahwa penyebut hasil perkalian adalah bilangan rasional.</p>
+    </div>
+
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 10</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\dfrac{3}{\sqrt{6}}$</li>
+        <li>$\dfrac{\sqrt{2}}{\sqrt{10}}$</li>
+        <li>$\dfrac{6}{\sqrt{8}}$</li>
+        <li>$\dfrac{\sqrt{12}}{4\sqrt{2}}$</li>
+        <li>$\dfrac{5}{\sqrt{5}}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>$\dfrac{3}{\sqrt{6}} = \dfrac{3\sqrt{6}}{6} = \dfrac{\sqrt{6}}{2}$</li>
+        <li>$\dfrac{\sqrt{2}}{\sqrt{10}} = \dfrac{\sqrt{2} \cdot \sqrt{10}}{10} = \dfrac{\sqrt{20}}{10} = \dfrac{2\sqrt{5}}{10} = \dfrac{\sqrt{5}}{5}$</li>
+        <li>$\dfrac{6}{\sqrt{8}} = \dfrac{6}{2\sqrt{2}} = \dfrac{3}{\sqrt{2}} = \dfrac{3\sqrt{2}}{2}$</li>
+        <li>$\dfrac{\sqrt{12}}{4\sqrt{2}} = \dfrac{2\sqrt{3}}{4\sqrt{2}} = \dfrac{\sqrt{3}}{2\sqrt{2}} = \dfrac{\sqrt{6}}{4}$</li>
+        <li>$\dfrac{5}{\sqrt{5}} = \dfrac{5\sqrt{5}}{5} = \sqrt{5}$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\dfrac{2}{\sqrt{6}-\sqrt{2}}$</li>
+        <li>$\dfrac{\sqrt{6}}{\sqrt{6}+\sqrt{3}}$</li>
+        <li>$\dfrac{5}{2\sqrt{3}-\sqrt{2}}$</li>
+        <li>$\dfrac{\sqrt{6}+\sqrt{3}}{\sqrt{6}-\sqrt{3}}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>Kalikan dengan konjugat $(\sqrt{6}+\sqrt{2})$:
+          $$\frac{2}{\sqrt{6}-\sqrt{2}} \times \frac{\sqrt{6}+\sqrt{2}}{\sqrt{6}+\sqrt{2}} = \frac{2(\sqrt{6}+\sqrt{2})}{6-2} = \frac{\sqrt{6}+\sqrt{2}}{2}.$$</li>
+        <li>Kalikan dengan konjugat $(\sqrt{6}-\sqrt{3})$:
+          $$\frac{\sqrt{6}}{\sqrt{6}+\sqrt{3}} \times \frac{\sqrt{6}-\sqrt{3}}{\sqrt{6}-\sqrt{3}} = \frac{6-\sqrt{18}}{3} = \frac{6-3\sqrt{2}}{3} = 2 - \sqrt{2}.$$</li>
+        <li>Kalikan dengan konjugat $(2\sqrt{3}+\sqrt{2})$:
+          $$\frac{5}{2\sqrt{3}-\sqrt{2}} \times \frac{2\sqrt{3}+\sqrt{2}}{2\sqrt{3}+\sqrt{2}} = \frac{5(2\sqrt{3}+\sqrt{2})}{12-2} = \frac{2\sqrt{3}+\sqrt{2}}{2}.$$</li>
+        <li>Kalikan dengan konjugat $(\sqrt{6}+\sqrt{3})$:
+          $$\frac{\sqrt{6}+\sqrt{3}}{\sqrt{6}-\sqrt{3}} \times \frac{\sqrt{6}+\sqrt{3}}{\sqrt{6}+\sqrt{3}} = \frac{(\sqrt{6}+\sqrt{3})^2}{3} = \frac{9 + 6\sqrt{2}}{3} = 3 + 2\sqrt{2}.$$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah bentuk sederhana dari $\sqrt[4]{49-20\sqrt{6}}$.</p>
     </div>
     <div class="penyelesaian">
-      Cari $p, q &gt; 0$ sedemikian sehingga: 
-      $$\begin{align*}49 - 20\sqrt{6} &= (\sqrt{p} - \sqrt{q})^2 \\ &= p + q - 2\sqrt{pq} \end{align*}$$ 
-      Dari sini: $p + q = 49$ dan $pq = 600 = 25 \times 24$. Pilih $p = 25$, $q = 24$:
+       Cari $p, q &gt; 0$ sedemikian sehingga $49 - 20\sqrt{6} = (\sqrt{p} - \sqrt{q})^2 = p + q - 2\sqrt{pq}$. Dari sini: $p + q = 49$ dan $pq = 600 = 25 \times 24$. Pilih $p = 25$, $q = 24$:
       $$\sqrt{49-20\sqrt{6}} = \sqrt{25} - \sqrt{24} = 5 - 2\sqrt{6}.$$
       Dengan demikian:
       $$\sqrt[4]{49-20\sqrt{6}} = \sqrt{5-2\sqrt{6}} = \sqrt{(\sqrt{3}-\sqrt{2})^2} = \sqrt{3} - \sqrt{2}.$$
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 11</div>
+      <div class="box-label">📘 Contoh 13</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar bertingkat berikut menggunakan sifat $\sqrt[p]{\sqrt[q]{a}} = \sqrt[pq]{a}$.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\sqrt{\sqrt[3]{64}}$</li>
@@ -567,68 +489,6 @@ window.MathJax = {
         <li>$\sqrt{\sqrt[3]{64}} = \sqrt[2 \cdot 3]{64} = \sqrt[6]{64} = \sqrt[6]{2^6} = 2.$</li>
         <li>$\sqrt[3]{\sqrt{729}} = \sqrt[3 \cdot 2]{729} = \sqrt[6]{729} = \sqrt[6]{3^6} = 3.$</li>
         <li>$\sqrt[2]{\sqrt[4]{a^8}} = \sqrt[2 \cdot 4]{a^8} = \sqrt[8]{a^8} = a^{\frac{8}{8}} = a.$</li>
-      </ol>
-    </div>
-
-    <h3 class="subsection-title">2. Merasionalkan Penyebut</h3>
-    <p>Merasionalkan penyebut adalah proses mengubah pecahan yang penyebutnya memuat bentuk akar menjadi pecahan yang penyebutnya berupa bilangan rasional.</p>
-      <p><strong>Kasus 1: Penyebut berbentuk $\sqrt{b}$</strong></p>
-      <div class="box box-definisi">
-      <div class="math-block">$$\frac{a}{\sqrt{b}} = \frac{a}{\sqrt{b}} \times \frac{\sqrt{b}}{\sqrt{b}} = \frac{a\sqrt{b}}{b}, \quad b > 0.$$</div>
-      </div>
-      <p><strong>Kasus 2: Penyebut berbentuk $\sqrt{a} \pm \sqrt{b}$</strong> (menggunakan konjugat/sekawan)</p>
-      <div class="box box-definisi">
-      <div class="math-block">$$\frac{p}{\sqrt{a}+\sqrt{b}} = \frac{p(\sqrt{a}-\sqrt{b})}{a-b}, \qquad \frac{p}{\sqrt{a}-\sqrt{b}} = \frac{p(\sqrt{a}+\sqrt{b})}{a-b}.$$</div>
-      <p>Pasangan $(\sqrt{a}+\sqrt{b})$ dan $(\sqrt{a}-\sqrt{b})$ saling disebut <strong>bentuk akar konjugat(sekawan)</strong>.</p>
-      </div>
-      <p style="margin-top:1rem;"><strong>Kasus 3: Penyebut berbentuk $c \pm \sqrt{b}$</strong></p>
-      <div class="box box-definisi">
-      <div class="math-block">$$\frac{p}{c+\sqrt{b}} = \frac{p(c-\sqrt{b})}{c^2-b}, \qquad \frac{p}{c-\sqrt{b}} = \frac{p(c+\sqrt{b})}{c^2-b}.$$</div>
-    </div>
-
-    <div class="box box-catatan">
-      <div class="box-label">⚠ Catatan</div>
-      <p style="margin:0;font-size:.9rem;">Identitas aljabar yang mendasari penggunaan konjugat adalah:
-        $$(\sqrt{a}+\sqrt{b})(\sqrt{a}-\sqrt{b}) = a - b, \qquad (c+\sqrt{b})(c-\sqrt{b}) = c^2 - b.$$
-        Identitas ini memastikan bahwa penyebut hasil perkalian adalah bilangan rasional.</p>
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 12</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
-      <ol class="alpha-list" style="margin:0;">
-        <li>$\dfrac{3}{\sqrt{6}}$</li>
-        <li>$\dfrac{\sqrt{2}}{\sqrt{10}}$</li>
-        <li>$\dfrac{\sqrt{12}}{4\sqrt{2}}$</li>
-      </ol>
-    </div>
-    <div class="penyelesaian">
-      
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$\dfrac{3}{\sqrt{6}} = \dfrac{3\sqrt{6}}{6} = \dfrac{\sqrt{6}}{2}$</li>
-        <li>$\dfrac{\sqrt{2}}{\sqrt{10}} = \dfrac{\sqrt{2} \cdot \sqrt{10}}{10} = \dfrac{\sqrt{20}}{10} = \dfrac{2\sqrt{5}}{10} = \dfrac{\sqrt{5}}{5}$</li>
-        <li>$\dfrac{\sqrt{12}}{4\sqrt{2}} = \dfrac{2\sqrt{3}}{4\sqrt{2}} = \dfrac{\sqrt{3}}{2\sqrt{2}} = \dfrac{\sqrt{6}}{4}$</li>
-      </ol>
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 11</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
-      <ol class="alpha-list" style="margin:0;">
-        <li>$\dfrac{2}{\sqrt{6}-\sqrt{2}}$</li>
-        <li>$\dfrac{\sqrt{6}}{\sqrt{6}+\sqrt{3}}$</li>
-        <li>$\dfrac{\sqrt{6}+\sqrt{3}}{\sqrt{6}-\sqrt{3}}$</li>
-      </ol>
-    </div>
-    <div class="penyelesaian">
-      
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>Kalikan dengan konjugat $(\sqrt{6}+\sqrt{2})$:
-          $$\begin{align*}\frac{2}{\sqrt{6}-\sqrt{2}} \times \frac{\sqrt{6}+\sqrt{2}}{\sqrt{6}+\sqrt{2}} &= \frac{2(\sqrt{6}+\sqrt{2})}{6-2} \\ &= \frac{\sqrt{6}+\sqrt{2}}{2}.\end{align*}$$</li>
-        <li>Kalikan dengan konjugat $(\sqrt{6}-\sqrt{3})$:
-          $$\begin{align*}\frac{\sqrt{6}}{\sqrt{6}+\sqrt{3}} \times \frac{\sqrt{6}-\sqrt{3}}{\sqrt{6}-\sqrt{3}} &= \frac{6-\sqrt{18}}{3} \\ &= \frac{6-3\sqrt{2}}{3} \\ &= 2 - \sqrt{2}.\end{align*}$$</li>
-        <li>Kalikan dengan konjugat $(\sqrt{6}+\sqrt{3})$:
-          $$\begin{align*}\frac{\sqrt{6}+\sqrt{3}}{\sqrt{6}-\sqrt{3}} \times \frac{\sqrt{6}+\sqrt{3}}{\sqrt{6}+\sqrt{3}} &= \frac{(\sqrt{6}+\sqrt{3})^2}{3} \\ &= \frac{9 + 6\sqrt{2}}{3} \\ &= 3 + 2\sqrt{2}.\end{align*}$$</li>
       </ol>
     </div>
 
@@ -1783,8 +1643,8 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban:`(a) $2a^3b^3$&nbsp; &nbsp;(b) $\\dfrac{x^8}{y^{10}}$&nbsp; &nbsp;(c) $a$` },
       { jawaban:`$\\dfrac{16}{5}$` },
       { jawaban:`$x = -\\dfrac{1}{2}$` },
-      { jawaban:`$a - a^{-1} = \\sqrt{21}$ (jika $a > 1$), atau $a - a^{-1} = -\\sqrt{21}$ (jika $0 < a < 1$)` },
-      { jawaban:`Faktorkan $2^{n+1}$: pembilang $= 2^{n+1}(2+1) = 3 \\cdot 2^{n+1}$, penyebut $= 2^{n+1}(4+1) = 5 \\cdot 2^{n+1}$, sehingga hasilnya $=\\dfrac{3}{5}$ (konstan). $\\blacksquare$` },
+      { jawaban:`$a - a^{-1} = \\sqrt{21}$ jika $a > 1$, atau $a - a^{-1} = -\\sqrt{21}$ jika $0 < a < 1$` },
+      { jawaban:`Faktorkan $2^{n+1}$: pembilang $= 2^{n+1}(2+1) = 3 \\cdot 2^{n+1}$, penyebut $= 2^{n+1}(4-1) = 3 \\cdot 2^{n+1}$, sehingga hasilnya $= 1$ (konstan). $\\blacksquare$` },
     ],
     // B — Bentuk Akar
     1: [

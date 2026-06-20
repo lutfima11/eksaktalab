@@ -17,6 +17,68 @@ window.MathJax = {
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 <style>
+/* ── NAVBAR override untuk quiz (navy, bukan surface) ── */
+.navbar{background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08);}
+.nav-logo-tag{color:rgba(255,255,255,.4);}
+.nav-btn{border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.07);color:rgba(255,255,255,.8);}
+.nav-btn:hover{background:rgba(255,255,255,.13);color:#fff;border-color:rgba(255,255,255,.25);}
+
+/* ── NAVBAR QUIZ (pakai materi.css navbar + override tipis) ── */
+.navbar{position:sticky;top:0;z-index:50;}
+/* q-top tidak lagi dipakai — navbar standar menggantikan */
+.q-top{display:none;}
+.q-breadcrumb{
+  padding:.5rem var(--px);
+  border-bottom:1px solid var(--border);
+  background:var(--surface-2);
+  font-size:.72rem;color:var(--text-3);
+  display:flex;align-items:center;gap:.4rem;
+  flex-shrink:0;flex-wrap:wrap;
+}
+.q-breadcrumb a{color:var(--text-3);text-decoration:none;transition:color .15s;}
+.q-breadcrumb a:hover{color:var(--teal);}
+.q-breadcrumb span{opacity:.4;}
+.q-bc-sep{opacity:.35;margin:0 .05rem;}
+.q-bc-kode{font-family:var(--mono);font-weight:700;color:var(--teal);letter-spacing:.04em;}
+.q-bc-mode{font-weight:600;color:var(--text-2);}
+.q-bc-level{font-weight:700;font-family:var(--mono);}
+
+/* ── TOMBOL NAV BAWAH — style EksaktaLab card-btn ── */
+.q-nav{
+  flex-shrink:0;border-top:1px solid var(--border);
+  padding:.85rem var(--px);
+  display:flex;align-items:center;justify-content:space-between;gap:.75rem;
+  background:var(--surface);
+}
+.q-nav-btn{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:.65rem;height:40px;padding:0 1rem 0 1.1rem;
+  border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);
+  background:var(--surface-2);color:var(--text-2);
+  font-size:.82rem;font-weight:600;font-family:var(--sans);
+  cursor:pointer;transition:all .2s;letter-spacing:.01em;
+}
+.q-nav-btn:hover:not(:disabled){border-color:var(--teal);color:var(--teal);}
+.q-nav-btn:disabled{opacity:.35;cursor:not-allowed;}
+.q-nav-btn.next{
+  background:transparent;color:var(--teal);
+  border-color:rgba(0,191,165,.35);
+  padding:0 .75rem 0 1.1rem;
+}
+.q-nav-btn.next:hover{background:var(--teal);color:#fff;border-color:var(--teal);}
+.q-nav-btn.next:hover .q-nav-arrow{background:rgba(255,255,255,.2);}
+.q-nav-btn.next:disabled{opacity:.35;cursor:not-allowed;}
+.q-nav-arrow{
+  width:26px;height:26px;border-radius:6px;
+  background:rgba(0,191,165,.12);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;transition:background .2s;
+}
+.q-nav-arrow svg{width:11px;height:11px;}
+.q-nav-ctr{font-family:var(--mono);font-size:.75rem;color:var(--text-3);}
+.q-nav-ctr em{color:var(--text);font-style:normal;font-weight:700;}
+
 /* ── LAYOUT ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 body{
@@ -25,43 +87,12 @@ body{
 }
 
 /* TOPBAR */
-.q-top{
-  height:52px;flex-shrink:0;background:var(--navy);
-  border-bottom:1px solid rgba(255,255,255,.08);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 1.25rem;gap:1rem;
-}
-.q-top-left{display:flex;align-items:center;gap:.7rem;min-width:0;}
-.q-top-logo{
-  width:28px;height:28px;border-radius:7px;background:var(--teal);
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;
-}
-.q-top-logo svg{width:14px;height:14px;}
-.q-top-brand{display:flex;align-items:center;}
-.q-top-brand-name{font-family:var(--display);font-size:.95rem;font-weight:700;color:#fff;letter-spacing:-.02em;}
 .q-top-brand-name em{font-style:normal;color:var(--teal);}
-.q-top-right{display:flex;align-items:center;gap:.5rem;flex-shrink:0;}
-.q-top-btn{
-  height:30px;padding:0 .7rem;border-radius:6px;
-  border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.07);
-  color:rgba(255,255,255,.8);font-size:.72rem;font-weight:600;
-  font-family:var(--sans);cursor:pointer;
-  display:flex;align-items:center;gap:.3rem;transition:all .18s;
-}
-.q-top-btn:hover{background:rgba(255,255,255,.14);color:#fff;}
-.q-top-btn svg{width:12px;height:12px;stroke:currentColor;flex-shrink:0;}
-
 /* PROGRESS */
 .q-progress-bar{height:3px;background:var(--surface-3);flex-shrink:0;}
 .q-progress-fill{height:100%;background:var(--teal);transition:width .4s ease;width:0%;}
 
 /* BREADCRUMB */
-.q-breadcrumb{padding:.5rem 1.5rem;border-bottom:1px solid var(--border);background:var(--surface-2);font-size:.72rem;color:var(--text-3);display:flex;align-items:center;gap:.4rem;flex-shrink:0;flex-wrap:wrap;}
-.q-breadcrumb a{color:var(--text-3);text-decoration:none;transition:color .15s;}
-.q-breadcrumb a:hover{color:var(--teal);}
-.q-breadcrumb span{opacity:.4;}
-
-
 /* MAIN */
 .q-layout{flex:1;display:flex;min-height:0;overflow:hidden;}
 
@@ -247,19 +278,7 @@ body{
 }
 
 /* NAV BAWAH */
-.q-nav{
-  flex-shrink:0;border-top:1px solid var(--border);
-  padding:.85rem 1.75rem;
-  display:flex;align-items:center;justify-content:space-between;gap:.75rem;
-  background:var(--surface);
-}
-.q-nav-btn{height:40px;padding:0 1.25rem;border-radius:99px;border:1.5px solid var(--border);background:var(--surface-2);color:var(--text-2);font-size:.8rem;font-weight:600;font-family:var(--sans);cursor:pointer;display:flex;align-items:center;gap:.45rem;transition:all .2s;letter-spacing:.01em;}
-.q-nav-btn:hover:not(:disabled){border-color:var(--teal);color:var(--teal);background:rgba(0,191,165,.07);}
-.q-nav-btn:disabled{opacity:.3;cursor:not-allowed;}
 .q-nav-btn svg{width:12px;height:12px;stroke:currentColor;flex-shrink:0;}
-.q-nav-btn.next{background:var(--teal);color:#fff;border-color:var(--teal);box-shadow:0 4px 16px rgba(0,191,165,.28);}
-.q-nav-btn.next:hover{background:var(--teal-dim);box-shadow:0 6px 20px rgba(0,191,165,.36);}
-.q-nav-ctr{font-family:var(--mono);font-size:.73rem;color:var(--text-3);}
 .q-nav-ctr em{color:var(--text);font-style:normal;font-weight:700;}
 
 /* SKOR */
@@ -307,11 +326,6 @@ body{
   display:none;position:fixed;inset:0;
   background:rgba(0,0,0,.5);z-index:55;
 }
-.q-bc-sep{opacity:.35;margin:0 .1rem;}
-.q-bc-kode{font-family:var(--mono);font-weight:700;color:var(--teal);letter-spacing:.04em;}
-.q-bc-mode{font-weight:600;color:var(--text-2);}
-.q-bc-level{font-weight:700;font-family:var(--mono);}
-
 /* ── BENAR SALAH — card list style ── */
 .q-bs-head{display:flex;align-items:center;justify-content:space-between;padding:.4rem 0;margin-bottom:.5rem;}
 .q-bs-head-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;}
@@ -349,47 +363,207 @@ body{
    RESPONSIVE — MOBILE
 ═══════════════════════════════════════════════════════ */
 
-@media(max-width:768px){
-  /* Layout: scroll normal di mobile */
-  body{height:auto;overflow-x:hidden;overflow-y:auto;display:block;}
-  .q-layout{flex-direction:column;overflow:visible;min-height:0;}
+/* Matikan hover di touchscreen */
 
-  /* Sidebar: slide-in panel dari kiri */
-  .q-sidebar{
-    position:fixed;left:0;top:0;bottom:0;z-index:56;
-    transform:translateX(-100%);transition:transform .25s ease;
-    width:min(260px,80vw);padding-top:52px;
-  }
-  .q-sidebar.open{transform:translateX(0);box-shadow:4px 0 24px rgba(0,0,0,.15);}
-  .q-sb-overlay.open{display:block;}
-  .q-sb-fab{display:flex;}
+/* ═══════════════════════════════════════════════════════
+   MOBILE BOTTOM STRIP — nomor soal horizontal
+═══════════════════════════════════════════════════════ */
 
-  /* Content: padding lebih kecil */
-  .q-content{overflow-y:visible;padding:1.1rem 1rem 1.5rem;}
-
-  /* Nav bawah: sticky, pastikan tidak tertutup keyboard */
-  .q-nav{
-    padding:.75rem 1rem;
-    position:sticky;bottom:0;z-index:20;
-    box-shadow:0 -1px 0 var(--border), 0 -8px 20px rgba(0,0,0,.06);
-  }
-
-  /* Topbar: sedikit lebih kompak */
-  .q-top{height:50px;padding:0 1rem;}
-  .q-top-brand-name{font-size:.88rem;}
-  .q-top-btn{height:28px;padding:0 .6rem;font-size:.7rem;}
-
-  /* Breadcrumb: lebih compact, bisa wrap */
-  .q-breadcrumb{padding:.45rem 1rem;font-size:.67rem;gap:.3rem;}
-
-  /* Score screen */
-  .q-score{min-height:60vh;padding:2rem 1rem 1.5rem;}
+/* Strip nomor soal (hidden di desktop) */
+.q-mob-strip {
+  display: none;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  background: var(--surface-2);
+  border-top: 1px solid var(--border);
+  padding: .5rem .85rem;
+  gap: .4rem;
+  flex-shrink: 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 15;
+}
+.q-mob-strip::-webkit-scrollbar { display: none; }
+.q-mob-strip-inner {
+  display: flex;
+  gap: .38rem;
+  min-width: max-content;
+  align-items: center;
+  padding: .1rem 0;
 }
 
-@media(max-width:500px){
-  /* FAB di atas nav bawah */
-  .q-sb-fab{bottom:4.5rem;left:.85rem;width:38px;height:38px;}
-  /* Score screen mobile */
+/* Nomor soal di strip mobile — lebih kecil dari sidebar */
+.q-mob-num {
+  width: 32px; height: 32px;
+  border-radius: 7px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--text-3);
+  font-family: var(--mono); font-size: .7rem; font-weight: 600;
+  cursor: pointer; transition: all .15s;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.q-mob-num.cur  { border-color: var(--teal); background: var(--teal); color: var(--navy); }
+.q-mob-num.ok   { border-color: var(--green-b); background: var(--green); color: var(--green-b); }
+.q-mob-num.ng   { border-color: var(--red-b); background: var(--red); color: var(--red-b); }
+.q-mob-num.cur.ok, .q-mob-num.cur.ng { outline: 2px solid var(--teal); outline-offset: 1px; }
+
+/* Nav tombol di mobile (sama tapi lebih compact) */
+.q-mob-nav {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: .6rem .85rem .75rem;
+  gap: .6rem;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.q-mob-nav-btn {
+  display: flex; align-items: center; gap: .4rem;
+  height: 38px; padding: 0 1rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: var(--surface-2); color: var(--text-2);
+  font-size: .78rem; font-weight: 600; font-family: var(--sans);
+  cursor: pointer; transition: all .18s;
+}
+.q-mob-nav-btn:hover:not(:disabled) { border-color: var(--teal); color: var(--teal); }
+.q-mob-nav-btn:disabled { opacity: .35; cursor: not-allowed; }
+.q-mob-nav-btn svg { width: 11px; height: 11px; stroke: currentColor; flex-shrink: 0; }
+.q-mob-nav-btn.next {
+  background: transparent; color: var(--teal);
+  border-color: rgba(0,191,165,.35);
+  padding: 0 .75rem 0 1rem;
+}
+.q-mob-nav-btn.next:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+.q-mob-nav-btn.next:hover .q-mob-arrow { background: rgba(255,255,255,.2); }
+.q-mob-arrow {
+  width: 24px; height: 24px; border-radius: 5px;
+  background: rgba(0,191,165,.12);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: background .18s;
+}
+.q-mob-arrow svg { width: 10px; height: 10px; }
+.q-mob-nav-ctr { font-family: var(--mono); font-size: .72rem; color: var(--text-3); }
+.q-mob-nav-ctr em { color: var(--text); font-style: normal; font-weight: 700; }
+
+
+/* ═══════════════════════════════════════════════════════
+   TABLET PORTRAIT  601–900px
+   Sidebar collapse ke icon-only strip vertikal kiri
+═══════════════════════════════════════════════════════ */
+@media(min-width:601px) and (max-width:900px){
+  /* Body: normal scroll */
+  body{height:100dvh;overflow:hidden;display:flex;flex-direction:column;}
+
+  /* Layout: sidebar tipis icon-only */
+  .q-layout{flex-direction:row;overflow:hidden;flex:1;min-height:0;}
+
+  /* Sidebar: icon-only 56px */
+  .q-sidebar{
+    width:56px;flex-shrink:0;
+    display:flex;flex-direction:column;overflow:hidden;
+    transition:width .22s ease;
+  }
+  .q-sidebar:hover{
+    width:200px;
+    box-shadow:4px 0 20px rgba(0,0,0,.12);
+    z-index:30;position:relative;
+  }
+
+  /* Sidebar head: nomor soal tetap grid 4 col, hide label saat collapsed */
+  .q-sb-head{padding:.65rem .6rem .5rem;}
+  .q-sb-label{
+    font-size:.55rem;white-space:nowrap;overflow:hidden;
+    opacity:0;transition:opacity .15s;
+  }
+  .q-sidebar:hover .q-sb-label{opacity:1;}
+  .q-num-grid{grid-template-columns:repeat(2,1fr);gap:4px;}
+  .q-sidebar:hover .q-num-grid{grid-template-columns:repeat(4,1fr);}
+  .q-num-btn{width:32px;height:32px;font-size:.67rem;}
+
+  /* Tip + legend: hide saat collapsed */
+  .q-sb-tip{display:none;}
+  .q-sidebar:hover .q-sb-tip{display:block;}
+  .q-sb-legend{display:none;}
+  .q-sidebar:hover .q-sb-legend{display:block;}
+
+  /* Content: scroll internal */
+  .q-content{overflow-y:auto;padding:1.25rem 1.25rem 1.5rem;}
+
+  /* Nav desktop: tampil normal */
+  .q-nav{display:flex;padding:.8rem 1.25rem;}
+  .q-nav-btn{height:38px;padding:0 1rem 0 1rem;font-size:.79rem;}
+
+  /* Mobile strip + mob-nav: sembunyikan */
+  .q-mob-strip{display:none !important;}
+  .q-mob-nav{display:none !important;}
+  .q-sb-fab{display:none !important;}
+
+  /* Breadcrumb */
+  .q-breadcrumb{padding:.5rem 1.25rem;}
+
+  /* Soal text */
+  .q-text{font-size:.9rem;}
+  .q-opt{padding:.65rem .9rem;font-size:.86rem;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   TABLET LANDSCAPE + SMALL DESKTOP  901–1100px
+═══════════════════════════════════════════════════════ */
+@media(min-width:901px) and (max-width:1100px){
+  /* Sidebar sedikit lebih sempit */
+  .q-sidebar{width:180px;}
+  .q-num-btn{width:30px;height:30px;font-size:.67rem;}
+  .q-num-grid{gap:4px;}
+  .q-content{padding:1.25rem 1.5rem;}
+  .q-nav{padding:.8rem 1.5rem;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE  ≤600px — strip bawah
+═══════════════════════════════════════════════════════ */
+@media(max-width:600px){
+  body{height:auto;overflow-x:hidden;overflow-y:auto;display:block;}
+  .q-layout{flex-direction:column;overflow:visible;min-height:0;}
+  .q-sidebar{display:none !important;}
+  .q-sb-overlay{display:none !important;}
+  .q-sb-fab{display:none !important;}
+  .q-content{overflow-y:visible;padding:1.1rem 1rem 1rem;}
+  .q-nav{display:none;}
+  .q-mob-strip{display:flex;}
+  .q-mob-nav{display:flex;}
+  .q-breadcrumb{padding:.45rem 1rem;font-size:.67rem;gap:.3rem;}
+  #scroll-bar{top:60px;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   SMALL MOBILE  ≤480px
+═══════════════════════════════════════════════════════ */
+@media(max-width:480px){
+  .nav-logo-tag{display:none;}
+  .q-content{padding:.9rem .9rem 1rem;}
+  .q-text{font-size:.88rem;line-height:1.65;}
+  .q-soal-meta{margin-bottom:.75rem;}
+  .q-tandai{font-size:.66rem;padding:.18rem .5rem;}
+  .q-type{font-size:.55rem;}
+  .q-opt{padding:.6rem .8rem;font-size:.845rem;gap:.65rem;}
+  .q-opt-key{width:20px;height:20px;font-size:.63rem;}
+  .q-mma-opt{padding:.6rem .8rem;font-size:.845rem;}
+  .q-checkbox{width:17px;height:17px;}
+  .q-bs-item{flex-wrap:wrap;gap:.5rem;}
+  .q-bs-btns{width:100%;justify-content:flex-end;}
+  .q-bs-btn{flex:1;height:36px;font-size:.7rem;}
+  .q-pem-hd{padding:.55rem .85rem;font-size:.76rem;}
+  .q-pem-body{padding:.75rem .85rem;font-size:.815rem;}
+  .q-mob-nav{padding:.55rem .85rem .7rem;}
+  .q-mob-nav-btn{height:36px;padding:0 .85rem;font-size:.76rem;}
+  .q-mob-nav-ctr{font-size:.68rem;}
+  .q-mob-strip{padding:.45rem .85rem;}
+  .q-mob-num{width:30px;height:30px;font-size:.67rem;border-radius:6px;}
   .q-score{padding:1.5rem .9rem 2rem;gap:.4rem;}
   .q-score-ring{width:90px;height:90px;}
   .q-score-num{font-size:1.8rem;}
@@ -398,97 +572,57 @@ body{
   .q-score-grid{gap:.45rem;max-width:100%;}
   .q-score-item-n{font-size:1.2rem;}
   .q-score-btn{height:34px;padding:0 .85rem;font-size:.76rem;}
-
-  /* Topbar: sembunyikan teks "Kembali", hanya icon */
-  .q-top-btn.back-btn .btn-text{display:none;}
-  .q-top-btn{height:28px;padding:0 .5rem;min-width:28px;justify-content:center;}
-
-  /* Content padding minimal */
-  .q-content{padding:.9rem .9rem 1.25rem;}
-
-  /* Soal text */
-  .q-text{font-size:.88rem;line-height:1.65;}
-
-  /* PG Options */
-  .q-opt{padding:.6rem .8rem;font-size:.845rem;gap:.65rem;}
-  .q-opt-key{width:20px;height:20px;font-size:.63rem;}
-
-  /* MMA Options */
-  .q-mma-opt{padding:.6rem .8rem;font-size:.845rem;}
-  .q-checkbox{width:17px;height:17px;}
-
-  /* Benar/Salah — stack pernyataan dan tombol secara vertikal di HP kecil */
-  .q-bs-item{flex-wrap:wrap;gap:.5rem;}
-  .q-bs-btns{width:100%;justify-content:flex-end;}
-  .q-bs-btn{flex:1;height:36px;font-size:.7rem;}
-
-  /* Pembahasan */
-  .q-pem-hd{padding:.55rem .85rem;font-size:.76rem;}
-  .q-pem-body{padding:.75rem .85rem;font-size:.815rem;}
-  .q-pem-toggle{font-size:.68rem;}
-
-  /* Nav tombol */
-  .q-nav{padding:.65rem .9rem;gap:.5rem;}
-  .q-nav-btn{height:38px;padding:0 .9rem;font-size:.76rem;}
-  .q-nav-btn svg{width:11px;height:11px;}
-  .q-nav-ctr{font-size:.68rem;}
-
-  /* Sidebar FAB */
-  .q-sb-fab{width:40px;height:40px;bottom:5.5rem;}
-
-  /* Soal meta row */
-  .q-soal-meta{margin-bottom:.75rem;}
-  .q-tandai{font-size:.66rem;padding:.18rem .5rem;}
-
-  /* Type badge */
-  .q-type{font-size:.55rem;}
-
-  /* BS Head labels */
-  .q-bs-head-col{width:48px;font-size:.58rem;}
-  .q-bs-btn{width:48px;}
-
-  /* Nomor soal grid di sidebar */
-  .q-num-grid{grid-template-columns:repeat(5,1fr);}
 }
 
+/* ═══════════════════════════════════════════════════════
+   VERY SMALL  ≤360px
+═══════════════════════════════════════════════════════ */
 @media(max-width:360px){
   .q-content{padding:.75rem .75rem 1rem;}
-  .q-nav-btn{padding:0 .7rem;font-size:.72rem;}
   .q-text{font-size:.84rem;}
   .q-breadcrumb{font-size:.62rem;}
+  .q-mob-num{width:28px;height:28px;font-size:.64rem;}
+  .q-mob-nav-btn{font-size:.72rem;padding:0 .7rem;}
 }
 
-/* Matikan hover di touchscreen */
+/* ═══════════════════════════════════════════════════════
+   TOUCH DEVICE — matikan hover state
+═══════════════════════════════════════════════════════ */
 @media(hover:none){
   .q-opt:hover:not(:disabled){border-color:var(--border);background:var(--surface);}
   .q-mma-opt:hover:not(:disabled){border-color:var(--border);background:var(--surface);}
-  .q-nav-btn:hover:not(:disabled){border-color:var(--border);color:var(--text-2);background:var(--surface-2);}
-  .q-nav-btn.next:hover{background:var(--teal);box-shadow:0 4px 16px rgba(0,191,165,.28);}
+  .q-nav-btn.next:hover{background:transparent;color:var(--teal);box-shadow:none;border-color:rgba(0,191,165,.35);}
+  .q-mob-nav-btn.next:hover{background:transparent;color:var(--teal);}
   .q-bs-btn:hover:not(:disabled){border-color:var(--border);color:var(--text-3);background:var(--surface-2);}
 }
 </style>
 </head>
 <body>
 
-<!-- TOPBAR -->
-<div class="q-top">
-  <div class="q-top-left">
-    <a class="q-top-logo" href="../../../">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <div class="q-top-brand">
-      <span class="q-top-brand-name">Eksakta<em>Lab</em></span>
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
     </div>
-  </div>
-  <div class="q-top-right">
-    <button class="q-top-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
-    <button class="q-top-btn back-btn" onclick="window.location.href='../'" class="q-top-btn back-btn">
-      <svg viewBox="0 0 13 13" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="8,2 3,6.5 8,11"/></svg>
+  </a>
+  <div class="nav-right">
+    <a class="nav-btn" href="../">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="8,2 3,6.5 8,11"/></svg>
       Kembali
-    </button>
+    </a>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
   </div>
-</div>
+</nav>
 
 <!-- PROGRESS -->
 <div class="q-progress-bar"><div class="q-progress-fill" id="q-prog"></div></div>
@@ -534,29 +668,56 @@ body{
   <!-- CONTENT -->
   <div class="q-content" id="q-content"></div>
 
+  <!-- MOBILE STRIP: nomor soal horizontal -->
+  <div class="q-mob-strip" id="q-mob-strip">
+    <div class="q-mob-strip-inner" id="q-mob-strip-inner">
+      <!-- injected by JS -->
+    </div>
+  </div>
+
+  <!-- MOBILE NAV -->
+  <div class="q-mob-nav" id="q-mob-nav">
+    <button class="q-mob-nav-btn" id="mob-btn-prev" onclick="go(-1)" disabled>
+      <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="7,2 3,5 7,8"/></svg>
+      Sebelumnya
+    </button>
+    <span class="q-mob-nav-ctr"><em id="mob-q-cur">1</em> / <span id="mob-q-tot">10</span></span>
+    <button class="q-mob-nav-btn next" id="mob-btn-next" onclick="go(1)">
+      Selanjutnya
+      <span class="q-mob-arrow">
+        <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg>
+      </span>
+    </button>
+  </div>
+
 </div><!-- /q-layout -->
 
 <!-- NAV -->
 <div class="q-nav" id="q-nav">
   <button class="q-nav-btn" id="btn-prev" onclick="go(-1)" disabled>
-    <svg viewBox="0 0 13 13" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="8,2 3,6.5 8,11"/></svg>Sebelumnya
+    <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="7,2 3,5 7,8"/></svg>
+    Sebelumnya
   </button>
   <span class="q-nav-ctr"><em id="q-cur">1</em> / <span id="q-tot">10</span></span>
   <button class="q-nav-btn next" id="btn-next" onclick="go(1)">
-    Selanjutnya<svg viewBox="0 0 13 13" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,6.5 5,11"/></svg>
+    Selanjutnya
+    <span class="q-nav-arrow">
+      <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg>
+    </span>
   </button>
 </div>
 
-<!-- FAB mobile sidebar toggle -->
-<button class="q-sb-fab" onclick="toggleSb()" title="Daftar Soal">
-  <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-    <line x1="2" y1="5" x2="8" y2="5"/><line x1="2" y1="9" x2="8" y2="9"/><line x1="2" y1="13" x2="8" y2="13"/>
-    <rect x="11" y="4" width="5" height="10" rx="1.5"/>
-  </svg>
-</button>
 
 <script src="../../../assets/js/quiz-data.js"></script>
 <script>
+// ── Scroll progress bar ──────────────────────────────────
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  const sb  = document.getElementById('scroll-bar');
+  if (sb) sb.style.width = pct + '%';
+});
+
 const PAKET_ID = '19';
 const TIPS = {
   pg:  'Pilih satu jawaban yang paling tepat.',
@@ -585,7 +746,7 @@ function init(){
   S.correct=Array(data.soal.length).fill(null);
   S.marked=Array(data.soal.length).fill(false);
   document.getElementById('q-tot').textContent=data.soal.length;
-  buildGrid();renderQ(0);
+  buildGrid();buildMobStrip();renderQ(0);
 }
 
 function buildGrid(){
@@ -595,7 +756,7 @@ function buildGrid(){
   ).join('');
 }
 
-function updateBtn(i){
+function updateBtn(i){updateMobNum(i);
   const b=document.getElementById('nb'+i);if(!b)return;
   b.className='q-num-btn';
   if(i===S.cur)b.classList.add('cur');
@@ -608,12 +769,12 @@ function updateProg(){
   document.getElementById('q-prog').style.width=(done/S.soal.length*100)+'%';
 }
 
-function goTo(i){if(S.done)return;S.cur=i;S.soal.forEach((_,j)=>updateBtn(j));renderQ(i);closeSb();}
-function go(d){const n=S.cur+d;if(n<0||n>=S.soal.length)return;S.cur=n;S.soal.forEach((_,j)=>updateBtn(j));renderQ(n);}
+function goTo(i){if(S.done)return;S.cur=i;S.soal.forEach((_,j)=>{updateBtn(j);updateMobNum(j);});updateMobNav(i);renderQ(i);closeSb();}
+function go(d){const n=S.cur+d;if(n<0||n>=S.soal.length)return;S.cur=n;S.soal.forEach((_,j)=>{updateBtn(j);updateMobNum(j);});updateMobNav(n);renderQ(n);}
 
 function renderQ(i){
   const q=S.soal[i],ans=S.answers[i],answered=ans!==null;
-  document.getElementById('q-cur').textContent=i+1;
+  document.getElementById('q-cur').textContent=i+1;updateMobNav(i);
   document.getElementById('btn-prev').disabled=i===0;
   document.getElementById('q-tip').textContent=TIPS[q.type]||TIPS.pg;
 
@@ -808,7 +969,7 @@ function showScore(){
       <button class="q-score-btn p" onclick="window.location.href='../'" class="q-top-btn back-btn">&#8592; Kembali</button>
     </div>
   </div>`;
-  document.getElementById('q-nav').style.display='none';
+  document.getElementById('q-nav').style.display='none';const mn2=document.getElementById('q-mob-nav');if(mn2)mn2.style.display='none';const ms2=document.getElementById('q-mob-strip');if(ms2)ms2.style.display='none';
   document.getElementById('q-prog').style.width='100%';
 }
 
@@ -841,7 +1002,57 @@ document.addEventListener('keydown',e=>{
   }
 });
 
+
+// ── Mobile strip: build dan update ──────────────────────────────────
+function buildMobStrip(){
+  const inner = document.getElementById('q-mob-strip-inner');
+  if(!inner) return;
+  const tot = document.getElementById('mob-q-tot');
+  if(tot) tot.textContent = S.soal.length;
+  inner.innerHTML = S.soal.map((_,i) =>
+    `<button class="q-mob-num${i===0?' cur':''}" id="mn${i}" onclick="goTo(${i})">${i+1}</button>`
+  ).join('');
+}
+
+function updateMobNum(i){
+  const b = document.getElementById('mn'+i);
+  if(!b) return;
+  b.className = 'q-mob-num';
+  if(i === S.cur) b.classList.add('cur');
+  if(S.correct[i] === true)  b.classList.add('ok');
+  if(S.correct[i] === false) b.classList.add('ng');
+}
+
+function updateMobNav(i){
+  const prev = document.getElementById('mob-btn-prev');
+  const cur  = document.getElementById('mob-q-cur');
+  const next = document.getElementById('mob-btn-next');
+  const isLast = i === S.soal.length - 1;
+  if(prev) prev.disabled = (i === 0);
+  if(cur)  cur.textContent = i + 1;
+  if(next){
+    if(isLast){
+      next.innerHTML = 'Lihat Nilai<span class="q-mob-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="2,7 5,9.5 8,4"/></svg></span>';
+      next.onclick = showScore;
+    } else {
+      next.innerHTML = 'Selanjutnya<span class="q-mob-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span>';
+      next.onclick = () => go(1);
+    }
+  }
+  // Auto-scroll strip ke nomor aktif
+  const mn = document.getElementById('mn'+i);
+  if(mn) mn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+
 init();
+
+// ── Scroll progress bar ─────────────────────────────────
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  const sb  = document.getElementById('scroll-bar');
+  if (sb) sb.style.width = pct + '%';
+});
 </script>
 </body>
 </html>
