@@ -48,3 +48,28 @@ function toast(msg) {
   clearTimeout(t._timer);
   t._timer = setTimeout(() => { t.style.display = 'none'; }, 2200);
 }
+
+// ── FASE FILTER ──────────────────────────────────────────────────────────────
+function filterFase(btn, viewId) {
+  // Update chip aktif dalam filter bar yang sama
+  const bar = btn.closest('.fase-filter');
+  bar.querySelectorAll('.fase-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+
+  const target = btn.dataset.target;
+  const view = document.getElementById(viewId);
+  if (!view) return;
+
+  view.querySelectorAll('.chapter-group').forEach(group => {
+    if (target === 'all') {
+      group.classList.remove('fase-hidden');
+    } else {
+      const fase = group.dataset.fase;
+      if (fase === target) {
+        group.classList.remove('fase-hidden');
+      } else {
+        group.classList.add('fase-hidden');
+      }
+    }
+  });
+}

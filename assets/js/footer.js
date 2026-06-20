@@ -54,7 +54,7 @@
         { label: 'Tentang Kami',        href: 'tentang/' },
         { label: 'Kontak',              href: 'kontak/' },
         { label: 'Laporkan Kesalahan',  href: 'laporkan/' },
-        { label: 'Blog',                href: '#' },
+        { label: 'Blog',                href: 'blog/' },
       ],
     },
   ];

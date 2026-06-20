@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Fungsi Linear — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<style>
+/* ── RESET BODY utk quiz layout ── */
+body { overflow: hidden; height: 100dvh; display: flex; flex-direction: column; }
+
+/* ── TOPBAR ── */
+.q-topbar {
+  height: 56px; flex-shrink: 0;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 1.25rem; gap: 1rem;
+}
+.q-topbar-left { display: flex; align-items: center; gap: .75rem; min-width: 0; }
+.q-topbar-icon {
+  width: 30px; height: 30px; border-radius: 7px;
+  background: var(--teal); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.q-topbar-icon svg { width: 15px; height: 15px; }
+.q-topbar-title {
+  font-family: var(--display); font-size: .9rem; font-weight: 700;
+  color: #fff; letter-spacing: -.02em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.q-topbar-sub {
+  font-family: var(--mono); font-size: .6rem; font-weight: 600;
+  color: var(--teal); letter-spacing: .08em; text-transform: uppercase;
+}
+.q-topbar-right { display: flex; align-items: center; gap: .6rem; flex-shrink: 0; }
+.q-topbar-btn {
+  height: 32px; padding: 0 .75rem; border-radius: 7px;
+  border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.06);
+  color: #fff; font-size: .75rem; font-weight: 600; font-family: var(--sans);
+  cursor: pointer; display: flex; align-items: center; gap: .35rem;
+  transition: all .18s; white-space: nowrap;
+}
+.q-topbar-btn:hover { background: rgba(255,255,255,.12); }
+.q-topbar-btn svg { width: 13px; height: 13px; stroke: currentColor; }
+.q-topbar-btn.exit { color: rgba(255,255,255,.6); }
+.q-topbar-btn.exit:hover { color: #fff; }
+
+/* progress bar tipis di bawah topbar */
+.q-prog-bar { height: 3px; background: var(--surface-3); flex-shrink: 0; position: relative; }
+.q-prog-fill { height: 100%; background: var(--teal); transition: width .4s ease; width: 0%; }
+
+/* ── MAIN LAYOUT ── */
+.q-layout {
+  flex: 1; display: flex; min-height: 0; overflow: hidden;
+}
+
+/* ── SIDEBAR ── */
+.q-sidebar {
+  width: 220px; flex-shrink: 0;
+  background: var(--surface-2);
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.q-sidebar-head {
+  padding: .85rem 1rem .6rem;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.q-sidebar-label {
+  font-family: var(--mono); font-size: .6rem; font-weight: 700;
+  color: var(--teal); letter-spacing: .1em; text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.q-sidebar-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px;
+}
+.q-num-btn {
+  aspect-ratio: 1; border-radius: 6px; border: 1.5px solid var(--border);
+  background: var(--surface); color: var(--text-2);
+  font-family: var(--mono); font-size: .72rem; font-weight: 600;
+  cursor: pointer; transition: all .15s; display: flex; align-items: center; justify-content: center;
+}
+.q-num-btn:hover { border-color: var(--teal); color: var(--teal); }
+.q-num-btn.active { border-color: var(--teal); background: var(--teal); color: var(--navy); }
+.q-num-btn.answered-benar { border-color: var(--green-b); background: var(--green); color: var(--green-b); }
+.q-num-btn.answered-salah { border-color: var(--red-b); background: var(--red); color: var(--red-b); }
+.q-num-btn.answered-benar.active,
+.q-num-btn.answered-salah.active { outline: 2px solid var(--teal); outline-offset: 1px; }
+
+.q-sidebar-legend {
+  padding: .75rem 1rem; border-top: 1px solid var(--border);
+  margin-top: auto; flex-shrink: 0;
+}
+.q-legend-item {
+  display: flex; align-items: center; gap: .45rem;
+  font-size: .72rem; color: var(--text-3); margin-bottom: .35rem;
+}
+.q-legend-item:last-child { margin-bottom: 0; }
+.q-legend-dot {
+  width: 12px; height: 12px; border-radius: 3px; border: 1.5px solid; flex-shrink: 0;
+}
+.q-legend-dot.active-dot  { background: var(--teal); border-color: var(--teal); }
+.q-legend-dot.benar-dot   { background: var(--green); border-color: var(--green-b); }
+.q-legend-dot.salah-dot   { background: var(--red); border-color: var(--red-b); }
+.q-legend-dot.blank-dot   { background: var(--surface); border-color: var(--border); }
+
+/* tip box di sidebar */
+.q-tip-box {
+  margin: .75rem 1rem 0; padding: .65rem .8rem;
+  border-radius: var(--radius-sm); background: rgba(0,191,165,.06);
+  border: 1px solid rgba(0,191,165,.2);
+  font-size: .72rem; color: var(--text-3); line-height: 1.55;
+  flex-shrink: 0;
+}
+.q-tip-label {
+  display: flex; align-items: center; gap: .3rem;
+  font-family: var(--mono); font-size: .6rem; font-weight: 700;
+  color: var(--teal); text-transform: uppercase; letter-spacing: .08em;
+  margin-bottom: .3rem;
+}
+.q-tip-label svg { width: 11px; height: 11px; }
+
+/* ── CONTENT AREA ── */
+.q-content {
+  flex: 1; overflow-y: auto; padding: 1.75rem;
+  display: flex; flex-direction: column;
+  background: var(--surface);
+}
+
+/* soal header */
+.q-soal-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.25rem; flex-wrap: wrap; gap: .5rem;
+}
+.q-soal-pos {
+  font-family: var(--mono); font-size: .7rem; font-weight: 700;
+  color: var(--text-3);
+}
+.q-soal-tandai {
+  display: flex; align-items: center; gap: .35rem;
+  font-size: .72rem; font-weight: 600; color: var(--text-3);
+  background: none; border: 1.5px solid var(--border); border-radius: 6px;
+  padding: .25rem .65rem; cursor: pointer; transition: all .18s; font-family: var(--sans);
+}
+.q-soal-tandai:hover { border-color: var(--yellow-b); color: var(--yellow-b); }
+.q-soal-tandai.marked { border-color: var(--yellow-b); color: var(--yellow-b); background: var(--yellow); }
+.q-soal-tandai svg { width: 12px; height: 12px; stroke: currentColor; }
+
+/* tipe badge */
+.q-type-badge {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font-family: var(--mono); font-size: .58rem; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase;
+  padding: .18rem .55rem; border-radius: 4px;
+  margin-bottom: .75rem;
+}
+.q-type-badge.pg    { background: var(--blue); color: var(--blue-b); }
+.q-type-badge.bs    { background: var(--green); color: var(--green-b); }
+.q-type-badge.mma   { background: var(--yellow); color: var(--yellow-b); }
+
+/* teks soal */
+.q-soal-text {
+  font-size: .96rem; font-weight: 500; color: var(--text);
+  line-height: 1.75; margin-bottom: 1.25rem;
+}
+
+/* ── PILIHAN GANDA ── */
+.q-opts { display: flex; flex-direction: column; gap: .55rem; }
+.q-opt {
+  display: flex; align-items: flex-start; gap: .85rem;
+  padding: .75rem 1rem; border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border); background: var(--surface);
+  cursor: pointer; transition: all .18s; text-align: left; width: 100%;
+  font-size: .875rem; color: var(--text); line-height: 1.55;
+}
+.q-opt:hover:not(:disabled) { border-color: var(--teal); background: rgba(0,191,165,.04); }
+.q-opt:disabled { cursor: default; }
+.q-opt-key {
+  font-family: var(--mono); font-size: .68rem; font-weight: 700;
+  color: var(--text-3); background: var(--surface-2); border: 1px solid var(--border);
+  width: 24px; height: 24px; border-radius: 5px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  margin-top: .08rem; transition: all .18s;
+}
+.q-opt-text { flex: 1; }
+.q-opt-icon { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: .04rem; }
+
+/* option states */
+.q-opt.correct {
+  border-color: var(--green-b) !important;
+  background: var(--green) !important;
+}
+.q-opt.correct .q-opt-key {
+  background: var(--green-b) !important; color: #fff !important;
+  border-color: var(--green-b) !important;
+}
+.q-opt.wrong {
+  border-color: var(--red-b) !important;
+  background: var(--red) !important;
+}
+.q-opt.wrong .q-opt-key {
+  background: var(--red-b) !important; color: #fff !important;
+  border-color: var(--red-b) !important;
+}
+
+/* ── BENAR SALAH ── */
+.q-bs-table {
+  width: 100%; border-collapse: separate; border-spacing: 0 .45rem;
+  margin-bottom: .25rem;
+}
+.q-bs-table th {
+  font-family: var(--mono); font-size: .62rem; font-weight: 700;
+  color: var(--text-3); letter-spacing: .08em; text-transform: uppercase;
+  padding: .25rem .75rem; text-align: center;
+}
+.q-bs-table th:first-child { text-align: left; }
+.q-bs-table td {
+  padding: .6rem .75rem; background: var(--surface-2);
+  border-top: 1.5px solid var(--border); border-bottom: 1.5px solid var(--border);
+  font-size: .875rem; color: var(--text);
+}
+.q-bs-table td:first-child {
+  border-left: 1.5px solid var(--border); border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  font-weight: 500; line-height: 1.55;
+}
+.q-bs-table td:not(:first-child) { border-left: none; text-align: center; width: 72px; }
+.q-bs-table td:last-child {
+  border-right: 1.5px solid var(--border); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.q-bs-radio {
+  width: 20px; height: 20px; border-radius: 50%;
+  border: 2px solid var(--border); background: var(--surface);
+  cursor: pointer; transition: all .18s; display: inline-flex;
+  align-items: center; justify-content: center; vertical-align: middle;
+}
+.q-bs-radio:hover:not(.disabled) { border-color: var(--teal); }
+.q-bs-radio.selected-benar { border-color: var(--teal); background: var(--teal); }
+.q-bs-radio.selected-salah { border-color: var(--teal); background: var(--teal); }
+.q-bs-radio.correct-mark   { border-color: var(--green-b); background: var(--green-b); }
+.q-bs-radio.wrong-mark     { border-color: var(--red-b); background: var(--red-b); }
+.q-bs-radio svg { width: 10px; height: 10px; stroke: #fff; stroke-width: 2.5; display: none; }
+.q-bs-radio.selected-benar svg,
+.q-bs-radio.selected-salah svg,
+.q-bs-radio.correct-mark svg,
+.q-bs-radio.wrong-mark svg { display: block; }
+.q-bs-row.answered td { background: var(--surface); }
+.q-bs-row.row-benar td { background: var(--green) !important; }
+.q-bs-row.row-salah td { background: var(--red) !important; }
+
+/* ── MULTIPLE ANSWER ── */
+.q-mma-opts { display: flex; flex-direction: column; gap: .5rem; }
+.q-mma-opt {
+  display: flex; align-items: flex-start; gap: .85rem;
+  padding: .75rem 1rem; border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border); background: var(--surface);
+  cursor: pointer; transition: all .18s; text-align: left; width: 100%;
+  font-size: .875rem; color: var(--text); line-height: 1.55;
+}
+.q-mma-opt:hover:not(:disabled) { border-color: var(--teal); background: rgba(0,191,165,.04); }
+.q-mma-opt:disabled { cursor: default; }
+.q-mma-checkbox {
+  width: 20px; height: 20px; border-radius: 5px; border: 2px solid var(--border);
+  background: var(--surface); flex-shrink: 0; margin-top: .1rem;
+  display: flex; align-items: center; justify-content: center; transition: all .18s;
+}
+.q-mma-opt.selected .q-mma-checkbox {
+  background: var(--teal); border-color: var(--teal);
+}
+.q-mma-checkbox svg { width: 11px; height: 11px; stroke: #fff; stroke-width: 2.8; display: none; }
+.q-mma-opt.selected .q-mma-checkbox svg { display: block; }
+.q-mma-opt.correct { border-color: var(--green-b) !important; background: var(--green) !important; }
+.q-mma-opt.correct .q-mma-checkbox { background: var(--green-b) !important; border-color: var(--green-b) !important; }
+.q-mma-opt.wrong   { border-color: var(--red-b) !important; background: var(--red) !important; }
+.q-mma-opt.wrong   .q-mma-checkbox { background: var(--red-b) !important; border-color: var(--red-b) !important; }
+.q-mma-opt.missed  { border-color: var(--green-b) !important; background: var(--green) !important; opacity: .6; }
+.q-mma-note {
+  font-family: var(--mono); font-size: .62rem; color: var(--text-3);
+  margin-bottom: .85rem; display: flex; align-items: center; gap: .35rem;
+}
+.q-mma-note svg { width: 12px; height: 12px; }
+.q-mma-submit {
+  margin-top: .85rem; height: 38px; padding: 0 1.25rem; border-radius: var(--radius-sm);
+  background: var(--teal); color: var(--navy); font-size: .82rem; font-weight: 700;
+  font-family: var(--sans); border: none; cursor: pointer; transition: all .2s;
+}
+.q-mma-submit:hover { background: var(--teal-dim); }
+.q-mma-submit:disabled { opacity: .4; cursor: not-allowed; }
+
+/* ── PEMBAHASAN ── */
+.q-pembahasan {
+  margin-top: 1.1rem; border-radius: var(--radius-sm);
+  overflow: hidden; display: none;
+}
+.q-pembahasan.show { display: block; animation: fadeInUp .22s ease; }
+@keyframes fadeInUp { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+.q-pem-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .6rem .9rem; cursor: pointer;
+  font-size: .78rem; font-weight: 600; color: var(--text);
+  background: var(--surface-2); border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm); transition: border-color .18s;
+  user-select: none;
+}
+.q-pembahasan.show .q-pem-header {
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0; border-bottom: none;
+}
+.q-pem-header.benar-pem { border-color: var(--green-b); background: var(--green); }
+.q-pem-header.salah-pem { border-color: var(--red-b); background: var(--red); }
+.q-pem-header-left { display: flex; align-items: center; gap: .5rem; }
+.q-pem-icon { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.q-pem-icon.benar { background: var(--green-b); }
+.q-pem-icon.salah { background: var(--red-b); }
+.q-pem-icon svg { width: 11px; height: 11px; stroke: #fff; stroke-width: 2.5; }
+.q-pem-verdict { font-weight: 700; }
+.q-pem-verdict.benar { color: var(--green-b); }
+.q-pem-verdict.salah { color: var(--red-b); }
+.q-pem-toggle-label { font-size: .72rem; color: var(--text-3); display: flex; align-items: center; gap: .3rem; }
+.q-pem-toggle-label svg { width: 12px; height: 12px; transition: transform .2s; }
+.q-pembahasan.pem-open .q-pem-toggle-label svg { transform: rotate(180deg); }
+.q-pem-body {
+  padding: .85rem .95rem; border: 1.5px solid var(--border); border-top: none;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  background: var(--surface); display: none;
+  font-size: .845rem; color: var(--text-2); line-height: 1.7;
+}
+.q-pembahasan.pem-open .q-pem-header { border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+.q-pembahasan.pem-open .q-pem-body { display: block; animation: fadeInUp .18s ease; }
+.q-pem-body-label {
+  font-family: var(--mono); font-size: .6rem; font-weight: 700;
+  color: var(--teal); text-transform: uppercase; letter-spacing: .08em;
+  display: block; margin-bottom: .45rem;
+}
+
+/* ── NAV BAWAH ── */
+.q-nav {
+  flex-shrink: 0; border-top: 1px solid var(--border);
+  padding: .9rem 1.75rem; display: flex;
+  align-items: center; justify-content: space-between; gap: .75rem;
+  background: var(--surface);
+}
+.q-nav-btn {
+  height: 38px; padding: 0 1rem; border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border); background: var(--surface-2);
+  color: var(--text-2); font-size: .8rem; font-weight: 600;
+  font-family: var(--sans); cursor: pointer;
+  display: flex; align-items: center; gap: .4rem; transition: all .18s;
+}
+.q-nav-btn:hover:not(:disabled) { border-color: var(--teal); color: var(--teal); }
+.q-nav-btn:disabled { opacity: .35; cursor: not-allowed; }
+.q-nav-btn svg { width: 13px; height: 13px; stroke: currentColor; flex-shrink: 0; }
+.q-nav-btn.next-btn { background: var(--teal); color: var(--navy); border-color: var(--teal); }
+.q-nav-btn.next-btn:hover { background: var(--teal-dim); }
+.q-nav-counter { font-family: var(--mono); font-size: .75rem; color: var(--text-3); }
+.q-nav-counter em { color: var(--text); font-style: normal; font-weight: 700; }
+
+/* ── SKOR SCREEN ── */
+.q-score-screen {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 2rem 1.5rem; text-align: center; gap: .5rem;
+  background: var(--surface); overflow-y: auto;
+}
+.q-score-ring {
+  width: 120px; height: 120px; border-radius: 50%;
+  background: var(--navy); border: 4px solid var(--teal);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  margin-bottom: .75rem; position: relative;
+}
+.q-score-ring::after {
+  content: ''; position: absolute; inset: -8px; border-radius: 50%;
+  border: 2px solid rgba(0,191,165,.15);
+}
+.q-score-num { font-family: var(--display); font-size: 2.4rem; font-weight: 700; color: #fff; line-height: 1; letter-spacing: -.04em; }
+.q-score-denom { font-family: var(--mono); font-size: .62rem; color: var(--teal); margin-top: .15rem; }
+.q-score-label { font-family: var(--display); font-size: 1.2rem; font-weight: 700; color: var(--text); letter-spacing: -.02em; }
+.q-score-msg { font-size: .85rem; color: var(--text-3); max-width: 340px; line-height: 1.6; margin-bottom: .5rem; }
+.q-score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: .6rem; max-width: 320px; width: 100%; margin-bottom: .75rem; }
+.q-score-item { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: .7rem .5rem; }
+.q-score-item-num { font-family: var(--display); font-size: 1.5rem; font-weight: 700; color: var(--text); }
+.q-score-item-num.g { color: var(--green-b); }
+.q-score-item-num.r { color: var(--red-b); }
+.q-score-item-lbl { font-family: var(--mono); font-size: .55rem; font-weight: 700; color: var(--text-3); letter-spacing: .06em; text-transform: uppercase; margin-top: .1rem; }
+.q-score-actions { display: flex; gap: .6rem; flex-wrap: wrap; justify-content: center; }
+.q-score-btn {
+  height: 38px; padding: 0 1.1rem; border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border); background: var(--surface-2);
+  color: var(--text-2); font-size: .8rem; font-weight: 600;
+  font-family: var(--sans); cursor: pointer;
+  display: flex; align-items: center; gap: .4rem; transition: all .18s;
+}
+.q-score-btn:hover { border-color: var(--teal); color: var(--teal); }
+.q-score-btn.primary { background: var(--teal); color: var(--navy); border-color: var(--teal); }
+.q-score-btn.primary:hover { background: var(--teal-dim); }
+
+/* ── RESPONSIVE: SIDEBAR COLLAPSE ── */
+.q-sidebar-toggle {
+  display: none; position: fixed; bottom: 1.25rem; left: 1rem; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--teal); color: var(--navy); border: none;
+  box-shadow: 0 4px 16px rgba(0,191,165,.35);
+  align-items: center; justify-content: center; cursor: pointer;
+}
+.q-sidebar-toggle svg { width: 18px; height: 18px; stroke: currentColor; }
+.q-sidebar-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.5); z-index: 55;
+}
+
+@media (max-width: 768px) {
+  body { overflow: auto; height: auto; }
+  .q-layout { flex-direction: column; overflow: visible; min-height: 0; }
+  .q-sidebar {
+    position: fixed; left: 0; top: 0; bottom: 0; z-index: 56;
+    transform: translateX(-100%); transition: transform .25s;
+    width: min(260px, 85vw);
+    padding-top: 56px; /* topbar height */
+  }
+  .q-sidebar.open { transform: translateX(0); }
+  .q-sidebar-overlay.open { display: block; }
+  .q-sidebar-toggle { display: flex; }
+  .q-content { overflow-y: visible; padding: 1.25rem 1rem; }
+  .q-nav { padding: .85rem 1rem; position: sticky; bottom: 0; z-index: 10; }
+  .q-score-screen { min-height: 60vh; }
+}
+@media (max-width: 500px) {
+  .q-topbar { padding: 0 1rem; }
+  .q-topbar-title { font-size: .8rem; }
+  .q-opt, .q-mma-opt { padding: .65rem .85rem; font-size: .845rem; }
+  .q-soal-text { font-size: .9rem; }
+  .q-nav-btn { padding: 0 .75rem; font-size: .75rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="q-topbar">
+  <div class="q-topbar-left">
+    <div class="q-topbar-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div>
+      <div class="q-topbar-sub" id="q-kode">FL-01 · Berlatih</div>
+      <div class="q-topbar-title" id="q-judul">Memuat soal...</div>
+    </div>
+  </div>
+  <div class="q-topbar-right">
+    <button class="q-topbar-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+    <button class="q-topbar-btn exit" onclick="window.location.href='index.html'">
+      <svg viewBox="0 0 14 14" fill="none"><polyline points="9,2 4,7 9,12"/></svg>
+      Kembali
+    </button>
+  </div>
+</div>
+
+<!-- PROGRESS BAR -->
+<div class="q-prog-bar"><div class="q-prog-fill" id="q-prog-fill"></div></div>
+
+<!-- MAIN LAYOUT -->
+<div class="q-layout" id="q-layout">
+
+  <!-- SIDEBAR OVERLAY (mobile) -->
+  <div class="q-sidebar-overlay" id="q-sidebar-overlay" onclick="closeSidebar()"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="q-sidebar" id="q-sidebar">
+    <div class="q-sidebar-head">
+      <div class="q-sidebar-label">Daftar Soal</div>
+      <div class="q-sidebar-grid" id="q-num-grid">
+        <!-- injected by JS -->
+      </div>
+    </div>
+
+    <div class="q-tip-box" id="q-tip-box">
+      <div class="q-tip-label">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="7" cy="7" r="5.5"/><line x1="7" y1="5" x2="7" y2="7.5"/><circle cx="7" cy="9.5" r=".6" fill="currentColor"/></svg>
+        Tips
+      </div>
+      <span id="q-tip-text">Pilih jawaban untuk melihat pembahasan instan.</span>
+    </div>
+
+    <div class="q-sidebar-legend">
+      <div class="q-legend-item"><div class="q-legend-dot active-dot"></div>Soal aktif</div>
+      <div class="q-legend-item"><div class="q-legend-dot benar-dot"></div>Sudah dijawab</div>
+      <div class="q-legend-item"><div class="q-legend-dot salah-dot"></div>Jawaban salah</div>
+      <div class="q-legend-item"><div class="q-legend-dot blank-dot"></div>Belum dikunjungi</div>
+    </div>
+  </aside>
+
+  <!-- CONTENT AREA -->
+  <div class="q-content" id="q-content-wrap">
+    <!-- soal injected here -->
+  </div>
+
+</div><!-- /q-layout -->
+
+<!-- BOTTOM NAV -->
+<div class="q-nav" id="q-nav">
+  <button class="q-nav-btn" id="btn-prev" onclick="goQ(-1)" disabled>
+    <svg viewBox="0 0 13 13" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="8,2 3,6.5 8,11"/></svg>
+    Sebelumnya
+  </button>
+  <span class="q-nav-counter"><em id="q-cur">1</em> / <span id="q-tot">10</span></span>
+  <button class="q-nav-btn next-btn" id="btn-next" onclick="goQ(1)">
+    Selanjutnya
+    <svg viewBox="0 0 13 13" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,6.5 5,11"/></svg>
+  </button>
+</div>
+
+<!-- MOBILE SIDEBAR TOGGLE -->
+<button class="q-sidebar-toggle" id="q-sidebar-toggle" onclick="toggleSidebar()" title="Daftar Soal">
+  <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+    <line x1="2" y1="5" x2="8" y2="5"/><line x1="2" y1="9" x2="8" y2="9"/><line x1="2" y1="13" x2="8" y2="13"/>
+    <rect x="11" y="4" width="5" height="10" rx="1.5"/>
+  </svg>
+</button>
+
+<script src="../../assets/js/quiz-data.js"></script>
+<script>
+// ── URL params ──────────────────────────────────────────
+const params  = new URLSearchParams(location.search);
+const paketId = params.get('paket') || '1';
+const mode    = params.get('mode')  || 'berlatih'; // berlatih | sub
+
+// ── State ───────────────────────────────────────────────
+const state = {
+  soal    : [],
+  cur     : 0,
+  answers : [],   // null | idx | 'BENAR' | 'SALAH' | [idx,...]
+  correct : [],   // true | false | null
+  marked  : [],
+  done    : false,
+};
+
+// ── Init ────────────────────────────────────────────────
+function init() {
+  const data = window.quizDB && window.quizDB[paketId];
+  if (!data) {
+    document.getElementById('q-judul').textContent = 'Soal tidak ditemukan';
+    document.getElementById('q-content-wrap').innerHTML =
+      '<div style="padding:2rem;text-align:center;color:var(--text-3)">Paket ' + paketId + ' sedang disiapkan. Kembali lagi segera!</div>';
+    return;
+  }
+
+  document.title = data.title + ' — EksaktaLab';
+  document.getElementById('q-kode').textContent  = (data.kode || paketId) + ' · ' + (mode === 'sub' ? 'Sub-materi' : 'Berlatih');
+  document.getElementById('q-judul').textContent = data.title;
+  document.getElementById('q-tot').textContent   = data.soal.length;
+
+  state.soal    = data.soal;
+  state.answers = Array(data.soal.length).fill(null);
+  state.correct = Array(data.soal.length).fill(null);
+  state.marked  = Array(data.soal.length).fill(false);
+
+  buildNumGrid();
+  renderQ(0);
+}
+
+// ── Num grid ────────────────────────────────────────────
+function buildNumGrid() {
+  const grid = document.getElementById('q-num-grid');
+  grid.innerHTML = state.soal.map((_, i) =>
+    `<button class="q-num-btn${i === 0 ? ' active' : ''}" id="nb-${i}" onclick="goToQ(${i})">${i+1}</button>`
+  ).join('');
+}
+
+function updateNumBtn(i) {
+  const btn = document.getElementById('nb-' + i);
+  if (!btn) return;
+  btn.className = 'q-num-btn';
+  if (i === state.cur) btn.classList.add('active');
+  if (state.correct[i] === true)  btn.classList.add('answered-benar');
+  if (state.correct[i] === false) btn.classList.add('answered-salah');
+}
+
+// ── Progress bar ─────────────────────────────────────────
+function updateProg() {
+  const answered = state.answers.filter(a => a !== null).length;
+  const pct = (answered / state.soal.length) * 100;
+  document.getElementById('q-prog-fill').style.width = pct + '%';
+}
+
+// ── Navigation ──────────────────────────────────────────
+function goToQ(i) {
+  if (state.done) return;
+  state.cur = i;
+  updateAllNumBtns();
+  renderQ(i);
+  closeSidebar();
+}
+
+function goQ(dir) {
+  const n = state.cur + dir;
+  if (n < 0 || n >= state.soal.length) return;
+  state.cur = n;
+  updateAllNumBtns();
+  renderQ(n);
+}
+
+function updateAllNumBtns() {
+  state.soal.forEach((_, i) => updateNumBtn(i));
+}
+
+// ── Render soal ──────────────────────────────────────────
+const TYPE_LABEL = { pg: 'Pilihan Ganda', bs: 'Benar / Salah', mma: 'Multiple Answer' };
+const TYPE_CLASS = { pg: 'pg', bs: 'bs', mma: 'mma' };
+const TIPS = {
+  pg:  'Pilih satu jawaban yang paling tepat.',
+  bs:  'Baca setiap pernyataan dengan teliti. Pilih Benar atau Salah untuk setiap pernyataan.',
+  mma: 'Bisa lebih dari satu jawaban benar. Pilih semua yang kamu anggap benar, lalu klik Konfirmasi.',
+};
+
+function renderQ(i) {
+  const q   = state.soal[i];
+  const ans = state.answers[i];
+  const isAnswered = ans !== null;
+
+  document.getElementById('q-cur').textContent = i + 1;
+  document.getElementById('btn-prev').disabled = (i === 0);
+
+  const isLast = i === state.soal.length - 1;
+  const btnNext = document.getElementById('btn-next');
+  if (isLast) {
+    btnNext.textContent = '';
+    btnNext.innerHTML = 'Lihat Nilai <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg>';
+    btnNext.onclick = showScore;
+    btnNext.className = 'q-nav-btn next-btn';
+  } else {
+    btnNext.innerHTML = 'Selanjutnya <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,6.5 5,11"/></svg>';
+    btnNext.onclick = () => goQ(1);
+    btnNext.className = 'q-nav-btn next-btn';
+  }
+
+  // Tip
+  document.getElementById('q-tip-text').textContent = TIPS[q.type] || TIPS.pg;
+
+  // Content
+  const wrap = document.getElementById('q-content-wrap');
+  let html = '';
+
+  // Meta row
+  html += `<div class="q-soal-meta">
+    <span class="q-soal-pos">Soal ${i+1} dari ${state.soal.length}</span>
+    <button class="q-soal-tandai${state.marked[i] ? ' marked' : ''}" onclick="toggleMark(${i})" id="btn-mark-${i}">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 2h6v9l-3-2.2L4 11V2z"/></svg>
+      ${state.marked[i] ? 'Ditandai' : 'Tandai Soal'}
+    </button>
+  </div>`;
+
+  // Type badge
+  html += `<span class="q-type-badge ${TYPE_CLASS[q.type]}">${TYPE_LABEL[q.type] || 'Pilihan Ganda'}</span>`;
+
+  // Teks soal
+  html += `<div class="q-soal-text">${q.q}</div>`;
+
+  // Render per type
+  if (q.type === 'bs') {
+    html += renderBS(q, i, isAnswered);
+  } else if (q.type === 'mma') {
+    html += renderMMA(q, i, isAnswered);
+  } else {
+    html += renderPG(q, i, isAnswered);
+  }
+
+  // Pembahasan
+  if (isAnswered) {
+    const isBenar = state.correct[i];
+    const verdict = isBenar ? 'Jawaban Benar!' : 'Jawaban Salah';
+    const vClass  = isBenar ? 'benar' : 'salah';
+    const iconPath = isBenar
+      ? '<polyline points="2,6 5,9 10,3"/>'
+      : '<line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/>';
+    html += `<div class="q-pembahasan show pem-open" id="q-pem-${i}">
+      <div class="q-pem-header ${vClass}-pem" onclick="togglePembahasan(${i})">
+        <div class="q-pem-header-left">
+          <div class="q-pem-icon ${vClass}"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">${iconPath}</svg></div>
+          <span class="q-pem-verdict ${vClass}">${verdict}</span>
+        </div>
+        <span class="q-pem-toggle-label">Sembunyikan Pembahasan
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg>
+        </span>
+      </div>
+      <div class="q-pem-body">
+        <span class="q-pem-body-label">Pembahasan</span>
+        ${q.p}
+      </div>
+    </div>`;
+  }
+
+  wrap.innerHTML = html;
+
+  // Scroll ke atas konten
+  wrap.scrollTop = 0;
+
+  if (window.MathJax) MathJax.typesetPromise([wrap]).catch(() => {});
+}
+
+// ── PG ──────────────────────────────────────────────────
+function renderPG(q, i, isAnswered) {
+  const keys = ['A','B','C','D','E'];
+  let html = '<div class="q-opts">';
+  q.opts.forEach((opt, oi) => {
+    let cls = 'q-opt';
+    if (isAnswered) {
+      if (oi === q.jawab) cls += ' correct';
+      else if (state.answers[i] === oi && oi !== q.jawab) cls += ' wrong';
+    }
+    const dis = isAnswered ? ' disabled' : '';
+    html += `<button class="${cls}" onclick="pilihPG(${i},${oi},this)"${dis}>
+      <span class="q-opt-key">${keys[oi]}</span>
+      <span class="q-opt-text">${opt}</span>
+    </button>`;
+  });
+  html += '</div>';
+  return html;
+}
+
+function pilihPG(qi, oi, btn) {
+  if (state.answers[qi] !== null || state.done) return;
+  state.answers[qi] = oi;
+  const isBenar = oi === state.soal[qi].jawab;
+  state.correct[qi] = isBenar;
+  updateNumBtn(qi);
+  updateProg();
+  renderQ(qi);
+}
+
+// ── BENAR SALAH TABLE ───────────────────────────────────
+function renderBS(q, i, isAnswered) {
+  const pernyataan = Array.isArray(q.pernyataan) ? q.pernyataan : [q.q];
+  const jawaban    = Array.isArray(q.jawabArr)   ? q.jawabArr   : [q.jawab];
+  const userAns    = isAnswered ? state.answers[i] : null;
+
+  let html = `<table class="q-bs-table">
+    <thead><tr>
+      <th>Pernyataan</th>
+      <th>Benar</th>
+      <th>Salah</th>
+    </tr></thead><tbody>`;
+
+  pernyataan.forEach((p, pi) => {
+    const ua  = userAns ? userAns[pi] : null;
+    const cor = jawaban[pi];
+    let rowCls = '';
+    if (ua !== null) {
+      rowCls = ua === cor ? 'row-benar' : 'row-salah';
+    }
+    const BENAR_SEL = ua === 'BENAR';
+    const SALAH_SEL = ua === 'SALAH';
+    const dis = isAnswered ? 'pointer-events:none' : '';
+
+    const benarCls = isAnswered
+      ? (cor === 'BENAR' ? 'correct-mark' : (BENAR_SEL ? 'wrong-mark' : ''))
+      : (BENAR_SEL ? 'selected-benar' : '');
+    const salahCls = isAnswered
+      ? (cor === 'SALAH' ? 'correct-mark' : (SALAH_SEL ? 'wrong-mark' : ''))
+      : (SALAH_SEL ? 'selected-salah' : '');
+
+    html += `<tr class="q-bs-row ${rowCls}" id="bs-row-${i}-${pi}">
+      <td>${String.fromCharCode(65+pi)}. ${p}</td>
+      <td><div class="q-bs-radio ${benarCls}" onclick="pilihBS(${i},${pi},'BENAR')" style="${dis}">
+        <svg viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="2,6 5,9 10,3"/></svg>
+      </div></td>
+      <td><div class="q-bs-radio ${salahCls}" onclick="pilihBS(${i},${pi},'SALAH')" style="${dis}">
+        <svg viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="2,6 5,9 10,3"/></svg>
+      </div></td>
+    </tr>`;
+  });
+
+  html += '</tbody></table>';
+  return html;
+}
+
+function pilihBS(qi, pi, val) {
+  if (state.done) return;
+  const q = state.soal[qi];
+  const pernyataan = Array.isArray(q.pernyataan) ? q.pernyataan : [q.q];
+  const jawaban    = Array.isArray(q.jawabArr)   ? q.jawabArr   : [q.jawab];
+
+  // Init answers array if null
+  if (!state.answers[qi]) state.answers[qi] = Array(pernyataan.length).fill(null);
+
+  // Single-statement BS: lock immediately
+  if (pernyataan.length === 1) {
+    if (state.answers[qi][0] !== null) return;
+    state.answers[qi][0] = val;
+    state.correct[qi] = val === jawaban[0];
+    updateNumBtn(qi);
+    updateProg();
+    renderQ(qi);
+    return;
+  }
+
+  // Multi: allow changing until all answered
+  const alreadyAnswered = state.answers[qi][pi] !== null;
+  if (alreadyAnswered) return;
+  state.answers[qi][pi] = val;
+
+  const allDone = state.answers[qi].every(a => a !== null);
+  if (allDone) {
+    state.correct[qi] = state.answers[qi].every((a, idx) => a === jawaban[idx]);
+    updateNumBtn(qi);
+    updateProg();
+    renderQ(qi);
+  } else {
+    // Re-render inline just the radio states
+    renderQ(qi);
+  }
+}
+
+// ── MULTIPLE ANSWER ─────────────────────────────────────
+function renderMMA(q, i, isAnswered) {
+  const userSel = isAnswered ? (state.answers[i] || []) : (state._mmaTemp && state._mmaTemp[i] ? state._mmaTemp[i] : []);
+  let html = `<div class="q-mma-note">
+    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="7" cy="7" r="5.5"/><line x1="7" y1="5" x2="7" y2="7.5"/><circle cx="7" cy="9.5" r=".6" fill="currentColor"/></svg>
+    Bisa lebih dari satu jawaban benar
+  </div>`;
+  html += '<div class="q-mma-opts">';
+  const keys = ['A','B','C','D','E'];
+  q.opts.forEach((opt, oi) => {
+    const isSelected = userSel.includes(oi);
+    const isCorrect  = q.jawabArr && q.jawabArr.includes(oi);
+    let cls = 'q-mma-opt';
+    if (isAnswered) {
+      if (isCorrect && isSelected)  cls += ' correct';
+      else if (!isCorrect && isSelected) cls += ' wrong';
+      else if (isCorrect && !isSelected) cls += ' missed';
+    } else if (isSelected) {
+      cls += ' selected';
+    }
+    const dis = isAnswered ? ' disabled' : '';
+    html += `<button class="${cls}" onclick="toggleMMA(${i},${oi},this)"${dis}>
+      <div class="q-mma-checkbox">
+        <svg viewBox="0 0 12 12" fill="none" stroke-width="2.8" stroke-linecap="round"><polyline points="2,6 5,9 10,3"/></svg>
+      </div>
+      <span class="q-opt-text">${keys[oi]}. ${opt}</span>
+    </button>`;
+  });
+  html += '</div>';
+  if (!isAnswered) {
+    html += `<button class="q-mma-submit" onclick="konfirmasiMMA(${i})">Konfirmasi Jawaban</button>`;
+  }
+  return html;
+}
+
+function toggleMMA(qi, oi, btn) {
+  if (state.answers[qi] !== null || state.done) return;
+  if (!state._mmaTemp) state._mmaTemp = {};
+  if (!state._mmaTemp[qi]) state._mmaTemp[qi] = [];
+  const idx = state._mmaTemp[qi].indexOf(oi);
+  if (idx === -1) state._mmaTemp[qi].push(oi);
+  else state._mmaTemp[qi].splice(idx, 1);
+  btn.classList.toggle('selected');
+  const checkbox = btn.querySelector('.q-mma-checkbox');
+  const hasSel = state._mmaTemp[qi].includes(oi);
+  if (hasSel) { btn.classList.add('selected'); } else { btn.classList.remove('selected'); }
+}
+
+function konfirmasiMMA(qi) {
+  const q   = state.soal[qi];
+  const sel = (state._mmaTemp && state._mmaTemp[qi]) || [];
+  if (!sel.length) { return; }
+  state.answers[qi] = [...sel];
+  const corr = q.jawabArr || [q.jawab];
+  const benar = corr.every(c => sel.includes(c)) && sel.every(s => corr.includes(s));
+  state.correct[qi] = benar;
+  updateNumBtn(qi);
+  updateProg();
+  renderQ(qi);
+}
+
+// ── Toggle mark ─────────────────────────────────────────
+function toggleMark(i) {
+  state.marked[i] = !state.marked[i];
+  const btn = document.getElementById(`btn-mark-${i}`);
+  if (btn) {
+    btn.classList.toggle('marked', state.marked[i]);
+    btn.innerHTML = `<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 2h6v9l-3-2.2L4 11V2z"/></svg>
+      ${state.marked[i] ? 'Ditandai' : 'Tandai Soal'}`;
+  }
+}
+
+// ── Toggle pembahasan ───────────────────────────────────
+function togglePembahasan(i) {
+  const el = document.getElementById(`q-pem-${i}`);
+  if (el) el.classList.toggle('pem-open');
+}
+
+// ── Score screen ────────────────────────────────────────
+function showScore() {
+  state.done = true;
+  const total = state.soal.length;
+  const benar = state.correct.filter(c => c === true).length;
+  const salah = total - benar;
+  const nilai = Math.round((benar / total) * 100);
+
+  let label = 'Perlu Latihan Lagi';
+  let msg   = 'Pelajari ulang materinya, kamu pasti bisa!';
+  if (nilai >= 90) { label = 'Luar Biasa! 🎉'; msg = 'Penguasaan materi sangat baik. Coba paket yang lebih tinggi!'; }
+  else if (nilai >= 75) { label = 'Sangat Baik!'; msg = 'Hampir sempurna. Teliti soal yang salah.'; }
+  else if (nilai >= 60) { label = 'Cukup Baik'; msg = 'Ulas kembali materi dan coba lagi.'; }
+
+  const layout = document.getElementById('q-layout');
+  const nav    = document.getElementById('q-nav');
+  const toggle = document.getElementById('q-sidebar-toggle');
+
+  layout.innerHTML = `<div class="q-score-screen">
+    <div class="q-score-ring">
+      <div class="q-score-num">${nilai}</div>
+      <div class="q-score-denom">dari 100</div>
+    </div>
+    <div class="q-score-label">${label}</div>
+    <div class="q-score-msg">${msg}</div>
+    <div class="q-score-grid">
+      <div class="q-score-item"><div class="q-score-item-num g">${benar}</div><div class="q-score-item-lbl">Benar</div></div>
+      <div class="q-score-item"><div class="q-score-item-num r">${salah}</div><div class="q-score-item-lbl">Salah</div></div>
+      <div class="q-score-item"><div class="q-score-item-num">${total}</div><div class="q-score-item-lbl">Total</div></div>
+    </div>
+    <div class="q-score-actions">
+      <button class="q-score-btn" onclick="location.reload()">↺ Ulangi</button>
+      <button class="q-score-btn primary" onclick="window.location.href='index.html'">⬅ Kembali ke Latihan</button>
+    </div>
+  </div>`;
+
+  nav.style.display = 'none';
+  if (toggle) toggle.style.display = 'none';
+  document.getElementById('q-prog-fill').style.width = '100%';
+}
+
+// ── Sidebar mobile ──────────────────────────────────────
+function toggleSidebar() {
+  document.getElementById('q-sidebar').classList.toggle('open');
+  document.getElementById('q-sidebar-overlay').classList.toggle('open');
+}
+function closeSidebar() {
+  document.getElementById('q-sidebar').classList.remove('open');
+  document.getElementById('q-sidebar-overlay').classList.remove('open');
+}
+
+// ── Theme ───────────────────────────────────────────────
+function toggleTheme() {
+  const html = document.documentElement;
+  const btn  = document.getElementById('themeBtn');
+  const dark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', dark ? 'light' : 'dark');
+  localStorage.setItem('eksaktalab-theme', dark ? 'light' : 'dark');
+  btn.textContent = dark ? '🌙 Gelap' : '☀️ Terang';
+}
+
+// ── Keyboard ────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goQ(1);
+  if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   goQ(-1);
+  if (['1','2','3','4'].includes(e.key) && !state.done) {
+    const q = state.soal[state.cur];
+    if (q && q.type === 'pg' && state.answers[state.cur] === null) {
+      const oi = parseInt(e.key) - 1;
+      if (oi < q.opts.length) pilihPG(state.cur, oi, null);
+    }
+  }
+});
+
+init();
+</script>
+
+</body>
+</html>

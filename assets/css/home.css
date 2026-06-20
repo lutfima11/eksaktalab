@@ -26,13 +26,13 @@
 
 /* ── STATS BAR ───────────────────────────────────────── */
 .stats-bar{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--border);background:var(--surface-2);}
-.stat-item{display:flex;flex-direction:column;align-items:center;padding:1rem 2.5rem;border-right:1px solid var(--border);transition:background .2s,transform .2s;cursor:default;}
+.stat-item{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.1rem 1rem;border-right:1px solid var(--border);transition:background .2s;cursor:default;min-height:72px;}
 .stat-item:last-child{border-right:none;}
-.stat-item:hover{background:var(--surface);transform:translateY(-2px);}
+.stat-item:hover{background:var(--surface);}
 .stat-item:hover .stat-num{color:var(--teal);}
-.stat-num{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--text);letter-spacing:-0.03em;}
+.stat-num{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--text);letter-spacing:-0.03em;line-height:1.1;}
 .stat-num span{color:var(--teal);}
-.stat-label{font-size:0.72rem;font-weight:500;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;margin-top:0.15rem;}
+.stat-label{font-size:0.65rem;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.07em;margin-top:0.3rem;}
 
 /* ── MAIN LAYOUT ─────────────────────────────────────── */
 .main-wrap{max-width:1100px;margin:0 auto;padding:2.5rem var(--px);}
@@ -126,7 +126,7 @@
   .hero{padding:3rem var(--px) 2.5rem;}
   .hero-title{font-size:2rem;}
   .main-wrap{padding:1.5rem var(--px);}
-  .stat-item{padding:.75rem 1rem;}
+  .stat-item{padding:.85rem .75rem;min-height:64px;}
   .materi-grid{grid-template-columns:repeat(2,1fr);}
   .chapter-label{flex-wrap:wrap;gap:.35rem;}
 }
@@ -142,14 +142,89 @@
   .main-wrap{padding:1.5rem var(--px) 5.5rem;}
   .hero{padding:2.5rem var(--px) 2rem;}
   .hero-title{font-size:1.6rem;}
-  .stat-num{font-size:1.25rem;}
+  .stat-num{font-size:1.15rem;}
+  .stat-label{font-size:.58rem;letter-spacing:.05em;}
   .chapter-title-text{font-size:.85rem;}
   .card-name{font-size:.85rem;}
   .card-meta{font-size:.7rem;}
+}
+/* Matikan hover stat di perangkat sentuh agar tidak sticky */
+@media(hover:none){
+  .stat-item:hover{background:var(--surface-2);}
+  .stat-item:hover .stat-num{color:var(--text);}
 }
 @media(max-width:360px){
   .hero-title{font-size:1.4rem;}
   .nav-logo-tag{display:none;}
   .hero-cta{flex-direction:column;align-items:stretch;}
   .btn-primary,.btn-ghost{text-align:center;}
+}
+
+/* ── FASE FILTER CHIPS ───────────────────────────────── */
+.fase-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.fase-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  height: 30px;
+  padding: 0 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-3);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .18s;
+  white-space: nowrap;
+  letter-spacing: .01em;
+}
+.fase-chip:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+  background: rgba(0,191,165,.05);
+}
+.fase-chip.active {
+  border-color: var(--teal);
+  background: rgba(0,191,165,.1);
+  color: var(--teal);
+}
+/* Dot warna per fase */
+.fase-chip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.f1 { background: #3B82F6; }
+.f2 { background: #00BFA5; }
+.f3 { background: #8B5CF6; }
+.f4 { background: #F59E0B; }
+.f5 { background: #EF4444; }
+.f6 { background: #10B981; }
+
+/* chapter-group hidden state */
+.chapter-group.fase-hidden {
+  display: none;
+}
+
+/* Chip saat fase tidak ada konten */
+.fase-chip:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media(max-width: 500px) {
+  .fase-filter { gap: 0.35rem; }
+  .fase-chip { height: 28px; padding: 0 0.65rem; font-size: 0.7rem; }
 }

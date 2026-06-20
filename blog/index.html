@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/favicon.svg">
+<meta name="description" content="Artikel, tips belajar matematika, dan panduan soal dari tim EksaktaLab untuk siswa SMA dan SMK.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/materi.css">
+<link rel="stylesheet" href="../assets/css/footer.css">
+<link rel="stylesheet" href="../assets/css/page-inner.css">
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/blog/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lutfima11.github.io/eksaktalab/blog/">
+<meta property="og:title" content="Blog — EksaktaLab">
+<meta property="og:description" content="Artikel, tips belajar matematika, dan panduan soal dari tim EksaktaLab.">
+<meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+<meta property="og:site_name" content="EksaktaLab">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog — EksaktaLab">
+<meta name="twitter:description" content="Artikel, tips belajar matematika, dan panduan soal dari tim EksaktaLab.">
+<meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+
+<style>
+/* ─── BLOG PAGE STYLES ─────────────────────────────────── */
+body { overflow-x: hidden; }
+
+/* ─── SCROLL BAR ─── */
+#scroll-bar { position:fixed;top:60px;left:0;height:3px;background:var(--teal);z-index:200;width:0%;transition:width .1s linear; }
+
+/* ─── HERO ─── */
+.blog-hero {
+  background: var(--navy);
+  padding: 3.5rem var(--px) 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.blog-hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,191,165,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,191,165,.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.blog-hero-grid::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,191,165,.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,191,165,.2) 1px, transparent 1px);
+  background-size: 200px 200px;
+}
+.blog-hero-grid::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 80% at 50% 50%, transparent 40%, var(--navy) 100%);
+  z-index: 1;
+}
+.blog-hero-content { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
+.blog-eyebrow {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-family: var(--mono); font-size: .7rem; font-weight: 600;
+  color: var(--teal); letter-spacing: .12em; text-transform: uppercase;
+  background: rgba(0,191,165,.1); border: 1px solid rgba(0,191,165,.25);
+  padding: .28rem .75rem; border-radius: 8px; margin-bottom: 1.1rem;
+}
+.blog-hero-title {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700; color: #fff;
+  letter-spacing: -.03em; line-height: 1.1;
+  margin-bottom: .9rem;
+}
+.blog-hero-title em { font-style: normal; color: var(--teal); }
+.blog-hero-sub {
+  font-size: .9rem; color: #8FA8C8;
+  line-height: 1.65; max-width: 420px; margin: 0 auto;
+}
+
+/* ─── SEARCH BAR ─── */
+.blog-search-wrap {
+  max-width: 980px; margin: 0 auto;
+  padding: 1.5rem var(--px) 0;
+}
+.blog-search {
+  position: relative;
+  display: flex; align-items: center;
+}
+.blog-search-input {
+  width: 100%; height: 44px;
+  padding: 0 1rem 0 2.8rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--sans); font-size: .875rem;
+  outline: none; transition: border-color .18s;
+}
+.blog-search-input:focus { border-color: var(--teal); }
+.blog-search-input::placeholder { color: var(--text-3); }
+.blog-search-icon {
+  position: absolute; left: .85rem;
+  width: 15px; height: 15px;
+  stroke: var(--text-3); fill: none;
+  stroke-width: 2; stroke-linecap: round;
+  pointer-events: none;
+}
+.blog-search-clear {
+  position: absolute; right: .75rem;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--surface-3); border: none;
+  color: var(--text-3); cursor: pointer;
+  display: none; align-items: center; justify-content: center;
+  font-size: .75rem; transition: all .18s;
+}
+.blog-search-clear:hover { background: var(--border); color: var(--text); }
+.blog-search-clear.visible { display: flex; }
+
+/* ─── MAIN WRAP ─── */
+.blog-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1.75rem var(--px) 5rem;
+}
+
+/* ─── FILTER BAR ─── */
+.blog-filter {
+  display: flex; align-items: center;
+  gap: .4rem; flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.blog-chip {
+  display: inline-flex; align-items: center; gap: .32rem;
+  height: 30px; padding: 0 .85rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-3);
+  font-family: var(--sans); font-size: .73rem; font-weight: 600;
+  cursor: pointer; transition: all .17s; white-space: nowrap;
+}
+.blog-chip:hover { border-color: var(--teal); color: var(--teal); background: rgba(0,191,165,.05); }
+.blog-chip.active { border-color: var(--teal); background: rgba(0,191,165,.1); color: var(--teal); }
+.blog-chip-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+
+/* ─── SORT + COUNT ROW ─── */
+.blog-meta-row {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.25rem; gap: 1rem;
+}
+.blog-count {
+  font-family: var(--mono); font-size: .68rem; font-weight: 600;
+  color: var(--text-3); letter-spacing: .04em;
+}
+.blog-count span { color: var(--teal); }
+.blog-sort {
+  font-family: var(--sans); font-size: .73rem; font-weight: 600;
+  color: var(--text-2); background: var(--surface-2);
+  border: 1.5px solid var(--border); border-radius: 7px;
+  padding: .25rem .6rem; cursor: pointer; outline: none;
+  transition: border-color .18s;
+}
+.blog-sort:focus { border-color: var(--teal); }
+
+/* ─── ARTIKEL GRID ─── */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+/* ─── ARTICLE CARD ─── */
+.article-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex; flex-direction: column;
+  transition: all .22s;
+  cursor: pointer;
+}
+.article-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.07);
+}
+/* Featured card — full width baris pertama */
+.article-card.featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+.article-card.featured .article-thumb {
+  width: 340px; flex-shrink: 0;
+  aspect-ratio: unset; height: auto;
+}
+.article-card.featured .article-body { padding: 1.75rem 1.75rem; }
+
+/* THUMBNAIL */
+.article-thumb {
+  aspect-ratio: 16/9;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.article-thumb-inner {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.article-thumb-icon { font-size: 2.5rem; opacity: .6; }
+.article-thumb-bg {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(0,191,165,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,191,165,.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.article-thumb-math {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: 2.4rem; font-weight: 700;
+  color: rgba(0,191,165,.2); letter-spacing: -.05em;
+  user-select: none; pointer-events: none;
+}
+.article-thumb.t-algebra { background: linear-gradient(135deg, #0d1b2e 0%, #162032 100%); }
+.article-thumb.t-tips    { background: linear-gradient(135deg, #0d1b2e 0%, #1a1040 100%); }
+.article-thumb.t-utbk    { background: linear-gradient(135deg, #0d1b2e 0%, #1c0a0a 100%); }
+.article-thumb.t-materi  { background: linear-gradient(135deg, #0d1b2e 0%, #052e1c 100%); }
+.article-thumb.t-mindset { background: linear-gradient(135deg, #0d1b2e 0%, #1c1808 100%); }
+.article-thumb.t-featured { background: linear-gradient(135deg, #0d1b2e 0%, #091a2e 100%); }
+
+/* BODY */
+.article-body { padding: 1.1rem 1.1rem 1.1rem; display: flex; flex-direction: column; flex: 1; }
+.article-tag {
+  display: inline-flex; align-items: center; gap: .28rem;
+  font-family: var(--mono); font-size: .57rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: .13rem .48rem; border-radius: 4px;
+  margin-bottom: .6rem; width: fit-content;
+}
+.tag-tips    { background: var(--yellow); color: var(--yellow-b); }
+.tag-materi  { background: var(--green);  color: var(--green-b); }
+.tag-utbk    { background: var(--red);    color: var(--red-b); }
+.tag-insight { background: var(--blue);   color: var(--blue-b); }
+.tag-panduan { background: rgba(139,92,246,.12); color: #7C3AED; }
+[data-theme="dark"] .tag-panduan { color: #A78BFA; }
+
+.article-title {
+  font-family: var(--display);
+  font-size: .95rem; font-weight: 700;
+  color: var(--text); letter-spacing: -.02em;
+  line-height: 1.35; margin-bottom: .5rem;
+}
+.article-card.featured .article-title {
+  font-size: 1.3rem;
+}
+.article-excerpt {
+  font-size: .8rem; color: var(--text-3);
+  line-height: 1.6; flex: 1;
+  margin-bottom: .85rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.article-card.featured .article-excerpt {
+  -webkit-line-clamp: 4;
+}
+.article-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: auto; padding-top: .75rem;
+  border-top: 1px solid var(--border);
+}
+.article-author {
+  display: flex; align-items: center; gap: .45rem;
+}
+.article-avatar {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--teal); display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: .55rem; font-weight: 700; color: var(--navy);
+  flex-shrink: 0;
+}
+.article-byline {
+  font-size: .7rem; color: var(--text-3);
+}
+.article-byline strong { color: var(--text-2); font-weight: 600; }
+.article-meta-right {
+  display: flex; align-items: center; gap: .6rem;
+}
+.article-date {
+  font-family: var(--mono); font-size: .62rem; color: var(--text-3);
+}
+.article-read {
+  font-family: var(--mono); font-size: .6rem; font-weight: 600;
+  color: var(--teal);
+  background: rgba(0,191,165,.1); border: 1px solid rgba(0,191,165,.2);
+  padding: .12rem .42rem; border-radius: 4px;
+}
+/* FEATURED badge */
+.article-featured-badge {
+  position: absolute; top: .85rem; right: .85rem;
+  font-family: var(--mono); font-size: .58rem; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase;
+  background: rgba(0,191,165,.15); color: var(--teal);
+  border: 1px solid rgba(0,191,165,.3);
+  padding: .15rem .5rem; border-radius: 4px;
+}
+
+/* ─── EMPTY STATE ─── */
+.blog-empty {
+  text-align: center; padding: 4rem 1rem;
+  display: none;
+}
+.blog-empty.show { display: block; }
+.blog-empty-icon { font-size: 2.5rem; margin-bottom: .75rem; }
+.blog-empty-title {
+  font-family: var(--display); font-size: 1rem; font-weight: 700;
+  color: var(--text); margin-bottom: .3rem;
+}
+.blog-empty-desc { font-size: .83rem; color: var(--text-3); }
+
+/* ─── NEWSLETTER STRIP ─── */
+.blog-newsletter {
+  margin-top: 3rem;
+  background: var(--navy);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; flex-wrap: wrap;
+  position: relative; overflow: hidden;
+}
+.blog-newsletter::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(0,191,165,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,191,165,.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+.blog-nl-text { position: relative; z-index: 1; }
+.blog-nl-label {
+  font-family: var(--mono); font-size: .6rem; font-weight: 700;
+  color: var(--teal); letter-spacing: .1em; text-transform: uppercase;
+  margin-bottom: .4rem;
+}
+.blog-nl-title {
+  font-family: var(--display); font-size: 1.1rem; font-weight: 700;
+  color: #fff; letter-spacing: -.02em; margin-bottom: .3rem;
+}
+.blog-nl-sub { font-size: .8rem; color: #8FA8C8; line-height: 1.5; }
+.blog-nl-form {
+  display: flex; gap: .6rem; position: relative; z-index: 1; flex-wrap: wrap;
+}
+.blog-nl-input {
+  height: 40px; width: 240px;
+  padding: 0 .9rem; border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.07);
+  color: #fff; font-family: var(--sans); font-size: .83rem;
+  outline: none; transition: border-color .18s;
+}
+.blog-nl-input::placeholder { color: rgba(255,255,255,.35); }
+.blog-nl-input:focus { border-color: var(--teal); }
+.blog-nl-btn {
+  height: 40px; padding: 0 1.25rem;
+  border-radius: var(--radius-sm);
+  background: var(--teal); color: var(--navy);
+  font-family: var(--sans); font-size: .83rem; font-weight: 700;
+  border: none; cursor: pointer; transition: background .18s; white-space: nowrap;
+}
+.blog-nl-btn:hover { background: var(--teal-dim); }
+
+/* ─── SCROLL TOP ─── */
+#scroll-top {
+  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 99;
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--teal); border: none;
+  display: none; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 12px rgba(0,191,165,.3);
+  transition: background .18s;
+}
+#scroll-top.visible { display: flex; animation: fadeUp .2s ease; }
+#scroll-top:hover { background: var(--teal-dim); }
+@keyframes fadeUp { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
+
+/* ─── RESPONSIVE ─── */
+@media(max-width: 900px) {
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .article-card.featured { flex-direction: column; }
+  .article-card.featured .article-thumb { width: 100%; height: 200px; }
+  .article-card.featured .article-body { padding: 1.1rem; }
+  .article-card.featured .article-title { font-size: 1.1rem; }
+}
+@media(max-width: 600px) {
+  .blog-hero { padding: 2.5rem var(--px) 2.25rem; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .blog-nl-input { width: 100%; }
+  .blog-nl-form { width: 100%; }
+  .blog-newsletter { padding: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <a class="nav-btn" href="../">← Beranda</a>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="blog-hero-grid"></div>
+  <div class="blog-hero-content">
+    <div class="blog-eyebrow">
+      <svg width="11" height="11" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="1" width="10" height="12" rx="1.5"/><line x1="4.5" y1="4.5" x2="9.5" y2="4.5"/><line x1="4.5" y1="7" x2="9.5" y2="7"/><line x1="4.5" y1="9.5" x2="7.5" y2="9.5"/></svg>
+      Blog EksaktaLab
+    </div>
+    <h1 class="blog-hero-title">Tips, Panduan &amp; <em>Insight</em><br>Belajar Matematika</h1>
+    <p class="blog-hero-sub">Artikel ringan dan mendalam tentang cara belajar matematika yang efektif, strategi UTBK, dan pembahasan topik yang sering bikin bingung.</p>
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div class="blog-search-wrap">
+  <div class="blog-search">
+    <svg class="blog-search-icon" viewBox="0 0 16 16">
+      <circle cx="6.5" cy="6.5" r="4.5"/><line x1="10.5" y1="10.5" x2="14" y2="14"/>
+    </svg>
+    <input class="blog-search-input" type="text" id="searchInput"
+      placeholder="Cari artikel, topik, atau kata kunci..."
+      oninput="handleSearch(this.value)">
+    <button class="blog-search-clear" id="clearBtn" onclick="clearSearch()" title="Hapus">✕</button>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="blog-wrap">
+
+  <!-- FILTER -->
+  <div class="blog-filter">
+    <button class="blog-chip active" data-cat="semua" onclick="filterCat(this)">Semua</button>
+    <button class="blog-chip" data-cat="tips" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:var(--yellow-b)"></span>Tips Belajar</button>
+    <button class="blog-chip" data-cat="materi" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:var(--green-b)"></span>Materi</button>
+    <button class="blog-chip" data-cat="utbk" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:var(--red-b)"></span>UTBK/SNBT</button>
+    <button class="blog-chip" data-cat="panduan" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:#7C3AED"></span>Panduan</button>
+    <button class="blog-chip" data-cat="insight" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:var(--blue-b)"></span>Insight</button>
+  </div>
+
+  <!-- META ROW -->
+  <div class="blog-meta-row">
+    <span class="blog-count" id="articleCount"><span id="countNum">8</span> artikel</span>
+    <select class="blog-sort" id="sortSelect" onchange="sortArticles(this.value)">
+      <option value="terbaru">Terbaru</option>
+      <option value="terpopuler">Terpopuler</option>
+      <option value="terlama">Terlama</option>
+    </select>
+  </div>
+
+  <!-- GRID -->
+  <div class="blog-grid" id="blogGrid">
+
+    <!-- FEATURED -->
+    <a class="article-card featured" href="#" data-cat="tips" data-date="2025-06-15" data-title="Cara Belajar Matematika yang Benar — Bukan Sekadar Hafal Rumus">
+      <div class="article-thumb t-featured">
+        <div class="article-thumb-bg"></div>
+        <div class="article-thumb-math">f(x)</div>
+        <div class="article-featured-badge">UNGGULAN</div>
+      </div>
+      <div class="article-body">
+        <span class="article-tag tag-tips">Tips Belajar</span>
+        <div class="article-title">Cara Belajar Matematika yang Benar — Bukan Sekadar Hafal Rumus</div>
+        <div class="article-excerpt">Kebanyakan siswa gagal di matematika bukan karena bodoh, tapi karena salah strategi. Hafalan rumus tanpa pemahaman konsep ibarat membangun rumah tanpa fondasi. Artikel ini membahas pendekatan belajar yang terbukti efektif: dari cara membaca soal, membangun intuisi, hingga teknik latihan yang benar-benar mengembangkan kemampuan.</div>
+        <div class="article-footer">
+          <div class="article-author">
+            <div class="article-avatar">EL</div>
+            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
+          </div>
+          <div class="article-meta-right">
+            <span class="article-date">15 Jun 2025</span>
+            <span class="article-read">8 menit</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- CARD 2 -->
+    <a class="article-card" href="#" data-cat="materi" data-date="2025-06-10" data-title="Gradien Bukan Hanya Kemiringan — Memahami Makna Geometri di Balik m">
+      <div class="article-thumb t-algebra">
+        <div class="article-thumb-bg"></div>
+        <div class="article-thumb-math">m = Δy/Δx</div>
+      </div>
+      <div class="article-body">
+        <span class="article-tag tag-materi">Materi</span>
+        <div class="article-title">Gradien Bukan Hanya Kemiringan — Makna Geometri di Balik <em>m</em></div>
+        <div class="article-excerpt">Kenapa gradien ditulis $m$? Apa hubungannya dengan laju perubahan? Artikel ini menggali makna geometri gradien yang jarang diajarkan di kelas.</div>
+        <div class="article-footer">
+          <div class="article-author">
+            <div class="article-avatar">EL</div>
+            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
+          </div>
+          <div class="article-meta-right">
+            <span class="article-date">10 Jun 2025</span>
+            <span class="article-read">5 menit</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- CARD 3 -->
+    <a class="article-card" href="#" data-cat="utbk" data-date="2025-06-05" data-title="Strategi Mengerjakan Soal UTBK Matematika dalam 2 Menit per Soal">
+      <div class="article-thumb t-utbk">
+        <div class="article-thumb-bg"></div>
+        <div class="article-thumb-math">UTBK</div>
+      </div>
+      <div class="article-body">
+        <span class="article-tag tag-utbk">UTBK/SNBT</span>
+        <div class="article-title">Strategi Mengerjakan Soal UTBK Matematika dalam 2 Menit per Soal</div>
+        <div class="article-excerpt">Waktu adalah musuh terbesar di UTBK. Panduan ini berisi teknik triase soal, skipping, dan estimasi cepat yang bisa menghemat puluhan menit.</div>
+        <div class="article-footer">
+          <div class="article-author">
+            <div class="article-avatar">EL</div>
+            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
+          </div>
+          <div class="article-meta-right">
+            <span class="article-date">5 Jun 2025</span>
+            <span class="article-read">6 menit</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- CARD 4 -->
+    <a class="article-card" href="#" data-cat="materi" data-date="2025-05-28" data-title="Eksponen dan Logaritma — Dua Sisi Mata Uang yang Sering Disalahpahami">
+      <div class="article-thumb t-materi">
+        <div class="article-thumb-bg"></div>
+        <div class="article-thumb-math">a^x = b</div>
+      </div>
+      <div class="article-body">
+        <span class="article-tag tag-materi">Materi</span>
+        <div class="article-title">Eksponen dan Logaritma — Dua Sisi yang Sering Disalahpahami</div>
+        <div class="article-excerpt">Banyak siswa bisa mengerjakan soal eksponen dan logaritma secara prosedural, tapi tidak tahu hubungan keduanya. Artikel ini menjelaskan koneksinya secara visual.</div>
+        <div class="article-footer">
+          <div class="article-author">
+            <div class="article-avatar">EL</div>
+            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
+          </div>
+          <div class="article-meta-right">
+            <span class="article-date">28 Mei 2025</span>
+            <span class="article-read">7 menit</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- CARD 5 -->
+    <a class="article-card" href="#" data-cat="tips" data-date="2025-05-20" data-title="Kenapa Latihan Soal Setiap Hari Lebih Efektif dari Belajar Semalam Suntuk">
+      <div class="article-thumb t-tips">
+        <div class="article-thumb-bg"></div>
+        <div class="article-thumb-math">∑ latihan</div>
+      </div>
+      <div class="article-body">
+        <span class="article-tag tag-tips">Tips Belajar</span>
+        <div class="article-title">Kenapa Latihan Soal Harian Lebih Efektif dari Belajar Semalam Suntuk</div>
+        <div class="article-excerpt">Spaced repetition bukan sekadar tren — sains di baliknya solid. Artikel ini membahas mengapa konsistensi 30 menit sehari mengalahkan marathon belajar 8 jam seminggu sekali.</div>
+        <div class="article-footer">
+          <div class="article-author">
+            <div class="article-avatar">EL</div>
+            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
+          </div>
+          <div class="article-meta-right">
+            <span class="article-date">20 Mei 2025</span>
+            <span class="article-read">4 menit</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- CARD 6 -->
+    <a class="article-card" href="#" data-cat="panduan" data-date="2025-05-12" data-title="Panduan Lengkap Menggunakan EksaktaLab untuk Persiapan UTBK">
+      <div class="article-thumb t-materi">
+        <div class="article-thumb-bg"></div>
+        <div class="article-thumb-math">EL</div>
+      </div>
+      <div class="article-body">
+        <span class="article-tag tag-panduan">Panduan</span>
+        <div class="article-title">Panduan Lengkap Menggunakan EksaktaLab untuk Persiapan UTBK</div>
+        <div class="article-excerpt">Mulai dari mana? Paket mana yang harus dikerjakan duluan? Artikel ini adalah roadmap resmi cara menggunakan EksaktaLab secara optimal dalam 90 hari menuju UTBK.</div>
+        <div class="article-footer">
+          <div class="article-author">
+            <div class="article-avatar">EL</div>
+            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
+          </div>
+          <div class="article-meta-right">
+            <span class="article-date">12 Mei 2025</span>
+            <span class="article-read">10 menit</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- CARD 7 -->
+    <a class="article-card" href="#" data-cat="insight" data-date="2025-05-05" data-title="Mengapa Matematika Terasa Sulit? Penjelasan dari Perspektif Kognitif">
+      <div class="article-thumb t-tips">
+        <div class="article-thumb-bg"></div>
+        <div class="article-thumb-math">🧠</div>
+      </div>
+      <div class="article-body">
+        <span class="article-tag tag-insight">Insight</span>
+        <div class="article-title">Mengapa Matematika Terasa Sulit? Penjelasan dari Perspektif Kognitif</div>
+        <div class="article-excerpt">Matematika tidak inheren sulit. Tapi ada alasan neuropsikologis yang konkret kenapa banyak orang merasa demikian — dan cara mengatasinya.</div>
+        <div class="article-footer">
+          <div class="article-author">
+            <div class="article-avatar">EL</div>
+            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
+          </div>
+          <div class="article-meta-right">
+            <span class="article-date">5 Mei 2025</span>
+            <span class="article-read">6 menit</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- CARD 8 -->
+    <a class="article-card" href="#" data-cat="utbk" data-date="2025-04-28" data-title="Topik Matematika yang Paling Sering Muncul di UTBK 5 Tahun Terakhir">
+      <div class="article-thumb t-utbk">
+        <div class="article-thumb-bg"></div>
+        <div class="article-thumb-math">SNBT</div>
+      </div>
+      <div class="article-body">
+        <span class="article-tag tag-utbk">UTBK/SNBT</span>
+        <div class="article-title">Topik Matematika yang Paling Sering Muncul di UTBK 5 Tahun Terakhir</div>
+        <div class="article-excerpt">Analisis frekuensi kemunculan topik dari soal UTBK 2020–2024. Data ini bisa jadi acuan prioritas belajarmu agar tidak membuang waktu pada topik yang jarang keluar.</div>
+        <div class="article-footer">
+          <div class="article-author">
+            <div class="article-avatar">EL</div>
+            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
+          </div>
+          <div class="article-meta-right">
+            <span class="article-date">28 Apr 2025</span>
+            <span class="article-read">5 menit</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+  </div><!-- /blog-grid -->
+
+  <!-- EMPTY STATE -->
+  <div class="blog-empty" id="blogEmpty">
+    <div class="blog-empty-icon">🔍</div>
+    <div class="blog-empty-title">Artikel tidak ditemukan</div>
+    <div class="blog-empty-desc">Coba kata kunci lain atau pilih kategori berbeda.</div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="blog-newsletter">
+    <div class="blog-nl-text">
+      <div class="blog-nl-label">📬 Newsletter EksaktaLab</div>
+      <div class="blog-nl-title">Dapat Artikel Terbaru Langsung di Inbox</div>
+      <div class="blog-nl-sub">Setiap minggu — tips belajar, artikel baru, dan soal pilihan. Gratis selamanya.</div>
+    </div>
+    <div class="blog-nl-form">
+      <input class="blog-nl-input" type="email" id="nlEmail" placeholder="email@kamu.com">
+      <button class="blog-nl-btn" onclick="subscribeNL()">Berlangganan →</button>
+    </div>
+  </div>
+
+</div><!-- /blog-wrap -->
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><polyline points="2,9 7,4 12,9"/></svg>
+</button>
+
+<div id="eksaktalab-footer"></div>
+<script src="../assets/js/footer.js"></script>
+<script src="../assets/js/protect.js"></script>
+
+<script>
+// ── Scroll progress ──────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const el = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  const btn = document.getElementById('scroll-top');
+  if (pct > 20) btn.classList.add('visible'); else btn.classList.remove('visible');
+});
+
+// ── Theme ────────────────────────────────────────────────
+function toggleTheme() {
+  const html = document.documentElement;
+  const btn  = document.getElementById('themeBtn');
+  const dark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', dark ? 'light' : 'dark');
+  localStorage.setItem('eksaktalab-theme', dark ? 'light' : 'dark');
+  btn.textContent = dark ? '🌙 Gelap' : '☀️ Terang';
+}
+
+// ── State ────────────────────────────────────────────────
+let currentCat  = 'semua';
+let currentSort = 'terbaru';
+let searchQuery = '';
+
+// ── Filter by category ───────────────────────────────────
+function filterCat(btn) {
+  document.querySelectorAll('.blog-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  currentCat = btn.dataset.cat;
+  applyFilters();
+}
+
+// ── Search ───────────────────────────────────────────────
+function handleSearch(val) {
+  searchQuery = val.toLowerCase().trim();
+  document.getElementById('clearBtn').classList.toggle('visible', val.length > 0);
+  applyFilters();
+}
+function clearSearch() {
+  const input = document.getElementById('searchInput');
+  input.value = '';
+  searchQuery = '';
+  document.getElementById('clearBtn').classList.remove('visible');
+  applyFilters();
+  input.focus();
+}
+
+// ── Sort ─────────────────────────────────────────────────
+function sortArticles(val) {
+  currentSort = val;
+  applyFilters();
+}
+
+// ── Apply all filters + sort ─────────────────────────────
+function applyFilters() {
+  const cards = [...document.querySelectorAll('#blogGrid .article-card')];
+
+  // Filter
+  cards.forEach(card => {
+    const catMatch = currentCat === 'semua' || card.dataset.cat === currentCat;
+    const title    = (card.dataset.title || '').toLowerCase();
+    const excerpt  = card.querySelector('.article-excerpt')?.textContent.toLowerCase() || '';
+    const srchMatch = !searchQuery || title.includes(searchQuery) || excerpt.includes(searchQuery);
+    card.style.display = (catMatch && srchMatch) ? '' : 'none';
+  });
+
+  // Handle featured card layout: if featured is visible and alone, keep full-width
+  const featured = document.querySelector('.article-card.featured');
+  const visibleCards = cards.filter(c => c.style.display !== 'none');
+
+  // Sort visible cards
+  const grid = document.getElementById('blogGrid');
+  const sorted = [...visibleCards].sort((a, b) => {
+    if (currentSort === 'terbaru' || currentSort === 'terlama') {
+      const da = new Date(a.dataset.date);
+      const db = new Date(b.dataset.date);
+      return currentSort === 'terbaru' ? db - da : da - db;
+    }
+    return 0; // terpopuler: keep original order
+  });
+
+  // Re-append in sorted order (hidden cards stay at end)
+  sorted.forEach(c => grid.appendChild(c));
+  cards.filter(c => !sorted.includes(c)).forEach(c => grid.appendChild(c));
+
+  // Update count
+  const count = visibleCards.length;
+  document.getElementById('countNum').textContent = count;
+  document.getElementById('blogEmpty').classList.toggle('show', count === 0);
+}
+
+// ── Newsletter ───────────────────────────────────────────
+function subscribeNL() {
+  const email = document.getElementById('nlEmail').value.trim();
+  if (!email || !email.includes('@')) {
+    document.getElementById('nlEmail').style.borderColor = 'var(--red-b)';
+    setTimeout(() => document.getElementById('nlEmail').style.borderColor = '', 1500);
+    return;
+  }
+  const btn = document.querySelector('.blog-nl-btn');
+  btn.textContent = '✓ Terima kasih!';
+  btn.style.background = 'var(--green-b)';
+  document.getElementById('nlEmail').value = '';
+  setTimeout(() => {
+    btn.textContent = 'Berlangganan →';
+    btn.style.background = '';
+  }, 3000);
+}
+</script>
+
+</body>
+</html>

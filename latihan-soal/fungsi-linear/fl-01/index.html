@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FL-01 Mengenal Fungsi Linear — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/materi.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<style>
+/* ── LAYOUT ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:var(--sans);background:var(--surface);color:var(--text);
+  height:100dvh;display:flex;flex-direction:column;overflow:hidden;
+}
+
+/* TOPBAR */
+.q-top{
+  height:52px;flex-shrink:0;background:var(--navy);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 1.25rem;gap:1rem;
+}
+.q-top-left{display:flex;align-items:center;gap:.7rem;min-width:0;}
+.q-top-logo{
+  width:28px;height:28px;border-radius:7px;background:var(--teal);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.q-top-logo svg{width:14px;height:14px;}
+.q-top-info{min-width:0;}
+.q-top-kode{
+  font-family:var(--mono);font-size:.58rem;font-weight:700;
+  color:var(--teal);letter-spacing:.1em;text-transform:uppercase;
+}
+.q-top-title{
+  font-family:var(--display);font-size:.88rem;font-weight:700;
+  color:#fff;letter-spacing:-.02em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px;
+}
+.q-top-right{display:flex;align-items:center;gap:.5rem;flex-shrink:0;}
+.q-top-btn{
+  height:30px;padding:0 .7rem;border-radius:6px;
+  border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.07);
+  color:rgba(255,255,255,.8);font-size:.72rem;font-weight:600;
+  font-family:var(--sans);cursor:pointer;
+  display:flex;align-items:center;gap:.3rem;transition:all .18s;
+}
+.q-top-btn:hover{background:rgba(255,255,255,.14);color:#fff;}
+.q-top-btn svg{width:12px;height:12px;stroke:currentColor;flex-shrink:0;}
+
+/* PROGRESS */
+.q-progress-bar{height:3px;background:var(--surface-3);flex-shrink:0;}
+.q-progress-fill{height:100%;background:var(--teal);transition:width .4s ease;width:0%;}
+
+/* BREADCRUMB */
+.q-breadcrumb{
+  padding:.55rem 1.5rem;border-bottom:1px solid var(--border);
+  background:var(--surface-2);font-size:.72rem;color:var(--text-3);
+  display:flex;align-items:center;gap:.35rem;flex-shrink:0;flex-wrap:wrap;
+}
+.q-breadcrumb a{color:var(--text-3);text-decoration:none;transition:color .15s;}
+.q-breadcrumb a:hover{color:var(--teal);}
+.q-breadcrumb span{opacity:.5;}
+.q-breadcrumb strong{color:var(--text-2);font-weight:500;}
+
+/* MAIN */
+.q-layout{flex:1;display:flex;min-height:0;overflow:hidden;}
+
+/* SIDEBAR */
+.q-sidebar{
+  width:214px;flex-shrink:0;
+  background:var(--surface-2);border-right:1px solid var(--border);
+  display:flex;flex-direction:column;overflow:hidden;
+}
+.q-sb-head{
+  padding:.85rem 1rem .7rem;border-bottom:1px solid var(--border);
+  flex-shrink:0;
+}
+.q-sb-label{
+  font-family:var(--mono);font-size:.58rem;font-weight:700;
+  color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;
+}
+.q-num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;}
+.q-num-btn{
+  aspect-ratio:1;border-radius:5px;border:1.5px solid var(--border);
+  background:var(--surface);color:var(--text-3);
+  font-family:var(--mono);font-size:.7rem;font-weight:600;
+  cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;
+}
+.q-num-btn:hover{border-color:var(--teal);color:var(--teal);}
+.q-num-btn.cur{border-color:var(--teal);background:var(--teal);color:var(--navy);}
+.q-num-btn.ok{border-color:var(--green-b);background:var(--green);color:var(--green-b);}
+.q-num-btn.ng{border-color:var(--red-b);background:var(--red);color:var(--red-b);}
+.q-num-btn.cur.ok,.q-num-btn.cur.ng{outline:2px solid var(--teal);outline-offset:1px;}
+
+.q-sb-tip{
+  padding:.7rem 1rem;margin:.5rem .75rem 0;
+  border-radius:var(--radius-sm);
+  background:rgba(0,191,165,.06);border:1px solid rgba(0,191,165,.18);
+  font-size:.7rem;color:var(--text-3);line-height:1.55;
+}
+.q-sb-tip-lbl{
+  display:flex;align-items:center;gap:.3rem;
+  font-family:var(--mono);font-size:.58rem;font-weight:700;
+  color:var(--teal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;
+}
+.q-sb-tip-lbl svg{width:10px;height:10px;}
+
+.q-sb-legend{
+  padding:.75rem 1rem;border-top:1px solid var(--border);
+  margin-top:auto;flex-shrink:0;
+}
+.q-legend-row{
+  display:flex;align-items:center;gap:.4rem;
+  font-size:.68rem;color:var(--text-3);margin-bottom:.3rem;
+}
+.q-legend-row:last-child{margin-bottom:0;}
+.q-legend-dot{
+  width:10px;height:10px;border-radius:3px;border:1.5px solid;flex-shrink:0;
+}
+.ld-cur{background:var(--teal);border-color:var(--teal);}
+.ld-ok {background:var(--green);border-color:var(--green-b);}
+.ld-ng {background:var(--red);border-color:var(--red-b);}
+.ld-bl {background:var(--surface);border-color:var(--border);}
+
+/* CONTENT */
+.q-content{flex:1;overflow-y:auto;padding:1.5rem 1.75rem;background:var(--surface);}
+
+/* SOAL META ROW */
+.q-soal-meta{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:1rem;flex-wrap:wrap;gap:.5rem;
+}
+.q-soal-pos{font-family:var(--mono);font-size:.68rem;font-weight:700;color:var(--text-3);}
+.q-tandai{
+  display:flex;align-items:center;gap:.3rem;
+  font-size:.7rem;font-weight:600;color:var(--text-3);
+  background:none;border:1.5px solid var(--border);border-radius:6px;
+  padding:.22rem .6rem;cursor:pointer;transition:all .18s;font-family:var(--sans);
+}
+.q-tandai:hover{border-color:var(--yellow-b);color:var(--yellow-b);}
+.q-tandai.on{border-color:var(--yellow-b);color:var(--yellow-b);background:var(--yellow);}
+.q-tandai svg{width:11px;height:11px;stroke:currentColor;}
+
+/* TYPE BADGE */
+.q-type{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.57rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.15rem .5rem;border-radius:4px;margin-bottom:.75rem;
+}
+.qt-pg {background:var(--blue);color:var(--blue-b);}
+.qt-bs {background:var(--green);color:var(--green-b);}
+.qt-mma{background:var(--yellow);color:var(--yellow-b);}
+
+/* SOAL TEXT */
+.q-text{font-size:.94rem;font-weight:500;color:var(--text);line-height:1.75;margin-bottom:1.1rem;}
+
+/* PG OPTIONS */
+.q-opts{display:flex;flex-direction:column;gap:.5rem;}
+.q-opt{
+  display:flex;align-items:flex-start;gap:.8rem;
+  padding:.7rem .95rem;border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);background:var(--surface);
+  cursor:pointer;transition:all .18s;text-align:left;width:100%;
+  font-size:.875rem;color:var(--text);line-height:1.55;
+}
+.q-opt:hover:not(:disabled){border-color:var(--teal);background:rgba(0,191,165,.04);}
+.q-opt:disabled{cursor:default;}
+.q-opt-key{
+  font-family:var(--mono);font-size:.67rem;font-weight:700;
+  color:var(--text-3);background:var(--surface-2);border:1px solid var(--border);
+  width:22px;height:22px;border-radius:5px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  margin-top:.1rem;transition:all .18s;
+}
+.q-opt-text{flex:1;}
+.q-opt.correct{border-color:var(--green-b)!important;background:var(--green)!important;}
+.q-opt.correct .q-opt-key{background:var(--green-b)!important;color:#fff!important;border-color:var(--green-b)!important;}
+.q-opt.wrong{border-color:var(--red-b)!important;background:var(--red)!important;}
+.q-opt.wrong .q-opt-key{background:var(--red-b)!important;color:#fff!important;border-color:var(--red-b)!important;}
+
+/* BS TABLE */
+.q-bs-wrap{overflow-x:auto;}
+.q-bs-table{width:100%;border-collapse:separate;border-spacing:0 .4rem;min-width:320px;}
+.q-bs-table th{
+  font-family:var(--mono);font-size:.6rem;font-weight:700;color:var(--text-3);
+  letter-spacing:.08em;text-transform:uppercase;padding:.2rem .75rem;
+}
+.q-bs-table th:first-child{text-align:left;}
+.q-bs-table th:not(:first-child){text-align:center;width:70px;}
+.q-bs-table td{
+  padding:.55rem .75rem;background:var(--surface-2);
+  border-top:1.5px solid var(--border);border-bottom:1.5px solid var(--border);
+  font-size:.875rem;color:var(--text);
+}
+.q-bs-table td:first-child{
+  border-left:1.5px solid var(--border);
+  border-radius:var(--radius-sm) 0 0 var(--radius-sm);
+  font-weight:500;line-height:1.55;
+}
+.q-bs-table td:not(:first-child){border-left:none;text-align:center;}
+.q-bs-table td:last-child{
+  border-right:1.5px solid var(--border);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+}
+.q-radio{
+  width:20px;height:20px;border-radius:50%;
+  border:2px solid var(--border);background:var(--surface);
+  cursor:pointer;transition:all .18s;display:inline-flex;
+  align-items:center;justify-content:center;vertical-align:middle;
+}
+.q-radio:hover:not(.locked){border-color:var(--teal);}
+.q-radio.sel{border-color:var(--teal);background:var(--teal);}
+.q-radio.r-ok{border-color:var(--green-b)!important;background:var(--green-b)!important;}
+.q-radio.r-ng{border-color:var(--red-b)!important;background:var(--red-b)!important;}
+.q-radio svg{width:9px;height:9px;stroke:#fff;stroke-width:2.5;display:none;}
+.q-radio.sel svg,.q-radio.r-ok svg,.q-radio.r-ng svg{display:block;}
+.row-ok td{background:var(--green)!important;}
+.row-ng td{background:var(--red)!important;}
+
+/* MMA */
+.q-mma-note{
+  font-family:var(--mono);font-size:.62rem;color:var(--text-3);
+  margin-bottom:.8rem;display:flex;align-items:center;gap:.3rem;
+}
+.q-mma-note svg{width:11px;height:11px;stroke:currentColor;}
+.q-mma-opts{display:flex;flex-direction:column;gap:.5rem;}
+.q-mma-opt{
+  display:flex;align-items:flex-start;gap:.8rem;
+  padding:.7rem .95rem;border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);background:var(--surface);
+  cursor:pointer;transition:all .18s;text-align:left;width:100%;
+  font-size:.875rem;color:var(--text);line-height:1.55;
+}
+.q-mma-opt:hover:not(:disabled){border-color:var(--teal);background:rgba(0,191,165,.04);}
+.q-mma-opt:disabled{cursor:default;}
+.q-checkbox{
+  width:18px;height:18px;border-radius:4px;border:2px solid var(--border);
+  background:var(--surface);flex-shrink:0;margin-top:.15rem;
+  display:flex;align-items:center;justify-content:center;transition:all .18s;
+}
+.q-mma-opt.sel .q-checkbox{background:var(--teal);border-color:var(--teal);}
+.q-checkbox svg{width:10px;height:10px;stroke:#fff;stroke-width:2.8;display:none;}
+.q-mma-opt.sel .q-checkbox svg{display:block;}
+.q-mma-opt.correct{border-color:var(--green-b)!important;background:var(--green)!important;}
+.q-mma-opt.correct .q-checkbox{background:var(--green-b)!important;border-color:var(--green-b)!important;}
+.q-mma-opt.wrong{border-color:var(--red-b)!important;background:var(--red)!important;}
+.q-mma-opt.wrong .q-checkbox{background:var(--red-b)!important;border-color:var(--red-b)!important;}
+.q-mma-opt.missed{border-color:var(--green-b)!important;opacity:.55;}
+.q-confirm-btn{
+  margin-top:.85rem;height:36px;padding:0 1.25rem;border-radius:var(--radius-sm);
+  background:var(--teal);color:var(--navy);font-size:.8rem;font-weight:700;
+  font-family:var(--sans);border:none;cursor:pointer;transition:all .2s;
+}
+.q-confirm-btn:hover{background:var(--teal-dim);}
+.q-confirm-btn:disabled{opacity:.4;cursor:not-allowed;}
+
+/* PEMBAHASAN */
+.q-pem{margin-top:1.1rem;display:none;border-radius:var(--radius-sm);overflow:hidden;}
+.q-pem.show{display:block;animation:fadeUp .22s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.q-pem-hd{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.55rem .9rem;cursor:pointer;font-size:.77rem;font-weight:600;color:var(--text);
+  background:var(--surface-2);border:1.5px solid var(--border);
+  border-radius:var(--radius-sm);transition:border-color .18s;user-select:none;
+}
+.q-pem.show .q-pem-hd{border-radius:var(--radius-sm) var(--radius-sm) 0 0;border-bottom:none;}
+.q-pem-hd.ok{border-color:var(--green-b);background:var(--green);}
+.q-pem-hd.ng{border-color:var(--red-b);background:var(--red);}
+.q-pem-hd-l{display:flex;align-items:center;gap:.45rem;}
+.q-pem-ico{
+  width:18px;height:18px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.q-pem-ico.ok{background:var(--green-b);}
+.q-pem-ico.ng{background:var(--red-b);}
+.q-pem-ico svg{width:10px;height:10px;stroke:#fff;stroke-width:2.5;}
+.q-pem-verdict{font-weight:700;}
+.q-pem-verdict.ok{color:var(--green-b);}
+.q-pem-verdict.ng{color:var(--red-b);}
+.q-pem-toggle{font-size:.7rem;color:var(--text-3);display:flex;align-items:center;gap:.25rem;}
+.q-pem-toggle svg{width:11px;height:11px;transition:transform .2s;}
+.q-pem.open .q-pem-toggle svg{transform:rotate(180deg);}
+.q-pem-body{
+  padding:.8rem .95rem;border:1.5px solid var(--border);border-top:none;
+  border-radius:0 0 var(--radius-sm) var(--radius-sm);
+  background:var(--surface);display:none;
+  font-size:.84rem;color:var(--text-2);line-height:1.7;
+}
+.q-pem.open .q-pem-body{display:block;animation:fadeUp .18s ease;}
+.q-pem-body-lbl{
+  font-family:var(--mono);font-size:.58rem;font-weight:700;
+  color:var(--teal);text-transform:uppercase;letter-spacing:.08em;
+  display:block;margin-bottom:.4rem;
+}
+
+/* NAV BAWAH */
+.q-nav{
+  flex-shrink:0;border-top:1px solid var(--border);
+  padding:.85rem 1.75rem;
+  display:flex;align-items:center;justify-content:space-between;gap:.75rem;
+  background:var(--surface);
+}
+.q-nav-btn{
+  height:36px;padding:0 .95rem;border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);background:var(--surface-2);
+  color:var(--text-2);font-size:.78rem;font-weight:600;
+  font-family:var(--sans);cursor:pointer;
+  display:flex;align-items:center;gap:.4rem;transition:all .18s;
+}
+.q-nav-btn:hover:not(:disabled){border-color:var(--teal);color:var(--teal);}
+.q-nav-btn:disabled{opacity:.35;cursor:not-allowed;}
+.q-nav-btn svg{width:12px;height:12px;stroke:currentColor;flex-shrink:0;}
+.q-nav-btn.next{background:var(--teal);color:var(--navy);border-color:var(--teal);}
+.q-nav-btn.next:hover{background:var(--teal-dim);}
+.q-nav-ctr{font-family:var(--mono);font-size:.73rem;color:var(--text-3);}
+.q-nav-ctr em{color:var(--text);font-style:normal;font-weight:700;}
+
+/* SKOR */
+.q-score{
+  flex:1;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:2rem 1.5rem;text-align:center;overflow-y:auto;background:var(--surface);
+}
+.q-score-ring{
+  width:108px;height:108px;border-radius:50%;
+  background:var(--navy);border:4px solid var(--teal);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  margin-bottom:.85rem;
+}
+.q-score-num{font-family:var(--display);font-size:2.2rem;font-weight:700;color:#fff;line-height:1;letter-spacing:-.04em;}
+.q-score-den{font-family:var(--mono);font-size:.6rem;color:var(--teal);margin-top:.12rem;}
+.q-score-label{font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--text);letter-spacing:-.02em;margin-bottom:.3rem;}
+.q-score-msg{font-size:.83rem;color:var(--text-3);max-width:320px;line-height:1.6;margin-bottom:.85rem;}
+.q-score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;max-width:300px;width:100%;margin-bottom:.85rem;}
+.q-score-item{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.65rem .4rem;}
+.q-score-item-n{font-family:var(--display);font-size:1.45rem;font-weight:700;color:var(--text);}
+.q-score-item-n.g{color:var(--green-b);} .q-score-item-n.r{color:var(--red-b);}
+.q-score-item-l{font-family:var(--mono);font-size:.53rem;font-weight:700;color:var(--text-3);letter-spacing:.06em;text-transform:uppercase;margin-top:.1rem;}
+.q-score-acts{display:flex;gap:.55rem;flex-wrap:wrap;justify-content:center;}
+.q-score-btn{
+  height:36px;padding:0 1rem;border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);background:var(--surface-2);
+  color:var(--text-2);font-size:.78rem;font-weight:600;font-family:var(--sans);
+  cursor:pointer;display:flex;align-items:center;gap:.35rem;transition:all .18s;
+}
+.q-score-btn:hover{border-color:var(--teal);color:var(--teal);}
+.q-score-btn.p{background:var(--teal);color:var(--navy);border-color:var(--teal);}
+.q-score-btn.p:hover{background:var(--teal-dim);}
+
+/* MOBILE */
+.q-sb-fab{
+  display:none;position:fixed;bottom:1.25rem;left:1rem;z-index:60;
+  width:42px;height:42px;border-radius:50%;
+  background:var(--teal);color:var(--navy);border:none;
+  box-shadow:0 4px 14px rgba(0,191,165,.35);
+  align-items:center;justify-content:center;cursor:pointer;
+}
+.q-sb-fab svg{width:17px;height:17px;stroke:currentColor;}
+.q-sb-overlay{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,.5);z-index:55;
+}
+@media(max-width:768px){
+  body{overflow:auto;height:auto;}
+  .q-layout{flex-direction:column;overflow:visible;}
+  .q-sidebar{
+    position:fixed;left:0;top:0;bottom:0;z-index:56;
+    transform:translateX(-100%);transition:transform .25s;
+    width:min(250px,82vw);padding-top:52px;
+  }
+  .q-sidebar.open{transform:translateX(0);}
+  .q-sb-overlay.open{display:block;}
+  .q-sb-fab{display:flex;}
+  .q-content{overflow-y:visible;padding:1.25rem 1rem;}
+  .q-nav{padding:.8rem 1rem;position:sticky;bottom:0;z-index:10;}
+  .q-top-title{max-width:160px;}
+  .q-breadcrumb{padding:.45rem 1rem;}
+}
+@media(max-width:500px){
+  .q-opt,.q-mma-opt{padding:.6rem .8rem;font-size:.845rem;}
+  .q-text{font-size:.9rem;}
+  .q-nav-btn{padding:0 .7rem;font-size:.73rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="q-top">
+  <div class="q-top-left">
+    <a class="q-top-logo" href="../../../">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <div class="q-top-info">
+      <div class="q-top-kode">FL-01 &middot; Paket Berlatih &middot; <span style="color:#059669">Beginner</span></div>
+      <div class="q-top-title">Mengenal Fungsi Linear</div>
+    </div>
+  </div>
+  <div class="q-top-right">
+    <button class="q-top-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+    <button class="q-top-btn" onclick="window.location.href='../'">
+      <svg viewBox="0 0 13 13" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="8,2 3,6.5 8,11"/></svg>
+      Kembali
+    </button>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div class="q-progress-bar"><div class="q-progress-fill" id="q-prog"></div></div>
+
+<!-- BREADCRUMB -->
+<div class="q-breadcrumb">
+  <a href="../../../">Beranda</a><span>/</span>
+  <a href="../../../latihan-soal/fungsi-linear/">Latihan Soal Fungsi Linear</a><span>/</span>
+  <strong>fl-01</strong>
+</div>
+
+<!-- LAYOUT -->
+<div class="q-layout" id="q-layout">
+
+  <!-- sidebar overlay mobile -->
+  <div class="q-sb-overlay" id="q-sb-ov" onclick="closeSb()"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="q-sidebar" id="q-sb">
+    <div class="q-sb-head">
+      <div class="q-sb-label">Daftar Soal</div>
+      <div class="q-num-grid" id="q-grid"></div>
+    </div>
+    <div class="q-sb-tip">
+      <div class="q-sb-tip-lbl">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="7" cy="7" r="5.5"/><line x1="7" y1="5" x2="7" y2="7.5"/><circle cx="7" cy="9.5" r=".6" fill="currentColor"/></svg>
+        Tips
+      </div>
+      <span id="q-tip">Pilih jawaban untuk melihat pembahasan instan.</span>
+    </div>
+    <div class="q-sb-legend">
+      <div class="q-legend-row"><div class="q-legend-dot ld-cur"></div>Soal aktif</div>
+      <div class="q-legend-row"><div class="q-legend-dot ld-ok"></div>Sudah dijawab</div>
+      <div class="q-legend-row"><div class="q-legend-dot ld-ng"></div>Jawaban salah</div>
+      <div class="q-legend-row"><div class="q-legend-dot ld-bl"></div>Belum dikunjungi</div>
+    </div>
+  </aside>
+
+  <!-- CONTENT -->
+  <div class="q-content" id="q-content"></div>
+
+</div><!-- /q-layout -->
+
+<!-- NAV -->
+<div class="q-nav" id="q-nav">
+  <button class="q-nav-btn" id="btn-prev" onclick="go(-1)" disabled>
+    <svg viewBox="0 0 13 13" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="8,2 3,6.5 8,11"/></svg>Sebelumnya
+  </button>
+  <span class="q-nav-ctr"><em id="q-cur">1</em> / <span id="q-tot">10</span></span>
+  <button class="q-nav-btn next" id="btn-next" onclick="go(1)">
+    Selanjutnya<svg viewBox="0 0 13 13" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,6.5 5,11"/></svg>
+  </button>
+</div>
+
+<!-- FAB mobile sidebar toggle -->
+<button class="q-sb-fab" onclick="toggleSb()" title="Daftar Soal">
+  <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+    <line x1="2" y1="5" x2="8" y2="5"/><line x1="2" y1="9" x2="8" y2="9"/><line x1="2" y1="13" x2="8" y2="13"/>
+    <rect x="11" y="4" width="5" height="10" rx="1.5"/>
+  </svg>
+</button>
+
+<script src="../../../assets/js/quiz-data.js"></script>
+<script>
+const PAKET_ID = '1';
+const TIPS = {
+  pg:  'Pilih satu jawaban yang paling tepat.',
+  bs:  'Baca setiap pernyataan dengan teliti. Pilih Benar atau Salah.',
+  mma: 'Bisa lebih dari satu jawaban benar. Pilih semua, lalu klik Konfirmasi.',
+};
+const KEYS = ['A','B','C','D','E'];
+
+// State
+const S = {
+  soal:[],cur:0,
+  answers:[],correct:[],marked:[],
+  mmaTemp:{},done:false,
+};
+
+function init(){
+  const data = window.quizDB && window.quizDB[PAKET_ID];
+  if(!data){
+    document.getElementById('q-content').innerHTML =
+      '<div style="padding:2rem;text-align:center;color:var(--text-3)">Soal sedang disiapkan. Kembali lagi segera!</div>';
+    return;
+  }
+  S.soal=data.soal;
+  S.answers=Array(data.soal.length).fill(null);
+  S.correct=Array(data.soal.length).fill(null);
+  S.marked=Array(data.soal.length).fill(false);
+  document.getElementById('q-tot').textContent=data.soal.length;
+  buildGrid();renderQ(0);
+}
+
+function buildGrid(){
+  const g=document.getElementById('q-grid');
+  g.innerHTML=S.soal.map((_,i)=>
+    `<button class="q-num-btn${i===0?' cur':''}" id="nb${i}" onclick="goTo(${i})">${i+1}</button>`
+  ).join('');
+}
+
+function updateBtn(i){
+  const b=document.getElementById('nb'+i);if(!b)return;
+  b.className='q-num-btn';
+  if(i===S.cur)b.classList.add('cur');
+  if(S.correct[i]===true)b.classList.add('ok');
+  if(S.correct[i]===false)b.classList.add('ng');
+}
+
+function updateProg(){
+  const done=S.answers.filter(a=>a!==null).length;
+  document.getElementById('q-prog').style.width=(done/S.soal.length*100)+'%';
+}
+
+function goTo(i){if(S.done)return;S.cur=i;S.soal.forEach((_,j)=>updateBtn(j));renderQ(i);closeSb();}
+function go(d){const n=S.cur+d;if(n<0||n>=S.soal.length)return;S.cur=n;S.soal.forEach((_,j)=>updateBtn(j));renderQ(n);}
+
+function renderQ(i){
+  const q=S.soal[i],ans=S.answers[i],answered=ans!==null;
+  document.getElementById('q-cur').textContent=i+1;
+  document.getElementById('btn-prev').disabled=i===0;
+  document.getElementById('q-tip').textContent=TIPS[q.type]||TIPS.pg;
+
+  const isLast=i===S.soal.length-1;
+  const nb=document.getElementById('btn-next');
+  if(isLast){
+    nb.innerHTML='Lihat Nilai<svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg>';
+    nb.onclick=showScore;
+  }else{
+    nb.innerHTML='Selanjutnya<svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,6.5 5,11"/></svg>';
+    nb.onclick=()=>go(1);
+  }
+
+  let html='';
+  // meta row
+  html+=`<div class="q-soal-meta">
+    <span class="q-soal-pos">Soal ${i+1} dari ${S.soal.length}</span>
+    <button class="q-tandai${S.marked[i]?' on':''}" id="tm${i}" onclick="mark(${i})">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 2h6v9l-3-2.2L4 11V2z"/></svg>
+      ${S.marked[i]?'Ditandai':'Tandai Soal'}
+    </button>
+  </div>`;
+
+  // type badge
+  const typeLabel={pg:'Pilihan Ganda',bs:'Benar / Salah',mma:'Multiple Answer'};
+  const typeCls={pg:'qt-pg',bs:'qt-bs',mma:'qt-mma'};
+  html+=`<span class="q-type ${typeCls[q.type]||'qt-pg'}">${typeLabel[q.type]||'Pilihan Ganda'}</span>`;
+
+  // soal text
+  html+=`<div class="q-text">${q.q}</div>`;
+
+  // options
+  if(q.type==='bs') html+=renderBS(q,i,answered);
+  else if(q.type==='mma') html+=renderMMA(q,i,answered);
+  else html+=renderPG(q,i,answered);
+
+  // pembahasan
+  if(answered){
+    const ok=S.correct[i];
+    const vc=ok?'ok':'ng';
+    const vt=ok?'Jawaban Benar!':'Jawaban Salah';
+    const ip=ok?'<polyline points="2,6 5,9 10,3"/>'
+                :'<line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/>';
+    html+=`<div class="q-pem show open" id="pem${i}">
+      <div class="q-pem-hd ${vc}" onclick="togglePem(${i})">
+        <div class="q-pem-hd-l">
+          <div class="q-pem-ico ${vc}"><svg viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round">${ip}</svg></div>
+          <span class="q-pem-verdict ${vc}">${vt}</span>
+        </div>
+        <span class="q-pem-toggle">Sembunyikan Pembahasan<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="2,4 6,8 10,4"/></svg></span>
+      </div>
+      <div class="q-pem-body"><span class="q-pem-body-lbl">Pembahasan</span>${q.p}</div>
+    </div>`;
+  }
+
+  const wrap=document.getElementById('q-content');
+  wrap.innerHTML=html;wrap.scrollTop=0;
+  if(window.MathJax)MathJax.typesetPromise([wrap]).catch(()=>{});
+}
+
+/* PG */
+function renderPG(q,i,answered){
+  let h='<div class="q-opts">';
+  q.opts.forEach((opt,oi)=>{
+    let cls='q-opt';
+    if(answered){
+      if(oi===q.jawab)cls+=' correct';
+      else if(S.answers[i]===oi&&oi!==q.jawab)cls+=' wrong';
+    }
+    h+=`<button class="${cls}" onclick="pickPG(${i},${oi})"${answered?' disabled':''}>
+      <span class="q-opt-key">${KEYS[oi]}</span>
+      <span class="q-opt-text">${opt}</span>
+    </button>`;
+  });
+  return h+'</div>';
+}
+function pickPG(qi,oi){
+  if(S.answers[qi]!==null||S.done)return;
+  S.answers[qi]=oi;S.correct[qi]=oi===S.soal[qi].jawab;
+  updateBtn(qi);updateProg();renderQ(qi);
+}
+
+/* BS */
+function renderBS(q,i,answered){
+  const ps=Array.isArray(q.pernyataan)?q.pernyataan:[q.q];
+  const js=Array.isArray(q.jawabArr)?q.jawabArr:[q.jawab];
+  const ua=S.answers[i];
+  let h='<div class="q-bs-wrap"><table class="q-bs-table"><thead><tr><th>Pernyataan</th><th>Benar</th><th>Salah</th></tr></thead><tbody>';
+  ps.forEach((p,pi)=>{
+    const a=ua?ua[pi]:null;const cor=js[pi];
+    let rc='';
+    if(a!==null)rc=a===cor?'row-ok':'row-ng';
+    const bCls=answered?(cor==='BENAR'?'r-ok':(a==='BENAR'&&a!==cor?'r-ng':'')):(a==='BENAR'?'sel':'');
+    const sCls=answered?(cor==='SALAH'?'r-ok':(a==='SALAH'&&a!==cor?'r-ng':'')):(a==='SALAH'?'sel':'');
+    const dis=answered?'pointer-events:none':'';
+    h+=`<tr class="${rc}">
+      <td>${String.fromCharCode(65+pi)}. ${p}</td>
+      <td><div class="q-radio ${bCls}" onclick="pickBS(${i},${pi},'BENAR')" style="${dis}"><svg viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="2,6 5,9 10,3"/></svg></div></td>
+      <td><div class="q-radio ${sCls}" onclick="pickBS(${i},${pi},'SALAH')" style="${dis}"><svg viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="2,6 5,9 10,3"/></svg></div></td>
+    </tr>`;
+  });
+  return h+'</tbody></table></div>';
+}
+function pickBS(qi,pi,val){
+  if(S.done)return;
+  const q=S.soal[qi];
+  const ps=Array.isArray(q.pernyataan)?q.pernyataan:[q.q];
+  const js=Array.isArray(q.jawabArr)?q.jawabArr:[q.jawab];
+  if(!S.answers[qi])S.answers[qi]=Array(ps.length).fill(null);
+  if(S.answers[qi][pi]!==null)return;
+  S.answers[qi][pi]=val;
+  if(ps.length===1||S.answers[qi].every(a=>a!==null)){
+    S.correct[qi]=S.answers[qi].every((a,idx)=>a===js[idx]);
+    updateBtn(qi);updateProg();renderQ(qi);
+  }else renderQ(qi);
+}
+
+/* MMA */
+function renderMMA(q,i,answered){
+  const sel=answered?S.answers[i]:(S.mmaTemp[i]||[]);
+  let h=`<div class="q-mma-note"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="7" cy="7" r="5.5"/><line x1="7" y1="5" x2="7" y2="7.5"/><circle cx="7" cy="9.5" r=".6" fill="currentColor"/></svg>Bisa lebih dari satu jawaban benar</div>`;
+  h+='<div class="q-mma-opts">';
+  const cor=q.jawabArr||[q.jawab];
+  q.opts.forEach((opt,oi)=>{
+    const isSel=sel.includes(oi),isCor=cor.includes(oi);
+    let cls='q-mma-opt';
+    if(answered){
+      if(isCor&&isSel)cls+=' correct';
+      else if(!isCor&&isSel)cls+=' wrong';
+      else if(isCor&&!isSel)cls+=' missed';
+    }else if(isSel)cls+=' sel';
+    h+=`<button class="${cls}" onclick="toggleMMA(${i},${oi},this)"${answered?' disabled':''}>
+      <div class="q-checkbox"><svg viewBox="0 0 12 12" fill="none" stroke-width="2.8" stroke-linecap="round"><polyline points="2,6 5,9 10,3"/></svg></div>
+      <span class="q-opt-text">${KEYS[oi]}. ${opt}</span>
+    </button>`;
+  });
+  h+='</div>';
+  if(!answered)h+=`<button class="q-confirm-btn" onclick="confirmMMA(${i})">Konfirmasi Jawaban</button>`;
+  return h;
+}
+function toggleMMA(qi,oi,btn){
+  if(S.answers[qi]!==null||S.done)return;
+  if(!S.mmaTemp[qi])S.mmaTemp[qi]=[];
+  const idx=S.mmaTemp[qi].indexOf(oi);
+  if(idx===-1)S.mmaTemp[qi].push(oi);else S.mmaTemp[qi].splice(idx,1);
+  btn.classList.toggle('sel');
+  const cb=btn.querySelector('.q-checkbox svg');
+  if(cb)cb.style.display=S.mmaTemp[qi].includes(oi)?'block':'none';
+}
+function confirmMMA(qi){
+  const sel=S.mmaTemp[qi]||[];if(!sel.length)return;
+  S.answers[qi]=[...sel];
+  const cor=S.soal[qi].jawabArr||[S.soal[qi].jawab];
+  S.correct[qi]=cor.every(c=>sel.includes(c))&&sel.every(s=>cor.includes(s));
+  updateBtn(qi);updateProg();renderQ(qi);
+}
+
+/* Mark */
+function mark(i){
+  S.marked[i]=!S.marked[i];
+  const b=document.getElementById('tm'+i);if(!b)return;
+  b.classList.toggle('on',S.marked[i]);
+  b.innerHTML=`<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 2h6v9l-3-2.2L4 11V2z"/></svg>${S.marked[i]?'Ditandai':'Tandai Soal'}`;
+}
+
+/* Toggle pembahasan */
+function togglePem(i){document.getElementById('pem'+i)?.classList.toggle('open');}
+
+/* Score */
+function showScore(){
+  S.done=true;
+  const tot=S.soal.length;
+  const ok=S.correct.filter(c=>c===true).length;
+  const ng=tot-ok;
+  const nilai=Math.round(ok/tot*100);
+  let label='Perlu Latihan Lagi',msg='Pelajari ulang materinya, kamu pasti bisa!';
+  if(nilai>=90){label='Luar Biasa! 🎉';msg='Penguasaan materi sangat baik!';}
+  else if(nilai>=75){label='Sangat Baik!';msg='Hampir sempurna. Teliti soal yang salah.';}
+  else if(nilai>=60){label='Cukup Baik';msg='Ulas kembali materi dan coba lagi.';}
+  document.getElementById('q-layout').innerHTML=`<div class="q-score">
+    <div class="q-score-ring"><div class="q-score-num">${nilai}</div><div class="q-score-den">dari 100</div></div>
+    <div class="q-score-label">${label}</div>
+    <div class="q-score-msg">${msg}</div>
+    <div class="q-score-grid">
+      <div class="q-score-item"><div class="q-score-item-n g">${ok}</div><div class="q-score-item-l">Benar</div></div>
+      <div class="q-score-item"><div class="q-score-item-n r">${ng}</div><div class="q-score-item-l">Salah</div></div>
+      <div class="q-score-item"><div class="q-score-item-n">${tot}</div><div class="q-score-item-l">Total</div></div>
+    </div>
+    <div class="q-score-acts">
+      <button class="q-score-btn" onclick="location.reload()">&#8635; Ulangi</button>
+      <button class="q-score-btn p" onclick="window.location.href='../'">&#8592; Kembali</button>
+    </div>
+  </div>`;
+  document.getElementById('q-nav').style.display='none';
+  document.getElementById('q-prog').style.width='100%';
+}
+
+/* Sidebar mobile */
+function toggleSb(){
+  document.getElementById('q-sb').classList.toggle('open');
+  document.getElementById('q-sb-ov').classList.toggle('open');
+}
+function closeSb(){
+  document.getElementById('q-sb').classList.remove('open');
+  document.getElementById('q-sb-ov').classList.remove('open');
+}
+
+/* Theme */
+function toggleTheme(){
+  const h=document.documentElement,btn=document.getElementById('themeBtn');
+  const dark=h.getAttribute('data-theme')==='dark';
+  h.setAttribute('data-theme',dark?'light':'dark');
+  localStorage.setItem('eksaktalab-theme',dark?'light':'dark');
+  btn.textContent=dark?'🌙 Gelap':'☀️ Terang';
+}
+
+/* Keyboard */
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='ArrowDown')go(1);
+  if(e.key==='ArrowLeft'||e.key==='ArrowUp')go(-1);
+  if(['1','2','3','4'].includes(e.key)&&!S.done){
+    const q=S.soal[S.cur];
+    if(q&&q.type==='pg'&&S.answers[S.cur]===null)pickPG(S.cur,parseInt(e.key)-1);
+  }
+});
+
+init();
+</script>
+</body>
+</html>

@@ -66,6 +66,7 @@
       <option value="kapita">🔬 Kapita Selekta</option>
       <option value="video">🎓 TKA – UTBK</option>
     </select>
+    <a class="nav-btn" href="blog/">📝 Blog</a>
     <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
   </div>
 </header>
@@ -115,8 +116,30 @@
       <h2>Belajar Mandiri</h2>
       <p>Pilih topik untuk membaca materi lengkap beserta contoh soal dan pembahasan.</p>
     </div>
+    <div class="fase-filter" id="filter-bm">
+      <button class="fase-chip active" data-target="all" onclick="filterFase(this,'materi-view')">Semua</button>
+      <button class="fase-chip" data-target="fase-1" onclick="filterFase(this,'materi-view')">
+        <span class="fase-chip-dot f1"></span>Bilangan
+      </button>
+      <button class="fase-chip" data-target="fase-2" onclick="filterFase(this,'materi-view')">
+        <span class="fase-chip-dot f2"></span>Aljabar
+      </button>
+      <button class="fase-chip" data-target="fase-3" onclick="filterFase(this,'materi-view')">
+        <span class="fase-chip-dot f3"></span>Trigonometri
+      </button>
+      <button class="fase-chip" data-target="fase-4" onclick="filterFase(this,'materi-view')">
+        <span class="fase-chip-dot f4"></span>Geometri
+      </button>
+      <button class="fase-chip" data-target="fase-5" onclick="filterFase(this,'materi-view')">
+        <span class="fase-chip-dot f5"></span>Kalkulus
+      </button>
+      <button class="fase-chip" data-target="fase-6" onclick="filterFase(this,'materi-view')">
+        <span class="fase-chip-dot f6"></span>Statistika
+      </button>
+    </div>
 
-    <div class="chapter-group" id="fase-1">
+
+    <div class="chapter-group" id="fase-1" data-fase="fase-1">
       <div class="chapter-label">
         <span class="chapter-tag">FASE 1</span>
         <span class="chapter-title-text">Bilangan &amp; Bernalar</span>
@@ -154,7 +177,7 @@
         </a>
       </div>
     </div>
-    <div class="chapter-group" id="fase-2">
+    <div class="chapter-group" id="fase-2" data-fase="fase-2">
       <div class="chapter-label">
         <span class="chapter-tag">FASE 2</span>
         <span class="chapter-title-text">Aljabar &amp; Fungsi</span>
@@ -227,7 +250,7 @@
         </a>
       </div>
     </div>
-    <div class="chapter-group" id="fase-3">
+    <div class="chapter-group" id="fase-3" data-fase="fase-3">
       <div class="chapter-label">
         <span class="chapter-tag">FASE 3</span>
         <span class="chapter-title-text">Trigonometri</span>
@@ -255,7 +278,7 @@
         </a>
       </div>
     </div>
-    <div class="chapter-group" id="fase-4">
+    <div class="chapter-group" id="fase-4" data-fase="fase-4">
       <div class="chapter-label">
         <span class="chapter-tag">FASE 4</span>
         <span class="chapter-title-text">Geometri</span>
@@ -288,7 +311,7 @@
         </a>
       </div>
     </div>
-    <div class="chapter-group" id="fase-5">
+    <div class="chapter-group" id="fase-5" data-fase="fase-5">
       <div class="chapter-label">
         <span class="chapter-tag">FASE 5</span>
         <span class="chapter-title-text">Kalkulus</span>
@@ -311,7 +334,7 @@
         </a>
       </div>
     </div>
-    <div class="chapter-group" id="fase-6">
+    <div class="chapter-group" id="fase-6" data-fase="fase-6">
       <div class="chapter-label">
         <span class="chapter-tag">FASE 6</span>
         <span class="chapter-title-text">Statistika &amp; Peluang</span>
@@ -347,7 +370,29 @@
       <h2>Worksheet</h2>
       <p>Unduh lembar kerja PDF per materi untuk latihan mandiri atau digunakan di kelas.</p>
     </div>
-    <div class="chapter-group">
+    <div class="fase-filter" id="filter-ws">
+      <button class="fase-chip active" data-target="all" onclick="filterFase(this,'worksheet-view')">Semua</button>
+      <button class="fase-chip" data-target="fase-1" onclick="filterFase(this,'worksheet-view')">
+        <span class="fase-chip-dot f1"></span>Bilangan
+      </button>
+      <button class="fase-chip" data-target="fase-2" onclick="filterFase(this,'worksheet-view')">
+        <span class="fase-chip-dot f2"></span>Aljabar
+      </button>
+      <button class="fase-chip" data-target="fase-3" onclick="filterFase(this,'worksheet-view')">
+        <span class="fase-chip-dot f3"></span>Trigonometri
+      </button>
+      <button class="fase-chip" data-target="fase-4" onclick="filterFase(this,'worksheet-view')">
+        <span class="fase-chip-dot f4"></span>Geometri
+      </button>
+      <button class="fase-chip" data-target="fase-5" onclick="filterFase(this,'worksheet-view')">
+        <span class="fase-chip-dot f5"></span>Kalkulus
+      </button>
+      <button class="fase-chip" data-target="fase-6" onclick="filterFase(this,'worksheet-view')">
+        <span class="fase-chip-dot f6"></span>Statistika
+      </button>
+    </div>
+
+    <div class="chapter-group" data-fase="fase-1">
       <div class="chapter-label"><span class="chapter-tag">FASE 1</span><span class="chapter-title-text">Bilangan &amp; Bernalar</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Eksponen</div><div class="file-desc">Segera tersedia</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
@@ -358,7 +403,7 @@
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Logika Matematika</div><div class="file-desc">Segera tersedia</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
       </div>
     </div>
-    <div class="chapter-group">
+    <div class="chapter-group" data-fase="fase-2">
       <div class="chapter-label"><span class="chapter-tag">FASE 2</span><span class="chapter-title-text">Aljabar &amp; Fungsi</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Fungsi, Komposisi & Invers</div><div class="file-desc">Segera tersedia</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
@@ -376,7 +421,7 @@
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Matriks</div><div class="file-desc">Segera tersedia</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
       </div>
     </div>
-    <div class="chapter-group">
+    <div class="chapter-group" data-fase="fase-3">
       <div class="chapter-label"><span class="chapter-tag">FASE 3</span><span class="chapter-title-text">Trigonometri</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Trigonometri Dasar</div><div class="file-desc">Segera tersedia</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
@@ -385,7 +430,7 @@
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Persamaan Trigonometri</div><div class="file-desc">Segera tersedia</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
       </div>
     </div>
-    <div class="chapter-group">
+    <div class="chapter-group" data-fase="fase-4">
       <div class="chapter-label"><span class="chapter-tag">FASE 4</span><span class="chapter-title-text">Geometri</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Lingkaran</div><div class="file-desc">Segera tersedia</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
@@ -395,7 +440,7 @@
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Geometri Ruang</div><div class="file-desc">Segera tersedia</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
       </div>
     </div>
-    <div class="chapter-group">
+    <div class="chapter-group" data-fase="fase-5">
       <div class="chapter-label"><span class="chapter-tag">FASE 5</span><span class="chapter-title-text">Kalkulus</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Limit Fungsi</div><div class="file-desc">Segera tersedia</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
@@ -403,7 +448,7 @@
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Integral</div><div class="file-desc">Segera tersedia</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
       </div>
     </div>
-    <div class="chapter-group">
+    <div class="chapter-group" data-fase="fase-6">
       <div class="chapter-label"><span class="chapter-tag">FASE 6</span><span class="chapter-title-text">Statistika &amp; Peluang</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon pdf">📄</div><div><div class="file-name">Worksheet Statistika Deskriptif</div><div class="file-desc">Segera tersedia</div></div></div><button class="btn-dl pdf" onclick="toast('Segera tersedia')">↓ Download PDF</button></div>
@@ -419,7 +464,29 @@
       <h2>Latihan Soal</h2>
       <p>5 paket soal per materi. Kerjakan langsung di browser, dapat nilai dan pembahasan instan.</p>
     </div>
-    <div class="chapter-group">
+    <div class="fase-filter" id="filter-ls">
+      <button class="fase-chip active" data-target="all" onclick="filterFase(this,'latihan-view')">Semua</button>
+      <button class="fase-chip" data-target="fase-1" onclick="filterFase(this,'latihan-view')">
+        <span class="fase-chip-dot f1"></span>Bilangan
+      </button>
+      <button class="fase-chip" data-target="fase-2" onclick="filterFase(this,'latihan-view')">
+        <span class="fase-chip-dot f2"></span>Aljabar
+      </button>
+      <button class="fase-chip" data-target="fase-3" onclick="filterFase(this,'latihan-view')">
+        <span class="fase-chip-dot f3"></span>Trigonometri
+      </button>
+      <button class="fase-chip" data-target="fase-4" onclick="filterFase(this,'latihan-view')">
+        <span class="fase-chip-dot f4"></span>Geometri
+      </button>
+      <button class="fase-chip" data-target="fase-5" onclick="filterFase(this,'latihan-view')">
+        <span class="fase-chip-dot f5"></span>Kalkulus
+      </button>
+      <button class="fase-chip" data-target="fase-6" onclick="filterFase(this,'latihan-view')">
+        <span class="fase-chip-dot f6"></span>Statistika
+      </button>
+    </div>
+
+    <div class="chapter-group" data-fase="fase-1">
       <div class="chapter-label"><span class="chapter-tag">FASE 1</span><span class="chapter-title-text">Bilangan &amp; Bernalar</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Eksponen</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
@@ -430,7 +497,7 @@
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Logika Matematika</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
       </div>
     </div>
-    <div class="chapter-group">
+    <div class="chapter-group" data-fase="fase-2">
       <div class="chapter-label"><span class="chapter-tag">FASE 2</span><span class="chapter-title-text">Aljabar &amp; Fungsi</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Fungsi, Komposisi & Invers</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
@@ -448,7 +515,7 @@
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Matriks</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
       </div>
     </div>
-    <div class="chapter-group">
+    <div class="chapter-group" data-fase="fase-3">
       <div class="chapter-label"><span class="chapter-tag">FASE 3</span><span class="chapter-title-text">Trigonometri</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Trigonometri Dasar</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
@@ -457,7 +524,7 @@
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Persamaan Trigonometri</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
       </div>
     </div>
-    <div class="chapter-group">
+    <div class="chapter-group" data-fase="fase-4">
       <div class="chapter-label"><span class="chapter-tag">FASE 4</span><span class="chapter-title-text">Geometri</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Lingkaran</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
@@ -467,7 +534,7 @@
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Geometri Ruang</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
       </div>
     </div>
-    <div class="chapter-group">
+    <div class="chapter-group" data-fase="fase-5">
       <div class="chapter-label"><span class="chapter-tag">FASE 5</span><span class="chapter-title-text">Kalkulus</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Limit Fungsi</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
@@ -475,7 +542,7 @@
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Integral</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
       </div>
     </div>
-    <div class="chapter-group">
+    <div class="chapter-group" data-fase="fase-6">
       <div class="chapter-label"><span class="chapter-tag">FASE 6</span><span class="chapter-title-text">Statistika &amp; Peluang</span></div>
       <div class="file-list">
         <div class="file-card"><div class="file-info"><div class="file-icon quiz">✏️</div><div><div class="file-name">Statistika Deskriptif</div><div class="file-desc">5 paket · 10 soal/paket · ±15 menit</div></div></div><button class="btn-dl start" onclick="toast('Segera tersedia')">Mulai →</button></div>
