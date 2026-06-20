@@ -1,0 +1,38 @@
+/* ── TENTANG PAGE ── */
+
+.page-wrap{max-width:860px;margin:0 auto;padding:3.5rem var(--px);}
+
+.section{margin-bottom:3rem;}
+.section h2{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--text);letter-spacing:-0.02em;margin-bottom:1rem;}
+.section p{font-size:0.95rem;line-height:1.75;color:var(--text-2);margin-bottom:0.85rem;}
+
+.value-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-top:1.5rem;}
+.value-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;transition:border-color .2s,transform .2s;}
+.value-card:hover{border-color:var(--teal);transform:translateY(-2px);}
+.value-icon{font-size:1.6rem;margin-bottom:0.65rem;}
+.value-title{font-family:var(--display);font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:0.35rem;}
+.value-desc{font-size:0.85rem;line-height:1.65;color:var(--text-2);}
+
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1.25rem;margin-top:1.5rem;}
+.team-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem 1rem;text-align:center;transition:border-color .2s,transform .2s;}
+.team-card:hover{border-color:var(--teal);transform:translateY(-2px);}
+.team-avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--teal),#0066cc);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.2rem;font-weight:700;color:#fff;margin:0 auto 0.75rem;}
+.team-photo{width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:center 15%;border:3px solid var(--teal);margin:0 auto 0.75rem;display:block;}
+.team-name{font-family:var(--display);font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:0.2rem;}
+.team-role{font-size:0.78rem;color:var(--text-3);}
+
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;}
+.stat-box{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;text-align:center;transition:border-color .2s;}
+.stat-box:hover{border-color:var(--teal);}
+.stat-big{font-family:var(--display);font-size:2rem;font-weight:700;color:var(--teal);letter-spacing:-0.03em;}
+.stat-lbl{font-size:0.78rem;color:var(--text-3);margin-top:0.2rem;text-transform:uppercase;letter-spacing:.05em;}
+
+.divider{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+
+@media(max-width:768px){
+  .page-wrap{padding:2.5rem var(--px);}
+}
+@media(max-width:500px){
+  .stat-row{grid-template-columns:1fr 1fr;}
+  .stat-row .stat-box:last-child{grid-column:1/-1;}
+}

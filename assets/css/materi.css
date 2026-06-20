@@ -24,6 +24,7 @@
   --radius:12px;
   --radius-sm:8px;
   --radius-lg:18px;
+  --px: 2rem; /* horizontal gutter — dipakai seragam di navbar, hero, main-wrap, footer */
 }
 [data-theme="dark"] {
   --surface:  #0A0F1E;
@@ -51,7 +52,7 @@ body{font-family:var(--sans);background:var(--surface);color:var(--text);line-he
   position:sticky;top:0;z-index:50;
   background:var(--surface);
   border-bottom:1px solid var(--border);
-  padding:0 2rem;height:60px;
+  padding:0 var(--px);height:60px;
   display:flex;align-items:center;justify-content:space-between;gap:1rem;
 }
 .nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;flex-shrink:0;}
@@ -103,10 +104,14 @@ body{font-family:var(--sans);background:var(--surface);color:var(--text);line-he
 .nav-tab:hover{color:var(--text);}
 .nav-tab.active{background:var(--navy);color:#fff;}
 [data-theme="dark"] .nav-tab.active{background:var(--teal);color:#fff;}
-/* Tablet: sembunyikan label teks tab, sisakan icon */
-@media(max-width:768px){
+/* Tablet: sembunyikan tabs, tampilkan select dropdown */
+@media(max-width:768px) and (min-width:501px){
   .nav-tabs{ display:none; }
   .nav-select{ display:flex !important; }
+}
+/* Mobile ≤500px: sembunyikan tabs (bottom-nav menggantikan di halaman utama) */
+@media(max-width:500px){
+  .nav-tabs{ display:none; }
 }
 /* Nav select — muncul di tablet/hp sebagai pengganti tabs */
 .nav-select{
@@ -876,6 +881,20 @@ tr:hover td{background:var(--surface-2);}
   table{font-size:0.78rem;}
 }
 
+/* ── MATHJAX TABLE FIX ───────────────────── */
+th mjx-container{color:#fff !important;}
+th mjx-container svg,th mjx-container svg *{fill:#fff !important;}
+
+/* ── NUMBER LINE & GRAFIK HELPERS ────────── */
+.nline-wrap{margin:.8rem 0 1rem;overflow-x:auto;}
+.nline-wrap svg{display:block;max-width:100%;height:auto;}
+.grafik-pair{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin:1rem 0;}
+.grafik-pair .grafik-wrap{flex:1;min-width:180px;max-width:340px;}
+.panels-wrap{overflow-x:auto;text-align:center;margin:1rem 0;}
+.panels-wrap svg{max-width:100%;height:auto;}
+ol.step-list{padding-left:1.4rem;line-height:1.9;}
+ol.step-list li{margin-bottom:.3rem;}
+
 /* ── SVG GRAFIK ─────────────────────────── */
 .grafik-wrap{
   display:flex;justify-content:center;
@@ -962,9 +981,16 @@ tr:hover td{background:var(--surface-2);}
 [data-theme="dark"] svg[style*="background-color"] path[fill="black"] { fill:#94A3B8 !important; }
 [data-theme="dark"] svg[style*="background-color"] circle[fill="black"] { fill:#E2E8F0 !important; }
 
-/* ── NAVBAR MOBILE ───────────────────────── */
+/* ── NAVBAR RESPONSIVE ───────────────────── */
+@media(max-width:1024px){
+  :root{ --px: 1.5rem; }
+}
+@media(max-width:768px){
+  :root{ --px: 1rem; }
+  .navbar{ gap:0.75rem; }
+}
 @media(max-width:600px){
-  .navbar{ padding:0 1rem; height:56px; gap:0.5rem; }
+  .navbar{ height:56px; gap:0.5rem; }
   .nav-logo-tag{ display:none; }
   .nav-logo-name{ font-size:0.95rem; }
   .nav-logo-icon{ width:30px; height:30px; }

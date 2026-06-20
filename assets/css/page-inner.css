@@ -1,0 +1,17 @@
+/* ── SHARED INNER PAGE LAYOUT ── tentang · kontak · laporkan · latihan-soal */
+
+.page-hero{background:var(--navy);padding:4rem var(--px) 3.5rem;text-align:center;position:relative;overflow:hidden;}
+
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,191,165,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,191,165,.07) 1px,transparent 1px);background-size:40px 40px;background-position:center center;}
+.hero-grid::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,191,165,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(0,191,165,.22) 1px,transparent 1px);background-size:200px 200px;background-position:center center;}
+.hero-grid::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 50%,transparent 40%,var(--navy) 100%);z-index:1;}
+
+.hero-content{position:relative;z-index:2;max-width:680px;margin:0 auto;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.72rem;font-weight:500;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;background:rgba(0,191,165,.1);border:1px solid rgba(0,191,165,.25);padding:0.3rem 0.75rem;border-radius:8px;margin-bottom:1.25rem;}
+.hero-title{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.1;color:#fff;letter-spacing:-0.03em;margin-bottom:1rem;}
+.hero-title em{font-style:normal;color:var(--teal);}
+.hero-sub{font-size:1rem;line-height:1.65;color:#8FA8C8;max-width:480px;margin:0 auto;}
+
+.section-label{font-family:var(--mono);font-size:0.7rem;font-weight:500;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;margin-bottom:0.6rem;}
+
+@media(max-width:768px){.page-hero{padding:3rem var(--px) 2.5rem;}}
