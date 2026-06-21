@@ -246,13 +246,7 @@ body{
 .q-confirm-btn:disabled{opacity:.4;cursor:not-allowed;}
 
 /* PEMBAHASAN */
-@keyframes fadeUp{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
-.q-pem-ico svg{width:10px;height:10px;stroke:#fff;stroke-width:2.5;}
-.q-pem.open .q-pem.open .q-pem-body-lbl{
-  font-family:var(--mono);font-size:.58rem;font-weight:700;
-  color:var(--teal);text-transform:uppercase;letter-spacing:.08em;
-  display:block;margin-bottom:.4rem;
-}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
 /* NAV BAWAH */
 .q-nav-btn svg{width:12px;height:12px;stroke:currentColor;flex-shrink:0;}
@@ -439,63 +433,32 @@ body{
    TOUCH DEVICE — matikan hover state
 ═══════════════════════════════════════════════════════ */
 
-/* ── PEMBAHASAN ACCORDION — style contoh-header materi ── */
-.q-pem{margin-top:1rem;display:none;border-radius:var(--radius-sm);border:1.5px solid var(--border);overflow:hidden;background:var(--surface);}
-.q-pem.show{display:block;animation:fadeUp .2s ease;}
+/* ── PEMBAHASAN — verdict card ── */
+.q-pem{margin-top:1.1rem;display:none;border-radius:var(--radius);border:1.5px solid;overflow:hidden;}
+.q-pem.show{display:block;animation:fadeUp .22s ease;}
 .q-pem.pem-ok{border-color:var(--green-b);}
 .q-pem.pem-ng{border-color:var(--red-b);}
-.q-pem-hd{
-  display:flex;align-items:center;gap:.75rem;
-  padding:.75rem 1rem;
-  background:transparent;
-  cursor:pointer;user-select:none;
-  transition:background .2s;
-}
-.q-pem-hd:hover{background:var(--surface-2);}
-.q-pem-hd.ok{background:rgba(0,180,80,.06);}
-.q-pem-hd.ng{background:rgba(220,50,50,.05);}
-.q-pem.open /* Badge verdict — seperti contoh-badge */
-.q-pem-badge{
-  font-family:var(--mono);font-size:.62rem;font-weight:700;
-  padding:.22rem .6rem;border-radius:5px;
-  letter-spacing:.06em;white-space:nowrap;flex-shrink:0;
-  border:1px solid;transition:all .2s;
-}
-.q-pem-badge.ok{background:var(--green);color:var(--green-b);border-color:var(--green-b);}
-.q-pem-badge.ng{background:var(--red);color:var(--red-b);border-color:var(--red-b);}
-.q-pem.open .q-pem-badge.ok{background:var(--green-b);color:#fff;border-color:var(--green-b);}
-.q-pem.open .q-pem-badge.ng{background:var(--red-b);color:#fff;border-color:var(--red-b);}
-/* Label teks tengah */
-.q-pem-label{flex:1;font-size:.82rem;font-weight:600;color:var(--text-2);}
-/* Chevron — seperti contoh-chevron */
-.q-pem-chevron{
-  width:24px;height:24px;flex-shrink:0;
-  border-radius:6px;
-  background:var(--surface-3);
-  border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  transition:all .25s ease;
-}
-.q-pem-chevron svg{width:11px;height:11px;stroke:var(--text-3);stroke-width:2.2;transition:transform .25s ease;}
+.q-pem-hd{display:flex;align-items:center;gap:.7rem;padding:.72rem 1rem;cursor:pointer;user-select:none;transition:filter .15s;}
+.q-pem.pem-ok .q-pem-hd{background:rgba(0,180,80,.06);}
+.q-pem.pem-ng .q-pem-hd{background:rgba(220,50,50,.05);}
+.q-pem-hd:hover{filter:brightness(.96);}
+.q-pem-ico{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.q-pem.pem-ok .q-pem-ico{background:var(--green-b);}
+.q-pem.pem-ng .q-pem-ico{background:var(--red-b);}
+.q-pem-ico svg{width:12px;height:12px;stroke:#fff;stroke-width:2.8;stroke-linecap:round;}
+.q-pem-badge{flex:1;font-size:.875rem;font-weight:700;font-family:var(--sans);letter-spacing:-.01em;}
+.q-pem.pem-ok .q-pem-badge{color:var(--green-b);}
+.q-pem.pem-ng .q-pem-badge{color:var(--red-b);}
+.q-pem-chevron{width:24px;height:24px;flex-shrink:0;border-radius:6px;background:var(--surface-3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.q-pem-chevron svg{width:10px;height:10px;stroke:var(--text-3);stroke-width:2.2;transition:transform .25s;}
 .q-pem.open .q-pem-chevron{background:var(--teal);border-color:var(--teal);}
 .q-pem.open .q-pem-chevron svg{stroke:var(--navy);transform:rotate(180deg);}
-/* Body: smooth expand */
-.q-pem-body{
-  max-height:0;overflow:hidden;opacity:0;
-  transition:max-height .4s cubic-bezier(.4,0,.2,1),opacity .35s ease;
-  background:var(--surface);
-}
+.q-pem-body{max-height:0;overflow:hidden;opacity:0;transition:max-height .38s cubic-bezier(.4,0,.2,1),opacity .3s ease;}
 .q-pem.open .q-pem-body{max-height:2000px;opacity:1;}
-/* Solve header dalam body */
-.q-pem-solve-hd{
-  display:flex;align-items:center;gap:.5rem;
-  padding:.5rem 1rem;
-  background:rgba(0,191,165,.05);
-  border-bottom:1px solid rgba(0,191,165,.1);
-}
-.q-pem-solve-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0;}
-.q-pem-solve-title{font-family:var(--mono);font-size:.6rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;}
-.q-pem-body-inner{padding:.9rem 1rem;font-size:.845rem;color:var(--text-2);line-height:1.7;}
+.q-pem-solve-hd{display:flex;align-items:center;gap:.45rem;padding:.5rem 1rem;background:rgba(0,191,165,.05);border-top:1px solid var(--border);border-bottom:1px solid rgba(0,191,165,.1);}
+.q-pem-solve-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+.q-pem-solve-title{font-family:var(--mono);font-size:.58rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.1em;}
+.q-pem-body-inner{padding:.9rem 1rem;font-size:.845rem;color:var(--text-2);line-height:1.75;}
 
 @media(min-width:601px) and (max-width:900px){
   /* Body: flex column, tinggi viewport */
@@ -921,11 +884,13 @@ function renderQ(i){
     const ok=S.correct[i];
     const vc=ok?'ok':'ng';
     const vt=ok?'Jawaban Benar!':'Jawaban Salah';
-    const ip=ok?'<polyline points="2,6 5,9 10,3"/>'
-                :'<line x1="2" y1="2" x2="10" y2="10"/><line x1="10" y1="2" x2="2" y2="10"/>';
+    const icoSvg=ok
+      ?'<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><polyline points="2,6 5,9 10,3"/></svg>'
+      :'<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><line x1="3" y1="3" x2="9" y2="9"/><line x1="9" y1="3" x2="3" y2="9"/></svg>';
     html+=`<div class="q-pem show open pem-${vc}" id="pem${i}">
-      <div class="q-pem-hd ${vc}" onclick="togglePem(${i})">
-        <span class="q-pem-badge ${vc}">${vt}</span>
+      <div class="q-pem-hd" onclick="togglePem(${i})">
+        <span class="q-pem-ico">${icoSvg}</span>
+        <span class="q-pem-badge">${vt}</span>
         <span class="q-pem-chevron"><svg viewBox="0 0 12 12" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,4 6,8 10,4"/></svg></span>
       </div>
       <div class="q-pem-body">
@@ -960,6 +925,59 @@ function pickPG(qi,oi){
   if(S.answers[qi]!==null||S.done)return;
   S.answers[qi]=oi;S.correct[qi]=oi===S.soal[qi].jawab;
   updateBtn(qi);updateProg();renderQ(qi);
+}
+/* MMA */
+function renderMMA(q,i,answered){
+  const jawab = Array.isArray(q.jawabArr) ? q.jawabArr : [q.jawab];
+  const temp = S.mmaTemp[i] || [];
+  const selected = answered ? (S.answers[i] || []) : temp;
+
+  let h = `<div class="q-mma-note">
+    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="4.5"/><line x1="6" y1="4" x2="6" y2="6.5"/><circle cx="6" cy="8.5" r=".5" fill="currentColor"/></svg>
+    Bisa lebih dari satu jawaban benar. Pilih semua, lalu klik Konfirmasi.
+  </div><div class="q-mma-opts">`;
+
+  q.opts.forEach((opt, oi) => {
+    const isSel = selected.includes(oi);
+    const isCorrect = jawab.includes(oi);
+    let cls = 'q-mma-opt';
+    if(answered){
+      if(isSel && isCorrect) cls += ' correct';
+      else if(isSel && !isCorrect) cls += ' wrong';
+      else if(!isSel && isCorrect) cls += ' missed';
+    } else {
+      if(isSel) cls += ' sel';
+    }
+    const dis = answered ? ' disabled' : '';
+    h += `<button class="${cls}" onclick="pickMMA(${i},${oi})"${dis}>
+      <span class="q-checkbox"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><polyline points="2,5 4,8 8,2"/></svg></span>
+      <span>${opt}</span>
+    </button>`;
+  });
+
+  h += '</div>';
+  if(!answered){
+    const canConfirm = temp.length > 0;
+    h += `<button class="q-confirm-btn" onclick="confirmMMA(${i})"${canConfirm ? '' : ' disabled'} id="mma-confirm-${i}">Konfirmasi Jawaban</button>`;
+  }
+  return h;
+}
+function pickMMA(qi, oi){
+  if(S.done || S.answers[qi] !== null) return;
+  if(!S.mmaTemp[qi]) S.mmaTemp[qi] = [];
+  const idx = S.mmaTemp[qi].indexOf(oi);
+  if(idx === -1) S.mmaTemp[qi].push(oi);
+  else S.mmaTemp[qi].splice(idx, 1);
+  renderQ(qi);
+}
+function confirmMMA(qi){
+  if(S.done) return;
+  const temp = S.mmaTemp[qi] || [];
+  if(temp.length === 0) return;
+  const jawab = Array.isArray(S.soal[qi].jawabArr) ? S.soal[qi].jawabArr : [S.soal[qi].jawab];
+  S.answers[qi] = [...temp];
+  S.correct[qi] = temp.length === jawab.length && jawab.every(j => temp.includes(j));
+  updateBtn(qi); updateProg(); renderQ(qi);
 }
 
 /* BS */
@@ -1014,8 +1032,6 @@ function pickBS(qi,pi,val,btn){
   // Re-render soal agar tombol update
   renderQ(qi);
 }
-function pickBS(qi,pi,val,btn){
-  if(S.done||S.answers[qi]!==null)return;
   if(!S.bsTemp)S.bsTemp={};
   if(!S.bsTemp[qi]){
     const ps=Array.isArray(S.soal[qi].pernyataan)?S.soal[qi].pernyataan:[S.soal[qi].q];

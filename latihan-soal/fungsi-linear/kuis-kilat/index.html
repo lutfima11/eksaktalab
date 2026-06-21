@@ -122,6 +122,7 @@ body{
 .q-num-btn.cur{border-color:var(--teal);background:var(--teal);color:var(--navy);}
 .q-num-btn.ok{border-color:var(--green-b);background:var(--green);color:var(--green-b);}
 .q-num-btn.ng{border-color:var(--red-b);background:var(--red);color:var(--red-b);}
+.q-num-btn.ans{border-color:rgba(0,191,165,.5);background:rgba(0,191,165,.12);color:var(--teal);}
 .q-num-btn.cur.ok,.q-num-btn.cur.ng{outline:2px solid var(--teal);outline-offset:1px;}
 
 .q-sb-tip{
@@ -210,6 +211,8 @@ body{
 .q-opt.correct .q-opt-key{background:var(--green-b)!important;color:#fff!important;border-color:var(--green-b)!important;}
 .q-opt.wrong{border-color:var(--red-b)!important;background:var(--red)!important;}
 .q-opt.wrong .q-opt-key{background:var(--red-b)!important;color:#fff!important;border-color:var(--red-b)!important;}
+.q-opt.sel{border-color:var(--teal)!important;background:rgba(0,191,165,.07)!important;}
+.q-opt.sel .q-opt-key{background:var(--teal)!important;color:var(--navy)!important;border-color:var(--teal)!important;}
 
 /* BS TABLE */
 /* MMA */
@@ -376,6 +379,7 @@ body{
 .q-mob-num.cur  { border-color: var(--teal); background: var(--teal); color: var(--navy); }
 .q-mob-num.ok   { border-color: var(--green-b); background: var(--green); color: var(--green-b); }
 .q-mob-num.ng   { border-color: var(--red-b); background: var(--red); color: var(--red-b); }
+.q-mob-num.ans  { border-color: rgba(0,191,165,.5); background: rgba(0,191,165,.12); color: var(--teal); }
 .q-mob-num.cur.ok, .q-mob-num.cur.ng { outline: 2px solid var(--teal); outline-offset: 1px; }
 
 /* Nav tombol di mobile (sama tapi lebih compact) */
@@ -1093,8 +1097,12 @@ function updateBtn(i){updateMobNum(i);
   const b=document.getElementById('nb'+i);if(!b)return;
   b.className='q-num-btn';
   if(i===S.cur)b.classList.add('cur');
-  if(S.correct[i]===true)b.classList.add('ok');
-  if(S.correct[i]===false)b.classList.add('ng');
+  if(IS_UJIAN){
+    if(S.answers[i]!==null) b.classList.add('ans');
+  } else {
+    if(S.correct[i]===true) b.classList.add('ok');
+    if(S.correct[i]===false) b.classList.add('ng');
+  }
 }
 
 function updateProg(){
@@ -1174,10 +1182,15 @@ function renderPG(q,i,answered){
   q.opts.forEach((opt,oi)=>{
     let cls='q-opt';
     if(answered){
-      if(oi===q.jawab)cls+=' correct';
-      else if(S.answers[i]===oi&&oi!==q.jawab)cls+=' wrong';
+      if(IS_UJIAN){
+        if(S.answers[i]===oi) cls+=' sel';
+      } else {
+        if(oi===q.jawab) cls+=' correct';
+        else if(S.answers[i]===oi&&oi!==q.jawab) cls+=' wrong';
+      }
     }
-    h+=`<button class="${cls}" onclick="pickPG(${i},${oi})"${answered?' disabled':''}>
+    const dis = (answered && !IS_UJIAN) ? ' disabled' : '';
+    h+=`<button class="${cls}" onclick="pickPG(${i},${oi})"${dis}>
       <span class="q-opt-key">${KEYS[oi]}</span>
       <span class="q-opt-text">${opt}</span>
     </button>`;
@@ -1185,9 +1198,70 @@ function renderPG(q,i,answered){
   return h+'</div>';
 }
 function pickPG(qi,oi){
-  if(S.answers[qi]!==null||S.done)return;
-  S.answers[qi]=oi;S.correct[qi]=oi===S.soal[qi].jawab;
-  updateBtn(qi);updateProg();renderQ(qi);
+  if(S.done) return;
+  if(!IS_UJIAN && S.answers[qi]!==null) return;
+  S.answers[qi]=oi; S.correct[qi]=oi===S.soal[qi].jawab;
+  updateBtn(qi); updateProg(); renderQ(qi);
+}
+
+/* MMA */
+function renderMMA(q,i,answered){
+  const jawab = Array.isArray(q.jawabArr) ? q.jawabArr : [q.jawab];
+  if(IS_UJIAN && answered && !S.mmaTemp[i]){
+    S.mmaTemp[i] = [...(S.answers[i] || [])];
+  }
+  const temp = S.mmaTemp[i] || [];
+  const selected = answered && !IS_UJIAN ? (S.answers[i] || []) : temp;
+
+  let h = `<div class="q-mma-note">
+    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="4.5"/><line x1="6" y1="4" x2="6" y2="6.5"/><circle cx="6" cy="8.5" r=".5" fill="currentColor"/></svg>
+    Bisa lebih dari satu jawaban benar. Pilih semua, lalu klik Konfirmasi.
+  </div><div class="q-mma-opts">`;
+
+  q.opts.forEach((opt, oi) => {
+    const isSel = selected.includes(oi);
+    const isCorrect = jawab.includes(oi);
+    let cls = 'q-mma-opt';
+    if(answered && !IS_UJIAN){
+      if(isSel && isCorrect) cls += ' correct';
+      else if(isSel && !isCorrect) cls += ' wrong';
+      else if(!isSel && isCorrect) cls += ' missed';
+    } else {
+      if(isSel) cls += ' sel';
+    }
+    const dis = (answered && !IS_UJIAN) ? ' disabled' : '';
+    h += `<button class="${cls}" onclick="pickMMA(${i},${oi})"${dis}>
+      <span class="q-checkbox"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><polyline points="2,5 4,8 8,2"/></svg></span>
+      <span>${opt}</span>
+    </button>`;
+  });
+
+  h += '</div>';
+  if(!(answered && !IS_UJIAN)){
+    const canConfirm = temp.length > 0;
+    const btnLabel = (answered && IS_UJIAN) ? 'Update Jawaban' : 'Konfirmasi Jawaban';
+    h += `<button class="q-confirm-btn" onclick="confirmMMA(${i})"${canConfirm ? '' : ' disabled'} id="mma-confirm-${i}">${btnLabel}</button>`;
+  }
+  return h;
+}
+function pickMMA(qi, oi){
+  if(S.done) return;
+  if(!IS_UJIAN && S.answers[qi] !== null) return;
+  if(!S.mmaTemp[qi]) S.mmaTemp[qi] = [];
+  const idx = S.mmaTemp[qi].indexOf(oi);
+  if(idx === -1) S.mmaTemp[qi].push(oi);
+  else S.mmaTemp[qi].splice(idx, 1);
+  renderQ(qi);
+}
+function confirmMMA(qi){
+  if(S.done) return;
+  if(!IS_UJIAN && S.answers[qi] !== null) return;
+  const temp = S.mmaTemp[qi] || [];
+  if(temp.length === 0) return;
+  const jawab = Array.isArray(S.soal[qi].jawabArr) ? S.soal[qi].jawabArr : [S.soal[qi].jawab];
+  S.answers[qi] = [...temp];
+  S.correct[qi] = temp.length === jawab.length && jawab.every(j => temp.includes(j));
+  updateBtn(qi); updateProg(); renderQ(qi);
 }
 
 /* BS */
@@ -1337,8 +1411,12 @@ function updateMobNum(i){
   if(!b) return;
   b.className = 'q-mob-num';
   if(i === S.cur) b.classList.add('cur');
-  if(S.correct[i] === true)  b.classList.add('ok');
-  if(S.correct[i] === false) b.classList.add('ng');
+  if(IS_UJIAN){
+    if(S.answers[i] !== null) b.classList.add('ans');
+  } else {
+    if(S.correct[i] === true)  b.classList.add('ok');
+    if(S.correct[i] === false) b.classList.add('ng');
+  }
 }
 
 function updateMobNav(i){
