@@ -71,23 +71,28 @@
 .materi-card.available .card-num{color:var(--teal);}
 .materi-card.available:hover{border-color:var(--teal);box-shadow:0 4px 16px rgba(0,191,165,.12);}
 
-/* ── WORKSHEET & KUIS CARDS ──────────────────────────── */
-.file-list{display:flex;flex-direction:column;gap:0.5rem;}
-.file-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:0.9rem 1.1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:border-color .2s;}
-.file-card:hover{border-color:var(--teal);}
-.file-info{display:flex;align-items:center;gap:0.75rem;}
-.file-icon{width:38px;height:38px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
-.file-icon.pdf{background:#FFEAEA;}
-.file-icon.quiz{background:#FFF3E0;}
-.file-name{font-size:0.875rem;font-weight:600;color:var(--text);}
-.file-desc{font-size:0.75rem;color:var(--text-3);margin-top:0.1rem;}
-.btn-dl{font-size:0.78rem;font-weight:600;padding:0.4rem 1rem;border-radius:var(--radius-sm);border:none;cursor:pointer;white-space:nowrap;transition:background .2s;}
-.btn-dl.pdf{background:#FFEAEA;color:#C0392B;}
-.btn-dl.pdf:hover{background:#FFD5D5;}
-.btn-dl.quiz{background:#FFF3E0;color:#E67E22;}
-.btn-dl.quiz:hover{background:#FFE0B2;}
-.btn-dl.start{background:var(--teal);color:#fff;}
-.btn-dl.start:hover{background:var(--teal-dim);}
+/* ── PAKET CARD (worksheet & latihan soal) ──────────── */
+.paket-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:0.85rem;margin-bottom:2rem;}
+.paket-card{border:1.5px solid var(--border);border-radius:var(--radius);padding:1.05rem 1.1rem .95rem;background:var(--surface);transition:all .22s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:0.5rem;}
+.paket-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(0,191,165,.05) 0%,transparent 60%);pointer-events:none;}
+.paket-card:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.07);}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:0.4rem;}
+.card-kode{font-family:var(--mono);font-size:0.67rem;font-weight:700;color:var(--teal);letter-spacing:.08em;}
+.level-badge{font-size:0.58rem;font-weight:700;font-family:var(--mono);letter-spacing:.06em;padding:0.14rem 0.48rem;border-radius:4px;flex-shrink:0;}
+.badge-avail{background:rgba(0,191,165,.12);color:var(--teal);border:1px solid rgba(0,191,165,.25);}
+.badge-pdf{background:#FFEAEA;color:#C0392B;}
+.badge-soon{background:var(--surface-3);color:var(--text-3);}
+[data-theme="dark"] .badge-pdf{background:rgba(220,50,50,.12);color:#F87171;}
+.card-title{font-family:var(--display);font-size:0.875rem;font-weight:700;color:var(--text);line-height:1.3;letter-spacing:-.01em;}
+.card-btn{margin-top:0.55rem;display:flex;align-items:center;justify-content:space-between;width:100%;padding:0 0.85rem;height:34px;border-radius:8px;background:transparent;color:var(--teal);font-size:0.76rem;font-weight:600;font-family:var(--sans);border:1.5px solid rgba(0,191,165,.3);cursor:pointer;transition:all .2s;letter-spacing:.01em;}
+.card-btn:hover{background:var(--teal);color:#fff;border-color:var(--teal);}
+.card-btn.soon{color:var(--text-3);border-color:var(--border);cursor:default;}
+.card-btn.soon:hover{background:transparent;color:var(--text-3);border-color:var(--border);}
+.card-btn-arrow{width:19px;height:19px;border-radius:5px;background:rgba(0,191,165,.12);display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;}
+.card-btn-arrow svg{width:9px;height:9px;}
+.card-btn:hover .card-btn-arrow{background:rgba(255,255,255,.2);}
+.card-btn.soon .card-btn-arrow{background:var(--surface-3);}
+@media(max-width:500px){.paket-grid{grid-template-columns:repeat(2,1fr);gap:0.65rem;}}
 
 /* ── PLACEHOLDER VIEWS ───────────────────────────────── */
 .placeholder-view{background:var(--surface-2);border:1px dashed var(--border);border-radius:var(--radius-lg);padding:4rem 2rem;text-align:center;}
