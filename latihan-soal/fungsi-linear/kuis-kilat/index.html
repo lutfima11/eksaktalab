@@ -1198,7 +1198,11 @@ function pickMMA(qi, oi){
   const idx = S.mmaTemp[qi].indexOf(oi);
   if(idx === -1) S.mmaTemp[qi].push(oi);
   else S.mmaTemp[qi].splice(idx, 1);
-  renderQ(qi);
+  const isSel=S.mmaTemp[qi].includes(oi);
+  const mbtn=document.querySelector(`[onclick="pickMMA(${qi},${oi})"]`);
+  if(mbtn)mbtn.classList.toggle('sel',isSel);
+  const mc=document.getElementById(`mma-confirm-${qi}`);
+  if(mc)mc.disabled=S.mmaTemp[qi].length===0;
 }
 function confirmMMA(qi){
   if(S.done) return;
