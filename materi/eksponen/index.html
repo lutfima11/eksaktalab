@@ -104,7 +104,7 @@ window.MathJax = {
       <div class="materi-tags">
         <span class="tag">Bilangan</span>
         <span class="tag">7 Sub-bab</span>
-        <span class="tag">32 Contoh Soal</span>
+        <span class="tag">34 Contoh Soal</span>
       </div>
     </div>
   </div>
@@ -267,6 +267,8 @@ window.MathJax = {
       <li><a href="#bagian-g" data-num="G">Tabel Ringkasan</a></li>
     </ul>
   </div>
+
+  </section>
 
   <!-- ═══ A. PANGKAT BULAT ═══════════════════ -->
   <section class="section" id="bagian-a">
@@ -539,21 +541,81 @@ window.MathJax = {
           $$\begin{align*}(\sqrt{50} - \sqrt{2})(\sqrt{27} + \sqrt{12}) &= (5\sqrt{2} - \sqrt{2})(3\sqrt{3} + 2\sqrt{3}) \\ &= 4\sqrt{2} \times 5\sqrt{3} \\ &= 20\sqrt{6}.\end{align*}$$</li>
       </ol>
     </div>
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 10</div>
-      <p style="margin:0;font-size:.9rem;">Tentukanlah bentuk sederhana dari $\sqrt[4]{49-20\sqrt{6}}$.</p>
+    <h3 class="subsection-title">2. Akar dari Bentuk $a + b \pm 2\sqrt{ab}$</h3>
+    <p>Perhatikan ekspansi kuadrat $(\sqrt{a} + \sqrt{b})^2 = a + 2\sqrt{ab} + b$. Dengan membalik operasi tersebut, kita dapat menyederhanakan ekspresi akar yang memuat suku irasional di dalamnya menjadi penjumlahan atau selisih dua akar sederhana.</p>
+
+    <p>Untuk $a, b \geq 0$, berlaku:</p>
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Penyederhanaan Akar Ganda</div>
+      <div class="math-block">$$\sqrt{a + b + 2\sqrt{ab}} = \sqrt{a} + \sqrt{b}$$</div>
+      <div class="math-block">$$\sqrt{a + b - 2\sqrt{ab}} = \left|\sqrt{a} - \sqrt{b}\right|$$</div>
     </div>
-    <div class="penyelesaian">
-      Cari $p, q &gt; 0$ sedemikian sehingga: 
-      $$\begin{align*}49 - 20\sqrt{6} &= (\sqrt{p} - \sqrt{q})^2 \\ &= p + q - 2\sqrt{pq} \end{align*}$$ 
-      Dari sini: $p + q = 49$ dan $pq = 600 = 25 \times 24$. Pilih $p = 25$, $q = 24$:
-      $$\sqrt{49-20\sqrt{6}} = \sqrt{25} - \sqrt{24} = 5 - 2\sqrt{6}.$$
-      Dengan demikian:
-      $$\sqrt[4]{49-20\sqrt{6}} = \sqrt{5-2\sqrt{6}} = \sqrt{(\sqrt{3}-\sqrt{2})^2} = \sqrt{3} - \sqrt{2}.$$
+    <p>Khususnya, jika $a \geq b \geq 0$, maka $\left|\sqrt{a} - \sqrt{b}\right| = \sqrt{a} - \sqrt{b}$.</p>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Cara Menentukan $a$ dan $b$</div>
+      <p style="margin:0;font-size:.9rem;">Untuk menyederhanakan $\sqrt{c + d\sqrt{e}}$, cari $a, b \geq 0$ yang memenuhi sistem berikut (dengan menyamakan $\sqrt{c + d\sqrt{e}} = \sqrt{a + b + 2\sqrt{ab}}$):</p>
+      $$\begin{cases} a + b = c \\ 4ab = d^2 e \end{cases}$$
+      <p style="margin:.3rem 0 0;font-size:.9rem;">Nilai $a$ dan $b$ adalah akar-akar persamaan kuadrat $t^2 - ct + \dfrac{d^2 e}{4} = 0$. Setelah $a$ dan $b$ ditemukan, substitusikan langsung ke rumus di atas.</p>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 11</div>
+      <div class="box-label">📘 Contoh 10 <span style="font-size:.75rem;font-weight:400;opacity:.65;">— Mudah</span></div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar berikut.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\sqrt{7 + 4\sqrt{3}}$</li>
+        <li>$\sqrt{9 - 4\sqrt{5}}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>Cari $a, b \geq 0$ dengan $a + b = 7$ dan $ab = 12$ (dari $2\sqrt{ab} = 4\sqrt{3}$). Selesaikan $t^2 - 7t + 12 = 0 \Rightarrow (t-3)(t-4) = 0$, diperoleh $a = 4$, $b = 3$.
+          $$\begin{align*} \sqrt{7 + 4\sqrt{3}} &= \sqrt{4 + 3 + 2\sqrt{12}} \\ &= \sqrt{(\sqrt{4} + \sqrt{3})^2} \\ &= \sqrt{4} + \sqrt{3} \\ &= 2 + \sqrt{3}. \end{align*}$$</li>
+        <li>Cari $a, b \geq 0$ dengan $a + b = 9$ dan $ab = 20$ (dari $2\sqrt{ab} = 4\sqrt{5}$). Selesaikan $t^2 - 9t + 20 = 0 \Rightarrow (t-4)(t-5) = 0$, diperoleh $a = 5$, $b = 4$.
+          $$\begin{align*} \sqrt{9 - 4\sqrt{5}} &= \sqrt{5 + 4 - 2\sqrt{20}} \\ &= \sqrt{(\sqrt{5} - \sqrt{4})^2} \\ &= \left|\sqrt{5} - \sqrt{4}\right| \\ &= \sqrt{5} - 2. \end{align*}$$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11 <span style="font-size:.75rem;font-weight:400;opacity:.65;">— Sedang</span></div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar berikut.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\sqrt{11 + 6\sqrt{2}}$</li>
+        <li>$\sqrt{5 - \sqrt{24}}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li>Cari $a, b \geq 0$ dengan $a + b = 11$ dan $ab = 18$ (dari $2\sqrt{ab} = 6\sqrt{2}$, sehingga $\sqrt{ab} = 3\sqrt{2}$). Selesaikan $t^2 - 11t + 18 = 0 \Rightarrow (t-2)(t-9) = 0$, diperoleh $a = 9$, $b = 2$.
+          $$\begin{align*} \sqrt{11 + 6\sqrt{2}} &= \sqrt{9 + 2 + 2\sqrt{18}} \\ &= \sqrt{(\sqrt{9} + \sqrt{2})^2} \\ &= \sqrt{9} + \sqrt{2} \\ &= 3 + \sqrt{2}. \end{align*}$$</li>
+        <li>Sederhanakan dahulu: $\sqrt{24} = 2\sqrt{6}$. Cari $a, b \geq 0$ dengan $a + b = 5$ dan $ab = 6$. Selesaikan $t^2 - 5t + 6 = 0 \Rightarrow (t-2)(t-3) = 0$, diperoleh $a = 3$, $b = 2$.
+          $$\begin{align*} \sqrt{5 - \sqrt{24}} &= \sqrt{5 - 2\sqrt{6}} \\ &= \sqrt{(\sqrt{3} - \sqrt{2})^2} \\ &= \left|\sqrt{3} - \sqrt{2}\right| \\ &= \sqrt{3} - \sqrt{2}. \end{align*}$$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12 <span style="font-size:.75rem;font-weight:400;opacity:.65;">— Sulit</span></div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar berikut.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\sqrt[4]{49 - 20\sqrt{6}}$</li>
+        <li>$\sqrt{6 + \sqrt{20}} + \sqrt{6 - \sqrt{20}}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin-top:.4rem;">
+        <li><strong>Langkah 1 — sederhanakan $\sqrt{49 - 20\sqrt{6}}$.</strong> Cari $a, b$ dengan $a + b = 49$ dan $ab = 600$. Selesaikan $t^2 - 49t + 600 = 0$; diskriminan $= 49^2 - 4(600) = 1$, sehingga $t = \frac{49 \pm 1}{2}$, diperoleh $a = 25$, $b = 24$.
+          $$\begin{align*} \sqrt{49 - 20\sqrt{6}} &= \sqrt{25 + 24 - 2\sqrt{600}} \\ &= \sqrt{(\sqrt{25} - \sqrt{24})^2} \\ &= \sqrt{25} - \sqrt{24} \\ &= 5 - 2\sqrt{6}. \end{align*}$$
+          <strong>Langkah 2 — sederhanakan $\sqrt{5 - 2\sqrt{6}}$.</strong> Cari $a, b$ dengan $a + b = 5$ dan $ab = 6$, diperoleh $a = 3$, $b = 2$.
+          $$\begin{align*} \sqrt[4]{49 - 20\sqrt{6}} &= \sqrt{5 - 2\sqrt{6}} \\ &= \sqrt{(\sqrt{3} - \sqrt{2})^2} \\ &= \left|\sqrt{3} - \sqrt{2}\right| \\ &= \sqrt{3} - \sqrt{2}. \end{align*}$$</li>
+        <li>Sederhanakan dahulu: $\sqrt{20} = 2\sqrt{5}$. Cari $a, b$ dengan $a + b = 6$ dan $ab = 5$, diperoleh $a = 5$, $b = 1$.
+          $$\begin{align*} \sqrt{6 + \sqrt{20}} &= \sqrt{6 + 2\sqrt{5}} = \sqrt{(\sqrt{5}+1)^2} = \sqrt{5} + 1 \\ \sqrt{6 - \sqrt{20}} &= \sqrt{6 - 2\sqrt{5}} = \sqrt{(\sqrt{5}-1)^2} = \sqrt{5} - 1 \end{align*}$$
+          Dengan demikian:
+          $$\begin{align*} \sqrt{6 + \sqrt{20}} + \sqrt{6 - \sqrt{20}} &= (\sqrt{5} + 1) + (\sqrt{5} - 1) \\ &= 2\sqrt{5}. \end{align*}$$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar bertingkat berikut menggunakan sifat $\sqrt[p]{\sqrt[q]{a}} = \sqrt[pq]{a}$.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\sqrt{\sqrt[3]{64}}$</li>
@@ -570,21 +632,24 @@ window.MathJax = {
       </ol>
     </div>
 
-    <h3 class="subsection-title">2. Merasionalkan Penyebut</h3>
+    <h3 class="subsection-title">3. Merasionalkan Penyebut</h3>
     <p>Merasionalkan penyebut adalah proses mengubah pecahan yang penyebutnya memuat bentuk akar menjadi pecahan yang penyebutnya berupa bilangan rasional.</p>
       <p><strong>Kasus 1: Penyebut berbentuk $\sqrt{b}$</strong></p>
-      <div class="box box-definisi">
-      <div class="math-block">$$\frac{a}{\sqrt{b}} = \frac{a}{\sqrt{b}} \times \frac{\sqrt{b}}{\sqrt{b}} = \frac{a\sqrt{b}}{b}, \quad b > 0.$$</div>
+      <div class="box box-rumus">
+        <div class="box-label">• Rumus Kasus 1</div>
+        <div class="math-block">$$\frac{a}{\sqrt{b}} = \frac{a}{\sqrt{b}} \times \frac{\sqrt{b}}{\sqrt{b}} = \frac{a\sqrt{b}}{b}, \quad b > 0.$$</div>
       </div>
       <p><strong>Kasus 2: Penyebut berbentuk $\sqrt{a} \pm \sqrt{b}$</strong> (menggunakan konjugat/sekawan)</p>
-      <div class="box box-definisi">
-      <div class="math-block">$$\frac{p}{\sqrt{a}+\sqrt{b}} = \frac{p(\sqrt{a}-\sqrt{b})}{a-b}, \qquad \frac{p}{\sqrt{a}-\sqrt{b}} = \frac{p(\sqrt{a}+\sqrt{b})}{a-b}.$$</div>
-      <p>Pasangan $(\sqrt{a}+\sqrt{b})$ dan $(\sqrt{a}-\sqrt{b})$ saling disebut <strong>bentuk akar konjugat(sekawan)</strong>.</p>
+      <div class="box box-rumus">
+        <div class="box-label">• Rumus Kasus 2</div>
+        <div class="math-block">$$\frac{p}{\sqrt{a}+\sqrt{b}} = \frac{p(\sqrt{a}-\sqrt{b})}{a-b}, \qquad \frac{p}{\sqrt{a}-\sqrt{b}} = \frac{p(\sqrt{a}+\sqrt{b})}{a-b}.$$</div>
       </div>
-      <p style="margin-top:1rem;"><strong>Kasus 3: Penyebut berbentuk $c \pm \sqrt{b}$</strong></p>
-      <div class="box box-definisi">
-      <div class="math-block">$$\frac{p}{c+\sqrt{b}} = \frac{p(c-\sqrt{b})}{c^2-b}, \qquad \frac{p}{c-\sqrt{b}} = \frac{p(c+\sqrt{b})}{c^2-b}.$$</div>
-    </div>
+      <p>Pasangan $(\sqrt{a}+\sqrt{b})$ dan $(\sqrt{a}-\sqrt{b})$ saling disebut <strong>bentuk akar konjugat (sekawan)</strong>.</p>
+      <p><strong>Kasus 3: Penyebut berbentuk $c \pm \sqrt{b}$</strong></p>
+      <div class="box box-rumus">
+        <div class="box-label">• Rumus Kasus 3</div>
+        <div class="math-block">$$\frac{p}{c+\sqrt{b}} = \frac{p(c-\sqrt{b})}{c^2-b}, \qquad \frac{p}{c-\sqrt{b}} = \frac{p(c+\sqrt{b})}{c^2-b}.$$</div>
+      </div>
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Catatan</div>
@@ -594,7 +659,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 12</div>
+      <div class="box-label">📘 Contoh 14</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\dfrac{3}{\sqrt{6}}$</li>
@@ -612,7 +677,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 11</div>
+      <div class="box-label">📘 Contoh 15</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\dfrac{2}{\sqrt{6}-\sqrt{2}}$</li>
@@ -654,8 +719,8 @@ window.MathJax = {
     <div class="box box-rumus">
       <div class="box-label">• Definisi Pangkat Pecahan</div>
       <div class="math-block">$$a^{\frac{m}{n}} = \sqrt[n]{a^m} = \left(\sqrt[n]{a}\right)^m$$</div>
-      <p>Khususnya, untuk $m = 1$: $\;a^{\frac{1}{n}} = \sqrt[n]{a}$.</p>
     </div>
+    <p>Khususnya, untuk $m = 1$: $a^{\frac{1}{n}} = \sqrt[n]{a}$.</p>
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Perluasan ke $a &lt; 0$</div>
@@ -664,8 +729,8 @@ window.MathJax = {
         Sebaliknya, jika $n$ <strong>genap</strong> dan $a &lt; 0$, maka $a^{\frac{m}{n}}$ <strong>tidak terdefinisi</strong> dalam $\mathbb{R}$.</p>
     </div>
 
-    <div class="box box-rumus">
-      <div class="box-label">• Sifat-Sifat Pangkat Pecahan</div>
+    <div class="box box-definisi">
+      <div class="box-label">Sifat-Sifat Pangkat Pecahan</div>
       <p>Untuk $a, b &gt; 0$, $m, n \in \mathbb{Z}$, dan $p, q \in \mathbb{Z}^+$, berlaku:</p>
       <ol>
         <li>$a^{\frac{m}{p}} \cdot a^{\frac{n}{p}} = a^{\frac{m+n}{p}}$</li>
@@ -678,7 +743,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 14</div>
+      <div class="box-label">📘 Contoh 16</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Ubahlah setiap bentuk pangkat berikut ke dalam bentuk akar, kemudian sederhanakanlah.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$32^{\frac{7}{10}}$</li>
@@ -690,16 +755,16 @@ window.MathJax = {
       
       <ol class="alpha-list" style="margin-top:.4rem;">
         <li>Karena $32 = 2^5$, diperoleh:
-          $$32^{\frac{7}{10}} = (2^5)^{\frac{7}{10}} = 2^{\frac{7}{2}} = \sqrt{2^7} = \sqrt{2^6 \cdot 2} = 2^3\sqrt{2} = 8\sqrt{2}.$$</li>
+          $$\begin{align*} 32^{\frac{7}{10}} &= (2^5)^{\frac{7}{10}} \\ &= 2^{\frac{7}{2}} \\ &= \sqrt{2^6 \cdot 2} \\ &= 2^3\sqrt{2} \\ &= 8\sqrt{2}. \end{align*}$$</li>
         <li>Karena $81 = 3^4$, diperoleh:
-          $$81^{\frac{5}{8}} = (3^4)^{\frac{5}{8}} = 3^{\frac{5}{2}} = \sqrt{3^5} = \sqrt{3^4 \cdot 3} = 3^2\sqrt{3} = 9\sqrt{3}.$$</li>
+          $$\begin{align*} 81^{\frac{5}{8}} &= (3^4)^{\frac{5}{8}} \\ &= 3^{\frac{5}{2}} \\ &= \sqrt{3^4 \cdot 3} \\ &= 3^2\sqrt{3} \\ &= 9\sqrt{3}. \end{align*}$$</li>
         <li>Karena $25 = 5^2$, diperoleh:
-          $$25^{\frac{3}{4}} = (5^2)^{\frac{3}{4}} = 5^{\frac{3}{2}} = \sqrt{5^3} = \sqrt{25 \cdot 5} = 5\sqrt{5}.$$</li>
+          $$\begin{align*} 25^{\frac{3}{4}} &= (5^2)^{\frac{3}{4}} \\ &= 5^{\frac{3}{2}} \\ &= \sqrt{5^3} \\ &= \sqrt{25 \cdot 5} \\ &= 5\sqrt{5}. \end{align*}$$</li>
       </ol>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 15</div>
+      <div class="box-label">📘 Contoh 17</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Ubahlah setiap bentuk akar berikut ke dalam notasi pangkat, kemudian sederhanakanlah.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$16\sqrt{32}$</li>
@@ -719,7 +784,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 16</div>
+      <div class="box-label">📘 Contoh 18</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk berikut.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\dfrac{(2^{\frac{5}{4}})^2 \cdot 16^{\frac{3}{8}}}{8^{\frac{7}{6}}}$</li>
@@ -730,9 +795,9 @@ window.MathJax = {
       
       <ol class="alpha-list" style="margin-top:.4rem;">
         <li>Nyatakan semua basis sebagai perpangkatan dari 2: $16 = 2^4$, $8 = 2^3$.
-          $$\frac{(2^{\frac{5}{4}})^2 \cdot (2^4)^{\frac{3}{8}}}{(2^3)^{\frac{7}{6}}} = \frac{2^{\frac{5}{2}} \cdot 2^{\frac{3}{2}}}{2^{\frac{7}{2}}} = \frac{2^{\frac{8}{2}}}{2^{\frac{7}{2}}} = 2^{\frac{1}{2}} = \sqrt{2}.$$</li>
+          $$\begin{align*} \frac{(2^{\frac{5}{4}})^2 \cdot (2^4)^{\frac{3}{8}}}{(2^3)^{\frac{7}{6}}} &= \frac{2^{\frac{5}{2}} \cdot 2^{\frac{3}{2}}}{2^{\frac{7}{2}}} \\ &= \frac{2^{\frac{8}{2}}}{2^{\frac{7}{2}}} \\ &= 2^{\frac{1}{2}} \\ &= \sqrt{2}. \end{align*}$$</li>
         <li>Nyatakan semua basis sebagai perpangkatan dari 3: $27 = 3^3$, $81 = 3^4$.
-          $$\begin{aligned}\left[\frac{3^{\frac{2}{3}} \cdot (3^{\frac{3}{2}})^{\frac{4}{3}}}{(3^{\frac{4}{3}})^5}\right]^{-\frac{1}{2}} &= \left[\frac{3^{\frac{2}{3}} \cdot 3^{2}}{3^{\frac{20}{3}}}\right]^{-\frac{1}{2}} = \left[3^{\frac{2+6-20}{3}}\right]^{-\frac{1}{2}} = \left[3^{-4}\right]^{-\frac{1}{2}} = 3^2 = 9.\end{aligned}$$</li>
+          $$\begin{align*} \left[\frac{3^{\frac{2}{3}} \cdot (3^{\frac{3}{2}})^{\frac{4}{3}}}{(3^{\frac{4}{3}})^5}\right]^{-\frac{1}{2}} &= \left[\frac{3^{\frac{2}{3}} \cdot 3^{2}}{3^{\frac{20}{3}}}\right]^{-\frac{1}{2}} \\ &= \left[3^{\frac{2+6-20}{3}}\right]^{-\frac{1}{2}} \\ &= \left[3^{-4}\right]^{-\frac{1}{2}} \\ &= 3^2 \\ &= 9. \end{align*}$$</li>
       </ol>
     </div>
 
@@ -755,7 +820,7 @@ window.MathJax = {
     <p><strong>Persamaan eksponen</strong> adalah persamaan yang memuat variabel pada eksponen (pangkat), berbentuk $a^{f(x)} = b$ atau $a^{f(x)} = a^{g(x)}$. Berikut disajikan lima tipe beserta cara penyelesaiannya.</p>
 
     <div class="box box-definisi">
-      <div class="box-label">• Lima Tipe Persamaan Eksponen</div>
+      <div class="box-label">Lima Tipe Persamaan Eksponen</div>
       <p><strong>Tipe 1. Basis sama, pangkat mengandung variabel:</strong>
         $$a^{f(x)} = a^p \;\Longrightarrow\; f(x) = p, \quad (a > 0,\, a \neq 1).$$</p>
       <p><strong>Tipe 2. Basis sama, kedua pangkat mengandung variabel:</strong>
@@ -775,47 +840,47 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 17</div>
+      <div class="box-label">📘 Contoh 19</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 1)</strong> Tentukanlah nilai $x$ yang memenuhi $25 \cdot 5^{3x+2} = 1$.</p>
     </div>
     <div class="penyelesaian">
        Nyatakan semua faktor dalam basis 5.
-      $$5^2 \cdot 5^{3x+2} = 5^0 \;\Rightarrow\; 5^{3x+4} = 5^0 \;\Rightarrow\; 3x + 4 = 0 \;\Rightarrow\; x = -\frac{4}{3}.$$
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 18</div>
-      <p style="margin:0;font-size:.9rem;"><strong>(Tipe 2)</strong> Tentukanlah nilai $x$ yang memenuhi $\sqrt{27^{2x-5}} = 3\bigl(9^{6x-8}\bigr)$.</p>
-    </div>
-    <div class="penyelesaian">
-       Nyatakan semua faktor dalam basis 3: $27 = 3^3$ dan $9 = 3^2$.
-      $$\left[(3^3)^{2x-5}\right]^{\frac{1}{2}} = 3^1 \cdot (3^2)^{6x-8} \;\Rightarrow\; 3^{\frac{6x-15}{2}} = 3^{12x-15}.$$
-      Samakan eksponen:
-      $$\frac{6x-15}{2} = 12x - 15 \;\Rightarrow\; 6x - 15 = 24x - 30 \;\Rightarrow\; -18x = -15 \;\Rightarrow\; x = \frac{5}{6}.$$
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 19</div>
-      <p style="margin:0;font-size:.9rem;"><strong>(Tipe 3)</strong> Tentukanlah himpunan penyelesaian dari $25 \cdot 8^x = 4 \cdot 125^x$.</p>
-    </div>
-    <div class="penyelesaian">
-       Pisahkan faktor-faktor dengan basis yang sama:
-      $$\frac{(2^3)^x}{2^2} = \frac{(5^3)^x}{5^2} \;\Rightarrow\; 2^{3x-2} = 5^{3x-2}.$$
-      Karena $2 \neq 5$, maka $3x - 2 = 0 \;\Rightarrow\; x = \dfrac{2}{3}.$
+      $$\begin{align*} 5^2 \cdot 5^{3x+2} &= 5^0 \\ 5^{3x+4} &= 5^0 \\ 3x + 4 &= 0 \\ x &= -\frac{4}{3}. \end{align*}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 20</div>
-      <p style="margin:0;font-size:.9rem;"><strong>(Tipe 3 — Pangkat Kuadrat)</strong> Tentukanlah himpunan penyelesaian dari $6^{x^2-3} = 10^{x^2-3}$.</p>
+      <p style="margin:0;font-size:.9rem;"><strong>(Tipe 2)</strong> Tentukanlah nilai $x$ yang memenuhi $\sqrt{27^{2x-5}} = 3\bigl(9^{6x-8}\bigr)$.</p>
     </div>
     <div class="penyelesaian">
-       Basis berbeda ($6 \neq 10$), pangkat sama. Berdasarkan Tipe 3:
-      $$6^{x^2-3} = 10^{x^2-3} \;\Longrightarrow\; x^2 - 3 = 0 \;\Longrightarrow\; x = \pm\sqrt{3}.$$
-      Verifikasi: $6^0 = 1 = 10^0$. ✓ &nbsp; Jadi $H = \{-\sqrt{3},\, \sqrt{3}\}$.
+       Nyatakan semua faktor dalam basis 3: $27 = 3^3$ dan $9 = 3^2$.
+      $$\begin{align*} \left[(3^3)^{2x-5}\right]^{\frac{1}{2}} &= 3^1 \cdot (3^2)^{6x-8} \\ 3^{\frac{6x-15}{2}} &= 3^{12x-15}. \end{align*}$$
+      Samakan eksponen:
+      $$\begin{align*} \frac{6x-15}{2} &= 12x - 15 \\ 6x - 15 &= 24x - 30 \\ -18x &= -15 \\ x &= \frac{5}{6}. \end{align*}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;"><strong>(Tipe 3)</strong> Tentukanlah himpunan penyelesaian dari $25 \cdot 8^x = 4 \cdot 125^x$.</p>
+    </div>
+    <div class="penyelesaian">
+       Pisahkan faktor-faktor dengan basis yang sama:
+      $$\begin{align*} \frac{(2^3)^x}{2^2} &= \frac{(5^3)^x}{5^2} \\ 2^{3x-2} &= 5^{3x-2}. \end{align*}$$
+      Karena $2 \neq 5$, maka $3x - 2 = 0 \;\Rightarrow\; x = \dfrac{2}{3}.$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;"><strong>(Tipe 3 — Pangkat Kuadrat)</strong> Tentukanlah himpunan penyelesaian dari $6^{x^2-3} = 10^{x^2-3}$.</p>
+    </div>
+    <div class="penyelesaian">
+       Basis berbeda ($6 \neq 10$), pangkat sama. Berdasarkan Tipe 3:
+      $$\begin{align*} 6^{x^2-3} &= 10^{x^2-3} \\ x^2 - 3 &= 0 \\ x &= \pm\sqrt{3}. \end{align*}$$
+      Verifikasi: $6^0 = 1 = 10^0$. ✓ &nbsp; Jadi $H = \{-\sqrt{3},\, \sqrt{3}\}$.
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 23</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 4)</strong> Tentukanlah himpunan penyelesaian dari $(2x-5)^{4x+3} = (2x-5)^{2x-7}$.</p>
     </div>
     <div class="penyelesaian">
@@ -830,14 +895,14 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 22</div>
+      <div class="box-label">📘 Contoh 24</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 5)</strong> Tentukanlah himpunan penyelesaian dari $2^{2x} - 3 \cdot 2^{x+2} + 32 = 0$.</p>
     </div>
     <div class="penyelesaian">
        Uraikan suku tengah: $3 \cdot 2^{x+2} = 12 \cdot 2^x$.
       $$(2^x)^2 - 12 \cdot 2^x + 32 = 0.$$
       Misalkan $p = 2^x$ (dengan $p &gt; 0$):
-      $$p^2 - 12p + 32 = 0 \;\Rightarrow\; (p-8)(p-4) = 0 \;\Rightarrow\; p = 8 \text{ atau } p = 4.$$
+      $$\begin{align*} p^2 - 12p + 32 &= 0 \\ (p-8)(p-4) &= 0 \\ p = 8 &\text{ atau } p = 4. \end{align*}$$
       <ul>
         <li>$p = 8 \;\Rightarrow\; 2^x = 2^3 \;\Rightarrow\; x = 3.$</li>
         <li>$p = 4 \;\Rightarrow\; 2^x = 2^2 \;\Rightarrow\; x = 2.$</li>
@@ -864,8 +929,8 @@ window.MathJax = {
 
     <p><strong>Pertidaksamaan eksponen</strong> adalah pertidaksamaan yang memuat bentuk $a^{f(x)}$ dengan variabel pada eksponen. Penyelesaiannya bergantung pada sifat monoton fungsi eksponen:</p>
 
-    <div class="box box-rumus">
-      <div class="box-label">• Sifat Monoton Fungsi Eksponen ($a &gt; 0$, $a \neq 1$)</div>
+    <div class="box box-definisi">
+      <div class="box-label">Sifat Monoton Fungsi Eksponen ($a &gt; 0$, $a \neq 1$)</div>
       <p><strong>(1) Jika $a &gt; 1$</strong> (monoton naik): tanda pertidaksamaan <strong>tetap</strong></p>
       <div class="math-block">$$a^{f(x)} \geq a^{g(x)} \;\Longleftrightarrow\; f(x) \geq g(x)$$</div>
       <p><strong>(2) Jika $0 &lt; a &lt; 1$</strong> (monoton turun): tanda pertidaksamaan <strong>berbalik</strong></p>
@@ -878,14 +943,14 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 23</div>
+      <div class="box-label">📘 Contoh 25</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $3^{3x-21} &lt; 27^{2x+5}$.</p>
     </div>
     <div class="penyelesaian">
        Nyatakan basis kanan: $27 = 3^3$.
-      $$3^{3x-21} < (3^3)^{2x+5} = 3^{6x+15}.$$
+      $$\begin{align*} 3^{3x-21} &< (3^3)^{2x+5} \\ &= 3^{6x+15}. \end{align*}$$
       Karena $a = 3 &gt; 1$ (monoton naik), tanda dipertahankan:
-      $$3x - 21 < 6x + 15 \;\Rightarrow\; -3x < 36 \;\Rightarrow\; x > -12.$$
+      $$\begin{align*} 3x - 21 &< 6x + 15 \\ -3x &< 36 \\ x &> -12. \end{align*}$$
       Himpunan penyelesaian: $\{x \in \mathbb{R} \mid x &gt; -12\}$ atau $(-12, +\infty)$.
 
       <div class="grafik-wrap" style="margin-top:.75rem;">
@@ -909,14 +974,14 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 24</div>
+      <div class="box-label">📘 Contoh 26</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $\left(\dfrac{2}{5}\right)^{x^2-5x-20} \geq \left(\dfrac{5}{2}\right)^{x^2+3x-20}$.</p>
     </div>
     <div class="penyelesaian">
        Perhatikan bahwa $\dfrac{5}{2} = \left(\dfrac{2}{5}\right)^{-1}$, sehingga:
       $$\left(\frac{2}{5}\right)^{x^2-5x-20} \;\geq\; \left(\frac{2}{5}\right)^{-(x^2+3x-20)}.$$
       Karena basis $\dfrac{2}{5}$ dengan $0 &lt; \dfrac{2}{5} &lt; 1$ (monoton turun), tanda berbalik:
-      $$x^2 - 5x - 20 \leq -(x^2 + 3x - 20) \;\Rightarrow\; 2x^2 - 2x - 40 \leq 0 \;\Rightarrow\; (x-5)(x+4) \leq 0.$$
+      $$\begin{align*} x^2 - 5x - 20 &\leq -(x^2 + 3x - 20) \\ 2x^2 - 2x - 40 &\leq 0 \\ (x-5)(x+4) &\leq 0. \end{align*}$$
       Dari analisis tanda, diperoleh $-4 \leq x \leq 5$, sehingga himpunan penyelesaian adalah $[-4,\, 5]$.
 
       <div class="grafik-wrap" style="margin-top:.75rem;">
@@ -942,14 +1007,14 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 25</div>
+      <div class="box-label">📘 Contoh 27</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $\dfrac{3^{4x-2}}{9^{3x+1}} &gt; \left(\dfrac{1}{3}\right)^{x-14}$.</p>
     </div>
     <div class="penyelesaian">
        Nyatakan semua suku dalam basis 3: $9 = 3^2$ dan $\dfrac{1}{3} = 3^{-1}$.
-      $$\frac{3^{4x-2}}{3^{6x+2}} > 3^{-(x-14)} \;\Rightarrow\; 3^{-2x-4} > 3^{-x+14}.$$
+      $$\begin{align*} \frac{3^{4x-2}}{3^{6x+2}} &> 3^{-(x-14)} \\ 3^{-2x-4} &> 3^{-x+14}. \end{align*}$$
       Karena $a = 3 &gt; 1$ (monoton naik), tanda dipertahankan:
-      $$-2x - 4 > -x + 14 \;\Rightarrow\; -x > 18 \;\Rightarrow\; x < -18.$$
+      $$\begin{align*} -2x - 4 &> -x + 14 \\ -x &> 18 \\ x &< -18. \end{align*}$$
       Himpunan penyelesaian: $\{x \in \mathbb{R} \mid x &lt; -18\}$ atau $(-\infty,\, -18)$.
 
       <div class="grafik-wrap" style="margin-top:.75rem;">
@@ -973,14 +1038,14 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 26</div>
+      <div class="box-label">📘 Contoh 28</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $4^x - 5 \cdot 2^x + 4 \leq 0$.</p>
     </div>
     <div class="penyelesaian">
        Uraikan: $4^x = (2^x)^2$. Misalkan $p = 2^x$ (dengan $p &gt; 0$):
-      $$p^2 - 5p + 4 \leq 0 \;\Rightarrow\; (p-1)(p-4) \leq 0 \;\Rightarrow\; 1 \leq p \leq 4.$$
+      $$\begin{align*} p^2 - 5p + 4 &\leq 0 \\ (p-1)(p-4) &\leq 0 \\ 1 \leq p &\leq 4. \end{align*}$$
       Kembalikan ke variabel $x$ melalui $p = 2^x$:
-      $$1 \leq 2^x \leq 4 \;\Rightarrow\; 2^0 \leq 2^x \leq 2^2 \;\Rightarrow\; 0 \leq x \leq 2.$$
+      $$\begin{align*} 1 \leq 2^x &\leq 4 \\ 2^0 \leq 2^x &\leq 2^2 \\ 0 \leq x &\leq 2. \end{align*}$$
       Jadi himpunan penyelesaian adalah $[0,\, 2]$.
 
       <div class="grafik-wrap" style="margin-top:.75rem;">
@@ -1097,7 +1162,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-definisi">
-      <div class="box-label">• Sifat-Sifat Grafik $f(x) = a^x$</div>
+      <div class="box-label">Sifat-Sifat Grafik $f(x) = a^x$</div>
       <ol>
         <li><strong>Domain:</strong> $\mathbb{R}$; &nbsp;<strong>Range:</strong> $(0,\,+\infty)$.</li>
         <li>Grafik selalu melalui titik $(0,\,1)$ karena $a^0 = 1$ untuk semua $a &gt; 0$.</li>
@@ -1132,7 +1197,7 @@ window.MathJax = {
     </ol>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 27</div>
+      <div class="box-label">📘 Contoh 29</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik fungsi $f(x) = 2^x$ pada interval $-3 \leq x \leq 3$. Tentukan domain, range, asimtot, dan sifat kemonotonannya.</p>
     </div>
     <div class="penyelesaian">
@@ -1220,7 +1285,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 28</div>
+      <div class="box-label">📘 Contoh 30</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik $f(x) = \left(\dfrac{1}{3}\right)^x$ pada interval $-3 \leq x \leq 3$. Tentukan sifat-sifatnya dan bandingkan dengan $g(x) = 3^x$.</p>
     </div>
     <div class="penyelesaian">
@@ -1317,7 +1382,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 29</div>
+      <div class="box-label">📘 Contoh 31</div>
       <p style="margin:0;font-size:.9rem;">Sebuah fungsi eksponen $y = k \cdot a^x$ diketahui grafiknya melalui titik $(0,\,5)$ dan $(2,\,20)$. Tentukanlah rumus fungsi tersebut.</p>
     </div>
     <div class="penyelesaian">
@@ -1328,7 +1393,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 30</div>
+      <div class="box-label">📘 Contoh 32</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Diketahui $f(x) = 2^x$. Untuk setiap fungsi berikut, tentukanlah jenis transformasi yang terjadi terhadap grafik $f$, lalu identifikasi titik potong sumbu-$Y$ dan asimtot barunya.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$g(x) = 2^{x-2} + 1$</li>
@@ -1352,8 +1417,8 @@ window.MathJax = {
     <h3 class="subsection-title">4. Penerapan Fungsi Eksponen</h3>
     <p>Fungsi eksponen banyak digunakan untuk memodelkan fenomena dunia nyata yang bersifat <strong>pertumbuhan</strong> atau <strong>peluruhan</strong> secara proporsional.</p>
 
-    <div class="box box-rumus">
-      <div class="box-label">• Model Pertumbuhan dan Peluruhan</div>
+    <div class="box box-definisi">
+      <div class="box-label">Model Pertumbuhan dan Peluruhan</div>
       <p><strong>Model Pertumbuhan:</strong></p>
       <div class="math-block">$$N(t) = N_0 \cdot a^t, \qquad a > 1$$</div>
       <p><strong>Model Peluruhan:</strong></p>
@@ -1362,7 +1427,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 31</div>
+      <div class="box-label">📘 Contoh 33</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sebuah koloni bakteri berkembang mengikuti model $N(t) = 500 \cdot 2^t$, dengan $t$ dalam jam.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>Tentukanlah jumlah bakteri awal ($t=0$).</li>
@@ -1376,12 +1441,13 @@ window.MathJax = {
         <li>$N(0) = 500 \cdot 2^0 = 500$ bakteri.</li>
         <li>$N(4) = 500 \cdot 2^4 = 500 \cdot 16 = \mathbf{8.000}$ bakteri.</li>
         <li>Selesaikan $500 \cdot 2^t = 16.000$:
-          $$2^t = \frac{16.000}{500} = 32 = 2^5 \;\Rightarrow\; t = 5 \text{ jam}.$$</li>
+          $$\begin{align*} 2^t &= \frac{16.000}{500} \\ &= 32 \\ &= 2^5, \end{align*}$$
+          sehingga $t = 5$ jam.</li>
       </ol>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 32</div>
+      <div class="box-label">📘 Contoh 34</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Suatu zat radioaktif memiliki waktu paruh $T_h = 10$ tahun dan massa awal 200 gram.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>Tentukanlah massa zat setelah 30 tahun.</li>
@@ -1791,7 +1857,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban:`(a) $7\\sqrt{3}$&nbsp; &nbsp;(b) $5\\sqrt{3}+10$&nbsp; &nbsp;(c) $4\\sqrt{6}$` },
       { jawaban:`(a) $\\dfrac{4\\sqrt{3}+2\\sqrt{2}}{5}$&nbsp; &nbsp;(b) $18 - 12\\sqrt{2}$` },
       { jawaban:`$\\sqrt{5}+\\sqrt{3}+\\sqrt{2}$` },
-      { jawaban:`Rasionalkan dengan mengalikan $\\dfrac{\\sqrt{n+1}-\\sqrt{n}}{\\sqrt{n+1}-\\sqrt{n}}$; penyebut menjadi $(n+1)-n = 1$. $\\blacksquare$` },
+      { jawaban:`$\\dfrac{1}{\\sqrt{n+1}+\\sqrt{n}} = \\dfrac{\\sqrt{n+1}-\\sqrt{n}}{(n+1)-n} = \\sqrt{n+1}-\\sqrt{n}$. $\\blacksquare$` },
       { jawaban:`$a^2$` },
     ],
     // C — Pangkat Pecahan
