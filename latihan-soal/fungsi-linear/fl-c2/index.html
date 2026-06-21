@@ -1032,17 +1032,6 @@ function pickBS(qi,pi,val,btn){
   // Re-render soal agar tombol update
   renderQ(qi);
 }
-  if(!S.bsTemp)S.bsTemp={};
-  if(!S.bsTemp[qi]){
-    const ps=Array.isArray(S.soal[qi].pernyataan)?S.soal[qi].pernyataan:[S.soal[qi].q];
-    S.bsTemp[qi]=Array(ps.length).fill(null);
-  }
-  // Toggle: klik lagi → deselect
-  if(S.bsTemp[qi][pi]===val){S.bsTemp[qi][pi]=null;}
-  else{S.bsTemp[qi][pi]=val;}
-  // Re-render soal agar tombol update
-  renderQ(qi);
-}
 function confirmBS(qi){
   const q=S.soal[qi];
   const ps=Array.isArray(q.pernyataan)?q.pernyataan:[q.q];

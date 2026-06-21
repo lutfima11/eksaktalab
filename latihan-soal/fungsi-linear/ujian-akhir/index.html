@@ -706,48 +706,6 @@ body{
 }
 
 
-/* ═══════════════════════════════════════════════════════
-   TIMER
-═══════════════════════════════════════════════════════ */
-.ujian-timer-wrap{
-  margin:.75rem .75rem 0;
-  padding:.6rem .85rem;
-  border-radius:var(--radius-sm);
-  background:var(--navy);
-  border:1px solid rgba(0,191,165,.2);
-  display:flex;align-items:center;gap:.5rem;
-  flex-shrink:0;
-}
-[data-theme="light"] .ujian-timer-wrap{background:rgba(13,27,46,.06);}
-.ujian-timer-icon{width:14px;height:14px;stroke:var(--teal);fill:none;}
-.ujian-timer-lbl{font-family:var(--mono);font-size:.6rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;}
-#ujian-timer{
-  font-family:var(--mono);font-size:1.35rem;font-weight:700;
-  color:#fff;letter-spacing:-.02em;margin-left:auto;
-}
-[data-theme="light"] #ujian-timer{color:var(--navy);}
-.ujian-timer-wrap.timer-urgent{border-color:var(--red-b);animation:timerPulse 1s ease infinite;}
-.ujian-timer-wrap.timer-urgent #ujian-timer{color:var(--red-b);}
-@keyframes timerPulse{0%,100%{opacity:1;}50%{opacity:.6;}}
-
-/* TIMER MOBILE BAR — tampil di mobile & tablet portrait */
-.mob-timer-bar{
-  display:none;align-items:center;gap:.5rem;
-  padding:.45rem 1rem;
-  background:var(--navy);
-  border-bottom:1px solid rgba(0,191,165,.2);
-  flex-shrink:0;
-}
-[data-theme="light"] .mob-timer-bar{background:rgba(13,27,46,.06);}
-.mob-timer-bar .ujian-timer-lbl{font-family:var(--mono);font-size:.58rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;}
-#mob-ujian-timer{
-  font-family:var(--mono);font-size:1.05rem;font-weight:700;
-  color:#fff;letter-spacing:-.02em;margin-left:auto;
-}
-[data-theme="light"] #mob-ujian-timer{color:var(--navy);}
-.mob-timer-bar.timer-urgent{border-bottom-color:var(--red-b);animation:timerPulse 1s ease infinite;}
-.mob-timer-bar.timer-urgent #mob-ujian-timer{color:var(--red-b);}
-@media(max-width:900px){.mob-timer-bar{display:flex;}}
 
 /* ═══════════════════════════════════════════════════════
    UJIAN RESULT PAGE
@@ -956,12 +914,6 @@ body{
   <span class="q-bc-level" style="color:#0EA5E9">Komprehensif</span>
 </div>
 
-<!-- TIMER MOBILE — visible di mobile & tablet portrait, hidden di desktop -->
-<div class="mob-timer-bar" id="mob-timer-bar">
-  <svg class="ujian-timer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15,15"/></svg>
-  <span class="ujian-timer-lbl">Sisa Waktu</span>
-  <span id="mob-ujian-timer">--:--</span>
-</div>
 
 <!-- LAYOUT -->
 <div class="q-layout" id="q-layout">
@@ -974,12 +926,6 @@ body{
     <div class="q-sb-head">
       <div class="q-sb-label">Daftar Soal</div>
       <div class="q-num-grid" id="q-grid"></div>
-    </div>
-    <!-- TIMER UJIAN -->
-    <div class="ujian-timer-wrap" id="ujian-timer-wrap">
-      <svg class="ujian-timer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15,15"/></svg>
-      <span class="ujian-timer-lbl">Waktu</span>
-      <span id="ujian-timer">--:--</span>
     </div>
     <div class="q-sb-tip">
       <div class="q-sb-tip-lbl">
@@ -1083,7 +1029,7 @@ function init(){
   S.correct=Array(data.soal.length).fill(null);
   S.marked=Array(data.soal.length).fill(false);
   document.getElementById('q-tot').textContent=data.soal.length;
-  buildGrid();buildMobStrip();renderQ(0);initTimer();initReloadGuard();
+  buildGrid();buildMobStrip();renderQ(0);initReloadGuard();
 }
 
 function buildGrid(){
@@ -1451,59 +1397,8 @@ function updateMobNav(i){
 // ══════════════════════════════════════════════════════════════════
 
 const IS_UJIAN = (typeof UJIAN_MODE !== 'undefined') && UJIAN_MODE === true;
-const UJIAN_DURATION = (typeof UJIAN_MINUTES !== 'undefined') ? UJIAN_MINUTES * 60 : 45 * 60;
 const SS_STARTED = 'ujian_started_' + PAKET_ID;
 const SS_DONE    = 'ujian_done_'    + PAKET_ID;
-
-// ── Timer ────────────────────────────────────────────────────────
-let timerInterval = null;
-let timeLeft = UJIAN_DURATION;
-let _timerStartAt = null;
-let _timerBaseLeft = 0;
-
-function initTimer() {
-  if (!IS_UJIAN) return;
-  timeLeft = UJIAN_DURATION;
-  _timerBaseLeft = timeLeft;
-  _timerStartAt = Date.now();
-  renderTimer();
-  timerInterval = setInterval(() => {
-    const elapsed = Math.floor((Date.now() - _timerStartAt) / 1000);
-    timeLeft = Math.max(0, _timerBaseLeft - elapsed);
-    renderTimer();
-    if (timeLeft <= 0) {
-      clearInterval(timerInterval);
-      autoSubmitUjian();
-    }
-  }, 500);
-}
-
-function renderTimer() {
-  const m = Math.floor(Math.abs(timeLeft) / 60).toString().padStart(2, '0');
-  const s = (Math.abs(timeLeft) % 60).toString().padStart(2, '0');
-  const timeStr = `${m}:${s}`;
-  const urgent = timeLeft < 300 && timeLeft > 0;
-  const done = timeLeft <= 0;
-
-  const el = document.getElementById('ujian-timer');
-  if (el) el.textContent = timeStr;
-  const wrap = document.getElementById('ujian-timer-wrap');
-  if (wrap) { wrap.classList.toggle('timer-urgent', urgent); wrap.classList.toggle('timer-done', done); }
-
-  const mobEl = document.getElementById('mob-ujian-timer');
-  if (mobEl) mobEl.textContent = timeStr;
-  const mobBar = document.getElementById('mob-timer-bar');
-  if (mobBar) { mobBar.classList.toggle('timer-urgent', urgent); mobBar.classList.toggle('timer-done', done); }
-}
-
-function autoSubmitUjian() {
-  // Submit semua yang sudah dijawab, null yang belum
-  S.correct = S.soal.map((_, i) => {
-    if (S.answers[i] === null) return false;
-    return S.correct[i];
-  });
-  showUjianResult();
-}
 
 // ── Reload / Exit Guard ──────────────────────────────────────────
 function initReloadGuard() {
@@ -1519,7 +1414,6 @@ function initReloadGuard() {
 // ── Halaman Hasil Ujian ──────────────────────────────────────────
 function showUjianResult() {
   S.done = true;
-  if (timerInterval) clearInterval(timerInterval);
   if (IS_UJIAN) sessionStorage.setItem(SS_DONE, '1');
 
   const total = S.soal.length;
@@ -1606,10 +1500,8 @@ function showUjianResult() {
   document.getElementById('q-nav').style.display = 'none';
   const mobStrip = document.getElementById('q-mob-strip');
   const mobNav = document.getElementById('q-mob-nav');
-  const mobTimerBar = document.getElementById('mob-timer-bar');
   if (mobStrip) mobStrip.style.display = 'none';
   if (mobNav) mobNav.style.display = 'none';
-  if (mobTimerBar) mobTimerBar.style.display = 'none';
   document.getElementById('q-prog').style.width = '100%';
 
   // Typeset MathJax
