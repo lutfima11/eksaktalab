@@ -881,11 +881,39 @@ body{
   .ur-stat span{font-size:1.15rem;}
   .ur-review{padding:1rem;}
 }
+
+/* ── INVALID SCREEN (reload saat ujian) ── */
+#ujian-invalid-screen{
+  display:none;position:fixed;inset:0;
+  background:var(--navy);z-index:9999;
+  flex-direction:column;align-items:center;justify-content:center;
+  padding:2rem;text-align:center;gap:.85rem;
+}
+#ujian-invalid-screen.show{display:flex;}
+.inv-icon{font-size:3.5rem;line-height:1;}
+.inv-title{font-family:var(--display);font-size:1.45rem;font-weight:700;color:#F87171;letter-spacing:-.02em;}
+.inv-msg{font-size:.875rem;line-height:1.75;color:rgba(255,255,255,.55);max-width:340px;}
+.inv-msg strong{color:#fff;font-weight:600;}
+.inv-back{margin-top:.35rem;display:inline-flex;align-items:center;gap:.45rem;padding:.55rem 1.15rem;background:transparent;border:1.5px solid rgba(255,255,255,.2);border-radius:8px;color:rgba(255,255,255,.7);font-family:var(--sans);font-size:.8rem;font-weight:600;text-decoration:none;transition:all .2s;cursor:pointer;}
+.inv-back:hover{border-color:rgba(255,255,255,.5);color:#fff;}
+[data-theme="light"] #ujian-invalid-screen{background:var(--surface-2);}
+[data-theme="light"] .inv-msg{color:var(--text-3);}
+[data-theme="light"] .inv-msg strong{color:var(--text);}
+[data-theme="light"] .inv-back{border-color:var(--border);color:var(--text-2);}
+[data-theme="light"] .inv-back:hover{border-color:var(--teal);color:var(--teal);}
 </style>
 </head>
 <body>
 
 <div id="scroll-bar"></div>
+
+<!-- INVALID SCREEN — tampil saat reload selama ujian berlangsung -->
+<div id="ujian-invalid-screen">
+  <div class="inv-icon">🚫</div>
+  <div class="inv-title">Sesi Ujian Tidak Valid</div>
+  <p class="inv-msg">Halaman di-<strong>refresh</strong> saat ujian sedang berlangsung.<br>Sesi ini <strong>tidak dapat dilanjutkan</strong>.<br>Hubungi gurumu atau mulai ulang dari awal.</p>
+  <a class="inv-back" href="../">← Kembali ke Fungsi Linear</a>
+</div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -1036,6 +1064,10 @@ const S = {
 };
 
 function init(){
+  if (IS_UJIAN) {
+    sessionStorage.setItem(SS_STARTED, '1');
+    sessionStorage.removeItem(SS_DONE);
+  }
   const data = window.quizDB && window.quizDB[PAKET_ID];
   if(!data){
     document.getElementById('q-content').innerHTML =
@@ -1337,7 +1369,8 @@ function updateMobNav(i){
 
 const IS_UJIAN = (typeof UJIAN_MODE !== 'undefined') && UJIAN_MODE === true;
 const UJIAN_DURATION = (typeof UJIAN_MINUTES !== 'undefined') ? UJIAN_MINUTES * 60 : 45 * 60;
-const SESSION_KEY = 'ujian_timer_' + PAKET_ID;
+const SS_STARTED = 'ujian_started_' + PAKET_ID;
+const SS_DONE    = 'ujian_done_'    + PAKET_ID;
 
 // ── Timer ────────────────────────────────────────────────────────
 let timerInterval = null;
@@ -1347,23 +1380,16 @@ let _timerBaseLeft = 0;
 
 function initTimer() {
   if (!IS_UJIAN) return;
-
-  const saved = sessionStorage.getItem(SESSION_KEY);
-  timeLeft = saved ? parseInt(saved) : UJIAN_DURATION;
-  if (!saved) sessionStorage.setItem(SESSION_KEY, timeLeft);
-
+  timeLeft = UJIAN_DURATION;
   _timerBaseLeft = timeLeft;
   _timerStartAt = Date.now();
-
   renderTimer();
   timerInterval = setInterval(() => {
     const elapsed = Math.floor((Date.now() - _timerStartAt) / 1000);
     timeLeft = Math.max(0, _timerBaseLeft - elapsed);
-    sessionStorage.setItem(SESSION_KEY, timeLeft);
     renderTimer();
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
-      sessionStorage.removeItem(SESSION_KEY);
       autoSubmitUjian();
     }
   }, 500);
@@ -1411,7 +1437,7 @@ function initReloadGuard() {
 function showUjianResult() {
   S.done = true;
   if (timerInterval) clearInterval(timerInterval);
-  sessionStorage.removeItem(SESSION_KEY);
+  if (IS_UJIAN) sessionStorage.setItem(SS_DONE, '1');
 
   const total = S.soal.length;
   const benar = S.correct.filter(c => c === true).length;
@@ -1521,7 +1547,12 @@ function showScore() {
   else { _origShowScore(); }
 }
 
-init();
+// Cek reload saat ujian berlangsung
+if (IS_UJIAN && sessionStorage.getItem(SS_STARTED) === '1' && sessionStorage.getItem(SS_DONE) !== '1') {
+  document.getElementById('ujian-invalid-screen').classList.add('show');
+} else {
+  init();
+}
 
 // ── Scroll progress bar ─────────────────────────────────
 window.addEventListener('scroll', () => {
