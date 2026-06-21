@@ -1549,6 +1549,7 @@ function showScore() {
 
 // Cek reload saat ujian berlangsung
 if (IS_UJIAN && sessionStorage.getItem(SS_STARTED) === '1' && sessionStorage.getItem(SS_DONE) !== '1') {
+  sessionStorage.removeItem(SS_STARTED);
   document.getElementById('ujian-invalid-screen').classList.add('show');
 } else {
   init();
