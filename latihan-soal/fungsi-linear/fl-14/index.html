@@ -1069,10 +1069,11 @@ function showScore(){
   const ok=S.correct.filter(c=>c===true).length;
   const ng=tot-ok;
   const nilai=Math.round(ok/tot*100);
-  let label='Perlu Latihan Lagi',msg='Pelajari ulang materinya, kamu pasti bisa!';
-  if(nilai>=90){label='Luar Biasa! 🎉';msg='Penguasaan materi sangat baik!';}
-  else if(nilai>=75){label='Sangat Baik!';msg='Hampir sempurna. Teliti soal yang salah.';}
-  else if(nilai>=60){label='Cukup Baik';msg='Ulas kembali materi dan coba lagi.';}
+  let label='🔁 Perlu Latihan Lagi',msg='Masih banyak soal yang perlu diulangi. Baca kembali materinya, lalu coba lagi!';
+  if(nilai>=90){label='🏆 Luar Biasa!';msg='Penguasaan soal sangat baik. Kamu siap ke paket berikutnya!';}
+  else if(nilai>=75){label='✅ Sangat Baik!';msg='Hampir sempurna — teliti lagi soal yang salah, pasti bisa 100!';}
+  else if(nilai>=60){label='📈 Cukup Baik';msg='Sudah melewati batas tuntas. Ulas soal yang salah untuk memperkuat pemahamanmu.';}
+  else if(nilai>=40){label='⚠️ Perlu Penguatan';msg='Beberapa konsep perlu diperkuat. Pelajari kembali materinya sebelum mencoba lagi.';}
   document.getElementById('q-layout').innerHTML=`<div class="q-score">
     <div class="q-score-ring"><div class="q-score-num">${nilai}</div><div class="q-score-den">dari 100</div></div>
     <div class="q-score-label">${label}</div>

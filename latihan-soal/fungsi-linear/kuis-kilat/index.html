@@ -746,6 +746,7 @@ body{
   font-size:.9rem;color:rgba(255,255,255,.7);
   position:relative;z-index:1;
 }
+.ur-msg{font-size:.78rem;color:rgba(255,255,255,.45);max-width:300px;text-align:center;line-height:1.55;margin-top:.25rem;position:relative;z-index:1;}
 .ur-stats{
   display:flex;gap:1rem;margin-top:.5rem;
   position:relative;z-index:1;
@@ -1421,11 +1422,12 @@ function showUjianResult() {
   const kosong = S.answers.filter(a => a === null).length;
   const nilai = Math.round((benar / total) * 100);
 
-  let grade = 'D', gradeColor = 'var(--red-b)', label = 'Perlu Belajar Lebih Giat';
-  if (nilai >= 90) { grade = 'A'; gradeColor = 'var(--green-b)'; label = 'Sangat Memuaskan! 🎉'; }
-  else if (nilai >= 80) { grade = 'B'; gradeColor = 'var(--teal)'; label = 'Baik Sekali!'; }
-  else if (nilai >= 70) { grade = 'C'; gradeColor = '#D97706'; label = 'Cukup Baik'; }
-  else if (nilai >= 60) { grade = 'C-'; gradeColor = '#EA580C'; label = 'Cukup'; }
+  let grade='D',gradeColor='var(--red-b)',label='Perlu Banyak Latihan',msg='Masih banyak celah yang perlu ditutup. Pelajari kembali materinya dan ulangi ujian ini!';
+  if(nilai>=90){grade='A';gradeColor='var(--green-b)';label='Luar Biasa! 🏆';msg='Hasil ujian yang membanggakan. Penguasaan soal sangat kuat!';}
+  else if(nilai>=80){grade='B';gradeColor='var(--teal)';label='Sangat Baik ✅';msg='Hampir sempurna. Teliti kembali soal yang salah untuk menyempurnakan pemahamanmu.';}
+  else if(nilai>=70){grade='C+';gradeColor='#D97706';label='Baik 📈';msg='Di atas rata-rata. Perkuat bagian yang masih kurang agar bisa naik ke grade B.';}
+  else if(nilai>=60){grade='C';gradeColor='#EA580C';label='Cukup';msg='Sudah melewati batas lulus. Masih ada ruang untuk meningkat — ulas soal yang salah!';}
+  else if(nilai>=40){grade='D+';gradeColor='var(--red-b)';label='Perlu Penguatan ⚠️';msg='Beberapa konsep dasar perlu diperkuat. Baca ulang materi dan fokus pada bagian yang salah.';}
 
   // Share text untuk WA
   const shareText = `📊 Hasil Ujian EksaktaLab\n` +
@@ -1468,6 +1470,7 @@ function showUjianResult() {
         <div class="ur-grade" style="border-color:${gradeColor};color:${gradeColor}">${grade}</div>
         <div class="ur-nilai">${nilai}<span>/100</span></div>
         <div class="ur-label">${label}</div>
+        <div class="ur-msg">${msg}</div>
         <div class="ur-stats">
           <div class="ur-stat g"><span>${benar}</span>Benar</div>
           <div class="ur-stat r"><span>${salah}</span>Salah</div>
@@ -1479,9 +1482,6 @@ function showUjianResult() {
             <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Bagikan ke WhatsApp
           </a>
-          <button class="ur-btn secondary" onclick="navigator.clipboard.writeText('${shareText.replace(/'/g, "\\'")}').then(()=>{this.textContent='✓ Disalin!';setTimeout(()=>this.textContent='Salin Hasil',2000)})">
-            Salin Hasil
-          </button>
           <button class="ur-btn secondary" onclick="window.location.reload()">↺ Ulangi</button>
           <a class="ur-btn secondary" href="../">← Kembali</a>
         </div>
