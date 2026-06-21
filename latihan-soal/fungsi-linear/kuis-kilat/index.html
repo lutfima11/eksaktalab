@@ -873,7 +873,7 @@ body{
 <div id="ujian-invalid-screen">
   <div class="inv-icon">🚫</div>
   <div class="inv-title">Sesi Ujian Tidak Valid</div>
-  <p class="inv-msg">Halaman di-<strong>refresh</strong> saat ujian sedang berlangsung.<br>Sesi ini <strong>tidak dapat dilanjutkan</strong>.<br>Hubungi gurumu atau mulai ulang dari awal.</p>
+  <p class="inv-msg">Halaman di-<strong>refresh</strong> saat ujian sedang berlangsung.<br>Sesi ini <strong>tidak dapat dilanjutkan</strong>.<br>Mulai ulang dari awal.</p>
   <a class="inv-back" href="../">← Kembali ke Fungsi Linear</a>
 </div>
 
@@ -1214,18 +1214,21 @@ function confirmMMA(qi){
 function renderBS(q,i,answered){
   const ps=Array.isArray(q.pernyataan)?q.pernyataan:[q.q];
   const js=Array.isArray(q.jawabArr)?q.jawabArr:[q.jawab];
-  const ua=S.answers[i]; // array per-pernyataan atau null
+  const ua=S.answers[i];
+  if(IS_UJIAN&&answered&&(!S.bsTemp||!S.bsTemp[i])){
+    if(!S.bsTemp)S.bsTemp={};
+    S.bsTemp[i]=[...(ua||[])];
+  }
   const temp=S.bsTemp&&S.bsTemp[i]?S.bsTemp[i]:Array(ps.length).fill(null);
 
   let h='';
   h+='<div class="q-bs-list">';
   ps.forEach((p,pi)=>{
-    const cur=answered?(ua?ua[pi]:null):(temp[pi]);
+    const cur=answered&&!IS_UJIAN?(ua?ua[pi]:null):(temp[pi]);
     const cor=js[pi];
     let itemCls='q-bs-item';
     let bCls='q-bs-btn', sCls='q-bs-btn';
-    if(answered){
-      // show correct/wrong
+    if(answered&&!IS_UJIAN){
       if(cor==='BENAR'){bCls+=' cor';}else{bCls+=(cur==='BENAR'?' wrg':'')}
       if(cor==='SALAH'){sCls+=' cor';}else{sCls+=(cur==='SALAH'?' wrg':'')}
       if(cur===cor)itemCls+=' item-ok'; else if(cur!==null)itemCls+=' item-ng';
@@ -1233,7 +1236,7 @@ function renderBS(q,i,answered){
       if(cur==='BENAR')bCls+=' sel-b';
       if(cur==='SALAH')sCls+=' sel-s';
     }
-    const dis=answered?' disabled':'';
+    const dis=answered&&!IS_UJIAN?' disabled':'';
     h+=`<div class="${itemCls}">
       <div class="q-bs-item-text"><span class="q-bs-item-label">${String.fromCharCode(65+pi)}.</span>${p}</div>
       <div class="q-bs-btns">
@@ -1243,18 +1246,19 @@ function renderBS(q,i,answered){
     </div>`;
   });
   h+='</div>';
-  if(!answered){
+  if(!(answered&&!IS_UJIAN)){
     const allFilled=temp.every(a=>a!==null);
-    h+=`<button class="q-bs-confirm" onclick="confirmBS(${i})"${allFilled?'':' disabled'} id="bs-confirm-${i}">Konfirmasi Jawaban</button>`;
+    const btnLabel=(answered&&IS_UJIAN)?'Update Jawaban':'Konfirmasi Jawaban';
+    h+=`<button class="q-bs-confirm" onclick="confirmBS(${i})"${allFilled?'':' disabled'} id="bs-confirm-${i}">${btnLabel}</button>`;
   }
   return h;
 }
 function pickBS(qi,pi,val,btn){
-  if(S.done||S.answers[qi]!==null)return;
+  if(S.done||(S.answers[qi]!==null&&!IS_UJIAN))return;
   if(!S.bsTemp)S.bsTemp={};
   if(!S.bsTemp[qi]){
     const ps=Array.isArray(S.soal[qi].pernyataan)?S.soal[qi].pernyataan:[S.soal[qi].q];
-    S.bsTemp[qi]=Array(ps.length).fill(null);
+    S.bsTemp[qi]=IS_UJIAN&&S.answers[qi]?[...S.answers[qi]]:Array(ps.length).fill(null);
   }
   if(S.bsTemp[qi][pi]===val){S.bsTemp[qi][pi]=null;}
   else{S.bsTemp[qi][pi]=val;}

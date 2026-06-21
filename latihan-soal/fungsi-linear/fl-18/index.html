@@ -442,10 +442,10 @@ body{
 .q-pem.pem-ok .q-pem-hd{background:rgba(0,180,80,.06);}
 .q-pem.pem-ng .q-pem-hd{background:rgba(220,50,50,.05);}
 .q-pem-hd:hover{filter:brightness(.96);}
-.q-pem-ico{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.q-pem-ico{width:20px;height:20px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
 .q-pem.pem-ok .q-pem-ico{background:var(--green-b);}
 .q-pem.pem-ng .q-pem-ico{background:var(--red-b);}
-.q-pem-ico svg{width:12px;height:12px;stroke:#fff;stroke-width:2.8;stroke-linecap:round;}
+.q-pem-ico svg{width:9px;height:9px;stroke:#fff;stroke-width:2.8;stroke-linecap:round;}
 .q-pem-badge{flex:1;font-size:.875rem;font-weight:700;font-family:var(--sans);letter-spacing:-.01em;}
 .q-pem.pem-ok .q-pem-badge{color:var(--green-b);}
 .q-pem.pem-ng .q-pem-badge{color:var(--red-b);}
@@ -968,7 +968,11 @@ function pickMMA(qi, oi){
   const idx = S.mmaTemp[qi].indexOf(oi);
   if(idx === -1) S.mmaTemp[qi].push(oi);
   else S.mmaTemp[qi].splice(idx, 1);
-  renderQ(qi);
+  const isSel=S.mmaTemp[qi].includes(oi);
+  const mbtn=document.querySelector(`[onclick="pickMMA(${qi},${oi})"]`);
+  if(mbtn)mbtn.classList.toggle('sel',isSel);
+  const mc=document.getElementById(`mma-confirm-${qi}`);
+  if(mc)mc.disabled=S.mmaTemp[qi].length===0;
 }
 function confirmMMA(qi){
   if(S.done) return;
@@ -1026,11 +1030,15 @@ function pickBS(qi,pi,val,btn){
     const ps=Array.isArray(S.soal[qi].pernyataan)?S.soal[qi].pernyataan:[S.soal[qi].q];
     S.bsTemp[qi]=Array(ps.length).fill(null);
   }
-  // Toggle: klik lagi → deselect
   if(S.bsTemp[qi][pi]===val){S.bsTemp[qi][pi]=null;}
   else{S.bsTemp[qi][pi]=val;}
-  // Re-render soal agar tombol update
-  renderQ(qi);
+  const cur=S.bsTemp[qi][pi];
+  const bb=document.querySelector(`[onclick="pickBS(${qi},${pi},'BENAR',this)"]`);
+  const sb=document.querySelector(`[onclick="pickBS(${qi},${pi},'SALAH',this)"]`);
+  if(bb)bb.className='q-bs-btn'+(cur==='BENAR'?' sel-b':'');
+  if(sb)sb.className='q-bs-btn'+(cur==='SALAH'?' sel-s':'');
+  const bc=document.getElementById(`bs-confirm-${qi}`);
+  if(bc)bc.disabled=!S.bsTemp[qi].every(a=>a!==null);
 }
 function confirmBS(qi){
   const q=S.soal[qi];
