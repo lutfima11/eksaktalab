@@ -1044,15 +1044,25 @@ function init(){
 
 // ── Timer Ujian ──────────────────────────────────────────────────
 let _timerInt=null;
+
+function _onTabVisible(){
+  // Segera sinkronkan tampilan saat tab kembali ke foreground
+  if(document.visibilityState==='visible') updateTimer();
+}
+
 function startTimer(){
   if(!IS_UJIAN) return;
   S.endTime=Date.now()+UJIAN_MINUTES*60*1000;
   updateTimer();
-  _timerInt=setInterval(updateTimer,1000);
+  // 500ms agar lebih responsif dan tidak kehilangan tick
+  _timerInt=setInterval(updateTimer,500);
+  // Sinkronkan segera saat user kembali ke tab (setelah sleep/background)
+  document.addEventListener('visibilitychange',_onTabVisible);
 }
+
 function updateTimer(){
-  let rem=Math.round((S.endTime-Date.now())/1000);
-  if(rem<0)rem=0;
+  // Math.floor → countdown lebih natural (1:00 tampil penuh 1 detik)
+  const rem=Math.max(0,Math.floor((S.endTime-Date.now())/1000));
   const m=Math.floor(rem/60),s=rem%60;
   const txt=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
   const d=document.getElementById('timer-display');if(d)d.textContent=txt;
@@ -1064,7 +1074,11 @@ function updateTimer(){
   });
   if(rem<=0){clearInterval(_timerInt);_timerInt=null;if(!S.done)showScore();}
 }
-function stopTimer(){if(_timerInt){clearInterval(_timerInt);_timerInt=null;}}
+
+function stopTimer(){
+  if(_timerInt){clearInterval(_timerInt);_timerInt=null;}
+  document.removeEventListener('visibilitychange',_onTabVisible);
+}
 
 function buildGrid(){
   const g=document.getElementById('q-grid');
