@@ -2,17 +2,17 @@
 // build-latihan.mjs  —  GENERATOR HALAMAN LATIHAN SOAL
 //
 // Sumber kebenaran:
-//   • Soal     → assets/js/quiz-data.js   (window.quizDB)
+//   • Soal       → assets/js/quiz-data-{materiId}.js  (window.quizDB)
 //   • Presentasi → tools/latihan-manifest.json
-//   • Tampilan → tools/templates/latihan.html
+//   • Tampilan   → tools/templates/latihan.html
 //
 // Cara pakai:
 //   node tools/build-latihan.mjs            # generate semua paket latihan
 //   node tools/build-latihan.mjs --check    # cek saja, jangan tulis (CI-friendly)
 //
 // Setelah ini: untuk ubah tampilan SEMUA halaman latihan, edit
-// tools/templates/latihan.html sekali lalu jalankan script ini.
-// Untuk tambah paket baru: tambah soal di quiz-data.js + 1 baris di manifest.
+// tools/templates/latihan.html lalu jalankan script ini.
+// Untuk tambah paket baru: tambah soal di quiz-data-{id}.js + 1 baris di manifest.
 // ─────────────────────────────────────────────────────────────
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -26,7 +26,7 @@ const tplLatihan = readFileSync(join(ROOT, 'tools', 'templates', 'latihan.html')
 
 // load quiz-data untuk validasi paket
 const g = {}; global.window = g;
-await import('../assets/js/quiz-data.js');
+await import(`../assets/js/quiz-data-${manifest.materiId}.js`);
 const quizDB = g.quizDB || {};
 
 function render(tpl, vars) {
@@ -41,19 +41,22 @@ function render(tpl, vars) {
 
 let written = 0, drift = 0, warn = 0;
 for (const item of manifest.items) {
-  if (item.type !== 'latihan') continue; // ujian/kilat dikelola terpisah (Tahap 2)
+  if (item.type !== 'latihan') continue;
 
   if (!quizDB[item.paket]) {
-    console.warn(`  ⚠  ${item.slug}: PAKET '${item.paket}' tidak ada di quiz-data.js (halaman akan tampil "Soal sedang disiapkan")`);
+    console.warn(`  ⚠  ${item.slug}: PAKET '${item.paket}' tidak ada di quiz-data-${manifest.materiId}.js`);
     warn++;
   }
 
   const html = render(tplLatihan, {
-    KODE: item.kode,
-    MODE: item.mode,
+    KODE:        item.kode,
+    MODE:        item.mode,
     LEVEL_COLOR: item.levelColor,
     LEVEL_LABEL: item.levelLabel,
-    PAKET: item.paket,
+    PAKET:       item.paket,
+    MATERI_ID:   manifest.materiId,
+    TOPIC_SLUG:  manifest.topic,
+    TOPIC_TITLE: manifest.topicTitle,
   });
 
   const dir = join(ROOT, 'latihan-soal', manifest.topic, item.slug);

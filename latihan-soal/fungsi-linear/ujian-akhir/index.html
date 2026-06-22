@@ -1004,7 +1004,7 @@ body{
 </div>
 
 
-<script src="../../../assets/js/quiz-data.js"></script>
+<script src="../../../assets/js/quiz-data-fl.js"></script>
 <script>
 // ── Scroll progress bar ──────────────────────────────────
 window.addEventListener('scroll', () => {
@@ -1023,6 +1023,23 @@ const TIPS = {
   mma: 'Bisa lebih dari satu jawaban benar. Pilih semua, lalu klik Konfirmasi.',
 };
 const KEYS = ['A','B','C','D','E'];
+const EXAM_CACHE_KEY = 'eksakta-exam:' + window.location.pathname;
+
+function buildStratifiedExam(data) {
+  try {
+    const cached = JSON.parse(localStorage.getItem(EXAM_CACHE_KEY));
+    if (Array.isArray(cached) && cached.length > 0) return cached;
+  } catch(e) {}
+  const result = [];
+  for (const [level, n] of Object.entries(data.config)) {
+    const tier = data.pool.filter(s => s.level === level);
+    const shuffled = [...tier].sort(() => Math.random() - 0.5);
+    result.push(...shuffled.slice(0, n));
+  }
+  result.sort(() => Math.random() - 0.5);
+  try { localStorage.setItem(EXAM_CACHE_KEY, JSON.stringify(result)); } catch(e) {}
+  return result;
+}
 
 // State
 const S = {
@@ -1043,11 +1060,12 @@ function init(){
       '<div style="padding:2rem;text-align:center;color:var(--text-3)">Soal sedang disiapkan. Kembali lagi segera!</div>';
     return;
   }
-  S.soal=data.soal;
-  S.answers=Array(data.soal.length).fill(null);
-  S.correct=Array(data.soal.length).fill(null);
-  S.marked=Array(data.soal.length).fill(false);
-  document.getElementById('q-tot').textContent=data.soal.length;
+  const soal = data.pool ? buildStratifiedExam(data) : data.soal;
+  S.soal = soal;
+  S.answers=Array(soal.length).fill(null);
+  S.correct=Array(soal.length).fill(null);
+  S.marked=Array(soal.length).fill(false);
+  document.getElementById('q-tot').textContent=soal.length;
   buildGrid();buildMobStrip();renderQ(0);initReloadGuard();startTimer();
 }
 
@@ -1572,7 +1590,7 @@ function showUjianResult() {
   if (mobNav) mobNav.style.display = 'none';
   document.getElementById('q-prog').style.width = '100%';
 
-  // Typeset MathJax
+  try { localStorage.removeItem(EXAM_CACHE_KEY); } catch(e) {}
   if (window.MathJax && typeof MathJax.typesetPromise === 'function') MathJax.typesetPromise([document.getElementById('ujian-result')]).catch(() => {});
 }
 
@@ -1592,6 +1610,7 @@ function showScore() {
 
 // Bersihkan semua session state ujian dan mulai ulang
 function mulaiUlangUjian(){
+  try { localStorage.removeItem(EXAM_CACHE_KEY); } catch(e) {}
   sessionStorage.removeItem(SS_STARTED);
   sessionStorage.removeItem(SS_DONE);
   window.location.reload();
