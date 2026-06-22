@@ -95,7 +95,7 @@ body{
 
 /* BREADCRUMB */
 /* MAIN */
-.q-layout{flex:1;display:flex;min-height:0;overflow:hidden;}
+.q-layout{flex:1;display:flex;min-height:0;overflow:hidden;position:relative;}
 
 /* SIDEBAR */
 .q-sidebar{
@@ -301,6 +301,24 @@ body{
 .q-score-btn:hover{border-color:var(--teal);color:var(--teal);}
 .q-score-btn.p{background:var(--teal);color:var(--navy);border-color:var(--teal);}
 .q-score-btn.p:hover{background:var(--teal-dim);}
+/* COMPLETION CARD (latihan) */
+.q-done-ov{position:absolute;inset:0;z-index:60;background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1.5rem;text-align:center;overflow-y:auto;}
+.q-done-ico{width:58px;height:58px;border-radius:50%;background:rgba(0,191,165,.12);border:2px solid var(--teal);color:var(--teal);display:flex;align-items:center;justify-content:center;margin-bottom:.85rem;flex-shrink:0;}
+.q-done-ico svg{width:26px;height:26px;}
+.q-done-title{font-family:var(--display);font-size:1.25rem;font-weight:700;color:var(--text);letter-spacing:-.02em;margin-bottom:.3rem;}
+.q-done-msg{font-size:.83rem;color:var(--text-3);max-width:330px;line-height:1.6;margin-bottom:1rem;}
+.q-done-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;max-width:300px;width:100%;margin-bottom:1.1rem;}
+.q-done-stat{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.6rem .4rem;}
+.q-done-n{font-family:var(--display);font-size:1.4rem;font-weight:700;color:var(--text);display:block;line-height:1;}
+.q-done-n.g{color:var(--green-b);}
+.q-done-n.r{color:var(--red-b);}
+.q-done-l{font-family:var(--mono);font-size:.53rem;font-weight:700;color:var(--text-3);letter-spacing:.06em;text-transform:uppercase;margin-top:.25rem;display:block;}
+.q-done-acts{display:flex;gap:.55rem;flex-wrap:wrap;justify-content:center;}
+.q-done-btn{height:36px;padding:0 1rem;border-radius:var(--radius-sm);border:1.5px solid var(--border);background:var(--surface-2);color:var(--text-2);font-size:.78rem;font-weight:600;font-family:var(--sans);cursor:pointer;display:flex;align-items:center;gap:.35rem;transition:all .18s;}
+.q-done-btn svg{width:13px;height:13px;}
+.q-done-btn:hover{border-color:var(--teal);color:var(--teal);}
+.q-done-btn.p{background:var(--teal);color:var(--navy);border-color:var(--teal);}
+.q-done-btn.p:hover{background:var(--teal-dim);}
 
 /* MOBILE */
 .q-sb-fab{
@@ -864,7 +882,7 @@ function updateProg(){
   const f=document.getElementById('qp-fill');if(f)f.style.width=(done/tot*100)+'%';
 }
 
-function goTo(i){if(S.done)return;S.cur=i;S.soal.forEach((_,j)=>{updateBtn(j);updateMobNum(j);});updateMobNav(i);renderQ(i);closeSb();}
+function goTo(i){if(S.done&&!S.review)return;S.cur=i;S.soal.forEach((_,j)=>{updateBtn(j);updateMobNum(j);});updateMobNav(i);renderQ(i);closeSb();}
 function go(d){const n=S.cur+d;if(n<0||n>=S.soal.length)return;S.cur=n;S.soal.forEach((_,j)=>{updateBtn(j);updateMobNum(j);});updateMobNav(n);renderQ(n);}
 
 function renderQ(i){
@@ -875,7 +893,7 @@ function renderQ(i){
   const isLast=i===S.soal.length-1;
   const nb=document.getElementById('btn-next');
   if(isLast){
-    nb.innerHTML='Lihat Nilai<svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg>';
+    nb.innerHTML='Selesai<svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg>';
     nb.onclick=showScore;
   }else{
     nb.innerHTML='Selanjutnya<svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,6.5 5,11"/></svg>';
@@ -1097,26 +1115,40 @@ function showScore(){
   const ok=S.correct.filter(c=>c===true).length;
   const ng=tot-ok;
   const nilai=Math.round(ok/tot*100);
-  let label='🔁 Perlu Latihan Lagi',msg='Masih banyak soal yang perlu diulangi. Baca kembali materinya, lalu coba lagi!';
-  if(nilai>=90){label='🏆 Luar Biasa!';msg='Penguasaan soal sangat baik. Kamu siap ke paket berikutnya!';}
-  else if(nilai>=75){label='✅ Sangat Baik!';msg='Hampir sempurna — teliti lagi soal yang salah, pasti bisa 100!';}
-  else if(nilai>=60){label='📈 Cukup Baik';msg='Sudah melewati batas tuntas. Ulas soal yang salah untuk memperkuat pemahamanmu.';}
-  else if(nilai>=40){label='⚠️ Perlu Penguatan';msg='Beberapa konsep perlu diperkuat. Pelajari kembali materinya sebelum mencoba lagi.';}
-  document.getElementById('q-layout').innerHTML=`<div class="q-score">
-    <div class="q-score-ring"><div class="q-score-num">${nilai}</div><div class="q-score-den">dari 100</div></div>
-    <div class="q-score-label">${label}</div>
-    <div class="q-score-msg">${msg}</div>
-    <div class="q-score-grid">
-      <div class="q-score-item"><div class="q-score-item-n g">${ok}</div><div class="q-score-item-l">Benar</div></div>
-      <div class="q-score-item"><div class="q-score-item-n r">${ng}</div><div class="q-score-item-l">Salah</div></div>
-      <div class="q-score-item"><div class="q-score-item-n">${tot}</div><div class="q-score-item-l">Total</div></div>
+  let label='Perlu Latihan Lagi',msg='Masih banyak soal yang perlu diulangi. Baca kembali materinya, lalu coba lagi!';
+  if(nilai>=90){label='Luar Biasa! 🎉';msg='Penguasaan soal sangat baik. Kamu siap ke paket berikutnya!';}
+  else if(nilai>=75){label='Sangat Baik!';msg='Hampir sempurna — teliti lagi soal yang salah, pasti bisa 100!';}
+  else if(nilai>=60){label='Cukup Baik';msg='Sudah melewati batas tuntas. Ulas soal yang salah untuk memperkuat pemahamanmu.';}
+  else if(nilai>=40){label='Perlu Penguatan';msg='Beberapa konsep perlu diperkuat. Pelajari kembali materinya sebelum mencoba lagi.';}
+  const firstWrong=S.correct.findIndex(c=>c===false);
+  const reviewBtn=firstWrong>=0?`<button class="q-done-btn" onclick="reviewWrong()"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7s2.2-4 6-4 6 4 6 4-2.2 4-6 4-6-4-6-4z"/><circle cx="7" cy="7" r="1.6"/></svg>Tinjau soal salah</button>`:'';
+  const ov=document.createElement('div');
+  ov.className='q-done-ov';ov.id='q-done-ov';
+  ov.innerHTML=`
+    <div class="q-done-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="5,13 10,18 19,7"/></svg></div>
+    <div class="q-done-title">${label}</div>
+    <div class="q-done-msg">${msg}</div>
+    <div class="q-done-stats">
+      <div class="q-done-stat"><span class="q-done-n g">${ok}</span><span class="q-done-l">Benar</span></div>
+      <div class="q-done-stat"><span class="q-done-n r">${ng}</span><span class="q-done-l">Salah</span></div>
+      <div class="q-done-stat"><span class="q-done-n">${nilai}</span><span class="q-done-l">Nilai</span></div>
     </div>
-    <div class="q-score-acts">
-      <button class="q-score-btn" onclick="location.reload()">&#8635; Ulangi</button>
-      <button class="q-score-btn p" onclick="window.location.href='../'" class="q-top-btn back-btn">&#8592; Kembali</button>
-    </div>
-  </div>`;
+    <div class="q-done-acts">
+      ${reviewBtn}
+      <button class="q-done-btn" onclick="location.reload()"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7a5 5 0 1 1-1.6-3.7M12 2v2.6H9.4"/></svg>Ulangi</button>
+      <button class="q-done-btn p" onclick="window.location.href='../'"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 3 4.5 7l4 4"/></svg>Kembali</button>
+    </div>`;
+  document.getElementById('q-layout').appendChild(ov);
   document.getElementById('q-nav').style.display='none';const mn2=document.getElementById('q-mob-nav');if(mn2)mn2.style.display='none';const ms2=document.getElementById('q-mob-strip');if(ms2)ms2.style.display='none';
+}
+function reviewWrong(){
+  S.review=true;
+  const ov=document.getElementById('q-done-ov');if(ov)ov.remove();
+  document.getElementById('q-nav').style.display='';
+  const mn=document.getElementById('q-mob-nav');if(mn)mn.style.display='';
+  const ms=document.getElementById('q-mob-strip');if(ms)ms.style.display='';
+  const fw=S.correct.findIndex(c=>c===false);
+  goTo(fw>=0?fw:0);
 }
 
 /* Sidebar mobile */
@@ -1178,7 +1210,7 @@ function updateMobNav(i){
   if(cur)  cur.textContent = i + 1;
   if(next){
     if(isLast){
-      next.innerHTML = 'Lihat Nilai<span class="q-mob-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="2,7 5,9.5 8,4"/></svg></span>';
+      next.innerHTML = 'Selesai<span class="q-mob-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="2,7 5,9.5 8,4"/></svg></span>';
       next.onclick = showScore;
     } else {
       next.innerHTML = 'Selanjutnya<span class="q-mob-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span>';
