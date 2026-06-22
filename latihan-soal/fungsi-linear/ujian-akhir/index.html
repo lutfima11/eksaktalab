@@ -1044,46 +1044,32 @@ function init(){
 }
 
 // ── Timer Ujian ──────────────────────────────────────────────────
-const SS_ENDTIME = 'ujian_endtime_' + PAKET_ID;
-let _timerActive = false;
-let _timerRAF = null;
+let _timerInterval = null;
+let _secondsLeft   = 0;
 
 function startTimer(){
   if(!IS_UJIAN) return;
-  // Hentikan timer lama jika ada (safety)
-  _timerActive = false;
-  if(_timerRAF){ cancelAnimationFrame(_timerRAF); _timerRAF = null; }
-
-  // Set endTime baru dan simpan ke sessionStorage agar tahan edge case
-  const endTime = Date.now() + UJIAN_MINUTES * 60 * 1000;
-  S.endTime = endTime;
-  sessionStorage.setItem(SS_ENDTIME, String(endTime));
-
-  _timerActive = true;
-  _tickTimer();
+  // Bersihkan interval lama (cegah dobel)
+  if(_timerInterval){ clearInterval(_timerInterval); _timerInterval = null; }
+  // Reset counter ke durasi penuh
+  _secondsLeft = UJIAN_MINUTES * 60;
+  _renderTimer(_secondsLeft);
+  _timerInterval = setInterval(function(){
+    _secondsLeft--;
+    _renderTimer(_secondsLeft);
+    if(_secondsLeft <= 0){
+      clearInterval(_timerInterval);
+      _timerInterval = null;
+      if(!S.done) showScore();
+    }
+  }, 1000);
 }
 
-function _tickTimer(){
-  if(!_timerActive) return;
-  _renderTimer();
-  const rem = Math.round((S.endTime - Date.now()) / 1000);
-  if(rem <= 0){
-    _timerActive = false;
-    _timerRAF = null;
-    if(!S.done) showScore();
-    return;
-  }
-  // Jadwalkan tick berikutnya ± tepat di pergantian detik
-  const msToNext = (S.endTime - Date.now()) % 1000 || 1000;
-  _timerRAF = setTimeout(_tickTimer, msToNext > 0 ? msToNext : 1000);
-}
-
-function _renderTimer(){
-  const rem = Math.max(0, Math.round((S.endTime - Date.now()) / 1000));
-  const m = Math.floor(rem/60), s = rem%60;
+function _renderTimer(rem){
+  const m   = Math.floor(rem/60), s = rem%60;
   const txt = (m<10?'0':'')+m+':'+(s<10?'0':'')+s;
-  const d = document.getElementById('timer-display'); if(d) d.textContent = txt;
-  const mv = document.querySelector('#timer-mobile .t-val'); if(mv) mv.textContent = txt;
+  const d   = document.getElementById('timer-display'); if(d) d.textContent=txt;
+  const mv  = document.querySelector('#timer-mobile .t-val'); if(mv) mv.textContent=txt;
   const cls = rem<=60?'danger':rem<=300?'warn':'';
   [document.getElementById('timer-box'),document.getElementById('timer-mobile')].forEach(el=>{
     if(!el)return; el.classList.remove('warn','danger'); if(cls) el.classList.add(cls);
@@ -1091,9 +1077,7 @@ function _renderTimer(){
 }
 
 function stopTimer(){
-  _timerActive = false;
-  if(_timerRAF){ clearTimeout(_timerRAF); _timerRAF = null; }
-  sessionStorage.removeItem(SS_ENDTIME);
+  if(_timerInterval){ clearInterval(_timerInterval); _timerInterval=null; }
 }
 
 function buildGrid(){
@@ -1601,7 +1585,6 @@ function showScore() {
 function mulaiUlangUjian(){
   sessionStorage.removeItem(SS_STARTED);
   sessionStorage.removeItem(SS_DONE);
-  sessionStorage.removeItem(SS_ENDTIME);
   window.location.reload();
 }
 
@@ -1609,13 +1592,11 @@ function mulaiUlangUjian(){
 if (IS_UJIAN && sessionStorage.getItem(SS_STARTED) === '1' && sessionStorage.getItem(SS_DONE) !== '1') {
   // Reload saat ujian sedang berlangsung → sesi tidak valid
   sessionStorage.removeItem(SS_STARTED);
-  sessionStorage.removeItem(SS_ENDTIME);
   document.getElementById('ujian-invalid-screen').classList.add('show');
 } else {
   // Kondisi normal: awal, setelah selesai, atau setelah invalid screen
   sessionStorage.removeItem(SS_STARTED);
   sessionStorage.removeItem(SS_DONE);
-  sessionStorage.removeItem(SS_ENDTIME);
   init();
 }
 
