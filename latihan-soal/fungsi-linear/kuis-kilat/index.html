@@ -1130,7 +1130,7 @@ function renderQ(i){
 
   const wrap=document.getElementById('q-content');
   wrap.innerHTML=html;wrap.scrollTop=0;const qc=document.getElementById('q-content');if(qc)qc.scrollTop=0;
-  if(window.MathJax && typeof MathJax.typesetPromise === 'function')MathJax.typesetPromise([wrap]).catch(()=>{});
+  if(window.MathJax && typeof MathJax.typeset === 'function')try{MathJax.typeset([wrap]);}catch(e){}
 }
 
 /* PG */
