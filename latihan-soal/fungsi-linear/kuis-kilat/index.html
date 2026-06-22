@@ -147,6 +147,22 @@ body{
   color:var(--teal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;
 }
 .q-sb-tip-lbl svg{width:10px;height:10px;}
+/* TIMER (ujian) */
+.q-timer-box{text-align:center;transition:background .3s,border-color .3s;}
+.q-timer-lbl{display:flex;align-items:center;justify-content:center;gap:.3rem;font-family:var(--mono);font-size:.58rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+.q-timer-lbl svg{width:11px;height:11px;}
+.q-timer{font-family:var(--mono);font-size:1.7rem;font-weight:700;color:var(--text);letter-spacing:.02em;line-height:1;}
+.q-timer-box.warn{background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.32);}
+.q-timer-box.warn .q-timer,.q-timer-box.warn .q-timer-lbl{color:#D97706;}
+.q-timer-box.danger{background:rgba(239,68,68,.09);border-color:rgba(239,68,68,.38);animation:timerPulse 1s ease-in-out infinite;}
+.q-timer-box.danger .q-timer,.q-timer-box.danger .q-timer-lbl{color:var(--red-b);}
+@keyframes timerPulse{0%,100%{opacity:1;}50%{opacity:.5;}}
+.q-bc-timer{display:none;align-items:center;gap:.3rem;margin-left:auto;opacity:1;font-family:var(--mono);font-weight:700;color:var(--teal);background:rgba(0,191,165,.1);border:1px solid rgba(0,191,165,.28);border-radius:6px;padding:.18rem .55rem;font-size:.74rem;}
+.q-bc-timer svg{width:12px;height:12px;}
+.q-bc-timer b{font-weight:700;}
+.q-bc-timer.warn{color:#D97706;background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.32);}
+.q-bc-timer.danger{color:var(--red-b);background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.38);animation:timerPulse 1s ease-in-out infinite;}
+@media(max-width:900px){.q-bc-timer{display:inline-flex;}}
 
 .q-sb-legend{
   padding:.75rem 1rem;border-top:1px solid var(--border);
@@ -923,6 +939,7 @@ body{
   <span class="q-bc-mode">Sesi Ujian</span>
   <span class="q-bc-sep">·</span>
   <span class="q-bc-level" style="color:#7C3AED">Campuran</span>
+  <div class="q-bc-timer" id="timer-mobile"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7.5" r="5"/><path d="M7 4.7v2.8l1.8 1.1"/><path d="M5 1h4"/></svg><b class="t-val">--:--</b></div>
 </div>
 
 
@@ -938,12 +955,12 @@ body{
       <div class="q-sb-label">Daftar Soal</div>
       <div class="q-num-grid" id="q-grid"></div>
     </div>
-    <div class="q-sb-tip">
-      <div class="q-sb-tip-lbl">
-        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="7" cy="7" r="5.5"/><line x1="7" y1="5" x2="7" y2="7.5"/><circle cx="7" cy="9.5" r=".6" fill="currentColor"/></svg>
-        Tips
+    <div class="q-sb-tip q-timer-box" id="timer-box">
+      <div class="q-timer-lbl">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7.5" r="5"/><path d="M7 4.7v2.8l1.8 1.1"/><path d="M5 1h4"/></svg>
+        Sisa Waktu
       </div>
-      <span id="q-tip">Pilih jawaban untuk melihat pembahasan instan.</span>
+      <div class="q-timer" id="timer-display">--:--</div>
     </div>
     <div class="q-sb-legend">
       <div class="q-legend-row"><div class="q-legend-dot ld-cur"></div>Soal aktif</div>
@@ -1040,7 +1057,42 @@ function init(){
   S.correct=Array(data.soal.length).fill(null);
   S.marked=Array(data.soal.length).fill(false);
   document.getElementById('q-tot').textContent=data.soal.length;
-  buildGrid();buildMobStrip();renderQ(0);initReloadGuard();
+  buildGrid();buildMobStrip();renderQ(0);initReloadGuard();startTimer();
+}
+
+// ── Timer Ujian ──────────────────────────────────────────────────
+let _timerInterval = null;
+let _secondsLeft   = 0;
+
+function startTimer(){
+  if(!IS_UJIAN) return;
+  if(_timerInterval){ clearInterval(_timerInterval); _timerInterval = null; }
+  _secondsLeft = UJIAN_MINUTES * 60;
+  _renderTimer(_secondsLeft);
+  _timerInterval = setInterval(function(){
+    _secondsLeft--;
+    _renderTimer(_secondsLeft);
+    if(_secondsLeft <= 0){
+      clearInterval(_timerInterval);
+      _timerInterval = null;
+      if(!S.done) showScore();
+    }
+  }, 1000);
+}
+
+function _renderTimer(rem){
+  const m   = Math.floor(rem/60), s = rem%60;
+  const txt = (m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+  const d   = document.getElementById('timer-display'); if(d) d.textContent=txt;
+  const mv  = document.querySelector('#timer-mobile .t-val'); if(mv) mv.textContent=txt;
+  const cls = rem<=60?'danger':rem<=300?'warn':'';
+  [document.getElementById('timer-box'),document.getElementById('timer-mobile')].forEach(el=>{
+    if(!el)return; el.classList.remove('warn','danger'); if(cls) el.classList.add(cls);
+  });
+}
+
+function stopTimer(){
+  if(_timerInterval){ clearInterval(_timerInterval); _timerInterval=null; }
 }
 
 function buildGrid(){
@@ -1074,7 +1126,6 @@ function renderQ(i){
   const q=S.soal[i],ans=S.answers[i],answered=ans!==null;
   document.getElementById('q-cur').textContent=i+1;updateMobNav(i);
   document.getElementById('btn-prev').disabled=i===0;
-  document.getElementById('q-tip').textContent=TIPS[q.type]||TIPS.pg;
 
   const isLast=i===S.soal.length-1;
   const nb=document.getElementById('btn-next');
@@ -1434,6 +1485,7 @@ function initReloadGuard() {
 // ── Halaman Hasil Ujian ──────────────────────────────────────────
 function showUjianResult() {
   S.done = true;
+  stopTimer();
   if (IS_UJIAN) sessionStorage.setItem(SS_DONE, '1');
 
   const total = S.soal.length;
