@@ -27,9 +27,6 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Panduan Belajar Matematika yang Benar di EksaktaLab","description":"Panduan lengkap cara belajar matematika efektif menggunakan EksaktaLab","author":{"@type":"Organization","name":"EksaktaLab"},"publisher":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"datePublished":"2025-06-15","inLanguage":"id"}</script>
 
 <style>
-/* ── SCROLL BAR ── */
-#scroll-bar{position:fixed;top:60px;left:0;height:3px;background:var(--teal);z-index:200;width:0%;transition:width .1s linear;}
-
 /* ── ARTICLE HERO ── */
 .art-hero{
   background:var(--navy);padding:3.5rem var(--px) 3rem;
@@ -104,13 +101,6 @@
 /* ── ARTICLE BODY ── */
 .art-body{min-width:0;}
 
-/* Reading progress */
-.art-progress{
-  height:3px;background:var(--surface-3);
-  border-radius:2px;margin-bottom:2.5rem;overflow:hidden;
-}
-.art-progress-fill{height:100%;background:var(--teal);width:0%;transition:width .3s ease;}
-
 /* Intro lead */
 .art-lead{
   font-size:1.05rem;line-height:1.8;color:var(--text);
@@ -162,20 +152,20 @@
 .callout p{font-size:.875rem;color:var(--text-2);margin:0;line-height:1.65;}
 
 /* Step list */
-.step-list{list-style:none;padding:0;margin:1rem 0 1.5rem;display:flex;flex-direction:column;gap:.75rem;}
-.step-item{
+.artstep-list{list-style:none;padding:0;margin:1rem 0 1.5rem;display:flex;flex-direction:column;gap:.75rem;}
+.artstep-item{
   display:flex;gap:.85rem;align-items:flex-start;
   padding:.8rem 1rem;border-radius:var(--radius-sm);
   background:var(--surface-2);border:.5px solid var(--border);
 }
-.step-num{
+.artstep-num{
   width:24px;height:24px;border-radius:50%;flex-shrink:0;
   background:var(--teal);color:var(--navy);
   font-family:var(--mono);font-size:.65rem;font-weight:700;
   display:flex;align-items:center;justify-content:center;margin-top:.05rem;
 }
-.step-content{font-size:.875rem;color:var(--text-2);line-height:1.6;}
-.step-content strong{color:var(--text);}
+.artstep-content{font-size:.875rem;color:var(--text-2);line-height:1.6;}
+.artstep-content strong{color:var(--text);}
 
 /* Feature card */
 .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1.25rem 0 1.5rem;}
@@ -341,8 +331,6 @@
 </head>
 <body>
 
-<div id="scroll-bar"></div>
-
 <!-- NAVBAR -->
 <nav class="navbar">
   <a class="nav-logo" href="../../">
@@ -402,10 +390,6 @@
   <!-- ── ARTIKEL ── -->
   <article class="art-body">
 
-    <div class="art-progress">
-      <div class="art-progress-fill" id="read-progress"></div>
-    </div>
-
     <p class="art-lead">Banyak siswa buka buku, baca, lalu bingung. Atau langsung ngerjain soal tanpa paham konsep, hasilnya trial-and-error. EksaktaLab dirancang biar itu tidak terjadi — tapi manfaatnya hanya optimal kalau kamu pakai dengan cara yang benar.</p>
 
     <p>Artikel ini adalah panduan ringkas tapi lengkap tentang cara menggunakan EksaktaLab secara efektif. Bacanya santai, tapi praktikkan sungguh-sungguh.</p>
@@ -439,26 +423,26 @@
 
     <p>Halaman materi EksaktaLab bukan untuk dibaca cepat-cepat. Ada struktur di dalamnya yang dirancang untuk membangun pemahaman secara bertahap.</p>
 
-    <ul class="step-list">
-      <li class="step-item">
-        <span class="step-num">1</span>
-        <div class="step-content"><strong>Baca narasi pembuka.</strong> Setiap sub-bab dimulai dengan penjelasan konsep dalam bahasa yang manusiawi — bukan langsung rumus. Ini fondasi pemahamanmu.</div>
+    <ul class="artstep-list">
+      <li class="artstep-item">
+        <span class="artstep-num">1</span>
+        <div class="artstep-content"><strong>Baca narasi pembuka.</strong> Setiap sub-bab dimulai dengan penjelasan konsep dalam bahasa yang manusiawi — bukan langsung rumus. Ini fondasi pemahamanmu.</div>
       </li>
-      <li class="step-item">
-        <span class="step-num">2</span>
-        <div class="step-content"><strong>Buka accordion Rumus.</strong> Setelah paham konsepnya, baru lihat rumus formalnya. Rumus tanpa konsep = hafalan yang mudah lupa.</div>
+      <li class="artstep-item">
+        <span class="artstep-num">2</span>
+        <div class="artstep-content"><strong>Buka accordion Rumus.</strong> Setelah paham konsepnya, baru lihat rumus formalnya. Rumus tanpa konsep = hafalan yang mudah lupa.</div>
       </li>
-      <li class="step-item">
-        <span class="step-num">3</span>
-        <div class="step-content"><strong>Kerjakan Contoh Soal sendiri dulu.</strong> Sebelum klik untuk lihat penyelesaiannya, coba kerjakan di kertas. Ini kunci — otak belajar dari struggle, bukan dari menonton.</div>
+      <li class="artstep-item">
+        <span class="artstep-num">3</span>
+        <div class="artstep-content"><strong>Kerjakan Contoh Soal sendiri dulu.</strong> Sebelum klik untuk lihat penyelesaiannya, coba kerjakan di kertas. Ini kunci — otak belajar dari struggle, bukan dari menonton.</div>
       </li>
-      <li class="step-item">
-        <span class="step-num">4</span>
-        <div class="step-content"><strong>Bandingkan jawabanmu.</strong> Kalau sama, great. Kalau berbeda, baca langkah penyelesaiannya pelan-pelan dan cari di mana pikiranmu berbeda.</div>
+      <li class="artstep-item">
+        <span class="artstep-num">4</span>
+        <div class="artstep-content"><strong>Bandingkan jawabanmu.</strong> Kalau sama, great. Kalau berbeda, baca langkah penyelesaiannya pelan-pelan dan cari di mana pikiranmu berbeda.</div>
       </li>
-      <li class="step-item">
-        <span class="step-num">5</span>
-        <div class="step-content"><strong>Kerjakan Soal Latihan di bagian bawah.</strong> Ini verifikasi akhir — kalau kamu bisa jawab tanpa membuka materi lagi, berarti konsepnya sudah masuk.</div>
+      <li class="artstep-item">
+        <span class="artstep-num">5</span>
+        <div class="artstep-content"><strong>Kerjakan Soal Latihan di bagian bawah.</strong> Ini verifikasi akhir — kalau kamu bisa jawab tanpa membuka materi lagi, berarti konsepnya sudah masuk.</div>
       </li>
     </ul>
 
@@ -533,22 +517,22 @@
 
     <p>Tiga minggu sebelum ulangan atau UTBK, ubah modenya. Frekuensi soal lebih penting dari kedalaman materi di fase ini.</p>
 
-    <ul class="step-list">
-      <li class="step-item">
-        <span class="step-num">H-21</span>
-        <div class="step-content"><strong>Peta celah terakhir.</strong> Kerjakan satu Sesi Ujian per topik. Catat topik dengan nilai di bawah 70.</div>
+    <ul class="artstep-list">
+      <li class="artstep-item">
+        <span class="artstep-num">H-21</span>
+        <div class="artstep-content"><strong>Peta celah terakhir.</strong> Kerjakan satu Sesi Ujian per topik. Catat topik dengan nilai di bawah 70.</div>
       </li>
-      <li class="step-item">
-        <span class="step-num">H-14</span>
-        <div class="step-content"><strong>Drilling topik lemah.</strong> Fokus kerjakan paket Sub-Materi untuk topik yang nilainya rendah. Target: semua soal benar tanpa melihat materi.</div>
+      <li class="artstep-item">
+        <span class="artstep-num">H-14</span>
+        <div class="artstep-content"><strong>Drilling topik lemah.</strong> Fokus kerjakan paket Sub-Materi untuk topik yang nilainya rendah. Target: semua soal benar tanpa melihat materi.</div>
       </li>
-      <li class="step-item">
-        <span class="step-num">H-7</span>
-        <div class="step-content"><strong>Simulasi penuh.</strong> Kerjakan Sesi Ujian Akhir dengan kondisi mirip ujian: timer nyala, tidak ada gangguan, tidak ada pause.</div>
+      <li class="artstep-item">
+        <span class="artstep-num">H-7</span>
+        <div class="artstep-content"><strong>Simulasi penuh.</strong> Kerjakan Sesi Ujian Akhir dengan kondisi mirip ujian: timer nyala, tidak ada gangguan, tidak ada pause.</div>
       </li>
-      <li class="step-item">
-        <span class="step-num">H-1</span>
-        <div class="step-content"><strong>Istirahat.</strong> Bukan review. Otak butuh waktu konsolidasi. Tidur cukup jauh lebih berharga dari belajar sampai tengah malam.</div>
+      <li class="artstep-item">
+        <span class="artstep-num">H-1</span>
+        <div class="artstep-content"><strong>Istirahat.</strong> Bukan review. Otak butuh waktu konsolidasi. Tidur cukup jauh lebih berharga dari belajar sampai tengah malam.</div>
       </li>
     </ul>
 
@@ -664,11 +648,6 @@ function toggleTheme() {
 const sections = ['mulai','baca-materi','latihan-soal','pembahasan','ujian'];
 
 window.addEventListener('scroll', () => {
-  const el  = document.documentElement;
-  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
-  document.getElementById('scroll-bar').style.width = pct + '%';
-  document.getElementById('read-progress').style.width = pct + '%';
-
   // TOC active
   let active = sections[0];
   sections.forEach(id => {
