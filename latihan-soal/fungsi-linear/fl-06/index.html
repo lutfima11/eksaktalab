@@ -105,13 +105,13 @@ body{
 }
 .q-sb-head{
   padding:.85rem 1rem .7rem;border-bottom:1px solid var(--border);
-  flex:0 1 auto;min-height:0;display:flex;flex-direction:column;
+  flex:1 1 auto;min-height:0;display:flex;flex-direction:column;
 }
 .q-sb-label{
   font-family:var(--mono);font-size:.58rem;font-weight:700;
   color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;flex-shrink:0;
 }
-.q-num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;align-content:start;overflow-y:auto;min-height:0;}
+.q-num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;align-content:start;overflow-y:auto;min-height:0;flex:1;padding:2px;}
 .q-num-grid::-webkit-scrollbar{width:5px;}
 .q-num-grid::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
 .q-num-btn{
@@ -124,11 +124,11 @@ body{
 .q-num-btn.cur{border-color:var(--teal);background:var(--teal);color:var(--navy);}
 .q-num-btn.ok{border-color:var(--green-b);background:var(--green);color:var(--green-b);}
 .q-num-btn.ng{border-color:var(--red-b);background:var(--red);color:var(--red-b);}
-.q-num-btn.cur.ok,.q-num-btn.cur.ng{outline:2px solid var(--teal);outline-offset:1px;}
+.q-num-btn.cur.ok,.q-num-btn.cur.ng{box-shadow:inset 0 0 0 2px var(--teal);}
 
 .q-sb-tip{
   flex-shrink:0;
-  padding:.7rem 1rem;margin:.5rem .75rem 0;
+  padding:.7rem 1rem;margin:.6rem .75rem .75rem;
   border-radius:var(--radius-sm);
   background:rgba(0,191,165,.06);border:1px solid rgba(0,191,165,.18);
   font-size:.7rem;color:var(--text-3);line-height:1.55;
@@ -139,6 +139,21 @@ body{
   color:var(--teal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;
 }
 .q-sb-tip-lbl svg{width:10px;height:10px;}
+.q-prog-num{font-size:.82rem;color:var(--text-2);margin-bottom:.5rem;}
+.q-prog-num em{font-style:normal;font-weight:700;color:var(--text);font-family:var(--mono);font-size:1.05rem;}
+.q-prog-bar{height:6px;background:var(--surface-3);border-radius:4px;overflow:hidden;margin-bottom:.6rem;}
+.q-prog-fill{height:100%;background:var(--teal);border-radius:4px;width:0%;transition:width .35s ease;}
+.q-prog-stats{display:flex;flex-wrap:wrap;gap:.45rem .7rem;}
+.qps{display:flex;align-items:center;gap:.3rem;font-size:.7rem;color:var(--text-3);}
+.qps em{font-style:normal;font-weight:700;}
+.qps-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0;}
+.qps-ok .qps-dot{background:var(--green-b);}
+.qps-ok em{color:var(--green-b);}
+.qps-ng .qps-dot{background:var(--red-b);}
+.qps-ng em{color:var(--red-b);}
+.qps-sisa .qps-dot{background:var(--surface-3);border:1px solid var(--text-3);}
+.q-num-btn{position:relative;}
+.q-num-btn.mk::after{content:'';position:absolute;top:2px;right:2px;width:5px;height:5px;border-radius:50%;background:#F59E0B;}
 
 .q-sb-legend{
   padding:.75rem 1rem;border-top:1px solid var(--border);
@@ -373,7 +388,7 @@ body{
 .q-mob-num.cur  { border-color: var(--teal); background: var(--teal); color: var(--navy); }
 .q-mob-num.ok   { border-color: var(--green-b); background: var(--green); color: var(--green-b); }
 .q-mob-num.ng   { border-color: var(--red-b); background: var(--red); color: var(--red-b); }
-.q-mob-num.cur.ok, .q-mob-num.cur.ng { outline: 2px solid var(--teal); outline-offset: 1px; }
+.q-mob-num.cur.ok, .q-mob-num.cur.ng { box-shadow: inset 0 0 0 2px var(--teal); }
 
 /* Nav tombol di mobile (sama tapi lebih compact) */
 .q-mob-nav {
@@ -695,9 +710,6 @@ body{
   </div>
 </nav>
 
-<!-- PROGRESS -->
-<div class="q-progress-bar"><div class="q-progress-fill" id="q-prog"></div></div>
-
 <!-- BREADCRUMB -->
 <div class="q-breadcrumb">
   <a href="../../../latihan-soal/fungsi-linear/">Fungsi Linear</a>
@@ -723,16 +735,16 @@ body{
     </div>
     <div class="q-sb-tip">
       <div class="q-sb-tip-lbl">
-        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="7" cy="7" r="5.5"/><line x1="7" y1="5" x2="7" y2="7.5"/><circle cx="7" cy="9.5" r=".6" fill="currentColor"/></svg>
-        Tips
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 1.5v11M2.5 4.2l9 5.6M2.5 9.8l9-5.6"/></svg>
+        Progres
       </div>
-      <span id="q-tip">Pilih jawaban untuk melihat pembahasan instan.</span>
-    </div>
-    <div class="q-sb-legend">
-      <div class="q-legend-row"><div class="q-legend-dot ld-cur"></div>Soal aktif</div>
-      <div class="q-legend-row"><div class="q-legend-dot ld-ok"></div>Sudah dijawab</div>
-      <div class="q-legend-row"><div class="q-legend-dot ld-ng"></div>Jawaban salah</div>
-      <div class="q-legend-row"><div class="q-legend-dot ld-bl"></div>Belum dikunjungi</div>
+      <div class="q-prog-num"><em id="qp-done">0</em> / <span id="qp-tot">0</span> terjawab</div>
+      <div class="q-prog-bar"><div class="q-prog-fill" id="qp-fill"></div></div>
+      <div class="q-prog-stats">
+        <span class="qps qps-ok"><span class="qps-dot"></span>Benar <em id="qp-benar">0</em></span>
+        <span class="qps qps-ng"><span class="qps-dot"></span>Salah <em id="qp-salah">0</em></span>
+        <span class="qps qps-sisa"><span class="qps-dot"></span>Sisa <em id="qp-sisa">0</em></span>
+      </div>
     </div>
   </aside>
 
@@ -815,15 +827,21 @@ function init(){
   S.soal=data.soal;
   S.answers=Array(data.soal.length).fill(null);
   S.correct=Array(data.soal.length).fill(null);
-  S.marked=Array(data.soal.length).fill(false);
+  S.marked=loadMarks(data.soal.length);
   document.getElementById('q-tot').textContent=data.soal.length;
-  buildGrid();buildMobStrip();renderQ(0);
+  buildGrid();buildMobStrip();renderQ(0);updateProg();
 }
+const MARK_KEY='eksakta-mark-'+PAKET_ID;
+function loadMarks(n){
+  try{const a=JSON.parse(localStorage.getItem(MARK_KEY));if(Array.isArray(a)&&a.length===n)return a.map(Boolean);}catch(e){}
+  return Array(n).fill(false);
+}
+function saveMarks(){try{localStorage.setItem(MARK_KEY,JSON.stringify(S.marked));}catch(e){}}
 
 function buildGrid(){
   const g=document.getElementById('q-grid');
   g.innerHTML=S.soal.map((_,i)=>
-    `<button class="q-num-btn${i===0?' cur':''}" id="nb${i}" onclick="goTo(${i})">${i+1}</button>`
+    `<button class="q-num-btn${i===0?' cur':''}${S.marked[i]?' mk':''}" id="nb${i}" onclick="goTo(${i})">${i+1}</button>`
   ).join('');
 }
 
@@ -833,11 +851,17 @@ function updateBtn(i){updateMobNum(i);
   if(i===S.cur)b.classList.add('cur');
   if(S.correct[i]===true)b.classList.add('ok');
   if(S.correct[i]===false)b.classList.add('ng');
+  if(S.marked[i])b.classList.add('mk');
 }
 
 function updateProg(){
+  const tot=S.soal.length;
   const done=S.answers.filter(a=>a!==null).length;
-  document.getElementById('q-prog').style.width=(done/S.soal.length*100)+'%';
+  const benar=S.correct.filter(c=>c===true).length;
+  const salah=S.correct.filter(c=>c===false).length;
+  const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v;};
+  set('qp-done',done);set('qp-tot',tot);set('qp-benar',benar);set('qp-salah',salah);set('qp-sisa',tot-done);
+  const f=document.getElementById('qp-fill');if(f)f.style.width=(done/tot*100)+'%';
 }
 
 function goTo(i){if(S.done)return;S.cur=i;S.soal.forEach((_,j)=>{updateBtn(j);updateMobNum(j);});updateMobNav(i);renderQ(i);closeSb();}
@@ -847,7 +871,6 @@ function renderQ(i){
   const q=S.soal[i],ans=S.answers[i],answered=ans!==null;
   document.getElementById('q-cur').textContent=i+1;updateMobNav(i);
   document.getElementById('btn-prev').disabled=i===0;
-  document.getElementById('q-tip').textContent=TIPS[q.type]||TIPS.pg;
 
   const isLast=i===S.soal.length-1;
   const nb=document.getElementById('btn-next');
@@ -1057,6 +1080,8 @@ function confirmBS(qi){
 /* Mark */
 function mark(i){
   S.marked[i]=!S.marked[i];
+  saveMarks();
+  const nb=document.getElementById('nb'+i);if(nb)nb.classList.toggle('mk',S.marked[i]);
   const b=document.getElementById('tm'+i);if(!b)return;
   b.classList.toggle('on',S.marked[i]);
   b.innerHTML=`<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 2h6v9l-3-2.2L4 11V2z"/></svg>${S.marked[i]?'Ditandai':'Tandai Soal'}`;
@@ -1092,7 +1117,6 @@ function showScore(){
     </div>
   </div>`;
   document.getElementById('q-nav').style.display='none';const mn2=document.getElementById('q-mob-nav');if(mn2)mn2.style.display='none';const ms2=document.getElementById('q-mob-strip');if(ms2)ms2.style.display='none';
-  document.getElementById('q-prog').style.width='100%';
 }
 
 /* Sidebar mobile */
