@@ -1062,8 +1062,8 @@ function renderBS(q,i,answered){
     h+=`<div class="${itemCls}">
       <div class="q-bs-item-text"><span class="q-bs-item-label">${String.fromCharCode(65+pi)}.</span>${p}</div>
       <div class="q-bs-btns">
-        <button class="${bCls}" onclick="pickBS(${i},${pi},'BENAR',this)"${dis}>Benar</button>
-        <button class="${sCls}" onclick="pickBS(${i},${pi},'SALAH',this)"${dis}>Salah</button>
+        <button class="${bCls}" id="bs-b-${i}-${pi}" onclick="pickBS(${i},${pi},'BENAR')"${dis}>Benar</button>
+        <button class="${sCls}" id="bs-s-${i}-${pi}" onclick="pickBS(${i},${pi},'SALAH')"${dis}>Salah</button>
       </div>
     </div>`;
   });
@@ -1074,7 +1074,7 @@ function renderBS(q,i,answered){
   }
   return h;
 }
-function pickBS(qi,pi,val,btn){
+function pickBS(qi,pi,val){
   if(S.done||S.answers[qi]!==null)return;
   if(!S.bsTemp)S.bsTemp={};
   if(!S.bsTemp[qi]){
@@ -1084,8 +1084,8 @@ function pickBS(qi,pi,val,btn){
   if(S.bsTemp[qi][pi]===val){S.bsTemp[qi][pi]=null;}
   else{S.bsTemp[qi][pi]=val;}
   const cur=S.bsTemp[qi][pi];
-  const bb=document.querySelector(`[onclick="pickBS(${qi},${pi},'BENAR',this)"]`);
-  const sb=document.querySelector(`[onclick="pickBS(${qi},${pi},'SALAH',this)"]`);
+  const bb=document.getElementById(`bs-b-${qi}-${pi}`);
+  const sb=document.getElementById(`bs-s-${qi}-${pi}`);
   if(bb)bb.className='q-bs-btn'+(cur==='BENAR'?' sel-b':'');
   if(sb)sb.className='q-bs-btn'+(cur==='SALAH'?' sel-s':'');
   const bc=document.getElementById(`bs-confirm-${qi}`);

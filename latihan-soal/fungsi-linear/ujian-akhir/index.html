@@ -1304,8 +1304,8 @@ function renderBS(q,i,answered){
     h+=`<div class="${itemCls}">
       <div class="q-bs-item-text"><span class="q-bs-item-label">${String.fromCharCode(65+pi)}.</span>${p}</div>
       <div class="q-bs-btns">
-        <button class="${bCls}" onclick="pickBS(${i},${pi},'BENAR',this)"${dis}>Benar</button>
-        <button class="${sCls}" onclick="pickBS(${i},${pi},'SALAH',this)"${dis}>Salah</button>
+        <button class="${bCls}" id="bs-b-${i}-${pi}" onclick="pickBS(${i},${pi},'BENAR')"${dis}>Benar</button>
+        <button class="${sCls}" id="bs-s-${i}-${pi}" onclick="pickBS(${i},${pi},'SALAH')"${dis}>Salah</button>
       </div>
     </div>`;
   });
@@ -1317,21 +1317,22 @@ function renderBS(q,i,answered){
   }
   return h;
 }
-function pickBS(qi,pi,val,btn){
+function pickBS(qi,pi,val){
   if(S.done||(S.answers[qi]!==null&&!IS_UJIAN))return;
   if(!S.bsTemp)S.bsTemp={};
   if(!S.bsTemp[qi]){
     const ps=Array.isArray(S.soal[qi].pernyataan)?S.soal[qi].pernyataan:[S.soal[qi].q];
     S.bsTemp[qi]=IS_UJIAN&&S.answers[qi]?[...S.answers[qi]]:Array(ps.length).fill(null);
   }
-  if(!S.bsTemp)S.bsTemp={};
-  if(!S.bsTemp[qi]){
-    const ps=Array.isArray(S.soal[qi].pernyataan)?S.soal[qi].pernyataan:[S.soal[qi].q];
-    S.bsTemp[qi]=Array(ps.length).fill(null);
-  }
   if(S.bsTemp[qi][pi]===val){S.bsTemp[qi][pi]=null;}
   else{S.bsTemp[qi][pi]=val;}
-  renderQ(qi);
+  const cur=S.bsTemp[qi][pi];
+  const bb=document.getElementById(`bs-b-${qi}-${pi}`);
+  const sb=document.getElementById(`bs-s-${qi}-${pi}`);
+  if(bb)bb.className='q-bs-btn'+(cur==='BENAR'?' sel-b':'');
+  if(sb)sb.className='q-bs-btn'+(cur==='SALAH'?' sel-s':'');
+  const bc=document.getElementById(`bs-confirm-${qi}`);
+  if(bc)bc.disabled=!S.bsTemp[qi].every(a=>a!==null);
 }
 function confirmBS(qi){
   const q=S.soal[qi];
