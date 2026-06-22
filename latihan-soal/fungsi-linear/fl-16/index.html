@@ -12,7 +12,14 @@
 <script>
 window.MathJax = {
   tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
-  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] },
+  startup: {
+    ready() {
+      MathJax.startup.defaultReady();
+      const wrap = document.getElementById('q-content');
+      if (wrap) MathJax.typesetPromise([wrap]).catch(()=>{});
+    }
+  }
 };
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
@@ -946,7 +953,7 @@ function renderQ(i){
 
   const wrap=document.getElementById('q-content');
   wrap.innerHTML=html;wrap.scrollTop=0;const qc=document.getElementById('q-content');if(qc)qc.scrollTop=0;
-  if(window.MathJax)MathJax.typesetPromise([wrap]).catch(()=>{});
+  if(window.MathJax && typeof MathJax.typesetPromise === 'function')MathJax.typesetPromise([wrap]).catch(()=>{});
 }
 
 /* PG */
