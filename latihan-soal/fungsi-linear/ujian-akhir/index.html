@@ -884,6 +884,7 @@ body{
   <div class="inv-icon">🚫</div>
   <div class="inv-title">Sesi Ujian Tidak Valid</div>
   <p class="inv-msg">Halaman di-<strong>refresh</strong> saat ujian sedang berlangsung.<br>Sesi ini <strong>tidak dapat dilanjutkan</strong>.<br>Mulai ulang dari awal.</p>
+  <button class="inv-back" onclick="mulaiUlangUjian()" style="background:var(--teal);border-color:var(--teal);color:#fff;cursor:pointer;">&#8635; Mulai Ujian Baru</button>
   <a class="inv-back" href="../">← Kembali ke Fungsi Linear</a>
 </div>
 
@@ -1043,41 +1044,56 @@ function init(){
 }
 
 // ── Timer Ujian ──────────────────────────────────────────────────
-let _timerInt=null;
-
-function _onTabVisible(){
-  // Segera sinkronkan tampilan saat tab kembali ke foreground
-  if(document.visibilityState==='visible') updateTimer();
-}
+const SS_ENDTIME = 'ujian_endtime_' + PAKET_ID;
+let _timerActive = false;
+let _timerRAF = null;
 
 function startTimer(){
   if(!IS_UJIAN) return;
-  S.endTime=Date.now()+UJIAN_MINUTES*60*1000;
-  updateTimer();
-  // 500ms agar lebih responsif dan tidak kehilangan tick
-  _timerInt=setInterval(updateTimer,500);
-  // Sinkronkan segera saat user kembali ke tab (setelah sleep/background)
-  document.addEventListener('visibilitychange',_onTabVisible);
+  // Hentikan timer lama jika ada (safety)
+  _timerActive = false;
+  if(_timerRAF){ cancelAnimationFrame(_timerRAF); _timerRAF = null; }
+
+  // Set endTime baru dan simpan ke sessionStorage agar tahan edge case
+  const endTime = Date.now() + UJIAN_MINUTES * 60 * 1000;
+  S.endTime = endTime;
+  sessionStorage.setItem(SS_ENDTIME, String(endTime));
+
+  _timerActive = true;
+  _tickTimer();
 }
 
-function updateTimer(){
-  // Math.floor → countdown lebih natural (1:00 tampil penuh 1 detik)
-  const rem=Math.max(0,Math.floor((S.endTime-Date.now())/1000));
-  const m=Math.floor(rem/60),s=rem%60;
-  const txt=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
-  const d=document.getElementById('timer-display');if(d)d.textContent=txt;
-  const mv=document.querySelector('#timer-mobile .t-val');if(mv)mv.textContent=txt;
-  let cls='';
-  if(rem<=60)cls='danger';else if(rem<=300)cls='warn';
+function _tickTimer(){
+  if(!_timerActive) return;
+  _renderTimer();
+  const rem = Math.round((S.endTime - Date.now()) / 1000);
+  if(rem <= 0){
+    _timerActive = false;
+    _timerRAF = null;
+    if(!S.done) showScore();
+    return;
+  }
+  // Jadwalkan tick berikutnya ± tepat di pergantian detik
+  const msToNext = (S.endTime - Date.now()) % 1000 || 1000;
+  _timerRAF = setTimeout(_tickTimer, msToNext > 0 ? msToNext : 1000);
+}
+
+function _renderTimer(){
+  const rem = Math.max(0, Math.round((S.endTime - Date.now()) / 1000));
+  const m = Math.floor(rem/60), s = rem%60;
+  const txt = (m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+  const d = document.getElementById('timer-display'); if(d) d.textContent = txt;
+  const mv = document.querySelector('#timer-mobile .t-val'); if(mv) mv.textContent = txt;
+  const cls = rem<=60?'danger':rem<=300?'warn':'';
   [document.getElementById('timer-box'),document.getElementById('timer-mobile')].forEach(el=>{
-    if(!el)return;el.classList.remove('warn','danger');if(cls)el.classList.add(cls);
+    if(!el)return; el.classList.remove('warn','danger'); if(cls) el.classList.add(cls);
   });
-  if(rem<=0){clearInterval(_timerInt);_timerInt=null;if(!S.done)showScore();}
 }
 
 function stopTimer(){
-  if(_timerInt){clearInterval(_timerInt);_timerInt=null;}
-  document.removeEventListener('visibilitychange',_onTabVisible);
+  _timerActive = false;
+  if(_timerRAF){ clearTimeout(_timerRAF); _timerRAF = null; }
+  sessionStorage.removeItem(SS_ENDTIME);
 }
 
 function buildGrid(){
@@ -1368,7 +1384,7 @@ function showScore(){
       <div class="q-score-item"><div class="q-score-item-n">${tot}</div><div class="q-score-item-l">Total</div></div>
     </div>
     <div class="q-score-acts">
-      <button class="q-score-btn" onclick="location.reload()">&#8635; Ulangi</button>
+      <button class="q-score-btn" onclick="mulaiUlangUjian()">&#8635; Ulangi</button>
       <button class="q-score-btn p" onclick="window.location.href='../'" class="q-top-btn back-btn">&#8592; Kembali</button>
     </div>
   </div>`;
@@ -1542,7 +1558,7 @@ function showUjianResult() {
             <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Bagikan ke WhatsApp
           </a>
-          <button class="ur-btn secondary" onclick="window.location.reload()">↺ Ulangi</button>
+          <button class="ur-btn secondary" onclick="mulaiUlangUjian()">↺ Ulangi</button>
           <a class="ur-btn secondary" href="../">← Kembali</a>
         </div>
       </div>
@@ -1581,11 +1597,25 @@ function showScore() {
   else { _origShowScore(); }
 }
 
+// Bersihkan semua session state ujian dan mulai ulang
+function mulaiUlangUjian(){
+  sessionStorage.removeItem(SS_STARTED);
+  sessionStorage.removeItem(SS_DONE);
+  sessionStorage.removeItem(SS_ENDTIME);
+  window.location.reload();
+}
+
 // Cek reload saat ujian berlangsung
 if (IS_UJIAN && sessionStorage.getItem(SS_STARTED) === '1' && sessionStorage.getItem(SS_DONE) !== '1') {
+  // Reload saat ujian sedang berlangsung → sesi tidak valid
   sessionStorage.removeItem(SS_STARTED);
+  sessionStorage.removeItem(SS_ENDTIME);
   document.getElementById('ujian-invalid-screen').classList.add('show');
 } else {
+  // Kondisi normal: awal, setelah selesai, atau setelah invalid screen
+  sessionStorage.removeItem(SS_STARTED);
+  sessionStorage.removeItem(SS_DONE);
+  sessionStorage.removeItem(SS_ENDTIME);
   init();
 }
 
