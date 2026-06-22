@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="../assets/favicon.svg">
 <meta name="description" content="Artikel, tips belajar matematika, dan panduan soal dari tim EksaktaLab untuk siswa SMA dan SMK.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/materi.css">
 <link rel="stylesheet" href="../assets/css/footer.css">
 <link rel="stylesheet" href="../assets/css/page-inner.css">
@@ -28,384 +28,251 @@
 <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
 
 <style>
-/* ─── BLOG PAGE STYLES ─────────────────────────────────── */
-body { overflow-x: hidden; }
+/* ═══════════════════════════════════════════════════════════
+   BLOG — EksaktaLab · "chalkboard editorial"
+   Memakai token global dari materi.css (navy/teal/Space Grotesk).
+   ═══════════════════════════════════════════════════════════ */
+body{overflow-x:hidden;}
+#scroll-bar{position:fixed;top:60px;left:0;height:3px;background:var(--teal);z-index:200;width:0%;transition:width .1s linear;}
 
-/* ─── SCROLL BAR ─── */
-#scroll-bar { position:fixed;top:60px;left:0;height:3px;background:var(--teal);z-index:200;width:0%;transition:width .1s linear; }
+/* ─── HERO (chalkboard) ─────────────────────────────────────── */
+.blog-hero{
+  position:relative;overflow:hidden;
+  background:var(--navy);
+  padding:4.25rem var(--px) 4rem;
+}
+.bh-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(0,191,165,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,191,165,.07) 1px,transparent 1px);
+  background-size:38px 38px;}
+.bh-grid::after{content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(0,191,165,.16) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,191,165,.16) 1px,transparent 1px);
+  background-size:190px 190px;}
+.bh-glow{position:absolute;inset:0;
+  background:radial-gradient(ellipse 65% 75% at 50% 38%,transparent 35%,var(--navy) 100%);z-index:1;}
+/* drifting math glyphs */
+.bh-glyphs{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;}
+.bh-glyph{position:absolute;font-family:var(--mono);font-weight:700;
+  color:rgba(0,191,165,.10);user-select:none;will-change:transform;
+  animation:bhFloat linear infinite;}
+@keyframes bhFloat{
+  0%{transform:translateY(8px) rotate(-3deg);}
+  50%{transform:translateY(-10px) rotate(3deg);}
+  100%{transform:translateY(8px) rotate(-3deg);}
+}
+.bh-content{position:relative;z-index:2;max-width:680px;margin:0 auto;text-align:center;
+  opacity:0;transform:translateY(14px);animation:bhRise .7s cubic-bezier(.2,.7,.3,1) forwards;}
+@keyframes bhRise{to{opacity:1;transform:none;}}
+.bh-eyebrow{display:inline-flex;align-items:center;gap:.45rem;
+  font-family:var(--mono);font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--teal);background:rgba(0,191,165,.1);border:1px solid rgba(0,191,165,.28);
+  padding:.3rem .8rem;border-radius:999px;margin-bottom:1.25rem;}
+.bh-eyebrow svg{width:11px;height:11px;}
+.bh-title{font-family:var(--display);font-weight:700;color:#fff;
+  font-size:clamp(2rem,5.2vw,3.1rem);line-height:1.06;letter-spacing:-.035em;margin-bottom:1rem;}
+.bh-title em{font-style:normal;color:var(--teal);position:relative;}
+.bh-title em::after{content:'';position:absolute;left:0;right:0;bottom:.06em;height:.13em;
+  background:rgba(0,191,165,.28);border-radius:2px;}
+.bh-sub{font-size:.94rem;color:#90A6C6;line-height:1.7;max-width:480px;margin:0 auto;}
+.bh-stats{display:flex;justify-content:center;flex-wrap:wrap;gap:1.5rem;margin-top:1.9rem;}
+.bh-stat{display:flex;flex-direction:column;align-items:center;gap:.2rem;}
+.bh-stat b{font-family:var(--display);font-size:1.45rem;font-weight:700;color:#fff;line-height:1;letter-spacing:-.02em;}
+.bh-stat span{font-family:var(--mono);font-size:.56rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:#5C719A;}
+.bh-stat-div{width:1px;align-self:stretch;background:rgba(255,255,255,.1);}
 
-/* ─── HERO ─── */
-.blog-hero {
-  background: var(--navy);
-  padding: 3.5rem var(--px) 3rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.blog-hero-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(0,191,165,.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,191,165,.07) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-.blog-hero-grid::after {
-  content: '';
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(0,191,165,.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,191,165,.2) 1px, transparent 1px);
-  background-size: 200px 200px;
-}
-.blog-hero-grid::before {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse 70% 80% at 50% 50%, transparent 40%, var(--navy) 100%);
-  z-index: 1;
-}
-.blog-hero-content { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
-.blog-eyebrow {
-  display: inline-flex; align-items: center; gap: .4rem;
-  font-family: var(--mono); font-size: .7rem; font-weight: 600;
-  color: var(--teal); letter-spacing: .12em; text-transform: uppercase;
-  background: rgba(0,191,165,.1); border: 1px solid rgba(0,191,165,.25);
-  padding: .28rem .75rem; border-radius: 8px; margin-bottom: 1.1rem;
-}
-.blog-hero-title {
-  font-family: var(--display);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 700; color: #fff;
-  letter-spacing: -.03em; line-height: 1.1;
-  margin-bottom: .9rem;
-}
-.blog-hero-title em { font-style: normal; color: var(--teal); }
-.blog-hero-sub {
-  font-size: .9rem; color: #8FA8C8;
-  line-height: 1.65; max-width: 420px; margin: 0 auto;
-}
+/* ─── STICKY TOOLBAR (search + chips) ───────────────────────── */
+.blog-toolbar{position:sticky;top:60px;z-index:50;
+  background:color-mix(in srgb,var(--surface) 86%,transparent);
+  backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--border);}
+@supports not (backdrop-filter:blur(1px)){.blog-toolbar{background:var(--surface);}}
+.blog-toolbar-inner{max-width:1020px;margin:0 auto;padding:.85rem var(--px);
+  display:flex;align-items:center;gap:.85rem;flex-wrap:wrap;}
+.blog-search{position:relative;display:flex;align-items:center;flex:1;min-width:200px;}
+.blog-search-input{width:100%;height:40px;padding:0 2.4rem 0 2.55rem;
+  border-radius:999px;border:1.5px solid var(--border);background:var(--surface-2);
+  color:var(--text);font-family:var(--sans);font-size:.85rem;outline:none;transition:border-color .18s,background .18s;}
+.blog-search-input:focus{border-color:var(--teal);background:var(--surface);}
+.blog-search-input::placeholder{color:var(--text-3);}
+.blog-search-icon{position:absolute;left:.95rem;width:15px;height:15px;stroke:var(--text-3);fill:none;stroke-width:2;stroke-linecap:round;pointer-events:none;}
+.blog-search-clear{position:absolute;right:.7rem;width:24px;height:24px;border-radius:50%;
+  background:var(--surface-3);border:none;color:var(--text-3);cursor:pointer;
+  display:none;align-items:center;justify-content:center;font-size:.72rem;transition:all .18s;}
+.blog-search-clear:hover{background:var(--border);color:var(--text);}
+.blog-search-clear.visible{display:flex;}
+.blog-sort{font-family:var(--sans);font-size:.76rem;font-weight:600;color:var(--text-2);
+  background:var(--surface-2);border:1.5px solid var(--border);border-radius:999px;
+  padding:.4rem .85rem;cursor:pointer;outline:none;transition:border-color .18s;flex-shrink:0;}
+.blog-sort:focus{border-color:var(--teal);}
 
-/* ─── SEARCH BAR ─── */
-.blog-search-wrap {
-  max-width: 980px; margin: 0 auto;
-  padding: 1.5rem var(--px) 0;
-}
-.blog-search {
-  position: relative;
-  display: flex; align-items: center;
-}
-.blog-search-input {
-  width: 100%; height: 44px;
-  padding: 0 1rem 0 2.8rem;
-  border-radius: var(--radius-sm);
-  border: 1.5px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-  font-family: var(--sans); font-size: .875rem;
-  outline: none; transition: border-color .18s;
-}
-.blog-search-input:focus { border-color: var(--teal); }
-.blog-search-input::placeholder { color: var(--text-3); }
-.blog-search-icon {
-  position: absolute; left: .85rem;
-  width: 15px; height: 15px;
-  stroke: var(--text-3); fill: none;
-  stroke-width: 2; stroke-linecap: round;
-  pointer-events: none;
-}
-.blog-search-clear {
-  position: absolute; right: .75rem;
-  width: 26px; height: 26px; border-radius: 50%;
-  background: var(--surface-3); border: none;
-  color: var(--text-3); cursor: pointer;
-  display: none; align-items: center; justify-content: center;
-  font-size: .75rem; transition: all .18s;
-}
-.blog-search-clear:hover { background: var(--border); color: var(--text); }
-.blog-search-clear.visible { display: flex; }
+/* ─── FILTER CHIPS ──────────────────────────────────────────── */
+.blog-chips{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;width:100%;}
+.blog-chip{display:inline-flex;align-items:center;gap:.36rem;height:32px;padding:0 .9rem;
+  border-radius:999px;border:1.5px solid var(--border);background:var(--surface-2);
+  color:var(--text-3);font-family:var(--sans);font-size:.74rem;font-weight:600;
+  cursor:pointer;transition:all .16s;white-space:nowrap;}
+.blog-chip:hover{border-color:var(--teal);color:var(--teal);}
+.blog-chip.active{border-color:var(--teal);background:var(--teal);color:#fff;}
+.blog-chip.active .blog-chip-dot{background:#fff;}
+.blog-chip-dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex-shrink:0;}
+.blog-chip-count{font-family:var(--mono);font-size:.62rem;opacity:.65;}
 
-/* ─── MAIN WRAP ─── */
-.blog-wrap {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 1.75rem var(--px) 5rem;
-}
+/* ─── MAIN ──────────────────────────────────────────────────── */
+.blog-wrap{max-width:1020px;margin:0 auto;padding:1.85rem var(--px) 5rem;}
+.blog-count{font-family:var(--mono);font-size:.66rem;font-weight:600;color:var(--text-3);
+  letter-spacing:.05em;margin-bottom:1.15rem;}
+.blog-count b{color:var(--teal);}
 
-/* ─── FILTER BAR ─── */
-.blog-filter {
-  display: flex; align-items: center;
-  gap: .4rem; flex-wrap: wrap;
-  margin-bottom: 1.75rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--border);
-}
-.blog-chip {
-  display: inline-flex; align-items: center; gap: .32rem;
-  height: 30px; padding: 0 .85rem;
-  border-radius: var(--radius-sm);
-  border: 1.5px solid var(--border);
-  background: var(--surface-2);
-  color: var(--text-3);
-  font-family: var(--sans); font-size: .73rem; font-weight: 600;
-  cursor: pointer; transition: all .17s; white-space: nowrap;
-}
-.blog-chip:hover { border-color: var(--teal); color: var(--teal); background: rgba(0,191,165,.05); }
-.blog-chip.active { border-color: var(--teal); background: rgba(0,191,165,.1); color: var(--teal); }
-.blog-chip-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+/* ─── GRID ──────────────────────────────────────────────────── */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem;}
 
-/* ─── SORT + COUNT ROW ─── */
-.blog-meta-row {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 1.25rem; gap: 1rem;
-}
-.blog-count {
-  font-family: var(--mono); font-size: .68rem; font-weight: 600;
-  color: var(--text-3); letter-spacing: .04em;
-}
-.blog-count span { color: var(--teal); }
-.blog-sort {
-  font-family: var(--sans); font-size: .73rem; font-weight: 600;
-  color: var(--text-2); background: var(--surface-2);
-  border: 1.5px solid var(--border); border-radius: 7px;
-  padding: .25rem .6rem; cursor: pointer; outline: none;
-  transition: border-color .18s;
-}
-.blog-sort:focus { border-color: var(--teal); }
+/* ─── CARD ──────────────────────────────────────────────────── */
+.acard{position:relative;display:flex;flex-direction:column;
+  background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;text-decoration:none;color:inherit;transition:transform .22s,border-color .22s,box-shadow .22s;
+  opacity:0;transform:translateY(16px);}
+.acard.in{opacity:1;transform:none;}
+a.acard{cursor:pointer;}
+a.acard:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:0 12px 30px rgba(10,15,30,.10);}
+[data-theme="dark"] a.acard:hover{box-shadow:0 12px 30px rgba(0,0,0,.4);}
+a.acard:hover .acard-thumb .tm-line{stroke-dashoffset:0;}
+.acard.soon{cursor:default;}
+.acard.soon .acard-thumb{filter:saturate(.7);}
 
-/* ─── ARTIKEL GRID ─── */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.1rem;
-}
+/* featured spans full row */
+.acard.featured{grid-column:1/-1;flex-direction:row;}
+.acard.featured .acard-thumb{width:42%;min-width:300px;aspect-ratio:auto;}
+.acard.featured .acard-body{padding:1.9rem 2rem;}
+.acard.featured .acard-title{font-size:1.5rem;line-height:1.18;}
+.acard.featured .acard-excerpt{-webkit-line-clamp:4;font-size:.86rem;}
 
-/* ─── ARTICLE CARD ─── */
-.article-card {
-  background: var(--surface);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  display: flex; flex-direction: column;
-  transition: all .22s;
-  cursor: pointer;
-}
-.article-card:hover {
-  border-color: var(--teal);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,.07);
-}
-/* Featured card — full width baris pertama */
-.article-card.featured {
-  grid-column: 1 / -1;
-  flex-direction: row;
-}
-.article-card.featured .article-thumb {
-  width: 340px; flex-shrink: 0;
-  aspect-ratio: unset; height: auto;
-}
-.article-card.featured .article-body { padding: 1.75rem 1.75rem; }
-
-/* THUMBNAIL */
-.article-thumb {
-  aspect-ratio: 16/9;
-  background: var(--navy);
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.article-thumb-inner {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-}
-.article-thumb-icon { font-size: 2.5rem; opacity: .6; }
-.article-thumb-bg {
-  position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(0,191,165,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,191,165,.06) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-.article-thumb-math {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--mono); font-size: 2.4rem; font-weight: 700;
-  color: rgba(0,191,165,.2); letter-spacing: -.05em;
-  user-select: none; pointer-events: none;
-}
-.article-thumb.t-algebra { background: linear-gradient(135deg, #0d1b2e 0%, #162032 100%); }
-.article-thumb.t-tips    { background: linear-gradient(135deg, #0d1b2e 0%, #1a1040 100%); }
-.article-thumb.t-utbk    { background: linear-gradient(135deg, #0d1b2e 0%, #1c0a0a 100%); }
-.article-thumb.t-materi  { background: linear-gradient(135deg, #0d1b2e 0%, #052e1c 100%); }
-.article-thumb.t-mindset { background: linear-gradient(135deg, #0d1b2e 0%, #1c1808 100%); }
-.article-thumb.t-featured { background: linear-gradient(135deg, #0d1b2e 0%, #091a2e 100%); }
+/* THUMB */
+.acard-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;flex-shrink:0;background:var(--navy);}
+.acard-thumb .tgrid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(0,191,165,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,191,165,.07) 1px,transparent 1px);background-size:22px 22px;}
+.acard-thumb.t-algebra{background:linear-gradient(140deg,#0c1726 0%,#13233a 100%);}
+.acard-thumb.t-tips   {background:linear-gradient(140deg,#0d1626 0%,#1a1340 100%);}
+.acard-thumb.t-utbk   {background:linear-gradient(140deg,#0d1626 0%,#241016 100%);}
+.acard-thumb.t-materi {background:linear-gradient(140deg,#0c1726 0%,#06321f 100%);}
+.acard-thumb.t-insight{background:linear-gradient(140deg,#0c1726 0%,#0a2540 100%);}
+.acard-thumb.t-panduan{background:linear-gradient(140deg,#0d1626 0%,#1d1640 100%);}
+.acard-thumb.t-featured{background:linear-gradient(140deg,#0a1424 0%,#0b2238 60%,#0a1c34 100%);}
+.tm{position:absolute;inset:0;width:100%;height:100%;}
+.tm-axis{stroke:rgba(0,191,165,.28);stroke-width:1.5;}
+.tm-line{stroke:var(--teal);stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:340;stroke-dashoffset:0;transition:stroke-dashoffset .9s ease;}
+.tm-line.dash{stroke-dasharray:6 7;}
+.tm-dot{fill:var(--teal);}
+.tm-soft{stroke:rgba(0,191,165,.45);stroke-width:1.6;fill:none;}
+.tm-fill{fill:rgba(0,191,165,.16);}
+.thumb-tag{position:absolute;left:.7rem;top:.7rem;z-index:2;display:inline-flex;align-items:center;gap:.3rem;
+  font-family:var(--mono);font-size:.55rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:.18rem .5rem;border-radius:999px;}
+.thumb-tag.live{color:var(--teal);background:rgba(0,191,165,.16);border:1px solid rgba(0,191,165,.4);}
+.thumb-tag.soon{color:#FBBF24;background:rgba(245,158,11,.16);border:1px solid rgba(245,158,11,.4);}
+.thumb-tag.live .dot{width:5px;height:5px;border-radius:50%;background:var(--teal);
+  box-shadow:0 0 0 0 rgba(0,191,165,.6);animation:livePulse 1.8s infinite;}
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(0,191,165,.5);}70%{box-shadow:0 0 0 6px rgba(0,191,165,0);}100%{box-shadow:0 0 0 0 rgba(0,191,165,0);}}
+.thumb-formula{position:absolute;right:.7rem;bottom:.5rem;z-index:2;
+  font-family:var(--mono);font-weight:700;font-size:1.15rem;color:rgba(0,191,165,.26);letter-spacing:-.02em;}
 
 /* BODY */
-.article-body { padding: 1.1rem 1.1rem 1.1rem; display: flex; flex-direction: column; flex: 1; }
-.article-tag {
-  display: inline-flex; align-items: center; gap: .28rem;
-  font-family: var(--mono); font-size: .57rem; font-weight: 700;
-  letter-spacing: .08em; text-transform: uppercase;
-  padding: .13rem .48rem; border-radius: 4px;
-  margin-bottom: .6rem; width: fit-content;
-}
-.tag-tips    { background: var(--yellow); color: var(--yellow-b); }
-.tag-materi  { background: var(--green);  color: var(--green-b); }
-.tag-utbk    { background: var(--red);    color: var(--red-b); }
-.tag-insight { background: var(--blue);   color: var(--blue-b); }
-.tag-panduan { background: rgba(139,92,246,.12); color: #7C3AED; }
-[data-theme="dark"] .tag-panduan { color: #A78BFA; }
+.acard-body{display:flex;flex-direction:column;flex:1;padding:1.15rem 1.2rem;}
+.acard-tag{display:inline-flex;align-items:center;gap:.28rem;width:fit-content;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:.16rem .5rem;border-radius:5px;margin-bottom:.65rem;}
+.tag-tips   {background:var(--yellow);color:var(--yellow-b);}
+.tag-materi {background:var(--green);color:var(--green-b);}
+.tag-utbk   {background:var(--red);color:var(--red-b);}
+.tag-insight{background:var(--blue);color:var(--blue-b);}
+.tag-panduan{background:rgba(139,92,246,.13);color:#7C3AED;}
+[data-theme="dark"] .tag-panduan{color:#A78BFA;}
+.acard-title{font-family:var(--display);font-size:1rem;font-weight:700;color:var(--text);
+  letter-spacing:-.02em;line-height:1.32;margin-bottom:.5rem;}
+.acard-title em{font-style:italic;color:var(--text);}
+.acard-excerpt{font-size:.8rem;color:var(--text-3);line-height:1.62;flex:1;margin-bottom:.95rem;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.acard-foot{display:flex;align-items:center;justify-content:space-between;gap:.6rem;
+  margin-top:auto;padding-top:.8rem;border-top:1px solid var(--border);}
+.acard-auth{display:flex;align-items:center;gap:.45rem;min-width:0;}
+.acard-avatar{width:22px;height:22px;border-radius:50%;background:var(--teal);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:.54rem;font-weight:700;color:var(--navy);}
+.acard-by{font-size:.69rem;color:var(--text-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.acard-by b{color:var(--text-2);font-weight:600;}
+.acard-meta{display:flex;align-items:center;gap:.5rem;flex-shrink:0;}
+.acard-date{font-family:var(--mono);font-size:.6rem;color:var(--text-3);}
+.acard-read{font-family:var(--mono);font-size:.58rem;font-weight:700;color:var(--teal);
+  background:rgba(0,191,165,.1);border:1px solid rgba(0,191,165,.22);padding:.1rem .42rem;border-radius:5px;}
+.acard.featured .acard-cta{display:inline-flex;align-items:center;gap:.4rem;margin-top:1rem;
+  font-family:var(--sans);font-size:.8rem;font-weight:700;color:var(--teal);}
+.acard.featured .acard-cta svg{width:14px;height:14px;transition:transform .2s;}
+a.acard.featured:hover .acard-cta svg{transform:translateX(3px);}
 
-.article-title {
-  font-family: var(--display);
-  font-size: .95rem; font-weight: 700;
-  color: var(--text); letter-spacing: -.02em;
-  line-height: 1.35; margin-bottom: .5rem;
-}
-.article-card.featured .article-title {
-  font-size: 1.3rem;
-}
-.article-excerpt {
-  font-size: .8rem; color: var(--text-3);
-  line-height: 1.6; flex: 1;
-  margin-bottom: .85rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.article-card.featured .article-excerpt {
-  -webkit-line-clamp: 4;
-}
-.article-footer {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-top: auto; padding-top: .75rem;
-  border-top: 1px solid var(--border);
-}
-.article-author {
-  display: flex; align-items: center; gap: .45rem;
-}
-.article-avatar {
-  width: 22px; height: 22px; border-radius: 50%;
-  background: var(--teal); display: flex; align-items: center; justify-content: center;
-  font-family: var(--mono); font-size: .55rem; font-weight: 700; color: var(--navy);
-  flex-shrink: 0;
-}
-.article-byline {
-  font-size: .7rem; color: var(--text-3);
-}
-.article-byline strong { color: var(--text-2); font-weight: 600; }
-.article-meta-right {
-  display: flex; align-items: center; gap: .6rem;
-}
-.article-date {
-  font-family: var(--mono); font-size: .62rem; color: var(--text-3);
-}
-.article-read {
-  font-family: var(--mono); font-size: .6rem; font-weight: 600;
-  color: var(--teal);
-  background: rgba(0,191,165,.1); border: 1px solid rgba(0,191,165,.2);
-  padding: .12rem .42rem; border-radius: 4px;
-}
-/* FEATURED badge */
-.article-featured-badge {
-  position: absolute; top: .85rem; right: .85rem;
-  font-family: var(--mono); font-size: .58rem; font-weight: 700;
-  letter-spacing: .07em; text-transform: uppercase;
-  background: rgba(0,191,165,.15); color: var(--teal);
-  border: 1px solid rgba(0,191,165,.3);
-  padding: .15rem .5rem; border-radius: 4px;
-}
+/* ─── EMPTY ─────────────────────────────────────────────────── */
+.blog-empty{display:none;text-align:center;padding:4rem 1rem;grid-column:1/-1;}
+.blog-empty.show{display:block;}
+.blog-empty-ic{font-size:2.4rem;margin-bottom:.6rem;}
+.blog-empty-t{font-family:var(--display);font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:.25rem;}
+.blog-empty-d{font-size:.83rem;color:var(--text-3);}
 
-/* ─── EMPTY STATE ─── */
-.blog-empty {
-  text-align: center; padding: 4rem 1rem;
-  display: none;
-}
-.blog-empty.show { display: block; }
-.blog-empty-icon { font-size: 2.5rem; margin-bottom: .75rem; }
-.blog-empty-title {
-  font-family: var(--display); font-size: 1rem; font-weight: 700;
-  color: var(--text); margin-bottom: .3rem;
-}
-.blog-empty-desc { font-size: .83rem; color: var(--text-3); }
+/* ─── NEWSLETTER ────────────────────────────────────────────── */
+.blog-nl{position:relative;overflow:hidden;margin-top:2.75rem;border-radius:var(--radius-lg);
+  background:var(--navy);padding:2.2rem 2.25rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+.blog-nl::before{content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(0,191,165,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,191,165,.07) 1px,transparent 1px);background-size:30px 30px;}
+.blog-nl::after{content:'∑';position:absolute;right:-.2rem;bottom:-1.5rem;font-family:var(--mono);
+  font-size:9rem;font-weight:700;color:rgba(0,191,165,.06);pointer-events:none;}
+.blog-nl-text{position:relative;z-index:1;}
+.blog-nl-lbl{font-family:var(--mono);font-size:.58rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--teal);margin-bottom:.45rem;}
+.blog-nl-title{font-family:var(--display);font-size:1.2rem;font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:.3rem;}
+.blog-nl-sub{font-size:.82rem;color:#90A6C6;line-height:1.55;max-width:380px;}
+.blog-nl-form{display:flex;gap:.55rem;position:relative;z-index:1;flex-wrap:wrap;}
+.blog-nl-input{height:42px;width:230px;padding:0 .95rem;border-radius:999px;
+  border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:#fff;
+  font-family:var(--sans);font-size:.84rem;outline:none;transition:border-color .18s;}
+.blog-nl-input::placeholder{color:rgba(255,255,255,.38);}
+.blog-nl-input:focus{border-color:var(--teal);}
+.blog-nl-btn{height:42px;padding:0 1.3rem;border-radius:999px;background:var(--teal);color:var(--navy);
+  font-family:var(--sans);font-size:.83rem;font-weight:700;border:none;cursor:pointer;
+  transition:background .18s;white-space:nowrap;}
+.blog-nl-btn:hover{background:var(--teal-dim);}
 
-/* ─── NEWSLETTER STRIP ─── */
-.blog-newsletter {
-  margin-top: 3rem;
-  background: var(--navy);
-  border-radius: var(--radius);
-  padding: 2rem;
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 1.5rem; flex-wrap: wrap;
-  position: relative; overflow: hidden;
-}
-.blog-newsletter::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(0,191,165,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,191,165,.06) 1px, transparent 1px);
-  background-size: 32px 32px;
-  pointer-events: none;
-}
-.blog-nl-text { position: relative; z-index: 1; }
-.blog-nl-label {
-  font-family: var(--mono); font-size: .6rem; font-weight: 700;
-  color: var(--teal); letter-spacing: .1em; text-transform: uppercase;
-  margin-bottom: .4rem;
-}
-.blog-nl-title {
-  font-family: var(--display); font-size: 1.1rem; font-weight: 700;
-  color: #fff; letter-spacing: -.02em; margin-bottom: .3rem;
-}
-.blog-nl-sub { font-size: .8rem; color: #8FA8C8; line-height: 1.5; }
-.blog-nl-form {
-  display: flex; gap: .6rem; position: relative; z-index: 1; flex-wrap: wrap;
-}
-.blog-nl-input {
-  height: 40px; width: 240px;
-  padding: 0 .9rem; border-radius: var(--radius-sm);
-  border: 1px solid rgba(255,255,255,.15);
-  background: rgba(255,255,255,.07);
-  color: #fff; font-family: var(--sans); font-size: .83rem;
-  outline: none; transition: border-color .18s;
-}
-.blog-nl-input::placeholder { color: rgba(255,255,255,.35); }
-.blog-nl-input:focus { border-color: var(--teal); }
-.blog-nl-btn {
-  height: 40px; padding: 0 1.25rem;
-  border-radius: var(--radius-sm);
-  background: var(--teal); color: var(--navy);
-  font-family: var(--sans); font-size: .83rem; font-weight: 700;
-  border: none; cursor: pointer; transition: background .18s; white-space: nowrap;
-}
-.blog-nl-btn:hover { background: var(--teal-dim); }
+/* ─── SCROLL TOP ────────────────────────────────────────────── */
+#scroll-top{position:fixed;bottom:1.5rem;right:1.5rem;z-index:99;width:40px;height:40px;border-radius:50%;
+  background:var(--teal);border:none;display:none;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:0 6px 16px rgba(0,191,165,.34);transition:background .18s;}
+#scroll-top.visible{display:flex;}
+#scroll-top:hover{background:var(--teal-dim);}
 
-/* ─── SCROLL TOP ─── */
-#scroll-top {
-  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 99;
-  width: 38px; height: 38px; border-radius: 50%;
-  background: var(--teal); border: none;
-  display: none; align-items: center; justify-content: center;
-  cursor: pointer; box-shadow: 0 4px 12px rgba(0,191,165,.3);
-  transition: background .18s;
+/* ─── RESPONSIVE ────────────────────────────────────────────── */
+@media(max-width:880px){
+  .blog-grid{grid-template-columns:repeat(2,1fr);}
+  .acard.featured{flex-direction:column;}
+  .acard.featured .acard-thumb{width:100%;min-width:0;aspect-ratio:16/9;}
+  .acard.featured .acard-body{padding:1.3rem;}
+  .acard.featured .acard-title{font-size:1.25rem;}
 }
-#scroll-top.visible { display: flex; animation: fadeUp .2s ease; }
-#scroll-top:hover { background: var(--teal-dim); }
-@keyframes fadeUp { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
-
-/* ─── RESPONSIVE ─── */
-@media(max-width: 900px) {
-  .blog-grid { grid-template-columns: repeat(2, 1fr); }
-  .article-card.featured { flex-direction: column; }
-  .article-card.featured .article-thumb { width: 100%; height: 200px; }
-  .article-card.featured .article-body { padding: 1.1rem; }
-  .article-card.featured .article-title { font-size: 1.1rem; }
+@media(max-width:560px){
+  .blog-hero{padding:3rem var(--px) 2.75rem;}
+  .blog-grid{grid-template-columns:1fr;}
+  .bh-stats{gap:1.1rem;}
+  .blog-nl{padding:1.6rem;}
+  .blog-nl-input{width:100%;}
+  .blog-nl-form{width:100%;}
+  .blog-toolbar{top:60px;}
 }
-@media(max-width: 600px) {
-  .blog-hero { padding: 2.5rem var(--px) 2.25rem; }
-  .blog-grid { grid-template-columns: 1fr; }
-  .blog-nl-input { width: 100%; }
-  .blog-nl-form { width: 100%; }
-  .blog-newsletter { padding: 1.5rem; }
+@media(prefers-reduced-motion:reduce){
+  .bh-glyph{animation:none;}
+  .bh-content{animation:none;opacity:1;transform:none;}
+  .acard{transition:border-color .2s;opacity:1;transform:none;}
+  .thumb-tag.live .dot{animation:none;}
 }
 </style>
 </head>
@@ -434,268 +301,301 @@ body { overflow-x: hidden; }
 </nav>
 
 <!-- HERO -->
-<div class="blog-hero">
-  <div class="blog-hero-grid"></div>
-  <div class="blog-hero-content">
-    <div class="blog-eyebrow">
-      <svg width="11" height="11" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="1" width="10" height="12" rx="1.5"/><line x1="4.5" y1="4.5" x2="9.5" y2="4.5"/><line x1="4.5" y1="7" x2="9.5" y2="7"/><line x1="4.5" y1="9.5" x2="7.5" y2="9.5"/></svg>
-      Blog EksaktaLab
+<header class="blog-hero">
+  <div class="bh-grid"></div>
+  <div class="bh-glyphs" id="bhGlyphs"></div>
+  <div class="bh-glow"></div>
+  <div class="bh-content">
+    <span class="bh-eyebrow">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="1" width="10" height="12" rx="1.5"/><line x1="4.5" y1="4.5" x2="9.5" y2="4.5"/><line x1="4.5" y1="7" x2="9.5" y2="7"/><line x1="4.5" y1="9.5" x2="7.5" y2="9.5"/></svg>
+      Catatan EksaktaLab
+    </span>
+    <h1 class="bh-title">Belajar matematika,<br>dengan <em>cara berpikir</em>.</h1>
+    <p class="bh-sub">Tulisan ringan dan mendalam soal strategi belajar, pembahasan konsep yang sering bikin bingung, dan persiapan UTBK — ditulis tim yang membangun EksaktaLab.</p>
+    <div class="bh-stats">
+      <div class="bh-stat"><b id="statTotal">8</b><span>Artikel</span></div>
+      <div class="bh-stat-div"></div>
+      <div class="bh-stat"><b>5</b><span>Kategori</span></div>
+      <div class="bh-stat-div"></div>
+      <div class="bh-stat"><b>Gratis</b><span>Tanpa Iklan</span></div>
     </div>
-    <h1 class="blog-hero-title">Tips, Panduan &amp; <em>Insight</em><br>Belajar Matematika</h1>
-    <p class="blog-hero-sub">Artikel ringan dan mendalam tentang cara belajar matematika yang efektif, strategi UTBK, dan pembahasan topik yang sering bikin bingung.</p>
   </div>
-</div>
+</header>
 
-<!-- SEARCH -->
-<div class="blog-search-wrap">
-  <div class="blog-search">
-    <svg class="blog-search-icon" viewBox="0 0 16 16">
-      <circle cx="6.5" cy="6.5" r="4.5"/><line x1="10.5" y1="10.5" x2="14" y2="14"/>
-    </svg>
-    <input class="blog-search-input" type="text" id="searchInput"
-      placeholder="Cari artikel, topik, atau kata kunci..."
-      oninput="handleSearch(this.value)">
-    <button class="blog-search-clear" id="clearBtn" onclick="clearSearch()" title="Hapus">✕</button>
+<!-- TOOLBAR -->
+<div class="blog-toolbar">
+  <div class="blog-toolbar-inner">
+    <div class="blog-search">
+      <svg class="blog-search-icon" viewBox="0 0 16 16"><circle cx="6.5" cy="6.5" r="4.5"/><line x1="10.5" y1="10.5" x2="14" y2="14"/></svg>
+      <input class="blog-search-input" type="text" id="searchInput" placeholder="Cari artikel, topik, atau kata kunci…" oninput="handleSearch(this.value)">
+      <button class="blog-search-clear" id="clearBtn" onclick="clearSearch()" title="Hapus">✕</button>
+    </div>
+    <select class="blog-sort" id="sortSelect" onchange="sortArticles(this.value)" aria-label="Urutkan">
+      <option value="terbaru">Terbaru</option>
+      <option value="terlama">Terlama</option>
+      <option value="cepat">Bacaan tercepat</option>
+    </select>
+    <div class="blog-chips">
+      <button class="blog-chip active" data-cat="semua" onclick="filterCat(this)">Semua</button>
+      <button class="blog-chip" data-cat="tips" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:var(--yellow-b)"></span>Tips Belajar</button>
+      <button class="blog-chip" data-cat="materi" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:var(--green-b)"></span>Materi</button>
+      <button class="blog-chip" data-cat="utbk" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:var(--red-b)"></span>UTBK/SNBT</button>
+      <button class="blog-chip" data-cat="panduan" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:#7C3AED"></span>Panduan</button>
+      <button class="blog-chip" data-cat="insight" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:var(--blue-b)"></span>Insight</button>
+    </div>
   </div>
 </div>
 
 <!-- MAIN -->
-<div class="blog-wrap">
+<main class="blog-wrap">
+  <div class="blog-count"><b id="countNum">8</b> artikel ditampilkan</div>
 
-  <!-- FILTER -->
-  <div class="blog-filter">
-    <button class="blog-chip active" data-cat="semua" onclick="filterCat(this)">Semua</button>
-    <button class="blog-chip" data-cat="tips" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:var(--yellow-b)"></span>Tips Belajar</button>
-    <button class="blog-chip" data-cat="materi" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:var(--green-b)"></span>Materi</button>
-    <button class="blog-chip" data-cat="utbk" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:var(--red-b)"></span>UTBK/SNBT</button>
-    <button class="blog-chip" data-cat="panduan" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:#7C3AED"></span>Panduan</button>
-    <button class="blog-chip" data-cat="insight" onclick="filterCat(this)"><span class="blog-chip-dot" style="background:var(--blue-b)"></span>Insight</button>
-  </div>
-
-  <!-- META ROW -->
-  <div class="blog-meta-row">
-    <span class="blog-count" id="articleCount"><span id="countNum">8</span> artikel</span>
-    <select class="blog-sort" id="sortSelect" onchange="sortArticles(this.value)">
-      <option value="terbaru">Terbaru</option>
-      <option value="terpopuler">Terpopuler</option>
-      <option value="terlama">Terlama</option>
-    </select>
-  </div>
-
-  <!-- GRID -->
   <div class="blog-grid" id="blogGrid">
 
-    <!-- FEATURED -->
-    <a class="article-card featured" href="panduan-belajar-matematika-eksaktalab/" data-cat="tips" data-date="2025-06-15" data-title="Cara Belajar Matematika yang Benar — Bukan Sekadar Hafal Rumus">
-      <div class="article-thumb t-featured">
-        <div class="article-thumb-bg"></div>
-        <div class="article-thumb-math">f(x)</div>
-        <div class="article-featured-badge">UNGGULAN</div>
+    <!-- ══ FEATURED · LIVE ══ -->
+    <a class="acard featured" href="panduan-belajar-matematika-eksaktalab/" data-cat="tips" data-date="2025-06-15" data-read="8" data-title="Cara Belajar Matematika yang Benar — Bukan Sekadar Hafal Rumus">
+      <div class="acard-thumb t-featured">
+        <div class="tgrid"></div>
+        <span class="thumb-tag live"><span class="dot"></span>Terbit</span>
+        <svg class="tm" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <line x1="46" y1="150" x2="46" y2="26" class="tm-axis"/>
+          <line x1="34" y1="138" x2="290" y2="138" class="tm-axis"/>
+          <path d="M52 150 L286 44" class="tm-line"/>
+          <line x1="150" y1="103" x2="150" y2="138" class="tm-soft"/>
+          <line x1="150" y1="138" x2="214" y2="138" class="tm-soft"/>
+          <line x1="214" y1="138" x2="214" y2="74" class="tm-soft"/>
+          <circle cx="150" cy="103" r="4" class="tm-dot"/>
+          <circle cx="214" cy="74" r="4" class="tm-dot"/>
+        </svg>
+        <span class="thumb-formula">f(x)=mx+c</span>
       </div>
-      <div class="article-body">
-        <span class="article-tag tag-tips">Tips Belajar</span>
-        <div class="article-title">Cara Belajar Matematika yang Benar — Bukan Sekadar Hafal Rumus</div>
-        <div class="article-excerpt">Kebanyakan siswa gagal di matematika bukan karena bodoh, tapi karena salah strategi. Hafalan rumus tanpa pemahaman konsep ibarat membangun rumah tanpa fondasi. Artikel ini membahas pendekatan belajar yang terbukti efektif: dari cara membaca soal, membangun intuisi, hingga teknik latihan yang benar-benar mengembangkan kemampuan.</div>
-        <div class="article-footer">
-          <div class="article-author">
-            <div class="article-avatar">EL</div>
-            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
-          </div>
-          <div class="article-meta-right">
-            <span class="article-date">15 Jun 2025</span>
-            <span class="article-read">8 menit</span>
-          </div>
+      <div class="acard-body">
+        <span class="acard-tag tag-tips">Tips Belajar</span>
+        <div class="acard-title">Cara Belajar Matematika yang Benar — Bukan Sekadar Hafal Rumus</div>
+        <div class="acard-excerpt">Kebanyakan siswa gagal di matematika bukan karena kurang pintar, tapi karena salah strategi. Hafal rumus tanpa paham konsep ibarat membangun rumah tanpa fondasi. Artikel ini membahas pendekatan yang terbukti efektif: dari cara membaca soal, membangun intuisi, sampai teknik latihan yang benar-benar menumbuhkan kemampuan.</div>
+        <div class="acard-foot">
+          <div class="acard-auth"><div class="acard-avatar">EL</div><div class="acard-by"><b>Tim EksaktaLab</b></div></div>
+          <div class="acard-meta"><span class="acard-date">15 Jun 2025</span><span class="acard-read">8 menit</span></div>
         </div>
+        <span class="acard-cta">Baca panduan lengkap <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5,3 9,7 5,11"/></svg></span>
       </div>
     </a>
 
-    <!-- CARD 2 -->
-    <a class="article-card" href="#" data-cat="materi" data-date="2025-06-10" data-title="Gradien Bukan Hanya Kemiringan — Memahami Makna Geometri di Balik m">
-      <div class="article-thumb t-algebra">
-        <div class="article-thumb-bg"></div>
-        <div class="article-thumb-math">m = Δy/Δx</div>
+    <!-- ══ CARD · gradien (soon) ══ -->
+    <article class="acard soon" data-cat="materi" data-date="2025-06-10" data-read="5" data-title="Gradien Bukan Hanya Kemiringan — Makna Geometri di Balik m">
+      <div class="acard-thumb t-algebra">
+        <div class="tgrid"></div>
+        <span class="thumb-tag soon">Segera</span>
+        <svg class="tm" viewBox="0 0 320 180" aria-hidden="true">
+          <line x1="46" y1="150" x2="46" y2="26" class="tm-axis"/>
+          <line x1="34" y1="138" x2="290" y2="138" class="tm-axis"/>
+          <path d="M60 138 L250 60" class="tm-line"/>
+          <line x1="120" y1="113" x2="200" y2="113" class="tm-soft"/>
+          <line x1="200" y1="113" x2="200" y2="80" class="tm-soft"/>
+          <circle cx="120" cy="113" r="4" class="tm-dot"/>
+          <circle cx="200" cy="80" r="4" class="tm-dot"/>
+        </svg>
+        <span class="thumb-formula">m = Δy/Δx</span>
       </div>
-      <div class="article-body">
-        <span class="article-tag tag-materi">Materi</span>
-        <div class="article-title">Gradien Bukan Hanya Kemiringan — Makna Geometri di Balik <em>m</em></div>
-        <div class="article-excerpt">Kenapa gradien ditulis $m$? Apa hubungannya dengan laju perubahan? Artikel ini menggali makna geometri gradien yang jarang diajarkan di kelas.</div>
-        <div class="article-footer">
-          <div class="article-author">
-            <div class="article-avatar">EL</div>
-            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
-          </div>
-          <div class="article-meta-right">
-            <span class="article-date">10 Jun 2025</span>
-            <span class="article-read">5 menit</span>
-          </div>
+      <div class="acard-body">
+        <span class="acard-tag tag-materi">Materi</span>
+        <div class="acard-title">Gradien Bukan Hanya Kemiringan — Makna Geometri di Balik <em>m</em></div>
+        <div class="acard-excerpt">Kenapa gradien dilambangkan m? Apa hubungannya dengan laju perubahan? Tulisan ini menggali makna geometri gradien yang jarang dijelaskan di kelas.</div>
+        <div class="acard-foot">
+          <div class="acard-auth"><div class="acard-avatar">EL</div><div class="acard-by"><b>Tim EksaktaLab</b></div></div>
+          <div class="acard-meta"><span class="acard-date">10 Jun 2025</span><span class="acard-read">5 menit</span></div>
         </div>
       </div>
-    </a>
+    </article>
 
-    <!-- CARD 3 -->
-    <a class="article-card" href="#" data-cat="utbk" data-date="2025-06-05" data-title="Strategi Mengerjakan Soal UTBK Matematika dalam 2 Menit per Soal">
-      <div class="article-thumb t-utbk">
-        <div class="article-thumb-bg"></div>
-        <div class="article-thumb-math">UTBK</div>
+    <!-- ══ CARD · UTBK speed (soon) ══ -->
+    <article class="acard soon" data-cat="utbk" data-date="2025-06-05" data-read="6" data-title="Strategi Mengerjakan Soal UTBK Matematika dalam 2 Menit per Soal">
+      <div class="acard-thumb t-utbk">
+        <div class="tgrid"></div>
+        <span class="thumb-tag soon">Segera</span>
+        <svg class="tm" viewBox="0 0 320 180" aria-hidden="true">
+          <circle cx="160" cy="92" r="50" class="tm-line"/>
+          <line x1="160" y1="92" x2="160" y2="56" class="tm-line"/>
+          <line x1="160" y1="92" x2="190" y2="104" class="tm-line"/>
+          <circle cx="160" cy="92" r="4" class="tm-dot"/>
+          <line x1="160" y1="34" x2="160" y2="42" class="tm-axis"/>
+          <line x1="218" y1="92" x2="210" y2="92" class="tm-axis"/>
+          <line x1="160" y1="150" x2="160" y2="142" class="tm-axis"/>
+          <line x1="102" y1="92" x2="110" y2="92" class="tm-axis"/>
+        </svg>
+        <span class="thumb-formula">2:00</span>
       </div>
-      <div class="article-body">
-        <span class="article-tag tag-utbk">UTBK/SNBT</span>
-        <div class="article-title">Strategi Mengerjakan Soal UTBK Matematika dalam 2 Menit per Soal</div>
-        <div class="article-excerpt">Waktu adalah musuh terbesar di UTBK. Panduan ini berisi teknik triase soal, skipping, dan estimasi cepat yang bisa menghemat puluhan menit.</div>
-        <div class="article-footer">
-          <div class="article-author">
-            <div class="article-avatar">EL</div>
-            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
-          </div>
-          <div class="article-meta-right">
-            <span class="article-date">5 Jun 2025</span>
-            <span class="article-read">6 menit</span>
-          </div>
+      <div class="acard-body">
+        <span class="acard-tag tag-utbk">UTBK/SNBT</span>
+        <div class="acard-title">Strategi Mengerjakan Soal UTBK Matematika dalam 2 Menit per Soal</div>
+        <div class="acard-excerpt">Waktu adalah musuh terbesar di UTBK. Panduan ini berisi teknik triase soal, skipping cerdas, dan estimasi cepat yang bisa menghemat puluhan menit.</div>
+        <div class="acard-foot">
+          <div class="acard-auth"><div class="acard-avatar">EL</div><div class="acard-by"><b>Tim EksaktaLab</b></div></div>
+          <div class="acard-meta"><span class="acard-date">5 Jun 2025</span><span class="acard-read">6 menit</span></div>
         </div>
       </div>
-    </a>
+    </article>
 
-    <!-- CARD 4 -->
-    <a class="article-card" href="#" data-cat="materi" data-date="2025-05-28" data-title="Eksponen dan Logaritma — Dua Sisi Mata Uang yang Sering Disalahpahami">
-      <div class="article-thumb t-materi">
-        <div class="article-thumb-bg"></div>
-        <div class="article-thumb-math">a^x = b</div>
+    <!-- ══ CARD · eksponen/log (soon) ══ -->
+    <article class="acard soon" data-cat="materi" data-date="2025-05-28" data-read="7" data-title="Eksponen dan Logaritma — Dua Sisi yang Sering Disalahpahami">
+      <div class="acard-thumb t-materi">
+        <div class="tgrid"></div>
+        <span class="thumb-tag soon">Segera</span>
+        <svg class="tm" viewBox="0 0 320 180" aria-hidden="true">
+          <line x1="46" y1="150" x2="46" y2="26" class="tm-axis"/>
+          <line x1="34" y1="138" x2="290" y2="138" class="tm-axis"/>
+          <path d="M56 138 C150 138 168 44 250 36" class="tm-line"/>
+          <path d="M56 138 C56 56 150 38 244 38" class="tm-line dash" style="opacity:.55"/>
+        </svg>
+        <span class="thumb-formula">aˣ = b</span>
       </div>
-      <div class="article-body">
-        <span class="article-tag tag-materi">Materi</span>
-        <div class="article-title">Eksponen dan Logaritma — Dua Sisi yang Sering Disalahpahami</div>
-        <div class="article-excerpt">Banyak siswa bisa mengerjakan soal eksponen dan logaritma secara prosedural, tapi tidak tahu hubungan keduanya. Artikel ini menjelaskan koneksinya secara visual.</div>
-        <div class="article-footer">
-          <div class="article-author">
-            <div class="article-avatar">EL</div>
-            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
-          </div>
-          <div class="article-meta-right">
-            <span class="article-date">28 Mei 2025</span>
-            <span class="article-read">7 menit</span>
-          </div>
+      <div class="acard-body">
+        <span class="acard-tag tag-materi">Materi</span>
+        <div class="acard-title">Eksponen dan Logaritma — Dua Sisi yang Sering Disalahpahami</div>
+        <div class="acard-excerpt">Banyak siswa bisa mengerjakan eksponen dan logaritma secara prosedural, tapi tak tahu hubungan keduanya. Artikel ini menjelaskan koneksinya secara visual.</div>
+        <div class="acard-foot">
+          <div class="acard-auth"><div class="acard-avatar">EL</div><div class="acard-by"><b>Tim EksaktaLab</b></div></div>
+          <div class="acard-meta"><span class="acard-date">28 Mei 2025</span><span class="acard-read">7 menit</span></div>
         </div>
       </div>
-    </a>
+    </article>
 
-    <!-- CARD 5 -->
-    <a class="article-card" href="#" data-cat="tips" data-date="2025-05-20" data-title="Kenapa Latihan Soal Setiap Hari Lebih Efektif dari Belajar Semalam Suntuk">
-      <div class="article-thumb t-tips">
-        <div class="article-thumb-bg"></div>
-        <div class="article-thumb-math">∑ latihan</div>
+    <!-- ══ CARD · latihan harian (soon) ══ -->
+    <article class="acard soon" data-cat="tips" data-date="2025-05-20" data-read="4" data-title="Kenapa Latihan Soal Harian Lebih Efektif dari Belajar Semalam Suntuk">
+      <div class="acard-thumb t-tips">
+        <div class="tgrid"></div>
+        <span class="thumb-tag soon">Segera</span>
+        <svg class="tm" viewBox="0 0 320 180" aria-hidden="true">
+          <line x1="40" y1="150" x2="290" y2="150" class="tm-axis"/>
+          <rect x="62"  y="118" width="26" height="32"  class="tm-fill"/><rect x="62"  y="118" width="26" height="32"  class="tm-soft"/>
+          <rect x="106" y="104" width="26" height="46"  class="tm-fill"/><rect x="106" y="104" width="26" height="46"  class="tm-soft"/>
+          <rect x="150" y="86"  width="26" height="64"  class="tm-fill"/><rect x="150" y="86"  width="26" height="64"  class="tm-soft"/>
+          <rect x="194" y="62"  width="26" height="88"  class="tm-fill"/><rect x="194" y="62"  width="26" height="88"  class="tm-soft"/>
+          <rect x="238" y="40"  width="26" height="110" class="tm-fill"/><rect x="238" y="40"  width="26" height="110" class="tm-soft"/>
+          <path d="M75 122 L119 108 L163 90 L207 66 L251 44" class="tm-line"/>
+        </svg>
+        <span class="thumb-formula">Σ harian</span>
       </div>
-      <div class="article-body">
-        <span class="article-tag tag-tips">Tips Belajar</span>
-        <div class="article-title">Kenapa Latihan Soal Harian Lebih Efektif dari Belajar Semalam Suntuk</div>
-        <div class="article-excerpt">Spaced repetition bukan sekadar tren — sains di baliknya solid. Artikel ini membahas mengapa konsistensi 30 menit sehari mengalahkan marathon belajar 8 jam seminggu sekali.</div>
-        <div class="article-footer">
-          <div class="article-author">
-            <div class="article-avatar">EL</div>
-            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
-          </div>
-          <div class="article-meta-right">
-            <span class="article-date">20 Mei 2025</span>
-            <span class="article-read">4 menit</span>
-          </div>
+      <div class="acard-body">
+        <span class="acard-tag tag-tips">Tips Belajar</span>
+        <div class="acard-title">Kenapa Latihan Soal Harian Lebih Efektif dari Belajar Semalam Suntuk</div>
+        <div class="acard-excerpt">Spaced repetition bukan sekadar tren — sainsnya solid. Artikel ini membahas kenapa konsisten 30 menit sehari mengalahkan maraton 8 jam seminggu sekali.</div>
+        <div class="acard-foot">
+          <div class="acard-auth"><div class="acard-avatar">EL</div><div class="acard-by"><b>Tim EksaktaLab</b></div></div>
+          <div class="acard-meta"><span class="acard-date">20 Mei 2025</span><span class="acard-read">4 menit</span></div>
         </div>
       </div>
-    </a>
+    </article>
 
-    <!-- CARD 6 -->
-    <a class="article-card" href="#" data-cat="panduan" data-date="2025-05-12" data-title="Panduan Lengkap Menggunakan EksaktaLab untuk Persiapan UTBK">
-      <div class="article-thumb t-materi">
-        <div class="article-thumb-bg"></div>
-        <div class="article-thumb-math">EL</div>
+    <!-- ══ CARD · panduan roadmap (soon) ══ -->
+    <article class="acard soon" data-cat="panduan" data-date="2025-05-12" data-read="10" data-title="Panduan Lengkap Menggunakan EksaktaLab untuk Persiapan UTBK">
+      <div class="acard-thumb t-panduan">
+        <div class="tgrid"></div>
+        <span class="thumb-tag soon">Segera</span>
+        <svg class="tm" viewBox="0 0 320 180" aria-hidden="true">
+          <path d="M40 138 C96 138 84 64 150 64 C214 64 200 110 280 50" class="tm-line dash"/>
+          <circle cx="40"  cy="138" r="6" class="tm-soft"/><circle cx="40" cy="138" r="3" class="tm-dot"/>
+          <circle cx="150" cy="64"  r="6" class="tm-soft"/><circle cx="150" cy="64" r="3" class="tm-dot"/>
+          <circle cx="280" cy="50"  r="7" class="tm-line"/><circle cx="280" cy="50" r="3" class="tm-dot"/>
+        </svg>
+        <span class="thumb-formula">90 hari</span>
       </div>
-      <div class="article-body">
-        <span class="article-tag tag-panduan">Panduan</span>
-        <div class="article-title">Panduan Lengkap Menggunakan EksaktaLab untuk Persiapan UTBK</div>
-        <div class="article-excerpt">Mulai dari mana? Paket mana yang harus dikerjakan duluan? Artikel ini adalah roadmap resmi cara menggunakan EksaktaLab secara optimal dalam 90 hari menuju UTBK.</div>
-        <div class="article-footer">
-          <div class="article-author">
-            <div class="article-avatar">EL</div>
-            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
-          </div>
-          <div class="article-meta-right">
-            <span class="article-date">12 Mei 2025</span>
-            <span class="article-read">10 menit</span>
-          </div>
+      <div class="acard-body">
+        <span class="acard-tag tag-panduan">Panduan</span>
+        <div class="acard-title">Panduan Lengkap Menggunakan EksaktaLab untuk Persiapan UTBK</div>
+        <div class="acard-excerpt">Mulai dari mana? Paket mana dulu yang dikerjakan? Artikel ini adalah peta jalan resmi memakai EksaktaLab secara optimal dalam 90 hari menuju UTBK.</div>
+        <div class="acard-foot">
+          <div class="acard-auth"><div class="acard-avatar">EL</div><div class="acard-by"><b>Tim EksaktaLab</b></div></div>
+          <div class="acard-meta"><span class="acard-date">12 Mei 2025</span><span class="acard-read">10 menit</span></div>
         </div>
       </div>
-    </a>
+    </article>
 
-    <!-- CARD 7 -->
-    <a class="article-card" href="#" data-cat="insight" data-date="2025-05-05" data-title="Mengapa Matematika Terasa Sulit? Penjelasan dari Perspektif Kognitif">
-      <div class="article-thumb t-tips">
-        <div class="article-thumb-bg"></div>
-        <div class="article-thumb-math">🧠</div>
+    <!-- ══ CARD · insight kognitif (soon) ══ -->
+    <article class="acard soon" data-cat="insight" data-date="2025-05-05" data-read="6" data-title="Mengapa Matematika Terasa Sulit? Penjelasan dari Perspektif Kognitif">
+      <div class="acard-thumb t-insight">
+        <div class="tgrid"></div>
+        <span class="thumb-tag soon">Segera</span>
+        <svg class="tm" viewBox="0 0 320 180" aria-hidden="true">
+          <line x1="120" y1="60" x2="190" y2="48" class="tm-soft"/>
+          <line x1="120" y1="60" x2="150" y2="120" class="tm-soft"/>
+          <line x1="190" y1="48" x2="225" y2="108" class="tm-soft"/>
+          <line x1="150" y1="120" x2="225" y2="108" class="tm-soft"/>
+          <line x1="190" y1="48" x2="150" y2="120" class="tm-soft"/>
+          <circle cx="120" cy="60"  r="8" class="tm-line"/>
+          <circle cx="190" cy="48"  r="10" class="tm-line"/>
+          <circle cx="150" cy="120" r="9" class="tm-line"/>
+          <circle cx="225" cy="108" r="7" class="tm-line"/>
+          <circle cx="120" cy="60"  r="3" class="tm-dot"/>
+          <circle cx="190" cy="48"  r="3" class="tm-dot"/>
+          <circle cx="150" cy="120" r="3" class="tm-dot"/>
+          <circle cx="225" cy="108" r="3" class="tm-dot"/>
+        </svg>
+        <span class="thumb-formula">∴</span>
       </div>
-      <div class="article-body">
-        <span class="article-tag tag-insight">Insight</span>
-        <div class="article-title">Mengapa Matematika Terasa Sulit? Penjelasan dari Perspektif Kognitif</div>
-        <div class="article-excerpt">Matematika tidak inheren sulit. Tapi ada alasan neuropsikologis yang konkret kenapa banyak orang merasa demikian — dan cara mengatasinya.</div>
-        <div class="article-footer">
-          <div class="article-author">
-            <div class="article-avatar">EL</div>
-            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
-          </div>
-          <div class="article-meta-right">
-            <span class="article-date">5 Mei 2025</span>
-            <span class="article-read">6 menit</span>
-          </div>
+      <div class="acard-body">
+        <span class="acard-tag tag-insight">Insight</span>
+        <div class="acard-title">Mengapa Matematika Terasa Sulit? Penjelasan dari Perspektif Kognitif</div>
+        <div class="acard-excerpt">Matematika tidak inheren sulit. Tapi ada alasan neuropsikologis yang konkret kenapa banyak orang merasa begitu — dan cara mengatasinya.</div>
+        <div class="acard-foot">
+          <div class="acard-auth"><div class="acard-avatar">EL</div><div class="acard-by"><b>Tim EksaktaLab</b></div></div>
+          <div class="acard-meta"><span class="acard-date">5 Mei 2025</span><span class="acard-read">6 menit</span></div>
         </div>
       </div>
-    </a>
+    </article>
 
-    <!-- CARD 8 -->
-    <a class="article-card" href="#" data-cat="utbk" data-date="2025-04-28" data-title="Topik Matematika yang Paling Sering Muncul di UTBK 5 Tahun Terakhir">
-      <div class="article-thumb t-utbk">
-        <div class="article-thumb-bg"></div>
-        <div class="article-thumb-math">SNBT</div>
+    <!-- ══ CARD · frekuensi UTBK (soon) ══ -->
+    <article class="acard soon" data-cat="utbk" data-date="2025-04-28" data-read="5" data-title="Topik Matematika yang Paling Sering Muncul di UTBK 5 Tahun Terakhir">
+      <div class="acard-thumb t-utbk">
+        <div class="tgrid"></div>
+        <span class="thumb-tag soon">Segera</span>
+        <svg class="tm" viewBox="0 0 320 180" aria-hidden="true">
+          <line x1="40" y1="150" x2="290" y2="150" class="tm-axis"/>
+          <rect x="58"  y="58"  width="30" height="92"  class="tm-fill"/><rect x="58"  y="58"  width="30" height="92"  class="tm-soft"/>
+          <rect x="104" y="92"  width="30" height="58"  class="tm-fill"/><rect x="104" y="92"  width="30" height="58"  class="tm-soft"/>
+          <rect x="150" y="44"  width="30" height="106" class="tm-line"/>
+          <rect x="196" y="104" width="30" height="46"  class="tm-fill"/><rect x="196" y="104" width="30" height="46"  class="tm-soft"/>
+          <rect x="242" y="78"  width="30" height="72"  class="tm-fill"/><rect x="242" y="78"  width="30" height="72"  class="tm-soft"/>
+        </svg>
+        <span class="thumb-formula">SNBT</span>
       </div>
-      <div class="article-body">
-        <span class="article-tag tag-utbk">UTBK/SNBT</span>
-        <div class="article-title">Topik Matematika yang Paling Sering Muncul di UTBK 5 Tahun Terakhir</div>
-        <div class="article-excerpt">Analisis frekuensi kemunculan topik dari soal UTBK 2020–2024. Data ini bisa jadi acuan prioritas belajarmu agar tidak membuang waktu pada topik yang jarang keluar.</div>
-        <div class="article-footer">
-          <div class="article-author">
-            <div class="article-avatar">EL</div>
-            <div class="article-byline"><strong>Tim EksaktaLab</strong></div>
-          </div>
-          <div class="article-meta-right">
-            <span class="article-date">28 Apr 2025</span>
-            <span class="article-read">5 menit</span>
-          </div>
+      <div class="acard-body">
+        <span class="acard-tag tag-utbk">UTBK/SNBT</span>
+        <div class="acard-title">Topik Matematika yang Paling Sering Muncul di UTBK 5 Tahun Terakhir</div>
+        <div class="acard-excerpt">Analisis frekuensi kemunculan topik dari soal UTBK 2020–2024. Data ini bisa jadi acuan prioritas belajarmu agar tak membuang waktu di topik yang jarang keluar.</div>
+        <div class="acard-foot">
+          <div class="acard-auth"><div class="acard-avatar">EL</div><div class="acard-by"><b>Tim EksaktaLab</b></div></div>
+          <div class="acard-meta"><span class="acard-date">28 Apr 2025</span><span class="acard-read">5 menit</span></div>
         </div>
       </div>
-    </a>
+    </article>
+
+    <!-- EMPTY -->
+    <div class="blog-empty" id="blogEmpty">
+      <div class="blog-empty-ic">🔍</div>
+      <div class="blog-empty-t">Tidak ada artikel yang cocok</div>
+      <div class="blog-empty-d">Coba kata kunci lain atau pilih kategori berbeda.</div>
+    </div>
 
   </div><!-- /blog-grid -->
 
-  <!-- EMPTY STATE -->
-  <div class="blog-empty" id="blogEmpty">
-    <div class="blog-empty-icon">🔍</div>
-    <div class="blog-empty-title">Artikel tidak ditemukan</div>
-    <div class="blog-empty-desc">Coba kata kunci lain atau pilih kategori berbeda.</div>
-  </div>
-
   <!-- NEWSLETTER -->
-  <div class="blog-newsletter">
+  <section class="blog-nl">
     <div class="blog-nl-text">
-      <div class="blog-nl-label">📬 Newsletter EksaktaLab</div>
-      <div class="blog-nl-title">Dapat Artikel Terbaru Langsung di Inbox</div>
-      <div class="blog-nl-sub">Setiap minggu — tips belajar, artikel baru, dan soal pilihan. Gratis selamanya.</div>
+      <div class="blog-nl-lbl">Buletin EksaktaLab</div>
+      <div class="blog-nl-title">Artikel baru, langsung ke inbox</div>
+      <div class="blog-nl-sub">Sekali seminggu: tips belajar, artikel baru, dan soal pilihan. Berhenti kapan saja.</div>
     </div>
     <div class="blog-nl-form">
-      <input class="blog-nl-input" type="email" id="nlEmail" placeholder="email@kamu.com">
-      <button class="blog-nl-btn" onclick="subscribeNL()">Berlangganan →</button>
+      <input class="blog-nl-input" type="email" id="nlEmail" placeholder="email@kamu.com" aria-label="Alamat email">
+      <button class="blog-nl-btn" onclick="subscribeNL()">Berlangganan</button>
     </div>
-  </div>
+  </section>
 
-</div><!-- /blog-wrap -->
+</main>
 
-<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
-  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><polyline points="2,9 7,4 12,9"/></svg>
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas" aria-label="Kembali ke atas">
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,9 7,4 12,9"/></svg>
 </button>
 
 <div id="eksaktalab-footer"></div>
@@ -703,115 +603,105 @@ body { overflow-x: hidden; }
 <script src="../assets/js/protect.js"></script>
 
 <script>
-// ── Scroll progress ──────────────────────────────────────
-window.addEventListener('scroll', () => {
-  const el = document.documentElement;
-  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
-  document.getElementById('scroll-bar').style.width = pct + '%';
-  const btn = document.getElementById('scroll-top');
-  if (pct > 20) btn.classList.add('visible'); else btn.classList.remove('visible');
+// ── Floating glyphs ──────────────────────────────────────────
+(function(){
+  const wrap=document.getElementById('bhGlyphs');
+  if(!wrap||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  const glyphs=['∑','∫','π','√','Δ','θ','∞','f(x)','%','≈','x²','÷'];
+  const N=window.innerWidth<560?7:12;
+  for(let i=0;i<N;i++){
+    const g=document.createElement('span');
+    g.className='bh-glyph';
+    g.textContent=glyphs[i%glyphs.length];
+    g.style.left=(Math.random()*94+2)+'%';
+    g.style.top=(Math.random()*78+4)+'%';
+    g.style.fontSize=(Math.random()*1.6+0.9).toFixed(2)+'rem';
+    g.style.animationDuration=(Math.random()*6+7).toFixed(1)+'s';
+    g.style.animationDelay=(-Math.random()*8).toFixed(1)+'s';
+    wrap.appendChild(g);
+  }
+})();
+
+// ── Scroll progress + scroll-top ─────────────────────────────
+window.addEventListener('scroll',()=>{
+  const el=document.documentElement;
+  const pct=el.scrollTop/(el.scrollHeight-el.clientHeight)*100;
+  document.getElementById('scroll-bar').style.width=pct+'%';
+  document.getElementById('scroll-top').classList.toggle('visible',pct>18);
 });
 
-// ── Theme ────────────────────────────────────────────────
-function toggleTheme() {
-  const html = document.documentElement;
-  const btn  = document.getElementById('themeBtn');
-  const dark = html.getAttribute('data-theme') === 'dark';
-  html.setAttribute('data-theme', dark ? 'light' : 'dark');
-  localStorage.setItem('eksaktalab-theme', dark ? 'light' : 'dark');
-  btn.textContent = dark ? '🌙 Gelap' : '☀️ Terang';
+// ── Theme ────────────────────────────────────────────────────
+function toggleTheme(){
+  const html=document.documentElement, btn=document.getElementById('themeBtn');
+  const dark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',dark?'light':'dark');
+  localStorage.setItem('eksaktalab-theme',dark?'light':'dark');
+  btn.textContent=dark?'🌙 Gelap':'☀️ Terang';
 }
+(function(){const b=document.getElementById('themeBtn');
+  if(b&&document.documentElement.getAttribute('data-theme')==='dark')b.textContent='☀️ Terang';})();
 
-// ── State ────────────────────────────────────────────────
-let currentCat  = 'semua';
-let currentSort = 'terbaru';
-let searchQuery = '';
+// ── Reveal on scroll ─────────────────────────────────────────
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{ if(e.isIntersecting){ e.target.style.transitionDelay=(Math.min(i,5)*45)+'ms'; e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.acard').forEach(c=>io.observe(c));
 
-// ── Filter by category ───────────────────────────────────
-function filterCat(btn) {
-  document.querySelectorAll('.blog-chip').forEach(c => c.classList.remove('active'));
+// ── Filter / search / sort ───────────────────────────────────
+let currentCat='semua', currentSort='terbaru', searchQuery='';
+
+function filterCat(btn){
+  document.querySelectorAll('.blog-chip').forEach(c=>c.classList.remove('active'));
   btn.classList.add('active');
-  currentCat = btn.dataset.cat;
+  currentCat=btn.dataset.cat; applyFilters();
+}
+function handleSearch(v){
+  searchQuery=v.toLowerCase().trim();
+  document.getElementById('clearBtn').classList.toggle('visible',v.length>0);
   applyFilters();
 }
-
-// ── Search ───────────────────────────────────────────────
-function handleSearch(val) {
-  searchQuery = val.toLowerCase().trim();
-  document.getElementById('clearBtn').classList.toggle('visible', val.length > 0);
-  applyFilters();
-}
-function clearSearch() {
-  const input = document.getElementById('searchInput');
-  input.value = '';
-  searchQuery = '';
+function clearSearch(){
+  const i=document.getElementById('searchInput');
+  i.value=''; searchQuery='';
   document.getElementById('clearBtn').classList.remove('visible');
-  applyFilters();
-  input.focus();
+  applyFilters(); i.focus();
 }
+function sortArticles(v){ currentSort=v; applyFilters(); }
 
-// ── Sort ─────────────────────────────────────────────────
-function sortArticles(val) {
-  currentSort = val;
-  applyFilters();
-}
-
-// ── Apply all filters + sort ─────────────────────────────
-function applyFilters() {
-  const cards = [...document.querySelectorAll('#blogGrid .article-card')];
-
-  // Filter
-  cards.forEach(card => {
-    const catMatch = currentCat === 'semua' || card.dataset.cat === currentCat;
-    const title    = (card.dataset.title || '').toLowerCase();
-    const excerpt  = card.querySelector('.article-excerpt')?.textContent.toLowerCase() || '';
-    const srchMatch = !searchQuery || title.includes(searchQuery) || excerpt.includes(searchQuery);
-    card.style.display = (catMatch && srchMatch) ? '' : 'none';
+function applyFilters(){
+  const grid=document.getElementById('blogGrid');
+  const cards=[...grid.querySelectorAll('.acard')];
+  cards.forEach(card=>{
+    const catMatch=currentCat==='semua'||card.dataset.cat===currentCat;
+    const title=(card.dataset.title||'').toLowerCase();
+    const ex=card.querySelector('.acard-excerpt')?.textContent.toLowerCase()||'';
+    const sMatch=!searchQuery||title.includes(searchQuery)||ex.includes(searchQuery);
+    card.style.display=(catMatch&&sMatch)?'':'none';
   });
-
-  // Handle featured card layout: if featured is visible and alone, keep full-width
-  const featured = document.querySelector('.article-card.featured');
-  const visibleCards = cards.filter(c => c.style.display !== 'none');
-
-  // Sort visible cards
-  const grid = document.getElementById('blogGrid');
-  const sorted = [...visibleCards].sort((a, b) => {
-    if (currentSort === 'terbaru' || currentSort === 'terlama') {
-      const da = new Date(a.dataset.date);
-      const db = new Date(b.dataset.date);
-      return currentSort === 'terbaru' ? db - da : da - db;
-    }
-    return 0; // terpopuler: keep original order
+  const visible=cards.filter(c=>c.style.display!=='none');
+  const sorted=[...visible].sort((a,b)=>{
+    if(currentSort==='cepat') return (+a.dataset.read)-(+b.dataset.read);
+    const da=new Date(a.dataset.date), db=new Date(b.dataset.date);
+    return currentSort==='terlama'? da-db : db-da;
   });
-
-  // Re-append in sorted order (hidden cards stay at end)
-  sorted.forEach(c => grid.appendChild(c));
-  cards.filter(c => !sorted.includes(c)).forEach(c => grid.appendChild(c));
-
-  // Update count
-  const count = visibleCards.length;
-  document.getElementById('countNum').textContent = count;
-  document.getElementById('blogEmpty').classList.toggle('show', count === 0);
+  const empty=document.getElementById('blogEmpty');
+  sorted.forEach(c=>grid.insertBefore(c,empty));
+  cards.filter(c=>!sorted.includes(c)).forEach(c=>grid.insertBefore(c,empty));
+  document.getElementById('countNum').textContent=visible.length;
+  empty.classList.toggle('show',visible.length===0);
 }
 
-// ── Newsletter ───────────────────────────────────────────
-function subscribeNL() {
-  const email = document.getElementById('nlEmail').value.trim();
-  if (!email || !email.includes('@')) {
-    document.getElementById('nlEmail').style.borderColor = 'var(--red-b)';
-    setTimeout(() => document.getElementById('nlEmail').style.borderColor = '', 1500);
-    return;
+// ── Newsletter ───────────────────────────────────────────────
+function subscribeNL(){
+  const inp=document.getElementById('nlEmail'), email=inp.value.trim();
+  if(!email||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){
+    inp.style.borderColor='var(--red-b)';
+    setTimeout(()=>inp.style.borderColor='',1500); return;
   }
-  const btn = document.querySelector('.blog-nl-btn');
-  btn.textContent = '✓ Terima kasih!';
-  btn.style.background = 'var(--green-b)';
-  document.getElementById('nlEmail').value = '';
-  setTimeout(() => {
-    btn.textContent = 'Berlangganan →';
-    btn.style.background = '';
-  }, 3000);
+  const btn=document.querySelector('.blog-nl-btn');
+  btn.textContent='✓ Terima kasih!'; btn.style.background='var(--green-b)'; inp.value='';
+  setTimeout(()=>{btn.textContent='Berlangganan';btn.style.background='';},3000);
 }
 </script>
-
 </body>
 </html>

@@ -68,7 +68,15 @@
   font-weight:700;color:#fff;letter-spacing:-.03em;line-height:1.15;
   margin-bottom:1rem;
 }
-.art-title em{font-style:normal;color:var(--teal);}
+.art-title em{font-style:normal;color:var(--teal);position:relative;}
+.art-title em::after{content:'';position:absolute;left:0;right:0;bottom:.06em;height:.12em;background:rgba(0,191,165,.28);border-radius:2px;}
+.art-eyebrow{border-radius:999px;}
+.art-hero-glyphs{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;}
+.art-glyph{position:absolute;font-family:var(--mono);font-weight:700;color:rgba(0,191,165,.10);user-select:none;will-change:transform;animation:artFloat linear infinite;}
+@keyframes artFloat{0%{transform:translateY(8px) rotate(-3deg);}50%{transform:translateY(-10px) rotate(3deg);}100%{transform:translateY(8px) rotate(-3deg);}}
+.art-hero-content{opacity:0;transform:translateY(14px);animation:artRise .7s cubic-bezier(.2,.7,.3,1) forwards;}
+@keyframes artRise{to{opacity:1;transform:none;}}
+@media(prefers-reduced-motion:reduce){.art-glyph{animation:none;}.art-hero-content{animation:none;opacity:1;transform:none;}}
 .art-desc{
   font-size:.95rem;color:#8FA8C8;line-height:1.7;
   max-width:580px;margin-bottom:1.5rem;
@@ -358,6 +366,7 @@
 <!-- HERO -->
 <div class="art-hero">
   <div class="art-hero-grid"></div>
+  <div class="art-hero-glyphs" id="artGlyphs"></div>
   <div class="art-hero-content">
     <div class="art-breadcrumb">
       <a href="../../">Beranda</a><span>/</span>
@@ -608,25 +617,25 @@
     <div class="sidebar-card">
       <div class="sidebar-title">Artikel Terkait</div>
       <div class="related-list">
-        <a class="related-item" href="#">
+        <a class="related-item" href="../">
           <div class="related-thumb">📊</div>
           <div>
             <div class="related-title">Topik Matematika Paling Sering Muncul di UTBK</div>
-            <div class="related-tag">UTBK/SNBT · 5 menit</div>
+            <div class="related-tag">UTBK/SNBT · Segera</div>
           </div>
         </a>
-        <a class="related-item" href="#">
+        <a class="related-item" href="../">
           <div class="related-thumb">⚡</div>
           <div>
             <div class="related-title">Kenapa Latihan Soal Harian Lebih Efektif</div>
-            <div class="related-tag">Tips Belajar · 4 menit</div>
+            <div class="related-tag">Tips Belajar · Segera</div>
           </div>
         </a>
-        <a class="related-item" href="#">
+        <a class="related-item" href="../">
           <div class="related-thumb">🧮</div>
           <div>
             <div class="related-title">Gradien Bukan Hanya Kemiringan — Makna Geometri di Balik m</div>
-            <div class="related-tag">Materi · 5 menit</div>
+            <div class="related-tag">Materi · Segera</div>
           </div>
         </a>
       </div>
@@ -693,6 +702,25 @@ document.querySelectorAll('.toc-list a').forEach(a => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+
+// ── Floating math glyphs (hero) ─────────────────────
+(function(){
+  const wrap = document.getElementById('artGlyphs');
+  if (!wrap || window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  const glyphs = ['∑','∫','π','√','Δ','θ','∞','f(x)','%','≈','x²','÷'];
+  const N = window.innerWidth < 560 ? 6 : 10;
+  for (let i = 0; i < N; i++) {
+    const g = document.createElement('span');
+    g.className = 'art-glyph';
+    g.textContent = glyphs[i % glyphs.length];
+    g.style.left = (Math.random()*92+3) + '%';
+    g.style.top  = (Math.random()*74+5) + '%';
+    g.style.fontSize = (Math.random()*1.5+0.9).toFixed(2) + 'rem';
+    g.style.animationDuration = (Math.random()*6+7).toFixed(1) + 's';
+    g.style.animationDelay = (-Math.random()*8).toFixed(1) + 's';
+    wrap.appendChild(g);
+  }
+})();
 </script>
 </body>
 </html>
