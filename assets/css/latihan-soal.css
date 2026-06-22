@@ -48,7 +48,7 @@ body{overflow-x:hidden;}
 .paket-card.done{border-color:var(--green-b);background:var(--green);}
 [data-theme="dark"] .paket-card.done{background:var(--green);}
 .card-top{display:flex;align-items:center;justify-content:space-between;gap:0.4rem;}
-.card-kode{font-family:var(--mono);font-size:0.68rem;font-weight:700;color:var(--teal);letter-spacing:.08em;}
+.card-kode{font-family:var(--mono);font-size:0.68rem;font-weight:700;color:var(--teal);letter-spacing:.08em;white-space:nowrap;}
 .level-badge{font-size:0.6rem;font-weight:700;font-family:var(--mono);letter-spacing:.06em;padding:0.15rem 0.5rem;border-radius:4px;flex-shrink:0;}
 .badge-beginner{background:var(--green);color:var(--green-b);}
 [data-theme="dark"] .badge-beginner{background:rgba(5,150,105,.15);color:#34D399;}
@@ -56,9 +56,9 @@ body{overflow-x:hidden;}
 [data-theme="dark"] .badge-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
 .badge-expert{background:var(--red);color:var(--red-b);}
 [data-theme="dark"] .badge-expert{background:rgba(239,68,68,.1);color:#F87171;}
-.card-title{font-family:var(--display);font-size:0.92rem;font-weight:700;color:var(--text);line-height:1.3;letter-spacing:-.01em;}
+.card-title{font-family:var(--display);font-size:0.92rem;font-weight:700;color:var(--text);line-height:1.3;letter-spacing:-.01em;min-height:2.6em;}
 .card-soal{font-family:var(--mono);font-size:0.65rem;color:var(--text-3);margin-top:0.3rem;}
-.card-btn{margin-top:0.75rem;display:flex;align-items:center;justify-content:space-between;width:100%;padding:0 0.9rem;height:36px;border-radius:8px;background:transparent;color:var(--teal);font-size:0.78rem;font-weight:600;font-family:var(--sans);border:1.5px solid rgba(0,191,165,.3);cursor:pointer;transition:all .2s;letter-spacing:.01em;}
+.card-btn{margin-top:auto;display:flex;align-items:center;justify-content:space-between;width:100%;padding:0 0.9rem;height:36px;border-radius:8px;background:transparent;color:var(--teal);font-size:0.78rem;font-weight:600;font-family:var(--sans);border:1.5px solid rgba(0,191,165,.3);cursor:pointer;transition:all .2s;letter-spacing:.01em;}
 .card-btn:hover{background:var(--teal);color:#fff;border-color:var(--teal);}
 .card-btn-arrow{width:20px;height:20px;border-radius:5px;background:rgba(0,191,165,.12);display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;}
 .card-btn-arrow svg{width:10px;height:10px;}
