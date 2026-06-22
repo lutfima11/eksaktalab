@@ -1,0 +1,236 @@
+{
+  "materi": "persamaan-linear",
+  "sections": [
+    {
+      "id": "A",
+      "title": "Persamaan Linear Satu Variabel (PLSV)",
+      "contoh": [
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 1",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan penyelesaian dari $3x - 7 = 2$!</p>",
+          "p": "$$\\begin{align*} 3x - 7 &= 2 \\\\ 3x &= 2 + 7 \\\\ 3x &= 9 \\\\ x &= 3 \\end{align*}$$ Jadi $\\text{HP} = \\{3\\}$."
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 2",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan penyelesaian dari $5x + 4 = 2x - 8$!</p>",
+          "p": "$$\\begin{align*} 5x + 4 &= 2x - 8 \\\\ 5x - 2x &= -8 - 4 \\\\ 3x &= -12 \\\\ x &= -4 \\end{align*}$$ Jadi $\\text{HP} = \\{-4\\}$."
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 3",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Selesaikan $4(x - 3) = 2(x + 1) - 6$!</p>",
+          "p": "$$\\begin{align*} 4x - 12 &= 2x + 2 - 6 \\\\ 4x - 12 &= 2x - 4 \\\\ 4x - 2x &= -4 + 12 \\\\ 2x &= 8 \\\\ x &= 4 \\end{align*}$$ Jadi $\\text{HP} = \\{4\\}$."
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 4",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Selesaikan $\\dfrac{2x+1}{3} - \\dfrac{x-2}{2} = 1$!</p>",
+          "p": "Kalikan kedua ruas dengan KPK dari penyebut, yaitu $6$: $$\\begin{align*} 6 \\cdot \\frac{2x+1}{3} - 6 \\cdot \\frac{x-2}{2} &= 6 \\cdot 1 \\\\ 2(2x+1) - 3(x-2) &= 6 \\\\ 4x + 2 - 3x + 6 &= 6 \\\\ x + 8 &= 6 \\\\ x &= -2 \\end{align*}$$ Jadi $\\text{HP} = \\{-2\\}$."
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 5",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan nilai $x$ yang memenuhi persamaan linear berikut: $\\dfrac{2x - 5}{3} - \\dfrac{3(x + 2)}{4} = \\dfrac{5x - 19}{6}$</p>",
+          "p": "Kalikan kedua ruas dengan KPK dari penyebut, yaitu $12$: $$\\begin{align*} 12\\cdot \\frac{2x - 5}{3} - 12\\cdot \\frac{3(x + 2)}{4} &= 12\\cdot \\frac{5x - 19}{6} \\\\ 4(2x-5) - 9(x+2) &= 2(5x-19) \\\\ 8x - 20 - 9x - 18 &= 10x - 38 \\\\ -x - 38 &= 10x - 38 \\\\ -11x &= 0 \\\\ x &= 0 \\end{align*}$$ Jadi $\\text{HP} = \\{0\\}$."
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 6",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Jika dua kali suatu bilangan dikurangi 9 sama dengan bilangan itu ditambah 3, tentukanlah bilangan tersebut!</p>",
+          "p": "Misalkan bilangan tersebut adalah $x$, maka: $$\\begin{align*} 2x - 9 &= x + 3 \\\\ 2x - x &= 3 + 9 \\\\ x &= 12 \\end{align*}$$ Jadi bilangan tersebut adalah $12$."
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 7",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Umur Andi sekarang tiga kali umur adiknya. Lima tahun kemudian, jumlah umur keduanya adalah 50 tahun. Berapakah umur Andi sekarang?</p>",
+          "p": "Misalkan umur adik sekarang $= x$ tahun, maka umur Andi sekarang $= 3x$ tahun.<br><br> Lima tahun kemudian: umur adik $= x + 5$, umur Andi $= 3x + 5$. $$\\begin{align*} (3x + 5) + (x + 5) &= 50 \\\\ 4x + 10 &= 50 \\\\ 4x &= 40 \\\\ x &= 10 \\end{align*}$$ Jadi umur Andi sekarang $= 3x = 3 \\times 10 = 30$ tahun."
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 8",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Panjang suatu persegi panjang 5 cm lebih dari lebarnya. Jika kelilingnya 58 cm, tentukan luas persegi panjang tersebut!</p>",
+          "p": "<div class=\"grafik-wrap\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 500\" width=\"100%\" style=\"max-width:300px; background-color:transparent;\"><defs></defs><g transform=\"translate(60, 85) scale(0.85)\"><!-- Kotak persegi panjang untuk ilustrasi - ini yang akan tampil --><rect x=\"50\" y=\"50\" width=\"420\" height=\"300\" class=\"rect-edge\" /><text x=\"260\" y=\"210\" text-anchor=\"middle\" class=\"text-main-fixed\" style=\"font-size: 32px;\"><tspan class=\"text-bold\">Keliling</tspan> = 58 cm </text><text x=\"25\" y=\"210\" text-anchor=\"middle\" class=\"text-main-fixed text-italic\" style=\"font-size: 30px;\">l</text><text x=\"260\" y=\"390\" text-anchor=\"middle\" class=\"text-main-fixed text-italic\" style=\"font-size: 30px;\"> p = l + <tspan style=\"font-style: normal;\">5</tspan></text></g></svg></div> Misalkan $l = x$ cm, maka $p = (x+5)$ cm.<br><br> Keliling $= 2(\\text{panjang} + \\text{lebar})$: $$\\begin{align*} 2(x+5+x) &= 58 \\\\ 2(2x+5) &= 58 \\\\ 4x + 10 &= 58 \\\\ 4x &= 48 \\\\ x &= 12 \\end{align*}$$ Jadi lebar $= 12$ cm dan panjang $= 17$ cm, sehingga luas $= 12 \\times 17 = 204$ cm$^2$."
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 9",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dua keran A dan B mengaliri bak mandi. Keran A mengisi bak dalam 12 menit, keran B menguras bak dalam 20 menit. Jika bak kosong dan kedua keran dibuka bersamaan, berapa menit waktu yang diperlukan untuk mengisi bak hingga penuh?</p>",
+          "p": "Misalkan $t$ = waktu (menit) yang diperlukan hingga bak penuh.<br><br> Dalam $t$ menit: <ul><li>Keran A mengisi $\\dfrac{t}{12}$ bagian bak</li><li>Keran B menguras $\\dfrac{t}{20}$ bagian bak</li></ul> Agar bak terisi penuh (= 1 bak penuh): $$\\frac{t}{12} - \\frac{t}{20} = 1$$ Kalikan kedua ruas dengan KPK dari 12 dan 20, yaitu 60: $$\\begin{align*} 5t - 3t &= 60 \\\\ 2t &= 60 \\\\ t &= 30 \\end{align*}$$ Jadi waktu yang diperlukan untuk mengisi bak hingga penuh adalah $30$ menit."
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "Persamaan &amp; Sistem Persamaan Linear Dua Variabel",
+      "contoh": [
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 10",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dengan metode grafik, tentukan penyelesaian dari $2x + 5y = 20$ dan $x - y = 3$!</p>",
+          "p": "<strong>Garis $2x + 5y = 20$:</strong><div class=\"table-wrap\" style=\"margin:.5rem 0;\"><table><thead><tr><th>$x$</th><th>$y$</th><th>$(x,\\,y)$</th></tr></thead><tbody><tr><td>$0$</td><td>$4$</td><td>$(0,\\,4)$</td></tr><tr><td>$10$</td><td>$0$</td><td>$(10,\\,0)$</td></tr></tbody></table></div><strong>Garis $x - y = 3$:</strong><div class=\"table-wrap\" style=\"margin:.5rem 0;\"><table><thead><tr><th>$x$</th><th>$y$</th><th>$(x,\\,y)$</th></tr></thead><tbody><tr><td>$0$</td><td>$-3$</td><td>$(0,\\,-3)$</td></tr><tr><td>$3$</td><td>$0$</td><td>$(3,\\,0)$</td></tr></tbody></table></div><div class=\"grafik-wrap\" style=\"margin-top:1rem;\"><svg viewBox=\"0 0 360 280\" xmlns=\"http://www.w3.org/2000/svg\" width=\"360\"><defs><marker id=\"bx\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L7,3z\" class=\"svg-arrow-g10\"/></marker></defs><g class=\"svg-grid-g10\"><line x1=\"10\" y1=\"10\" x2=\"10\" y2=\"270\" /><line x1=\"35\" y1=\"10\" x2=\"35\" y2=\"270\" /><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"270\" /><line x1=\"85\" y1=\"10\" x2=\"85\" y2=\"270\" /><line x1=\"110\" y1=\"10\" x2=\"110\" y2=\"270\" /><line x1=\"135\" y1=\"10\" x2=\"135\" y2=\"270\" /><line x1=\"160\" y1=\"10\" x2=\"160\" y2=\"270\" /><line x1=\"185\" y1=\"10\" x2=\"185\" y2=\"270\" /><line x1=\"210\" y1=\"10\" x2=\"210\" y2=\"270\" /><line x1=\"235\" y1=\"10\" x2=\"235\" y2=\"270\" /><line x1=\"260\" y1=\"10\" x2=\"260\" y2=\"270\" /><line x1=\"285\" y1=\"10\" x2=\"285\" y2=\"270\" /><line x1=\"310\" y1=\"10\" x2=\"310\" y2=\"270\" /><line x1=\"335\" y1=\"10\" x2=\"335\" y2=\"270\" /><line x1=\"10\" y1=\"260\" x2=\"350\" y2=\"260\" /><line x1=\"10\" y1=\"235\" x2=\"350\" y2=\"235\" /><line x1=\"10\" y1=\"210\" x2=\"350\" y2=\"210\" /><line x1=\"10\" y1=\"185\" x2=\"350\" y2=\"185\" /><line x1=\"10\" y1=\"160\" x2=\"350\" y2=\"160\" /><line x1=\"10\" y1=\"135\" x2=\"350\" y2=\"135\" /><line x1=\"10\" y1=\"110\" x2=\"350\" y2=\"110\" /><line x1=\"10\" y1=\"85\" x2=\"350\" y2=\"85\" /><line x1=\"10\" y1=\"60\" x2=\"350\" y2=\"60\" /><line x1=\"10\" y1=\"35\" x2=\"350\" y2=\"35\" /></g><line x1=\"10\" y1=\"160\" x2=\"348\" y2=\"160\" class=\"svg-axis-g10\" marker-end=\"url(#bx)\"/><line x1=\"60\" y1=\"270\" x2=\"60\" y2=\"12\" class=\"svg-axis-g10\" marker-end=\"url(#bx)\"/><text x=\"342\" y=\"172\" font-size=\"11\" font-weight=\"bold\" class=\"svg-label-g10\">x</text><text x=\"50\" y=\"15\" font-size=\"11\" font-weight=\"bold\" class=\"svg-label-g10\">y</text><text x=\"48\" y=\"174\" font-size=\"10\" class=\"svg-label-g10\">O</text><text x=\"10\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">-2</text><text x=\"35\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">-1</text><text x=\"85\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">1</text><text x=\"110\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">2</text><text x=\"135\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">3</text><text x=\"160\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">4</text><text x=\"185\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">5</text><text x=\"210\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">6</text><text x=\"235\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">7</text><text x=\"260\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">8</text><text x=\"285\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">9</text><text x=\"310\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">10</text><text x=\"335\" y=\"174\" font-size=\"9\" text-anchor=\"middle\" class=\"svg-tick-g10\">11</text><text x=\"54\" y=\"263\" font-size=\"9\" text-anchor=\"end\" class=\"svg-tick-g10\">-4</text><text x=\"54\" y=\"238\" font-size=\"9\" text-anchor=\"end\" class=\"svg-tick-g10\">-3</text><text x=\"54\" y=\"213\" font-size=\"9\" text-anchor=\"end\" class=\"svg-tick-g10\">-2</text><text x=\"54\" y=\"188\" font-size=\"9\" text-anchor=\"end\" class=\"svg-tick-g10\">-1</text><text x=\"54\" y=\"138\" font-size=\"9\" text-anchor=\"end\" class=\"svg-tick-g10\">1</text><text x=\"54\" y=\"113\" font-size=\"9\" text-anchor=\"end\" class=\"svg-tick-g10\">2</text><text x=\"54\" y=\"88\" font-size=\"9\" text-anchor=\"end\" class=\"svg-tick-g10\">3</text><text x=\"54\" y=\"63\" font-size=\"9\" text-anchor=\"end\" class=\"svg-tick-g10\">4</text><text x=\"54\" y=\"38\" font-size=\"9\" text-anchor=\"end\" class=\"svg-tick-g10\">5</text><line x1=\"185\" y1=\"110\" x2=\"185\" y2=\"160\" stroke=\"#EF4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/><line x1=\"185\" y1=\"110\" x2=\"60\" y2=\"110\" stroke=\"#EF4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/><line x1=\"10\" y1=\"40\" x2=\"335\" y2=\"170\" stroke=\"#3B82F6\" stroke-width=\"2.2\"/><line x1=\"35\" y1=\"260\" x2=\"285\" y2=\"10\" stroke=\"#10B981\" stroke-width=\"2.2\"/><circle cx=\"185\" cy=\"110\" r=\"5\" fill=\"#EF4444\"/><text x=\"195\" y=\"105\" font-size=\"10\" font-weight=\"bold\" fill=\"#EF4444\">(5, 2)</text><text x=\"245\" y=\"125\" font-size=\"10\" fill=\"#3B82F6\" font-weight=\"bold\">2x + 5y = 20</text><text x=\"210\" y=\"45\" font-size=\"10\" fill=\"#10B981\" font-weight=\"bold\">x - y = 3</text></svg></div> Titik potong kedua garis adalah $P(5,\\,2)$, sehingga $\\text{HP} = \\{(5,\\,2)\\}$."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 11",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dengan metode substitusi, tentukan penyelesaian dari $3x + y = 3$ dan $2x - 3y = 13$!</p>",
+          "p": "Dari persamaan (1): $y = 3 - 3x \\quad\\cdots(*)$<br><br> Substitusi $(*)$ ke persamaan (2): $$\\begin{align*} 2x - 3(3 - 3x) &= 13 \\\\ 2x - 9 + 9x &= 13 \\\\ 11x &= 22 \\\\ x &= 2 \\end{align*}$$ Substitusi $x = 2$ ke $(*)$: $y = 3 - 3(2) = -3$<br><br><strong>Verifikasi:</strong><ul><li>Persamaan (1): $3(2) + (-3) = 6 - 3 = 3$ &#10003;</li><li>Persamaan (2): $2(2) - 3(-3) = 4 + 9 = 13$ &#10003;</li></ul> Jadi $\\text{HP} = \\{(2,\\,-3)\\}$."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 12",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dengan metode substitusi, tentukan penyelesaian dari $\\dfrac{x-2}{3}+\\dfrac{y+1}{4}=2$ dan $3x-\\dfrac{2y-1}{2}=11$!</p>",
+          "p": "Sederhanakan persamaan (1) dengan mengalikan kedua ruas dengan 12: $$\\begin{align*} 4(x - 2) + 3(y + 1) &= 24 \\\\ 4x - 8 + 3y + 3 &= 24 \\\\ 4x + 3y &= 29 \\quad\\cdots(1a) \\end{align*}$$ Sederhanakan persamaan (2) dengan mengalikan kedua ruas dengan 2: $$\\begin{align*} 6x - (2y - 1) &= 22 \\\\ 6x - 2y + 1 &= 22 \\\\ 6x - 2y &= 21 \\quad\\cdots(2a) \\end{align*}$$ Dari persamaan (2a): $y = \\dfrac{6x - 21}{2} \\quad\\cdots(*)$<br><br> Substitusi $(*)$ ke persamaan (1a): $$\\begin{align*} 4x + 3\\!\\left(\\frac{6x - 21}{2}\\right) &= 29 \\\\ 8x + 18x - 63 &= 58 \\\\ 26x &= 121 \\\\ x &= \\frac{121}{26} \\end{align*}$$ Substitusi balik: $y = \\dfrac{45}{13}$<br><br> Jadi $\\text{HP} = \\left\\{\\!\\left(\\dfrac{121}{26},\\,\\dfrac{45}{13}\\right)\\!\\right\\}$."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 13",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dengan metode eliminasi, tentukan penyelesaian dari $2x - 3y = 2$ dan $5x + 2y = -14$!</p>",
+          "p": "<p style=\"margin:0 0 .6rem 0;\"><strong>Eliminasi $x$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$2x - 3y = 2$\" data-mult1=\"$\\times 5$\" data-eq2=\"$5x + 2y = -14$\" data-mult2=\"$\\times 2$\" data-res1=\"$10x - 15y = 10$\" data-res2=\"$10x + 4y = -28$\" data-result-eq=\"$-19y = 38$\" data-result-val=\"$y = -2$\" data-op=\"(−)\"></div><p style=\"margin:0 0 .6rem 0;\"><strong>Eliminasi $y$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$2x - 3y = 2$\" data-mult1=\"$\\times 2$\" data-eq2=\"$5x + 2y = -14$\" data-mult2=\"$\\times 3$\" data-res1=\"$4x - 6y = 4$\" data-res2=\"$15x + 6y = -42$\" data-result-eq=\"$19x = -38$\" data-result-val=\"$x = -2$\" data-op=\"(+)\"></div> Jadi $\\text{HP} = \\{(-2,\\,-2)\\}$."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 14",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dengan metode eliminasi, tentukan penyelesaian dari $6x + y = 11$ dan $x + 3y = -1$!</p>",
+          "p": "<p style=\"margin:0 0 .6rem 0;\"><strong>Eliminasi $y$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$6x + y = 11$\" data-mult1=\"$\\times 3$\" data-eq2=\"$x + 3y = -1$\" data-mult2=\"$\\times 1$\" data-res1=\"$18x + 3y = 33$\" data-res2=\"$x + 3y = -1$\" data-result-eq=\"$17x = 34$\" data-result-val=\"$x = 2$\" data-op=\"(−)\"></div><p style=\"margin:0 0 .6rem 0;\"><strong>Eliminasi $x$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$6x + y = 11$\" data-mult1=\"$\\times 1$\" data-eq2=\"$x + 3y = -1$\" data-mult2=\"$\\times 6$\" data-res1=\"$6x + y = 11$\" data-res2=\"$6x + 18y = -6$\" data-result-eq=\"$-17y = 17$\" data-result-val=\"$y = -1$\" data-op=\"(−)\"></div> Jadi $\\text{HP} = \\{(2,\\,-1)\\}$."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 15",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan penyelesaian dari $4x + y = 5600$ dan $5x + 3y = 8400$!</p>",
+          "p": "<p style=\"margin:0 0 .6rem 0;\"><strong>Langkah 1 &mdash; Eliminasi $y$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$4x + y = 5600$\" data-mult1=\"$\\times 3$\" data-eq2=\"$5x + 3y = 8400$\" data-mult2=\"$\\times 1$\" data-res1=\"$12x + 3y = 16800$\" data-res2=\"$5x + 3y = 8400$\" data-result-eq=\"$7x = 8400$\" data-result-val=\"$x = 1200$\" data-op=\"(−)\"></div><p style=\"margin:0 0 .4rem 0;\"><strong>Langkah 2 &mdash; Substitusi $x = 1200$ ke persamaan (1):</strong></p> $$\\begin{align*} 4(1200) + y &= 5600 \\\\ 4800 + y &= 5600 \\\\ y &= 800 \\end{align*}$$ Jadi $\\text{HP} = \\{(1200,\\,800)\\}$."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 16",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dengan metode campuran (eliminasi dan substitusi), tentukan penyelesaian dari sistem persamaan: $\\dfrac{6}{x-1}+\\dfrac{10}{y+2}=4$ dan $\\dfrac{10}{x-1}-\\dfrac{5}{y+2}=\\dfrac{5}{2}$</p>",
+          "p": "Misalkan $u=\\dfrac{1}{x-1}$ dan $v=\\dfrac{1}{y+2}$. Sistem persamaan menjadi: $$\\begin{cases} 6u+10v=4 \\quad\\cdots(1) \\\\ 10u-5v=2{,}5 \\quad\\cdots(2) \\end{cases}$$ <p style=\"margin:.8rem 0 .6rem 0;\"><strong>Langkah 1 &mdash; Eliminasi $v$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$6u + 10v = 4$\" data-mult1=\"$\\times 1$\" data-eq2=\"$10u - 5v = 2{,}5$\" data-mult2=\"$\\times 2$\" data-res1=\"$6u + 10v = 4$\" data-res2=\"$20u - 10v = 5$\" data-result-eq=\"$26u = 9$\" data-result-val=\"$u = \\dfrac{9}{26}$\" data-op=\"(+)\"></div><p style=\"margin:0 0 .4rem 0;\"><strong>Langkah 2 &mdash; Substitusi $u = \\dfrac{9}{26}$ ke persamaan (1):</strong></p> $$\\begin{align*} 6\\!\\left(\\frac{9}{26}\\right)+10v &= 4 \\\\ \\frac{54}{26}+10v &= 4 \\\\ 10v &= 4 - \\frac{27}{13} = \\frac{25}{13} \\\\ v &= \\dfrac{5}{26} \\end{align*}$$ <p style=\"margin:.4rem 0;\"><strong>Langkah 3 &mdash; Kembalikan ke variabel $x$ dan $y$:</strong></p> Dari $u = \\dfrac{1}{x-1} = \\dfrac{9}{26}$: $$\\begin{align*} 9(x-1) &= 26 \\\\ x &= \\dfrac{35}{9} \\end{align*}$$ Dari $v = \\dfrac{1}{y+2} = \\dfrac{5}{26}$: $$\\begin{align*} 5(y+2) &= 26 \\\\ y &= \\dfrac{16}{5} \\end{align*}$$ Jadi $\\text{HP} = \\left\\{\\!\\left(\\dfrac{35}{9},\\,\\dfrac{16}{5}\\right)\\!\\right\\}$."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 17",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Diketahui sistem persamaan $ax + 2y = 5$ dan $15x - 5y = 14$. Tentukan nilai $a$ agar sistem persamaan tersebut <strong>tidak memiliki penyelesaian</strong>!</p>",
+          "p": "Agar tidak ada penyelesaian, kedua garis harus sejajar. Syaratnya: $$\\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2}$$ $$\\frac{a}{15} = \\frac{2}{-5} \\neq \\frac{5}{14}$$ Dari $\\dfrac{a}{15} = \\dfrac{2}{-5}$: $$\\begin{align*} -5a &= 30 \\\\ a &= -6 \\end{align*}$$ Periksa: $\\dfrac{5}{14} \\neq \\dfrac{2}{-5}$ &#10003;<br><br> Jadi $a = -6$."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 18",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Jika dua buah bilangan mempunyai jumlah 45 dan selisihnya 5, tentukanlah kedua bilangan tersebut!</p>",
+          "p": "Misalkan kedua bilangan adalah $x$ dan $y$, maka: $$\\begin{cases} x+y=45 \\quad\\cdots(1) \\\\ x-y=5 \\quad\\cdots(2) \\end{cases}$$ <p style=\"margin:0 0 .6rem 0;\"><strong>Eliminasi $y$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$x + y = 45$\" data-mult1=\"$\\times 1$\" data-eq2=\"$x - y = 5$\" data-mult2=\"$\\times 1$\" data-res1=\"$x + y = 45$\" data-res2=\"$x - y = 5$\" data-result-eq=\"$2x = 50$\" data-result-val=\"$x = 25$\" data-op=\"(+)\"></div><p style=\"margin:0 0 .4rem 0;\"><strong>Substitusi $x = 25$ ke persamaan (1):</strong></p> $$\\begin{align*} 25 + y &= 45 \\\\ y &= 20 \\end{align*}$$ <strong>Verifikasi:</strong><br> Jumlah: $25 + 20 = 45$ &#10003;<br> Selisih: $25 - 20 = 5$ &#10003;<br><br> Jadi kedua bilangan tersebut adalah $25$ dan $20$."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 19",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dalam sebuah gedung pertunjukan terdapat 400 penonton. Harga tiket kelas I Rp7.000 dan kelas II Rp5.000. Total penjualan tiket Rp2.300.000. Berapa banyak penonton kelas I dan kelas II?</p>",
+          "p": "Misalkan $x$ = penonton kelas I, $y$ = penonton kelas II, maka: $$\\begin{cases} x + y = 400 \\quad\\cdots(1) \\\\ 7000x + 5000y = 2.300.000 \\quad\\cdots(2) \\end{cases}$$ Sederhanakan persamaan (2) dibagi 1000: $$7x + 5y = 2300 \\quad\\cdots(2a)$$ <p style=\"margin:0 0 .6rem 0;\"><strong>Eliminasi $y$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$x + y = 400$\" data-mult1=\"$\\times 5$\" data-eq2=\"$7x + 5y = 2300$\" data-mult2=\"$\\times 1$\" data-res1=\"$5x + 5y = 2000$\" data-res2=\"$7x + 5y = 2300$\" data-result-eq=\"$-2x = -300$\" data-result-val=\"$x = 150$\" data-op=\"(−)\"></div><p style=\"margin:0 0 .4rem 0;\"><strong>Substitusi $x = 150$ ke persamaan (1):</strong></p> $$\\begin{align*} 150 + y &= 400 \\\\ y &= 250 \\end{align*}$$ Jadi penonton kelas I sebanyak $150$ orang dan kelas II sebanyak $250$ orang."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 20",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Pembilang suatu pecahan ditambah 1 dan penyebutnya dikurangi 3 menghasilkan $\\frac{1}{2}$. Jika penyebutnya ditambah 1 (pembilang tetap), hasilnya $\\frac{1}{5}$. Tentukan pecahan tersebut!</p>",
+          "p": "Misalkan pecahan tersebut adalah $\\dfrac{a}{b}$, maka: $$\\begin{align*} \\frac{a+1}{b-3} = \\frac{1}{2} &\\implies 2a - b = -5 \\quad\\cdots(1) \\\\ \\frac{a}{b+1} = \\frac{1}{5} &\\implies 5a - b = 1 \\quad\\cdots(2) \\end{align*}$$ <p style=\"margin:0 0 .6rem 0;\"><strong>Eliminasi $b$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$2a - b = -5$\" data-mult1=\"$\\times 1$\" data-eq2=\"$5a - b = 1$\" data-mult2=\"$\\times 1$\" data-res1=\"$2a - b = -5$\" data-res2=\"$5a - b = 1$\" data-result-eq=\"$-3a = -6$\" data-result-val=\"$a = 2$\" data-op=\"(−)\"></div><p style=\"margin:0 0 .4rem 0;\"><strong>Substitusi $a = 2$ ke persamaan (1):</strong></p> $$\\begin{align*} 2(2) - b &= -5 \\\\ 4 - b &= -5 \\\\ b &= 9 \\end{align*}$$ Jadi pecahan tersebut adalah $\\dfrac{2}{9}$."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 21",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Lima tahun yang lalu umur Ali sama dengan tiga kali umur Wati. Lima tahun kemudian, umur Ali menjadi dua kali umur Wati. Berapakah umur Ali dan Wati sekarang?</p>",
+          "p": "Misalkan $A$ = umur Ali sekarang, $W$ = umur Wati sekarang.<br><br><em>Lima tahun lalu:</em> $$\\begin{align*} A - 5 &= 3(W - 5) \\\\ A - 3W &= -10 \\quad\\cdots(1) \\end{align*}$$ <em>Lima tahun kemudian:</em> $$\\begin{align*} A + 5 &= 2(W + 5) \\\\ A - 2W &= 5 \\quad\\cdots(2) \\end{align*}$$ <p style=\"margin:0 0 .6rem 0;\"><strong>Eliminasi $A$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$A - 3W = -10$\" data-mult1=\"$\\times 1$\" data-eq2=\"$A - 2W = 5$\" data-mult2=\"$\\times 1$\" data-res1=\"$A - 3W = -10$\" data-res2=\"$A - 2W = 5$\" data-result-eq=\"$-W = -15$\" data-result-val=\"$W = 15$\" data-op=\"(−)\"></div><p style=\"margin:0 0 .4rem 0;\"><strong>Substitusi $W = 15$ ke persamaan (2):</strong></p> $$\\begin{align*} A - 2(15) &= 5 \\\\ A - 30 &= 5 \\\\ A &= 35 \\end{align*}$$ Jadi umur Ali sekarang $35$ tahun dan umur Wati $15$ tahun."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 22",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Enam tahun yang lalu jumlah umur ayah dan ibu sama dengan 54 tahun. Sekarang umur ayah adalah $\\frac{6}{5}$ dari umur ibu. Tentukan masing-masing umur ayah dan ibu lima tahun yang akan datang!</p>",
+          "p": "Misalkan $A$ = umur ayah sekarang, $B$ = umur ibu sekarang.<br><br> Enam tahun lalu: $$\\begin{align*} (A-6)+(B-6) &= 54 \\\\ A + B &= 66 \\quad\\cdots(1) \\end{align*}$$ Hubungan sekarang: $$\\begin{align*} A &= \\tfrac{6}{5}B \\\\ 5A - 6B &= 0 \\quad\\cdots(2) \\end{align*}$$ <p style=\"margin:0 0 .6rem 0;\"><strong>Eliminasi $A$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$A + B = 66$\" data-mult1=\"$\\times 5$\" data-eq2=\"$5A - 6B = 0$\" data-mult2=\"$\\times 1$\" data-res1=\"$5A + 5B = 330$\" data-res2=\"$5A - 6B = 0$\" data-result-eq=\"$11B = 330$\" data-result-val=\"$B = 30$\" data-op=\"(−)\"></div><p style=\"margin:0 0 .4rem 0;\"><strong>Substitusi $B = 30$ ke persamaan (1):</strong></p> $$\\begin{align*} A + 30 &= 66 \\\\ A &= 36 \\end{align*}$$ Lima tahun yang akan datang:<br> Ayah $= 36 + 5 = 41$ tahun<br> Ibu $= 30 + 5 = 35$ tahun"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 23",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Keran A dan keran B bersama-sama dapat mengisi sebuah bak dalam 6 menit. Laju pengisian keran A adalah $\\dfrac{2}{3}$ kali laju keran B. Tentukan waktu yang dibutuhkan masing-masing keran untuk mengisi bak secara mandiri!</p>",
+          "p": "Misalkan $p$ = laju keran A (bak/menit) dan $q$ = laju keran B (bak/menit), maka: $$\\begin{cases} p + q = \\dfrac{1}{6} \\quad\\cdots(1) \\\\ p = \\dfrac{2}{3}\\,q \\quad\\cdots(2) \\end{cases}$$ Substitusi (2) ke (1): $$\\begin{align*} \\tfrac{2}{3}q + q &= \\tfrac{1}{6} \\\\ \\tfrac{5}{3}q &= \\tfrac{1}{6} \\\\ q &= \\tfrac{1}{10} \\end{align*}$$ Dari (2): $$\\begin{align*} p &= \\tfrac{2}{3} \\times \\tfrac{1}{10} \\\\ p &= \\tfrac{1}{15} \\end{align*}$$ <strong>Verifikasi:</strong> $$p + q = \\dfrac{1}{15} + \\dfrac{1}{10} = \\dfrac{2+3}{30} = \\dfrac{1}{6} \\checkmark$$ Jadi keran A membutuhkan $15$ menit dan keran B membutuhkan $10$ menit untuk mengisi bak secara mandiri."
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 24",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Sebuah kantin sekolah menjual dua jenis paket makan siang: paket nasi ayam dan paket nasi ikan. Senin: terjual 5 nasi ayam + 3 nasi ikan = Rp87.000. Selasa: terjual 3 nasi ayam + 7 nasi ikan = Rp99.000.<br> a. Tentukan harga masing-masing paket!<br> b. Jika pada hari Rabu kantin menargetkan pendapatan Rp120.000 dan terjual 6 paket nasi ayam, berapa paket nasi ikan yang harus terjual?<br> c. Pada hari Kamis, pengelola memberikan diskon 10% untuk nasi ikan. Jika total terjual 10 paket dengan perbandingan nasi ayam dan nasi ikan adalah 3:2, berapa pendapatan hari Kamis?</p>",
+          "p": "Misalkan $x$ = harga paket nasi ayam (Rp) dan $y$ = harga paket nasi ikan (Rp), maka: $$\\begin{cases} 5x + 3y = 87.000 \\quad\\cdots(1) \\\\ 3x + 7y = 99.000 \\quad\\cdots(2) \\end{cases}$$ <p style=\"margin:.4rem 0 .6rem 0;\"><strong>Eliminasi $x$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$5x + 3y = 87.000$\" data-mult1=\"$\\times 3$\" data-eq2=\"$3x + 7y = 99.000$\" data-mult2=\"$\\times 5$\" data-res1=\"$15x + 9y = 261.000$\" data-res2=\"$15x + 35y = 495.000$\" data-result-eq=\"$-26y = -234.000$\" data-result-val=\"$y = 9.000$\" data-op=\"(−)\"></div><p style=\"margin:0 0 .6rem 0;\"><strong>Eliminasi $y$:</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$5x + 3y = 87.000$\" data-mult1=\"$\\times 7$\" data-eq2=\"$3x + 7y = 99.000$\" data-mult2=\"$\\times 3$\" data-res1=\"$35x + 21y = 609.000$\" data-res2=\"$9x + 21y = 297.000$\" data-result-eq=\"$26x = 312.000$\" data-result-val=\"$x = 12.000$\" data-op=\"(−)\"></div><strong>Verifikasi ke (2):</strong> $$3(12.000) + 7(9.000) = 36.000 + 63.000 = 99.000 \\checkmark$$ <strong>a.</strong> Harga paket nasi ayam: $x = \\text{Rp12.000}$<br> Harga paket nasi ikan: $y = \\text{Rp9.000}$<br><br><strong>b.</strong> Misalkan paket nasi ikan yang terjual $= n$: $$\\begin{align*} 6(12.000) + n(9.000) &= 120.000 \\\\ 72.000 + 9.000n &= 120.000 \\\\ 9.000n &= 48.000 \\\\ n &\\approx 5{,}3 \\end{align*}$$ Karena jumlah paket harus bilangan bulat, maka harus terjual minimal $\\mathbf{6}$ paket nasi ikan.<br><br><strong>c.</strong> Perbandingan nasi ayam : nasi ikan $= 3 : 2$ dari 10 paket → 6 nasi ayam dan 4 nasi ikan.<br> Harga nasi ikan setelah diskon $10\\%$: $$\\begin{align*} 0{,}9 \\times 9.000 &= \\text{Rp}8.100 \\end{align*}$$ Total pendapatan: $$\\begin{align*} 6 \\times 12.000 &= 72.000 \\\\ 4 \\times 8.100 &= 32.400 \\\\ \\text{Total} &= 72.000 + 32.400 = \\text{Rp104.400} \\end{align*}$$"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "title": "Sistem Persamaan Linear Tiga Variabel (SPLTV)",
+      "contoh": [
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 25",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dengan metode campuran, tentukan penyelesaian sistem persamaan: $x + 3y - 3z = -7$,&ensp; $2x - 2y + z = 8$,&ensp; $2x + y + z = 5$</p>",
+          "p": "Misalkan: $$\\begin{aligned} (1)&:\\; x + 3y - 3z = -7 \\\\ (2)&:\\; 2x - 2y + z = 8 \\\\ (3)&:\\; 2x + y + z = 5 \\end{aligned}$$ <strong>Langkah 1 &mdash; Eliminasi $x$ dari (2) dan (3):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$2x - 2y + z = 8$\" data-mult1=\"$\\times 1$\" data-eq2=\"$2x + y + z = 5$\" data-mult2=\"$\\times 1$\" data-res1=\"$2x - 2y + z = 8$\" data-res2=\"$2x + y + z = 5$\" data-result-eq=\"$-3y = 3$\" data-result-val=\"$y = -1 \\quad\\cdots(4)$\" data-op=\"(−)\"></div><strong>Langkah 2 &mdash; Eliminasi $x$ dari (1) dan (2):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$x + 3y - 3z = -7$\" data-mult1=\"$\\times 2$\" data-eq2=\"$2x - 2y + z = 8$\" data-mult2=\"$\\times 1$\" data-res1=\"$2x + 6y - 6z = -14$\" data-res2=\"$2x - 2y + z = 8$\" data-result-eq=\"$8y - 7z = -22$\" data-result-val=\"$\\quad\\cdots(5)$\" data-op=\"(−)\"></div><strong>Langkah 3 &mdash; Substitusi (4) ke (5):</strong> $$\\begin{align*} 8(-1)-7z &= -22 \\\\ -8-7z &= -22 \\\\ -7z &= -14 \\\\ z &= 2 \\quad\\cdots(6) \\end{align*}$$ <strong>Langkah 4 &mdash; Substitusi (4) dan (6) ke (1):</strong> $$\\begin{align*} x+3(-1)-3(2) &= -7 \\\\ x-3-6 &= -7 \\\\ x &= 2 \\end{align*}$$ Jadi $\\text{HP} = \\{(2,\\,-1,\\,2)\\}$.<br><br><strong>Verifikasi:</strong><ul><li>$(1)$: $2 + 3(-1) - 3(2) = 2 - 3 - 6 = -7$ &#10003;</li><li>$(2)$: $2(2) - 2(-1) + 2 = 4 + 2 + 2 = 8$ &#10003;</li><li>$(3)$: $2(2) + (-1) + 2 = 4 - 1 + 2 = 5$ &#10003;</li></ul>"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 26",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dengan metode campuran, tentukan penyelesaian sistem persamaan: $2x + y + 3z = 1$,&ensp; $2x - 3y + 4z = -5$,&ensp; $x + 2y - z = 7$</p>",
+          "p": "$$\\begin{aligned} (1)&:\\; 2x + y + 3z = 1 \\\\ (2)&:\\; 2x - 3y + 4z = -5 \\\\ (3)&:\\; x + 2y - z = 7 \\end{aligned}$$ <strong>Langkah 1 &mdash; Eliminasi $x$ dari (1) dan (2):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$2x + y + 3z = 1$\" data-mult1=\"$\\times 1$\" data-eq2=\"$2x - 3y + 4z = -5$\" data-mult2=\"$\\times 1$\" data-res1=\"$2x + y + 3z = 1$\" data-res2=\"$2x - 3y + 4z = -5$\" data-result-eq=\"$4y - z = 6$\" data-result-val=\"$\\quad\\cdots(4)$\" data-op=\"(−)\"></div><strong>Langkah 2 &mdash; Eliminasi $x$ dari (1) dan (3):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$2x + y + 3z = 1$\" data-mult1=\"$\\times 1$\" data-eq2=\"$x + 2y - z = 7$\" data-mult2=\"$\\times 2$\" data-res1=\"$2x + y + 3z = 1$\" data-res2=\"$2x + 4y - 2z = 14$\" data-result-eq=\"$-3y + 5z = -13$\" data-result-val=\"$\\quad\\cdots(5)$\" data-op=\"(−)\"></div><strong>Langkah 3 &mdash; Eliminasi $z$ dari (4) dan (5):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$4y - z = 6$\" data-mult1=\"$\\times 5$\" data-eq2=\"$-3y + 5z = -13$\" data-mult2=\"$\\times 1$\" data-res1=\"$20y - 5z = 30$\" data-res2=\"$-3y + 5z = -13$\" data-result-eq=\"$17y = 17$\" data-result-val=\"$y = 1$\" data-op=\"(+)\"></div> Substitusi $y=1$ ke (4): $$\\begin{align*} 4(1) - z &= 6 \\\\ z &= -2 \\end{align*}$$ <strong>Langkah 4 &mdash; Substitusi $y=1$, $z=-2$ ke (1):</strong> $$\\begin{align*} 2x+1+3(-2) &= 1 \\\\ 2x-5 &= 1 \\\\ x &= 3 \\end{align*}$$ Jadi $\\text{HP} = \\{(3,\\,1,\\,-2)\\}$."
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 27",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dengan metode campuran, tentukan penyelesaian sistem persamaan: $2x + 3y - 3z = 10$,&ensp; $2x - y + 2z = 1$,&ensp; $4x + 4y + z = 11$</p>",
+          "p": "$$\\begin{aligned} (1)&:\\; 2x + 3y - 3z = 10 \\\\ (2)&:\\; 2x - y + 2z = 1 \\\\ (3)&:\\; 4x + 4y + z = 11 \\end{aligned}$$ <strong>Langkah 1 &mdash; Eliminasi $z$ dari (1) dan (3):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$2x + 3y - 3z = 10$\" data-mult1=\"$\\times 1$\" data-eq2=\"$4x + 4y + z = 11$\" data-mult2=\"$\\times 3$\" data-res1=\"$2x + 3y - 3z = 10$\" data-res2=\"$12x + 12y + 3z = 33$\" data-result-eq=\"$14x + 15y = 43$\" data-result-val=\"$\\quad\\cdots(4)$\" data-op=\"(+)\"></div><strong>Langkah 2 &mdash; Eliminasi $z$ dari (2) dan (3):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$2x - y + 2z = 1$\" data-mult1=\"$\\times 1$\" data-eq2=\"$4x + 4y + z = 11$\" data-mult2=\"$\\times 2$\" data-res1=\"$2x - y + 2z = 1$\" data-res2=\"$8x + 8y + 2z = 22$\" data-result-eq=\"$-6x - 9y = -21$\" data-result-val=\"$\\implies 2x + 3y = 7 \\quad\\cdots(5)$\" data-op=\"(−)\"></div><strong>Langkah 3 &mdash; Eliminasi $x$ dari (4) dan (5):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$14x + 15y = 43$\" data-mult1=\"$\\times 1$\" data-eq2=\"$2x + 3y = 7$\" data-mult2=\"$\\times 7$\" data-res1=\"$14x + 15y = 43$\" data-res2=\"$14x + 21y = 49$\" data-result-eq=\"$-6y = -6$\" data-result-val=\"$y = 1$\" data-op=\"(−)\"></div> Substitusi $y=1$ ke (5): $2x+3(1)=7 \\implies x=2$<br><br><strong>Langkah 4 &mdash; Substitusi $x=2$, $y=1$ ke (1):</strong> $$\\begin{align*} 2(2)+3(1)-3z &= 10 \\\\ 7-3z &= 10 \\\\ z &= -1 \\end{align*}$$ Jadi $\\text{HP} = \\{(2,\\,1,\\,-1)\\}$."
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 28",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan nilai $x$, $y$, dan $z$ dari: $\\dfrac{1}{x}+\\dfrac{2}{y}-\\dfrac{1}{z}=1$,&ensp; $\\dfrac{2}{x}-\\dfrac{1}{y}+\\dfrac{1}{z}=3$,&ensp; $\\dfrac{1}{x}+\\dfrac{1}{y}+\\dfrac{1}{z}=2$</p>",
+          "p": "Misalkan $p=\\tfrac{1}{x}$, $q=\\tfrac{1}{y}$, $r=\\tfrac{1}{z}$, maka sistem menjadi: $$\\begin{cases} p + 2q - r = 1 \\quad\\cdots(1) \\\\ 2p - q + r = 3 \\quad\\cdots(2) \\\\ p + q + r = 2 \\quad\\cdots(3) \\end{cases}$$ <strong>Langkah 1 &mdash; Eliminasi $r$ dari (1) dan (2):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$p + 2q - r = 1$\" data-mult1=\"$\\times 1$\" data-eq2=\"$2p - q + r = 3$\" data-mult2=\"$\\times 1$\" data-res1=\"$p + 2q - r = 1$\" data-res2=\"$2p - q + r = 3$\" data-result-eq=\"$3p + q = 4$\" data-result-val=\"$\\quad\\cdots(4)$\" data-op=\"(+)\"></div><strong>Langkah 2 &mdash; Eliminasi $r$ dari (2) dan (3):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$2p - q + r = 3$\" data-mult1=\"$\\times 1$\" data-eq2=\"$p + q + r = 2$\" data-mult2=\"$\\times 1$\" data-res1=\"$2p - q + r = 3$\" data-res2=\"$p + q + r = 2$\" data-result-eq=\"$p - 2q = 1$\" data-result-val=\"$\\quad\\cdots(5)$\" data-op=\"(−)\"></div><strong>Langkah 3 &mdash; Eliminasi $p$ dari (4) dan (5):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$3p + q = 4$\" data-mult1=\"$\\times 1$\" data-eq2=\"$p - 2q = 1$\" data-mult2=\"$\\times 3$\" data-res1=\"$3p + q = 4$\" data-res2=\"$3p - 6q = 3$\" data-result-eq=\"$7q = 1$\" data-result-val=\"$q = \\tfrac{1}{7}$\" data-op=\"(−)\"></div> Substitusi $q=\\tfrac{1}{7}$ ke (5): $p = 1 + 2\\left(\\tfrac{1}{7}\\right) = \\tfrac{9}{7}$<br> Dari (3): $r = 2 - \\tfrac{9}{7} - \\tfrac{1}{7} = \\tfrac{4}{7}$<br><br> Jadi $x=\\dfrac{7}{9}$,&ensp; $y=7$,&ensp; $z=\\dfrac{7}{4}$."
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 29",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Sebuah taman berbentuk segitiga memiliki keliling 36 m. Sisi pertama 4 m lebih panjang dari sisi kedua. Sisi ketiga sama dengan dua kali sisi kedua dikurangi 2 m. Tentukan panjang masing-masing sisi taman tersebut!</p>",
+          "p": "<div class=\"grafik-wrap\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 270\" width=\"100%\" style=\"max-width:340px;background:transparent;\"><defs></defs><!-- segitiga A=kiri-bawah, B=kanan-bawah, C=atas-tengah --><polygon points=\"55,220 365,220 210,55\" class=\"tri-fill\"/><!-- label sisi kiri (x) --><text x=\"112\" y=\"135\" text-anchor=\"middle\" class=\"tri-label\">x</text><!-- label sisi kanan (y) --><text x=\"308\" y=\"135\" text-anchor=\"middle\" class=\"tri-label\">y</text><!-- label sisi bawah (z) --><text x=\"210\" y=\"245\" text-anchor=\"middle\" class=\"tri-label\">z</text><!-- keliling --><text x=\"210\" y=\"35\" text-anchor=\"middle\" class=\"tri-note\">Keliling = x + y + z = 36 m</text></svg></div> Misalkan sisi pertama $= x$ m, sisi kedua $= y$ m, sisi ketiga $= z$ m, maka: $x=y+4$;&ensp; $z=2y-2$<br><br> Substitusi ke $x+y+z=36$: $$\\begin{align*} (y+4)+y+(2y-2) &= 36 \\\\ 4y+2 &= 36 \\\\ 4y &= 34 \\\\ y &= 8{,}5 \\end{align*}$$ $$\\begin{align*} x &= 8{,}5+4 = 12{,}5 \\\\ z &= 2(8{,}5)-2 = 15 \\end{align*}$$ <strong>Verifikasi:</strong> $12{,}5+8{,}5+15=36$ &#10003;<br><br> Jadi sisi pertama $=12{,}5$ m, sisi kedua $=8{,}5$ m, dan sisi ketiga $=15$ m."
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 30",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Toko A, B, dan C menjual barang yang sama. Di toko A, harga 2 kg beras, 1 kg gula, dan 1 kg minyak Rp47.000. Di toko B, harga 1 kg beras, 2 kg gula, dan 1 kg minyak Rp43.000. Di toko C, harga 1 kg beras, 1 kg gula, dan 2 kg minyak Rp45.000. Tentukan harga tiap kg beras, gula, dan minyak!</p>",
+          "p": "$$\\begin{cases} 2x + y + z = 47000 \\quad\\cdots(1) \\\\ x + 2y + z = 43000 \\quad\\cdots(2) \\\\ x + y + 2z = 45000 \\quad\\cdots(3) \\end{cases}$$ <strong>Langkah 1 &mdash; Eliminasi $z$ dari (1) dan (2):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$2x + y + z = 47000$\" data-mult1=\"$\\times 1$\" data-eq2=\"$x + 2y + z = 43000$\" data-mult2=\"$\\times 1$\" data-res1=\"$2x + y + z = 47000$\" data-res2=\"$x + 2y + z = 43000$\" data-result-eq=\"$x - y = 4000$\" data-result-val=\"$\\quad\\cdots(4)$\" data-op=\"(−)\"></div><strong>Langkah 2 &mdash; Eliminasi $z$ dari (2) dan (3):</strong><p style=\"margin:0 0 .6rem 0;\"><strong></strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$x + 2y + z = 43000$\" data-mult1=\"$\\times 1$\" data-eq2=\"$x + y + 2z = 45000$\" data-mult2=\"$\\times 1$\" data-res1=\"$x + 2y + z = 43000$\" data-res2=\"$x + y + 2z = 45000$\" data-result-eq=\"$y - z = -2000$\" data-result-val=\"$\\implies z = y + 2000 \\quad\\cdots(5)$\" data-op=\"(−)\"></div><strong>Langkah 3 &mdash; Substitusi $x = y+4000$ dan $z = y+2000$ ke (1):</strong> $$\\begin{align*} 2(y+4000)+y+(y+2000) &= 47000 \\\\ 4y+10000 &= 47000 \\\\ 4y &= 37000 \\\\ y &= 9.250 \\end{align*}$$ $$\\begin{align*} x &= 9.250+4000 = 13.250 \\\\ z &= 9.250+2000 = 11.250 \\end{align*}$$ Jadi harga beras $\\text{Rp13.250}$/kg, gula $\\text{Rp9.250}$/kg, dan minyak $\\text{Rp11.250}$/kg."
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 31",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Jumlah tiga bilangan adalah 60. Bilangan kedua sama dengan dua kali bilangan pertama dikurangi 6. Bilangan ketiga sama dengan bilangan pertama ditambah bilangan kedua dikurangi 6. Tentukan ketiga bilangan tersebut!</p>",
+          "p": "$y=2x-6$,&ensp; $z=x+y-6=3x-12$<br><br> Substitusi ke $x+y+z=60$: $$\\begin{align*} x+(2x-6)+(3x-12) &= 60 \\\\ 6x-18 &= 60 \\\\ 6x &= 78 \\\\ x &= 13 \\end{align*}$$ $$\\begin{align*} y &= 2(13)-6 = 20 \\\\ z &= 3(13)-12 = 27 \\end{align*}$$ <strong>Verifikasi:</strong> $13+20+27=60$ &#10003;<br><br> Jadi ketiga bilangan adalah $13$, $20$, dan $27$."
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 32",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Seorang pengusaha menyimpan modal di tiga bank berbeda. Modal di bank A 2 kali modal di bank B. Modal di bank C Rp5.000.000 lebih sedikit dari modal di bank A. Jika total modal Rp55.000.000, tentukan modal di masing-masing bank!</p>",
+          "p": "Misalkan modal di bank A, B, C berturut-turut $x$, $y$, $z$ (dalam jutaan rupiah):<br> $x=2y$,&ensp; $z=x-5=2y-5$<br><br> Substitusi ke $x+y+z=55$: $$\\begin{align*} 2y+y+(2y-5) &= 55 \\\\ 5y-5 &= 55 \\\\ 5y &= 60 \\\\ y &= 12 \\end{align*}$$ $$\\begin{align*} x &= 2(12) = 24 \\\\ z &= 24-5 = 19 \\end{align*}$$ Jadi bank A $= \\text{Rp24.000.000}$, bank B $= \\text{Rp12.000.000}$, bank C $= \\text{Rp19.000.000}$."
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 33",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Pak Budi, Pak Candra, dan Pak Dodi bekerja bersama menyelesaikan sebuah proyek. Jika Pak Budi dan Pak Candra bekerja bersama tanpa Pak Dodi, proyek selesai dalam 12 hari. Jika Pak Budi dan Pak Dodi bekerja bersama tanpa Pak Candra, proyek selesai dalam 10 hari. Jika ketiganya bekerja bersama, proyek selesai dalam 6 hari. Berapa hari masing-masing orang menyelesaikan proyek tersebut jika bekerja sendiri?</p>",
+          "p": "Misalkan kecepatan kerja Pak Budi, Pak Candra, dan Pak Dodi berturut-turut $\\dfrac{1}{x}$, $\\dfrac{1}{y}$, dan $\\dfrac{1}{z}$ bagian per hari.<br><br> Misalkan $p=\\dfrac{1}{x}$, $q=\\dfrac{1}{y}$, $r=\\dfrac{1}{z}$: $$\\begin{cases} p + q = \\dfrac{1}{12} \\quad\\cdots(1) \\\\ p + r = \\dfrac{1}{10} \\quad\\cdots(2) \\\\ p + q + r = \\dfrac{1}{6} \\quad\\cdots(3) \\end{cases}$$ Dari (1) dan (3): $r=\\dfrac{1}{6}-\\dfrac{1}{12}=\\dfrac{1}{12} \\quad\\cdots(4)$<br> Substitusi (4) ke (2): $p=\\dfrac{1}{10}-\\dfrac{1}{12}=\\dfrac{1}{60} \\quad\\cdots(5)$<br> Substitusi (5) ke (1): $q=\\dfrac{1}{12}-\\dfrac{1}{60}=\\dfrac{1}{15} \\quad\\cdots(6)$<br><br><strong>Verifikasi:</strong> $\\dfrac{1}{60}+\\dfrac{1}{15}+\\dfrac{1}{12}=\\dfrac{1+4+5}{60}=\\dfrac{1}{6}$ &#10003;<br><br> Jadi Pak Budi $=60$ hari, Pak Candra $=15$ hari, Pak Dodi $=12$ hari jika bekerja sendiri."
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 34",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Periksa apakah sistem berikut memiliki penyelesaian: $x+y+z=6$,&ensp; $2x+2y+2z=10$,&ensp; $x-y+z=2$</p>",
+          "p": "Perhatikan persamaan (1) dan (2): $$\\begin{align*} 2x + 2y + 2z &= 10 \\\\ x + y + z &= 5 \\end{align*}$$ Namun persamaan (1) menyatakan $x + y + z = 6$. Karena $5 \\neq 6$, terdapat <strong>kontradiksi</strong>.<br><br> Sistem ini <strong>tidak memiliki penyelesaian</strong> (inkonsisten)."
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 35",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Periksa apakah sistem berikut memiliki satu, tak hingga, atau tidak ada penyelesaian: $x+y+z=6$,&ensp; $2x+2y+2z=12$,&ensp; $x-y+z=2$</p>",
+          "p": "Persamaan (2) identik dengan persamaan (1) setelah disederhanakan ($x+y+z=6$), sehingga sistem ini hanya memiliki <strong>dua persamaan yang bebas secara linear</strong>, yaitu (1) dan (3).<br><br><p style=\"margin:0 0 .6rem 0;\"><strong>Eliminasi $x$ dan $z$ dari (1) dan (3):</strong></p><div class=\"elim-svg-wrap\" data-eq1=\"$x + y + z = 6$\" data-mult1=\"$\\times 1$\" data-eq2=\"$x - y + z = 2$\" data-mult2=\"$\\times 1$\" data-res1=\"$x + y + z = 6$\" data-res2=\"$x - y + z = 2$\" data-result-eq=\"$2y = 4$\" data-result-val=\"$y = 2$\" data-op=\"(−)\"></div> Substitusi $y=2$ ke persamaan (1): $x+z=4$, sehingga $z=4-x$ untuk sembarang nilai $x$.<br><br> Karena proses eliminasi menghasilkan $0=0$, sistem memiliki <strong>tak hingga penyelesaian</strong>: $$\\{(x,\\,2,\\,4-x) \\mid x \\in \\mathbb{R}\\}$$"
+        }
+      ]
+    }
+  ],
+  "totalContoh": 35,
+  "title": "Sistem Persamaan Linear",
+  "prefix": "SPL"
+}

@@ -1,0 +1,284 @@
+{
+  "materi": "turunan-fungsi",
+  "sections": [
+    {
+      "id": "A",
+      "title": "Definisi &amp; Aturan Dasar Turunan",
+      "contoh": [
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 1",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Dengan menggunakan definisi turunan, tentukanlah turunan dari:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = 3x - 5$</li><li>$f(x) = 4x^2 + 3x$</li><li>$f(x) = x^3 - 2x$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$$f'(x) = \\lim_{h \\to 0} \\frac{[3(x+h)-5]-[3x-5]}{h} = \\lim_{h \\to 0} \\frac{3h}{h} = \\boxed{3}$$</li><li>$$\\begin{align*} f'(x) &= \\lim_{h \\to 0} \\frac{[4(x+h)^2+3(x+h)]-[4x^2+3x]}{h} \\\\ &= \\lim_{h \\to 0} \\frac{8hx+4h^2+3h}{h} = \\lim_{h \\to 0}(8x+4h+3) = \\boxed{8x+3} \\end{align*}$$</li><li>$$\\begin{align*} f'(x) &= \\lim_{h \\to 0} \\frac{[(x+h)^3-2(x+h)]-[x^3-2x]}{h} \\\\ &= \\lim_{h \\to 0} \\frac{3x^2h+3xh^2+h^3-2h}{h} = \\lim_{h \\to 0}(3x^2+3xh+h^2-2) = \\boxed{3x^2-2} \\end{align*}$$</li></ol>"
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 2",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukanlah turunan pertama dari setiap fungsi berikut:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = 7$</li><li>$f(x) = -4x$</li><li>$f(x) = 3x^{-2} + 4x^{-5} - 4x^{-1}$</li><li>$f(x) = 6x^{1/2} - 12x^{-1/3} + 4x^{3/2} + 5$</li><li>$f(x) = 3\\sqrt{x} - 2\\sqrt[3]{x^2} + \\sqrt[4]{x^3}$</li><li>$f(x) = \\dfrac{5}{x} - \\dfrac{3}{x^2} + \\dfrac{2}{x^4}$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$f(x) = 7x^0 \\;\\Rightarrow\\; f'(x) = \\boxed{0}$</li><li>$f(x) = -4x^1 \\;\\Rightarrow\\; f'(x) = \\boxed{-4}$</li><li>$$f'(x) = 3(-2)x^{-3}+4(-5)x^{-6}-4(-1)x^{-2} = \\boxed{-6x^{-3}-20x^{-6}+4x^{-2}}$$</li><li>$$f'(x) = 6\\cdot\\tfrac{1}{2}x^{-1/2} - 12\\cdot(-\\tfrac{1}{3})x^{-4/3} + 4\\cdot\\tfrac{3}{2}x^{1/2} = \\boxed{3x^{-1/2}+4x^{-4/3}+6x^{1/2}}$$</li><li>Ubah ke pangkat pecahan: $f(x) = 3x^{1/2}-2x^{2/3}+x^{3/4}$ $$f'(x) = \\tfrac{3}{2}x^{-1/2}-\\tfrac{4}{3}x^{-1/3}+\\tfrac{3}{4}x^{-1/4} = \\boxed{\\dfrac{3}{2\\sqrt{x}}-\\dfrac{4}{3\\sqrt[3]{x}}+\\dfrac{3}{4\\sqrt[4]{x}}}$$</li><li>Ubah ke pangkat negatif: $f(x) = 5x^{-1}-3x^{-2}+2x^{-4}$ $$f'(x) = -5x^{-2}+6x^{-3}-8x^{-5} = \\boxed{-\\dfrac{5}{x^2}+\\dfrac{6}{x^3}-\\dfrac{8}{x^5}}$$</li></ol>"
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 3",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukanlah turunan pertama dari fungsi-fungsi berikut dengan menyederhanakan terlebih dahulu:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = x\\sqrt{x}$</li><li>$f(x) = \\dfrac{x^3-2x}{\\sqrt{x}}$</li><li>$f(x) = \\left(\\sqrt{x}+1\\right)^2$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$f(x) = x \\cdot x^{1/2} = x^{3/2} \\;\\to\\; f'(x) = \\boxed{\\dfrac{3}{2}x^{1/2} = \\dfrac{3\\sqrt{x}}{2}}$</li><li>$f(x) = \\dfrac{x^3-2x}{x^{1/2}} = x^{5/2}-2x^{1/2} \\;\\to\\; f'(x) = \\boxed{\\dfrac{5}{2}x^{3/2}-\\dfrac{1}{\\sqrt{x}}}$</li><li>$f(x) = \\left(x^{1/2}+1\\right)^2 = x+2x^{1/2}+1 \\;\\to\\; f'(x) = 1+2\\cdot\\tfrac{1}{2}x^{-1/2} = \\boxed{1+\\dfrac{1}{\\sqrt{x}}}$</li></ol>"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "Pengembangan Rumus Turunan",
+      "contoh": [
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 4",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukanlah turunan pertama dari fungsi-fungsi berikut:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = (x^2-4x)(2x+3)$</li><li>$f(x) = \\dfrac{4x^2-5}{2x+3}$</li><li>$f(x) = \\dfrac{3x-1}{\\sqrt{2x+5}}$</li><li>$f(x) = (x^2-3x)(x+1)(x-2)$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$u = x^2-4x \\Rightarrow u'=2x-4$;&ensp; $v=2x+3 \\Rightarrow v'=2$ $$f'(x) = (2x-4)(2x+3)+(x^2-4x)(2) = 4x^2+6x-8x-12+2x^2-8x = \\boxed{6x^2-10x-12}$$</li><li>$u=4x^2-5 \\Rightarrow u'=8x$;&ensp; $v=2x+3 \\Rightarrow v'=2$ $$f'(x) = \\frac{8x(2x+3)-(4x^2-5)(2)}{(2x+3)^2} = \\boxed{\\frac{8x^2+24x+10}{(2x+3)^2}}$$</li><li>$u=3x-1 \\Rightarrow u'=3$;&ensp; $v=(2x+5)^{-1/2} \\Rightarrow v'=-(2x+5)^{-3/2}$ $$f'(x) = \\frac{3}{(2x+5)^{1/2}}-\\frac{3x-1}{(2x+5)^{3/2}} = \\frac{3(2x+5)-(3x-1)}{(2x+5)^{3/2}} = \\boxed{\\frac{3x+16}{(2x+5)^{3/2}}}$$</li><li>$u=x^2-3x$, $v=x+1$, $w=x-2$;&ensp; $u'=2x-3$, $v'=1$, $w'=1$ $$\\begin{align*} f'(x) &= (2x-3)(x+1)(x-2)+(x^2-3x)(x-2)+(x^2-3x)(x+1) \\\\ &= (2x-3)(x^2-x-2)+(x^2-3x)(2x-1) \\\\ &= \\boxed{4x^3-12x^2+2x+6} \\end{align*}$$</li></ol>"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 5",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukanlah turunan pertama dari:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = (2x+5)^4$</li><li>$f(x) = (2x+5)^3 \\cdot (2x-1)$</li><li>$f(x) = \\sqrt{5x^2-4x+3}$</li><li>$f(x) = \\dfrac{(x^2+1)^3}{x-2}$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$u=2x+5 \\Rightarrow u'=2$. $\\;f'(x) = 4(2x+5)^3\\cdot 2 = \\boxed{8(2x+5)^3}$</li><li>$u=(2x+5)^3 \\Rightarrow u'=6(2x+5)^2$;&ensp; $v=2x-1 \\Rightarrow v'=2$ $$f'(x) = 6(2x+5)^2(2x-1)+2(2x+5)^3 = (2x+5)^2[6(2x-1)+2(2x+5)] = \\boxed{4(2x+5)^2(4x+1)}$$</li><li>$u=5x^2-4x+3 \\Rightarrow u'=10x-4$. $\\;f'(x) = \\tfrac{1}{2}(5x^2-4x+3)^{-1/2}\\cdot(10x-4) = \\boxed{\\dfrac{5x-2}{\\sqrt{5x^2-4x+3}}}$</li><li>$u=(x^2+1)^3 \\Rightarrow u'=6x(x^2+1)^2$;&ensp; $v=x-2 \\Rightarrow v'=1$ $$f'(x) = \\frac{6x(x^2+1)^2(x-2)-(x^2+1)^3}{(x-2)^2} = \\boxed{\\frac{(x^2+1)^2(5x^2-12x-1)}{(x-2)^2}}$$</li></ol>"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 6",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukanlah turunan pertama dari:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = \\left(\\dfrac{x+2}{3x-1}\\right)^4$</li><li>$f(x) = \\left(x^2+\\dfrac{1}{x}\\right)^3$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>Misalkan $u = \\dfrac{x+2}{3x-1}$, maka $u' = \\dfrac{(3x-1)-(x+2)(3)}{(3x-1)^2} = \\dfrac{-7}{(3x-1)^2}$ $$f'(x) = 4\\!\\left(\\frac{x+2}{3x-1}\\right)^3\\!\\cdot\\frac{-7}{(3x-1)^2} = \\boxed{\\frac{-28(x+2)^3}{(3x-1)^5}}$$</li><li>$u=x^2+x^{-1} \\Rightarrow u'=2x-x^{-2}$ $$f'(x) = 3\\!\\left(x^2+\\frac{1}{x}\\right)^2\\!\\!\\left(2x-\\frac{1}{x^2}\\right) = \\boxed{3\\!\\left(x^2+\\frac{1}{x}\\right)^2\\!\\!\\!\\left(2x-\\frac{1}{x^2}\\right)}$$</li></ol>"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 7",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukanlah:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>Nilai $f'(2)$ dari $f(x) = (3x^2-4)^3$</li><li>Nilai $x$ saat $f'(x) = 0$ dari $f(x) = (x^2-3x)^4$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$u=3x^2-4 \\Rightarrow u'=6x$. $\\;f'(x)=18x(3x^2-4)^2$;&ensp; $f'(2)=36\\cdot(8)^2=\\boxed{2304}$</li><li>$f'(x)=4(x^2-3x)^3(2x-3)=0 \\implies x^2-3x=0$ atau $2x-3=0$ $$\\boxed{x=0,\\quad x=\\tfrac{3}{2},\\quad x=3}$$</li></ol>"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 8",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukanlah turunan kedua dari:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = 5x^4-3x^2+7$</li><li>$f(x) = -4x^3+2x-9$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$f'(x) = 20x^3-6x \\;\\to\\; f''(x) = \\boxed{60x^2-6}$</li><li>$f'(x) = -12x^2+2 \\;\\to\\; f''(x) = \\boxed{-24x}$</li></ol>"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 9",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukanlah turunan kedua, kemudian hitung nilainya pada titik yang diberikan:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = (3x-2)^4$, hitung $f''(1)$</li><li>$f(x) = (x^2+1)^3$, hitung $f''(0)$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$f'(x)=12(3x-2)^3$;&ensp; $f''(x)=108(3x-2)^2$;&ensp; $f''(1)=108(1)^2=\\boxed{108}$</li><li>$f'(x)=6x(x^2+1)^2$;&ensp; $f''(x)=6(x^2+1)^2+24x^2(x^2+1)=6(x^2+1)(5x^2+1)$;&ensp; $f''(0)=6(1)(1)=\\boxed{6}$</li></ol>"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 10",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Diketahui $f(x) = x^4-2x^3-12x^2+5x-1$. Tentukanlah nilai $x$ sehingga $f''(x) = 0$.</p>",
+          "p": "$f'(x)=4x^3-6x^2-24x+5$;&ensp; $f''(x)=12x^2-12x-24$<br><br> Syarat $f''(x)=0$: $$12x^2-12x-24=0 \\implies x^2-x-2=0 \\implies (x-2)(x+1)=0$$ $$\\boxed{x=2 \\quad\\text{atau}\\quad x=-1}$$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 11",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Diketahui $f(x) = (2x+3)^3$. Tentukanlah nilai $x$ sehingga $f''(x) = 120$.</p>",
+          "p": "$f'(x)=6(2x+3)^2$;&ensp; $f''(x)=24(2x+3)$<br><br> Syarat $f''(x)=120$: $$24(2x+3)=120 \\implies 2x+3=5 \\implies \\boxed{x=1}$$"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "title": "Persamaan Garis Singgung Kurva",
+      "contoh": [
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 12",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukan persamaan garis singgung dari fungsi berikut:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = x^3-6x^2+4x+11$ di titik $T(3,-4)$</li><li>$y = x^2-5x+6$ jika gradiennya adalah 3</li><li>$y = (x-1)^2(x+2)$ di titik $x=1$</li><li>$y = x^3-3x^2-5x+10$ jika gradiennya adalah 4</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$f'(x)=3x^2-12x+4$;&ensp; $m=3(9)-12(3)+4=-5$ $$y-(-4)=-5(x-3) \\implies \\boxed{y=-5x+11}$$</li><li>$f'(x)=2x-5=3 \\implies x_1=4$;&ensp; $y_1=16-20+6=2$ $$y-2=3(x-4) \\implies \\boxed{y=3x-10}$$</li><li>$y(1)=0$;&ensp; $y'=(x-1)(3x+3)$;&ensp; $m=y'(1)=0$. Garis singgung: $\\boxed{y=0}$ (sejajar sumbu-$x$)</li><li>$f'(x_1)=3x_1^2-6x_1-5=4 \\implies x_1^2-2x_1-3=0 \\implies (x_1-3)(x_1+1)=0$<br> Untuk $x_1=3$: $y_1=-5 \\implies \\boxed{y=4x-17}$<br> Untuk $x_1=-1$: $y_1=11 \\implies \\boxed{y=4x+15}$<br> Terdapat <strong>dua garis singgung</strong> dengan gradien yang sama (sejajar).</li></ol>"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 13",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Kurva $y = ax^3+bx$ memiliki garis singgung $y = 5x+4$ di titik yang berabsis $-1$. Tentukanlah nilai $a$ dan $b$.</p>",
+          "p": "Titik singgung di $x=-1$: $y_1=5(-1)+4=-1$. Dari kurva: $-a-b=-1 \\implies a+b=1 \\quad\\cdots(i)$<br><br> Gradien kurva: $y'=3ax^2+b$;&ensp; $y'(-1)=3a+b=5 \\quad\\cdots(ii)$<br><br> Dari $(ii)-(i)$: $2a=4 \\implies a=2$;&ensp; substitusi ke $(i)$: $b=-1$<br><br> Jadi $\\boxed{a=2 \\text{ dan } b=-1}$."
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 14",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan persamaan garis normal kurva $y = x^2-4x+3$ yang sejajar dengan $x-2y+6=0$.</p>",
+          "p": "Garis $x-2y+6=0 \\implies y=\\tfrac{1}{2}x+3$, gradiennya $\\tfrac{1}{2}$. Karena garis normal sejajar: $m_n=\\tfrac{1}{2}$.<br><br> Hubungan gradien: $m_s = -\\dfrac{1}{m_n} = -2$<br><br> Gradien kurva $y'=2x-4=-2 \\implies x_1=1$;&ensp; $y_1=1-4+3=0$. Titik singgung $(1,0)$.<br><br> Persamaan garis normal: $y-0=\\tfrac{1}{2}(x-1) \\implies \\boxed{x-2y-1=0}$"
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "title": "Fungsi Naik, Turun, dan Titik Stasioner",
+      "contoh": [
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 15",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah interval naik dan interval turun dari $f(x) = x^3+3x^2-45x+10$.</p>",
+          "p": "$f'(x)=3x^2+6x-45=0 \\implies (x+5)(x-3)=0 \\implies x_1=-5$, $x_2=3$<br><br> Uji: $f'(-10)=195>0$ (naik);&ensp; $f'(0)=-45<0$ (turun);&ensp; $f'(5)=60>0$ (naik) $$\\boxed{\\text{Naik pada } x<-5 \\text{ atau } x>3,\\qquad\\text{Turun pada } -5<x<3}$$"
+        },
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 16",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukanlah interval naik dan interval turun dari:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = x^4-4x^3-8x^2+48x$</li><li>$f(x) = 3x^4-16x^3+24x^2-9$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$f'(x)=4(x-3)(x-2)(x+2)=0 \\implies x=-2, 2, 3$<br> Uji tanda: $(-\\infty,-2)$: $(-)$;&ensp; $(-2,2)$: $(+)$;&ensp; $(2,3)$: $(-)$;&ensp; $(3,\\infty)$: $(+)$ $$\\boxed{\\text{Naik: }{-2}<x<2 \\text{ atau } x>3;\\quad\\text{Turun: } x<{-2} \\text{ atau } 2<x<3}$$</li><li>$f'(x)=12x(x-2)^2=0 \\implies x=0, x=2$<br> Tanda $f'$: $x<0$: $(-)$;&ensp; $x\\in(0,2)$: $(+)$;&ensp; $x>2$: $(+)$. Tanda tidak berubah di $x=2$ (titik belok stasioner, bukan titik balik). $$\\boxed{\\text{Naik: } x>0;\\quad\\text{Turun: } x<0}$$</li></ol>"
+        },
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 17",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah titik stasioner dan jenisnya untuk $f(x) = x^3-3x^2-9x+10$.</p>",
+          "p": "$f'(x)=3x^2-6x-9=3(x+1)(x-3)=0 \\implies x_1=-1$, $x_2=3$<br><br> Titik: $f(-1)=15 \\to (-1,\\,15)$;&ensp; $f(3)=-17 \\to (3,\\,-17)$<br><br> Uji tanda $f'(x)$: $x<-1$: $(+)$;&ensp; $-1<x<3$: $(-)$;&ensp; $x>3$: $(+)$<br><br><ul style=\"margin:.4rem 0;padding-left:1.3rem;font-size:.9rem;\"><li>$(-1,\\,15)$: tanda berubah $(+\\to-)$ $\\Rightarrow$ <strong>titik maksimum stasioner</strong></li><li>$(3,\\,-17)$: tanda berubah $(-\\to+)$ $\\Rightarrow$ <strong>titik minimum stasioner</strong></li></ul>"
+        },
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 18",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah titik-titik stasioner dan jenisnya untuk $f(x) = x^4-4x^3+4x^2+2$.</p>",
+          "p": "$f'(x)=4x(x-1)(x-2)=0 \\implies x=0, 1, 2$<br><br> Titik: $(0,\\,2)$, $(1,\\,3)$, $(2,\\,2)$<br><br> Uji tanda: $x<0$: $(-)$;&ensp; $0<x<1$: $(+)$;&ensp; $1<x<2$: $(-)$;&ensp; $x>2$: $(+)$<br><br><ul style=\"margin:.4rem 0;padding-left:1.3rem;font-size:.9rem;\"><li>$(0,\\,2)$: $(-\\to+)$ $\\Rightarrow$ <strong>titik minimum stasioner</strong></li><li>$(1,\\,3)$: $(+\\to-)$ $\\Rightarrow$ <strong>titik maksimum stasioner</strong></li><li>$(2,\\,2)$: $(-\\to+)$ $\\Rightarrow$ <strong>titik minimum stasioner</strong></li></ul>"
+        },
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 19",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah titik-titik stasioner dan jenisnya untuk $f(x) = x^5-5x^4+10x^3-10x^2+5x+1$.</p>",
+          "p": "$f'(x)=5(x-1)^4=0 \\implies x=1$. Nilai $f(1)=2$, titik stasioner $(1,\\,2)$.<br><br> Uji tanda: $f'(x)=5(x-1)^4 \\geq 0$ untuk semua $x$, tanda <strong>tidak berubah</strong> di sekitar $x=1$.<br><br> Kesimpulan: $(1,\\,2)$ adalah <strong>titik belok stasioner</strong> (bukan titik balik)."
+        },
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 20",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah interval kecekungan dan titik belok dari $f(x) = x^3-3x^2-9x+10$.</p>",
+          "p": "$f'(x)=3x^2-6x-9$;&ensp; $f''(x)=6x-6=0 \\implies x=1$ (kandidat titik belok)<br><br> Uji tanda $f''$: $x<1$: $f''(0)=-6<0$ (cekung ke bawah);&ensp; $x>1$: $f''(2)=6>0$ (cekung ke atas)<br><br> Tanda $f''$ berubah di $x=1$: $f(1)=1-3-9+10=-1$<br><br> Jadi <strong>titik belok</strong> berada di $\\boldsymbol{(1,\\,-1)}$."
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "title": "Turunan Fungsi Trigonometri",
+      "contoh": [
+        {
+          "section": "E",
+          "label": "&#128216; Contoh 21",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukanlah turunan pertama dari:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = 3\\sin x - 2\\cos x$</li><li>$f(x) = 5\\tan x + \\cot x$</li><li>$f(x) = \\sin x \\cdot \\cos x$</li><li>$f(x) = \\dfrac{\\sin x}{1+\\cos x}$</li><li>$f(x) = x^2 \\tan x$</li><li>$f(x) = \\dfrac{\\cos x}{\\sin x+1}$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$f'(x) = 3\\cos x - 2(-\\sin x) = \\boxed{3\\cos x + 2\\sin x}$</li><li>$f'(x) = 5\\sec^2 x + (-\\csc^2 x) = \\boxed{5\\sec^2 x - \\csc^2 x}$</li><li>$u=\\sin x$, $v=\\cos x$;&ensp; $f'(x) = \\cos^2 x - \\sin^2 x = \\boxed{\\cos 2x}$</li><li>$u=\\sin x$, $v=1+\\cos x$: $$f'(x) = \\frac{\\cos x(1+\\cos x)+\\sin^2 x}{(1+\\cos x)^2} = \\frac{\\cos x+1}{(1+\\cos x)^2} = \\boxed{\\frac{1}{1+\\cos x}}$$</li><li>$u=x^2$, $v=\\tan x$;&ensp; $f'(x) = 2x\\tan x + x^2\\sec^2 x = \\boxed{2x\\tan x + x^2\\sec^2 x}$</li><li>$u=\\cos x$, $v=\\sin x+1$: $$f'(x) = \\frac{-\\sin x(\\sin x+1)-\\cos^2 x}{(\\sin x+1)^2} = \\frac{-(1+\\sin x)}{(\\sin x+1)^2} = \\boxed{\\frac{-1}{\\sin x+1}}$$</li></ol>"
+        },
+        {
+          "section": "E",
+          "label": "&#128216; Contoh 22",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukanlah turunan pertama dari:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = \\cos(3x-4)$</li><li>$f(x) = 3\\tan(x^2-4)$</li><li>$f(x) = \\sin(3x+2)\\cos(3x-3)$</li><li>$f(x) = 5\\sec^3 x$</li><li>$f(x) = \\sin^4(3x+5)$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$u=3x-4 \\Rightarrow u'=3$;&ensp; $f'(x)=3(-\\sin(3x-4))=\\boxed{-3\\sin(3x-4)}$</li><li>$u=x^2-4 \\Rightarrow u'=2x$;&ensp; $f'(x)=3\\cdot 2x\\sec^2(x^2-4)=\\boxed{6x\\sec^2(x^2-4)}$</li><li>$u'=3\\cos(3x+2)$, $v'=-3\\sin(3x-3)$. Gunakan identitas $\\cos A\\cos B-\\sin A\\sin B=\\cos(A+B)$: $$f'(x)=3[\\cos(3x+2)\\cos(3x-3)-\\sin(3x+2)\\sin(3x-3)]=\\boxed{3\\cos(6x-1)}$$</li><li>$u=\\sec x \\Rightarrow u'=\\sec x\\tan x$;&ensp; $f'(x)=5\\cdot 3\\sec^2 x\\cdot\\sec x\\tan x=\\boxed{15\\sec^3 x\\tan x}$</li><li>$u=\\sin(3x+5) \\Rightarrow u'=3\\cos(3x+5)$;&ensp; $f'(x)=4\\sin^3(3x+5)\\cdot 3\\cos(3x+5)=\\boxed{12\\sin^3(3x+5)\\cos(3x+5)}$</li></ol>"
+        },
+        {
+          "section": "E",
+          "label": "&#128216; Contoh 23",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukanlah turunan pertama dari:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$f(x) = x^2\\sin 3x$</li><li>$f(x) = \\dfrac{\\tan 2x}{1+\\cos 2x}$</li><li>$f(x) = \\sin^2 x \\cdot \\cos^3 x$</li><li>$f(x) = \\cos^4(2x^2-3)$</li><li>$f(x) = \\sqrt{\\tan(3x+1)}$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$u=x^2$, $v=\\sin 3x \\Rightarrow v'=3\\cos 3x$;&ensp; $f'(x)=\\boxed{2x\\sin 3x+3x^2\\cos 3x}$</li><li>$u=\\tan 2x \\Rightarrow u'=2\\sec^2 2x$;&ensp; $v=1+\\cos 2x \\Rightarrow v'=-2\\sin 2x$ $$f'(x) = \\frac{2\\sec^2 2x(1+\\cos 2x)+2\\tan 2x\\sin 2x}{(1+\\cos 2x)^2} = \\boxed{\\frac{2(1+\\cos 2x-\\cos^2 2x)}{\\cos^2 2x\\,(1+\\cos 2x)^2}}$$</li><li>$u=\\sin^2 x \\Rightarrow u'=2\\sin x\\cos x$;&ensp; $v=\\cos^3 x \\Rightarrow v'=-3\\cos^2 x\\sin x$ $$f'(x)=\\sin x\\cos^2 x(2\\cos^2 x-3\\sin^2 x)=\\boxed{\\sin x\\cos^2 x\\,(5\\cos^2 x-3)}$$</li><li>$u=\\cos(2x^2-3) \\Rightarrow u'=-4x\\sin(2x^2-3)$;&ensp; $f'(x)=\\boxed{-16x\\cos^3(2x^2-3)\\sin(2x^2-3)}$</li><li>$u=\\tan(3x+1) \\Rightarrow u'=3\\sec^2(3x+1)$;&ensp; $f'(x)=\\boxed{\\dfrac{3\\sec^2(3x+1)}{2\\sqrt{\\tan(3x+1)}}}$</li></ol>"
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "title": "Melukis Grafik Fungsi Polinom",
+      "contoh": [
+        {
+          "section": "F",
+          "label": "&#128216; Contoh 24",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Lukislah grafik fungsi polinom $f(x) = x^3-9x^2+24x-10$.</p>",
+          "p": "<strong>Langkah 1 &mdash; Titik potong sumbu.</strong> Titik potong sumbu-$y$ ($x=0$): $(0,\\,-10)$.<br><br><strong>Langkah 2 &mdash; Interval naik/turun.</strong> $$f'(x)=3x^2-18x+24=0 \\implies (x-4)(x-2)=0 \\implies x_1=2,\\; x_2=4$$ <ul style=\"margin:.4rem 0;padding-left:1.3rem;font-size:.9rem;\"><li>$x&lt;2$: $(+)$ naik;&ensp; $2&lt;x&lt;4$: $(-)$ turun;&ensp; $x>4$: $(+)$ naik</li><li>$x=2$: $f(2)=10$ (maksimum lokal);&ensp; $x=4$: $f(4)=6$ (minimum lokal)</li></ul><strong>Langkah 3 &mdash; Cekung atas/bawah.</strong> $$f''(x)=6x-18=0 \\implies x=3$$ Titik belok: $f(3)=8$, yaitu $(3,\\,8)$.<br><br><strong>Langkah 4 &mdash; Ringkasan titik istimewa.</strong><br> $(0,\\,-10)$ potong sumbu-$y$;&ensp; $(2,\\,10)$ maks. lokal;&ensp; $(3,\\,8)$ titik belok;&ensp; $(4,\\,6)$ min. lokal."
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "title": "Aplikasi Turunan dalam Kehidupan",
+      "contoh": [
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 25",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dua buah bilangan real positif mempunyai hasil kali 80. Supaya jumlah kedua bilangan itu minimum, tentukanlah kedua bilangan tersebut.</p>",
+          "p": "Misalkan bilangan $= x$ dan $y = \\dfrac{80}{x}$. Jumlah $H = x+\\dfrac{80}{x}$.<br><br> Syarat minimum: $H'=1-\\dfrac{80}{x^2}=0 \\implies x^2=80 \\implies x=4\\sqrt{5}$;&ensp; $y=\\dfrac{80}{4\\sqrt{5}}=4\\sqrt{5}$<br><br> Jadi kedua bilangan adalah $\\boxed{4\\sqrt{5}}$ dan $\\boxed{4\\sqrt{5}}$."
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 26",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Suatu persegi panjang mempunyai keliling 24 cm. Supaya luasnya maksimum, tentukanlah ukuran panjang dan lebarnya.</p>",
+          "p": "$2x+2y=24 \\implies y=12-x$. Luas $L=x(12-x)=12x-x^2$.<br><br> $L'=12-2x=0 \\implies x=6$, $y=6$. Luas maksimum $=36$ cm$^2$ (persegi)."
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 27",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Sebuah balok beralas persegi dengan luas permukaan $24$ cm$^2$. Tentukanlah volume terbesar yang mungkin dicapai.</p>",
+          "p": "$2x^2+4xy=24 \\implies y=\\dfrac{12-x^2}{2x}$. Volume $V=x^2y=6x-\\dfrac{x^3}{2}$.<br><br> $V'=6-\\dfrac{3x^2}{2}=0 \\implies x=2$;&ensp; $V_{\\max}=12-4=\\boxed{8 \\text{ cm}^3}$"
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 28",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Sebuah balok tanpa tutup beralas persegi dengan volume 32 cm$^3$. Tentukanlah luas permukaan minimum yang mungkin.</p>",
+          "p": "$x^2y=32 \\implies y=\\dfrac{32}{x^2}$. Luas $L=x^2+4x\\cdot\\dfrac{32}{x^2}=x^2+\\dfrac{128}{x}$.<br><br> $L'=2x-\\dfrac{128}{x^2}=0 \\implies x^3=64 \\implies x=4$;&ensp; $L_{\\min}=16+32=\\boxed{48 \\text{ cm}^2}$"
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 29",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Di dalam sebuah bola berjari-jari 6 cm dibuat tabung dengan jari-jari alas $r$ dan tinggi $2h$. (a) Nyatakan volume tabung sebagai fungsi dari $h$. (b) Tentukanlah $r$ dan $2h$ agar volume tabung maksimum.</p>",
+          "p": "<strong>a.</strong> Dari hubungan $r^2+h^2=36$: $V=2\\pi h(36-h^2)=72\\pi h-2\\pi h^3$<br><br><strong>b.</strong> $V'=72\\pi-6\\pi h^2=0 \\implies h^2=12 \\implies h=2\\sqrt{3}$ cm<br> $r=\\sqrt{36-12}=2\\sqrt{6}$ cm;&ensp; tinggi $=2h=4\\sqrt{3}$ cm."
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 30",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Sebuah parabola $y=12-x^2$. Tentukanlah luas maksimum persegi panjang $ABCD$ yang dibuat di dalam parabola (sisi $AB$ pada sumbu-$x$).</p>",
+          "p": "Panjang $=2x$, lebar $=y=12-x^2$. Luas $L=(2x)(12-x^2)=24x-2x^3$.<br><br> $L'=24-6x^2=0 \\implies x=2$;&ensp; $L_{\\max}=48-16=\\boxed{32 \\text{ satuan luas}}$"
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 31",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Di dalam sebuah lingkaran berjari-jari $R=6$ cm dibuat segitiga sama kaki yang tingginya $h$. Tentukanlah $h$ agar luas segitiga maksimum.</p>",
+          "p": "Setengah alas: $a=\\sqrt{R^2-(h-R)^2}=\\sqrt{36-(h-6)^2}$. Luas $L=h\\sqrt{36-(h-6)^2}$.<br><br> Kuadratkan: $L^2=h^2(12h-h^2)=12h^3-h^4$. Syarat maksimum: $\\dfrac{d(L^2)}{dh}=36h^2-4h^3=4h^2(9-h)=0 \\implies h=9$ cm<br><br> $a=\\sqrt{36-9}=3\\sqrt{3}$ cm;&ensp; $L_{\\max}=\\dfrac{1}{2}\\cdot 6\\sqrt{3}\\cdot 9=\\boxed{27\\sqrt{3} \\text{ cm}^2}$"
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 32",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Sebuah kebun persegi panjang berarea 600 m$^2$ akan dipagari. Sisi yang menghadap jalan (panjang) Rp150.000/m, ketiga sisi lainnya Rp100.000/m. Tentukanlah ukuran kebun agar biaya pagar minimum.</p>",
+          "p": "$xy=600 \\implies y=\\dfrac{600}{x}$. Biaya total: $$B=250.000x+200.000y=250.000x+\\frac{120.000.000}{x}$$ $B'=250.000-\\dfrac{120.000.000}{x^2}=0 \\implies x^2=480 \\implies x=4\\sqrt{30}$ m;&ensp; $y=5\\sqrt{30}$ m<br><br> $B_{\\min}=250.000(4\\sqrt{30})+\\dfrac{120.000.000}{4\\sqrt{30}}=\\boxed{500.000\\sqrt{30} \\approx \\text{Rp2.739.000}}$"
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 33",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Suatu benda bergerak dengan persamaan posisi $s(t) = t^3-6t^2+9t+2$ (meter). Tentukanlah: (a) kecepatan pada $t=4$ s, (b) waktu ketika benda berhenti sesaat, (c) percepatan pada $t=3$ s.</p>",
+          "p": "$v(t)=3t^2-12t+9$<br><br><strong>a.</strong> $v(4)=48-48+9=\\boxed{9 \\text{ m/s}}$<br><br><strong>b.</strong> $3t^2-12t+9=0 \\implies (t-1)(t-3)=0 \\implies \\boxed{t=1 \\text{ s dan } t=3 \\text{ s}}$<br><br><strong>c.</strong> $a(t)=6t-12$;&ensp; $a(3)=18-12=\\boxed{6 \\text{ m/s}^2}$"
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 34",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Sebuah benda dilempar ke atas dengan $h(t)=-5t^2+40t+15$ (meter). Tentukanlah: (a) kecepatan awal, (b) waktu ketika mencapai ketinggian maksimum, (c) ketinggian maksimum, (d) waktu ketika benda menyentuh tanah.</p>",
+          "p": "$v(t)=-10t+40$<br><br><strong>a.</strong> $v(0)=\\boxed{40 \\text{ m/s}}$<br><br><strong>b.</strong> $v(t)=0 \\implies t=\\boxed{4 \\text{ sekon}}$<br><br><strong>c.</strong> $h(4)=-80+160+15=\\boxed{95 \\text{ m}}$<br><br><strong>d.</strong> $-5t^2+40t+15=0 \\implies t^2-8t-3=0 \\implies t=4+\\sqrt{19}\\approx\\boxed{8{,}36 \\text{ sekon}}$"
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 35",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dua benda bergerak pada sumbu-$x$: $s_1(t)=t^3-3t^2$ dan $s_2(t)=2t^2-4t$. (a) Kapan kedua benda berada di posisi yang sama? (b) Kapan kecepatan kedua benda sama?</p>",
+          "p": "<strong>a.</strong> $s_1=s_2$: $t^3-5t^2+4t=t(t-1)(t-4)=0 \\implies \\boxed{t=0, 1, 4 \\text{ sekon}}$<br><br><strong>b.</strong> $v_1=3t^2-6t$, $v_2=4t-4$. $v_1=v_2$: $3t^2-10t+4=(3t-2)(t-2)=0 \\implies \\boxed{t=\\tfrac{2}{3} \\text{ s dan } t=2 \\text{ s}}$"
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 36",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Fungsi biaya $C(x)=x^3-6x^2+15x+10$ (juta Rp) dan fungsi pendapatan $R(x)=9x$ (juta Rp). (a) Fungsi keuntungan $\\pi(x)$. (b) Jumlah unit agar keuntungan maksimum. (c) Keuntungan maksimum.</p>",
+          "p": "<strong>a.</strong> $\\pi(x)=9x-(x^3-6x^2+15x+10)=-x^3+6x^2-6x-10$<br><br><strong>b.</strong> $\\pi'(x)=-3x^2+12x-6=0 \\implies x^2-4x+2=0 \\implies x=2\\pm\\sqrt{2}$<br> Ambil $x=2+\\sqrt{2}\\approx 3{,}41$ unit. $\\pi''(2+\\sqrt{2})=-6\\sqrt{2}<0$ (maksimum).<br><br><strong>c.</strong> Ekspansi $(2+\\sqrt{2})^2=6+4\\sqrt{2}$, $(2+\\sqrt{2})^3=20+14\\sqrt{2}$: $$\\pi_{\\max}=-(20+14\\sqrt{2})+6(6+4\\sqrt{2})-6(2+\\sqrt{2})-10=\\boxed{-6+4\\sqrt{2}\\approx -0{,}34 \\text{ juta Rp}}$$"
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 37",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Volume bola mengembang dengan laju $\\dfrac{dV}{dt}=10$ cm$^3$/s. Tentukanlah laju pertambahan jari-jarinya ketika $r=5$ cm.</p>",
+          "p": "$V=\\dfrac{4}{3}\\pi r^3 \\implies \\dfrac{dV}{dt}=4\\pi r^2\\dfrac{dr}{dt}$<br><br> Substitusi $\\dfrac{dV}{dt}=10$ dan $r=5$: $10=4\\pi(25)\\dfrac{dr}{dt} \\implies \\dfrac{dr}{dt}=\\dfrac{1}{10\\pi}\\approx\\boxed{0{,}032 \\text{ cm/s}}$"
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 38",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Luas sebuah persegi bertambah dengan laju 8 cm$^2$/s. Tentukanlah laju pertambahan sisinya ketika sisi $= 5$ cm.</p>",
+          "p": "$L=s^2 \\implies \\dfrac{dL}{dt}=2s\\dfrac{ds}{dt}$<br><br> $8=2(5)\\dfrac{ds}{dt} \\implies \\dfrac{ds}{dt}=\\boxed{0{,}8 \\text{ cm/s}}$"
+        },
+        {
+          "section": "G",
+          "label": "&#128216; Contoh 39",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Sebuah tangga sepanjang 10 m bersandar di dinding vertikal. Kaki tangga bergerak menjauhi dinding dengan laju 0,5 m/s. Tentukanlah laju penurunan ujung atas tangga ketika kaki tangga berjarak 6 m dari dinding.</p>",
+          "p": "$x^2+y^2=100$. Diferensialkan: $2x\\dfrac{dx}{dt}+2y\\dfrac{dy}{dt}=0 \\implies \\dfrac{dy}{dt}=-\\dfrac{x}{y}\\dfrac{dx}{dt}$<br><br> Saat $x=6$: $y=8$ m. $\\;\\dfrac{dy}{dt}=-\\dfrac{6}{8}(0{,}5)=-\\dfrac{3}{8}=\\boxed{-0{,}375 \\text{ m/s}}$<br><br> Tanda negatif berarti ujung atas tangga <strong>turun</strong> dengan laju 0,375 m/s."
+        }
+      ]
+    }
+  ],
+  "totalContoh": 39,
+  "title": "Turunan Fungsi",
+  "prefix": "TUR"
+}

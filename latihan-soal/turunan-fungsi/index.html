@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latihan Soal Turunan Fungsi — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<meta name="description" content="Latihan soal Turunan Fungsi SMA: 12 paket berlatih, 7 paket per sub-materi, dan sesi ujian. Pilihan ganda interaktif, tingkat Beginner hingga Expert.">
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/latihan-soal/turunan-fungsi/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<link rel="stylesheet" href="../../assets/css/latihan-soal.css">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lutfima11.github.io/eksaktalab/latihan-soal/turunan-fungsi/">
+<meta property="og:title" content="Latihan Soal Turunan Fungsi — EksaktaLab">
+<meta property="og:description" content="Latihan soal Turunan Fungsi SMA: 12 paket berlatih, 7 paket per sub-materi, dan sesi ujian. Pilihan ganda interaktif, tingkat Beginner hingga Expert.">
+<meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+<meta property="og:site_name" content="EksaktaLab">
+<meta property="og:locale" content="id_ID">
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="nav-logo-text"><div class="nav-logo-name">Eksakta<em>Lab</em></div><div class="nav-logo-tag">Lab Belajar Matematika</div></div>
+  </a>
+  <div class="nav-right">
+    <a class="nav-btn" href="../../materi/turunan-fungsi/">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="8,2 3,6.5 8,11"/></svg>
+      Materi
+    </a>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">&#128218; Latihan Soal · Turunan Fungsi</div>
+    <h1 class="hero-title">Berlatih <em>Turunan Fungsi</em></h1>
+    <p class="hero-desc">12 paket soal variatif plus latihan per sub-materi dan sesi ujian bertimer. Pilih mode sesuai kebutuhanmu.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>12</strong> Paket Soal</div>
+      <div class="hero-stat"><strong>7</strong> Sub-Materi</div>
+      <div class="hero-stat"><strong>2</strong> Sesi Ujian</div>
+      <div class="hero-stat"><strong>Beginner → Expert</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="main-wrap">
+
+  <div class="mode-tabs">
+    <button class="mode-tab active" data-view="berlatih" onclick="switchView('berlatih',this)">
+      <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1.5" y="2" width="12" height="11" rx="2"/><line x1="5" y1="5" x2="10" y2="5"/><line x1="5" y1="7.5" x2="9" y2="7.5"/><line x1="5" y1="10" x2="7.5" y2="10"/></svg>
+      Paket Berlatih
+    </button>
+    <button class="mode-tab" data-view="sub" onclick="switchView('sub',this)">
+      <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="7.5" cy="7.5" r="5.5"/><line x1="7.5" y1="5" x2="7.5" y2="8"/><circle cx="7.5" cy="9.5" r=".6" fill="currentColor"/></svg>
+      Per Sub-Materi
+    </button>
+    <button class="mode-tab" data-view="ujian" onclick="switchView('ujian',this)">
+      <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 2h9a1 1 0 0 1 1 1v10l-2-1.5L9 13l-1.5-1.5L6 13l-2-1.5L2 13V3a1 1 0 0 1 1-1z"/><line x1="5" y1="5.5" x2="10" y2="5.5"/><line x1="5" y1="8" x2="8" y2="8"/></svg>
+      Sesi Ujian
+    </button>
+  </div>
+
+  <div class="view-panel active" id="view-berlatih">
+    <div class="sec-head">
+      <div class="sec-label">&#128218; Paket Berlatih</div>
+      <div class="sec-title">12 Paket Soal Variatif</div>
+      <div class="sec-desc">Setiap paket berisi 10 soal pilihan ganda dengan pembahasan instan.</div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">LEVEL:</span>
+      <button class="filter-btn active" onclick="filterPaket('semua',this)">Semua</button>
+      <button class="filter-btn" onclick="filterPaket('beginner',this)">Beginner</button>
+      <button class="filter-btn" onclick="filterPaket('intermediate',this)">Intermediate</button>
+      <button class="filter-btn" onclick="filterPaket('expert',this)">Expert</button>
+    </div>
+    <div class="paket-grid" id="paket-grid">
+      <div class="paket-card" data-level="beginner" data-paket="1" data-locked="false">
+        <div class="card-top"><span class="card-kode">TUR-01</span><span class="level-badge badge-beginner">BEGINNER</span></div>
+        <div class="card-title">Turunan Fungsi 1</div>
+<button class="card-btn" onclick="location.href='tur-01/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="paket-card" data-level="beginner" data-paket="2" data-locked="false">
+        <div class="card-top"><span class="card-kode">TUR-02</span><span class="level-badge badge-beginner">BEGINNER</span></div>
+        <div class="card-title">Turunan Fungsi 2</div>
+<button class="card-btn" onclick="location.href='tur-02/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="paket-card" data-level="beginner" data-paket="3" data-locked="false">
+        <div class="card-top"><span class="card-kode">TUR-03</span><span class="level-badge badge-beginner">BEGINNER</span></div>
+        <div class="card-title">Turunan Fungsi 3</div>
+<button class="card-btn" onclick="location.href='tur-03/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="paket-card" data-level="beginner" data-paket="4" data-locked="false">
+        <div class="card-top"><span class="card-kode">TUR-04</span><span class="level-badge badge-beginner">BEGINNER</span></div>
+        <div class="card-title">Turunan Fungsi 4</div>
+<button class="card-btn" onclick="location.href='tur-04/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="paket-card" data-level="intermediate" data-paket="5" data-locked="false">
+        <div class="card-top"><span class="card-kode">TUR-05</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div>
+        <div class="card-title">Turunan Fungsi 5</div>
+<button class="card-btn" onclick="location.href='tur-05/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="paket-card" data-level="intermediate" data-paket="6" data-locked="false">
+        <div class="card-top"><span class="card-kode">TUR-06</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div>
+        <div class="card-title">Turunan Fungsi 6</div>
+<button class="card-btn" onclick="location.href='tur-06/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="paket-card" data-level="intermediate" data-paket="7" data-locked="false">
+        <div class="card-top"><span class="card-kode">TUR-07</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div>
+        <div class="card-title">Turunan Fungsi 7</div>
+<button class="card-btn" onclick="location.href='tur-07/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="paket-card" data-level="intermediate" data-paket="8" data-locked="false">
+        <div class="card-top"><span class="card-kode">TUR-08</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div>
+        <div class="card-title">Turunan Fungsi 8</div>
+<button class="card-btn" onclick="location.href='tur-08/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="paket-card" data-level="expert" data-paket="9" data-locked="false">
+        <div class="card-top"><span class="card-kode">TUR-09</span><span class="level-badge badge-expert">EXPERT</span></div>
+        <div class="card-title">Turunan Fungsi 9</div>
+<button class="card-btn" onclick="location.href='tur-09/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="paket-card" data-level="expert" data-paket="10" data-locked="false">
+        <div class="card-top"><span class="card-kode">TUR-10</span><span class="level-badge badge-expert">EXPERT</span></div>
+        <div class="card-title">Turunan Fungsi 10</div>
+<button class="card-btn" onclick="location.href='tur-10/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="paket-card" data-level="expert" data-paket="11" data-locked="false">
+        <div class="card-top"><span class="card-kode">TUR-11</span><span class="level-badge badge-expert">EXPERT</span></div>
+        <div class="card-title">Turunan Fungsi 11</div>
+<button class="card-btn" onclick="location.href='tur-11/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="paket-card" data-level="expert" data-paket="12" data-locked="false">
+        <div class="card-top"><span class="card-kode">TUR-12</span><span class="level-badge badge-expert">EXPERT</span></div>
+        <div class="card-title">Turunan Fungsi 12</div>
+<button class="card-btn" onclick="location.href='tur-12/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="view-panel" id="view-sub">
+    <div class="sec-head">
+      <div class="sec-label">&#128218; Per Sub-Materi</div>
+      <div class="sec-title">Pilih Topik yang Ingin Didalami</div>
+      <div class="sec-desc">Latihan terfokus berdasarkan sub-bab pada materi Turunan Fungsi.</div>
+    </div>
+    <div class="sub-filter">
+      <button class="sub-chip active" onclick="filterSub('semua',this)"><span class="sub-chip-dot"></span>Semua</button>
+      <button class="sub-chip" onclick="filterSub('A',this)"><span class="sub-chip-dot"></span>A · Definisi &amp;amp; Aturan Da</button>
+      <button class="sub-chip" onclick="filterSub('B',this)"><span class="sub-chip-dot"></span>B · Pengembangan Rumus Turunan</button>
+      <button class="sub-chip" onclick="filterSub('C',this)"><span class="sub-chip-dot"></span>C · Persamaan Garis Singgung Kur</button>
+      <button class="sub-chip" onclick="filterSub('D',this)"><span class="sub-chip-dot"></span>D · Fungsi Naik, Turun, dan Titi</button>
+      <button class="sub-chip" onclick="filterSub('E',this)"><span class="sub-chip-dot"></span>E · Turunan Fungsi Trigonometri</button>
+      <button class="sub-chip" onclick="filterSub('F',this)"><span class="sub-chip-dot"></span>F · Melukis Grafik Fungsi Polino</button>
+      <button class="sub-chip" onclick="filterSub('G',this)"><span class="sub-chip-dot"></span>G · Aplikasi Turunan dalam Kehid</button>
+    </div>
+    <div class="paket-grid" id="sub-grid">
+      <div class="paket-card" data-sub="A"><div class="card-top"><span class="card-kode">TUR-A1</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Definisi &amp;amp; Aturan Dasar Turunan</div>
+<button class="card-btn" onclick="location.href='tur-a1/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-sub="B"><div class="card-top"><span class="card-kode">TUR-B1</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Pengembangan Rumus Turunan</div>
+<button class="card-btn" onclick="location.href='tur-b1/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-sub="C"><div class="card-top"><span class="card-kode">TUR-C1</span><span class="level-badge badge-expert">EXPERT</span></div><div class="card-title">Persamaan Garis Singgung Kurva</div>
+<button class="card-btn" onclick="location.href='tur-c1/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-sub="D"><div class="card-top"><span class="card-kode">TUR-D1</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Fungsi Naik, Turun, dan Titik Stasioner</div>
+<button class="card-btn" onclick="location.href='tur-d1/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-sub="E"><div class="card-top"><span class="card-kode">TUR-E1</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Turunan Fungsi Trigonometri</div>
+<button class="card-btn" onclick="location.href='tur-e1/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-sub="F"><div class="card-top"><span class="card-kode">TUR-F1</span><span class="level-badge badge-expert">EXPERT</span></div><div class="card-title">Melukis Grafik Fungsi Polinom</div>
+<button class="card-btn" onclick="location.href='tur-f1/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-sub="G"><div class="card-top"><span class="card-kode">TUR-G1</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Aplikasi Turunan dalam Kehidupan</div>
+<button class="card-btn" onclick="location.href='tur-g1/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+    </div>
+  </div>
+
+  <div class="view-panel" id="view-ujian">
+    <div class="sec-head">
+      <div class="sec-label">&#128218; Sesi Ujian</div>
+      <div class="sec-title">Uji Kemampuanmu Secara Komprehensif</div>
+      <div class="sec-desc">Soal terseleksi dengan timer. Nilai dan umpan balik tersedia setelah selesai.</div>
+    </div>
+    <div class="ujian-grid">
+      <div class="ujian-card featured">
+        <div class="ujian-badge">POPULER</div>
+        <div class="ujian-eyebrow">Ujian Standar</div>
+        <div class="ujian-title">Ujian Akhir Turunan Fungsi</div>
+        <div class="ujian-desc">Mencakup seluruh sub-bab. Campuran tingkat kesulitan. Cocok untuk persiapan ujian sekolah.</div>
+        <div class="ujian-meta">
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 1v5l3 3"/><circle cx="6" cy="6" r="5"/></svg>45 menit</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="3" width="10" height="7" rx="1.5"/><line x1="3" y1="5.5" x2="9" y2="5.5"/><line x1="3" y1="7.5" x2="7" y2="7.5"/></svg>20 soal</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="5"/><polyline points="3,6 5,8 9,4"/></svg>Ada Nilai</div>
+        </div>
+        <button class="ujian-start-btn" onclick="location.href='ujian-akhir/'"><span>Mulai Ujian</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="ujian-card">
+        <div class="ujian-eyebrow">Ujian Cepat</div>
+        <div class="ujian-title">Kuis Kilat 10 Soal</div>
+        <div class="ujian-desc">Uji pemahaman dalam waktu singkat. Cocok untuk warm-up sebelum belajar mendalam.</div>
+        <div class="ujian-meta">
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 1v5l3 3"/><circle cx="6" cy="6" r="5"/></svg>15 menit</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="3" width="10" height="7" rx="1.5"/><line x1="3" y1="5.5" x2="9" y2="5.5"/><line x1="3" y1="7.5" x2="7" y2="7.5"/></svg>10 soal</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="5"/><polyline points="3,6 5,8 9,4"/></svg>Ada Nilai</div>
+        </div>
+        <button class="ujian-start-btn" onclick="location.href='kuis-kilat/'"><span>Mulai Kuis</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+<script>
+window.addEventListener('scroll',()=>{const el=document.documentElement;const pct=el.scrollTop/(el.scrollHeight-el.clientHeight)*100;const b=document.getElementById('scroll-top');if(b){pct>25?b.classList.add('visible'):b.classList.remove('visible');}});
+function switchView(id,btn){document.querySelectorAll('.view-panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.mode-tab').forEach(b=>b.classList.remove('active'));document.getElementById('view-'+id).classList.add('active');btn.classList.add('active');}
+function filterPaket(level,btn){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#paket-grid .paket-card').forEach(c=>{c.style.display=(level==='semua'||c.dataset.level===level)?'':'none';});}
+function filterSub(sub,btn){document.querySelectorAll('.sub-chip').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#sub-grid .paket-card').forEach(c=>{c.style.display=(sub==='semua'||c.dataset.sub===sub)?'':'none';});}
+</script>
+
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+{
+  "materi": "kombinatorika",
+  "sections": [
+    {
+      "id": "A",
+      "title": "Kaidah Pencacahan",
+      "contoh": [
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 1",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Seseorang mempunyai 3 pasang sepatu ($P_1, P_2, P_3$) dan 5 pasang kaus kaki ($K_1\\text{–}K_5$). Dengan aturan tabel, tentukan banyaknya cara orang tersebut mengenakan sepatu dan kaus kaki!</p>",
+          "p": "<div class=\"table-wrap\" style=\"margin:.5rem 0;\"><table class=\"tbl-mini\"><thead><tr><th>$P \\backslash K$</th><th>$K_1$</th><th>$K_2$</th><th>$K_3$</th><th>$K_4$</th><th>$K_5$</th></tr></thead><tbody><tr><td>$P_1$</td><td>$P_1K_1$</td><td>$P_1K_2$</td><td>$P_1K_3$</td><td>$P_1K_4$</td><td>$P_1K_5$</td></tr><tr><td>$P_2$</td><td>$P_2K_1$</td><td>$P_2K_2$</td><td>$P_2K_3$</td><td>$P_2K_4$</td><td>$P_2K_5$</td></tr><tr><td>$P_3$</td><td>$P_3K_1$</td><td>$P_3K_2$</td><td>$P_3K_3$</td><td>$P_3K_4$</td><td>$P_3K_5$</td></tr></tbody></table></div> Jadi banyaknya cara $= 3 \\times 5 = \\mathbf{15}$ cara."
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 2",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Ahmad dan Budi adalah calon ketua OSIS, Mahmud, Cici, dan Gani adalah calon wakil, serta Yuli dan Susi adalah calon sekretaris. Dengan diagram cabang, tentukan banyaknya kemungkinan susunan pengurus inti!</p>",
+          "p": "<div class=\"branch-tree\"><strong>Ketua A:</strong><br> &nbsp;&nbsp;&mdash; Wakil M &rarr; Sekretaris Y &rarr; <em>AMY</em><br> &nbsp;&nbsp;&mdash; Wakil M &rarr; Sekretaris S &rarr; <em>AMS</em><br> &nbsp;&nbsp;&mdash; Wakil C &rarr; Sekretaris Y &rarr; <em>ACY</em><br> &nbsp;&nbsp;&mdash; Wakil C &rarr; Sekretaris S &rarr; <em>ACS</em><br> &nbsp;&nbsp;&mdash; Wakil G &rarr; Sekretaris Y &rarr; <em>AGY</em><br> &nbsp;&nbsp;&mdash; Wakil G &rarr; Sekretaris S &rarr; <em>AGS</em><br><strong>Ketua B:</strong><br> &nbsp;&nbsp;&mdash; Wakil M &rarr; Y: <em>BMY</em> &nbsp; S: <em>BMS</em><br> &nbsp;&nbsp;&mdash; Wakil C &rarr; Y: <em>BCY</em> &nbsp; S: <em>BCS</em><br> &nbsp;&nbsp;&mdash; Wakil G &rarr; Y: <em>BGY</em> &nbsp; S: <em>BGS</em></div> Terdapat $2 \\times 3 \\times 2 = \\mathbf{12}$ kemungkinan susunan pengurus."
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 3",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Terdapat 4 jalan dari kota P ke Q, 3 jalan dari Q ke R, dan 3 jalan dari R ke S. Tentukan banyaknya rute perjalanan dari kota P ke S!</p>",
+          "p": "<div class=\"diagram-slot\"><div class=\"slot-box\"><div class=\"slot-n\">4</div><div class=\"slot-lbl\">P &rarr; Q</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">3</div><div class=\"slot-lbl\">Q &rarr; R</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">3</div><div class=\"slot-lbl\">R &rarr; S</div></div></div> Banyaknya rute $= 4 \\times 3 \\times 3 = \\mathbf{36}$ rute."
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 4",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukan banyaknya bilangan tiga angka dari $\\{3,4,5,6,7\\}$ jika:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>angka tidak boleh berulang</li><li>angka boleh berulang</li></ol>",
+          "p": "<strong>a. Tidak boleh berulang</strong> &mdash; pilihan berkurang tiap posisi: <div class=\"diagram-slot\" style=\"margin:.5rem 0;\"><div class=\"slot-box\"><div class=\"slot-n\">5</div><div class=\"slot-lbl\">ratusan</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">4</div><div class=\"slot-lbl\">puluhan</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">3</div><div class=\"slot-lbl\">satuan</div></div></div> $$N = 5 \\times 4 \\times 3 = \\boxed{60 \\text{ bilangan}}$$ <strong>b. Boleh berulang</strong> &mdash; setiap posisi selalu 5 pilihan: <div class=\"diagram-slot\" style=\"margin:.5rem 0;\"><div class=\"slot-box\"><div class=\"slot-n\">5</div><div class=\"slot-lbl\">ratusan</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">5</div><div class=\"slot-lbl\">puluhan</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">5</div><div class=\"slot-lbl\">satuan</div></div></div> $$N = 5 \\times 5 \\times 5 = \\boxed{125 \\text{ bilangan}}$$"
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 5",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukan banyaknya bilangan tiga angka berbeda dari $\\{2,3,4,5,6\\}$ yang nilainya:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>genap</li><li>ganjil</li></ol>",
+          "p": "Karena ada syarat pada nilai, <strong>isi posisi satuan terlebih dahulu</strong>.<br><br><strong>a. Bilangan genap</strong> &rarr; satuan dari $\\{2,4,6\\}$: <div class=\"diagram-slot\" style=\"margin:.5rem 0;\"><div class=\"slot-box\"><div class=\"slot-n\">4</div><div class=\"slot-lbl\">ratusan (sisa)</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">3</div><div class=\"slot-lbl\">puluhan (sisa)</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box highlight\"><div class=\"slot-n\">3</div><div class=\"slot-lbl\">satuan $\\{2,4,6\\}$</div><div class=\"slot-hint\">isi dulu</div></div></div> $$N = 4 \\times 3 \\times 3 = \\boxed{36 \\text{ bilangan}}$$ <strong>b. Bilangan ganjil</strong> &rarr; satuan dari $\\{3,5\\}$: <div class=\"diagram-slot\" style=\"margin:.5rem 0;\"><div class=\"slot-box\"><div class=\"slot-n\">4</div><div class=\"slot-lbl\">ratusan (sisa)</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">3</div><div class=\"slot-lbl\">puluhan (sisa)</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box highlight\"><div class=\"slot-n\">2</div><div class=\"slot-lbl\">satuan $\\{3,5\\}$</div><div class=\"slot-hint\">isi dulu</div></div></div> $$N = 4 \\times 3 \\times 2 = \\boxed{24 \\text{ bilangan}}$$"
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 6",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Tentukan banyaknya bilangan ribuan dari $\\{1,2,3,4,5\\}$ tanpa pengulangan, jika nilainya:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>lebih dari 2.000</li><li>kurang dari 3.000</li></ol>",
+          "p": "Karena syarat ada pada nilai, <strong>isi posisi ribuan terlebih dahulu</strong>.<br><br><strong>a. Lebih dari 2.000</strong> &rarr; ribuan dari $\\{2,3,4,5\\}$: <div class=\"diagram-slot\" style=\"margin:.5rem 0;\"><div class=\"slot-box highlight\"><div class=\"slot-n\">4</div><div class=\"slot-lbl\">ribuan $\\{2,3,4,5\\}$</div><div class=\"slot-hint\">isi dulu</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">4</div><div class=\"slot-lbl\">ratusan</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">3</div><div class=\"slot-lbl\">puluhan</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">2</div><div class=\"slot-lbl\">satuan</div></div></div> $$N = 4 \\times 4 \\times 3 \\times 2 = \\boxed{96 \\text{ bilangan}}$$ <strong>b. Kurang dari 3.000</strong> &rarr; ribuan dari $\\{1,2\\}$: <div class=\"diagram-slot\" style=\"margin:.5rem 0;\"><div class=\"slot-box highlight\"><div class=\"slot-n\">2</div><div class=\"slot-lbl\">ribuan $\\{1,2\\}$</div><div class=\"slot-hint\">isi dulu</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">4</div><div class=\"slot-lbl\">ratusan</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">3</div><div class=\"slot-lbl\">puluhan</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">2</div><div class=\"slot-lbl\">satuan</div></div></div> $$N = 2 \\times 4 \\times 3 \\times 2 = \\boxed{48 \\text{ bilangan}}$$"
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 7",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Enam orang (4 pria: Andi, Budi, Candra, Doni; 2 wanita: Eka, Fani) duduk berdampingan dalam satu baris. Tentukan banyaknya susunan jika:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>tidak ada syarat (bebas)</li><li>kedua wanita harus selalu berdampingan</li><li>kedua wanita tidak boleh berdampingan</li></ol>",
+          "p": "<strong>a. Bebas:</strong><div class=\"diagram-slot\" style=\"margin:.5rem 0;\"><div class=\"slot-box\"><div class=\"slot-n\">6</div><div class=\"slot-lbl\">kursi 1</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">5</div><div class=\"slot-lbl\">kursi 2</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">4</div><div class=\"slot-lbl\">kursi 3</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">3</div><div class=\"slot-lbl\">kursi 4</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">2</div><div class=\"slot-lbl\">kursi 5</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">1</div><div class=\"slot-lbl\">kursi 6</div></div></div> $$N_a = 6! = \\boxed{720 \\text{ susunan}}$$ <strong>b. Kedua wanita harus berdampingan:</strong><br> Gabungkan Eka dan Fani menjadi 1 blok [EF] &rarr; ada 5 objek yang disusun. $$\\text{Susunan 5 objek} = 5! = 120 \\text{ cara}$$ Di dalam blok, Eka dan Fani bisa bertukar: $2! = 2$ cara. $$N_b = 5! \\times 2! = 120 \\times 2 = \\boxed{240 \\text{ susunan}}$$ <strong>c. Kedua wanita tidak boleh berdampingan</strong> &mdash; gunakan <strong>komplemen</strong>: $$N_c = N_a - N_b = 720 - 240 = \\boxed{480 \\text{ susunan}}$$"
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 8",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Seorang siswa akan memilih satu buku dari 5 buku matematika, 3 buku fisika, atau 4 buku biologi. Berapa banyak pilihan buku yang tersedia?</p>",
+          "p": "Karena siswa hanya memilih <strong>satu</strong> buku dari ketiga kategori: $$N = 5 + 3 + 4 = \\boxed{12 \\text{ pilihan}}$$"
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 9",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Seorang siswa akan pergi dari rumah ke sekolah. Tersedia dua pilihan rute: jalan utama (3 jalur) atau jalan alternatif (2 jalur). Siswa hanya bisa memilih <strong>satu</strong> rute setiap kali berangkat. Berapa banyak pilihan perjalanan?</p>",
+          "p": "Kedua rute bersifat <strong>eksklusif</strong> &mdash; berlaku aturan penjumlahan: $$N = 3 + 2 = \\boxed{5 \\text{ pilihan perjalanan}}$$"
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 10",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dari angka $\\{1,2,3,4,5,6\\}$ tanpa pengulangan, berapa banyak bilangan tiga angka yang nilainya <strong>kurang dari 300 atau lebih dari 500</strong>?</p>",
+          "p": "Dua syarat tersebut tidak dapat dipenuhi sekaligus &mdash; bagi menjadi dua kasus.<br><br><strong>Kasus 1: Kurang dari 300</strong> &rarr; ratusan dari $\\{1,2\\}$: <div class=\"diagram-slot\" style=\"margin:.4rem 0;\"><div class=\"slot-box highlight\"><div class=\"slot-n\">2</div><div class=\"slot-lbl\">ratusan $\\{1,2\\}$</div><div class=\"slot-hint\">isi dulu</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">5</div><div class=\"slot-lbl\">puluhan</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">4</div><div class=\"slot-lbl\">satuan</div></div></div> $N_1 = 2 \\times 5 \\times 4 = 40$<br><br><strong>Kasus 2: Lebih dari 500</strong> &rarr; ratusan dari $\\{5,6\\}$: <div class=\"diagram-slot\" style=\"margin:.4rem 0;\"><div class=\"slot-box highlight\"><div class=\"slot-n\">2</div><div class=\"slot-lbl\">ratusan $\\{5,6\\}$</div><div class=\"slot-hint\">isi dulu</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">5</div><div class=\"slot-lbl\">puluhan</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">4</div><div class=\"slot-lbl\">satuan</div></div></div> $N_2 = 2 \\times 5 \\times 4 = 40$<br><br> Karena kedua kasus eksklusif: $N = 40 + 40 = \\boxed{80 \\text{ bilangan}}$"
+        },
+        {
+          "section": "A",
+          "label": "&#128216; Contoh 11",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dari Kota A menuju Kota D terdapat jalur: A&rarr;B (2 jalan), A&rarr;C (3 jalan), A&rarr;D langsung (1 jalan), B&rarr;D (2 jalan), C&rarr;D (2 jalan). Berapa banyak jalur dari A ke D?</p>",
+          "p": "Tiga jalur bersifat eksklusif:<br><br><strong>Kasus 1: Lewat B</strong> (A&rarr;B&rarr;D): $2 \\times 2 = 4$ jalur<br><strong>Kasus 2: Lewat C</strong> (A&rarr;C&rarr;D): $3 \\times 2 = 6$ jalur<br><strong>Kasus 3: Langsung</strong> (A&rarr;D): $1$ jalur<br><br> $$N = 4 + 6 + 1 = \\boxed{11 \\text{ jalur}}$$"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "Permutasi",
+      "contoh": [
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 12",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Hitunglah setiap nilai faktorial berikut:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$3! \\cdot 4!$</li><li>$\\dfrac{8!\\cdot 2!}{6!\\cdot 5!}$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$3! = 6,\\quad 4! = 24 \\implies 3! \\cdot 4! = 6 \\times 24 = \\boxed{144}$</li><li>$$\\frac{8!\\cdot 2!}{6!\\cdot 5!} = \\frac{8 \\times 7 \\times \\cancel{6!} \\times \\cancel{2!}}{\\cancel{6!} \\times 5 \\times 4 \\times 3 \\times \\cancel{2!}} = \\frac{56}{60} = \\boxed{\\frac{14}{15}}$$</li></ol>"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 13",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Uraikanlah bentuk faktorial berikut:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>$\\dfrac{(n-3)!}{(n-6)!}$</li><li>$\\dfrac{(n+2)!}{(n-3)!}$</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$$\\frac{(n-3)!}{(n-6)!} = \\frac{(n-3)(n-4)(n-5)\\cancel{(n-6)!}}{\\cancel{(n-6)!}} = \\boxed{(n-3)(n-4)(n-5)}$$</li><li>$$\\frac{(n+2)!}{(n-3)!} = \\frac{(n+2)(n+1)\\,n\\,(n-1)(n-2)\\cancel{(n-3)!}}{\\cancel{(n-3)!}} = \\boxed{(n+2)(n+1)\\,n\\,(n-1)(n-2)}$$</li></ol>"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 14",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan banyaknya susunan 3 huruf dari huruf-huruf $\\{a,b,c,d\\}$ dengan memperhatikan urutannya!</p>",
+          "p": "$n=4$, $r=3$: $_4P_3 = \\dfrac{4!}{1!} = 4 \\times 3 \\times 2 = \\boxed{24 \\text{ susunan}}$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 15",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Terdapat 8 orang juru masak. Dari 8 orang ini ditunjuk 3 orang untuk memasak gulai rendang, sayur lodeh, dan sambal daging (masing-masing satu menu berbeda). Tentukan banyaknya cara penunjukan!</p>",
+          "p": "$n=8$, $r=3$ (urutan penting, tugas berbeda): $$_8P_3 = \\frac{8!}{5!} = 8 \\times 7 \\times 6 = \\boxed{336 \\text{ cara}}$$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 16",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Enam orang siswa akan berbaris membentuk satu barisan. Tentukan banyaknya susunan barisan!</p>",
+          "p": "$P_6 = 6! = 6 \\times 5 \\times 4 \\times 3 \\times 2 \\times 1 = \\boxed{720 \\text{ susunan}}$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 17",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Empat orang lelaki dan dua orang wanita berdiri membentuk satu barisan. Tentukan banyaknya susunan jika:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>lelaki dan wanita boleh bercampur</li><li>lelaki dan wanita tidak boleh bercampur</li></ol>",
+          "p": "<strong>a. Boleh bercampur:</strong> $P_6 = 6! = \\boxed{720 \\text{ susunan}}$<br><br><strong>b. Tidak boleh bercampur</strong> &mdash; kelompokkan menjadi 1 blok lelaki $[L_1L_2L_3L_4]$ dan 1 blok wanita $[W_1W_2]$:<br><ul style=\"margin:.4rem 0;padding-left:1.3rem;font-size:.9rem;\"><li>Susunan 2 blok: $2! = 2$ cara</li><li>Di dalam blok lelaki: $4! = 24$ cara</li><li>Di dalam blok wanita: $2! = 2$ cara</li></ul> $$N_b = 2! \\times 4! \\times 2! = 2 \\times 24 \\times 2 = \\boxed{96 \\text{ susunan}}$$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 18",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Empat orang pria dan tiga orang wanita berdiri membentuk satu barisan. Jika formasi harus berselang-seling pria&ndash;wanita, tentukan banyaknya formasi!</p>",
+          "p": "Formasi: P W P W P W P (pria di posisi ganjil, wanita di posisi genap). $$P_4 \\times P_3 = 4! \\times 3! = 24 \\times 6 = \\boxed{144 \\text{ formasi}}$$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 19",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan banyaknya susunan huruf yang dapat dibentuk dari huruf-huruf pada kata <strong>&ldquo;PANGAN&rdquo;</strong>!</p>",
+          "p": "PANGAN: P(1), A(2), N(2), G(1) &mdash; 6 huruf dengan A muncul 2&times;, N muncul 2&times;. $$P = \\frac{6!}{2!\\cdot 2!} = \\frac{720}{4} = \\boxed{180 \\text{ susunan}}$$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 20",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Kode rahasia terdiri dari 7 digit yang disusun dari angka-angka: 2, 2, 2, 3, 3, 5, 5. Berapa banyak kode berbeda yang dapat dibentuk?</p>",
+          "p": "Total digit $= 7$; angka 2 muncul 3&times;, angka 3 muncul 2&times;, angka 5 muncul 2&times;: $$P = \\frac{7!}{3!\\cdot 2!\\cdot 2!} = \\frac{5040}{6 \\times 2 \\times 2} = \\frac{5040}{24} = \\boxed{210 \\text{ kode}}$$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 21",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Empat buah ubin merah, 3 ubin kuning, dan 2 ubin hijau akan disusun berderet satu baris. Tentukan banyaknya cara menyusun kesembilan ubin jika <strong>ubin hijau tidak boleh bersebelahan</strong>!</p>",
+          "p": "<strong>Langkah 1 &mdash; Total susunan tanpa syarat:</strong> $$P_{\\text{total}} = \\frac{9!}{4!\\cdot 3!\\cdot 2!} = \\frac{362880}{288} = 1.260$$ <strong>Langkah 2 &mdash; Kedua ubin hijau berdampingan</strong> (anggap [HH] sebagai 1 blok): $$P_{\\text{berdampingan}} = \\frac{8!}{4!\\cdot 3!} = \\frac{40320}{144} = 280$$ <strong>Langkah 3 &mdash; Komplemen:</strong> $$P_{\\text{tidak berdampingan}} = 1.260 - 280 = \\boxed{980 \\text{ cara}}$$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 22",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan banyaknya susunan 3 huruf dari $\\{a,b,c,d,e\\}$ jika huruf boleh berulang!</p>",
+          "p": "$n=5$, $r=3$: $\\quad 5^3 = \\boxed{125 \\text{ susunan}}$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 23",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Berapa banyak bilangan 4 angka dari $\\{1,2,3,4,5\\}$ (boleh berulang) yang nilainya kurang dari 4000?</p>",
+          "p": "Syarat: ribuan harus $< 4$ &rarr; dari $\\{1,2,3\\}$ (3 pilihan): <div class=\"diagram-slot\" style=\"margin:.5rem 0;\"><div class=\"slot-box highlight\"><div class=\"slot-n\">3</div><div class=\"slot-lbl\">ribuan $\\{1,2,3\\}$</div><div class=\"slot-hint\">isi dulu</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">5</div><div class=\"slot-lbl\">ratusan</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">5</div><div class=\"slot-lbl\">puluhan</div></div><div class=\"slot-times\">&times;</div><div class=\"slot-box\"><div class=\"slot-n\">5</div><div class=\"slot-lbl\">satuan</div></div></div> $$3 \\times 5^3 = 3 \\times 125 = \\boxed{375 \\text{ bilangan}}$$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 24",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Sebuah plat nomor terdiri dari 4 digit angka dari $\\{1,2,3,4,5\\}$ (boleh berulang). Berapa banyak plat nomor yang dapat dibentuk jika angka 1 harus muncul <strong>paling sedikit satu kali</strong>?</p>",
+          "p": "Gunakan komplemen:<br> Total plat tanpa syarat: $5^4 = 625$<br> Plat tanpa angka 1 sama sekali (hanya $\\{2,3,4,5\\}$): $4^4 = 256$ $$625 - 256 = \\boxed{369 \\text{ plat nomor}}$$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 25",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Enam tangkai bunga yang berlainan akan disusun melingkar di atas meja. Tentukan banyaknya cara menyusunnya!</p>",
+          "p": "$n=6$: $(6-1)! = 5! = \\boxed{120 \\text{ cara}}$"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 26",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Lima orang (3 pria dan 2 wanita) duduk mengelilingi meja bundar. Tentukan banyaknya susunan jika:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>tidak ada syarat khusus</li><li>semua wanita harus duduk berdampingan</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>$(5-1)! = 4! = \\boxed{24 \\text{ cara}}$</li><li>Anggap 2 wanita sebagai 1 blok &rarr; ada 4 elemen mengelilingi meja: $(4-1)! = 6$ cara. Di dalam blok wanita ada $2! = 2$ susunan: $6 \\times 2 = \\boxed{12 \\text{ cara}}$</li></ol>"
+        },
+        {
+          "section": "B",
+          "label": "&#128216; Contoh 27",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Acara wisuda dihadiri 1 dekan, 2 wakil dekan, serta 8 mahasiswa (3 Fisika, 3 Kimia, 2 Matematika) dengan meja bundar. Jika <strong>dekan dan kedua wakil harus duduk berdekatan</strong> serta <strong>mahasiswa satu jurusan harus duduk bersama</strong>, tentukan banyaknya susunan!</p>",
+          "p": "<strong>Langkah 1 &mdash; Bentuk 4 blok:</strong> Pimpinan (3 orang), Fisika (3), Kimia (3), Matematika (2).<br><br><strong>Langkah 2 &mdash; Susunan siklis 4 blok:</strong> $(4-1)! = 3! = 6$ cara<br><br><strong>Langkah 3 &mdash; Susunan di dalam tiap blok:</strong><ul style=\"margin:.3rem 0;padding-left:1.3rem;font-size:.9rem;\"><li>Blok Pimpinan: $3! = 6$</li><li>Blok Fisika: $3! = 6$</li><li>Blok Kimia: $3! = 6$</li><li>Blok Matematika: $2! = 2$</li></ul><strong>Langkah 4 &mdash; Kalikan:</strong> $$N = 3! \\times 3! \\times 3! \\times 3! \\times 2! = 6 \\times 6 \\times 6 \\times 6 \\times 2 = \\boxed{2.592 \\text{ susunan}}$$"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "title": "Kombinasi",
+      "contoh": [
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 32",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dari himpunan $A = \\{p,q,r,s,t\\}$, berapa banyak cara mengambil 2 huruf tanpa memperhatikan urutan?</p>",
+          "p": "$n=5$, $r=2$: ${}_5C_2 = \\dfrac{5!}{2!\\cdot 3!} = \\dfrac{5 \\times 4}{2} = \\boxed{10 \\text{ cara}}$"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 33",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dari 7 orang calon paduan suara akan dipilih 5 orang untuk festival. Tentukan banyaknya cara pemilihan!</p>",
+          "p": "$n=7$, $r=5$. Gunakan sifat simetri: ${}_7C_5 = {}_7C_2 = \\dfrac{7 \\times 6}{2} = \\boxed{21 \\text{ cara}}$"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 34",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tersedia 5 kelereng merah identik dan 3 kelereng biru identik. Berapa banyak cara mengambil 4 kelereng?</p>",
+          "p": "Karena kelereng dalam satu warna identik, yang menentukan hanyalah <strong>banyaknya kelereng tiap warna</strong>. Misalkan $m$ kelereng merah dan $b$ kelereng biru diambil, dengan $m+b=4$: <div class=\"table-wrap\" style=\"margin:.6rem 0;\"><table class=\"tbl-mini\"><thead><tr><th>Merah ($m$)</th><th>Biru ($b$)</th><th>Cara</th></tr></thead><tbody><tr><td>1</td><td>3</td><td>1</td></tr><tr><td>2</td><td>2</td><td>1</td></tr><tr><td>3</td><td>1</td><td>1</td></tr><tr><td>4</td><td>0</td><td>1</td></tr></tbody></table></div> $N = \\boxed{4 \\text{ cara}}$"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 35",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan nilai $r$ jika ${}_6C_r = 2 \\cdot {}_5C_r$.</p>",
+          "p": "$$\\frac{6!}{r!(6-r)!} = 2 \\cdot \\frac{5!}{r!(5-r)!} \\implies \\frac{6}{(6-r)(5-r)!} = \\frac{2}{(5-r)!} \\implies \\frac{6}{6-r} = 2 \\implies r = \\boxed{3}$$"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 36",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dari 20 anggota English Club (10 pria dan 10 wanita) akan dipilih tim 4 pria dan 2 wanita untuk lomba debat. Tentukan banyaknya cara pemilihan!</p>",
+          "p": "$${}_{10}C_4 \\times {}_{10}C_2 = \\frac{10\\times9\\times8\\times7}{4!} \\times \\frac{10\\times9}{2} = 210 \\times 45 = \\boxed{9.450 \\text{ cara}}$$"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 37",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dalam keranjang terdapat 6 kelereng hitam dan 4 kelereng putih. Jika diambil 5 kelereng, tentukan banyaknya cara terambilnya tepat 3 hitam dan 2 putih!</p>",
+          "p": "$${}_6C_3 \\times {}_4C_2 = 20 \\times 6 = \\boxed{120 \\text{ cara}}$$"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 38",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dalam sebuah kotak terdapat 5 bola kuning dan 4 bola hijau. Jika diambil 2 bola, tentukan banyaknya kemungkinan terambilnya dua bola berwarna sama!</p>",
+          "p": "Dua bola berwarna sama $=$ kuning-kuning <strong>atau</strong> hijau-hijau: $${}_5C_2 + {}_4C_2 = 10 + 6 = \\boxed{16 \\text{ cara}}$$"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 39",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Di suatu sekolah terdapat 10 calon pemain voli: 3 kelas X, 2 kelas XI, dan 5 kelas XII. Jika dipilih 6 siswa, tentukan banyaknya cara pemilihan yang terdiri dari 2 siswa kelas X, 2 kelas XI, dan 2 kelas XII!</p>",
+          "p": "$${}_3C_2 \\times {}_2C_2 \\times {}_5C_2 = 3 \\times 1 \\times 10 = \\boxed{30 \\text{ cara}}$$"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 40",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Berapa banyak diagonal yang dapat ditarik pada sebuah segi-10 (dekagon)?</p>",
+          "p": "Total garis dari 10 titik: ${}_{10}C_2 = 45$. Dari 45 tersebut, 10 adalah sisi segi-10 (bukan diagonal). $$\\text{Banyak diagonal} = {}_{10}C_2 - 10 = 45 - 10 = \\boxed{35 \\text{ diagonal}}$$"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 41",
+          "q": "<p style=\"margin-bottom:.5rem;font-size:.9rem;\">Dari 9 orang anggota OSIS akan dipilih panitia 4 orang. Berapa banyak susunan panitia jika:</p><ol class=\"alpha-list\" style=\"margin:0;\"><li>Andi <em>wajib</em> masuk panitia</li><li>Budi <em>tidak boleh</em> masuk panitia</li><li>Andi <em>wajib</em> masuk <strong>dan</strong> Budi <em>tidak boleh</em> masuk</li></ol>",
+          "p": "<ol class=\"alpha-list\" style=\"margin-top:.4rem;\"><li>Andi sudah terpilih &rarr; sisa 3 posisi dari 8 orang: ${}_8C_3 = \\boxed{56 \\text{ cara}}$</li><li>Budi dikeluarkan &rarr; pilih 4 dari 8 orang: ${}_8C_4 = \\boxed{70 \\text{ cara}}$</li><li>Andi wajib (sisa 3 posisi), Budi dilarang (kolam $= 9-2=7$): ${}_7C_3 = \\boxed{35 \\text{ cara}}$</li></ol>"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 42",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dari 6 pria dan 5 wanita akan dibentuk panitia 5 orang (3 pria dan 2 wanita). Tentukan banyaknya cara jika Pak Hendra (pria) <em>pasti terpilih</em> dan Ibu Sari (wanita) <em>tidak boleh</em> terpilih!</p>",
+          "p": "Pak Hendra wajib &rarr; sisa 2 pria dari $6-1=5$. Ibu Sari dilarang &rarr; 2 wanita dari $5-1=4$: $${}_5C_2 \\times {}_4C_2 = 10 \\times 6 = \\boxed{60 \\text{ cara}}$$"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 43",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dari 6 pria dan 4 wanita akan dipilih 5 orang. Berapa banyak cara jika jumlah pria yang terpilih <strong>lebih banyak</strong> dari jumlah wanita?</p>",
+          "p": "Syarat $p > w$ dengan $p + w = 5$: <div class=\"table-wrap\" style=\"margin:.6rem 0;\"><table class=\"tbl-mini\"><thead><tr><th>Kasus</th><th>Pria ($p$)</th><th>Wanita ($w$)</th><th>Banyak cara</th></tr></thead><tbody><tr><td>1</td><td>3</td><td>2</td><td>${}_6C_3 \\times {}_4C_2 = 20 \\times 6 = 120$</td></tr><tr><td>2</td><td>4</td><td>1</td><td>${}_6C_4 \\times {}_4C_1 = 15 \\times 4 = 60$</td></tr><tr><td>3</td><td>5</td><td>0</td><td>${}_6C_5 \\times {}_4C_0 = 6 \\times 1 = 6$</td></tr></tbody></table></div> $$N = 120 + 60 + 6 = \\boxed{186 \\text{ cara}}$$"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 44",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dari 7 orang (4 pria dan 3 wanita) akan dipilih tim 3 orang. Berapa banyak cara pemilihan yang mengandung <em>paling sedikit 1 wanita</em>?</p>",
+          "p": "Gunakan komplemen: Total $-$ (tidak ada wanita): $$\\text{Total} = {}_7C_3 = 35;\\quad \\text{0 wanita} = {}_4C_3 = 4$$ $$\\text{Paling sedikit 1 wanita} = 35 - 4 = \\boxed{31 \\text{ cara}}$$ <em>Verifikasi langsung:</em> Tepat 1 wanita: $3\\times6=18$; tepat 2 wanita: $3\\times4=12$; tepat 3 wanita: $1\\times1=1$. Total $= 31$ &#10003;"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 45",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dari 10 orang calon akan dipilih tim 4 orang. Berapa banyak cara jika <em>paling banyak 1 orang</em> dari 3 calon tertentu (A, B, C) yang boleh masuk tim?</p>",
+          "p": "Gunakan komplemen: Total $-$ (2 atau lebih dari $\\{A,B,C\\}$ masuk): $${}_{10}C_4 = 210$$ Tepat 2 dari $\\{A,B,C\\}$: ${}_3C_2 \\times {}_7C_2 = 3 \\times 21 = 63$<br> Tepat 3 dari $\\{A,B,C\\}$: ${}_3C_3 \\times {}_7C_1 = 1 \\times 7 = 7$ $$\\text{Paling banyak 1} = 210 - 63 - 7 = \\boxed{140 \\text{ cara}}$$"
+        },
+        {
+          "section": "C",
+          "label": "&#128216; Contoh 46",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dari 7 pria dan 5 wanita, pilih 6 orang dengan syarat <strong>paling sedikit 2 pria</strong> dan <strong>paling banyak 4 wanita</strong>. Berapa banyak cara pemilihan?</p>",
+          "p": "Syarat $w \\leq 4$ ekuivalen dengan $p \\geq 2$ (karena $p = 6-w \\geq 2$). Kasus yang mungkin: <div class=\"table-wrap\" style=\"margin:.6rem 0;\"><table class=\"tbl-mini\"><thead><tr><th>Pria</th><th>Wanita</th><th>Banyak cara</th></tr></thead><tbody><tr><td>2</td><td>4</td><td>${}_7C_2 \\times {}_5C_4 = 21\\times5=105$</td></tr><tr><td>3</td><td>3</td><td>${}_7C_3 \\times {}_5C_3 = 35\\times10=350$</td></tr><tr><td>4</td><td>2</td><td>${}_7C_4 \\times {}_5C_2 = 35\\times10=350$</td></tr><tr><td>5</td><td>1</td><td>${}_7C_5 \\times {}_5C_1 = 21\\times5=105$</td></tr><tr><td>6</td><td>0</td><td>${}_7C_6 \\times {}_5C_0 = 7\\times1=7$</td></tr></tbody></table></div> $$N = 105+350+350+105+7 = \\boxed{917 \\text{ cara}}$$"
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "title": "Segitiga Pascal &amp; Binomial Newton",
+      "contoh": [
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 47",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Jabarkan $(a+2)^4$!</p>",
+          "p": "Gunakan teorema binomial dengan $a=a$, $b=2$, $n=4$: $$\\begin{align*} r=0:&\\;\\binom{4}{0}a^4\\cdot1 = a^4 \\\\ r=1:&\\;\\binom{4}{1}a^3\\cdot2 = 8a^3 \\\\ r=2:&\\;\\binom{4}{2}a^2\\cdot4 = 24a^2 \\\\ r=3:&\\;\\binom{4}{3}a^1\\cdot8 = 32a \\\\ r=4:&\\;\\binom{4}{4}\\cdot16 = 16 \\end{align*}$$ $$\\boxed{(a+2)^4 = a^4 + 8a^3 + 24a^2 + 32a + 16}$$"
+        },
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 48",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Jabarkan $(2x - y)^3$!</p>",
+          "p": "Tulis $(2x-y)^3 = (2x+(-y))^3$: $$= \\binom{3}{0}(2x)^3(-y)^0 + \\binom{3}{1}(2x)^2(-y)^1 + \\binom{3}{2}(2x)(-y)^2 + \\binom{3}{3}(-y)^3$$ $$= 8x^3 - 12x^2y + 6xy^2 - y^3$$ $$\\boxed{(2x-y)^3 = 8x^3 - 12x^2y + 6xy^2 - y^3}$$"
+        },
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 49",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan suku ke-4 dari penjabaran $(a+b)^8$!</p>",
+          "p": "$n=8$, $p=4$: $$U_4 = \\binom{8}{3}\\cdot a^5\\cdot b^3 = 56\\,a^5b^3$$ $$\\boxed{U_4 = 56\\,a^5b^3}$$"
+        },
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 50",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan suku ke-6 dari $(2x - y)^9$!</p>",
+          "p": "$a=2x$, $b=-y$, $n=9$, $p=6$: $$U_6 = \\binom{9}{5}(2x)^4(-y)^5 = 126 \\cdot 16x^4 \\cdot (-y^5) = \\boxed{-2016\\,x^4y^5}$$"
+        },
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 51",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dalam penjabaran $(a+3b)^6$, salah satu sukunya adalah $m \\cdot a^4 b^2$. Tentukan nilai $m$!</p>",
+          "p": "Suku umum: $U_p = \\binom{6}{p-1}\\cdot a^{7-p}\\cdot(3b)^{p-1}$.<br> Agar pangkat $a$ adalah 4: $7-p=4 \\implies p=3$. $$U_3 = \\binom{6}{2}\\cdot a^4\\cdot(3b)^2 = 15\\cdot 9\\,a^4b^2 = 135\\,a^4b^2$$ $$\\boxed{m = 135}$$"
+        },
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 52",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan koefisien suku yang memuat $x^3$ dari $(x+2)^5$!</p>",
+          "p": "Suku umum: $U_p = \\binom{5}{p-1}\\cdot x^{6-p}\\cdot 2^{p-1}$.<br> Agar pangkat $x$ adalah 3: $6-p=3 \\implies p=3$. $$U_3 = \\binom{5}{2}\\cdot x^3\\cdot 2^2 = 10\\cdot 4\\cdot x^3 = 40x^3$$ Koefisien $x^3$ adalah $\\boxed{40}$."
+        },
+        {
+          "section": "D",
+          "label": "&#128216; Contoh 53",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan suku yang tidak memuat $x$ (suku konstan) dari $\\left(x + \\dfrac{2}{x}\\right)^6$!</p>",
+          "p": "$a=x$, $b=\\dfrac{2}{x}$, $n=6$. Suku umum: $$U_p = \\binom{6}{p-1}\\cdot x^{7-p}\\cdot\\left(\\frac{2}{x}\\right)^{p-1} = \\binom{6}{p-1}\\cdot 2^{p-1}\\cdot x^{8-2p}$$ Agar suku tidak memuat $x$: $8-2p=0 \\implies p=4$. $$U_4 = \\binom{6}{3}\\cdot 2^3 = 20\\cdot 8 = \\boxed{160}$$"
+        }
+      ]
+    }
+  ],
+  "totalContoh": 49,
+  "title": "Kombinatorika",
+  "prefix": "KMB"
+}

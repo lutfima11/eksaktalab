@@ -1,0 +1,248 @@
+{
+  "materi": "limit-fungsi",
+  "sections": [
+    {
+      "id": "A",
+      "title": "Limit Fungsi",
+      "contoh": [
+        {
+          "section": "A",
+          "label": "📘 Contoh 1",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Apakah fungsi berikut mempunyai limit untuk $x$ mendekati 1? $$f(x) = \\begin{cases} x^2 & \\text{jika } x \\leq 1 \\\\ x + 1 & \\text{jika } x > 1 \\end{cases}$$</p>",
+          "p": "<br> Hitung limit kiri dan limit kanan secara terpisah.<br><br><strong>Limit kiri</strong> (gunakan $f(x)=x^2$, karena $x\\leq 1$): $$\\lim_{x \\to 1^-} f(x) = \\lim_{x \\to 1^-} x^2 = 1^2 = 1$$ <strong>Limit kanan</strong> (gunakan $f(x)=x+1$, karena $x>1$): $$\\lim_{x \\to 1^+} f(x) = \\lim_{x \\to 1^+} (x+1) = 1+1 = 2$$ <!-- Grafik ilustrasi --><div class=\"grafik-wrap\" style=\"margin-top:1rem;\"><svg viewBox=\"0 0 230 200\" width=\"230\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"a1x\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L0,6 L6,3z\" fill=\"#555\"/></marker><marker id=\"a1y\" markerWidth=\"6\" markerHeight=\"6\" refX=\"3\" refY=\"5\" orient=\"auto\"><path d=\"M0,0 L6,0 L3,6z\" fill=\"#555\"/></marker></defs><g stroke=\"#e2e8f0\" stroke-width=\"0.6\"><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"188\"/><line x1=\"100\" y1=\"10\" x2=\"100\" y2=\"188\"/><line x1=\"150\" y1=\"10\" x2=\"150\" y2=\"188\"/><line x1=\"200\" y1=\"10\" x2=\"200\" y2=\"188\"/><line x1=\"5\" y1=\"138\" x2=\"220\" y2=\"138\"/><line x1=\"5\" y1=\"88\" x2=\"220\" y2=\"88\"/><line x1=\"5\" y1=\"38\" x2=\"220\" y2=\"38\"/></g><line x1=\"5\" y1=\"188\" x2=\"222\" y2=\"188\" stroke=\"#555\" stroke-width=\"1.6\" marker-end=\"url(#a1x)\"/><line x1=\"5\" y1=\"192\" x2=\"5\" y2=\"8\" stroke=\"#555\" stroke-width=\"1.6\" marker-end=\"url(#a1y)\"/><text x=\"224\" y=\"192\" font-size=\"9\" fill=\"#555\">x</text><text x=\"0\" y=\"8\" font-size=\"9\" fill=\"#555\">y</text><text x=\"2\" y=\"192\" font-size=\"8\" fill=\"#888\">O</text><text x=\"50\" y=\"197\" font-size=\"9\" fill=\"#777\" text-anchor=\"middle\">1</text><text x=\"100\" y=\"197\" font-size=\"9\" fill=\"#777\" text-anchor=\"middle\">2</text><text x=\"2\" y=\"141\" font-size=\"8\" fill=\"#777\" text-anchor=\"end\">1</text><text x=\"2\" y=\"91\" font-size=\"8\" fill=\"#777\" text-anchor=\"end\">2</text><text x=\"2\" y=\"41\" font-size=\"8\" fill=\"#777\" text-anchor=\"end\">3</text><!-- f(x)=x² for x in [0,1]: at x=0→(5,188); x=1→(50,138). Sample points --><!-- scale: 45px/unit x from x=5; 50px/unit y from y=188 --><!-- Curve x²: (0,0)→(5,188); (0.5,0.25)→(27.5,175.5); (1,1)→(50,138) --><path d=\"M5,188 Q27,178 50,138\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><!-- f(x)=x+1 for x>1: at x=1→(50,138)[open]; x=2.4→(113,68) --><line x1=\"50\" y1=\"138\" x2=\"120\" y2=\"63\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><!-- Solid dot at (1,1) = (50,138) --><circle cx=\"50\" cy=\"138\" r=\"4\" fill=\"#2563eb\"/><!-- Open dot at (1,2) = (50,88) --><circle cx=\"50\" cy=\"88\" r=\"4.5\" fill=\"white\" stroke=\"#2563eb\" stroke-width=\"2\"/><!-- dashed lines: limit kiri=1 --><line x1=\"50\" y1=\"188\" x2=\"50\" y2=\"138\" stroke=\"#aaa\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/><line x1=\"5\" y1=\"138\" x2=\"50\" y2=\"138\" stroke=\"#aaa\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/><!-- dashed: limit kanan=2 --><line x1=\"5\" y1=\"88\" x2=\"50\" y2=\"88\" stroke=\"#aaa\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/><!-- labels --><text x=\"56\" y=\"85\" font-size=\"8\" fill=\"#e53e3e\">lim⁺ = 2</text><text x=\"56\" y=\"141\" font-size=\"8\" fill=\"#059669\">lim⁻ = 1</text><text x=\"10\" y=\"130\" font-size=\"8\" fill=\"#2563eb\">y=x²</text><text x=\"88\" y=\"58\" font-size=\"8\" fill=\"#2563eb\">y=x+1</text></svg></div> Karena limit kiri $\\neq$ limit kanan ($1 \\neq 2$), maka $\\displaystyle\\lim_{x\\to 1} f(x)$ <strong>tidak ada</strong>."
+        },
+        {
+          "section": "A",
+          "label": "📘 Contoh 2",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan nilai limit berikut menggunakan sifat-sifat limit.<br> (a) $\\displaystyle\\lim_{x\\to 2} 5$ &emsp; (b) $\\displaystyle\\lim_{x\\to 3} 2x^3$ &emsp; (c) $\\displaystyle\\lim_{x\\to 1} (x^2 + x)$ &emsp; (d) $\\displaystyle\\lim_{x\\to 3} \\dfrac{x^2 - 1}{x + 1}$ &emsp; (e) $\\displaystyle\\lim_{x\\to 3} \\sqrt[3]{x^2 - 1}$</p>",
+          "p": "<br><strong>(a)</strong> Sifat (1): $\\displaystyle\\lim_{x\\to 2} 5 = \\boxed{5}$<br><br><strong>(b)</strong> Sifat (2): $\\displaystyle\\lim_{x\\to 3} 2x^3 = 2 \\cdot 3^3 = 2 \\cdot 27 = \\boxed{54}$<br><br><strong>(c)</strong> Sifat (3) dan (2): $$\\lim_{x\\to 1}(x^2 + x) = \\lim_{x\\to 1} x^2 + \\lim_{x\\to 1} x = 1^2 + 1 = \\boxed{2}$$ <strong>(d)</strong> Sifat (5), (3), dan (1): $$\\lim_{x\\to 3}\\frac{x^2-1}{x+1} = \\frac{\\lim_{x\\to 3}x^2 - \\lim_{x\\to 3}1}{\\lim_{x\\to 3}x + \\lim_{x\\to 3}1} = \\frac{3^2 - 1}{3 + 1} = \\frac{8}{4} = \\boxed{2}$$ <strong>(e)</strong> Sifat (7) dan (3): $$\\lim_{x\\to 3}\\sqrt[3]{x^2-1} = \\sqrt[3]{\\lim_{x\\to 3}x^2 - \\lim_{x\\to 3}1} = \\sqrt[3]{3^2 - 1} = \\sqrt[3]{8} = \\boxed{2}$$"
+        },
+        {
+          "section": "A",
+          "label": "📘 Contoh 3",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Jika diketahui $\\displaystyle\\lim_{x\\to 2} f(x) = 5$ dan $\\displaystyle\\lim_{x\\to 2} g(x) = -4$, hitunglah nilai:<br> (a) $\\lim_{x\\to 2}\\left[2f(x) + 3g(x)\\right]^2$ &emsp; (b) $\\lim_{x\\to 2}\\left[g^2(x) - 6\\right]^3$</p>",
+          "p": "<br><strong>(a)</strong> Sifat (2), (3), dan (6): $$\\lim_{x\\to 2}\\left[2f(x)+3g(x)\\right]^2 = \\left[2\\lim_{x\\to 2}f(x) + 3\\lim_{x\\to 2}g(x)\\right]^2 = \\left[2(5)+3(-4)\\right]^2 = (-2)^2 = \\boxed{4}$$ <strong>(b)</strong> Sifat (4) dan (6): $$\\lim_{x\\to 2}\\left[g^2(x)-6\\right]^3 = \\left[\\left(\\lim_{x\\to 2}g(x)\\right)^2 - 6\\right]^3 = \\left[(-4)^2 - 6\\right]^3 = [10]^3 = \\boxed{1000}$$"
+        },
+        {
+          "section": "A",
+          "label": "📘 Contoh 4",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Dengan teorema limit, hitunglah:<br> (a) $\\displaystyle\\lim_{x\\to 2}\\left[\\frac{x^2+2x-8}{x^2-6x+8}\\right]^2 \\left[\\frac{x^2+6x-16}{x^2+x-6}\\right]^3$<br><br> (b) $\\displaystyle\\lim_{x\\to 3}\\left[\\frac{x^2+3x-18}{x^2-7x+12}\\right]\\sqrt{\\frac{x^2+2x-15}{x^2-5x+6}}$</p>",
+          "p": "<br><strong>(a)</strong> Faktorkan pembilang dan penyebut, lalu gunakan sifat (5) dan (6): $$\\begin{align*} &\\left[\\lim_{x\\to 2}\\frac{x^2+2x-8}{x^2-6x+8}\\right]^2\\left[\\lim_{x\\to 2}\\frac{x^2+6x-16}{x^2+x-6}\\right]^3 \\\\ &= \\left[\\lim_{x\\to 2}\\frac{(x+4)(x-2)}{(x-4)(x-2)}\\right]^2\\left[\\lim_{x\\to 2}\\frac{(x+8)(x-2)}{(x+3)(x-2)}\\right]^3 \\\\ &= \\left[\\lim_{x\\to 2}\\frac{x+4}{x-4}\\right]^2\\left[\\lim_{x\\to 2}\\frac{x+8}{x+3}\\right]^3 = \\left[\\frac{6}{-2}\\right]^2\\left[\\frac{10}{5}\\right]^3 = (-3)^2 \\cdot 2^3 = 9 \\cdot 8 = \\boxed{72} \\end{align*}$$ <strong>(b)</strong> Faktorkan pembilang dan penyebut, lalu gunakan sifat (5) dan (7): $$\\begin{align*} &\\left[\\lim_{x\\to 3}\\frac{(x+6)(x-3)}{(x-4)(x-3)}\\right]\\sqrt{\\lim_{x\\to 3}\\frac{(x+5)(x-3)}{(x-2)(x-3)}} = \\left[\\frac{3+6}{3-4}\\right]\\sqrt{\\frac{3+5}{3-2}} = (-9)\\sqrt{8} = -9 \\cdot 2\\sqrt{2} = \\boxed{-18\\sqrt{2}} \\end{align*}$$"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "Limit Berhingga Fungsi Aljabar",
+      "contoh": [
+        {
+          "section": "B",
+          "label": "📘 Contoh 5",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Hitunglah $\\lim_{x\\to 3}(2x^2 - 5x + 1)$.</p>",
+          "p": "<br> $$\\lim_{x\\to 3}(2x^2 - 5x + 1) = 2(3)^2 - 5(3) + 1 = 18 - 15 + 1 = \\boxed{4}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 6",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Hitunglah nilai-nilai limit berikut menggunakan substitusi langsung.<br> (a) $\\displaystyle\\lim_{x\\to 4}\\frac{x^2 - 3x + 1}{2x + 5}$ &emsp; (b) $\\displaystyle\\lim_{x\\to 2}\\sqrt{3x^2 - 2x + 1}$</p>",
+          "p": "<br><strong>(a)</strong> Substitusi $x = 4$ (penyebut $\\neq 0$): $$\\lim_{x\\to 4}\\frac{x^2 - 3x + 1}{2x + 5} = \\frac{4^2 - 3(4) + 1}{2(4) + 5} = \\frac{16 - 12 + 1}{13} = \\boxed{\\dfrac{5}{13}}$$ <strong>(b)</strong> Substitusi $x = 2$ (nilai di dalam akar $> 0$): $$\\lim_{x\\to 2}\\sqrt{3x^2 - 2x + 1} = \\sqrt{3(4) - 4 + 1} = \\sqrt{9} = \\boxed{3}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 7",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil setiap limit berikut.<br> (a) $\\displaystyle\\lim_{x\\to 3} \\frac{x^2 + 2x - 15}{x^2 - 4x + 3}$ &emsp; (b) $\\displaystyle\\lim_{x\\to 4} \\frac{x^2 - 8x + 16}{x^2 - 6x + 8}$</p>",
+          "p": "<br><strong>(a)</strong> Cek: $\\frac{9+6-15}{9-12+3} = \\frac{0}{0}$ (bentuk tak tentu, gunakan faktorisasi): $$\\lim_{x\\to 3} \\frac{x^2 + 2x - 15}{x^2 - 4x + 3} = \\lim_{x\\to 3} \\frac{(x+5)(x-3)}{(x-1)(x-3)} = \\lim_{x\\to 3} \\frac{x+5}{x-1} = \\frac{3+5}{3-1} = \\boxed{4}$$ <strong>(b)</strong> Cek: $\\frac{16-32+16}{16-24+8} = \\frac{0}{0}$ (bentuk tak tentu): $$\\lim_{x\\to 4} \\frac{x^2 - 8x + 16}{x^2 - 6x + 8} = \\lim_{x\\to 4} \\frac{(x-4)(x-4)}{(x-4)(x-2)} = \\lim_{x\\to 4} \\frac{x-4}{x-2} = \\frac{4-4}{4-2} = \\boxed{0}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 8",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil setiap limit berikut.<br> (a) $\\displaystyle\\lim_{x\\to 1} \\frac{x^4 + 3x^2 - 4}{x^2 + x - 2}$ &emsp; (b) $\\displaystyle\\lim_{x\\to 2} \\frac{x^3 + 3x^2 - 10x}{x^3 - 4x^2 + 4x}$</p>",
+          "p": "<br><strong>(a)</strong> Misalkan $p = x^2$: $$\\begin{align*} \\lim_{x\\to 1} \\frac{x^4 + 3x^2 - 4}{x^2 + x - 2} &= \\lim_{x\\to 1} \\frac{(p+4)(p-1)}{(x+2)(x-1)} = \\lim_{x\\to 1} \\frac{(x^2+4)(x^2-1)}{(x+2)(x-1)} \\\\ &= \\lim_{x\\to 1} \\frac{(x^2+4)(x+1)(x-1)}{(x+2)(x-1)} = \\lim_{x\\to 1} \\frac{(x^2+4)(x+1)}{x+2} = \\frac{(1+4)(1+1)}{1+2} = \\boxed{\\dfrac{10}{3}} \\end{align*}$$ <strong>(b)</strong> $$\\begin{align*} \\lim_{x\\to 2} \\frac{x^3 + 3x^2 - 10x}{x^3 - 4x^2 + 4x} &= \\lim_{x\\to 2} \\frac{x(x^2+3x-10)}{x(x^2-4x+4)} = \\lim_{x\\to 2} \\frac{(x+5)(x-2)}{(x-2)^2} = \\lim_{x\\to 2} \\frac{x+5}{x-2} = \\frac{7}{0} = \\boxed{\\infty} \\end{align*}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 9",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil setiap limit berikut.<br> (a) $\\displaystyle\\lim_{x\\to 3} \\frac{x^3 - 7x^2 + 12x}{x^3 - 27}$ &emsp; (b) $\\displaystyle\\lim_{x\\to -2} \\frac{2x^3 + 16}{x^2 + 6x + 8}$</p>",
+          "p": "<br><strong>(a)</strong> $$\\begin{align*} \\lim_{x\\to 3} \\frac{x^3 - 7x^2 + 12x}{x^3 - 27} &= \\lim_{x\\to 3} \\frac{x(x^2-7x+12)}{(x-3)(x^2+3x+9)} = \\lim_{x\\to 3} \\frac{x(x-3)(x-4)}{(x-3)(x^2+3x+9)} \\\\ &= \\lim_{x\\to 3} \\frac{x(x-4)}{x^2+3x+9} = \\frac{3(3-4)}{9+9+9} = \\frac{-3}{27} = \\boxed{-\\dfrac{1}{9}} \\end{align*}$$ <strong>(b)</strong> $$\\begin{align*} \\lim_{x\\to -2} \\frac{2x^3 + 16}{x^2 + 6x + 8} &= \\lim_{x\\to -2} \\frac{2(x+2)(x^2-2x+4)}{(x+4)(x+2)} = \\lim_{x\\to -2} \\frac{2(x^2-2x+4)}{x+4} = \\frac{2(4+4+4)}{-2+4} = \\frac{24}{2} = \\boxed{12} \\end{align*}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 10",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil setiap limit berikut.<br> (a) $\\displaystyle\\lim_{x\\to 2} \\frac{(x-2)^2 + 3(x-2)}{2x - 4}$ &emsp; (b) $\\displaystyle\\lim_{x\\to 2} \\frac{x^2 - 4}{3x - 6} + \\frac{(x-2)^2}{x^2 - 4}$ &emsp; (c) $\\displaystyle\\lim_{x\\to 1} \\frac{x^3 - 3x + 2}{(x-1)^2 + 2(x^2 - 1)}$</p>",
+          "p": "<br><strong>(a)</strong> Misalkan $h = x - 2$: $$\\lim_{x\\to 2} \\frac{(x-2)^2 + 3(x-2)}{2(x-2)} = \\lim_{h \\to 0} \\frac{h^2 + 3h}{2h} = \\lim_{h \\to 0} \\frac{h(h + 3)}{2h} = \\lim_{h \\to 0} \\frac{h + 3}{2} = \\frac{3}{2} = \\boxed{\\dfrac{3}{2}}$$ <strong>(b)</strong> Misalkan $h = x - 2$: $$\\begin{align*} \\lim_{h\\to 0}\\left(\\frac{h(h+4)}{3h} + \\frac{h^2}{h(h+4)}\\right) = \\lim_{h\\to 0}\\left(\\frac{h+4}{3} + \\frac{h}{h+4}\\right) = \\frac{4}{3} + 0 = \\boxed{\\dfrac{4}{3}} \\end{align*}$$ <strong>(c)</strong> Misalkan $h = x - 1$: $$\\lim_{x\\to 1} \\frac{x^3 - 3x + 2}{(x-1)^2 + 2(x^2-1)} = \\lim_{h \\to 0} \\frac{h^2(h+3)}{h(3h+4)} = \\lim_{h \\to 0} \\frac{h(h+3)}{3h+4} = \\frac{0}{4} = \\boxed{0}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 11",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah nilai $a$ dan $b$ jika $\\displaystyle\\lim_{x\\to 2}\\frac{x^2 + ax + b}{x^2 - x - 2} = \\frac{5}{3}$.</p>",
+          "p": "<br> Faktorkan penyebut: $x^2 - x - 2 = (x-2)(x+1)$. Penyebut nol di $x = 2$. Agar limit berhingga, pembilang <strong>harus</strong> nol di $x = 2$: $$(2)^2 + a(2) + b = 0 \\implies b = -4 - 2a \\quad \\cdots (1)$$ Tulis $x^2 + ax + b = (x-2)(x-r)$. Dengan mengembangkan: $a = -(2+r)$, $b = 2r$. Substitusikan ke nilai limit: $$\\lim_{x\\to 2}\\frac{(x-2)(x-r)}{(x-2)(x+1)} = \\lim_{x\\to 2}\\frac{x-r}{x+1} = \\frac{2-r}{3} = \\frac{5}{3}$$ $$2 - r = 5 \\implies r = -3$$ Maka: $a = -(2+(-3)) = 1$ dan $b = 2(-3) = -6$. Verifikasi: $\\displaystyle\\lim_{x\\to 2}\\frac{x^2+x-6}{x^2-x-2} = \\lim_{x\\to 2}\\frac{(x+3)(x-2)}{(x+1)(x-2)} = \\frac{5}{3}$ ✓ $$\\boxed{a = 1,\\quad b = -6}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 12",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil setiap limit berikut.<br> (a) $\\displaystyle\\lim_{x\\to 3} \\frac{x^2 + 3x - 18}{\\sqrt{x} - \\sqrt{3}}$ &emsp; (b) $\\displaystyle\\lim_{x\\to 4} \\frac{\\sqrt{x} - 2}{x^2 - 16}$</p>",
+          "p": "<br><strong>(a)</strong> Kalikan dengan sekawan $\\dfrac{\\sqrt{x}+\\sqrt{3}}{\\sqrt{x}+\\sqrt{3}}$: $$\\begin{align*} \\lim_{x\\to 3} \\frac{x^2 + 3x - 18}{\\sqrt{x} - \\sqrt{3}} &= \\lim_{x\\to 3} \\frac{(x+6)(x-3)}{\\sqrt{x}-\\sqrt{3}} \\cdot \\frac{\\sqrt{x}+\\sqrt{3}}{\\sqrt{x}+\\sqrt{3}} = \\lim_{x\\to 3} \\frac{(x+6)(x-3)(\\sqrt{x}+\\sqrt{3})}{x - 3} \\\\ &= \\lim_{x\\to 3} (x+6)(\\sqrt{x}+\\sqrt{3}) = (3+6)(\\sqrt{3}+\\sqrt{3}) = 9 \\cdot 2\\sqrt{3} = \\boxed{18\\sqrt{3}} \\end{align*}$$ <strong>(b)</strong> Kalikan dengan sekawan $\\dfrac{\\sqrt{x}+2}{\\sqrt{x}+2}$: $$\\begin{align*} \\lim_{x\\to 4} \\frac{\\sqrt{x}-2}{x^2-16} &= \\lim_{x\\to 4} \\frac{\\sqrt{x}-2}{(x-4)(x+4)} \\cdot \\frac{\\sqrt{x}+2}{\\sqrt{x}+2} = \\lim_{x\\to 4} \\frac{x-4}{(x-4)(x+4)(\\sqrt{x}+2)} \\\\ &= \\lim_{x\\to 4} \\frac{1}{(x+4)(\\sqrt{x}+2)} = \\frac{1}{(4+4)(\\sqrt{4}+2)} = \\frac{1}{8 \\cdot 4} = \\boxed{\\dfrac{1}{32}} \\end{align*}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 13",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil setiap limit berikut.<br> (a) $\\displaystyle\\lim_{x\\to 2} \\frac{2-\\sqrt{x+2}}{3-\\sqrt{3x+3}}$ &emsp; (b) $\\displaystyle\\lim_{x\\to 3} \\frac{\\sqrt{x}-\\sqrt{3}}{\\sqrt{x+1}-2}$</p>",
+          "p": "<br><strong>(a)</strong> Kalikan dengan sekawan masing-masing: $$\\begin{align*} \\lim_{x\\to 2}\\frac{2-\\sqrt{x+2}}{3-\\sqrt{3x+3}} &= \\lim_{x\\to 2}\\frac{(4-(x+2))(3+\\sqrt{3x+3})}{(9-(3x+3))(2+\\sqrt{x+2})} = \\lim_{x\\to 2}\\frac{(2-x)(3+\\sqrt{3x+3})}{3(2-x)(2+\\sqrt{x+2})} \\\\ &= \\lim_{x\\to 2}\\frac{3+\\sqrt{3x+3}}{3(2+\\sqrt{x+2})} = \\frac{3+\\sqrt{9}}{3(2+\\sqrt{4})} = \\frac{6}{3 \\cdot 4} = \\boxed{\\dfrac{1}{2}} \\end{align*}$$ <strong>(b)</strong> Kalikan dengan dua sekawan: $$\\begin{align*} \\lim_{x\\to 3}\\frac{\\sqrt{x}-\\sqrt{3}}{\\sqrt{x+1}-2} &= \\lim_{x\\to 3}\\frac{(x-3)(\\sqrt{x+1}+2)}{(x-3)(\\sqrt{x}+\\sqrt{3})} = \\lim_{x\\to 3}\\frac{\\sqrt{x+1}+2}{\\sqrt{x}+\\sqrt{3}} = \\frac{\\sqrt{4}+2}{\\sqrt{3}+\\sqrt{3}} = \\frac{4}{2\\sqrt{3}} = \\boxed{\\dfrac{2\\sqrt{3}}{3}} \\end{align*}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 14",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil setiap limit berikut.<br> (a) $\\displaystyle\\lim_{x\\to 4} \\frac{(x-4)^2}{\\left(\\sqrt{x}-2\\right)\\bigl[(x-4)^2 + 2(x-4)\\bigr]}$ &emsp; (b) $\\displaystyle\\lim_{x\\to 9} \\frac{(x-9)^2 + 4(x-9)}{\\sqrt{x} - 3}$</p>",
+          "p": "<br><strong>(a)</strong> Misalkan $h = x - 4$. Kalikan dengan sekawan $\\dfrac{\\sqrt{h+4}+2}{\\sqrt{h+4}+2}$: $$\\begin{align*} &= \\lim_{h\\to 0}\\frac{h^2}{(\\sqrt{h+4}-2)(h^2+2h)} \\cdot \\frac{\\sqrt{h+4}+2}{\\sqrt{h+4}+2} = \\lim_{h\\to 0}\\frac{h^2(\\sqrt{h+4}+2)}{h \\cdot h(h+2)} = \\lim_{h\\to 0}\\frac{\\sqrt{h+4}+2}{h+2} = \\frac{\\sqrt{4}+2}{0+2} = \\frac{4}{2} = \\boxed{2} \\end{align*}$$ <strong>(b)</strong> Misalkan $h = x - 9$. Kalikan dengan sekawan $\\dfrac{\\sqrt{h+9}+3}{\\sqrt{h+9}+3}$: $$\\begin{align*} \\lim_{h\\to 0}\\frac{h^2 + 4h}{\\sqrt{h+9}-3} &= \\lim_{h\\to 0}\\frac{h(h+4)(\\sqrt{h+9}+3)}{h} = \\lim_{h\\to 0}(h+4)(\\sqrt{h+9}+3) = 4(\\sqrt{9}+3) = 4 \\cdot 6 = \\boxed{24} \\end{align*}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 15",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil dari $\\displaystyle\\lim_{x\\to 0} \\frac{\\sqrt{1+\\sqrt{1+x}}-\\sqrt{2}}{x}$.</p>",
+          "p": "<br> Rasionalisasi lapisan luar terlebih dahulu dengan sekawan $\\sqrt{1+\\sqrt{1+x}}+\\sqrt{2}$: $$\\begin{align*} \\lim_{x\\to 0}\\frac{\\sqrt{1+\\sqrt{1+x}}-\\sqrt{2}}{x} &= \\lim_{x\\to 0}\\frac{\\bigl(1+\\sqrt{1+x}\\bigr)-2}{x\\bigl(\\sqrt{1+\\sqrt{1+x}}+\\sqrt{2}\\bigr)} = \\lim_{x\\to 0}\\frac{\\sqrt{1+x}-1}{x\\bigl(\\sqrt{1+\\sqrt{1+x}}+\\sqrt{2}\\bigr)} \\end{align*}$$ Kemudian rasionalisasi lapisan dalam dengan sekawan $\\sqrt{1+x}+1$: $$\\begin{align*} &= \\lim_{x\\to 0}\\frac{(1+x)-1}{x\\bigl(\\sqrt{1+\\sqrt{1+x}}+\\sqrt{2}\\bigr)\\bigl(\\sqrt{1+x}+1\\bigr)} = \\lim_{x\\to 0}\\frac{1}{\\bigl(\\sqrt{1+\\sqrt{1+x}}+\\sqrt{2}\\bigr)\\bigl(\\sqrt{1+x}+1\\bigr)} \\\\ &= \\frac{1}{(\\sqrt{2}+\\sqrt{2})(1+1)} = \\frac{1}{2\\sqrt{2}\\cdot 2} = \\boxed{\\dfrac{1}{4\\sqrt{2}} = \\dfrac{\\sqrt{2}}{8}} \\end{align*}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 16",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah nilai dari $\\displaystyle\\lim_{x\\to 2} \\frac{\\sqrt{x^2+5}-3}{x^2-2x}$.</p>",
+          "p": "<br> Cek substitusi: $x=2$ menghasilkan $\\tfrac{\\sqrt{9}-3}{0} = \\tfrac{0}{0}$. Kalikan dengan sekawan $\\sqrt{x^2+5}+3$, lalu faktorkan: $$\\begin{align*} \\lim_{x\\to 2}\\frac{\\sqrt{x^2+5}-3}{x^2-2x} &= \\lim_{x\\to 2}\\frac{(x^2+5)-9}{x(x-2)\\bigl(\\sqrt{x^2+5}+3\\bigr)} = \\lim_{x\\to 2}\\frac{x^2-4}{x(x-2)\\bigl(\\sqrt{x^2+5}+3\\bigr)} \\\\ &= \\lim_{x\\to 2}\\frac{(x-2)(x+2)}{x(x-2)\\bigl(\\sqrt{x^2+5}+3\\bigr)} = \\lim_{x\\to 2}\\frac{x+2}{x\\bigl(\\sqrt{x^2+5}+3\\bigr)} = \\frac{4}{2(\\sqrt{9}+3)} = \\frac{4}{12} = \\boxed{\\dfrac{1}{3}} \\end{align*}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 17",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah nilai $a$ dan $b$ yang memenuhi $\\displaystyle\\lim_{x\\to 3}\\frac{\\sqrt{x+a}-\\sqrt{b-x}}{x-3} = \\dfrac{1}{2}$.</p>",
+          "p": "<br> Agar kedua akar terdefinisi dan limit berhingga, <strong>keduanya</strong> harus nol di $x=3$: $$\\sqrt{3+a} - \\sqrt{b-3} = 0 \\implies 3 + a = b - 3 \\implies b = a + 6 \\quad \\cdots (1)$$ Tulis pembilang sebagai selisih dua akar lalu kalikan dengan sekawan $\\sqrt{x+a}+\\sqrt{b-x}$: $$\\begin{align*} \\lim_{x\\to 3}\\frac{\\sqrt{x+a}-\\sqrt{b-x}}{x-3} &= \\lim_{x\\to 3}\\frac{(x+a)-(b-x)}{(x-3)\\bigl(\\sqrt{x+a}+\\sqrt{b-x}\\bigr)} = \\lim_{x\\to 3}\\frac{2x+a-b}{(x-3)\\bigl(\\sqrt{x+a}+\\sqrt{b-x}\\bigr)} \\end{align*}$$ Substitusi $b = a+6$: $2x + a - b = 2(x-3)$. Maka: $$\\lim_{x\\to 3}\\frac{2(x-3)}{(x-3)\\bigl(\\sqrt{x+a}+\\sqrt{b-x}\\bigr)} = \\frac{2}{2\\sqrt{3+a}} = \\frac{1}{\\sqrt{3+a}} = \\frac{1}{2}$$ $$\\sqrt{3+a} = 2 \\implies a = 1, \\quad b = 7$$ Verifikasi: $\\displaystyle\\lim_{x\\to 3}\\frac{\\sqrt{x+1}-\\sqrt{7-x}}{x-3} = \\lim_{x\\to 3}\\frac{2(x-3)}{(x-3)\\cdot 2\\sqrt{x+1}} = \\frac{1}{\\sqrt{4}} = \\frac{1}{2}$ ✓ $$\\boxed{a = 1,\\quad b = 7}$$"
+        },
+        {
+          "section": "B",
+          "label": "📘 Contoh 18",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Hitunglah $\\displaystyle\\lim_{x\\to 1} \\dfrac{\\sqrt[3]{x^2} - 2\\sqrt[3]{x} + 1}{(x-1)^2}$.</p>",
+          "p": "<br> Misalkan $\\sqrt[3]{x} = p$, maka $x = p^3$ dan $x \\to 1 \\Rightarrow p \\to 1$: $$\\begin{align*} \\lim_{x\\to 1} \\frac{\\sqrt[3]{x^2} - 2\\sqrt[3]{x} + 1}{(x-1)^2} &= \\lim_{p \\to 1} \\frac{p^2 - 2p + 1}{(p^3-1)^2} = \\lim_{p \\to 1} \\frac{(p-1)^2}{\\left[(p-1)(p^2+p+1)\\right]^2} \\\\ &= \\lim_{p \\to 1} \\frac{1}{(p^2+p+1)^2} = \\frac{1}{(1+1+1)^2} = \\boxed{\\dfrac{1}{9}} \\end{align*}$$"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "title": "Limit Fungsi Aljabar di Tak Hingga",
+      "contoh": [
+        {
+          "section": "C",
+          "label": "📘 Contoh 19",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil dari setiap limit berikut.<br> (a) $\\displaystyle\\lim_{x\\to\\infty}\\frac{6x^3 + 4x + 6}{4x^2 + 2x^3 - 3x}$ &emsp; (b) $\\displaystyle\\lim_{x\\to\\infty}\\frac{2x^3-4x^2+3x^5}{x^3-2x^2-4}$ &emsp; (c) $\\displaystyle\\lim_{x\\to\\infty}\\frac{5x^2 - 3}{2x^4 + x - 1}$</p>",
+          "p": "<br><strong>(a)</strong> Pangkat tertinggi $x^3$ ($p = q = 3$), bagi dengan $x^3$: $$\\lim_{x\\to\\infty}\\frac{6x^3+4x+6}{4x^2+2x^3-3x} = \\lim_{x\\to\\infty}\\frac{6+\\frac{4}{x^2}+\\frac{6}{x^3}}{\\frac{4}{x}+2-\\frac{3}{x^2}} = \\frac{6+0+0}{0+2-0} = \\boxed{3}$$ <strong>(b)</strong> Pangkat tertinggi $x^5$ di pembilang, sedangkan penyebut hanya $x^3$ ($p > q$): $$\\lim_{x\\to\\infty}\\frac{2x^3-4x^2+3x^5}{x^3-2x^2-4} = \\lim_{x\\to\\infty}\\frac{\\frac{2}{x^2}-\\frac{4}{x^3}+3}{1-\\frac{2}{x}-\\frac{4}{x^3}} \\to \\boxed{\\infty}$$ <strong>(c)</strong> Derajat pembilang $p = 2$ lebih kecil dari penyebut $q = 4$: $$\\lim_{x\\to\\infty}\\frac{5x^2-3}{2x^4+x-1} = \\boxed{0}$$"
+        },
+        {
+          "section": "C",
+          "label": "📘 Contoh 20",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukan nilai dari $\\displaystyle\\lim_{x\\to\\infty}\\frac{(2x^2-3)(2x^3-x)}{x^4+6x^5-3x^2+4}$.</p>",
+          "p": "<br> Uraikan pembilang: $(2x^2-3)(2x^3-x) = 4x^5-8x^3+3x$. Pangkat tertinggi $x^5$ ($p = q = 5$): $$\\lim_{x\\to\\infty}\\frac{4x^5-8x^3+3x}{x^4+6x^5-3x^2+4} = \\frac{4}{6} = \\boxed{\\dfrac{2}{3}}$$"
+        },
+        {
+          "section": "C",
+          "label": "📘 Contoh 21",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah nilai dari $\\displaystyle\\lim_{x\\to\\infty}\\frac{(3x^2-2x+1)(x^3+4x-5)}{(2x^4-x^2+3)(x+2)-6x^5+10}$.</p>",
+          "p": "<br><strong>Pembilang:</strong> $$\\begin{align*} (3x^2-2x+1)(x^3+4x-5) &= 3x^5 - 2x^4 + 13x^3 - 23x^2 + 14x - 5 \\end{align*}$$ <strong>Penyebut:</strong> $$\\begin{align*} (2x^4-x^2+3)(x+2) - 6x^5 + 10 &= -4x^5 + 4x^4 - x^3 - 2x^2 + 3x + 16 \\end{align*}$$ Pangkat tertinggi di pembilang maupun penyebut adalah $x^5$ ($p = q = 5$). Terapkan kaidah cepat: $$\\lim_{x\\to\\infty}\\frac{3x^5 - 2x^4 + \\cdots}{-4x^5 + 4x^4 + \\cdots} = \\frac{3}{-4} = \\boxed{-\\dfrac{3}{4}}$$"
+        },
+        {
+          "section": "C",
+          "label": "📘 Contoh 22",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil dari setiap limit berikut.<br> (a) $\\displaystyle\\lim_{x\\to\\infty}\\frac{\\sqrt{4x^2 + 3x - 1}}{2x - 5}$ &emsp; (b) $\\displaystyle\\lim_{x\\to\\infty}\\frac{3x + 1}{\\sqrt{9x^2 - x + 4}}$ &emsp; (c) $\\displaystyle\\lim_{x\\to\\infty}\\left(\\sqrt{x^2 + 5x} - x\\right)$ &emsp; (d) $\\displaystyle\\lim_{x\\to\\infty}\\frac{\\sqrt{4x^2+x}-3x}{\\sqrt{x^2+2}+x}$</p>",
+          "p": "<br><strong>(a)</strong> Untuk $x>0$: $\\sqrt{4x^2+3x-1} = x\\sqrt{4+\\frac{3}{x}-\\frac{1}{x^2}}$: $$\\lim_{x\\to\\infty}\\frac{x\\sqrt{4+\\frac{3}{x}-\\frac{1}{x^2}}}{x\\left(2-\\frac{5}{x}\\right)} = \\frac{\\sqrt{4+0-0}}{2-0} = \\frac{2}{2} = \\boxed{1}$$ <strong>(b)</strong> Untuk $x>0$: $\\sqrt{9x^2-x+4} = x\\sqrt{9-\\frac{1}{x}+\\frac{4}{x^2}}$: $$\\lim_{x\\to\\infty}\\frac{x\\left(3+\\frac{1}{x}\\right)}{x\\sqrt{9-\\frac{1}{x}+\\frac{4}{x^2}}} = \\frac{3+0}{\\sqrt{9-0+0}} = \\frac{3}{3} = \\boxed{1}$$ <strong>(c)</strong> Kalikan dengan sekawan $\\dfrac{\\sqrt{x^2+5x}+x}{\\sqrt{x^2+5x}+x}$: $$\\begin{align*} \\lim_{x\\to\\infty}\\left(\\sqrt{x^2+5x}-x\\right) &= \\lim_{x\\to\\infty}\\frac{5x}{\\sqrt{x^2+5x}+x} = \\lim_{x\\to\\infty}\\frac{5x}{x\\left(\\sqrt{1+\\frac{5}{x}}+1\\right)} = \\frac{5}{\\sqrt{1}+1} = \\boxed{\\dfrac{5}{2}} \\end{align*}$$ <strong>(d)</strong> Bagi pembilang dan penyebut dengan $x$: $$\\lim_{x\\to\\infty}\\frac{x\\left(\\sqrt{4+\\frac{1}{x}}-3\\right)}{x\\left(\\sqrt{1+\\frac{2}{x^2}}+1\\right)} = \\frac{\\sqrt{4}-3}{\\sqrt{1}+1} = \\frac{2-3}{1+1} = \\boxed{-\\dfrac{1}{2}}$$"
+        },
+        {
+          "section": "C",
+          "label": "📘 Contoh 23",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah $\\displaystyle\\lim_{x\\to\\infty}(\\sqrt{3x+2}-\\sqrt{3x-4})$.</p>",
+          "p": "<br> Kedua akar linear ($a = c = 3$). Kalikan dengan sekawan: $$\\begin{align*} \\lim_{x\\to\\infty}(\\sqrt{3x+2}-\\sqrt{3x-4}) &= \\lim_{x\\to\\infty}\\frac{(3x+2)-(3x-4)}{\\sqrt{3x+2}+\\sqrt{3x-4}} = \\lim_{x\\to\\infty}\\frac{6}{\\sqrt{3x+2}+\\sqrt{3x-4}} = \\frac{6}{2\\sqrt{3}} = \\frac{6\\sqrt{3}}{6} = \\boxed{\\sqrt{3}} \\end{align*}$$"
+        },
+        {
+          "section": "C",
+          "label": "📘 Contoh 24",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil dari setiap limit berikut.<br> (a) $\\displaystyle\\lim_{x\\to\\infty}\\left(\\sqrt{4x^2+3x-5}-\\sqrt{4x^2-7x+2}\\right)$ &emsp; (b) $\\displaystyle\\lim_{x\\to\\infty}\\left(\\sqrt{3x^2+8x-2}-\\sqrt{3x^2+2x+5}\\right)$</p>",
+          "p": "<br><strong>(a)</strong> Koefisien $x^2$ sama ($a = d = 4$), gunakan kaidah cepat dengan $b = 3$, $e = -7$: $$= \\lim_{x\\to\\infty}\\frac{(4x^2+3x-5)-(4x^2-7x+2)}{\\sqrt{4x^2+3x-5}+\\sqrt{4x^2-7x+2}} = \\lim_{x\\to\\infty}\\frac{10x-7}{\\sqrt{4x^2+3x-5}+\\sqrt{4x^2-7x+2}} = \\frac{10}{\\sqrt{4}+\\sqrt{4}} = \\frac{10}{4} = \\boxed{\\dfrac{5}{2}}$$ <strong>(b)</strong> Koefisien $x^2$ sama ($a = d = 3$), $b = 8$, $e = 2$: $$= \\frac{b-e}{2\\sqrt{a}} = \\frac{8-2}{2\\sqrt{3}} = \\frac{6}{2\\sqrt{3}} = \\boxed{\\sqrt{3}}$$"
+        },
+        {
+          "section": "C",
+          "label": "📘 Contoh 25",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah nilai dari $\\displaystyle\\lim_{x\\to\\infty}\\left(\\sqrt{4x^2-5x+3}-(2x-1)\\right)$.</p>",
+          "p": "<br> Ubah ekspresi linear menjadi bentuk akar: $(2x-1) = \\sqrt{(2x-1)^2} = \\sqrt{4x^2-4x+1}$, sehingga: $$\\lim_{x\\to\\infty}\\left(\\sqrt{4x^2-5x+3}-\\sqrt{4x^2-4x+1}\\right) = \\frac{(-5)-(-4)}{2\\sqrt{4}} = \\frac{-1}{4} = \\boxed{-\\dfrac{1}{4}}$$"
+        },
+        {
+          "section": "C",
+          "label": "📘 Contoh 26",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah nilai dari $\\displaystyle\\lim_{x\\to-\\infty}\\frac{\\sqrt{4x^2+3x}}{2x+1}$.</p>",
+          "p": "<br> Untuk $x \\to -\\infty$, berlaku $x &lt; 0$ sehingga $\\sqrt{x^2} = |x| = -x$. Faktorkan $x^2$ dari dalam akar, lalu keluarkan $|x| = -x$: $$\\begin{align*} \\lim_{x\\to-\\infty}\\frac{\\sqrt{4x^2+3x}}{2x+1} &= \\lim_{x\\to-\\infty}\\frac{\\sqrt{x^2\\!\\left(4+\\frac{3}{x}\\right)}}{x\\!\\left(2+\\frac{1}{x}\\right)} = \\lim_{x\\to-\\infty}\\frac{|x|\\sqrt{4+\\frac{3}{x}}}{x\\!\\left(2+\\frac{1}{x}\\right)} \\\\ &= \\lim_{x\\to-\\infty}\\frac{-x\\sqrt{4+\\frac{3}{x}}}{x\\!\\left(2+\\frac{1}{x}\\right)} = \\frac{-\\sqrt{4+0}}{2+0} = \\boxed{-1} \\end{align*}$$"
+        },
+        {
+          "section": "C",
+          "label": "📘 Contoh 27",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Jika $\\displaystyle\\lim_{x\\to\\infty}\\left(\\sqrt{x^2+ax+4} - bx\\right) = 5$, tentukan nilai $a$ dan $b$.</p>",
+          "p": "<br> Agar limit tidak menuju $\\pm\\infty$, koefisien $x^2$ di bawah akar harus sama dengan $b^2$, yaitu $b^2 = 1$, sehingga $b = 1$ (diambil positif).<br><br> Dengan $b = 1$, kalikan dengan sekawan $\\dfrac{\\sqrt{x^2+ax+4}+x}{\\sqrt{x^2+ax+4}+x}$: $$\\begin{align*} \\lim_{x\\to\\infty}\\left(\\sqrt{x^2+ax+4}-x\\right) &= \\lim_{x\\to\\infty}\\frac{ax+4}{\\sqrt{x^2+ax+4}+x} = \\lim_{x\\to\\infty}\\frac{x\\!\\left(a+\\frac{4}{x}\\right)}{x\\!\\left(\\sqrt{1+\\frac{a}{x}+\\frac{4}{x^2}}+1\\right)} = \\frac{a}{2} \\end{align*}$$ Samakan dengan nilai limit yang diberikan: $\\dfrac{a}{2} = 5 \\implies a = 10$. $$\\boxed{a = 10,\\quad b = 1}$$ Verifikasi: $\\displaystyle\\lim_{x\\to\\infty}\\left(\\sqrt{x^2+10x+4}-x\\right) = \\dfrac{10}{2} = 5$ ✓"
+        },
+        {
+          "section": "C",
+          "label": "📘 Contoh 28",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah nilai dari $\\displaystyle\\lim_{x\\to\\infty} x\\!\\left(\\sqrt{x^2+6x}-x\\right)$.</p>",
+          "p": "<br> Rasionalisasi bagian dalam kurung terlebih dahulu: $$\\begin{align*} \\lim_{x\\to\\infty} x\\!\\left(\\sqrt{x^2+6x}-x\\right) &= \\lim_{x\\to\\infty} x \\cdot \\frac{(x^2+6x)-x^2}{\\sqrt{x^2+6x}+x} = \\lim_{x\\to\\infty} \\frac{6x^2}{\\sqrt{x^2+6x}+x} \\\\ &= \\lim_{x\\to\\infty} \\frac{6x^2}{x\\!\\left(\\sqrt{1+\\frac{6}{x}}+1\\right)} = \\lim_{x\\to\\infty} \\frac{6x}{\\sqrt{1+\\frac{6}{x}}+1} \\to \\boxed{+\\infty} \\end{align*}$$"
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "title": "Limit Fungsi Trigonometri",
+      "contoh": [
+        {
+          "section": "D",
+          "label": "📘 Contoh 29",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Hitunglah $\\displaystyle\\lim_{x\\to 0}\\frac{\\sin 3x}{5x}$.</p>",
+          "p": "<br> Gunakan rumus pengembangan (1) dengan $a = 3$ dan $b = 5$: $$\\lim_{x\\to 0}\\frac{\\sin 3x}{5x} = \\frac{3}{5} = \\boxed{\\dfrac{3}{5}}$$"
+        },
+        {
+          "section": "D",
+          "label": "📘 Contoh 30",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br> (a) $\\displaystyle\\lim_{x\\to 0}\\left[\\frac{\\sin 4x}{3x} - \\frac{\\tan 2x}{\\sin 6x} + \\frac{8x}{\\tan 2x}\\right]$<br> (b) $\\displaystyle\\lim_{x\\to 0}\\frac{\\sin^2 6x}{3x \\cdot \\tan 4x}$<br> (c) $\\displaystyle\\lim_{x\\to 0}\\frac{2\\tan^2 3x \\cdot \\sin 2x}{4x^2 \\cdot \\sin 6x}$<br> (d) $\\displaystyle\\lim_{x\\to 0}\\frac{6\\sin^3 2x}{\\sin 4x \\cdot \\sin 3x}$</p>",
+          "p": "<br><strong>(a)</strong> Terapkan rumus langsung pada setiap suku: $$\\frac{4}{3} - \\frac{2}{6} + \\frac{8}{2} = \\frac{4}{3} - \\frac{1}{3} + 4 = 1 + 4 = \\boxed{5}$$ <strong>(b)</strong> Urai menjadi dua rasio: $$\\lim_{x\\to 0}\\frac{\\sin 6x}{3x}\\cdot\\frac{\\sin 6x}{\\tan 4x} = \\left(\\frac{6}{3}\\right)\\left(\\frac{6}{4}\\right) = 2 \\cdot \\frac{3}{2} = \\boxed{3}$$ <strong>(c)</strong> Susun ulang faktor-faktornya: $$\\lim_{x\\to 0}2\\cdot\\frac{\\tan 3x}{4x}\\cdot\\frac{\\tan 3x}{x}\\cdot\\frac{\\sin 2x}{\\sin 6x} = 2\\cdot\\frac{3}{4}\\cdot\\frac{3}{1}\\cdot\\frac{2}{6} = 2\\cdot\\frac{3}{4}\\cdot3\\cdot\\frac{1}{3} = \\boxed{\\dfrac{3}{2}}$$ <strong>(d)</strong> Perhatikan $\\sin 2x \\to 0$ saat $x \\to 0$, sehingga perkalian dengan konstanta tetap menghasilkan 0: $$\\lim_{x\\to 0}6\\cdot\\frac{\\sin 2x}{\\sin 4x}\\cdot\\frac{\\sin 2x}{\\sin 3x}\\cdot\\sin 2x = 6\\cdot\\frac{2}{4}\\cdot\\frac{2}{3}\\cdot 0 = \\boxed{0}$$"
+        },
+        {
+          "section": "D",
+          "label": "📘 Contoh 31",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br> (a) $\\displaystyle\\lim_{x\\to 0}\\left[\\frac{\\sin 2x + 4x}{\\sin 3x + \\tan x}\\right]$ &emsp; (b) $\\displaystyle\\lim_{x\\to 0}\\left[\\frac{6x^2 + \\sin^2 3x}{\\tan^2 2x - x^2}\\right]$</p>",
+          "p": "<br><strong>(a)</strong> Bagi pembilang dan penyebut dengan $x$: $$\\lim_{x\\to 0}\\frac{\\frac{\\sin 2x}{x}+4}{\\frac{\\sin 3x}{x}+\\frac{\\tan x}{x}} = \\frac{2+4}{3+1} = \\frac{6}{4} = \\boxed{\\dfrac{3}{2}}$$ <strong>(b)</strong> Bagi pembilang dan penyebut dengan $x^2$: $$\\lim_{x\\to 0}\\frac{6+\\left(\\frac{\\sin 3x}{x}\\right)^2}{\\left(\\frac{\\tan 2x}{x}\\right)^2-1} = \\frac{6+9}{4-1} = \\frac{15}{3} = \\boxed{5}$$"
+        },
+        {
+          "section": "D",
+          "label": "📘 Contoh 32",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Hitunglah $\\displaystyle\\lim_{x\\to 3}\\frac{5\\sin(x-3)}{2(x-3)}$.</p>",
+          "p": "<br> Misalkan $p = x - 3$, maka $p \\to 0$: $$\\lim_{x\\to 3}\\frac{5\\sin(x-3)}{2(x-3)} = \\lim_{p\\to 0}\\frac{5\\sin p}{2p} = \\frac{5}{2} = \\boxed{\\dfrac{5}{2}}$$"
+        },
+        {
+          "section": "D",
+          "label": "📘 Contoh 33",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br> (a) $\\displaystyle\\lim_{x\\to 2}\\frac{3\\sin(x-2)}{4x-8}$ &emsp; (b) $\\displaystyle\\lim_{x\\to 3}\\frac{6\\tan^2(2x-6)}{(3x-9)^2}$ &emsp; (c) $\\displaystyle\\lim_{x\\to 1}\\frac{\\tan(2x^2-6x+4)}{3x^2-9x+6}$</p>",
+          "p": "<br><strong>(a)</strong> Faktorkan penyebut: $4x - 8 = 4(x-2)$, lalu terapkan rumus: $$\\lim_{x\\to 2}\\frac{3\\sin(x-2)}{4(x-2)} = 3\\cdot\\frac{1}{4} = \\boxed{\\dfrac{3}{4}}$$ <strong>(b)</strong> Faktorkan: $6x - 6 = 6(x-3)$ dan $3x-9 = 3(x-3)$: $$\\lim_{x\\to 3}6\\left(\\frac{\\tan 2(x-3)}{3(x-3)}\\right)^2 = 6\\left(\\frac{2}{3}\\right)^2 = 6\\cdot\\frac{4}{9} = \\boxed{\\dfrac{8}{3}}$$ <strong>(c)</strong> Faktorkan: $2x^2-6x+4 = 2(x-1)(x-2)$ dan $3x^2-9x+6 = 3(x-1)(x-2)$, sehingga faktor $(x-2)$ dapat dicoret: $$\\lim_{x\\to 1}\\frac{\\tan 2(x-1)(x-2)}{3(x-1)(x-2)} = \\lim_{x\\to 1}\\frac{\\tan 2(x-1)}{3(x-1)} = \\frac{2}{3} = \\boxed{\\dfrac{2}{3}}$$"
+        },
+        {
+          "section": "D",
+          "label": "📘 Contoh 34",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Hitunglah $\\displaystyle\\lim_{x\\to 0}\\frac{1 - \\cos 4x}{x^2}$.</p>",
+          "p": "<br> Gunakan identitas $1 - \\cos 4x = 2\\sin^2 2x$: $$\\lim_{x\\to 0}\\frac{1-\\cos 4x}{x^2} = \\lim_{x\\to 0}\\frac{2\\sin^2 2x}{x^2} = 2\\left(\\frac{\\sin 2x}{x}\\right)^2 \\to 2\\cdot 2^2 = \\boxed{8}$$"
+        },
+        {
+          "section": "D",
+          "label": "📘 Contoh 35",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br> (a) $\\displaystyle\\lim_{x\\to 0}\\frac{1-\\cos 6x}{\\cos 8x - 1}$ &emsp; (b) $\\displaystyle\\lim_{x\\to 0}\\frac{3\\cos 4x - 3}{2\\sin^2 3x}$ &emsp; (c) $\\displaystyle\\lim_{x\\to 0}\\frac{4 - 4\\cos 2x}{1 - \\cos^2 3x}$<br> (d) $\\displaystyle\\lim_{x\\to 0}\\frac{2 - 2\\cos^2 6x}{3\\cos^2 2x - 3}$ &emsp; (e) $\\displaystyle\\lim_{x\\to 0}\\frac{\\cos 5x - \\cos 3x}{1 - \\cos 8x}$ &emsp; (f) $\\displaystyle\\lim_{x\\to 0}\\frac{3\\cos 6x - 3\\cos 2x}{1 - \\cos^2 2x}$</p>",
+          "p": "<br><strong>(a)</strong> Gunakan $1-\\cos 2\\theta = 2\\sin^2\\theta$: $$\\lim_{x\\to 0}\\frac{1-\\cos 6x}{\\cos 8x-1} = \\lim_{x\\to 0}\\frac{2\\sin^2 3x}{-2\\sin^2 4x} = -\\lim_{x\\to 0}\\left(\\frac{\\sin 3x}{\\sin 4x}\\right)^2 = -\\left(\\frac{3}{4}\\right)^2 = \\boxed{-\\dfrac{9}{16}}$$ <strong>(b)</strong> Gunakan $\\cos 4x - 1 = -2\\sin^2 2x$: $$\\lim_{x\\to 0}\\frac{3\\cos 4x-3}{2\\sin^2 3x} = \\lim_{x\\to 0}\\frac{-3\\cdot 2\\sin^2 2x}{2\\sin^2 3x} = -3\\left(\\frac{2}{3}\\right)^2 = -3\\cdot\\frac{4}{9} = \\boxed{-\\dfrac{4}{3}}$$ <strong>(c)</strong> Gunakan $1-\\cos 2x = 2\\sin^2 x$ dan $1-\\cos^2 3x = \\sin^2 3x$: $$\\lim_{x\\to 0}\\frac{4(1-\\cos 2x)}{1-\\cos^2 3x} = \\lim_{x\\to 0}\\frac{4\\cdot 2\\sin^2 x}{\\sin^2 3x} = 8\\left(\\frac{1}{3}\\right)^2 = \\frac{8}{9} = \\boxed{\\dfrac{8}{9}}$$ <strong>(d)</strong> Gunakan $2-2\\cos^2\\theta = 2\\sin^2\\theta$ dan $\\cos^2 2x - 1 = -\\sin^2 2x$: $$\\lim_{x\\to 0}\\frac{2\\sin^2 6x}{-3\\sin^2 2x} = -\\frac{2}{3}\\left(\\frac{6}{2}\\right)^2 = -\\frac{2}{3}\\cdot 9 = \\boxed{-6}$$ <strong>(e)</strong> Gunakan $\\cos A - \\cos B = -2\\sin\\dfrac{A+B}{2}\\sin\\dfrac{A-B}{2}$ dan $1-\\cos 8x = 2\\sin^2 4x$: $$\\lim_{x\\to 0}\\frac{\\cos 5x-\\cos 3x}{1-\\cos 8x} = \\lim_{x\\to 0}\\frac{-2\\sin 4x\\sin x}{2\\sin^2 4x} = \\lim_{x\\to 0}\\frac{-\\sin x}{\\sin 4x} = -\\frac{1}{4} = \\boxed{-\\dfrac{1}{4}}$$ <strong>(f)</strong> Gunakan $\\cos 6x - \\cos 2x = -2\\sin 4x\\sin 2x$ dan $1-\\cos^2 2x = \\sin^2 2x$: $$\\lim_{x\\to 0}\\frac{3(\\cos 6x-\\cos 2x)}{\\sin^2 2x} = \\lim_{x\\to 0}\\frac{-6\\sin 4x\\sin 2x}{\\sin^2 2x} = \\lim_{x\\to 0}\\frac{-6\\sin 4x}{\\sin 2x} = -6\\cdot\\frac{4}{2} = \\boxed{-12}$$"
+        },
+        {
+          "section": "D",
+          "label": "📘 Contoh 36",
+          "q": "<p style=\"margin:0;font-size:.9rem;\">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br> (a) $\\displaystyle\\lim_{x\\to\\frac{\\pi}{2}}\\frac{3\\sin 4x}{\\cos x}$ &emsp; (b) $\\displaystyle\\lim_{x\\to\\frac{\\pi}{4}}\\frac{\\sin 6x + \\sin 2x}{\\cos 5x + \\cos x}$ &emsp; (c) $\\displaystyle\\lim_{x\\to\\frac{\\pi}{2}}\\frac{1-\\sin x}{\\cos^2 x}$</p>",
+          "p": "<br><strong>(a)</strong> Gunakan $\\sin 4x = 2\\sin 2x\\cos 2x = 4\\sin x\\cos x\\cos 2x$ agar faktor $\\cos x$ bisa dicoret: $$\\begin{align*} \\lim_{x\\to\\frac{\\pi}{2}}\\frac{3\\sin 4x}{\\cos x} &= \\lim_{x\\to\\frac{\\pi}{2}}\\frac{3\\cdot 4\\sin x\\cos x\\cos 2x}{\\cos x} = \\lim_{x\\to\\frac{\\pi}{2}}12\\sin x\\cos 2x = 12\\sin\\frac{\\pi}{2}\\cos\\pi = 12\\cdot 1\\cdot(-1) = \\boxed{-12} \\end{align*}$$ <strong>(b)</strong> Gunakan rumus jumlah sinus dan cosinus untuk menyederhanakan: $$\\begin{align*} \\lim_{x\\to\\frac{\\pi}{4}}\\frac{\\sin 6x+\\sin 2x}{\\cos 5x+\\cos x} &= \\lim_{x\\to\\frac{\\pi}{4}}\\frac{2\\sin 4x\\cos 2x}{2\\cos 3x\\cos 2x} = \\lim_{x\\to\\frac{\\pi}{4}}\\frac{\\sin 4x}{\\cos 3x} = \\frac{\\sin\\pi}{\\cos\\frac{3\\pi}{4}} = \\frac{0}{-\\frac{\\sqrt{2}}{2}} = \\boxed{0} \\end{align*}$$ <strong>(c)</strong> Cek: substitusi $x = \\tfrac{\\pi}{2}$ memberikan $\\tfrac{0}{0}$. Gunakan $\\cos^2 x = (1-\\sin x)(1+\\sin x)$: $$\\lim_{x\\to\\frac{\\pi}{2}}\\frac{1-\\sin x}{\\cos^2 x} = \\lim_{x\\to\\frac{\\pi}{2}}\\frac{1-\\sin x}{(1-\\sin x)(1+\\sin x)} = \\lim_{x\\to\\frac{\\pi}{2}}\\frac{1}{1+\\sin x} = \\frac{1}{1+1} = \\boxed{\\dfrac{1}{2}}$$"
+        }
+      ]
+    }
+  ],
+  "totalContoh": 36,
+  "title": "Limit Fungsi",
+  "prefix": "LIM"
+}
