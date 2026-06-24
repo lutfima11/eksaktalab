@@ -101,6 +101,217 @@ window.MathJax = {
     </div>
   </div>
 
+  <!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Seni Menjinakkan Bilangan yang Sangat Besar</h2>
+
+    <p>Bayangkan kamu harus mengalikan dua bilangan besar: $2^{40}$ dan $2^{37}$. Tanpa alat bantu, perkalian ini terasa mustahil. Namun dengan satu trik sederhana — menjumlahkan eksponen — hasilnya adalah $2^{77}$, diperoleh dalam hitungan detik. Logaritma lahir dari trik inilah: ia mengubah <em>perkalian</em> menjadi <em>penjumlahan</em>, dan <em>perpangkatan</em> menjadi <em>perkalian</em>.</p>
+
+    <p>Tapi logaritma lebih dari sekadar alat hitung. Ia adalah <strong>bahasa skala</strong>. Ketika rentang nilai yang ingin kita ukur terlalu lebar — dari intensitas suara yang hampir tak terdengar hingga ledakan jet, dari keasaman air murni hingga asam pekat, dari gempa kecil hingga gempa dahsyat — skala biasa tidak cukup. Logaritma memampatkan rentang yang tak terhingga itu menjadi skala yang bisa dipahami manusia: desibel, pH, skala Richter. Semua itu adalah logaritma yang bekerja di balik layar.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Logaritma sebagai Pembalik Eksponen</h3>
+    <p>Hubungan antara eksponen dan logaritma ibarat dua sisi koin yang sama. Pertanyaan "2 dipangkat berapa menghasilkan 8?" adalah pertanyaan logaritmik: jawabannya adalah ${}^{2}\!\log 8 = 3$. Secara Umum: </p>
+    <div class="grafik-wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 100 600 350" width="100%" style="max-width:420px; background-color:transparent;">
+    <defs>
+      <style>
+        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
+        .box-fixed { fill: var(--bg-muted, #f8fafc); stroke: var(--text-main, #334155); transition: all 0.3s ease; }
+        
+        /* Font disamakan dengan standard token frame sebelumnya */
+        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
+        .text-blue-fixed { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
+        .text-red-fixed { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
+        
+        /* Warna dinamis kurva dan panah */
+        .line-blue-fixed { stroke: #1010A0; fill: none; }
+        .line-red-fixed { stroke: #A01010; fill: none; }
+        .arrow-blue-fixed { fill: #1010A0; }
+        .arrow-red-fixed { fill: #A01010; }
+
+        /* Dukungan Dark Mode otomatis */
+        @media (prefers-color-scheme: dark) {
+          .box-fixed { fill: #1e293b; stroke: #94a3b8; }
+          .label-black-fixed { fill: #f1f5f9; }
+          .line-blue-fixed { stroke: #60A5FA; }
+          .line-red-fixed { stroke: #F87171; }
+          .text-blue-fixed { fill: #60A5FA; }
+          .text-red-fixed { fill: #F87171; }
+          .arrow-blue-fixed { fill: #60A5FA; }
+          .arrow-red-fixed { fill: #F87171; }
+        }
+        [data-theme="dark"] .box-fixed { fill: #1e293b; stroke: #94a3b8; }
+        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
+        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
+        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
+        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .text-red-fixed { fill: #F87171; }
+        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .arrow-red-fixed { fill: #F87171; }
+      </style>
+
+      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" class="arrow-blue-fixed" />
+      </marker>
+      <marker id="arrow-fixed-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" class="arrow-red-fixed" />
+      </marker>
+    </defs>
+
+    <g transform="translate(32, 140) scale(0.56)">
+      
+      <text x="500" y="45" class="text-blue-fixed" font-size="36" text-anchor="middle" style="font-style: normal;">
+        “<tspan style="font-style: italic;">b</tspan> diperoleh dari <tspan style="font-style: italic;">a</tspan> dipangkat <tspan style="font-style: italic;">c</tspan>”
+      </text>
+
+      <text x="500" y="90" class="text-blue-fixed" font-size="24" text-anchor="middle" style="font-style: italic;">
+        baca dari kiri ke kanan
+      </text>
+
+      <path d="M 210 190 Q 500 110, 790 190" class="line-blue-fixed" stroke-width="3" marker-end="url(#arrow-fixed-blue)" />
+
+      <rect x="70" y="190" width="280" height="120" rx="15" ry="15" class="box-fixed" stroke-width="2" />
+      <text x="210" y="245" class="label-black-fixed" font-size="34" text-anchor="middle" style="font-style: normal;">
+        <tspan style="font-style: italic;">a</tspan><tspan dy="-12" font-size="24" style="font-style: italic;">c</tspan><tspan dy="12"> = </tspan><tspan style="font-style: italic;">b</tspan>
+      </text>
+      <text x="210" y="285" class="label-black-fixed" font-size="22" text-anchor="middle" style="font-style: italic;">
+        (perpangkatan)
+      </text>
+
+      <path d="M 790 310 Q 500 390, 210 310" class="line-red-fixed" stroke-width="3" marker-end="url(#arrow-fixed-red)" />
+
+      <rect x="650" y="190" width="280" height="120" rx="15" ry="15" class="box-fixed" stroke-width="2" />
+      <text x="790" y="245" class="label-black-fixed" font-size="34" text-anchor="middle" style="font-style: normal;">
+        <tspan font-size="22" dy="-12" style="font-style: italic;">a</tspan><tspan dy="12">log </tspan><tspan style="font-style: italic;">b</tspan> = <tspan style="font-style: italic;">c</tspan>
+      </text>
+      <text x="790" y="285" class="label-black-fixed" font-size="22" text-anchor="middle" style="font-style: italic;">
+        (logaritma)
+      </text>
+
+      <text x="500" y="410" class="text-red-fixed" font-size="24" text-anchor="middle" style="font-style: italic;">
+        baca dari kanan ke kiri
+      </text>
+
+      <text x="500" y="455" class="text-red-fixed" font-size="36" text-anchor="middle" style="font-style: normal;">
+        “<tspan style="font-style: italic;">c</tspan> adalah eksponen <tspan style="font-style: italic;">a</tspan> agar menghasilkan <tspan style="font-style: italic;">b</tspan>”
+      </text>
+
+    </g>
+  </svg>
+</div>
+    <p>Grafik fungsi logaritma adalah cerminan grafik fungsi eksponen terhadap garis $y = x$ — keduanya saling merupakan fungsi invers.</p>
+
+    <div class="grafik-wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="100%" style="max-width:420px; background-color:transparent;">
+    <defs>
+      <style>
+        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
+        .arrow-path-fixed { fill: var(--text-main, #334155); }
+        .grid-line-fixed { stroke: var(--text-muted, #e2e8f0); opacity: 0.6; }
+        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
+        
+        /* Warna dinamis kurva dan teks petunjuk */
+        .line-blue-fixed { stroke: #0014b3; fill: none; }
+        .line-red-fixed { stroke: #b30000; fill: none; }
+        .line-gray-fixed { stroke: #94a3b8; fill: none; stroke-dasharray: 5,5; }
+        
+        .text-blue-fixed { fill: #0014b3; font-family: Cambria, 'Times New Roman', serif; }
+        .text-red-fixed { fill: #b30000; font-family: Cambria, 'Times New Roman', serif; }
+        .text-gray-fixed { fill: #94a3b8; font-family: Cambria, 'Times New Roman', serif; }
+        
+        .dot-blue-fixed { fill: #0014b3; }
+        .dot-red-fixed { fill: #b30000; }
+        .dot-black-fixed { fill: var(--text-main, #334155); }
+
+        /* Dukungan Dark Mode otomatis */
+        @media (prefers-color-scheme: dark) {
+          .grid-line-fixed { stroke: #334155; opacity: 0.4; }
+          .line-blue-fixed { stroke: #60A5FA; }
+          .line-red-fixed { stroke: #F87171; }
+          .text-blue-fixed { fill: #60A5FA; }
+          .text-red-fixed { fill: #F87171; }
+          .dot-blue-fixed { fill: #60A5FA; }
+          .dot-red-fixed { fill: #F87171; }
+        }
+        [data-theme="dark"] .grid-line-fixed { stroke: #334155; opacity: 0.4; }
+        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
+        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
+        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .text-red-fixed { fill: #F87171; }
+        [data-theme="dark"] .dot-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .dot-red-fixed { fill: #F87171; }
+      </style>
+
+      <marker id="arrow-fixed-black" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-path-fixed" />
+      </marker>
+    </defs>
+
+    <g>
+      <g class="grid-line-fixed" stroke-width="1">
+        <line x1="120" y1="70" x2="120" y2="550" />
+        <line x1="180" y1="70" x2="180" y2="550" />
+        <line x1="240" y1="70" x2="240" y2="550" />
+        <line x1="300" y1="70" x2="300" y2="550" />
+        <line x1="360" y1="70" x2="360" y2="550" />
+        <line x1="420" y1="70" x2="420" y2="550" />
+        <line x1="480" y1="70" x2="480" y2="550" />
+        
+        <line x1="120" y1="70" x2="480" y2="70" />
+        <line x1="120" y1="130" x2="480" y2="130" />
+        <line x1="120" y1="190" x2="480" y2="190" />
+        <line x1="120" y1="250" x2="480" y2="250" />
+        <line x1="120" y1="310" x2="480" y2="310" />
+        <line x1="120" y1="370" x2="480" y2="370" />
+        <line x1="120" y1="430" x2="480" y2="430" />
+        <line x1="120" y1="490" x2="480" y2="490" />
+        <line x1="120" y1="550" x2="480" y2="550" />
+      </g>
+
+      <line x1="120" y1="430" x2="480" y2="70" class="line-gray-fixed" stroke-width="2" />
+
+      <g class="axis-line-fixed" stroke-width="2.5">
+        <line x1="180" y1="550" x2="180" y2="40" marker-end="url(#arrow-fixed-black)" />
+        <line x1="130" y1="370" x2="520" y2="370" marker-end="url(#arrow-fixed-black)" />
+      </g>
+
+      <path d="M 120 360 C 150 360, 170 340, 180 310 C 200 250, 230 180, 260 70" class="line-blue-fixed" stroke-width="3" />
+
+      <path d="M 190 490 C 190 460, 210 400, 240 370 C 300 310, 380 270, 480 230" class="line-red-fixed" stroke-width="3" />
+
+      <circle cx="180" cy="310" r="5" class="dot-blue-fixed" />
+      <circle cx="240" cy="370" r="5" class="dot-red-fixed" />
+      <circle cx="240" cy="310" r="5" class="dot-black-fixed" />
+
+      <text x="180" y="25" class="label-black-fixed" font-size="24" font-style="italic" text-anchor="middle">y</text>
+      <text x="535" y="375" class="label-black-fixed" font-size="24" font-style="italic" text-anchor="start">x</text>
+      <text x="155" y="395" class="label-black-fixed" font-size="24" font-style="italic" text-anchor="middle">O</text>
+
+      <text x="210" y="110" class="text-blue-fixed" font-size="24" font-style="italic">y = 2<tspan dy="-10" font-size="16">x</tspan></text>
+      <text x="310" y="325" class="text-red-fixed" font-size="24" font-style="italic">
+        y = <tspan dy="-10" font-size="16">2</tspan><tspan dy="10">log x</tspan>
+      </text>
+      <text x="485" y="65" class="text-gray-fixed" font-size="20" font-style="italic">y = x</text>
+
+      <text x="135" y="290" class="text-blue-fixed" font-size="18">(0, 1)</text>
+      <text x="260" y="395" class="text-red-fixed" font-size="18">(1, 0)</text>
+      <text x="265" y="295" class="label-black-fixed" font-size="18" style="font-style: normal;">(1, 1)</text>
+    </g>
+  </svg>
+</div>
+
+    <p>Grafik eksponen melewati $(0,1)$ dan mendekati sumbu $x$ dari atas; grafik logaritma melewati $(1,0)$ dan mendekati sumbu $y$ dari kanan. Keduanya simetri sempurna terhadap garis $y=x$</p>
+    
+
+    <h3 class="subsection-title">Sejarah Singkat</h3>
+
+    <p>Ide logaritma muncul dari kebutuhan praktis yang sangat mendesak. Pada awal abad ke-17, para astronom dan navigator menghabiskan berhari-hari hanya untuk mengalikan dan membagi bilangan besar — perhitungan yang rawan kesalahan dan melelahkan.</p>
+
+    <p><strong>John Napier</strong> (1550–1617), matematikawan Skotlandia, menerbitkan tabel logaritma pertamanya pada 1614. Penemuannya <em>langsung</em> mengubah dunia sains: astronom <strong>Johannes Kepler</strong> berterima kasih secara terbuka karena logaritma memangkas waktu perhitungannya dari minggu menjadi hari. <strong>Henry Briggs</strong> (1561–1630) kemudian menyempurnakan sistem Napier dengan memperkenalkan <strong>logaritma basis 10</strong> yang lebih mudah digunakan dan menjadi dasar tabel logaritma yang dipakai di sekolah-sekolah selama berabad-abad.</p>
+
+    <p>Jauh kemudian, <strong>Leonhard Euler</strong> (1707–1783) meletakkan fondasi teori logaritma yang kita gunakan hari ini — termasuk memperkenalkan bilangan $e$ sebagai basis logaritma natural, yang menjadi bahasa alami pertumbuhan dan peluruhan di seluruh cabang sains.</p>
+
+  <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
     <ul class="toc-list">
@@ -115,13 +326,14 @@ window.MathJax = {
     </ul>
   </div>
 
+  </section>
 
   <!-- ═══ A. PENGERTIAN LOGARITMA ═══════════════════════════════════ -->
   <section class="section" id="bagian-a">
     <h2 class="section-title"><span class="section-badge">A</span>Pengertian Logaritma</h2>
 
     <p>Logaritma merupakan <strong>operasi invers dari perpangkatan</strong>. Jika $a^c = b$, maka pertanyaan <em>"berapakah nilai $c$?"</em> dijawab oleh logaritma.</p>
-
+    <p>Misalkan $a > 0, a \neq 1$, dan $b > 0$. Maka: </p>
     <div class="box box-rumus">
       <div class="box-label">Definisi Logaritma</div>
       <div class="math-block">$${}^{a}\!\log b = c \;\Longleftrightarrow\; a^c = b$$</div>
@@ -177,10 +389,10 @@ window.MathJax = {
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan</div>
       <ol class="soal-list">
-        <li>Ubahlah ke notasi logaritma: (a) $3^4 = 81$ &nbsp; (b) $7^{-2} = \frac{1}{49}$ &nbsp; (c) $\left(\frac{1}{2}\right)^3 = \frac{1}{8}$ &nbsp; (d) $10^5 = 100.000$</li>
-        <li>Ubahlah ke notasi eksponen: (a) ${}^{4}\!\log 64 = 3$ &nbsp; (b) ${}^{5}\!\log \frac{1}{5} = -1$ &nbsp; (c) ${}^{9}\!\log 3 = \frac{1}{2}$ &nbsp; (d) $\log 10.000 = 4$</li>
-        <li>Tentukan nilai: (a) ${}^{4}\!\log 256$ &nbsp; (b) ${}^{6}\!\log 216$ &nbsp; (c) ${}^{2}\!\log \frac{1}{32}$ &nbsp; (d) ${}^{25}\!\log 5$ &nbsp; (e) ${}^{27}\!\log 9$ &nbsp; (f) $\log 0{,}0001$</li>
-        <li>Tentukan nilai $x$: (a) ${}^{x}\!\log 81 = 4$ &nbsp; (b) ${}^{3}\!\log x = -4$ &nbsp; (c) ${}^{2}\!\log x = 0$ &nbsp; (d) ${}^{x}\!\log 125 = 3$</li>
+        <li>Ubahlah ke notasi logaritma: <br> (a) $3^4 = 81$ &nbsp; <br> (b) $7^{-2} = \frac{1}{49}$ &nbsp; <br> (c) $\left(\frac{1}{2}\right)^3 = \frac{1}{8}$ &nbsp; <br> (d) $10^5 = 100.000$</li>
+        <li>Ubahlah ke notasi eksponen: <br> (a) ${}^{4}\!\log 64 = 3$ &nbsp; <br> (b) ${}^{5}\!\log \frac{1}{5} = -1$ &nbsp; <br> (c) ${}^{9}\!\log 3 = \frac{1}{2}$ &nbsp; <br> (d) $\log 10.000 = 4$</li>
+        <li>Tentukan nilai: <br> (a) ${}^{4}\!\log 256$ &nbsp; <br> (b) ${}^{6}\!\log 216$ &nbsp; <br> (c) ${}^{2}\!\log \frac{1}{32}$ &nbsp; <br> (d) ${}^{25}\!\log 5$ &nbsp; <br> (e) ${}^{27}\!\log 9$ &nbsp; <br> (f) $\log 0{,}0001$</li>
+        <li>Tentukan nilai $x$: <br> (a) ${}^{x}\!\log 81 = 4$ &nbsp; <br> (b) ${}^{3}\!\log x = -4$ &nbsp; <br> (c) ${}^{2}\!\log x = 0$ &nbsp; <br> (d) ${}^{x}\!\log 125 = 3$</li>
       </ol>
     </div>
   </section>
@@ -192,57 +404,92 @@ window.MathJax = {
 
     <p>Terdapat <strong>sembilan sifat dasar</strong> logaritma yang wajib dikuasai. Seluruh sifat berlaku dengan syarat $a > 0$, $a \neq 1$, dan semua numerus positif.</p>
 
-    <div class="box box-rumus">
+    <div class="box box-definisi">
       <div class="box-label">Sembilan Sifat Dasar Logaritma</div>
-      <div class="table-wrap" style="margin-top:.5rem;">
-        <table>
-          <thead><tr><th>No.</th><th>Rumus</th><th>Nama</th></tr></thead>
-          <tbody>
-            <tr><td>S1</td><td>${}^{a}\!\log a = 1$</td><td>Log basis = numerus</td></tr>
-            <tr><td>S2</td><td>${}^{a}\!\log 1 = 0$</td><td>Log dengan numerus 1</td></tr>
-            <tr><td>S3</td><td>${}^{a}\!\log(p \cdot q) = {}^{a}\!\log p + {}^{a}\!\log q$</td><td>Perkalian → penjumlahan</td></tr>
-            <tr><td>S4</td><td>${}^{a}\!\log\dfrac{p}{q} = {}^{a}\!\log p - {}^{a}\!\log q$</td><td>Pembagian → pengurangan</td></tr>
-            <tr><td>S5</td><td>${}^{a}\!\log p^n = n \cdot {}^{a}\!\log p$</td><td>Pangkat sebagai faktor</td></tr>
-            <tr><td>S6</td><td>${}^{a}\!\log b = \dfrac{{}^{n}\!\log b}{{}^{n}\!\log a}$</td><td>Pergantian basis</td></tr>
-            <tr><td>S7</td><td>${}^{a}\!\log b = \dfrac{1}{{}^{b}\!\log a}$ &nbsp; $(b \neq 1)$</td><td>Kebalikan basis &amp; numerus</td></tr>
-            <tr><td>S8</td><td>${}^{a}\!\log b \cdot {}^{b}\!\log c = {}^{a}\!\log c$</td><td>Rantai logaritma</td></tr>
-            <tr><td>S9</td><td>$a^{{}^{a}\!\log b} = b$</td><td>Invers eksponen-logaritma</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <div style="margin-top:.5rem;">
+    <ol style="padding-left: 25px; line-height: 2.2; font-size: 16px;">
+        <li>${}^{a}\!\log a = 1$</li>
+        <li>${}^{a}\!\log 1 = 0$</li>
+        <li>${}^{a}\!\log(p \cdot q) = {}^{a}\!\log p + {}^{a}\!\log q$</li>
+        <li>${}^{a}\!\log\dfrac{p}{q} = {}^{a}\!\log p - {}^{a}\!\log q$</li>
+        <li>${}^{a}\!\log p^n = n \cdot {}^{a}\!\log p$</li>
+        <li>${}^{a}\!\log b = \dfrac{{}^{n}\!\log b}{{}^{n}\!\log a}$</li>
+        <li>${}^{a}\!\log b = \dfrac{1}{{}^{b}\!\log a}$ &nbsp; $(b \neq 1)$</li>
+        <li>${}^{a}\!\log b \cdot {}^{b}\!\log c = {}^{a}\!\log c$</li>
+        <li>$a^{{}^{a}\!\log b} = b$</li>
+    </ol>
+    <p>Sifat 8 dapat diperluas: ${}^{a}\!\log b \cdot {}^{b}\!\log c \cdot {}^{c}\!\log d = {}^{a}\!\log d$.</p>
+</div>
     </div>
-    <p style="margin-top:.5rem;font-size:.85rem;">Sifat S8 dapat diperluas: ${}^{a}\!\log b \cdot {}^{b}\!\log c \cdot {}^{c}\!\log d = {}^{a}\!\log d$.</p>
+  
 
     <h3 class="subsection-title">1. Pembuktian Sifat-Sifat Dasar</h3>
 
-    <p>Seluruh pembuktian menggunakan definisi: ${}^{a}\!\log b = c \Leftrightarrow a^c = b$.</p>
+    <p>Berikut ini adalah pembuktian lengkap untuk semua sembilan sifat dasar logaritma.  
+Seluruh pembuktian menggunakan definisi: $^a\log b = c \Leftrightarrow a^c = b $, dengan syarat $ a > 0 $,  
+$ a \neq 1 $, dan semua numerus positif.</p>
 
     <div class="box box-definisi">
-      <div class="box-label">Bukti S1 &amp; S2</div>
-      <p style="margin:0;font-size:.9rem;">
-        <strong>S1:</strong> Misalkan ${}^{a}\!\log a = x$, maka $a = a^x$. Karena $a = a^1$, diperoleh $x = 1$. &nbsp;$\square$<br>
-        <strong>S2:</strong> Misalkan ${}^{a}\!\log 1 = x$, maka $1 = a^x$. Karena $a^0 = 1$, diperoleh $x = 0$. &nbsp;$\square$
-      </p>
+      <div class="box-label">Bukti Sifat (1). $\boxed{{}^{a}\!\log a = 1}$</div>
+      <p style="margin:0;font-size:.9rem;">Misalkan ${}^{a}\!\log a = x$. Berdasarkan definisi logaritma, $a = a^x$. Karena $a = a^1$, dengan sifat kesamaan eksponen diperoleh $x = 1$. Jadi ${}^{a}\!\log a = 1$. &nbsp;$\square$</p>
     </div>
 
     <div class="box box-definisi">
-      <div class="box-label">Bukti S3 — Perkalian</div>
-      <p style="margin:0;font-size:.9rem;">Misalkan ${}^{a}\!\log p = x$ dan ${}^{a}\!\log q = y$, sehingga $p = a^x$ dan $q = a^y$. Maka:</p>
-      $$p \cdot q = a^x \cdot a^y = a^{x+y}$$
-      <p style="margin:0;font-size:.9rem;">Berdasarkan definisi, ${}^{a}\!\log(p \cdot q) = x + y = {}^{a}\!\log p + {}^{a}\!\log q$. &nbsp;$\square$</p>
+      <div class="box-label">Bukti Sifat (2). $\boxed{{}^{a}\!\log 1 = 0}$</div>
+      <p style="margin:0;font-size:.9rem;">Misalkan ${}^{a}\!\log 1 = x$. Berdasarkan definisi logaritma, $1 = a^x$. Karena $a^0 = 1$ untuk setiap $a \neq 0$, diperoleh $x = 0$. Jadi ${}^{a}\!\log 1 = 0$. &nbsp;$\square$</p>
     </div>
 
     <div class="box box-definisi">
-      <div class="box-label">Bukti S6 — Pergantian Basis</div>
-      <p style="margin:0;font-size:.9rem;">Misalkan ${}^{a}\!\log b = x$, sehingga $b = a^x$. Logaritmakan kedua ruas dengan basis $n$:</p>
-      $${}^{n}\!\log b = {}^{n}\!\log a^x = x \cdot {}^{n}\!\log a$$
-      <p style="margin:0;font-size:.9rem;">Karena $a \neq 1$, maka ${}^{n}\!\log a \neq 0$, sehingga $x = \dfrac{{}^{n}\!\log b}{{}^{n}\!\log a}$. &nbsp;$\square$</p>
+      <div class="box-label">Bukti Sifat (3). $\boxed{{}^{a}\!\log(p \cdot q) = {}^{a}\!\log p + {}^{a}\!\log q}$</div>
+      <p style="margin:0;font-size:.9rem;">Misalkan ${}^{a}\!\log p = x$ dan ${}^{a}\!\log q = y$. Berdasarkan definisi,</p>
+      $$p = a^x \quad \text{dan} \quad q = a^y.$$
+      <p style="margin:0;font-size:.9rem;">Maka:</p>
+      $$p \cdot q = a^x \cdot a^y = a^{x+y}.$$
+      <p style="margin:0;font-size:.9rem;">Berdasarkan definisi logaritma, ${}^{a}\!\log(p \cdot q) = x + y = {}^{a}\!\log p + {}^{a}\!\log q$. &nbsp;$\square$</p>
     </div>
 
     <div class="box box-definisi">
-      <div class="box-label">Bukti S8 — Rantai Logaritma</div>
-      <p style="margin:0;font-size:.9rem;">Terapkan S6 untuk mengubah ke basis $n$ yang sama:</p>
-      $${}^{a}\!\log b \cdot {}^{b}\!\log c = \frac{{}^{n}\!\log b}{{}^{n}\!\log a} \cdot \frac{{}^{n}\!\log c}{{}^{n}\!\log b} = \frac{{}^{n}\!\log c}{{}^{n}\!\log a} = {}^{a}\!\log c \qquad \square$$
+      <div class="box-label">Bukti Sifat (4). $\boxed{{}^{a}\!\log \dfrac{p}{q} = {}^{a}\!\log p - {}^{a}\!\log q}$</div>
+      <p style="margin:0;font-size:.9rem;">Misalkan ${}^{a}\!\log p = x$ dan ${}^{a}\!\log q = y$. Berdasarkan definisi, $p = a^x$ dan $q = a^y$. Maka:</p>
+      $$\frac{p}{q} = \frac{a^x}{a^y} = a^{x-y}.$$
+      <p style="margin:0;font-size:.9rem;">Berdasarkan definisi logaritma, ${}^{a}\!\log \dfrac{p}{q} = x - y = {}^{a}\!\log p - {}^{a}\!\log q$. &nbsp;$\square$</p>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Bukti Sifat (5). $\boxed{{}^{a}\!\log p^n = n \cdot {}^{a}\!\log p}$</div>
+      <p style="margin:0;font-size:.9rem;">Misalkan ${}^{a}\!\log p = x$, sehingga $p = a^x$. Maka:</p>
+      $$p^n = (a^x)^n = a^{nx}.$$
+      <p style="margin:0;font-size:.9rem;">Berdasarkan definisi logaritma, ${}^{a}\!\log p^n = nx = n \cdot {}^{a}\!\log p$. &nbsp;$\square$</p>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Bukti Sifat (6). $\boxed{{}^{a}\!\log b = \dfrac{{}^{n}\!\log b}{{}^{n}\!\log a}}$ &nbsp; (pergantian basis)</div>
+      <p style="margin:0;font-size:.9rem;">Misalkan ${}^{a}\!\log b = x$, sehingga $b = a^x$. Logaritmakan kedua ruas dengan basis $n$ ($n > 0$, $n \neq 1$):</p>
+      $${}^{n}\!\log b = {}^{n}\!\log a^x = x \cdot {}^{n}\!\log a.$$
+      <p style="margin:0;font-size:.9rem;">Karena $a \neq 1$, maka ${}^{n}\!\log a \neq 0$, sehingga:</p>
+      $$x = \frac{{}^{n}\!\log b}{{}^{n}\!\log a}.$$
+      <p style="margin:0;font-size:.9rem;">Jadi ${}^{a}\!\log b = \dfrac{{}^{n}\!\log b}{{}^{n}\!\log a}$. &nbsp;$\square$</p>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Bukti Sifat (7). $\boxed{{}^{a}\!\log b = \dfrac{1}{{}^{b}\!\log a}}$</div>
+      <p style="margin:0;font-size:.9rem;">Terapkan S6 dengan memilih $n = b$ ($b > 0$, $b \neq 1$):</p>
+      $${}^{a}\!\log b = \frac{{}^{b}\!\log b}{{}^{b}\!\log a} = \frac{1}{{}^{b}\!\log a}.$$
+      <p style="margin:0;font-size:.9rem;">(Menggunakan S1: ${}^{b}\!\log b = 1$.) &nbsp;$\square$</p>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Bukti Sifat (8). $\boxed{{}^{a}\!\log b \cdot {}^{b}\!\log c = {}^{a}\!\log c}$</div>
+      <p style="margin:0;font-size:.9rem;">Terapkan S6 untuk mengubah kedua logaritma ke basis $n$ yang sama:</p>
+      $${}^{a}\!\log b \cdot {}^{b}\!\log c = \frac{{}^{n}\!\log b}{{}^{n}\!\log a} \cdot \frac{{}^{n}\!\log c}{{}^{n}\!\log b} = \frac{{}^{n}\!\log c}{{}^{n}\!\log a} = {}^{a}\!\log c.$$
+      <p style="margin:0;font-size:.9rem;">(Faktor ${}^{n}\!\log b$ saling menghapus karena ${}^{n}\!\log b \neq 0$.) &nbsp;$\square$</p>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Bukti Sifat (9). $\boxed{a^{{}^{a}\!\log b} = b}$</div>
+      <p style="margin:0;font-size:.9rem;">Misalkan ${}^{a}\!\log b = c$. Berdasarkan definisi logaritma, $b = a^c$. Substitusikan kembali $c = {}^{a}\!\log b$:</p>
+      $$a^{{}^{a}\!\log b} = a^c = b.$$
+      <p style="margin:0;font-size:.9rem;">Jadi $a^{{}^{a}\!\log b} = b$. &nbsp;$\square$</p>
     </div>
 
     <h3 class="subsection-title">2. Penjumlahan dan Pengurangan (S3 &amp; S4)</h3>
@@ -1275,10 +1522,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const jawabanData = {
     // A — Pengertian Logaritma
     0: [
-      { jawaban:'(a) ${}^{3}\!\log 81 = 4$ &nbsp;|&nbsp; (b) ${}^{7}\!\log \tfrac{1}{49} = -2$ &nbsp;|&nbsp; (c) ${}^{1/2}\!\log \tfrac{1}{8} = 3$ &nbsp;|&nbsp; (d) ${}^{10}\!\log 100.000 = 5$' },
-      { jawaban:'(a) $4^3 = 64$ &nbsp;|&nbsp; (b) $5^{-1} = \tfrac{1}{5}$ &nbsp;|&nbsp; (c) $9^{1/2} = 3$ &nbsp;|&nbsp; (d) $10^4 = 10.000$' },
-      { jawaban:'(a) $4$ &nbsp;|&nbsp; (b) $3$ &nbsp;|&nbsp; (c) $-5$ &nbsp;|&nbsp; (d) $\dfrac{1}{2}$ &nbsp;|&nbsp; (e) $\dfrac{2}{3}$ &nbsp;|&nbsp; (f) $-4$' },
-      { jawaban:'(a) $x = 3$ &nbsp;|&nbsp; (b) $x = \dfrac{1}{81}$ &nbsp;|&nbsp; (c) $x = 1$ &nbsp;|&nbsp; (d) $x = 5$' },
+      { jawaban:'(a) ${}^{3}\\log 81 = 4$ &nbsp;|&nbsp; (b) ${}^{7}\\log {\\frac{1}{49}} = -2$ &nbsp;|&nbsp; (c) ${}^{\\frac{1}{2}}\\log {\\frac{1}{8}} = 3$ &nbsp;|&nbsp; (d) ${}^{10}\\log 100.000 = 5$' },
+      { jawaban:'(a) $4^3 = 64$ &nbsp;|&nbsp; (b) $5^{-1} = \\frac{1}{5}$ &nbsp;|&nbsp; (c) $9^{\\frac{1}{2}} = 3$ &nbsp;|&nbsp; (d) $10^4 = 10.000$' },
+      { jawaban:'(a) $4$ &nbsp;|&nbsp; (b) $3$ &nbsp;|&nbsp; (c) $-5$ &nbsp;|&nbsp; (d) $\\frac{1}{2}$ &nbsp;|&nbsp; (e) $\\frac{2}{3}$ &nbsp;|&nbsp; (f) $-4$' },
+      { jawaban:'(a) $x = 3$ &nbsp;|&nbsp; (b) $x = \\frac{1}{81}$ &nbsp;|&nbsp; (c) $x = 1$ &nbsp;|&nbsp; (d) $x = 5$' },
     ],
     // B — Sifat-Sifat Logaritma
     1: [
