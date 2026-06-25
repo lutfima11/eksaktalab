@@ -59,12 +59,13 @@ window.MathJax = {
         <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
       </button>
       <div class="toc-dropdown-menu">
-        <div class="toc-menu-header">Trigonometri Dasar · 5 Sub-bab</div>
+        <div class="toc-menu-header">Trigonometri Dasar · 6 Sub-bab</div>
         <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Perbandingan Trigonometri</a>
         <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Sudut-sudut Istimewa</a>
         <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Trigonometri di Semua Kuadran</a>
         <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Identitas Trigonometri</a>
-        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Ringkasan</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Fungsi Trigonometri</a>
+        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Ringkasan</a>
       </div>
     </div>
     <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
@@ -95,21 +96,10 @@ window.MathJax = {
       <p class="materi-desc">Pelajari perbandingan trigonometri pada segitiga siku-siku, sudut istimewa, sifat di semua kuadran, dan identitas trigonometri.</p>
       <div class="materi-tags">
         <span class="tag">Trigonometri</span>
-        <span class="tag">5 Sub-bab</span>
-        <span class="tag">35 Contoh Soal</span>
+        <span class="tag">6 Sub-bab</span>
+        <span class="tag">45 Contoh Soal</span>
       </div>
     </div>
-  </div>
-
-  <div class="toc">
-    <div class="toc-title">Daftar Isi</div>
-    <ul class="toc-list">
-      <li><a href="#bagian-a" data-num="A">Perbandingan Trigonometri</a></li>
-      <li><a href="#bagian-b" data-num="B">Perbandingan Trigonometri Sudut-sudut Istimewa</a></li>
-      <li><a href="#bagian-c" data-num="C">Rumus Perbandingan Trigonometri di Semua Kuadran</a></li>
-      <li><a href="#bagian-d" data-num="D">Identitas Trigonometri</a></li>
-      <li><a href="#bagian-f" data-num="E">Ringkasan</a></li>
-    </ul>
   </div>
 
   <!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
@@ -142,6 +132,95 @@ window.MathJax = {
         <li><strong>Identitas Trigonometri</strong> — menemukan hubungan aljabar antar perbandingan yang berlaku universal</li>
       </ol>
     </div>
+
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 420" width="100%" style="max-width:400px;background-color:transparent;">
+  <defs>
+    <style>
+      .ax-tr{stroke:var(--text-main,#334155)}
+      .lb-tr{fill:var(--text-main,#334155);font-family:Cambria,'Times New Roman',serif}
+      .cr-tr{stroke:var(--text-muted,#94a3b8);fill:none;stroke-width:1.5}
+      .rr-tr{stroke:#0014b3;fill:none;stroke-width:2.5}
+      .sn-tr{stroke:#b30000;fill:none;stroke-width:2;stroke-dasharray:6,3}
+      .cs-tr{stroke:#0014b3;fill:none;stroke-width:2;stroke-dasharray:6,3}
+      .pt-tr{fill:#800040}
+      .ls-tr{fill:#b30000;font-family:Cambria,'Times New Roman',serif}
+      .lc-tr{fill:#0014b3;font-family:Cambria,'Times New Roman',serif}
+      @media(prefers-color-scheme:dark){
+        .cr-tr{stroke:#475569}
+        .rr-tr{stroke:#60A5FA}
+        .sn-tr{stroke:#F87171}
+        .cs-tr{stroke:#60A5FA}
+        .pt-tr{fill:#F472B6}
+        .ls-tr{fill:#F87171}
+        .lc-tr{fill:#60A5FA}
+      }
+      [data-theme="dark"] .cr-tr{stroke:#475569}
+      [data-theme="dark"] .rr-tr{stroke:#60A5FA}
+      [data-theme="dark"] .sn-tr{stroke:#F87171}
+      [data-theme="dark"] .cs-tr{stroke:#60A5FA}
+      [data-theme="dark"] .pt-tr{fill:#F472B6}
+      [data-theme="dark"] .ls-tr{fill:#F87171}
+      [data-theme="dark"] .lc-tr{fill:#60A5FA}
+    </style>
+    <marker id="arr-tr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--text-main,#334155)"/>
+    </marker>
+  </defs>
+  <!-- Unit circle: center(215,270), r=140 -->
+  <circle cx="215" cy="270" r="140" class="cr-tr"/>
+  <!-- Axes -->
+  <line x1="55"  y1="270" x2="390" y2="270" marker-end="url(#arr-tr)" class="ax-tr" stroke-width="2"/>
+  <line x1="215" y1="415" x2="215" y2="62"  marker-end="url(#arr-tr)" class="ax-tr" stroke-width="2"/>
+  <text x="396" y="276" class="lb-tr" font-size="18" font-style="italic">x</text>
+  <text x="202" y="56"  class="lb-tr" font-size="18" font-style="italic">y</text>
+  <text x="200" y="285" class="lb-tr" font-size="16">O</text>
+  <!-- Axis ticks ±1 -->
+  <line x1="355" y1="265" x2="355" y2="275" class="ax-tr" stroke-width="1.5"/>
+  <line x1="75"  y1="265" x2="75"  y2="275" class="ax-tr" stroke-width="1.5"/>
+  <line x1="210" y1="130" x2="220" y2="130" class="ax-tr" stroke-width="1.5"/>
+  <line x1="210" y1="410" x2="220" y2="410" class="ax-tr" stroke-width="1.5"/>
+  <text x="355" y="290" class="lb-tr" font-size="14" text-anchor="middle">1</text>
+  <text x="75"  y="290" class="lb-tr" font-size="14" text-anchor="middle">−1</text>
+  <text x="225" y="133" class="lb-tr" font-size="14">1</text>
+  <text x="225" y="413" class="lb-tr" font-size="14">−1</text>
+  <!-- Radius to P(cos60°,sin60°) = (285,149) -->
+  <line x1="215" y1="270" x2="285" y2="149" class="rr-tr"/>
+  <!-- sin projection (vertical dashed) -->
+  <line x1="285" y1="270" x2="285" y2="149" class="sn-tr"/>
+  <!-- cos projection (horizontal dashed) -->
+  <line x1="215" y1="270" x2="285" y2="270" class="cs-tr"/>
+  <!-- Angle arc 60° -->
+  <path d="M 245 270 A 30 30 0 0 1 230 244" fill="none" stroke="var(--text-main,#334155)" stroke-width="1.5"/>
+  <text x="252" y="260" class="lb-tr" font-size="14" font-style="italic">θ</text>
+  <!-- Point P -->
+  <circle cx="285" cy="149" r="5" class="pt-tr"/>
+  <text x="292" y="145" class="lb-tr" font-size="13">P(cos θ, sin θ)</text>
+  <!-- Labels -->
+  <text x="295" y="214" class="ls-tr" font-size="14">sin θ</text>
+  <text x="240" y="288" class="lc-tr" font-size="14">cos θ</text>
+  <text x="252" y="205" class="lc-tr" font-size="12" transform="rotate(-60 252 205)">r = 1</text>
+  <!-- Quadrant labels -->
+  <text x="335" y="198" class="lb-tr" font-size="15" fill="#94a3b8">I</text>
+  <text x="82"  y="198" class="lb-tr" font-size="15" fill="#94a3b8">II</text>
+  <text x="78"  y="350" class="lb-tr" font-size="15" fill="#94a3b8">III</text>
+  <text x="332" y="350" class="lb-tr" font-size="15" fill="#94a3b8">IV</text>
+</svg>
+</div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Perbandingan Trigonometri</a></li>
+      <li><a href="#bagian-b" data-num="B">Perbandingan Trigonometri Sudut-sudut Istimewa</a></li>
+      <li><a href="#bagian-c" data-num="C">Rumus Perbandingan Trigonometri di Semua Kuadran</a></li>
+      <li><a href="#bagian-d" data-num="D">Identitas Trigonometri</a></li>
+      <li><a href="#bagian-e" data-num="E">Fungsi Trigonometri</a></li>
+      <li><a href="#bagian-f" data-num="F">Ringkasan</a></li>
+    </ul>
+  </div>
+
   </section>
 
   <!-- ═══ A. PERBANDINGAN TRIGONOMETRI ═════════════════════════════════ -->
@@ -938,6 +1017,445 @@ window.MathJax = {
     </div>
   </section>
 
+  <!-- ═══ E. FUNGSI TRIGONOMETRI ══════════════════════════════════════ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Fungsi Trigonometri</h2>
+
+    <h3 class="subsection-title">1. Grafik Fungsi Trigonometri Dasar</h3>
+
+    <p>Grafik fungsi trigonometri digambarkan pada koordinat Cartesius dengan sumbu-$X$ sebagai nilai sudut dan sumbu-$Y$ sebagai nilai fungsi.</p>
+
+    <p><strong>Tiga komponen penting:</strong></p>
+    <ul style="margin:.3rem 0 .6rem 1.2rem;line-height:1.9;">
+      <li><strong>Nilai maksimum</strong>: nilai ordinat tertinggi yang dicapai fungsi</li>
+      <li><strong>Nilai minimum</strong>: nilai ordinat terendah yang dicapai fungsi</li>
+      <li><strong>Periode</strong>: besar interval sudut untuk satu putaran penuh</li>
+    </ul>
+
+    <p><strong>(a) Grafik $y = \sin x$</strong></p>
+    <div class="grafik-wrap">
+      <svg viewBox="0 0 520 180" width="100%" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;">
+        <line x1="30" y1="90" x2="510" y2="90" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <line x1="30" y1="30" x2="510" y2="30" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.3"/>
+        <line x1="30" y1="150" x2="510" y2="150" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.3"/>
+        <line x1="30" y1="10" x2="30" y2="170" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <!-- axes arrows -->
+        <polyline points="508,87 512,90 508,93" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+        <polyline points="27,13 30,9 33,13" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+        <!-- tick marks at 90,180,270,360 -->
+        <line x1="150" y1="87" x2="150" y2="93" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+        <line x1="270" y1="87" x2="270" y2="93" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+        <line x1="390" y1="87" x2="390" y2="93" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+        <line x1="510" y1="87" x2="510" y2="93" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+        <text x="148" y="105" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">90°</text>
+        <text x="270" y="105" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">180°</text>
+        <text x="390" y="105" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">270°</text>
+        <text x="505" y="105" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">360°</text>
+        <text x="22" y="33" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">1</text>
+        <text x="22" y="153" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">-1</text>
+        <text x="22" y="93" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">0</text>
+        <!-- sin curve: y = 90 - 60*sin(x_deg * pi/180), x from 30 to 510 maps 0 to 360 deg -->
+        <path d="M30,90 C67,90 82,30 150,30 C218,30 232,90 270,90 C308,90 322,150 390,150 C458,150 472,90 510,90"
+              fill="none" stroke="#2563eb" stroke-width="2.2"/>
+        <text x="480" y="72" font-size="11" fill="#2563eb" font-style="italic">y = sin x</text>
+      </svg>
+    </div>
+
+    <p><strong>(b) Grafik $y = \cos x$</strong></p>
+    <div class="grafik-wrap">
+      <svg viewBox="0 0 520 180" width="100%" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;">
+        <line x1="30" y1="90" x2="510" y2="90" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <line x1="30" y1="30" x2="510" y2="30" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.3"/>
+        <line x1="30" y1="150" x2="510" y2="150" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.3"/>
+        <line x1="30" y1="10" x2="30" y2="170" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <polyline points="508,87 512,90 508,93" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+        <polyline points="27,13 30,9 33,13" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+        <line x1="150" y1="87" x2="150" y2="93" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+        <line x1="270" y1="87" x2="270" y2="93" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+        <line x1="390" y1="87" x2="390" y2="93" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+        <line x1="510" y1="87" x2="510" y2="93" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+        <text x="148" y="105" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">90°</text>
+        <text x="270" y="105" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">180°</text>
+        <text x="390" y="105" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">270°</text>
+        <text x="505" y="105" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">360°</text>
+        <text x="22" y="33" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">1</text>
+        <text x="22" y="153" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">-1</text>
+        <text x="22" y="93" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">0</text>
+        <!-- cos curve starts at (30,30)=1, goes down -->
+        <path d="M30,30 C68,30 82,90 150,90 C218,90 232,150 270,150 C308,150 322,90 390,90 C458,90 472,30 510,30"
+              fill="none" stroke="#dc2626" stroke-width="2.2"/>
+        <text x="480" y="47" font-size="11" fill="#dc2626" font-style="italic">y = cos x</text>
+      </svg>
+    </div>
+
+    <p><strong>(c) Grafik $y = \tan x$</strong></p>
+    <div class="grafik-wrap">
+      <svg viewBox="0 0 520 200" width="100%" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;">
+        <line x1="30" y1="100" x2="510" y2="100" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <line x1="30" y1="10" x2="30" y2="190" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+        <polyline points="508,97 512,100 508,103" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+        <polyline points="27,13 30,9 33,13" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+        <!-- asymptotes at 90 and 270 -->
+        <line x1="150" y1="10" x2="150" y2="190" stroke="currentColor" stroke-width="1" stroke-dasharray="5,3" opacity="0.35"/>
+        <line x1="390" y1="10" x2="390" y2="190" stroke="currentColor" stroke-width="1" stroke-dasharray="5,3" opacity="0.35"/>
+        <line x1="150" y1="97" x2="150" y2="103" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+        <line x1="270" y1="97" x2="270" y2="103" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+        <line x1="390" y1="97" x2="390" y2="103" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+        <line x1="510" y1="97" x2="510" y2="103" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+        <text x="148" y="115" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">90°</text>
+        <text x="270" y="115" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">180°</text>
+        <text x="390" y="115" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">270°</text>
+        <text x="505" y="115" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">360°</text>
+        <text x="22" y="103" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">0</text>
+        <!-- tan branches: branch 1: 0 to ~88 deg, branch 2: ~92 to ~268 deg, branch 3: ~272 to 360 deg -->
+        <path d="M30,100 C70,100 110,85 145,20" fill="none" stroke="#374151" stroke-width="2.2"/>
+        <path d="M155,182 C190,115 210,100 270,100 C330,100 350,85 385,18" fill="none" stroke="#374151" stroke-width="2.2"/>
+        <path d="M395,183 C430,115 450,100 510,100" fill="none" stroke="#374151" stroke-width="2.2"/>
+        <text x="470" y="88" font-size="11" fill="#374151" font-style="italic">y = tan x</text>
+      </svg>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Fungsi</th><th>Maks</th><th>Min</th><th>Periode</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$y = \sin x$</td><td>$1$</td><td>$-1$</td><td>$360^\circ$</td></tr>
+          <tr><td>$y = \cos x$</td><td>$1$</td><td>$-1$</td><td>$360^\circ$</td></tr>
+          <tr><td>$y = \tan x$</td><td colspan="2" style="text-align:center;"><em>tidak terbatas (unbounded)</em></td><td>$180^\circ$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan: Fungsi Tangen</div>
+      <p style="margin:0;font-size:.9rem;">Fungsi $y = \tan x$ <strong>tidak memiliki nilai maksimum maupun minimum</strong>. Nilai fungsi tidak terbatas karena mendekati $\pm\infty$ pada asimtot vertikal di $x = 90^\circ + k \cdot 180^\circ$, tetapi tidak pernah benar-benar mencapai nilai tersebut.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Fungsi Trigonometri Sederhana</h3>
+
+    <p>Bentuk umum fungsi trigonometri sederhana:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Bentuk Umum Fungsi Trigonometri</div>
+      <div class="math-block">$$y = k\sin(ax \pm \alpha) \qquad y = k\cos(ax \pm \alpha) \qquad y = k\tan(ax \pm \alpha)$$</div>
+    </div>
+
+    <p>dengan:</p>
+    <ul style="margin:.3rem 0 .6rem 1.2rem;line-height:1.9;">
+      <li>Nilai <strong>maksimum</strong> $= k$ dan nilai <strong>minimum</strong> $= -k$</li>
+      <li><strong>Periode</strong> $= \dfrac{360^\circ}{a}$ (untuk sinus dan cosinus) atau $\dfrac{180^\circ}{a}$ (untuk tangen)</li>
+      <li>Jika $+\alpha$: grafik <strong>geser kiri</strong> sejauh $\alpha$; jika $-\alpha$: grafik <strong>geser kanan</strong> sejauh $\alpha$</li>
+    </ul>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan</div>
+      <p style="margin:0;font-size:.9rem;">Untuk fungsi bentuk $y = p + k\sin(ax)$, nilai maks $= p + k$ dan min $= p - k$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 36</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Tentukan amplitudo, nilai maksimum, nilai minimum, dan periode dari:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$y = 3\sin x$</li>
+        <li>$y = -2\cos x$</li>
+        <li>$y = 1 + 4\sin 2x$</li>
+        <li>$y = -3 + 2\cos 3x$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin:0;">
+        <li>Amplitudo $= 3$, maks $= 3$, min $= -3$, periode $= 360^\circ$.</li>
+        <li>Amplitudo $= 2$ (selalu positif). Karena ada tanda $-$, grafik terbalik (refleksi terhadap sumbu-$X$): maks $= 2$, min $= -2$, periode $= 360^\circ$.</li>
+        <li>Amplitudo $= 4$. Maks $= 1 + 4 = 5$, min $= 1 - 4 = -3$, periode $= \dfrac{360^\circ}{2} = 180^\circ$.</li>
+        <li>Amplitudo $= 2$. Karena ada tanda $-$ di depan, grafik terbalik. Maks $= -3 + 2 = -1$, min $= -3 - 2 = -5$, periode $= \dfrac{360^\circ}{3} = 120^\circ$.</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 37</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Tentukan nilai maksimum, minimum, dan periode dari setiap fungsi berikut!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$y = 5\sin(3x - 60^\circ)$</li>
+        <li>$y = 3\cos(2x + 45^\circ)$</li>
+        <li>$y = 6\tan 2x$</li>
+        <li>$y = 4 + 2\cos 5x$</li>
+        <li>$y = 5 - 3\cos\!\left(\tfrac{1}{3}x + \pi\right)$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th></th><th>Fungsi</th><th>Maks</th><th>Min</th><th>Periode</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>(a)</td><td>$y = 5\sin(3x - 60^\circ)$</td><td>$5$</td><td>$-5$</td><td>$\dfrac{360^\circ}{3} = 120^\circ$</td></tr>
+            <tr><td>(b)</td><td>$y = 3\cos(2x + 45^\circ)$</td><td>$3$</td><td>$-3$</td><td>$\dfrac{360^\circ}{2} = 180^\circ$</td></tr>
+            <tr><td>(c)</td><td>$y = 6\tan 2x$</td><td colspan="2" style="text-align:center;"><em>tidak terbatas</em></td><td>$\dfrac{180^\circ}{2} = 90^\circ$</td></tr>
+            <tr><td>(d)</td><td>$y = 4 + 2\cos 5x$</td><td>$6$</td><td>$2$</td><td>$\dfrac{360^\circ}{5} = 72^\circ$</td></tr>
+            <tr><td>(e)</td><td>$y = 5 - 3\cos\!\left(\tfrac{1}{3}x + \pi\right)$</td><td>$8$</td><td>$2$</td><td>$\dfrac{360^\circ}{1/3} = 1080^\circ$</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="box box-catatan" style="margin-top:.6rem;">
+        <div class="box-label">⚠ Catatan</div>
+        <p style="margin:0;font-size:.9rem;">Untuk fungsi (e): karena ada tanda $-$ di depan cosinus, nilai maks diperoleh saat $\cos = -1$, yaitu $5 - 3(-1) = 8$; dan nilai min saat $\cos = 1$, yaitu $5 - 3(1) = 2$.</p>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 38</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai maksimum dan minimum dari $f(x) = \dfrac{24}{5 + 3\sin x}$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Nilai maks terjadi saat penyebut <strong>terkecil</strong>, yaitu saat $\sin x = -1$:</p>
+      <div class="math-block">$$f_{\max} = \frac{24}{5 + 3(-1)} = \frac{24}{2} = \mathbf{12}$$</div>
+      <p style="margin:.3rem 0 .3rem 0;">Nilai min terjadi saat penyebut <strong>terbesar</strong>, yaitu saat $\sin x = 1$:</p>
+      <div class="math-block">$$f_{\min} = \frac{24}{5 + 3(1)} = \frac{24}{8} = \mathbf{3}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 39</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Tentukan nilai maksimum dan minimum dari:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$f(x) = \dfrac{3}{2 - \sin x}$</li>
+        <li>$g(x) = \dfrac{8}{3 + 5\cos x}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ol class="alpha-list" style="margin:0;">
+        <li>Maks $f$ saat penyebut terkecil $\Rightarrow \sin x = 1$: $f_{\max} = \dfrac{3}{2-1} = 3$.<br>
+            Min $f$ saat penyebut terbesar $\Rightarrow \sin x = -1$: $f_{\min} = \dfrac{3}{2+1} = 1$.</li>
+        <li>Penyebut $3 + 5\cos x$ bernilai antara $3 - 5 = -2$ dan $3 + 5 = 8$. Karena penyebut bisa bernilai negatif, $g(x)$ bisa bernilai negatif.<br>
+            Min $g$ (paling negatif) saat penyebut $= -2$: $g_{\min} = \dfrac{8}{-2} = -4$.<br>
+            Maks $g$ (paling positif) saat penyebut $= 8$: $g_{\max} = \dfrac{8}{8} = 1$.</li>
+      </ol>
+      <div class="box box-catatan" style="margin-top:.6rem;">
+        <div class="box-label">⚠ Catatan</div>
+        <p style="margin:0;font-size:.9rem;">Fungsi bentuk $\dfrac{k}{a \pm b\sin x}$ atau $\dfrac{k}{a \pm b\cos x}$ harus diperiksa tanda penyebutnya. Jika penyebut bisa berganti tanda, fungsi tidak terdefinisi di beberapa titik dan perlu dianalisis lebih hati-hati.</p>
+      </div>
+    </div>
+
+    <h3 class="subsection-title">3. Menggambar Grafik Fungsi Trigonometri Sederhana</h3>
+
+    <p>Langkah-langkah menggambar grafik $y = k\sin a(x - \alpha)$:</p>
+    <ol style="margin:.3rem 0 .6rem 1.2rem;line-height:1.9;">
+      <li>Tentukan amplitudo $k$, periode $\dfrac{360^\circ}{a}$, dan pergeseran fase $\alpha$</li>
+      <li>Buat tabel nilai untuk setidaknya satu periode penuh</li>
+      <li>Plot titik-titik dan hubungkan dengan kurva mulus</li>
+    </ol>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 40</div>
+      <p style="margin:0;font-size:.9rem;">Lukislah grafik $f(x) = 2\cos x$ pada interval $0^\circ &lt; x \leq 360^\circ$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Amplitudo $= 2$, periode $= 360^\circ$. Grafik $y = 2\cos x$ (merah) memiliki nilai maks $2$ dan min $-2$, dibandingkan $y = \cos x$ (putus-putus) dengan maks $1$ dan min $-1$.</p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 520 220" width="100%" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;">
+          <line x1="30" y1="110" x2="510" y2="110" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+          <line x1="30" y1="50" x2="510" y2="50" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.25"/>
+          <line x1="30" y1="170" x2="510" y2="170" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.25"/>
+          <line x1="30" y1="10" x2="510" y2="10" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.2"/>
+          <line x1="30" y1="210" x2="510" y2="210" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.2"/>
+          <line x1="30" y1="10" x2="30" y2="215" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+          <polyline points="508,107 512,110 508,113" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+          <line x1="150" y1="107" x2="150" y2="113" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+          <line x1="270" y1="107" x2="270" y2="113" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+          <line x1="390" y1="107" x2="390" y2="113" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+          <line x1="510" y1="107" x2="510" y2="113" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
+          <text x="148" y="126" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">90°</text>
+          <text x="270" y="126" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">180°</text>
+          <text x="390" y="126" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">270°</text>
+          <text x="505" y="126" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">360°</text>
+          <text x="22" y="13" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">2</text>
+          <text x="22" y="53" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">1</text>
+          <text x="22" y="113" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">0</text>
+          <text x="22" y="173" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">-1</text>
+          <text x="22" y="213" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">-2</text>
+          <!-- g: y = cos x (dashed gray), amplitude 60px -->
+          <path d="M30,50 C68,50 82,110 150,110 C218,110 232,170 270,170 C308,170 322,110 390,110 C458,110 472,50 510,50"
+                fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.4"/>
+          <!-- f: y = 2cos x (red), amplitude 100px -->
+          <path d="M30,10 C68,10 82,110 150,110 C218,110 232,210 270,210 C308,210 322,110 390,110 C458,110 472,10 510,10"
+                fill="none" stroke="#dc2626" stroke-width="2.2"/>
+          <text x="460" y="30" font-size="11" fill="#dc2626" font-style="italic">f: y=2cos x</text>
+          <text x="460" y="47" font-size="11" fill="currentColor" font-style="italic" opacity="0.55">g: y=cos x</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 41</div>
+      <p style="margin:0;font-size:.9rem;">Lukislah grafik $f(x) = \sin(x - 45^\circ)$ pada interval $0^\circ &lt; x \leq 360^\circ$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Grafik $y = \sin x$ digeser ke kanan sejauh $45^\circ$. Titik nol naik pertama bergeser dari $0^\circ$ ke $45^\circ$, titik nol turun bergeser dari $180^\circ$ ke $225^\circ$.</p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 560 180" width="100%" xmlns="http://www.w3.org/2000/svg" style="max-width:560px;">
+          <line x1="30" y1="90" x2="545" y2="90" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+          <line x1="30" y1="30" x2="545" y2="30" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.25"/>
+          <line x1="30" y1="150" x2="545" y2="150" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.25"/>
+          <line x1="30" y1="10" x2="30" y2="170" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+          <polyline points="543,87 547,90 543,93" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+          <!-- tick marks at 45,90,135,180,225,270,315,360 -->
+          <line x1="90" y1="87" x2="90" y2="93" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+          <line x1="150" y1="87" x2="150" y2="93" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+          <line x1="210" y1="87" x2="210" y2="93" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+          <line x1="270" y1="87" x2="270" y2="93" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+          <line x1="330" y1="87" x2="330" y2="93" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+          <line x1="390" y1="87" x2="390" y2="93" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+          <line x1="450" y1="87" x2="450" y2="93" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+          <line x1="510" y1="87" x2="510" y2="93" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+          <text x="90" y="105" font-size="9" fill="currentColor" text-anchor="middle" opacity="0.65">45°</text>
+          <text x="150" y="105" font-size="9" fill="currentColor" text-anchor="middle" opacity="0.65">90°</text>
+          <text x="210" y="105" font-size="9" fill="currentColor" text-anchor="middle" opacity="0.65">135°</text>
+          <text x="270" y="105" font-size="9" fill="currentColor" text-anchor="middle" opacity="0.65">180°</text>
+          <text x="330" y="105" font-size="9" fill="currentColor" text-anchor="middle" opacity="0.65">225°</text>
+          <text x="390" y="105" font-size="9" fill="currentColor" text-anchor="middle" opacity="0.65">270°</text>
+          <text x="450" y="105" font-size="9" fill="currentColor" text-anchor="middle" opacity="0.65">315°</text>
+          <text x="510" y="105" font-size="9" fill="currentColor" text-anchor="middle" opacity="0.65">360°</text>
+          <text x="22" y="33" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">1</text>
+          <text x="22" y="93" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">0</text>
+          <text x="22" y="153" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">-1</text>
+          <!-- g: y = sin x dashed -->
+          <path d="M30,90 C67,90 82,30 150,30 C218,30 232,90 270,90 C308,90 322,150 390,150 C458,150 472,90 510,90"
+                fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.4"/>
+          <!-- f: y = sin(x-45) shifted right 45deg = 60px -->
+          <path d="M30,107 C55,120 75,60 150,48 C210,37 232,90 270,90 C330,90 345,90 390,150 C435,170 472,110 540,97"
+                fill="none" stroke="#2563eb" stroke-width="2.2"/>
+          <text x="490" y="75" font-size="11" fill="#2563eb" font-style="italic">f: y=sin(x−45°)</text>
+          <text x="490" y="90" font-size="11" fill="currentColor" font-style="italic" opacity="0.5">g: y=sin x</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 42</div>
+      <p style="margin:0;font-size:.9rem;">Lukislah grafik $f(x) = \tan\!\left(\dfrac{1}{2}x\right)$ pada interval $0^\circ \leq x \leq 360^\circ$ dan bandingkan dengan $y = \tan x$! Tentukan periode dan letak asimtot vertikalnya.</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .4rem 0;">Koefisien $a = \dfrac{1}{2}$, sehingga periode $= \dfrac{180^\circ}{1/2} = 360^\circ$ (dua kali lebih panjang dari $\tan x$).</p>
+      <p style="margin:0 0 .4rem 0;">Asimtot vertikal terjadi saat $\dfrac{1}{2}x = 90^\circ + k \cdot 180^\circ$, yaitu $x = 180^\circ + k \cdot 360^\circ$. Dalam interval $[0^\circ, 360^\circ]$, asimtot berada di $x = 180^\circ$.</p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 520 220" width="100%" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;">
+          <line x1="30" y1="110" x2="510" y2="110" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+          <line x1="30" y1="10" x2="30" y2="215" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+          <polyline points="508,107 512,110 508,113" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+          <!-- asymptotes -->
+          <line x1="270" y1="10" x2="270" y2="215" stroke="#dc2626" stroke-width="1" stroke-dasharray="6,3" opacity="0.5"/>
+          <line x1="150" y1="10" x2="150" y2="215" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.25"/>
+          <line x1="390" y1="10" x2="390" y2="215" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.25"/>
+          <line x1="150" y1="107" x2="150" y2="113" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          <line x1="270" y1="107" x2="270" y2="113" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          <line x1="390" y1="107" x2="390" y2="113" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          <line x1="510" y1="107" x2="510" y2="113" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          <text x="148" y="126" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">90°</text>
+          <text x="270" y="126" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">180°</text>
+          <text x="390" y="126" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">270°</text>
+          <text x="505" y="126" font-size="10" fill="currentColor" text-anchor="middle" opacity="0.7">360°</text>
+          <text x="22" y="113" font-size="10" fill="currentColor" text-anchor="end" opacity="0.7">0</text>
+          <text x="272" y="22" font-size="9" fill="#dc2626" opacity="0.7">x=180°</text>
+          <!-- g: tan x (dashed) -->
+          <path d="M30,110 C70,110 110,90 147,18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.4"/>
+          <path d="M153,205 C190,128 210,110 270,110 C330,110 350,90 387,18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.4"/>
+          <path d="M393,205 C430,128 450,110 510,110" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.4"/>
+          <!-- f: tan(x/2) — one branch from 0 to 180, next from 180 to 360 -->
+          <path d="M30,110 C100,110 180,70 267,15" fill="none" stroke="#2563eb" stroke-width="2.2"/>
+          <path d="M273,210 C360,145 420,110 510,110" fill="none" stroke="#2563eb" stroke-width="2.2"/>
+          <text x="60" y="85" font-size="11" fill="#2563eb" font-style="italic">f: tan(x/2)</text>
+          <text x="60" y="100" font-size="11" fill="currentColor" font-style="italic" opacity="0.5">g: tan x</text>
+        </svg>
+      </div>
+      <div class="box box-catatan" style="margin-top:.6rem;">
+        <div class="box-label">⚠ Sifat Penting Grafik $y = k\tan(ax + \phi)$</div>
+        <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;line-height:1.9;">
+          <li><strong>Tidak memiliki amplitudo</strong> — nilai fungsi tidak terbatas ($-\infty$ s.d. $+\infty$).</li>
+          <li><strong>Periode</strong> $= \dfrac{180^\circ}{a}$.</li>
+          <li><strong>Asimtot vertikal</strong> di setiap $ax + \phi = 90^\circ + k \cdot 180^\circ$.</li>
+          <li>Koefisien $k$ memperbesar/memperkecil <em>kecuraman</em> grafik, bukan amplitudo.</li>
+          <li>Jika $k &lt; 0$, grafik terbalik (turun dari kiri ke kanan dalam satu periode).</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="subsection-title">4. Menentukan Persamaan Fungsi dari Grafik</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">&bull; Langkah Menentukan Persamaan dari Grafik</div>
+      <ol style="margin:0;padding-left:1.2rem;font-size:.9rem;line-height:1.9;">
+        <li>Tentukan amplitudo: $k = \dfrac{\text{maks} - \text{min}}{2}$ atau langsung dari grafik</li>
+        <li>Tentukan periode dari grafik, lalu hitung $a = \dfrac{360^\circ}{\text{periode}}$</li>
+        <li>Tentukan pergeseran fase $\alpha$</li>
+        <li>Tuliskan persamaan: $y = k\sin a(x - \alpha)$ atau $y = k\cos a(x - \alpha)$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 43</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan persamaan fungsi sinus dari grafik berikut! (Grafik memiliki nilai maks 3, nilai min $-3$, titik nol naik pertama di $x = 75^\circ$, dan titik nol naik berikutnya di $x = 255^\circ$.)</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 1:</strong> Amplitudo. Nilai maksimum $= 3$ dan minimum $= -3$, sehingga $k = 3$.</p>
+      <p style="margin:.2rem 0 .3rem 0;"><strong>Langkah 2:</strong> Periode dan nilai $a$. Jarak antara dua titik nol naik $= 255^\circ - 75^\circ = 180^\circ$ (satu periode), sehingga $a = \dfrac{360^\circ}{180^\circ} = 2$.</p>
+      <p style="margin:.2rem 0 .3rem 0;"><strong>Langkah 3:</strong> Pergeseran fase. Untuk $y = \sin(2x)$ standar, titik nol naik pertama di $x = 0^\circ$. Karena grafik ini di $x = 75^\circ$, grafik digeser kanan sejauh $75^\circ$:</p>
+      <div class="math-block">$$\boxed{y = 3\sin\!\bigl(2(x-75^\circ)\bigr) = 3\sin(2x - 150^\circ)}$$</div>
+      <div class="box box-catatan" style="margin-top:.5rem;">
+        <div class="box-label">⚠ Dua Bentuk Penulisan</div>
+        <p style="margin:0;font-size:.9rem;">Bentuk $y = k\sin\!\bigl(a(x-\alpha)\bigr)$: pergeseran fase dibaca langsung, grafik bergeser <strong>kanan</strong> sejauh $\alpha = 75^\circ$. Bentuk $y = k\sin(ax + \phi)$: setelah distribusi, $\phi = -150^\circ$. Kedua bentuk <strong>ekuivalen</strong>.</p>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 44</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Sebuah grafik fungsi trigonometri memiliki nilai maksimum $3$ (di $x = 60^\circ$) dan nilai minimum $-1$ (di $x = 240^\circ$), dengan midline $y = 1$. Tentukan persamaan fungsi dalam bentuk $y = k\cos(a(x - \alpha)) + c$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 1:</strong> Amplitudo dan geseran vertikal.</p>
+      <div class="math-block">$$k = \frac{\text{maks} - \text{min}}{2} = \frac{3-(-1)}{2} = 2, \qquad c = \frac{\text{maks}+\text{min}}{2} = \frac{3+(-1)}{2} = 1$$</div>
+      <p style="margin:.2rem 0 .3rem 0;"><strong>Langkah 2:</strong> Periode dan nilai $a$. Jarak dari maks ke min adalah setengah periode:</p>
+      <div class="math-block">$$\frac{T}{2} = 240^\circ - 60^\circ = 180^\circ \implies T = 360^\circ \implies a = 1$$</div>
+      <p style="margin:.2rem 0 .3rem 0;"><strong>Langkah 3:</strong> Pergeseran fase. Untuk cosinus standar, maks di $x = 0^\circ$. Grafik ini maks di $x = 60^\circ$, jadi $\alpha = 60^\circ$.</p>
+      <div class="math-block">$$\boxed{y = 2\cos(x - 60^\circ) + 1}$$</div>
+      <div class="box box-catatan" style="margin-top:.5rem;">
+        <div class="box-label">⚠ Strategi Membaca Persamaan dari Grafik</div>
+        <ol style="margin:0;padding-left:1.2rem;font-size:.9rem;line-height:1.9;">
+          <li>Baca nilai <strong>maksimum</strong> dan <strong>minimum</strong> $\to$ hitung $k$ dan $c$.</li>
+          <li>Cari jarak antar dua titik maksimum berurutan $\to$ itulah <strong>periode</strong> $T$, lalu $a = \dfrac{360^\circ}{T}$.</li>
+          <li>Bandingkan posisi maksimum (cosinus) atau titik nol naik (sinus) $\to$ tentukan <strong>pergeseran fase</strong> $\alpha$.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">&#128216; Contoh 45</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah grafik fungsi trigonometri memiliki ciri-ciri: nilai maksimum $= 4$, nilai minimum $= -2$, periode $= 240^\circ$, dan melewati titik $(30^\circ,\, 1)$. Tentukan persamaan fungsi tersebut dalam bentuk $y = k\sin(ax + b) + c$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p style="margin:0 0 .3rem 0;"><strong>Langkah 1:</strong> Amplitudo dan vertikal shift.</p>
+      <div class="math-block">$$k = \frac{4-(-2)}{2} = 3, \qquad c = \frac{4+(-2)}{2} = 1$$</div>
+      <p style="margin:.2rem 0 .3rem 0;"><strong>Langkah 2:</strong> Nilai $a$ dari periode.</p>
+      <div class="math-block">$$\text{Periode} = 240^\circ \implies a = \frac{360^\circ}{240^\circ} = \frac{3}{2}$$</div>
+      <p style="margin:.2rem 0 .3rem 0;"><strong>Langkah 3:</strong> Pergeseran fase. Persamaan sementara: $y = 3\sin\!\left(\dfrac{3}{2}x + b\right) + 1$. Substitusi titik $(30^\circ, 1)$:</p>
+      <div class="math-block">$$1 = 3\sin\!\left(\frac{3}{2}\cdot 30^\circ + b\right) + 1 \implies 0 = 3\sin(45^\circ + b) \implies 45^\circ + b = 0^\circ \implies b = -45^\circ$$</div>
+      <div class="math-block">$$\boxed{y = 3\sin\!\left(\frac{3}{2}x - 45^\circ\right) + 1}$$</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan E</div>
+      <ol class="soal-list">
+        <li>Tentukan nilai maksimum, minimum, dan periode dari:<br>(a) $y = 4\sin\!\left(\dfrac{1}{2}x - 30^\circ\right)$<br>(b) $y = 2 - 5\cos 3x$<br>(c) $f(x) = \dfrac{10}{3 - 2\cos x}$</li>
+        <li>Lukislah grafik $f(x) = 3\sin 2x$ pada interval $0^\circ \leq x \leq 360^\circ$ dengan membuat tabel nilai terlebih dahulu!</li>
+        <li>Lukislah grafik $f(x) = 2\cos(x + 30^\circ)$ pada interval $0^\circ \leq x \leq 360^\circ$ dan bandingkan dengan $y = \cos x$! Jelaskan pengaruh koefisien 2 dan pergeseran $30^\circ$ terhadap bentuk grafik.</li>
+        <li>Lukislah grafik $f(x) = 2\tan\!\left(\dfrac{1}{3}x\right)$ pada interval $0^\circ \leq x \leq 360^\circ$. Tentukan:<br>(a) Periode fungsi tersebut.<br>(b) Letak semua asimtot vertikal dalam interval yang diberikan.<br>(c) Perbedaan grafik ini dibanding $y = \tan x$ (dari segi kecuraman dan periode).</li>
+        <li>Tentukan persamaan fungsi sinus dengan amplitudo 4, periode $120^\circ$, dan pergeseran ke kanan sejauh $20^\circ$. Kemudian tentukan nilai fungsi tersebut pada $x = 50^\circ$!</li>
+        <li>Sebuah grafik fungsi trigonometri memiliki satu periode penuh dengan nilai maksimum $5$, nilai minimum $-5$, titik nol naik pertama di $x = 30^\circ$, dan titik nol naik berikutnya di $x = 210^\circ$.<br>(a) Tentukan amplitudo, periode, dan nilai $a$.<br>(b) Tentukan persamaan fungsi dalam bentuk $y = k\sin(ax + b)$.<br>(c) Verifikasi persamaanmu dengan mensubstitusi $x = 30^\circ$.</li>
+      </ol>
+    </div>
+  </section>
+
   <!-- ═══ F. RINGKASAN ══════════════════════════════════════════════════ -->
   <section class="section" id="bagian-f">
     <h2 class="section-title"><span class="section-badge">F</span>Ringkasan</h2>
@@ -980,6 +1498,22 @@ window.MathJax = {
 
     <h3 class="subsection-title">Sudut Negatif</h3>
     <div class="math-block">$$\sin(-\alpha) = -\sin\alpha \qquad \cos(-\alpha) = \cos\alpha \qquad \tan(-\alpha) = -\tan\alpha$$</div>
+
+    <h3 class="subsection-title">Fungsi Trigonometri Sederhana</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Bentuk</th><th>Maks</th><th>Min</th><th>Periode</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$y = k\sin(ax \pm \alpha)$</td><td>$k$</td><td>$-k$</td><td>$\dfrac{360^\circ}{a}$</td></tr>
+          <tr><td>$y = k\cos(ax \pm \alpha)$</td><td>$k$</td><td>$-k$</td><td>$\dfrac{360^\circ}{a}$</td></tr>
+          <tr><td>$y = k\tan(ax \pm \alpha)$</td><td colspan="2" style="text-align:center;"><em>tidak terbatas</em></td><td>$\dfrac{180^\circ}{a}$</td></tr>
+          <tr><td>$y = p + k\sin(ax)$</td><td>$p + k$</td><td>$p - k$</td><td>$\dfrac{360^\circ}{a}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.9rem;margin:.4rem 0 0 0;">Pergeseran fase: $+\alpha$ (geser kiri), $-\alpha$ (geser kanan). Amplitudo $= \dfrac{\text{maks}-\text{min}}{2}$, periode dibaca dari grafik lalu $a = \dfrac{360^\circ}{\text{periode}}$.</p>
 
   </section>
 
@@ -1243,6 +1777,15 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban: 'Dari $\\tan\\alpha+\\cot\\alpha = \\dfrac{1}{\\sin\\alpha\\cos\\alpha} = k$, maka $\\sin\\alpha\\cos\\alpha = \\dfrac{1}{k}$. (a) $\\sin^2\\alpha\\cos^2\\alpha = \\dfrac{1}{k^2}$ ✓. (b) $(\\sin^2\\alpha+\\cos^2\\alpha)^2 - 2\\sin^2\\alpha\\cos^2\\alpha = 1 - \\dfrac{2}{k^2}$ ✓.' },
       { jawaban: '$\\dfrac{1+\\tan^2\\alpha}{1+\\cot^2\\alpha} = \\dfrac{\\sec^2\\alpha}{\\csc^2\\alpha} = \\dfrac{\\sin^2\\alpha}{\\cos^2\\alpha} = \\tan^2\\alpha$ ✓.' },
       { jawaban: '(a) $(\\sec\\alpha-\\tan\\alpha)(\\sec\\alpha+\\tan\\alpha) = \\sec^2\\alpha-\\tan^2\\alpha = 1 \\Rightarrow \\sec\\alpha+\\tan\\alpha = \\dfrac{1}{p}$ ✓. (b) $\\sin\\alpha = \\dfrac{1/p - p}{1/p + p} = \\dfrac{1-p^2}{1+p^2}$, $\\cos\\alpha = \\dfrac{2p}{1+p^2}$. (c) $\\dfrac{\\tan^2\\alpha}{1+\\tan^2\\alpha} = \\dfrac{\\sec^2\\alpha-1}{\\sec^2\\alpha} = 1 - \\cos^2\\alpha = \\sin^2\\alpha$.' },
+    ],
+    // Latihan E (index 4)
+    4: [
+      { jawaban: '(a) Amplitudo $= 4$, Maks $= 4$, Min $= -4$, Periode $= \\dfrac{360^\\circ}{1/2} = 720^\\circ$. (b) Maks $= 2 + 5 = 7$, Min $= 2 - 5 = -3$, Periode $= \\dfrac{360^\\circ}{3} = 120^\\circ$. (c) $f$ maks saat $\\cos x = -1$: $f_{\\max} = \\dfrac{10}{3-2(-1)} = \\dfrac{10}{5} = 2$; $f$ min saat $\\cos x = 1$: $f_{\\min} = \\dfrac{10}{3-2(1)} = \\dfrac{10}{1} = 10$. Hati-hati: penyebut $3 - 2\\cos x \\in [1, 5]$, sehingga $f \\in [2, 10]$.' },
+      { jawaban: 'Amplitudo $= 3$, periode $= \\dfrac{360^\\circ}{2} = 180^\\circ$. Tabel nilai: $x = 0^\\circ \\to 0$; $45^\\circ \\to 3$; $90^\\circ \\to 0$; $135^\\circ \\to -3$; $180^\\circ \\to 0$; $225^\\circ \\to 3$; $270^\\circ \\to 0$; $315^\\circ \\to -3$; $360^\\circ \\to 0$. Grafik berosilasi antara $3$ dan $-3$ dengan dua siklus penuh dalam $[0^\\circ, 360^\\circ]$.' },
+      { jawaban: 'Amplitudo $= 2$ (grafik dua kali lebih tinggi dari $\\cos x$). Pergeseran fase $+30^\\circ$ (geser kiri $30^\\circ$): titik maks bergeser dari $0^\\circ$ ke $-30^\\circ$ (ekuivalen $330^\\circ$ dari kanan). Dalam $[0^\\circ, 360^\\circ]$: maks di $x = 330^\\circ$, titik nol di $x = 60^\\circ$ dan $x = 240^\\circ$, min di $x = 150^\\circ$.' },
+      { jawaban: '(a) Periode $= \\dfrac{180^\\circ}{1/3} = 540^\\circ$. (b) Asimtot: $\\dfrac{1}{3}x = 90^\\circ \\Rightarrow x = 270^\\circ$. Satu asimtot dalam $[0^\\circ, 360^\\circ]$ di $x = 270^\\circ$. (c) Dibanding $y = \\tan x$: periode lebih panjang ($540^\\circ$ vs $180^\\circ$), kemiringan dua kali lebih curam (koefisien $k = 2$), hanya satu asimtot dalam interval vs tiga asimtot.' },
+      { jawaban: 'Persamaan: $y = 4\\sin(3(x - 20^\\circ)) = 4\\sin(3x - 60^\\circ)$. Nilai di $x = 50^\\circ$: $y = 4\\sin(3 \\cdot 50^\\circ - 60^\\circ) = 4\\sin(90^\\circ) = 4$.' },
+      { jawaban: '(a) Amplitudo $= 5$, periode: jarak titik nol naik $= 210^\\circ - 30^\\circ = 180^\\circ$, maka $a = \\dfrac{360^\\circ}{180^\\circ} = 2$. (b) Grafik digeser kanan $30^\\circ$ dari $\\sin(2x)$: $y = 5\\sin(2(x - 30^\\circ)) = 5\\sin(2x - 60^\\circ)$. (c) Substitusi $x = 30^\\circ$: $y = 5\\sin(60^\\circ - 60^\\circ) = 5 \\cdot 0 = 0$ ✓ (titik nol naik terkonfirmasi).' },
     ],
   };
 

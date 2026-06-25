@@ -101,6 +101,148 @@ window.MathJax = {
     </div>
   </div>
 
+  <!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Mendekati Tanpa Pernah Sampai</h2>
+
+    <p>Lebih dari dua ribu tahun lalu, filsuf Yunani Zeno dari Elea mengajukan sebuah teka-teki yang mengguncang dunia matematika. Ia berkata: <em>"Achilles — pelari tercepat di dunia — tidak akan pernah bisa menyusul seekor kura-kura yang diberi keunggulan awal."</em> Alasannya? Setiap kali Achilles mencapai posisi kura-kura, kura-kura itu sudah bergerak sedikit lebih maju. Lalu Achilles mengejar lagi, kura-kura maju lagi — selamanya. Paradoks ini tampak absurd, tapi selama berabad-abad tak ada yang bisa membantahnya secara matematis. Jawabannya — ternyata — tersembunyi di dalam konsep yang kita sebut <strong>limit</strong>.</p>
+
+    <p>Limit hadir di mana-mana dalam kehidupan nyata, seringkali tanpa kita sadari. Ketika speedometer mobilmu menunjukkan 80 km/jam, angka itu bukan kecepatan rata-rata perjalananmu — itu adalah kecepatan <em>sesaat</em>, yaitu kecepatan pada satu titik waktu yang presisi. Mustahil diukur dengan cara biasa (jarak dibagi waktu), karena tidak ada jarak yang ditempuh dalam waktu nol. Namun limit memungkinkan kita mendefinisikannya dengan tepat. Begitu pula ketika kamu memperbesar sebuah kurva di layar komputer terus-menerus: lama-kelamaan bagian kecil kurva itu terlihat semakin lurus — itulah intuisi di balik turunan, yang seluruhnya dibangun di atas limit.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Mendekati vs. Mencapai</h3>
+    <p>Pertanyaan kunci dalam limit bukan <em>"berapa nilai f(2)?"</em> melainkan <em>"ke nilai berapa f(x) mendekati, ketika x semakin dekat ke 2?"</em> Perbedaan ini terdengar halus, tetapi sangat dalam. Perhatikan fungsi $f(x) = \dfrac{x^2-4}{x-2}$: tepat di $x = 2$, fungsi ini <strong>tidak terdefinisi</strong> (pembagian oleh nol). Namun lihat apa yang terjadi di sekitarnya:</p>
+
+    <div style="overflow-x:auto;margin:.8rem 0;">
+      <table class="approach-table">
+        <thead><tr>
+          <th>$x$</th><th>1,90</th><th>1,99</th><th>1,999</th>
+          <th class="highlight">⋯ 2 ⋯</th>
+          <th>2,001</th><th>2,01</th><th>2,1</th>
+        </tr></thead>
+        <tbody><tr>
+          <th>$f(x)$</th><td>3,90</td><td>3,99</td><td>3,999</td>
+          <td class="highlight">⋯ ? ⋯</td>
+          <td>4,001</td><td>4,01</td><td>4,1</td>
+        </tr></tbody>
+      </table>
+    </div>
+
+    <p>Dari kiri maupun dari kanan, $f(x)$ mendekati <strong>4</strong> — meskipun $f(2)$ sendiri tidak ada. Inilah esensi limit: kita bisa mengetahui <em>tujuan</em> sebuah fungsi, bahkan di titik yang fungsinya "rusak". Perbandingan antara dua pertanyaan ini sangat penting untuk dipahami:</p>
+
+    <div style="overflow-x:auto;margin:.8rem 0;">
+      <table style="width:100%;border-collapse:collapse;font-size:.95em;">
+        <thead>
+          <tr style="background:var(--accent-2,#64748b);color:#fff;">
+            <th style="padding:.5rem .8rem;text-align:left;">Pertanyaan</th>
+            <th style="padding:.5rem .8rem;text-align:left;">Maksud</th>
+            <th style="padding:.5rem .8rem;text-align:left;">Jawaban untuk $f(x)=\frac{x^2-4}{x-2}$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border,#e2e8f0);">
+            <td style="padding:.5rem .8rem;">$f(2) = ?$</td>
+            <td style="padding:.5rem .8rem;">Nilai fungsi <em>tepat</em> di $x=2$</td>
+            <td style="padding:.5rem .8rem;"><strong>Tidak terdefinisi</strong> (0/0)</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .8rem;">$\lim_{x \to 2} f(x) = ?$</td>
+            <td style="padding:.5rem .8rem;">Nilai yang <em>didekati</em> $f(x)$ saat $x \to 2$</td>
+            <td style="padding:.5rem .8rem;"><strong>4</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Limit memberi kita alat untuk menjawab pertanyaan yang sebelumnya tak terjawab — termasuk paradoks Zeno, kecepatan sesaat, dan kemiringan kurva di satu titik. Inilah yang akan kita pelajari: <strong>limit sebagai fondasi kalkulus</strong>, bahasa matematika yang menggambarkan dunia yang selalu berubah.</p>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Peta Materi: Alur Belajar Limit Fungsi</div>
+      <p style="margin:.3rem 0 .5rem;">Materi dalam modul ini disusun secara bertahap:</p>
+      <ol style="padding-left:1.3rem;line-height:2;">
+        <li><strong>Limit Fungsi</strong> — memahami definisi limit fungsi, limit kiri-kanan, dan sifat-sifat/teorema limit fungsi</li>
+        <li><strong>Limit Berhingga Fungsi Aljabar</strong> — cara menghitungnya (substitusi, faktorisasi, perkalian sekawan)</li>
+        <li><strong>Limit Fungsi Aljabar di Tak Hingga</strong> — limit untuk $x \to \infty$ dan selisih akar</li>
+        <li><strong>Limit Fungsi Trigonometri</strong> — rumus dasar $\lim_{x\to 0}\frac{\sin x}{x} = 1$ dan pengembangannya</li>
+      </ol>
+    </div>
+
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 390" width="100%" style="max-width:360px;background-color:transparent;">
+  <defs>
+    <style>
+      .ax-lf{stroke:var(--text-main,#334155)}
+      .gl-lf{stroke:var(--text-muted,#e2e8f0);opacity:.5}
+      .lb-lf{fill:var(--text-main,#334155);font-family:Cambria,'Times New Roman',serif}
+      .cv-lf{stroke:#b30000;fill:none;stroke-width:2.5}
+      .hl-lf{stroke:#0014b3;fill:none;stroke-width:1.5;stroke-dasharray:5,3}
+      .lm-lf{fill:#0014b3;font-family:Cambria,'Times New Roman',serif}
+      @media(prefers-color-scheme:dark){
+        .gl-lf{stroke:#334155}
+        .cv-lf{stroke:#F87171}
+        .hl-lf{stroke:#60A5FA}
+        .lm-lf{fill:#60A5FA}
+      }
+      [data-theme="dark"] .gl-lf{stroke:#334155}
+      [data-theme="dark"] .cv-lf{stroke:#F87171}
+      [data-theme="dark"] .hl-lf{stroke:#60A5FA}
+      [data-theme="dark"] .lm-lf{fill:#60A5FA}
+    </style>
+    <marker id="arr-lf" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--text-main,#334155)"/>
+    </marker>
+  </defs>
+  <!-- origin(80,350), x-unit=70px, y-unit=50px -->
+  <!-- Grid -->
+  <line x1="150" y1="88" x2="150" y2="355" class="gl-lf" stroke-width="1"/>
+  <line x1="220" y1="88" x2="220" y2="355" class="gl-lf" stroke-width="1"/>
+  <line x1="290" y1="88" x2="290" y2="355" class="gl-lf" stroke-width="1"/>
+  <line x1="75"  y1="250" x2="340" y2="250" class="gl-lf" stroke-width="1"/>
+  <line x1="75"  y1="200" x2="340" y2="200" class="gl-lf" stroke-width="1"/>
+  <line x1="75"  y1="150" x2="340" y2="150" class="gl-lf" stroke-width="1"/>
+  <line x1="75"  y1="100" x2="340" y2="100" class="gl-lf" stroke-width="1"/>
+  <!-- Dashed limit line at y=150 (limit = 4) -->
+  <line x1="82" y1="150" x2="213" y2="150" class="hl-lf"/>
+  <!-- Axes -->
+  <line x1="55"  y1="350" x2="355" y2="350" marker-end="url(#arr-lf)" class="ax-lf" stroke-width="2.5"/>
+  <line x1="80"  y1="370" x2="80"  y2="60"  marker-end="url(#arr-lf)" class="ax-lf" stroke-width="2.5"/>
+  <text x="360" y="356" class="lb-lf" font-size="18" font-style="italic">x</text>
+  <text x="66"  y="54"  class="lb-lf" font-size="18" font-style="italic">y</text>
+  <text x="64"  y="362" class="lb-lf" font-size="16">O</text>
+  <!-- X ticks -->
+  <line x1="150" y1="345" x2="150" y2="355" class="ax-lf" stroke-width="1.5"/>
+  <line x1="220" y1="345" x2="220" y2="355" class="ax-lf" stroke-width="1.5"/>
+  <line x1="290" y1="345" x2="290" y2="355" class="ax-lf" stroke-width="1.5"/>
+  <text x="150" y="370" class="lb-lf" font-size="15" text-anchor="middle">1</text>
+  <text x="220" y="370" class="lb-lf" font-size="15" text-anchor="middle">2</text>
+  <text x="290" y="370" class="lb-lf" font-size="15" text-anchor="middle">3</text>
+  <!-- Y ticks -->
+  <line x1="75" y1="250" x2="85" y2="250" class="ax-lf" stroke-width="1.5"/>
+  <line x1="75" y1="200" x2="85" y2="200" class="ax-lf" stroke-width="1.5"/>
+  <line x1="75" y1="150" x2="85" y2="150" class="ax-lf" stroke-width="1.5"/>
+  <line x1="75" y1="100" x2="85" y2="100" class="ax-lf" stroke-width="1.5"/>
+  <text x="68" y="255" class="lb-lf" font-size="15" text-anchor="end">2</text>
+  <text x="68" y="205" class="lb-lf" font-size="15" text-anchor="end">3</text>
+  <text x="68" y="155" class="lb-lf" font-size="15" text-anchor="end">4</text>
+  <text x="68" y="105" class="lb-lf" font-size="15" text-anchor="end">5</text>
+  <!-- Curve y=x+2 with hole at (2,4)=(220,150) -->
+  <line x1="80" y1="250" x2="213" y2="155" class="cv-lf"/>
+  <line x1="227" y1="145" x2="311" y2="85"  class="cv-lf"/>
+  <!-- Open circle (hole) at (220,150) -->
+  <circle cx="220" cy="150" r="5.5" fill="var(--bg-card,#ffffff)" stroke="#b30000" stroke-width="2"/>
+  <!-- Approach arrows -->
+  <line x1="168" y1="188" x2="209" y2="157" marker-end="url(#arr-lf)" stroke="var(--text-main,#334155)" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="268" y1="115" x2="231" y2="147" marker-end="url(#arr-lf)" stroke="var(--text-main,#334155)" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="150" y="185" class="lb-lf" font-size="12">x → 2⁻</text>
+  <text x="270" y="112" class="lb-lf" font-size="12">x → 2⁺</text>
+  <!-- Annotations -->
+  <text x="232" y="144" class="lm-lf" font-size="13" font-weight="600">lim f(x) = 4</text>
+  <text x="232" y="160" class="lb-lf" font-size="11" fill="#94a3b8">f(2) tidak terdefinisi</text>
+  <!-- Curve label -->
+  <text x="302" y="90"  class="lb-lf" font-size="13" fill="#b30000">f(x)=x+2</text>
+  <text x="302" y="105" class="lb-lf" font-size="11" fill="#94a3b8">(x ≠ 2)</text>
+</svg>
+</div>
+
   <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
@@ -114,105 +256,6 @@ window.MathJax = {
     </ul>
   </div>
 
-  <!-- ═══ PENGANTAR ═══════════════════════════════════════════════════ -->
-  <section class="section" id="pengantar">
-    <h2 class="section-title"><span class="section-badge" style="background:var(--text-3);">★</span>Pengantar: Apa itu Limit?</h2>
-
-    <p>Bayangkan kamu berjalan mendekati sebuah tembok. Semakin dekat langkahmu, semakin jelas kamu bisa melihat tekstur temboknya — meskipun kamu belum menyentuhnya. Itulah inti dari <strong>limit</strong>: kita ingin tahu <em>ke mana</em> suatu nilai menuju, bukan apakah ia benar-benar sampai di sana.</p>
-
-    <p>Konsep limit adalah fondasi dari seluruh kalkulus. Tanpa limit, turunan (diferensial) dan integral tidak akan bisa didefinisikan dengan tepat. Limit menjawab pertanyaan: <em>"Jika $x$ mendekati suatu nilai tertentu, ke nilai berapakah $f(x)$ mendekati?"</em></p>
-
-    <h3 class="subsection-title">Ide Dasar</h3>
-
-    <p>Perhatikan fungsi $f(x) = \dfrac{x^2 - 4}{x - 2}$. Fungsi ini <strong>tidak terdefinisi</strong> di $x = 2$ karena menyebabkan pembagian oleh nol. Namun, perhatikan apa yang terjadi pada $f(x)$ saat $x$ <em>mendekati</em> 2:</p>
-
-    <!-- Tabel nilai pendekatan -->
-    <div style="overflow-x:auto;margin:.8rem 0;">
-      <table class="approach-table">
-        <thead><tr>
-          <th>$x$</th><th>1,90</th><th>1,99</th><th>1,999</th>
-          <th class="highlight">⋯ 2 ⋯</th>
-          <th>2,001</th><th>2,01</th><th>2,1</th>
-        </tr></thead>
-        <tbody><tr>
-          <th>$f(x)$</th><td>3,90</td><td>3,99</td><td>3,999</td>
-          <td class="highlight">⋯</td>
-          <td>4,001</td><td>4,01</td><td>4,1</td>
-        </tr></tbody>
-      </table>
-    </div>
-
-    <!-- Grafik f(x) = (x²-4)/(x-2) = x+2 dengan lubang di (2,4) -->
-    <div class="grafik-wrap">
-      <svg viewBox="0 0 280 210" width="280" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <marker id="px" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#555"/></marker>
-          <marker id="py" markerWidth="6" markerHeight="6" refX="3" refY="5" orient="auto"><path d="M0,0 L6,0 L3,6z" fill="#555"/></marker>
-        </defs>
-        <!-- grid -->
-        <g stroke="#e2e8f0" stroke-width="0.6">
-          <line x1="55" y1="10" x2="55" y2="195"/>
-          <line x1="95" y1="10" x2="95" y2="195"/>
-          <line x1="135" y1="10" x2="135" y2="195"/>
-          <line x1="175" y1="10" x2="175" y2="195"/>
-          <line x1="215" y1="10" x2="215" y2="195"/>
-          <line x1="15" y1="155" x2="265" y2="155"/>
-          <line x1="15" y1="115" x2="265" y2="115"/>
-          <line x1="15" y1="75" x2="265" y2="75"/>
-          <line x1="15" y1="35" x2="265" y2="35"/>
-        </g>
-        <!-- axes -->
-        <line x1="15" y1="195" x2="265" y2="195" stroke="#555" stroke-width="1.6" marker-end="url(#px)"/>
-        <line x1="15" y1="200" x2="15" y2="10" stroke="#555" stroke-width="1.6" marker-end="url(#py)"/>
-        <!-- axis labels -->
-        <text x="268" y="199" font-size="10" fill="#555">x</text>
-        <text x="9" y="10" font-size="10" fill="#555">y</text>
-        <text x="10" y="199" font-size="9" fill="#888">O</text>
-        <!-- tick marks x: 1,2,3,4 -->
-        <text x="55" y="207" font-size="9" fill="#777" text-anchor="middle">1</text>
-        <text x="95" y="207" font-size="9" fill="#777" text-anchor="middle">2</text>
-        <text x="135" y="207" font-size="9" fill="#777" text-anchor="middle">3</text>
-        <text x="175" y="207" font-size="9" fill="#777" text-anchor="middle">4</text>
-        <!-- tick marks y: 1,2,3,4,5 (scale: 40px per unit, origin at y=195) -->
-        <text x="10" y="158" font-size="9" fill="#777" text-anchor="end">1</text>
-        <text x="10" y="118" font-size="9" fill="#777" text-anchor="end">2</text>
-        <text x="10" y="78" font-size="9" fill="#777" text-anchor="end">3</text>
-        <text x="10" y="38" font-size="9" fill="#777" text-anchor="end">4</text>
-        <!-- f(x) = x+2 (scale: x→ 40px per unit from x=15; y→195-40y) -->
-        <!-- At x=0: y=2 → (15,115); At x=1.85: y=3.85 → (89,41) -->
-        <!-- At x=2.15: y=4.15 → (101,29); At x=3.8: y=5.8 → (167,-37) clip -->
-        <line x1="15" y1="115" x2="87" y2="42" stroke="#2563eb" stroke-width="2.2"/>
-        <line x1="103" y1="26" x2="190" y2="-9" stroke="#2563eb" stroke-width="2.2" clip-path="url(#clip-graph)"/>
-        <clipPath id="clip-graph"><rect x="0" y="0" width="280" height="210"/></clipPath>
-        <line x1="103" y1="26" x2="230" y2="-30" stroke="#2563eb" stroke-width="2.2" clip-path="url(#clip-graph)"/>
-        <!-- dashed lines to (2,4): x=95, y=195-4*40=35 -->
-        <line x1="95" y1="195" x2="95" y2="35" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
-        <line x1="15" y1="35" x2="95" y2="35" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
-        <!-- open circle at (2,4) → (95,35) -->
-        <circle cx="95" cy="35" r="5" fill="white" stroke="#2563eb" stroke-width="2"/>
-        <!-- label -->
-        <text x="100" y="33" font-size="9" fill="#555">(2, 4)</text>
-        <text x="155" y="55" font-size="9" fill="#2563eb">y = x+2</text>
-      </svg>
-    </div>
-
-    <p>Terlihat bahwa $f(x)$ mendekati <strong>4</strong> baik dari kiri maupun dari kanan. Maka kita tuliskan:</p>
-
-    <div class="box box-rumus">
-      <div class="box-label">Contoh Limit</div>
-      <div class="math-block">$$\lim_{x \to 2} f(x) = \lim_{x \to 2} \frac{x^2 - 4}{x - 2} = 4$$</div>
-    </div>
-
-    <div class="box box-catatan">
-      <div class="box-label">⚠ Peta Materi: Alur Belajar Limit Fungsi</div>
-      <p style="margin:.3rem 0 .5rem;">Materi dalam modul ini disusun secara bertahap:</p>
-      <ol style="padding-left:1.3rem;line-height:2;">
-        <li><strong>Limit Fungsi</strong> — memahami definisi limit fungsi, limit kiri-kanan, dan sifat-sifat/teorema limit fungsi</li>
-        <li><strong>Limit Berhingga Fungsi Aljabar</strong> — cara menghitungnya (substitusi, faktorisasi, perkalian sekawan)</li>
-        <li><strong>Limit Fungsi Aljabar di Tak Hingga</strong> — limit untuk $x \to \infty$ dan selisih akar</li>
-        <li><strong>Limit Fungsi Trigonometri</strong> — rumus dasar $\lim_{x\to 0}\frac{\sin x}{x} = 1$ dan pengembangannya</li>
-      </ol>
-    </div>
   </section>
 
   <!-- ═══ A. LIMIT FUNGSI ═══════════════════════════════════════════════ -->
@@ -699,15 +742,15 @@ window.MathJax = {
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan — Bagian B (Set 1)</div>
       <ol class="soal-list">
-        <li>Tentukanlah nilai setiap limit berikut menggunakan substitusi langsung: (a) $\displaystyle\lim_{x\to -1}\frac{x^2 + 4x + 3}{x + 1}$, (b) $\displaystyle\lim_{x\to 3}\frac{x^2 - 9}{x - 3}$.</li>
-        <li>Tentukanlah nilai setiap limit berikut menggunakan faktorisasi: (a) $\displaystyle\lim_{x\to 4}\frac{x^2 - 8x + 16}{x^2 - 3x - 4}$, (b) $\displaystyle\lim_{x\to -2}\frac{x^3 + 8}{x^2 + 5x + 6}$.</li>
-        <li>Tentukanlah nilai setiap limit berikut menggunakan perkalian sekawan: (a) $\displaystyle\lim_{x\to 4}\frac{x^2 - 16}{\sqrt{x} - 2}$, (b) $\displaystyle\lim_{x\to 5}\frac{\sqrt{x - 1} - 2}{x^2 - 7x + 10}$.</li>
+        <li>Tentukanlah nilai setiap limit berikut menggunakan substitusi langsung:<br>(a) $\displaystyle\lim_{x\to -1}\frac{x^2 + 4x + 3}{x + 1}$<br>(b) $\displaystyle\lim_{x\to 3}\frac{x^2 - 9}{x - 3}$</li>
+        <li>Tentukanlah nilai setiap limit berikut menggunakan faktorisasi:<br>(a) $\displaystyle\lim_{x\to 4}\frac{x^2 - 8x + 16}{x^2 - 3x - 4}$<br>(b) $\displaystyle\lim_{x\to -2}\frac{x^3 + 8}{x^2 + 5x + 6}$</li>
+        <li>Tentukanlah nilai setiap limit berikut menggunakan perkalian sekawan:<br>(a) $\displaystyle\lim_{x\to 4}\frac{x^2 - 16}{\sqrt{x} - 2}$<br>(b) $\displaystyle\lim_{x\to 5}\frac{\sqrt{x - 1} - 2}{x^2 - 7x + 10}$</li>
       </ol>
     </div>
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan — Bagian B (Set 2)</div>
       <ol class="soal-list">
-        <li>Tentukanlah nilai setiap limit berikut: (a) $\displaystyle\lim_{x\to 0}\frac{\sqrt{1 + \sqrt{1 + x}} - \sqrt{2}}{x}$, (b) $\displaystyle\lim_{x\to 4}\frac{\sqrt{x^2 + 9} - 5}{x^2 - 6x + 8}$.</li>
+        <li>Tentukanlah nilai setiap limit berikut:<br>(a) $\displaystyle\lim_{x\to 0}\frac{\sqrt{1 + \sqrt{1 + x}} - \sqrt{2}}{x}$<br>(b) $\displaystyle\lim_{x\to 4}\frac{\sqrt{x^2 + 9} - 5}{x^2 - 6x + 8}$</li>
         <li>Jika $\displaystyle\lim_{x\to 2}\frac{x^2 + ax + b}{x^2 - x - 2} = \dfrac{4}{3}$, tentukan nilai $a$ dan $b$.</li>
         <li>Jika $\displaystyle\lim_{x\to 4}\frac{\sqrt{x + a} - \sqrt{b - x}}{x - 4} = \dfrac{1}{4}$, tentukan nilai $a$ dan $b$, kemudian verifikasi jawabanmu.</li>
         <li>Tentukanlah $\displaystyle\lim_{x\to 8}\dfrac{\sqrt[3]{x} - 2}{x - 8}$. (Gunakan substitusi $\sqrt[3]{x} = p$.)</li>

@@ -99,6 +99,102 @@ window.MathJax = {
     </div>
   </div>
 
+<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Seni Menghitung Tanpa Menghitung Satu per Satu</h2>
+
+    <p>Berapa banyak kemungkinan urutan kartu dalam satu deck standar (52 kartu)? Jawabannya adalah $52!$ — sebuah angka dengan 68 digit. Jika setiap atom di alam semesta yang teramati adalah satu deck kartu, dan setiap atom dalam deck itu dikocok satu triliun kali per detik sejak Big Bang, kamu masih belum akan melihat setengah dari semua kemungkinan urutan itu. Inilah kekuatan kombinatorika: angka yang tampak sederhana menyimpan kemungkinan yang tak terbayangkan.</p>
+
+    <p>Kombinatorika adalah matematika dari <em>pilihan</em>. Berapa banyak password yang bisa dibuat? Berapa cara memilih tim dari sekelompok orang? Berapa peluang menang lotre? Semua pertanyaan ini dijawab oleh kombinatorika — cabang matematika yang memungkinkan kita menghitung kemungkinan tanpa harus mendaftarnya satu per satu.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Apakah Urutan Penting?</h3>
+    <p>Pertanyaan kunci dalam setiap masalah kombinatorika adalah: <strong>apakah urutan memengaruhi hasilnya?</strong></p>
+
+    <table style="border-collapse:collapse;margin:12px 0;font-size:.92rem;width:100%;max-width:500px;">
+      <thead><tr style="background:var(--bg-card);"><th style="padding:8px 14px;border:1px solid var(--border);text-align:left;">Situasi</th><th style="padding:8px 14px;border:1px solid var(--border);text-align:left;">Urutan Penting?</th><th style="padding:8px 14px;border:1px solid var(--border);text-align:left;">Gunakan</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:7px 14px;border:1px solid var(--border);">PIN 4 digit (1234 ≠ 4321)</td><td style="padding:7px 14px;border:1px solid var(--border);">Ya</td><td style="padding:7px 14px;border:1px solid var(--border);"><strong>Permutasi</strong></td></tr>
+        <tr><td style="padding:7px 14px;border:1px solid var(--border);">Pilih 3 orang dari 10 untuk panitia</td><td style="padding:7px 14px;border:1px solid var(--border);">Tidak</td><td style="padding:7px 14px;border:1px solid var(--border);"><strong>Kombinasi</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 470" width="100%" style="max-width:480px;background-color:transparent;">
+  <defs>
+    <style>
+      .rn-ko{fill:#334155}
+      .ln-ko{stroke:var(--text-muted,#94a3b8);fill:none}
+      .sn-ko{fill:#0014b3}
+      .pn-ko{fill:#b30000}
+      .lb-ko{fill:var(--text-main,#334155);font-family:Cambria,'Times New Roman',serif}
+      .wt-ko{fill:#fff;font-family:Cambria,'Times New Roman',serif;font-weight:700}
+      @media(prefers-color-scheme:dark){
+        .rn-ko{fill:#475569}
+        .lb-ko{fill:#e2e8f0}
+        .ln-ko{stroke:#475569}
+        .sn-ko{fill:#60A5FA}
+        .pn-ko{fill:#F87171}
+      }
+      [data-theme="dark"] .rn-ko{fill:#475569}
+      [data-theme="dark"] .lb-ko{fill:#e2e8f0}
+      [data-theme="dark"] .ln-ko{stroke:#475569}
+      [data-theme="dark"] .sn-ko{fill:#60A5FA}
+      [data-theme="dark"] .pn-ko{fill:#F87171}
+    </style>
+  </defs>
+  <!-- Lines: root to 3 shirts -->
+  <line x1="300" y1="78" x2="120" y2="167" class="ln-ko" stroke-width="2"/>
+  <line x1="300" y1="78" x2="300" y2="167" class="ln-ko" stroke-width="2"/>
+  <line x1="300" y1="78" x2="480" y2="167" class="ln-ko" stroke-width="2"/>
+  <!-- Lines: shirt A (120,190) to pants 1,2 -->
+  <line x1="120" y1="213" x2="60"  y2="308" class="ln-ko" stroke-width="1.5"/>
+  <line x1="120" y1="213" x2="180" y2="308" class="ln-ko" stroke-width="1.5"/>
+  <!-- Lines: shirt B (300,190) to pants 1,2 -->
+  <line x1="300" y1="213" x2="240" y2="308" class="ln-ko" stroke-width="1.5"/>
+  <line x1="300" y1="213" x2="360" y2="308" class="ln-ko" stroke-width="1.5"/>
+  <!-- Lines: shirt C (480,190) to pants 1,2 -->
+  <line x1="480" y1="213" x2="420" y2="308" class="ln-ko" stroke-width="1.5"/>
+  <line x1="480" y1="213" x2="540" y2="308" class="ln-ko" stroke-width="1.5"/>
+  <!-- Root node -->
+  <circle cx="300" cy="50" r="30" class="rn-ko"/>
+  <text x="300" y="44"  class="wt-ko" font-size="11" text-anchor="middle">Pilih</text>
+  <text x="300" y="61"  class="wt-ko" font-size="11" text-anchor="middle">Outfit</text>
+  <!-- Shirt nodes (blue) -->
+  <circle cx="120" cy="190" r="23" class="sn-ko"/>
+  <text x="120" y="197" class="wt-ko" font-size="16" text-anchor="middle">A</text>
+  <circle cx="300" cy="190" r="23" class="sn-ko"/>
+  <text x="300" y="197" class="wt-ko" font-size="16" text-anchor="middle">B</text>
+  <circle cx="480" cy="190" r="23" class="sn-ko"/>
+  <text x="480" y="197" class="wt-ko" font-size="16" text-anchor="middle">C</text>
+  <!-- Pants nodes (red) -->
+  <circle cx="60"  cy="326" r="18" class="pn-ko"/>
+  <text x="60"  y="332" class="wt-ko" font-size="14" text-anchor="middle">1</text>
+  <circle cx="180" cy="326" r="18" class="pn-ko"/>
+  <text x="180" y="332" class="wt-ko" font-size="14" text-anchor="middle">2</text>
+  <circle cx="240" cy="326" r="18" class="pn-ko"/>
+  <text x="240" y="332" class="wt-ko" font-size="14" text-anchor="middle">1</text>
+  <circle cx="360" cy="326" r="18" class="pn-ko"/>
+  <text x="360" y="332" class="wt-ko" font-size="14" text-anchor="middle">2</text>
+  <circle cx="420" cy="326" r="18" class="pn-ko"/>
+  <text x="420" y="332" class="wt-ko" font-size="14" text-anchor="middle">1</text>
+  <circle cx="540" cy="326" r="18" class="pn-ko"/>
+  <text x="540" y="332" class="wt-ko" font-size="14" text-anchor="middle">2</text>
+  <!-- Annotations -->
+  <text x="300" y="148" class="lb-ko" font-size="14" text-anchor="middle">3 pilihan baju</text>
+  <text x="300" y="282" class="lb-ko" font-size="14" text-anchor="middle">tiap baju: 2 pilihan celana</text>
+  <!-- Result -->
+  <text x="300" y="395" class="lb-ko" font-size="18" text-anchor="middle" font-weight="700">Total: 3 × 2 = 6 pasangan outfit</text>
+  <!-- Legend -->
+  <circle cx="120" cy="432" r="8" class="sn-ko"/>
+  <text x="135" y="437" class="lb-ko" font-size="13">Baju (A, B, C)</text>
+  <circle cx="310" cy="432" r="8" class="pn-ko"/>
+  <text x="325" y="437" class="lb-ko" font-size="13">Celana (1, 2)</text>
+</svg>
+</div>
+
+    <p>Mulai dari kaidah perkalian sederhana hingga permutasi dan kombinasi, modul ini akan membekali kamu dengan alat yang digunakan dalam kriptografi, teori peluang, desain algoritma, dan banyak bidang lainnya. Karena di balik setiap sistem yang melibatkan pilihan, selalu ada kombinatorika yang bekerja di balik layar.</p>
+
+  <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
     <ul class="toc-list">
@@ -110,6 +206,7 @@ window.MathJax = {
     </ul>
   </div>
 
+  </section>
 
   <!-- ═══ A. KAIDAH PENCACAHAN ══════════════════════════════════════ -->
   <section class="section" id="bagian-a">
@@ -736,7 +833,13 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan nilai $r$ jika ${}_6C_r = 2 \cdot {}_5C_r$.</p>
     </div>
     <div class="penyelesaian">
-      $$\frac{6!}{r!(6-r)!} = 2 \cdot \frac{5!}{r!(5-r)!} \implies \frac{6}{(6-r)(5-r)!} = \frac{2}{(5-r)!} \implies \frac{6}{6-r} = 2 \implies r = \boxed{3}$$
+      <p><strong>Penyelesaian:</strong></p>
+      <div class="math-block">$$\begin{align*}
+\frac{6!}{r!(6-r)!} &= 2 \cdot \frac{5!}{r!(5-r)!} \\[4pt]
+\frac{6 \times \cancel{5!}}{(6-r)!} &= \frac{2 \times \cancel{5!}}{(5-r)!} \\[4pt]
+\frac{6}{(6-r)\cancel{(5-r)!}} &= \frac{2}{\cancel{(5-r)!}} \\[4pt]
+6 &= 2(6-r) \;\Rightarrow\; r = \boxed{3}
+\end{align*}$$</div>
     </div>
 
     <div class="box box-contoh">

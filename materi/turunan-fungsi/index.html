@@ -107,6 +107,113 @@ window.MathJax = {
     </div>
   </div>
 
+<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Seberapa Cepat Sesuatu Berubah?</h2>
+
+    <p>Speedometer di dasbor mobilmu tidak menunjukkan kecepatan rata-rata perjalanan — ia menunjukkan kecepatan <em>tepat saat ini</em>, pada pecahan detik ini. Ini bukan hal yang sepele: kecepatan rata-rata mudah dihitung (jarak dibagi waktu), tapi kecepatan sesaat membutuhkan konsep yang lebih dalam. Konsep itulah yang disebut <strong>turunan</strong>.</p>
+
+    <p>Turunan adalah alat untuk mengukur laju perubahan di satu titik tertentu. Di balik algoritma machine learning yang belajar dari data, ada <em>gradient descent</em> — metode yang menggunakan turunan untuk menemukan nilai minimum fungsi kerugian. Di balik desain jembatan yang tahan gempa, ada analisis turunan gaya terhadap deformasi. Di balik model penyebaran pandemi, ada turunan yang menggambarkan seberapa cepat jumlah kasus berubah setiap hari.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Dari Kecepatan Rata-Rata ke Kecepatan Sesaat</h3>
+    <p>Kecepatan rata-rata dihitung sebagai $\dfrac{\Delta s}{\Delta t}$ — perubahan posisi dibagi perubahan waktu. Tapi bagaimana dengan kecepatan di satu detik tertentu? Kita buat $\Delta t$ semakin kecil, mendekati nol:</p>
+
+    $$v_{\text{sesaat}} = \lim_{\Delta t \to 0} \frac{\Delta s}{\Delta t} = \frac{ds}{dt}$$
+
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 510" width="100%" style="max-width:420px;background-color:transparent;">
+  <defs>
+    <style>
+      .ax-td{stroke:var(--text-main,#334155)}
+      .gl-td{stroke:var(--text-muted,#e2e8f0);opacity:.5}
+      .lb-td{fill:var(--text-main,#334155);font-family:Cambria,'Times New Roman',serif}
+      .cv-td{stroke:#b30000;fill:none}
+      .tg-td{stroke:#0014b3;fill:none}
+      .sc-td{stroke:#94a3b8;fill:none;stroke-dasharray:6,4}
+      .dx-td{stroke:#94a3b8;fill:none;stroke-dasharray:4,3}
+      .pt-td{fill:#800040}
+      .ta-td{fill:#0014b3;font-family:Cambria,'Times New Roman',serif}
+      .tr-td{fill:#b30000;font-family:Cambria,'Times New Roman',serif}
+      @media(prefers-color-scheme:dark){
+        .gl-td{stroke:#334155}
+        .cv-td{stroke:#F87171}
+        .tg-td{stroke:#60A5FA}
+        .sc-td{stroke:#475569}
+        .dx-td{stroke:#475569}
+        .pt-td{fill:#F472B6}
+        .ta-td{fill:#60A5FA}
+        .tr-td{fill:#F87171}
+      }
+      [data-theme="dark"] .gl-td{stroke:#334155}
+      [data-theme="dark"] .cv-td{stroke:#F87171}
+      [data-theme="dark"] .tg-td{stroke:#60A5FA}
+      [data-theme="dark"] .sc-td{stroke:#475569}
+      [data-theme="dark"] .dx-td{stroke:#475569}
+      [data-theme="dark"] .pt-td{fill:#F472B6}
+      [data-theme="dark"] .ta-td{fill:#60A5FA}
+      [data-theme="dark"] .tr-td{fill:#F87171}
+    </style>
+    <marker id="arr-td" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--text-main,#334155)"/>
+    </marker>
+  </defs>
+  <!-- origin(100,460), x-unit=80px, y-unit=40px -->
+  <!-- Grid -->
+  <line x1="100" y1="420" x2="370" y2="420" class="gl-td" stroke-width="1"/>
+  <line x1="100" y1="300" x2="370" y2="300" class="gl-td" stroke-width="1"/>
+  <line x1="100" y1="180" x2="370" y2="180" class="gl-td" stroke-width="1"/>
+  <line x1="180" y1="80"  x2="180" y2="465" class="gl-td" stroke-width="1"/>
+  <line x1="260" y1="80"  x2="260" y2="465" class="gl-td" stroke-width="1"/>
+  <line x1="340" y1="80"  x2="340" y2="465" class="gl-td" stroke-width="1"/>
+  <!-- Axes -->
+  <line x1="100" y1="480" x2="100" y2="65"  marker-end="url(#arr-td)" class="ax-td" stroke-width="2.5"/>
+  <line x1="80"  y1="460" x2="400" y2="460" marker-end="url(#arr-td)" class="ax-td" stroke-width="2.5"/>
+  <text x="407" y="466" class="lb-td" font-size="20" font-style="italic">x</text>
+  <text x="86"  y="58"  class="lb-td" font-size="20" font-style="italic">y</text>
+  <text x="78"  y="474" class="lb-td" font-size="18">O</text>
+  <!-- Ticks and labels -->
+  <line x1="180" y1="455" x2="180" y2="465" class="ax-td" stroke-width="1.5"/>
+  <line x1="260" y1="455" x2="260" y2="465" class="ax-td" stroke-width="1.5"/>
+  <line x1="340" y1="455" x2="340" y2="465" class="ax-td" stroke-width="1.5"/>
+  <text x="180" y="482" class="lb-td" font-size="16" text-anchor="middle">1</text>
+  <text x="260" y="482" class="lb-td" font-size="16" text-anchor="middle">2</text>
+  <text x="340" y="482" class="lb-td" font-size="16" text-anchor="middle">3</text>
+  <line x1="95"  y1="420" x2="105" y2="420" class="ax-td" stroke-width="1.5"/>
+  <line x1="95"  y1="300" x2="105" y2="300" class="ax-td" stroke-width="1.5"/>
+  <line x1="95"  y1="180" x2="105" y2="180" class="ax-td" stroke-width="1.5"/>
+  <text x="88"   y="425" class="lb-td" font-size="15" text-anchor="end">1</text>
+  <text x="88"   y="305" class="lb-td" font-size="15" text-anchor="end">4</text>
+  <text x="88"   y="185" class="lb-td" font-size="15" text-anchor="end">7</text>
+  <!-- Curve y=x²: (100,460)→(180,420)→(260,300)→(340,100) -->
+  <path d="M 100 460 C 130 452,155 439,180 420 C 212 400,242 354,260 300 C 285 240,320 158,340 100" class="cv-td" stroke-width="3"/>
+  <!-- Tangent at P(2,4): y=4x-4 → from (180,460) to (340,140) -->
+  <line x1="180" y1="460" x2="340" y2="140" class="tg-td" stroke-width="2.5"/>
+  <!-- Secant from A(1,1) to P(2,4), extended; slope_px=−1.5 -->
+  <line x1="158" y1="453" x2="294" y2="249" class="sc-td" stroke-width="2"/>
+  <!-- Δx and Δy guide lines -->
+  <line x1="180" y1="420" x2="260" y2="420" class="dx-td" stroke-width="1.5"/>
+  <line x1="260" y1="420" x2="260" y2="300" class="dx-td" stroke-width="1.5"/>
+  <!-- Points -->
+  <circle cx="180" cy="420" r="5" class="pt-td"/>
+  <text x="155" y="414" class="lb-td" font-size="13">A(1,1)</text>
+  <circle cx="260" cy="300" r="7" class="pt-td"/>
+  <text x="268" y="295" class="lb-td" font-size="14" font-weight="600">P(2,4)</text>
+  <!-- Δ labels -->
+  <text x="220" y="437" class="lb-td" font-size="12" text-anchor="middle" fill="#94a3b8">Δx</text>
+  <text x="270" y="362" class="lb-td" font-size="12" fill="#94a3b8">Δy</text>
+  <!-- Curve label -->
+  <text x="348" y="96"  class="tr-td" font-size="16">y = x²</text>
+  <!-- Tangent label (near upper end of tangent line) -->
+  <text x="350" y="138" class="ta-td" font-size="13">garis singgung di P</text>
+  <text x="350" y="155" class="ta-td" font-size="13">f'(2) = 4</text>
+  <!-- Secant label -->
+  <text x="105" y="342" class="lb-td" font-size="12" fill="#94a3b8">tali busur AP</text>
+  <text x="105" y="358" class="lb-td" font-size="12" fill="#94a3b8">(kemiringan = 3)</text>
+</svg>
+</div>
+
+    <p>Inilah turunan: nilai yang diperoleh ketika interval pengukuran diperkecil hingga mendekati nol, sehingga yang tersisa adalah laju perubahan sesaat — bukan rata-rata. Secara geometris, turunan adalah <strong>kemiringan garis singgung</strong> grafik fungsi di suatu titik. Dalam modul ini, kita akan mempelajari aturan-aturan turunan, cara menentukan nilai maksimum dan minimum, serta menggunakannya untuk memecahkan masalah optimasi nyata.</p>
+
   <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
@@ -122,28 +229,7 @@ window.MathJax = {
     </ul>
   </div>
 
-
-  <!-- ═══ PENGANTAR ═══════════════════════════════════════════════ -->
-  <div class="box box-definisi" style="margin-bottom:2rem;">
-    <div class="box-label">Pengantar: Apa itu Turunan?</div>
-    <p>Bayangkan kamu sedang berkendara di jalan tol. Speedometer menunjukkan angka 100 km/jam &mdash; itulah <strong>laju perubahan</strong> posisimu terhadap waktu <em>pada saat itu</em>. Bukan rata-rata dari Jakarta ke Bandung, melainkan kecepatan <em>sesaat</em> di satu titik tertentu. Inilah inti dari <strong>turunan</strong>: mengukur seberapa cepat suatu besaran berubah terhadap besaran lainnya pada suatu titik tertentu.</p>
-    <p>Secara matematis, jika $y = f(x)$, maka turunan $f'(x)$ menjawab pertanyaan: <em>&ldquo;Seberapa cepat nilai $y$ berubah saat $x$ berubah sedikit?&rdquo;</em></p>
-    <p><strong>Ide Dasar: Dari Kemiringan Tali Busur ke Garis Singgung.</strong> Perhatikan dua titik pada kurva $y = f(x)$, yaitu $P(x, f(x))$ dan $Q(x+h, f(x+h))$. Kemiringan garis yang menghubungkan $P$ dan $Q$ (tali busur) adalah:</p>
-    <div class="math-block">$$m_{PQ} = \frac{f(x+h) - f(x)}{h}$$</div>
-    <p>Saat $h \to 0$, titik $Q$ bergerak mendekati $P$, dan garis tali busur berubah menjadi <strong>garis singgung</strong> di titik $P$. Kemiringan garis singgung inilah yang kita sebut <strong>turunan</strong>.</p>
-    <p style="margin-bottom:0"><strong>Peta Materi &mdash; Alur Belajar Turunan Fungsi:</strong></p>
-    <ol style="margin:.4rem 0;padding-left:1.3rem;font-size:.9rem;">
-      <li>Definisi Turunan &mdash; konsep laju perubahan sesaat dari limit</li>
-      <li>Aturan Dasar Turunan &mdash; rumus pangkat, konstanta, dan penjumlahan</li>
-      <li>Pengembangan Rumus Turunan &mdash; aturan hasil kali, hasil bagi, rantai, dan pangkat fungsi</li>
-      <li>Persamaan Garis Singgung &mdash; aplikasi turunan pada geometri kurva</li>
-      <li>Fungsi Naik, Turun, Stasioner, serta Kecekungan dan Titik Belok</li>
-      <li>Turunan Fungsi Trigonometri &mdash; turunan sin, cos, tan, dan komposisinya</li>
-      <li>Melukis Grafik Fungsi Polinom</li>
-      <li>Aplikasi Turunan dalam Kehidupan &mdash; optimasi, kecepatan, dan masalah nyata</li>
-    </ol>
-  </div>
-
+  </section>
 
   <!-- ═══ A. DEFINISI & ATURAN DASAR ═══════════════════════════════ -->
   <section class="section" id="bagian-a">
@@ -187,7 +273,20 @@ window.MathJax = {
 
     <h3 class="subsection-title">2. Rumus Dasar Turunan Fungsi Aljabar</h3>
 
-    <p>Dari pola pada Contoh 1, terlihat bahwa turunan suku berbentuk $ax^n$ selalu mengikuti aturan: <strong>pangkat diturunkan satu</strong> dan <strong>hasilnya dikalikan dengan pangkat semula</strong>.</p>
+    <p>Perhatikan kembali hasil-hasil dari Contoh 1 yang telah kita kerjakan menggunakan definisi turunan:</p>
+
+    <div class="table-wrap" style="margin-bottom:1rem;">
+      <table>
+        <thead><tr><th>Fungsi $f(x)$</th><th>Turunan $f'(x)$</th><th>Pengamatan</th></tr></thead>
+        <tbody>
+          <tr><td>$f(x) = 3x - 5$</td><td>$f'(x) = 3$</td><td>koefisien $x$ tetap, konstanta hilang</td></tr>
+          <tr><td>$f(x) = 4x^2 + 3x$</td><td>$f'(x) = 8x + 3$</td><td>pangkat turun, dikalikan koefisien semula</td></tr>
+          <tr><td>$f(x) = x^3 - 2x$</td><td>$f'(x) = 3x^2 - 2$</td><td>pangkat turun, dikalikan pangkat semula</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Dari pola di atas, terlihat bahwa turunan suku berbentuk $ax^n$ selalu mengikuti aturan: <strong>pangkat diturunkan satu</strong> dan <strong>hasilnya dikalikan dengan pangkat semula</strong>. Secara umum:</p>
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Aturan Pangkat</div>
@@ -599,6 +698,20 @@ window.MathJax = {
       </ol>
     </div>
 
+    <p><strong>Langkah menentukan titik stasioner:</strong></p>
+    <ol class="soal-list" style="margin-bottom:1rem;">
+      <li>Tentukan $f'(x)$, kemudian selesaikan $f'(x) = 0$ untuk mendapatkan nilai-nilai $x$ kritis.</li>
+      <li>Substitusikan nilai $x$ kritis ke $f(x)$ untuk mendapatkan koordinat titik stasioner $T(x_1, y_1)$.</li>
+      <li>Uji tanda $f'(x)$ di sekitar titik kritis (kiri dan kanan) menggunakan garis bilangan.</li>
+      <li>Simpulkan jenis titik stasioner berdasarkan perubahan tanda $f'(x)$:
+        <ul style="margin:.3rem 0;padding-left:1.3rem;font-size:.9rem;">
+          <li>Jika $f'(x)$ berubah dari $+$ menjadi $-$ $\rightarrow$ <strong>Titik Balik Maksimum</strong></li>
+          <li>Jika $f'(x)$ berubah dari $-$ menjadi $+$ $\rightarrow$ <strong>Titik Balik Minimum</strong></li>
+          <li>Jika tanda $f'(x)$ tidak berubah $\rightarrow$ <strong>Titik Belok Stasioner</strong></li>
+        </ul>
+      </li>
+    </ol>
+
     <div class="box box-contoh">
       <div class="box-label">&#128216; Contoh 17</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah titik stasioner dan jenisnya untuk $f(x) = x^3-3x^2-9x+10$.</p>
@@ -648,6 +761,22 @@ window.MathJax = {
         <li>$f''(x_1)=0$ dan tanda $f''$ berubah $\Rightarrow$ $T(x_1, f(x_1))$ adalah <strong>titik belok</strong></li>
       </ul>
     </div>
+
+    <p>Secara intuitif, kurva yang <strong>cekung ke atas</strong> (seperti mangkuk) berarti garis singgung berada <em>di bawah</em> kurva, sedangkan kurva yang <strong>cekung ke bawah</strong> (seperti kubah) berarti garis singgung berada <em>di atas</em> kurva.</p>
+
+    <p><strong>Langkah-langkah menentukan kecekungan dan titik belok:</strong></p>
+    <ol class="soal-list" style="margin-bottom:1rem;">
+      <li>Tentukan $f'(x)$, kemudian tentukan $f''(x)$.</li>
+      <li>Selesaikan $f''(x) = 0$ untuk mendapatkan <strong>titik-titik kandidat belok</strong> $x_1, x_2, \ldots$</li>
+      <li>Buat garis bilangan $f''(x)$ dengan titik-titik kandidat belok sebagai batas interval.</li>
+      <li>Uji tanda $f''(x)$ pada setiap interval:
+        <ul style="margin:.3rem 0;padding-left:1.3rem;font-size:.9rem;">
+          <li>$f''(x) > 0$ $\Rightarrow$ kurva <strong>cekung ke atas</strong> pada interval tersebut</li>
+          <li>$f''(x) < 0$ $\Rightarrow$ kurva <strong>cekung ke bawah</strong> pada interval tersebut</li>
+        </ul>
+      </li>
+      <li>Tentukan koordinat titik belok: jika tanda $f''$ <strong>berubah</strong> di $x = x_1$, maka hitung $y_1 = f(x_1)$ dan nyatakan titik beloknya sebagai $T(x_1, y_1)$.</li>
+    </ol>
 
     <div class="box box-catatan">
       <div class="box-label">&#9888; Catatan Penting</div>
@@ -1058,10 +1187,10 @@ window.MathJax = {
       <ol class="soal-list">
         <li>Dua bilangan positif mempunyai jumlah 40. Supaya hasil kalinya maksimum, tentukanlah kedua bilangan itu.</li>
         <li>Dari selembar karton berukuran $30\times 20$ cm dibuat kotak tanpa tutup dengan cara memotong persegi kecil berukuran $x\times x$ di setiap sudutnya. Tentukanlah nilai $x$ agar volume kotak maksimum.</li>
-        <li>Suatu benda bergerak dengan $s(t)=2t^3-9t^2+12t$ meter. (a) Tentukanlah kecepatan benda saat $t=2$ s. (b) Kapan benda berhenti sesaat? (c) Tentukanlah percepatan saat $t=1$ s.</li>
+        <li>Suatu benda bergerak dengan $s(t)=2t^3-9t^2+12t$ meter.<br>(a) Tentukanlah kecepatan benda saat $t=2$ s.<br>(b) Kapan benda berhenti sesaat?<br>(c) Tentukanlah percepatan saat $t=1$ s.</li>
         <li>Sebuah kawat sepanjang 100 cm dibengkokkan membentuk persegi panjang. Tentukanlah ukuran persegi panjang agar luasnya maksimum.</li>
         <li>Sebuah kaleng silinder tanpa tutup akan dibuat dari bahan seluas $300\pi$ cm$^2$. Tentukanlah jari-jari dan tinggi kaleng agar volumenya maksimum.</li>
-        <li>Fungsi biaya total suatu perusahaan adalah $C(x)=2x^3-15x^2+36x+10$ (ribu rupiah). (a) Tentukanlah biaya marginal $C'(x)$. (b) Jumlah produksi ketika biaya marginal minimum.</li>
+        <li>Fungsi biaya total suatu perusahaan adalah $C(x)=2x^3-15x^2+36x+10$ (ribu rupiah).<br>(a) Tentukanlah biaya marginal $C'(x)$.<br>(b) Jumlah produksi ketika biaya marginal minimum.</li>
         <li>Air dipompa ke dalam tangki berbentuk bola berjari-jari 4 m dengan laju $\dfrac{dV}{dt}=2$ m$^3$/menit. Tentukanlah laju kenaikan jari-jarinya saat $r=2$ m.</li>
       </ol>
     </div>

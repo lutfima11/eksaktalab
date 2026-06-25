@@ -103,6 +103,130 @@ window.MathJax = {
     </div>
   </div>
 
+<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Matematika dari Batas dan Kendala</h2>
+
+    <p>Bayangkan kamu punya Rp500.000 dan ingin membeli dua jenis barang: buku tulis dan alat tulis. Kamu tidak bisa membeli sebanyak yang kamu mau — ada batas anggaran. Kalimat "total belanja <em>tidak boleh melebihi</em> Rp500.000" inilah yang secara matematis disebut <strong>pertidaksamaan</strong>. Bukan satu jawaban tepat, melainkan sebuah <em>syarat</em> — dan semua kombinasi pembelian yang memenuhi syarat itu sekaligus valid.</p>
+
+    <p>Situasi semacam ini hadir di mana-mana. Seorang siswa perlu nilai minimal 70 agar lulus — ia tidak peduli apakah nilainya 70, 85, atau 99, asalkan <em>memenuhi ambang batas</em>. Sebuah pabrik harus memproduksi setidaknya 100 unit agar menutup biaya tetap, tetapi tidak boleh lebih dari 500 unit karena kapasitas gudang terbatas. Seorang ahli gizi merancang menu makan siang dengan kalori <em>antara</em> 500 dan 700 kkal. Semua ini bukan soal "satu jawaban benar" — melainkan soal <em>wilayah jawaban yang layak</em>.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Satu Titik vs Seluruh Wilayah</h3>
+    <p>Perbedaan mendasar antara <strong>persamaan</strong> dan <strong>pertidaksamaan</strong> terletak pada jenis jawaban yang dihasilkan. Persamaan memberikan satu titik tepat; pertidaksamaan memberikan seluruh himpunan nilai yang memenuhi syarat.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Persamaan vs Pertidaksamaan</div>
+      <div class="table-wrap" style="margin-top:.5rem;">
+        <table>
+          <thead><tr><th>Kalimat Matematika</th><th>Jenis</th><th>Jawaban</th></tr></thead>
+          <tbody>
+            <tr><td>$x = 3$</td><td>Persamaan</td><td>Satu titik: tepat $x = 3$</td></tr>
+            <tr><td>$x &lt; 3$</td><td>Pertidaksamaan</td><td>Sinar ke kiri: semua $x$ yang kurang dari 3</td></tr>
+            <tr><td>$x \geq 3$</td><td>Pertidaksamaan</td><td>Sinar ke kanan: $x = 3, 4, 5, \ldots$ hingga tak terhingga</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p>Ketika ada <em>dua</em> pertidaksamaan sekaligus — misalnya anggaran produksi dan kapasitas mesin pada sebuah pabrik — irisan dari kedua syarat itu membentuk sebuah <strong>daerah layak</strong> (<em>feasible region</em>) di bidang koordinat. Ini adalah inti dari <strong>Program Linear</strong>: mencari titik dalam daerah layak yang memaksimalkan keuntungan atau meminimalkan biaya. Ternyata, titik optimal selalu berada di salah satu <em>sudut</em> (titik pojok) daerah layak — sebuah fakta geometri yang membuat optimasi menjadi sistematis dan elegan.</p>
+
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 430" width="100%" style="max-width:400px;background-color:transparent;">
+  <defs>
+    <style>
+      .ax-pl{stroke:var(--text-main,#334155)}
+      .gl-pl{stroke:var(--text-muted,#e2e8f0);opacity:.5}
+      .lb-pl{fill:var(--text-main,#334155);font-family:Cambria,'Times New Roman',serif}
+      .ln1-pl{stroke:#0014b3;fill:none}
+      .ln2-pl{stroke:#b30000;fill:none}
+      .rg-pl{fill:#dbeafe;opacity:.5}
+      .pt-pl{fill:#0014b3}
+      .t1-pl{fill:#0014b3;font-family:Cambria,'Times New Roman',serif}
+      .t2-pl{fill:#b30000;font-family:Cambria,'Times New Roman',serif}
+      @media(prefers-color-scheme:dark){
+        .gl-pl{stroke:#334155}
+        .ln1-pl{stroke:#60A5FA}
+        .ln2-pl{stroke:#F87171}
+        .rg-pl{fill:#1e3a5f;opacity:.5}
+        .pt-pl{fill:#60A5FA}
+        .t1-pl{fill:#60A5FA}
+        .t2-pl{fill:#F87171}
+      }
+      [data-theme="dark"] .gl-pl{stroke:#334155}
+      [data-theme="dark"] .ln1-pl{stroke:#60A5FA}
+      [data-theme="dark"] .ln2-pl{stroke:#F87171}
+      [data-theme="dark"] .rg-pl{fill:#1e3a5f;opacity:.5}
+      [data-theme="dark"] .pt-pl{fill:#60A5FA}
+      [data-theme="dark"] .t1-pl{fill:#60A5FA}
+      [data-theme="dark"] .t2-pl{fill:#F87171}
+    </style>
+    <marker id="arr-pl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--text-main,#334155)"/>
+    </marker>
+  </defs>
+  <!-- origin(80,370), 1 unit=45px -->
+  <!-- Grid -->
+  <line x1="125" y1="100" x2="125" y2="375" class="gl-pl" stroke-width="1"/>
+  <line x1="170" y1="100" x2="170" y2="375" class="gl-pl" stroke-width="1"/>
+  <line x1="215" y1="100" x2="215" y2="375" class="gl-pl" stroke-width="1"/>
+  <line x1="260" y1="100" x2="260" y2="375" class="gl-pl" stroke-width="1"/>
+  <line x1="305" y1="100" x2="305" y2="375" class="gl-pl" stroke-width="1"/>
+  <line x1="75"  y1="325" x2="370" y2="325" class="gl-pl" stroke-width="1"/>
+  <line x1="75"  y1="280" x2="370" y2="280" class="gl-pl" stroke-width="1"/>
+  <line x1="75"  y1="235" x2="370" y2="235" class="gl-pl" stroke-width="1"/>
+  <line x1="75"  y1="190" x2="370" y2="190" class="gl-pl" stroke-width="1"/>
+  <line x1="75"  y1="145" x2="370" y2="145" class="gl-pl" stroke-width="1"/>
+  <line x1="75"  y1="100" x2="370" y2="100" class="gl-pl" stroke-width="1"/>
+  <!-- Feasible region: (0,0),(4,0),(2,4),(0,6) -->
+  <polygon points="80,370 260,370 170,190 80,100" class="rg-pl"/>
+  <!-- Constraint line 1: x+y=6, from (0,6)=(80,100) to (6,0)=(350,370) -->
+  <line x1="80" y1="100" x2="350" y2="370" class="ln1-pl" stroke-width="2"/>
+  <!-- Constraint line 2: 2x+y=8, from (1,6)=(125,100) to (4,0)=(260,370) -->
+  <line x1="118" y1="93" x2="268" y2="378" class="ln2-pl" stroke-width="2"/>
+  <!-- Axes -->
+  <line x1="55"  y1="370" x2="390" y2="370" marker-end="url(#arr-pl)" class="ax-pl" stroke-width="2.5"/>
+  <line x1="80"  y1="395" x2="80"  y2="55"  marker-end="url(#arr-pl)" class="ax-pl" stroke-width="2.5"/>
+  <text x="396" y="376" class="lb-pl" font-size="19" font-style="italic">x</text>
+  <text x="68"  y="48"  class="lb-pl" font-size="19" font-style="italic">y</text>
+  <text x="68"  y="384" class="lb-pl" font-size="17">O</text>
+  <!-- X ticks -->
+  <line x1="125" y1="365" x2="125" y2="375" class="ax-pl" stroke-width="1.5"/>
+  <line x1="170" y1="365" x2="170" y2="375" class="ax-pl" stroke-width="1.5"/>
+  <line x1="215" y1="365" x2="215" y2="375" class="ax-pl" stroke-width="1.5"/>
+  <line x1="260" y1="365" x2="260" y2="375" class="ax-pl" stroke-width="1.5"/>
+  <line x1="305" y1="365" x2="305" y2="375" class="ax-pl" stroke-width="1.5"/>
+  <text x="125" y="390" class="lb-pl" font-size="15" text-anchor="middle">1</text>
+  <text x="170" y="390" class="lb-pl" font-size="15" text-anchor="middle">2</text>
+  <text x="215" y="390" class="lb-pl" font-size="15" text-anchor="middle">3</text>
+  <text x="260" y="390" class="lb-pl" font-size="15" text-anchor="middle">4</text>
+  <text x="305" y="390" class="lb-pl" font-size="15" text-anchor="middle">5</text>
+  <!-- Y ticks -->
+  <line x1="75" y1="325" x2="85" y2="325" class="ax-pl" stroke-width="1.5"/>
+  <line x1="75" y1="280" x2="85" y2="280" class="ax-pl" stroke-width="1.5"/>
+  <line x1="75" y1="235" x2="85" y2="235" class="ax-pl" stroke-width="1.5"/>
+  <line x1="75" y1="190" x2="85" y2="190" class="ax-pl" stroke-width="1.5"/>
+  <line x1="75" y1="145" x2="85" y2="145" class="ax-pl" stroke-width="1.5"/>
+  <line x1="75" y1="100" x2="85" y2="100" class="ax-pl" stroke-width="1.5"/>
+  <text x="68" y="330" class="lb-pl" font-size="14" text-anchor="end">1</text>
+  <text x="68" y="285" class="lb-pl" font-size="14" text-anchor="end">2</text>
+  <text x="68" y="240" class="lb-pl" font-size="14" text-anchor="end">3</text>
+  <text x="68" y="195" class="lb-pl" font-size="14" text-anchor="end">4</text>
+  <text x="68" y="150" class="lb-pl" font-size="14" text-anchor="end">5</text>
+  <text x="68" y="105" class="lb-pl" font-size="14" text-anchor="end">6</text>
+  <!-- Vertex -->
+  <circle cx="170" cy="190" r="5" class="pt-pl"/>
+  <text x="178" y="187" class="lb-pl" font-size="13" font-weight="600">V(2, 4)</text>
+  <!-- Line labels -->
+  <text x="285" y="290" class="t1-pl" font-size="13">x + y = 6</text>
+  <text x="188" y="198" class="t2-pl" font-size="13">2x + y = 8</text>
+  <!-- Region label -->
+  <text x="112" y="290" class="lb-pl" font-size="14" text-anchor="middle">Daerah</text>
+  <text x="112" y="308" class="lb-pl" font-size="14" text-anchor="middle">Layak</text>
+</svg>
+</div>
+
+    <p>Dari belanja sehari-hari hingga optimasi bisnis, pertidaksamaan adalah bahasa dari semua situasi "batas dan kendala". Menguasai pertidaksamaan berarti menguasai cara berpikir tentang <em>apa yang mungkin</em>, bukan hanya <em>apa yang tepat</em>.</p>
+
   <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
@@ -113,6 +237,8 @@ window.MathJax = {
       <li><a href="#bagian-d" data-num="D">Tabel Ringkasan</a></li>
     </ul>
   </div>
+
+  </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════
        A. PENGERTIAN DAN NOTASI
@@ -714,9 +840,12 @@ window.MathJax = {
         <li>Tentukan interval penyelesaian pertidaksamaan ganda:<br>(a) $-5 &lt; 2x+3 \leq 11$<br>(b) $1 \leq \dfrac{3-x}{2} &lt; 4$<br>(c) $-10 \leq 3-4x \leq 7$</li>
         <li>Seorang pedagang memiliki modal Rp500.000. Ia membeli barang seharga Rp20.000/unit dan menjualnya dengan keuntungan 25% per unit. Jika ia ingin memperoleh keuntungan total minimal Rp100.000, tentukan berapa unit minimal yang harus ia jual.</li>
         <li>Tentukan nilai $x$ bulat yang memenuhi kedua pertidaksamaan berikut sekaligus: $\dfrac{5x-2}{3}-\dfrac{x+4}{6} \geq 2$ dan $3(2x-5) &lt; 5x+7$.</li>
-        <li>Sebuah proyek konstruksi memiliki anggaran antara Rp180 juta dan Rp240 juta (inklusif). Material bangunan seharga Rp60 juta dan upah tenaga kerja Rp15 juta per minggu. Tentukan rentang minggu kerja yang dapat dijadwalkan!</li>
-        <li><strong>[HOTS]</strong> Periksa apakah jawaban $x \geq \dfrac{19}{10}$ benar untuk pertidaksamaan $\dfrac{3-2x}{4} \leq \dfrac{x+1}{3}-1$. Jika salah, temukan letak kesalahannya dan tuliskan penyelesaian yang benar.</li>
         <li>Tentukan interval penyelesaian: $\dfrac{2}{3}\!\left(\dfrac{3x-1}{2}-\dfrac{x+2}{3}\right) > \dfrac{x-5}{4}-1$.</li>
+        <li>Sebuah proyek konstruksi memiliki anggaran antara Rp180 juta dan Rp240 juta (inklusif). Material bangunan seharga Rp60 juta dan upah tenaga kerja Rp15 juta per minggu. Tentukan rentang minggu kerja yang dapat dijadwalkan dalam proyek ini!</li>
+        <li><strong>[HOTS — Analisis &amp; Evaluasi]</strong> Seorang siswa mengerjakan soal $\dfrac{3-2x}{4} \leq \dfrac{x+1}{3} - 1$ dan memperoleh jawaban $x \geq \dfrac{19}{10}$.<br>
+          (a) Periksa apakah jawaban siswa tersebut benar. Jika salah, temukan letak kesalahannya dan tuliskan penyelesaian yang benar secara lengkap.<br>
+          (b) Diberikan pertidaksamaan kedua: $2(x-3) &lt; x + k$, dengan $k$ adalah bilangan bulat. Tentukan nilai $k$ terkecil agar irisan himpunan penyelesaian kedua pertidaksamaan tersebut <em>tidak</em> kosong.<br>
+          (c) Apakah mungkin dipilih nilai $k$ sehingga irisan himpunan penyelesaian kedua pertidaksamaan tepat hanya memuat satu bilangan bulat? Jika ya, tentukan nilai $k$ dan bilangan bulat tersebut; jika tidak, jelaskan alasanmu.</li>
       </ol>
     </div>
 
@@ -1031,6 +1160,71 @@ window.MathJax = {
           </tbody>
         </table>
       </div>
+
+      <!-- Graph for Contoh 25: 3x+2y<=24, x+2y<=16, x>=2, y>=0
+           Scale: x: 0→20px (origin), each unit=18px. So x=0→20, x=8→20+8*18=164, x=16→308
+           y: bottom at 260px (y=0), each unit=18px. y=12→260-12*18=44
+           Garis 1: 3x+2y=24: (8,0)→(164,260) and (0,12)→(20,44)
+           Garis 2: x+2y=16: (16,0)→(308,260) off screen, (0,8)→(20,260-8*18=116)
+           Garis 3: x=2 → x_px=20+2*18=56
+           Feasible region: (2,0),(8,0),(4,6),(2,7)
+           Pixel coords: (2,0)→(56,260), (8,0)→(164,260), (4,6)→(92,152), (2,7)→(56,134) -->
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 320 280" width="320" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="d25x" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#555"/></marker>
+            <marker id="d25y" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#555"/></marker>
+          </defs>
+          <!-- grid -->
+          <g stroke="#e2e8f0" stroke-width="0.5">
+            <line x1="20" y1="10" x2="20" y2="265"/><line x1="56" y1="10" x2="56" y2="265"/>
+            <line x1="92" y1="10" x2="92" y2="265"/><line x1="128" y1="10" x2="128" y2="265"/>
+            <line x1="164" y1="10" x2="164" y2="265"/><line x1="200" y1="10" x2="200" y2="265"/>
+            <line x1="236" y1="10" x2="236" y2="265"/><line x1="272" y1="10" x2="272" y2="265"/>
+            <line x1="10" y1="44" x2="310" y2="44"/><line x1="10" y1="80" x2="310" y2="80"/>
+            <line x1="10" y1="116" x2="310" y2="116"/><line x1="10" y1="152" x2="310" y2="152"/>
+            <line x1="10" y1="188" x2="310" y2="188"/><line x1="10" y1="224" x2="310" y2="224"/>
+          </g>
+          <!-- feasible region: (2,0)→(56,260), (8,0)→(164,260), (4,6)→(92,152), (2,7)→(56,134) -->
+          <polygon points="56,260 164,260 92,152 56,134" fill="#3B82F6" fill-opacity="0.18"/>
+          <!-- axes -->
+          <line x1="10" y1="260" x2="310" y2="260" stroke="#555" stroke-width="1.5" marker-end="url(#d25x)"/>
+          <line x1="20" y1="275" x2="20" y2="10" stroke="#555" stroke-width="1.5" marker-end="url(#d25y)"/>
+          <!-- Garis 1: 3x+2y=24 from (0,12)=(20,44) to (8,0)=(164,260) -->
+          <line x1="20" y1="44" x2="164" y2="260" stroke="#3B82F6" stroke-width="2"/>
+          <!-- Garis 2: x+2y=16 from (0,8)=(20,116) to (16,0)=(308,260) — extend to screen edge -->
+          <line x1="20" y1="116" x2="308" y2="260" stroke="#e53e3e" stroke-width="2"/>
+          <!-- Garis 3: x=2 vertical from (56,10) to (56,265) -->
+          <line x1="56" y1="10" x2="56" y2="265" stroke="#059669" stroke-width="2"/>
+          <!-- axis labels -->
+          <text x="56" y="273" font-size="9" fill="#777" text-anchor="middle">2</text>
+          <text x="92" y="273" font-size="9" fill="#777" text-anchor="middle">4</text>
+          <text x="128" y="273" font-size="9" fill="#777" text-anchor="middle">6</text>
+          <text x="164" y="273" font-size="9" fill="#777" text-anchor="middle">8</text>
+          <text x="200" y="273" font-size="9" fill="#777" text-anchor="middle">10</text>
+          <text x="12" y="44" font-size="9" fill="#777" text-anchor="end">12</text>
+          <text x="12" y="80" font-size="9" fill="#777" text-anchor="end">10</text>
+          <text x="12" y="116" font-size="9" fill="#777" text-anchor="end">8</text>
+          <text x="12" y="152" font-size="9" fill="#777" text-anchor="end">6</text>
+          <text x="12" y="188" font-size="9" fill="#777" text-anchor="end">4</text>
+          <text x="12" y="224" font-size="9" fill="#777" text-anchor="end">2</text>
+          <text x="13" y="270" font-size="9" fill="#555">O</text>
+          <!-- corner points -->
+          <circle cx="56" cy="260" r="4" fill="#333"/>
+          <circle cx="164" cy="260" r="4" fill="#333"/>
+          <circle cx="92" cy="152" r="4" fill="#333"/>
+          <circle cx="56" cy="134" r="4" fill="#333"/>
+          <text x="56" y="255" font-size="8" fill="#333" text-anchor="middle">(2,0)</text>
+          <text x="164" y="255" font-size="8" fill="#333" text-anchor="middle">(8,0)</text>
+          <text x="100" y="147" font-size="8" fill="#333">(4,6)</text>
+          <text x="60" y="130" font-size="8" fill="#333">(2,7)</text>
+          <!-- labels -->
+          <text x="100" y="230" font-size="10" fill="#3B82F6" font-weight="bold">HP</text>
+          <text x="60" y="75" font-size="8" fill="#3B82F6">3x+2y=24</text>
+          <text x="200" y="185" font-size="8" fill="#e53e3e">x+2y=16</text>
+          <text x="58" y="25" font-size="8" fill="#059669">x=2</text>
+        </svg>
+      </div>
     </div>
 
     <div class="box box-contoh">
@@ -1057,6 +1251,71 @@ window.MathJax = {
           </tbody>
         </table>
       </div>
+
+      <!-- Graph for Contoh 26: x+2y<=8, x-y<=2, x>=0, y>=0
+           Scale: origin at (25,230). Each unit = 28px.
+           x=0→25, x=2→81, x=4→137, x=8→249
+           y=0→230, y=2→174, y=4→118
+           Garis 1: x+2y=8: (8,0)→(249,230), (0,4)→(25,118)
+           Garis 2: x-y=2: (2,0)→(81,230), (0,-2)→(25,286) off-screen top extension to (8,6)→(249,62)
+           Feasible region: (0,0),(2,0),(4,2),(0,4)
+           Pixels: (0,0)→(25,230), (2,0)→(81,230), (4,2)→(137,174), (0,4)→(25,118) -->
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 270 245" width="270" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="d26x" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#555"/></marker>
+            <marker id="d26y" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#555"/></marker>
+          </defs>
+          <g stroke="#e2e8f0" stroke-width="0.5">
+            <line x1="25" y1="10" x2="25" y2="235"/><line x1="53" y1="10" x2="53" y2="235"/>
+            <line x1="81" y1="10" x2="81" y2="235"/><line x1="109" y1="10" x2="109" y2="235"/>
+            <line x1="137" y1="10" x2="137" y2="235"/><line x1="165" y1="10" x2="165" y2="235"/>
+            <line x1="193" y1="10" x2="193" y2="235"/><line x1="221" y1="10" x2="221" y2="235"/>
+            <line x1="10" y1="230" x2="255" y2="230"/><line x1="10" y1="202" x2="255" y2="202"/>
+            <line x1="10" y1="174" x2="255" y2="174"/><line x1="10" y1="146" x2="255" y2="146"/>
+            <line x1="10" y1="118" x2="255" y2="118"/><line x1="10" y1="90" x2="255" y2="90"/>
+            <line x1="10" y1="62" x2="255" y2="62"/>
+          </g>
+          <!-- feasible region -->
+          <polygon points="25,230 81,230 137,174 25,118" fill="#3B82F6" fill-opacity="0.18"/>
+          <!-- axes -->
+          <line x1="10" y1="230" x2="255" y2="230" stroke="#555" stroke-width="1.5" marker-end="url(#d26x)"/>
+          <line x1="25" y1="240" x2="25" y2="10" stroke="#555" stroke-width="1.5" marker-end="url(#d26y)"/>
+          <!-- Garis 1: x+2y=8: (0,4)→(25,118) to (8,0)→(249,230) -->
+          <line x1="25" y1="118" x2="249" y2="230" stroke="#3B82F6" stroke-width="2"/>
+          <!-- Garis 2: x-y=2: (2,0)→(81,230) to (8,6)→(249,62) -->
+          <line x1="81" y1="230" x2="249" y2="62" stroke="#e53e3e" stroke-width="2"/>
+          <!-- also extend leftward for context: (0,-2) off screen, draw from leftmost visible pt -->
+          <!-- axis labels -->
+          <text x="53" y="242" font-size="9" fill="#777" text-anchor="middle">1</text>
+          <text x="81" y="242" font-size="9" fill="#777" text-anchor="middle">2</text>
+          <text x="109" y="242" font-size="9" fill="#777" text-anchor="middle">3</text>
+          <text x="137" y="242" font-size="9" fill="#777" text-anchor="middle">4</text>
+          <text x="165" y="242" font-size="9" fill="#777" text-anchor="middle">5</text>
+          <text x="193" y="242" font-size="9" fill="#777" text-anchor="middle">6</text>
+          <text x="221" y="242" font-size="9" fill="#777" text-anchor="middle">7</text>
+          <text x="14" y="202" font-size="9" fill="#777" text-anchor="end">1</text>
+          <text x="14" y="174" font-size="9" fill="#777" text-anchor="end">2</text>
+          <text x="14" y="146" font-size="9" fill="#777" text-anchor="end">3</text>
+          <text x="14" y="118" font-size="9" fill="#777" text-anchor="end">4</text>
+          <text x="14" y="90" font-size="9" fill="#777" text-anchor="end">5</text>
+          <text x="14" y="62" font-size="9" fill="#777" text-anchor="end">6</text>
+          <text x="16" y="240" font-size="9" fill="#555">O</text>
+          <!-- corner points -->
+          <circle cx="25" cy="230" r="4" fill="#333"/>
+          <circle cx="81" cy="230" r="4" fill="#333"/>
+          <circle cx="137" cy="174" r="4" fill="#333"/>
+          <circle cx="25" cy="118" r="4" fill="#333"/>
+          <text x="81" y="225" font-size="8" fill="#333" text-anchor="middle">(2,0)</text>
+          <text x="145" y="170" font-size="8" fill="#333">(4,2)</text>
+          <text x="30" y="114" font-size="8" fill="#333">(0,4)</text>
+          <!-- HP label -->
+          <text x="65" y="195" font-size="10" fill="#3B82F6" font-weight="bold">HP</text>
+          <!-- line labels -->
+          <text x="180" y="140" font-size="8" fill="#3B82F6">x+2y=8</text>
+          <text x="180" y="105" font-size="8" fill="#e53e3e">x−y=2</text>
+        </svg>
+      </div>
     </div>
 
     <div class="box box-contoh">
@@ -1080,6 +1339,69 @@ window.MathJax = {
       Perpotongan $2x+y=8$ dengan $y=3$: $2x+3=8 \Rightarrow x=2{,}5$. Titik: $(2{,}5;\,3)$.<br>
       Perpotongan $x=2$ dengan $y=3$: Titik $(2,3)$.<br><br>
       Daerah penyelesaian adalah segitiga dengan titik sudut $(2,3)$, $(2{,}5;\,3)$, dan $(2,4)$.
+
+      <!-- Graph for Contoh 27: 2x+y<=8, x>=2, y>=3
+           Scale: origin at (30,220). Each unit = 30px.
+           x: 0→30, 1→60, 2→90, 2.5→105, 3→120, 4→150
+           y: 0→220, 3→130, 4→100, 8→220-8*30=(-20) off top; draw from y=0 to y=8
+           Garis 2x+y=8: (4,0)→(150,220), (0,8)→(30,220-8*30=220-240=-20) off screen top
+               So draw from visible top to (4,0): at y_px=10 → y=(220-10)/30=7, x=(8-7)/2=0.5 → x_px=30+0.5*30=45
+           Garis x=2 → x_px=90
+           Garis y=3 → y_px=220-3*30=130
+           Feasible region: (2,3)→(90,130), (2.5,3)→(105,130), (2,4)→(90,100) -->
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 200 240" width="200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="d27x" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#555"/></marker>
+            <marker id="d27y" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#555"/></marker>
+          </defs>
+          <g stroke="#e2e8f0" stroke-width="0.5">
+            <line x1="30" y1="10" x2="30" y2="225"/><line x1="60" y1="10" x2="60" y2="225"/>
+            <line x1="90" y1="10" x2="90" y2="225"/><line x1="120" y1="10" x2="120" y2="225"/>
+            <line x1="150" y1="10" x2="150" y2="225"/><line x1="180" y1="10" x2="180" y2="225"/>
+            <line x1="10" y1="220" x2="192" y2="220"/><line x1="10" y1="190" x2="192" y2="190"/>
+            <line x1="10" y1="160" x2="192" y2="160"/><line x1="10" y1="130" x2="192" y2="130"/>
+            <line x1="10" y1="100" x2="192" y2="100"/><line x1="10" y1="70" x2="192" y2="70"/>
+            <line x1="10" y1="40" x2="192" y2="40"/>
+          </g>
+          <!-- feasible region: tiny triangle -->
+          <polygon points="90,130 105,130 90,100" fill="#3B82F6" fill-opacity="0.35"/>
+          <!-- axes -->
+          <line x1="10" y1="220" x2="192" y2="220" stroke="#555" stroke-width="1.5" marker-end="url(#d27x)"/>
+          <line x1="30" y1="232" x2="30" y2="10" stroke="#555" stroke-width="1.5" marker-end="url(#d27y)"/>
+          <!-- Garis 2x+y=8: from (0.5,7)=(45,10) to (4,0)=(150,220) -->
+          <line x1="45" y1="10" x2="150" y2="220" stroke="#3B82F6" stroke-width="2"/>
+          <!-- Garis x=2: vertical x_px=90 -->
+          <line x1="90" y1="10" x2="90" y2="225" stroke="#059669" stroke-width="2"/>
+          <!-- Garis y=3: horizontal y_px=130 -->
+          <line x1="10" y1="130" x2="192" y2="130" stroke="#e53e3e" stroke-width="2"/>
+          <!-- axis labels -->
+          <text x="60" y="232" font-size="9" fill="#777" text-anchor="middle">1</text>
+          <text x="90" y="232" font-size="9" fill="#777" text-anchor="middle">2</text>
+          <text x="120" y="232" font-size="9" fill="#777" text-anchor="middle">3</text>
+          <text x="150" y="232" font-size="9" fill="#777" text-anchor="middle">4</text>
+          <text x="23" y="220" font-size="9" fill="#777" text-anchor="end">0</text>
+          <text x="23" y="190" font-size="9" fill="#777" text-anchor="end">1</text>
+          <text x="23" y="160" font-size="9" fill="#777" text-anchor="end">2</text>
+          <text x="23" y="130" font-size="9" fill="#777" text-anchor="end">3</text>
+          <text x="23" y="100" font-size="9" fill="#777" text-anchor="end">4</text>
+          <text x="23" y="70" font-size="9" fill="#777" text-anchor="end">5</text>
+          <text x="23" y="40" font-size="9" fill="#777" text-anchor="end">6</text>
+          <text x="18" y="228" font-size="9" fill="#555">O</text>
+          <!-- corner points -->
+          <circle cx="90" cy="130" r="3.5" fill="#333"/>
+          <circle cx="105" cy="130" r="3.5" fill="#333"/>
+          <circle cx="90" cy="100" r="3.5" fill="#333"/>
+          <text x="78" y="126" font-size="7.5" fill="#333">(2,3)</text>
+          <text x="107" y="126" font-size="7.5" fill="#333">(2,5;3)</text>
+          <text x="78" y="97" font-size="7.5" fill="#333">(2,4)</text>
+          <!-- line labels -->
+          <text x="152" y="180" font-size="8" fill="#3B82F6">2x+y=8</text>
+          <text x="93" y="22" font-size="8" fill="#059669">x=2</text>
+          <text x="155" y="126" font-size="8" fill="#e53e3e">y=3</text>
+          <text x="97" y="118" font-size="9" fill="#3B82F6" font-weight="bold">HP</text>
+        </svg>
+      </div>
     </div>
 
     <div class="box box-contoh">
@@ -1109,6 +1431,73 @@ window.MathJax = {
         <li>$2x+5y=40$ dan $y=1$: $x=17{,}5$ → Cek biaya: $17{,}5+3=20{,}5 > 18$ — tidak memenuhi kendala biaya.</li>
       </ul>
       <strong>Titik-titik sudut HP:</strong> $(3,1)$, $(15,1)$, $(3,5)$.
+
+      <!-- Graph for Contoh 28: 2x+5y<=40, x+3y<=18, x>=3, y>=1
+           Scale: origin at (25,230). Each unit = 13px.
+           x: 0→25, 3→64, 15→220, 18→259, 20→285
+           y: 0→230, 1→217, 5→165, 6→152, 8→126
+           Garis 2x+5y=40: (20,0)→(285,230) off screen; (0,8)→(25,126). Draw (0,8)→(20,0)
+           Garis x+3y=18: (18,0)→(259,230); (0,6)→(25,152). Draw (0,6)→(18,0)
+           Garis x=3 → x_px=64
+           Garis y=1 → y_px=217
+           Feasible region: (3,1)→(64,217), (15,1)→(220,217), (3,5)→(64,165) -->
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 300 245" width="300" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="d28x" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#555"/></marker>
+            <marker id="d28y" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3z" fill="#555"/></marker>
+          </defs>
+          <g stroke="#e2e8f0" stroke-width="0.5">
+            <line x1="25" y1="10" x2="25" y2="235"/><line x1="64" y1="10" x2="64" y2="235"/>
+            <line x1="103" y1="10" x2="103" y2="235"/><line x1="142" y1="10" x2="142" y2="235"/>
+            <line x1="181" y1="10" x2="181" y2="235"/><line x1="220" y1="10" x2="220" y2="235"/>
+            <line x1="259" y1="10" x2="259" y2="235"/>
+            <line x1="10" y1="230" x2="290" y2="230"/><line x1="10" y1="217" x2="290" y2="217"/>
+            <line x1="10" y1="204" x2="290" y2="204"/><line x1="10" y1="191" x2="290" y2="191"/>
+            <line x1="10" y1="178" x2="290" y2="178"/><line x1="10" y1="165" x2="290" y2="165"/>
+            <line x1="10" y1="152" x2="290" y2="152"/><line x1="10" y1="126" x2="290" y2="126"/>
+          </g>
+          <!-- feasible region: (3,1)→(64,217), (15,1)→(220,217), (3,5)→(64,165) -->
+          <polygon points="64,217 220,217 64,165" fill="#3B82F6" fill-opacity="0.20"/>
+          <!-- axes -->
+          <line x1="10" y1="230" x2="290" y2="230" stroke="#555" stroke-width="1.5" marker-end="url(#d28x)"/>
+          <line x1="25" y1="240" x2="25" y2="10" stroke="#555" stroke-width="1.5" marker-end="url(#d28y)"/>
+          <!-- Garis 2x+5y=40: (0,8)→(25,126) to (20,0)→(285,230) -->
+          <line x1="25" y1="126" x2="285" y2="230" stroke="#8B5CF6" stroke-width="2"/>
+          <!-- Garis x+3y=18: (0,6)→(25,152) to (18,0)→(259,230) -->
+          <line x1="25" y1="152" x2="259" y2="230" stroke="#e53e3e" stroke-width="2"/>
+          <!-- Garis x=3: x_px=64 -->
+          <line x1="64" y1="10" x2="64" y2="235" stroke="#059669" stroke-width="2"/>
+          <!-- Garis y=1: y_px=217 -->
+          <line x1="10" y1="217" x2="290" y2="217" stroke="#f59e0b" stroke-width="2"/>
+          <!-- axis labels -->
+          <text x="64" y="242" font-size="8" fill="#777" text-anchor="middle">3</text>
+          <text x="103" y="242" font-size="8" fill="#777" text-anchor="middle">6</text>
+          <text x="142" y="242" font-size="8" fill="#777" text-anchor="middle">9</text>
+          <text x="181" y="242" font-size="8" fill="#777" text-anchor="middle">12</text>
+          <text x="220" y="242" font-size="8" fill="#777" text-anchor="middle">15</text>
+          <text x="259" y="242" font-size="8" fill="#777" text-anchor="middle">18</text>
+          <text x="18" y="217" font-size="8" fill="#777" text-anchor="end">1</text>
+          <text x="18" y="165" font-size="8" fill="#777" text-anchor="end">5</text>
+          <text x="18" y="152" font-size="8" fill="#777" text-anchor="end">6</text>
+          <text x="18" y="126" font-size="8" fill="#777" text-anchor="end">8</text>
+          <text x="16" y="238" font-size="8" fill="#555">O</text>
+          <!-- corner points -->
+          <circle cx="64" cy="217" r="4" fill="#333"/>
+          <circle cx="220" cy="217" r="4" fill="#333"/>
+          <circle cx="64" cy="165" r="4" fill="#333"/>
+          <text x="64" y="212" font-size="7.5" fill="#333" text-anchor="middle">(3,1)</text>
+          <text x="220" y="212" font-size="7.5" fill="#333" text-anchor="middle">(15,1)</text>
+          <text x="70" y="161" font-size="7.5" fill="#333">(3,5)</text>
+          <!-- HP label -->
+          <text x="120" y="210" font-size="10" fill="#3B82F6" font-weight="bold">HP</text>
+          <!-- line labels -->
+          <text x="195" y="165" font-size="7.5" fill="#8B5CF6">2x+5y=40</text>
+          <text x="170" y="185" font-size="7.5" fill="#e53e3e">x+3y=18</text>
+          <text x="66" y="22" font-size="7.5" fill="#059669">x=3</text>
+          <text x="230" y="214" font-size="7.5" fill="#f59e0b">y=1</text>
+        </svg>
+      </div>
     </div>
 
     <div class="box box-latihan">
@@ -1491,10 +1880,10 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban: `(a) $x \\geq -7$; (b) $x > \\dfrac{1}{2}$; (c) $x \\geq -5$` },
       { jawaban: `(a) $-4 < x \\leq 4$; (b) $-5 < x \\leq 1$; (c) $-1 \\leq x \\leq \\dfrac{7}{4}$` },
       { jawaban: `Keuntungan per unit = Rp5.000. Perlu menjual minimal $\\mathbf{20}$ unit.` },
-      { jawaban: `Pertidaksamaan 1: $x \\geq 2$. Pertidaksamaan 2: $x < 22$. Irisan: $2 \\leq x < 22$. Bilangan bulat: $x \\in \\{2,3,...,21\\}$.` },
-      { jawaban: `$\\text{Rp}60 + \\text{Rp}15w$ antara Rp180–Rp240 juta. Maka $8 \\leq w \\leq 12$ minggu.` },
-      { jawaban: `Penyelesaian benar dari $\\dfrac{3-2x}{4} \\leq \\dfrac{x+1}{3}-1$ adalah $x \\geq \\dfrac{19}{10}$. Periksa ulang: kalikan KPK=12: $3(3-2x) \\leq 4(x+1)-12 \\Rightarrow 9-6x \\leq 4x-8 \\Rightarrow 17 \\leq 10x \\Rightarrow x \\geq \\dfrac{17}{10}$. Jadi jawaban $x \\geq \\dfrac{17}{10}$, bukan $\\dfrac{19}{10}$. Ada kesalahan operasi.` },
-      { jawaban: `Kalikan dengan 12: $2(\\frac{3x-1}{2}-\\frac{x+2}{3}) > \\frac{x-5}{4}-1$. Menyederhanakan: $x > \\dfrac{-5}{4}$ atau $x > -1{,}25$.` },
+      { jawaban: `Pertidaksamaan 1: $\\dfrac{5x-2}{3}-\\dfrac{x+4}{6} \\geq 2$. KPK=6: $2(5x-2)-(x+4) \\geq 12 \\Rightarrow 9x-8 \\geq 12 \\Rightarrow x \\geq \\dfrac{20}{9}$. Pertidaksamaan 2: $3(2x-5) < 5x+7 \\Rightarrow x < 22$. Irisan: $\\dfrac{20}{9} \\leq x < 22$. Bilangan bulat: $x \\in \\{3,4,\\ldots,21\\}$.` },
+      { jawaban: `Sederhanakan isi kurung terlebih dahulu: $\\dfrac{3x-1}{2}-\\dfrac{x+2}{3} = \\dfrac{3(3x-1)-2(x+2)}{6} = \\dfrac{7x-7}{6}$. Substitusi: $\\dfrac{2}{3}\\cdot\\dfrac{7x-7}{6} > \\dfrac{x-5}{4}-1 \\Rightarrow \\dfrac{7x-7}{9} > \\dfrac{x-9}{4}$. KPK=36: $4(7x-7) > 9(x-9) \\Rightarrow 28x-28 > 9x-81 \\Rightarrow 19x > -53 \\Rightarrow x > -\\dfrac{53}{19}$.` },
+      { jawaban: `Total biaya = Rp60 + Rp15$w$ juta. Syarat: $180 \\leq 60 + 15w \\leq 240 \\Rightarrow 120 \\leq 15w \\leq 180 \\Rightarrow 8 \\leq w \\leq 12$ minggu.` },
+      { jawaban: `(a) Kalikan KPK=12: $3(3-2x) \\leq 4(x+1)-12 \\Rightarrow 9-6x \\leq 4x-8 \\Rightarrow 17 \\leq 10x \\Rightarrow x \\geq \\dfrac{17}{10}$. Jawaban siswa $\\dfrac{19}{10}$ <strong>salah</strong>; yang benar adalah $x \\geq \\dfrac{17}{10}$. (b) Dari (a): $x \\geq \\dfrac{17}{10}$. Dari pertidaksamaan kedua: $2x-6 < x+k \\Rightarrow x < k+6$. Agar irisan tidak kosong: $k+6 > \\dfrac{17}{10} \\Rightarrow k > -\\dfrac{43}{10}$, sehingga $k \\geq -4$ (bilangan bulat terkecil). (c) Bilangan bulat pertama yang memenuhi $x \\geq \\dfrac{17}{10}$ adalah $x=2$. Agar tepat satu bilangan bulat: $2 < k+6 \\leq 3 \\Rightarrow -4 < k \\leq -3$. Karena $k$ bulat, $k=-3$, dan bilangan bulat tersebut adalah $2$.` },
     ],
     // Bagian C latihan
     1: [

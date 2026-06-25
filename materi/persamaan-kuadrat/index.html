@@ -101,6 +101,75 @@ window.MathJax = {
     </div>
   </div>
 
+<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Ketika Dunia Nyata Melengkung</h2>
+
+    <p>Bayangkan kamu melempar bola ke atas dengan sudut tertentu. Sedetik pertama bola naik, lalu melambat, berhenti sejenak di titik tertinggi, kemudian jatuh kembali ke tanah. Pertanyaan sederhana — "<em>kapan bola menyentuh tanah?</em>" — ternyata tak bisa dijawab dengan persamaan linear biasa. Dibutuhkan persamaan yang memuat $t^2$, karena ketinggian bola mengikuti kurva berbentuk parabola, bukan garis lurus. Inilah momen pertama kamu membutuhkan <strong>persamaan kuadrat</strong>.</p>
+
+    <p>Persamaan kuadrat hadir di mana-mana. Ketika seorang insinyur menghitung jarak pengereman mobil — yang sebanding dengan <em>kuadrat</em> kecepatan, bukan kecepatan itu sendiri — ia menyelesaikan persamaan kuadrat. Ketika seorang pengusaha mencari harga jual optimal agar keuntungan (selisih pendapatan dan biaya, keduanya fungsi dari kuantitas) dimaksimalkan, ia pun berhadapan dengan persamaan yang sama. Di sinilah fisika dan ekonomi bertemu: keduanya menggunakan bentuk $ax^2 + bx + c = 0$ sebagai bahasa bersama.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Mengapa Ada Paling Banyak Dua Solusi?</h3>
+    <p>Persamaan kuadrat $ax^2 + bx + c = 0$ merepresentasikan sebuah parabola $y = ax^2 + bx + c$ yang memotong sumbu-$x$. Solusi persamaan tersebut adalah titik-titik di mana parabola menyentuh garis $y = 0$. Sebuah parabola hanya bisa memotong garis lurus horizontal dalam tiga skenario: di <strong>dua titik</strong> berbeda, <strong>satu titik</strong> (menyinggung), atau <strong>tidak sama sekali</strong>. Itulah mengapa persamaan kuadrat memiliki paling banyak dua akar — tidak lebih, tidak kurang.</p>
+
+    <p>Penentu skenario mana yang terjadi adalah nilai <strong>diskriminan</strong> $D = b^2 - 4ac$: jika $D > 0$ parabola memotong sumbu-$x$ di dua titik (dua akar nyata berbeda), jika $D = 0$ parabola menyinggung tepat di satu titik (akar kembar), dan jika $D < 0$ parabola berada seluruhnya di atas atau di bawah sumbu-$x$ (tidak ada akar nyata). Dengan satu nilai $D$, kita sudah tahu "bentuk" jawaban bahkan sebelum menghitungnya.</p>
+
+    <p>Untuk menemukan akar-akarnya, ada empat metode yang akan kamu pelajari. <strong>Pemfaktoran</strong> adalah cara paling cepat jika koefisiennya "bersahabat". <strong>Melengkapi kuadrat sempurna</strong> adalah metode yang lebih sistematis dan merupakan fondasi dari semua metode lain. <strong>Rumus kuadrat (rumus ABC)</strong> adalah senjata pamungkas yang selalu bekerja untuk persamaan apa pun — ia diturunkan langsung dari metode melengkapi kuadrat sempurna. Terakhir, <strong>substitusi</strong> digunakan saat persamaan tampak lebih rumit dari kuadrat biasa, tetapi dapat disederhanakan menjadi bentuk kuadrat dengan penggantian variabel yang tepat.</p>
+
+    <p>Memahami persamaan kuadrat bukan hanya soal hafal rumus. Ia adalah pintu masuk ke seluruh dunia <strong>polinomial berderajat tinggi</strong>: kubik, kuartik, dan seterusnya. Teknik-teknik yang kamu kembangkan di sini — memfaktorkan, mencari akar, menggunakan diskriminan — akan muncul kembali dalam setiap topik aljabar yang lebih lanjut. Kuasai persamaan kuadrat, dan kamu sudah memegang kunci untuk membuka pintu berikutnya.</p>
+
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 275" width="100%" style="max-width:480px;background-color:transparent;">
+  <defs>
+    <style>
+      .lb-pk{fill:var(--text-main,#334155);font-family:Cambria,'Times New Roman',serif}
+      .pa-pk{stroke:#b30000;fill:none;stroke-width:2.5}
+      .xa-pk{stroke:var(--text-muted,#94a3b8);stroke-width:1.5;fill:none}
+      .dt-pk{fill:#0014b3}
+      .dm-pk{fill:#b30000;font-family:Cambria,'Times New Roman',serif}
+      @media(prefers-color-scheme:dark){
+        .pa-pk{stroke:#F87171}
+        .xa-pk{stroke:#475569}
+        .dt-pk{fill:#60A5FA}
+        .dm-pk{fill:#F87171}
+      }
+      [data-theme="dark"] .pa-pk{stroke:#F87171}
+      [data-theme="dark"] .xa-pk{stroke:#475569}
+      [data-theme="dark"] .dt-pk{fill:#60A5FA}
+      [data-theme="dark"] .dm-pk{fill:#F87171}
+    </style>
+    <marker id="xarr-pk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--text-muted,#94a3b8)"/>
+    </marker>
+  </defs>
+  <!-- Parabola 1: D > 0 — two x-intercepts -->
+  <line x1="18"  y1="198" x2="175" y2="198" marker-end="url(#xarr-pk)" class="xa-pk"/>
+  <path d="M 40 138 Q 100 298 160 138" class="pa-pk"/>
+  <circle cx="70"  cy="198" r="5" class="dt-pk"/>
+  <circle cx="130" cy="198" r="5" class="dt-pk"/>
+  <text x="100" y="222" class="dm-pk" font-size="14" text-anchor="middle" font-style="italic">D &gt; 0</text>
+  <text x="100" y="240" class="lb-pk" font-size="12" text-anchor="middle">2 akar nyata berbeda</text>
+  <!-- Parabola 2: D = 0 — one tangent point -->
+  <line x1="182" y1="198" x2="342" y2="198" marker-end="url(#xarr-pk)" class="xa-pk"/>
+  <path d="M 198 138 Q 263 258 328 138" class="pa-pk"/>
+  <circle cx="263" cy="198" r="5" class="dt-pk"/>
+  <text x="263" y="222" class="dm-pk" font-size="14" text-anchor="middle" font-style="italic">D = 0</text>
+  <text x="263" y="240" class="lb-pk" font-size="12" text-anchor="middle">1 akar kembar (dobel)</text>
+  <!-- Parabola 3: D < 0 — no x-intercept -->
+  <line x1="348" y1="198" x2="508" y2="198" marker-end="url(#xarr-pk)" class="xa-pk"/>
+  <path d="M 362 138 Q 422 180 482 138" class="pa-pk"/>
+  <text x="422" y="222" class="dm-pk" font-size="14" text-anchor="middle" font-style="italic">D &lt; 0</text>
+  <text x="422" y="240" class="lb-pk" font-size="12" text-anchor="middle">tidak ada akar nyata</text>
+  <!-- Top formula labels -->
+  <text x="100" y="122" class="lb-pk" font-size="11" text-anchor="middle" fill="#94a3b8">y = ax²+bx+c</text>
+  <text x="263" y="122" class="lb-pk" font-size="11" text-anchor="middle" fill="#94a3b8">y = ax²+bx+c</text>
+  <text x="422" y="122" class="lb-pk" font-size="11" text-anchor="middle" fill="#94a3b8">y = ax²+bx+c</text>
+  <!-- Discriminant formula caption -->
+  <text x="260" y="262" class="lb-pk" font-size="12" text-anchor="middle" fill="#94a3b8">Diskriminan: D = b² − 4ac</text>
+</svg>
+</div>
+
+  <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
     <ul class="toc-list">
@@ -113,6 +182,8 @@ window.MathJax = {
       <li><a href="#bagian-g" data-num="G">Tabel Ringkasan</a></li>
     </ul>
   </div>
+
+  </section>
 
   <!-- ══════════════════════════════════════
        A. PENGERTIAN PERSAMAAN KUADRAT
@@ -143,19 +214,21 @@ window.MathJax = {
       <div class="box-label">📘 Contoh 1</div>
       <p style="margin:0 0 .4rem;font-size:.9rem;">Ubahlah persamaan berikut ke dalam bentuk baku $ax^2 + bx + c = 0$, lalu tentukan nilai $a$, $b$, dan $c$!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
+        <li>$(2x - 2)(x + 4) - (x + 3)(x + 1) = 0$</li>
         <li>$2x - 5 = \dfrac{3}{x}$</li>
         <li>$\dfrac{4}{x-1} + \dfrac{1}{x-2} = 3$</li>
       </ol>
     </div>
     <div class="penyelesaian">
 <ol class="alpha-list">
+  <li>$(2x-2)(x+4)-(x+3)(x+1)=0$
+  $$\begin{align*}(2x^2+8x-2x-8)-(x^2+x+3x+3)&=0\\(2x^2+6x-8)-(x^2+4x+3)&=0\\x^2+2x-11&=0\end{align*}$$
+  Jadi $\boxed{a=1,\; b=2,\; c=-11}$.</li>
   <li>$2x - 5 = \dfrac{3}{x}$, kalikan kedua ruas dengan $x$:
   $$x(2x-5)=3 \;\Rightarrow\; 2x^2-5x-3=0$$
   Jadi $\boxed{a=2,\; b=-5,\; c=-3}$.</li>
   <li>$\dfrac{4}{x-1}+\dfrac{1}{x-2}=3$, kalikan kedua ruas dengan $(x-1)(x-2)$:
-  $$4(x-2)+(x-1)=3(x-1)(x-2)$$
-  $$5x-9=3x^2-9x+6$$
-  $$3x^2-14x+15=0$$
+  $$\begin{align*}4(x-2)+(x-1)&=3(x-1)(x-2)\\5x-9&=3x^2-9x+6\\3x^2-14x+15&=0\end{align*}$$
   Jadi $\boxed{a=3,\; b=-14,\; c=15}$.</li>
 </ol></div>
 
@@ -433,29 +506,30 @@ window.MathJax = {
       <div class="box-label">📘 Contoh 12</div>
       <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan penyelesaian persamaan-persamaan berikut!</p>
       <ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;">
-        <li>$(x-3)(x+1) = 5$</li>
+        <li>$(x-6)(x+1) + 2(x-2)(x-3) = -6$</li>
         <li>$x - 4 - \dfrac{7}{x+2} = 0$</li>
       </ol>
     </div>
     <div class="penyelesaian">
 <ol class="alpha-list">
-  <li>$(x-3)(x+1)=5$. Ekspansikan:
-  $$x^2-2x-3=5 \;\Rightarrow\; x^2-2x-8=0 \;\Rightarrow\; (x-4)(x+2)=0$$
-  Jadi $\boxed{x_1=4 \text{ dan } x_2=-2}$.</li>
+  <li>$(x-6)(x+1)+2(x-2)(x-3)=-6$
+  $$\begin{align*}(x^2+x-6x-6)+2(x^2-3x-2x+6)&=-6\\(x^2-5x-6)+2(x^2-5x+6)&=-6\\x^2-5x-6+2x^2-10x+12&=-6\\3x^2-15x+6&=-6\\3x^2-15x+12&=0\\x^2-5x+4&=0\\(x-4)(x-1)&=0\end{align*}$$
+  Jadi $\boxed{x_1=4 \text{ dan } x_2=1}$.</li>
   <li>$x-4-\dfrac{7}{x+2}=0$. Kalikan $(x+2)$:
-  $$(x-4)(x+2)-7=0 \;\Rightarrow\; x^2-2x-15=0 \;\Rightarrow\; (x-5)(x+3)=0$$
+  $$\begin{align*}(x-4)(x+2)-7&=0\\x^2-2x-8-7&=0\\x^2-2x-15&=0\\(x-5)(x+3)&=0\end{align*}$$
   Jadi $\boxed{x_1=5 \text{ dan } x_2=-3}$ &nbsp;($x\neq -2$ ✓).</li>
 </ol></div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 13</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$ real yang memenuhi $x^4 - 13x^2 + 36 = 0$.</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$ real yang memenuhi $(x^2 + 2x + 3)(2x^2 + 4x - 33) = -54$.</p>
     </div>
-    <div class="penyelesaian">Misalkan $p = x^2$, persamaan menjadi:
-$$p^2 - 13p + 36 = 0 \;\Rightarrow\; (p-4)(p-9) = 0$$
-<strong>Kasus 1:</strong> $p=4 \Rightarrow x^2=4 \Rightarrow x=\pm 2$<br>
-<strong>Kasus 2:</strong> $p=9 \Rightarrow x^2=9 \Rightarrow x=\pm 3$<br><br>
-Jadi $\boxed{x \in \{-3,\,-2,\,2,\,3\}}$.</div>
+    <div class="penyelesaian">Misalkan $p = x^2 + 2x$, sehingga $x^2+2x+3=p+3$ dan $2x^2+4x-33=2p-33$.
+$$\begin{align*}(p+3)(2p-33)&=-54\\2p^2-33p+6p-99&=-54\\2p^2-27p-45&=0\\(2p+3)(p-15)&=0\end{align*}$$
+<strong>Kasus 1:</strong> $p=-\dfrac{3}{2}$, maka $x^2+2x=-\dfrac{3}{2}$, yaitu $2x^2+4x+3=0$.<br>
+$D=16-24=-8<0$ → tidak ada akar real.<br><br>
+<strong>Kasus 2:</strong> $p=15$, maka $x^2+2x=15$, yaitu $x^2+2x-15=0 \;\Rightarrow\; (x+5)(x-3)=0$.<br><br>
+Jadi $\boxed{x_1=-5 \text{ atau } x_2=3}$.</div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan</div>

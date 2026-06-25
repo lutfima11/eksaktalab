@@ -108,6 +108,107 @@ window.MathJax = {
     </div>
   </div>
 
+<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Ketika Garis Menjadi Lengkungan</h2>
+
+    <p>Pernahkah kamu memperhatikan lintasan bola yang dilempar ke udara? Bola itu tidak melaju lurus — ia naik, mencapai titik tertinggi, lalu turun kembali membentuk lengkungan yang mulus. Lengkungan itu punya nama: <strong>parabola</strong>. Dan di balik parabola tersebut, tersembunyi sebuah fungsi matematika yang begitu elegan: <strong>fungsi kuadrat</strong>.</p>
+
+    <p>Parabola bukan hanya milik bola yang dilempar. Piringanan satelit dirancang berbentuk parabola agar semua sinyal yang datang terpantul tepat ke satu titik fokus — itulah mengapa gambarnya jernih. Kabel jembatan gantung bergaya Golden Gate membentuk lengkungan parabolik agar beban terdistribusi secara merata. Reflektor lampu mobil menggunakan permukaan parabolik agar cahaya terpancar sejajar ke depan. Bahkan tikungan roller coaster pun mengandalkan bentuk ini. Sekali kamu mulai melihatnya, parabola ada di mana-mana.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Fungsi Kuadrat Adalah Sebuah Bentuk</h3>
+    <p>Kesalahan umum adalah memandang fungsi kuadrat $f(x) = ax^2 + bx + c$ hanya sebagai rumus. Padahal, fungsi kuadrat sejatinya adalah sebuah <strong>bentuk geometri</strong> — parabola. Koefisien $a$ menentukan arah bukaan: jika $a > 0$, parabola terbuka ke atas seperti mangkuk; jika $a < 0$, terbuka ke bawah seperti kubah. Nilai $|a|$ menentukan seberapa sempit atau lebar parabolanya.</p>
+
+    <p>Bandingkan dengan fungsi linear $f(x) = mx + n$: grafiknya berupa garis lurus karena laju perubahannya konstan — setiap kenaikan $x$ memberikan perubahan $f(x)$ yang sama persis. Pada fungsi kuadrat, laju perubahannya sendiri berubah — semakin jauh dari puncak, semakin cepat nilai fungsi berubah. Inilah yang menciptakan kelengkungan parabola.</p>
+
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 430" width="100%" style="max-width:420px;background-color:transparent;">
+  <defs>
+    <style>
+      .ax-fk{stroke:var(--text-main,#334155)}
+      .gl-fk{stroke:var(--text-muted,#e2e8f0);opacity:.5}
+      .lb-fk{fill:var(--text-main,#334155);font-family:Cambria,'Times New Roman',serif}
+      .cv-fk{stroke:#b30000;fill:none}
+      .sy-fk{stroke:#0014b3;fill:none;stroke-dasharray:6,4}
+      .pt-fk{fill:#800040}
+      .lv-fk{fill:#b30000;font-family:Cambria,'Times New Roman',serif}
+      .ls-fk{fill:#0014b3;font-family:Cambria,'Times New Roman',serif}
+      @media(prefers-color-scheme:dark){
+        .gl-fk{stroke:#334155}
+        .cv-fk{stroke:#F87171}
+        .sy-fk{stroke:#60A5FA}
+        .pt-fk{fill:#F472B6}
+        .lv-fk{fill:#F87171}
+        .ls-fk{fill:#60A5FA}
+      }
+      [data-theme="dark"] .gl-fk{stroke:#334155}
+      [data-theme="dark"] .cv-fk{stroke:#F87171}
+      [data-theme="dark"] .sy-fk{stroke:#60A5FA}
+      [data-theme="dark"] .pt-fk{fill:#F472B6}
+      [data-theme="dark"] .lv-fk{fill:#F87171}
+      [data-theme="dark"] .ls-fk{fill:#60A5FA}
+    </style>
+    <marker id="arr-fk" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--text-main,#334155)"/>
+    </marker>
+  </defs>
+  <!-- origin(140,320), x-unit=80px, y-unit=55px -->
+  <!-- Grid -->
+  <line x1="220" y1="105" x2="220" y2="395" class="gl-fk" stroke-width="1"/>
+  <line x1="300" y1="105" x2="300" y2="395" class="gl-fk" stroke-width="1"/>
+  <line x1="380" y1="105" x2="380" y2="395" class="gl-fk" stroke-width="1"/>
+  <line x1="460" y1="105" x2="460" y2="395" class="gl-fk" stroke-width="1"/>
+  <line x1="115" y1="265" x2="490" y2="265" class="gl-fk" stroke-width="1"/>
+  <line x1="115" y1="210" x2="490" y2="210" class="gl-fk" stroke-width="1"/>
+  <line x1="115" y1="155" x2="490" y2="155" class="gl-fk" stroke-width="1"/>
+  <line x1="115" y1="375" x2="490" y2="375" class="gl-fk" stroke-width="1"/>
+  <!-- Axis of symmetry x=2 -->
+  <line x1="300" y1="82" x2="300" y2="388" class="sy-fk" stroke-width="1.5"/>
+  <text x="300" y="76" class="ls-fk" font-size="13" text-anchor="middle">x = 2</text>
+  <!-- Axes -->
+  <line x1="110" y1="320" x2="495" y2="320" marker-end="url(#arr-fk)" class="ax-fk" stroke-width="2.5"/>
+  <line x1="140" y1="405" x2="140" y2="76"  marker-end="url(#arr-fk)" class="ax-fk" stroke-width="2.5"/>
+  <text x="500" y="326" class="lb-fk" font-size="18" font-style="italic">x</text>
+  <text x="126" y="70"  class="lb-fk" font-size="18" font-style="italic">y</text>
+  <text x="122" y="334" class="lb-fk" font-size="17">O</text>
+  <!-- X ticks -->
+  <line x1="220" y1="315" x2="220" y2="325" class="ax-fk" stroke-width="1.5"/>
+  <line x1="300" y1="315" x2="300" y2="325" class="ax-fk" stroke-width="1.5"/>
+  <line x1="380" y1="315" x2="380" y2="325" class="ax-fk" stroke-width="1.5"/>
+  <line x1="460" y1="315" x2="460" y2="325" class="ax-fk" stroke-width="1.5"/>
+  <text x="220" y="338" class="lb-fk" font-size="15" text-anchor="middle">1</text>
+  <text x="300" y="338" class="lb-fk" font-size="15" text-anchor="middle">2</text>
+  <text x="380" y="338" class="lb-fk" font-size="15" text-anchor="middle">3</text>
+  <text x="460" y="338" class="lb-fk" font-size="15" text-anchor="middle">4</text>
+  <!-- Y ticks -->
+  <line x1="135" y1="265" x2="145" y2="265" class="ax-fk" stroke-width="1.5"/>
+  <line x1="135" y1="210" x2="145" y2="210" class="ax-fk" stroke-width="1.5"/>
+  <line x1="135" y1="155" x2="145" y2="155" class="ax-fk" stroke-width="1.5"/>
+  <line x1="135" y1="375" x2="145" y2="375" class="ax-fk" stroke-width="1.5"/>
+  <text x="128" y="270" class="lb-fk" font-size="15" text-anchor="end">1</text>
+  <text x="128" y="215" class="lb-fk" font-size="15" text-anchor="end">2</text>
+  <text x="128" y="160" class="lb-fk" font-size="15" text-anchor="end">3</text>
+  <text x="128" y="380" class="lb-fk" font-size="15" text-anchor="end">−1</text>
+  <!-- Parabola f(x)=x²−4x+3 -->
+  <path d="M 140 155 C 180 310 248 375 300 375 C 352 375 420 310 460 155" class="cv-fk" stroke-width="3"/>
+  <!-- X-intercepts -->
+  <circle cx="220" cy="320" r="5" class="pt-fk"/>
+  <circle cx="380" cy="320" r="5" class="pt-fk"/>
+  <text x="220" y="312" class="lb-fk" font-size="12" text-anchor="middle">x₁=1</text>
+  <text x="380" y="312" class="lb-fk" font-size="12" text-anchor="middle">x₂=3</text>
+  <!-- Y-intercept -->
+  <circle cx="140" cy="155" r="5" class="pt-fk"/>
+  <text x="152" y="152" class="lb-fk" font-size="12">(0, 3)</text>
+  <!-- Vertex -->
+  <circle cx="300" cy="375" r="6" class="pt-fk"/>
+  <text x="308" y="395" class="lb-fk" font-size="12">V(2, −1) titik minimum</text>
+  <!-- Formula -->
+  <text x="300" y="418" class="lv-fk" font-size="13" text-anchor="middle">f(x) = x² − 4x + 3</text>
+</svg>
+</div>
+
+    <p>Titik paling istimewa pada parabola adalah <strong>titik balik</strong> (vertex) — titik di mana fungsi mencapai nilai maksimum atau minimumnya. Semua informasi penting tentang fungsi kuadrat (akar-akar, sumbu simetri, nilai ekstrem) dapat dibaca langsung dari grafik. Dari lemparan bola hingga desain arsitektur, parabola adalah salah satu kurva paling elegan di alam.</p>
+
   <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
@@ -123,6 +224,8 @@ window.MathJax = {
       <li><a href="#bagian-i" data-num="I">Tabel Ringkasan</a></li>
     </ul>
   </div>
+
+  </section>
 
   <!-- ═══ A. PENGERTIAN FUNGSI KUADRAT ═══════════════════ -->
   <section class="section" id="bagian-a">
@@ -1369,7 +1472,7 @@ window.MathJax = {
       
       $a = -5 < 0$ (terbuka ke bawah, memiliki maksimum).<br>
       <strong>(a) &amp; (b)</strong> Titik balik:
-      $$t_P = \frac{-b}{2a} = \frac{-20}{-10} = 2 \text{ detik}$$
+      $$t_P = \frac{-b}{2a} = \frac{-20}{2(-5)} = 2 \text{ detik}$$
       $$h_{\max} = h(2) = -5(4) + 20(2) + 1 = 21 \text{ meter}$$
       <strong>(c)</strong> Bola menyentuh tanah saat $h = 0$:
       $$-5t^2 + 20t + 1 = 0 \;\Rightarrow\; 5t^2 - 20t - 1 = 0$$

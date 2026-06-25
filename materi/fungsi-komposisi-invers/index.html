@@ -107,6 +107,92 @@ window.MathJax = {
     </div>
   </div>
 
+<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Fungsi sebagai Mesin, Komposisi sebagai Rangkaian</h2>
+
+    <p>Bayangkan sebuah pabrik dengan dua mesin dalam satu lini produksi. Mesin pertama menerima bahan mentah dan menghasilkan setengah jadi. Mesin kedua menerima setengah jadi itu, lalu menghasilkan produk akhir. Tidak ada yang melewati mesin kedua tanpa terlebih dahulu melewati mesin pertama — itulah inti dari <strong>komposisi fungsi</strong>. Dalam matematika, fungsi adalah "mesin" yang menerima input dan mengeluarkan output, dan komposisi adalah cara kita <em>merangkai</em> mesin-mesin itu secara berurutan.</p>
+
+    <p>Ide ini ternyata ada di mana-mana. Saat aplikasi navigasi menghitung rute, ia melakukan serangkaian fungsi secara berturut: mengubah alamat teks menjadi koordinat GPS, lalu meneruskan koordinat itu ke algoritma pencarian rute, lalu mengubah hasilnya menjadi petunjuk langkah demi langkah yang kita baca di layar. Setiap langkah adalah satu fungsi; seluruh proses adalah komposisinya. Sistem enkripsi pesan bekerja serupa: fungsi $f$ mengenkripsi pesan biasa menjadi sandi, dan fungsi $f^{-1}$ — <strong>fungsi invers</strong> dari $f$ — mendekripsi sandi itu kembali menjadi pesan asli.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Rangkaian Mesin dan Tombol "Undo"</h3>
+    <p>Misalkan $f(x) = 2x$ (fungsi "kalikan dua") dan $g(x) = x + 3$ (fungsi "tambah tiga"). Komposisi $(f \circ g)(x) = f(g(x))$ berarti: <em>pertama</em> jalankan $g$ (tambah tiga), <em>baru kemudian</em> jalankan $f$ (kalikan dua). Jadi $(f \circ g)(x) = 2(x+3) = 2x+6$. Perhatikan urutan penting: $(g \circ f)(x) = g(f(x)) = 2x+3$, hasilnya berbeda — komposisi tidak komutatif.</p>
+
+    <div style="background:var(--surface-2,#f1f5f9);border:1px solid var(--border,#e2e8f0);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0;font-size:.92rem;">
+      <p style="margin:.25rem 0;"><strong>Contoh mesin berantai:</strong></p>
+      <p style="margin:.25rem 0;">Input $x = 4$ → mesin $g$: tambah 3 → <strong>7</strong> → mesin $f$: kalikan 2 → <strong>14</strong></p>
+      <p style="margin:.25rem 0;">Jadi $(f \circ g)(4) = 14$.</p>
+      <p style="margin:.75rem 0 .25rem;"><strong>Contoh fungsi invers — tombol "undo":</strong></p>
+      <p style="margin:.25rem 0;">$f(x) = 2x$, maka $f^{-1}(x) = \dfrac{x}{2}$.</p>
+      <p style="margin:.25rem 0;">$f(5) = 10$ → $f^{-1}(10) = 5$ — kita kembali ke titik semula.</p>
+    </div>
+
+    <p>Fungsi invers adalah "tombol undo" dari sebuah fungsi. Jika fungsi $f$ mengubah $x$ menjadi $y$, maka $f^{-1}$ mengubah $y$ kembali menjadi $x$. Namun tidak semua fungsi punya invers — hanya fungsi <strong>bijektif</strong> (satu-satu dan pada) yang dapat dibalik sepenuhnya. Inilah mengapa resep memasak yang menggandakan semua bahan bisa "dibatalkan" dengan membagi dua kembali, tetapi proses memasak telur tidak bisa dibalik — fungsinya tidak bijektif.</p>
+
+    <p>Komposisi dan invers adalah fondasi dari konsep yang lebih dalam di matematika dan informatika: dari transformasi geometri, teori grup, hingga kriptografi modern. Memahami keduanya berarti memahami bagaimana operasi-operasi kompleks dapat dibangun dari bagian-bagian yang sederhana — dan bagaimana cara membaliknya.</p>
+
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 210" width="100%" style="max-width:460px;background-color:transparent;">
+  <defs>
+    <style>
+      .lb-fi{fill:var(--text-main,#334155);font-family:Cambria,'Times New Roman',serif}
+      .bx-fi{fill:var(--bg-card,#f8fafc);stroke:#0014b3;stroke-width:2.5}
+      .bx2-fi{fill:var(--bg-card,#f8fafc);stroke:#b30000;stroke-width:2.5}
+      .tg-fi{fill:#0014b3;font-family:Cambria,'Times New Roman',serif}
+      .tr-fi{fill:#b30000;font-family:Cambria,'Times New Roman',serif}
+      @media(prefers-color-scheme:dark){
+        .bx-fi{fill:#1e293b;stroke:#60A5FA}
+        .bx2-fi{fill:#1e293b;stroke:#F87171}
+        .tg-fi{fill:#60A5FA}
+        .tr-fi{fill:#F87171}
+      }
+      [data-theme="dark"] .bx-fi{fill:#1e293b;stroke:#60A5FA}
+      [data-theme="dark"] .bx2-fi{fill:#1e293b;stroke:#F87171}
+      [data-theme="dark"] .tg-fi{fill:#60A5FA}
+      [data-theme="dark"] .tr-fi{fill:#F87171}
+    </style>
+    <marker id="arr-fi" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--text-main,#334155)"/>
+    </marker>
+  </defs>
+  <!-- Input x -->
+  <text x="40" y="94" class="lb-fi" font-size="22" text-anchor="middle" font-style="italic" font-weight="700">x</text>
+  <!-- Arrow → box g -->
+  <line x1="56" y1="88" x2="88" y2="88" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
+  <!-- Box g -->
+  <rect x="92" y="62" width="114" height="52" class="bx-fi" rx="10"/>
+  <text x="149" y="83" class="tg-fi" font-size="13" text-anchor="middle" font-weight="700">Mesin g</text>
+  <text x="149" y="101" class="tg-fi" font-size="12" text-anchor="middle">g(x) = x + 3</text>
+  <!-- Arrow → intermediate -->
+  <line x1="208" y1="88" x2="232" y2="88" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
+  <!-- g(x) label -->
+  <text x="252" y="83" class="lb-fi" font-size="14" text-anchor="middle" font-style="italic">g(x)</text>
+  <!-- Arrow → box f -->
+  <line x1="272" y1="88" x2="298" y2="88" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
+  <!-- Box f -->
+  <rect x="302" y="62" width="106" height="52" class="bx2-fi" rx="10"/>
+  <text x="355" y="83" class="tr-fi" font-size="13" text-anchor="middle" font-weight="700">Mesin f</text>
+  <text x="355" y="101" class="tr-fi" font-size="12" text-anchor="middle">f(x) = 2x</text>
+  <!-- Arrow → output -->
+  <line x1="410" y1="88" x2="438" y2="88" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
+  <!-- Output y -->
+  <text x="455" y="94" class="lb-fi" font-size="22" text-anchor="middle" font-style="italic" font-weight="700">y</text>
+  <!-- ─ Example row ─ -->
+  <text x="40"  y="157" class="lb-fi" font-size="22" text-anchor="middle" font-weight="700">4</text>
+  <line x1="56" y1="152" x2="88" y2="152" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
+  <text x="149" y="157" class="tg-fi" font-size="18" text-anchor="middle" font-weight="700">+ 3</text>
+  <line x1="208" y1="152" x2="232" y2="152" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
+  <text x="252" y="157" class="lb-fi" font-size="22" text-anchor="middle" font-weight="700">7</text>
+  <line x1="272" y1="152" x2="298" y2="152" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
+  <text x="355" y="157" class="tr-fi" font-size="18" text-anchor="middle" font-weight="700">× 2</text>
+  <line x1="410" y1="152" x2="438" y2="152" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
+  <text x="455" y="157" class="lb-fi" font-size="22" text-anchor="middle" font-weight="700">14</text>
+  <!-- Caption -->
+  <text x="245" y="188" class="lb-fi" font-size="12" text-anchor="middle" fill="#94a3b8">(f ∘ g)(4) = f(g(4)) = f(7) = 14</text>
+  <text x="245" y="204" class="lb-fi" font-size="12" text-anchor="middle" fill="#94a3b8">(f ∘ g)(x) = f(x+3) = 2(x+3) = 2x+6</text>
+</svg>
+</div>
+
   <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
@@ -118,6 +204,8 @@ window.MathJax = {
       <li><a href="#bagian-e" data-num="E">Tabel Ringkasan</a></li>
     </ul>
   </div>
+
+  </section>
 
   <!-- ═══ A. PENGERTIAN FUNGSI ══════════════ -->
   <section class="section" id="bagian-a">
@@ -181,6 +269,11 @@ window.MathJax = {
     <h3 class="subsection-title">1. Jenis-Jenis Fungsi</h3>
 
     <p><strong>a. Fungsi Injektif (Satu-Satu)</strong> — Fungsi $f: A \to B$ disebut <strong>injektif</strong> jika setiap dua elemen berbeda di $A$ selalu dipetakan ke elemen berbeda di $B$.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Syarat Injektif</div>
+      <div class="math-block">$$f(x_1) = f(x_2) \implies x_1 = x_2 \qquad x_1 \neq x_2 \implies f(x_1) \neq f(x_2)$$</div>
+    </div>
 
     <p><strong>b. Fungsi Surjektif (Pada)</strong> — $f(A) = B$ (range = kodomain). Setiap $y \in B$ punya paling sedikit satu pasangan $x \in A$.</p>
 
@@ -838,17 +931,6 @@ window.MathJax = {
         <line x1="90" y1="160" x2="110" y2="180" stroke="#94A3B8" stroke-width="0.9" stroke-dasharray="3,2"/>
       </svg>
     </div>
-    <div class="box box-rumus">
-      <div class="box-label">Domain &amp; Range Fungsi Invers</div>
-      <div class="math-block">$$D_{f^{-1}} = R_f \qquad \text{dan} \qquad R_{f^{-1}} = D_f$$</div>
-    </div>
-
-    <p>Karena fungsi invers <em>membalikkan</em> pemetaan $f$, maka domain dan range-nya pun saling bertukar. Artinya, <strong>domain</strong> $f^{-1}$ adalah semua nilai keluaran $f$, dan <strong>range</strong> $f^{-1}$ adalah semua nilai masukan $f$ yang diizinkan.</p>
-
-    <div class="box box-catatan">
-      <div class="box-label">⚠ Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Jika $f$ memiliki batasan domain (misalnya fungsi akar atau pecahan), maka $f^{-1}$ memiliki batasan range yang bersesuaian. Begitu pula sebaliknya.</p>
-    </div>
 
     <h3 class="subsection-title">1. Langkah Menentukan Fungsi Invers</h3>
     <ol class="step-list">
@@ -962,8 +1044,18 @@ window.MathJax = {
       Misalkan $y = \bigl[(x+5)^{1/3}-4\bigr]^2$, maka:
       $$\sqrt{y} = (x+5)^{1/3} - 4 \quad \text{(diambil akar non-negatif)}$$
       $$\bigl(\sqrt{y}+4\bigr)^3 = x + 5 \implies x = \bigl(\sqrt{y}+4\bigr)^3 - 5$$
-      Jadi $f^{-1}(x) = \bigl(\sqrt{x}+4\bigr)^3 - 5$.<br><br>
-      $D_{f^{-1}} = \{x \in \mathbb{R} \mid x \geq 0\}$, $R_{f^{-1}} = [59,\,+\infty)$ (jika domain $f$ dibatasi $x \geq 59$).
+      Jadi $f^{-1}(x) = \bigl(\sqrt{x}+4\bigr)^3 - 5$.
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Domain Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;">Domain alami $f(x) = \bigl[(x+5)^{1/3}-4\bigr]^2$ adalah $\mathbb{R}$, namun $f$ <strong>tidak injektif</strong> pada $\mathbb{R}$.</p>
+      <p style="margin:.4rem 0 0;font-size:.9rem;">Misalkan $u(x) = (x+5)^{1/3} - 4$. Titik yang memisahkan dua cabang monoton adalah ketika $u(x)=0$, yaitu $(x+5)^{1/3}=4 \implies x+5=64 \implies x=59$.</p>
+      <ul style="margin:.4rem 0 0;font-size:.9rem;padding-left:1.2rem;">
+        <li><strong>Pilihan 1:</strong> $D_f = [59,\,+\infty)$ (ambil $\sqrt{y} = (x+5)^{1/3}-4 \geq 0$), sehingga $R_f = [0,\,+\infty)$, $D_{f^{-1}} = [0,\,+\infty)$, $R_{f^{-1}} = [59,\,+\infty)$.</li>
+        <li><strong>Pilihan 2:</strong> $D_f = (-\infty,\,59]$ (ambil $-\sqrt{y}$), dengan $f^{-1}(x) = \bigl(-\sqrt{x}+4\bigr)^3 - 5$.</li>
+      </ul>
+      <p style="margin:.4rem 0 0;font-size:.9rem;">Jika soal tidak menyebutkan pembatasan domain, umumnya diambil Pilihan 1 (tanda positif).</p>
     </div>
 
     <div class="box box-contoh">
@@ -976,7 +1068,35 @@ window.MathJax = {
       $$a = f(2) = \frac{2(2)+5}{2-1} = \frac{9}{1} = \mathbf{9}$$
     </div>
 
-    <h3 class="subsection-title">3. Invers Fungsi Eksponen dan Logaritma</h3>
+    <h3 class="subsection-title">3. Domain dan Range Fungsi Invers</h3>
+
+    <p>Karena fungsi invers <em>membalikkan</em> pemetaan $f$, maka domain dan range-nya pun saling bertukar dengan fungsi asalnya.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Domain &amp; Range Fungsi Invers</div>
+      <div class="math-block">$$D_{f^{-1}} = R_f \qquad \text{dan} \qquad R_{f^{-1}} = D_f$$</div>
+    </div>
+
+    <p>Artinya, <strong>domain</strong> $f^{-1}$ adalah semua nilai keluaran $f$, dan <strong>range</strong> $f^{-1}$ adalah semua nilai masukan $f$ yang diizinkan.</p>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Jika $f$ memiliki batasan domain (misalnya fungsi akar atau pecahan), maka $f^{-1}$ memiliki batasan range yang bersesuaian. Begitu pula sebaliknya.</p>
+    </div>
+
+    <p><strong>Ilustrasi pada beberapa jenis fungsi:</strong></p>
+
+    <p><strong>a. Fungsi Linear</strong> $f(x) = ax + b$, &nbsp; $D_f = \mathbb{R}$, &nbsp; $R_f = \mathbb{R}$</p>
+    $$D_{f^{-1}} = \mathbb{R} \qquad \text{dan} \qquad R_{f^{-1}} = \mathbb{R}$$
+
+    <p><strong>b. Fungsi Akar</strong> $f(x) = \sqrt{x - k}$, &nbsp; $D_f = [k, +\infty)$, &nbsp; $R_f = [0, +\infty)$</p>
+    $$D_{f^{-1}} = [0, +\infty) \qquad \text{dan} \qquad R_{f^{-1}} = [k, +\infty)$$
+    <p>(memang benar: $f^{-1}(x) = x^2 + k$ dengan $x \geq 0$)</p>
+
+    <p><strong>c. Fungsi Pecahan Linear</strong> $f(x) = \dfrac{ax+b}{cx+d}$, &nbsp; $D_f = \mathbb{R} \setminus \!\left\{-\dfrac{d}{c}\right\}$, &nbsp; $R_f = \mathbb{R} \setminus \!\left\{\dfrac{a}{c}\right\}$</p>
+    $$D_{f^{-1}} = \mathbb{R} \setminus \!\left\{\frac{a}{c}\right\} \qquad \text{dan} \qquad R_{f^{-1}} = \mathbb{R} \setminus \!\left\{-\frac{d}{c}\right\}$$
+
+    <h3 class="subsection-title">4. Invers Fungsi Eksponen dan Logaritma</h3>
 
     <p><strong>a. Fungsi Eksponen</strong> $f(x) = a^{bx+c}$</p>
     <p>Dari $y = a^{bx+c}$ diperoleh $bx + c = \log_a y$, sehingga:</p>
@@ -1007,7 +1127,7 @@ window.MathJax = {
       <strong>b.</strong> $3^y=2x+5 \Rightarrow g^{-1}(x)=\dfrac{3^x-5}{2}$, $D_{g^{-1}}=\{x \in \mathbb{R}\}$
     </div>
 
-    <h3 class="subsection-title">4. Fungsi Invers Diri Sendiri (Involusi)</h3>
+    <h3 class="subsection-title">5. Fungsi Invers Diri Sendiri (Involusi)</h3>
 
     <p>Suatu fungsi disebut <strong>involusi</strong> (atau <em>self-inverse</em>) jika $f = f^{-1}$, yaitu $f(f(x)) = x$ untuk semua $x$ pada domainnya.</p>
 
@@ -1283,6 +1403,8 @@ window.MathJax = {
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </div><!-- /komentar-section -->
 
 </div><!-- /page-wrap -->
 

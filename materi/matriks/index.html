@@ -103,6 +103,109 @@ window.MathJax = {
     </div>
   </div>
 
+  <!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Bahasa Data di Balik Dunia Digital</h2>
+
+    <p>Setiap kali kamu membuka Instagram dan melihat konten yang relevan, setiap kali Google Maps menghitung rute tercepat, atau setiap kali game favoritmu merender karakter 3D yang bergerak mulus — di balik semua itu ada satu struktur matematika yang bekerja tanpa henti: <strong>matriks</strong>. Matriks bukan sekadar "tabel angka" yang terlihat rumit di buku pelajaran. Matriks adalah cara dunia digital mengorganisasi, memproses, dan mentransformasi data dalam skala yang mustahil dilakukan dengan cara biasa.</p>
+
+    <p>Algoritma PageRank milik Google — yang menentukan urutan hasil pencarian untuk miliaran halaman web — pada dasarnya adalah operasi pada matriks raksasa berukuran miliaran × miliaran. Grafik dalam game dan film animasi dihasilkan dengan mengalikan matriks transformasi jutaan kali per detik agar karakter bisa berputar, bergerak, dan berskala secara realistis. Prakiraan cuaca pun dihitung dengan menyelesaikan sistem persamaan diferensial yang direpresentasikan sebagai matriks. Spreadsheet yang kamu gunakan sehari-hari? Pada intinya, ia adalah sebuah matriks.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Satu Tabel untuk Menggantikan Ratusan Persamaan</h3>
+    <p>Bayangkan kamu punya data nilai tiga siswa pada tiga mata pelajaran. Daripada menyimpan sembilan angka secara terpisah dan menghitungnya satu per satu, matriks memungkinkanmu mengelompokkan semuanya dalam satu struktur dan memanipulasinya sekaligus.</p>
+
+    <div style="overflow-x:auto; margin: 1.2rem 0;">
+      <table style="border-collapse:collapse; margin:0 auto; font-family: inherit; font-size: 0.95rem;">
+        <thead>
+          <tr style="background:var(--accent-1, #3b82f6); color:#fff;">
+            <th style="padding:0.6rem 1rem; border:1px solid var(--border,#e2e8f0);">Siswa</th>
+            <th style="padding:0.6rem 1rem; border:1px solid var(--border,#e2e8f0);">Matematika</th>
+            <th style="padding:0.6rem 1rem; border:1px solid var(--border,#e2e8f0);">Fisika</th>
+            <th style="padding:0.6rem 1rem; border:1px solid var(--border,#e2e8f0);">Kimia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:0.5rem 1rem; border:1px solid var(--border,#e2e8f0); font-weight:600;">Andi</td>
+            <td style="padding:0.5rem 1rem; border:1px solid var(--border,#e2e8f0); text-align:center;">85</td>
+            <td style="padding:0.5rem 1rem; border:1px solid var(--border,#e2e8f0); text-align:center;">78</td>
+            <td style="padding:0.5rem 1rem; border:1px solid var(--border,#e2e8f0); text-align:center;">90</td>
+          </tr>
+          <tr style="background:var(--bg-alt, #f8fafc);">
+            <td style="padding:0.5rem 1rem; border:1px solid var(--border,#e2e8f0); font-weight:600;">Budi</td>
+            <td style="padding:0.5rem 1rem; border:1px solid var(--border,#e2e8f0); text-align:center;">72</td>
+            <td style="padding:0.5rem 1rem; border:1px solid var(--border,#e2e8f0); text-align:center;">88</td>
+            <td style="padding:0.5rem 1rem; border:1px solid var(--border,#e2e8f0); text-align:center;">65</td>
+          </tr>
+          <tr>
+            <td style="padding:0.5rem 1rem; border:1px solid var(--border,#e2e8f0); font-weight:600;">Cici</td>
+            <td style="padding:0.5rem 1rem; border:1px solid var(--border,#e2e8f0); text-align:center;">91</td>
+            <td style="padding:0.5rem 1rem; border:1px solid var(--border,#e2e8f0); text-align:center;">74</td>
+            <td style="padding:0.5rem 1rem; border:1px solid var(--border,#e2e8f0); text-align:center;">83</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Tabel di atas sudah merupakan matriks 3×3 — tiga baris (siswa) dan tiga kolom (mata pelajaran). Dengan matriks, kita bisa langsung menghitung rata-rata per kolom, mencari siswa dengan total nilai tertinggi, atau bahkan menyelesaikan sistem persamaan linear yang melibatkan ketiga variabel sekaligus — hanya dengan satu set operasi terstruktur, bukan dengan menghitung tiap angka satu per satu.</p>
+
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="100%" style="max-width:420px;background-color:transparent;">
+  <defs>
+    <style>
+      .lb-mx{fill:var(--text-main,#334155);font-family:Cambria,'Times New Roman',serif}
+      .hb-mx{fill:#dbeafe;opacity:.6}
+      .hc-mx{fill:#fee2e2;opacity:.6}
+      .hi-mx{fill:#818cf8;opacity:.35}
+      .hl-mx{fill:#0014b3}
+      .gr-mx{stroke:var(--border,#cbd5e1);fill:none}
+      @media(prefers-color-scheme:dark){
+        .hb-mx{fill:#1e3a5f;opacity:.7}
+        .hc-mx{fill:#4b1d1d;opacity:.7}
+        .hi-mx{fill:#6366f1;opacity:.4}
+        .hl-mx{fill:#60A5FA}
+        .gr-mx{stroke:#334155}
+      }
+      [data-theme="dark"] .hb-mx{fill:#1e3a5f;opacity:.7}
+      [data-theme="dark"] .hc-mx{fill:#4b1d1d;opacity:.7}
+      [data-theme="dark"] .hi-mx{fill:#6366f1;opacity:.4}
+      [data-theme="dark"] .hl-mx{fill:#60A5FA}
+      [data-theme="dark"] .gr-mx{stroke:#334155}
+    </style>
+  </defs>
+  <text x="245" y="25" class="lb-mx" font-size="15" text-anchor="middle">Matriks Nilai Siswa (ordo 3×3)</text>
+  <text x="162" y="50" class="lb-mx" font-size="12" text-anchor="middle" fill="#94a3b8">Matematika</text>
+  <text x="242" y="50" class="lb-mx" font-size="12" text-anchor="middle" fill="#94a3b8">Fisika</text>
+  <text x="322" y="50" class="lb-mx" font-size="12" text-anchor="middle" fill="#94a3b8">Kimia</text>
+  <rect x="122" y="115" width="240" height="54" class="hb-mx" rx="2"/>
+  <rect x="122" y="59"  width="80"  height="162" class="hc-mx" rx="2"/>
+  <rect x="122" y="115" width="80"  height="54" class="hi-mx" rx="2"/>
+  <rect x="122" y="59"  width="240" height="162" class="gr-mx" stroke-width="1.5"/>
+  <line x1="122" y1="115" x2="362" y2="115" class="gr-mx" stroke-width="1"/>
+  <line x1="122" y1="169" x2="362" y2="169" class="gr-mx" stroke-width="1"/>
+  <line x1="202" y1="59"  x2="202" y2="221" class="gr-mx" stroke-width="1"/>
+  <line x1="282" y1="59"  x2="282" y2="221" class="gr-mx" stroke-width="1"/>
+  <text x="162" y="95"  class="lb-mx" font-size="22" text-anchor="middle">85</text>
+  <text x="242" y="95"  class="lb-mx" font-size="22" text-anchor="middle">78</text>
+  <text x="322" y="95"  class="lb-mx" font-size="22" text-anchor="middle">90</text>
+  <text x="162" y="149" class="lb-mx hl-mx" font-size="22" text-anchor="middle" font-weight="700">72</text>
+  <text x="242" y="149" class="lb-mx" font-size="22" text-anchor="middle">88</text>
+  <text x="322" y="149" class="lb-mx" font-size="22" text-anchor="middle">65</text>
+  <text x="162" y="203" class="lb-mx" font-size="22" text-anchor="middle">91</text>
+  <text x="242" y="203" class="lb-mx" font-size="22" text-anchor="middle">74</text>
+  <text x="322" y="203" class="lb-mx" font-size="22" text-anchor="middle">83</text>
+  <path d="M 132 57 L 120 57 L 120 223 L 132 223" fill="none" stroke="var(--text-main,#334155)" stroke-width="2.5"/>
+  <path d="M 352 57 L 364 57 L 364 223 L 352 223" fill="none" stroke="var(--text-main,#334155)" stroke-width="2.5"/>
+  <text x="114" y="95"  class="lb-mx" font-size="13" text-anchor="end">Andi</text>
+  <text x="114" y="149" class="lb-mx hl-mx" font-size="13" text-anchor="end" font-weight="600">Budi</text>
+  <text x="114" y="203" class="lb-mx" font-size="13" text-anchor="end">Cici</text>
+  <text x="66"  y="143" class="lb-mx" font-size="16" font-style="italic">A =</text>
+  <text x="245" y="268" class="lb-mx" font-size="12" text-anchor="middle" fill="#94a3b8">a₂₁ = 72  (baris ke-2, kolom ke-1 = nilai Matematika Budi)</text>
+</svg>
+</div>
+
+    <p>Di bab ini kamu akan belajar mulai dari cara membaca dan menuliskan matriks, melakukan operasi aljabar (penjumlahan, pengurangan, perkalian), menghitung determinan, menemukan invers, hingga menggunakan matriks untuk menyelesaikan sistem persamaan linear — teknik yang sama dipakai oleh insinyur perangkat lunak, ilmuwan data, dan peneliti di seluruh dunia. Matriks adalah alat yang digunakan di balik hampir semua sistem digital modern.</p>
+
   <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
@@ -117,6 +220,8 @@ window.MathJax = {
       <li><a href="#bagian-h" data-num="H">Tabel Ringkasan</a></li>
     </ul>
   </div>
+
+  </section>
 
   <!-- ═══ A. MENGENAL MATRIKS ═══════════════════════════════════════════ -->
   <section class="section" id="bagian-a">
@@ -502,7 +607,7 @@ window.MathJax = {
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan — Bagian B (Perkalian Matriks)</div>
       <ol class="soal-list">
-        <li>Tentukan hasil perkalian matriks: (a) $\begin{bmatrix} 1 & -2 \\ 3 & 4 \end{bmatrix}\begin{bmatrix} 2 & 0 \\ -1 & 3 \end{bmatrix}$, (b) $\begin{bmatrix} 2 & 1 & -1 \\ 0 & 3 & 2 \end{bmatrix}\begin{bmatrix} 1 & 2 \\ -1 & 0 \\ 3 & 1 \end{bmatrix}$.</li>
+        <li>Tentukan hasil perkalian matriks:<br>(a) $\begin{bmatrix} 1 & -2 \\ 3 & 4 \end{bmatrix}\begin{bmatrix} 2 & 0 \\ -1 & 3 \end{bmatrix}$<br>(b) $\begin{bmatrix} 2 & 1 & -1 \\ 0 & 3 & 2 \end{bmatrix}\begin{bmatrix} 1 & 2 \\ -1 & 0 \\ 3 & 1 \end{bmatrix}$</li>
         <li>Diketahui $A = \begin{bmatrix} 5 & 3 \\ 4 & -2 \end{bmatrix}$ dan $B = \begin{bmatrix} 3/4 & -1/4 \\ 5/4 & 3/2 \end{bmatrix}$. Tentukan $A \times B$ dan $B \times A$. Apakah $AB = BA$?</li>
         <li>Tentukan nilai $x$, $y$, $z$ jika $\begin{bmatrix} 2 & x \\ 1 & 3 \end{bmatrix}\begin{bmatrix} 1 & 2 \\ 2 & y \end{bmatrix} = \begin{bmatrix} 8 & z \\ 7 & 5 \end{bmatrix}$.</li>
         <li>Diketahui $A = \begin{bmatrix} 1 & 2 \\ 0 & -1 \end{bmatrix}$ dan $f(x) = x^2 + 2x - 3$. Tentukan $f(A)$.</li>
@@ -1037,8 +1142,8 @@ window.MathJax = {
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan — Bagian G</div>
       <ol class="soal-list">
-        <li>Selesaikan dengan metode invers matriks: (a) $\begin{cases} 3x + 2y = 7 \\ x - y = -1 \end{cases}$, (b) $\begin{cases} 2x - 5y = 1 \\ 3x + y = -7 \end{cases}$.</li>
-        <li>Selesaikan dengan metode Cramer: (a) $\begin{cases} 4x - y = 11 \\ 2x + 3y = -1 \end{cases}$, (b) $\begin{cases} 3x - 2y = 7 \\ x + 4y = -5 \end{cases}$.</li>
+        <li>Selesaikan dengan metode invers matriks:<br>(a) $\begin{cases} 3x + 2y = 7 \\ x - y = -1 \end{cases}$<br>(b) $\begin{cases} 2x - 5y = 1 \\ 3x + y = -7 \end{cases}$</li>
+        <li>Selesaikan dengan metode Cramer:<br>(a) $\begin{cases} 4x - y = 11 \\ 2x + 3y = -1 \end{cases}$<br>(b) $\begin{cases} 3x - 2y = 7 \\ x + 4y = -5 \end{cases}$</li>
         <li>Selesaikan SPL tiga variabel berikut menggunakan metode determinan: $\begin{cases} x - 2y = -3 \\ y + z = 1 \\ 2x + z = 1 \end{cases}$.</li>
         <li>Selesaikan dengan metode invers matriks: $\begin{cases} 2x + 2y + 3z = 4 \\ -x + y + 3z = 1 \\ -2x + y + 2z = -3 \end{cases}$.</li>
         <li>Selesaikan dengan metode yang lebih efisien (pilih sendiri): $\begin{cases} 2x - 2y - z = 3 \\ 3x + y + 2z = 7 \\ 2x + 3y + 4z = 8 \end{cases}$.</li>

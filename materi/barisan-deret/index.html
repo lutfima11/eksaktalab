@@ -107,7 +107,122 @@ window.MathJax = {
     </div>
   </div>
 
-  <!-- TOC inline -->
+<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Pola yang Tersembunyi di Balik Angka</h2>
+
+    <p>Pernahkah kamu memperhatikan bunga matahari? Bijinya tersusun dalam dua set spiral yang saling berlawanan — dan jumlah spiralnya hampir selalu bilangan Fibonacci: 34 dan 55, atau 55 dan 89. Atau perhatikan cangkang siput nautilus: setiap bagiannya bertumbuh dengan rasio yang sama, membentuk spiral yang sempurna secara geometris. Alam ternyata "senang" mengikuti barisan — urutan angka yang mengikuti aturan tertentu, dari langkah ke langkah.</p>
+
+    <p>Barisan dan deret bukan hanya tentang angka-angka yang rapi. Ini adalah bahasa di balik cicilan KPR, bunga tabungan, pertumbuhan populasi, dan bahkan lintasan bola yang memantul. Setiap kali sesuatu berubah dengan selisih tetap atau rasio tetap, di situlah barisan hadir — dan ketika kita menjumlahkan semua sukunya, kita mendapat deret.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Selisih Tetap vs Rasio Tetap</h3>
+    <p>Dua jenis barisan paling penting dibedakan oleh satu pertanyaan: <em>apa yang konstan dari suku ke suku?</em></p>
+
+    <table style="border-collapse:collapse;margin:12px 0;font-size:.92rem;width:100%;max-width:480px;">
+      <thead><tr style="background:var(--bg-card);"><th style="padding:8px 14px;border:1px solid var(--border);text-align:left;">Jenis</th><th style="padding:8px 14px;border:1px solid var(--border);text-align:left;">Contoh</th><th style="padding:8px 14px;border:1px solid var(--border);text-align:left;">Yang Konstan</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:7px 14px;border:1px solid var(--border);">Aritmatika</td><td style="padding:7px 14px;border:1px solid var(--border);">2, 5, 8, 11, ...</td><td style="padding:7px 14px;border:1px solid var(--border);">Selisih $d = 3$</td></tr>
+        <tr><td style="padding:7px 14px;border:1px solid var(--border);">Geometri</td><td style="padding:7px 14px;border:1px solid var(--border);">2, 6, 18, 54, ...</td><td style="padding:7px 14px;border:1px solid var(--border);">Rasio $r = 3$</td></tr>
+      </tbody>
+    </table>
+
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="100%" style="max-width:420px;background-color:transparent;">
+  <defs>
+    <style>
+      .ax-bd{stroke:var(--text-main,#334155)}
+      .gl-bd{stroke:var(--text-muted,#e2e8f0);opacity:.5}
+      .lb-bd{fill:var(--text-main,#334155);font-family:Cambria,'Times New Roman',serif}
+      .la-bd{stroke:#0014b3;fill:none}
+      .da-bd{fill:#0014b3}
+      .lg-bd{stroke:#b30000;fill:none}
+      .dg-bd{fill:#b30000}
+      .ta-bd{fill:#0014b3;font-family:Cambria,'Times New Roman',serif}
+      .tg-bd{fill:#b30000;font-family:Cambria,'Times New Roman',serif}
+      @media(prefers-color-scheme:dark){
+        .gl-bd{stroke:#334155}
+        .la-bd{stroke:#60A5FA}.da-bd{fill:#60A5FA}
+        .lg-bd{stroke:#F87171}.dg-bd{fill:#F87171}
+        .ta-bd{fill:#60A5FA}.tg-bd{fill:#F87171}
+      }
+      [data-theme="dark"] .gl-bd{stroke:#334155}
+      [data-theme="dark"] .la-bd{stroke:#60A5FA}
+      [data-theme="dark"] .da-bd{fill:#60A5FA}
+      [data-theme="dark"] .lg-bd{stroke:#F87171}
+      [data-theme="dark"] .dg-bd{fill:#F87171}
+      [data-theme="dark"] .ta-bd{fill:#60A5FA}
+      [data-theme="dark"] .tg-bd{fill:#F87171}
+    </style>
+    <marker id="arr-bd" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--text-main,#334155)"/>
+    </marker>
+  </defs>
+  <g transform="translate(45,20)">
+    <!-- Origin (80,490); x-unit=70px (n=1..5); y-unit=26px (v=0..16) -->
+    <line x1="80" y1="386" x2="450" y2="386" class="gl-bd" stroke-width="1"/>
+    <line x1="80" y1="282" x2="450" y2="282" class="gl-bd" stroke-width="1"/>
+    <line x1="80" y1="178" x2="450" y2="178" class="gl-bd" stroke-width="1"/>
+    <line x1="80" y1="74"  x2="450" y2="74"  class="gl-bd" stroke-width="1"/>
+    <line x1="150" y1="70" x2="150" y2="490" class="gl-bd" stroke-width="1"/>
+    <line x1="220" y1="70" x2="220" y2="490" class="gl-bd" stroke-width="1"/>
+    <line x1="290" y1="70" x2="290" y2="490" class="gl-bd" stroke-width="1"/>
+    <line x1="360" y1="70" x2="360" y2="490" class="gl-bd" stroke-width="1"/>
+    <line x1="430" y1="70" x2="430" y2="490" class="gl-bd" stroke-width="1"/>
+    <line x1="80"  y1="510" x2="80"  y2="55"  marker-end="url(#arr-bd)" class="ax-bd" stroke-width="2.5"/>
+    <line x1="60"  y1="490" x2="465" y2="490" marker-end="url(#arr-bd)" class="ax-bd" stroke-width="2.5"/>
+    <text x="474" y="496" class="lb-bd" font-size="20" font-style="italic">n</text>
+    <text x="62"  y="46"  class="lb-bd" font-size="20" font-style="italic">U</text>
+    <text x="73"  y="53"  class="lb-bd" font-size="13" font-style="italic">n</text>
+    <text x="57"  y="504" class="lb-bd" font-size="18">O</text>
+    <line x1="150" y1="485" x2="150" y2="495" class="ax-bd" stroke-width="1.5"/>
+    <line x1="220" y1="485" x2="220" y2="495" class="ax-bd" stroke-width="1.5"/>
+    <line x1="290" y1="485" x2="290" y2="495" class="ax-bd" stroke-width="1.5"/>
+    <line x1="360" y1="485" x2="360" y2="495" class="ax-bd" stroke-width="1.5"/>
+    <line x1="430" y1="485" x2="430" y2="495" class="ax-bd" stroke-width="1.5"/>
+    <text x="150" y="512" class="lb-bd" font-size="16" text-anchor="middle">1</text>
+    <text x="220" y="512" class="lb-bd" font-size="16" text-anchor="middle">2</text>
+    <text x="290" y="512" class="lb-bd" font-size="16" text-anchor="middle">3</text>
+    <text x="360" y="512" class="lb-bd" font-size="16" text-anchor="middle">4</text>
+    <text x="430" y="512" class="lb-bd" font-size="16" text-anchor="middle">5</text>
+    <line x1="75"  y1="386" x2="85"  y2="386" class="ax-bd" stroke-width="1.5"/>
+    <line x1="75"  y1="282" x2="85"  y2="282" class="ax-bd" stroke-width="1.5"/>
+    <line x1="75"  y1="178" x2="85"  y2="178" class="ax-bd" stroke-width="1.5"/>
+    <line x1="75"  y1="74"  x2="85"  y2="74"  class="ax-bd" stroke-width="1.5"/>
+    <text x="68"  y="391"  class="lb-bd" font-size="16" text-anchor="end">4</text>
+    <text x="68"  y="287"  class="lb-bd" font-size="16" text-anchor="end">8</text>
+    <text x="62"  y="183"  class="lb-bd" font-size="16" text-anchor="end">12</text>
+    <text x="62"  y="79"   class="lb-bd" font-size="16" text-anchor="end">16</text>
+    <!-- Arithmetic a_n=2n: v=2,4,6,8,10 at n=1..5; y=490-v*26 -->
+    <line x1="150" y1="438" x2="220" y2="386" class="la-bd" stroke-width="2.5"/>
+    <line x1="220" y1="386" x2="290" y2="334" class="la-bd" stroke-width="2.5"/>
+    <line x1="290" y1="334" x2="360" y2="282" class="la-bd" stroke-width="2.5"/>
+    <line x1="360" y1="282" x2="430" y2="230" class="la-bd" stroke-width="2.5"/>
+    <circle cx="150" cy="438" r="6" class="da-bd"/>
+    <circle cx="220" cy="386" r="6" class="da-bd"/>
+    <circle cx="290" cy="334" r="6" class="da-bd"/>
+    <circle cx="360" cy="282" r="6" class="da-bd"/>
+    <circle cx="430" cy="230" r="6" class="da-bd"/>
+    <!-- Geometric a_n=2^(n-1): v=1,2,4,8,16 at n=1..5; y=490-v*26 -->
+    <path d="M 150 464 C 180 454,200 447,220 438 C 248 428,265 410,290 386 C 318 360,337 322,360 282 C 390 232,410 150,430 74" class="lg-bd" stroke-width="2.5"/>
+    <circle cx="150" cy="464" r="6" class="dg-bd"/>
+    <circle cx="220" cy="438" r="6" class="dg-bd"/>
+    <circle cx="290" cy="386" r="6" class="dg-bd"/>
+    <circle cx="360" cy="282" r="6" class="dg-bd"/>
+    <circle cx="430" cy="74"  r="6" class="dg-bd"/>
+    <!-- Legend -->
+    <line x1="170" y1="130" x2="200" y2="130" class="la-bd" stroke-width="2.5"/>
+    <circle cx="185" cy="130" r="5" class="da-bd"/>
+    <text x="208" y="135" class="ta-bd" font-size="15">Aritmatika (selisih tetap)</text>
+    <line x1="170" y1="158" x2="200" y2="158" class="lg-bd" stroke-width="2.5"/>
+    <circle cx="185" cy="158" r="5" class="dg-bd"/>
+    <text x="208" y="163" class="tg-bd" font-size="15">Geometri (rasio tetap)</text>
+  </g>
+</svg>
+</div>
+
+    <p>Yang paling menakjubkan: deret geometri tak hingga dengan $|r| < 1$ justru memiliki jumlah yang <em>terbatas</em> — sebuah paradoks yang sudah menghantui para filsuf sejak zaman Zeno. Dalam modul ini, kita akan membuktikannya dengan matematika yang solid, lalu menggunakannya untuk menyelesaikan masalah bunga majemuk, pertumbuhan, dan peluruhan di kehidupan nyata.</p>
+
+  <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
     <ul class="toc-list">
@@ -120,6 +235,8 @@ window.MathJax = {
       <li><a href="#bagian-g" data-num="G">Ringkasan</a></li>
     </ul>
   </div>
+
+  </section>
 
   <!-- ═══ A. PENGERTIAN BARISAN DAN DERET ═══════════════════════════ -->
   <section class="section" id="bagian-a">
@@ -626,7 +743,7 @@ window.MathJax = {
       $$U_2 \cdot U_6 = ar \cdot ar^5 = a^2r^6 = 2304 \quad\cdots(2)$$
       Dari (2): $(ar^3)^2 = 2304 \;\Rightarrow\; ar^3 = 48$ (positif).<br><br>
       Suku ke-4: $U_4 = ar^3 = 48$<br><br>
-      Verifikasi dari (1): $ar^2(1+r^2) = \dfrac{48}{r}(1+r^2) = 180$, sehingga $48r^2 - 180r + 48 = 0$, $(4r-1)(r-4) = 0$, $r = 4$ atau $r = \dfrac{1}{4}$.
+      Verifikasi dari (1): $ar^2(1+r^2) = \dfrac{48}{r}(1+r^2) = 180$, sehingga $48 + 48r^2 = 180r$, lalu $48r^2 - 180r + 48 = 0$, $4r^2 - 15r + 4 = 0$, $(4r-1)(r-4) = 0$, $r = 4$ atau $r = \dfrac{1}{4}$.
     </div>
 
     <div class="box box-contoh">
