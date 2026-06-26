@@ -88,11 +88,13 @@ function parseFile(filePath) {
   const raw = readFileSync(filePath, 'utf8');
 
   // Ambil section identifier dari footer: "Section X --- Judul"
-  const footerMatch = raw.match(/\\cfoot\{[^}]*Section\s+([A-F])[^}]*---\s*([^}]+)\}/);
+  const footerMatch = raw.match(/\\cfoot\{[^}]*Section\s+([A-Z])[^}]*---\s*([^}]+)\}/);
   const sectionId = footerMatch ? footerMatch[1] : '?';
   const sectionTitle = footerMatch ? footerMatch[2].trim() : 'Unknown';
 
-  const body = raw.split('\\begin{document}')[1]?.split('\\end{document}')[0] || '';
+  // Pre-process \Blog{a}{b} → {}^{a}\!\log b (Logaritma custom macro)
+  const rawProcessed = raw.replace(/\\Blog\{([^}]+)\}\{([^}]+)\}/g, '{}^{$1}\\!\\log $2');
+  const body = rawProcessed.split('\\begin{document}')[1]?.split('\\end{document}')[0] || '';
   const lines = body.split('\n');
 
   // ── 1. Parse kunci jawaban dari tabular ──

@@ -1,0 +1,2633 @@
+{
+  "materi": "persamaan-kuadrat",
+  "judul": "Persamaan Kuadrat",
+  "totalSoal": 136,
+  "sections": [
+    {
+      "sectionId": "A",
+      "sectionTitle": "Pengertian Logaritma",
+      "soal": [
+        {
+          "id": "A1",
+          "section": "A",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira semua bilangan positif bisa jadi basis; lupa syarat a≠1",
+          "jawab": "c",
+          "p": "Syarat basis logaritma: $ a > 0 $ dan $ a \\neq 1 $ . Pada opsi (c), basisnya adalah $ 1 $ , sehingga $ {}^{1}\\!\\log 5 $ <b>tidak terdefinisi</b>.",
+          "q": "Di antara pilihan berikut, ekspresi yang <b>tidak terdefinisi</b> sebagai logaritma adalah …",
+          "opts": [
+            "$ {}^{2}\\!\\log 8 $",
+            "$ \\Blog{0{,}5}{4} $",
+            "$ {}^{1}\\!\\log 5 $",
+            "$ {}^{4}\\!\\log 16 $",
+            "$ {}^{3}\\!\\log 27 $"
+          ]
+        },
+        {
+          "id": "A2",
+          "section": "A",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_2(64)=32 (membagi 64 dengan 2 alih-alih mencari eksponen)",
+          "jawab": "b",
+          "p": "Cari $ x $ sehingga $ 2^x = 64 = 2^6 $ , maka $ {}^{2}\\!\\log 64 = 6 $ .",
+          "q": "Nilai dari $ {}^{2}\\!\\log 64 $ adalah …",
+          "opts": [
+            "$ 4 $",
+            "$ 6 $",
+            "$ 8 $",
+            "$ 32 $",
+            "$ 128 $"
+          ]
+        },
+        {
+          "id": "A3",
+          "section": "A",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log dari pecahan selalu positif; lupa bahwa pecahan < 1 hasilnya negatif saat basis > 1",
+          "jawab": "b",
+          "p": "$ \\dfrac{1}{9} = 3^{-2} $ , maka $ {}^{3}\\!\\log \\dfrac{1{9}} = -2 $ . Numerus berupa pecahan dengan nilai $ < 1 $ dan basis $ > 1 $ selalu menghasilkan logaritma negatif.",
+          "q": "Nilai dari $ {}^{3}\\!\\log \\dfrac{1{9}} $ adalah …",
+          "opts": [
+            "$ -3 $",
+            "$ -2 $",
+            "$ -\\dfrac{1}{3} $",
+            "$ \\dfrac{1}{2} $",
+            "$ 2 $"
+          ]
+        },
+        {
+          "id": "A4",
+          "section": "A",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(100.000) = 6 karena menghitung banyak nol, bukan eksponen",
+          "jawab": "d",
+          "p": "$ 100.000 = 10^5 $ , maka $ \\log 100.000 = 5 $ .",
+          "q": "Nilai dari $ \\log 100.000 $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 4 $",
+            "$ 6 $",
+            "$ 5 $",
+            "$ 7 $"
+          ]
+        },
+        {
+          "id": "A5",
+          "section": "A",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "menulis log_3(125)=5 padahal harusnya log_5(125)=3; menukar basis dan hasil",
+          "jawab": "b",
+          "p": "Dari $ 5^3 = 125 $ , dalam notasi logaritma ditulis $ {}^{5}\\!\\log 125 = 3 $ . Basis = 5, numerus = 125, hasil = 3.",
+          "q": "Jika $ 5^3 = 125 $ , maka dalam notasi logaritma ditulis …",
+          "opts": [
+            "$ {}^{3}\\!\\log 5 = 125 $",
+            "$ {}^{5}\\!\\log 125 = 3 $",
+            "$ {}^{5}\\!\\log 3 = 125 $",
+            "$ {}^{3}\\!\\log 125 = 5 $",
+            "$ {}^{125}\\!\\log 5 = 3 $"
+          ]
+        },
+        {
+          "id": "A6",
+          "section": "A",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira x=3×4=12 (mengalikan basis dan eksponen alih-alih memangkatkan)",
+          "jawab": "d",
+          "p": "$ {}^{4}\\!\\log x = 3 \\Rightarrow x = 4^3 = 64 $ .",
+          "q": "Jika $ {}^{4}\\!\\log x = 3 $ , maka nilai $ x $ adalah …",
+          "opts": [
+            "$ 12 $",
+            "$ 16 $",
+            "$ 32 $",
+            "$ 64 $",
+            "$ 81 $"
+          ]
+        },
+        {
+          "id": "A7",
+          "section": "A",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira x > 0 cukup; lupa bahwa syarat numerus x-3 > 0 lebih ketat dari x > 0",
+          "jawab": "c",
+          "p": "Syarat numerus: $ x - 3 > 0 \\Rightarrow x > 3 $ .",
+          "q": "Ekspresi $ {}^{3}\\!\\log (x - 3) $ terdefinisi jika dan hanya jika …",
+          "opts": [
+            "$ x \\geq 3 $",
+            "$ x > 0 $",
+            "$ x > 3 $",
+            "$ x > -3 $",
+            "$ x \\in \\mathbb{R} $"
+          ]
+        },
+        {
+          "id": "A8",
+          "section": "A",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_9(3)=3 (membalik basis dan numerus) atau log_9(3)=1/3",
+          "jawab": "e",
+          "p": "$ {}^{9}\\!\\log 3 = x \\Rightarrow 9^x = 3 \\Rightarrow (3^2)^x = 3^1 \\Rightarrow 2x = 1 \\Rightarrow x = \\dfrac{1}{2} $ . Opsi (d) dan (e) keduanya menyatakan $ \\frac{1}{2} $ ; opsi (e) ditulis lebih bersih.",
+          "q": "Nilai dari $ {}^{9}\\!\\log 3 $ adalah …",
+          "opts": [
+            "$ -\\dfrac{1}{2} $",
+            "$ \\dfrac{1}{3} $",
+            "$ 3 $",
+            "$ \\dfrac{1}{2} $ hanya jika $ 3 = 9^{1/2} $ , yaitu benar",
+            "$ \\dfrac{1}{2} $"
+          ]
+        },
+        {
+          "id": "A9",
+          "section": "A",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira x=4 (mengambil numerus 16 dibagi nilai log 4); tidak menerapkan definisi",
+          "jawab": "b",
+          "p": "$ {}^{x}\\!\\log 16 = 4 \\Rightarrow x^4 = 16 \\Rightarrow x = 16^{1/4} = 2^{4 \\cdot \\frac{1}{4}} = 2 $ .",
+          "q": "Jika $ {}^{x}\\!\\log 16 = 4 $ , maka nilai $ x $ adalah …",
+          "opts": [
+            "$ 4 $",
+            "$ 2 $",
+            "$ 8 $",
+            "$ 16 $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "A10",
+          "section": "A",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira x = -81 (mengabaikan bahwa numerus selalu positif)",
+          "jawab": "d",
+          "p": "$ {}^{3}\\!\\log x = -4 \\Rightarrow x = 3^{-4} = \\dfrac{1}{81} $ .",
+          "q": "Jika $ {}^{3}\\!\\log x = -4 $ , maka nilai $ x $ adalah …",
+          "opts": [
+            "$ 81 $",
+            "$ 12 $",
+            "$ \\dfrac{1}{27} $",
+            "$ \\dfrac{1}{81} $",
+            "$ -81 $"
+          ]
+        },
+        {
+          "id": "A11",
+          "section": "A",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira x=2 karena hanya melihat 32=2^5 tanpa memperhatikan nilai log yang positif",
+          "jawab": "a",
+          "p": "$ {}^{x}\\!\\log \\dfrac{1{32}} = 5 \\Rightarrow x^5 = \\dfrac{1}{32} = \\left(\\dfrac{1}{2}\\right)^5 \\Rightarrow x = \\dfrac{1}{2} $ .",
+          "q": "Jika $ {}^{x}\\!\\log \\dfrac{1{32}} = 5 $ , maka nilai $ x $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{2} $",
+            "$ -2 $",
+            "$ 2 $",
+            "$ \\dfrac{1}{4} $",
+            "$ \\dfrac{1}{8} $"
+          ]
+        },
+        {
+          "id": "A12",
+          "section": "A",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira x=25 (mengambil 5^2=25 tanpa mengurangi 1 dari ruas kiri)",
+          "jawab": "c",
+          "p": "$ {}^{5}\\!\\log (x+1) = 2 \\Rightarrow x + 1 = 5^2 = 25 \\Rightarrow x = 24 $ .",
+          "q": "Jika $ {}^{5}\\!\\log (x + 1) = 2 $ , maka nilai $ x $ adalah …",
+          "opts": [
+            "$ 26 $",
+            "$ 25 $",
+            "$ 24 $",
+            "$ 20 $",
+            "$ 23 $"
+          ]
+        },
+        {
+          "id": "A13",
+          "section": "A",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya mengambil salah satu syarat; tidak mengambil irisan kedua syarat",
+          "jawab": "e",
+          "p": "Syarat $ {}^{2}\\!\\log (x+4) $ : $ x + 4 > 0 \\Rightarrow x > -4 $ . Syarat $ {}^{3}\\!\\log (x-1) $ : $ x - 1 > 0 \\Rightarrow x > 1 $ . Irisan kedua syarat: $ x > 1 $ .",
+          "q": "Agar $ {}^{2}\\!\\log (x + 4) + {}^{3}\\!\\log (x - 1) $ terdefinisi, syarat yang harus dipenuhi adalah …",
+          "opts": [
+            "$ x > -4 $",
+            "$ x > 0 $",
+            "$ x > -1 $",
+            "$ x > 4 $",
+            "$ x > 1 $"
+          ]
+        },
+        {
+          "id": "A14",
+          "section": "A",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira log_2(5)<log_2(3) karena 5 \"lebih jauh\" dari basis 2",
+          "jawab": "d",
+          "p": "Karena basis $ a = 2 > 1 $ , fungsi logaritma monoton naik. Karena $ 5 > 3 $ , maka $ {}^{2}\\!\\log 5 > {}^{2}\\!\\log 3 $ .",
+          "q": "Perbandingan yang <b>benar</b> antara $ {}^{2}\\!\\log 5 $ dan $ {}^{2}\\!\\log 3 $ adalah …",
+          "opts": [
+            "$ {}^{2}\\!\\log 5 < {}^{2}\\!\\log 3 $",
+            "$ {}^{2}\\!\\log 5 = {}^{2}\\!\\log 3 $",
+            "$ {}^{2}\\!\\log 5 = {}^{2}\\!\\log 3 + 1 $",
+            "$ {}^{2}\\!\\log 5 > {}^{2}\\!\\log 3 $",
+            "Tidak dapat dibandingkan"
+          ]
+        },
+        {
+          "id": "A15",
+          "section": "A",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira x=3 (mengambil basis numerus 27 saja) atau x=27^{3/2}",
+          "jawab": "b",
+          "p": "$ {}^{x}\\!\\log 27 = \\dfrac{3}{2} \\Rightarrow x^{3/2} = 27 = 3^3 \\Rightarrow x = 3^{3 \\cdot \\frac{2}{3}} = 3^2 = 9 $ .",
+          "q": "Jika $ {}^{x}\\!\\log 27 = \\dfrac{3}{2} $ , maka nilai $ x $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 9 $",
+            "$ 6 $",
+            "$ 27 $",
+            "$ 81 $"
+          ]
+        },
+        {
+          "id": "A16",
+          "section": "A",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_8(32)=4 karena 32=2×8×2; tidak mengkonversi ke basis 2",
+          "jawab": "d",
+          "p": "Ubah ke basis 2: $ 8 = 2^3 $ dan $ 32 = 2^5 $ , maka: \\[{}^{8}\\!\\log 32 = \\frac{{}^{2}\\!\\log 32}{{}^{2}\\!\\log 8} = \\frac{5}{3}.\\]",
+          "q": "Nilai dari $ {}^{8}\\!\\log 32 $ adalah …",
+          "opts": [
+            "$ \\dfrac{4}{3} $",
+            "$ \\dfrac{3}{2} $",
+            "$ 2 $",
+            "$ \\dfrac{5}{3} $",
+            "$ \\dfrac{5}{2} $"
+          ]
+        },
+        {
+          "id": "A17",
+          "section": "A",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "langsung menghitung log_2(log_3(x))=2 menjadi x=2^2=4; lupa bahwa hasil dalam pertama=4 baru dicari x",
+          "jawab": "d",
+          "p": "Selesaikan dari dalam ke luar: \\[{}^{2}\\!\\log \\!\\left(\\Blog{3{x}\\right)} = 2 \\Rightarrow {}^{3}\\!\\log x = 2^2 = 4 \\Rightarrow x = 3^4 = 81.\\]",
+          "q": "Nilai $ x $ yang memenuhi $ {}^{2}\\!\\log \\!\\left(\\Blog{3{x}\\right)} = 2 $ adalah …",
+          "opts": [
+            "$ 8 $",
+            "$ 16 $",
+            "$ 64 $",
+            "$ 81 $",
+            "$ 256 $"
+          ]
+        },
+        {
+          "id": "A18",
+          "section": "A",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira log_5(4)=2a tanpa memperhitungkan log(5)=1-a; atau mengira log(5)=a",
+          "jawab": "c",
+          "p": "Gunakan pergantian basis: $ {}^{5}\\!\\log 4 = \\dfrac{\\log 4}{\\log 5} $ . Karena $ \\log 4 = 2\\log 2 = 2a $ dan $ \\log 5 = \\log\\dfrac{10}{2} = 1 - \\log 2 = 1 - a $ : \\[{}^{5}\\!\\log 4 = \\frac{2a}{1-a}.\\]",
+          "q": "Diketahui $ \\log 2 = a $ . Nilai dari $ {}^{5}\\!\\log 4 $ dinyatakan dalam $ a $ adalah …",
+          "opts": [
+            "$ \\dfrac{a}{1-a} $",
+            "$ \\dfrac{2a}{1+a} $",
+            "$ \\dfrac{2a}{1-a} $",
+            "$ \\dfrac{a}{1+a} $",
+            "$ \\dfrac{1-a}{2a} $"
+          ]
+        },
+        {
+          "id": "A19",
+          "section": "A",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira log_a(c) = log_a(b) + log_b(c) = 2+3=5 (menjumlahkan alih-alih mengalikan)",
+          "jawab": "d",
+          "p": "Gunakan sifat rantai logaritma $ {}^{a}\\!\\log b \\cdot {}^{b}\\!\\log c = {}^{a}\\!\\log c $ : \\[{}^{a}\\!\\log c = {}^{a}\\!\\log b \\cdot {}^{b}\\!\\log c = 2 \\times 3 = 6.\\]",
+          "q": "Diketahui $ {}^{a}\\!\\log b = 2 $ dan $ {}^{b}\\!\\log c = 3 $ . Pernyataan yang <b>pasti benar</b> adalah …",
+          "opts": [
+            "$ {}^{a}\\!\\log c = 5 $",
+            "$ {}^{a}\\!\\log c = \\dfrac{2}{3} $",
+            "$ {}^{c}\\!\\log a = 6 $",
+            "$ {}^{a}\\!\\log c = 6 $",
+            "$ {}^{b}\\!\\log a = \\dfrac{3}{2} $"
+          ]
+        },
+        {
+          "id": "A20",
+          "section": "A",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mendapat x=3 tetapi tidak memeriksa syarat basis (x>0 dan x≠1); atau mendapat x=3 tapi salah hitung syarat numerus",
+          "jawab": "a",
+          "p": "$ {}^{x}\\!\\log (2x-3) = 1 \\Rightarrow 2x - 3 = x^1 = x \\Rightarrow x = 3 $ . Periksa syarat: basis $ x = 3 > 0 $ dan $ \\neq 1 $ ✓; numerus $ 2(3)-3 = 3 > 0 $ ✓. Jawaban (a) adalah satu-satunya yang menyatakan $ x = 3 $ <b>dengan pemeriksaan syarat yang benar</b>.",
+          "q": "Nilai $ x $ yang memenuhi $ {}^{x}\\!\\log (2x - 3) = 1 $ beserta pemeriksaan syarat yang <b>tepat</b> adalah …",
+          "opts": [
+            "$ x = 3 $ , syarat terpenuhi: $ x > 0 $ , $ x \\neq 1 $ , dan $ 2x-3 = 3 > 0 $",
+            "$ x = 3 $ , syarat tidak terpenuhi karena basis $ = 3 > 1 $",
+            "$ x = 1 $ , syarat terpenuhi karena numerus $ = 2(1)-3 = -1 $",
+            "$ x = 4 $ , diperoleh dari $ 2x-3 = 4 \\Rightarrow x = 3{,}5 $",
+            "$ x = 3 $ atau $ x = 1 $ , keduanya memenuhi"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "C",
+      "sectionTitle": "Menyatakan Log dalam Bentuk Lain",
+      "soal": [
+        {
+          "id": "C1",
+          "section": "C",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(6)=log(2+3)=log2+log3 (menjumlahkan bukan mengalikan)",
+          "jawab": "d",
+          "p": "$ \\log 6=\\log(2\\times3)=\\log 2+\\log 3=a+b $ .",
+          "q": "Nilai $ \\log 6 $ dalam $ a $ dan $ b $ adalah …",
+          "opts": [
+            "$ a - b $",
+            "$ ab $",
+            "$ a^2 + b $",
+            "$ a + b $",
+            "$ 2a + b $"
+          ]
+        },
+        {
+          "id": "C2",
+          "section": "C",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(9)=log(3)+log(3)=b+b=2b, tapi menggunakan Sifat 3 bukan Sifat 5",
+          "jawab": "d",
+          "p": "$ \\log 9=\\log 3^2=2\\log 3=2b $ .",
+          "q": "Nilai $ \\log 9 $ dalam $ b $ adalah …",
+          "opts": [
+            "$ 3b $",
+            "$ b^2 $",
+            "$ b+3 $",
+            "$ 2b $",
+            "$ b+b $"
+          ]
+        },
+        {
+          "id": "C3",
+          "section": "C",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(12)=log(4+8)=log4+log8=2a+3a=5a; lupa faktor 3",
+          "jawab": "e",
+          "p": "$ \\log 12=\\log(4\\times3)=\\log 4+\\log 3=2a+b $ .",
+          "q": "Nilai $ \\log 12 $ dalam $ a $ dan $ b $ adalah …",
+          "opts": [
+            "$ 3a $",
+            "$ a + 2b $",
+            "$ 2a - b $",
+            "$ 3a + b $",
+            "$ 2a + b $"
+          ]
+        },
+        {
+          "id": "C4",
+          "section": "C",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(5)=b atau log(5)=a-1; tidak menggunakan log(10)=1",
+          "jawab": "e",
+          "p": "$ \\log 5=\\log\\dfrac{10}{2}=\\log 10-\\log 2=1-a $ .",
+          "q": "Nilai $ \\log 5 $ dalam $ a $ adalah …",
+          "opts": [
+            "$ a $",
+            "$ 1 + a $",
+            "$ a - 1 $",
+            "$ \\dfrac{1}{a} $",
+            "$ 1 - a $"
+          ]
+        },
+        {
+          "id": "C5",
+          "section": "C",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(18)=log(9+9)=2*log(9)=4b; tidak memfaktorkan 18=2*9",
+          "jawab": "e",
+          "p": "$ \\log 18=\\log(2\\times9)=\\log 2+2\\log 3=a+2b $ .",
+          "q": "Nilai $ \\log 18 $ dalam $ a $ dan $ b $ adalah …",
+          "opts": [
+            "$ 2a + b $",
+            "$ a + b $",
+            "$ a + 3b $",
+            "$ 2b + a $",
+            "$ a + 2b $"
+          ]
+        },
+        {
+          "id": "C6",
+          "section": "C",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(0,2)=1/log(5)=1/(1-a); tidak menggunakan 0,2=1/5",
+          "jawab": "a",
+          "p": "$ \\log 0{,}2=\\log\\dfrac{1}{5}=-\\log 5=-(1-a)=a-1 $ .",
+          "q": "Nilai $ \\log 0{,}2 $ dalam $ a $ adalah …",
+          "opts": [
+            "$ a - 1 $",
+            "$ 1 - a $",
+            "$ \\dfrac{a}{1-a} $",
+            "$ -a $",
+            "$ 2a - 1 $"
+          ]
+        },
+        {
+          "id": "C7",
+          "section": "C",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(4)=log(2)²=a²; bingung antara sifat pangkat dan kuadrat nilai",
+          "jawab": "e",
+          "p": "$ \\log 4=\\log 2^2=2\\log 2=2a $ .",
+          "q": "Nilai $ \\log 4 $ dalam $ a $ adalah …",
+          "opts": [
+            "$ 4a $",
+            "$ a^2 $",
+            "$ a + 1 $",
+            "$ a $",
+            "$ 2a $"
+          ]
+        },
+        {
+          "id": "C8",
+          "section": "C",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(15)=log(3*5)=b+a-1 salah tanda; atau log(15)=1+a-b",
+          "jawab": "d",
+          "p": "$ \\log 15=\\log(3\\times5)=\\log 3+\\log 5=b+(1-a)=1-a+b $ .",
+          "q": "Nilai $ \\log 15 $ dalam $ a $ dan $ b $ adalah …",
+          "opts": [
+            "$ 1 + a - b $",
+            "$ a + b - 1 $",
+            "$ a + b $",
+            "$ 1 - a + b $",
+            "$ 2 - a + b $"
+          ]
+        },
+        {
+          "id": "C9",
+          "section": "C",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(24)=log(8*3)=3a+b benar, tapi sering dihitung log(4*6)=2a+a+b=3a+b juga benar",
+          "jawab": "c",
+          "p": "$ \\log 24=\\log(8\\times3)=3\\log 2+\\log 3=3a+b $ .",
+          "q": "Nilai $ \\log 24 $ dalam $ a $ dan $ b $ adalah …",
+          "opts": [
+            "$ a + 3b $",
+            "$ 4a $",
+            "$ 3a + b $",
+            "$ 2a + 2b $",
+            "$ a + 2b $"
+          ]
+        },
+        {
+          "id": "C10",
+          "section": "C",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(0,06)=log(6)/100=a+b/100; tidak mengubah 0,06=6/100",
+          "jawab": "d",
+          "p": "$ \\log 0{,}06=\\log\\dfrac{6}{100}=\\log 6-2=(a+b)-2 $ .",
+          "q": "Nilai $ \\log 0{,}06 $ dalam $ a $ dan $ b $ adalah …",
+          "opts": [
+            "$ a + b - 1 $",
+            "$ a - b - 2 $",
+            "$ 2 - a - b $",
+            "$ a + b - 2 $",
+            "$ a + b $"
+          ]
+        },
+        {
+          "id": "C11",
+          "section": "C",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_6(5)=log(5)/log(6)=(1-a)/(a+b) benar, tapi sering salah menghitung log(6)",
+          "jawab": "d",
+          "p": "$ {}^{6}\\!\\log 5=\\dfrac{\\log 5}{\\log 6}=\\dfrac{1-a}{a+b} $ .",
+          "q": "Nilai $ {}^{6}\\!\\log 5 $ dalam $ a $ dan $ b $ adalah …",
+          "opts": [
+            "$ \\dfrac{1+a}{a-b} $",
+            "$ \\dfrac{a-1}{a+b} $",
+            "$ \\dfrac{1-b}{a+b} $",
+            "$ \\dfrac{1-a}{a+b} $",
+            "$ \\dfrac{1-a}{a-b} $"
+          ]
+        },
+        {
+          "id": "C12",
+          "section": "C",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_4(15)=(a+b)/a; lupa log(4)=2a bukan a",
+          "jawab": "a",
+          "p": "$ {}^{4}\\!\\log 15=\\dfrac{\\log 15}{\\log 4}=\\dfrac{1-a+b}{2a} $ .",
+          "q": "Nilai $ {}^{4}\\!\\log 15 $ dalam $ a $ dan $ b $ adalah …",
+          "opts": [
+            "$ \\dfrac{1-a+b}{a} $",
+            "$ \\dfrac{1+b}{2a} $",
+            "$ \\dfrac{a+b}{2a} $",
+            "$ \\dfrac{1-a+b}{2a} $",
+            "$ \\dfrac{a-b}{2a} $"
+          ]
+        },
+        {
+          "id": "C13",
+          "section": "C",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung satu per satu dan menjumlahkan nilai numerik tanpa menyederhanakan",
+          "jawab": "c",
+          "p": "$ \\log 36+\\log 50-\\log 18=\\log\\dfrac{36\\times50}{18}=\\log 100=2 $ .",
+          "q": "Nilai dari $ \\log 36 + \\log 50 - \\log 18 $ adalah …",
+          "opts": [
+            "$ \\log 68 $",
+            "$ 3 $",
+            "$ 2 $",
+            "$ 1 $",
+            "$ \\log 4 $"
+          ]
+        },
+        {
+          "id": "C14",
+          "section": "C",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menyadari log_15(8)=3/(p+q); mengira denominator hanya p atau hanya q",
+          "jawab": "b",
+          "p": "$ {}^{15}\\!\\log 8=\\dfrac{{}^{2}\\!\\log 8}{{}^{2}\\!\\log 15}=\\dfrac{3}{{}^{2}\\!\\log 3+{}^{2}\\!\\log 5}=\\dfrac{3}{p+q} $ .",
+          "q": "Diketahui $ {}^{2}\\!\\log 3=p $ dan $ {}^{2}\\!\\log 5=q $ . Nilai $ {}^{15}\\!\\log 8 $ adalah …",
+          "opts": [
+            "$ \\dfrac{3}{pq} $",
+            "$ \\dfrac{3}{p+q} $",
+            "$ \\dfrac{p+q}{3} $",
+            "$ \\dfrac{3}{p-q} $",
+            "$ 3pq $"
+          ]
+        },
+        {
+          "id": "C15",
+          "section": "C",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_12(45)=(2p+q)/(2p) lupa pembilang 2 pada penyebut",
+          "jawab": "b",
+          "p": "$ {}^{12}\\!\\log 45=\\dfrac{{}^{2}\\!\\log 45}{{}^{2}\\!\\log 12}=\\dfrac{2p+q}{2+p} $ .",
+          "q": "Diketahui $ {}^{2}\\!\\log 3=p $ dan $ {}^{2}\\!\\log 5=q $ . Nilai $ {}^{12}\\!\\log 45 $ adalah …",
+          "opts": [
+            "$ \\dfrac{2p+q}{p+2} $",
+            "$ \\dfrac{p+2q}{2+p} $",
+            "$ \\dfrac{2p+q}{2p} $",
+            "$ \\dfrac{p+q}{2+p} $",
+            "$ \\dfrac{2+p}{2p+q} $"
+          ]
+        },
+        {
+          "id": "C16",
+          "section": "C",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(0,18)=a+2b-1 (salah menghitung banyak faktor 10)",
+          "jawab": "d",
+          "p": "$ \\log 0{,}18=\\log\\dfrac{18}{100}=\\log(2\\cdot3^2)-2=a+2b-2 $ .",
+          "q": "Nilai $ \\log 0{,}18 $ dalam $ a $ dan $ b $ adalah …",
+          "opts": [
+            "$ a + 2b - 1 $",
+            "$ a - 2b + 2 $",
+            "$ 2a + b - 2 $",
+            "$ a + 2b - 2 $",
+            "$ 2b - a $"
+          ]
+        },
+        {
+          "id": "C17",
+          "section": "C",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira √12 dalam basis 2: log_2(√12)=(1/2)(2+p) tapi lupa bagi log_2(30)",
+          "jawab": "c",
+          "p": "$ {}^{30}\\!\\log \\sqrt{12}=\\dfrac{\\tfrac{1}{2}{}^{2}\\!\\log 12}{{}^{2}\\!\\log 30}=\\dfrac{\\tfrac{1}{2}(2+p)}{1+p+q}=\\dfrac{2+p}{2(1+p+q)} $ .",
+          "q": "Diketahui $ {}^{2}\\!\\log 3=p $ dan $ {}^{2}\\!\\log 5=q $ . Nilai $ {}^{30}\\!\\log \\sqrt{12} $ adalah …",
+          "opts": [
+            "$ \\dfrac{2+p}{1+p+q} $",
+            "$ \\dfrac{p+2}{2+p+q} $",
+            "$ \\dfrac{2+p}{2(1+p+q)} $",
+            "$ \\dfrac{p}{2(1+p+q)} $",
+            "$ \\dfrac{1+p}{1+p+q} $"
+          ]
+        },
+        {
+          "id": "C18",
+          "section": "C",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak memfaktorkan 245=5*7² dan 63=9*7; langsung mengurangi tanpa simplifikasi",
+          "jawab": "d",
+          "p": "$ 245=5\\cdot7^2\\Rightarrow{}^{3}\\!\\log 245=m+2n $ ; $ 63=3^2\\cdot7\\Rightarrow{}^{3}\\!\\log 63=2+n $ . Selisih: $ m+2n-(2+n)=m+n-2 $ .",
+          "q": "Diketahui $ {}^{3}\\!\\log 5=m $ dan $ {}^{3}\\!\\log 7=n $ . Nilai dari $ {}^{3}\\!\\log 245-{}^{3}\\!\\log 63 $ dalam $ m $ dan $ n $ adalah …",
+          "opts": [
+            "$ m + 2n $",
+            "$ m - n - 2 $",
+            "$ m + n + 2 $",
+            "$ m + n - 2 $",
+            "$ 2m - n $"
+          ]
+        },
+        {
+          "id": "C19",
+          "section": "C",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "lupa faktor 1/2 dari akar; mengira log_6(200/3)=(a+2-b)/(a+b) tanpa dibagi 2",
+          "jawab": "d",
+          "p": "$ \\log 200=\\log(2^3\\cdot5^2)=3a+2(1-a)=a+2 $ ; $ \\log\\dfrac{200}{3}=a+2-b $ . \\[{}^{6}\\!\\log \\sqrt{\\tfrac{200{3}}}=\\dfrac{\\tfrac{1}{2}(a+2-b)}{a+b}=\\dfrac{a+2-b}{2(a+b)}.\\]",
+          "q": "Diketahui $ \\log 2 = a $ dan $ \\log 3 = b $ . Nilai dari $ {}^{6}\\!\\log \\sqrt{\\dfrac{200{3}}} $ adalah …",
+          "opts": [
+            "$ \\dfrac{a+2-b}{a+b} $",
+            "$ \\dfrac{a+2+b}{2(a+b)} $",
+            "$ \\dfrac{a-2-b}{2(a+b)} $",
+            "$ \\dfrac{a+2-b}{2(a+b)} $",
+            "$ \\dfrac{2(a-b)}{a+b} $"
+          ]
+        },
+        {
+          "id": "C20",
+          "section": "C",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira log_3(2)=1/(2s) benar tapi salah menerapkan ke log_9(32) dan log_3(8)",
+          "jawab": "b",
+          "p": "$ {}^{4}\\!\\log 3=s\\Rightarrow{}^{2}\\!\\log 3=2s\\Rightarrow{}^{3}\\!\\log 2=\\dfrac{1}{2s} $ . $ {}^{9}\\!\\log 32=\\dfrac{5{}^{3}\\!\\log 2}{2}=\\dfrac{5}{4s} $ ; $ {}^{3}\\!\\log 8=\\dfrac{3}{2s}=\\dfrac{6}{4s} $ . Jumlah: $ \\dfrac{5}{4s}+\\dfrac{6}{4s}=\\dfrac{11}{4s} $ .",
+          "q": "Diketahui $ {}^{4}\\!\\log 3 = s $ . Nilai dari $ {}^{9}\\!\\log 32 + {}^{3}\\!\\log 8 $ dalam $ s $ adalah …",
+          "opts": [
+            "$ \\dfrac{5}{4s} $",
+            "$ \\dfrac{11}{4s} $",
+            "$ \\dfrac{8}{4s} $",
+            "$ \\dfrac{3}{4s} $",
+            "$ \\dfrac{7}{4s} $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "D",
+      "sectionTitle": "Persamaan Logaritma",
+      "soal": [
+        {
+          "id": "D1",
+          "section": "D",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_2(x)=3 → x=2+3=5; tidak mengubah ke bentuk eksponen",
+          "jawab": "c",
+          "p": "$ {}^{2}\\!\\log x=3\\Rightarrow x=2^3=8 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{2}\\!\\log x = 3 $ adalah …",
+          "opts": [
+            "$ \\{5\\} $",
+            "$ \\{6\\} $",
+            "$ \\{8\\} $",
+            "$ \\{16\\} $",
+            "$ \\{9\\} $"
+          ]
+        },
+        {
+          "id": "D2",
+          "section": "D",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_5(2x-1)=2 → 2x-1=2*5=10 (mengalikan bukan memangkatkan)",
+          "jawab": "c",
+          "p": "$ {}^{5}\\!\\log (2x-1)=2\\Rightarrow 2x-1=25\\Rightarrow x=13 $ . Cek: $ 2(13)-1=25>0 $ ✓.",
+          "q": "Himpunan penyelesaian dari $ {}^{5}\\!\\log (2x - 1) = 2 $ adalah …",
+          "opts": [
+            "$ \\{4\\} $",
+            "$ \\{5\\} $",
+            "$ \\{13\\} $",
+            "$ \\{12\\} $",
+            "$ \\{6\\} $"
+          ]
+        },
+        {
+          "id": "D3",
+          "section": "D",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(x)=-1 → x=-10; tidak menyadari numerus harus positif",
+          "jawab": "d",
+          "p": "$ \\log x=-1\\Rightarrow x=10^{-1}=0{,}1 $ .",
+          "q": "Himpunan penyelesaian dari $ \\log x = -1 $ adalah …",
+          "opts": [
+            "$ \\{-10\\} $",
+            "$ \\{-0{,}1\\} $",
+            "$ \\{0{,}01\\} $",
+            "$ \\{0{,}1\\} $",
+            "$ \\{10\\} $"
+          ]
+        },
+        {
+          "id": "D4",
+          "section": "D",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira harus diubah ke bentuk eksponen padahal cukup menyamakan numerus",
+          "jawab": "d",
+          "p": "Basis sama: $ {}^{3}\\!\\log x={}^{3}\\!\\log 5\\Rightarrow x=5 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{3}\\!\\log x = {}^{3}\\!\\log 5 $ adalah …",
+          "opts": [
+            "$ \\{15\\} $",
+            "$ \\{3\\} $",
+            "$ \\{8\\} $",
+            "$ \\{5\\} $",
+            "$ \\{2\\} $"
+          ]
+        },
+        {
+          "id": "D5",
+          "section": "D",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira x+3=log_2(11) alih-alih x+3=11",
+          "jawab": "c",
+          "p": "Basis sama: $ x+3=11\\Rightarrow x=8 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{2}\\!\\log (x + 3) = {}^{2}\\!\\log 11 $ adalah …",
+          "opts": [
+            "$ \\{14\\} $",
+            "$ \\{3\\} $",
+            "$ \\{8\\} $",
+            "$ \\{33\\} $",
+            "$ \\{-3\\} $"
+          ]
+        },
+        {
+          "id": "D6",
+          "section": "D",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_4(x)=-3/2 → x=-4^(3/2)=-8 (mengabaikan bahwa x selalu positif)",
+          "jawab": "b",
+          "p": "$ {}^{4}\\!\\log x=-\\frac{3}{2}\\Rightarrow x=4^{-3/2}=(2^2)^{-3/2}=2^{-3}=\\dfrac{1}{8} $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{4}\\!\\log x = -\\dfrac{3}{2} $ adalah …",
+          "opts": [
+            "$ \\left\\{-8\\right\\} $",
+            "$ \\left\\{\\dfrac{1}{8}\\right\\} $",
+            "$ \\left\\{-\\dfrac{1}{8}\\right\\} $",
+            "$ \\left\\{8\\right\\} $",
+            "$ \\left\\{\\dfrac{1}{64}\\right\\} $"
+          ]
+        },
+        {
+          "id": "D7",
+          "section": "D",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "langsung menyamakan numerus dan lupa memeriksa apakah x=5 membuat numerus > 0",
+          "jawab": "c",
+          "p": "$ x+4=2x-1\\Rightarrow x=5 $ . Cek: $ x+4=9>0 $ ✓, $ 2x-1=9>0 $ ✓.",
+          "q": "Himpunan penyelesaian dari $ {}^{3}\\!\\log (x + 4) = {}^{3}\\!\\log (2x - 1) $ adalah …",
+          "opts": [
+            "$ \\{1\\} $",
+            "$ \\{3\\} $",
+            "$ \\{5\\} $",
+            "$ \\{7\\} $",
+            "$ \\{-5\\} $"
+          ]
+        },
+        {
+          "id": "D8",
+          "section": "D",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_2(3-x)=4 → 3-x=2*4=8 → x=-5; salah mengubah ke eksponen",
+          "jawab": "d",
+          "p": "$ 3-x=2^4=16\\Rightarrow x=-13 $ . Cek: $ 3-(-13)=16>0 $ ✓.",
+          "q": "Himpunan penyelesaian dari $ {}^{2}\\!\\log (3 - x) = 4 $ adalah …",
+          "opts": [
+            "$ \\{5\\} $",
+            "$ \\{-5\\} $",
+            "$ \\{11\\} $",
+            "$ \\{-13\\} $",
+            "$ \\{-11\\} $"
+          ]
+        },
+        {
+          "id": "D9",
+          "section": "D",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menyamakan x²-7x=log(8)=? bukannya x²-7x=8; tidak mengenali log basis 10",
+          "jawab": "b",
+          "p": "$ x^2-7x=8\\Rightarrow(x-8)(x+1)=0\\Rightarrow x=8 $ atau $ x=-1 $ . Cek keduanya: numerus positif ✓. HP $ =\\{-1,8\\} $ .",
+          "q": "Himpunan penyelesaian dari $ \\log(x^2 - 7x) = \\log 8 $ adalah …",
+          "opts": [
+            "$ \\{1,\\; 8\\} $",
+            "$ \\{-1,\\; 8\\} $",
+            "$ \\{8\\} $",
+            "$ \\{1,\\; -8\\} $",
+            "$ \\{-1,\\; -8\\} $"
+          ]
+        },
+        {
+          "id": "D10",
+          "section": "D",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mendapat x=0 dan x=4 dari persamaan, tetapi tidak memeriksa syarat numerus; x=0 harus dibuang",
+          "jawab": "d",
+          "p": "$ (x-1)(x-3)=3\\Rightarrow x^2-4x=0\\Rightarrow x(x-4)=0\\Rightarrow x=0 $ atau $ x=4 $ . Cek: $ x=0 $ membuat $ x-1=-1<0 $ \\texttimes. Jadi HP $ =\\{4\\} $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{3}\\!\\log (x-1) + {}^{3}\\!\\log (x-3) = 1 $ adalah …",
+          "opts": [
+            "$ \\{0,\\; 4\\} $",
+            "$ \\{4\\} $",
+            "$ \\{0\\} $",
+            "$ \\{-4,\\; 4\\} $",
+            "$ \\{3\\} $"
+          ]
+        },
+        {
+          "id": "D11",
+          "section": "D",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira 2*log_2(x)=log_2(x)+3 → x=2*3=6; tidak mengurangi kedua ruas",
+          "jawab": "d",
+          "p": "$ 2{}^{2}\\!\\log x-{}^{2}\\!\\log x=3\\Rightarrow{}^{2}\\!\\log x=3\\Rightarrow x=8 $ .",
+          "q": "Himpunan penyelesaian dari $ 2\\,{}^{2}\\!\\log x = {}^{2}\\!\\log x + 3 $ adalah …",
+          "opts": [
+            "$ \\{6\\} $",
+            "$ \\{4\\} $",
+            "$ \\{3\\} $",
+            "$ \\{8\\} $",
+            "$ \\{16\\} $"
+          ]
+        },
+        {
+          "id": "D12",
+          "section": "D",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira (x+2)(x-2)=5^2=25 → x²=29 → x=±√29; tidak membuang x<0",
+          "jawab": "a",
+          "p": "$ (x+2)(x-2)=5^2=25\\Rightarrow x^2=29\\Rightarrow x=\\sqrt{29} $ (buang $ x=-\\sqrt{29} $ karena $ x-2<0 $ ).",
+          "q": "Himpunan penyelesaian dari $ {}^{5}\\!\\log (x+2) + {}^{5}\\!\\log (x-2) = 2 $ adalah …",
+          "opts": [
+            "$ \\{\\sqrt{29}\\} $",
+            "$ \\{-\\sqrt{29},\\;\\sqrt{29}\\} $",
+            "$ \\{5\\} $",
+            "$ \\{3\\} $",
+            "$ \\{7\\} $"
+          ]
+        },
+        {
+          "id": "D13",
+          "section": "D",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak mengganti t=log_3(x) dan mencoba menyelesaikan langsung; atau hanya mencari satu akar",
+          "jawab": "a",
+          "p": "Misalkan $ t={}^{3}\\!\\log x $ : $ t^2+t-2=0\\Rightarrow(t+2)(t-1)=0 $ . $ t=-2\\Rightarrow x=\\frac{1}{9} $ ; $ t=1\\Rightarrow x=3 $ . HP $ =\\left\\{\\frac{1}{9}, 3\\right\\} $ .",
+          "q": "Himpunan penyelesaian dari $ \\left({}^{3}\\!\\log x\\right)^2 + {}^{3}\\!\\log x - 2 = 0 $ adalah …",
+          "opts": [
+            "$ \\left\\{3,\\;\\dfrac{1}{9}\\right\\} $",
+            "$ \\left\\{9,\\;\\dfrac{1}{3}\\right\\} $",
+            "$ \\left\\{\\dfrac{1}{9},\\;9\\right\\} $",
+            "$ \\left\\{1,\\;3\\right\\} $",
+            "$ \\left\\{3,\\;9\\right\\} $"
+          ]
+        },
+        {
+          "id": "D14",
+          "section": "D",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira (log x)²-5log(x)+6=0 memiliki akar x=2 dan x=3 (salah: harusnya x=100 dan x=1000)",
+          "jawab": "c",
+          "p": "Misalkan $ t=\\log x $ : $ t^2-5t+6=0\\Rightarrow(t-2)(t-3)=0\\Rightarrow t=2 $ atau $ t=3 $ . $ x=100 $ atau $ x=1000 $ .",
+          "q": "Himpunan penyelesaian dari $ (\\log x)^2 - 5\\log x + 6 = 0 $ adalah …",
+          "opts": [
+            "$ \\{2,\\; 3\\} $",
+            "$ \\{10,\\; 100\\} $",
+            "$ \\{100,\\; 1000\\} $",
+            "$ \\{1,\\; 100\\} $",
+            "$ \\{10,\\; 1000\\} $"
+          ]
+        },
+        {
+          "id": "D15",
+          "section": "D",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mendapat x=1 dan x=4 keduanya diterima tanpa dicek; keduanya sebenarnya valid",
+          "jawab": "a",
+          "p": "$ x^2-5x+6=2\\Rightarrow x^2-5x+4=0\\Rightarrow(x-1)(x-4)=0 $ . Cek: $ x=1 $ : $ 1-5+6=2>0 $ ✓; $ x=4 $ : $ 16-20+6=2>0 $ ✓. HP $ =\\{1,4\\} $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{2}\\!\\log (x^2 - 5x + 6) = 1 $ adalah …",
+          "opts": [
+            "$ \\{1,\\; 4\\} $",
+            "$ \\{4\\} $",
+            "$ \\{1\\} $",
+            "$ \\{2,\\; 3\\} $",
+            "$ \\{-1,\\; 4\\} $"
+          ]
+        },
+        {
+          "id": "D16",
+          "section": "D",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_2(x+4)=log_4(x+10) bisa diselesaikan dengan menyamakan numerus langsung",
+          "jawab": "d",
+          "p": "$ 2{}^{2}\\!\\log (x+4)={}^{2}\\!\\log (x+10)\\Rightarrow(x+4)^2=x+10\\Rightarrow x^2+7x+6=0\\Rightarrow x=-6 $ (buang) atau $ x=-1 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{2}\\!\\log (x + 4) = {}^{4}\\!\\log (x + 10) $ adalah …",
+          "opts": [
+            "$ \\{-1,\\; 6\\} $",
+            "$ \\{6\\} $",
+            "$ \\{-6\\} $",
+            "$ \\{-1\\} $",
+            "$ \\{1\\} $"
+          ]
+        },
+        {
+          "id": "D17",
+          "section": "D",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira hanya satu akar yang valid; tidak memeriksa kedua akar ke syarat numerus",
+          "jawab": "c",
+          "p": "$ x^2-2x=x+4\\Rightarrow x^2-3x-4=0\\Rightarrow(x-4)(x+1)=0 $ . Cek $ x=4 $ : numerus $ =8>0 $ ✓; $ x=-1 $ : numerus $ =3>0 $ ✓. HP $ =\\{-1,4\\} $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{2}\\!\\log (x^2 - 2x) = {}^{2}\\!\\log (x + 4) $ adalah …",
+          "opts": [
+            "$ \\{4\\} $",
+            "$ \\{-1\\} $",
+            "$ \\{-1,\\; 4\\} $",
+            "$ \\{1,\\; 4\\} $",
+            "$ \\{-4,\\; 1\\} $"
+          ]
+        },
+        {
+          "id": "D18",
+          "section": "D",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mendapat dua akar dari persamaan kuadrat tetapi tidak memeriksa syarat x>2 dan x≠3",
+          "jawab": "c",
+          "p": "$ 2x^2-7x+5=(x-2)^2\\Rightarrow x^2-3x+1=0\\Rightarrow x=\\dfrac{3\\pm\\sqrt{5}}{2} $ . Syarat $ x>2 $ : hanya $ x=\\dfrac{3+\\sqrt{5}}{2}\\approx2{,}618 $ memenuhi.",
+          "q": "Himpunan penyelesaian dari $ {}^{(x-2)}\\!\\log (2x^2 - 7x + 5) = 2 $ adalah …",
+          "opts": [
+            "$ \\left\\{\\dfrac{3+\\sqrt{5}}{2},\\;\\dfrac{3-\\sqrt{5}}{2}\\right\\} $",
+            "$ \\left\\{\\dfrac{3-\\sqrt{5}}{2}\\right\\} $",
+            "$ \\left\\{\\dfrac{3+\\sqrt{5}}{2}\\right\\} $",
+            "$ \\{3\\} $",
+            "$ \\left\\{1,\\;\\dfrac{3+\\sqrt{5}}{2}\\right\\} $"
+          ]
+        },
+        {
+          "id": "D19",
+          "section": "D",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira p dan q adalah akar persamaan t²-3t+2=0 yaitu t=1 dan t=2; lalu bingung x=p dan x=q",
+          "jawab": "c",
+          "p": "$ (\\log x)^2-3\\log x+2=0\\Rightarrow(t-1)(t-2)=0\\Rightarrow t=1 $ atau $ t=2 $ . Akar: $ q=10 $ ( $ t=1 $ ) dan $ p=100 $ ( $ t=2 $ ). \\[\\tfrac{\\log p}{\\log q}+\\tfrac{\\log q}{\\log p}=\\tfrac{2}{1}+\\tfrac{1}{2}=\\tfrac{5}{2}.\\]",
+          "q": "Diketahui $ p $ dan $ q $ adalah akar-akar persamaan $ (\\log x)^2 - \\log x^3 + 2 = 0 $ , dengan $ p > q > 0 $ . Nilai dari $ \\dfrac{\\log p}{\\log q} + \\dfrac{\\log q}{\\log p} $ adalah …",
+          "opts": [
+            "$ 2 $",
+            "$ 3 $",
+            "$ \\dfrac{5}{2} $",
+            "$ 4 $",
+            "$ \\dfrac{7}{2} $"
+          ]
+        },
+        {
+          "id": "D20",
+          "section": "D",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mendapat x=1 dan x=-5 tapi hanya membuang salah satu; tidak memeriksa syarat x+3>0 untuk x=-5",
+          "jawab": "e",
+          "p": "Ubah basis: $ {}^{9}\\!\\log (26-x^2)=\\dfrac{{}^{3}\\!\\log (26-x^2)}{2} $ . Maka $ {}^{3}\\!\\log (x+4)=\\dfrac{{}^{3}\\!\\log (26-x^2)}{2} $ , sehingga $ (x+4)^2=26-x^2\\Rightarrow x^2+4x-5=0\\Rightarrow x=1 $ atau $ x=-5 $ . Cek $ x=-5 $ : $ x+4=-1<0 $ \\texttimes. HP $ =\\{1\\} $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{3}\\!\\log (x + 4) = {}^{9}\\!\\log (26 - x^2) $ adalah …",
+          "opts": [
+            "$ \\{1,\\; -5\\} $",
+            "$ \\{-1,\\; 5\\} $",
+            "$ \\{-5\\} $",
+            "$ \\{5\\} $",
+            "$ \\{1\\} $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "E",
+      "sectionTitle": "Pertidaksamaan Logaritma",
+      "soal": [
+        {
+          "id": "E1",
+          "section": "E",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_2(x)>3 → x>3 (tidak mengubah ke bentuk eksponen)",
+          "jawab": "d",
+          "p": "Basis $ 2>1 $ , arah tetap: $ x>2^3=8 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{2}\\!\\log x > 3 $ adalah …",
+          "opts": [
+            "$ x > 3 $",
+            "$ x > 6 $",
+            "$ x > 4 $",
+            "$ x > 8 $",
+            "$ 0 < x < 8 $"
+          ]
+        },
+        {
+          "id": "E2",
+          "section": "E",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_3(x)≤2 → x≤2 (tidak mengubah ke eksponen 3²=9)",
+          "jawab": "a",
+          "p": "Basis $ 3>1 $ , arah tetap: $ x\\leq3^2=9 $ ; syarat $ x>0 $ . HP: $ 0<x\\leq9 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{3}\\!\\log x \\leq 2 $ adalah …",
+          "opts": [
+            "$ 0 < x \\leq 9 $",
+            "$ x \\leq 9 $",
+            "$ 0 < x \\leq 6 $",
+            "$ x \\leq 2 $",
+            "$ 0 < x \\leq 2 $"
+          ]
+        },
+        {
+          "id": "E3",
+          "section": "E",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira arah pertidaksamaan tetap seperti basis > 1",
+          "jawab": "b",
+          "p": "Basis $ \\frac{1}{2}<1 $ , arah <b>berbalik</b>: $ x>\\left(\\frac{1}{2}\\right)^3=\\frac{1}{8} $ ; syarat $ x>0 $ . HP: $ x>\\frac{1}{8} $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{1/2}\\!\\log x < 3 $ adalah …",
+          "opts": [
+            "$ 0 < x < \\dfrac{1}{8} $",
+            "$ x > \\dfrac{1}{8} $",
+            "$ x < 6 $",
+            "$ x > 6 $",
+            "$ 0 < x < 6 $"
+          ]
+        },
+        {
+          "id": "E4",
+          "section": "E",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mendapat x>2 dari pertidaksamaan lalu lupa irisan dengan syarat numerus 2x-1>0",
+          "jawab": "b",
+          "p": "Basis $ 3>1 $ : $ 2x-1>3^1=3\\Rightarrow x>2 $ . Syarat $ 2x-1>0\\Rightarrow x>\\frac{1}{2} $ . Irisan: $ x>2 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{3}\\!\\log (2x - 1) > 1 $ adalah …",
+          "opts": [
+            "$ x > 1 $",
+            "$ x > 2 $",
+            "$ x > 0 $",
+            "$ 1 < x < 2 $",
+            "$ x > \\dfrac{1}{2} $"
+          ]
+        },
+        {
+          "id": "E5",
+          "section": "E",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira HP: x≤3 (lupa syarat x+2>0 → x>-2)",
+          "jawab": "b",
+          "p": "Basis $ 5>1 $ : $ x+2\\leq5\\Rightarrow x\\leq3 $ . Syarat $ x+2>0\\Rightarrow x>-2 $ . HP: $ -2<x\\leq3 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{5}\\!\\log (x + 2) \\leq 1 $ adalah …",
+          "opts": [
+            "$ x \\leq 3 $",
+            "$ -2 < x \\leq 3 $",
+            "$ -2 \\leq x \\leq 3 $",
+            "$ x \\geq -2 $",
+            "$ 0 < x \\leq 3 $"
+          ]
+        },
+        {
+          "id": "E6",
+          "section": "E",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengubah ke (1/3)^{-2}=9 benar, tapi lupa arah berbalik karena basis < 1",
+          "jawab": "b",
+          "p": "Basis $ \\frac{1}{3}<1 $ , berbalik: $ x-1\\leq\\left(\\frac{1}{3}\\right)^{-2}=9\\Rightarrow x\\leq10 $ . Syarat $ x>1 $ . HP: $ 1<x\\leq10 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{1/3}\\!\\log (x - 1) \\geq -2 $ adalah …",
+          "opts": [
+            "$ x \\geq 10 $",
+            "$ 1 < x \\leq 10 $",
+            "$ x \\leq 10 $",
+            "$ x > 1 $",
+            "$ 1 < x < 10 $"
+          ]
+        },
+        {
+          "id": "E7",
+          "section": "E",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_2(4x-3)>2 → 4x-3>2 (tidak menghitung 2²=4)",
+          "jawab": "c",
+          "p": "Basis $ 2>1 $ : $ 4x-3>2^2=4\\Rightarrow x>\\frac{7}{4} $ . Syarat $ 4x-3>0\\Rightarrow x>\\frac{3}{4} $ . Irisan: $ x>\\frac{7}{4} $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{2}\\!\\log (4x - 3) > 2 $ adalah …",
+          "opts": [
+            "$ x > \\dfrac{5}{4} $",
+            "$ x > 2 $",
+            "$ x > \\dfrac{7}{4} $",
+            "$ x > \\dfrac{3}{4} $",
+            "$ x > 1 $"
+          ]
+        },
+        {
+          "id": "E8",
+          "section": "E",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak membalik arah setelah mengkonversi ke numerus",
+          "jawab": "a",
+          "p": "Basis $ \\frac{1}{4}<1 $ , berbalik: $ 2x+1>\\left(\\frac{1}{4}\\right)^{-1}=4\\Rightarrow x>\\frac{3}{2} $ . Syarat $ x>-\\frac{1}{2} $ . HP: $ x>\\frac{3}{2} $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{1/4}\\!\\log (2x + 1) < -1 $ adalah …",
+          "opts": [
+            "$ x > \\dfrac{3}{2} $",
+            "$ -\\dfrac{1}{2} < x < \\dfrac{3}{2} $",
+            "$ 0 < x < \\dfrac{3}{2} $",
+            "$ x < \\dfrac{3}{2} $",
+            "$ x > -\\dfrac{1}{2} $"
+          ]
+        },
+        {
+          "id": "E9",
+          "section": "E",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mendapat x<4 dari pertidaksamaan, lalu lupa irisan dengan syarat 2x-1>0 → x>1/2",
+          "jawab": "b",
+          "p": "Basis $ 2>1 $ : $ x+3>2x-1\\Rightarrow x<4 $ . Syarat: $ 2x-1>0\\Rightarrow x>\\frac{1}{2} $ . HP: $ \\frac{1}{2}<x<4 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{2}\\!\\log (x+3) > {}^{2}\\!\\log (2x-1) $ adalah …",
+          "opts": [
+            "$ x < 4 $",
+            "$ \\dfrac{1}{2} < x < 4 $",
+            "$ x > \\dfrac{1}{2} $",
+            "$ 1 < x < 4 $",
+            "$ x < -4 $"
+          ]
+        },
+        {
+          "id": "E10",
+          "section": "E",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak membalik arah sehingga mendapat x<2 alih-alih x>2",
+          "jawab": "d",
+          "p": "Basis $ \\frac{1}{3}<1 $ , berbalik: $ 3x-1>x+3\\Rightarrow x>2 $ . Syarat: $ 3x-1>0\\Rightarrow x>\\frac{1}{3} $ . HP: $ x>2 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{1/3}\\!\\log (3x-1) < {}^{1/3}\\!\\log (x+3) $ adalah …",
+          "opts": [
+            "$ x < 2 $",
+            "$ x < -2 $",
+            "$ x > -2 $",
+            "$ x > 2 $",
+            "$ -2 < x < 2 $"
+          ]
+        },
+        {
+          "id": "E11",
+          "section": "E",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mendapat (5,3+2√2] dari pertidaksamaan tapi salah menghitung irisan syarat numerus",
+          "jawab": "b",
+          "p": "Basis $ 3>1 $ : $ x^2-5x\\leq x-1\\Rightarrow x^2-6x+1\\leq0 $ . Akar: $ 3\\pm2\\sqrt{2} $ . Syarat: $ x^2-5x>0\\Rightarrow x<0 $ atau $ x>5 $ ; $ x-1>0\\Rightarrow x>1 $ . Irisan: $ (5, 3+2\\sqrt{2}] $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{3}\\!\\log (x^2 - 5x) \\leq {}^{3}\\!\\log (x - 1) $ adalah …",
+          "opts": [
+            "$ 1 < x \\leq 3+2\\sqrt{2} $",
+            "$ x \\leq 3+2\\sqrt{2} $",
+            "$ 5 < x \\leq 3+2\\sqrt{2} $",
+            "$ 1 < x < 5 $",
+            "$ x > 5 $"
+          ]
+        },
+        {
+          "id": "E12",
+          "section": "E",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mendapat -1<x<4 tapi lupa irisan dengan syarat x²-4>0 → x>2 (membuang -1<x≤2)",
+          "jawab": "c",
+          "p": "Basis $ 2>1 $ : $ x^2-4<3x\\Rightarrow-1<x<4 $ . Syarat: $ x>2 $ dan $ x>0 $ . HP: $ 2<x<4 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{2}\\!\\log (x^2 - 4) < {}^{2}\\!\\log (3x) $ adalah …",
+          "opts": [
+            "$ -1 < x < 4 $",
+            "$ x > 2 $",
+            "$ 2 < x < 4 $",
+            "$ 0 < x < 4 $",
+            "$ 1 < x < 4 $"
+          ]
+        },
+        {
+          "id": "E13",
+          "section": "E",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mendapat -2≤t≤3 tapi mengira x∈[-2,3] alih-alih 2^{-2}≤x≤2^3",
+          "jawab": "c",
+          "p": "$ t=-2\\Rightarrow x=\\frac{1}{4} $ ; $ t=3\\Rightarrow x=8 $ ; $ t^2-t-6\\leq0\\Rightarrow-2\\leq t\\leq3 $ . HP: $ \\frac{1}{4}\\leq x\\leq8 $ .",
+          "q": "Himpunan penyelesaian dari $ \\left({}^{2}\\!\\log x\\right)^2 - {}^{2}\\!\\log x - 6 \\leq 0 $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{4} \\leq x \\leq 8 $",
+            "$ -2 \\leq x \\leq 3 $",
+            "$ \\dfrac{1}{8} \\leq x \\leq 8 $",
+            "$ \\dfrac{1}{4} \\leq x \\leq 4 $",
+            "$ 2 \\leq x \\leq 8 $"
+          ]
+        },
+        {
+          "id": "E14",
+          "section": "E",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira t<-2 atau t>1 → x<-2 atau x>1 (bingung antara nilai t dan nilai x)",
+          "jawab": "a",
+          "p": "$ t^2+t-2>0\\Rightarrow t<-2 $ atau $ t>1 $ . $ {}^{3}\\!\\log x<-2\\Rightarrow 0<x<\\frac{1}{9} $ ; $ {}^{3}\\!\\log x>1\\Rightarrow x>3 $ .",
+          "q": "Himpunan penyelesaian dari $ \\left({}^{3}\\!\\log x\\right)^2 + {}^{3}\\!\\log x - 2 > 0 $ adalah …",
+          "opts": [
+            "$ x < \\dfrac{1}{9} $ atau $ x > 3 $",
+            "$ 0 < x < \\dfrac{1}{9} $ atau $ x > 3 $",
+            "$ x < -2 $ atau $ x > 1 $",
+            "$ \\dfrac{1}{9} < x < 3 $",
+            "$ x > 3 $"
+          ]
+        },
+        {
+          "id": "E15",
+          "section": "E",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mendapat 4<x<5 benar, tapi tidak memeriksa syarat kedua numerus",
+          "jawab": "c",
+          "p": "Basis $ \\frac{1}{2}<1 $ , berbalik: $ x^2-6x+8<x-2\\Rightarrow(x-2)(x-5)<0\\Rightarrow2<x<5 $ . Syarat: $ x^2-6x+8>0\\Rightarrow x<2 $ atau $ x>4 $ ; $ x-2>0\\Rightarrow x>2 $ . HP: $ (4,5) $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{1/2}\\!\\log (x^2 - 6x + 8) > {}^{1/2}\\!\\log (x - 2) $ adalah …",
+          "opts": [
+            "$ 2 < x < 5 $",
+            "$ 4 < x < 5 $",
+            "$ 2 < x < 4 $",
+            "$ x > 4 $",
+            "$ x > 5 $"
+          ]
+        },
+        {
+          "id": "E16",
+          "section": "E",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_5(2x+3)>log_5(x²-1) → 2x+3>x²-1 langsung tanpa syarat numerus",
+          "jawab": "a",
+          "p": "Basis $ 5>1 $ : $ 2x+3>x^2-1\\Rightarrow x^2-2x-4<0\\Rightarrow1-\\sqrt{5}<x<1+\\sqrt{5} $ . Syarat: $ x^2-1>0\\Rightarrow x>1 $ ; $ 2x+3>0\\Rightarrow x>-\\frac{3}{2} $ . HP: $ (1, 1+\\sqrt{5}) $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{5}\\!\\log (2x + 3) > {}^{5}\\!\\log (x^2 - 1) $ adalah …",
+          "opts": [
+            "$ 1 < x < 1+\\sqrt{5} $",
+            "$ -1 < x < 1+\\sqrt{5} $",
+            "$ 0 < x < 1+\\sqrt{5} $",
+            "$ x > 1 $",
+            "$ -1{,}5 < x < 1+\\sqrt{5} $"
+          ]
+        },
+        {
+          "id": "E17",
+          "section": "E",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya menemukan satu interval; tidak memisahkan irisan kiri dan kanan",
+          "jawab": "a",
+          "p": "Basis $ \\frac{1}{3}<1 $ , berbalik: $ 2x^2-3x-2\\leq x+2\\Rightarrow x^2-2x-2\\leq0\\Rightarrow[1-\\sqrt{3}, 1+\\sqrt{3}] $ . Syarat: $ 2x^2-3x-2>0\\Rightarrow x<-\\frac{1}{2} $ atau $ x>2 $ ; $ x+2>0\\Rightarrow x>-2 $ . HP: $ [1-\\sqrt{3},-\\tfrac{1}{2})\\cup(2, 1+\\sqrt{3}] $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{1/3}\\!\\log (2x^2-3x-2) \\geq {}^{1/3}\\!\\log (x+2) $ adalah …",
+          "opts": [
+            "$ [1-\\sqrt{3},\\,-\\tfrac{1}{2}) \\cup (2,\\,1+\\sqrt{3}] $",
+            "$ [1-\\sqrt{3},\\,1+\\sqrt{3}] $",
+            "$ (2,\\,1+\\sqrt{3}] $",
+            "$ [1-\\sqrt{3},\\,-\\tfrac{1}{2}) $",
+            "$ -2 < x \\leq 1+\\sqrt{3} $"
+          ]
+        },
+        {
+          "id": "E18",
+          "section": "E",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak mengubah 2*log_{1/2}(x-5)=log_{1/2}((x-5)²) sebelum membandingkan",
+          "jawab": "b",
+          "p": "$ 2{}^{1/2}\\!\\log (x-5)={}^{1/2}\\!\\log (x-5)^2 $ . Basis $ <1 $ , berbalik: $ (x-5)^2\\geq x^2-8x+7\\Rightarrow x\\leq9 $ . Syarat: $ x>5 $ ; $ x>7 $ (dari $ x^2-8x+7>0 $ ). HP: $ 7<x\\leq9 $ .",
+          "q": "Himpunan penyelesaian dari $ 2\\,{}^{1/2}\\!\\log (x-5) \\leq {}^{1/2}\\!\\log (x^2-8x+7) $ adalah …",
+          "opts": [
+            "$ 5 < x \\leq 9 $",
+            "$ 7 < x \\leq 9 $",
+            "$ 5 < x < 7 $",
+            "$ x \\leq 9 $",
+            "$ 7 < x \\leq 10 $"
+          ]
+        },
+        {
+          "id": "E19",
+          "section": "E",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mendapat t<1 atau t>2 lalu mengira x<1 atau x>2; tidak mengonversi ke pangkat 2",
+          "jawab": "b",
+          "p": "$ t^2-3t+2>0\\Rightarrow(t-1)(t-2)>0\\Rightarrow t<1 $ atau $ t>2 $ . $ {}^{2}\\!\\log x<1\\Rightarrow x<2 $ ; $ {}^{2}\\!\\log x>2\\Rightarrow x>4 $ . Syarat $ x>0 $ . HP: $ 0<x<2 $ atau $ x>4 $ .",
+          "q": "Himpunan penyelesaian dari $ \\left({}^{2}\\!\\log x\\right)^2 - 3\\,{}^{2}\\!\\log x + 2 > 0 $ , $ x > 0 $ adalah …",
+          "opts": [
+            "$ 0 < x < 1 $ atau $ x > 4 $",
+            "$ 0 < x < 2 $ atau $ x > 4 $",
+            "$ 1 < x < 4 $",
+            "$ x > 4 $",
+            "$ 2 < x < 4 $"
+          ]
+        },
+        {
+          "id": "E20",
+          "section": "E",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak membagi kedua ruas dengan (x+3) setelah mengalikan; atau salah menentukan tanda pembagi",
+          "jawab": "b",
+          "p": "$ (x+3)(x-1)\\leq2(x+3) $ . Karena $ x+3>0 $ (dari syarat $ x>1 $ ), bagi kedua ruas: $ x-1\\leq2\\Rightarrow x\\leq3 $ . Syarat: $ x>1 $ . HP: $ 1<x\\leq3 $ .",
+          "q": "Himpunan penyelesaian dari $ {}^{2}\\!\\log (x+3) + {}^{2}\\!\\log (x-1) \\leq {}^{2}\\!\\log (2x+6) $ adalah …",
+          "opts": [
+            "$ x > 1 $",
+            "$ 1 < x \\leq 3 $",
+            "$ x \\leq 3 $",
+            "$ 1 \\leq x \\leq 3 $",
+            "$ x > 3 $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "F",
+      "sectionTitle": "Fungsi Logaritma",
+      "soal": [
+        {
+          "id": "F1",
+          "section": "F",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira domain x>0 karena logaritma selalu membutuhkan argumen positif, tanpa memperhatikan x-4",
+          "jawab": "c",
+          "p": "Syarat $ x-4>0\\Rightarrow x>4 $ .",
+          "q": "Domain dari fungsi $ f(x) = {}^{2}\\!\\log (x - 4) $ adalah …",
+          "opts": [
+            "$ x > 0 $",
+            "$ x > 2 $",
+            "$ x > 4 $",
+            "$ x \\geq 4 $",
+            "$ x > -4 $"
+          ]
+        },
+        {
+          "id": "F2",
+          "section": "F",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira asimtot x=0 untuk semua fungsi log; tidak memperhatikan translasi horizontal",
+          "jawab": "e",
+          "p": "Asimtot dari $ {}^{3}\\!\\log (x+5) $ diperoleh dari $ x+5=0 $ , yaitu $ x=-5 $ .",
+          "q": "Asimtot vertikal dari fungsi $ f(x) = {}^{3}\\!\\log (x + 5) $ adalah …",
+          "opts": [
+            "$ x = 3 $",
+            "$ x = 0 $",
+            "$ x = -3 $",
+            "$ x = 5 $",
+            "$ x = -5 $"
+          ]
+        },
+        {
+          "id": "F3",
+          "section": "F",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira titik potong sumbu-X terjadi saat x=0, bukan saat f(x)=0",
+          "jawab": "d",
+          "p": "$ {}^{2}\\!\\log x=0\\Rightarrow x=2^0=1 $ . Titik potong: $ (1,0) $ .",
+          "q": "Titik potong grafik $ f(x) = {}^{2}\\!\\log x $ dengan sumbu- $ X $ adalah …",
+          "opts": [
+            "$ (0,\\; 0) $",
+            "$ (2,\\; 0) $",
+            "$ (0,\\; 1) $",
+            "$ (1,\\; 0) $",
+            "$ (-1,\\; 0) $"
+          ]
+        },
+        {
+          "id": "F4",
+          "section": "F",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira fungsi log selalu naik tanpa memperhatikan nilai basis",
+          "jawab": "c",
+          "p": "Basis $ 3>1\\Rightarrow $ fungsi monoton naik untuk semua $ x>0 $ .",
+          "q": "Fungsi $ f(x) = {}^{3}\\!\\log x $ bersifat …",
+          "opts": [
+            "Monoton turun untuk $ x > 0 $",
+            "Monoton naik untuk $ x > 3 $",
+            "Monoton naik untuk semua $ x > 0 $",
+            "Monoton turun untuk semua $ x $",
+            "Tidak monoton"
+          ]
+        },
+        {
+          "id": "F5",
+          "section": "F",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira log_{1/2}(x) naik seperti log_2(x); bingung efek basis antara 0 dan 1",
+          "jawab": "c",
+          "p": "Basis $ \\frac{1}{2}<1\\Rightarrow $ fungsi monoton turun: nilai log makin kecil seiring $ x $ naik.",
+          "q": "Pernyataan yang <b>benar</b> tentang $ f(x) = {}^{1/2}\\!\\log x $ adalah …",
+          "opts": [
+            "Monoton naik; nilai log makin besar seiring $ x $ naik",
+            "Monoton turun; nilai log makin kecil seiring $ x $ naik",
+            "Monoton turun; nilai log makin besar seiring $ x $ naik",
+            "Monoton naik; asimtot $ y = 0 $",
+            "Monoton naik; domain $ x < 0 $"
+          ]
+        },
+        {
+          "id": "F6",
+          "section": "F",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira domain x>0 atau x²<9 tanpa menyelesaikan pertidaksamaan dengan benar",
+          "jawab": "a",
+          "p": "$ 9-x^2>0\\Rightarrow x^2<9\\Rightarrow-3<x<3 $ .",
+          "q": "Domain dari fungsi $ f(x) = {}^{5}\\!\\log (9 - x^2) $ adalah …",
+          "opts": [
+            "$ -3 < x < 3 $",
+            "$ x > 3 $",
+            "$ x < -3 $",
+            "$ 0 < x < 3 $",
+            "$ x \\neq 3 $"
+          ]
+        },
+        {
+          "id": "F7",
+          "section": "F",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira f(0)=0 untuk semua fungsi log; tidak mensubstitusikan x=0",
+          "jawab": "e",
+          "p": "$ f(0)={}^{3}\\!\\log (0+9)={}^{3}\\!\\log 9=2 $ . Titik potong: $ (0,2) $ .",
+          "q": "Titik potong grafik $ f(x) = {}^{3}\\!\\log (x + 9) $ dengan sumbu- $ Y $ adalah …",
+          "opts": [
+            "$ (0,\\; 3) $",
+            "$ (0,\\; 1) $",
+            "$ (0,\\; 9) $",
+            "$ (0,\\; 0) $",
+            "$ (0,\\; 2) $"
+          ]
+        },
+        {
+          "id": "F8",
+          "section": "F",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung f(11)=log_2(11-3)=log_2(8)+3=6; menambahkan, bukan menghitung log",
+          "jawab": "e",
+          "p": "$ f(11)={}^{2}\\!\\log (11-3)={}^{2}\\!\\log 8=3 $ .",
+          "q": "Nilai $ f(11) $ dari fungsi $ f(x) = {}^{2}\\!\\log (x - 3) $ adalah …",
+          "opts": [
+            "$ 6 $",
+            "$ 2 $",
+            "$ 8 $",
+            "$ 4 $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "F9",
+          "section": "F",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira domain x>2 atau x>3 saja; tidak mengambil gabungan dua interval",
+          "jawab": "c",
+          "p": "$ x^2-5x+6=(x-2)(x-3)>0\\Rightarrow x<2 $ atau $ x>3 $ .",
+          "q": "Domain dari fungsi $ f(x) = {}^{2}\\!\\log (x^2 - 5x + 6) $ adalah …",
+          "opts": [
+            "$ x > 3 $",
+            "$ 2 < x < 3 $",
+            "$ x < 2 $ atau $ x > 3 $",
+            "$ x > 2 $",
+            "$ 2 \\leq x \\leq 3 $"
+          ]
+        },
+        {
+          "id": "F10",
+          "section": "F",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira titik potong adalah akar dari x²-4x+3=0 (bukan dari x²-4x+3=1)",
+          "jawab": "b",
+          "p": "$ {}^{3}\\!\\log (x^2-4x+3)=0\\Rightarrow x^2-4x+3=1\\Rightarrow x^2-4x+2=0\\Rightarrow x=2\\pm\\sqrt{2} $ . Titik: $ (2-\\sqrt{2},0) $ dan $ (2+\\sqrt{2},0) $ .",
+          "q": "Titik potong grafik $ f(x) = {}^{3}\\!\\log (x^2 - 4x + 3) $ dengan sumbu- $ X $ adalah …",
+          "opts": [
+            "$ (1,\\;0) $ dan $ (3,\\;0) $",
+            "$ (2+\\sqrt{2},\\;0) $ dan $ (2-\\sqrt{2},\\;0) $",
+            "$ (0,\\;0) $",
+            "$ (2,\\;0) $",
+            "$ (0,\\;1) $ dan $ (0,\\;3) $"
+          ]
+        },
+        {
+          "id": "F11",
+          "section": "F",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira g(x)=log_2(x-3)+1 adalah refleksi, bukan translasi",
+          "jawab": "b",
+          "p": "$ g(x)={}^{2}\\!\\log (x-3)+1 $ berasal dari $ f(x)={}^{2}\\!\\log x $ dengan menggeser kanan 3 satuan dan naik 1 satuan.",
+          "q": "Grafik $ g(x) = {}^{2}\\!\\log (x-3) + 1 $ diperoleh dari $ f(x) = {}^{2}\\!\\log x $ dengan …",
+          "opts": [
+            "Geser kiri 3 satuan, naik 1 satuan",
+            "Geser kanan 3 satuan, naik 1 satuan",
+            "Geser kanan 1 satuan, naik 3 satuan",
+            "Refleksi terhadap $ y = x $",
+            "Geser kanan 3 satuan, turun 1 satuan"
+          ]
+        },
+        {
+          "id": "F12",
+          "section": "F",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira domain dan monotonitas sama seperti basis > 1",
+          "jawab": "b",
+          "p": "$ 4-x>0\\Rightarrow x<4 $ (domain); basis $ \\frac{1}{3}<1\\Rightarrow $ monoton turun; asimtot $ x=4 $ .",
+          "q": "Pernyataan yang <b>benar</b> tentang $ f(x) = {}^{1/3}\\!\\log (4 - x) $ adalah …",
+          "opts": [
+            "Domain $ x > 4 $ , monoton naik",
+            "Domain $ x < 4 $ , monoton naik",
+            "Domain $ x < 4 $ , monoton turun, asimtot $ x = 4 $",
+            "Domain $ x > 0 $ , monoton turun",
+            "Domain semua $ x $ , monoton turun"
+          ]
+        },
+        {
+          "id": "F13",
+          "section": "F",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira titik potong sumbu-X terjadi saat 2x-6=0 → x=3, bukan saat 2x-6=1",
+          "jawab": "c",
+          "p": "$ {}^{2}\\!\\log (2x-6)=0\\Rightarrow 2x-6=1\\Rightarrow x=\\frac{7}{2} $ .",
+          "q": "Absis titik potong grafik $ f(x) = {}^{2}\\!\\log (2x - 6) $ dengan sumbu- $ X $ adalah …",
+          "opts": [
+            "$ x = 3 $",
+            "$ x = \\dfrac{5}{2} $",
+            "$ x = 4 $",
+            "$ x = \\dfrac{7}{2} $",
+            "$ x = 6 $"
+          ]
+        },
+        {
+          "id": "F14",
+          "section": "F",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira range = domain; tidak menghitung nilai fungsi di ujung-ujung interval",
+          "jawab": "d",
+          "p": "$ f(1)={}^{3}\\!\\log 1=0 $ dan $ f(81)={}^{3}\\!\\log 81=4 $ . Karena $ f $ naik dan kontinu, range $ =[0,4] $ .",
+          "q": "Range dari $ f(x) = {}^{3}\\!\\log x $ untuk $ x \\in [1,\\; 81] $ adalah …",
+          "opts": [
+            "$ [0,\\; 3] $",
+            "$ [1,\\; 81] $",
+            "$ [0,\\; 4] $",
+            "$ [1,\\; 4] $",
+            "$ [-4,\\; 4] $"
+          ]
+        },
+        {
+          "id": "F15",
+          "section": "F",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira -log_a(x) adalah refleksi terhadap sumbu-Y, bukan sumbu-X",
+          "jawab": "c",
+          "p": "$ -{}^{2}\\!\\log x $ adalah refleksi grafik $ {}^{2}\\!\\log x $ terhadap sumbu- $ X $ .",
+          "q": "Grafik $ g(x) = -{}^{2}\\!\\log x $ merupakan hasil … dari grafik $ f(x) = {}^{2}\\!\\log x $ .",
+          "opts": [
+            "Refleksi terhadap sumbu- $ Y $",
+            "Refleksi terhadap garis $ y = x $",
+            "Refleksi terhadap sumbu- $ X $",
+            "Translasi ke bawah 2 satuan",
+            "Refleksi terhadap titik asal"
+          ]
+        },
+        {
+          "id": "F16",
+          "section": "F",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira fungsi log bisa memetakan dua nilai berbeda ke hasil yang sama",
+          "jawab": "c",
+          "p": "Fungsi logaritma bersifat injektif (satu-satu): $ f(a)=f(b)\\Rightarrow a=b $ .",
+          "q": "Untuk fungsi $ f(x) = {}^{2}\\!\\log x $ , jika $ f(a) = f(b) $ maka …",
+          "opts": [
+            "$ a = 2b $",
+            "$ a + b = 2 $",
+            "$ ab = 1 $",
+            "$ a = b $",
+            "$ a = b^2 $"
+          ]
+        },
+        {
+          "id": "F17",
+          "section": "F",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira invers f(x)=log_3(x+2)-1 adalah f^{-1}(x)=3^x+2-1=3^x+1",
+          "jawab": "c",
+          "p": "$ y={}^{3}\\!\\log (x+2)-1\\Rightarrow y+1={}^{3}\\!\\log (x+2)\\Rightarrow x+2=3^{y+1}\\Rightarrow x=3^{y+1}-2 $ . Jadi $ f^{-1}(x)=3^{x+1}-2 $ .",
+          "q": "Invers dari fungsi $ f(x) = {}^{3}\\!\\log (x + 2) - 1 $ adalah …",
+          "opts": [
+            "$ f^{-1}(x) = 3^{x+1} + 2 $",
+            "$ f^{-1}(x) = 3^{x-1} - 2 $",
+            "$ f^{-1}(x) = 3^{x+1} - 2 $",
+            "$ f^{-1}(x) = 3^{x+2} - 1 $",
+            "$ f^{-1}(x) = 3^{x} + 1 $"
+          ]
+        },
+        {
+          "id": "F18",
+          "section": "F",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mencari akar 2x²-12x+17=0 alih-alih 2x²-12x+17=1; atau mendapat x=2,4 tapi tidak memeriksa numerus",
+          "jawab": "a",
+          "p": "$ 2x^2-12x+17=1\\Rightarrow x^2-6x+8=0\\Rightarrow(x-2)(x-4)=0 $ . Cek: $ x=2 $ dan $ x=4 $ keduanya membuat numerus $ =1>0 $ ✓. Titik: $ (2,0) $ dan $ (4,0) $ .",
+          "q": "Titik potong grafik $ f(x) = {}^{2}\\!\\log (2x^2 - 12x + 17) $ dengan sumbu- $ X $ adalah …",
+          "opts": [
+            "$ (2,\\;0) $ dan $ (4,\\;0) $",
+            "$ (3,\\;0) $",
+            "$ (1,\\;0) $ dan $ (5,\\;0) $",
+            "$ (2,\\;0) $",
+            "$ (0,\\;2) $ dan $ (0,\\;4) $"
+          ]
+        },
+        {
+          "id": "F19",
+          "section": "F",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira titik potong sumbu-X dari g(x)=2*log_2(3x+6) adalah x=0 atau x=3",
+          "jawab": "a",
+          "p": "$ 3x+6=1\\Rightarrow x=-\\frac{5}{3} $ ; domain: $ 3x+6>0\\Rightarrow x>-2 $ . Titik potong $ \\left(-\\frac{5}{3},0\\right) $ , domain $ x>-2 $ .",
+          "q": "Diketahui $ g(x) = 2\\,{}^{2}\\!\\log (3x + 6) $ . Titik potong grafik $ g $ dengan sumbu- $ X $ dan domain $ g $ adalah …",
+          "opts": [
+            "Titik potong $ \\left(-\\dfrac{5}{3},\\;0\\right) $ , domain $ x > -2 $",
+            "Titik potong $ \\left(-2,\\;0\\right) $ , domain $ x > -3 $",
+            "Titik potong $ \\left(\\dfrac{5}{3},\\;0\\right) $ , domain $ x > 2 $",
+            "Titik potong $ (0,\\;0) $ , domain $ x > -2 $",
+            "Titik potong $ (-1,\\;0) $ , domain $ x > -2 $"
+          ]
+        },
+        {
+          "id": "F20",
+          "section": "F",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira log_2(x+1)=log_4(x+7) bisa diselesaikan langsung x+1=x+7; tidak menyamakan basis",
+          "jawab": "b",
+          "p": "$ {}^{4}\\!\\log (x+7)=\\dfrac{{}^{2}\\!\\log (x+7)}{2} $ , maka $ 2{}^{2}\\!\\log (x+1)={}^{2}\\!\\log (x+7)\\Rightarrow(x+1)^2=x+7\\Rightarrow x^2+x-6=0\\Rightarrow(x+3)(x-2)=0 $ . $ x=-3 $ : $ x+1=-2<0 $ \\texttimes. Jadi $ x=2 $ .",
+          "q": "Nilai $ x $ sehingga $ {}^{2}\\!\\log (x + 1) = {}^{4}\\!\\log (x + 7) $ adalah …",
+          "opts": [
+            "$ x = -3 $",
+            "$ x = 2 $",
+            "$ x = 3 $",
+            "$ x = -2 $",
+            "$ x = 1 $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "G",
+      "sectionTitle": "Log Natural dan Perubahan Basis",
+      "soal": [
+        {
+          "id": "G1",
+          "section": "G",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira ln(e)=e karena \"inversi\"; bingung antara nilai dan basis",
+          "jawab": "e",
+          "p": "$ \\ln e = {}^{e}\\!\\log e = 1 $ (Sifat 1).",
+          "q": "Nilai dari $ \\ln e $ adalah …",
+          "opts": [
+            "$ e $",
+            "$ e^2 $",
+            "$ 0 $",
+            "$ \\dfrac{1}{e} $",
+            "$ 1 $"
+          ]
+        },
+        {
+          "id": "G2",
+          "section": "G",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira ln(1)=1 (bingung dengan ln(e)=1)",
+          "jawab": "d",
+          "p": "$ \\ln 1 = {}^{e}\\!\\log 1 = 0 $ (Sifat 2).",
+          "q": "Nilai dari $ \\ln 1 $ adalah …",
+          "opts": [
+            "$ 1 $",
+            "$ e $",
+            "$ -1 $",
+            "$ 0 $",
+            "$ \\dfrac{1}{e} $"
+          ]
+        },
+        {
+          "id": "G3",
+          "section": "G",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira e^(ln(5))=e*5=5e (mengalikan basis dan nilai ln)",
+          "jawab": "e",
+          "p": "Sifat 9: $ e^{\\ln 5} = 5 $ .",
+          "q": "Nilai dari $ e^{\\ln 5} $ adalah …",
+          "opts": [
+            "$ 5e $",
+            "$ e^5 $",
+            "$ \\ln 5 $",
+            "$ 25 $",
+            "$ 5 $"
+          ]
+        },
+        {
+          "id": "G4",
+          "section": "G",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira ln(e³)=e*3=3e; bingung antara perkalian dan sifat pangkat log",
+          "jawab": "c",
+          "p": "$ \\ln e^3 = 3\\ln e = 3\\times1 = 3 $ .",
+          "q": "Nilai dari $ \\ln e^3 $ adalah …",
+          "opts": [
+            "$ 3e $",
+            "$ e^3 $",
+            "$ 3 $",
+            "$ \\dfrac{1}{3} $",
+            "$ \\ln 3 $"
+          ]
+        },
+        {
+          "id": "G5",
+          "section": "G",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_2(8)=ln(8)*ln(2); tidak memahami rumus log_a(b)=ln(b)/ln(a)",
+          "jawab": "b",
+          "p": "Rumus perubahan basis: $ {}^{a}\\!\\log b=\\dfrac{\\ln b}{\\ln a} $ . Maka $ {}^{2}\\!\\log 8=\\dfrac{\\ln 8}{\\ln 2} $ .",
+          "q": "Nilai dari $ {}^{2}\\!\\log 8 $ menggunakan rumus perubahan basis $ \\dfrac{\\ln b}{\\ln a} $ adalah …",
+          "opts": [
+            "$ \\dfrac{\\ln 2}{\\ln 8} $",
+            "$ \\dfrac{\\ln 8}{\\ln 2} $",
+            "$ \\ln 8 - \\ln 2 $",
+            "$ \\dfrac{\\ln 6}{\\ln 2} $",
+            "$ \\ln 4 $"
+          ]
+        },
+        {
+          "id": "G6",
+          "section": "G",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira log_3(x)=ln(3)/ln(x); membalik posisi argumen",
+          "jawab": "b",
+          "p": "Rumus yang benar: $ {}^{3}\\!\\log x=\\dfrac{\\log x}{\\log 3}=\\dfrac{\\ln x}{\\ln 3} $ .",
+          "q": "Rumus perubahan basis yang <b>benar</b> untuk $ {}^{3}\\!\\log x $ adalah …",
+          "opts": [
+            "$ \\dfrac{\\ln 3}{\\ln x} $",
+            "$ \\dfrac{\\log x}{\\log 3} $",
+            "$ \\ln x \\cdot \\ln 3 $",
+            "$ \\dfrac{\\log 3}{\\log x} $",
+            "$ \\ln x - \\ln 3 $"
+          ]
+        },
+        {
+          "id": "G7",
+          "section": "G",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log(100)=ln(100)/10; salah memahami ln(10)≈2,3026",
+          "jawab": "b",
+          "p": "$ \\dfrac{\\ln 100}{\\ln 10}={}^{10}\\!\\log 100=2 $ .",
+          "q": "Nilai $ \\log 100 $ dihitung sebagai $ \\dfrac{\\ln 100}{\\ln 10} $ hasilnya adalah …",
+          "opts": [
+            "$ \\dfrac{\\ln 100}{\\ln 10}=10 $",
+            "$ 2 $",
+            "$ \\ln 10 $",
+            "$ \\ln 2 $",
+            "$ 20 $"
+          ]
+        },
+        {
+          "id": "G8",
+          "section": "G",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira ln(e²)-ln(e)=ln(e²-e); tidak menggunakan sifat pengurangan log",
+          "jawab": "e",
+          "p": "$ \\ln e^2 - \\ln e = 2-1=1 $ .",
+          "q": "Nilai dari $ \\ln e^2 - \\ln e $ adalah …",
+          "opts": [
+            "$ e $",
+            "$ 2 $",
+            "$ e^2 - e $",
+            "$ \\ln(e^2 - e) $",
+            "$ 1 $"
+          ]
+        },
+        {
+          "id": "G9",
+          "section": "G",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_5(125) via ln = ln(125)/5; tidak menyadari penyebut adalah ln(5)",
+          "jawab": "d",
+          "p": "$ \\dfrac{\\ln 125}{\\ln 5}={}^{5}\\!\\log 125={}^{5}\\!\\log 5^3=3 $ .",
+          "q": "Nilai $ {}^{5}\\!\\log 125 $ dihitung dengan rumus $ \\dfrac{\\ln 125}{\\ln 5} $ hasilnya adalah …",
+          "opts": [
+            "$ 25 $",
+            "$ 5 $",
+            "$ \\dfrac{5}{3} $",
+            "$ 3 $",
+            "$ 15 $"
+          ]
+        },
+        {
+          "id": "G10",
+          "section": "G",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira ln(x)=2 → x=2 (bingung ln dan log; atau mengira hasilnya adalah angka biasa)",
+          "jawab": "c",
+          "p": "$ \\ln x=2\\Rightarrow x=e^2 $ .",
+          "q": "Jika $ \\ln x = 2 $ , maka nilai $ x $ adalah …",
+          "opts": [
+            "$ x = 2 $",
+            "$ x = 10^2 $",
+            "$ x = e^2 $",
+            "$ x = 2e $",
+            "$ x = \\ln 2 $"
+          ]
+        },
+        {
+          "id": "G11",
+          "section": "G",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira log_a(b)*log_b(a)=log_a(a)=1 benar tapi tidak memahami mengapa",
+          "jawab": "e",
+          "p": "Sifat 7: $ {}^{a}\\!\\log b\\cdot{}^{b}\\!\\log a=1 $ .",
+          "q": "Nilai dari $ {}^{a}\\!\\log b \\cdot {}^{b}\\!\\log a $ untuk setiap $ a,b>0,\\;a,b\\neq1 $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ 2 $",
+            "$ ab $",
+            "$ a + b $",
+            "$ 1 $"
+          ]
+        },
+        {
+          "id": "G12",
+          "section": "G",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira e^(2*ln(3))=2*e^(ln(3))=2*3=6; tidak menerapkan sifat pangkat",
+          "jawab": "b",
+          "p": "$ e^{2\\ln 3}=e^{\\ln 3^2}=3^2=9 $ .",
+          "q": "Nilai dari $ e^{2\\ln 3} $ adalah …",
+          "opts": [
+            "$ 6 $",
+            "$ 9 $",
+            "$ 3e^2 $",
+            "$ \\ln 9 $",
+            "$ 2e^3 $"
+          ]
+        },
+        {
+          "id": "G13",
+          "section": "G",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_8(512)=log_2(512)/log_2(8)=9/3=3 benar, tapi sering salah hitung",
+          "jawab": "b",
+          "p": "$ {}^{8}\\!\\log 512=\\dfrac{{}^{2}\\!\\log 512}{{}^{2}\\!\\log 8}=\\dfrac{9}{3}=3 $ .",
+          "q": "Nilai dari $ {}^{8}\\!\\log 512 $ menggunakan perubahan basis ke basis 2 adalah …",
+          "opts": [
+            "$ \\dfrac{9}{2} $",
+            "$ 4 $",
+            "$ \\dfrac{8}{3} $",
+            "$ 3 $",
+            "$ 64 $"
+          ]
+        },
+        {
+          "id": "G14",
+          "section": "G",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira ln(x)+ln(x+2)=ln(8) → x+(x+2)=8 → x=3; tidak mengalikan numerus",
+          "jawab": "d",
+          "p": "$ \\ln(x(x+2))=\\ln 8\\Rightarrow x^2+2x=8\\Rightarrow(x+4)(x-2)=0 $ . $ x=-4 $ buang (negatif). $ x=2 $ .",
+          "q": "Nilai $ x $ yang memenuhi $ \\ln x + \\ln(x + 2) = \\ln 8 $ dengan $ x > 0 $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 2 $",
+            "$ 4 $",
+            "$ 1 $",
+            "$ 6 $"
+          ]
+        },
+        {
+          "id": "G15",
+          "section": "G",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira log_6(36)+log_6(1/6)=2+(-1)=1 benar tapi sering dihitung sebagai log_6(35) salah",
+          "jawab": "b",
+          "p": "$ {}^{6}\\!\\log 36+{}^{6}\\!\\log \\frac{1{6}}=2+(-1)=1 $ .",
+          "q": "Nilai dari $ {}^{6}\\!\\log 36 + {}^{6}\\!\\log \\dfrac{1{6}} $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ 2 $",
+            "$ 1 $",
+            "$ 3 $",
+            "$ \\dfrac{1}{6} $"
+          ]
+        },
+        {
+          "id": "G16",
+          "section": "G",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira x=log(10)=1 (menggunakan log basis 10 bukan ln)",
+          "jawab": "c",
+          "p": "$ e^x=10\\Rightarrow x=\\ln 10 $ .",
+          "q": "Jika $ e^x = 10 $ , maka nilai $ x $ adalah …",
+          "opts": [
+            "$ x = 1 $",
+            "$ x = \\log 10 $",
+            "$ x = \\ln 10 $",
+            "$ x = 10e $",
+            "$ x = e^{10} $"
+          ]
+        },
+        {
+          "id": "G17",
+          "section": "G",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira ln(√72)=(3p+2q) tanpa membagi 2; atau salah memfaktorkan 72",
+          "jawab": "c",
+          "p": "$ \\ln\\sqrt{72}=\\tfrac{1}{2}\\ln 72=\\tfrac{1}{2}\\ln(8\\cdot9)=\\tfrac{1}{2}(3\\ln2+2\\ln3)=\\dfrac{3p+2q}{2} $ .",
+          "q": "Diketahui $ \\ln 2 = p $ dan $ \\ln 3 = q $ . Nilai $ \\ln\\sqrt{72} $ dalam $ p $ dan $ q $ adalah …",
+          "opts": [
+            "$ 3p + 2q $",
+            "$ \\dfrac{3p - 2q}{2} $",
+            "$ \\dfrac{3p + 2q}{2} $",
+            "$ 6p + 4q $",
+            "$ \\dfrac{p + q}{2} $"
+          ]
+        },
+        {
+          "id": "G18",
+          "section": "G",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira log_b(a)=2 juga karena keduanya \"berkaitan dengan log_a(b)=2\"",
+          "jawab": "c",
+          "p": "Sifat 7: $ {}^{b}\\!\\log a=\\dfrac{1}{{}^{a}\\!\\log b}=\\dfrac{1}{2} $ .",
+          "q": "Jika $ {}^{a}\\!\\log b = 2 $ , maka nilai $ {}^{b}\\!\\log a $ adalah …",
+          "opts": [
+            "$ 2 $",
+            "$ -2 $",
+            "$ \\dfrac{1}{2} $",
+            "$ 4 $",
+            "$ -\\dfrac{1}{2} $"
+          ]
+        },
+        {
+          "id": "G19",
+          "section": "G",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mendapat x=4 dan x=-1 lalu menerima keduanya tanpa memeriksa syarat numerus ln",
+          "jawab": "b",
+          "p": "$ x^2-4=3x\\Rightarrow(x-4)(x+1)=0\\Rightarrow x=4 $ atau $ x=-1 $ . Cek: $ x=-1 $ : $ x^2-4=-3<0 $ \\texttimes. HP $ =\\{4\\} $ .",
+          "q": "Himpunan penyelesaian dari $ \\ln(x^2 - 4) = \\ln(3x) $ adalah …",
+          "opts": [
+            "$ \\{4,\\; -1\\} $",
+            "$ \\{4\\} $",
+            "$ \\{-1\\} $",
+            "$ \\{-4,\\; 1\\} $",
+            "$ \\{1\\} $"
+          ]
+        },
+        {
+          "id": "G20",
+          "section": "G",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira t+1/t=5/2 → 2t+1=5/2t → selesaikan salah; atau hanya mencari satu nilai t",
+          "jawab": "c",
+          "p": "Misalkan $ t={}^{a}\\!\\log b $ , maka $ {}^{b}\\!\\log a=\\frac{1}{t} $ . Persamaan: $ t+\\frac{1}{t}=\\frac{5}{2}\\Rightarrow2t^2-5t+2=0\\Rightarrow(2t-1)(t-2)=0 $ . Jadi $ t=\\frac{1}{2} $ atau $ t=2 $ , yaitu $ {}^{a}\\!\\log b=\\frac{1}{2} $ atau $ {}^{a}\\!\\log b=2 $ .",
+          "q": "Jika $ {}^{a}\\!\\log b + {}^{b}\\!\\log a = \\dfrac{5}{2} $ , maka nilai yang mungkin untuk $ {}^{a}\\!\\log b $ adalah …",
+          "opts": [
+            "$ \\dfrac{5}{2} $ saja",
+            "$ 1 $ atau $ \\dfrac{3}{2} $",
+            "$ 2 $ atau $ \\dfrac{1}{2} $",
+            "$ \\dfrac{5}{4} $ saja",
+            "$ \\dfrac{3}{2} $ saja"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "H",
+      "sectionTitle": "Aplikasi Logaritma",
+      "soal": [
+        {
+          "id": "H1",
+          "section": "H",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira pH=-log(10^{-3})=-(-3)=3 benar tapi menulis pH=log(10^3)=3 (tanda minus dilupakan)",
+          "jawab": "c",
+          "p": "$ \\text{pH} = -\\log[\\text{H}^+] = -\\log(10^{-3}) = 3 $ .",
+          "q": "Larutan HCl memiliki konsentrasi ion hidrogen $ [\\text{H}^+] = 10^{-3} $ mol/L. pH larutan tersebut adalah …",
+          "opts": [
+            "$ -3 $",
+            "$ 0{,}001 $",
+            "$ 3 $",
+            "$ 30 $",
+            "$ \\dfrac{1}{3} $"
+          ]
+        },
+        {
+          "id": "H2",
+          "section": "H",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira M=7 berarti intensitas = 7, bukan 10^7 kali I0",
+          "jawab": "b",
+          "p": "$ M = \\log\\dfrac{I}{I_0} = \\log(10^7) = 7 $ .",
+          "q": "Suatu gempa bumi memiliki intensitas $ I = 10^7 \\cdot I_0 $ , di mana $ I_0 $ adalah intensitas minimal yang terdeteksi. Magnitudo gempa pada skala Richter ( $ M = \\log\\frac{I}{I_0} $ ) adalah …",
+          "opts": [
+            "$ 70 $",
+            "$ 7 $",
+            "$ 0{,}7 $",
+            "$ 17 $",
+            "$ \\log 7 $"
+          ]
+        },
+        {
+          "id": "H3",
+          "section": "H",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira L=log(10^4)=4 dB; lupa faktor pengali 10",
+          "jawab": "d",
+          "p": "$ L = 10\\log\\dfrac{I}{I_0} = 10\\log(10^4) = 10\\times4 = 40 $ dB.",
+          "q": "Intensitas suara sebuah mesin adalah $ I = 10^4 \\cdot I_0 $ . Tingkat kebisingan dalam desibel ( $ L = 10\\log\\frac{I}{I_0} $ ) adalah …",
+          "opts": [
+            "$ 4 $ dB",
+            "$ 10^4 $ dB",
+            "$ 400 $ dB",
+            "$ 40 $ dB",
+            "$ 14 $ dB"
+          ]
+        },
+        {
+          "id": "H4",
+          "section": "H",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira t=2/0,1=20 tahun; tidak menggunakan logaritma untuk mencari t",
+          "jawab": "d",
+          "p": "$ (1{,}1)^t = 2 \\Rightarrow t = \\dfrac{\\log 2}{\\log 1{,}1} = \\dfrac{0{,}3010}{0{,}0414} \\approx 7{,}3 $ .",
+          "q": "Suatu populasi bakteri tumbuh mengikuti rumus $ N = N_0 \\cdot (1{,}1)^t $ . Jika populasi awal $ N_0 = 1.000 $ dan ingin menjadi $ 2.000 $ , waktu $ t $ yang diperlukan (dalam satuan waktu) adalah … \\ \\textit{(Gunakan $ \\log 2 = 0{,}3010 $ dan $ \\log 1{,}1 = 0{,}0414 $ )}",
+          "opts": [
+            "$ t \\approx 20{,}0 $",
+            "$ t \\approx 14{,}2 $",
+            "$ t \\approx 10{,}0 $",
+            "$ t \\approx 7{,}3 $",
+            "$ t \\approx 3{,}0 $"
+          ]
+        },
+        {
+          "id": "H5",
+          "section": "H",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira pH=-log(2)+(-5)=5-log2=4,699 ≈ 4,70 benar, tapi banyak salah tanda",
+          "jawab": "c",
+          "p": "$ \\text{pH} = -\\log(2\\times10^{-5}) = 5 - \\log 2 = 5 - 0{,}3010 = 4{,}699 \\approx 4{,}70 $ .",
+          "q": "Konsentrasi ion hidrogen suatu larutan asam adalah $ [\\text{H}^+] = 2\\times10^{-5} $ mol/L. pH larutan tersebut kira-kira adalah … \\ \\textit{(Gunakan $ \\log 2 = 0{,}3010 $ )}",
+          "opts": [
+            "$ 4{,}30 $",
+            "$ 5{,}30 $",
+            "$ 4{,}70 $",
+            "$ 5{,}70 $",
+            "$ 3{,}70 $"
+          ]
+        },
+        {
+          "id": "H6",
+          "section": "H",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira M=M0/4 berarti 2 waktu paruh; tetapi salah menghitung atau menganggap t=4T",
+          "jawab": "e",
+          "p": "$ \\left(\\dfrac{1}{2}\\right)^{t/T} = \\dfrac{1}{4} = \\left(\\dfrac{1}{2}\\right)^2 \\Rightarrow \\dfrac{t}{T}=2 \\Rightarrow t=2T $ .",
+          "q": "Suatu zat radioaktif memiliki waktu paruh $ T $ tahun. Jika massa awal adalah $ M_0 $ , setelah berapa waktu massa zat tinggal $ \\dfrac{M_0}{4} $ ?",
+          "opts": [
+            "$ t = T $",
+            "$ t = 3T $",
+            "$ t = \\dfrac{T}{2} $",
+            "$ t = 4T $",
+            "$ t = 2T $"
+          ]
+        },
+        {
+          "id": "H7",
+          "section": "H",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira rasio = 8-6=2 kali (langsung selisih magnitudonya, bukan 10^selisih)",
+          "jawab": "d",
+          "p": "$ \\Delta M = 8 - 6 = 2 $ . Rasio intensitas $ = 10^2 = 100 $ kali.",
+          "q": "Gempa A bermagnitude 8 dan gempa B bermagnitude 6 pada skala Richter. Rasio intensitas gempa A terhadap gempa B adalah …",
+          "opts": [
+            "$ 2 $ kali",
+            "$ 20 $ kali",
+            "$ 10 $ kali",
+            "$ 100 $ kali",
+            "$ 1.000 $ kali"
+          ]
+        },
+        {
+          "id": "H8",
+          "section": "H",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira L=6 dB (tidak mengalikan dengan 10)",
+          "jawab": "b",
+          "p": "$ L = 10\\log(10^6) = 10\\times6 = 60 $ dB.",
+          "q": "Intensitas suara konser rock adalah $ I = 10^6 \\cdot I_0 $ . Tingkat kebisingannya dalam desibel adalah …",
+          "opts": [
+            "$ 6 $ dB",
+            "$ 60 $ dB",
+            "$ 600 $ dB",
+            "$ 16 $ dB",
+            "$ 100 $ dB"
+          ]
+        },
+        {
+          "id": "H9",
+          "section": "H",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira t=10/1,2≈8,3; tidak menggunakan rumus logaritma untuk eksponen",
+          "jawab": "d",
+          "p": "$ 500\\cdot(1{,}2)^t = 5.000 \\Rightarrow (1{,}2)^t = 10 $ . \\[t = \\frac{\\log 10}{\\log 1{,}2} = \\frac{1}{0{,}0792} \\approx 12{,}6 \\text{ tahun.}\\]",
+          "q": "Jumlah penduduk suatu kota berkembang mengikuti rumus $ N = 500 \\cdot (1{,}2)^t $ (ribuan jiwa), dengan $ t $ dalam tahun. Kapan penduduk kota mencapai 5 juta jiwa?\\ \\textit{(Gunakan $ \\log 1{,}2 = 0{,}0792 $ )}",
+          "opts": [
+            "$ t \\approx 5{,}0 $ tahun",
+            "$ t \\approx 8{,}3 $ tahun",
+            "$ t \\approx 7{,}3 $ tahun",
+            "$ t \\approx 12{,}6 $ tahun",
+            "$ t \\approx 20{,}0 $ tahun"
+          ]
+        },
+        {
+          "id": "H10",
+          "section": "H",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira (1/2)^3=1/8 berarti t=3 tahun; tidak mengalikan dengan waktu paruh",
+          "jawab": "d",
+          "p": "$ \\left(\\dfrac{1}{2}\\right)^{t/1600} = \\dfrac{25}{200} = \\dfrac{1}{8} = \\left(\\dfrac{1}{2}\\right)^3 \\Rightarrow \\dfrac{t}{1600}=3 \\Rightarrow t = 4.800 $ tahun.",
+          "q": "Unsur radioaktif radium-226 memiliki waktu paruh 1.600 tahun. Jika massa awal 200 gram, setelah berapa tahun massa radium tinggal 25 gram?",
+          "opts": [
+            "$ 3.200 $ tahun",
+            "$ 1.600 $ tahun",
+            "$ 6.400 $ tahun",
+            "$ 4.800 $ tahun",
+            "$ 800 $ tahun"
+          ]
+        },
+        {
+          "id": "H11",
+          "section": "H",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira pH=3-log(3)≈2,52 → [H+]=10^{-2,52} benar, tapi banyak yang salah hitung pH",
+          "jawab": "c",
+          "p": "$ \\text{pH} = -\\log(3\\times10^{-3}) = 3 - \\log 3 = 3 - 0{,}4771 = 2{,}5229 \\approx 2{,}52 $ .",
+          "q": "Larutan memiliki $ [\\text{H}^+] = 3\\times10^{-3} $ mol/L. Nilai pH larutan tersebut kira-kira adalah … \\ \\textit{(Gunakan $ \\log 3 = 0{,}4771 $ )}",
+          "opts": [
+            "$ 2{,}05 $",
+            "$ 3{,}48 $",
+            "$ 2{,}52 $",
+            "$ 3{,}52 $",
+            "$ 4{,}48 $"
+          ]
+        },
+        {
+          "id": "H12",
+          "section": "H",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira pH=-log[OH-] langsung; atau lupa hubungan pH+pOH=14",
+          "jawab": "d",
+          "p": "$ \\text{pOH} = -\\log(2\\times10^{-5}) = 5 - \\log 2 = 5 - 0{,}3010 = 4{,}699 $ . $ \\text{pH} = 14 - 4{,}699 \\approx 9{,}30 $ .",
+          "q": "Larutan basa memiliki $ [\\text{OH}^-] = 2\\times10^{-5} $ mol/L. Nilai pH larutan tersebut kira-kira adalah … \\ \\textit{(Gunakan $ \\log 2 = 0{,}3010 $ dan $ \\text{pH} + \\text{pOH} = 14 $ )}",
+          "opts": [
+            "$ 4{,}70 $",
+            "$ 9{,}70 $",
+            "$ 5{,}30 $",
+            "$ 9{,}30 $",
+            "$ 8{,}70 $"
+          ]
+        },
+        {
+          "id": "H13",
+          "section": "H",
+          "num": 13,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira t=1/0,05=20 tahun (linear, bukan eksponen); tidak menggunakan log",
+          "jawab": "d",
+          "p": "$ (1{,}05)^t = 2 \\Rightarrow t = \\dfrac{\\log 2}{\\log 1{,}05} = \\dfrac{0{,}3010}{0{,}0212} \\approx 14{,}2 $ tahun.",
+          "q": "Modal sebesar Rp\\,1.000.000 diinvestasikan dengan bunga majemuk 5% per tahun. Berapa tahun agar modal menjadi dua kali lipat?\\ \\textit{(Gunakan $ \\log 2 = 0{,}3010 $ dan $ \\log 1{,}05 = 0{,}0212 $ )}",
+          "opts": [
+            "$ \\approx 20{,}0 $ tahun",
+            "$ \\approx 10{,}0 $ tahun",
+            "$ \\approx 7{,}3 $ tahun",
+            "$ \\approx 14{,}2 $ tahun",
+            "$ \\approx 5{,}0 $ tahun"
+          ]
+        },
+        {
+          "id": "H14",
+          "section": "H",
+          "num": 14,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira rasio = 1,5 kali (langsung dari selisih magnitudonya)",
+          "jawab": "c",
+          "p": "$ \\Delta M = 7{,}5 - 6 = 1{,}5 $ . Rasio intensitas $ = 10^{1{,}5} \\approx 31{,}6 $ kali.",
+          "q": "Gempa C bermagnitude 6 dan gempa D bermagnitude 7,5. Berapa kali lebih kuat intensitas gempa D dibanding gempa C?\\ \\textit{(Gunakan $ 10^{1,5} \\approx 31{,}6 $ )}",
+          "opts": [
+            "$ 1{,}5 $ kali",
+            "$ 15 $ kali",
+            "$ 31{,}6 $ kali",
+            "$ 100 $ kali",
+            "$ 316 $ kali"
+          ]
+        },
+        {
+          "id": "H15",
+          "section": "H",
+          "num": 15,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira rasio = 90-60=30 kali (linear, bukan pangkat 10)",
+          "jawab": "c",
+          "p": "$ \\Delta L = 90 - 60 = 30 $ dB. Rasio $ = 10^{30/10} = 10^3 = 1.000 $ kali.",
+          "q": "Suara mesin A berkebisingan 90 dB dan suara mesin B berkebisingan 60 dB. Rasio intensitas mesin A terhadap mesin B adalah …",
+          "opts": [
+            "$ 30 $ kali",
+            "$ 3 $ kali",
+            "$ 300 $ kali",
+            "$ 1.000 $ kali",
+            "$ 10.000 $ kali"
+          ]
+        },
+        {
+          "id": "H16",
+          "section": "H",
+          "num": 16,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Aplikasi",
+          "kesalahanUmum": "mengira 2^(t/3)=8 → t/3=log(8)=0,903 → t≈2,7; tidak menyederhanakan 8=2^3",
+          "jawab": "d",
+          "p": "$ 1.000\\cdot2^{t/3} = 8.000 \\Rightarrow 2^{t/3} = 8 = 2^3 \\Rightarrow \\dfrac{t}{3}=3 \\Rightarrow t=9 $ jam.",
+          "q": "Koloni bakteri tumbuh mengikuti $ N = 1.000 \\cdot 2^{t/3} $ , dengan $ t $ dalam jam. Kapan jumlah bakteri mencapai 8.000?",
+          "opts": [
+            "$ t = 3 $ jam",
+            "$ t = 6 $ jam",
+            "$ t = 9 $ jam",
+            "$ t = 12 $ jam",
+            "$ t = 24 $ jam"
+          ]
+        }
+      ]
+    }
+  ]
+}
