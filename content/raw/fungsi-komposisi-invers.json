@@ -1,0 +1,1555 @@
+{
+  "materi": "persamaan-kuadrat",
+  "judul": "Persamaan Kuadrat",
+  "totalSoal": 80,
+  "sections": [
+    {
+      "sectionId": "A",
+      "sectionTitle": "Pengertian Fungsi",
+      "soal": [
+        {
+          "id": "A1",
+          "section": "A",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira relasi yang satu domain dipetakan ke banyak kodomain masih fungsi",
+          "jawab": "c",
+          "p": "Setiap fungsi memetakan setiap anggota domain ke <em>tepat satu</em> anggota kodomain. Opsi (c): $ (1,q),(2,p),(3,r) $ memetakan $ 1\\to q $ , $ 2\\to p $ , $ 3\\to r $ --- setiap elemen domain dipetakan ke tepat satu elemen kodomain.",
+          "q": "Dari relasi berikut, yang merupakan fungsi dari $ A = \\{1,2,3\\} $ ke $ B = \\{p,q,r\\} $ adalah …",
+          "opts": [
+            "$ \\{(1,p),(1,q),(2,r),(3,p)\\} $",
+            "$ \\{(1,p),(2,q),(2,r),(3,p)\\} $",
+            "$ \\{(1,q),(2,p),(3,r)\\} $",
+            "$ \\{(1,p),(2,q)\\} $",
+            "$ \\{(2,p),(3,q),(3,r)\\} $"
+          ]
+        },
+        {
+          "id": "A2",
+          "section": "A",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira fungsi polinomial memiliki batasan domain tertentu",
+          "jawab": "d",
+          "p": "$ f(x)=3x^2-5x+7 $ adalah polinomial --- tidak ada batasan nilai $ x $ . Domain $ = \\mathbb{R} $ .",
+          "q": "Domain dari fungsi $ f(x) = 3x^2 - 5x + 7 $ adalah …",
+          "opts": [
+            "$ x \\geq 0 $",
+            "$ x > 0 $",
+            "$ \\{0, 1, 2, 3, \\ldots\\} $",
+            "$ \\mathbb{R} $",
+            "$ x \\neq 0 $"
+          ]
+        },
+        {
+          "id": "A3",
+          "section": "A",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira range = kodomain; tidak mensubstitusikan setiap nilai domain",
+          "jawab": "a",
+          "p": "Substitusi setiap nilai domain: \\[f(-2)=-3, f(-1)=-1, f(0)=1, f(1)=3, f(2)=5.\\] Range $ = \\{-3,-1,1,3,5\\} $ .",
+          "q": "Diketahui $ f(x) = 2x + 1 $ dengan domain $ \\{-2, -1, 0, 1, 2\\} $ . Range fungsi tersebut adalah …",
+          "opts": [
+            "$ \\{-3, -1, 1, 3, 5\\} $",
+            "$ \\{-5, -3, -1, 1, 3\\} $",
+            "$ \\{-4, -2, 0, 2, 4\\} $",
+            "$ \\{-3, -2, -1, 0, 1\\} $",
+            "$ \\{1, 2, 3, 4, 5\\} $"
+          ]
+        },
+        {
+          "id": "A4",
+          "section": "A",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa bahwa penyebut tidak boleh nol; memberikan domain = R",
+          "jawab": "d",
+          "p": "Syarat penyebut $ \\neq 0 $ : $ x-5\\neq 0 \\Rightarrow x\\neq 5 $ . Domain $ = \\mathbb{R}\\setminus\\{5\\} $ .",
+          "q": "Domain dari fungsi $ f(x) = \\dfrac{3x+1}{x-5} $ adalah …",
+          "opts": [
+            "$ \\mathbb{R} $",
+            "$ \\mathbb{R} \\setminus \\{3\\} $",
+            "$ \\mathbb{R} \\setminus \\{-5\\} $",
+            "$ \\mathbb{R} \\setminus \\{5\\} $",
+            "$ x > 5 $"
+          ]
+        },
+        {
+          "id": "A5",
+          "section": "A",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menulis x > -3 bukan x >= -3; lupa bahwa sqrt(0)=0 terdefinisi",
+          "jawab": "d",
+          "p": "Syarat akar: $ 3x+9\\geq 0 \\Rightarrow x\\geq -3 $ . Domain $ = \\{x \\mid x\\geq -3\\} $ .",
+          "q": "Domain dari fungsi $ f(x) = \\sqrt{3x + 9} $ adalah …",
+          "opts": [
+            "$ x > 3 $",
+            "$ x \\geq 3 $",
+            "$ x > -3 $",
+            "$ x \\geq -3 $",
+            "$ x \\leq -3 $"
+          ]
+        },
+        {
+          "id": "A6",
+          "section": "A",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira f(x)=x² injektif karena setiap input menghasilkan output unik",
+          "jawab": "b",
+          "p": "$ f(2)=f(-2)=4 $ , padahal $ 2\\neq -2 $ --- melanggar syarat injektif ( $ f(x_1)=f(x_2)\\Rightarrow x_1=x_2 $ ).",
+          "q": "Fungsi $ f : \\mathbb{R} \\to \\mathbb{R} $ yang didefinisikan $ f(x) = x^2 $ <b>bukan</b> fungsi injektif karena …",
+          "opts": [
+            "$ f(0) = 0 $ sehingga ada elemen yang tidak terpetakan",
+            "$ f(2) = f(-2) = 4 $ padahal $ 2 \\neq -2 $",
+            "nilai $ f(x) $ selalu positif",
+            "domain $ f $ bukan himpunan bilangan asli",
+            "$ f $ tidak memiliki invers"
+          ]
+        },
+        {
+          "id": "A7",
+          "section": "A",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira semua fungsi dengan pasangan jelas sudah bijektif",
+          "jawab": "b",
+          "p": "Bijektif = injektif <em>dan</em> surjektif: setiap elemen domain terpetakan ke elemen berbeda, dan setiap elemen kodomain memiliki pasangan.",
+          "q": "Fungsi $ f : \\{1,2,3\\} \\to \\{a,b,c\\} $ dengan $ f = \\{(1,b),(2,a),(3,c)\\} $ adalah bijektif karena …",
+          "opts": [
+            "setiap anggota domain terpetakan",
+            "setiap anggota domain terpetakan ke elemen berbeda dan semua elemen kodomain terpakai",
+            "domain dan kodomainnya memiliki jumlah anggota sama",
+            "semua anggota $ B $ dipetakan ke anggota $ A $",
+            "nilai-nilai fungsi membentuk pola terurut"
+          ]
+        },
+        {
+          "id": "A8",
+          "section": "A",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira range = {-2,1,4,7,10} tetapi salah mensubstitusi x=0",
+          "jawab": "d",
+          "p": "Nilai terbesar domain $ = 4 $ : $ f(4)=3(4)-2=10 $ .",
+          "q": "Diketahui $ f(x) = 3x - 2 $ dengan domain $ \\{0,1,2,3,4\\} $ . Nilai terbesar dalam range $ f $ adalah …",
+          "opts": [
+            "$ 7 $",
+            "$ 8 $",
+            "$ 9 $",
+            "$ 10 $",
+            "$ 12 $"
+          ]
+        },
+        {
+          "id": "A9",
+          "section": "A",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa memfaktorkan penyebut; hanya menyingkirkan satu nilai",
+          "jawab": "c",
+          "p": "Faktorkan penyebut: $ x^2-7x+10=(x-2)(x-5) $ . Syarat: $ x\\neq 2 $ dan $ x\\neq 5 $ . Domain $ = \\mathbb{R}\\setminus\\{2,5\\} $ .",
+          "q": "Domain dari fungsi $ f(x) = \\dfrac{4x-1}{x^2 - 7x + 10} $ adalah …",
+          "opts": [
+            "$ \\mathbb{R} \\setminus \\{2\\} $",
+            "$ \\mathbb{R} \\setminus \\{5\\} $",
+            "$ \\mathbb{R} \\setminus \\{2, 5\\} $",
+            "$ \\mathbb{R} \\setminus \\{-2, -5\\} $",
+            "$ \\mathbb{R} \\setminus \\{2, -5\\} $"
+          ]
+        },
+        {
+          "id": "A10",
+          "section": "A",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "membalik tanda pertidaksamaan saat mengalikan -1 pada koefisien x²",
+          "jawab": "b",
+          "p": "Syarat akar: $ -x^2+2x+8\\geq 0 $ , kalikan $ -1 $ (balik tanda): $ x^2-2x-8\\leq 0 \\Rightarrow (x-4)(x+2)\\leq 0 $ . Titik kritis $ x=-2 $ dan $ x=4 $ , sehingga $ -2\\leq x\\leq 4 $ . Domain $ = [-2,\\,4] $ .",
+          "q": "Domain dari fungsi $ f(x) = \\sqrt{-x^2 + 2x + 8} $ adalah …",
+          "opts": [
+            "$ [-4,2] $",
+            "$ [-2,4] $",
+            "$ [2,4] $",
+            "$ (-\\infty,-2] \\cup [4,+\\infty) $",
+            "$ [-4,\\infty) $"
+          ]
+        },
+        {
+          "id": "A11",
+          "section": "A",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menggunakan >= bukan > untuk penyebut yang mengandung akar",
+          "jawab": "b",
+          "p": "Penyebut mengandung akar, syarat $ > 0 $ : $ x^2-x-6=(x-3)(x+2)>0 $ . Titik kritis $ x=-2 $ dan $ x=3 $ , nilai positif di $ x<-2 $ atau $ x>3 $ . Domain $ = (-\\infty,-2)\\cup(3,+\\infty) $ .",
+          "q": "Domain dari fungsi $ f(x) = \\dfrac{x+3}{\\sqrt{x^2-x-6}} $ adalah …",
+          "opts": [
+            "$ [-2,3] $",
+            "$ (-\\infty,-2) \\cup (3,+\\infty) $",
+            "$ (-\\infty,-2] \\cup [3,+\\infty) $",
+            "$ \\mathbb{R} \\setminus \\{-2,3\\} $",
+            "$ (2,3) \\cup (3,+\\infty) $"
+          ]
+        },
+        {
+          "id": "A12",
+          "section": "A",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "melupakan irisan kedua syarat; hanya memperhatikan satu syarat",
+          "jawab": "b",
+          "p": "Dua syarat: (i) $ x+4\\geq 0\\Rightarrow x\\geq -4 $ ; (ii) $ x-2\\neq 0\\Rightarrow x\\neq 2 $ . Irisan: $ x\\geq -4 $ dan $ x\\neq 2 $ . Domain $ = [-4,2)\\cup(2,+\\infty) $ .",
+          "q": "Domain dari fungsi $ f(x) = \\sqrt{x+4} + \\dfrac{1}{x-2} $ adalah …",
+          "opts": [
+            "$ [-4,+\\infty) $",
+            "$ [-4,2) \\cup (2,+\\infty) $",
+            "$ (-4,2) \\cup (2,+\\infty) $",
+            "$ [2,+\\infty) $",
+            "$ \\mathbb{R} \\setminus \\{2\\} $"
+          ]
+        },
+        {
+          "id": "A13",
+          "section": "A",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira fungsi surjektif pasti injektif jika jumlah anggota sama",
+          "jawab": "c",
+          "p": "$ f:\\{1,2,3,4\\}\\to\\{a,b,c,d\\} $ dengan $ f(1)=c,f(2)=a,f(3)=b,f(4)=d $ . Setiap elemen domain terpetakan ke elemen berbeda (injektif), dan semua elemen kodomain terpakai (surjektif). Jadi fungsi ini bijektif.",
+          "q": "Diketahui $ A = \\{1,2,3,4\\} $ dan $ B = \\{a,b,c,d\\} $ . Fungsi $ f : A \\to B $ dengan $ f(1)=c,\\; f(2)=a,\\; f(3)=b,\\; f(4)=d $ adalah …",
+          "opts": [
+            "injektif, tetapi tidak surjektif",
+            "surjektif, tetapi tidak injektif",
+            "bijektif",
+            "bukan fungsi",
+            "injektif dan surjektif, tetapi bukan bijektif"
+          ]
+        },
+        {
+          "id": "A14",
+          "section": "A",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira banyaknya fungsi = banyaknya bijeksi; tidak menggunakan pangkat",
+          "jawab": "d",
+          "p": "Banyak fungsi dari himpunan $ n $ elemen ke himpunan $ m $ elemen $ = m^n $ . Dari $ \\{a,b\\} $ (2 elemen) ke $ \\{1,2,3\\} $ (3 elemen): $ 3^2 = 9 $ .",
+          "q": "Banyaknya fungsi yang mungkin dari himpunan $ \\{a,b\\} $ ke himpunan $ \\{1,2,3\\} $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 6 $",
+            "$ 8 $",
+            "$ 9 $",
+            "$ 12 $"
+          ]
+        },
+        {
+          "id": "A15",
+          "section": "A",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak memisahkan syarat pembilang (>=0) dan penyebut (>0)",
+          "jawab": "d",
+          "p": "Dua syarat: (i) $ 2x-6\\geq 0\\Rightarrow x\\geq 3 $ (akar di pembilang); (ii) $ x-4\\neq 0\\Rightarrow x\\neq 4 $ (penyebut). Irisan: $ x\\geq 3 $ dan $ x\\neq 4 $ . Domain $ = [3,4)\\cup(4,+\\infty) $ .",
+          "q": "Domain dari fungsi $ f(x) = \\dfrac{\\sqrt{2x-6}}{x-4} $ adalah …",
+          "opts": [
+            "$ [3,4) \\cup (4,+\\infty) $",
+            "$ [3,+\\infty) $",
+            "$ (3,4) \\cup (4,+\\infty) $",
+            "$ \\{x \\mid x \\geq 3\\} $",
+            "$ [4,+\\infty) $"
+          ]
+        },
+        {
+          "id": "A16",
+          "section": "A",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira syarat = >=0; tidak menyadari x berada di penyebut akar",
+          "jawab": "c",
+          "p": "Syarat $ \\dfrac{x-1}{x+3}\\geq 0 $ . Titik kritis: $ x=1 $ (nol pembilang), $ x=-3 $ (nol penyebut, dikecualikan). Uji tanda: $ x<-3 $ : $ \\dfrac{(-)}{(-)}>0 $ ✓; $ -3<x<1 $ : $ \\dfrac{(-)}{(+)}<0 $ ; $ x\\geq 1 $ : $ \\dfrac{(+)}{(+)}>0 $ ✓. Domain $ = (-\\infty,-3)\\cup[1,+\\infty) $ .",
+          "q": "Domain dari fungsi $ f(x) = \\sqrt{\\dfrac{x-1}{x+3}} $ adalah …",
+          "opts": [
+            "$ [1,+\\infty) $",
+            "$ (-3,1) \\cup [1,+\\infty) $",
+            "$ (-\\infty,-3) \\cup [1,+\\infty) $",
+            "$ [-3,1] $",
+            "$ [-3,+\\infty) \\setminus \\{-3\\} $"
+          ]
+        },
+        {
+          "id": "A17",
+          "section": "A",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Komputasi-Analisis",
+          "kesalahanUmum": "mengira jumlah bijeksi sama dengan jumlah semua fungsi; bukan faktorial",
+          "jawab": "d",
+          "p": "Banyak bijeksi dari himpunan $ n $ elemen ke himpunan $ n $ elemen $ = n! $ . Dari $ \\{p,q,r,s\\} $ (4 elemen) ke $ \\{1,2,3,4\\} $ (4 elemen): $ 4! = 24 $ .",
+          "q": "Banyaknya korespondensi satu-satu (fungsi bijektif) dari himpunan $ P = \\{p,q,r,s\\} $ ke himpunan $ Q = \\{1,2,3,4\\} $ adalah …",
+          "opts": [
+            "$ 4 $",
+            "$ 8 $",
+            "$ 16 $",
+            "$ 24 $",
+            "$ 256 $"
+          ]
+        },
+        {
+          "id": "A18",
+          "section": "A",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak mengambil irisan; atau salah menguji tanda pada akar pecahan",
+          "jawab": "b",
+          "p": "Syarat penyebut $ > 0 $ (karena penyebut mengandung akar): $ 9-x^2>0\\Rightarrow x^2<9\\Rightarrow -3<x<3 $ . Domain $ = (-3,3) $ .",
+          "q": "Domain dari fungsi $ f(x) = \\dfrac{1}{\\sqrt{9 - x^2}} $ adalah … \\begin{center} \\begin{tikzpicture}[scale=0.6] \\draw[->] (-4.2,0) -- (4.2,0) node[right] {\\small $ x $ }; \\foreach \\x/\\lbl in {-3/{ $ -3 $ }, 3/{ $ 3 $ }} \\draw (\\x,0.12) -- (\\x,-0.12) node[below] {\\small\\lbl}; \\node at (-3.7, 0.4) {\\small $ - $ }; \\node at (0, 0.4) {\\small $ + $ }; \\node at (3.7, 0.4) {\\small $ - $ }; \\draw[very thick, blue!70!black] (-3,0) -- (3,0); \\draw[fill=white] (-3,0) circle (3.5pt); \\draw[fill=white] (3,0) circle (3.5pt); \\end{tikzpicture} \\end{center}",
+          "opts": [
+            "$ [-3,3] $",
+            "$ (-3,3) $",
+            "$ (-\\infty,-3) \\cup (3,+\\infty) $",
+            "$ \\mathbb{R} \\setminus \\{-3,3\\} $",
+            "$ (-3,0) \\cup (0,3) $"
+          ]
+        },
+        {
+          "id": "A19",
+          "section": "A",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira fungsi monoton naik pasti bijektif pada R tanpa memeriksa surjektif",
+          "jawab": "b",
+          "p": "Periksa setiap fungsi pada $ \\mathbb{R} $ : I. $ f(x)=2x+3 $ --- linear, monoton, bijektif ✓\\ II. $ g(x)=x^2-4 $ --- $ g(2)=g(-2)=0 $ , bukan injektif $ \\times $ \\ III. $ h(x)=x^3 $ --- monoton naik, bijektif ✓\\ IV. $ k(x)=|x-1| $ --- $ k(0)=k(2)=1 $ , bukan injektif $ \\times $ \\ Bijektif: I dan III.",
+          "q": "Perhatikan fungsi-fungsi berikut pada domain $ \\mathbb{R} $ :",
+          "opts": [
+            "$ f(x) = 2x + 3 $",
+            "$ g(x) = x^2 - 4 $",
+            "$ h(x) = x^3 $",
+            "$ k(x) = |x - 1| $",
+            "I dan II saja",
+            "I dan III saja",
+            "II dan III saja",
+            "I, II, dan III",
+            "I, III, dan IV"
+          ]
+        },
+        {
+          "id": "A20",
+          "section": "A",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak mengambil irisan dua syarat; menjumlahkan syarat bukannya mengiris",
+          "jawab": "c",
+          "p": "Dua syarat: (i) $ x-1\\geq 0\\Rightarrow x\\geq 1 $ (akar); (ii) $ x+2\\neq 0\\Rightarrow x\\neq -2 $ (penyebut). Irisan: $ x\\geq 1 $ (kondisi ini sudah secara otomatis menjamin $ x\\neq -2 $ ). Domain $ = [1,+\\infty) $ .",
+          "q": "Domain dari $ f(x) = \\sqrt{x - 1} + \\dfrac{3}{x + 2} $ adalah … Diagram garis bilangan irisan dua syarat: \\begin{center} \\begin{tikzpicture}[scale=0.65] \\draw[->] (-3.5,0) -- (3.5,0) node[right] {\\small $ x $ }; \\foreach \\x/\\lbl in {-2/{ $ -2 $ }, 1/{ $ 1 $ }} \\draw (\\x,0.12) -- (\\x,-0.12) node[below] {\\small\\lbl}; \\draw[very thick, blue!70!black] (1,0.18) -- (3.4,0.18); \\fill[blue!70!black] (1,0.18) circle (3pt); \\node[blue!70!black, above] at (2,0.28) {\\tiny $ x\\geq 1 $ }; \\draw[very thick, red!70!black] (-3.4,-0.18) -- (-2,-0.18); \\draw[fill=white, red!70!black] (-2,-0.18) circle (3pt); \\draw[very thick, red!70!black] (-2,-0.18) -- (3.4,-0.18); \\node[red!70!black, below] at (0,-0.35) {\\tiny $ x\\neq -2 $ }; \\end{tikzpicture} \\end{center}",
+          "opts": [
+            "$ [-2,+\\infty) $",
+            "$ (-2,+\\infty) $",
+            "$ [1,+\\infty) $",
+            "$ (-2,1) \\cup [1,+\\infty) $",
+            "$ [-2,1) \\cup (1,+\\infty) $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "B",
+      "sectionTitle": "Komposisi Fungsi",
+      "soal": [
+        {
+          "id": "B1",
+          "section": "B",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira (f∘g)(x)=f(x)·g(x); membalik urutan: f dikerjakan lebih dulu",
+          "jawab": "c",
+          "p": "$ (f \\circ g)(x) = f[g(x)] = f(x+3) = 2(x+3)-1 = 2x+6-1 = 2x+5 $ .",
+          "q": "Jika $ f(x) = 2x - 1 $ dan $ g(x) = x + 3 $ , maka $ (f \\circ g)(x) $ adalah …",
+          "opts": [
+            "$ 2x + 2 $",
+            "$ 2x + 4 $",
+            "$ 2x + 5 $",
+            "$ 2x - 4 $",
+            "$ x + 2 $"
+          ]
+        },
+        {
+          "id": "B2",
+          "section": "B",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "membalik urutan: menghitung f(g(x)) bukan g(f(x))",
+          "jawab": "d",
+          "p": "$ (g \\circ f)(x) = g[f(x)] = g(3x+2) = (3x+2)^2-1 = 9x^2+12x+4-1 = 9x^2+12x+3 $ .",
+          "q": "Jika $ f(x) = 3x + 2 $ dan $ g(x) = x^2 - 1 $ , maka $ (g \\circ f)(x) $ adalah …",
+          "opts": [
+            "$ 9x^2 + 3 $",
+            "$ 3x^2 + 5 $",
+            "$ 9x^2 + 12x + 4 $",
+            "$ 9x^2 + 12x + 3 $",
+            "$ 9x^2 - 1 $"
+          ]
+        },
+        {
+          "id": "B3",
+          "section": "B",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "langsung mensubstitusi ke f tanpa menghitung g(3) dahulu",
+          "jawab": "c",
+          "p": "Hitung $ g(3) $ dulu: $ g(3)=2(3)-1=5 $ . Kemudian $ f(5)=5+4=9 $ .",
+          "q": "Jika $ f(x) = x + 4 $ dan $ g(x) = 2x - 1 $ , maka $ (f \\circ g)(3) $ adalah …",
+          "opts": [
+            "$ 7 $",
+            "$ 8 $",
+            "$ 9 $",
+            "$ 10 $",
+            "$ 11 $"
+          ]
+        },
+        {
+          "id": "B4",
+          "section": "B",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira (f∘I)(x)=x (mengira I mengubah f menjadi identitas)",
+          "jawab": "c",
+          "p": "$ (f \\circ I)(x) = f[I(x)] = f(x) = 5x-3 $ . Komposisi dengan fungsi identitas menghasilkan fungsi semula.",
+          "q": "Jika $ I(x) = x $ (fungsi identitas) dan $ f(x) = 5x - 3 $ , maka $ (f \\circ I)(x) $ adalah …",
+          "opts": [
+            "$ x $",
+            "$ 5x $",
+            "$ 5x - 3 $",
+            "$ -3 $",
+            "$ 5x + 3 $"
+          ]
+        },
+        {
+          "id": "B5",
+          "section": "B",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung g(f(x)) bukan f(g(x)); salah substitusi tanda negatif",
+          "jawab": "b",
+          "p": "$ (f \\circ g)(x) = f[g(x)] = f(x-3) = 2(x-3)+1 = 2x-6+1 = 2x-5 $ .",
+          "q": "Jika $ f(x) = 2x + 1 $ dan $ g(x) = x - 3 $ , maka $ (f \\circ g)(x) $ adalah …",
+          "opts": [
+            "$ 2x - 4 $",
+            "$ 2x - 5 $",
+            "$ 2x - 6 $",
+            "$ 2x + 4 $",
+            "$ x - 5 $"
+          ]
+        },
+        {
+          "id": "B6",
+          "section": "B",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung f(2)·g(2) bukan f(g(2))",
+          "jawab": "d",
+          "p": "Hitung $ g(2)=3(2)=6 $ . Kemudian $ f(6)=6^2+2=36+2=38 $ .",
+          "q": "Jika $ f(x) = x^2 + 2 $ dan $ g(x) = 3x $ , maka $ (f \\circ g)(2) $ adalah …",
+          "opts": [
+            "$ 20 $",
+            "$ 26 $",
+            "$ 32 $",
+            "$ 38 $",
+            "$ 44 $"
+          ]
+        },
+        {
+          "id": "B7",
+          "section": "B",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira (f∘f)(x) = [f(x)]²; tidak mensubstitusikan f(x) ke dalam f",
+          "jawab": "c",
+          "p": "$ (f \\circ f)(x) = f[f(x)] = f(2x+3) = 2(2x+3)+3 = 4x+6+3 = 4x+9 $ .",
+          "q": "Jika $ f(x) = 2x + 3 $ , maka $ (f \\circ f)(x) $ adalah …",
+          "opts": [
+            "$ 4x + 6 $",
+            "$ 4x + 8 $",
+            "$ 4x + 9 $",
+            "$ 4x + 12 $",
+            "$ 2x + 9 $"
+          ]
+        },
+        {
+          "id": "B8",
+          "section": "B",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira komposisi bersifat komutatif seperti penjumlahan",
+          "jawab": "b",
+          "p": "$ (f \\circ g)(x) = f(x+1) = 2(x+1) = 2x+2 $ . $ (g \\circ f)(x) = g(2x) = 2x+1 $ . Keduanya berbeda, membuktikan sifat tidak komutatif.",
+          "q": "Jika $ f(x) = 2x $ dan $ g(x) = x + 1 $ , pernyataan yang <b>benar</b> adalah …",
+          "opts": [
+            "$ (f \\circ g)(x) = (g \\circ f)(x) = 2x + 2 $",
+            "$ (f \\circ g)(x) = 2x + 2 $ , tetapi $ (g \\circ f)(x) = 2x + 1 $",
+            "$ (f \\circ g)(x) = 2x + 1 $ , tetapi $ (g \\circ f)(x) = 2x + 2 $",
+            "$ (f \\circ g)(x) = (g \\circ f)(x) = 2x + 1 $",
+            "$ (f \\circ g)(x) = 4x + 1 $"
+          ]
+        },
+        {
+          "id": "B9",
+          "section": "B",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak mendistribusikan perkalian: 2(x²-3x+5)-1 dianggap 2x²-3x+5-1",
+          "jawab": "c",
+          "p": "$ (f \\circ g)(x) = f[g(x)] = f(x^2-3x+5) = 2(x^2-3x+5)-1 = 2x^2-6x+10-1 = 2x^2-6x+9 $ .",
+          "q": "Jika $ f(x) = 2x - 1 $ dan $ g(x) = x^2 - 3x + 5 $ , maka $ (f \\circ g)(x) $ adalah …",
+          "opts": [
+            "$ 2x^2 - 6x + 4 $",
+            "$ 2x^2 - 6x + 8 $",
+            "$ 2x^2 - 6x + 9 $",
+            "$ 2x^2 - 6x + 10 $",
+            "$ 4x^2 - 10x + 9 $"
+          ]
+        },
+        {
+          "id": "B10",
+          "section": "B",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "substitusi g(x) ke dalam f tanpa menyederhanakan pembilang dan penyebut",
+          "jawab": "b",
+          "p": "$ (f \\circ g)(x) = f(4x+2) = \\dfrac{2(4x+2)-3}{7-3(4x+2)} = \\dfrac{8x+4-3}{7-12x-6} = \\dfrac{8x+1}{1-12x} $ . Penulisan setara: $ \\dfrac{8x+1}{-(12x-1)} = \\dfrac{8x+1}{-12x+1} $ .",
+          "q": "Jika $ f(x) = \\dfrac{2x-3}{7-3x} $ dan $ g(x) = 4x + 2 $ , maka $ (f \\circ g)(x) $ adalah …",
+          "opts": [
+            "$ \\dfrac{8x+4}{1-12x} $",
+            "$ \\dfrac{8x+1}{-12x+1} $",
+            "$ \\dfrac{8x-1}{1+12x} $",
+            "$ \\dfrac{8x+1}{12x-1} $",
+            "$ \\dfrac{4x+2}{1-6x} $"
+          ]
+        },
+        {
+          "id": "B11",
+          "section": "B",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung g(f(2)) alih-alih f(g(2)); atau salah mensubstitusi nilai negatif",
+          "jawab": "c",
+          "p": "Langkah: $ f(3) = 3^2-5(3)+4 = 9-15+4 = -2 $ . Kemudian $ (g \\circ f)(3) = g(-2) = (-2)^2+3(-2)-6 = 4-6-6 = -8 $ .",
+          "q": "Jika $ f(x) = x^2 - 5x + 4 $ dan $ g(x) = x^2 + 3x - 6 $ , maka nilai $ (g \\circ f)(3) $ adalah …",
+          "opts": [
+            "$ -12 $",
+            "$ -10 $",
+            "$ -8 $",
+            "$ -6 $",
+            "$ 0 $"
+          ]
+        },
+        {
+          "id": "B12",
+          "section": "B",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak melakukan substitusi balik; atau lupa mengganti variabel dari m ke x",
+          "jawab": "c",
+          "p": "Dari $ (f \\circ h)(x) = f[x+3] = 2x^2-4x-3 $ . Misalkan $ m=x+3 $ , maka $ x=m-3 $ : \\[f(m) = 2(m-3)^2-4(m-3)-3 = 2m^2-16m+27.\\] Nilai $ f(1) = 2(1)-16(1)+27 = 2-16+27 = 13 $ .",
+          "q": "Diketahui $ (f \\circ h)(x) = 2x^2 - 4x - 3 $ dan $ h(x) = x + 3 $ . Nilai $ f(1) $ adalah …",
+          "opts": [
+            "$ 9 $",
+            "$ 11 $",
+            "$ 13 $",
+            "$ 15 $",
+            "$ 17 $"
+          ]
+        },
+        {
+          "id": "B13",
+          "section": "B",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mensubstitusikan ke (f∘h) tanpa membalik langkah; salah tanda pada h",
+          "jawab": "b",
+          "p": "$ f[h(x)] = 4x^2+6x-5 \\Rightarrow 2h(x)-1 = 4x^2+6x-5 \\Rightarrow 2h(x) = 4x^2+6x-4 \\Rightarrow h(x) = 2x^2+3x-2 $ .",
+          "q": "Diketahui $ (f \\circ h)(x) = 4x^2 + 6x - 5 $ dan $ f(x) = 2x - 1 $ . Fungsi $ h(x) $ adalah …",
+          "opts": [
+            "$ 2x^2 + 3x - 1 $",
+            "$ 2x^2 + 3x - 2 $",
+            "$ 2x^2 + 3x - 3 $",
+            "$ 4x^2 + 6x - 4 $",
+            "$ 2x^2 - 3x + 2 $"
+          ]
+        },
+        {
+          "id": "B14",
+          "section": "B",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah isolasi g(x): lupa membagi atau menambah konstanta dengan benar",
+          "jawab": "c",
+          "p": "$ f[g(x)] = 6x-1 \\Rightarrow 3g(x)+2 = 6x-1 \\Rightarrow 3g(x) = 6x-3 \\Rightarrow g(x) = 2x-1 $ .",
+          "q": "Diketahui $ (f \\circ g)(x) = 6x - 1 $ dan $ f(x) = 3x + 2 $ . Fungsi $ g(x) $ adalah …",
+          "opts": [
+            "$ 2x - 3 $",
+            "$ 2x - 1 $",
+            "$ 3x - 1 $",
+            "$ 3x - 3 $",
+            "$ x - 1 $"
+          ]
+        },
+        {
+          "id": "B15",
+          "section": "B",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "langsung mengganti x dengan 2x+1 tanpa mengubah variabel terlebih dahulu",
+          "jawab": "b",
+          "p": "Misalkan $ m = 2x+1 $ , maka $ x = \\dfrac{m-1}{2} $ . Substitusi: \\[f(m) = 4\\!\\left(\\frac{m-1}{2}\\right)^{\\!2} - 8\\!\\left(\\frac{m-1}{2}\\right)+5 = (m-1)^2-4(m-1)+5 = m^2-6m+10.\\] Jadi $ f(x) = x^2-6x+10 $ .",
+          "q": "Diketahui $ f(2x + 1) = 4x^2 - 8x + 5 $ . Fungsi $ f(x) $ adalah …",
+          "opts": [
+            "$ x^2 - 6x + 9 $",
+            "$ x^2 - 6x + 10 $",
+            "$ x^2 + 6x + 10 $",
+            "$ 2x^2 - 8x + 5 $",
+            "$ x^2 - 4x + 10 $"
+          ]
+        },
+        {
+          "id": "B16",
+          "section": "B",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menurunkan rumus f(x) terlebih dahulu; langsung substitusi x=3",
+          "jawab": "b",
+          "p": "Misalkan $ m=x+1 $ , maka $ x=m-1 $ . $ f(m) = 2(m-1)^2+3(m-1)-1 = 2m^2-m-2 $ .\\ Nilai $ f(3) = 2(9)-3-2 = 18-5 = 13 $ .",
+          "q": "Diketahui $ f(x + 1) = 2x^2 + 3x - 1 $ . Nilai $ f(3) $ adalah …",
+          "opts": [
+            "$ 9 $",
+            "$ 11 $",
+            "$ 13 $",
+            "$ 15 $",
+            "$ 17 $"
+          ]
+        },
+        {
+          "id": "B17",
+          "section": "B",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah urutan: menghitung dari kiri bukan dari kanan (h dulu)",
+          "jawab": "a",
+          "p": "Hitung bertahap dari kanan: \\begin{align*} h(x) &= x+2 \\ g(h(x)) &= (x+2)^2-3 = x^2+4x+1 \\ f(g(h(x))) &= 2(x^2+4x+1)+1 = 2x^2+8x+3.",
+          "q": "Diketahui $ f(x) = 2x + 1 $ , $ g(x) = x^2 - 3 $ , dan $ h(x) = x + 2 $ . Nilai $ (f \\circ g \\circ h)(x) $ adalah …",
+          "opts": [
+            "$ 2x^2 + 8x + 3 $",
+            "$ 2x^2 + 8x + 5 $",
+            "$ 2x^2 + 4x + 3 $",
+            "$ 4x^2 + 8x - 5 $",
+            "$ 2x^2 + 8x - 3 $"
+          ]
+        },
+        {
+          "id": "B18",
+          "section": "B",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menyederhanakan pecahan bertingkat; salah menentukan penyebut",
+          "jawab": "b",
+          "p": "$ (f \\circ f)(x) = f\\!\\left[\\dfrac{x}{x-1}\\right] = \\dfrac{\\dfrac{x}{x-1}}{\\dfrac{x}{x-1}-1} = \\dfrac{\\dfrac{x}{x-1}}{\\dfrac{x-(x-1)}{x-1}} = \\dfrac{\\dfrac{x}{x-1}}{\\dfrac{1}{x-1}} = x $ .",
+          "q": "Jika $ f(x) = \\dfrac{x}{x - 1} $ , maka $ (f \\circ f)(x) $ adalah …",
+          "opts": [
+            "$ \\dfrac{x^2}{(x-1)^2} $",
+            "$ x $",
+            "$ \\dfrac{x}{x-2} $",
+            "$ \\dfrac{x}{2x-1} $",
+            "$ \\dfrac{2x-1}{x-1} $"
+          ]
+        },
+        {
+          "id": "B19",
+          "section": "B",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira asosiatif hanya berlaku jika komutatif; atau salah mengelompokkan",
+          "jawab": "a",
+          "p": "Dengan sifat asosiatif, $ f \\circ (g \\circ h) = (f \\circ g) \\circ h $ untuk semua fungsi. Selisihnya $ = 0 $ .",
+          "q": "Diketahui $ f(x) = 2x $ , $ g(x) = x + 3 $ , dan $ h(x) = x^2 $ . Nilai $ [f \\circ (g \\circ h)](x) - [(f \\circ g) \\circ h](x) $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ 2 $",
+            "$ 2x^2 $",
+            "$ x^2 + 6 $",
+            "$ -2x^2 $"
+          ]
+        },
+        {
+          "id": "B20",
+          "section": "B",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira g(x)=f(x) jika (f∘g)(x)=x; tidak menyadari ini berarti g=f⁻¹",
+          "jawab": "b",
+          "p": "Jika $ (f \\circ g)(x) = x $ , artinya $ g = f^{-1} $ . Dari $ f(x) = 3x+2 $ : \\[3g(x)+2 = x \\Rightarrow 3g(x) = x-2 \\Rightarrow g(x) = \\frac{x-2}{3}.\\]",
+          "q": "Diketahui $ f(x) = 3x + 2 $ dan $ (f \\circ g)(x) = x $ untuk semua $ x $ . Fungsi $ g(x) $ adalah …",
+          "opts": [
+            "$ 3x - 2 $",
+            "$ \\dfrac{x - 2}{3} $",
+            "$ \\dfrac{x + 2}{3} $",
+            "$ \\dfrac{1}{3x + 2} $",
+            "$ \\dfrac{x}{3} + 2 $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "C",
+      "sectionTitle": "Fungsi Invers",
+      "soal": [
+        {
+          "id": "C1",
+          "section": "C",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa menambah konstanta: mengira f^-1(x)=(x-5)/3 bukan (x+5)/3",
+          "jawab": "c",
+          "p": "Misalkan $ y=3x-5 \\Rightarrow y+5=3x \\Rightarrow x=\\dfrac{y+5}{3} $ . Jadi $ f^{-1}(x)=\\dfrac{x+5}{3} $ .",
+          "q": "Invers dari fungsi $ f(x) = 3x - 5 $ adalah …",
+          "opts": [
+            "$ f^{-1}(x) = \\dfrac{x-5}{3} $",
+            "$ f^{-1}(x) = \\dfrac{x-3}{5} $",
+            "$ f^{-1}(x) = \\dfrac{x+5}{3} $",
+            "$ f^{-1}(x) = \\dfrac{x+3}{5} $",
+            "$ f^{-1}(x) = 3x + 5 $"
+          ]
+        },
+        {
+          "id": "C2",
+          "section": "C",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung f(3) bukan f^-1(3); salah tanda saat memindahkan konstanta",
+          "jawab": "b",
+          "p": "$ f^{-1}(x)=\\dfrac{x-7}{2} $ . Nilai $ f^{-1}(3)=\\dfrac{3-7}{2}=\\dfrac{-4}{2}=-2 $ .",
+          "q": "Diketahui $ f(x) = 2x + 7 $ . Nilai $ f^{-1}(3) $ adalah …",
+          "opts": [
+            "$ -3 $",
+            "$ -2 $",
+            "$ -1 $",
+            "$ 0 $",
+            "$ 2 $"
+          ]
+        },
+        {
+          "id": "C3",
+          "section": "C",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung f(5) bukan f^-1(5); atau salah menerapkan rumus invers",
+          "jawab": "d",
+          "p": "$ f^{-1}(x)=\\dfrac{x+3}{4} $ . Nilai $ f^{-1}(5)=\\dfrac{5+3}{4}=\\dfrac{8}{4}=2 $ .",
+          "q": "Diketahui $ f(x) = 4x - 3 $ . Nilai $ f^{-1}(5) $ adalah …",
+          "opts": [
+            "$ 17 $",
+            "$ 8 $",
+            "$ 4 $",
+            "$ 2 $",
+            "$ 1 $"
+          ]
+        },
+        {
+          "id": "C4",
+          "section": "C",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengalikan koefisien alih-alih membagi; salah tanda konstanta",
+          "jawab": "b",
+          "p": "$ f^{-1}(x)=\\dfrac{x-2}{5}=g(x) $ . Nilai $ g(17)=\\dfrac{17-2}{5}=\\dfrac{15}{5}=3 $ .",
+          "q": "Diketahui $ f(x) = 5x + 2 $ . Jika $ g = f^{-1} $ , nilai $ g(17) $ adalah …",
+          "opts": [
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $"
+          ]
+        },
+        {
+          "id": "C5",
+          "section": "C",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira cukup injektif saja; atau mengira semua fungsi memiliki invers",
+          "jawab": "c",
+          "p": "Fungsi memiliki invers jika dan hanya jika bijektif: setiap elemen kodomain memiliki tepat satu pasangan di domain.",
+          "q": "Fungsi $ f: A \\to B $ memiliki invers $ f^{-1}: B \\to A $ jika dan hanya jika $ f $ adalah …",
+          "opts": [
+            "injektif saja",
+            "surjektif saja",
+            "bijektif (injektif dan surjektif)",
+            "polinomial dengan derajat ganjil",
+            "fungsi linear"
+          ]
+        },
+        {
+          "id": "C6",
+          "section": "C",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira f^-1(3) = f(3); tidak membalik pasangan dalam fungsi",
+          "jawab": "b",
+          "p": "Balik pasangan: $ f(3)=3 $ , sehingga $ f^{-1}(3)=3 $ .",
+          "q": "Diketahui $ f : \\{1,2,3,4\\} \\to \\{1,2,3,4\\} $ dengan $ f(1) = 4,\\; f(2) = 1,\\; f(3) = 3,\\; f(4) = 2 $ . Nilai $ f^{-1}(3) $ adalah …",
+          "opts": [
+            "$ 1 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $",
+            "$ 0 $"
+          ]
+        },
+        {
+          "id": "C7",
+          "section": "C",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira (f^-1)^-1(x) = 1/f(x) atau (f^-1)^-1 ≠ f",
+          "jawab": "d",
+          "p": "$ (f^{-1})^{-1} = f $ (invers dari invers adalah fungsi semula). Jadi $ (f^{-1})^{-1}(x) = f(x) = 2x+3 $ .",
+          "q": "Jika $ f(x) = 2x + 3 $ , maka $ \\bigl(f^{-1}\\bigr)^{-1}(x) $ adalah …",
+          "opts": [
+            "$ \\dfrac{x-3}{2} $",
+            "$ \\dfrac{1}{2x+3} $",
+            "$ 2x - 3 $",
+            "$ 2x + 3 $",
+            "$ x $"
+          ]
+        },
+        {
+          "id": "C8",
+          "section": "C",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira refleksi terhadap sumbu-x atau sumbu-y; bukan garis y=x",
+          "jawab": "c",
+          "p": "Grafik $ f^{-1} $ adalah refleksi grafik $ f $ terhadap garis $ y=x $ , sehingga setiap titik $ (a,b) $ pada $ f $ bersesuaian dengan $ (b,a) $ pada $ f^{-1} $ . Titik $ (3,7) \\to (7,3) $ .",
+          "q": "Jika titik $ (3, 7) $ terletak pada grafik $ f $ , maka titik yang terletak pada grafik $ f^{-1} $ adalah …",
+          "opts": [
+            "$ (3, -7) $",
+            "$ (-3, 7) $",
+            "$ (7, 3) $",
+            "$ (-7, -3) $",
+            "$ (3, 7) $"
+          ]
+        },
+        {
+          "id": "C9",
+          "section": "C",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menentukan domain f^-1 dari R_f; atau salah kuadratkan",
+          "jawab": "b",
+          "p": "Misalkan $ y=\\sqrt{2x-4} $ . Maka $ y^2=2x-4 \\Rightarrow x=\\dfrac{y^2+4}{2} $ , sehingga $ f^{-1}(x)=\\dfrac{x^2+4}{2} $ .\\ $ D_f=[2,+\\infty) $ , $ R_f=[0,+\\infty) $ . Maka $ D_{f^{-1}}=R_f=[0,+\\infty) $ .",
+          "q": "Diketahui $ f(x) = \\sqrt{2x - 4} $ . Fungsi invers dan domain $ f^{-1} $ adalah …",
+          "opts": [
+            "$ f^{-1}(x) = \\dfrac{x^2+4}{2},\\quad D_{f^{-1}} = [-2,+\\infty) $",
+            "$ f^{-1}(x) = \\dfrac{x^2+4}{2},\\quad D_{f^{-1}} = [0,+\\infty) $",
+            "$ f^{-1}(x) = \\dfrac{x^2-4}{2},\\quad D_{f^{-1}} = [0,+\\infty) $",
+            "$ f^{-1}(x) = \\sqrt{\\dfrac{x+4}{2}},\\quad D_{f^{-1}} = [2,+\\infty) $",
+            "$ f^{-1}(x) = 2x^2 + 4,\\quad D_{f^{-1}} = \\mathbb{R} $"
+          ]
+        },
+        {
+          "id": "C10",
+          "section": "C",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah mengisolasi x; atau menukar pembilang dan penyebut",
+          "jawab": "b",
+          "p": "Misalkan $ y=\\dfrac{3x+5}{x-2} $ . Maka $ y(x-2)=3x+5 \\Rightarrow xy-2y=3x+5 \\Rightarrow x(y-3)=2y+5 \\Rightarrow x=\\dfrac{2y+5}{y-3} $ . Jadi $ f^{-1}(x)=\\dfrac{2x+5}{x-3} $ .",
+          "q": "Invers dari $ f(x) = \\dfrac{3x + 5}{x - 2} $ adalah …",
+          "opts": [
+            "$ f^{-1}(x) = \\dfrac{x+5}{3x-2} $",
+            "$ f^{-1}(x) = \\dfrac{2x+5}{x-3} $",
+            "$ f^{-1}(x) = \\dfrac{x-2}{3x+5} $",
+            "$ f^{-1}(x) = \\dfrac{3x+2}{x-5} $",
+            "$ f^{-1}(x) = \\dfrac{2x-5}{x+3} $"
+          ]
+        },
+        {
+          "id": "C11",
+          "section": "C",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menggunakan syarat x>=2; salah tanda ± saat mengakar",
+          "jawab": "a",
+          "p": "$ f(x)=(x-2)^2-1 $ . Dengan $ x\\geq 2 $ : $ (x-2)^2=y+1 \\Rightarrow x-2=\\sqrt{y+1} \\Rightarrow x=2+\\sqrt{y+1} $ . Jadi $ f^{-1}(x)=2+\\sqrt{x+1} $ . $ R_f=[-1,+\\infty) $ , sehingga $ D_{f^{-1}}=[-1,+\\infty) $ .",
+          "q": "Diketahui $ f(x) = x^2 - 4x + 3 $ dengan syarat $ x \\geq 2 $ . Invers $ f^{-1}(x) $ dan domain $ f^{-1} $ adalah …",
+          "opts": [
+            "$ f^{-1}(x) = 2 + \\sqrt{x+1},\\quad D_{f^{-1}} = [-1,+\\infty) $",
+            "$ f^{-1}(x) = 2 - \\sqrt{x+4},\\quad D_{f^{-1}} = [-4,+\\infty) $",
+            "$ f^{-1}(x) = 2 + \\sqrt{x+4},\\quad D_{f^{-1}} = [-4,+\\infty) $",
+            "$ f^{-1}(x) = 2 + \\sqrt{x-1},\\quad D_{f^{-1}} = [1,+\\infty) $",
+            "$ f^{-1}(x) = \\sqrt{x+1}-2,\\quad D_{f^{-1}} = [-1,+\\infty) $"
+          ]
+        },
+        {
+          "id": "C12",
+          "section": "C",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira (f^-1∘f^-1)(x) = x; tidak menghitung komposisi dua kali",
+          "jawab": "b",
+          "p": "$ f^{-1}(x)=\\dfrac{x-1}{3} $ . Hitung bertahap: \\[(f^{-1}\\circ f^{-1})(7) = f^{-1}\\!\\left(\\frac{7-1}{3}\\right) = f^{-1}(2) = \\frac{2-1}{3} = \\frac{1}{3}.\\]",
+          "q": "Diketahui $ f(x) = 3x + 1 $ . Nilai $ (f^{-1} \\circ f^{-1})(7) $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{9} $",
+            "$ \\dfrac{1}{3} $",
+            "$ 2 $",
+            "$ 7 $",
+            "$ \\dfrac{2}{9} $"
+          ]
+        },
+        {
+          "id": "C13",
+          "section": "C",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah menentukan D_f^-1; lupa bahwa D_f^-1 = R_f bukan D_f",
+          "jawab": "b",
+          "p": "$ D_f = \\mathbb{R}\\setminus\\{3\\} $ (penyebut $ x+4\\geq 0 $ ), $ R_f = [-2,+\\infty) $ (nilai minimum $ f(-4)=-2 $ ). Prinsip $ D_{f^{-1}}=R_f $ : <b>domain</b> $ f^{-1} $ adalah $ [-2,+\\infty) $ , yaitu $ x\\geq -2 $ .",
+          "q": "Diketahui $ f(x) = \\sqrt{x + 4} - 2 $ . Domain $ f^{-1} $ adalah …",
+          "opts": [
+            "$ x \\geq -4 $",
+            "$ x \\geq -2 $",
+            "$ x \\geq 0 $",
+            "$ x \\geq 2 $",
+            "$ x \\geq 4 $"
+          ]
+        },
+        {
+          "id": "C14",
+          "section": "C",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung f(3) bukan f^-1(3); salah mengisolasi x pada y(x-1)=2x-3",
+          "jawab": "b",
+          "p": "$ D_f=[-4,+\\infty) $ . $ R_f $ : saat $ x=-4 $ , $ f(-4)=\\sqrt{0}-2=-2 $ (nilai minimum). Sehingga $ R_f=[-2,+\\infty) $ . $ D_{f^{-1}}=R_f=[-2,+\\infty) $ , yaitu $ x\\geq -2 $ .",
+          "q": "Diketahui $ f(x) = \\dfrac{2x - 3}{x - 1} $ . Nilai $ f^{-1}(3) $ adalah …",
+          "opts": [
+            "$ -3 $",
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "C15",
+          "section": "C",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira hanya (f^-1∘f)=x berlaku; tidak menyadari (f∘f^-1)=x juga berlaku",
+          "jawab": "c",
+          "p": "Dari $ f(x)=\\dfrac{2x-3}{x-1} $ : misalkan $ y=\\dfrac{2x-3}{x-1} $ , maka $ y(x-1)=2x-3 \\Rightarrow x(y-2)=y-3 \\Rightarrow f^{-1}(x)=\\dfrac{x-3}{x-2} $ . Nilai $ f^{-1}(3)=\\dfrac{3-3}{3-2}=\\dfrac{0}{1}=0 $ .",
+          "q": "Jika $ f(x) = 2x - 3 $ dan $ g(x) = \\dfrac{x+3}{2} $ , pernyataan yang <b>benar</b> adalah …",
+          "opts": [
+            "$ (g \\circ f)(x) = x $ saja, $ (f \\circ g)(x) \\neq x $",
+            "$ (f \\circ g)(x) = x $ saja, $ (g \\circ f)(x) \\neq x $",
+            "$ (g \\circ f)(x) = x $ dan $ (f \\circ g)(x) = x $ , sehingga $ g = f^{-1} $",
+            "$ (g \\circ f)(x) \\neq x $ dan $ (f \\circ g)(x) \\neq x $",
+            "$ g $ dan $ f $ tidak berkaitan"
+          ]
+        },
+        {
+          "id": "C16",
+          "section": "C",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira D_f^-1 = D_f; tidak menyadari domain dan range saling bertukar",
+          "jawab": "b",
+          "p": "$ (g\\circ f)(x) = g(2x-3) = \\dfrac{(2x-3)+3}{2} = x $ ✓. $ (f\\circ g)(x) = f\\!\\left(\\dfrac{x+3}{2}\\right) = 2\\!\\cdot\\!\\dfrac{x+3}{2}-3 = x $ ✓. Keduanya $ = x $ , sehingga $ g = f^{-1} $ .",
+          "q": "Diketahui $ f(x) = \\dfrac{x+2}{2x-6} $ , $ x \\neq 3 $ . Domain fungsi invers $ f^{-1} $ adalah …",
+          "opts": [
+            "$ x \\neq 3 $",
+            "$ x \\neq \\dfrac{1}{2} $",
+            "$ x \\neq 0 $",
+            "$ x \\neq 6 $",
+            "$ x \\neq 2 $"
+          ]
+        },
+        {
+          "id": "C17",
+          "section": "C",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menukar urutan koefisien pada rumus cepat; salah tanda penyebut",
+          "jawab": "b",
+          "p": "$ f^{-1}(x)=\\dfrac{3x+5}{4x-2} $ . Nilai $ f^{-1}(1)=\\dfrac{3+5}{4-2}=\\dfrac{8}{2}=4 $ .",
+          "q": "Diketahui $ f(x) = \\dfrac{2x+5}{4x-3} $ . Nilai $ f^{-1}(1) $ adalah … \\begin{center} \\begin{tikzpicture}[scale=0.82, box/.style={draw, thick, rounded corners=3pt, minimum width=1.8cm, minimum height=0.7cm, align=center, font=\\small, fill=black!5}] \\node[box] (A) at (0,0) { $ x $ }; \\node[box] (B) at (4,0) { $ f^{-1}(x) $ }; \\draw[-Stealth, thick, blue!70!black] ([yshift=3pt]A.east) -- node[above, font=\\scriptsize]{ $ f $ } ([yshift=3pt]B.west); \\draw[-Stealth, thick, red!70!black] ([yshift=-3pt]B.west) -- node[below, font=\\scriptsize]{ $ f^{-1} $ } ([yshift=-3pt]A.east); \\end{tikzpicture} \\end{center}",
+          "opts": [
+            "$ 2 $",
+            "$ 4 $",
+            "$ 6 $",
+            "$ 8 $",
+            "$ \\dfrac{7}{2} $"
+          ]
+        },
+        {
+          "id": "C18",
+          "section": "C",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak melengkapi kuadrat sempurna; salah menentukan nilai minimum",
+          "jawab": "c",
+          "p": "$ f(x)=(x-3)^2-4 $ (dengan $ x\\geq 3 $ ). $ (x-3)^2=y+4 \\Rightarrow x=3+\\sqrt{y+4} $ , sehingga $ f^{-1}(x)=3+\\sqrt{x+4} $ . Nilai $ f^{-1}(0)=3+\\sqrt{0+4}=3+2=5 $ .",
+          "q": "Diketahui $ f(x) = x^2 - 6x + 5 $ dengan $ x \\geq 3 $ . Nilai $ f^{-1}(0) $ adalah … \\begin{center} \\begin{tikzpicture}[scale=0.72] \\draw[->] (1.8,0) -- (6,0) node[right] {\\small $ x $ }; \\draw[->] (2,-4.5) -- (2,2) node[above] {\\small $ y $ }; \\draw[blue!70!black, very thick, domain=3:5.3, samples=50] plot (\\x, {(\\x-3)^2-4}) node[right] {\\small $ f $ }; \\fill[blue!70!black] (3,-4) circle (2.5pt) node[below right] {\\small $ (3,-4) $ }; \\fill[blue!70!black] (4,-3) circle (2pt); \\fill[blue!70!black] (5,0) circle (2pt) node[above right] {\\small $ (5,0) $ }; \\draw[gray, dashed] (3,-4.4) -- (3,0) node[above] {\\small $ 3 $ }; \\end{tikzpicture} \\end{center}",
+          "opts": [
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $"
+          ]
+        },
+        {
+          "id": "C19",
+          "section": "C",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menukar D_f^-1 dan R_f^-1; tidak menentukan R_f terlebih dahulu",
+          "jawab": "a",
+          "p": "$ D_f=\\mathbb{R}\\setminus\\{3\\} $ . Range $ f $ : dari $ y=\\dfrac{x+2}{2x-6} $ , isolasi $ x $ : $ y(2x-6)=x+2 \\Rightarrow x(2y-1)=6y+2 \\Rightarrow x=\\dfrac{6y+2}{2y-1} $ . Syarat: $ y\\neq\\tfrac{1}{2} $ , sehingga $ R_f=\\mathbb{R}\\setminus\\!\\left\\{\\tfrac{1}{2}\\right\\} $ . Maka $ D_{f^{-1}}=R_f=\\mathbb{R}\\setminus\\!\\left\\{\\tfrac{1}{2}\\right\\} $ dan $ R_{f^{-1}}=D_f=\\mathbb{R}\\setminus\\{3\\} $ .",
+          "q": "Diketahui $ f(x) = \\dfrac{x+2}{2x-6} $ . Pasangan domain dan range $ f^{-1} $ yang tepat adalah …",
+          "opts": [
+            "$ D_{f^{-1}} = \\mathbb{R}\\setminus\\!\\left\\{\\tfrac{1}{2}\\right\\} $ dan $ R_{f^{-1}} = \\mathbb{R}\\setminus\\{3\\} $",
+            "$ D_{f^{-1}} = \\mathbb{R}\\setminus\\{3\\} $ dan $ R_{f^{-1}} = \\mathbb{R}\\setminus\\!\\left\\{\\tfrac{1}{2}\\right\\} $",
+            "$ D_{f^{-1}} = \\mathbb{R}\\setminus\\{6\\} $ dan $ R_{f^{-1}} = \\mathbb{R} $",
+            "$ D_{f^{-1}} = \\mathbb{R} $ dan $ R_{f^{-1}} = \\mathbb{R}\\setminus\\{3\\} $",
+            "$ D_{f^{-1}} = \\mathbb{R}\\setminus\\{2\\} $ dan $ R_{f^{-1}} = \\mathbb{R}\\setminus\\!\\left\\{\\tfrac{1}{2}\\right\\} $"
+          ]
+        },
+        {
+          "id": "C20",
+          "section": "C",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak memeriksa syarat f(f(x))=x; mengira hanya a=0 yang memenuhi",
+          "jawab": "b",
+          "p": "Cari $ f^{-1} $ : dari $ y=\\dfrac{ax+2}{3x-1} $ , isolasi $ x $ : $ y(3x-1)=ax+2 \\Rightarrow x(3y-a)=y+2 \\Rightarrow f^{-1}(x)=\\dfrac{x+2}{3x-a} $ . Agar $ f=f^{-1} $ : bandingkan $ \\dfrac{ax+2}{3x-1}=\\dfrac{x+2}{3x-a} $ . Perkalian silang: $ (ax+2)(3x-a)=(x+2)(3x-1) $ . Ekspansi kiri: $ 3ax^2+(6-a^2)x-2a $ ; kanan: $ 3x^2+5x-2 $ . Samakan: $ 3a=3\\Rightarrow a=1 $ ; $ 6-a^2=5\\Rightarrow a^2=1\\Rightarrow a=\\pm 1 $ ; $ -2a=-2\\Rightarrow a=1 $ . Nilai yang konsisten: $ a=1 $ .",
+          "q": "Diketahui $ f(x) = \\dfrac{ax + 2}{3x - 1} $ . Agar $ f = f^{-1} $ (fungsi adalah inversnya sendiri), nilai $ a $ yang memenuhi adalah …",
+          "opts": [
+            "$ a = 0 $",
+            "$ a = 1 $",
+            "$ a = -1 $",
+            "$ a = 3 $",
+            "$ a = 2 $ atau $ a = -2 $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "D",
+      "sectionTitle": "Hubungan Komposisi \\& Invers",
+      "soal": [
+        {
+          "id": "D1",
+          "section": "D",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira g = h∘f bukan f^-1∘h; salah urutan komposisi",
+          "jawab": "b",
+          "p": "$ f \\circ g = h \\Rightarrow g = f^{-1} \\circ h $ . $ f^{-1}(x) = \\dfrac{x-1}{3} $ . $ g(x) = f^{-1}(3x+7) = \\dfrac{(3x+7)-1}{3} = \\dfrac{3x+6}{3} = x+2 $ .",
+          "q": "Diketahui $ f(x) = 3x + 1 $ dan $ (f \\circ g)(x) = 3x + 7 $ . Fungsi $ g(x) $ adalah …",
+          "opts": [
+            "$ g(x) = x + 1 $",
+            "$ g(x) = x + 2 $",
+            "$ g(x) = 3x + 2 $",
+            "$ g(x) = x - 2 $",
+            "$ g(x) = x + 6 $"
+          ]
+        },
+        {
+          "id": "D2",
+          "section": "D",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "langsung mensubstitusi g ke h; tidak menggunakan f=h∘g^-1",
+          "jawab": "a",
+          "p": "$ f \\circ g = h \\Rightarrow f = h \\circ g^{-1} $ . $ g^{-1}(x)=x-4 $ . $ f(x)=h(x-4)=2(x-4)^2+16(x-4)+33=2x^2-16x+32+16x-64+33=2x^2+1 $ .",
+          "q": "Diketahui $ g(x) = x + 4 $ dan $ (f \\circ g)(x) = 2x^2 + 16x + 33 $ . Fungsi $ f(x) $ adalah …",
+          "opts": [
+            "$ f(x) = 2x^2 + 1 $",
+            "$ f(x) = 2x^2 - 1 $",
+            "$ f(x) = 2x^2 + 33 $",
+            "$ f(x) = x^2 + 1 $",
+            "$ f(x) = 2x^2 + 8x + 9 $"
+          ]
+        },
+        {
+          "id": "D3",
+          "section": "D",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung (f^-1∘g^-1) alih-alih (g^-1∘f^-1); atau langsung hitung f(g(7))",
+          "jawab": "c",
+          "p": "$ (f\\circ g)(x) = f(x+5) = 2(x+5)-3 = 2x+7 $ . Invers: $ (f\\circ g)^{-1}(x)=\\dfrac{x-7}{2} $ . Nilai $ (f\\circ g)^{-1}(7) = \\dfrac{7-7}{2} = 0 $ .",
+          "q": "Diketahui $ f(x) = 2x - 3 $ dan $ g(x) = x + 5 $ . Nilai $ (f \\circ g)^{-1}(7) $ adalah …",
+          "opts": [
+            "$ -3 $",
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "D4",
+          "section": "D",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira (fog)^-1 = f^-1∘g^-1 (urutan tidak dibalik); atau mengira = g∘f",
+          "jawab": "b",
+          "p": "Sifat: $ (f \\circ g)^{-1} = g^{-1} \\circ f^{-1} $ (urutan dibalik).",
+          "q": "Jika $ f $ dan $ g $ adalah fungsi bijektif, pernyataan yang <b>benar</b> adalah …",
+          "opts": [
+            "$ (f \\circ g)^{-1} = f^{-1} \\circ g^{-1} $",
+            "$ (f \\circ g)^{-1} = g^{-1} \\circ f^{-1} $",
+            "$ (f \\circ g)^{-1} = g \\circ f^{-1} $",
+            "$ (f \\circ g)^{-1} = f^{-1} \\circ g $",
+            "$ (f \\circ g)^{-1} = (g \\circ f)^{-1} $"
+          ]
+        },
+        {
+          "id": "D5",
+          "section": "D",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mencari g(2) dengan h(f(2)) bukan dengan menghitung g langsung",
+          "jawab": "c",
+          "p": "Dari No.~1: $ g(x) = x+2 $ . Nilai $ g(2) = 2+2 = 4 $ . Tidak langsung — cara lain: $ h(2)=9(2)+7=25=f(g(2))=3g(2)+1 $ , sehingga $ g(2)=8 $ .",
+          "q": "Diketahui $ f(x) = 3x + 1 $ , $ h(x) = 9x + 7 $ , dan $ f \\circ g = h $ . Nilai $ g(2) $ adalah …",
+          "opts": [
+            "$ 6 $",
+            "$ 7 $",
+            "$ 8 $",
+            "$ 9 $",
+            "$ 10 $"
+          ]
+        },
+        {
+          "id": "D6",
+          "section": "D",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah menghitung (gof)(x) dahulu sebelum mencari invers",
+          "jawab": "b",
+          "p": "$ (g\\circ f)(x) = g(x+2) = 2(x+2)-1 = 2x+3 $ . Invers: $ (g\\circ f)^{-1}(x)=\\dfrac{x-3}{2} $ . Nilai $ (g\\circ f)^{-1}(5) = \\dfrac{5-3}{2} = 1 $ .",
+          "q": "Diketahui $ f(x) = x + 2 $ dan $ g(x) = 2x - 1 $ . Nilai $ (g \\circ f)^{-1}(5) $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ 1 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "D7",
+          "section": "D",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "membalik urutan: menghitung g^-1∘f^-1 bukan f^-1∘g^-1",
+          "jawab": "b",
+          "p": "$ (f\\circ g)(x) = f(3x-1) = 2(3x-1)+3 = 6x+1 $ . Invers: $ (f\\circ g)^{-1}(x)=\\dfrac{x-1}{6} $ . Nilai $ (f\\circ g)^{-1}(7) = \\dfrac{7-1}{6} = 1 $ .",
+          "q": "Diketahui $ f(x) = 2x + 3 $ dan $ g(x) = 3x - 1 $ . Nilai $ (f \\circ g)^{-1}(7) $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ 1 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "D8",
+          "section": "D",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira g=h∘f^-1 bukan g=h∘f^-1; atau g=h∘f (tidak memakai invers)",
+          "jawab": "a",
+          "p": "$ g \\circ f = h \\Rightarrow g = h \\circ f^{-1} $ . $ f^{-1}(x) = \\dfrac{x-1}{2} $ . $ g(x) = h\\!\\left(\\dfrac{x-1}{2}\\right) = 6\\!\\cdot\\!\\dfrac{x-1}{2}-1 = 3(x-1)-1 = 3x-4 $ .",
+          "q": "Diketahui $ f(x) = 2x + 1 $ dan $ (g \\circ f)(x) = 6x - 1 $ . Fungsi $ g(x) $ adalah …",
+          "opts": [
+            "$ g(x) = 3x - 4 $",
+            "$ g(x) = 3x - 2 $",
+            "$ g(x) = 3x - 1 $",
+            "$ g(x) = 6x - 2 $",
+            "$ g(x) = 3x + 2 $"
+          ]
+        },
+        {
+          "id": "D9",
+          "section": "D",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira f=g^-1∘h bukan f=g^-1∘h; melupakan rumus yang benar",
+          "jawab": "b",
+          "p": "$ g \\circ f = h \\Rightarrow f = g^{-1} \\circ h $ . $ g^{-1}(x) = \\dfrac{x-1}{2} $ . $ f(x) = g^{-1}(6x-1) = \\dfrac{6x-1-1}{2} = \\dfrac{6x-2}{2} = 3x-1 $ .",
+          "q": "Diketahui $ g(x) = 2x + 1 $ dan $ (g \\circ f)(x) = 6x - 1 $ . Fungsi $ f(x) $ adalah …",
+          "opts": [
+            "$ f(x) = 2x - 1 $",
+            "$ f(x) = 3x - 1 $",
+            "$ f(x) = 3x + 1 $",
+            "$ f(x) = 6x - 2 $",
+            "$ f(x) = 2x - 2 $"
+          ]
+        },
+        {
+          "id": "D10",
+          "section": "D",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "hanya menghitung satu arah; tidak membuktikan dua arah sama",
+          "jawab": "b",
+          "p": "$ (f\\circ g)(x) = 2(3x+2)-1 = 6x+3 $ . Invers: $ (f\\circ g)^{-1}(x)=\\dfrac{x-3}{6} $ . Nilai $ (f\\circ g)^{-1}(9) = \\dfrac{9-3}{6} = 1 $ .",
+          "q": "Diketahui $ f(x) = 2x - 1 $ dan $ g(x) = 3x + 2 $ . Nilai $ (f \\circ g)^{-1}(9) $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ 1 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "D11",
+          "section": "D",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menyederhanakan h(f^-1(x)); salah substitusi pada kuadrat",
+          "jawab": "b",
+          "p": "$ f\\circ g = h \\Rightarrow g = f^{-1}\\circ h $ . $ f^{-1}(x) = \\dfrac{x+3}{2} $ . $ g(x) = f^{-1}(4x^2-12x+10) = \\dfrac{4x^2-12x+10+3}{2} = \\dfrac{4x^2-12x+13}{2} $ ?",
+          "q": "Diketahui $ f(x) = 2x - 3 $ dan $ (f \\circ g)(x) = 4x^2 - 12x + 10 $ . Fungsi $ g(x) $ adalah …",
+          "opts": [
+            "$ g(x) = x^2 - 1 $",
+            "$ g(x) = x^2 + 1 $",
+            "$ g(x) = 2x^2 + 3 $",
+            "$ g(x) = 4x^2 - 3 $",
+            "$ g(x) = x^2 + 3 $"
+          ]
+        },
+        {
+          "id": "D12",
+          "section": "D",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah menghitung g^-1 dari fungsi pecahan; bingung a,b,c,d",
+          "jawab": "b",
+          "p": "$ f \\circ g = h \\Rightarrow f = h \\circ g^{-1} $ . $ g^{-1}(x)=\\dfrac{x-1}{3} $ . $ f(x)=h\\!\\left(\\dfrac{x-1}{3}\\right)=\\dfrac{(x-1)/3-4}{(x-1)/3+3}=\\dfrac{x-1-12}{x-1+9}=\\dfrac{x-13}{x+8} $ .",
+          "q": "Diketahui $ g(x) = 3x + 1 $ dan $ (f \\circ g)(x) = \\dfrac{x - 4}{x + 3} $ . Fungsi $ f(x) $ adalah …",
+          "opts": [
+            "$ f(x) = \\dfrac{3x+2}{3(x+3)} $",
+            "$ f(x) = \\dfrac{3x-13}{3x+10} $",
+            "$ f(x) = \\dfrac{x-13}{x+4} $",
+            "$ f(x) = \\dfrac{x-5}{x+4} $",
+            "$ f(x) = \\dfrac{3x-1}{x+3} $"
+          ]
+        },
+        {
+          "id": "D13",
+          "section": "D",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mencari f^-1 dari fungsi linear dan mengaplikasikannya pada h pecahan",
+          "jawab": "b",
+          "p": "$ f \\circ g = h \\Rightarrow g = f^{-1} \\circ h $ . $ f^{-1}(x)=\\dfrac{x+2}{3} $ . $ g(x) = f^{-1}\\!\\left(\\dfrac{x-4}{x+3}\\right) = \\dfrac{\\frac{x-4}{x+3}+2}{3} = \\dfrac{\\frac{x-4+2(x+3)}{x+3}}{3} = \\dfrac{3x+2}{3(x+3)} $ .",
+          "q": "Diketahui $ f(x) = 3x - 2 $ dan $ (f \\circ g)(x) = \\dfrac{x - 4}{x + 3} $ . Fungsi $ g(x) $ adalah …",
+          "opts": [
+            "$ g(x) = \\dfrac{x+2}{x+3} $",
+            "$ g(x) = \\dfrac{3x+2}{3(x+3)} $",
+            "$ g(x) = \\dfrac{x-4}{x+3} $",
+            "$ g(x) = \\dfrac{3x-4}{3(x+3)} $",
+            "$ g(x) = \\dfrac{x+6}{3(x+3)} $"
+          ]
+        },
+        {
+          "id": "D14",
+          "section": "D",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menukar urutan: menghitung g^-1∘f^-1 alih-alih f^-1∘g^-1",
+          "jawab": "b",
+          "p": "$ (f\\circ g)(x)=3(2x-1)+5=6x+2 $ . $ f^{-1}(x)=\\dfrac{x-5}{3} $ , $ g^{-1}(x)=\\dfrac{x+1}{2} $ . $ (g^{-1}\\circ f^{-1})(8) = g^{-1}\\!\\left(\\dfrac{8-5}{3}\\right) = g^{-1}(1) = \\dfrac{1+1}{2} = 1 $ . $ (f\\circ g)^{-1}(8)=\\dfrac{8-2}{6}=1 $ . Keduanya sama.",
+          "q": "Diketahui $ f(x) = 3x + 5 $ dan $ g(x) = 2x - 1 $ . Nilai $ (f \\circ g)^{-1}(8) $ sama dengan …",
+          "opts": [
+            "$ (f^{-1} \\circ g^{-1})(8) = \\dfrac{1}{2} $",
+            "$ (g^{-1} \\circ f^{-1})(8) = 1 $",
+            "$ (g^{-1} \\circ f^{-1})(8) = \\dfrac{1}{6} $",
+            "$ (f^{-1} \\circ g^{-1})(8) = \\dfrac{1}{3} $",
+            "$ (g^{-1} \\circ f^{-1})(8) = \\dfrac{1}{2} $"
+          ]
+        },
+        {
+          "id": "D15",
+          "section": "D",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak membalik urutan saat mengambil invers tiga komposisi",
+          "jawab": "b",
+          "p": "Sifat: $ (f\\circ g\\circ h)^{-1} = h^{-1}\\circ g^{-1}\\circ f^{-1} $ (urutan dibalik).",
+          "q": "Diketahui $ f(x) = 2x + 1 $ , $ g(x) = x - 3 $ , dan $ h(x) = 3x + 2 $ . Pernyataan yang <b>benar</b> tentang $ (f \\circ g \\circ h)^{-1} $ adalah …",
+          "opts": [
+            "$ (f \\circ g \\circ h)^{-1} = f^{-1} \\circ g^{-1} \\circ h^{-1} $",
+            "$ (f \\circ g \\circ h)^{-1} = h^{-1} \\circ g^{-1} \\circ f^{-1} $",
+            "$ (f \\circ g \\circ h)^{-1} = f \\circ g \\circ h $",
+            "$ (f \\circ g \\circ h)^{-1} = g^{-1} \\circ f^{-1} \\circ h^{-1} $",
+            "$ (f \\circ g \\circ h)^{-1} = h^{-1} \\circ f^{-1} \\circ g^{-1} $"
+          ]
+        },
+        {
+          "id": "D16",
+          "section": "D",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "bingung antara f∘g=h (g=f^-1∘h) dan f∘g^-1=h (g^-1=f^-1∘h)",
+          "jawab": "b",
+          "p": "$ (f\\circ g^{-1})(x)=h(x) \\Rightarrow g^{-1}(x) = f^{-1}(h(x)) $ . $ f^{-1}(x)=\\dfrac{x-1}{2} $ . $ g^{-1}(x) = \\dfrac{4x-1-1}{2} = \\dfrac{4x-2}{2} = 2x-1 $ . $ g $ adalah invers dari $ g^{-1}(x)=2x-1 $ : $ y=2x-1 \\Rightarrow x=\\dfrac{y+1}{2} $ , jadi $ g(x)=\\dfrac{x+1}{2} $ .",
+          "q": "Diketahui $ f(x) = 2x + 1 $ dan $ (f \\circ g^{-1})(x) = 4x - 1 $ . Fungsi $ g(x) $ adalah …",
+          "opts": [
+            "$ g(x) = 2x + 1 $",
+            "$ g(x) = \\dfrac{x+1}{2} $",
+            "$ g(x) = \\dfrac{x+1}{4} $",
+            "$ g(x) = 2x - 1 $",
+            "$ g(x) = \\dfrac{x-1}{2} $"
+          ]
+        },
+        {
+          "id": "D17",
+          "section": "D",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menyederhanakan fog terlebih dahulu; salah menentukan invers pecahan",
+          "jawab": "a",
+          "p": null,
+          "q": "Diketahui $ f(x) = \\dfrac{x+3}{2x-1} $ dan $ g(x) = x + 1 $ . Mengingat $ f $ involusi ( $ f = f^{-1} $ ), nilai $ (f \\circ g)^{-1}(3) $ adalah … \\begin{center} \\begin{tikzpicture}[scale=0.80, box/.style={draw, thick, rounded corners=3pt, minimum width=2cm, minimum height=0.7cm, align=center, font=\\small, fill=black!5}] \\node[box] (X) at (0,0) { $ x $ }; \\node[box] (G) at (2.8,0) { $ g(x) $ }; \\node[box] (F) at (5.6,0) { $ f(g(x)) $ }; \\draw[-Stealth, thick, blue!70!black] (X.east) -- node[above, font=\\scriptsize]{ $ g $ } (G.west); \\draw[-Stealth, thick, blue!70!black] (G.east) -- node[above, font=\\scriptsize]{ $ f $ } (F.west); \\draw[-Stealth, thick, red!70!black, dashed, bend right=28] (X.south) to node[below, font=\\scriptsize]{ $ (f \\circ g)^{-1} $ } (F.south); \\end{tikzpicture} \\end{center}",
+          "opts": [
+            "$ \\dfrac{1}{5} $",
+            "$ \\dfrac{7}{5} $",
+            "$ \\dfrac{5}{3} $",
+            "$ 2 $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "D18",
+          "section": "D",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira sifat hanya berlaku untuk dua fungsi; salah membalik urutan",
+          "jawab": "a",
+          "p": null,
+          "q": "Diketahui $ f(x) = 2x - 3 $ , $ h(x) = 4x^2 - 12x + 7 $ , dan $ f \\circ g = h $ . Diagram berantai: \\begin{center} \\begin{tikzpicture}[scale=0.85, box/.style={draw, thick, rounded corners=3pt, minimum width=1.5cm, minimum height=0.65cm, align=center, font=\\small, fill=black!5}] \\node[box] (X) at (0,0) { $ x $ }; \\node[box] (G) at (3,0) { $ g(x) $ }; \\node[box] (H) at (6,0) { $ h(x) $ }; \\draw[-Stealth, thick, blue!70!black] (X.east) -- node[above, font=\\scriptsize]{ $ g $ } (G.west); \\draw[-Stealth, thick, blue!70!black] (G.east) -- node[above, font=\\scriptsize]{ $ f $ } (H.west); \\end{tikzpicture} \\end{center} Fungsi $ g(x) $ adalah …",
+          "opts": [
+            "$ g(x) = 2x^2 - 6x + 5 $",
+            "$ g(x) = 2x^2 - 3 $",
+            "$ g(x) = x^2 + 1 $",
+            "$ g(x) = 2x^2 + 1 $",
+            "$ g(x) = x^2 - 1 $"
+          ]
+        },
+        {
+          "id": "D19",
+          "section": "D",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak menyadari (f∘g^-1)(x)=h => g^-1=f^-1∘h => g=(f^-1∘h)^-1=h^-1∘f",
+          "jawab": "b",
+          "p": null,
+          "q": "Diketahui $ f(x) = 2x + 1 $ dan $ (f \\circ g^{-1})(x) = 4x - 1 $ . Nilai $ g(2) $ adalah …",
+          "opts": [
+            "$ 1 $",
+            "$ \\dfrac{3}{2} $",
+            "$ 2 $",
+            "$ \\dfrac{5}{2} $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "D20",
+          "section": "D",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "membalik urutan: (fog)^-1=f^-1∘g^-1 (SALAH); urutan yang benar g^-1∘f^-1",
+          "jawab": "c",
+          "p": null,
+          "q": "Diketahui $ f(x) = 3x + 1 $ dan $ g(x) = 2x - 5 $ . Pernyataan yang <b>salah</b> tentang $ (g \\circ f)^{-1} $ adalah …",
+          "opts": [
+            "$ (g \\circ f)^{-1}(x) = \\dfrac{x+3}{6} $",
+            "$ (f^{-1} \\circ g^{-1})(x) = \\dfrac{x+3}{6} $",
+            "$ (g^{-1} \\circ f^{-1})(x) = \\dfrac{x+14}{6} $ , sehingga $ (g \\circ f)^{-1} \\neq g^{-1} \\circ f^{-1} $",
+            "$ (g \\circ f)(x) = 6x - 3 $ , sehingga $ (g \\circ f)^{-1}(x) = \\dfrac{x+3}{6} $",
+            "$ (g \\circ f)^{-1} = f^{-1} \\circ g^{-1} $"
+          ]
+        }
+      ]
+    }
+  ]
+}

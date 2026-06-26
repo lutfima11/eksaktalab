@@ -23,9 +23,17 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 if (process.argv.length < 3) {
-  console.error('Usage: node tools/import-pk-sections.mjs file1.tex [file2.tex ...]');
+  console.error('Usage: node tools/import-pk-sections.mjs [--out=filename.json] file1.tex [file2.tex ...]');
   process.exit(1);
 }
+
+// ── Opsi --out=filename.json ──
+let outFileName = null;
+const filteredArgs = process.argv.slice(2).filter(a => {
+  if (a.startsWith('--out=')) { outFileName = a.slice(6); return false; }
+  return true;
+});
+process.argv = [...process.argv.slice(0, 2), ...filteredArgs];
 
 // ── konversi teks LaTeX → HTML (non-math), tanpa trim ─────────
 // JANGAN tambahkan .trim() di sini — spasi tepi dibutuhkan saat join segmen math
@@ -287,7 +295,7 @@ for (const filePath of process.argv.slice(2)) {
 // ── Output JSON ──
 const outDir = join(ROOT, 'content', 'raw');
 mkdirSync(outDir, { recursive: true });
-const outPath = join(outDir, 'persamaan-kuadrat.json');
+const outPath = join(outDir, outFileName || 'persamaan-kuadrat.json');
 const output = {
   materi: 'persamaan-kuadrat',
   judul: 'Persamaan Kuadrat',

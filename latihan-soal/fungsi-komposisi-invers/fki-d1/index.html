@@ -4,7 +4,7 @@
 <script src="../../../assets/js/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Latihan Soal FKI-D1 — EksaktaLab</title>
+<title>Latihan Soal FKI-D1 — Hubungan Komposisi & Invers · Paket 1 | EksaktaLab</title>
 <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -706,7 +706,22 @@ body{
   .q-mob-nav-btn.next:hover{background:transparent;color:var(--teal);}
   .q-bs-btn:hover:not(:disabled):not(.sel-b):not(.sel-s){border-color:var(--border);color:var(--text-3);background:var(--surface-2);}
 }
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Hubungan Komposisi & Invers · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/fungsi-komposisi-invers/fki-d1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Fungsi, Komposisi dan Invers"},"hasPart":[{"@type":"Question","name":"Diketahui $ f(x) = 3x + 1 $ dan $ (f \\circ g)(x) = 3x + 7 $ . Fungsi $ g(x) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ g(x) = x + 2 $"}},{"@type":"Question","name":"Diketahui $ f(x) = 2x - 3 $ dan $ g(x) = x + 5 $ . Nilai $ (f \\circ g)^{-1}(7) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 0 $"}},{"@type":"Question","name":"Diketahui $ f(x) = 3x + 1 $ , $ h(x) = 9x + 7 $ , dan $ f \\circ g = h $ . Nilai $ g(2) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 8 $"}},{"@type":"Question","name":"Diketahui $ f(x) = 2x + 3 $ dan $ g(x) = 3x - 1 $ . Nilai $ (f \\circ g)^{-1}(7) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 1 $"}},{"@type":"Question","name":"Diketahui $ g(x) = 2x + 1 $ dan $ (g \\circ f)(x) = 6x - 1 $ . Fungsi $ f(x) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ f(x) = 3x - 1 $"}},{"@type":"Question","name":"Diketahui $ f(x) = 2x - 3 $ dan $ (f \\circ g)(x) = 4x^2 - 12x + 10 $ . Fungsi $ g(x) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ g(x) = x^2 + 1 $"}},{"@type":"Question","name":"Diketahui $ f(x) = 3x - 2 $ dan $ (f \\circ g)(x) = \\dfrac{x - 4}{x + 3} $ . Fungsi $ g(x) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ g(x) = \\dfrac{3x+2}{3(x+3)} $"}},{"@type":"Question","name":"Diketahui $ f(x) = 2x + 1 $ , $ g(x) = x - 3 $ , dan $ h(x) = 3x + 2 $ . Pernyataan yang benar tentang $ (f \\circ g \\cir","acceptedAnswer":{"@type":"Answer","text":"$ (f \\circ g \\circ h)^{-1} = h^{-1} \\circ g^{-1} \\circ f^{-1} $"}},{"@type":"Question","name":"Diketahui $ f(x) = \\dfrac{x+3}{2x-1} $ dan $ g(x) = x + 1 $ . Mengingat $ f $ involusi ( $ f = f^{-1} $ ), nilai $ (f \\c","acceptedAnswer":{"@type":"Answer","text":"$ \\dfrac{1}{5} $"}},{"@type":"Question","name":"Diketahui $ f(x) = 2x + 1 $ dan $ (f \\circ g^{-1})(x) = 4x - 1 $ . Nilai $ g(2) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ \\dfrac{3}{2} $"}}]}</script>
 </head>
 <body>
 
@@ -742,8 +757,6 @@ body{
   <span class="q-bc-kode">FKI-D1</span>
   <span class="q-bc-sep">·</span>
   <span class="q-bc-mode">Per Sub-Materi</span>
-  <span class="q-bc-sep">·</span>
-  <span class="q-bc-level" style="color:#059669">Beginner</span>
 </div>
 
 <!-- LAYOUT -->
@@ -816,7 +829,7 @@ body{
 </div>
 
 
-<script>window.quizDB={"fki-d1":{"title":"Hubungan Komposisi Fungsi dan Fungsi Invers","kode":"FKI-D1","level":"Beginner","soal":[{"type":"pg","q":"Hasil dari $35 + 38$ adalah …","opts":["$81$","$73$","$65$","$82$"],"jawab":1,"p":"$35+38=73$."},{"type":"pg","q":"Hasil dari $44 - 22$ adalah …","opts":["$17$","$27$","$22$","$24$"],"jawab":2,"p":"$44-22=22$."},{"type":"pg","q":"Hasil dari $11 \\times 7$ adalah …","opts":["$80$","$77$","$70$","$85$"],"jawab":1,"p":"$11\\times7=77$."},{"type":"pg","q":"Hasil dari $81 - 15$ adalah …","opts":["$73$","$66$","$68$","$58$"],"jawab":1,"p":"$81-15=66$."},{"type":"pg","q":"Hasil dari $45 + 87$ adalah …","opts":["$133$","$137$","$132$","$124$"],"jawab":2,"p":"$45+87=132$."},{"type":"pg","q":"Hasil dari $46 - 15$ adalah …","opts":["$38$","$31$","$35$","$32$"],"jawab":1,"p":"$46-15=31$."},{"type":"pg","q":"Hasil dari $68 - 20$ adalah …","opts":["$54$","$47$","$48$","$50$"],"jawab":2,"p":"$68-20=48$."},{"type":"pg","q":"Hasil dari $16 + 22$ adalah …","opts":["$38$","$44$","$43$","$47$"],"jawab":0,"p":"$16+22=38$."},{"type":"pg","q":"Hasil dari $11 \\times 9$ adalah …","opts":["$99$","$93$","$100$","$108$"],"jawab":0,"p":"$11\\times9=99$."},{"type":"pg","q":"Hasil dari $87 + 76$ adalah …","opts":["$170$","$163$","$158$","$164$"],"jawab":1,"p":"$87+76=163$."}]}};</script>
+<script>window.quizDB={"fki-d1":{"title":"Hubungan Komposisi & Invers · Paket 1","kode":"FKI-D1","soal":[{"type":"pg","level":"Beginner","q":"Diketahui $ f(x) = 3x + 1 $ dan $ (f \\circ g)(x) = 3x + 7 $ . Fungsi $ g(x) $ adalah …","opts":["$ g(x) = x + 1 $","$ g(x) = x + 2 $","$ g(x) = 3x + 2 $","$ g(x) = x - 2 $","$ g(x) = x + 6 $"],"jawab":1,"p":"$ f \\circ g = h \\Rightarrow g = f^{-1} \\circ h $ . $ f^{-1}(x) = \\dfrac{x-1}{3} $ . $ g(x) = f^{-1}(3x+7) = \\dfrac{(3x+7)-1}{3} = \\dfrac{3x+6}{3} = x+2 $ .","subMateri":"","kesalahanUmum":"mengira g = h∘f bukan f^-1∘h; salah urutan komposisi"},{"type":"pg","level":"Beginner","q":"Diketahui $ f(x) = 2x - 3 $ dan $ g(x) = x + 5 $ . Nilai $ (f \\circ g)^{-1}(7) $ adalah …","opts":["$ -3 $","$ -1 $","$ 0 $","$ 1 $","$ 3 $"],"jawab":2,"p":"$ (f\\circ g)(x) = f(x+5) = 2(x+5)-3 = 2x+7 $ . Invers: $ (f\\circ g)^{-1}(x)=\\dfrac{x-7}{2} $ . Nilai $ (f\\circ g)^{-1}(7) = \\dfrac{7-7}{2} = 0 $ .","subMateri":"","kesalahanUmum":"menghitung (f^-1∘g^-1) alih-alih (g^-1∘f^-1); atau langsung hitung f(g(7))"},{"type":"pg","level":"Beginner","q":"Diketahui $ f(x) = 3x + 1 $ , $ h(x) = 9x + 7 $ , dan $ f \\circ g = h $ . Nilai $ g(2) $ adalah …","opts":["$ 6 $","$ 7 $","$ 8 $","$ 9 $","$ 10 $"],"jawab":2,"p":"Dari No.~1: $ g(x) = x+2 $ . Nilai $ g(2) = 2+2 = 4 $ . Tidak langsung — cara lain: $ h(2)=9(2)+7=25=f(g(2))=3g(2)+1 $ , sehingga $ g(2)=8 $ .","subMateri":"","kesalahanUmum":"mencari g(2) dengan h(f(2)) bukan dengan menghitung g langsung"},{"type":"pg","level":"Beginner","q":"Diketahui $ f(x) = 2x + 3 $ dan $ g(x) = 3x - 1 $ . Nilai $ (f \\circ g)^{-1}(7) $ adalah …","opts":["$ 0 $","$ 1 $","$ 2 $","$ 3 $","$ 4 $"],"jawab":1,"p":"$ (f\\circ g)(x) = f(3x-1) = 2(3x-1)+3 = 6x+1 $ . Invers: $ (f\\circ g)^{-1}(x)=\\dfrac{x-1}{6} $ . Nilai $ (f\\circ g)^{-1}(7) = \\dfrac{7-1}{6} = 1 $ .","subMateri":"","kesalahanUmum":"membalik urutan: menghitung g^-1∘f^-1 bukan f^-1∘g^-1"},{"type":"pg","level":"Intermediate","q":"Diketahui $ g(x) = 2x + 1 $ dan $ (g \\circ f)(x) = 6x - 1 $ . Fungsi $ f(x) $ adalah …","opts":["$ f(x) = 2x - 1 $","$ f(x) = 3x - 1 $","$ f(x) = 3x + 1 $","$ f(x) = 6x - 2 $","$ f(x) = 2x - 2 $"],"jawab":1,"p":"$ g \\circ f = h \\Rightarrow f = g^{-1} \\circ h $ . $ g^{-1}(x) = \\dfrac{x-1}{2} $ . $ f(x) = g^{-1}(6x-1) = \\dfrac{6x-1-1}{2} = \\dfrac{6x-2}{2} = 3x-1 $ .","subMateri":"","kesalahanUmum":"mengira f=g^-1∘h bukan f=g^-1∘h; melupakan rumus yang benar"},{"type":"pg","level":"Intermediate","q":"Diketahui $ f(x) = 2x - 3 $ dan $ (f \\circ g)(x) = 4x^2 - 12x + 10 $ . Fungsi $ g(x) $ adalah …","opts":["$ g(x) = x^2 - 1 $","$ g(x) = x^2 + 1 $","$ g(x) = 2x^2 + 3 $","$ g(x) = 4x^2 - 3 $","$ g(x) = x^2 + 3 $"],"jawab":1,"p":"$ f\\circ g = h \\Rightarrow g = f^{-1}\\circ h $ . $ f^{-1}(x) = \\dfrac{x+3}{2} $ . $ g(x) = f^{-1}(4x^2-12x+10) = \\dfrac{4x^2-12x+10+3}{2} = \\dfrac{4x^2-12x+13}{2} $ ?","subMateri":"","kesalahanUmum":"tidak menyederhanakan h(f^-1(x)); salah substitusi pada kuadrat"},{"type":"pg","level":"Intermediate","q":"Diketahui $ f(x) = 3x - 2 $ dan $ (f \\circ g)(x) = \\dfrac{x - 4}{x + 3} $ . Fungsi $ g(x) $ adalah …","opts":["$ g(x) = \\dfrac{x+2}{x+3} $","$ g(x) = \\dfrac{3x+2}{3(x+3)} $","$ g(x) = \\dfrac{x-4}{x+3} $","$ g(x) = \\dfrac{3x-4}{3(x+3)} $","$ g(x) = \\dfrac{x+6}{3(x+3)} $"],"jawab":1,"p":"$ f \\circ g = h \\Rightarrow g = f^{-1} \\circ h $ . $ f^{-1}(x)=\\dfrac{x+2}{3} $ . $ g(x) = f^{-1}\\!\\left(\\dfrac{x-4}{x+3}\\right) = \\dfrac{\\frac{x-4}{x+3}+2}{3} = \\dfrac{\\frac{x-4+2(x+3)}{x+3}}{3} = \\dfrac{3x+2}{3(x+3)} $ .","subMateri":"","kesalahanUmum":"mencari f^-1 dari fungsi linear dan mengaplikasikannya pada h pecahan"},{"type":"pg","level":"Intermediate","q":"Diketahui $ f(x) = 2x + 1 $ , $ g(x) = x - 3 $ , dan $ h(x) = 3x + 2 $ . Pernyataan yang <b>benar</b> tentang $ (f \\circ g \\circ h)^{-1} $ adalah …","opts":["$ (f \\circ g \\circ h)^{-1} = f^{-1} \\circ g^{-1} \\circ h^{-1} $","$ (f \\circ g \\circ h)^{-1} = h^{-1} \\circ g^{-1} \\circ f^{-1} $","$ (f \\circ g \\circ h)^{-1} = f \\circ g \\circ h $","$ (f \\circ g \\circ h)^{-1} = g^{-1} \\circ f^{-1} \\circ h^{-1} $","$ (f \\circ g \\circ h)^{-1} = h^{-1} \\circ f^{-1} \\circ g^{-1} $"],"jawab":1,"p":"Sifat: $ (f\\circ g\\circ h)^{-1} = h^{-1}\\circ g^{-1}\\circ f^{-1} $ (urutan dibalik).","subMateri":"","kesalahanUmum":"tidak membalik urutan saat mengambil invers tiga komposisi"},{"type":"pg","level":"Expert","q":"Diketahui $ f(x) = \\dfrac{x+3}{2x-1} $ dan $ g(x) = x + 1 $ . Mengingat $ f $ involusi ( $ f = f^{-1} $ ), nilai $ (f \\circ g)^{-1}(3) $ adalah … \\begin{center} \\begin{tikzpicture}[scale=0.80, box/.style={draw, thick, rounded corners=3pt, minimum width=2cm, minimum height=0.7cm, align=center, font=\\small, fill=black!5}] \\node[box] (X) at (0,0) { $ x $ }; \\node[box] (G) at (2.8,0) { $ g(x) $ }; \\node[box] (F) at (5.6,0) { $ f(g(x)) $ }; \\draw[-Stealth, thick, blue!70!black] (X.east) -- node[above, font=\\scriptsize]{ $ g $ } (G.west); \\draw[-Stealth, thick, blue!70!black] (G.east) -- node[above, font=\\scriptsize]{ $ f $ } (F.west); \\draw[-Stealth, thick, red!70!black, dashed, bend right=28] (X.south) to node[below, font=\\scriptsize]{ $ (f \\circ g)^{-1} $ } (F.south); \\end{tikzpicture} \\end{center}","opts":["$ \\dfrac{1}{5} $","$ \\dfrac{7}{5} $","$ \\dfrac{5}{3} $","$ 2 $","$ 3 $"],"jawab":0,"p":"","subMateri":"","kesalahanUmum":"tidak menyederhanakan fog terlebih dahulu; salah menentukan invers pecahan"},{"type":"pg","level":"Expert","q":"Diketahui $ f(x) = 2x + 1 $ dan $ (f \\circ g^{-1})(x) = 4x - 1 $ . Nilai $ g(2) $ adalah …","opts":["$ 1 $","$ \\dfrac{3}{2} $","$ 2 $","$ \\dfrac{5}{2} $","$ 3 $"],"jawab":1,"p":"","subMateri":"","kesalahanUmum":"tidak menyadari (f∘g^-1)(x)=h => g^-1=f^-1∘h => g=(f^-1∘h)^-1=h^-1∘f"}]}};</script>
 <script>
 // ── Scroll progress bar ──────────────────────────────────
 window.addEventListener('scroll', () => {
@@ -911,8 +924,13 @@ function renderQ(i){
   // meta row
   const typeLabel={pg:'Pilihan Ganda',bs:'Benar / Salah',mma:'Multiple Answer'};
   const typeCls={pg:'qt-pg',bs:'qt-bs',mma:'qt-mma'};
+  const lvlCls={Beginner:'qlb-beginner',Intermediate:'qlb-intermediate',Expert:'qlb-expert'};
+  const lvlHtml=q.level?`<span class="q-level-badge ${lvlCls[q.level]||'qlb-beginner'}">${q.level}</span>`:'';
   html+=`<div class="q-soal-meta">
-    <span class="q-type ${typeCls[q.type]||'qt-pg'}">${typeLabel[q.type]||'Pilihan Ganda'}</span>
+    <div style="display:flex;align-items:center;gap:.45rem;">
+      <span class="q-type ${typeCls[q.type]||'qt-pg'}">${typeLabel[q.type]||'Pilihan Ganda'}</span>
+      ${lvlHtml}
+    </div>
     <button class="q-tandai${S.marked[i]?' on':''}" id="tm${i}" onclick="mark(${i})">
       <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 2h6v9l-3-2.2L4 11V2z"/></svg>
       ${S.marked[i]?'Ditandai':'Tandai Soal'}

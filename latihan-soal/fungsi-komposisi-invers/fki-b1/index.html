@@ -4,7 +4,7 @@
 <script src="../../../assets/js/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Latihan Soal FKI-B1 — EksaktaLab</title>
+<title>Latihan Soal FKI-B1 — Komposisi Fungsi · Paket 1 | EksaktaLab</title>
 <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -706,7 +706,22 @@ body{
   .q-mob-nav-btn.next:hover{background:transparent;color:var(--teal);}
   .q-bs-btn:hover:not(:disabled):not(.sel-b):not(.sel-s){border-color:var(--border);color:var(--text-3);background:var(--surface-2);}
 }
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Komposisi Fungsi · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/fungsi-komposisi-invers/fki-b1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Fungsi, Komposisi dan Invers"},"hasPart":[{"@type":"Question","name":"Jika $ f(x) = 2x - 1 $ dan $ g(x) = x + 3 $ , maka $ (f \\circ g)(x) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2x + 5 $"}},{"@type":"Question","name":"Jika $ f(x) = x + 4 $ dan $ g(x) = 2x - 1 $ , maka $ (f \\circ g)(3) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 9 $"}},{"@type":"Question","name":"Jika $ f(x) = 2x + 1 $ dan $ g(x) = x - 3 $ , maka $ (f \\circ g)(x) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2x - 5 $"}},{"@type":"Question","name":"Jika $ f(x) = 2x + 3 $ , maka $ (f \\circ f)(x) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 4x + 9 $"}},{"@type":"Question","name":"Jika $ f(x) = 2x - 1 $ dan $ g(x) = x^2 - 3x + 5 $ , maka $ (f \\circ g)(x) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2x^2 - 6x + 9 $"}},{"@type":"Question","name":"Jika $ f(x) = x^2 - 5x + 4 $ dan $ g(x) = x^2 + 3x - 6 $ , maka nilai $ (g \\circ f)(3) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -8 $"}},{"@type":"Question","name":"Diketahui $ (f \\circ h)(x) = 4x^2 + 6x - 5 $ dan $ f(x) = 2x - 1 $ . Fungsi $ h(x) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2x^2 + 3x - 2 $"}},{"@type":"Question","name":"Diketahui $ f(2x + 1) = 4x^2 - 8x + 5 $ . Fungsi $ f(x) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ x^2 - 6x + 10 $"}},{"@type":"Question","name":"Diketahui $ f(x) = 2x + 1 $ , $ g(x) = x^2 - 3 $ , dan $ h(x) = x + 2 $ . Nilai $ (f \\circ g \\circ h)(x) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2x^2 + 8x + 3 $"}},{"@type":"Question","name":"Diketahui $ f(x) = 2x $ , $ g(x) = x + 3 $ , dan $ h(x) = x^2 $ . Nilai $ [f \\circ (g \\circ h)](x) - [(f \\circ g) \\circ ","acceptedAnswer":{"@type":"Answer","text":"$ 0 $"}}]}</script>
 </head>
 <body>
 
@@ -742,8 +757,6 @@ body{
   <span class="q-bc-kode">FKI-B1</span>
   <span class="q-bc-sep">·</span>
   <span class="q-bc-mode">Per Sub-Materi</span>
-  <span class="q-bc-sep">·</span>
-  <span class="q-bc-level" style="color:#D97706">Intermediate</span>
 </div>
 
 <!-- LAYOUT -->
@@ -816,7 +829,7 @@ body{
 </div>
 
 
-<script>window.quizDB={"fki-b1":{"title":"Komposisi Fungsi","kode":"FKI-B1","level":"Intermediate","soal":[{"type":"pg","q":"Nilai $x$ yang memenuhi $3x + 19 = 43$ adalah …","opts":["$5$","$17$","$1$","$8$"],"jawab":3,"p":"$3x=43-19=24$, maka $x=8$."},{"type":"pg","q":"Nilai $x$ yang memenuhi $4x + 10 = 54$ adalah …","opts":["$9$","$8$","$5$","$11$"],"jawab":3,"p":"$4x=54-10=44$, maka $x=11$."},{"type":"pg","q":"Diketahui $f(x)=3x+5$. Nilai $f(8)$ adalah …","opts":["$29$","$33$","$28$","$35$"],"jawab":0,"p":"$f(8)=3\\cdot8+5=29$."},{"type":"pg","q":"Diketahui $f(x)=6x+5$. Nilai $f(2)$ adalah …","opts":["$22$","$19$","$17$","$18$"],"jawab":2,"p":"$f(2)=6\\cdot2+5=17$."},{"type":"pg","q":"Nilai $x$ yang memenuhi $6x + 16 = 82$ adalah …","opts":["$16$","$11$","$18$","$5$"],"jawab":1,"p":"$6x=82-16=66$, maka $x=11$."},{"type":"pg","q":"Nilai $x$ yang memenuhi $5x + 2 = 62$ adalah …","opts":["$16$","$7$","$12$","$20$"],"jawab":2,"p":"$5x=62-2=60$, maka $x=12$."},{"type":"pg","q":"Diketahui $f(x)=5x+3$. Nilai $f(8)$ adalah …","opts":["$51$","$43$","$46$","$39$"],"jawab":1,"p":"$f(8)=5\\cdot8+3=43$."},{"type":"pg","q":"Nilai $x$ yang memenuhi $3x + 12 = 42$ adalah …","opts":["$9$","$15$","$10$","$7$"],"jawab":2,"p":"$3x=42-12=30$, maka $x=10$."},{"type":"pg","q":"Hasil dari $19 \\times 6$ adalah …","opts":["$105$","$115$","$114$","$111$"],"jawab":2,"p":"$19\\times6=114$."},{"type":"pg","q":"Hasil dari $21 \\times 4$ adalah …","opts":["$84$","$91$","$90$","$78$"],"jawab":0,"p":"$21\\times4=84$."}]}};</script>
+<script>window.quizDB={"fki-b1":{"title":"Komposisi Fungsi · Paket 1","kode":"FKI-B1","soal":[{"type":"pg","level":"Beginner","q":"Jika $ f(x) = 2x - 1 $ dan $ g(x) = x + 3 $ , maka $ (f \\circ g)(x) $ adalah …","opts":["$ 2x + 2 $","$ 2x + 4 $","$ 2x + 5 $","$ 2x - 4 $","$ x + 2 $"],"jawab":2,"p":"$ (f \\circ g)(x) = f[g(x)] = f(x+3) = 2(x+3)-1 = 2x+6-1 = 2x+5 $ .","subMateri":"","kesalahanUmum":"mengira (f∘g)(x)=f(x)·g(x); membalik urutan: f dikerjakan lebih dulu"},{"type":"pg","level":"Beginner","q":"Jika $ f(x) = x + 4 $ dan $ g(x) = 2x - 1 $ , maka $ (f \\circ g)(3) $ adalah …","opts":["$ 7 $","$ 8 $","$ 9 $","$ 10 $","$ 11 $"],"jawab":2,"p":"Hitung $ g(3) $ dulu: $ g(3)=2(3)-1=5 $ . Kemudian $ f(5)=5+4=9 $ .","subMateri":"","kesalahanUmum":"langsung mensubstitusi ke f tanpa menghitung g(3) dahulu"},{"type":"pg","level":"Beginner","q":"Jika $ f(x) = 2x + 1 $ dan $ g(x) = x - 3 $ , maka $ (f \\circ g)(x) $ adalah …","opts":["$ 2x - 4 $","$ 2x - 5 $","$ 2x - 6 $","$ 2x + 4 $","$ x - 5 $"],"jawab":1,"p":"$ (f \\circ g)(x) = f[g(x)] = f(x-3) = 2(x-3)+1 = 2x-6+1 = 2x-5 $ .","subMateri":"","kesalahanUmum":"menghitung g(f(x)) bukan f(g(x)); salah substitusi tanda negatif"},{"type":"pg","level":"Beginner","q":"Jika $ f(x) = 2x + 3 $ , maka $ (f \\circ f)(x) $ adalah …","opts":["$ 4x + 6 $","$ 4x + 8 $","$ 4x + 9 $","$ 4x + 12 $","$ 2x + 9 $"],"jawab":2,"p":"$ (f \\circ f)(x) = f[f(x)] = f(2x+3) = 2(2x+3)+3 = 4x+6+3 = 4x+9 $ .","subMateri":"","kesalahanUmum":"mengira (f∘f)(x) = [f(x)]²; tidak mensubstitusikan f(x) ke dalam f"},{"type":"pg","level":"Intermediate","q":"Jika $ f(x) = 2x - 1 $ dan $ g(x) = x^2 - 3x + 5 $ , maka $ (f \\circ g)(x) $ adalah …","opts":["$ 2x^2 - 6x + 4 $","$ 2x^2 - 6x + 8 $","$ 2x^2 - 6x + 9 $","$ 2x^2 - 6x + 10 $","$ 4x^2 - 10x + 9 $"],"jawab":2,"p":"$ (f \\circ g)(x) = f[g(x)] = f(x^2-3x+5) = 2(x^2-3x+5)-1 = 2x^2-6x+10-1 = 2x^2-6x+9 $ .","subMateri":"","kesalahanUmum":"tidak mendistribusikan perkalian: 2(x²-3x+5)-1 dianggap 2x²-3x+5-1"},{"type":"pg","level":"Intermediate","q":"Jika $ f(x) = x^2 - 5x + 4 $ dan $ g(x) = x^2 + 3x - 6 $ , maka nilai $ (g \\circ f)(3) $ adalah …","opts":["$ -12 $","$ -10 $","$ -8 $","$ -6 $","$ 0 $"],"jawab":2,"p":"Langkah: $ f(3) = 3^2-5(3)+4 = 9-15+4 = -2 $ . Kemudian $ (g \\circ f)(3) = g(-2) = (-2)^2+3(-2)-6 = 4-6-6 = -8 $ .","subMateri":"","kesalahanUmum":"menghitung g(f(2)) alih-alih f(g(2)); atau salah mensubstitusi nilai negatif"},{"type":"pg","level":"Intermediate","q":"Diketahui $ (f \\circ h)(x) = 4x^2 + 6x - 5 $ dan $ f(x) = 2x - 1 $ . Fungsi $ h(x) $ adalah …","opts":["$ 2x^2 + 3x - 1 $","$ 2x^2 + 3x - 2 $","$ 2x^2 + 3x - 3 $","$ 4x^2 + 6x - 4 $","$ 2x^2 - 3x + 2 $"],"jawab":1,"p":"$ f[h(x)] = 4x^2+6x-5 \\Rightarrow 2h(x)-1 = 4x^2+6x-5 \\Rightarrow 2h(x) = 4x^2+6x-4 \\Rightarrow h(x) = 2x^2+3x-2 $ .","subMateri":"","kesalahanUmum":"mensubstitusikan ke (f∘h) tanpa membalik langkah; salah tanda pada h"},{"type":"pg","level":"Intermediate","q":"Diketahui $ f(2x + 1) = 4x^2 - 8x + 5 $ . Fungsi $ f(x) $ adalah …","opts":["$ x^2 - 6x + 9 $","$ x^2 - 6x + 10 $","$ x^2 + 6x + 10 $","$ 2x^2 - 8x + 5 $","$ x^2 - 4x + 10 $"],"jawab":1,"p":"Misalkan $ m = 2x+1 $ , maka $ x = \\dfrac{m-1}{2} $ . Substitusi: \\[f(m) = 4\\!\\left(\\frac{m-1}{2}\\right)^{\\!2} - 8\\!\\left(\\frac{m-1}{2}\\right)+5 = (m-1)^2-4(m-1)+5 = m^2-6m+10.\\] Jadi $ f(x) = x^2-6x+10 $ .","subMateri":"","kesalahanUmum":"langsung mengganti x dengan 2x+1 tanpa mengubah variabel terlebih dahulu"},{"type":"pg","level":"Expert","q":"Diketahui $ f(x) = 2x + 1 $ , $ g(x) = x^2 - 3 $ , dan $ h(x) = x + 2 $ . Nilai $ (f \\circ g \\circ h)(x) $ adalah …","opts":["$ 2x^2 + 8x + 3 $","$ 2x^2 + 8x + 5 $","$ 2x^2 + 4x + 3 $","$ 4x^2 + 8x - 5 $","$ 2x^2 + 8x - 3 $"],"jawab":0,"p":"Hitung bertahap dari kanan: \\begin{align*} h(x) &= x+2 \\ g(h(x)) &= (x+2)^2-3 = x^2+4x+1 \\ f(g(h(x))) &= 2(x^2+4x+1)+1 = 2x^2+8x+3.","subMateri":"","kesalahanUmum":"salah urutan: menghitung dari kiri bukan dari kanan (h dulu)"},{"type":"pg","level":"Expert","q":"Diketahui $ f(x) = 2x $ , $ g(x) = x + 3 $ , dan $ h(x) = x^2 $ . Nilai $ [f \\circ (g \\circ h)](x) - [(f \\circ g) \\circ h](x) $ adalah …","opts":["$ 0 $","$ 2 $","$ 2x^2 $","$ x^2 + 6 $","$ -2x^2 $"],"jawab":0,"p":"Dengan sifat asosiatif, $ f \\circ (g \\circ h) = (f \\circ g) \\circ h $ untuk semua fungsi. Selisihnya $ = 0 $ .","subMateri":"","kesalahanUmum":"mengira asosiatif hanya berlaku jika komutatif; atau salah mengelompokkan"}]}};</script>
 <script>
 // ── Scroll progress bar ──────────────────────────────────
 window.addEventListener('scroll', () => {
@@ -911,8 +924,13 @@ function renderQ(i){
   // meta row
   const typeLabel={pg:'Pilihan Ganda',bs:'Benar / Salah',mma:'Multiple Answer'};
   const typeCls={pg:'qt-pg',bs:'qt-bs',mma:'qt-mma'};
+  const lvlCls={Beginner:'qlb-beginner',Intermediate:'qlb-intermediate',Expert:'qlb-expert'};
+  const lvlHtml=q.level?`<span class="q-level-badge ${lvlCls[q.level]||'qlb-beginner'}">${q.level}</span>`:'';
   html+=`<div class="q-soal-meta">
-    <span class="q-type ${typeCls[q.type]||'qt-pg'}">${typeLabel[q.type]||'Pilihan Ganda'}</span>
+    <div style="display:flex;align-items:center;gap:.45rem;">
+      <span class="q-type ${typeCls[q.type]||'qt-pg'}">${typeLabel[q.type]||'Pilihan Ganda'}</span>
+      ${lvlHtml}
+    </div>
     <button class="q-tandai${S.marked[i]?' on':''}" id="tm${i}" onclick="mark(${i})">
       <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 2h6v9l-3-2.2L4 11V2z"/></svg>
       ${S.marked[i]?'Ditandai':'Tandai Soal'}
