@@ -27,7 +27,8 @@ if (process.argv.length < 3) {
   process.exit(1);
 }
 
-// ── konversi teks LaTeX → HTML (non-math) ──
+// ── konversi teks LaTeX → HTML (non-math), tanpa trim ─────────
+// JANGAN tambahkan .trim() di sini — spasi tepi dibutuhkan saat join segmen math
 function latexToHtml(s) {
   return s
     .replace(/\\textbf\{([^}]*)\}/g, '<b>$1</b>')
@@ -38,8 +39,8 @@ function latexToHtml(s) {
     .replace(/\\checkmark/g, '✓')
     .replace(/\\%/g, '%')
     .replace(/\\ /g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+    .replace(/\s+/g, ' ');
+  // biarkan spasi leading/trailing — cleanText akan trim di akhir
 }
 
 // ── bersihkan teks tapi pertahankan blok math $...$ dan \[...\] ──
@@ -47,9 +48,13 @@ function cleanText(s) {
   let rest = s;
   // Normalise display math
   rest = rest.replace(/\\\[([\s\S]*?)\\\]/g, (_, m) => `\\[${m.trim()}\\]`);
-  // Tambahkan spasi di sekitar $ agar "dalam$x$adalah" → "dalam $x$ adalah"
-  rest = rest.replace(/([^\s])(\$)/g, '$1 $2').replace(/(\$)([^\s$])/g, '$1 $2');
-  // Untuk teks di luar math, konversi LaTeX → HTML
+  // Tambahkan spasi di sekitar $ dan \[..\] agar "dalam$x$adalah" → "dalam $x$ adalah"
+  rest = rest
+    .replace(/([^\s])(\$)/g, '$1 $2')
+    .replace(/(\$)([^\s$])/g, '$1 $2')
+    .replace(/([^\s])(\\\[)/g, '$1 $2')
+    .replace(/(\\\])([^\s])/g, '$1 $2');
+  // Split pada blok math, konversi teks biasa → HTML (tanpa trim per segmen)
   const segments = rest.split(/(\$[^$]+\$|\\\[[\s\S]*?\\\])/g);
   const parts = [];
   for (const seg of segments) {
@@ -59,6 +64,7 @@ function cleanText(s) {
       parts.push(latexToHtml(seg));
     }
   }
+  // Trim hanya di akhir, bukan per segmen
   return parts.join('').replace(/\s+/g, ' ').trim();
 }
 
@@ -110,7 +116,8 @@ function parseFile(filePath) {
     if (curPNum && pBuf.length) {
       pembahasan[curPNum] = cleanText(pBuf.join(' ')
         .replace(/\\quad/g, ' ')
-        .replace(/\\textbf\{[a-e]\}/g, '') // hapus "(e)" di akhir pembahasan
+        .replace(/\\textbf\{\(?[a-e]\)?\}/g, '') // hapus semua answer hint: \textbf{(c)} / \textbf{c}
+        .replace(/\.\s*\*\*\([a-e]\)\*\*/g, '.') // hapus bold letter jika sudah ke HTML
         .replace(/\\;\s*/g, ' ')
         .replace(/\s+/g, ' ')
         .trim()
