@@ -1,4 +1,4 @@
-// ─────────────────────────────────────────────────────────────
+﻿// ─────────────────────────────────────────────────────────────
 // import-pk-sections.mjs
 //
 // Parser bank soal LaTeX format "soal_pg_section_X.tex" EksaktaLab
@@ -47,6 +47,7 @@ function latexToHtml(s) {
     .replace(/\\checkmark/g, '✓')
     .replace(/\\%/g, '%')
     .replace(/\\ /g, ' ')
+    .replace(/\\quad/g, ' ')
     .replace(/\s+/g, ' ');
   // biarkan spasi leading/trailing — cleanText akan trim di akhir
 }
@@ -304,3 +305,4 @@ const output = {
 };
 writeFileSync(outPath, JSON.stringify(output, null, 2), 'utf8');
 console.log(`\nOutput: ${outPath} (${output.totalSoal} soal total)`);
+
