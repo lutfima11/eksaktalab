@@ -243,7 +243,7 @@ soal.push(cur);
     if (t.startsWith('\\begin{enumerate}')) {
       enumDepth++;
       // Only treat as opts if it's the (a)/(A) style enumerate at depth 2
-      if (enumDepth === 2 && cur && /\\begin\{enumerate\}\[\(a\)\]/i.test(t)) phase = 'opts';
+      if (enumDepth === 2 && cur && /\\begin\{enumerate\}(\[\(a\)\]|\[label=\(\\alph\*\)\])/i.test(t)) phase = 'opts';
       continue;
     }
     if (t.startsWith('\\end{enumerate}')) {
