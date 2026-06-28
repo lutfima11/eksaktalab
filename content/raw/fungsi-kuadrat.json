@@ -1,1124 +1,2728 @@
 {
-  "materi": "fungsi-kuadrat",
-  "mataPelajaran": "Matematika",
-  "topik": "Fungsi Kuadrat",
-  "jenjang": "SMA",
-  "sumber": "Fungsi_Kuadrat.pdf (mathcyber1997.com)",
-  "sourceFile": "Latihan_Soal_Fungsi_Kuadrat.tex",
-  "importedAt": "2026-06-22",
-  "totalSoal": 46,
-  "soal": [
+  "materi": "persamaan-kuadrat",
+  "judul": "Persamaan Kuadrat",
+  "totalSoal": 160,
+  "sections": [
     {
-      "id": "A-1",
-      "type": "pg",
-      "level": "Beginner",
-      "jenis": [
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Fungsi kuadrat",
-        "Sumbu simetri",
-        "Titik balik"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Koordinat titik balik grafik fungsi kuadrat $f(x)=3x^2-12x+7$ adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$(2,\\;-5)$",
-        "$(2,\\;-7)$",
-        "$(-2,\\;-5)$",
-        "$(2,\\;5)$",
-        "$(1,\\;-8)$"
-      ]
-    },
-    {
-      "id": "A-2",
-      "type": "pg",
-      "level": "Beginner",
-      "jenis": [
-        "KONSEP",
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Substitusi nilai fungsi"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Diketahui fungsi kuadrat $f(x)=2x^2+3x-4$ serta titik $A(1,1)$, $B(-2,-2)$, dan $C(2,5)$. Titik yang dilalui grafik fungsi $f(x)$ adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "titik $A$, $B$, dan $C$",
-        "titik $A$ dan $B$",
-        "titik $A$ dan $C$",
-        "titik $B$ dan $C$",
-        "titik $A$ saja"
-      ]
-    },
-    {
-      "id": "A-3",
-      "type": "pg",
-      "level": "Beginner",
-      "jenis": [
-        "KOMPUTASI",
-        "KONSEP"
-      ],
-      "prasyarat": [
-        "Sumbu simetri",
-        "Kesimetrian titik"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Titik $P(-2,7)$ dan $Q(8,7)$ terletak pada grafik fungsi $f(x)=p(x-q)^2+r$. Nilai $q=…$",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$1$",
-        "$2$",
-        "$3$",
-        "$4$",
-        "$5$"
-      ]
-    },
-    {
-      "id": "A-4",
-      "type": "pg",
-      "level": "Beginner",
-      "jenis": [
-        "KONSTRUKSI",
-        "KONSEP"
-      ],
-      "prasyarat": [
-        "Bentuk puncak fungsi kuadrat"
-      ],
-      "gambar": true,
-      "figures": [
+      "sectionId": "A",
+      "sectionTitle": "Pengertian",
+      "soal": [
         {
-          "tikz": "\\begin{tikzpicture}[scale=0.55,>=Stealth]\n  \\draw[step=1,gray!30,very thin] (-0.5,-3.5) grid (6.5,3.5);\n  \\draw[->] (-0.5,0)--(6.5,0) node[right]{$X$};\n  \\draw[->] (0,-3.5)--(0,3.5) node[above]{$Y$};\n  \\draw[thick,green!50!black,domain=1:5,smooth,samples=100]\n    plot(\\x,{-(\\x-3)^2+2});\n  \\filldraw[blue] (3,2) circle(2pt) node[above right]{\\small$(3,2)$};\n\\end{tikzpicture}",
-          "svg": "<svg viewBox=\"0 0 320 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"q-graph\" role=\"img\"><style>.q-graph .ax{stroke:var(--text-3,#9aa);stroke-width:1.2}.q-graph .gr{stroke:var(--border,#e5e7eb);stroke-width:.5}.q-graph .cv{fill:none;stroke:var(--teal,#00BFA5);stroke-width:2}.q-graph .pt{fill:var(--blue-b,#2563eb)}.q-graph text{fill:var(--text-2,#555);font:11px var(--mono,monospace)}</style><line class=\"gr\" x1=\"45.1\" y1=\"214.0\" x2=\"45.1\" y2=\"26.0\"/><line class=\"gr\" x1=\"83.4\" y1=\"214.0\" x2=\"83.4\" y2=\"26.0\"/><line class=\"gr\" x1=\"121.7\" y1=\"214.0\" x2=\"121.7\" y2=\"26.0\"/><line class=\"gr\" x1=\"160.0\" y1=\"214.0\" x2=\"160.0\" y2=\"26.0\"/><line class=\"gr\" x1=\"198.3\" y1=\"214.0\" x2=\"198.3\" y2=\"26.0\"/><line class=\"gr\" x1=\"236.6\" y1=\"214.0\" x2=\"236.6\" y2=\"26.0\"/><line class=\"gr\" x1=\"274.9\" y1=\"214.0\" x2=\"274.9\" y2=\"26.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"200.6\" x2=\"294.0\" y2=\"200.6\"/><line class=\"gr\" x1=\"26.0\" y1=\"173.7\" x2=\"294.0\" y2=\"173.7\"/><line class=\"gr\" x1=\"26.0\" y1=\"146.9\" x2=\"294.0\" y2=\"146.9\"/><line class=\"gr\" x1=\"26.0\" y1=\"120.0\" x2=\"294.0\" y2=\"120.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"93.1\" x2=\"294.0\" y2=\"93.1\"/><line class=\"gr\" x1=\"26.0\" y1=\"66.3\" x2=\"294.0\" y2=\"66.3\"/><line class=\"gr\" x1=\"26.0\" y1=\"39.4\" x2=\"294.0\" y2=\"39.4\"/><line class=\"ax\" x1=\"26.0\" y1=\"120.0\" x2=\"294.0\" y2=\"120.0\"/><text x=\"298\" y=\"124\">X</text><line class=\"ax\" x1=\"45.1\" y1=\"214.0\" x2=\"45.1\" y2=\"26.0\"/><text x=\"50.14285714285714\" y=\"18\">Y</text><polyline class=\"cv\" points=\"83.4,173.7 84.7,170.2 86.0,166.7 87.3,163.2 88.5,159.9 89.8,156.6 91.1,153.3 92.4,150.1 93.6,147.0 94.9,143.9 96.2,140.9 97.5,137.9 98.7,135.0 100.0,132.2 101.3,129.4 102.6,126.7 103.8,124.1 105.1,121.5 106.4,118.9 107.7,116.4 109.0,114.0 110.2,111.7 111.5,109.4 112.8,107.1 114.1,105.0 115.3,102.8 116.6,100.8 117.9,98.8 119.2,96.8 120.4,95.0 121.7,93.1 123.0,91.4 124.3,89.7 125.5,88.0 126.8,86.5 128.1,84.9 129.4,83.5 130.6,82.1 131.9,80.7 133.2,79.4 134.5,78.2 135.8,77.1 137.0,76.0 138.3,74.9 139.6,73.9 140.9,73.0 142.1,72.1 143.4,71.3 144.7,70.6 146.0,69.9 147.2,69.3 148.5,68.7 149.8,68.2 151.1,67.7 152.3,67.4 153.6,67.0 154.9,66.8 156.2,66.6 157.4,66.4 158.7,66.3 160.0,66.3 161.3,66.3 162.6,66.4 163.8,66.6 165.1,66.8 166.4,67.0 167.7,67.4 168.9,67.7 170.2,68.2 171.5,68.7 172.8,69.3 174.0,69.9 175.3,70.6 176.6,71.3 177.9,72.1 179.1,73.0 180.4,73.9 181.7,74.9 183.0,76.0 184.2,77.1 185.5,78.2 186.8,79.4 188.1,80.7 189.4,82.1 190.6,83.5 191.9,84.9 193.2,86.5 194.5,88.0 195.7,89.7 197.0,91.4 198.3,93.1 199.6,95.0 200.8,96.8 202.1,98.8 203.4,100.8 204.7,102.8 205.9,105.0 207.2,107.1 208.5,109.4 209.8,111.7 211.0,114.0 212.3,116.4 213.6,118.9 214.9,121.5 216.2,124.1 217.4,126.7 218.7,129.4 220.0,132.2 221.3,135.0 222.5,137.9 223.8,140.9 225.1,143.9 226.4,147.0 227.6,150.1 228.9,153.3 230.2,156.6 231.5,159.9 232.7,163.2 234.0,166.7 235.3,170.2 236.6,173.7\"/><circle class=\"pt\" cx=\"160.0\" cy=\"66.3\" r=\"3\"/></svg>"
-        }
-      ],
-      "q": "Gambar kurva parabola berikut merupakan grafik dari fungsi kuadrat yang berbentuk … [[GAMBAR]]",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$f(x)=a(x-3)^2+2$ dengan $a<0$",
-        "$f(x)=a(x+3)^2+2$ dengan $a>0$",
-        "$f(x)=a(x-3)^2-2$ dengan $a<0$",
-        "$f(x)=a(x-2)^2+3$ dengan $a<0$",
-        "$f(x)=a(x+3)^2-2$ dengan $a>0$"
-      ]
-    },
-    {
-      "id": "B-1",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KONSTRUKSI"
-      ],
-      "prasyarat": [
-        "Akar fungsi",
-        "Pembentukan fungsi dari grafik"
-      ],
-      "gambar": true,
-      "figures": [
+          "id": "A1",
+          "section": "A",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira semua fungsi berisi x² pasti FK; lupa syarat a≠0",
+          "jawab": "c",
+          "p": "$ h(x)=4x-7 $ adalah fungsi <em>linear</em> karena derajatnya satu. Syarat FK: koefisien $ x^2 \\neq 0 $ , sedangkan pada $ h(x) $ koefisien $ x^2 = 0 $ .",
+          "q": "Pernyataan berikut yang <b>bukan</b> merupakan fungsi kuadrat adalah …",
+          "opts": [
+            "$ f(x) = 5x^2 - 3x + 2 $",
+            "$ g(x) = x^2 $",
+            "$ h(x) = 4x - 7 $",
+            "$ p(x) = -\\dfrac{1}{2}x^2 + 4 $",
+            "$ q(x) = x^2 + 0\\cdot x - 9 $"
+          ]
+        },
         {
-          "tikz": "\\begin{tikzpicture}[scale=0.4,>=Stealth]\n  \\draw[->] (-1.5,0)--(7.5,0) node[right]{$X$};\n  \\draw[->] (0,-10.5)--(0,2.5) node[above]{$Y$};\n  \\draw[thick,domain=-0.3:6.3,smooth,samples=100]\n    plot(\\x,{(\\x)^2-6*(\\x)});\n  \\filldraw (0,0) circle(2pt) node[above left]{\\small$(0,0)$};\n  \\filldraw (6,0) circle(2pt) node[above right]{\\small$(6,0)$};\n  \\filldraw (3,-9) circle(2pt) node[below]{\\small$(3,-9)$};\n\\end{tikzpicture}",
-          "svg": "<svg viewBox=\"0 0 320 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"q-graph\" role=\"img\"><style>.q-graph .ax{stroke:var(--text-3,#9aa);stroke-width:1.2}.q-graph .gr{stroke:var(--border,#e5e7eb);stroke-width:.5}.q-graph .cv{fill:none;stroke:var(--teal,#00BFA5);stroke-width:2}.q-graph .pt{fill:var(--blue-b,#2563eb)}.q-graph text{fill:var(--text-2,#555);font:11px var(--mono,monospace)}</style><line class=\"gr\" x1=\"40.9\" y1=\"214.0\" x2=\"40.9\" y2=\"26.0\"/><line class=\"gr\" x1=\"70.7\" y1=\"214.0\" x2=\"70.7\" y2=\"26.0\"/><line class=\"gr\" x1=\"100.4\" y1=\"214.0\" x2=\"100.4\" y2=\"26.0\"/><line class=\"gr\" x1=\"130.2\" y1=\"214.0\" x2=\"130.2\" y2=\"26.0\"/><line class=\"gr\" x1=\"160.0\" y1=\"214.0\" x2=\"160.0\" y2=\"26.0\"/><line class=\"gr\" x1=\"189.8\" y1=\"214.0\" x2=\"189.8\" y2=\"26.0\"/><line class=\"gr\" x1=\"219.6\" y1=\"214.0\" x2=\"219.6\" y2=\"26.0\"/><line class=\"gr\" x1=\"249.3\" y1=\"214.0\" x2=\"249.3\" y2=\"26.0\"/><line class=\"gr\" x1=\"279.1\" y1=\"214.0\" x2=\"279.1\" y2=\"26.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"206.8\" x2=\"294.0\" y2=\"206.8\"/><line class=\"gr\" x1=\"26.0\" y1=\"192.3\" x2=\"294.0\" y2=\"192.3\"/><line class=\"gr\" x1=\"26.0\" y1=\"177.8\" x2=\"294.0\" y2=\"177.8\"/><line class=\"gr\" x1=\"26.0\" y1=\"163.4\" x2=\"294.0\" y2=\"163.4\"/><line class=\"gr\" x1=\"26.0\" y1=\"148.9\" x2=\"294.0\" y2=\"148.9\"/><line class=\"gr\" x1=\"26.0\" y1=\"134.5\" x2=\"294.0\" y2=\"134.5\"/><line class=\"gr\" x1=\"26.0\" y1=\"120.0\" x2=\"294.0\" y2=\"120.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"105.5\" x2=\"294.0\" y2=\"105.5\"/><line class=\"gr\" x1=\"26.0\" y1=\"91.1\" x2=\"294.0\" y2=\"91.1\"/><line class=\"gr\" x1=\"26.0\" y1=\"76.6\" x2=\"294.0\" y2=\"76.6\"/><line class=\"gr\" x1=\"26.0\" y1=\"62.2\" x2=\"294.0\" y2=\"62.2\"/><line class=\"gr\" x1=\"26.0\" y1=\"47.7\" x2=\"294.0\" y2=\"47.7\"/><line class=\"gr\" x1=\"26.0\" y1=\"33.2\" x2=\"294.0\" y2=\"33.2\"/><line class=\"ax\" x1=\"26.0\" y1=\"62.2\" x2=\"294.0\" y2=\"62.2\"/><text x=\"298\" y=\"66.15384615384616\">X</text><line class=\"ax\" x1=\"70.7\" y1=\"214.0\" x2=\"70.7\" y2=\"26.0\"/><text x=\"75.66666666666667\" y=\"18\">Y</text><polyline class=\"cv\" points=\"61.7,34.8 63.4,40.0 65.0,45.1 66.6,50.2 68.3,55.1 69.9,60.0 71.6,64.7 73.2,69.4 74.8,74.0 76.5,78.5 78.1,82.9 79.7,87.3 81.4,91.5 83.0,95.7 84.7,99.7 86.3,103.7 87.9,107.6 89.6,111.4 91.2,115.1 92.9,118.8 94.5,122.3 96.1,125.8 97.8,129.1 99.4,132.4 101.0,135.6 102.7,138.7 104.3,141.7 106.0,144.7 107.6,147.5 109.2,150.3 110.9,152.9 112.5,155.5 114.1,158.0 115.8,160.4 117.4,162.7 119.1,165.0 120.7,167.1 122.3,169.2 124.0,171.1 125.6,173.0 127.2,174.8 128.9,176.5 130.5,178.1 132.2,179.7 133.8,181.1 135.4,182.5 137.1,183.7 138.7,184.9 140.3,186.0 142.0,187.0 143.6,187.9 145.3,188.8 146.9,189.5 148.5,190.2 150.2,190.7 151.8,191.2 153.4,191.6 155.1,191.9 156.7,192.1 158.4,192.3 160.0,192.3 161.6,192.3 163.3,192.1 164.9,191.9 166.6,191.6 168.2,191.2 169.8,190.7 171.5,190.2 173.1,189.5 174.7,188.8 176.4,187.9 178.0,187.0 179.7,186.0 181.3,184.9 182.9,183.7 184.6,182.5 186.2,181.1 187.8,179.7 189.5,178.1 191.1,176.5 192.8,174.8 194.4,173.0 196.0,171.1 197.7,169.2 199.3,167.1 200.9,165.0 202.6,162.7 204.2,160.4 205.9,158.0 207.5,155.5 209.1,152.9 210.8,150.3 212.4,147.5 214.0,144.7 215.7,141.7 217.3,138.7 219.0,135.6 220.6,132.4 222.2,129.1 223.9,125.8 225.5,122.3 227.1,118.8 228.8,115.1 230.4,111.4 232.1,107.6 233.7,103.7 235.3,99.7 237.0,95.7 238.6,91.5 240.3,87.3 241.9,82.9 243.5,78.5 245.2,74.0 246.8,69.4 248.4,64.7 250.1,60.0 251.7,55.1 253.4,50.2 255.0,45.1 256.6,40.0 258.3,34.8\"/><circle class=\"pt\" cx=\"70.7\" cy=\"62.2\" r=\"3\"/><circle class=\"pt\" cx=\"249.3\" cy=\"62.2\" r=\"3\"/><circle class=\"pt\" cx=\"160.0\" cy=\"192.3\" r=\"3\"/></svg>"
-        }
-      ],
-      "q": "Persamaan grafik parabola pada gambar di bawah adalah … [[GAMBAR]]",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$f(x)=x^2-6x$",
-        "$f(x)=x^2+6x$",
-        "$f(x)=-x^2+6x$",
-        "$f(x)=-x^2-6x+6$",
-        "$f(x)=-x^2+6x-9$"
-      ]
-    },
-    {
-      "id": "B-2",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "ANALISIS-SIFAT"
-      ],
-      "prasyarat": [
-        "Tanda koefisien",
-        "Diskriminan"
-      ],
-      "gambar": true,
-      "figures": [
+          "id": "A2",
+          "section": "A",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa bahwa b=0 jika tidak ada suku x; menjumlah dengan a+b+c=2+0+(-6) tapi lupa tanda",
+          "jawab": "b",
+          "p": "Pada $ f(x)=2x^2-6 $ : $ a=2 $ , $ b=0 $ , $ c=-6 $ . \\[a+b+c = 2+0+(-6) = -4.\\]",
+          "q": "Pada fungsi $ f(x) = 2x^2 - 6 $ , nilai $ a + b + c $ adalah …",
+          "opts": [
+            "$ -6 $ (b) $ -4 $ (c) $ 0 $ (d) $ 2 $ (e) $ 4 $"
+          ]
+        },
         {
-          "tikz": "\\begin{tikzpicture}[scale=0.6,>=Stealth]\n  \\draw[->] (-3,0)--(3.5,0) node[right]{$X$};\n  \\draw[->] (0,-3)--(0,4.5) node[above]{$Y$};\n  \\draw[thick,green!50!black,domain=-2:3,smooth,samples=100]\n    plot(\\x,{(\\x)^2-(\\x)-2});\n\\end{tikzpicture}",
-          "svg": "<svg viewBox=\"0 0 320 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"q-graph\" role=\"img\"><style>.q-graph .ax{stroke:var(--text-3,#9aa);stroke-width:1.2}.q-graph .gr{stroke:var(--border,#e5e7eb);stroke-width:.5}.q-graph .cv{fill:none;stroke:var(--teal,#00BFA5);stroke-width:2}.q-graph .pt{fill:var(--blue-b,#2563eb)}.q-graph text{fill:var(--text-2,#555);font:11px var(--mono,monospace)}</style><line class=\"gr\" x1=\"26.0\" y1=\"214.0\" x2=\"26.0\" y2=\"26.0\"/><line class=\"gr\" x1=\"67.2\" y1=\"214.0\" x2=\"67.2\" y2=\"26.0\"/><line class=\"gr\" x1=\"108.5\" y1=\"214.0\" x2=\"108.5\" y2=\"26.0\"/><line class=\"gr\" x1=\"149.7\" y1=\"214.0\" x2=\"149.7\" y2=\"26.0\"/><line class=\"gr\" x1=\"190.9\" y1=\"214.0\" x2=\"190.9\" y2=\"26.0\"/><line class=\"gr\" x1=\"232.2\" y1=\"214.0\" x2=\"232.2\" y2=\"26.0\"/><line class=\"gr\" x1=\"273.4\" y1=\"214.0\" x2=\"273.4\" y2=\"26.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"214.0\" x2=\"294.0\" y2=\"214.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"188.9\" x2=\"294.0\" y2=\"188.9\"/><line class=\"gr\" x1=\"26.0\" y1=\"163.9\" x2=\"294.0\" y2=\"163.9\"/><line class=\"gr\" x1=\"26.0\" y1=\"138.8\" x2=\"294.0\" y2=\"138.8\"/><line class=\"gr\" x1=\"26.0\" y1=\"113.7\" x2=\"294.0\" y2=\"113.7\"/><line class=\"gr\" x1=\"26.0\" y1=\"88.7\" x2=\"294.0\" y2=\"88.7\"/><line class=\"gr\" x1=\"26.0\" y1=\"63.6\" x2=\"294.0\" y2=\"63.6\"/><line class=\"gr\" x1=\"26.0\" y1=\"38.5\" x2=\"294.0\" y2=\"38.5\"/><line class=\"ax\" x1=\"26.0\" y1=\"138.8\" x2=\"294.0\" y2=\"138.8\"/><text x=\"298\" y=\"142.8\">X</text><line class=\"ax\" x1=\"149.7\" y1=\"214.0\" x2=\"149.7\" y2=\"26.0\"/><text x=\"154.6923076923077\" y=\"18\">Y</text><polyline class=\"cv\" points=\"67.2,38.5 68.9,43.7 70.7,48.8 72.4,53.8 74.1,58.7 75.8,63.6 77.5,68.3 79.3,73.0 81.0,77.5 82.7,82.0 84.4,86.4 86.1,90.7 87.8,94.9 89.6,99.1 91.3,103.1 93.0,107.1 94.7,110.9 96.4,114.7 98.2,118.4 99.9,122.0 101.6,125.6 103.3,129.0 105.0,132.4 106.7,135.6 108.5,138.8 110.2,141.9 111.9,144.9 113.6,147.8 115.3,150.6 117.1,153.4 118.8,156.0 120.5,158.6 122.2,161.1 123.9,163.5 125.6,165.8 127.4,168.0 129.1,170.1 130.8,172.2 132.5,174.1 134.2,176.0 135.9,177.8 137.7,179.5 139.4,181.1 141.1,182.6 142.8,184.1 144.5,185.4 146.3,186.7 148.0,187.8 149.7,188.9 151.4,189.9 153.1,190.8 154.8,191.7 156.6,192.4 158.3,193.1 160.0,193.6 161.7,194.1 163.4,194.5 165.2,194.8 166.9,195.0 168.6,195.2 170.3,195.2 172.0,195.2 173.7,195.0 175.5,194.8 177.2,194.5 178.9,194.1 180.6,193.6 182.3,193.1 184.1,192.4 185.8,191.7 187.5,190.8 189.2,189.9 190.9,188.9 192.6,187.8 194.4,186.7 196.1,185.4 197.8,184.1 199.5,182.6 201.2,181.1 202.9,179.5 204.7,177.8 206.4,176.0 208.1,174.1 209.8,172.2 211.5,170.1 213.3,168.0 215.0,165.8 216.7,163.5 218.4,161.1 220.1,158.6 221.8,156.0 223.6,153.4 225.3,150.6 227.0,147.8 228.7,144.9 230.4,141.9 232.2,138.8 233.9,135.6 235.6,132.4 237.3,129.0 239.0,125.6 240.7,122.0 242.5,118.4 244.2,114.7 245.9,110.9 247.6,107.1 249.3,103.1 251.1,99.1 252.8,94.9 254.5,90.7 256.2,86.4 257.9,82.0 259.6,77.5 261.4,73.0 263.1,68.3 264.8,63.6 266.5,58.7 268.2,53.8 269.9,48.8 271.7,43.7 273.4,38.5\"/></svg>"
-        }
-      ],
-      "q": "Grafik fungsi $y=ax^2+bx+c$ tampak seperti pada gambar berikut. Jika nilai diskriminannya dinyatakan oleh $D$, maka pernyataan yang benar adalah … [[GAMBAR]]",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$a>0;\\;c>0;\\;D>0$",
-        "$a>0;\\;c<0;\\;D>0$",
-        "$a<0;\\;c>0;\\;D<0$",
-        "$a<0;\\;c<0;\\;D<0$",
-        "$a>0;\\;c=0;\\;D=0$"
-      ]
-    },
-    {
-      "id": "B-3",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KOMPUTASI",
-        "KONSTRUKSI"
-      ],
-      "prasyarat": [
-        "Fungsi dari akar",
-        "Substitusi"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Jika $f$ adalah fungsi kuadrat yang grafiknya melalui titik $(1,0)$, $(4,0)$, dan $(0,-8)$, maka nilai dari $f(6)=…$",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$-16$",
-        "$-17$",
-        "$-18$",
-        "$-19$",
-        "$-20$"
-      ]
-    },
-    {
-      "id": "B-4",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Sumbu simetri",
-        "Nilai maksimum"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Jika fungsi kuadrat $y=ax^2+4x+a$ mempunyai sumbu simetri $x=2$, maka nilai maksimum fungsi tersebut adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$9$",
-        "$8$",
-        "$5$",
-        "$3$",
-        "$1$"
-      ]
-    },
-    {
-      "id": "B-5",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KOMPUTASI",
-        "KONSTRUKSI"
-      ],
-      "prasyarat": [
-        "Bentuk puncak",
-        "Substitusi",
-        "Nilai fungsi"
-      ],
-      "gambar": true,
-      "figures": [
+          "id": "A3",
+          "section": "A",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira a negatif berarti terbuka ke atas; atau terbuka ke atas berarti ada nilai maksimum",
+          "jawab": "c",
+          "p": "Koefisien $ x^2 $ pada $ f(x)=-x^2+5x $ adalah $ a=-1 < 0 $ , sehingga parabola <b>terbuka ke bawah</b> dan memiliki nilai <b>maksimum</b>.",
+          "q": "Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …",
+          "opts": [
+            "atas; minimum",
+            "atas; maksimum",
+            "bawah; maksimum",
+            "bawah; minimum",
+            "atas; tidak ada ekstrem"
+          ]
+        },
         {
-          "tikz": "\\begin{tikzpicture}[scale=0.5,>=Stealth]\n  \\draw[step=1,gray!30,very thin] (-6.5,-8.5) grid (2.5,1.5);\n  \\draw[->] (-6.5,0)--(2.5,0) node[right]{$X$};\n  \\draw[->] (0,-8.5)--(0,1.5) node[above]{$Y$};\n  \\draw[thick,domain=-4:0,smooth,samples=100]\n    plot(\\x,{-(\\x+2)^2-3});\n  \\filldraw (-2,-3) circle(2pt) node[above right]{\\small$(-2,-3)$};\n  \\filldraw (0,-7) circle(2pt) node[right]{\\small$(0,-7)$};\n\\end{tikzpicture}",
-          "svg": "<svg viewBox=\"0 0 320 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"q-graph\" role=\"img\"><style>.q-graph .ax{stroke:var(--text-3,#9aa);stroke-width:1.2}.q-graph .gr{stroke:var(--border,#e5e7eb);stroke-width:.5}.q-graph .cv{fill:none;stroke:var(--teal,#00BFA5);stroke-width:2}.q-graph .pt{fill:var(--blue-b,#2563eb)}.q-graph text{fill:var(--text-2,#555);font:11px var(--mono,monospace)}</style><line class=\"gr\" x1=\"40.9\" y1=\"214.0\" x2=\"40.9\" y2=\"26.0\"/><line class=\"gr\" x1=\"70.7\" y1=\"214.0\" x2=\"70.7\" y2=\"26.0\"/><line class=\"gr\" x1=\"100.4\" y1=\"214.0\" x2=\"100.4\" y2=\"26.0\"/><line class=\"gr\" x1=\"130.2\" y1=\"214.0\" x2=\"130.2\" y2=\"26.0\"/><line class=\"gr\" x1=\"160.0\" y1=\"214.0\" x2=\"160.0\" y2=\"26.0\"/><line class=\"gr\" x1=\"189.8\" y1=\"214.0\" x2=\"189.8\" y2=\"26.0\"/><line class=\"gr\" x1=\"219.6\" y1=\"214.0\" x2=\"219.6\" y2=\"26.0\"/><line class=\"gr\" x1=\"249.3\" y1=\"214.0\" x2=\"249.3\" y2=\"26.0\"/><line class=\"gr\" x1=\"279.1\" y1=\"214.0\" x2=\"279.1\" y2=\"26.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"204.6\" x2=\"294.0\" y2=\"204.6\"/><line class=\"gr\" x1=\"26.0\" y1=\"185.8\" x2=\"294.0\" y2=\"185.8\"/><line class=\"gr\" x1=\"26.0\" y1=\"167.0\" x2=\"294.0\" y2=\"167.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"148.2\" x2=\"294.0\" y2=\"148.2\"/><line class=\"gr\" x1=\"26.0\" y1=\"129.4\" x2=\"294.0\" y2=\"129.4\"/><line class=\"gr\" x1=\"26.0\" y1=\"110.6\" x2=\"294.0\" y2=\"110.6\"/><line class=\"gr\" x1=\"26.0\" y1=\"91.8\" x2=\"294.0\" y2=\"91.8\"/><line class=\"gr\" x1=\"26.0\" y1=\"73.0\" x2=\"294.0\" y2=\"73.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"54.2\" x2=\"294.0\" y2=\"54.2\"/><line class=\"gr\" x1=\"26.0\" y1=\"35.4\" x2=\"294.0\" y2=\"35.4\"/><line class=\"ax\" x1=\"26.0\" y1=\"54.2\" x2=\"294.0\" y2=\"54.2\"/><text x=\"298\" y=\"58.19999999999999\">X</text><line class=\"ax\" x1=\"219.6\" y1=\"214.0\" x2=\"219.6\" y2=\"26.0\"/><text x=\"224.55555555555557\" y=\"18\">Y</text><polyline class=\"cv\" points=\"100.4,185.8 101.4,183.3 102.4,180.9 103.4,178.5 104.4,176.1 105.4,173.8 106.4,171.5 107.4,169.3 108.4,167.1 109.4,164.9 110.4,162.8 111.4,160.8 112.4,158.7 113.3,156.7 114.3,154.8 115.3,152.9 116.3,151.0 117.3,149.2 118.3,147.4 119.3,145.7 120.3,144.0 121.3,142.4 122.3,140.8 123.3,139.2 124.3,137.7 125.3,136.2 126.3,134.7 127.2,133.3 128.2,132.0 129.2,130.7 130.2,129.4 131.2,128.2 132.2,127.0 133.2,125.8 134.2,124.7 135.2,123.7 136.2,122.6 137.2,121.7 138.2,120.7 139.2,119.8 140.1,119.0 141.1,118.1 142.1,117.4 143.1,116.6 144.1,115.9 145.1,115.3 146.1,114.7 147.1,114.1 148.1,113.6 149.1,113.1 150.1,112.7 151.1,112.3 152.1,111.9 153.1,111.6 154.0,111.4 155.0,111.1 156.0,110.9 157.0,110.8 158.0,110.7 159.0,110.6 160.0,110.6 161.0,110.6 162.0,110.7 163.0,110.8 164.0,110.9 165.0,111.1 166.0,111.4 166.9,111.6 167.9,111.9 168.9,112.3 169.9,112.7 170.9,113.1 171.9,113.6 172.9,114.1 173.9,114.7 174.9,115.3 175.9,115.9 176.9,116.6 177.9,117.4 178.9,118.1 179.9,119.0 180.8,119.8 181.8,120.7 182.8,121.7 183.8,122.6 184.8,123.7 185.8,124.7 186.8,125.8 187.8,127.0 188.8,128.2 189.8,129.4 190.8,130.7 191.8,132.0 192.8,133.3 193.7,134.7 194.7,136.2 195.7,137.7 196.7,139.2 197.7,140.8 198.7,142.4 199.7,144.0 200.7,145.7 201.7,147.4 202.7,149.2 203.7,151.0 204.7,152.9 205.7,154.8 206.7,156.7 207.6,158.7 208.6,160.8 209.6,162.8 210.6,164.9 211.6,167.1 212.6,169.3 213.6,171.5 214.6,173.8 215.6,176.1 216.6,178.5 217.6,180.9 218.6,183.3 219.6,185.8\"/><circle class=\"pt\" cx=\"160.0\" cy=\"110.6\" r=\"3\"/><circle class=\"pt\" cx=\"219.6\" cy=\"185.8\" r=\"3\"/></svg>"
-        }
-      ],
-      "q": "Jika gambar di bawah merupakan grafik fungsi kuadrat $f$ dengan titik puncak $(-2,-3)$ dan melalui titik $(0,-7)$, maka nilai $f(2)$ adalah … [[GAMBAR]]",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$-17$",
-        "$-18$",
-        "$-19$",
-        "$-20$",
-        "$-21$"
-      ]
-    },
-    {
-      "id": "B-6",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Nilai optimum",
-        "Daerah hasil pada interval"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Diketahui fungsi kuadrat $f(x)=-x^2+2x+3$ dengan daerah asal $\\{x \\mid -1\\leq x\\leq 2,\\;x\\in\\mathbb{R}\\}$. Daerah hasil fungsi $f$ adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$\\{y \\mid 0\\leq y\\leq 4,\\;y\\in\\mathbb{R}\\}$",
-        "$\\{y \\mid 0\\leq y\\leq 3,\\;y\\in\\mathbb{R}\\}$",
-        "$\\{y \\mid -1\\leq y\\leq 4,\\;y\\in\\mathbb{R}\\}$",
-        "$\\{y \\mid 0\\leq y\\leq 5,\\;y\\in\\mathbb{R}\\}$",
-        "$\\{y \\mid 3\\leq y\\leq 4,\\;y\\in\\mathbb{R}\\}$"
-      ]
-    },
-    {
-      "id": "B-7",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KONSTRUKSI"
-      ],
-      "prasyarat": [
-        "Titik balik",
-        "Bentuk puncak",
-        "Substitusi"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Fungsi kuadrat yang grafiknya melalui titik $(0,0)$ dan titik baliknya sama dengan titik balik dari grafik $g(x)=x^2-2x-3$ adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$y=4x^2-8x$",
-        "$y=x^2-2x$",
-        "$y=4x^2-8x+4$",
-        "$y=x^2-2x-3$",
-        "$y=4x^2+8x$"
-      ]
-    },
-    {
-      "id": "B-8",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "ANALISIS-SIFAT",
-        "KONSEP"
-      ],
-      "prasyarat": [
-        "Sifat grafik fungsi kuadrat (akar, sumbu simetri, nilai optimum)"
-      ],
-      "gambar": true,
-      "figures": [
+          "id": "A4",
+          "section": "A",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira a pada bentuk a(x-p)²+q tetap 3 tanpa memeriksa bentuk standar",
+          "jawab": "a",
+          "p": "Bentuk $ f(x)=3(x-2)^2+1 $ sudah berbentuk $ a(x-p)^2+q $ dengan $ a=3 $ . Nilai $ a $ tidak berubah saat dijabarkan.",
+          "q": "Nilai koefisien $ a $ dari fungsi $ f(x) = 3(x - 2)^2 + 1 $ adalah …",
+          "opts": [
+            "$ 3 $ (b) $ -2 $ (c) $ 1 $ (d) $ -4 $ (e) $ 13 $"
+          ]
+        },
         {
-          "tikz": "\\begin{tikzpicture}[scale=0.5,>=Stealth]\n  \\draw[->] (-4.5,0)--(2.5,0) node[right]{$X$};\n  \\draw[->] (0,-2)--(0,5) node[above]{$Y$};\n  \\draw[thick,red,domain=-3.3:1.3,smooth,samples=100]\n    plot(\\x,{3-2*(\\x)-(\\x)^2});\n  \\filldraw (-3,0) circle(1.5pt);\n  \\filldraw (1,0) circle(1.5pt);\n  \\node[below] at (-3,-0.1) {\\small$-3$};\n  \\node[below right] at (1,-0.1) {\\small$1$};\n\\end{tikzpicture}",
-          "svg": "<svg viewBox=\"0 0 320 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"q-graph\" role=\"img\"><style>.q-graph .ax{stroke:var(--text-3,#9aa);stroke-width:1.2}.q-graph .gr{stroke:var(--border,#e5e7eb);stroke-width:.5}.q-graph .cv{fill:none;stroke:var(--teal,#00BFA5);stroke-width:2}.q-graph .pt{fill:var(--blue-b,#2563eb)}.q-graph text{fill:var(--text-2,#555);font:11px var(--mono,monospace)}</style><line class=\"gr\" x1=\"45.1\" y1=\"214.0\" x2=\"45.1\" y2=\"26.0\"/><line class=\"gr\" x1=\"83.4\" y1=\"214.0\" x2=\"83.4\" y2=\"26.0\"/><line class=\"gr\" x1=\"121.7\" y1=\"214.0\" x2=\"121.7\" y2=\"26.0\"/><line class=\"gr\" x1=\"160.0\" y1=\"214.0\" x2=\"160.0\" y2=\"26.0\"/><line class=\"gr\" x1=\"198.3\" y1=\"214.0\" x2=\"198.3\" y2=\"26.0\"/><line class=\"gr\" x1=\"236.6\" y1=\"214.0\" x2=\"236.6\" y2=\"26.0\"/><line class=\"gr\" x1=\"274.9\" y1=\"214.0\" x2=\"274.9\" y2=\"26.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"214.0\" x2=\"294.0\" y2=\"214.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"187.1\" x2=\"294.0\" y2=\"187.1\"/><line class=\"gr\" x1=\"26.0\" y1=\"160.3\" x2=\"294.0\" y2=\"160.3\"/><line class=\"gr\" x1=\"26.0\" y1=\"133.4\" x2=\"294.0\" y2=\"133.4\"/><line class=\"gr\" x1=\"26.0\" y1=\"106.6\" x2=\"294.0\" y2=\"106.6\"/><line class=\"gr\" x1=\"26.0\" y1=\"79.7\" x2=\"294.0\" y2=\"79.7\"/><line class=\"gr\" x1=\"26.0\" y1=\"52.9\" x2=\"294.0\" y2=\"52.9\"/><line class=\"gr\" x1=\"26.0\" y1=\"26.0\" x2=\"294.0\" y2=\"26.0\"/><line class=\"ax\" x1=\"26.0\" y1=\"160.3\" x2=\"294.0\" y2=\"160.3\"/><text x=\"298\" y=\"164.28571428571428\">X</text><line class=\"ax\" x1=\"198.3\" y1=\"214.0\" x2=\"198.3\" y2=\"26.0\"/><text x=\"203.28571428571428\" y=\"18\">Y</text><polyline class=\"cv\" points=\"71.9,194.9 73.4,190.2 74.9,185.6 76.3,181.1 77.8,176.6 79.3,172.2 80.7,167.9 82.2,163.7 83.7,159.6 85.2,155.5 86.6,151.5 88.1,147.6 89.6,143.8 91.0,140.0 92.5,136.4 94.0,132.8 95.4,129.3 96.9,125.8 98.4,122.5 99.8,119.2 101.3,116.0 102.8,112.9 104.2,109.8 105.7,106.9 107.2,104.0 108.6,101.2 110.1,98.5 111.6,95.8 113.0,93.3 114.5,90.8 116.0,88.4 117.4,86.0 118.9,83.8 120.4,81.6 121.8,79.5 123.3,77.5 124.8,75.6 126.2,73.7 127.7,72.0 129.2,70.3 130.6,68.6 132.1,67.1 133.6,65.6 135.1,64.3 136.5,63.0 138.0,61.7 139.5,60.6 140.9,59.5 142.4,58.5 143.9,57.6 145.3,56.8 146.8,56.1 148.3,55.4 149.7,54.8 151.2,54.3 152.7,53.8 154.1,53.5 155.6,53.2 157.1,53.0 158.5,52.9 160.0,52.9 161.5,52.9 162.9,53.0 164.4,53.2 165.9,53.5 167.3,53.8 168.8,54.3 170.3,54.8 171.7,55.4 173.2,56.1 174.7,56.8 176.1,57.6 177.6,58.5 179.1,59.5 180.5,60.6 182.0,61.7 183.5,63.0 184.9,64.3 186.4,65.6 187.9,67.1 189.4,68.6 190.8,70.3 192.3,72.0 193.8,73.7 195.2,75.6 196.7,77.5 198.2,79.5 199.6,81.6 201.1,83.8 202.6,86.0 204.0,88.4 205.5,90.8 207.0,93.3 208.4,95.8 209.9,98.5 211.4,101.2 212.8,104.0 214.3,106.9 215.8,109.8 217.2,112.9 218.7,116.0 220.2,119.2 221.6,122.5 223.1,125.8 224.6,129.3 226.0,132.8 227.5,136.4 229.0,140.0 230.4,143.8 231.9,147.6 233.4,151.5 234.8,155.5 236.3,159.6 237.8,163.7 239.3,167.9 240.7,172.2 242.2,176.6 243.7,181.1 245.1,185.6 246.6,190.2 248.1,194.9\"/><circle class=\"pt\" cx=\"83.4\" cy=\"160.3\" r=\"3\"/><circle class=\"pt\" cx=\"236.6\" cy=\"160.3\" r=\"3\"/></svg>"
-        }
-      ],
-      "q": "Gambar berikut menunjukkan grafik fungsi $f(x)=3-2x-x^2$. Pernyataan berikut ini yang <b>tidak benar</b> terkait gambar itu adalah … [[GAMBAR]]",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "grafik memotong sumbu-$X$ di dua titik",
-        "persamaan sumbu simetri grafiknya adalah $x=-1$",
-        "grafik mempunyai nilai minimum $0$",
-        "grafik mempunyai nilai maksimum $4$",
-        "grafik memotong sumbu-$Y$ di titik $(0,3)$"
-      ]
-    },
-    {
-      "id": "B-9",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KONSEP"
-      ],
-      "prasyarat": [
-        "Bentuk puncak",
-        "Translasi/pergeseran grafik"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Grafik fungsi $f(x)=x^2-4x+1$ dapat diperoleh dengan cara menggeser grafik fungsi $f(x)=x^2$ ke arah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "kanan sumbu-$X$ sejauh $2$ satuan, bawah sumbu-$Y$ sejauh $3$ satuan",
-        "kiri sumbu-$X$ sejauh $2$ satuan, atas sumbu-$Y$ sejauh $3$ satuan",
-        "kanan sumbu-$X$ sejauh $3$ satuan, bawah sumbu-$Y$ sejauh $2$ satuan",
-        "kanan sumbu-$X$ sejauh $2$ satuan, atas sumbu-$Y$ sejauh $3$ satuan",
-        "kiri sumbu-$X$ sejauh $3$ satuan, bawah sumbu-$Y$ sejauh $2$ satuan"
-      ]
-    },
-    {
-      "id": "B-10",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KOMPUTASI",
-        "ANALISIS-SIFAT"
-      ],
-      "prasyarat": [
-        "Substitusi garis ke fungsi",
-        "Diskriminan (menyinggung)"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Grafik fungsi kuadrat $f(x)=x^2+bx+6$ menyinggung garis $y=4x+6$. Nilai $b$ yang memenuhi adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$-4$",
-        "$-3$",
-        "$0$",
-        "$3$",
-        "$4$"
-      ]
-    },
-    {
-      "id": "B-11",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Substitusi titik",
-        "Nilai minimum"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Grafik fungsi kuadrat $y=ax^2+4x+(a+2)$ melalui titik $(0,3)$. Nilai balik minimumnya adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$-1$",
-        "$-2$",
-        "$1$",
-        "$3$",
-        "$4$"
-      ]
-    },
-    {
-      "id": "B-12",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KONSTRUKSI",
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Akar fungsi",
-        "Nilai ekstrem"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Grafik fungsi $y=ax^2+bx-2$ memotong sumbu-$X$ di titik $(1,0)$ dan $(2,0)$. Fungsi ini mempunyai nilai ekstrem …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "maksimum $\\dfrac{1}{4}$",
-        "minimum $-\\dfrac{1}{4}$",
-        "maksimum $\\dfrac{1}{8}$",
-        "minimum $-\\dfrac{1}{8}$",
-        "maksimum $\\dfrac{3}{8}$"
-      ]
-    },
-    {
-      "id": "B-13",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KONSTRUKSI"
-      ],
-      "prasyarat": [
-        "Bentuk puncak",
-        "Substitusi"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Fungsi kuadrat yang memiliki nilai minimum $2$ untuk $x=-1$ dan mempunyai nilai $6$ untuk $x=1$ adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$y=x^2+2x+3$",
-        "$y=x^2-2x+3$",
-        "$y=x^2+2x-3$",
-        "$y=x^2+2x+1$",
-        "$y=x^2-2x-1$"
-      ]
-    },
-    {
-      "id": "B-14",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KONSTRUKSI"
-      ],
-      "prasyarat": [
-        "Bentuk puncak",
-        "Substitusi"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Apabila sebuah fungsi kuadrat mempunyai nilai maksimum $-2$ untuk $x=1$, sedangkan untuk $x=-1$ fungsi bernilai $-10$, maka fungsi itu dirumuskan oleh …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$y=-2x^2+4x-4$",
-        "$y=2x^2-4x+4$",
-        "$y=-2x^2+4x+4$",
-        "$y=-x^2+2x-4$",
-        "$y=-2x^2-4x-4$"
-      ]
-    },
-    {
-      "id": "B-15",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "KONSTRUKSI"
-      ],
-      "prasyarat": [
-        "Akar fungsi",
-        "Nilai maksimum",
-        "Bentuk faktor"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Jika untuk fungsi kuadrat $f(x)$ berlaku $f(1)=f(5)=0$ dan mempunyai nilai maksimum $4$, maka $f(x)=…$",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$x^2-6x+5$",
-        "$x^2+6x+5$",
-        "$-x^2+6x-5$",
-        "$-x^2+6x+5$",
-        "$-x^2-6x-5$"
-      ]
-    },
-    {
-      "id": "B-16",
-      "type": "pg",
-      "level": "Intermediate",
-      "jenis": [
-        "ANALISIS-SIFAT",
-        "KONSEP"
-      ],
-      "prasyarat": [
-        "Akar fungsi",
-        "Sumbu simetri dari akar"
-      ],
-      "gambar": true,
-      "figures": [
+          "id": "A5",
+          "section": "A",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa mengalikan negatif ke seluruh suku setelah menjabarkan (2x-1)²",
+          "jawab": "d",
+          "p": "Jabarkan: $ -(2x-1)^2+3 = -(4x^2-4x+1)+3 = -4x^2+4x+2 $ . Koefisien $ x^2 $ adalah $ a=-4 $ .",
+          "q": "Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …",
+          "opts": [
+            "$ 1 $ (b) $ -1 $ (c) $ 2 $ (d) $ -4 $ (e) $ 4 $"
+          ]
+        },
         {
-          "tikz": "\\begin{tikzpicture}[scale=0.6,>=Stealth]\n  \\draw[->] (-1,0)--(7,0) node[right]{$X$};\n  \\draw[->] (0,-1)--(0,4) node[above]{$Y$};\n  \\draw[thick,red,domain=0.6:5.4,smooth,samples=100]\n    plot(\\x,{-0.5*(\\x-1)*(\\x-5)});\n  \\filldraw (1,0) circle(1.5pt) node[above left]{\\small$A$};\n  \\filldraw (5,0) circle(1.5pt) node[above right]{\\small$B$};\n  \\node[above] at (3,2.3) {\\small$y=f(x)$};\n\\end{tikzpicture}",
-          "svg": "<svg viewBox=\"0 0 320 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"q-graph\" role=\"img\"><style>.q-graph .ax{stroke:var(--text-3,#9aa);stroke-width:1.2}.q-graph .gr{stroke:var(--border,#e5e7eb);stroke-width:.5}.q-graph .cv{fill:none;stroke:var(--teal,#00BFA5);stroke-width:2}.q-graph .pt{fill:var(--blue-b,#2563eb)}.q-graph text{fill:var(--text-2,#555);font:11px var(--mono,monospace)}</style><line class=\"gr\" x1=\"26.0\" y1=\"214.0\" x2=\"26.0\" y2=\"26.0\"/><line class=\"gr\" x1=\"59.5\" y1=\"214.0\" x2=\"59.5\" y2=\"26.0\"/><line class=\"gr\" x1=\"93.0\" y1=\"214.0\" x2=\"93.0\" y2=\"26.0\"/><line class=\"gr\" x1=\"126.5\" y1=\"214.0\" x2=\"126.5\" y2=\"26.0\"/><line class=\"gr\" x1=\"160.0\" y1=\"214.0\" x2=\"160.0\" y2=\"26.0\"/><line class=\"gr\" x1=\"193.5\" y1=\"214.0\" x2=\"193.5\" y2=\"26.0\"/><line class=\"gr\" x1=\"227.0\" y1=\"214.0\" x2=\"227.0\" y2=\"26.0\"/><line class=\"gr\" x1=\"260.5\" y1=\"214.0\" x2=\"260.5\" y2=\"26.0\"/><line class=\"gr\" x1=\"294.0\" y1=\"214.0\" x2=\"294.0\" y2=\"26.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"214.0\" x2=\"294.0\" y2=\"214.0\"/><line class=\"gr\" x1=\"26.0\" y1=\"176.4\" x2=\"294.0\" y2=\"176.4\"/><line class=\"gr\" x1=\"26.0\" y1=\"138.8\" x2=\"294.0\" y2=\"138.8\"/><line class=\"gr\" x1=\"26.0\" y1=\"101.2\" x2=\"294.0\" y2=\"101.2\"/><line class=\"gr\" x1=\"26.0\" y1=\"63.6\" x2=\"294.0\" y2=\"63.6\"/><line class=\"gr\" x1=\"26.0\" y1=\"26.0\" x2=\"294.0\" y2=\"26.0\"/><line class=\"ax\" x1=\"26.0\" y1=\"176.4\" x2=\"294.0\" y2=\"176.4\"/><text x=\"298\" y=\"180.4\">X</text><line class=\"ax\" x1=\"59.5\" y1=\"214.0\" x2=\"59.5\" y2=\"26.0\"/><text x=\"64.5\" y=\"18\">Y</text><polyline class=\"cv\" points=\"79.6,209.5 80.9,205.9 82.3,202.4 83.6,198.9 85.0,195.5 86.3,192.2 87.6,188.9 89.0,185.7 90.3,182.5 91.7,179.4 93.0,176.4 94.3,173.4 95.7,170.5 97.0,167.6 98.4,164.8 99.7,162.1 101.0,159.4 102.4,156.8 103.7,154.3 105.1,151.8 106.4,149.3 107.7,147.0 109.1,144.6 110.4,142.4 111.8,140.2 113.1,138.0 114.4,136.0 115.8,134.0 117.1,132.0 118.5,130.1 119.8,128.3 121.1,126.5 122.5,124.8 123.8,123.1 125.2,121.5 126.5,120.0 127.8,118.5 129.2,117.1 130.5,115.8 131.9,114.5 133.2,113.2 134.5,112.1 135.9,110.9 137.2,109.9 138.6,108.9 139.9,108.0 141.2,107.1 142.6,106.3 143.9,105.5 145.3,104.8 146.6,104.2 147.9,103.6 149.3,103.1 150.6,102.7 152.0,102.3 153.3,102.0 154.6,101.7 156.0,101.5 157.3,101.3 158.7,101.2 160.0,101.2 161.3,101.2 162.7,101.3 164.0,101.5 165.4,101.7 166.7,102.0 168.0,102.3 169.4,102.7 170.7,103.1 172.1,103.6 173.4,104.2 174.7,104.8 176.1,105.5 177.4,106.3 178.8,107.1 180.1,108.0 181.4,108.9 182.8,109.9 184.1,110.9 185.5,112.1 186.8,113.2 188.1,114.5 189.5,115.8 190.8,117.1 192.2,118.5 193.5,120.0 194.8,121.5 196.2,123.1 197.5,124.8 198.9,126.5 200.2,128.3 201.5,130.1 202.9,132.0 204.2,134.0 205.6,136.0 206.9,138.0 208.2,140.2 209.6,142.4 210.9,144.6 212.3,147.0 213.6,149.3 214.9,151.8 216.3,154.3 217.6,156.8 219.0,159.4 220.3,162.1 221.6,164.8 223.0,167.6 224.3,170.5 225.7,173.4 227.0,176.4 228.3,179.4 229.7,182.5 231.0,185.7 232.4,188.9 233.7,192.2 235.0,195.5 236.4,198.9 237.7,202.4 239.1,205.9 240.4,209.5\"/><circle class=\"pt\" cx=\"93.0\" cy=\"176.4\" r=\"3\"/><circle class=\"pt\" cx=\"227.0\" cy=\"176.4\" r=\"3\"/></svg>"
+          "id": "A6",
+          "section": "A",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira titik potong sb Y adalah a+b+c bukan hanya c",
+          "jawab": "d",
+          "p": "$ g(x)=(x+3)(x-1) = x^2+2x-3 $ , sehingga $ c=-3 $ . Titik potong sumbu $ Y $ : $ (0,\\,-3) $ .",
+          "q": "Fungsi $ g(x) = (x + 3)(x - 1) $ memotong sumbu $ Y $ di titik …",
+          "opts": [
+            "$ (0,\\;3) $ (b) $ (0,\\;2) $ (c) $ (0,\\;0) $ (d) $ (0,\\;-3) $ (e) $ (0,\\;-1) $"
+          ]
+        },
+        {
+          "id": "A7",
+          "section": "A",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira b dan c juga harus ≠0; atau mengira derajat fungsi tergantung pada b dan c",
+          "jawab": "c",
+          "p": "Syarat FK: $ a\\neq0 $ mutlak. Nilai $ b $ dan $ c $ <b>boleh nol</b> (contoh: $ f(x)=x^2 $ dengan $ b=c=0 $ tetap FK).",
+          "q": "Pernyataan yang <b>benar</b> tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …",
+          "opts": [
+            "$ a \\neq 0 $ , $ b \\neq 0 $ , dan $ c \\neq 0 $",
+            "$ a \\neq 0 $ , $ b \\neq 0 $ , tetapi $ c $ boleh $ 0 $",
+            "Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol",
+            "$ b \\neq 0 $ dan $ c \\neq 0 $ ; nilai $ a $ boleh nol",
+            "$ a $ , $ b $ , dan $ c $ semuanya boleh nol"
+          ]
+        },
+        {
+          "id": "A8",
+          "section": "A",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira koefisien besar berarti lebih condong ke arah tertentu; a<0 dikira terbuka ke atas",
+          "jawab": "b",
+          "p": "Koefisien $ a=-3<0 $ , sehingga parabola <b>terbuka ke bawah</b> dan memiliki titik <b>maksimum</b>.",
+          "q": "Fungsi $ f(x) = -3x^2 + 2x + 1 $ memiliki grafik yang …",
+          "opts": [
+            "terbuka ke atas dan memiliki titik minimum",
+            "terbuka ke bawah dan memiliki titik maksimum",
+            "terbuka ke atas dan memiliki titik maksimum",
+            "terbuka ke bawah dan memiliki titik minimum",
+            "tidak memiliki titik ekstrem"
+          ]
+        },
+        {
+          "id": "A9",
+          "section": "A",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak memeriksa syarat a≠0 pada koefisien yang mengandung k",
+          "jawab": "b",
+          "p": "FK syarat: koefisien $ x^2\\neq0 $ , yaitu $ k-2\\neq0 \\Rightarrow k\\neq2 $ .",
+          "q": "Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …",
+          "opts": [
+            "$ k = 0 $ (b) $ k \\neq 2 $ (c) $ k = 2 $ (d) $ k > 2 $ (e) $ k < 2 $"
+          ]
+        },
+        {
+          "id": "A10",
+          "section": "A",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira a×c = a+c; lupa bahwa tanda negatif pada a dan c mempengaruhi hasil kali",
+          "jawab": "c",
+          "p": "$ a=-3 $ , $ c=-2 $ , sehingga $ a\\times c = (-3)\\times(-2) = 6 $ .",
+          "q": "Pada fungsi $ f(x) = -3x^2 + 7x - 2 $ , nilai $ a \\times c $ adalah …",
+          "opts": [
+            "$ -6 $ (b) $ 2 $ (c) $ 6 $ (d) $ -2 $ (e) $ 21 $"
+          ]
+        },
+        {
+          "id": "A11",
+          "section": "A",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung c dari -(x+2)²+5 sebagai 5 saja; lupa menjabarkan -(x+2)²=-x²-4x-4",
+          "jawab": "c",
+          "p": "Jabarkan: $ -(x+2)^2+5 = -(x^2+4x+4)+5 = -x^2-4x+1 $ . Nilai $ c=1 $ , jadi titik potong sumbu $ Y $ : $ (0,\\,1) $ .",
+          "q": "Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …",
+          "opts": [
+            "$ (0,\\;5) $ (b) $ (0,\\;-5) $ (c) $ (0,\\;1) $ (d) $ (0,\\;-1) $ (e) $ (0,\\;3) $"
+          ]
+        },
+        {
+          "id": "A12",
+          "section": "A",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya menguji m=0 atau m=1; tidak menyelesaikan 2m+4<0 untuk nilai m",
+          "jawab": "c",
+          "p": "Syarat terbuka ke bawah: $ a<0 \\Rightarrow 2m+4<0 \\Rightarrow m<-2 $ .",
+          "q": "Fungsi $ f(x) = (2m + 4)x^2 - 5x + 3 $ membuka ke <b>bawah</b> jika …",
+          "opts": [
+            "$ m > -2 $ (b) $ m = -2 $ (c) $ m < -2 $ (d) $ m > 2 $ (e) $ m < 2 $"
+          ]
+        },
+        {
+          "id": "A13",
+          "section": "A",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah menghitung suku tengah (x)(4)+(-2)(x); lupa distribusi perkalian dua binomial",
+          "jawab": "b",
+          "p": "$ g(x)=(x-2)(x+4)=x^2+2x-8 $ . Koefisien $ x $ adalah $ b=2 $ .",
+          "q": "Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …",
+          "opts": [
+            "$ -8 $ (b) $ 2 $ (c) $ -2 $ (d) $ 8 $ (e) $ 4 $"
+          ]
+        },
+        {
+          "id": "A14",
+          "section": "A",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira (3-x)(x+5) terbuka ke atas karena koefisien pertama positif",
+          "jawab": "b",
+          "p": "Jabarkan $ h(x)=(3-x)(x+5)=-x^2-2x+15 $ . Koefisien $ a=-1<0 $ , sehingga terbuka ke bawah. Nilai $ c=15>0 $ , titik balik berada di atas sumbu $ X $ (maksimum di atas sumbu $ X $ ).",
+          "q": "Fungsi $ h(x) = (3 - x)(x + 5) $ memiliki parabola yang … [GAMBAR]",
+          "opts": [
+            "terbuka ke atas dengan minimum di atas sumbu $ X $",
+            "terbuka ke bawah dengan maksimum di atas sumbu $ X $",
+            "terbuka ke atas dengan minimum di bawah sumbu $ X $",
+            "terbuka ke bawah dengan maksimum di bawah sumbu $ X $",
+            "terbuka ke atas dengan nilai minimum $ = 0 $"
+          ]
+        },
+        {
+          "id": "A15",
+          "section": "A",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "salah mensubstitusi; atau salah mengurangkan persamaan untuk eliminasi b",
+          "jawab": "b",
+          "p": "Dari kondisi $ f(0)=c=2 $ ; $ f(1)=a+b+c=5\\Rightarrow a+b=3 $ ; $ f(-1)=a-b+c=3\\Rightarrow a-b=1 $ . Selesaikan: $ 2a=4\\Rightarrow a=2 $ , $ b=1 $ . Maka $ a-b+c = 2-1+2 = 3 $ .",
+          "q": "Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …",
+          "opts": [
+            "$ 2 $ (b) $ 3 $ (c) $ 4 $ (d) $ 5 $ (e) $ 6 $"
+          ]
+        },
+        {
+          "id": "A16",
+          "section": "A",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira grafik pasti memotong sb X untuk semua nilai a; tidak melihat hubungan a,b,c",
+          "jawab": "a",
+          "p": "Sumbu simetri $ x_P = \\dfrac{-b}{2a} $ . Karena $ a>0 $ dan $ b<0 $ , maka $ -b>0 $ dan $ 2a>0 $ , sehingga $ x_P = \\dfrac{-b}{2a} > 0 $ (kanan sumbu $ Y $ ).",
+          "q": "Jika $ a > 0 $ , $ b < 0 $ , dan $ c > 0 $ pada $ f(x) = ax^2 + bx + c $ , maka sumbu simetri grafik berada di …",
+          "opts": [
+            "kanan sumbu $ Y $ (nilai $ x_P > 0 $ )",
+            "kiri sumbu $ Y $ (nilai $ x_P < 0 $ )",
+            "tepat di sumbu $ Y $ ( $ x_P = 0 $ )",
+            "tidak dapat ditentukan",
+            "bergantung pada nilai $ c $"
+          ]
+        },
+        {
+          "id": "A17",
+          "section": "A",
+          "num": 17,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira persamaan luas segi empat otomatis linear; tidak memahami L=panjang×lebar sbg kuadrat",
+          "jawab": "c",
+          "p": "Keliling persegi panjang $ = 2(x+l)=20 $ , sehingga $ l=10-x $ . Luas: \\[L(x) = x(10-x) = -x^2+10x.\\] Bentuk baku tersebut sesuai pilihan (c). (Pilihan (e) $ x(20-x) $ salah karena keliling $ =20 $ bukan sisi lainnya $ =20 $ ).",
+          "q": "Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, maka luas persegi panjang tersebut dinyatakan sebagai fungsi $ L(x) $ . Fungsi tersebut adalah …",
+          "opts": [
+            "$ L(x) = 20x $",
+            "$ L(x) = x^2 - 20x $",
+            "$ L(x) = -x^2 + 10x $",
+            "$ L(x) = 2x^2 - 20 $",
+            "$ L(x) = x(20 - x) $"
+          ]
+        },
+        {
+          "id": "A18",
+          "section": "A",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira p=1 tidak memenuhi sementara p>1 juga perlu diperiksa arah bukaan",
+          "jawab": "b",
+          "p": "FK syarat $ p-1\\neq0 $ , dan terbuka ke atas syarat $ p-1>0 \\Rightarrow p>1 $ . Gabungan: $ p>1 $ .",
+          "q": "Diketahui $ f(x) = (p-1)x^2 + (2p-3)x + (p+2) $ . Agar fungsi $ f(x) $ merupakan <b>fungsi kuadrat yang terbuka ke atas</b>, syarat yang harus dipenuhi adalah …",
+          "opts": [
+            "$ p > 0 $",
+            "$ p > 1 $",
+            "$ p \\neq 1 $",
+            "$ p < 1 $ dan $ p \\neq 0 $",
+            "$ p = 1 $"
+          ]
+        },
+        {
+          "id": "A19",
+          "section": "A",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya mencari n=2; lupa ada dua nilai yang membuat n²-4=0 yaitu n=±2",
+          "jawab": "d",
+          "p": "Syarat FK: $ n^2-4\\neq0 \\Rightarrow n^2\\neq4 \\Rightarrow n\\neq2 $ dan $ n\\neq-2 $ . Jadi yang <b>bukan</b> FK: $ n=2 $ atau $ n=-2 $ .",
+          "q": "Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ <b>bukan</b> merupakan fungsi kuadrat jika …",
+          "opts": [
+            "$ n = 0 $",
+            "$ n = 1 $",
+            "$ n = 2 $ saja",
+            "$ n = 2 $ atau $ n = -2 $",
+            "$ n = -1 $"
+          ]
+        },
+        {
+          "id": "A20",
+          "section": "A",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "tidak menyadari b=0 berarti sumbu simetri tepat di sb Y; atau c<0 dikira D<0",
+          "jawab": "e",
+          "p": "Dengan $ a>0 $ , $ b=0 $ , $ c<0 $ : (I) $ a>0 $ : terbuka ke atas $ \\checkmark $ ; (II) $ x_P=\\frac{-0}{2a}=0 $ : sumbu simetri $ x=0 $ $ \\checkmark $ ; (III) $ D=0-4ac=-4ac $ ; karena $ a>0 $ dan $ c<0 $ , maka $ -4ac>0\\Rightarrow D>0 $ : memotong sb $ X $ di dua titik $ \\checkmark $ ; (IV) $ f(0)=c<0 $ : potong sb $ Y $ di bawah $ O $ $ \\checkmark $ . Semua benar.",
+          "q": "Fungsi $ f(x) = ax^2 + bx + c $ memiliki $ a > 0 $ , $ b = 0 $ , dan $ c < 0 $ . Perhatikan pernyataan berikut: Parabola terbuka ke atas Sumbu simetri adalah garis $ x = 0 $ Grafik memotong sumbu $ X $ di dua titik Titik potong dengan sumbu $ Y $ berada di bawah titik $ O $ Pernyataan yang <b>semuanya benar</b> adalah …",
+          "opts": [
+            "I dan II saja",
+            "I, II, dan III saja",
+            "I, III, dan IV saja",
+            "II, III, dan IV saja",
+            "I, II, III, dan IV"
+          ]
         }
-      ],
-      "q": "Perhatikan grafik fungsi kuadrat berikut. Jika grafik fungsi $f$ memotong sumbu-$X$ di titik $A(a,0)$ dan $B(a+4,0)$, maka koordinat titik puncak grafik fungsi $f$ yang mungkin adalah … [[GAMBAR]]",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$(a+1,\\;3)$",
-        "$(a+2,\\;3)$",
-        "$(a+3,\\;5)$",
-        "$(a+3,\\;3)$",
-        "$(a+4,\\;5)$"
       ]
     },
     {
-      "id": "C-1",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Titik balik",
-        "Parameter",
-        "Persamaan kuadrat"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Koordinat titik puncak grafik fungsi kuadrat $y=2x^2+2kx+k+2$ adalah $(m,m)$. Nilai $k+m=…$",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$-\\dfrac{1}{2}$ atau $2$",
-        "$-1$ atau $\\dfrac{5}{2}$",
-        "$1$ atau $-\\dfrac{5}{2}$",
-        "$\\dfrac{1}{2}$ atau $-2$",
-        "$1$ atau $\\dfrac{5}{2}$"
+      "sectionId": "B",
+      "sectionTitle": "Titik-Titik Penting Grafik",
+      "soal": [
+        {
+          "id": "B1",
+          "section": "B",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung D=b²-4ac lalu salah tanda; mengira D=b²+4ac",
+          "jawab": "c",
+          "p": "$ a=1, b=-6, c=5 $ : \\[D = (-6)^2 - 4(1)(5) = 36 - 20 = 16.\\]",
+          "q": "Nilai diskriminan dari fungsi $ f(x) = x^2 - 6x + 5 $ adalah …",
+          "opts": [
+            "$ 4 $ (b) $ 8 $ (c) $ 16 $ (d) $ 36 $ (e) $ 56 $"
+          ]
+        },
+        {
+          "id": "B2",
+          "section": "B",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira x=0 adalah satu-satunya akar; lupa memfaktorkan x(x-4)=0",
+          "jawab": "d",
+          "p": "$ x^2 - 4x = 0 \\Rightarrow x(x-4)=0 \\Rightarrow x=0 $ atau $ x=4 $ . Titik potong: $ (0,\\,0) $ dan $ (4,\\,0) $ .",
+          "q": "Titik potong grafik $ f(x) = x^2 - 4x $ dengan sumbu $ X $ adalah …",
+          "opts": [
+            "$ (0,\\;0) $ saja",
+            "$ (4,\\;0) $ saja",
+            "$ (-4,\\;0) $ dan $ (0,\\;0) $",
+            "$ (0,\\;0) $ dan $ (4,\\;0) $",
+            "$ (2,\\;0) $ dan $ (-2,\\;0) $"
+          ]
+        },
+        {
+          "id": "B3",
+          "section": "B",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung xs=-b/2a lalu lupa tanda negatif; mengira xs=b/2a",
+          "jawab": "b",
+          "p": "$ a=-2, b=8 $ : \\[x_s = \\frac{-b}{2a} = \\frac{-8}{2(-2)} = \\frac{-8}{-4} = 2.\\]",
+          "q": "Sumbu simetri grafik $ f(x) = -2x^2 + 8x - 3 $ adalah …",
+          "opts": [
+            "$ x = -2 $",
+            "$ x = 2 $",
+            "$ x = 3 $",
+            "$ x = 4 $",
+            "$ x = -4 $"
+          ]
+        },
+        {
+          "id": "B4",
+          "section": "B",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira yP=f(xs) dihitung langsung tapi salah substitusi; atau hanya mencari xs tanpa yP",
+          "jawab": "a",
+          "p": "$ a=1, b=6, c=5 $ . Sumbu simetri $ x_s = \\dfrac{-6}{2} = -3 $ . Nilai balik: \\[y_P = \\frac{-D}{4a} = \\frac{-(36-20)}{4} = \\frac{-16}{4} = -4.\\] Titik balik: $ (-3,\\,-4) $ .",
+          "q": "Koordinat titik balik grafik $ f(x) = x^2 + 6x + 5 $ adalah …",
+          "opts": [
+            "$ (-3,\\;-4) $ (b) $ (3,\\;-4) $ (c) $ (-3,\\;4) $ (d) $ (3,\\;4) $ (e) $ (-3,\\;-5) $"
+          ]
+        },
+        {
+          "id": "B5",
+          "section": "B",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira D=0 berarti tidak ada titik potong; padahal D=0 berarti menyinggung (1 titik)",
+          "jawab": "c",
+          "p": "$ D = (-4)^2 - 4(1)(4) = 16 - 16 = 0 $ . Karena $ D=0 $ , grafik <b>menyinggung</b> sumbu $ X $ di satu titik.",
+          "q": "Nilai diskriminan fungsi $ f(x) = x^2 - 4x + 4 $ adalah …, yang berarti grafik …",
+          "opts": [
+            "$ D = 4 $ ;\\; memotong sumbu $ X $ di dua titik",
+            "$ D = -4 $ ;\\; tidak memotong sumbu $ X $",
+            "$ D = 0 $ ;\\; menyinggung sumbu $ X $ di satu titik",
+            "$ D = 8 $ ;\\; memotong sumbu $ X $ di dua titik",
+            "$ D = 16 $ ;\\; memotong sumbu $ X $ di dua titik"
+          ]
+        },
+        {
+          "id": "B6",
+          "section": "B",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira titik potong sb Y dihitung dari xs; lupa bahwa cukup substitusi x=0",
+          "jawab": "d",
+          "p": "Titik potong sumbu $ Y $ diperoleh saat $ x=0 $ : $ f(0) = 7 $ . Jadi titik potong: $ (0,\\,7) $ .",
+          "q": "Titik potong grafik $ f(x) = 3x^2 - 5x + 7 $ dengan sumbu $ Y $ adalah …",
+          "opts": [
+            "$ (0,\\;-5) $ (b) $ (0,\\;3) $ (c) $ (0,\\;5) $ (d) $ (0,\\;7) $ (e) $ (0,\\;-7) $"
+          ]
+        },
+        {
+          "id": "B7",
+          "section": "B",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira xs=-b/a bukan -b/2a; atau lupa tanda: b=+2 sehingga xs=-1, bukan +1",
+          "jawab": "b",
+          "p": "$ a=1, b=2 $ : \\[x_s = \\frac{-2}{2(1)} = -1.\\]",
+          "q": "Persamaan sumbu simetri grafik $ f(x) = x^2 + 2x - 8 $ adalah …",
+          "opts": [
+            "$ x = 2 $",
+            "$ x = -1 $",
+            "$ x = 1 $",
+            "$ x = -2 $",
+            "$ x = 4 $"
+          ]
+        },
+        {
+          "id": "B8",
+          "section": "B",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira nilai maks=xs; atau salah hitung yP=-D/4a dengan tanda a negatif",
+          "jawab": "c",
+          "p": "$ a=-1, b=4, c=-1 $ . Karena $ a<0 $ , titik balik adalah maksimum. \\[y_P = \\frac{-D}{4a} = \\frac{-(16-4)}{4(-1)} = \\frac{-12}{-4} = 3.\\]",
+          "q": "Nilai maksimum fungsi $ f(x) = -x^2 + 4x - 1 $ adalah …",
+          "opts": [
+            "$ 1 $ (b) $ 2 $ (c) $ 3 $ (d) $ 4 $ (e) $ 5 $"
+          ]
+        },
+        {
+          "id": "B9",
+          "section": "B",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah menghitung yP; mengira titik balik adalah (xs, f(0)) bukan (xs, f(xs))",
+          "jawab": "b",
+          "p": "$ a=2, b=-8, c=6 $ . Sumbu simetri $ x_s = \\dfrac{8}{4} = 2 $ . \\[y_P = f(2) = 2(4) - 8(2) + 6 = 8 - 16 + 6 = -2.\\] Titik balik: $ (2,\\,-2) $ .",
+          "q": "Titik balik grafik $ f(x) = 2x^2 - 8x + 6 $ terletak di …",
+          "opts": [
+            "$ (2,\\;-1) $",
+            "$ (2,\\;-2) $",
+            "$ (4,\\;6) $",
+            "$ (-2,\\;-2) $",
+            "$ (1,\\;0) $"
+          ]
+        },
+        {
+          "id": "B10",
+          "section": "B",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira range=[yP, +∞) untuk semua FK; lupa membalik jika a<0",
+          "jawab": "d",
+          "p": "$ a=-1, b=4, c=5 $ . Nilai maksimum $ y_P = \\dfrac{-D}{4a} $ : \\[D = 16+20=36; y_P = \\frac{-36}{-4} = 9.\\] Karena $ a<0 $ , range $ = (-\\infty, 9] $ .",
+          "q": "Range fungsi $ f(x) = -x^2 + 4x + 5 $ adalah …",
+          "opts": [
+            "$ [9,\\;+\\infty) $",
+            "$ (-\\infty,\\;5] $",
+            "$ [-9,\\;+\\infty) $",
+            "$ (-\\infty,\\;9] $",
+            "$ [5,\\;+\\infty) $"
+          ]
+        },
+        {
+          "id": "B11",
+          "section": "B",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya mencari xs dari persamaan xs=2 tanpa menghitung yP; atau mengira yP=q pada f(x)=x²+px+q",
+          "jawab": "c",
+          "p": "Sumbu simetri $ x=2 \\Rightarrow \\dfrac{-p}{2} = 2 \\Rightarrow p = -4 $ . Titik potong $ Y $ : $ q=3 $ . \\[y_P = f(2) = 4 - 4(2) + 3 = 4-8+3 = -1.\\] Titik balik: $ (2,\\,-1) $ .",
+          "q": "Fungsi $ f(x) = x^2 + px + q $ memiliki sumbu simetri $ x = 2 $ dan titik potong sumbu $ Y $ di $ (0,\\;3) $ . Koordinat titik balik fungsi tersebut adalah …",
+          "opts": [
+            "$ (2,\\;3) $",
+            "$ (2,\\;0) $",
+            "$ (2,\\;-1) $",
+            "$ (-2,\\;-1) $",
+            "$ (2,\\;1) $"
+          ]
+        },
+        {
+          "id": "B12",
+          "section": "B",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "salah mengambil rata-rata: mengira xs=(-1+3)=2, lupa dibagi 2",
+          "jawab": "c",
+          "p": "Sumbu simetri parabola yang memotong sumbu $ X $ di $ x_1 $ dan $ x_2 $ adalah rata-rata kedua akar: \\[x_s = \\frac{-1+3}{2} = 1.\\]",
+          "q": "Sebuah parabola memotong sumbu $ X $ di titik $ (-1,\\;0) $ dan $ (3,\\;0) $ seperti tampak pada gambar berikut. \\begin{center} [GAMBAR] \\end{center} Persamaan sumbu simetri parabola tersebut adalah …",
+          "opts": [
+            "$ x = 0 $ (b) $ x = -1 $ (c) $ x = 1 $ (d) $ x = 2 $ (e) $ x = 3 $"
+          ]
+        },
+        {
+          "id": "B13",
+          "section": "B",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira yP=-D/4a dengan a=-1 sehingga salah menerapkan rumus; salah mensubstitusi",
+          "jawab": "b",
+          "p": "$ a=-1, b=6 $ . Sumbu simetri $ x_s = \\dfrac{-6}{-2} = 3 $ . Ordinat titik balik: \\[y_P = \\frac{-D}{4a}; D = 36 - 4k; y_P = \\frac{-(36-4k)}{-4} = \\frac{36-4k}{4} = 9 - k.\\] Syarat $ y_P = 5 $ : $ 9 - k = 5 \\Rightarrow k = 4 $ .",
+          "q": "Fungsi $ f(x) = -x^2 + 6x - k $ memiliki titik balik di ordinat $ y_P = 5 $ . Nilai $ k $ adalah …",
+          "opts": [
+            "$ k = 3 $",
+            "$ k = 4 $",
+            "$ k = 5 $",
+            "$ k = 6 $",
+            "$ k = 9 $"
+          ]
+        },
+        {
+          "id": "B14",
+          "section": "B",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak memisahkan syarat a≠0 dari syarat D=0; menerima a=0 sebagai solusi",
+          "jawab": "c",
+          "p": "$ D = (-4a)^2 - 4a(a+3) = 16a^2 - 4a^2 - 12a = 12a^2 - 12a = 12a(a-1) $ .",
+          "q": "Nilai $ a $ ( $ a \\neq 0 $ ) agar grafik $ f(x) = ax^2 - 4ax + (a + 3) $ <b>menyinggung</b> sumbu $ X $ adalah …",
+          "opts": [
+            "$ a = -1 $ (b) $ a = 0 $ (c) $ a = 1 $ (d) $ a = 2 $ (e) $ a = 3 $"
+          ]
+        },
+        {
+          "id": "B15",
+          "section": "B",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menemukan c=1 tapi tidak menentukan koordinat titik singgungnya",
+          "jawab": "a",
+          "p": "Tepat satu titik potong berarti $ D=0 $ : \\[D = (-2)^2 - 4c = 4 - 4c = 0 \\Rightarrow c = 1.\\] Titik singgung $ = x_s = \\dfrac{-(-2)}{2} = 1 $ . Jadi titik singgung: $ (1,\\,0) $ .",
+          "q": "Jika grafik $ f(x) = x^2 - 2x + c $ hanya menyentuh sumbu $ X $ di satu titik, koordinat titik tersebut adalah …",
+          "opts": [
+            "$ (1,\\;0) $ (b) $ (2,\\;0) $ (c) $ (-1,\\;0) $ (d) $ (0,\\;0) $ (e) $ (0,\\;1) $"
+          ]
+        },
+        {
+          "id": "B16",
+          "section": "B",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "salah menerapkan pertidaksamaan m²<36; mengira syaratnya m<6 saja tanpa m>-6",
+          "jawab": "c",
+          "p": "Tidak memotong sumbu $ X $ $ \\Rightarrow D < 0 $ : \\[D = m^2 - 4(9) = m^2 - 36 < 0 \\Rightarrow m^2 < 36 \\Rightarrow -6 < m < 6.\\]",
+          "q": "Grafik fungsi $ f(x) = x^2 - mx + 9 $ <b>tidak memotong</b> sumbu $ X $ jika …",
+          "opts": [
+            "$ m < -6 $",
+            "$ m > 6 $",
+            "$ -6 < m < 6 $",
+            "$ m \\leq -6 $ atau $ m \\geq 6 $",
+            "$ m = \\pm6 $"
+          ]
+        },
+        {
+          "id": "B17",
+          "section": "B",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya menemukan satu nilai p; lupa bahwa persamaan kuadrat dalam p punya dua akar",
+          "jawab": "d",
+          "p": "Syarat menyinggung: $ D=0 $ . Diskriminan dalam $ p $ : \\[D = (2p)^2 - 4(p+2) = 4p^2 - 4p - 8 = 4(p^2-p-2) = 4(p-2)(p+1) = 0.\\] Jadi $ p = 2 $ atau $ p = -1 $ .",
+          "q": "Grafik fungsi $ f(x) = x^2 + 2px + (p + 2) $ <b>menyinggung</b> sumbu $ X $ . Nilai $ p $ yang mungkin adalah …",
+          "opts": [
+            "$ p = 1 $ saja",
+            "$ p = -1 $ atau $ p = -2 $",
+            "$ p = 0 $ atau $ p = 4 $",
+            "$ p = -1 $ atau $ p = 2 $",
+            "$ p = 2 $ saja"
+          ]
+        },
+        {
+          "id": "B18",
+          "section": "B",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "hanya memeriksa D>0; lupa syarat jumlah dan hasil kali akar dari rumus Vieta",
+          "jawab": "b",
+          "p": "Gunakan rumus Vieta: $ x_1+x_2 = 2k+1 $ dan $ x_1 \\cdot x_2 = k^2+k $ .",
+          "q": "Fungsi $ f(x) = x^2 - (2k+1)x + k^2 + k $ memiliki dua akar real yang keduanya <b>positif</b>. Syarat nilai $ k $ yang memenuhi adalah …",
+          "opts": [
+            "$ k > \\dfrac{1}{2} $",
+            "$ k > 0 $",
+            "$ k < -1 $",
+            "$ -1 < k < 0 $",
+            "semua nilai $ k \\in \\mathbb{R} $"
+          ]
+        },
+        {
+          "id": "B19",
+          "section": "B",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "salah menghitung c dari xs=1 dan f(3)=6; atau menuliskan b tanpa memeriksa xs",
+          "jawab": "b",
+          "p": "Sumbu simetri $ x=1 \\Rightarrow \\dfrac{-b}{4}=1 \\Rightarrow b=-4 $ .",
+          "q": "Grafik di bawah adalah $ f(x) = 2x^2 + bx + c $ dengan sumbu simetri $ x = 1 $ dan melalui titik $ (3,\\;6) $ . \\begin{center} [GAMBAR] \\end{center} Nilai minimum fungsi tersebut adalah …",
+          "opts": [
+            "$ -4 $ (b) $ -2 $ (c) $ 0 $ (d) $ 2 $ (e) $ 4 $"
+          ]
+        },
+        {
+          "id": "B20",
+          "section": "B",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "hanya memeriksa D<0 tanpa memastikan a<0; atau salah arah pertidaksamaan 16+4c<0",
+          "jawab": "d",
+          "p": "Syarat grafik seluruhnya di bawah sumbu $ X $ : $ a < 0 $ (sudah terpenuhi, $ a=-1 $ ) <b>dan</b> $ D < 0 $ . \\[D = 16 - 4(-1)(c) = 16 + 4c < 0 \\Rightarrow 4c < -16 \\Rightarrow c < -4.\\]",
+          "q": "Grafik fungsi $ f(x) = -x^2 + 4x + c $ <b>seluruhnya berada di bawah</b> sumbu $ X $ untuk semua $ x \\in \\mathbb{R} $ . Syarat nilai $ c $ adalah …",
+          "opts": [
+            "$ c < 4 $",
+            "$ c > -4 $",
+            "$ c = -4 $",
+            "$ c < -4 $",
+            "$ c \\leq -4 $"
+          ]
+        }
       ]
     },
     {
-      "id": "C-2",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "ANALISIS-SIFAT",
-        "PERTAKSAMAAN"
-      ],
-      "prasyarat": [
-        "Definit negatif",
-        "Diskriminan",
-        "Pertidaksamaan kuadrat"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Diketahui fungsi $f(x)=(a-2)x^2+2ax+(2a-3)$ definit negatif. Nilai $a$ yang memenuhi adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$a<2$",
-        "$a>-2$",
-        "$a<-1$",
-        "$a<1$",
-        "$a>1$"
+      "sectionId": "C",
+      "sectionTitle": "Menggambar Grafik",
+      "soal": [
+        {
+          "id": "C1",
+          "section": "C",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah memfaktorkan x²-2x-8; mengira (x-4)(x+2) → root +4 dan -2 tapi lupa tanda",
+          "jawab": "c",
+          "p": "$ x^2-2x-8=0 \\Rightarrow (x-4)(x+2)=0 \\Rightarrow x=-2 $ atau $ x=4 $ . Titik potong: $ (-2,\\,0) $ dan $ (4,\\,0) $ .",
+          "q": "Titik potong grafik $ f(x) = x^2 - 2x - 8 $ dengan sumbu $ X $ adalah …",
+          "opts": [
+            "$ (-4,\\;0) $ dan $ (2,\\;0) $",
+            "$ (-8,\\;0) $ dan $ (1,\\;0) $",
+            "$ (-2,\\;0) $ dan $ (4,\\;0) $",
+            "$ (2,\\;0) $ dan $ (4,\\;0) $",
+            "$ (-4,\\;0) $ dan $ (-2,\\;0) $"
+          ]
+        },
+        {
+          "id": "C2",
+          "section": "C",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira titik potong sbY = titik potong sbX; atau menghitung f(1) bukan f(0)",
+          "jawab": "b",
+          "p": "Titik potong sumbu $ Y $ : substitusi $ x=0 \\Rightarrow f(0)=0-0+3=3 $ . Titik: $ (0,\\,3) $ .",
+          "q": "Titik potong grafik $ f(x) = x^2 - 4x + 3 $ dengan sumbu $ Y $ adalah …",
+          "opts": [
+            "$ (0,\\;-3) $ (b) $ (0,\\;3) $ (c) $ (0,\\;4) $ (d) $ (0,\\;1) $ (e) $ (0,\\;-4) $"
+          ]
+        },
+        {
+          "id": "C3",
+          "section": "C",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira sumbu simetri = titik tengah koordinat y, bukan rata-rata akar",
+          "jawab": "b",
+          "p": "Sumbu simetri = rata-rata kedua akar: \\[x_s = \\frac{-2+4}{2} = 1.\\]",
+          "q": "Grafik $ f(x) = x^2 - 2x - 8 $ memotong sumbu $ X $ di $ x = -2 $ dan $ x = 4 $ . Sumbu simetri parabola tersebut adalah …",
+          "opts": [
+            "$ x = -1 $ (b) $ x = 1 $ (c) $ x = 2 $ (d) $ x = 3 $ (e) $ x = 4 $"
+          ]
+        },
+        {
+          "id": "C4",
+          "section": "C",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira titik balik maksimum f=-x²+4x adalah (0,0) atau (4,0)",
+          "jawab": "d",
+          "p": "$ a=-1, b=4 $ . Sumbu simetri $ x_s=\\dfrac{-4}{-2}=2 $ . Nilai maksimum: \\[y_P = f(2) = -4+8=4. \\text{Titik balik: }(2,\\,4).\\]",
+          "q": "Titik balik grafik $ f(x) = -x^2 + 4x $ adalah …",
+          "opts": [
+            "$ (0,\\;0) $",
+            "$ (2,\\;0) $",
+            "$ (4,\\;0) $",
+            "$ (2,\\;4) $",
+            "$ (-2,\\;4) $"
+          ]
+        },
+        {
+          "id": "C5",
+          "section": "C",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira D negatif berarti tidak ada grafik sama sekali; lupa grafik tetap ada tapi tidak potong sbX",
+          "jawab": "c",
+          "p": "$ D=-8<0 $ dan $ a=1>0 $ . Karena $ a>0 $ dan $ D<0 $ , seluruh grafik berada <b>di atas</b> sumbu $ X $ .",
+          "q": "Diketahui $ f(x) = x^2 - 2x + 3 $ . Nilai diskriminannya adalah $ D = -8 $ . Pernyataan yang benar tentang posisi grafiknya adalah …",
+          "opts": [
+            "Grafik memotong sumbu $ X $ di dua titik",
+            "Grafik menyinggung sumbu $ X $ di satu titik",
+            "Grafik seluruhnya di <b>atas</b> sumbu $ X $",
+            "Grafik seluruhnya di <b>bawah</b> sumbu $ X $",
+            "Grafik tidak terdefinisi"
+          ]
+        },
+        {
+          "id": "C6",
+          "section": "C",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira sumbu simetri adalah salah satu akarnya (x=1 atau x=3)",
+          "jawab": "c",
+          "p": "Sumbu simetri = rata-rata $ x_1 $ dan $ x_2 $ : \\[x_s = \\frac{1+3}{2} = 2.\\]",
+          "q": "Grafik $ f(x) = x^2 - 4x + 3 $ mempunyai titik potong sumbu $ X $ di $ (1,\\;0) $ dan $ (3,\\;0) $ , serta titik potong sumbu $ Y $ di $ (0,\\;3) $ . Persamaan sumbu simetrinya adalah …",
+          "opts": [
+            "$ x = 1 $ (b) $ x = -2 $ (c) $ x = 2 $ (d) $ x = 3 $ (e) $ x = 0 $"
+          ]
+        },
+        {
+          "id": "C7",
+          "section": "C",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "menggambar tanpa menentukan arah bukaan terlebih dahulu; atau langsung plot tanpa titik penting",
+          "jawab": "a",
+          "p": "Urutan baku: (1) tanda $ a $ , (2) titik potong sb. $ X $ , (3) titik potong sb. $ Y $ , (4) sumbu simetri, (5) titik balik, (6) hubungkan dengan kurva mulus.",
+          "q": "Urutan langkah yang <b>benar</b> dalam menggambar grafik fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …",
+          "opts": [
+            "Tentukan tanda $ a $ $ \\to $ titik potong sb. $ X $ $ \\to $ titik potong sb. $ Y $ $ \\to $ sumbu simetri $ \\to $ titik balik $ \\to $ hubungkan",
+            "Tentukan titik balik $ \\to $ tanda $ a $ $ \\to $ titik potong sb. $ X $ $ \\to $ titik potong sb. $ Y $ $ \\to $ hubungkan",
+            "Hitung diskriminan $ \\to $ tentukan akar $ \\to $ gambar langsung",
+            "Substitusi $ x = 0,1,2,3 $ $ \\to $ plot titik $ \\to $ hubungkan",
+            "Tentukan range $ \\to $ tanda $ a $ $ \\to $ plot titik balik saja"
+          ]
+        },
+        {
+          "id": "C8",
+          "section": "C",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira setiap parabola pasti memotong sbX; tidak menggunakan D untuk mengecek",
+          "jawab": "d",
+          "p": "$ D=(-6)^2-4(8)=36-32=4>0 $ . Grafik memotong sumbu $ X $ di dua titik: \\[x^2-6x+8=0 \\Rightarrow (x-2)(x-4)=0 \\Rightarrow (2,\\,0)\\text{ dan }(4,\\,0).\\]",
+          "q": "Grafik $ f(x) = x^2 - 6x + 8 $ memotong sumbu $ X $ di …",
+          "opts": [
+            "tidak ada titik potong",
+            "satu titik, yaitu $ (3,\\;0) $",
+            "satu titik, yaitu $ (4,\\;0) $",
+            "dua titik, yaitu $ (2,\\;0) $ dan $ (4,\\;0) $",
+            "dua titik, yaitu $ (1,\\;0) $ dan $ (8,\\;0) $"
+          ]
+        },
+        {
+          "id": "C9",
+          "section": "C",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah menghitung yP; mengira yP=f(xs) tapi salah substitusi nilai xs",
+          "jawab": "b",
+          "p": "$ a=1, b=-4, c=-5 $ . Sumbu simetri $ x_s=2 $ . \\[y_P = f(2) = 4-8-5 = -9. \\text{Puncak di }(2,\\,-9)\\text{, yaitu \\textbf{di bawah} sb.\\ }X.\\]",
+          "q": "Ordinat titik balik grafik $ f(x) = x^2 - 4x - 5 $ adalah …, sehingga puncak parabola berada … sumbu $ X $ .",
+          "opts": [
+            "$ y_P = 4 $ ;\\; di atas",
+            "$ y_P = -9 $ ;\\; di bawah",
+            "$ y_P = -5 $ ;\\; di bawah",
+            "$ y_P = 9 $ ;\\; di atas",
+            "$ y_P = 0 $ ;\\; tepat pada"
+          ]
+        },
+        {
+          "id": "C10",
+          "section": "C",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak membalik tanda saat memfaktorkan -2x²+8x-6=0; salah menentukan faktor",
+          "jawab": "c",
+          "p": "$ -2x^2+8x-6=0 \\Rightarrow x^2-4x+3=0 \\Rightarrow (x-1)(x-3)=0 $ . Titik potong: $ (1,\\,0) $ dan $ (3,\\,0) $ .",
+          "q": "Titik potong grafik $ f(x) = -2x^2 + 8x - 6 $ dengan sumbu $ X $ adalah …",
+          "opts": [
+            "$ (-1,\\;0) $ dan $ (-3,\\;0) $",
+            "$ (1,\\;0) $ dan $ (-3,\\;0) $",
+            "$ (1,\\;0) $ dan $ (3,\\;0) $",
+            "$ (-1,\\;0) $ dan $ (3,\\;0) $",
+            "$ (2,\\;0) $ saja"
+          ]
+        },
+        {
+          "id": "C11",
+          "section": "C",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "salah mensubstitusi titik untuk mencari a; menggunakan titik sbX bukan sbY",
+          "jawab": "a",
+          "p": "Dari grafik: titik balik $ P(1,-4) $ , terbuka ke atas ( $ a>0 $ ), titik potong sb. $ Y $ di $ (0,-3) $ . Bentuk vertex: $ f(x)=a(x-1)^2-4 $ . Substitusi $ (0,-3) $ : \\[-3=a(1)-4 \\Rightarrow a=1.\\] Jadi $ f(x)=(x-1)^2-4=x^2-2x-3 $ .",
+          "q": "Perhatikan grafik berikut. \\begin{center} [GAMBAR] \\end{center} Persamaan fungsi kuadrat yang grafiknya tampak di atas adalah …",
+          "opts": [
+            "$ f(x) = x^2 - 2x - 3 $",
+            "$ f(x) = x^2 + 2x - 3 $",
+            "$ f(x) = -x^2 - 2x + 3 $",
+            "$ f(x) = x^2 - 2x + 3 $",
+            "$ f(x) = x^2 + 2x + 3 $"
+          ]
+        },
+        {
+          "id": "C12",
+          "section": "C",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira b+c = akar1 + akar2; tidak menyusun f=a(x-x1)(x-x2) terlebih dahulu",
+          "jawab": "d",
+          "p": "Dari akar $ x_1=-2 $ dan $ x_2=4 $ : $ f(x)=a(x+2)(x-4)=a(x^2-2x-8) $ . Karena koefisien $ x^2 $ adalah $ 1 $ (derajat 1), maka $ a=1 $ : $ b=-2 $ , $ c=-8 $ . \\[b+c = -2+(-8) = -10.\\]",
+          "q": "Grafik fungsi kuadrat $ f(x) = x^2 + bx + c $ memotong sumbu $ X $ di titik $ (-2,\\;0) $ dan $ (4,\\;0) $ . Nilai $ b + c $ adalah …",
+          "opts": [
+            "$ -12 $ (b) $ -6 $ (c) $ 2 $ (d) $ -10 $ (e) $ 6 $"
+          ]
+        },
+        {
+          "id": "C13",
+          "section": "C",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira D<0 berarti grafik di bawah sbX; lupa harus cek tanda a",
+          "jawab": "c",
+          "p": "$ a=2>0 $ dan $ D=-24<0 $ . Karena $ a>0 $ dan $ D<0 $ , seluruh grafik berada <b>di atas</b> sumbu $ X $ .",
+          "q": "Diketahui $ f(x) = 2x^2 - 4x + 5 $ . Nilai diskriminannya $ D = -24 < 0 $ . Posisi grafik $ f(x) $ terhadap sumbu $ X $ adalah …",
+          "opts": [
+            "Seluruhnya di bawah sumbu $ X $",
+            "Menyinggung sumbu $ X $ di satu titik",
+            "Seluruhnya di atas sumbu $ X $",
+            "Memotong sumbu $ X $ di dua titik",
+            "Sebagian di atas, sebagian di bawah"
+          ]
+        },
+        {
+          "id": "C14",
+          "section": "C",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "salah menentukan tanda a; mengambil a>0 karena puncak di atas",
+          "jawab": "b",
+          "p": "Dari grafik: puncak $ P(-1,4) $ , terbuka ke bawah ( $ a<0 $ ), melalui $ (1,0) $ . Bentuk vertex: $ f(x)=a(x+1)^2+4 $ . Substitusi $ (1,0) $ : \\[0=a(4)+4 \\Rightarrow a=-1.\\] Jadi $ f(x)=-(x+1)^2+4=-x^2-2x+3 $ .",
+          "q": "Perhatikan grafik berikut. \\begin{center} [GAMBAR] \\end{center} Persamaan fungsi kuadrat yang grafiknya tampak di atas adalah …",
+          "opts": [
+            "$ f(x) = x^2 + 2x - 3 $",
+            "$ f(x) = -x^2 - 2x + 3 $",
+            "$ f(x) = -x^2 + 2x + 3 $",
+            "$ f(x) = x^2 - 2x - 3 $",
+            "$ f(x) = -x^2 - 2x - 3 $"
+          ]
+        },
+        {
+          "id": "C15",
+          "section": "C",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira range=(-∞,+∞) untuk semua FK; atau salah menentukan yP",
+          "jawab": "a",
+          "p": "$ f(x)=x^2-2x-3 $ . Titik balik $ P(1,-4) $ , $ a=1>0 $ (terbuka ke atas). \\[\\text{Range} = [y_P, +\\infty) = [-4, +\\infty).\\]",
+          "q": "Dari grafik $ f(x) = x^2 - 2x - 3 $ yang memiliki titik balik minimum $ P(1,\\;-4) $ , range fungsi tersebut adalah …",
+          "opts": [
+            "$ [-4,\\;+\\infty) $",
+            "$ (-\\infty,\\;-4] $",
+            "$ [-3,\\;+\\infty) $",
+            "$ (-\\infty,\\;4] $",
+            "$ \\mathbb{R} $"
+          ]
+        },
+        {
+          "id": "C16",
+          "section": "C",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "memilih sketsa dengan D>0 (2 titik potong); atau puncak di bawah sbX",
+          "jawab": "b",
+          "p": "$ f(x)=x^2-4x+4=(x-2)^2 $ . Sifat: $ D=0 $ , terbuka ke atas, menyinggung sb. $ X $ di $ (2,\\,0) $ , titik potong sb. $ Y $ : $ f(0)=4 $ , yaitu $ (0,\\,4) $ . Sketsa (b) memenuhi semua sifat ini.",
+          "q": "Dari empat sketsa di bawah, yang paling tepat menggambarkan $ f(x) = x^2 - 4x + 4 $ adalah … \\begin{center} [GAMBAR] \\end{center}",
+          "opts": [
+            "Sketsa (a) (b) Sketsa (b) (c) Sketsa (c) (d) Sketsa (d)",
+            "[(e)] Tidak ada yang benar"
+          ]
+        },
+        {
+          "id": "C17",
+          "section": "C",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menggunakan f=a(x-x1)(x-x2) lalu substitusi titik ketiga tapi salah aritmetika",
+          "jawab": "c",
+          "p": "Gunakan $ f(x)=a(x+1)(x-3) $ , karena akar $ -1 $ dan $ 3 $ . Substitusi $ (0,-6) $ : \\[-6=a(1)(-3)=-3a \\Rightarrow a=2.\\] $ f(x)=2(x+1)(x-3)=2x^2-4x-6 $ . Koefisien $ b=-4 $ .",
+          "q": "Grafik fungsi kuadrat melewati titik $ (-1,\\;0) $ , $ (3,\\;0) $ , dan $ (0,\\;-6) $ . Nilai $ b $ dalam persamaan $ f(x) = ax^2 + bx + c $ adalah …",
+          "opts": [
+            "$ b = 2 $ (b) $ b = -2 $ (c) $ b = -4 $ (d) $ b = 4 $ (e) $ b = -6 $"
+          ]
+        },
+        {
+          "id": "C18",
+          "section": "C",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mencari a tapi salah membagi; atau mengira nilai minimum = yP + sesuatu",
+          "jawab": "b",
+          "p": "Gunakan bentuk vertex $ f(x)=a(x-2)^2-3 $ . Substitusi $ (0,\\,5) $ : \\[5=a(4)-3 \\Rightarrow 4a=8 \\Rightarrow a=2.\\] Titik balik $ P(2,-3) $ , sehingga nilai minimum $ = -3 $ .",
+          "q": "Fungsi kuadrat memiliki titik balik $ P(2,\\;-3) $ dan melalui titik $ (0,\\;5) $ . Nilai minimum fungsi tersebut adalah …",
+          "opts": [
+            "$ -5 $ (b) $ -3 $ (c) $ 0 $ (d) $ 2 $ (e) $ 5 $"
+          ]
+        },
+        {
+          "id": "C19",
+          "section": "C",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mengira c<0 berarti grafik memotong sbY di atas O; terbalik dengan c>0",
+          "jawab": "d",
+          "p": "Periksa tiap pernyataan: (I) $ a>0 $ : terbuka ke atas $ \\checkmark $ ; (II) $ D>0 $ : memotong sb. $ X $ di dua titik $ \\checkmark $ ; (III) $ a>0 $ dan $ D>0\\Rightarrow y_P = -D/4a < 0 $ : puncak <b>di bawah</b> sb. $ X $ — pernyataan III <b>salah</b>; (IV) $ c<0\\Rightarrow f(0)<0 $ : sb. $ Y $ di bawah $ O $ $ \\checkmark $ .",
+          "q": "Diketahui fungsi kuadrat $ f(x) = ax^2 + bx + c $ dengan $ a > 0 $ , $ D > 0 $ , dan $ c < 0 $ . Perhatikan pernyataan-pernyataan berikut: Parabola terbuka ke atas Grafik memotong sumbu $ X $ di dua titik Titik puncak berada di atas sumbu $ X $ Grafik memotong sumbu $ Y $ di bawah titik $ O $ Pernyataan yang <b>salah</b> adalah …",
+          "opts": [
+            "I (b) II (c) I dan II (d) III (e) IV"
+          ]
+        },
+        {
+          "id": "C20",
+          "section": "C",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "memilih sketsa dengan 2 titik potong sbX; atau puncak tidak tepat di (2,0)",
+          "jawab": "b",
+          "p": "$ f(x)=x^2-4x+4=(x-2)^2 $ : $ D=0 $ (menyinggung sb. $ X $ di satu titik), $ a>0 $ (terbuka ke atas), $ f(0)=4>0 $ (sb. $ Y $ di atas $ O $ ). Ketiga syarat dipenuhi sketsa (b).",
+          "q": "Sketsa yang paling akurat untuk grafik $ f(x) = x^2 - 4x + 4 $ adalah yang memenuhi <b>semua</b> sifat berikut: terbuka ke atas, menyinggung sumbu $ X $ tepat di satu titik, dan memotong sumbu $ Y $ di atas titik $ O $ . \\begin{center} [GAMBAR] \\end{center}",
+          "opts": [
+            "Sketsa (a) (b) Sketsa (b) (c) Sketsa (c) (d) Sketsa (d)",
+            "[(e)] Semua salah"
+          ]
+        }
       ]
     },
     {
-      "id": "C-3",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "ANALISIS-SIFAT",
-        "KONSTRUKSI"
-      ],
-      "prasyarat": [
-        "Diskriminan (menyinggung)",
-        "Titik balik",
-        "Parameter"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Jika grafik $f(x)=ax^2+(2a+4)x+(2a+1)$ menyinggung sumbu-$X$, maka koordinat titik balik maksimumnya adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$(-2,\\;0)$",
-        "$(-1,\\;0)$",
-        "$(1,\\;0)$",
-        "$(2,\\;0)$",
-        "$(3,\\;0)$"
+      "sectionId": "D",
+      "sectionTitle": "Sifat Grafik Berdasarkan $a$ dan $D$",
+      "soal": [
+        {
+          "id": "D1",
+          "section": "D",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira D<0 berarti nilai minimum negatif; lupa bahwa jika D<0 dan a>0 maka yP>0",
+          "jawab": "b",
+          "p": "$ a>0 $ : terbuka ke atas. $ D<0 $ : tidak ada titik potong sumbu $ X $ . Karena seluruh grafik di atas sumbu $ X $ , nilai minimum $ y_P = \\dfrac{-D}{4a} > 0 $ (sebab $ D<0 $ dan $ a>0 $ sehingga $ -D>0 $ ).",
+          "q": "Jika fungsi kuadrat $ f(x) = ax^2 + bx + c $ memiliki $ a > 0 $ dan $ D < 0 $ , pernyataan yang <b>benar</b> adalah …",
+          "opts": [
+            "Grafik memotong sumbu $ X $ di dua titik dan nilai minimum $ < 0 $",
+            "Grafik tidak memotong sumbu $ X $ dan nilai minimum $ > 0 $",
+            "Grafik menyinggung sumbu $ X $ dan nilai minimum $ = 0 $",
+            "Grafik memotong sumbu $ X $ di satu titik",
+            "Grafik seluruhnya di bawah sumbu $ X $"
+          ]
+        },
+        {
+          "id": "D2",
+          "section": "D",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira terbuka ke bawah berarti tidak ada titik potong sbX; lupa peran D",
+          "jawab": "c",
+          "p": "$ a<0 $ : terbuka ke bawah. $ D>0 $ : ada dua titik potong sumbu $ X $ berbeda. Jadi grafik terbuka ke bawah dan memotong sumbu $ X $ di dua titik.",
+          "q": "Jika fungsi kuadrat memiliki $ a < 0 $ dan $ D > 0 $ , maka grafiknya …",
+          "opts": [
+            "terbuka ke atas dan tidak memotong sumbu $ X $",
+            "terbuka ke atas dan memotong sumbu $ X $ di dua titik",
+            "terbuka ke bawah dan memotong sumbu $ X $ di dua titik",
+            "terbuka ke bawah dan tidak memotong sumbu $ X $",
+            "terbuka ke bawah dan menyinggung sumbu $ X $"
+          ]
+        },
+        {
+          "id": "D3",
+          "section": "D",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menghitung D=(-4)²-4(5)=16-20 salah tanda; mengira hasilnya positif",
+          "jawab": "d",
+          "p": "$ D=-4<0 $ dan $ a=1>0 $ : grafik terbuka ke atas dan tidak memotong sumbu $ X $ (seluruhnya di atas). Nilai minimum $ y_P = \\dfrac{-(-4)}{4} = 1 $ .",
+          "q": "Diketahui $ f(x) = x^2 - 4x + 5 $ . Nilai diskriminannya adalah $ D = -4 $ . Pernyataan yang tepat tentang posisi grafiknya adalah …",
+          "opts": [
+            "Memotong sumbu $ X $ di $ (1,\\,0) $ dan $ (5,\\,0) $",
+            "Menyinggung sumbu $ X $ di $ (2,\\,0) $",
+            "Memotong sumbu $ X $ di dua titik dengan nilai minimum $ < 0 $",
+            "Seluruhnya di atas sumbu $ X $ ; nilai minimum $ = 1 $",
+            "Seluruhnya di bawah sumbu $ X $"
+          ]
+        },
+        {
+          "id": "D4",
+          "section": "D",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira a<0,D=0 berarti nilai minimum=0; padahal itu nilai MAKSIMUM=0",
+          "jawab": "a",
+          "p": "$ D=0 $ dan $ a=-1<0 $ : grafik terbuka ke bawah, menyinggung sumbu $ X $ di satu titik. Titik singgung adalah titik balik, yaitu <b>nilai maksimum</b> $ = y_P = 0 $ .",
+          "q": "Diketahui $ f(x) = -x^2 + 2x - 1 $ . Nilai $ D = 0 $ dan $ a = -1 < 0 $ . Pernyataan yang <b>benar</b> adalah …",
+          "opts": [
+            "Grafik menyinggung sumbu $ X $ dan nilai <b>maksimum</b> $ = 0 $",
+            "Grafik menyinggung sumbu $ X $ dan nilai <b>minimum</b> $ = 0 $",
+            "Grafik memotong sumbu $ X $ di dua titik",
+            "Grafik seluruhnya di atas sumbu $ X $",
+            "Grafik tidak memiliki titik ekstrem"
+          ]
+        },
+        {
+          "id": "D5",
+          "section": "D",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira D>0 dan a>0 berarti puncak di atas sbX; padahal puncak DI BAWAH sbX",
+          "jawab": "c",
+          "p": "$ D=16>0 $ dan $ a=1>0 $ : terbuka ke atas, memotong sumbu $ X $ di dua titik. Karena $ a>0 $ dan ada dua akar, titik puncak (minimum) berada <b>di bawah</b> sumbu $ X $ .",
+          "q": "Diketahui $ f(x) = x^2 - 2x - 3 $ dengan $ D = 16 > 0 $ dan $ a = 1 > 0 $ . Sifat grafik yang tepat adalah …",
+          "opts": [
+            "Terbuka ke atas; tidak memotong sumbu $ X $",
+            "Terbuka ke atas; menyinggung sumbu $ X $",
+            "Terbuka ke atas; memotong sumbu $ X $ di dua titik; puncak di <b>bawah</b> sumbu $ X $",
+            "Terbuka ke bawah; memotong sumbu $ X $ di dua titik",
+            "Terbuka ke atas; puncak di atas sumbu $ X $"
+          ]
+        },
+        {
+          "id": "D6",
+          "section": "D",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira D<0 selalu berarti grafik di atas sbX; lupa tanda a menentukan arah",
+          "jawab": "d",
+          "p": "$ a<0 $ : terbuka ke bawah. $ D<0 $ : tidak ada titik potong sumbu $ X $ . Gabungan: grafik seluruhnya <b>di bawah</b> sumbu $ X $ .",
+          "q": "Jika fungsi kuadrat memiliki $ a < 0 $ dan $ D < 0 $ , posisi seluruh grafik terhadap sumbu $ X $ adalah …",
+          "opts": [
+            "Seluruhnya di atas sumbu $ X $",
+            "Memotong sumbu $ X $ di dua titik",
+            "Menyinggung sumbu $ X $ dari bawah",
+            "Seluruhnya di bawah sumbu $ X $",
+            "Sebagian di atas, sebagian di bawah"
+          ]
+        },
+        {
+          "id": "D7",
+          "section": "D",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak menghitung D dulu; langsung mengira D≠0 karena koefisien berbeda",
+          "jawab": "b",
+          "p": "$ D = (-6)^2 - 4(9) = 36-36 = 0 $ dan $ a=1>0 $ : grafik menyinggung sumbu $ X $ . Titik singgung $ x_s = 3 $ , yaitu di $ (3,\\,0) $ . Nilai minimum $ = y_P = 0 $ .",
+          "q": "Untuk fungsi $ f(x) = x^2 - 6x + 9 $ , pernyataan yang <b>benar</b> adalah …",
+          "opts": [
+            "Grafik memotong sumbu $ X $ di $ (3,\\,0) $ dan $ (-3,\\,0) $",
+            "Grafik menyinggung sumbu $ X $ di $ (3,\\,0) $ ; nilai minimum $ = 0 $",
+            "Grafik seluruhnya di atas sumbu $ X $ ; nilai minimum $ = 9 $",
+            "Grafik menyinggung sumbu $ X $ di $ (1,\\,0) $",
+            "Grafik memotong sumbu $ X $ di $ (1,\\,0) $ dan $ (9,\\,0) $"
+          ]
+        },
+        {
+          "id": "D8",
+          "section": "D",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "memilih a>0,D=0 karena \"menyinggung\" tanpa memperhatikan arah bukaan",
+          "jawab": "c",
+          "p": "Terbuka ke bawah $ \\Rightarrow a<0 $ . Menyinggung sumbu $ X $ $ \\Rightarrow D=0 $ . Pasangan yang sesuai: $ a<0 $ , $ D=0 $ .",
+          "q": "Grafik fungsi kuadrat di bawah ini terbuka ke <b>bawah</b> dan <b>menyinggung</b> sumbu $ X $ . Pasangan $ (a, D) $ yang sesuai adalah … \\begin{center} [GAMBAR] \\end{center}",
+          "opts": [
+            "$ a > 0 $ ,\\; $ D > 0 $",
+            "$ a > 0 $ ,\\; $ D = 0 $",
+            "$ a < 0 $ ,\\; $ D = 0 $",
+            "$ a < 0 $ ,\\; $ D < 0 $",
+            "$ a < 0 $ ,\\; $ D > 0 $"
+          ]
+        },
+        {
+          "id": "D9",
+          "section": "D",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "lupa ada dua nilai k (positif dan negatif); hanya mencari k>0",
+          "jawab": "d",
+          "p": "Syarat menyinggung: $ D = k^2 - 4(4) = k^2-16 = 0 \\Rightarrow k^2 = 16 \\Rightarrow k = 4 $ atau $ k = -4 $ .",
+          "q": "Grafik fungsi $ f(x) = x^2 + kx + 4 $ <b>menyinggung</b> sumbu $ X $ . Nilai $ k $ yang memenuhi adalah …",
+          "opts": [
+            "$ k = 4 $ saja",
+            "$ k = -4 $ saja",
+            "$ k = 2 $ atau $ k = -2 $",
+            "$ k = 4 $ atau $ k = -4 $",
+            "$ k = 8 $ atau $ k = -8 $"
+          ]
+        },
+        {
+          "id": "D10",
+          "section": "D",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "salah arah pertidaksamaan; mengira D<0→4-4m<0→m<1",
+          "jawab": "b",
+          "p": "Tidak memotong sumbu $ X $ $ \\Rightarrow D < 0 $ : \\[D = (-2)^2 - 4(1)(m) = 4-4m < 0 \\Rightarrow 4m > 4 \\Rightarrow m > 1.\\]",
+          "q": "Grafik fungsi $ f(x) = x^2 - 2x + m $ <b>tidak memotong</b> sumbu $ X $ . Nilai $ m $ yang memenuhi adalah …",
+          "opts": [
+            "$ m < 1 $ (b) $ m > 1 $ (c) $ m = 1 $ (d) $ m < -1 $ (e) $ m > -1 $"
+          ]
+        },
+        {
+          "id": "D11",
+          "section": "D",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "lupa memeriksa a>0 sudah terpenuhi; hanya menyelesaikan D<0",
+          "jawab": "c",
+          "p": "Syarat di atas sumbu $ X $ : $ a>0 $ (sudah, $ a=2>0 $ ) <b>dan</b> $ D<0 $ : \\[D = b^2 - 4(2)(8) = b^2-64 < 0 \\Rightarrow b^2 < 64 \\Rightarrow -8 < b < 8.\\]",
+          "q": "Grafik $ f(x) = 2x^2 + bx + 8 $ selalu berada <b>di atas</b> sumbu $ X $ untuk semua $ x \\in \\mathbb{R} $ . Syarat nilai $ b $ adalah …",
+          "opts": [
+            "$ b < -8 $ atau $ b > 8 $",
+            "$ b \\leq -8 $ atau $ b \\geq 8 $",
+            "$ -8 < b < 8 $",
+            "$ b = \\pm 8 $",
+            "$ b > 0 $"
+          ]
+        },
+        {
+          "id": "D12",
+          "section": "D",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya memeriksa D<0; tidak mempertimbangkan dua kasus a>0 dan a<0 secara terpisah",
+          "jawab": "d",
+          "p": "Tidak memotong sumbu $ X $ $ \\Rightarrow D<0 $ : \\[D = 16 - 4k^2 < 0 \\Rightarrow 4k^2 > 16 \\Rightarrow k^2 > 4 \\Rightarrow k < -2 \\text{ atau } k > 2.\\]",
+          "q": "Agar grafik $ f(x) = kx^2 - 4x + k $ ( $ k \\neq 0 $ ) <b>tidak memotong</b> sumbu $ X $ , syarat nilai $ k $ adalah …",
+          "opts": [
+            "$ k > 2 $ (b) $ -2 < k < 2,\\; k \\neq 0 $ (c) $ k > 2 $ atau $ k < -2 $",
+            "[(d)] $ k < -2 $ atau $ k > 2 $ (e) $ k = 2 $ atau $ k = -2 $"
+          ]
+        },
+        {
+          "id": "D13",
+          "section": "D",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira D>0 → 4p²-12p-16>0 lalu salah menyelesaikan pertidaksamaan kuadrat",
+          "jawab": "a",
+          "p": "$ D = (2p)^2 - 4(3p+4) = 4p^2-12p-16 = 4(p^2-3p-4) = 4(p-4)(p+1) $ .",
+          "q": "Grafik $ f(x) = x^2 + 2px + (3p + 4) $ memotong sumbu $ X $ di <b>dua titik berbeda</b>. Syarat nilai $ p $ adalah …",
+          "opts": [
+            "$ p < -1 $ atau $ p > 4 $",
+            "$ -1 < p < 4 $",
+            "$ p < -4 $ atau $ p > 1 $",
+            "$ -4 < p < 1 $",
+            "$ p = -1 $ atau $ p = 4 $"
+          ]
+        },
+        {
+          "id": "D14",
+          "section": "D",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "salah mengembangkan (m+2)²; atau salah menentukan akar persamaan kuadrat dalam m",
+          "jawab": "c",
+          "p": "$ D = (m+2)^2 - 4(m+5) = m^2+4m+4-4m-20 = m^2-16 = (m-4)(m+4) $ .",
+          "q": "Grafik $ f(x) = x^2 - (m+2)x + (m+5) $ tidak memiliki titik potong dengan sumbu $ X $ . Nilai $ m $ yang memenuhi adalah …",
+          "opts": [
+            "$ m < -4 $ atau $ m > 4 $",
+            "$ m \\leq -4 $ atau $ m \\geq 4 $",
+            "$ -4 < m < 4 $",
+            "$ m < 0 $",
+            "$ m > 0 $"
+          ]
+        },
+        {
+          "id": "D15",
+          "section": "D",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "lupa mengecek a<0 sudah terpenuhi; atau salah arah pertidaksamaan 16+4c<0",
+          "jawab": "b",
+          "p": "$ a=-1<0 $ sudah terpenuhi. Syarat $ D<0 $ : \\[D = 16 - 4(-1)(c) = 16+4c < 0 \\Rightarrow 4c < -16 \\Rightarrow c < -4.\\]",
+          "q": "Agar grafik $ f(x) = -x^2 + 4x + c $ seluruhnya berada <b>di bawah</b> sumbu $ X $ , syarat nilai $ c $ adalah …",
+          "opts": [
+            "$ c > 4 $ (b) $ c < -4 $ (c) $ c > -4 $ (d) $ c < 4 $ (e) $ c = -4 $"
+          ]
+        },
+        {
+          "id": "D16",
+          "section": "D",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menemukan a>3 dari D<0 tapi lupa menggabungkan dengan syarat a>0",
+          "jawab": "d",
+          "p": "Syarat di atas sumbu $ X $ : $ a>0 $ <b>dan</b> $ D<0 $ .",
+          "q": "Agar grafik $ f(x) = ax^2 - 6x + 3 $ selalu berada <b>di atas</b> sumbu $ X $ untuk semua $ x \\in \\mathbb{R} $ , syarat nilai $ a $ adalah …",
+          "opts": [
+            "$ a > 0 $ (b) $ a > 3 $ (c) $ 0 < a < 3 $ (d) $ a > 3 $ (e) $ a \\geq 3 $"
+          ]
+        },
+        {
+          "id": "D17",
+          "section": "D",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "salah memfaktorkan 4k²-12k+8; atau salah menentukan arah pertidaksamaan kuadrat",
+          "jawab": "c",
+          "p": "$ D = (2k)^2 - 4(3k-2) = 4k^2-12k+8 = 4(k^2-3k+2) = 4(k-1)(k-2) $ .",
+          "q": "Grafik $ f(x) = x^2 + 2kx + (3k - 2) $ tidak memotong sumbu $ X $ . Nilai $ k $ yang memenuhi adalah …",
+          "opts": [
+            "$ k < 1 $ atau $ k > 2 $",
+            "$ k < -2 $ atau $ k > -1 $",
+            "$ 1 < k < 2 $",
+            "$ k = 1 $ atau $ k = 2 $",
+            "$ -2 < k < -1 $"
+          ]
+        },
+        {
+          "id": "D18",
+          "section": "D",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mengira ada dua solusi m; tidak menyederhanakan D=-4(m-1) dengan benar",
+          "jawab": "b",
+          "p": "$ D = [2(m-1)]^2 - 4m(m-1) = 4(m-1)^2 - 4m(m-1) = 4(m-1)[(m-1)-m] = 4(m-1)(-1) = -4(m-1) $ .",
+          "q": "Grafik $ f(x) = mx^2 + 2(m-1)x + (m-1) $ <b>menyinggung</b> sumbu $ X $ . Nilai $ m $ yang memenuhi (dengan $ m \\neq 0 $ ) adalah …",
+          "opts": [
+            "$ m = 0 $ atau $ m = 1 $",
+            "$ m = 1 $",
+            "$ m = -1 $",
+            "$ m = \\frac{1}{2} $",
+            "$ m = 2 $"
+          ]
+        },
+        {
+          "id": "D19",
+          "section": "D",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mengira D=4p²-4(p²+p-2)=4p² bukan 8-4p; salah menyederhanakan",
+          "jawab": "a",
+          "p": "$ D = (2p)^2 - 4(p^2+p-2) = 4p^2-4p^2-4p+8 = 8-4p $ .",
+          "q": "Grafik $ f(x) = x^2 + 2px + (p^2 + p - 2) $ memotong sumbu $ X $ di <b>dua titik berbeda</b>. Syarat nilai $ p $ adalah …",
+          "opts": [
+            "$ p < 2 $",
+            "$ p > 2 $",
+            "$ p < -2 $ atau $ p > 2 $",
+            "$ -2 < p < 2 $",
+            "$ p = 2 $"
+          ]
+        },
+        {
+          "id": "D20",
+          "section": "D",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mengira D=0 berarti nilai minimum=0; tidak memperhatikan bahwa a<0 → ini nilai MAKSIMUM",
+          "jawab": "c",
+          "p": "Periksa tiap pernyataan dengan $ a<0 $ , $ D=0 $ : (I) $ a<0 $ : terbuka ke bawah $ \\checkmark $ ; (II) $ D=0 $ : menyinggung sumbu $ X $ di satu titik $ \\checkmark $ ; (III) $ a<0 $ dan $ D=0 $ : titik singgung adalah titik <b>maksimum</b>, bukan minimum --- pernyataan III <b>salah</b>; (IV) karena nilai maksimum $ = 0 $ , range $ = (-\\infty,\\,0] $ $ \\checkmark $ .",
+          "q": "Diketahui fungsi kuadrat $ f(x) = ax^2 + bx + c $ dengan $ a < 0 $ dan $ D = 0 $ . Perhatikan pernyataan-pernyataan berikut: Parabola terbuka ke bawah Grafik menyinggung sumbu $ X $ di tepat satu titik Nilai <b>minimum</b> fungsi adalah $ 0 $ Range fungsi adalah $ (-\\infty,\\;0] $ Pernyataan yang <b>semuanya benar</b> adalah …",
+          "opts": [
+            "I dan II saja",
+            "I, II, dan III",
+            "I, II, dan IV",
+            "I, III, dan IV",
+            "I, II, III, dan IV"
+          ]
+        }
       ]
     },
     {
-      "id": "C-4",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "ANALISIS-SIFAT",
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Substitusi garis ke fungsi",
-        "Diskriminan (menyinggung)"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Jika grafik fungsi kuadrat $f(x)=x^2+3x+p$ menyinggung garis $x+y=2$ dengan $p>0$, maka nilai $p$ yang memenuhi adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$6$",
-        "$5$",
-        "$4$",
-        "$3$",
-        "$2$"
+      "sectionId": "E",
+      "sectionTitle": "Bentuk Vertex",
+      "soal": [
+        {
+          "id": "E1",
+          "section": "E",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah tanda pada p; menulis (x+2)²+3 padahal xs=+2 bukan -2",
+          "jawab": "c",
+          "p": "Lengkapi kuadrat: \\[x^2-4x+7 = (x^2-4x+4)-4+7 = (x-2)^2+3.\\]",
+          "q": "Bentuk vertex dari $ f(x) = x^2 - 4x + 7 $ adalah …",
+          "opts": [
+            "$ (x-2)^2 - 3 $",
+            "$ (x+2)^2 + 3 $",
+            "$ (x-2)^2 + 3 $",
+            "$ (x-4)^2 - 7 $",
+            "$ (x-2)^2 - 7 $"
+          ]
+        },
+        {
+          "id": "E2",
+          "section": "E",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira f=x²+6x+5 → (x-3)²+... karena lupa tanda; atau salah hitung konstanta",
+          "jawab": "b",
+          "p": "$ x^2+6x+5 = (x^2+6x+9)-9+5 = (x+3)^2-4 $ .",
+          "q": "Bentuk vertex dari $ f(x) = x^2 + 6x + 5 $ adalah …",
+          "opts": [
+            "$ (x-3)^2 - 4 $",
+            "$ (x+3)^2 - 4 $",
+            "$ (x+3)^2 + 4 $",
+            "$ (x-3)^2 + 5 $",
+            "$ (x+6)^2 - 5 $"
+          ]
+        },
+        {
+          "id": "E3",
+          "section": "E",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa memfaktorkan a=2 sebelum melengkapi kuadrat; mengira q=-3 bukan -5",
+          "jawab": "a",
+          "p": "Faktorkan $ a=2 $ terlebih dahulu: \\[2x^2-8x+3 = 2(x^2-4x)+3 = 2(x^2-4x+4-4)+3 = 2(x-2)^2-8+3 = 2(x-2)^2-5.\\]",
+          "q": "Bentuk vertex dari $ f(x) = 2x^2 - 8x + 3 $ adalah …",
+          "opts": [
+            "$ 2(x-2)^2 - 5 $",
+            "$ 2(x-2)^2 + 5 $",
+            "$ 2(x+2)^2 - 5 $",
+            "$ 2(x-4)^2 - 3 $",
+            "$ 2(x-2)^2 - 3 $"
+          ]
+        },
+        {
+          "id": "E4",
+          "section": "E",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira titik balik adalah (-3,4) karena ada tanda minus sebelum (x-3)²",
+          "jawab": "d",
+          "p": "Bentuk $ f(x)=-(x-3)^2+4 $ langsung terbaca: $ p=3 $ , $ q=4 $ . Titik balik: $ (3,\\,4) $ .",
+          "q": "Titik balik grafik $ f(x) = -(x-3)^2 + 4 $ adalah …",
+          "opts": [
+            "$ (-3,\\;4) $",
+            "$ (-3,\\;-4) $",
+            "$ (3,\\;-4) $",
+            "$ (3,\\;4) $",
+            "$ (4,\\;3) $"
+          ]
+        },
+        {
+          "id": "E5",
+          "section": "E",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira nilai minimum adalah +1 (nilai x pada puncak) bukan -9 (nilai y puncak)",
+          "jawab": "b",
+          "p": "Bentuk $ (x+1)^2-9=(x-(-1))^2+(-9) $ . Nilai minimum $ q=-9 $ dicapai di $ x=-1 $ .",
+          "q": "Nilai minimum fungsi $ f(x) = (x+1)^2 - 9 $ adalah …",
+          "opts": [
+            "$ 1 $ (b) $ -9 $ (c) $ -1 $ (d) $ 9 $ (e) $ -8 $"
+          ]
+        },
+        {
+          "id": "E6",
+          "section": "E",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira nilai minimum = nilai a = 3; tidak memahami q adalah nilai ekstrem",
+          "jawab": "c",
+          "p": "$ f(x)=3(x-2)^2+5 $ : $ a=3>0 $ , nilai minimum $ q=5 $ dicapai di $ x=2 $ .",
+          "q": "Nilai minimum fungsi $ f(x) = 3(x-2)^2 + 5 $ adalah …",
+          "opts": [
+            "$ 2 $ (b) $ 3 $ (c) $ 5 $ (d) $ -5 $ (e) $ 11 $"
+          ]
+        },
+        {
+          "id": "E7",
+          "section": "E",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira a boleh negatif asal q=3; tidak memahami nilai minimum hanya ada jika a>0",
+          "jawab": "a",
+          "p": "Nilai minimum pada bentuk $ a(x-1)^2+3 $ adalah $ q=3 $ , dicapai <b>hanya jika</b> parabola terbuka ke atas, yaitu $ a>0 $ .",
+          "q": "Fungsi $ f(x) = a(x-1)^2 + 3 $ memiliki <b>nilai minimum</b> sebesar $ 3 $ . Syarat nilai $ a $ yang harus dipenuhi adalah …",
+          "opts": [
+            "$ a > 0 $",
+            "$ a < 0 $",
+            "$ a = 0 $",
+            "$ a \\neq 0 $",
+            "$ a \\geq 0 $"
+          ]
+        },
+        {
+          "id": "E8",
+          "section": "E",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira nilai maks = -2 karena koefisien a=-2; tidak memahami q adalah nilai ekstrem",
+          "jawab": "d",
+          "p": "$ a=-2<0 $ : nilai <b>maksimum</b> adalah $ q=k $ . Syarat: $ k=7 $ .",
+          "q": "Fungsi $ f(x) = -2(x+3)^2 + k $ memiliki nilai <b>maksimum</b> sebesar $ 7 $ . Nilai $ k $ adalah …",
+          "opts": [
+            "$ k = -7 $ (b) $ k = 5 $ (c) $ k = -5 $ (d) $ k = 7 $ (e) $ k = 9 $"
+          ]
+        },
+        {
+          "id": "E9",
+          "section": "E",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah menghitung q = 11 - 9 = 2 (benar), tapi beberapa siswa hitung q=11-36/4=11-9=2",
+          "jawab": "b",
+          "p": "$ f(x)=x^2-6x+11=(x^2-6x+9)-9+11=(x-3)^2+2 $ . Titik balik: $ (3,\\,2) $ .",
+          "q": "Fungsi $ f(x) = x^2 - 6x + 11 $ diubah ke bentuk vertex. Titik balik grafik fungsi tersebut adalah …",
+          "opts": [
+            "$ (3,\\;11) $",
+            "$ (3,\\;2) $",
+            "$ (-3,\\;2) $",
+            "$ (6,\\;11) $",
+            "$ (-3,\\;-2) $"
+          ]
+        },
+        {
+          "id": "E10",
+          "section": "E",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa memfaktorkan -1 sebelum melengkapi kuadrat; menghitung q=+3 bukan -1 lalu benar +3",
+          "jawab": "c",
+          "p": "$ f(x)=-x^2+4x-1=-(x^2-4x)-1=-(x^2-4x+4-4)-1=-(x-2)^2+4-1=-(x-2)^2+3 $ .",
+          "q": "Bentuk vertex dari $ f(x) = -x^2 + 4x - 1 $ adalah …",
+          "opts": [
+            "$ -(x-2)^2 - 3 $",
+            "$ -(x+2)^2 + 3 $",
+            "$ -(x-2)^2 + 3 $",
+            "$ (x-2)^2 + 3 $",
+            "$ -(x-2)^2 + 1 $"
+          ]
+        },
+        {
+          "id": "E11",
+          "section": "E",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "p=12/6=2 (salah tanda), mengira P(2,-7) bukan P(-2,-7)",
+          "jawab": "a",
+          "p": "$ f(x)=3x^2+12x+5=3(x^2+4x)+5=3(x^2+4x+4-4)+5=3(x+2)^2-12+5=3(x+2)^2-7 $ . Titik balik: $ P(-2,\\,-7) $ .",
+          "q": "Perhatikan grafik $ f(x) = 3x^2 + 12x + 5 $ berikut. \\begin{center} [GAMBAR] \\end{center} Koordinat titik balik $ P $ adalah …",
+          "opts": [
+            "$ (-2,\\;-7) $",
+            "$ (2,\\;-7) $",
+            "$ (-2,\\;7) $",
+            "$ (-4,\\;5) $",
+            "$ (2,\\;7) $"
+          ]
+        },
+        {
+          "id": "E12",
+          "section": "E",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira k=nilai minimum=3; tidak menghitung vertex terlebih dahulu",
+          "jawab": "c",
+          "p": "Bentuk vertex $ f(x)=(x-2)^2+(k-4) $ . Nilai minimum $ =k-4=3 \\Rightarrow k=7 $ .",
+          "q": "Fungsi $ f(x) = x^2 - 4x + k $ memiliki nilai <b>minimum</b> sebesar $ 3 $ . Nilai $ k $ adalah …",
+          "opts": [
+            "$ k = 3 $ (b) $ k = -1 $ (c) $ k = 7 $ (d) $ k = 4 $ (e) $ k = 1 $"
+          ]
+        },
+        {
+          "id": "E13",
+          "section": "E",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira xs=-b/2a=3 → b=-6 (lupa a=2 sehingga -b/4=3 → b=-12, bukan -6)",
+          "jawab": "d",
+          "p": "$ x_s = \\dfrac{-(-b)}{2(2)} = \\dfrac{b}{4} = 3 \\Rightarrow b=12 $ .",
+          "q": "Fungsi $ f(x) = 2x^2 - bx + 8 $ memiliki sumbu simetri $ x = 3 $ . Nilai $ b $ adalah …",
+          "opts": [
+            "$ b = 3 $ (b) $ b = 6 $ (c) $ b = -6 $ (d) $ b = 12 $ (e) $ b = -12 $"
+          ]
+        },
+        {
+          "id": "E14",
+          "section": "E",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "substitusi titik ke bentuk umum bukan bentuk vertex; atau salah menghitung 4a-3=5",
+          "jawab": "b",
+          "p": "Substitusi $ (4,\\,5) $ : \\[5 = a(4-2)^2-3 = 4a-3 \\Rightarrow 4a=8 \\Rightarrow a=2.\\]",
+          "q": "Fungsi $ f(x) = a(x-2)^2 - 3 $ melalui titik $ (4,\\;5) $ . Nilai $ a $ adalah …",
+          "opts": [
+            "$ a = -2 $ (b) $ a = 2 $ (c) $ a = \\dfrac{1}{2} $ (d) $ a = 4 $ (e) $ a = 8 $"
+          ]
+        },
+        {
+          "id": "E15",
+          "section": "E",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira nilai min = c; tidak mengubah ke bentuk vertex terlebih dahulu",
+          "jawab": "a",
+          "p": "$ f(x)=(x+1)^2+(c-1) $ . Nilai minimum $ =c-1=-5 \\Rightarrow c=-4 $ .",
+          "q": "Fungsi $ f(x) = x^2 + 2x + c $ memiliki nilai <b>minimum</b> sebesar $ -5 $ . Nilai $ c $ adalah …",
+          "opts": [
+            "$ c = -4 $ (b) $ c = -5 $ (c) $ c = -6 $ (d) $ c = 4 $ (e) $ c = 6 $"
+          ]
+        },
+        {
+          "id": "E16",
+          "section": "E",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "jabarkan salah: 2(x-3)²-8=2x²-6x-8 (lupa ×koefisien 2 ke -6x→-12x)",
+          "jawab": "c",
+          "p": "$ 2(x-3)^2-8=2(x^2-6x+9)-8=2x^2-12x+18-8=2x^2-12x+10 $ . \\[a+b+c = 2+(-12)+10 = 0.\\]",
+          "q": "Fungsi $ f(x) = 2(x-3)^2 - 8 $ dijabarkan ke bentuk $ ax^2+bx+c $ . Nilai $ a + b + c $ adalah …",
+          "opts": [
+            "$ -10 $ (b) $ -6 $ (c) $ 0 $ (d) $ 4 $ (e) $ 10 $"
+          ]
+        },
+        {
+          "id": "E17",
+          "section": "E",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "menemukan b=-4 dan c=3 tapi menghitung nilai min = c = 3 bukan yP=-1",
+          "jawab": "b",
+          "p": "Sumbu simetri $ x=2\\Rightarrow\\dfrac{-b}{2}=2\\Rightarrow b=-4 $ . Titik potong $ Y $ : $ c=3 $ . \\[f(x)=(x-2)^2+(3-4)=(x-2)^2-1.\\] Nilai minimum $ = -1 $ .",
+          "q": "Fungsi $ f(x) = x^2 + bx + c $ memiliki sumbu simetri $ x = 2 $ dan titik potong sumbu $ Y $ di $ (0,\\;3) $ . Nilai minimum fungsi tersebut adalah …",
+          "opts": [
+            "$ -3 $ (b) $ -1 $ (c) $ 1 $ (d) $ 3 $ (e) $ 5 $"
+          ]
+        },
+        {
+          "id": "E18",
+          "section": "E",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mengira f(-1)=4a+5=1 → a=-1, tapi substitusi (-1) ke (x-1)² → (-1-1)²=4, bukan (-1+1)²=0",
+          "jawab": "c",
+          "p": "Nilai maksimum $ = b = 5 $ . Substitusi $ (-1,\\,1) $ : \\[1 = a(-1-1)^2+5 = 4a+5 \\Rightarrow 4a=-4 \\Rightarrow a=-1.\\]",
+          "q": "Grafik di bawah menunjukkan fungsi $ f(x) = a(x-1)^2 + b $ yang memiliki nilai <b>maksimum</b> $ 5 $ di $ x = 1 $ dan melalui $ (-1,\\;1) $ . \\begin{center} [GAMBAR] \\end{center} Nilai $ a $ adalah …",
+          "opts": [
+            "$ a = 1 $ (b) $ a = 2 $ (c) $ a = -1 $ (d) $ a = -2 $ (e) $ a = \\dfrac{1}{2} $"
+          ]
+        },
+        {
+          "id": "E19",
+          "section": "E",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mengira nilai min bergantung k; tidak menyederhanakan k²-2kx+x²=(x-k)² sehingga q=-3 konstan",
+          "jawab": "d",
+          "p": "$ f(x)=x^2-2kx+k^2-3=(x-k)^2-3 $ . Nilai minimum $ q=-3 $ , tidak bergantung pada $ k $ .",
+          "q": "Diketahui $ f(x) = x^2 - 2kx + (k^2 - 3) $ untuk sembarang $ k \\in \\mathbb{R} $ . Setelah diubah ke bentuk vertex, diperoleh bahwa nilai minimum fungsi ini …",
+          "opts": [
+            "bergantung pada $ k $ ; semakin besar $ k $ , nilai min semakin besar",
+            "bergantung pada $ k $ ; semakin besar $ k $ , nilai min semakin kecil",
+            "selalu sama dengan $ k^2 $",
+            "selalu $ -3 $ , tidak bergantung pada nilai $ k $",
+            "selalu $ 0 $"
+          ]
+        },
+        {
+          "id": "E20",
+          "section": "E",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "salah menghitung a dari f(0): p(4)+q=-1 → 4p+3=-1 → p=-1; mengira a+b+c=f(0) bukan f(1)",
+          "jawab": "b",
+          "p": "Nilai maksimum $ q=3 \\Rightarrow f(x)=p(x-2)^2+3 $ . Substitusi $ (0,\\,-1) $ : \\[-1=p(4)+3 \\Rightarrow 4p=-4 \\Rightarrow p=-1.\\] $ f(x)=-(x-2)^2+3=-x^2+4x-1 $ . Nilai $ a+b+c = f(1) = -1+4-1=2 $ .",
+          "q": "Fungsi $ f(x) = p(x-2)^2 + q $ memiliki nilai <b>maksimum</b> $ 3 $ di $ x = 2 $ , dan grafiknya melalui titik $ (0,\\;-1) $ . Nilai $ a + b + c $ dari bentuk standar fungsi tersebut adalah …",
+          "opts": [
+            "$ -1 $ (b) $ 2 $ (c) $ 3 $ (d) $ 5 $ (e) $ -3 $"
+          ]
+        }
       ]
     },
     {
-      "id": "C-5",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "ANALISIS-SIFAT",
-        "PERTAKSAMAAN"
-      ],
-      "prasyarat": [
-        "Definit positif",
-        "Diskriminan",
-        "Pertidaksamaan"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Fungsi kuadrat $f(x)=ax^2-(2a-4)x+a$ selalu bernilai positif untuk nilai $a$ yang memenuhi adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$a\\geq 1$",
-        "$a>1$",
-        "$a\\geq \\dfrac{1}{2}$",
-        "$a>\\dfrac{1}{2}$",
-        "$a>0$"
+      "sectionId": "F",
+      "sectionTitle": "Menyusun Persamaan",
+      "soal": [
+        {
+          "id": "F1",
+          "section": "F",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa mensubstitusi titik ketiga untuk mencari a; langsung tulis f=(x-2)(x-5)",
+          "jawab": "b",
+          "p": "$ f(x)=a(x-2)(x-5) $ . Substitusi $ (0,10) $ : $ 10=a(-2)(-5)=10a\\Rightarrow a=1 $ . $ f(x)=x^2-7x+10 $ . Nilai $ a+b+c=1-7+10=4 $ .",
+          "q": "Fungsi kuadrat memiliki titik potong sumbu $ X $ di $ (2,\\;0) $ dan $ (5,\\;0) $ , serta melalui $ (0,\\;10) $ . Nilai $ a + b + c $ dari persamaan fungsi tersebut adalah …",
+          "opts": [
+            "$ -3 $ (b) $ 4 $ (c) $ 10 $ (d) $ -7 $ (e) $ 7 $"
+          ]
+        },
+        {
+          "id": "F2",
+          "section": "F",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira a=1 karena tidak mensubstitusi titik ketiga; atau salah substitusi f(0)",
+          "jawab": "c",
+          "p": "$ f(x)=a(x+1)(x-3) $ . Substitusi $ (0,-6) $ : $ -6=a(1)(-3)=-3a\\Rightarrow a=2 $ .",
+          "q": "Fungsi kuadrat memiliki akar $ x = -1 $ dan $ x = 3 $ , serta melalui $ (0,\\;-6) $ . Nilai $ a $ adalah …",
+          "opts": [
+            "$ a = -2 $ (b) $ a = 1 $ (c) $ a = 2 $ (d) $ a = -1 $ (e) $ a = 3 $"
+          ]
+        },
+        {
+          "id": "F3",
+          "section": "F",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira a langsung bisa ditentukan dari titik balik saja tanpa titik ketiga",
+          "jawab": "a",
+          "p": "$ f(x)=a(x-2)^2-3 $ . Substitusi $ (4,5) $ : $ 5=a(4)-3=4a-3\\Rightarrow a=2 $ . $ f(x)=2(x-2)^2-3=2x^2-8x+5 $ .",
+          "q": "Fungsi kuadrat memiliki titik balik minimum $ P(2,\\;-3) $ dan melalui $ (4,\\;5) $ . Persamaan fungsi tersebut adalah …",
+          "opts": [
+            "$ f(x) = 2x^2 - 8x + 5 $",
+            "$ f(x) = x^2 - 4x + 1 $",
+            "$ f(x) = 2x^2 - 4x - 3 $",
+            "$ f(x) = x^2 - 2x + 3 $",
+            "$ f(x) = 2x^2 + 8x + 5 $"
+          ]
+        },
+        {
+          "id": "F4",
+          "section": "F",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira a=+1 karena titik balik di atas sbX; tidak memperhatikan \"terbuka ke bawah\"",
+          "jawab": "d",
+          "p": "$ f(x)=a(x-1)^2+4 $ . Substitusi $ (3,0) $ : $ 0=4a+4\\Rightarrow a=-1 $ . $ f(x)=-(x-1)^2+4=-x^2+2x+3 $ .",
+          "q": "Fungsi kuadrat memiliki titik balik maksimum $ P(1,\\;4) $ dan melalui $ (3,\\;0) $ . Persamaan fungsi tersebut adalah …",
+          "opts": [
+            "$ f(x) = x^2 - 2x + 3 $",
+            "$ f(x) = -x^2 + 4x - 3 $",
+            "$ f(x) = -(x-1)^2 - 4 $",
+            "$ f(x) = -x^2 + 2x + 3 $",
+            "$ f(x) = x^2 - 2x - 3 $"
+          ]
+        },
+        {
+          "id": "F5",
+          "section": "F",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira b = -(x1+x2) = -4 langsung tanpa memperhatikan nilai a",
+          "jawab": "c",
+          "p": "$ f(x)=ax(x-4)=ax^2-4ax $ . Substitusi $ (2,-4) $ : $ -4=a(2)(2-4)=-4a\\Rightarrow a=1 $ . Sehingga $ f(x)=x^2-4x $ , maka $ b=-4 $ .",
+          "q": "Fungsi kuadrat memiliki akar $ x = 0 $ dan $ x = 4 $ , serta melalui $ (2,\\;-4) $ . Nilai $ b $ adalah …",
+          "opts": [
+            "$ b = 0 $ (b) $ b = 4 $ (c) $ b = -4 $ (d) $ b = -8 $ (e) $ b = 8 $"
+          ]
+        },
+        {
+          "id": "F6",
+          "section": "F",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira c=q=5 karena \"nilai y titik balik\"; tidak substitusi untuk cari a lalu c",
+          "jawab": "b",
+          "p": "$ f(x)=a(x+1)^2+5 $ . Substitusi $ (0,4) $ : $ 4=a+5\\Rightarrow a=-1 $ . $ f(x)=-(x+1)^2+5=-x^2-2x+4 $ . Nilai $ c=4 $ .",
+          "q": "Fungsi kuadrat memiliki titik balik $ P(-1,\\;5) $ dan melalui $ (0,\\;4) $ . Nilai $ c $ adalah …",
+          "opts": [
+            "$ c = 5 $ (b) $ c = 4 $ (c) $ c = -4 $ (d) $ c = 1 $ (e) $ c = -1 $"
+          ]
+        },
+        {
+          "id": "F7",
+          "section": "F",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah menyusun SPLTV; mengira substitusi langsung ke f(x)=ax²+bx+c tanpa tiga persamaan",
+          "jawab": "a",
+          "p": "Misalkan $ f(x)=ax^2+bx+c $ . Substitusi tiga titik: $ f(0)=0\\Rightarrow c=0; f(1)=-3\\Rightarrow a+b=-3; f(3)=9\\Rightarrow 9a+3b=9\\Rightarrow 3a+b=3 $ . Dari dua persamaan: $ 2a=6\\Rightarrow a=3 $ .",
+          "q": "Fungsi kuadrat melalui $ (0,\\;0) $ , $ (1,\\;-3) $ , dan $ (3,\\;9) $ . Nilai $ a $ adalah …",
+          "opts": [
+            "$ a = 3 $ (b) $ a = -3 $ (c) $ a = 1 $ (d) $ a = -1 $ (e) $ a = 6 $"
+          ]
+        },
+        {
+          "id": "F8",
+          "section": "F",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah dalam eliminasi persamaan; atau salah menghitung a-b=5 dan a+b=-1",
+          "jawab": "d",
+          "p": "$ f(0)=c=1; f(1)=a+b+1=0\\Rightarrow a+b=-1; f(-1)=a-b+1=6\\Rightarrow a-b=5 $ . Selesaikan: $ a=2 $ , $ b=-3 $ , $ c=1 $ . Nilai $ a+b+c=0 $ .",
+          "q": "Fungsi kuadrat $ f(x) = ax^2 + bx + c $ melalui $ (0,\\;1) $ , $ (1,\\;0) $ , dan $ (-1,\\;6) $ . Nilai $ a + b + c $ adalah …",
+          "opts": [
+            "$ 6 $ (b) $ 1 $ (c) $ -1 $ (d) $ 0 $ (e) $ -6 $"
+          ]
+        },
+        {
+          "id": "F9",
+          "section": "F",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menemukan P(2,4) tapi mengira nilai maks = xs = 2, bukan yP = 4",
+          "jawab": "c",
+          "p": "Karena sumbu simetri $ x=2 $ dan $ f(0)=0 $ : $ f(x)=a(x-2)^2+q $ dengan $ 4a+q=0\\Rightarrow q=-4a $ . Substitusi $ (3,3) $ : $ 3=a(1)+q=a-4a=-3a\\Rightarrow a=-1 $ , $ q=4 $ . Nilai maksimum $ =q=4 $ .",
+          "q": "Fungsi kuadrat memiliki sumbu simetri $ x = 2 $ , melalui $ (0,\\;0) $ dan $ (3,\\;3) $ . Nilai <b>maksimum</b> fungsi tersebut adalah …",
+          "opts": [
+            "$ 0 $ (b) $ 2 $ (c) $ 4 $ (d) $ 3 $ (e) $ 6 $"
+          ]
+        },
+        {
+          "id": "F10",
+          "section": "F",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira f=1*(x+2)(x-4) karena tidak substitusi titik; salah menentukan a",
+          "jawab": "b",
+          "p": "$ f(x)=a(x+2)(x-4) $ . Substitusi $ (1,-9) $ : $ -9=a(3)(-3)=-9a\\Rightarrow a=1 $ . $ f(x)=(x+2)(x-4)=x^2-2x-8 $ . Nilai $ c=-8 $ .",
+          "q": "Fungsi kuadrat memiliki akar $ x = -2 $ dan $ x = 4 $ , serta melalui $ (1,\\;-9) $ . Nilai $ c $ adalah …",
+          "opts": [
+            "$ c = 8 $ (b) $ c = -8 $ (c) $ c = -4 $ (d) $ c = 4 $ (e) $ c = -2 $"
+          ]
+        },
+        {
+          "id": "F11",
+          "section": "F",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira b = -xs = -3; tidak menghitung a lalu jabarkan ke bentuk standar",
+          "jawab": "a",
+          "p": "Dari grafik: akar $ x=1 $ dan $ x=5 $ , titik balik $ P(3,-4) $ . $ f(x)=a(x-1)(x-5) $ . Substitusi $ P(3,-4) $ : $ -4=a(2)(-2)=-4a\\Rightarrow a=1 $ . $ f(x)=x^2-6x+5 $ . Nilai $ b=-6 $ .",
+          "q": "Perhatikan grafik berikut yang memiliki titik balik $ P(3,\\;-4) $ dan memotong sumbu $ X $ di $ (1,\\;0) $ serta $ (5,\\;0) $ . \\begin{center} [GAMBAR] \\end{center} Nilai $ b $ dari persamaan $ f(x) = ax^2 + bx + c $ adalah …",
+          "opts": [
+            "$ b = -6 $ (b) $ b = 6 $ (c) $ b = -3 $ (d) $ b = 3 $ (e) $ b = -5 $"
+          ]
+        },
+        {
+          "id": "F12",
+          "section": "F",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "salah mengeliminasi b; atau salah substitusi f(-1)=8 ke a-b+c=8",
+          "jawab": "c",
+          "p": "$ f(0)=c=3; f(1)=a+b+3=0\\Rightarrow a+b=-3; f(-1)=a-b+3=8\\Rightarrow a-b=5 $ . Dari dua persamaan: $ 2a=2\\Rightarrow a=1 $ .",
+          "q": "Fungsi kuadrat $ f(x) = ax^2 + bx + c $ melalui $ A(-1,\\;8) $ , $ B(0,\\;3) $ , dan $ C(1,\\;0) $ . Nilai $ a $ adalah …",
+          "opts": [
+            "$ a = 0 $ (b) $ a = -1 $ (c) $ a = 1 $ (d) $ a = 2 $ (e) $ a = 3 $"
+          ]
+        },
+        {
+          "id": "F13",
+          "section": "F",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira a=1 lalu c=x1·x2=3; tidak mensubstitusi titik yang dilalui untuk cari a",
+          "jawab": "d",
+          "p": "$ f(x)=a(x-1)(x-3)=ax^2-4ax+3a $ . Substitusi $ (2,-2) $ : $ -2=a(1)(-1)=-a\\Rightarrow a=2 $ . $ f(x)=2x^2-8x+6 $ . Nilai $ c=6 $ .",
+          "q": "Fungsi kuadrat memiliki akar $ x = 1 $ dan $ x = 3 $ , serta melalui $ (2,\\;-2) $ . Nilai $ c $ adalah …",
+          "opts": [
+            "$ c = 3 $ (b) $ c = -3 $ (c) $ c = 2 $ (d) $ c = 6 $ (e) $ c = -6 $"
+          ]
+        },
+        {
+          "id": "F14",
+          "section": "F",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira b = 2*xs = -4; tidak menjabarkan a(x+2)²-4 ke bentuk standar",
+          "jawab": "b",
+          "p": "$ f(x)=a(x+2)^2-4 $ . Substitusi $ (0,0) $ : $ 0=4a-4\\Rightarrow a=1 $ . $ f(x)=(x+2)^2-4=x^2+4x $ . Nilai $ b=4 $ .",
+          "q": "Fungsi kuadrat memiliki titik balik $ P(-2,\\;-4) $ dan melalui $ (0,\\;0) $ . Nilai $ b $ adalah …",
+          "opts": [
+            "$ b = -4 $ (b) $ b = 4 $ (c) $ b = 2 $ (d) $ b = -2 $ (e) $ b = 8 $"
+          ]
+        },
+        {
+          "id": "F15",
+          "section": "F",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira a+b+c=f(1)=0; tidak menghitung d lebih dulu lalu a,b,c",
+          "jawab": "c",
+          "p": "Menyinggung sbX di $ x=1\\Rightarrow $ bentuk $ f(x)=a(x-1)^2 $ . Substitusi $ (0,3) $ : $ 3=a(1)=a $ . Jadi $ f(x)=3(x-1)^2=3x^2-6x+3 $ . Nilai $ a+b+c=3-6+3=0 $ .",
+          "q": "Grafik fungsi kuadrat menyinggung sumbu $ X $ di $ x = 1 $ dan melalui $ (0,\\;3) $ . Nilai $ a + b + c $ adalah …",
+          "opts": [
+            "$ 3 $ (b) $ 1 $ (c) $ 0 $ (d) $ -3 $ (e) $ 6 $"
+          ]
+        },
+        {
+          "id": "F16",
+          "section": "F",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "salah mensubstitusi: mengira (1-3)²=1 bukan 4; atau lupa mengalikan 4a",
+          "jawab": "d",
+          "p": "Nilai maks $ =9 $ di $ x=3\\Rightarrow f(x)=a(x-3)^2+9 $ dengan $ a<0 $ . Substitusi $ (1,1) $ : $ 1=4a+9\\Rightarrow 4a=-8\\Rightarrow a=-2 $ . $ f(x)=-2(x-3)^2+9=-2x^2+12x-9 $ .",
+          "q": "Fungsi kuadrat memiliki nilai <b>maksimum</b> $ 9 $ di $ x = 3 $ , dan melalui $ (1,\\;1) $ . Persamaan fungsi tersebut adalah …",
+          "opts": [
+            "$ f(x) = -2x^2 + 12x - 9 $",
+            "$ f(x) = 2x^2 - 12x + 9 $",
+            "$ f(x) = -x^2 + 6x - 9 $",
+            "$ f(x) = -2x^2 + 12x + 9 $",
+            "$ f(x) = 2x^2 - 6x + 9 $"
+          ]
+        },
+        {
+          "id": "F17",
+          "section": "F",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mengira b=0 lalu titik balik bukan di (0,-4); tidak menyadari sumbu simetri = sbY",
+          "jawab": "a",
+          "p": "$ f(x)=a(x+2)(x-2)=a(x^2-4) $ . Substitusi $ (0,-4) $ : $ -4=-4a\\Rightarrow a=1 $ . $ f(x)=x^2-4 $ . Titik balik: $ b=0\\Rightarrow x_s=0 $ , $ y_P=f(0)=-4 $ . Jadi $ P(0,-4) $ .",
+          "q": "Grafik berikut adalah fungsi kuadrat yang memotong sumbu $ X $ di $ (-2,\\;0) $ dan $ (2,\\;0) $ , serta melalui $ (0,\\;-4) $ . \\begin{center} [GAMBAR] \\end{center} Koordinat titik balik $ P $ adalah …",
+          "opts": [
+            "$ (0,\\;-4) $ (b) $ (0,\\;4) $ (c) $ (2,\\;0) $ (d) $ (-2,\\;-4) $ (e) $ (0,\\;0) $"
+          ]
+        },
+        {
+          "id": "F18",
+          "section": "F",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mengira menyinggung sbX di x=2 berarti f(2)=0 dan D=0, lalu salah menghitung a",
+          "jawab": "b",
+          "p": "Menyinggung sbX di $ x=2\\Rightarrow f(x)=a(x-2)^2 $ . Substitusi $ (0,8) $ : $ 8=4a\\Rightarrow a=2 $ . $ f(x)=2(x-2)^2=2x^2-8x+8 $ . Nilai $ a=2 $ .",
+          "q": "Fungsi kuadrat menyinggung sumbu $ X $ di $ x = 2 $ dan melalui $ (0,\\;8) $ . Nilai $ a $ adalah …",
+          "opts": [
+            "$ a = -2 $ (b) $ a = 2 $ (c) $ a = 4 $ (d) $ a = -4 $ (e) $ a = 1 $"
+          ]
+        },
+        {
+          "id": "F19",
+          "section": "F",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "menghitung a dengan substitusi salah; atau menukar nilai b dan c dalam pilihan",
+          "jawab": "c",
+          "p": "$ f(x)=a(x-1)(x-5) $ . Substitusi $ (2,-3) $ : $ -3=a(1)(-3)=-3a\\Rightarrow a=1 $ . $ f(x)=(x-1)(x-5)=x^2-6x+5 $ .",
+          "q": "Fungsi kuadrat memiliki titik potong sumbu $ X $ di $ (1,\\;0) $ dan $ (5,\\;0) $ , serta melalui $ (2,\\;-3) $ . Persamaan fungsinya adalah …",
+          "opts": [
+            "$ f(x) = x^2 + 6x + 5 $",
+            "$ f(x) = -x^2 + 6x - 5 $",
+            "$ f(x) = x^2 - 6x + 5 $",
+            "$ f(x) = 2x^2 - 12x + 10 $",
+            "$ f(x) = -x^2 - 6x + 5 $"
+          ]
+        },
+        {
+          "id": "F20",
+          "section": "F",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "menemukan a=4,b=-8,c=3 tapi menghitung titik balik sebagai (2,-1) bukan (1,-1)",
+          "jawab": "b",
+          "p": "$ f(0)=c=3; f(1)=a+b+3=-1\\Rightarrow a+b=-4; f(2)=4a+2b+3=3\\Rightarrow 4a+2b=0\\Rightarrow 2a+b=0 $ . Dari dua persamaan: $ a=4 $ , $ b=-8 $ . $ f(x)=4x^2-8x+3 $ . Titik balik: $ x_s=\\dfrac{8}{8}=1 $ , $ y_P=f(1)=4-8+3=-1 $ . Jadi $ P(1,-1) $ .",
+          "q": "Fungsi kuadrat $ f(x) = ax^2 + bx + c $ melalui $ A(0,\\;3) $ , $ B(2,\\;3) $ , dan $ C(1,\\;-1) $ . Koordinat titik balik grafik fungsi tersebut adalah …",
+          "opts": [
+            "$ (2,\\;3) $",
+            "$ (1,\\;-1) $",
+            "$ (-1,\\;3) $",
+            "$ (0,\\;3) $",
+            "$ (1,\\;3) $"
+          ]
+        }
       ]
     },
     {
-      "id": "C-6",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "ANALISIS-SIFAT",
-        "PERTAKSAMAAN"
-      ],
-      "prasyarat": [
-        "Definit positif",
-        "Diskriminan",
-        "Pertidaksamaan"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Grafik fungsi $f(x)=mx^2+(2m-1)x+(m+1)$ seluruhnya di atas sumbu-$X$. Interval nilai $m$ yang memenuhi adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$m<-\\dfrac{1}{8}$",
-        "$m>-\\dfrac{1}{8}$",
-        "$m<\\dfrac{1}{8}$",
-        "$m>\\dfrac{1}{8}$",
-        "$0<m<\\dfrac{1}{8}$"
+      "sectionId": "G",
+      "sectionTitle": "Nilai Ekstrem pada Interval",
+      "soal": [
+        {
+          "id": "G1",
+          "section": "G",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira nilai min = f(0) atau f(ujung); lupa cek apakah xP ada di dalam interval",
+          "jawab": "b",
+          "p": "$ x_P = 2 \\in [0,5] $ . Tabel nilai: \\begin{center}\\begin{tabular}{c|c} $ x $ & $ f(x) $ \\\\\\hline $ 0 $ & $ 1 $ \\ $ 2 $ & $ -3 $ \\ $ 5 $ & $ 6 $ \\end{tabular}\\end{center} Nilai minimum $ = -3 $ di $ x=2 $ .",
+          "q": "Nilai <b>minimum</b> fungsi $ f(x) = x^2 - 4x + 1 $ pada interval $ 0 \\leq x \\leq 5 $ adalah …",
+          "opts": [
+            "$ -4 $ (b) $ -3 $ (c) $ 1 $ (d) $ 6 $ (e) $ 0 $"
+          ]
+        },
+        {
+          "id": "G2",
+          "section": "G",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira nilai min=-3 (yaitu yP) padahal xP=2 di luar [-1,1]",
+          "jawab": "c",
+          "p": "$ x_P = 2 \\notin [-1,1] $ , berada di <b>kanan</b> interval. Fungsi turun pada $ [-1,1] $ (sisi kiri parabola). Nilai di ujung: $ f(-1)=6 $ , $ f(1)=-2 $ . Minimum $ = -2 $ di $ x=1 $ .",
+          "q": "Nilai <b>minimum</b> fungsi $ f(x) = x^2 - 4x + 1 $ pada interval $ -1 \\leq x \\leq 1 $ adalah … \\begin{center} [GAMBAR] \\end{center}",
+          "opts": [
+            "$ -3 $ (b) $ -4 $ (c) $ -2 $ (d) $ 1 $ (e) $ 6 $"
+          ]
+        },
+        {
+          "id": "G3",
+          "section": "G",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira nilai maks ada di ujung interval; lupa bahwa a<0 → titik balik adalah maks",
+          "jawab": "a",
+          "p": "$ a=-1<0 $ , $ x_P = 3 \\in [1,5] $ . Tabel nilai: $ f(1)=0 $ , $ f(3)=4 $ , $ f(5)=0 $ . Nilai maksimum $ = 4 $ di $ x=3 $ .",
+          "q": "Nilai <b>maksimum</b> fungsi $ f(x) = -x^2 + 6x - 5 $ pada interval $ 1 \\leq x \\leq 5 $ adalah …",
+          "opts": [
+            "$ 4 $ (b) $ 5 $ (c) $ 0 $ (d) $ -5 $ (e) $ 3 $"
+          ]
+        },
+        {
+          "id": "G4",
+          "section": "G",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira nilai maks=-4 (titik balik); tidak sadar maks ada di ujung interval",
+          "jawab": "d",
+          "p": "$ x_P = 1 \\in [0,4] $ . Tabel nilai: $ f(0)=-3 $ , $ f(1)=-4 $ , $ f(4)=5 $ . Nilai maksimum $ = 5 $ di $ x=4 $ .",
+          "q": "Nilai <b>maksimum</b> fungsi $ f(x) = x^2 - 2x - 3 $ pada interval $ 0 \\leq x \\leq 4 $ adalah …",
+          "opts": [
+            "$ -4 $ (b) $ -3 $ (c) $ 0 $ (d) $ 5 $ (e) $ 4 $"
+          ]
+        },
+        {
+          "id": "G5",
+          "section": "G",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira xP=3 di luar [0,3] padahal tepat di ujung → yP adalah nilai min",
+          "jawab": "c",
+          "p": "$ x_P = 3 $ , tepat di ujung kanan interval $ [0,3] $ . Tabel nilai: $ f(0)=5 $ , $ f(3)=-4 $ . Nilai minimum $ = -4 $ di $ x=3 $ .",
+          "q": "Nilai <b>minimum</b> fungsi $ f(x) = x^2 - 6x + 5 $ pada interval $ 0 \\leq x \\leq 3 $ adalah …",
+          "opts": [
+            "$ 5 $ (b) $ 0 $ (c) $ -4 $ (d) $ -3 $ (e) $ 4 $"
+          ]
+        },
+        {
+          "id": "G6",
+          "section": "G",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira nilai maks = f(3)=3 (ujung kanan) bukan f(2)=4 (titik balik)",
+          "jawab": "b",
+          "p": "$ a=-1<0 $ , $ x_P = 2 \\in [0,3] $ . Tabel nilai: $ f(0)=0 $ , $ f(2)=4 $ , $ f(3)=3 $ . Nilai maksimum $ = 4 $ di $ x=2 $ .",
+          "q": "Nilai <b>maksimum</b> fungsi $ f(x) = -x^2 + 4x $ pada interval $ 0 \\leq x \\leq 3 $ adalah …",
+          "opts": [
+            "$ 0 $ (b) $ 4 $ (c) $ 3 $ (d) $ -4 $ (e) $ 12 $"
+          ]
+        },
+        {
+          "id": "G7",
+          "section": "G",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "masih menghitung f(xP) padahal xP di luar interval; mengira min=f(xP)",
+          "jawab": "a",
+          "p": "$ x_P = 2 \\notin [4,6] $ , berada di <b>kiri</b> interval. Fungsi naik pada $ [4,6] $ (sisi kanan parabola). Nilai di ujung: $ f(4)=3 $ , $ f(6)=15 $ . Nilai minimum $ = 3 $ di $ x=4 $ .",
+          "q": "Nilai <b>minimum</b> fungsi $ f(x) = x^2 - 4x + 3 $ pada interval $ 4 \\leq x \\leq 6 $ adalah …",
+          "opts": [
+            "$ 3 $ (b) $ -1 $ (c) $ 1 $ (d) $ 15 $ (e) $ 5 $"
+          ]
+        },
+        {
+          "id": "G8",
+          "section": "G",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira ada dua kandidat maks; tidak sadar xP=1 merupakan min pada interval [1,4]",
+          "jawab": "d",
+          "p": "$ x_P = 1 $ , tepat di ujung kiri interval $ [1,4] $ . Tabel nilai: $ f(1)=-1 $ , $ f(4)=8 $ . Nilai maksimum $ = 8 $ di $ x=4 $ .",
+          "q": "Nilai <b>maksimum</b> fungsi $ f(x) = x^2 - 2x $ pada interval $ 1 \\leq x \\leq 4 $ adalah …",
+          "opts": [
+            "$ -1 $ (b) $ 0 $ (c) $ 3 $ (d) $ 8 $ (e) $ 5 $"
+          ]
+        },
+        {
+          "id": "G9",
+          "section": "G",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "hanya menentukan salah satu; atau menukar nilai min dan maks",
+          "jawab": "c",
+          "p": "$ x_P = 2 \\in [0,5] $ . Tabel nilai: $ f(0)=3 $ , $ f(2)=-5 $ , $ f(5)=13 $ . Nilai minimum $ = -5 $ , maksimum $ = 13 $ .",
+          "q": "Nilai minimum dan maksimum fungsi $ f(x) = 2x^2 - 8x + 3 $ pada interval $ 0 \\leq x \\leq 5 $ adalah …",
+          "opts": [
+            "min $ = 3 $ ,\\; maks $ = 13 $",
+            "min $ = -5 $ ,\\; maks $ = 3 $",
+            "min $ = -5 $ ,\\; maks $ = 13 $",
+            "min $ = 3 $ ,\\; maks $ = -5 $",
+            "min $ = 0 $ ,\\; maks $ = 13 $"
+          ]
+        },
+        {
+          "id": "G10",
+          "section": "G",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira nilai min di xP=2 (titik balik); tidak menyadari bahwa min justru di ujung kiri",
+          "jawab": "a",
+          "p": "$ a=-1<0 $ , $ x_P = 2 \\in [-1,3] $ . Tabel nilai: $ f(-1)=0 $ , $ f(2)=9 $ , $ f(3)=8 $ . Nilai minimum $ = 0 $ di $ x=-1 $ .",
+          "q": "Nilai <b>minimum</b> fungsi $ f(x) = -x^2 + 4x + 5 $ pada interval $ -1 \\leq x \\leq 3 $ adalah …",
+          "opts": [
+            "$ 0 $ (b) $ 5 $ (c) $ 8 $ (d) $ 9 $ (e) $ -2 $"
+          ]
+        },
+        {
+          "id": "G11",
+          "section": "G",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa menghitung nilai di ujung-ujung interval; atau salah menentukan mana lebih besar",
+          "jawab": "b",
+          "p": "$ x_P = 3 \\in [2,6] $ . Tabel nilai: $ f(2)=-3 $ , $ f(3)=-4 $ , $ f(6)=5 $ . Min $ = -4 $ , maks $ = 5 $ .",
+          "q": "Nilai minimum dan maksimum fungsi $ f(x) = x^2 - 6x + 5 $ pada interval $ 2 \\leq x \\leq 6 $ adalah …",
+          "opts": [
+            "min $ = -3 $ ,\\; maks $ = 5 $",
+            "min $ = -4 $ ,\\; maks $ = 5 $",
+            "min $ = -4 $ ,\\; maks $ = -3 $",
+            "min $ = 5 $ ,\\; maks $ = -4 $",
+            "min $ = 0 $ ,\\; maks $ = 5 $"
+          ]
+        },
+        {
+          "id": "G12",
+          "section": "G",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira maks = f(3) = 3 bukan f(2) = 5",
+          "jawab": "c",
+          "p": "$ a=-2<0 $ , $ x_P = 2 \\in [0,3] $ . Tabel nilai: $ f(0)=-3 $ , $ f(2)=5 $ , $ f(3)=3 $ . Nilai maksimum $ = 5 $ di $ x=2 $ .",
+          "q": "Nilai <b>maksimum</b> fungsi $ f(x) = -2x^2 + 8x - 3 $ pada interval $ 0 \\leq x \\leq 3 $ adalah …",
+          "opts": [
+            "$ -3 $ (b) $ 3 $ (c) $ 5 $ (d) $ 8 $ (e) $ 4 $"
+          ]
+        },
+        {
+          "id": "G13",
+          "section": "G",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "masih menghitung f(xP)=-3 padahal xP=2 di luar [3,6]",
+          "jawab": "b",
+          "p": "$ x_P = 2 \\notin [3,6] $ , berada di <b>kiri</b> interval. Fungsi naik pada $ [3,6] $ . Nilai minimum $ = f(3) = 9-12+1 = -2 $ .",
+          "q": "Perhatikan sketsa $ f(x) = x^2 - 4x + 1 $ berikut. Titik balik $ P $ berada di luar interval $ [3,\\;6] $ . \\begin{center} [GAMBAR] \\end{center} Nilai <b>minimum</b> fungsi pada interval $ [3,\\;6] $ adalah …",
+          "opts": [
+            "$ -3 $ (b) $ -2 $ (c) $ 1 $ (d) $ 13 $ (e) $ -4 $"
+          ]
+        },
+        {
+          "id": "G14",
+          "section": "G",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira min ada di titik balik; tidak menyadari a<0 → titik balik adalah maks",
+          "jawab": "d",
+          "p": "$ a=-1<0 $ , $ x_P = 1 \\in [0,4] $ . Tabel nilai: $ f(0)=8 $ , $ f(1)=9 $ , $ f(4)=0 $ . Maks $ = 9 $ di $ x=1 $ , min $ = 0 $ di $ x=4 $ .",
+          "q": "Nilai maksimum dan minimum fungsi $ f(x) = -x^2 + 2x + 8 $ pada interval $ 0 \\leq x \\leq 4 $ adalah …",
+          "opts": [
+            "maks $ = 8 $ ,\\; min $ = 0 $",
+            "maks $ = 9 $ ,\\; min $ = -8 $",
+            "maks $ = 8 $ ,\\; min $ = -8 $",
+            "maks $ = 9 $ ,\\; min $ = 0 $",
+            "maks $ = 9 $ ,\\; min $ = 8 $"
+          ]
+        },
+        {
+          "id": "G15",
+          "section": "G",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira karena a>0 pasti ada minimum di dalam interval; tidak memeriksa posisi xP",
+          "jawab": "a",
+          "p": "$ x_P = 2 \\notin [-2,0] $ , berada di <b>kanan</b> interval. Fungsi turun pada $ [-2,0] $ (sisi kiri parabola). Nilai di ujung: $ f(-2)=7 $ , $ f(0)=-5 $ . Nilai maksimum $ = 7 $ di $ x=-2 $ .",
+          "q": "Nilai <b>maksimum</b> fungsi $ f(x) = x^2 - 4x - 5 $ pada interval $ -2 \\leq x \\leq 0 $ adalah …",
+          "opts": [
+            "$ 7 $ (b) $ -5 $ (c) $ -9 $ (d) $ 0 $ (e) $ 3 $"
+          ]
+        },
+        {
+          "id": "G16",
+          "section": "G",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira nilai min = f(0) = 1; tidak memeriksa apakah xP=1 benar-benar dalam [0,3]",
+          "jawab": "c",
+          "p": "$ x_P = 1 \\in [0,3] $ . Tabel nilai: $ f(0)=1 $ , $ f(1)=-2 $ , $ f(3)=10 $ . Nilai minimum $ = -2 $ di $ x=1 $ .",
+          "q": "Nilai <b>minimum</b> fungsi $ f(x) = 3x^2 - 6x + 1 $ pada interval $ 0 \\leq x \\leq 3 $ adalah …",
+          "opts": [
+            "$ 1 $ (b) $ -1 $ (c) $ -2 $ (d) $ 10 $ (e) $ 0 $"
+          ]
+        },
+        {
+          "id": "G17",
+          "section": "G",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mengira p=1 langsung dari \"min di x=1\" tanpa memperhatikan xP=-p harus sama dengan 1",
+          "jawab": "b",
+          "p": "Min dicapai di $ x=1 $ , berarti $ x_P = \\dfrac{-2p}{2} = -p = 1 \\Rightarrow p=-1 $ . Nilai min $ = y_P = q - p^2 = q - 1 = -5 \\Rightarrow q=-4 $ . $ p + q = -1 + (-4) = -5 $ .",
+          "q": "Fungsi $ f(x) = x^2 + 2px + q $ memiliki nilai <b>minimum</b> $ -5 $ yang dicapai di $ x = 1 $ , pada interval $ -1 \\leq x \\leq 3 $ . Nilai $ p + q $ adalah …",
+          "opts": [
+            "$ -3 $ (b) $ -5 $ (c) $ -4 $ (d) $ 3 $ (e) $ 5 $"
+          ]
+        },
+        {
+          "id": "G18",
+          "section": "G",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mengira c = nilai minimum = -4; tidak memasukkan ke rumus yP = c - 4",
+          "jawab": "a",
+          "p": "$ x_P = 2 \\in [1,5] $ . Nilai minimum $ = y_P = \\dfrac{-D}{4} = c-4 = -4 \\Rightarrow c = 0 $ .",
+          "q": "Fungsi $ f(x) = x^2 - 4x + c $ memiliki nilai <b>minimum</b> $ -4 $ pada interval $ 1 \\leq x \\leq 5 $ . Nilai $ c $ adalah …",
+          "opts": [
+            "$ 0 $ (b) $ -4 $ (c) $ 4 $ (d) $ -8 $ (e) $ 2 $"
+          ]
+        },
+        {
+          "id": "G19",
+          "section": "G",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "tidak memverifikasi bahwa xP=3 benar-benar dalam [2,7]; atau salah menghitung yP=9+k",
+          "jawab": "c",
+          "p": "$ a=-1<0 $ , $ x_P = 3 \\in [2,7] $ . Nilai maksimum $ = y_P = 9 + k = 13 \\Rightarrow k = 4 $ .",
+          "q": "Fungsi $ f(x) = -x^2 + 6x + k $ memiliki nilai <b>maksimum</b> $ 13 $ pada interval $ 2 \\leq x \\leq 7 $ . Nilai $ k $ adalah …",
+          "opts": [
+            "$ 9 $ (b) $ 7 $ (c) $ 4 $ (d) $ -4 $ (e) $ 13 $"
+          ]
+        },
+        {
+          "id": "G20",
+          "section": "G",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "menemukan b=-2 lalu lupa menghitung nilai maks di ujung; hanya menjawab nilai min",
+          "jawab": "d",
+          "p": "$ x_P = 1 \\in [0,4] $ . Nilai minimum $ = y_P = c-1+b\\ldots $ Gunakan vertex: $ f(x)=(x-1)^2+(b-1) $ . Min $ = b-1=-3 \\Rightarrow b=-2 $ . $ f(x)=x^2-2x-2 $ . Nilai di ujung: $ f(0)=-2 $ , $ f(4)=16-8-2=6 $ . Nilai maksimum $ = 6 $ . Selisih $ = 6-(-3) = 9 $ .",
+          "q": "Fungsi $ f(x) = x^2 - 2x + b $ memiliki nilai <b>minimum</b> $ -3 $ pada interval $ 0 \\leq x \\leq 4 $ . Selisih nilai maksimum dan minimum pada interval tersebut adalah …",
+          "opts": [
+            "$ 3 $ (b) $ 6 $ (c) $ 8 $ (d) $ 9 $ (e) $ 12 $"
+          ]
+        }
       ]
     },
     {
-      "id": "C-7",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "ANALISIS-SIFAT",
-        "PERTAKSAMAAN"
-      ],
-      "prasyarat": [
-        "Diskriminan",
-        "Jumlah & hasil kali akar",
-        "Tanda akar"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Agar grafik fungsi $f(x)=(p+3)x^2+px+1$ memotong sumbu-$X$ di dua titik di sebelah kanan $O(0,0)$, nilai $p$ haruslah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$-3<p<-2$ atau $p>6$",
-        "$-2<p<0$",
-        "$p<0$",
-        "$-3<p<0$",
-        "$-3<p<-2$"
+      "sectionId": "H",
+      "sectionTitle": "Aplikasi dalam Kehidupan",
+      "soal": [
+        {
+          "id": "H1",
+          "section": "H",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira ketinggian maks = koefisien t (yaitu 20m dari 20t); tidak menggunakan rumus xP",
+          "jawab": "c",
+          "p": "$ a=-5, b=20 $ . Waktu maks: $ t_P=\\dfrac{-20}{2(-5)}=2 $ detik. Ketinggian maks: $ h(2)=-5(4)+40=20 $ meter.",
+          "q": "Sebuah bola dilempar ke atas dari permukaan tanah. Ketinggiannya (dalam meter) setelah $ t $ detik dinyatakan dengan: \\[h(t) = -5t^2 + 20t\\] Ketinggian <b>maksimum</b> yang dicapai bola adalah …",
+          "opts": [
+            "$ 4 $ m (b) $ 10 $ m (c) $ 20 $ m (d) $ 40 $ m (e) $ 5 $ m"
+          ]
+        },
+        {
+          "id": "H2",
+          "section": "H",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira bola mendarat saat t=2 (saat maks); tidak menyelesaikan h(t)=0",
+          "jawab": "b",
+          "p": "Mendarat saat $ h(t)=0 $ : $ -5t^2+20t=0\\Rightarrow -5t(t-4)=0 $ . Solusi $ t=0 $ (awal) dan $ t=4 $ detik (mendarat).",
+          "q": "Masih dengan fungsi $ h(t) = -5t^2 + 20t $ (soal 1). Bola menyentuh tanah kembali saat $ t = \\ldots $ detik.",
+          "opts": [
+            "$ t = 1 $ (b) $ t = 4 $ (c) $ t = 2 $ (d) $ t = 5 $ (e) $ t = 20 $"
+          ]
+        },
+        {
+          "id": "H3",
+          "section": "H",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira luas maks saat x=15 (setengah pagar); tidak membuat persamaan L(x) dulu",
+          "jawab": "a",
+          "p": "Panjang efektif pagar: $ p+2x=30\\Rightarrow p=30-2x $ . $ L(x)=x(30-2x)=-2x^2+30x $ . Lebar optimal: $ x_P=\\dfrac{30}{4}=7{,}5 $ m. Luas maks: $ L(7{,}5)=7{,}5\\times15=112{,}5 $ m $ ^2 $ .",
+          "q": "Pak Andi memiliki pagar sepanjang $ 30 $ meter untuk memagari kebun persegi panjang. Salah satu sisi kebun berbatasan dengan tembok rumah sehingga <b>tidak perlu</b> dipagari. Jika lebar kebun adalah $ x $ meter, luas maksimum kebun yang dapat dipagari adalah …",
+          "opts": [
+            "$ 112{,}5 $ m $ ^2 $ (b) $ 100 $ m $ ^2 $ (c) $ 150 $ m $ ^2 $ (d) $ 225 $ m $ ^2 $ (e) $ 90 $ m $ ^2 $"
+          ]
+        },
+        {
+          "id": "H4",
+          "section": "H",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira pendapatan maks = nilai x optimal; tidak mensubstitusi xP ke P(x)",
+          "jawab": "d",
+          "p": "$ P(x)=-x^2+50x $ . Maksimum di $ x_P=25 $ porsi. $ P(25)=-625+1250=625 $ ribu rupiah $ = $ Rp $ 625.000 $ .",
+          "q": "Sebuah kantin menjual $ x $ porsi makan siang per hari. Keuntungan per porsi adalah $ (50 - x) $ ribu rupiah (agar tetap positif, $ 0 < x < 50 $ ). Keuntungan total harian adalah $ P(x) = x(50-x) $ ribu rupiah. Keuntungan total <b>maksimum</b> adalah …",
+          "opts": [
+            "Rp $ 500.000 $ (b) Rp $ 2.500.000 $ (c) Rp $ 250.000 $",
+            "[(d)] Rp $ 625.000 $ (e) Rp $ 1.000.000 $"
+          ]
+        },
+        {
+          "id": "H5",
+          "section": "H",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira t=6 karena koefisien t; tidak memfaktorkan -t²+6t+7=0",
+          "jawab": "c",
+          "p": "$ h(t)=0 $ : $ -t^2+6t+7=0\\Rightarrow t^2-6t-7=0\\Rightarrow(t-7)(t+1)=0 $ . $ t=7 $ detik (ambil positif).",
+          "q": "Sebuah bola ditendang dari ketinggian 7 meter di atas tanah. Lintasannya dinyatakan oleh $ h(t) = -t^2 + 6t + 7 $ (dalam meter). Bola menyentuh tanah saat $ t = \\ldots $ detik.",
+          "opts": [
+            "$ t = 1 $ (b) $ t = 3 $ (c) $ t = 7 $ (d) $ t = 6 $ (e) $ t = 8 $"
+          ]
+        },
+        {
+          "id": "H6",
+          "section": "H",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira waktu maks = 16 detik (dari koefisien); salah menghitung xP=16/(2×4)=2",
+          "jawab": "b",
+          "p": "$ t_P=\\dfrac{-16}{2(-4)}=2 $ detik. Ketinggian maks: $ h(2)=-4(4)+32=16 $ meter.",
+          "q": "Ketinggian roket mainan (dalam meter) setelah $ t $ detik adalah $ h(t) = -4t^2 + 16t $ . Ketinggian <b>maksimum</b> roket adalah …",
+          "opts": [
+            "$ 8 $ m (b) $ 16 $ m (c) $ 2 $ m (d) $ 32 $ m (e) $ 4 $ m"
+          ]
+        },
+        {
+          "id": "H7",
+          "section": "H",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira biaya min = c = 200 karena konstanta; tidak menggunakan rumus titik balik",
+          "jawab": "d",
+          "p": "$ x_P=\\dfrac{20}{2}=10 $ unit. Biaya minimum: $ C(10)=100-200+200=100 $ ribu rupiah $ = $ Rp $ 100.000 $ .",
+          "q": "Biaya produksi harian sebuah UMKM (dalam ribuan rupiah) untuk memproduksi $ x $ unit barang adalah $ C(x) = x^2 - 20x + 200 $ . Biaya produksi <b>minimum</b> adalah …",
+          "opts": [
+            "Rp $ 180.000 $ (b) Rp $ 110.000 $ (c) Rp $ 200.000 $",
+            "[(d)] Rp $ 100.000 $ (e) Rp $ 150.000 $"
+          ]
+        },
+        {
+          "id": "H8",
+          "section": "H",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menjawab nilai pendapatan maks (800) bukan nilai x optimal (20)",
+          "jawab": "a",
+          "p": "$ R(x)=-2x^2+80x $ . Penjualan optimal: $ x_P=\\dfrac{80}{4}=20 $ unit.",
+          "q": "Pendapatan mingguan toko (dalam ribuan rupiah) dari menjual $ x $ unit kaos adalah $ R(x) = -2x^2 + 80x $ . Jumlah kaos yang harus dijual agar pendapatan <b>maksimum</b> adalah … unit.",
+          "opts": [
+            "$ 20 $ (b) $ 40 $ (c) $ 800 $ (d) $ 80 $ (e) $ 10 $"
+          ]
+        },
+        {
+          "id": "H9",
+          "section": "H",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira ketinggian awal = ketinggian maks; tidak menghitung yP",
+          "jawab": "c",
+          "p": "$ t_P=\\dfrac{-30}{2(-5)}=3 $ detik. Ketinggian maks: $ h(3)=-5(9)+90+5=50 $ meter.",
+          "q": "Sebuah bola dilempar dari gedung setinggi 5 meter. Ketinggiannya (dalam meter) adalah $ h(t) = -5t^2 + 30t + 5 $ . Ketinggian <b>maksimum</b> yang dicapai bola adalah …",
+          "opts": [
+            "$ 5 $ m (b) $ 35 $ m (c) $ 50 $ m (d) $ 45 $ m (e) $ 30 $ m"
+          ]
+        },
+        {
+          "id": "H10",
+          "section": "H",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira persamaan keliling adalah 2p+2l=80; tidak menyadari ada 4 sisi lebar internal",
+          "jawab": "b",
+          "p": "Jika lebar petak $ =x $ m, panjang $ =p $ m. Kawat: $ 2p+4x=80\\Rightarrow p=40-2x $ . $ L(x)=x(40-2x)=-2x^2+40x $ . Maks di $ x_P=10 $ m; $ p=20 $ m. $ L_{\\max}=10\\times20=200 $ m $ ^2 $ .",
+          "q": "Seorang petani ingin membagi lahan persegi panjang menjadi <b>3 petak</b> sama besar seperti gambar, menggunakan kawat sepanjang $ 80 $ meter. \\begin{center} [GAMBAR] \\end{center} Luas lahan <b>maksimum</b> yang dapat dipagari adalah …",
+          "opts": [
+            "$ 150 $ m $ ^2 $ (b) $ 200 $ m $ ^2 $ (c) $ 400 $ m $ ^2 $ (d) $ 100 $ m $ ^2 $ (e) $ 250 $ m $ ^2 $"
+          ]
+        },
+        {
+          "id": "H11",
+          "section": "H",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira jarak terjauh = xP = 20m (titik tertinggi); tidak menyelesaikan h(x)=0",
+          "jawab": "d",
+          "p": "Mendarat saat $ h(x)=0 $ : $ -\\dfrac{x^2}{20}+2x=0\\Rightarrow x\\!\\left(2-\\dfrac{x}{20}\\right)=0 $ . $ x=0 $ atau $ x=40 $ m. Jarak terjauh $ =40 $ m.",
+          "q": "Sebuah bola ditendang dan melintasi udara dengan lintasan: \\[h(x) = -\\frac{1}{20}x^2 + 2x\\] di mana $ h $ adalah ketinggian (m) dan $ x $ adalah jarak horizontal (m). Jarak horizontal terjauh yang dicapai bola sebelum mendarat adalah …",
+          "opts": [
+            "$ 20 $ m (b) $ 30 $ m (c) $ 10 $ m (d) $ 40 $ m (e) $ 80 $ m"
+          ]
+        },
+        {
+          "id": "H12",
+          "section": "H",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak membuat model K(x) dulu; atau mengira keuntungan maks = xP bukan yP",
+          "jawab": "a",
+          "p": "$ x_P=\\dfrac{60}{2}=30 $ porsi. $ K(30)=-900+1800-500=400 $ ribu rupiah $ = $ Rp $ 400.000 $ .",
+          "q": "Keuntungan harian sebuah warung makan (dalam ribuan rupiah) jika menjual $ x $ porsi adalah $ K(x) = -x^2 + 60x - 500 $ . Keuntungan <b>maksimum</b> yang dapat diraih adalah …",
+          "opts": [
+            "Rp $ 400.000 $ (b) Rp $ 300.000 $ (c) Rp $ 500.000 $",
+            "[(d)] Rp $ 1.300.000 $ (e) Rp $ 100.000 $"
+          ]
+        },
+        {
+          "id": "H13",
+          "section": "H",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira tinggi maks = yP = 20 padahal benar, tapi ada yang mengira = 15+5=20 beda caranya",
+          "jawab": "c",
+          "p": "$ t_P=\\dfrac{-10}{2(-5)}=1 $ detik. Ketinggian maks: $ h(1)=-5+10+15=20 $ meter.",
+          "q": "Batu dilempar dari atas menara setinggi $ 15 $ meter. Ketinggiannya adalah $ h(t) = -5t^2 + 10t + 15 $ . Ketinggian <b>maksimum</b> batu dari tanah adalah …",
+          "opts": [
+            "$ 15 $ m (b) $ 10 $ m (c) $ 20 $ m (d) $ 25 $ m (e) $ 30 $ m"
+          ]
+        },
+        {
+          "id": "H14",
+          "section": "H",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira dimensi optimal adalah x=60 dan sisi lain=60; tidak memasang persamaan L=x(60-x)",
+          "jawab": "b",
+          "p": "Panjang satu sisi $ =p $ , dua sisi lebar $ =x $ : $ p+2x=60\\Rightarrow p=60-2x $ . $ L(x)=x(60-2x)=-2x^2+60x $ . Maks di $ x_P=15 $ m; $ p=30 $ m. $ L_{\\max}=15\\times60=900 $ m $ ^2 $ .",
+          "q": "Sebuah kebun persegi panjang akan dibuat di tepi sungai. Sisi yang berbatasan sungai <b>tidak</b> perlu dipagari. Pagar tersedia $ 60 $ meter untuk dua sisi lebar dan satu sisi panjang. \\begin{center} [GAMBAR] \\end{center} Luas <b>maksimum</b> kebun tersebut adalah …",
+          "opts": [
+            "$ 600 $ m $ ^2 $ (b) $ 900 $ m $ ^2 $ (c) $ 450 $ m $ ^2 $ (d) $ 720 $ m $ ^2 $ (e) $ 1.800 $ m $ ^2 $"
+          ]
+        },
+        {
+          "id": "H15",
+          "section": "H",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menjawab biaya minimum bukan jumlah produksi optimal; atau menukar xP dan yP",
+          "jawab": "d",
+          "p": "$ x_P=\\dfrac{24}{4}=6 $ unit. $ C(6)=2(36)-144+100=72-144+100=28 $ ribu rupiah. Produksi optimal $ =6 $ unit, biaya minimum $ = $ Rp $ 28.000 $ .",
+          "q": "Biaya produksi harian (ribuan rupiah) untuk membuat $ x $ unit mainan adalah $ C(x) = 2x^2 - 24x + 100 $ . Jumlah produksi <b>optimal</b> agar biaya <b>minimum</b> adalah … unit, dengan biaya minimum …",
+          "opts": [
+            "$ 12 $ unit;\\; Rp $ 28.000 $ (b) $ 6 $ unit;\\; Rp $ 100.000 $",
+            "[(c)] $ 12 $ unit;\\; Rp $ 100.000 $ (d) $ 6 $ unit;\\; Rp $ 28.000 $",
+            "[(e)] $ 3 $ unit;\\; Rp $ 64.000 $"
+          ]
+        },
+        {
+          "id": "H16",
+          "section": "H",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira lebar = akar tunggal x, bukan 2x karena simetri terhadap sbY",
+          "jawab": "a",
+          "p": "$ h(x)=0 $ : $ -\\dfrac{x^2}{50}+2=0\\Rightarrow x^2=100\\Rightarrow x=\\pm10 $ . Lebar jembatan $ =2\\times10=20 $ meter.",
+          "q": "Sebuah jembatan berbentuk parabola dengan persamaan $ h(x) = -\\dfrac{1}{50}x^2 + 2 $ , di mana $ h $ adalah ketinggian (meter) dan $ x $ adalah jarak dari pusat jembatan (meter). Lebar jembatan di permukaan air ( $ h = 0 $ ) adalah …",
+          "opts": [
+            "$ 20 $ m (b) $ 10 $ m (c) $ 5 $ m (d) $ 50 $ m (e) $ 100 $ m"
+          ]
+        },
+        {
+          "id": "H17",
+          "section": "H",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mencari t mendarat dari h=45 bukan h=0; atau salah memanfaatkan simetri parabola",
+          "jawab": "b",
+          "p": "$ h(t)=-5t^2+at $ . Ketinggian maks: $ y_P=\\dfrac{a^2}{20}=45\\Rightarrow a^2=900\\Rightarrow a=30 $ . $ h(t)=-5t^2+30t=0\\Rightarrow t(-5t+30)=0\\Rightarrow t=6 $ detik (mendarat).",
+          "q": "Sebuah kembang api diluncurkan dari tanah dan mengikuti lintasan $ h(t) = -5t^2 + at $ (dalam meter). Kembang api mencapai ketinggian <b>maksimum</b> $ 45 $ meter. Kembang api menyentuh tanah saat $ t = \\ldots $ detik.",
+          "opts": [
+            "$ t = 3 $ (b) $ t = 6 $ (c) $ t = 9 $ (d) $ t = 4{,}5 $ (e) $ t = 10 $"
+          ]
+        },
+        {
+          "id": "H18",
+          "section": "H",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mengira persamaan pagar p+2x=60 → L=x(60-2x); salah merumuskan persamaan",
+          "jawab": "c",
+          "p": "Panjang pagar: $ p+2x=60\\Rightarrow p=60-2x $ . $ L(x)=xp=x(60-2x)=-2x^2+60x $ . Maks di $ x_P=15 $ m; $ p=30 $ m. $ L_{\\max}=15\\times30=450 $ m $ ^2 $ .",
+          "q": "Seorang petani akan membuat kebun persegi panjang dengan satu sisi menempel tembok. Kawat sepanjang $ 60 $ meter digunakan untuk tiga sisi sisanya (dua lebar dan satu panjang). \\begin{center} [GAMBAR] \\end{center} Luas <b>maksimum</b> kebun tersebut adalah …",
+          "opts": [
+            "$ 400 $ m $ ^2 $ (b) $ 600 $ m $ ^2 $ (c) $ 450 $ m $ ^2 $ (d) $ 900 $ m $ ^2 $ (e) $ 300 $ m $ ^2 $"
+          ]
+        },
+        {
+          "id": "H19",
+          "section": "H",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "mengira harga optimal = pendapatan maks; atau menjawab x=30 bukan P(30)",
+          "jawab": "d",
+          "p": "$ P(x)=x(60-x)=-x^2+60x $ . Maks di $ x_P=30 $ (harga tiket Rp $ 30.000 $ ). Pendapatan maks: $ P(30)=30\\times30=900 $ ribu rupiah $ = $ Rp $ 900.000 $ .",
+          "q": "Sebuah gedung pertunjukan memiliki kapasitas $ 100 $ kursi. Jika harga tiket Rp $ x $ ribu, banyak pengunjung yang datang adalah $ (60 - x) $ orang (untuk $ 0 < x < 60 $ ). Pendapatan <b>maksimum</b> yang bisa diraih gedung tersebut adalah …",
+          "opts": [
+            "Rp $ 1.800.000 $ (b) Rp $ 600.000 $ (c) Rp $ 1.200.000 $",
+            "[(d)] Rp $ 900.000 $ (e) Rp $ 3.600.000 $"
+          ]
+        },
+        {
+          "id": "H20",
+          "section": "H",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Evaluasi",
+          "kesalahanUmum": "menghitung h(30)=puncak bukan h(10)=titik yang ditanya",
+          "jawab": "b",
+          "p": "Substitusi $ x=10 $ : \\[h(10) = -\\frac{100}{20}+3(10)+2 = -5+30+2 = 27 \\text{ meter}.\\]",
+          "q": "Sebuah bola dilempar dari permukaan tanah mengikuti lintasan: \\[h(x) = -\\frac{1}{20}x^2 + 3x + 2\\] di mana $ h $ adalah ketinggian (m) dan $ x $ adalah jarak horizontal (m). \\begin{center} [GAMBAR] \\end{center} Ketinggian bola pada jarak horizontal $ x = 10 $ meter adalah …",
+          "opts": [
+            "$ 22 $ m (b) $ 27 $ m (c) $ 32 $ m (d) $ 47 $ m (e) $ 17 $ m"
+          ]
+        }
       ]
-    },
-    {
-      "id": "C-8",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Nilai minimum",
-        "Sumbu simetri",
-        "Parameter"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Fungsi kuadrat $f(x)=x^2+2px+3p$ mempunyai nilai minimum $-p$ dengan $p\\neq 0$. Jika sumbu simetri kurva $f$ adalah $x=a$, maka nilai $a+f(a)=…$",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$6$",
-        "$4$",
-        "$-4$",
-        "$-8$",
-        "$-12$"
-      ]
-    },
-    {
-      "id": "C-9",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "KONSTRUKSI"
-      ],
-      "prasyarat": [
-        "Sumbu simetri",
-        "Titik balik",
-        "Persamaan garis"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Grafik parabola yang melalui titik $(0,0)$ mempunyai sumbu simetri $x=1$ dan puncak parabola terletak pada garis $x-y+1=0$. Persamaan parabola tersebut adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$y=-2x^2+4x$",
-        "$y=2x^2-4x$",
-        "$y=-x^2+2x$",
-        "$y=2x^2+4x$",
-        "$y=-2x^2-4x$"
-      ]
-    },
-    {
-      "id": "C-10",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "KONSEP"
-      ],
-      "prasyarat": [
-        "Sumbu simetri",
-        "Kesimetrian titik"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Titik $P(x_0,y_0)$ dan titik $Q$ adalah dua titik yang terletak simetris pada parabola $y=a(x-h)^2+k$. Absis titik $Q$ adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$2h-x_0$",
-        "$h-x_0$",
-        "$-h-x_0$",
-        "$x_0-2h$",
-        "$h+x_0$"
-      ]
-    },
-    {
-      "id": "C-11",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "KOMPUTASI",
-        "ANALISIS-SIFAT"
-      ],
-      "prasyarat": [
-        "Sumbu simetri",
-        "Kesimetrian",
-        "Jarak titik"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "$A$ dan $B$ adalah dua titik yang terletak pada parabola $f(x)=2x^2-8x-1$ dan berjarak sama terhadap sumbu-$X$. Jika titik $T$ terletak pada garis $x=k$ sedemikian sehingga $|TA|=|TB|$, maka $k=…$",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$1$",
-        "$\\dfrac{3}{2}$",
-        "$2$",
-        "$\\dfrac{5}{2}$",
-        "$3$"
-      ]
-    },
-    {
-      "id": "C-12",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "KONSTRUKSI",
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Sistem persamaan",
-        "Substitusi fungsi"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Jika $f(x)$ memenuhi $2f(x)+f(2-x)=x^2$ untuk setiap bilangan real $x$, maka $f(x)=…$",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$\\dfrac{1}{3}x^2+\\dfrac{4}{3}x-\\dfrac{4}{3}$",
-        "$\\dfrac{1}{2}x^2-\\dfrac{3}{2}x+\\dfrac{1}{2}$",
-        "$\\dfrac{1}{3}x^2-\\dfrac{2}{3}x-\\dfrac{1}{3}$",
-        "$\\dfrac{2}{3}x^2+\\dfrac{1}{3}x-\\dfrac{2}{3}$",
-        "$\\dfrac{1}{3}x^2+x-\\dfrac{4}{3}$"
-      ]
-    },
-    {
-      "id": "C-13",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "ANALISIS-SIFAT",
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Pengelompokan parameter",
-        "Titik tetap"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Jika parabola $y=(n-1)x^2-(n+2)x+(4-2n)$ untuk $n\\neq 0$, $n\\neq 1$, dan $n$ bilangan real akan selalu melalui dua titik tertentu, yaitu $(a,b)$ dan $(p,q)$, maka nilai dari $a+b+p+q=…$",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$-1$",
-        "$0$",
-        "$1$",
-        "$2$",
-        "$3$"
-      ]
-    },
-    {
-      "id": "C-14",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "ANALISIS-SIFAT",
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Diskriminan",
-        "Pencacahan pasangan"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Sebuah fungsi kuadrat $f(x)=x^2+bx+c$ dengan koefisien $b$ dan $c$ hanya boleh diganti oleh bilangan dari himpunan $\\{1,2,3,4,5\\}$. Banyaknya pasangan $b$ dan $c$ agar grafik fungsi $f(x)$ memotong sumbu-$X$ di dua titik berbeda adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$8$",
-        "$9$",
-        "$10$",
-        "$11$",
-        "$12$"
-      ]
-    },
-    {
-      "id": "C-15",
-      "type": "pg",
-      "level": "Expert",
-      "jenis": [
-        "ANALISIS-SIFAT",
-        "KONSEP"
-      ],
-      "prasyarat": [
-        "Titik balik",
-        "Diskriminan",
-        "Definit positif"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Grafik $f(x)=ax^2+bx+c$ mempunyai nilai minimum $6$ di kuadran II. Pernyataan berikut yang benar adalah …",
-      "jawab": null,
-      "p": null,
-      "opts": [
-        "$f(x)<0$ untuk setiap $x\\in$ bilangan real",
-        "$f(x)>0$ untuk setiap $x\\in$ bilangan real",
-        "$f(x)=0$ untuk setiap $x\\in$ bilangan real",
-        "$f(x)$ selalu memotong sumbu-$X$",
-        "$b^2\\geq 4ac$"
-      ]
-    },
-    {
-      "id": "D-1",
-      "type": "uraian",
-      "level": "Beginner",
-      "jenis": [
-        "KOMPUTASI",
-        "SIMPLIFIKASI"
-      ],
-      "prasyarat": [
-        "Pemfaktoran",
-        "Unsur grafik fungsi kuadrat"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Diketahui fungsi kuadrat $f(x)=x^2+8x+12$. Tentukan:",
-      "jawab": null,
-      "p": null,
-      "parts": [
-        "pembuat nol fungsi;",
-        "koordinat titik potong grafik $f(x)$ terhadap sumbu-$Y$;",
-        "persamaan sumbu simetri;",
-        "nilai optimum;",
-        "koordinat titik balik."
-      ]
-    },
-    {
-      "id": "D-2",
-      "type": "uraian",
-      "level": "Intermediate",
-      "jenis": [
-        "KONSTRUKSI",
-        "KONSEP"
-      ],
-      "prasyarat": [
-        "Unsur grafik",
-        "Sketsa parabola"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Gambarkan sketsa grafik fungsi kuadrat $f(x)=x^2-2x-8$.",
-      "jawab": null,
-      "p": null
-    },
-    {
-      "id": "D-3",
-      "type": "uraian",
-      "level": "Intermediate",
-      "jenis": [
-        "KONSTRUKSI"
-      ],
-      "prasyarat": [
-        "Akar fungsi",
-        "Bentuk fungsi kuadrat"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Tentukan rumus fungsi kuadrat yang memotong sumbu-$X$ di titik $(1,0)$ dan $(-4,0)$ serta melalui titik $(3,-14)$.",
-      "jawab": null,
-      "p": null
-    },
-    {
-      "id": "D-4",
-      "type": "uraian",
-      "level": "Intermediate",
-      "jenis": [
-        "KONSTRUKSI"
-      ],
-      "prasyarat": [
-        "Bentuk umum",
-        "Sistem persamaan linear tiga variabel"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Tentukan rumus fungsi kuadrat yang melalui titik $(1,2)$, $(2,3)$, dan $(-1,6)$.",
-      "jawab": null,
-      "p": null
-    },
-    {
-      "id": "D-5",
-      "type": "uraian",
-      "level": "Intermediate",
-      "jenis": [
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Nilai optimum",
-        "Daerah hasil pada interval"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Tentukan nilai maksimum, nilai minimum, dan daerah hasil dari setiap fungsi kuadrat dengan daerah asal yang diberikan.",
-      "jawab": null,
-      "p": null,
-      "parts": [
-        "$f(x)=-2x^2-4x+1$ dengan daerah asal $\\{x \\mid -2\\leq x\\leq 1,\\;x\\in\\mathbb{R}\\}$;",
-        "$f(x)=-x^2+2x+3$ dengan daerah asal $\\{x \\mid -1\\leq x\\leq 3,\\;x\\in\\mathbb{R}\\}$;",
-        "$f(x)=x^2-4x-5$ dengan daerah asal $\\{x \\mid 0\\leq x\\leq 5,\\;x\\in\\mathbb{R}\\}$."
-      ]
-    },
-    {
-      "id": "D-6",
-      "type": "uraian",
-      "level": "Intermediate",
-      "jenis": [
-        "KONSEP"
-      ],
-      "prasyarat": [
-        "Bentuk puncak",
-        "Translasi grafik"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Grafik fungsi $f(x)=a\\!\\left(x-\\left(-\\dfrac{b}{2a}\\right)\\right)^2+\\left(-\\dfrac{D}{4a}\\right)$ dapat diperoleh dengan menggeser grafik fungsi $f(x)=ax^2$ sejauh $\\left|-\\dfrac{b}{2a}\\right|$ satuan searah sumbu-$X$, lalu dilanjutkan menggeser grafik sejauh $\\left|-\\dfrac{D}{4a}\\right|$ satuan searah sumbu-$Y$. Gunakan cara ini untuk menggambar grafik fungsi berikut.",
-      "jawab": null,
-      "p": null,
-      "parts": [
-        "$f(x)=x^2-6x+4$",
-        "$f(x)=-x^2+4x-1$"
-      ]
-    },
-    {
-      "id": "D-7",
-      "type": "uraian",
-      "level": "Expert",
-      "jenis": [
-        "PEMBUKTIAN",
-        "KONSEP"
-      ],
-      "prasyarat": [
-        "Definisi fungsi",
-        "Relasi satu-satu"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Untuk suatu bilangan bulat $p>q>0$, apakah terdapat suatu fungsi kuadrat $y=ax^2+bx+c$ yang melalui titik koordinat $(2,p)$ dan $(2,q)$? Jelaskan alasanmu.",
-      "jawab": null,
-      "p": null
-    },
-    {
-      "id": "D-8",
-      "type": "uraian",
-      "level": "Expert",
-      "jenis": [
-        "PEMBUKTIAN",
-        "KONSEP"
-      ],
-      "prasyarat": [
-        "Perpotongan grafik",
-        "Derajat polinomial"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Apakah mungkin grafik fungsi linear dan grafik fungsi kuadrat berpotongan di tiga titik koordinat berbeda? Jelaskan alasanmu.",
-      "jawab": null,
-      "p": null
-    },
-    {
-      "id": "D-9",
-      "type": "uraian",
-      "level": "Expert",
-      "jenis": [
-        "PEMBUKTIAN",
-        "KONSEP"
-      ],
-      "prasyarat": [
-        "Perpotongan grafik",
-        "Persamaan kuadrat"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Apakah mungkin ada dua grafik fungsi kuadrat berbeda yang berpotongan di tiga titik koordinat? Jelaskan alasanmu.",
-      "jawab": null,
-      "p": null
-    },
-    {
-      "id": "D-10",
-      "type": "uraian",
-      "level": "Expert",
-      "jenis": [
-        "TERAPAN",
-        "KOMPUTASI"
-      ],
-      "prasyarat": [
-        "Parabola",
-        "Pemodelan geometri"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Dua titik terbawah suatu persegi terletak pada sumbu-$X$ dan dua titik teratasnya terletak pada parabola $y=12-x^2$. Berapa luas persegi tersebut?",
-      "jawab": null,
-      "p": null
-    },
-    {
-      "id": "D-11",
-      "type": "uraian",
-      "level": "Expert",
-      "jenis": [
-        "KONSTRUKSI",
-        "RELASI-AKAR"
-      ],
-      "prasyarat": [
-        "Teorema Vieta",
-        "Relasi antar akar",
-        "PK berantai"
-      ],
-      "gambar": false,
-      "figures": [],
-      "q": "Diketahui fungsi kuadrat $f(x)=x^2+px+q$ memiliki akar yang salah satunya bernilai tiga kali dari akar lainnya. Fungsi kuadrat $g(x)=x^2+qx+r$ memiliki akar yang masing-masing nilainya tiga kali dari akar-akar fungsi $f$. Jika $p,q,r\\neq 0$ dan merupakan bilangan real, tentukan nilai akar yang dimaksud dari fungsi $f$ dan $g$.",
-      "jawab": null,
-      "p": null
     }
   ]
 }

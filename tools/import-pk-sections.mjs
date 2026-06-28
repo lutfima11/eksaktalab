@@ -169,6 +169,7 @@ function parseFile(filePath) {
   let cur = null;
   let phase = null; // 'q' | 'opts'
   let globalCounter = 0; // nomor soal global (setcounter aware)
+  let inTikz = false; // tracking tikzpicture environment
 
   function flushSoal() {
     if (!cur) return;
@@ -179,7 +180,7 @@ function parseFile(filePath) {
       cur.jawab = kunci[num] || null;
       cur.p = pembahasan[num] || null;
       delete cur._q; delete cur._opts;
-      soal.push(cur);
+soal.push(cur);
     }
     cur = null; phase = null;
   }
@@ -189,6 +190,20 @@ function parseFile(filePath) {
 
     // Stop di KUNCI JAWABAN
     if (t.includes('KUNCI JAWABAN')) break;
+
+    // TikZ block tracking — strip tikzpicture from question text
+    if (t.startsWith('\\begin{tikzpicture}')) {
+      inTikz = true;
+      if (cur && phase === 'q' && !cur._q.join('').includes('[GAMBAR]')) {
+        cur._q.push('[GAMBAR]');
+      }
+      continue;
+    }
+    if (t.startsWith('\\end{tikzpicture}')) {
+      inTikz = false;
+      continue;
+    }
+    if (inTikz) continue;
 
     // Level section header: \textbf{\underline{A. Beginner}}
     const lvlMatch = t.match(/\\textbf\{\\underline\{[A-Z]\.\s*(Beginner|Intermediate|Expert|UTBK[^}]*|SIMAK[^}]*|UTUL[^}]*|Olimpiade[^}]*)\}\}/i);
@@ -217,16 +232,17 @@ function parseFile(filePath) {
     }
 
     // Ignore non-soal
-    if (t === '' || /^\\(vspace|onecolumn|twocolumn|rule|begin\{center\}|end\{center\}|newpage|par|lhead|rhead)\b/.test(t)) continue;
+    if (t === '' || /^\\(vspace|onecolumn|twocolumn|rule|begin\{center\}|end\{center\}|newpage|par|lhead|rhead|medskip|bigskip|smallskip|noindent|centering|columnbreak|hline|cline)\b/.test(t)) continue;
 
     // enumerate depth
     if (t.startsWith('\\begin{enumerate}')) {
       enumDepth++;
-      if (enumDepth === 2 && cur) phase = 'opts';
+      // Only treat as opts if it's the (a)/(A) style enumerate at depth 2
+      if (enumDepth === 2 && cur && /\\begin\{enumerate\}\[\(a\)\]/i.test(t)) phase = 'opts';
       continue;
     }
     if (t.startsWith('\\end{enumerate}')) {
-      if (enumDepth === 2) { phase = 'q-done'; }
+      if (enumDepth === 2 && phase === 'opts') { phase = 'q-done'; }
       if (enumDepth === 1) { flushSoal(); }
       enumDepth--;
       continue;
@@ -266,9 +282,14 @@ function parseFile(filePath) {
         commentBuf = [];
 
       } else if (enumDepth === 2 && cur && phase === 'opts') {
-        // Opsi: mungkin banyak \item per baris
+        // Opsi (a)-(e): mungkin banyak \item per baris
         for (const item of items) {
           cur._opts.push(item);
+        }
+      } else if (enumDepth === 2 && cur && phase === 'q') {
+        // Inner list (I. II. III. dsb.) — masukkan ke teks soal
+        for (const item of items) {
+          cur._q.push(item);
         }
       }
       continue;
