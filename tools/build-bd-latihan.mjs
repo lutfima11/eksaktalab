@@ -91,7 +91,7 @@ function buildPage(sectionId, sectionTitle, soalList, paketNum) {
 
   let html = template;
   html = html.replace(/const PAKET_ID = '[^']+';/, `const PAKET_ID = '${paketId}';`);
-  html = html.replace(/window\.quizDB=\{.*?\};(?=<\/script>)/s, `window.quizDB=${JSON.stringify(quizDB)};`);
+  html = html.replace(/<script src="[^"]*quiz-data[^"]*"><\/script>/, `<script>window.quizDB=${JSON.stringify(quizDB)};</script>`);
   html = html.replace(/BD-A1/g, kode);
   html = html.replace(/(<span[^>]*q-bc-mode[^>]*>)[^<]*/g, `$1Per Sub-Materi`);
   html = html.replace(/\s*<span[^>]*q-bc-sep[^>]*>[^<]*<\/span>\s*<span[^>]*q-bc-level[^>]*>[^<]*<\/span>/, '');
