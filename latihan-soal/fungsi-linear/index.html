@@ -127,14 +127,14 @@
       <div class="sec-title">Fokus pada Topik Tertentu</div>
       <div class="sec-desc">Pilih sub-materi yang ingin diperdalam.</div>
     </div>
-    <div class="chip-filter">
-      <button class="filter-chip active" onclick="filterSub('semua',this)">Semua</button>
-      <button class="filter-chip" onclick="filterSub('A',this)">Pengertian</button>
-      <button class="filter-chip" onclick="filterSub('B',this)">Gradien</button>
-      <button class="filter-chip" onclick="filterSub('C',this)">Grafik</button>
-      <button class="filter-chip" onclick="filterSub('D',this)">Persamaan</button>
-      <button class="filter-chip" onclick="filterSub('E',this)">Kedudukan</button>
-      <button class="filter-chip" onclick="filterSub('F',this)">Aplikasi</button>
+    <div class="sub-filter">
+      <button class="sub-chip active" onclick="filterSub('semua',this)"><span class="sub-chip-dot"></span>Semua</button>
+      <button class="sub-chip" onclick="filterSub('A',this)"><span class="sub-chip-dot"></span>A · Pengertian FL</button>
+      <button class="sub-chip" onclick="filterSub('B',this)"><span class="sub-chip-dot"></span>B · Gradien</button>
+      <button class="sub-chip" onclick="filterSub('C',this)"><span class="sub-chip-dot"></span>C · Grafik</button>
+      <button class="sub-chip" onclick="filterSub('D',this)"><span class="sub-chip-dot"></span>D · Persamaan Garis</button>
+      <button class="sub-chip" onclick="filterSub('E',this)"><span class="sub-chip-dot"></span>E · Kedudukan Dua Garis</button>
+      <button class="sub-chip" onclick="filterSub('F',this)"><span class="sub-chip-dot"></span>F · Aplikasi</button>
     </div>
     <div class="paket-grid" id="sub-grid">
       <div class="paket-card" data-sub="A"><div class="card-top"><span class="card-kode">FL-A1</span></div><div class="card-title">Pengertian · Paket 1</div>
@@ -232,7 +232,7 @@ function filterSub(sub, btn) {
       c.style.display = 'none';
     }
   });
-  document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.sub-chip').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 }
 </script>
