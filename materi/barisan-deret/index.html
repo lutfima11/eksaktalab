@@ -1005,54 +1005,44 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong><br>
-      <div class="grafik-wrap">
+      <div class="grafik-wrap" style="color: var(--text-main, #000000);">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 400" width="240px" height="100%" style="background-color: transparent;">
     <defs>
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Latin+Modern+Math&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap');
         
-        /* Warna default untuk Light Mode */
+        /* Menggunakan currentColor agar otomatis mendeteksi warna dari pembungkusnya */
         .math-text-fixed {
           font-family: 'Latin Modern Math', 'Lora', 'Times New Roman', serif;
           font-size: 18px;
-          fill: #000000;
+          fill: currentColor;
         }
         .ground-fixed {
-          stroke: #000000;
+          stroke: currentColor;
           stroke-width: 2.5;
           stroke-linecap: round;
         }
         .vector-line-fixed {
-          stroke: #000000;
+          stroke: currentColor;
           stroke-width: 1.5;
           fill: none;
         }
         .ball-fixed {
-          fill: #000000;
+          fill: currentColor;
         }
         .arrow-path {
           fill: none;
-          stroke: #000000;
+          stroke: currentColor;
           stroke-width: 1.5;
           stroke-linecap: round;
           stroke-linejoin: round;
         }
 
-        /* PERBAIKAN: Paksa perubahan warna saat Dark Mode di sistem operasi */
+        /* Jika Anda ingin memaksa warna teks di dark mode secara manual tanpa var() global */
         @media (prefers-color-scheme: dark) {
-          .math-text-fixed { fill: var(--text-main, #ffffff); }
-          .ground-fixed { stroke: var(--text-main, #ffffff); }
-          .vector-line-fixed { stroke: var(--text-main, #ffffff); }
-          .ball-fixed { fill: var(--text-main, #ffffff); }
-          .arrow-path { stroke: var(--text-main, #ffffff); }
+          .grafik-wrap { color: #ffffff !important; }
         }
-
-        /* PERBAIKAN: Paksa perubahan warna saat Dark Mode via toggle atribut tema */
-        [data-theme="dark"] .math-text-fixed { fill: var(--text-main, #ffffff); }
-        [data-theme="dark"] .ground-fixed { stroke: var(--text-main, #ffffff); }
-        [data-theme="dark"] .vector-line-fixed { stroke: var(--text-main, #ffffff); }
-        [data-theme="dark"] .ball-fixed { fill: var(--text-main, #ffffff); }
-        [data-theme="dark"] .arrow-path { stroke: var(--text-main, #ffffff); }
+        [data-theme="dark"] { color: #ffffff !important; }
       </style>
       
       <marker id="arrow-down-fixed" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
