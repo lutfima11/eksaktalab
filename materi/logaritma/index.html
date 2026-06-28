@@ -103,40 +103,209 @@ window.MathJax = {
   </div>
 
   <!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
-  <section class=”section” id=”pengantar”>
-    <h2 class=”section-title”><span class=”section-badge” style=”background:var(--accent-2,#64748b);”>✦</span>Pengantar: Ketika Dunia Berbicara dalam Skala Logaritma</h2>
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Seni Menjinakkan Bilangan yang Sangat Besar</h2>
 
-    <p>Pernahkah kamu bertanya-tanya mengapa gempa bumi berkekuatan 7 SR terasa <em>sepuluh kali lebih dahsyat</em> daripada gempa 6 SR, bukan sekadar lebih kuat sedikit? Atau mengapa perbedaan satu angka pada skala pH — dari 6 ke 5 — berarti larutan itu sepuluh kali lebih asam? Rahasianya ada di satu konsep yang sama: <strong>logaritma</strong>. Skala Richter, desibel (dB) pada pengukuran suara, skala pH keasaman, bahkan satuan bit dalam teori informasi dan kecerahan bintang dalam astronomi — semuanya adalah logaritma yang bekerja diam-diam di balik angka-angka yang kita baca sehari-hari.</p>
+    <p>Bayangkan kamu harus mengalikan dua bilangan besar: <strong>$2^{40}$</strong> dan <strong>$2^{37}$</strong>. Tanpa alat bantu, perkalian ini terasa mustahil. Namun dengan satu trik sederhana &mdash; menjumlahkan eksponen &mdash; hasilnya adalah <strong>$2^{77}$</strong>, diperoleh dalam hitungan detik. Logaritma lahir dari trik inilah: ia mengubah <em>perkalian</em> menjadi <em>penjumlahan</em>, dan <em>perpangkatan</em> menjadi <em>perkalian</em>.</p>
 
-    <p>Logaritma adalah <strong>operasi invers dari perpangkatan</strong>. Jika eksponen menjawab pertanyaan “berapa hasil $2^{10}$?”, maka logaritma menjawab pertanyaan yang berlawanan: “pangkat berapa yang harus diberikan kepada 2 agar menghasilkan 1024?” Dua pertanyaan berbeda, satu pasangan konsep yang tak terpisahkan. Logaritma lahir dari kebutuhan manusia untuk menaklukkan bilangan-bilangan raksasa — dan ternyata, alam semesta sudah lebih dulu menggunakannya jauh sebelum kita menyadarinya.</p>
+<p>Tapi logaritma lebih dari sekadar alat hitung. Ia adalah <strong>bahasa skala</strong>. Ketika rentang nilai yang ingin kita ukur terlalu lebar &mdash; dari intensitas suara yang hampir tak terdengar hingga ledakan jet, dari keasaman air murni hingga asam pekat, dari gempa kecil hingga gempa dahsyat &mdash; skala biasa tidak cukup. Logaritma memampatan rentang yang tak terhingga itu menjadi skala yang bisa dipahami manusia: desibel, pH, skala Richter. Semua itu adalah logaritma yang bekerja di balik layar.</p>
+    <h3 class="subsection-title">Ide Dasar: Logaritma sebagai Pembalik Eksponen</h3>
+    <p>Hubungan antara eksponen dan logaritma ibarat dua sisi koin yang sama. Pertanyaan "<strong>$2$ dipangkat berapa menghasilkan $8$?</strong>" adalah pertanyaan logaritmik: jawabannya adalah <strong>$\log_{2} 8 = 3$</strong>. Secara umum:</p>
+    <div class="grafik-wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 110 600 300" width="100%" style="max-width:420px; background-color:transparent;">
+    <defs>
+      <style>
+        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
+        .box-fixed { fill: var(--bg-muted, #f8fafc); stroke: var(--text-main, #334155); transition: all 0.3s ease; }
+        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
+        
+        /* Warna dinamis kurva dan teks petunjuk */
+        .line-blue-fixed { stroke: #1010A0; fill: none; }
+        .line-red-fixed { stroke: #A01010; fill: none; }
+        .text-blue-fixed { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
+        .text-red-fixed { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
+        .arrow-blue-fixed { fill: #1010A0; }
+        .arrow-red-fixed { fill: #A01010; }
 
-    <h3 class=”subsection-title”>Ide Dasar: Dua Pertanyaan, Satu Koin</h3>
-    <p>Bayangkan dua pertanyaan berikut. Keduanya membicarakan hubungan yang sama, hanya dari sudut yang berbeda:</p>
+        /* Dukungan Dark Mode otomatis */
+        @media (prefers-color-scheme: dark) {
+          .box-fixed { fill: #1e293b; stroke: #94a3b8; }
+          .label-black-fixed { fill: #f1f5f9; }
+          .line-blue-fixed { stroke: #60A5FA; }
+          .line-red-fixed { stroke: #F87171; }
+          .text-blue-fixed { fill: #60A5FA; }
+          .text-red-fixed { fill: #F87171; }
+          .arrow-blue-fixed { fill: #60A5FA; }
+          .arrow-red-fixed { fill: #F87171; }
+        }
+        [data-theme="dark"] .box-fixed { fill: #1e293b; stroke: #94a3b8; }
+        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
+        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
+        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
+        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .text-red-fixed { fill: #F87171; }
+        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .arrow-red-fixed { fill: #F87171; }
+      </style>
 
-    <table style=”width:100%;border-collapse:collapse;margin:1rem 0;font-size:.95rem;”>
-      <thead>
-        <tr style=”background:var(--bg-muted,#f1f5f9);”>
-          <th style=”padding:.6rem 1rem;text-align:left;border:1px solid var(--border,#e2e8f0);”>Pertanyaan</th>
-          <th style=”padding:.6rem 1rem;text-align:left;border:1px solid var(--border,#e2e8f0);”>Operasi</th>
-          <th style=”padding:.6rem 1rem;text-align:left;border:1px solid var(--border,#e2e8f0);”>Jawaban</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style=”padding:.6rem 1rem;border:1px solid var(--border,#e2e8f0);”>Berapa hasil $2^{10}$?</td>
-          <td style=”padding:.6rem 1rem;border:1px solid var(--border,#e2e8f0);”>Perpangkatan</td>
-          <td style=”padding:.6rem 1rem;border:1px solid var(--border,#e2e8f0);”>$2^{10} = 1024$</td>
-        </tr>
-        <tr style=”background:var(--bg-muted,#f1f5f9);”>
-          <td style=”padding:.6rem 1rem;border:1px solid var(--border,#e2e8f0);”>Pangkat berapa yang diberikan kepada 2 agar menghasilkan 1024?</td>
-          <td style=”padding:.6rem 1rem;border:1px solid var(--border,#e2e8f0);”>Logaritma</td>
-          <td style=”padding:.6rem 1rem;border:1px solid var(--border,#e2e8f0);”>${}^{2}\!\log 1024 = 10$</td>
-        </tr>
-      </tbody>
-    </table>
+      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" class="arrow-blue-fixed" />
+      </marker>
+      <marker id="arrow-fixed-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" class="arrow-red-fixed" />
+      </marker>
+    </defs>
 
-    <p>Hubungan ini berlaku umum: $a^c = b$ selalu bisa ditulis ulang sebagai ${}^{a}\!\log b = c$, dan sebaliknya. Logaritma tidak lebih dari cara membaca perpangkatan dari arah yang berlawanan — ia menanyakan <em>eksponen</em> yang tersembunyi. Dalam sub-bab berikut, kamu akan menguasai definisi, sifat-sifat, persamaan, pertidaksamaan, hingga fungsi logaritma — semua fondasi yang kamu butuhkan untuk memahami mengapa skala-skala penting dalam sains dan teknologi bekerja seperti yang mereka lakukan.</p>
+    <g transform="translate(20, 135) scale(0.56)">
+      
+      <text x="500" y="45" class="text-blue-fixed" font-size="36" text-anchor="middle">
+        “<tspan font-style="italic">b</tspan> diperoleh dari <tspan font-style="italic">a</tspan> dipangkat <tspan font-style="italic">c</tspan>”
+      </text>
 
+      <text x="500" y="90" class="text-blue-fixed" font-size="24" text-anchor="middle" font-style="italic">
+        baca dari kiri ke kanan
+      </text>
+
+      <path d="M 210 190 Q 500 110, 790 190" class="line-blue-fixed" stroke-width="3" marker-end="url(#arrow-fixed-blue)" />
+
+      <rect x="70" y="190" width="280" height="120" rx="15" ry="15" class="box-fixed" stroke-width="2" />
+      <text x="210" y="240" class="label-black-fixed" font-size="32" text-anchor="middle">
+        <tspan font-style="italic">a</tspan><tspan dy="-12">c</tspan><tspan dy="12"> = b</tspan>
+      </text>
+      <text x="210" y="285" class="label-black-fixed" font-size="22" font-style="italic" text-anchor="middle">
+        (perpangkatan)
+      </text>
+
+      <path d="M 790 310 Q 500 390, 210 310" class="line-red-fixed" stroke-width="3" marker-end="url(#arrow-fixed-red)" />
+
+      <rect x="650" y="190" width="280" height="120" rx="15" ry="15" class="box-fixed" stroke-width="2" />
+      <text x="790" y="240" class="label-black-fixed" font-size="32" text-anchor="middle">
+        <tspan font-size="20" dy="-14">a</tspan><tspan dy="14">log </tspan><tspan font-style="italic">b</tspan> = c
+      </text>
+      <text x="790" y="285" class="label-black-fixed" font-size="22" font-style="italic" text-anchor="middle">
+        (logaritma)
+      </text>
+
+      <text x="500" y="410" class="text-red-fixed" font-size="24" text-anchor="middle" font-style="italic">
+        baca dari kanan ke kiri
+      </text>
+
+      <text x="500" y="455" class="text-red-fixed" font-size="36" text-anchor="middle">
+        “<tspan font-style="italic">c</tspan> adalah eksponen <tspan font-style="italic">a</tspan> agar menghasilkan <tspan font-style="italic">b</tspan>”
+      </text>
+
+    </g>
+  </svg>
+</div>
+<br>
+
+    <p>Grafik fungsi logaritma <strong>$f(x) = \log_{a} x$</strong> adalah cerminan grafik fungsi eksponen <strong>$g(x) = a^x$</strong> terhadap garis <strong>$y = x$</strong> &mdash; keduanya saling merupakan fungsi invers.</p>
+    <div class="grafik-wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" style="max-width:420px; background-color:transparent;">
+    <defs>
+      <style>
+        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
+        .arrow-path-fixed { fill: var(--text-main, #334155); }
+        .grid-line-fixed { stroke: var(--text-muted, #e2e8f0); opacity: 0.6; }
+        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
+        
+        /* Warna dinamis kurva dan teks petunjuk */
+        .line-blue-fixed { stroke: #0014b3; fill: none; }
+        .line-red-fixed { stroke: #b30000; fill: none; }
+        .line-gray-fixed { stroke: #94a3b8; fill: none; stroke-dasharray: 5,5; }
+        
+        .text-blue-fixed { fill: #0014b3; font-family: Cambria, 'Times New Roman', serif; }
+        .text-red-fixed { fill: #b30000; font-family: Cambria, 'Times New Roman', serif; }
+        .text-gray-fixed { fill: #94a3b8; font-family: Cambria, 'Times New Roman', serif; }
+        
+        .dot-blue-fixed { fill: #0014b3; }
+        .dot-red-fixed { fill: #b30000; }
+        .dot-black-fixed { fill: var(--text-main, #334155); }
+
+        /* Dukungan Dark Mode otomatis */
+        @media (prefers-color-scheme: dark) {
+          .grid-line-fixed { stroke: #334155; opacity: 0.4; }
+          .line-blue-fixed { stroke: #60A5FA; }
+          .line-red-fixed { stroke: #F87171; }
+          .text-blue-fixed { fill: #60A5FA; }
+          .text-red-fixed { fill: #F87171; }
+          .dot-blue-fixed { fill: #60A5FA; }
+          .dot-red-fixed { fill: #F87171; }
+        }
+        [data-theme="dark"] .grid-line-fixed { stroke: #334155; opacity: 0.4; }
+        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
+        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
+        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .text-red-fixed { fill: #F87171; }
+        [data-theme="dark"] .dot-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .dot-red-fixed { fill: #F87171; }
+      </style>
+
+      <marker id="arrow-fixed-black" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-path-fixed" />
+      </marker>
+    </defs>
+
+    <g>
+      <g class="grid-line-fixed" stroke-width="1">
+        <line x1="120" y1="70" x2="120" y2="550" />
+        <line x1="180" y1="70" x2="180" y2="550" />
+        <line x1="240" y1="70" x2="240" y2="550" />
+        <line x1="300" y1="70" x2="300" y2="550" />
+        <line x1="360" y1="70" x2="360" y2="550" />
+        <line x1="420" y1="70" x2="420" y2="550" />
+        <line x1="480" y1="70" x2="480" y2="550" />
+        
+        <line x1="120" y1="70" x2="480" y2="70" />
+        <line x1="120" y1="130" x2="480" y2="130" />
+        <line x1="120" y1="190" x2="480" y2="190" />
+        <line x1="120" y1="250" x2="480" y2="250" />
+        <line x1="120" y1="310" x2="480" y2="310" />
+        <line x1="120" y1="370" x2="480" y2="370" />
+        <line x1="120" y1="430" x2="480" y2="430" />
+        <line x1="120" y1="490" x2="480" y2="490" />
+        <line x1="120" y1="550" x2="480" y2="550" />
+      </g>
+
+      <line x1="120" y1="430" x2="480" y2="70" class="line-gray-fixed" stroke-width="2" />
+
+      <g class="axis-line-fixed" stroke-width="2.5">
+        <line x1="180" y1="550" x2="180" y2="40" marker-end="url(#arrow-fixed-black)" />
+        <line x1="130" y1="370" x2="520" y2="370" marker-end="url(#arrow-fixed-black)" />
+      </g>
+
+      <path d="M 120 360 C 150 360, 170 340, 180 310 C 200 250, 230 180, 260 70" class="line-blue-fixed" stroke-width="3" />
+
+      <path d="M 190 490 C 190 460, 210 400, 240 370 C 300 310, 380 270, 480 230" class="line-red-fixed" stroke-width="3" />
+
+      <circle cx="180" cy="310" r="5" class="dot-blue-fixed" />
+      <circle cx="240" cy="370" r="5" class="dot-red-fixed" />
+      <circle cx="240" cy="310" r="5" class="dot-black-fixed" />
+
+      <text x="180" y="25" class="label-black-fixed" font-size="24" font-style="italic" text-anchor="middle">y</text>
+      <text x="535" y="375" class="label-black-fixed" font-size="24" font-style="italic" text-anchor="start">x</text>
+      <text x="155" y="395" class="label-black-fixed" font-size="24" font-style="italic" text-anchor="middle">O</text>
+
+      <text x="190" y="110" class="text-blue-fixed" font-size="24" font-style="italic">y = 2<tspan dy="-10" font-size="16">x</tspan></text>
+      <text x="320" y="325" class="text-red-fixed" font-size="24" font-style="italic">
+        y = <tspan dy="-10" font-size="16">2</tspan><tspan dy="10">log x</tspan>
+      </text>
+      <text x="485" y="65" class="text-gray-fixed" font-size="20" font-style="italic">y = x</text>
+
+      <text x="135" y="290" class="text-blue-fixed" font-size="18">(0, 1)</text>
+      <text x="260" y="395" class="text-red-fixed" font-size="18">(1, 0)</text>
+      <text x="265" y="300" class="label-black-fixed" font-size="18" style="font-style: normal;">(1, 1)</text>
+    </g>
+  </svg>
+</div>
+    <h3 class="subsection-title">Sejarah Singkat</h3>
+    <p>Ide logaritma muncul dari kebutuhan praktis yang sangat mendesak. Pada awal abad ke-17, para astronom dan navigator menghabiskan berhari-hari hanya untuk mengalikan dan membagi bilangan besar &mdash; perhitungan yang rawan kesalahan dan melelahkan.</p>
+
+<p><strong>John Napier</strong> (1550&ndash;1617), matematikawan Skotlandia, menerbitkan tabel logaritma pertamanya pada 1614 dalam buku <em>Mirifici Logarithmorum Canonis Descriptio</em>. Penemuannya <em>langsung</em> mengubah dunia sains: astronom <strong>Johannes Kepler</strong> berterima kasih secara terbuka karena logaritma memangkas waktu perhitungannya dari minggu menjadi hari.</p>
+
+<p><strong>Henry Briggs</strong> (1561&ndash;1630) kemudian menyempurnakan sistem Napier dengan memperkenalkan <strong>logaritma basis 10</strong> (logaritma umum) &mdash; yang lebih mudah digunakan dan menjadi dasar tabel logaritma yang dipakai di sekolah-sekolah selama berabad-abad hingga kalkulator elektronik mengambil alih.</p>
+
+<p>Jauh kemudian, <strong>Leonhard Euler</strong> (1707&ndash;1783) meletakkan fondasi teori logaritma yang kita gunakan hari ini &mdash; termasuk memperkenalkan bilangan <strong>$e$</strong> sebagai basis logaritma natural, yang menjadi bahasa alami pertumbuhan dan peluruhan di seluruh cabang sains.</p>
   <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
