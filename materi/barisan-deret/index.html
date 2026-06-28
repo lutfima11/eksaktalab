@@ -1005,13 +1005,12 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong><br>
-      <div class="grafik-wrap" style="color: var(--text-main, #000000);">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 400" width="240px" height="100%" style="background-color: transparent;">
+      <div class="grafik-wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 400" width="240px" height="100%" style="background-color: transparent; color: var(--text-main, #000000);">
     <defs>
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Latin+Modern+Math&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap');
         
-        /* Menggunakan currentColor agar otomatis mendeteksi warna dari pembungkusnya */
         .math-text-fixed {
           font-family: 'Latin Modern Math', 'Lora', 'Times New Roman', serif;
           font-size: 18px;
@@ -1037,12 +1036,6 @@ window.MathJax = {
           stroke-linecap: round;
           stroke-linejoin: round;
         }
-
-        /* Jika Anda ingin memaksa warna teks di dark mode secara manual tanpa var() global */
-        @media (prefers-color-scheme: dark) {
-          .grafik-wrap { color: #ffffff !important; }
-        }
-        [data-theme="dark"] { color: #ffffff !important; }
       </style>
       
       <marker id="arrow-down-fixed" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
