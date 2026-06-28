@@ -1006,35 +1006,53 @@ window.MathJax = {
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong><br>
       <div class="grafik-wrap">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 400" width="100%" style="max-width:320px; background-color:transparent; display:block; margin:0 auto;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 400" width="240px" height="100%" style="background-color: transparent;">
     <defs>
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Latin+Modern+Math&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap');
         
-        /* WARNA DEFAULT (LIGHT MODE) */
-        .ax-bd { stroke: var(--text-main, #334155); }
-        .lb-bd { fill: var(--text-main, #334155); font-family: 'Latin Modern Math', 'Lora', 'Times New Roman', serif; }
-        
-        /* Elemen Panah/Garis Vektor & Bola */
-        .la-bd { stroke: var(--text-main, #334155); fill: none; }
-        .da-bd { fill: var(--text-main, #334155); }
-        .arrow-path { fill: none; stroke: var(--text-main, #334155); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-
-        /* OTOMATIS BERUBAH JADI PUTIH/TERANG SAAT DARK MODE (SISTEM HP) */
-        @media(prefers-color-scheme:dark){
-          .ax-bd { stroke: #f1f5f9; }
-          .lb-bd { fill: #f1f5f9; }
-          .la-bd { stroke: #f1f5f9; }
-          .da-bd { fill: #f1f5f9; }
-          .arrow-path { stroke: #f1f5f9; }
+        /* ==================== 1. GAYA DEFAULT (LIGHT MODE - HITAM PEKAT) ==================== */
+        .math-text-fixed {
+          font-family: 'Latin Modern Math', 'Lora', 'Times New Roman', serif;
+          font-size: 18px;
+          fill: #000000;
+        }
+        .ground-fixed {
+          stroke: #000000;
+          stroke-width: 2.5;
+          stroke-linecap: round;
+        }
+        .vector-line-fixed {
+          stroke: #000000;
+          stroke-width: 1.5;
+          fill: none;
+        }
+        .ball-fixed {
+          fill: #000000;
+        }
+        .arrow-path {
+          fill: none;
+          stroke: #000000;
+          stroke-width: 1.5;
+          stroke-linecap: round;
+          stroke-linejoin: round;
         }
 
-        /* OTOMATIS BERUBAH JADI PUTIH/TERANG SAAT TOGGLE GELAP (APLIKASI) */
-        [data-theme="dark"] .ax-bd { stroke: #f1f5f9; }
-        [data-theme="dark"] .lb-bd { fill: #f1f5f9; }
-        [data-theme="dark"] .la-bd { stroke: #f1f5f9; }
-        [data-theme="dark"] .da-bd { fill: #f1f5f9; }
-        [data-theme="dark"] .arrow-path { stroke: #f1f5f9; }
+        /* ==================== 2. GAYA SAAT TOMBOL GELAP AKTIF (DARK MODE - PUTIH BERSIH) ==================== */
+        [data-theme="dark"] .math-text-fixed { fill: #ffffff !important; }
+        [data-theme="dark"] .ground-fixed { stroke: #ffffff !important; }
+        [data-theme="dark"] .vector-line-fixed { stroke: #ffffff !important; }
+        [data-theme="dark"] .ball-fixed { fill: #ffffff !important; }
+        [data-theme="dark"] .arrow-path { stroke: #ffffff !important; }
+
+        /* Fallback otomatis jika pengguna menggunakan pengaturan Dark Mode bawaan sistem HP */
+        @media (prefers-color-scheme: dark) {
+          .math-text-fixed { fill: #ffffff; }
+          .ground-fixed { stroke: #ffffff; }
+          .vector-line-fixed { stroke: #ffffff; }
+          .ball-fixed { fill: #ffffff; }
+          .arrow-path { stroke: #ffffff; }
+        }
       </style>
       
       <marker id="arrow-down-fixed" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -1047,25 +1065,25 @@ window.MathJax = {
     </defs>
 
     <g>
-      <line x1="40" y1="350" x2="310" y2="350" class="ax-bd" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="40" y1="350" x2="310" y2="350" class="ground-fixed" />
 
-      <circle cx="100" cy="70" r="7" class="da-bd" />
-      <line x1="100" y1="77" x2="100" y2="348" class="la-bd" stroke-width="1.5" marker-end="url(#arrow-down-fixed)" />
-      <text x="50" y="210" class="lb-bd" font-size="18">25 m</text>
+      <circle cx="100" cy="70" r="7" class="ball-fixed" />
+      <line x1="100" y1="77" x2="100" y2="348" class="vector-line-fixed" marker-end="url(#arrow-down-fixed)" />
+      <text x="50" y="210" class="math-text-fixed">25 m</text>
 
-      <line x1="150" y1="350" x2="150" y2="182" class="la-bd" stroke-width="1.5" marker-end="url(#arrow-up-fixed)" />
-      <circle cx="150" cy="180" r="6" class="da-bd" />
+      <line x1="150" y1="350" x2="150" y2="182" class="vector-line-fixed" marker-end="url(#arrow-up-fixed)" />
+      <circle cx="150" cy="180" r="6" class="ball-fixed" />
       
-      <line x1="185" y1="180" x2="185" y2="348" class="la-bd" stroke-width="1.5" marker-end="url(#arrow-down-fixed)" />
-      <text x="150" y="160" class="lb-bd" font-size="18">15 m</text>
+      <line x1="185" y1="180" x2="185" y2="348" class="vector-line-fixed" marker-end="url(#arrow-down-fixed)" />
+      <text x="150" y="160" class="math-text-fixed">15 m</text>
 
-      <line x1="220" y1="350" x2="220" y2="248" class="la-bd" stroke-width="1.5" marker-end="url(#arrow-up-fixed)" />
-      <circle cx="220" cy="246" r="5" class="da-bd" />
+      <line x1="220" y1="350" x2="220" y2="248" class="vector-line-fixed" marker-end="url(#arrow-up-fixed)" />
+      <circle cx="220" cy="246" r="5" class="ball-fixed" />
 
-      <line x1="250" y1="246" x2="250" y2="348" class="la-bd" stroke-width="1.5" marker-end="url(#arrow-down-fixed)" />
-      <text x="220" y="235" class="lb-bd" font-size="18">9 m</text>
+      <line x1="250" y1="246" x2="250" y2="348" class="vector-line-fixed" marker-end="url(#arrow-down-fixed)" />
+      <text x="220" y="235" class="math-text-fixed">9 m</text>
 
-      <text x="268" y="340" class="lb-bd" font-size="20">···</text>
+      <text x="268" y="340" class="math-text-fixed" font-size="20px">···</text>
     </g>
   </svg>
 </div>
