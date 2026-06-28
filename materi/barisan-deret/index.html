@@ -1011,6 +1011,7 @@ window.MathJax = {
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Latin+Modern+Math&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap');
         
+        /* Gaya Default (Light Mode) */
         .math-text-fixed {
           font-family: 'Latin Modern Math', 'Lora', 'Times New Roman', serif;
           font-size: 18px;
@@ -1036,6 +1037,24 @@ window.MathJax = {
           stroke-linecap: round;
           stroke-linejoin: round;
         }
+
+        /* PENGATURAN DARK MODE (Sistem Operasi) */
+        @media (prefers-color-scheme: dark) {
+          svg { color: var(--text-main, #ffffff) !important; }
+          .math-text-fixed { fill: #ffffff !important; }
+          .ground-fixed { stroke: #ffffff !important; }
+          .vector-line-fixed { stroke: #ffffff !important; }
+          .ball-fixed { fill: #ffffff !important; }
+          .arrow-path { stroke: #ffffff !important; }
+        }
+
+        /* PENGATURAN DARK MODE (Toggle Atribut Aplikasi) */
+        [data-theme="dark"] svg { color: var(--text-main, #ffffff) !important; }
+        [data-theme="dark"] .math-text-fixed { fill: #ffffff !important; }
+        [data-theme="dark"] .ground-fixed { stroke: #ffffff !important; }
+        [data-theme="dark"] .vector-line-fixed { stroke: #ffffff !important; }
+        [data-theme="dark"] .ball-fixed { fill: #ffffff !important; }
+        [data-theme="dark"] .arrow-path { stroke: #ffffff !important; }
       </style>
       
       <marker id="arrow-down-fixed" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
