@@ -20,7 +20,7 @@
           "q": "Di antara pilihan berikut, ekspresi yang <b>tidak terdefinisi</b> sebagai logaritma adalah …",
           "opts": [
             "$ {}^{2}\\!\\log 8 $",
-            "$ \\Blog{0{,}5}{4} $",
+            "$ {}^{0{,}5}\\!\\log 4 $",
             "$ {}^{1}\\!\\log 5 $",
             "$ {}^{4}\\!\\log 16 $",
             "$ {}^{3}\\!\\log 27 $"
@@ -54,8 +54,8 @@
           "jenis": "Komputasi",
           "kesalahanUmum": "mengira log dari pecahan selalu positif; lupa bahwa pecahan < 1 hasilnya negatif saat basis > 1",
           "jawab": "b",
-          "p": "$ \\dfrac{1}{9} = 3^{-2} $ , maka $ {}^{3}\\!\\log \\dfrac{1{9}} = -2 $ . Numerus berupa pecahan dengan nilai $ < 1 $ dan basis $ > 1 $ selalu menghasilkan logaritma negatif.",
-          "q": "Nilai dari $ {}^{3}\\!\\log \\dfrac{1{9}} $ adalah …",
+          "p": "$ \\dfrac{1}{9} = 3^{-2} $ , maka $ {}^{3}\\!\\log \\dfrac{1}{9} = -2 $ . Numerus berupa pecahan dengan nilai $ < 1 $ dan basis $ > 1 $ selalu menghasilkan logaritma negatif.",
+          "q": "Nilai dari $ {}^{3}\\!\\log \\dfrac{1}{9} $ adalah …",
           "opts": [
             "$ -3 $",
             "$ -2 $",
@@ -206,8 +206,8 @@
           "jenis": "Komputasi",
           "kesalahanUmum": "mengira x=2 karena hanya melihat 32=2^5 tanpa memperhatikan nilai log yang positif",
           "jawab": "a",
-          "p": "$ {}^{x}\\!\\log \\dfrac{1{32}} = 5 \\Rightarrow x^5 = \\dfrac{1}{32} = \\left(\\dfrac{1}{2}\\right)^5 \\Rightarrow x = \\dfrac{1}{2} $ .",
-          "q": "Jika $ {}^{x}\\!\\log \\dfrac{1{32}} = 5 $ , maka nilai $ x $ adalah …",
+          "p": "$ {}^{x}\\!\\log \\dfrac{1}{32} = 5 \\Rightarrow x^5 = \\dfrac{1}{32} = \\left(\\dfrac{1}{2}\\right)^5 \\Rightarrow x = \\dfrac{1}{2} $ .",
+          "q": "Jika $ {}^{x}\\!\\log \\dfrac{1}{32} = 5 $ , maka nilai $ x $ adalah …",
           "opts": [
             "$ \\dfrac{1}{2} $",
             "$ -2 $",
@@ -320,8 +320,8 @@
           "jenis": "Analisis",
           "kesalahanUmum": "langsung menghitung log_2(log_3(x))=2 menjadi x=2^2=4; lupa bahwa hasil dalam pertama=4 baru dicari x",
           "jawab": "d",
-          "p": "Selesaikan dari dalam ke luar: \\[{}^{2}\\!\\log \\!\\left(\\Blog{3{x}\\right)} = 2 \\Rightarrow {}^{3}\\!\\log x = 2^2 = 4 \\Rightarrow x = 3^4 = 81.\\]",
-          "q": "Nilai $ x $ yang memenuhi $ {}^{2}\\!\\log \\!\\left(\\Blog{3{x}\\right)} = 2 $ adalah …",
+          "p": "Selesaikan dari dalam ke luar: \\[{}^{2}\\!\\log \\!\\left({}^{3}\\!\\log x\\right) = 2 \\Rightarrow {}^{3}\\!\\log x = 2^2 = 4 \\Rightarrow x = 3^4 = 81.\\]",
+          "q": "Nilai $ x $ yang memenuhi $ {}^{2}\\!\\log \\!\\left({}^{3}\\!\\log x\\right) = 2 $ adalah …",
           "opts": [
             "$ 8 $",
             "$ 16 $",
@@ -2598,8 +2598,8 @@
           "jenis": "Komputasi",
           "kesalahanUmum": "mengira log_6(36)+log_6(1/6)=2+(-1)=1 benar tapi sering dihitung sebagai log_6(35) salah",
           "jawab": "b",
-          "p": "$ {}^{6}\\!\\log 36+{}^{6}\\!\\log \\frac{1{6}}=2+(-1)=1 $ .",
-          "q": "Nilai dari $ {}^{6}\\!\\log 36 + {}^{6}\\!\\log \\dfrac{1{6}} $ adalah …",
+          "p": "$ {}^{6}\\!\\log 36+{}^{6}\\!\\log \\frac{1}{6}=2+(-1)=1 $ .",
+          "q": "Nilai dari $ {}^{6}\\!\\log 36 + {}^{6}\\!\\log \\dfrac{1}{6} $ adalah …",
           "opts": [
             "$ 0 $",
             "$ 2 $",
@@ -2776,7 +2776,7 @@
           "kesalahanUmum": "mengira t=2/0,1=20 tahun; tidak menggunakan logaritma untuk mencari t",
           "jawab": "d",
           "p": "$ (1{,}1)^t = 2 \\Rightarrow t = \\dfrac{\\log 2}{\\log 1{,}1} = \\dfrac{0{,}3010}{0{,}0414} \\approx 7{,}3 $ .",
-          "q": "Suatu populasi bakteri tumbuh mengikuti rumus $ N = N_0 \\cdot (1{,}1)^t $ . Jika populasi awal $ N_0 = 1.000 $ dan ingin menjadi $ 2.000 $ , waktu $ t $ yang diperlukan (dalam satuan waktu) adalah … \\ \\textit{(Gunakan $ \\log 2 = 0{,}3010 $ dan $ \\log 1{,}1 = 0{,}0414 $ )}",
+          "q": "Suatu populasi bakteri tumbuh mengikuti rumus $ N = N_0 \\cdot (1{,}1)^t $ . Jika populasi awal $ N_0 = 1.000 $ dan ingin menjadi $ 2.000 $ , waktu $ t $ yang diperlukan (dalam satuan waktu) adalah … <em>(Gunakan $ \\log 2 = 0{,}3010 $ dan $ \\log 1{,}1 = 0{,}0414 $ )</em>",
           "opts": [
             "$ t \\approx 20{,}0 $",
             "$ t \\approx 14{,}2 $",
@@ -2795,7 +2795,7 @@
           "kesalahanUmum": "salah tanda: menulis pH=log2+5=5,301 bukan 5-log2=4,699",
           "jawab": "c",
           "p": "$ \\text{pH} = -\\log(2\\times10^{-5}) = 5 - \\log 2 = 5 - 0{,}3010 = 4{,}699 \\approx 4{,}70 $ .",
-          "q": "Konsentrasi ion hidrogen suatu larutan asam adalah $ [\\text{H}^+] = 2\\times10^{-5} $ mol/L. pH larutan tersebut kira-kira adalah … \\ \\textit{(Gunakan $ \\log 2 = 0{,}3010 $ )}",
+          "q": "Konsentrasi ion hidrogen suatu larutan asam adalah $ [\\text{H}^+] = 2\\times10^{-5} $ mol/L. pH larutan tersebut kira-kira adalah … <em>(Gunakan $ \\log 2 = 0{,}3010 $ )</em>",
           "opts": [
             "$ 4{,}30 $",
             "$ 5{,}30 $",
@@ -2871,7 +2871,7 @@
           "kesalahanUmum": "mengira t=10/1,2≈8,3; tidak menggunakan logaritma untuk eksponen",
           "jawab": "d",
           "p": "$ 500\\cdot(1{,}2)^t = 5.000 \\Rightarrow (1{,}2)^t = 10 $ . \\[t = \\frac{\\log 10}{\\log 1{,}2} = \\frac{1}{0{,}0792} \\approx 12{,}6 \\text{ tahun.}\\]",
-          "q": "Jumlah penduduk suatu kota berkembang mengikuti rumus $ N = 500 \\cdot (1{,}2)^t $ (ribuan jiwa), dengan $ t $ dalam tahun. Kapan penduduk kota mencapai 5 juta jiwa?\\ \\textit{(Gunakan $ \\log 1{,}2 = 0{,}0792 $ )}",
+          "q": "Jumlah penduduk suatu kota berkembang mengikuti rumus $ N = 500 \\cdot (1{,}2)^t $ (ribuan jiwa), dengan $ t $ dalam tahun. Kapan penduduk kota mencapai 5 juta jiwa?<em>(Gunakan $ \\log 1{,}2 = 0{,}0792 $ )</em>",
           "opts": [
             "$ t \\approx 5{,}0 $ tahun",
             "$ t \\approx 8{,}3 $ tahun",
@@ -2909,7 +2909,7 @@
           "kesalahanUmum": "mengira pH=3+log3; tanda minus pada -log diabaikan",
           "jawab": "c",
           "p": "$ \\text{pH} = -\\log(3\\times10^{-3}) = 3 - \\log 3 = 3 - 0{,}4771 = 2{,}5229 \\approx 2{,}52 $ .",
-          "q": "Larutan memiliki $ [\\text{H}^+] = 3\\times10^{-3} $ mol/L. Nilai pH larutan tersebut kira-kira adalah … \\ \\textit{(Gunakan $ \\log 3 = 0{,}4771 $ )}",
+          "q": "Larutan memiliki $ [\\text{H}^+] = 3\\times10^{-3} $ mol/L. Nilai pH larutan tersebut kira-kira adalah … <em>(Gunakan $ \\log 3 = 0{,}4771 $ )</em>",
           "opts": [
             "$ 2{,}05 $",
             "$ 3{,}48 $",
@@ -2928,7 +2928,7 @@
           "kesalahanUmum": "mengira pH=-log[OH-] langsung; lupa hubungan pH+pOH=14",
           "jawab": "d",
           "p": "$ \\text{pOH} = -\\log(2\\times10^{-5}) = 5 - \\log 2 = 5 - 0{,}3010 = 4{,}699 $ . $ \\text{pH} = 14 - 4{,}699 \\approx 9{,}30 $ .",
-          "q": "Larutan basa memiliki $ [\\text{OH}^-] = 2\\times10^{-5} $ mol/L. Nilai pH larutan tersebut kira-kira adalah … \\ \\textit{(Gunakan $ \\log 2 = 0{,}3010 $ dan $ \\text{pH} + \\text{pOH} = 14 $ )}",
+          "q": "Larutan basa memiliki $ [\\text{OH}^-] = 2\\times10^{-5} $ mol/L. Nilai pH larutan tersebut kira-kira adalah … <em>(Gunakan $ \\log 2 = 0{,}3010 $ dan $ \\text{pH} + \\text{pOH} = 14 $ )</em>",
           "opts": [
             "$ 4{,}70 $",
             "$ 9{,}70 $",
@@ -2966,7 +2966,7 @@
           "kesalahanUmum": "menghitung pOH=3+log3 alih-alih 4-log3; atau lupa pH=14-pOH",
           "jawab": "c",
           "p": "$ \\text{pOH} = -\\log(3\\times10^{-4}) = 4 - \\log 3 = 4 - 0{,}4771 = 3{,}5229 $ . $ \\text{pH} = 14 - 3{,}5229 \\approx 10{,}48 $ .",
-          "q": "Larutan basa kuat memiliki $ [\\text{OH}^-] = 3\\times10^{-4} $ mol/L. Nilai pH larutan tersebut kira-kira adalah … \\ \\textit{(Gunakan $ \\log 3 = 0{,}4771 $ dan $ \\text{pH} + \\text{pOH} = 14 $ )}",
+          "q": "Larutan basa kuat memiliki $ [\\text{OH}^-] = 3\\times10^{-4} $ mol/L. Nilai pH larutan tersebut kira-kira adalah … <em>(Gunakan $ \\log 3 = 0{,}4771 $ dan $ \\text{pH} + \\text{pOH} = 14 $ )</em>",
           "opts": [
             "$ 3{,}52 $",
             "$ 9{,}52 $",
@@ -3023,7 +3023,7 @@
           "kesalahanUmum": "mengira t=1/0,05=20 tahun (linear); tidak menggunakan log",
           "jawab": "d",
           "p": "$ (1{,}05)^t = 2 \\Rightarrow t = \\dfrac{\\log 2}{\\log 1{,}05} = \\dfrac{0{,}3010}{0{,}0212} \\approx 14{,}2 $ tahun.",
-          "q": "Modal sebesar Rp 1.000.000 diinvestasikan dengan bunga majemuk 5% per tahun. Berapa tahun agar modal menjadi dua kali lipat?\\ \\textit{(Gunakan $ \\log 2 = 0{,}3010 $ dan $ \\log 1{,}05 = 0{,}0212 $ )}",
+          "q": "Modal sebesar Rp 1.000.000 diinvestasikan dengan bunga majemuk 5% per tahun. Berapa tahun agar modal menjadi dua kali lipat?<em>(Gunakan $ \\log 2 = 0{,}3010 $ dan $ \\log 1{,}05 = 0{,}0212 $ )</em>",
           "opts": [
             "$ \\approx 20{,}0 $ tahun",
             "$ \\approx 10{,}0 $ tahun",
@@ -3042,7 +3042,7 @@
           "kesalahanUmum": "mengira rasio = 1,5 kali (linear dari selisih magnitudonya)",
           "jawab": "c",
           "p": "$ \\Delta M = 7{,}5 - 6 = 1{,}5 $ . Rasio intensitas $ = 10^{1{,}5} \\approx 31{,}6 $ kali.",
-          "q": "Gempa C bermagnitude 6 dan gempa D bermagnitude 7{,}5. Berapa kali lebih kuat intensitas gempa D dibanding gempa C?\\ \\textit{(Gunakan $ 10^{1{,}5} \\approx 31{,}6 $ )}",
+          "q": "Gempa C bermagnitude 6 dan gempa D bermagnitude 7,5. Berapa kali lebih kuat intensitas gempa D dibanding gempa C?<em>(Gunakan $ 10^{1,5} \\approx 31,6 $ )</em>",
           "opts": [
             "$ 1{,}5 $ kali",
             "$ 15 $ kali",
