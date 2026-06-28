@@ -93,8 +93,8 @@ function buildPage(sectionId, sectionTitle, soalList, paketNum) {
   let html = template;
   // Ganti PAKET_ID
   html = html.replace(/const PAKET_ID = '[^']+';/, `const PAKET_ID = '${paketId}';`);
-  // Ganti quizDB
-  html = html.replace(/window\.quizDB=\{.*?\};(?=<\/script>)/s, `window.quizDB=${JSON.stringify(quizDB)};`);
+  // Ganti quizDB (eksternal file → inline)
+  html = html.replace(/<script src="[^"]*quiz-data[^"]*"><\/script>/, `<script>window.quizDB=${JSON.stringify(quizDB)};</script>`);
   // Ganti kode FL-A1 → kode baru
   html = html.replace(/FL-A1/g, kode);
   // Breadcrumb mode
