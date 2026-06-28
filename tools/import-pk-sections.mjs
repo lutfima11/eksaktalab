@@ -48,6 +48,11 @@ function latexToHtml(s) {
     .replace(/\\%/g, '%')
     .replace(/\\ /g, ' ')
     .replace(/\\quad/g, ' ')
+    .replace(/\\;/g, ' ')
+    .replace(/\\,/g, ' ')
+    .replace(/\\!/g, '')
+    .replace(/\\medskip/g, '')
+    .replace(/\\vspace\{[^}]*\}/g, '')
     .replace(/\s+/g, ' ');
   // biarkan spasi leading/trailing — cleanText akan trim di akhir
 }
