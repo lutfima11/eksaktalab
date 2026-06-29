@@ -109,90 +109,195 @@ window.MathJax = {
 
 <!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
   <section class="section" id="pengantar">
-    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Fungsi sebagai Mesin, Komposisi sebagai Rangkaian</h2>
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Ketika Suatu Aturan Bisa Dibalik dan Disambung</h2>
 
-    <p>Bayangkan sebuah pabrik dengan dua mesin dalam satu lini produksi. Mesin pertama menerima bahan mentah dan menghasilkan setengah jadi. Mesin kedua menerima setengah jadi itu, lalu menghasilkan produk akhir. Tidak ada yang melewati mesin kedua tanpa terlebih dahulu melewati mesin pertama — itulah inti dari <strong>komposisi fungsi</strong>. Dalam matematika, fungsi adalah "mesin" yang menerima input dan mengeluarkan output, dan komposisi adalah cara kita <em>merangkai</em> mesin-mesin itu secara berurutan.</p>
+    <p>Bayangkan kamu ingin mengirim pesan rahasia kepada temanmu. Kamu menyandikan setiap huruf menggunakan aturan tertentu &mdash; misalnya, setiap huruf digeser dua posisi ke depan dalam abjad. Temanmu bisa membaca pesanmu hanya jika ia tahu cara <em>membalik</em> aturan tersebut: menggeser kembali dua posisi ke belakang. Inilah inti dari <strong>fungsi invers</strong> &mdash; sebuah aturan yang membatalkan aturan semula.</p>
 
-    <p>Ide ini ternyata ada di mana-mana. Saat aplikasi navigasi menghitung rute, ia melakukan serangkaian fungsi secara berturut: mengubah alamat teks menjadi koordinat GPS, lalu meneruskan koordinat itu ke algoritma pencarian rute, lalu mengubah hasilnya menjadi petunjuk langkah demi langkah yang kita baca di layar. Setiap langkah adalah satu fungsi; seluruh proses adalah komposisinya. Sistem enkripsi pesan bekerja serupa: fungsi $f$ mengenkripsi pesan biasa menjadi sandi, dan fungsi $f^{-1}$ — <strong>fungsi invers</strong> dari $f$ — mendekripsi sandi itu kembali menjadi pesan asli.</p>
+<p>Sekarang bayangkan sebuah pabrik dengan dua mesin. Bahan baku masuk ke mesin pertama, hasilnya langsung diteruskan ke mesin kedua, dan keluarlah produk akhir. Proses dua langkah seperti inilah yang disebut <strong>komposisi fungsi</strong> &mdash; fungsi yang bekerja berantai, di mana keluaran satu fungsi menjadi masukan bagi fungsi berikutnya.</p>
 
-    <h3 class="subsection-title">Ide Dasar: Rangkaian Mesin dan Tombol "Undo"</h3>
-    <p>Misalkan $f(x) = 2x$ (fungsi "kalikan dua") dan $g(x) = x + 3$ (fungsi "tambah tiga"). Komposisi $(f \circ g)(x) = f(g(x))$ berarti: <em>pertama</em> jalankan $g$ (tambah tiga), <em>baru kemudian</em> jalankan $f$ (kalikan dua). Jadi $(f \circ g)(x) = 2(x+3) = 2x+6$. Perhatikan urutan penting: $(g \circ f)(x) = g(f(x)) = 2x+3$, hasilnya berbeda — komposisi tidak komutatif.</p>
+<p>Dua konsep ini &mdash; komposisi dan invers &mdash; adalah jantung dari aljabar fungsi, dan keduanya saling berkaitan erat: invers dari suatu komposisi "membalik" urutan kerja mesin-mesin tersebut.</p>
+    
+<h3 class="subsection-title">Ide Dasar: Fungsi sebagai Mesin Berantai</h3>
+<p>Perhatikan bagaimana dua fungsi dapat disambungkan. Jika <strong>$g$</strong> memetakan <strong>$x$</strong> ke <strong>$u$</strong>, dan <strong>$f$</strong> memetakan <strong>$u$</strong> ke <strong>$y$</strong>, maka komposisi <strong>$f \circ g$</strong> langsung memetakan <strong>$x$</strong> ke <strong>$y$</strong> &mdash; melewatkan tahap tengah.</p>
+<div class="grafik-wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 150 600 200" width="100%" style="max-width:420px; background-color:transparent;">
+    <defs>
+      <style>
+        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
+        .box-fixed { fill: var(--bg-muted, #f8fafc); stroke: var(--text-main, #334155); transition: all 0.3s ease; }
+        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
+        
+        /* Warna dinamis kurva dan teks petunjuk */
+        .line-blue-fixed { stroke: #1010A0; fill: none; }
+        .line-red-fixed { stroke: #A01010; fill: none; }
+        .text-blue-fixed { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
+        .text-red-fixed { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
+        .arrow-blue-fixed { fill: #1010A0; }
+        .arrow-red-fixed { fill: #A01010; }
 
-    <div style="background:var(--surface-2,#f1f5f9);border:1px solid var(--border,#e2e8f0);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0;font-size:.92rem;">
-      <p style="margin:.25rem 0;"><strong>Contoh mesin berantai:</strong></p>
-      <p style="margin:.25rem 0;">Input $x = 4$ → mesin $g$: tambah 3 → <strong>7</strong> → mesin $f$: kalikan 2 → <strong>14</strong></p>
-      <p style="margin:.25rem 0;">Jadi $(f \circ g)(4) = 14$.</p>
-      <p style="margin:.75rem 0 .25rem;"><strong>Contoh fungsi invers — tombol "undo":</strong></p>
-      <p style="margin:.25rem 0;">$f(x) = 2x$, maka $f^{-1}(x) = \dfrac{x}{2}$.</p>
-      <p style="margin:.25rem 0;">$f(5) = 10$ → $f^{-1}(10) = 5$ — kita kembali ke titik semula.</p>
-    </div>
+        /* Dukungan Dark Mode otomatis */
+        @media (prefers-color-scheme: dark) {
+          .box-fixed { fill: #1e293b; stroke: #94a3b8; }
+          .label-black-fixed { fill: #f1f5f9; }
+          .line-blue-fixed { stroke: #60A5FA; }
+          .line-red-fixed { stroke: #F87171; }
+          .text-blue-fixed { fill: #60A5FA; }
+          .text-red-fixed { fill: #F87171; }
+          .arrow-blue-fixed { fill: #60A5FA; }
+          .arrow-red-fixed { fill: #F87171; }
+        }
+        [data-theme="dark"] .box-fixed { fill: #1e293b; stroke: #94a3b8; }
+        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
+        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
+        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
+        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .text-red-fixed { fill: #F87171; }
+        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .arrow-red-fixed { fill: #F87171; }
+      </style>
 
-    <p>Fungsi invers adalah "tombol undo" dari sebuah fungsi. Jika fungsi $f$ mengubah $x$ menjadi $y$, maka $f^{-1}$ mengubah $y$ kembali menjadi $x$. Namun tidak semua fungsi punya invers — hanya fungsi <strong>bijektif</strong> (satu-satu dan pada) yang dapat dibalik sepenuhnya. Inilah mengapa resep memasak yang menggandakan semua bahan bisa "dibatalkan" dengan membagi dua kembali, tetapi proses memasak telur tidak bisa dibalik — fungsinya tidak bijektif.</p>
+      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-blue-fixed" />
+      </marker>
+      <marker id="arrow-fixed-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-red-fixed" />
+      </marker>
+    </defs>
 
-    <p>Komposisi dan invers adalah fondasi dari konsep yang lebih dalam di matematika dan informatika: dari transformasi geometri, teori grup, hingga kriptografi modern. Memahami keduanya berarti memahami bagaimana operasi-operasi kompleks dapat dibangun dari bagian-bagian yang sederhana — dan bagaimana cara membaliknya.</p>
+    <g transform="translate(15, 125) scale(0.53)">
+      
+      <g id="box-x">
+        <rect x="20" y="100" width="230" height="110" rx="18" ry="18" class="box-fixed" stroke-width="3" />
+        <text x="135" y="168" text-anchor="middle" class="label-black-fixed" font-style="italic" font-size="42">x</text>
+      </g>
 
-    <div class="grafik-wrap">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 210" width="100%" style="max-width:460px;background-color:transparent;">
-  <defs>
-    <style>
-      .lb-fi{fill:var(--text-main,#334155);font-family:Cambria,'Times New Roman',serif}
-      .bx-fi{fill:var(--bg-card,#f8fafc);stroke:#0014b3;stroke-width:2.5}
-      .bx2-fi{fill:var(--bg-card,#f8fafc);stroke:#b30000;stroke-width:2.5}
-      .tg-fi{fill:#0014b3;font-family:Cambria,'Times New Roman',serif}
-      .tr-fi{fill:#b30000;font-family:Cambria,'Times New Roman',serif}
-      @media(prefers-color-scheme:dark){
-        .bx-fi{fill:#1e293b;stroke:#60A5FA}
-        .bx2-fi{fill:#1e293b;stroke:#F87171}
-        .tg-fi{fill:#60A5FA}
-        .tr-fi{fill:#F87171}
-      }
-      [data-theme="dark"] .bx-fi{fill:#1e293b;stroke:#60A5FA}
-      [data-theme="dark"] .bx2-fi{fill:#1e293b;stroke:#F87171}
-      [data-theme="dark"] .tg-fi{fill:#60A5FA}
-      [data-theme="dark"] .tr-fi{fill:#F87171}
-    </style>
-    <marker id="arr-fi" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--text-main,#334155)"/>
-    </marker>
-  </defs>
-  <!-- Input x -->
-  <text x="40" y="94" class="lb-fi" font-size="22" text-anchor="middle" font-style="italic" font-weight="700">x</text>
-  <!-- Arrow → box g -->
-  <line x1="56" y1="88" x2="88" y2="88" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
-  <!-- Box g -->
-  <rect x="92" y="62" width="114" height="52" class="bx-fi" rx="10"/>
-  <text x="149" y="83" class="tg-fi" font-size="13" text-anchor="middle" font-weight="700">Mesin g</text>
-  <text x="149" y="101" class="tg-fi" font-size="12" text-anchor="middle">g(x) = x + 3</text>
-  <!-- Arrow → intermediate -->
-  <line x1="208" y1="88" x2="232" y2="88" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
-  <!-- g(x) label -->
-  <text x="252" y="83" class="lb-fi" font-size="14" text-anchor="middle" font-style="italic">g(x)</text>
-  <!-- Arrow → box f -->
-  <line x1="272" y1="88" x2="298" y2="88" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
-  <!-- Box f -->
-  <rect x="302" y="62" width="106" height="52" class="bx2-fi" rx="10"/>
-  <text x="355" y="83" class="tr-fi" font-size="13" text-anchor="middle" font-weight="700">Mesin f</text>
-  <text x="355" y="101" class="tr-fi" font-size="12" text-anchor="middle">f(x) = 2x</text>
-  <!-- Arrow → output -->
-  <line x1="410" y1="88" x2="438" y2="88" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
-  <!-- Output y -->
-  <text x="455" y="94" class="lb-fi" font-size="22" text-anchor="middle" font-style="italic" font-weight="700">y</text>
-  <!-- ─ Example row ─ -->
-  <text x="40"  y="157" class="lb-fi" font-size="22" text-anchor="middle" font-weight="700">4</text>
-  <line x1="56" y1="152" x2="88" y2="152" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
-  <text x="149" y="157" class="tg-fi" font-size="18" text-anchor="middle" font-weight="700">+ 3</text>
-  <line x1="208" y1="152" x2="232" y2="152" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
-  <text x="252" y="157" class="lb-fi" font-size="22" text-anchor="middle" font-weight="700">7</text>
-  <line x1="272" y1="152" x2="298" y2="152" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
-  <text x="355" y="157" class="tr-fi" font-size="18" text-anchor="middle" font-weight="700">× 2</text>
-  <line x1="410" y1="152" x2="438" y2="152" marker-end="url(#arr-fi)" stroke="var(--text-main,#334155)" stroke-width="2"/>
-  <text x="455" y="157" class="lb-fi" font-size="22" text-anchor="middle" font-weight="700">14</text>
-  <!-- Caption -->
-  <text x="245" y="188" class="lb-fi" font-size="12" text-anchor="middle" fill="#94a3b8">(f ∘ g)(4) = f(g(4)) = f(7) = 14</text>
-  <text x="245" y="204" class="lb-fi" font-size="12" text-anchor="middle" fill="#94a3b8">(f ∘ g)(x) = f(x+3) = 2(x+3) = 2x+6</text>
-</svg>
+      <g id="box-u">
+        <rect x="425" y="100" width="240" height="110" rx="18" ry="18" class="box-fixed" stroke-width="3" />
+        <text x="545" y="166" text-anchor="middle" class="label-black-fixed" font-style="italic" font-size="42">
+          u <tspan font-style="normal">=</tspan> g(x)
+        </text>
+      </g>
+
+      <g id="box-y">
+        <rect x="840" y="100" width="230" height="110" rx="18" ry="18" class="box-fixed" stroke-width="3" />
+        <text x="955" y="166" text-anchor="middle" class="label-black-fixed" font-style="italic" font-size="42">
+          y <tspan font-style="normal">=</tspan> f(u)
+        </text>
+      </g>
+
+      <g id="path-g">
+        <line x1="250" y1="155" x2="410" y2="155" class="line-blue-fixed" stroke-width="4" marker-end="url(#arrow-fixed-blue)" />
+        <text x="330" y="130" text-anchor="middle" class="text-blue-fixed" font-size="30">
+          fungsi <tspan font-style="italic" font-size="34">g</tspan>
+        </text>
+      </g>
+
+      <g id="path-f">
+        <line x1="665" y1="155" x2="825" y2="155" class="line-blue-fixed" stroke-width="4" marker-end="url(#arrow-fixed-blue)" />
+        <text x="745" y="130" text-anchor="middle" class="text-blue-fixed" font-size="30">
+          fungsi <tspan font-style="italic" font-size="34">f</tspan>
+        </text>
+      </g>
+
+      <g id="path-composition">
+        <path d="M 135,210 Q 545,460 955,220" fill="none" class="line-red-fixed" stroke-width="4" stroke-dasharray="10,7" marker-end="url(#arrow-fixed-red)" />
+        <text x="545" y="390" text-anchor="middle" class="text-red-fixed" font-size="32">
+          komposisi <tspan font-style="italic" font-size="36">f</tspan> <tspan font-style="normal" font-size="26">○</tspan> <tspan font-style="italic" font-size="36">g</tspan>
+        </text>
+      </g>
+
+    </g>
+  </svg>
 </div>
 
+    <p>Sedangkan fungsi invers membalik arah: jika <strong>$f$</strong> membawa <strong>$x$</strong> ke <strong>$y$</strong>, maka <strong>$f^{-1}$</strong> membawa <strong>$y$</strong> kembali ke <strong>$x$</strong>.</p>
+    
+    <div class="grafik-wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 160 600 150" width="100%" style="max-width:420px; background-color:transparent;">
+    <defs>
+      <style>
+        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
+        .box-fixed { fill: var(--bg-muted, #f8fafc); stroke: var(--text-main, #334155); transition: all 0.3s ease; }
+        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
+        
+        /* Warna dinamis kurva dan teks petunjuk */
+        .line-blue-fixed { stroke: #1010A0; fill: none; }
+        .line-red-fixed { stroke: #A01010; fill: none; }
+        .text-blue-fixed { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
+        .text-red-fixed { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
+        .arrow-blue-fixed { fill: #1010A0; }
+        .arrow-red-fixed { fill: #A01010; }
+
+        /* Dukungan Dark Mode otomatis */
+        @media (prefers-color-scheme: dark) {
+          .box-fixed { fill: #1e293b; stroke: #94a3b8; }
+          .label-black-fixed { fill: #f1f5f9; }
+          .line-blue-fixed { stroke: #60A5FA; }
+          .line-red-fixed { stroke: #F87171; }
+          .text-blue-fixed { fill: #60A5FA; }
+          .text-red-fixed { fill: #F87171; }
+          .arrow-blue-fixed { fill: #60A5FA; }
+          .arrow-red-fixed { fill: #F87171; }
+        }
+        [data-theme="dark"] .box-fixed { fill: #1e293b; stroke: #94a3b8; }
+        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
+        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
+        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
+        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .text-red-fixed { fill: #F87171; }
+        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .arrow-red-fixed { fill: #F87171; }
+      </style>
+
+      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-blue-fixed" />
+      </marker>
+      <marker id="arrow-fixed-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-red-fixed" />
+      </marker>
+    </defs>
+
+    <g transform="translate(15, 160) scale(0.53)">
+      
+      <g id="box-left">
+        <rect x="20" y="80" width="290" height="120" rx="18" ry="18" class="box-fixed" stroke-width="3" />
+        <text x="165" y="152" text-anchor="middle" class="label-black-fixed" font-size="40">
+          <tspan font-style="italic">x</tspan> ∈ <tspan font-style="italic">A</tspan>
+        </text>
+      </g>
+
+      <g id="box-right">
+        <rect x="650" y="80" width="400" height="120" rx="18" ry="18" class="box-fixed" stroke-width="3" />
+        <text x="850" y="152" text-anchor="middle" class="label-black-fixed" font-size="40">
+          <tspan font-style="italic">y</tspan> = <tspan font-style="italic">f</tspan>(<tspan font-style="italic">x</tspan>) ∈ <tspan font-style="italic">B</tspan>
+        </text>
+      </g>
+
+      <g id="path-forward">
+        <line x1="310" y1="115" x2="640" y2="115" class="line-blue-fixed" stroke-width="4" marker-end="url(#arrow-fixed-blue)" />
+        <text x="475" y="90" text-anchor="middle" class="text-blue-fixed" font-size="34">
+          <tspan font-style="italic">f</tspan> <tspan font-size="30">(maju)</tspan>
+        </text>
+      </g>
+
+      <g id="path-backward">
+        <line x1="650" y1="165" x2="322" y2="165" class="line-red-fixed" stroke-width="3" marker-end="url(#arrow-fixed-red)" />
+        <text x="485" y="210" text-anchor="middle" class="text-red-fixed" font-size="34">
+          <tspan font-style="italic">f</tspan><tspan dy="-16" font-size="24">-1</tspan><tspan dy="16" font-size="30"> (balik)</tspan>
+        </text>
+      </g>
+
+    </g>
+  </svg>
+</div>
+
+<p>Tidak semua fungsi dapat dibalik. Fungsi hanya memiliki invers jika ia <strong>bijektif</strong> &mdash; setiap nilai keluaran hanya dihasilkan oleh tepat satu nilai masukan, sehingga pembalikan tidak menimbulkan kebingungan.</p>
+<h3 class="subsection-title">Sejarah Singkat</h3>
+<p>Gagasan komposisi fungsi sudah muncul secara implisit dalam karya-karya matematikawan abad ke-17 yang membangun kalkulus. <strong>Gottfried Wilhelm Leibniz</strong> (1646&ndash;1716) dan <strong>Isaac Newton</strong> (1643&ndash;1727) secara terpisah mengembangkan konsep fungsi berantai ini saat mempelajari laju perubahan &mdash; yang kemudian kita kenal sebagai <em>chain rule</em> dalam turunan.</p>
+
+<p>Notasi modern <strong>$f \circ g$</strong> untuk komposisi diperkenalkan jauh kemudian, seiring dengan formalisasi teori himpunan dan fungsi di abad ke-19. <strong>Leonhard Euler</strong> (1707&ndash;1783) adalah salah satu orang pertama yang menggunakan notasi <strong>$f(x)$</strong> secara sistematis, meletakkan fondasi bagi cara kita menuliskan fungsi hingga hari ini.</p>
+
+<p>Konsep fungsi invers sendiri berakar dari kebutuhan untuk "mengurai" operasi matematika &mdash; seperti logaritma yang merupakan invers dari eksponen, dan akar kuadrat yang merupakan invers dari kuadrat. Pemahaman formal bahwa invers hanya ada untuk fungsi bijektif menjadi bagian penting dari aljabar abstrak modern.</p>
   <!-- TOC -->
   <div class="toc">
     <div class="toc-title">Daftar Isi</div>
@@ -228,42 +333,72 @@ window.MathJax = {
 
     <!-- SVG: Diagram pemetaan fungsi A → B -->
     <div class="grafik-wrap">
-      <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" width="400">
-        <defs>
-          <marker id="farr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/>
-          </marker>
-        </defs>
-        <!-- Oval A (Domain) -->
-        <ellipse cx="100" cy="110" rx="70" ry="90" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
-        <text x="100" y="215" font-family="Inter,sans-serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-weight="600">A (Domain)</text>
-        <!-- Oval B (Kodomain) -->
-        <ellipse cx="300" cy="110" rx="70" ry="90" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
-        <text x="300" y="215" font-family="Inter,sans-serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-weight="600">B (Kodomain)</text>
-        <!-- Label f di tengah -->
-        <text x="200" y="30" font-family="Times New Roman,serif" font-size="18" fill="#00BFA5" text-anchor="middle" font-style="italic" font-weight="700">f</text>
-        <line x1="180" y1="34" x2="220" y2="34" stroke="#00BFA5" stroke-width="1" stroke-dasharray="3,2"/>
-        <!-- Elemen di A -->
-        <text x="100" y="65" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle" font-style="italic">a</text>
-        <text x="100" y="100" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle" font-style="italic">b</text>
-        <text x="100" y="135" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle" font-style="italic">c</text>
-        <text x="100" y="170" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle" font-style="italic">d</text>
-        <!-- Elemen di B -->
-        <text x="300" y="65" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle">1</text>
-        <text x="300" y="100" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle">2</text>
-        <text x="300" y="135" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle">3</text>
-        <text x="300" y="170" font-family="Times New Roman,serif" font-size="14" fill="#CBD5E8" text-anchor="middle">4</text>
-        <!-- Panah a→1, b→3, c→2, d→4 -->
-        <line x1="118" y1="62" x2="278" y2="62" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#farr)"/>
-        <line x1="118" y1="97" x2="278" y2="132" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#farr)"/>
-        <line x1="118" y1="132" x2="278" y2="97" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#farr)"/>
-        <line x1="118" y1="167" x2="278" y2="167" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#farr)"/>
-        <!-- Range shading di B -->
-        <ellipse cx="300" cy="110" rx="52" ry="72" fill="rgba(0,191,165,0.06)" stroke="#00BFA5" stroke-width="1" stroke-dasharray="4,3"/>
-        <text x="355" y="100" font-family="Inter,sans-serif" font-size="10" fill="#00BFA5">f(A)</text>
-        <text x="355" y="112" font-family="Inter,sans-serif" font-size="10" fill="#00BFA5">= Range</text>
-      </svg>
-    </div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-45 100 600 290" width="100%" style="max-width:420px; background-color:transparent;">
+    <defs>
+      <style>
+        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
+        .box-fixed { fill: none; stroke: var(--text-main, #334155); transition: all 0.3s ease; }
+        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
+        
+        /* Warna dinamis kurva dan teks petunjuk */
+        .line-blue-fixed { stroke: #1010A0; fill: none; }
+        .text-blue-fixed { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
+        .arrow-blue-fixed { fill: #1010A0; }
+
+        /* Dukungan Dark Mode otomatis */
+        @media (prefers-color-scheme: dark) {
+          .box-fixed { stroke: #94a3b8; }
+          .label-black-fixed { fill: #f1f5f9; }
+          .line-blue-fixed { stroke: #60A5FA; }
+          .text-blue-fixed { fill: #60A5FA; }
+          .arrow-blue-fixed { fill: #60A5FA; }
+        }
+        [data-theme="dark"] .box-fixed { stroke: #94a3b8; }
+        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
+        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
+        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
+      </style>
+
+      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-blue-fixed" />
+      </marker>
+    </defs>
+
+    <g transform="translate(60, 130) scale(0.65)">
+      
+      <ellipse cx="100" cy="150" rx="100" ry="160" class="box-fixed" stroke-width="2" />
+      <text x="100" y="350" text-anchor="middle" class="label-black-fixed" font-size="42">
+        <tspan font-style="italic">A</tspan> (Domain)
+      </text>
+
+      <text x="100" y="60" text-anchor="middle" class="label-black-fixed" font-size="38" font-style="italic">a</text>
+      <text x="100" y="125" text-anchor="middle" class="label-black-fixed" font-size="38" font-style="italic">b</text>
+      <text x="100" y="190" text-anchor="middle" class="label-black-fixed" font-size="38" font-style="italic">c</text>
+      <text x="100" y="255" text-anchor="middle" class="label-black-fixed" font-size="38" font-style="italic">d</text>
+
+      <ellipse cx="500" cy="150" rx="100" ry="160" class="box-fixed" stroke-width="2" />
+      <text x="500" y="350" text-anchor="middle" class="label-black-fixed" font-size="42">
+        <tspan font-style="italic">B</tspan> (Kodomain)
+      </text>
+
+      <text x="500" y="60" text-anchor="middle" class="label-black-fixed" font-size="38">1</text>
+      <text x="500" y="125" text-anchor="middle" class="label-black-fixed" font-size="38">2</text>
+      <text x="500" y="190" text-anchor="middle" class="label-black-fixed" font-size="38">3</text>
+      <text x="500" y="255" text-anchor="middle" class="label-black-fixed" font-size="38">4</text>
+
+      <g stroke-width="3" marker-end="url(#arrow-fixed-blue)">
+        <line x1="135" y1="50" x2="460" y2="50" class="line-blue-fixed" />
+        <line x1="135" y1="115" x2="460" y2="180" class="line-blue-fixed" />
+        <line x1="135" y1="180" x2="460" y2="115" class="line-blue-fixed" />
+        <line x1="135" y1="245" x2="460" y2="245" class="line-blue-fixed" />
+      </g>
+
+      <text x="300" y="20" text-anchor="middle" class="label-black-fixed" font-size="42" font-style="italic">f</text>
+
+    </g>
+  </svg>
+</div>
 
 
     <h3 class="subsection-title">1. Jenis-Jenis Fungsi</h3>
@@ -280,77 +415,140 @@ window.MathJax = {
     <p><strong>c. Fungsi Bijektif (Korespondensi Satu-Satu)</strong> — injektif sekaligus surjektif.</p>
 
     <!-- SVG: Jenis-jenis fungsi -->
-    <div class="grafik-row" style="grid-template-columns:repeat(3,1fr);gap:1rem;margin:1rem 0;">
+    <div class="grafik-wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 450" width="100%" style="max-width:100%; background-color:transparent;">
+    <defs>
+      <style>
+        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
+        .panel-bg-fixed { fill: var(--bg-muted, #f8fafc); stroke: #e2e8f0; transition: all 0.3s ease; }
+        .box-fixed { fill: none; stroke: var(--text-main, #334155); transition: all 0.3s ease; }
+        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
+        .label-gray-fixed { fill: #64748b; font-family: Cambria, 'Times New Roman', serif; }
+        
+        /* Warna dinamis panah dan teks sifat fungsi */
+        .color-injektif { stroke: #2563eb; fill: #2563eb; }
+        .color-surjektif { stroke: #16a34a; fill: #16a34a; }
+        .color-bijektif { stroke: #0d9488; fill: #0d9488; }
+        
+        .text-injektif { fill: #2563eb; font-family: Cambria, 'Times New Roman', serif; font-weight: bold; }
+        .text-surjektif { fill: #16a34a; font-family: Cambria, 'Times New Roman', serif; font-weight: bold; }
+        .text-bijektif { fill: #0d9488; font-family: Cambria, 'Times New Roman', serif; font-weight: bold; }
 
-      <!-- ── Injektif ── -->
-      <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" style="background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:6px;width:100%;height:auto;">
-        <defs><marker id="j1" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#3B82F6"/></marker></defs>
-        <!-- Oval kiri -->
-        <ellipse cx="45" cy="96" rx="28" ry="62" fill="none" stroke="#475569" stroke-width="1.5"/>
-        <!-- Oval kanan -->
-        <ellipse cx="115" cy="96" rx="28" ry="62" fill="none" stroke="#475569" stroke-width="1.5"/>
-        <!-- Elemen kiri: a, b, c -->
-        <text x="45" y="62"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">a</text>
-        <text x="45" y="96"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">b</text>
-        <text x="45" y="130" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">c</text>
-        <!-- Elemen kanan: 1, 2, 3, 4 -->
-        <text x="115" y="56"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">1</text>
-        <text x="115" y="84"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">2</text>
-        <text x="115" y="112" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">3</text>
-        <text x="115" y="140" font-family="Georgia,serif" font-size="13" fill="#5C6A8C" text-anchor="middle">4</text>
-        <!-- Panah: a→1, b→2, c→3 -->
-        <line x1="59" y1="59"  x2="100" y2="54"  stroke="#3B82F6" stroke-width="1.6" marker-end="url(#j1)"/>
-        <line x1="59" y1="94"  x2="100" y2="82"  stroke="#3B82F6" stroke-width="1.6" marker-end="url(#j1)"/>
-        <line x1="59" y1="128" x2="100" y2="110" stroke="#3B82F6" stroke-width="1.6" marker-end="url(#j1)"/>
-        <!-- Label -->
-        <text x="80" y="174" font-family="Inter,sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle" font-weight="700">Injektif</text>
-        <text x="80" y="188" font-family="Inter,sans-serif" font-size="10" fill="#64748B" text-anchor="middle">(satu-satu)</text>
-      </svg>
+        /* Dukungan Dark Mode otomatis */
+        @media (prefers-color-scheme: dark) {
+          .panel-bg-fixed { fill: #1e293b; stroke: #334155; }
+          .box-fixed { stroke: #94a3b8; }
+          .label-black-fixed { fill: #f1f5f9; }
+          .label-gray-fixed { fill: #94a3b8; }
+          
+          .color-injektif { stroke: #60a5fa; fill: #60a5fa; }
+          .color-surjektif { stroke: #4ade80; fill: #4ade80; }
+          .color-bijektif { stroke: #2dd4bf; fill: #2dd4bf; }
+          
+          .text-injektif { fill: #60a5fa; }
+          .text-surjektif { fill: #4ade80; }
+          .text-bijektif { fill: #2dd4bf; }
+        }
+        
+        [data-theme="dark"] .panel-bg-fixed { fill: #1e293b; stroke: #334155; }
+        [data-theme="dark"] .box-fixed { stroke: #94a3b8; }
+        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
+        [data-theme="dark"] .label-gray-fixed { fill: #94a3b8; }
+        [data-theme="dark"] .color-injektif { stroke: #60a5fa; fill: #60a5fa; }
+        [data-theme="dark"] .color-surjektif { stroke: #4ade80; fill: #4ade80; }
+        [data-theme="dark"] .color-bijektif { stroke: #2dd4bf; fill: #2dd4bf; }
+        [data-theme="dark"] .text-injektif { fill: #60a5fa; }
+        [data-theme="dark"] .text-surjektif { fill: #4ade80; }
+        [data-theme="dark"] .text-bijektif { fill: #2dd4bf; }
+      </style>
 
-      <!-- ── Surjektif ── -->
-      <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" style="background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:6px;width:100%;height:auto;">
-        <defs><marker id="j2" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#059669"/></marker></defs>
-        <ellipse cx="45" cy="96" rx="28" ry="62" fill="none" stroke="#475569" stroke-width="1.5"/>
-        <ellipse cx="115" cy="96" rx="28" ry="62" fill="none" stroke="#475569" stroke-width="1.5"/>
-        <!-- Elemen kiri: a, b, c, d -->
-        <text x="45" y="56"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">a</text>
-        <text x="45" y="84"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">b</text>
-        <text x="45" y="112" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">c</text>
-        <text x="45" y="140" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">d</text>
-        <!-- Elemen kanan: 1, 2, 3 -->
-        <text x="115" y="70"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">1</text>
-        <text x="115" y="100" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">2</text>
-        <text x="115" y="130" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">3</text>
-        <!-- Panah: a→1, b→1, c→2, d→3 -->
-        <line x1="59" y1="54"  x2="100" y2="67"  stroke="#059669" stroke-width="1.6" marker-end="url(#j2)"/>
-        <line x1="59" y1="82"  x2="100" y2="69"  stroke="#059669" stroke-width="1.6" marker-end="url(#j2)"/>
-        <line x1="59" y1="110" x2="100" y2="98"  stroke="#059669" stroke-width="1.6" marker-end="url(#j2)"/>
-        <line x1="59" y1="138" x2="100" y2="128" stroke="#059669" stroke-width="1.6" marker-end="url(#j2)"/>
-        <text x="80" y="174" font-family="Inter,sans-serif" font-size="12" fill="#059669" text-anchor="middle" font-weight="700">Surjektif</text>
-        <text x="80" y="188" font-family="Inter,sans-serif" font-size="10" fill="#64748B" text-anchor="middle">(onto)</text>
-      </svg>
+      <marker id="arrow-inj" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="color-injektif" />
+      </marker>
+      <marker id="arrow-sur" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="color-surjektif" />
+      </marker>
+      <marker id="arrow-bij" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="color-bijektif" />
+      </marker>
+    </defs>
 
-      <!-- ── Bijektif ── -->
-      <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" style="background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:6px;width:100%;height:auto;">
-        <defs><marker id="j3" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#00BFA5"/></marker></defs>
-        <ellipse cx="45" cy="96" rx="28" ry="62" fill="none" stroke="#475569" stroke-width="1.5"/>
-        <ellipse cx="115" cy="96" rx="28" ry="62" fill="none" stroke="#475569" stroke-width="1.5"/>
-        <!-- Elemen: a, b, c ↔ 1, 2, 3 -->
-        <text x="45" y="70"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">a</text>
-        <text x="45" y="98"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">b</text>
-        <text x="45" y="126" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle" font-style="italic">c</text>
-        <text x="115" y="70"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">1</text>
-        <text x="115" y="98"  font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">2</text>
-        <text x="115" y="126" font-family="Georgia,serif" font-size="13" fill="#94A3B8" text-anchor="middle">3</text>
-        <!-- Panah lurus: a→1, b→2, c→3 -->
-        <line x1="59" y1="68"  x2="100" y2="68"  stroke="#00BFA5" stroke-width="1.8" marker-end="url(#j3)"/>
-        <line x1="59" y1="96"  x2="100" y2="96"  stroke="#00BFA5" stroke-width="1.8" marker-end="url(#j3)"/>
-        <line x1="59" y1="124" x2="100" y2="124" stroke="#00BFA5" stroke-width="1.8" marker-end="url(#j3)"/>
-        <text x="80" y="174" font-family="Inter,sans-serif" font-size="12" fill="#00BFA5" text-anchor="middle" font-weight="700">Bijektif</text>
-        <text x="80" y="188" font-family="Inter,sans-serif" font-size="10" fill="#64748B" text-anchor="middle">(korespondensi 1-1)</text>
-      </svg>
+    <g transform="translate(10, 10)">
+      <rect width="320" height="430" rx="20" ry="20" class="panel-bg-fixed" stroke-width="2" />
+      
+      <ellipse cx="90" cy="190" rx="45" ry="105" class="box-fixed" stroke-width="2" />
+      <ellipse cx="230" cy="190" rx="45" ry="105" class="box-fixed" stroke-width="2" />
+      
+      <text x="90" y="140" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">a</text>
+      <text x="90" y="190" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">b</text>
+      <text x="90" y="240" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">c</text>
+      
+      <text x="230" y="125" text-anchor="middle" class="label-gray-fixed" font-size="24">1</text>
+      <text x="230" y="170" text-anchor="middle" class="label-gray-fixed" font-size="24">2</text>
+      <text x="230" y="215" text-anchor="middle" class="label-gray-fixed" font-size="24">3</text>
+      <text x="230" y="260" text-anchor="middle" class="label-gray-fixed" font-size="24">4</text>
+      
+      <g stroke-width="2.5" marker-end="url(#arrow-inj)" fill="none">
+        <line x1="110" y1="135" x2="210" y2="122" class="color-injektif" />
+        <line x1="110" y1="185" x2="210" y2="167" class="color-injektif" />
+        <line x1="110" y1="235" x2="210" y2="212" class="color-injektif" />
+      </g>
+      
+      <text x="160" y="355" text-anchor="middle" class="text-injektif" font-size="24">Injektif</text>
+      <text x="160" y="385" text-anchor="middle" class="label-gray-fixed" font-size="20">(satu-satu)</text>
+    </g>
 
-    </div>
+    <g transform="translate(365, 10)">
+      <rect width="320" height="430" rx="20" ry="20" class="panel-bg-fixed" stroke-width="2" />
+      
+      <ellipse cx="90" cy="190" rx="45" ry="105" class="box-fixed" stroke-width="2" />
+      <ellipse cx="230" cy="190" rx="45" ry="105" class="box-fixed" stroke-width="2" />
+      
+      <text x="90" y="125" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">a</text>
+      <text x="90" y="167" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">b</text>
+      <text x="90" y="209" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">c</text>
+      <text x="90" y="251" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">d</text>
+      
+      <text x="230" y="140" text-anchor="middle" class="label-gray-fixed" font-size="24">1</text>
+      <text x="230" y="190" text-anchor="middle" class="label-gray-fixed" font-size="24">2</text>
+      <text x="230" y="240" text-anchor="middle" class="label-gray-fixed" font-size="24">3</text>
+      
+      <g stroke-width="2.5" marker-end="url(#arrow-sur)" fill="none">
+        <line x1="110" y1="120" x2="210" y2="135" class="color-surjektif" />
+        <line x1="110" y1="162" x2="210" y2="140" class="color-surjektif" />
+        <line x1="110" y1="204" x2="210" y2="185" class="color-surjektif" />
+        <line x1="110" y1="246" x2="210" y2="235" class="color-surjektif" />
+      </g>
+      
+      <text x="160" y="355" text-anchor="middle" class="text-surjektif" font-size="24">Surjektif</text>
+      <text x="160" y="385" text-anchor="middle" class="label-gray-fixed" font-size="20">(onto)</text>
+    </g>
+
+    <g transform="translate(720, 10)">
+      <rect width="320" height="430" rx="20" ry="20" class="panel-bg-fixed" stroke-width="2" />
+      
+      <ellipse cx="90" cy="190" rx="45" ry="105" class="box-fixed" stroke-width="2" />
+      <ellipse cx="230" cy="190" rx="45" ry="105" class="box-fixed" stroke-width="2" />
+      
+      <text x="90" y="140" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">a</text>
+      <text x="90" y="190" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">b</text>
+      <text x="90" y="240" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">c</text>
+      
+      <text x="230" y="140" text-anchor="middle" class="label-gray-fixed" font-size="24">1</text>
+      <text x="230" y="190" text-anchor="middle" class="label-gray-fixed" font-size="24">2</text>
+      <text x="230" y="240" text-anchor="middle" class="label-gray-fixed" font-size="24">3</text>
+      
+      <g stroke-width="2.5" marker-end="url(#arrow-bij)" fill="none">
+        <line x1="110" y1="135" x2="210" y2="135" class="color-bijektif" />
+        <line x1="110" y1="185" x2="210" y2="185" class="color-bijektif" />
+        <line x1="110" y1="235" x2="210" y2="235" class="color-bijektif" />
+      </g>
+      
+      <text x="160" y="355" text-anchor="middle" class="text-bijektif" font-size="24">Bijektif</text>
+      <text x="160" y="385" text-anchor="middle" class="label-gray-fixed" font-size="20">(korespondensi 1-1)</text>
+    </g>
+  </svg>
+</div>
 
 
     <div class="box box-catatan">
@@ -619,66 +817,112 @@ window.MathJax = {
       <div class="box-label">Definisi Komposisi</div>
       <div class="math-block">$$(f \circ g)(x) = f[g(x)] \qquad \text{dan} \qquad (g \circ f)(x) = g[f(x)]$$</div>
     </div>
-
-    <!-- SVG: Diagram komposisi f ∘ g -->
+      <!-- SVG: Diagram komposisi f ∘ g -->
     <div class="grafik-wrap">
-      <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" width="480">
-        <defs>
-          <marker id="carr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/>
-          </marker>
-          <marker id="cred" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L8,3 z" fill="#EF4444"/>
-          </marker>
-        </defs>
-        <!-- Tiga oval -->
-        <ellipse cx="80"  cy="95" rx="58" ry="75" fill="none" stroke="#475569" stroke-width="1.5"/>
-        <ellipse cx="250" cy="95" rx="58" ry="75" fill="none" stroke="#475569" stroke-width="1.5"/>
-        <ellipse cx="420" cy="95" rx="58" ry="75" fill="none" stroke="#475569" stroke-width="1.5"/>
-        <!-- Labels bawah -->
-        <text x="80"  y="185" font-family="Inter,sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">$D_g$</text>
-        <text x="250" y="185" font-family="Inter,sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">$R_g = D_f$</text>
-        <text x="420" y="185" font-family="Inter,sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">$R_f$</text>
-        <!-- Panah g: oval 1 → oval 2 -->
-        <path d="M 142 80 Q 190 55 205 80" fill="none" stroke="#3B82F6" stroke-width="2" marker-end="url(#carr)"/>
-        <text x="175" y="52" font-family="Times New Roman,serif" font-size="15" fill="#3B82F6" text-anchor="middle" font-style="italic" font-weight="700">g</text>
-        <!-- Panah f: oval 2 → oval 3 -->
-        <path d="M 312 80 Q 360 55 375 80" fill="none" stroke="#3B82F6" stroke-width="2" marker-end="url(#carr)"/>
-        <text x="348" y="52" font-family="Times New Roman,serif" font-size="15" fill="#3B82F6" text-anchor="middle" font-style="italic" font-weight="700">f</text>
-        <!-- Panah f∘g: oval 1 → oval 3 (melengkung bawah) -->
-        <path d="M 130 125 Q 250 175 370 125" fill="none" stroke="#EF4444" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#cred)"/>
-        <text x="250" y="178" font-family="Times New Roman,serif" font-size="14" fill="#EF4444" text-anchor="middle" font-style="italic">f ∘ g</text>
-        <!-- Titik sampel -->
-        <circle cx="80"  cy="95" r="3" fill="#CBD5E8"/>
-        <circle cx="250" cy="95" r="3" fill="#CBD5E8"/>
-        <circle cx="420" cy="95" r="3" fill="#CBD5E8"/>
-      </svg>
-    </div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 600 200" width="100%" style="max-width:420px; background-color:transparent;">
+    <defs>
+      <style>
+        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
+        .box-fixed { fill: none; stroke: var(--text-main, #334155); transition: all 0.3s ease; }
+        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
+        
+        /* Warna dinamis kurva dan teks petunjuk */
+        .line-blue-fixed { stroke: #1010A0; fill: none; }
+        .line-red-fixed { stroke: #A01010; fill: none; }
+        .text-blue-fixed { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
+        .text-red-fixed { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
+        .arrow-blue-fixed { fill: #1010A0; }
+        .arrow-red-fixed { fill: #A01010; }
+
+        /* Dukungan Dark Mode otomatis */
+        @media (prefers-color-scheme: dark) {
+          .box-fixed { stroke: #94a3b8; }
+          .label-black-fixed { fill: #f1f5f9; }
+          .line-blue-fixed { stroke: #60A5FA; }
+          .line-red-fixed { stroke: #F87171; }
+          .text-blue-fixed { fill: #60A5FA; }
+          .text-red-fixed { fill: #F87171; }
+          .arrow-blue-fixed { fill: #60A5FA; }
+          .arrow-red-fixed { fill: #F87171; }
+        }
+        [data-theme="dark"] .box-fixed { stroke: #94a3b8; }
+        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
+        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
+        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
+        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .text-red-fixed { fill: #F87171; }
+        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
+        [data-theme="dark"] .arrow-red-fixed { fill: #F87171; }
+      </style>
+
+      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-blue-fixed" />
+      </marker>
+      <marker id="arrow-fixed-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-red-fixed" />
+      </marker>
+    </defs>
+
+    <g transform="translate(15, 125) scale(0.53)">
+      
+      <g id="set-dg">
+        <ellipse cx="150" cy="140" rx="95" ry="140" class="box-fixed" stroke-width="3" />
+        <text x="150" y="325" text-anchor="middle" class="label-black-fixed" font-size="38">
+          <tspan font-style="italic">D</tspan><tspan dy="10" font-size="26">g</tspan>
+        </text>
+      </g>
+
+      <g id="set-rg-df">
+        <text x="540" y="325" text-anchor="middle" class="label-black-fixed" font-size="38">
+          <tspan font-style="italic">R<tspan dy="10" font-size="26">g</tspan></tspan> 
+          <tspan dy="-10" font-style="normal"> = </tspan> 
+          <tspan font-style="italic">D<tspan dy="10" font-size="26">f</tspan></tspan>
+        </text>
+        <ellipse cx="540" cy="140" rx="95" ry="140" class="box-fixed" stroke-width="3" />
+      </g>
+
+      <g id="set-rf">
+        <ellipse cx="930" cy="140" rx="95" ry="140" class="box-fixed" stroke-width="3" />
+        <text x="930" y="325" text-anchor="middle" class="label-black-fixed" font-size="38">
+          <tspan font-style="italic">R</tspan><tspan dy="10" font-size="26">f</tspan>
+        </text>
+      </g>
 
 
-    <div class="box box-catatan">
+      <g id="path-g">
+        <path d="M 245,100 Q 342,80 440,100" fill="none" class="line-blue-fixed" stroke-width="3.5" marker-end="url(#arrow-fixed-blue)" />
+        <text x="342" y="70" text-anchor="middle" class="text-blue-fixed" font-size="36" font-style="italic">g</text>
+      </g>
+
+      <g id="path-f">
+        <path d="M 635,100 Q 732,80 830,100" fill="none" class="line-blue-fixed" stroke-width="3.5" marker-end="url(#arrow-fixed-blue)" />
+        <text x="732" y="70" text-anchor="middle" class="text-blue-fixed" font-size="36" font-style="italic">f</text>
+      </g>
+
+      <g id="path-composition">
+        <path d="M 240,160 Q 540,270 836,160" fill="none" class="line-red-fixed" stroke-width="3.5" stroke-dasharray="9,6" marker-end="url(#arrow-fixed-red)" />
+        <text x="540" y="245" text-anchor="middle" class="text-red-fixed" font-size="36">
+          <tspan font-style="italic">f</tspan> <tspan font-style="normal" font-size="24">○</tspan> <tspan font-style="italic">g</tspan>
+        </text>
+      </g>
+
+    </g>
+  </svg>
+</div>
+<div class="box box-catatan">
       <div class="box-label">💡 Syarat Terdefinisi</div>
       <p style="margin:0;font-size:.9rem;">$f \circ g$ terdefinisi jika $R_g \subseteq D_f$ (daerah hasil $g$ harus merupakan bagian dari daerah asal $f$).</p>
     </div>
 
-    <div class="box box-catatan">
-      <div class="box-label">⚠ Domain Komposisi $f \circ g$</div>
-      <p style="margin:0;font-size:.9rem;">Syarat $R_g \subseteq D_f$ dapat digunakan untuk menentukan domain $f \circ g$ secara eksplisit. Apabila $D_g$ dan $D_f$ memiliki batasan, maka:
-      $$D_{f \circ g} = \{x \in D_g \mid g(x) \in D_f\}$$
-      <strong>Contoh ringkas:</strong> $f(x) = \sqrt{x}$ (sehingga $D_f = [0,+\infty)$) dan $g(x) = 1 - x^2$. Maka $D_{f \circ g}$ adalah $x$ yang memenuhi $g(x) \geq 0$, yaitu $1 - x^2 \geq 0 \Rightarrow -1 \leq x \leq 1$. Jadi $D_{f \circ g} = [-1,\,1]$.</p>
+    <div class="box box-definisi">
+      <div class="box-label">Sifat-Sifat Komposisi Fungsi</div>
+      <ol>
+       <li><strong>Tidak komutatif:</strong> <strong>$f \circ g \neq g \circ f$</strong> (pada umumnya)</li>
+      <li><strong>Asosiatif:</strong> <strong>$f \circ (g \circ h) = (f \circ g) \circ h$</strong></li>
+      <li><strong>Identitas:</strong> <strong>$f \circ I = I \circ f = f$</strong>, di mana <strong>$I(x) = x$</strong></li>
+      </ol>
     </div>
-
-    <h3 class="subsection-title">1. Sifat-Sifat Komposisi Fungsi</h3>
-
-    <div class="box box-rumus">
-      <div class="box-label">Sifat-Sifat</div>
-      <div class="math-block">
-        $$\text{Tidak komutatif: } f \circ g \neq g \circ f$$
-        $$\text{Asosiatif: } f \circ (g \circ h) = (f \circ g) \circ h$$
-        $$\text{Identitas: } f \circ I = I \circ f = f, \quad I(x)=x$$
-      </div>
-    </div>
-
+     <h3 class="subsection-title">1. Menentukan Fungsi Komposisi</h3>
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 7</div>
       <p style="margin:0;font-size:.9rem;">Misalkan $f = \{(1,4),(2,3),(3,1),(4,2)\}$ dan $g = \{(1,2),(2,4),(3,1),(4,3)\}$. Tentukan $f \circ g$ dan $g \circ f$.</p>
@@ -699,12 +943,10 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = 2x - 1$ dan $g(x) = x^2 - 3x + 5$.<br>Tentukan $(f \circ g)(x)$ dan $(g \circ f)(x)$.</p>
     </div>
     <div class="penyelesaian">
-      
-      $$(f \circ g)(x) = f[x^2-3x+5]$$
-      $$= 2(x^2-3x+5)-1 = \mathbf{2x^2-6x+9}$$
-      $$(g \circ f)(x) = g[2x-1]$$
-      $$= (2x-1)^2-3(2x-1)+5$$
-      $$= 4x^2-10x+9 = \mathbf{4x^2-10x+9}$$
+      1. Menentukan $(f \circ g)(x)$ :
+      $$\begin{align*} (f \circ g)(x) &= f[x^2-3x+5] \\ &= 2(x^2-3x+5)-1 \\ &= \mathbf{2x^2-6x+9} \end{align*}$$
+      2. Menentukan $(g \circ f)(x)$ :
+      $$\begin{align*} (g \circ f)(x) &= g[2x-1] \\ &= (2x-1)^2-3(2x-1)+5 \\ &= 4x^2-10x+9 \\ &= \mathbf{4x^2-10x+9} \end{align*}$$
     </div>
 
     <div class="box box-contoh">
@@ -712,12 +954,10 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = \dfrac{2x-3}{7-3x}$ dan $g(x) = 4x + 2$. Tentukan $(f \circ g)(x)$ dan $(g \circ f)(x)$.</p>
     </div>
     <div class="penyelesaian">
-      
-      $$(f \circ g)(x) = f[4x+2] = \frac{2(4x+2)-3}{7-3(4x+2)}$$
-      $$= \frac{8x+1}{1-12x}$$
-      $$(g \circ f)(x) = g\!\left[\frac{2x-3}{7-3x}\right]$$
-      $$= 4\!\left(\frac{2x-3}{7-3x}\right)+2$$
-      $$= \frac{8x-12+2(7-3x)}{7-3x} = \frac{2x+2}{7-3x}$$
+      1. Menentukan $(f \circ g)(x)$ :
+      $$\begin{align*} (f \circ g)(x) &= f[4x+2] \\ &= \frac{2(4x+2)-3}{7-3(4x+2)} \\ &= \frac{8x+1}{1-12x} \end{align*}$$
+      2. Menentukan $(g \circ f)(x)$ :
+      $$\begin{align*} (g \circ f)(x) &= g\!\left[\frac{2x-3}{7-3x}\right] \\ &= 4\!\left(\frac{2x-3}{7-3x}\right)+2 \\ &= \frac{8x-12+2(7-3x)}{7-3x} \\ &= \frac{2x+2}{7-3x} \end{align*}$$
     </div>
 
     <div class="box box-contoh">
@@ -725,10 +965,10 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = 2x + 3$. Tentukan $(f \circ f \circ f)(x)$.</p>
     </div>
     <div class="penyelesaian">
-      
-      $$(f \circ f)(x) = f[2x+3] = 2(2x+3)+3 = 4x+9$$
-      $$(f \circ f \circ f)(x) = f[4x+9]$$
-      $$= 2(4x+9)+3 = \mathbf{8x+21}$$
+      1. Menentukan $(f \circ f)(x)$ :
+      $$\begin{align*} (f \circ f)(x) &= f[2x+3] \\ &= 2(2x+3)+3 \\ &= 4x+9 \end{align*}$$
+      2. Gunakan sifat asosiatif :
+      $$\begin{align*} (f \circ (f \circ f))(x) &= f[4x+9] \\ &= 2(4x+9)+3 \\ &= \mathbf{8x+21} \end{align*}$$
     </div>
 
     <div class="box box-contoh">
@@ -736,10 +976,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = x^2 - 5x + 4$ dan $g(x) = x^2 + 3x - 6$.<br>Tentukan nilai $(f \circ g)(2)$ dan $(g \circ f)(3)$.</p>
     </div>
     <div class="penyelesaian">
-      
-      $$g(2) = 4+6-6 = 4$$
-      $$(f \circ g)(2) = f(4) = 16-20+4 = \mathbf{0}$$
-      $$f(3) = 9-15+4 = -2$$
+      1. Menentukan nilai $(f \circ g)(2)$ :
+      $$\begin{align*} (f \circ g)(2) &= f(g(2)) \\ &= f(2^2+3.2-6) \\ &= f(4+6-6) \\ &= f(4) \\ &= 4^2 - 5.4 +4 \\ &= 16 - 20 + 4 \\ &= \mathbf{0} \end{align*}$$
+      2. Menentukan nilai $(g \circ f)(3)$ :
       $$(g \circ f)(3) = g(-2) = 4-6-6 = \mathbf{-8}$$
     </div>
 
