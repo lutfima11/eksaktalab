@@ -527,7 +527,7 @@ li strong,p strong{color:var(--text);}
 
 /* Header */
 .contoh-header{
-  display:flex;align-items:center;gap:0.75rem;
+  display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem 0.75rem;
   padding:0.8rem 1rem;
   background:transparent;
   cursor:pointer;user-select:none;
@@ -551,7 +551,8 @@ li strong,p strong{color:var(--text);}
 
 /* Teks soal */
 .contoh-question{
-  flex:1;font-size:0.875rem;font-weight:500;
+  flex-basis:100%;order:2;
+  font-size:0.875rem;font-weight:500;
   color:var(--text-2);line-height:1.45;
 }
 .contoh-wrap.open .contoh-question{color:var(--text);}
@@ -579,6 +580,7 @@ li strong,p strong{color:var(--text);}
   border:1px solid var(--border);
   display:flex;align-items:center;justify-content:center;
   transition:all .25s ease;
+  margin-left:auto;
 }
 .contoh-chevron svg{
   width:11px;height:11px;
