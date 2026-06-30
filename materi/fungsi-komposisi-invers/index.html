@@ -835,11 +835,11 @@ window.MathJax = {
     <div class="penyelesaian">
       <br>
       <strong>$f \circ g$:</strong> setiap $x$ dipetakan $g$ dulu, lalu hasilnya dipetakan $f$.<br>
-      $(1,2)\to f(2)=3$, $(2,4)\to f(4)=2$, $(3,1)\to f(1)=4$, $(4,3)\to f(3)=1$<br>
-      $\Rightarrow f \circ g = \{(1,3),(2,2),(3,4),(4,1)\}$<br><br>
+      $(1,2)\to f(2)=3$, $(2,4)\to f(4)=2$, $(3,1)\to f(1)=4$, $(4,3)\to f(3)=1$
+      $$\Rightarrow f \circ g = \{(1,3),(2,2),(3,4),(4,1)\}$$
       <strong>$g \circ f$:</strong> setiap $x$ dipetakan $f$ dulu, lalu hasilnya dipetakan $g$.<br>
-      $(1,4)\to g(4)=3$, $(2,3)\to g(3)=1$, $(3,1)\to g(1)=2$, $(4,2)\to g(2)=4$<br>
-      $\Rightarrow g \circ f = \{(1,3),(2,1),(3,2),(4,4)\}$<br><br>
+      $(1,4)\to g(4)=3$, $(2,3)\to g(3)=1$, $(3,1)\to g(1)=2$, $(4,2)\to g(2)=4$
+      $$\Rightarrow g \circ f = \{(1,3),(2,1),(3,2),(4,4)\}$$
       Terlihat $f \circ g \neq g \circ f$ — membuktikan sifat tidak komutatif.
     </div>
 
@@ -848,10 +848,19 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = 2x - 1$ dan $g(x) = x^2 - 3x + 5$.<br>Tentukan $(f \circ g)(x)$ dan $(g \circ f)(x)$.</p>
     </div>
     <div class="penyelesaian">
-      1. Menentukan $(f \circ g)(x)$ :
-      $$\begin{align*} (f \circ g)(x) &= f[x^2-3x+5] \\ &= 2(x^2-3x+5)-1 \\ &= \mathbf{2x^2-6x+9} \end{align*}$$
-      2. Menentukan $(g \circ f)(x)$ :
-      $$\begin{align*} (g \circ f)(x) &= g[2x-1] \\ &= (2x-1)^2-3(2x-1)+5 \\ &= 4x^2-10x+9 \\ &= \mathbf{4x^2-10x+9} \end{align*}$$
+      <br>
+      <strong>Langkah 1 — Menentukan $(f \circ g)(x)$:</strong>
+      $$\begin{align*}
+      (f \circ g)(x) &= f[x^2-3x+5] \\
+      &= 2(x^2-3x+5)-1 \\
+      &= 2x^2-6x+9
+      \end{align*}$$
+      <strong>Langkah 2 — Menentukan $(g \circ f)(x)$:</strong>
+      $$\begin{align*}
+      (g \circ f)(x) &= g[2x-1] \\
+      &= (2x-1)^2-3(2x-1)+5 \\
+      &= 4x^2-10x+9
+      \end{align*}$$
     </div>
 
     <div class="box box-contoh">
@@ -859,10 +868,20 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = \dfrac{2x-3}{7-3x}$ dan $g(x) = 4x + 2$. Tentukan $(f \circ g)(x)$ dan $(g \circ f)(x)$.</p>
     </div>
     <div class="penyelesaian">
-      1. Menentukan $(f \circ g)(x)$ :
-      $$\begin{align*} (f \circ g)(x) &= f[4x+2] \\ &= \frac{2(4x+2)-3}{7-3(4x+2)} \\ &= \frac{8x+1}{1-12x} \end{align*}$$
-      2. Menentukan $(g \circ f)(x)$ :
-      $$\begin{align*} (g \circ f)(x) &= g\!\left[\frac{2x-3}{7-3x}\right] \\ &= 4\!\left(\frac{2x-3}{7-3x}\right)+2 \\ &= \frac{8x-12+2(7-3x)}{7-3x} \\ &= \frac{2x+2}{7-3x} \end{align*}$$
+      <br>
+      <strong>Langkah 1 — Menentukan $(f \circ g)(x)$:</strong>
+      $$\begin{align*}
+      (f \circ g)(x) &= f[4x+2] \\
+      &= \frac{2(4x+2)-3}{7-3(4x+2)} \\
+      &= \frac{8x+1}{1-12x}
+      \end{align*}$$
+      <strong>Langkah 2 — Menentukan $(g \circ f)(x)$:</strong>
+      $$\begin{align*}
+      (g \circ f)(x) &= g\!\left[\frac{2x-3}{7-3x}\right] \\
+      &= 4\!\left(\frac{2x-3}{7-3x}\right)+2 \\
+      &= \frac{8x-12+2(7-3x)}{7-3x} \\
+      &= \frac{2x+2}{7-3x}
+      \end{align*}$$
     </div>
 
     <div class="box box-contoh">
@@ -870,10 +889,19 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = 2x + 3$. Tentukan $(f \circ f \circ f)(x)$.</p>
     </div>
     <div class="penyelesaian">
-      1. Menentukan $(f \circ f)(x)$ :
-      $$\begin{align*} (f \circ f)(x) &= f[2x+3] \\ &= 2(2x+3)+3 \\ &= 4x+9 \end{align*}$$
-      2. Gunakan sifat asosiatif :
-      $$\begin{align*} (f \circ (f \circ f))(x) &= f[4x+9] \\ &= 2(4x+9)+3 \\ &= \mathbf{8x+21} \end{align*}$$
+      <br>
+      <strong>Langkah 1 — Menentukan $(f \circ f)(x)$:</strong>
+      $$\begin{align*}
+      (f \circ f)(x) &= f[2x+3] \\
+      &= 2(2x+3)+3 \\
+      &= 4x+9
+      \end{align*}$$
+      <strong>Langkah 2 — Gunakan sifat asosiatif:</strong>
+      $$\begin{align*}
+      (f \circ (f \circ f))(x) &= f[4x+9] \\
+      &= 2(4x+9)+3 \\
+      &= 8x+21
+      \end{align*}$$
     </div>
 
     <div class="box box-contoh">
@@ -881,10 +909,22 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = x^2 - 5x + 4$ dan $g(x) = x^2 + 3x - 6$.<br>Tentukan nilai $(f \circ g)(2)$ dan $(g \circ f)(3)$.</p>
     </div>
     <div class="penyelesaian">
-      1. Menentukan nilai $(f \circ g)(2)$ :
-      $$\begin{align*} (f \circ g)(2) &= f(g(2)) \\ &= f(2^2+3.2-6) \\ &= f(4+6-6) \\ &= f(4) \\ &= 4^2 - 5.4 +4 \\ &= 16 - 20 + 4 \\ &= \mathbf{0} \end{align*}$$
-      2. Menentukan nilai $(g \circ f)(3)$ :
-      $$(g \circ f)(3) = g(-2) = 4-6-6 = \mathbf{-8}$$
+      <br>
+      <strong>Langkah 1 — Menentukan nilai $(f \circ g)(2)$:</strong>
+      $$\begin{align*}
+      (f \circ g)(2) &= f(g(2)) \\
+      &= f(2^2+3\cdot2-6) \\
+      &= f(4) \\
+      &= 4^2 - 5\cdot4 +4 \\
+      &= 16 - 20 + 4 \\
+      &= 0
+      \end{align*}$$
+      <strong>Langkah 2 — Menentukan nilai $(g \circ f)(3)$:</strong>
+      $$\begin{align*}
+      (g \circ f)(3) &= g(f(3)) = g(-2) \\
+      &= 4-6-6 \\
+      &= -8
+      \end{align*}$$
     </div>
 
     <h3 class="subsection-title">2. Menentukan Fungsi Komponen dari Komposisi</h3>
@@ -895,10 +935,12 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <br>
-      Karena $f[x+3] = 2x^2-4x-3$, misalkan $m = x+3$, maka $x = m-3$:
-      $$f(m) = 2(m-3)^2-4(m-3)-3$$
-      $$= 2m^2-12m+18-4m+12-3$$
-      $$= 2m^2-16m+27$$
+      Karena $f[x+3] = 2x^2-4x-3$, misalkan $m = x+3$, sehingga $x = m-3$:
+      $$\begin{align*}
+      f(m) &= 2(m-3)^2-4(m-3)-3 \\
+      &= 2m^2-12m+18-4m+12-3 \\
+      &= 2m^2-16m+27
+      \end{align*}$$
       Jadi $f(x) = 2x^2-16x+27$.
     </div>
 
@@ -907,10 +949,14 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $(f \circ h)(x) = 4x^2 + 6x - 5$ dan $f(x) = 2x - 1$. Tentukan $h(x)$.</p>
     </div>
     <div class="penyelesaian">
-      
-      $$f[h(x)] = 4x^2+6x-5$$
-      $$\implies 2\cdot h(x)-1 = 4x^2+6x-5$$
-      $$\implies h(x) = \mathbf{2x^2+3x-2}$$
+      <br>
+      Substitusikan $f(x) = 2x-1$ ke dalam $f[h(x)]$:
+      $$\begin{align*}
+      f[h(x)] &= 4x^2+6x-5 \\
+      2h(x)-1 &= 4x^2+6x-5 \\
+      h(x) &= 2x^2+3x-2
+      \end{align*}$$
+      Jadi $h(x) = 2x^2+3x-2$.
     </div>
 
     <div class="box box-contoh">
@@ -919,9 +965,14 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <br>
-      Misalkan $m = g(x) = x^2-3x+4$, maka $2m = 2x^2-6x+8$.<br>
-      Perhatikan $2m-1 = 2x^2-6x+7 = (f \circ g)(x)$, sehingga:
-      $$f(m) = 2m-1 \implies \mathbf{f(x) = 2x-1}$$
+      Karena $g(x) = x^2-3x+4$, hitung $2g(x)-1$:
+      $$\begin{align*}
+      2g(x)-1 &= 2(x^2-3x+4)-1 \\
+      &= 2x^2-6x+8-1 \\
+      &= 2x^2-6x+7
+      \end{align*}$$
+      Hasil ini sama dengan $(f \circ g)(x) = 2x^2-6x+7$ yang diketahui, sehingga $f[g(x)] = 2g(x)-1$. Misalkan $m = g(x)$, maka $f(m) = 2m-1$.<br><br>
+      Jadi $f(x) = 2x - 1$.
     </div>
 
     <div class="box box-contoh">
@@ -929,10 +980,15 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $(g \circ f)(x) = \dfrac{x-4}{x+3}$ dan $g(x) = 3x - 2$. Tentukan $f(x)$.</p>
     </div>
     <div class="penyelesaian">
-      
-      $$3\cdot f(x)-2 = \frac{x-4}{x+3}$$
-      $$\implies 3\cdot f(x) = \frac{x-4}{x+3}+\frac{2(x+3)}{x+3} = \frac{3x+2}{x+3}$$
-      $$\implies f(x) = \mathbf{\frac{3x+2}{3(x+3)}}$$
+      <br>
+      Karena $(g \circ f)(x) = g[f(x)] = 3f(x)-2$, substitusikan ke persamaan yang diketahui:
+      $$\begin{align*}
+      3f(x)-2 &= \frac{x-4}{x+3} \\
+      3f(x) &= \frac{x-4}{x+3}+\frac{2(x+3)}{x+3} \\
+      3f(x) &= \frac{3x+2}{x+3} \\
+      f(x) &= \frac{3x+2}{3(x+3)}
+      \end{align*}$$
+      Jadi $f(x) = \dfrac{3x+2}{3(x+3)}$.
     </div>
 
     <div class="box box-contoh">
@@ -942,8 +998,13 @@ window.MathJax = {
     <div class="penyelesaian">
       <br>
       Misalkan $m = 2x+1$, sehingga $x = \dfrac{m-1}{2}$. Substitusi:
-      $$f(m) = 4\!\left(\frac{m-1}{2}\right)^2 - 8\!\left(\frac{m-1}{2}\right) + 5$$
-      $$= (m-1)^2-4(m-1)+5 = m^2-6m+10$$
+      $$\begin{align*}
+      f(m) &= 4\left(\frac{m-1}{2}\right)^2 - 8\left(\frac{m-1}{2}\right) + 5 \\
+      &= 4 \cdot \frac{(m-1)^2}{4} - 8 \cdot \frac{m-1}{2} + 5 \\
+      &= (m-1)^2 - 4(m-1) + 5 \\
+      &= (m^2 - 2m + 1) - 4m + 4 + 5 \\
+      &= m^2 - 6m + 10
+      \end{align*}$$
       Jadi $f(x) = x^2-6x+10$.
     </div>
 
@@ -1182,7 +1243,8 @@ window.MathJax = {
       <strong>Langkah 3 — Terapkan prinsip $D_{f^{-1}} = R_f$ dan $R_{f^{-1}} = D_f$:</strong>
       $$D_{f^{-1}} = R_f = [0,\,+\infty), \qquad R_{f^{-1}} = D_f = [2,\,+\infty)$$
 
-      <strong>Verifikasi:</strong> $(f^{-1} \circ f)(x) = f^{-1}\!\bigl[\sqrt{2x-4}\bigr] = \dfrac{(\sqrt{2x-4})^2+4}{2} = \dfrac{2x-4+4}{2} = x$ ✓
+      <strong>Verifikasi:</strong>
+      $$(f^{-1} \circ f)(x) = f^{-1}\!\bigl[\sqrt{2x-4}\bigr] = \dfrac{(\sqrt{2x-4})^2+4}{2} = \dfrac{2x-4+4}{2} = x \quad \checkmark$$
     </div>
 
     <div class="box box-contoh">
@@ -1193,9 +1255,12 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <br>
-      <strong>a.</strong> $y=3x-5 \Rightarrow x=\dfrac{y+5}{3}$, jadi $f^{-1}(x)=\dfrac{x+5}{3}$<br>
-      Verifikasi: $(f^{-1} \circ f)(x) = f^{-1}[3x-5] = \dfrac{3x}{3} = x$ ✓<br><br>
-      <strong>b.</strong> $12y=4x+9 \Rightarrow x=\dfrac{12y-9}{4}$, jadi $g^{-1}(x)=\dfrac{12x-9}{4}$
+      <strong>a.</strong> Misalkan $y=3x-5$:
+      $$x=\dfrac{y+5}{3} \quad \Rightarrow \quad f^{-1}(x)=\dfrac{x+5}{3}$$
+      Verifikasi:
+      $$(f^{-1} \circ f)(x) = f^{-1}[3x-5] = \dfrac{3x}{3} = x \quad \checkmark$$
+      <strong>b.</strong> Misalkan $12y=4x+9$:
+      $$x=\dfrac{12y-9}{4} \quad \Rightarrow \quad g^{-1}(x)=\dfrac{12x-9}{4}$$
     </div>
 
     <div class="box box-contoh">
@@ -1206,10 +1271,10 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <br>
-      <strong>a.</strong> $y(x-1)=2x-3 \Rightarrow x(y-2)=y-3$<br>
-      $\Rightarrow f^{-1}(x)=\dfrac{x-3}{x-2}$<br><br>
-      <strong>b.</strong> $y(2x-4)=2-3x \Rightarrow x(2y+3)=4y+2$<br>
-      $\Rightarrow g^{-1}(x)=\dfrac{4x+2}{2x+3}$
+      <strong>a.</strong> Misalkan $y(x-1)=2x-3$:
+      $$x(y-2)=y-3 \quad \Rightarrow \quad f^{-1}(x)=\dfrac{x-3}{x-2}$$
+      <strong>b.</strong> Misalkan $y(2x-4)=2-3x$:
+      $$x(2y+3)=4y+2 \quad \Rightarrow \quad g^{-1}(x)=\dfrac{4x+2}{2x+3}$$
     </div>
 
     <div class="box box-contoh">
@@ -1222,12 +1287,14 @@ window.MathJax = {
       <br>
       <strong>a.</strong> Misalkan $y = x^2 - 6x + 5$, lengkapi kuadrat sempurna:
       $$y - 5 + 9 = x^2 - 6x + 9 \implies y + 4 = (x-3)^2 \implies x = 3 \pm \sqrt{y+4}$$
-      Jadi $f^{-1}(x) = 3 \pm \sqrt{x+4}$.<br><br>
+      Jadi:
+      $$f^{-1}(x) = 3 \pm \sqrt{x+4}$$
 
       <strong>b.</strong> Misalkan $y = 2x^2 - 8x + 4$:
       $$\frac{y}{2} = x^2 - 4x + 2 \implies \frac{y}{2} + 2 = x^2 - 4x + 4 = (x-2)^2$$
       $$x - 2 = \pm\sqrt{\frac{y}{2}+2} = \pm\frac{\sqrt{2y+8}}{2} \implies x = \frac{4 \pm \sqrt{2y+8}}{2}$$
-      Jadi $f^{-1}(x) = \dfrac{4 \pm \sqrt{2x+8}}{2}$.
+      Jadi:
+      $$f^{-1}(x) = \dfrac{4 \pm \sqrt{2x+8}}{2}$$
     </div>
 
     <div class="box box-contoh">
@@ -1239,7 +1306,8 @@ window.MathJax = {
       Misalkan $y = \bigl[(x+5)^{1/3}-4\bigr]^2$, maka:
       $$\sqrt{y} = (x+5)^{1/3} - 4 \quad \text{(diambil akar non-negatif)}$$
       $$\bigl(\sqrt{y}+4\bigr)^3 = x + 5 \implies x = \bigl(\sqrt{y}+4\bigr)^3 - 5$$
-      Jadi $f^{-1}(x) = \bigl(\sqrt{x}+4\bigr)^3 - 5$.
+      Jadi:
+      $$f^{-1}(x) = \bigl(\sqrt{x}+4\bigr)^3 - 5$$
     </div>
 
     <div class="box box-catatan">
@@ -1260,7 +1328,7 @@ window.MathJax = {
     <div class="penyelesaian">
       <br>
       $f^{-1}(a)=2$ berarti $f(2)=a$:
-      $$a = f(2) = \frac{2(2)+5}{2-1} = \frac{9}{1} = \mathbf{9}$$
+      $$a = f(2) = \frac{2(2)+5}{2-1} = \frac{9}{1} = 9$$
     </div>
 
     <h3 class="subsection-title">3. Domain dan Range Fungsi Invers</h3>
@@ -1317,9 +1385,10 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <br>
-      <strong>a.</strong> $\log_2 y = 3x-1 \Rightarrow f^{-1}(x)=\dfrac{{}^2\!\log x+1}{3}$<br>
-      $D_{f^{-1}}=\{x \in \mathbb{R} \mid x > 0\}$<br><br>
-      <strong>b.</strong> $3^y=2x+5 \Rightarrow g^{-1}(x)=\dfrac{3^x-5}{2}$, $D_{g^{-1}}=\{x \in \mathbb{R}\}$
+      <strong>a.</strong> Misalkan $\log_2 y = 3x-1$:
+      $$f^{-1}(x)=\dfrac{{}^2\!\log x+1}{3}, \qquad D_{f^{-1}}=\{x \in \mathbb{R} \mid x > 0\}$$
+      <strong>b.</strong> Misalkan $3^y=2x+5$:
+      $$g^{-1}(x)=\dfrac{3^x-5}{2}, \qquad D_{g^{-1}}=\{x \in \mathbb{R}\}$$
     </div>
 
     <h3 class="subsection-title">5. Fungsi Invers Diri Sendiri (Involusi)</h3>
@@ -1338,7 +1407,8 @@ window.MathJax = {
     <div class="penyelesaian">
       <br>
       Syarat: $a+d=0$, yaitu $p+(-p)=0$ — terpenuhi untuk semua $p \neq 0$.<br><br>
-      Untuk $p=2$: $f(x)=\dfrac{2x+6}{2x-2}=\dfrac{x+3}{x-1}$<br>
+      Untuk $p=2$:
+      $$f(x)=\dfrac{2x+6}{2x-2}=\dfrac{x+3}{x-1}$$
       Verifikasi:
       $$f(f(x)) = f\!\left(\frac{x+3}{x-1}\right) = \frac{\dfrac{x+3}{x-1}+3}{\dfrac{x+3}{x-1}-1} = \frac{(x+3)+3(x-1)}{(x+3)-(x-1)} = \frac{4x}{4} = x \quad \blacksquare$$
     </div>
@@ -1385,7 +1455,7 @@ window.MathJax = {
       <br>
       $f^{-1}(x) = \dfrac{x+5}{2}$. Gunakan $g = f^{-1} \circ h$:
       $$g(x) = f^{-1}[6x+3] = \frac{(6x+3)+5}{2}$$
-      $$= \frac{6x+8}{2} = \mathbf{3x+4}$$
+      $$= \frac{6x+8}{2} = 3x+4$$
     </div>
 
     <div class="box box-contoh">
@@ -1397,7 +1467,7 @@ window.MathJax = {
       $g^{-1}(x) = \dfrac{x-1}{2}$. Gunakan $f = h \circ g^{-1}$:
       $$f(x) = h\!\left(\frac{x-1}{2}\right)$$
       $$= 4\!\left(\frac{x-1}{2}\right)^2-2\!\left(\frac{x-1}{2}\right)+3$$
-      $$= (x-1)^2-(x-1)+3 = \mathbf{x^2-3x+5}$$
+      $$= (x-1)^2-(x-1)+3 = x^2-3x+5$$
     </div>
 
     <div class="box box-contoh">
@@ -1406,11 +1476,10 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <br>
-      <strong>Cara 1:</strong> $(f \circ g)(x) = 2(3x+2)-5 = 6x-1$<br>
-      $(f \circ g)^{-1}(x) = \dfrac{x+1}{6}$<br><br>
-      <strong>Cara 2:</strong> $g^{-1}(x)=\dfrac{x-2}{3}$, $f^{-1}(x)=\dfrac{x+5}{2}$<br>
-      $(g^{-1} \circ f^{-1})(x) = g^{-1}\!\left[\dfrac{x+5}{2}\right]$<br>
-      $= \dfrac{\frac{x+5}{2}-2}{3} = \dfrac{x+1}{6}$ ✓
+      <strong>Cara 1:</strong>
+      $$(f \circ g)(x) = 2(3x+2)-5 = 6x-1 \quad \Rightarrow \quad (f \circ g)^{-1}(x) = \dfrac{x+1}{6}$$
+      <strong>Cara 2:</strong> $g^{-1}(x)=\dfrac{x-2}{3}$, $f^{-1}(x)=\dfrac{x+5}{2}$
+      $$(g^{-1} \circ f^{-1})(x) = g^{-1}\!\left[\dfrac{x+5}{2}\right] = \dfrac{\frac{x+5}{2}-2}{3} = \dfrac{x+1}{6} \quad \checkmark$$
     </div>
 
     <div class="box box-contoh">
@@ -1419,12 +1488,11 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <br>
-      $(g \circ f)(x) = 2\!\left(\dfrac{3x+5}{4x-2}\right)-1$<br>
-      $= \dfrac{6x+10-(4x-2)}{4x-2} = \dfrac{x+6}{2x-1}$<br><br>
-      $(g \circ f)^{-1}(x) = \dfrac{x+6}{2x-1}$<br><br>
-      Verifikasi: $f^{-1}(x)=\dfrac{2x+5}{4x-3}$, $g^{-1}(x)=\dfrac{x+1}{2}$<br>
-      $(f^{-1} \circ g^{-1})(x) = f^{-1}\!\left[\dfrac{x+1}{2}\right]$<br>
-      $= \dfrac{x+1+5}{2(x+1)-3} = \dfrac{x+6}{2x-1}$ ✓
+      $$(g \circ f)(x) = 2\!\left(\dfrac{3x+5}{4x-2}\right)-1 = \dfrac{6x+10-(4x-2)}{4x-2} = \dfrac{x+6}{2x-1}$$
+      Jadi:
+      $$(g \circ f)^{-1}(x) = \dfrac{x+6}{2x-1}$$
+      Verifikasi: $f^{-1}(x)=\dfrac{2x+5}{4x-3}$, $g^{-1}(x)=\dfrac{x+1}{2}$
+      $$(f^{-1} \circ g^{-1})(x) = f^{-1}\!\left[\dfrac{x+1}{2}\right] = \dfrac{x+1+5}{2(x+1)-3} = \dfrac{x+6}{2x-1} \quad \checkmark$$
     </div>
 
     <div class="box box-latihan">
