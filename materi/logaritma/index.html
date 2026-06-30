@@ -111,74 +111,155 @@ window.MathJax = {
 <p>Tapi logaritma lebih dari sekadar alat hitung. Ia adalah <strong>bahasa skala</strong>. Ketika rentang nilai yang ingin kita ukur terlalu lebar &mdash; dari intensitas suara yang hampir tak terdengar hingga ledakan jet, dari keasaman air murni hingga asam pekat, dari gempa kecil hingga gempa dahsyat &mdash; skala biasa tidak cukup. Logaritma memampatan rentang yang tak terhingga itu menjadi skala yang bisa dipahami manusia: desibel, pH, skala Richter. Semua itu adalah logaritma yang bekerja di balik layar.</p>
     <h3 class="subsection-title">Ide Dasar: Logaritma sebagai Pembalik Eksponen</h3>
     <p>Hubungan antara eksponen dan logaritma ibarat dua sisi koin yang sama. Pertanyaan "<strong>$2$ dipangkat berapa menghasilkan $8$?</strong>" adalah pertanyaan logaritmik: jawabannya adalah <strong>$\log_{2} 8 = 3$</strong>. Secara umum:</p>
-    <div class=”grafik-wrap”>
-  <svg xmlns=”http://www.w3.org/2000/svg” viewBox=”0 120 600 300” width=”100%” style=”max-width:420px; background-color:transparent;”>
+    <div class="grafik-wrap">
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-25 0 1000 550" width="100%" style="max-width:420px; background-color:transparent;">
+
     <defs>
+
       <style>
-        .log1-box { fill: #f8fafc; stroke: #334155; transition: all 0.3s ease; }
-        .log1-label { fill: #334155; font-family: Cambria, 'Times New Roman', serif; }
-        .log1-line-blue { stroke: #1010A0; fill: none; }
-        .log1-line-red { stroke: #A01010; fill: none; }
-        .log1-text-blue { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
-        .log1-text-red { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
-        .log1-arrow-blue { fill: #1010A0; }
-        .log1-arrow-red { fill: #A01010; }
-        [data-theme=”dark”] .log1-box { fill: #1e293b; stroke: #94a3b8; }
-        [data-theme=”dark”] .log1-label { fill: #f1f5f9 !important; }
-        [data-theme=”dark”] .log1-text-blue { fill: #60A5FA !important; }
-        [data-theme=”dark”] .log1-text-red { fill: #F87171 !important; }
-        [data-theme=”dark”] .log1-arrow-blue { fill: #60A5FA; }
-        [data-theme=”dark”] .log1-arrow-red { fill: #F87171; }
+
+        .fki1-box { fill: #f8fafc; stroke: #334155; transition: all 0.3s ease; }
+
+        .fki1-label { fill: #334155; font-family: Cambria, 'Times New Roman', serif; }
+
+        .fki1-line-blue { stroke: #1010A0; fill: none; }
+
+        .fki1-line-red { stroke: #A01010; fill: none; }
+
+        .fki1-text-blue { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
+
+        .fki1-text-red { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
+
+        .fki1-arrow-blue { fill: #1010A0; }
+
+        .fki1-arrow-red { fill: #A01010; }
+
+        [data-theme="dark"] .fki1-box { fill: #1e293b; stroke: #94a3b8; }
+
+        [data-theme="dark"] .fki1-label { fill: #f1f5f9 !important; }
+
+        [data-theme="dark"] .fki1-text-blue { fill: #60A5FA !important; }
+
+        [data-theme="dark"] .fki1-text-red { fill: #F87171 !important; }
+
+        [data-theme="dark"] .fki1-arrow-blue { fill: #60A5FA; }
+
+        [data-theme="dark"] .fki1-arrow-red { fill: #F87171; }
+
       </style>
-      <marker id=”log1-arrow-blue” viewBox=”0 0 10 10” refX=”1” refY=”5” markerWidth=”6” markerHeight=”6” orient=”auto-start-reverse”>
-        <path d=”M 0 0 L 10 5 L 0 10 z” class=”log1-arrow-blue” />
+
+      <marker id="fki1-arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki1-arrow-blue" />
+
       </marker>
-      <marker id=”log1-arrow-red” viewBox=”0 0 10 10” refX=”9” refY=”5” markerWidth=”6” markerHeight=”6” orient=”auto-start-reverse”>
-        <path d=”M 0 0 L 10 5 L 0 10 z” class=”log1-arrow-red” />
+
+      <marker id="fki1-arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki1-arrow-red" />
+
       </marker>
+
     </defs>
 
-    <g transform=”translate(20, 135) scale(0.56)”>
 
-      <text x=”500” y=”45” class=”log1-text-blue” font-size=”36” text-anchor=”middle”>
-        “<tspan font-style=”italic”>b</tspan> diperoleh dari <tspan font-style=”italic”>a</tspan> dipangkat <tspan font-style=”italic”>c</tspan>”
-      </text>
 
-      <text x=”500” y=”90” class=”log1-text-blue” font-size=”24” text-anchor=”middle” font-style=”italic”>
-        baca dari kiri ke kanan
-      </text>
+    <g transform="translate(40, 20)">
 
-      <path d=”M 210 190 Q 500 110, 790 190” class=”log1-line-blue” stroke-width=”3” marker-end=”url(#log1-arrow-blue)” />
+      
 
-      <rect x=”70” y=”190” width=”280” height=”120” rx=”15” ry=”15” class=”log1-box” stroke-width=”2” />
-      <text x=”210” y=”240” class=”log1-label” font-size=”32” text-anchor=”middle”>
-        <tspan font-style=”italic”>a</tspan><tspan dy=”-12”>c</tspan><tspan dy=”12”> = b</tspan>
-      </text>
-      <text x=”210” y=”285” class=”log1-label” font-size=”22” font-style=”italic” text-anchor=”middle”>
-        (perpangkatan)
-      </text>
+      <g id="text-top">
 
-      <path d=”M 790 310 Q 500 390, 210 310” class=”log1-line-red” stroke-width=”3” marker-end=”url(#log1-arrow-red)” />
+        <text x="460" y="55" text-anchor="middle" class="fki1-text-blue" font-size="34">
 
-      <rect x=”650” y=”190” width=”280” height=”120” rx=”15” ry=”15” class=”log1-box” stroke-width=”2” />
-      <text x=”790” y=”240” class=”log1-label” font-size=”32” text-anchor=”middle”>
-        <tspan font-size=”20” dy=”-14”>a</tspan><tspan dy=”14”>log </tspan><tspan font-style=”italic”>b</tspan> = c
-      </text>
-      <text x=”790” y=”285” class=”log1-label” font-size=”22” font-style=”italic” text-anchor=”middle”>
-        (logaritma)
-      </text>
+          “<tspan font-style="italic">b</tspan> diperoleh dari <tspan font-style="italic">a</tspan> dipangkat <tspan font-style="italic">c</tspan>”
 
-      <text x=”500” y=”410” class=”log1-text-red” font-size=”24” text-anchor=”middle” font-style=”italic”>
-        baca dari kanan ke kiri
-      </text>
+        </text>
 
-      <text x=”500” y=”455” class=”log1-text-red” font-size=”36” text-anchor=”middle”>
-        “<tspan font-style=”italic”>c</tspan> adalah eksponen <tspan font-style=”italic”>a</tspan> agar menghasilkan <tspan font-style=”italic”>b</tspan>”
-      </text>
+        <text x="460" y="95" text-anchor="middle" class="fki1-text-blue" font-style="italic" font-size="22">
+
+          baca dari kiri ke kanan
+
+        </text>
+
+      </g>
+
+
+
+      <g id="box-perpangkatan">
+
+        <rect x="50" y="200" width="270" height="130" rx="18" ry="18" class="fki1-box" stroke-width="3" />
+
+        <text x="185" y="260" text-anchor="middle" class="fki1-label" font-size="42">
+
+          <tspan font-style="italic">a</tspan><tspan font-style="italic" dy="-16" font-size="28">c</tspan><tspan font-style="normal" dy="16"> = </tspan><tspan font-style="italic">b</tspan>
+
+        </text>
+
+        <text x="185" y="305" text-anchor="middle" class="fki1-label" font-size="24">(perpangkatan)</text>
+
+      </g>
+
+
+
+      <g id="box-logaritma">
+
+        <rect x="550" y="200" width="270" height="130" rx="18" ry="18" class="fki1-box" stroke-width="3" />
+
+        <text x="685" y="260" text-anchor="middle" class="fki1-label" font-size="42">
+
+          <tspan font-style="italic" dy="-14" font-size="28">a</tspan><tspan font-style="normal" dy="14">log </tspan><tspan font-style="italic">b</tspan><tspan font-style="normal"> = </tspan><tspan font-style="italic">c</tspan>
+
+        </text>
+
+        <text x="685" y="305" text-anchor="middle" class="fki1-label" font-size="24">(logaritma)</text>
+
+      </g>
+
+
+
+      <g id="arrow-top">
+
+        <path d="M 185,195 Q 460,105 720,193" fill="none" class="fki1-line-blue" stroke-width="4" marker-end="url(#fki1-arrow-blue)" />
+
+      </g>
+
+
+
+      <g id="arrow-bottom">
+
+        <path d="M 685,335 Q 460,425 200,337" fill="none" class="fki1-line-red" stroke-width="4" marker-end="url(#fki1-arrow-red)" />
+
+      </g>
+
+
+
+      <g id="text-bottom">
+
+        <text x="460" y="425" text-anchor="middle" class="fki1-text-red" font-style="italic" font-size="22">
+
+          baca dari kanan ke kiri
+
+        </text>
+
+        <text x="460" y="470" text-anchor="middle" class="fki1-text-red" font-size="34">
+
+          “<tspan font-style="italic">c</tspan> adalah eksponen <tspan font-style="italic">a</tspan> agar menghasilkan <tspan font-style="italic">b</tspan>”
+
+        </text>
+
+      </g>
+
+
 
     </g>
+
   </svg>
+
 </div>
+
+
 <br>
 
     <p>Grafik fungsi logaritma <strong>$f(x) = \log_{a} x$</strong> adalah cerminan grafik fungsi eksponen <strong>$g(x) = a^x$</strong> terhadap garis <strong>$y = x$</strong> &mdash; keduanya saling merupakan fungsi invers.</p>
