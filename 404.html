@@ -49,6 +49,11 @@
   </div>
 </nav>
 
+<!-- Floating scroll to top -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
 <main class="main">
   <div class="wrap">
     <div class="illustration-wrap">
@@ -90,5 +95,14 @@
 <div id="eksaktalab-footer"></div>
 <script src="assets/js/footer.js"></script>
 <script src="assets/js/protect.js"></script>
+<script>
+// Scroll-to-top
+window.addEventListener('scroll', () => {
+  const el = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  const btn = document.getElementById('scroll-top');
+  if (btn) { if (pct > 30) btn.classList.add('visible'); else btn.classList.remove('visible'); }
+});
+</script>
 </body>
 </html>
