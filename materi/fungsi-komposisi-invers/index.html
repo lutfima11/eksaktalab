@@ -198,73 +198,55 @@ window.MathJax = {
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 160 600 150" width="100%" style="max-width:420px; background-color:transparent;">
     <defs>
       <style>
-        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
-        .box-fixed { fill: var(--bg-muted, #f8fafc); stroke: var(--text-main, #334155); transition: all 0.3s ease; }
-        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
-        
-        /* Warna dinamis kurva dan teks petunjuk */
-        .line-blue-fixed { stroke: #1010A0; fill: none; }
-        .line-red-fixed { stroke: #A01010; fill: none; }
-        .text-blue-fixed { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
-        .text-red-fixed { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
-        .arrow-blue-fixed { fill: #1010A0; }
-        .arrow-red-fixed { fill: #A01010; }
-
-        /* Dukungan Dark Mode otomatis */
-        @media (prefers-color-scheme: dark) {
-          .box-fixed { fill: #1e293b; stroke: #94a3b8; }
-          .label-black-fixed { fill: #f1f5f9; }
-          .line-blue-fixed { stroke: #60A5FA; }
-          .line-red-fixed { stroke: #F87171; }
-          .text-blue-fixed { fill: #60A5FA; }
-          .text-red-fixed { fill: #F87171; }
-          .arrow-blue-fixed { fill: #60A5FA; }
-          .arrow-red-fixed { fill: #F87171; }
-        }
-        [data-theme="dark"] .box-fixed { fill: #1e293b; stroke: #94a3b8; }
-        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
-        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
-        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
-        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .text-red-fixed { fill: #F87171; }
-        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .arrow-red-fixed { fill: #F87171; }
+        .fki3-box { fill: #f8fafc; stroke: #334155; transition: all 0.3s ease; }
+        .fki3-label { fill: #334155; font-family: Cambria, 'Times New Roman', serif; }
+        .fki3-line-blue { stroke: #1010A0; fill: none; }
+        .fki3-line-red { stroke: #A01010; fill: none; }
+        .fki3-text-blue { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
+        .fki3-text-red { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
+        .fki3-arrow-blue { fill: #1010A0; }
+        .fki3-arrow-red { fill: #A01010; }
+        [data-theme="dark"] .fki3-box { fill: #1e293b; stroke: #94a3b8; }
+        [data-theme="dark"] .fki3-label { fill: #f1f5f9 !important; }
+        [data-theme="dark"] .fki3-text-blue { fill: #60A5FA !important; }
+        [data-theme="dark"] .fki3-text-red { fill: #F87171 !important; }
+        [data-theme="dark"] .fki3-arrow-blue { fill: #60A5FA; }
+        [data-theme="dark"] .fki3-arrow-red { fill: #F87171; }
       </style>
-
-      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-blue-fixed" />
+      <marker id="fki3-arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki3-arrow-blue" />
       </marker>
-      <marker id="arrow-fixed-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-red-fixed" />
+      <marker id="fki3-arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki3-arrow-red" />
       </marker>
     </defs>
 
     <g transform="translate(15, 160) scale(0.53)">
-      
+
       <g id="box-left">
-        <rect x="20" y="80" width="290" height="120" rx="18" ry="18" class="box-fixed" stroke-width="3" />
-        <text x="165" y="152" text-anchor="middle" class="label-black-fixed" font-size="40">
+        <rect x="20" y="80" width="290" height="120" rx="18" ry="18" class="fki3-box" stroke-width="3" />
+        <text x="165" y="152" text-anchor="middle" class="fki3-label" font-size="40">
           <tspan font-style="italic">x</tspan> ∈ <tspan font-style="italic">A</tspan>
         </text>
       </g>
 
       <g id="box-right">
-        <rect x="650" y="80" width="400" height="120" rx="18" ry="18" class="box-fixed" stroke-width="3" />
-        <text x="850" y="152" text-anchor="middle" class="label-black-fixed" font-size="40">
+        <rect x="650" y="80" width="400" height="120" rx="18" ry="18" class="fki3-box" stroke-width="3" />
+        <text x="850" y="152" text-anchor="middle" class="fki3-label" font-size="40">
           <tspan font-style="italic">y</tspan> = <tspan font-style="italic">f</tspan>(<tspan font-style="italic">x</tspan>) ∈ <tspan font-style="italic">B</tspan>
         </text>
       </g>
 
       <g id="path-forward">
-        <line x1="310" y1="115" x2="640" y2="115" class="line-blue-fixed" stroke-width="4" marker-end="url(#arrow-fixed-blue)" />
-        <text x="475" y="90" text-anchor="middle" class="text-blue-fixed" font-size="34">
+        <line x1="310" y1="115" x2="640" y2="115" class="fki3-line-blue" stroke-width="4" marker-end="url(#fki3-arrow-blue)" />
+        <text x="475" y="90" text-anchor="middle" class="fki3-text-blue" font-size="34">
           <tspan font-style="italic">f</tspan> <tspan font-size="30">(maju)</tspan>
         </text>
       </g>
 
       <g id="path-backward">
-        <line x1="650" y1="165" x2="322" y2="165" class="line-red-fixed" stroke-width="3" marker-end="url(#arrow-fixed-red)" />
-        <text x="485" y="210" text-anchor="middle" class="text-red-fixed" font-size="34">
+        <line x1="650" y1="165" x2="322" y2="165" class="fki3-line-red" stroke-width="3" marker-end="url(#fki3-arrow-red)" />
+        <text x="485" y="210" text-anchor="middle" class="fki3-text-red" font-size="34">
           <tspan font-style="italic">f</tspan><tspan dy="-16" font-size="24">-1</tspan><tspan dy="16" font-size="30"> (balik)</tspan>
         </text>
       </g>
@@ -318,65 +300,50 @@ window.MathJax = {
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-45 100 600 290" width="100%" style="max-width:420px; background-color:transparent;">
     <defs>
       <style>
-        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
-        .box-fixed { fill: none; stroke: var(--text-main, #334155); transition: all 0.3s ease; }
-        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
-        
-        /* Warna dinamis kurva dan teks petunjuk */
-        .line-blue-fixed { stroke: #1010A0; fill: none; }
-        .text-blue-fixed { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
-        .arrow-blue-fixed { fill: #1010A0; }
-
-        /* Dukungan Dark Mode otomatis */
-        @media (prefers-color-scheme: dark) {
-          .box-fixed { stroke: #94a3b8; }
-          .label-black-fixed { fill: #f1f5f9; }
-          .line-blue-fixed { stroke: #60A5FA; }
-          .text-blue-fixed { fill: #60A5FA; }
-          .arrow-blue-fixed { fill: #60A5FA; }
-        }
-        [data-theme="dark"] .box-fixed { stroke: #94a3b8; }
-        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
-        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
-        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
+        .fki4-box { fill: none; stroke: #334155; transition: all 0.3s ease; }
+        .fki4-label { fill: #334155; font-family: Cambria, 'Times New Roman', serif; }
+        .fki4-line-blue { stroke: #1010A0; fill: none; }
+        .fki4-arrow-blue { fill: #1010A0; }
+        [data-theme="dark"] .fki4-box { stroke: #94a3b8; }
+        [data-theme="dark"] .fki4-label { fill: #f1f5f9 !important; }
+        [data-theme="dark"] .fki4-line-blue { stroke: #60A5FA; }
+        [data-theme="dark"] .fki4-arrow-blue { fill: #60A5FA; }
       </style>
-
-      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-blue-fixed" />
+      <marker id="fki4-arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki4-arrow-blue" />
       </marker>
     </defs>
 
     <g transform="translate(60, 130) scale(0.65)">
-      
-      <ellipse cx="100" cy="150" rx="100" ry="160" class="box-fixed" stroke-width="2" />
-      <text x="100" y="350" text-anchor="middle" class="label-black-fixed" font-size="42">
+
+      <ellipse cx="100" cy="150" rx="100" ry="160" class="fki4-box" stroke-width="2" />
+      <text x="100" y="350" text-anchor="middle" class="fki4-label" font-size="42">
         <tspan font-style="italic">A</tspan> (Domain)
       </text>
 
-      <text x="100" y="60" text-anchor="middle" class="label-black-fixed" font-size="38" font-style="italic">a</text>
-      <text x="100" y="125" text-anchor="middle" class="label-black-fixed" font-size="38" font-style="italic">b</text>
-      <text x="100" y="190" text-anchor="middle" class="label-black-fixed" font-size="38" font-style="italic">c</text>
-      <text x="100" y="255" text-anchor="middle" class="label-black-fixed" font-size="38" font-style="italic">d</text>
+      <text x="100" y="60" text-anchor="middle" class="fki4-label" font-size="38" font-style="italic">a</text>
+      <text x="100" y="125" text-anchor="middle" class="fki4-label" font-size="38" font-style="italic">b</text>
+      <text x="100" y="190" text-anchor="middle" class="fki4-label" font-size="38" font-style="italic">c</text>
+      <text x="100" y="255" text-anchor="middle" class="fki4-label" font-size="38" font-style="italic">d</text>
 
-      <ellipse cx="500" cy="150" rx="100" ry="160" class="box-fixed" stroke-width="2" />
-      <text x="500" y="350" text-anchor="middle" class="label-black-fixed" font-size="42">
+      <ellipse cx="500" cy="150" rx="100" ry="160" class="fki4-box" stroke-width="2" />
+      <text x="500" y="350" text-anchor="middle" class="fki4-label" font-size="42">
         <tspan font-style="italic">B</tspan> (Kodomain)
       </text>
 
-      <text x="500" y="60" text-anchor="middle" class="label-black-fixed" font-size="38">1</text>
-      <text x="500" y="125" text-anchor="middle" class="label-black-fixed" font-size="38">2</text>
-      <text x="500" y="190" text-anchor="middle" class="label-black-fixed" font-size="38">3</text>
-      <text x="500" y="255" text-anchor="middle" class="label-black-fixed" font-size="38">4</text>
+      <text x="500" y="60" text-anchor="middle" class="fki4-label" font-size="38">1</text>
+      <text x="500" y="125" text-anchor="middle" class="fki4-label" font-size="38">2</text>
+      <text x="500" y="190" text-anchor="middle" class="fki4-label" font-size="38">3</text>
+      <text x="500" y="255" text-anchor="middle" class="fki4-label" font-size="38">4</text>
 
-      <g stroke-width="3" marker-end="url(#arrow-fixed-blue)">
-        <line x1="135" y1="50" x2="460" y2="50" class="line-blue-fixed" />
-        <line x1="135" y1="115" x2="460" y2="180" class="line-blue-fixed" />
-        <line x1="135" y1="180" x2="460" y2="115" class="line-blue-fixed" />
-        <line x1="135" y1="245" x2="460" y2="245" class="line-blue-fixed" />
+      <g stroke-width="3" marker-end="url(#fki4-arrow-blue)">
+        <line x1="135" y1="50" x2="460" y2="50" class="fki4-line-blue" />
+        <line x1="135" y1="115" x2="460" y2="180" class="fki4-line-blue" />
+        <line x1="135" y1="180" x2="460" y2="115" class="fki4-line-blue" />
+        <line x1="135" y1="245" x2="460" y2="245" class="fki4-line-blue" />
       </g>
 
-      <text x="300" y="20" text-anchor="middle" class="label-black-fixed" font-size="42" font-style="italic">f</text>
+      <text x="300" y="20" text-anchor="middle" class="fki4-label" font-size="42" font-style="italic">f</text>
 
     </g>
   </svg>
@@ -401,133 +368,110 @@ window.MathJax = {
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 450" width="100%" style="max-width:100%; background-color:transparent;">
     <defs>
       <style>
-        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
-        .panel-bg-fixed { fill: var(--bg-muted, #f8fafc); stroke: #e2e8f0; transition: all 0.3s ease; }
-        .box-fixed { fill: none; stroke: var(--text-main, #334155); transition: all 0.3s ease; }
-        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
-        .label-gray-fixed { fill: #64748b; font-family: Cambria, 'Times New Roman', serif; }
-        
-        /* Warna dinamis panah dan teks sifat fungsi */
-        .color-injektif { stroke: #2563eb; fill: #2563eb; }
-        .color-surjektif { stroke: #16a34a; fill: #16a34a; }
-        .color-bijektif { stroke: #0d9488; fill: #0d9488; }
-        
-        .text-injektif { fill: #2563eb; font-family: Cambria, 'Times New Roman', serif; font-weight: bold; }
-        .text-surjektif { fill: #16a34a; font-family: Cambria, 'Times New Roman', serif; font-weight: bold; }
-        .text-bijektif { fill: #0d9488; font-family: Cambria, 'Times New Roman', serif; font-weight: bold; }
-
-        /* Dukungan Dark Mode otomatis */
-        @media (prefers-color-scheme: dark) {
-          .panel-bg-fixed { fill: #1e293b; stroke: #334155; }
-          .box-fixed { stroke: #94a3b8; }
-          .label-black-fixed { fill: #f1f5f9; }
-          .label-gray-fixed { fill: #94a3b8; }
-          
-          .color-injektif { stroke: #60a5fa; fill: #60a5fa; }
-          .color-surjektif { stroke: #4ade80; fill: #4ade80; }
-          .color-bijektif { stroke: #2dd4bf; fill: #2dd4bf; }
-          
-          .text-injektif { fill: #60a5fa; }
-          .text-surjektif { fill: #4ade80; }
-          .text-bijektif { fill: #2dd4bf; }
-        }
-        
-        [data-theme="dark"] .panel-bg-fixed { fill: #1e293b; stroke: #334155; }
-        [data-theme="dark"] .box-fixed { stroke: #94a3b8; }
-        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
-        [data-theme="dark"] .label-gray-fixed { fill: #94a3b8; }
-        [data-theme="dark"] .color-injektif { stroke: #60a5fa; fill: #60a5fa; }
-        [data-theme="dark"] .color-surjektif { stroke: #4ade80; fill: #4ade80; }
-        [data-theme="dark"] .color-bijektif { stroke: #2dd4bf; fill: #2dd4bf; }
-        [data-theme="dark"] .text-injektif { fill: #60a5fa; }
-        [data-theme="dark"] .text-surjektif { fill: #4ade80; }
-        [data-theme="dark"] .text-bijektif { fill: #2dd4bf; }
+        .fki5-panel { fill: #f8fafc; stroke: #e2e8f0; transition: all 0.3s ease; }
+        .fki5-box { fill: none; stroke: #334155; transition: all 0.3s ease; }
+        .fki5-gray { fill: #64748b; font-family: Cambria, 'Times New Roman', serif; }
+        .fki5-inj { stroke: #2563eb; fill: #2563eb; }
+        .fki5-sur { stroke: #16a34a; fill: #16a34a; }
+        .fki5-bij { stroke: #0d9488; fill: #0d9488; }
+        .fki5-text-inj { fill: #2563eb; font-family: Cambria, 'Times New Roman', serif; font-weight: bold; }
+        .fki5-text-sur { fill: #16a34a; font-family: Cambria, 'Times New Roman', serif; font-weight: bold; }
+        .fki5-text-bij { fill: #0d9488; font-family: Cambria, 'Times New Roman', serif; font-weight: bold; }
+        [data-theme="dark"] .fki5-panel { fill: #1e293b; stroke: #334155; }
+        [data-theme="dark"] .fki5-box { stroke: #94a3b8; }
+        [data-theme="dark"] .fki5-gray { fill: #94a3b8 !important; }
+        [data-theme="dark"] .fki5-inj { stroke: #60a5fa; fill: #60a5fa; }
+        [data-theme="dark"] .fki5-sur { stroke: #4ade80; fill: #4ade80; }
+        [data-theme="dark"] .fki5-bij { stroke: #2dd4bf; fill: #2dd4bf; }
+        [data-theme="dark"] .fki5-text-inj { fill: #60a5fa !important; }
+        [data-theme="dark"] .fki5-text-sur { fill: #4ade80 !important; }
+        [data-theme="dark"] .fki5-text-bij { fill: #2dd4bf !important; }
       </style>
 
       <marker id="arrow-inj" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="color-injektif" />
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki5-inj" />
       </marker>
       <marker id="arrow-sur" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="color-surjektif" />
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki5-sur" />
       </marker>
       <marker id="arrow-bij" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="color-bijektif" />
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki5-bij" />
       </marker>
     </defs>
 
     <g transform="translate(10, 10)">
-      <rect width="320" height="430" rx="20" ry="20" class="panel-bg-fixed" stroke-width="2" />
+      <rect width="320" height="430" rx="20" ry="20" class="fki5-panel" stroke-width="2" />
       
-      <ellipse cx="90" cy="190" rx="45" ry="105" class="box-fixed" stroke-width="2" />
-      <ellipse cx="230" cy="190" rx="45" ry="105" class="box-fixed" stroke-width="2" />
+      <ellipse cx="90" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
+      <ellipse cx="230" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
       
-      <text x="90" y="140" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">a</text>
-      <text x="90" y="190" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">b</text>
-      <text x="90" y="240" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">c</text>
+      <text x="90" y="140" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">a</text>
+      <text x="90" y="190" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">b</text>
+      <text x="90" y="240" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">c</text>
       
-      <text x="230" y="125" text-anchor="middle" class="label-gray-fixed" font-size="24">1</text>
-      <text x="230" y="170" text-anchor="middle" class="label-gray-fixed" font-size="24">2</text>
-      <text x="230" y="215" text-anchor="middle" class="label-gray-fixed" font-size="24">3</text>
-      <text x="230" y="260" text-anchor="middle" class="label-gray-fixed" font-size="24">4</text>
+      <text x="230" y="125" text-anchor="middle" class="fki5-gray" font-size="24">1</text>
+      <text x="230" y="170" text-anchor="middle" class="fki5-gray" font-size="24">2</text>
+      <text x="230" y="215" text-anchor="middle" class="fki5-gray" font-size="24">3</text>
+      <text x="230" y="260" text-anchor="middle" class="fki5-gray" font-size="24">4</text>
       
       <g stroke-width="2.5" marker-end="url(#arrow-inj)" fill="none">
-        <line x1="110" y1="135" x2="210" y2="122" class="color-injektif" />
-        <line x1="110" y1="185" x2="210" y2="167" class="color-injektif" />
-        <line x1="110" y1="235" x2="210" y2="212" class="color-injektif" />
+        <line x1="110" y1="135" x2="210" y2="122" class="fki5-inj" />
+        <line x1="110" y1="185" x2="210" y2="167" class="fki5-inj" />
+        <line x1="110" y1="235" x2="210" y2="212" class="fki5-inj" />
       </g>
       
-      <text x="160" y="355" text-anchor="middle" class="text-injektif" font-size="24">Injektif</text>
-      <text x="160" y="385" text-anchor="middle" class="label-gray-fixed" font-size="20">(satu-satu)</text>
+      <text x="160" y="355" text-anchor="middle" class="fki5-text-inj" font-size="24">Injektif</text>
+      <text x="160" y="385" text-anchor="middle" class="fki5-gray" font-size="20">(satu-satu)</text>
     </g>
 
     <g transform="translate(365, 10)">
-      <rect width="320" height="430" rx="20" ry="20" class="panel-bg-fixed" stroke-width="2" />
+      <rect width="320" height="430" rx="20" ry="20" class="fki5-panel" stroke-width="2" />
       
-      <ellipse cx="90" cy="190" rx="45" ry="105" class="box-fixed" stroke-width="2" />
-      <ellipse cx="230" cy="190" rx="45" ry="105" class="box-fixed" stroke-width="2" />
+      <ellipse cx="90" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
+      <ellipse cx="230" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
       
-      <text x="90" y="125" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">a</text>
-      <text x="90" y="167" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">b</text>
-      <text x="90" y="209" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">c</text>
-      <text x="90" y="251" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">d</text>
+      <text x="90" y="125" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">a</text>
+      <text x="90" y="167" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">b</text>
+      <text x="90" y="209" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">c</text>
+      <text x="90" y="251" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">d</text>
       
-      <text x="230" y="140" text-anchor="middle" class="label-gray-fixed" font-size="24">1</text>
-      <text x="230" y="190" text-anchor="middle" class="label-gray-fixed" font-size="24">2</text>
-      <text x="230" y="240" text-anchor="middle" class="label-gray-fixed" font-size="24">3</text>
+      <text x="230" y="140" text-anchor="middle" class="fki5-gray" font-size="24">1</text>
+      <text x="230" y="190" text-anchor="middle" class="fki5-gray" font-size="24">2</text>
+      <text x="230" y="240" text-anchor="middle" class="fki5-gray" font-size="24">3</text>
       
       <g stroke-width="2.5" marker-end="url(#arrow-sur)" fill="none">
-        <line x1="110" y1="120" x2="210" y2="135" class="color-surjektif" />
-        <line x1="110" y1="162" x2="210" y2="140" class="color-surjektif" />
-        <line x1="110" y1="204" x2="210" y2="185" class="color-surjektif" />
-        <line x1="110" y1="246" x2="210" y2="235" class="color-surjektif" />
+        <line x1="110" y1="120" x2="210" y2="135" class="fki5-sur" />
+        <line x1="110" y1="162" x2="210" y2="140" class="fki5-sur" />
+        <line x1="110" y1="204" x2="210" y2="185" class="fki5-sur" />
+        <line x1="110" y1="246" x2="210" y2="235" class="fki5-sur" />
       </g>
       
-      <text x="160" y="355" text-anchor="middle" class="text-surjektif" font-size="24">Surjektif</text>
-      <text x="160" y="385" text-anchor="middle" class="label-gray-fixed" font-size="20">(onto)</text>
+      <text x="160" y="355" text-anchor="middle" class="fki5-text-sur" font-size="24">Surjektif</text>
+      <text x="160" y="385" text-anchor="middle" class="fki5-gray" font-size="20">(onto)</text>
     </g>
 
     <g transform="translate(720, 10)">
-      <rect width="320" height="430" rx="20" ry="20" class="panel-bg-fixed" stroke-width="2" />
+      <rect width="320" height="430" rx="20" ry="20" class="fki5-panel" stroke-width="2" />
       
-      <ellipse cx="90" cy="190" rx="45" ry="105" class="box-fixed" stroke-width="2" />
-      <ellipse cx="230" cy="190" rx="45" ry="105" class="box-fixed" stroke-width="2" />
+      <ellipse cx="90" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
+      <ellipse cx="230" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
       
-      <text x="90" y="140" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">a</text>
-      <text x="90" y="190" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">b</text>
-      <text x="90" y="240" text-anchor="middle" class="label-gray-fixed" font-size="24" font-style="italic">c</text>
+      <text x="90" y="140" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">a</text>
+      <text x="90" y="190" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">b</text>
+      <text x="90" y="240" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">c</text>
       
-      <text x="230" y="140" text-anchor="middle" class="label-gray-fixed" font-size="24">1</text>
-      <text x="230" y="190" text-anchor="middle" class="label-gray-fixed" font-size="24">2</text>
-      <text x="230" y="240" text-anchor="middle" class="label-gray-fixed" font-size="24">3</text>
+      <text x="230" y="140" text-anchor="middle" class="fki5-gray" font-size="24">1</text>
+      <text x="230" y="190" text-anchor="middle" class="fki5-gray" font-size="24">2</text>
+      <text x="230" y="240" text-anchor="middle" class="fki5-gray" font-size="24">3</text>
       
       <g stroke-width="2.5" marker-end="url(#arrow-bij)" fill="none">
-        <line x1="110" y1="135" x2="210" y2="135" class="color-bijektif" />
-        <line x1="110" y1="185" x2="210" y2="185" class="color-bijektif" />
-        <line x1="110" y1="235" x2="210" y2="235" class="color-bijektif" />
+        <line x1="110" y1="135" x2="210" y2="135" class="fki5-bij" />
+        <line x1="110" y1="185" x2="210" y2="185" class="fki5-bij" />
+        <line x1="110" y1="235" x2="210" y2="235" class="fki5-bij" />
       </g>
       
-      <text x="160" y="355" text-anchor="middle" class="text-bijektif" font-size="24">Bijektif</text>
-      <text x="160" y="385" text-anchor="middle" class="label-gray-fixed" font-size="20">(korespondensi 1-1)</text>
+      <text x="160" y="355" text-anchor="middle" class="fki5-text-bij" font-size="24">Bijektif</text>
+      <text x="160" y="385" text-anchor="middle" class="fki5-gray" font-size="20">(korespondensi 1-1)</text>
     </g>
   </svg>
 </div>
