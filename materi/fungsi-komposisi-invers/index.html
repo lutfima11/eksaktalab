@@ -123,85 +123,67 @@ window.MathJax = {
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 150 600 200" width="100%" style="max-width:420px; background-color:transparent;">
     <defs>
       <style>
-        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
-        .box-fixed { fill: var(--bg-muted, #f8fafc); stroke: var(--text-main, #334155); transition: all 0.3s ease; }
-        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
-        
-        /* Warna dinamis kurva dan teks petunjuk */
-        .line-blue-fixed { stroke: #1010A0; fill: none; }
-        .line-red-fixed { stroke: #A01010; fill: none; }
-        .text-blue-fixed { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
-        .text-red-fixed { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
-        .arrow-blue-fixed { fill: #1010A0; }
-        .arrow-red-fixed { fill: #A01010; }
-
-        /* Dukungan Dark Mode otomatis */
-        @media (prefers-color-scheme: dark) {
-          .box-fixed { fill: #1e293b; stroke: #94a3b8; }
-          .label-black-fixed { fill: #f1f5f9; }
-          .line-blue-fixed { stroke: #60A5FA; }
-          .line-red-fixed { stroke: #F87171; }
-          .text-blue-fixed { fill: #60A5FA; }
-          .text-red-fixed { fill: #F87171; }
-          .arrow-blue-fixed { fill: #60A5FA; }
-          .arrow-red-fixed { fill: #F87171; }
-        }
-        [data-theme="dark"] .box-fixed { fill: #1e293b; stroke: #94a3b8; }
-        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
-        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
-        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
-        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .text-red-fixed { fill: #F87171; }
-        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .arrow-red-fixed { fill: #F87171; }
+        .fki1-box { fill: #f8fafc; stroke: #334155; transition: all 0.3s ease; }
+        .fki1-label { fill: #334155; font-family: Cambria, 'Times New Roman', serif; }
+        .fki1-line-blue { stroke: #1010A0; fill: none; }
+        .fki1-line-red { stroke: #A01010; fill: none; }
+        .fki1-text-blue { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
+        .fki1-text-red { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
+        .fki1-arrow-blue { fill: #1010A0; }
+        .fki1-arrow-red { fill: #A01010; }
+        [data-theme="dark"] .fki1-box { fill: #1e293b; stroke: #94a3b8; }
+        [data-theme="dark"] .fki1-label { fill: #f1f5f9 !important; }
+        [data-theme="dark"] .fki1-text-blue { fill: #60A5FA !important; }
+        [data-theme="dark"] .fki1-text-red { fill: #F87171 !important; }
+        [data-theme="dark"] .fki1-arrow-blue { fill: #60A5FA; }
+        [data-theme="dark"] .fki1-arrow-red { fill: #F87171; }
       </style>
-
-      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-blue-fixed" />
+      <marker id="fki1-arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki1-arrow-blue" />
       </marker>
-      <marker id="arrow-fixed-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-red-fixed" />
+      <marker id="fki1-arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki1-arrow-red" />
       </marker>
     </defs>
 
     <g transform="translate(15, 125) scale(0.53)">
-      
+
       <g id="box-x">
-        <rect x="20" y="100" width="230" height="110" rx="18" ry="18" class="box-fixed" stroke-width="3" />
-        <text x="135" y="168" text-anchor="middle" class="label-black-fixed" font-style="italic" font-size="42">x</text>
+        <rect x="20" y="100" width="230" height="110" rx="18" ry="18" class="fki1-box" stroke-width="3" />
+        <text x="135" y="168" text-anchor="middle" class="fki1-label" font-style="italic" font-size="42">x</text>
       </g>
 
       <g id="box-u">
-        <rect x="425" y="100" width="240" height="110" rx="18" ry="18" class="box-fixed" stroke-width="3" />
-        <text x="545" y="166" text-anchor="middle" class="label-black-fixed" font-style="italic" font-size="42">
+        <rect x="425" y="100" width="240" height="110" rx="18" ry="18" class="fki1-box" stroke-width="3" />
+        <text x="545" y="166" text-anchor="middle" class="fki1-label" font-style="italic" font-size="42">
           u <tspan font-style="normal">=</tspan> g(x)
         </text>
       </g>
 
       <g id="box-y">
-        <rect x="840" y="100" width="230" height="110" rx="18" ry="18" class="box-fixed" stroke-width="3" />
-        <text x="955" y="166" text-anchor="middle" class="label-black-fixed" font-style="italic" font-size="42">
+        <rect x="840" y="100" width="230" height="110" rx="18" ry="18" class="fki1-box" stroke-width="3" />
+        <text x="955" y="166" text-anchor="middle" class="fki1-label" font-style="italic" font-size="42">
           y <tspan font-style="normal">=</tspan> f(u)
         </text>
       </g>
 
       <g id="path-g">
-        <line x1="250" y1="155" x2="410" y2="155" class="line-blue-fixed" stroke-width="4" marker-end="url(#arrow-fixed-blue)" />
-        <text x="330" y="130" text-anchor="middle" class="text-blue-fixed" font-size="30">
+        <line x1="250" y1="155" x2="410" y2="155" class="fki1-line-blue" stroke-width="4" marker-end="url(#fki1-arrow-blue)" />
+        <text x="330" y="130" text-anchor="middle" class="fki1-text-blue" font-size="30">
           fungsi <tspan font-style="italic" font-size="34">g</tspan>
         </text>
       </g>
 
       <g id="path-f">
-        <line x1="665" y1="155" x2="825" y2="155" class="line-blue-fixed" stroke-width="4" marker-end="url(#arrow-fixed-blue)" />
-        <text x="745" y="130" text-anchor="middle" class="text-blue-fixed" font-size="30">
+        <line x1="665" y1="155" x2="825" y2="155" class="fki1-line-blue" stroke-width="4" marker-end="url(#fki1-arrow-blue)" />
+        <text x="745" y="130" text-anchor="middle" class="fki1-text-blue" font-size="30">
           fungsi <tspan font-style="italic" font-size="34">f</tspan>
         </text>
       </g>
 
       <g id="path-composition">
-        <path d="M 135,210 Q 545,460 955,220" fill="none" class="line-red-fixed" stroke-width="4" stroke-dasharray="10,7" marker-end="url(#arrow-fixed-red)" />
-        <text x="545" y="390" text-anchor="middle" class="text-red-fixed" font-size="32">
+        <path d="M 135,210 Q 545,460 955,220" fill="none" class="fki1-line-red" stroke-width="4" stroke-dasharray="10,7" marker-end="url(#fki1-arrow-red)" />
+        <text x="545" y="390" text-anchor="middle" class="fki1-text-red" font-size="32">
           komposisi <tspan font-style="italic" font-size="36">f</tspan> <tspan font-style="normal" font-size="26">○</tspan> <tspan font-style="italic" font-size="36">g</tspan>
         </text>
       </g>
@@ -822,86 +804,67 @@ window.MathJax = {
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 600 200" width="100%" style="max-width:420px; background-color:transparent;">
     <defs>
       <style>
-        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
-        .box-fixed { fill: none; stroke: var(--text-main, #334155); transition: all 0.3s ease; }
-        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
-        
-        /* Warna dinamis kurva dan teks petunjuk */
-        .line-blue-fixed { stroke: #1010A0; fill: none; }
-        .line-red-fixed { stroke: #A01010; fill: none; }
-        .text-blue-fixed { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
-        .text-red-fixed { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
-        .arrow-blue-fixed { fill: #1010A0; }
-        .arrow-red-fixed { fill: #A01010; }
-
-        /* Dukungan Dark Mode otomatis */
-        @media (prefers-color-scheme: dark) {
-          .box-fixed { stroke: #94a3b8; }
-          .label-black-fixed { fill: #f1f5f9; }
-          .line-blue-fixed { stroke: #60A5FA; }
-          .line-red-fixed { stroke: #F87171; }
-          .text-blue-fixed { fill: #60A5FA; }
-          .text-red-fixed { fill: #F87171; }
-          .arrow-blue-fixed { fill: #60A5FA; }
-          .arrow-red-fixed { fill: #F87171; }
-        }
-        [data-theme="dark"] .box-fixed { stroke: #94a3b8; }
-        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
-        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
-        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
-        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .text-red-fixed { fill: #F87171; }
-        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .arrow-red-fixed { fill: #F87171; }
+        .fki2-box { fill: none; stroke: #334155; transition: all 0.3s ease; }
+        .fki2-label { fill: #334155; font-family: Cambria, 'Times New Roman', serif; }
+        .fki2-line-blue { stroke: #1010A0; fill: none; }
+        .fki2-line-red { stroke: #A01010; fill: none; }
+        .fki2-text-blue { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
+        .fki2-text-red { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
+        .fki2-arrow-blue { fill: #1010A0; }
+        .fki2-arrow-red { fill: #A01010; }
+        [data-theme="dark"] .fki2-box { stroke: #94a3b8; }
+        [data-theme="dark"] .fki2-label { fill: #f1f5f9 !important; }
+        [data-theme="dark"] .fki2-text-blue { fill: #60A5FA !important; }
+        [data-theme="dark"] .fki2-text-red { fill: #F87171 !important; }
+        [data-theme="dark"] .fki2-arrow-blue { fill: #60A5FA; }
+        [data-theme="dark"] .fki2-arrow-red { fill: #F87171; }
       </style>
-
-      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-blue-fixed" />
+      <marker id="fki2-arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki2-arrow-blue" />
       </marker>
-      <marker id="arrow-fixed-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow-red-fixed" />
+      <marker id="fki2-arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki2-arrow-red" />
       </marker>
     </defs>
 
     <g transform="translate(15, 125) scale(0.53)">
-      
+
       <g id="set-dg">
-        <ellipse cx="150" cy="140" rx="95" ry="140" class="box-fixed" stroke-width="3" />
-        <text x="150" y="325" text-anchor="middle" class="label-black-fixed" font-size="38">
+        <ellipse cx="150" cy="140" rx="95" ry="140" class="fki2-box" stroke-width="3" />
+        <text x="150" y="325" text-anchor="middle" class="fki2-label" font-size="38">
           <tspan font-style="italic">D</tspan><tspan dy="10" font-size="26">g</tspan>
         </text>
       </g>
 
       <g id="set-rg-df">
-        <text x="540" y="325" text-anchor="middle" class="label-black-fixed" font-size="38">
-          <tspan font-style="italic">R<tspan dy="10" font-size="26">g</tspan></tspan> 
-          <tspan dy="-10" font-style="normal"> = </tspan> 
+        <text x="540" y="325" text-anchor="middle" class="fki2-label" font-size="38">
+          <tspan font-style="italic">R<tspan dy="10" font-size="26">g</tspan></tspan>
+          <tspan dy="-10" font-style="normal"> = </tspan>
           <tspan font-style="italic">D<tspan dy="10" font-size="26">f</tspan></tspan>
         </text>
-        <ellipse cx="540" cy="140" rx="95" ry="140" class="box-fixed" stroke-width="3" />
+        <ellipse cx="540" cy="140" rx="95" ry="140" class="fki2-box" stroke-width="3" />
       </g>
 
       <g id="set-rf">
-        <ellipse cx="930" cy="140" rx="95" ry="140" class="box-fixed" stroke-width="3" />
-        <text x="930" y="325" text-anchor="middle" class="label-black-fixed" font-size="38">
+        <ellipse cx="930" cy="140" rx="95" ry="140" class="fki2-box" stroke-width="3" />
+        <text x="930" y="325" text-anchor="middle" class="fki2-label" font-size="38">
           <tspan font-style="italic">R</tspan><tspan dy="10" font-size="26">f</tspan>
         </text>
       </g>
 
-
       <g id="path-g">
-        <path d="M 245,100 Q 342,80 440,100" fill="none" class="line-blue-fixed" stroke-width="3.5" marker-end="url(#arrow-fixed-blue)" />
-        <text x="342" y="70" text-anchor="middle" class="text-blue-fixed" font-size="36" font-style="italic">g</text>
+        <path d="M 245,100 Q 342,80 440,100" fill="none" class="fki2-line-blue" stroke-width="3.5" marker-end="url(#fki2-arrow-blue)" />
+        <text x="342" y="70" text-anchor="middle" class="fki2-text-blue" font-size="36" font-style="italic">g</text>
       </g>
 
       <g id="path-f">
-        <path d="M 635,100 Q 732,80 830,100" fill="none" class="line-blue-fixed" stroke-width="3.5" marker-end="url(#arrow-fixed-blue)" />
-        <text x="732" y="70" text-anchor="middle" class="text-blue-fixed" font-size="36" font-style="italic">f</text>
+        <path d="M 635,100 Q 732,80 830,100" fill="none" class="fki2-line-blue" stroke-width="3.5" marker-end="url(#fki2-arrow-blue)" />
+        <text x="732" y="70" text-anchor="middle" class="fki2-text-blue" font-size="36" font-style="italic">f</text>
       </g>
 
       <g id="path-composition">
-        <path d="M 240,160 Q 540,270 836,160" fill="none" class="line-red-fixed" stroke-width="3.5" stroke-dasharray="9,6" marker-end="url(#arrow-fixed-red)" />
-        <text x="540" y="245" text-anchor="middle" class="text-red-fixed" font-size="36">
+        <path d="M 240,160 Q 540,270 836,160" fill="none" class="fki2-line-red" stroke-width="3.5" stroke-dasharray="9,6" marker-end="url(#fki2-arrow-red)" />
+        <text x="540" y="245" text-anchor="middle" class="fki2-text-red" font-size="36">
           <tspan font-style="italic">f</tspan> <tspan font-style="normal" font-size="24">○</tspan> <tspan font-style="italic">g</tspan>
         </text>
       </g>

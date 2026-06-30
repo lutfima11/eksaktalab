@@ -111,87 +111,69 @@ window.MathJax = {
 <p>Tapi logaritma lebih dari sekadar alat hitung. Ia adalah <strong>bahasa skala</strong>. Ketika rentang nilai yang ingin kita ukur terlalu lebar &mdash; dari intensitas suara yang hampir tak terdengar hingga ledakan jet, dari keasaman air murni hingga asam pekat, dari gempa kecil hingga gempa dahsyat &mdash; skala biasa tidak cukup. Logaritma memampatan rentang yang tak terhingga itu menjadi skala yang bisa dipahami manusia: desibel, pH, skala Richter. Semua itu adalah logaritma yang bekerja di balik layar.</p>
     <h3 class="subsection-title">Ide Dasar: Logaritma sebagai Pembalik Eksponen</h3>
     <p>Hubungan antara eksponen dan logaritma ibarat dua sisi koin yang sama. Pertanyaan "<strong>$2$ dipangkat berapa menghasilkan $8$?</strong>" adalah pertanyaan logaritmik: jawabannya adalah <strong>$\log_{2} 8 = 3$</strong>. Secara umum:</p>
-    <div class="grafik-wrap">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 600 300" width="100%" style="max-width:420px; background-color:transparent;">
+    <div class=”grafik-wrap”>
+  <svg xmlns=”http://www.w3.org/2000/svg” viewBox=”0 120 600 300” width=”100%” style=”max-width:420px; background-color:transparent;”>
     <defs>
       <style>
-        .axis-line-fixed { stroke: var(--text-main, #334155); fill: none; }
-        .box-fixed { fill: var(--bg-muted, #f8fafc); stroke: var(--text-main, #334155); transition: all 0.3s ease; }
-        .label-black-fixed { fill: var(--text-main, #334155); font-family: Cambria, 'Times New Roman', serif; }
-        
-        /* Warna dinamis kurva dan teks petunjuk */
-        .line-blue-fixed { stroke: #1010A0; fill: none; }
-        .line-red-fixed { stroke: #A01010; fill: none; }
-        .text-blue-fixed { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
-        .text-red-fixed { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
-        .arrow-blue-fixed { fill: #1010A0; }
-        .arrow-red-fixed { fill: #A01010; }
-
-        /* Dukungan Dark Mode otomatis */
-        @media (prefers-color-scheme: dark) {
-          .box-fixed { fill: #1e293b; stroke: #94a3b8; }
-          .label-black-fixed { fill: #f1f5f9; }
-          .line-blue-fixed { stroke: #60A5FA; }
-          .line-red-fixed { stroke: #F87171; }
-          .text-blue-fixed { fill: #60A5FA; }
-          .text-red-fixed { fill: #F87171; }
-          .arrow-blue-fixed { fill: #60A5FA; }
-          .arrow-red-fixed { fill: #F87171; }
-        }
-        [data-theme="dark"] .box-fixed { fill: #1e293b; stroke: #94a3b8; }
-        [data-theme="dark"] .label-black-fixed { fill: #f1f5f9; }
-        [data-theme="dark"] .line-blue-fixed { stroke: #60A5FA; }
-        [data-theme="dark"] .line-red-fixed { stroke: #F87171; }
-        [data-theme="dark"] .text-blue-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .text-red-fixed { fill: #F87171; }
-        [data-theme="dark"] .arrow-blue-fixed { fill: #60A5FA; }
-        [data-theme="dark"] .arrow-red-fixed { fill: #F87171; }
+        .log1-box { fill: #f8fafc; stroke: #334155; transition: all 0.3s ease; }
+        .log1-label { fill: #334155; font-family: Cambria, 'Times New Roman', serif; }
+        .log1-line-blue { stroke: #1010A0; fill: none; }
+        .log1-line-red { stroke: #A01010; fill: none; }
+        .log1-text-blue { fill: #1010A0; font-family: Cambria, 'Times New Roman', serif; }
+        .log1-text-red { fill: #A01010; font-family: Cambria, 'Times New Roman', serif; }
+        .log1-arrow-blue { fill: #1010A0; }
+        .log1-arrow-red { fill: #A01010; }
+        [data-theme=”dark”] .log1-box { fill: #1e293b; stroke: #94a3b8; }
+        [data-theme=”dark”] .log1-label { fill: #f1f5f9 !important; }
+        [data-theme=”dark”] .log1-text-blue { fill: #60A5FA !important; }
+        [data-theme=”dark”] .log1-text-red { fill: #F87171 !important; }
+        [data-theme=”dark”] .log1-arrow-blue { fill: #60A5FA; }
+        [data-theme=”dark”] .log1-arrow-red { fill: #F87171; }
       </style>
-
-      <marker id="arrow-fixed-blue" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 0 L 10 5 L 0 10 z" class="arrow-blue-fixed" />
+      <marker id=”log1-arrow-blue” viewBox=”0 0 10 10” refX=”1” refY=”5” markerWidth=”6” markerHeight=”6” orient=”auto-start-reverse”>
+        <path d=”M 0 0 L 10 5 L 0 10 z” class=”log1-arrow-blue” />
       </marker>
-      <marker id="arrow-fixed-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-        <path d="M 0 0 L 10 5 L 0 10 z" class="arrow-red-fixed" />
+      <marker id=”log1-arrow-red” viewBox=”0 0 10 10” refX=”9” refY=”5” markerWidth=”6” markerHeight=”6” orient=”auto-start-reverse”>
+        <path d=”M 0 0 L 10 5 L 0 10 z” class=”log1-arrow-red” />
       </marker>
     </defs>
 
-    <g transform="translate(20, 135) scale(0.56)">
-      
-      <text x="500" y="45" class="text-blue-fixed" font-size="36" text-anchor="middle">
-        “<tspan font-style="italic">b</tspan> diperoleh dari <tspan font-style="italic">a</tspan> dipangkat <tspan font-style="italic">c</tspan>”
+    <g transform=”translate(20, 135) scale(0.56)”>
+
+      <text x=”500” y=”45” class=”log1-text-blue” font-size=”36” text-anchor=”middle”>
+        “<tspan font-style=”italic”>b</tspan> diperoleh dari <tspan font-style=”italic”>a</tspan> dipangkat <tspan font-style=”italic”>c</tspan>”
       </text>
 
-      <text x="500" y="90" class="text-blue-fixed" font-size="24" text-anchor="middle" font-style="italic">
+      <text x=”500” y=”90” class=”log1-text-blue” font-size=”24” text-anchor=”middle” font-style=”italic”>
         baca dari kiri ke kanan
       </text>
 
-      <path d="M 210 190 Q 500 110, 790 190" class="line-blue-fixed" stroke-width="3" marker-end="url(#arrow-fixed-blue)" />
+      <path d=”M 210 190 Q 500 110, 790 190” class=”log1-line-blue” stroke-width=”3” marker-end=”url(#log1-arrow-blue)” />
 
-      <rect x="70" y="190" width="280" height="120" rx="15" ry="15" class="box-fixed" stroke-width="2" />
-      <text x="210" y="240" class="label-black-fixed" font-size="32" text-anchor="middle">
-        <tspan font-style="italic">a</tspan><tspan dy="-12">c</tspan><tspan dy="12"> = b</tspan>
+      <rect x=”70” y=”190” width=”280” height=”120” rx=”15” ry=”15” class=”log1-box” stroke-width=”2” />
+      <text x=”210” y=”240” class=”log1-label” font-size=”32” text-anchor=”middle”>
+        <tspan font-style=”italic”>a</tspan><tspan dy=”-12”>c</tspan><tspan dy=”12”> = b</tspan>
       </text>
-      <text x="210" y="285" class="label-black-fixed" font-size="22" font-style="italic" text-anchor="middle">
+      <text x=”210” y=”285” class=”log1-label” font-size=”22” font-style=”italic” text-anchor=”middle”>
         (perpangkatan)
       </text>
 
-      <path d="M 790 310 Q 500 390, 210 310" class="line-red-fixed" stroke-width="3" marker-end="url(#arrow-fixed-red)" />
+      <path d=”M 790 310 Q 500 390, 210 310” class=”log1-line-red” stroke-width=”3” marker-end=”url(#log1-arrow-red)” />
 
-      <rect x="650" y="190" width="280" height="120" rx="15" ry="15" class="box-fixed" stroke-width="2" />
-      <text x="790" y="240" class="label-black-fixed" font-size="32" text-anchor="middle">
-        <tspan font-size="20" dy="-14">a</tspan><tspan dy="14">log </tspan><tspan font-style="italic">b</tspan> = c
+      <rect x=”650” y=”190” width=”280” height=”120” rx=”15” ry=”15” class=”log1-box” stroke-width=”2” />
+      <text x=”790” y=”240” class=”log1-label” font-size=”32” text-anchor=”middle”>
+        <tspan font-size=”20” dy=”-14”>a</tspan><tspan dy=”14”>log </tspan><tspan font-style=”italic”>b</tspan> = c
       </text>
-      <text x="790" y="285" class="label-black-fixed" font-size="22" font-style="italic" text-anchor="middle">
+      <text x=”790” y=”285” class=”log1-label” font-size=”22” font-style=”italic” text-anchor=”middle”>
         (logaritma)
       </text>
 
-      <text x="500" y="410" class="text-red-fixed" font-size="24" text-anchor="middle" font-style="italic">
+      <text x=”500” y=”410” class=”log1-text-red” font-size=”24” text-anchor=”middle” font-style=”italic”>
         baca dari kanan ke kiri
       </text>
 
-      <text x="500" y="455" class="text-red-fixed" font-size="36" text-anchor="middle">
-        “<tspan font-style="italic">c</tspan> adalah eksponen <tspan font-style="italic">a</tspan> agar menghasilkan <tspan font-style="italic">b</tspan>”
+      <text x=”500” y=”455” class=”log1-text-red” font-size=”36” text-anchor=”middle”>
+        “<tspan font-style=”italic”>c</tspan> adalah eksponen <tspan font-style=”italic”>a</tspan> agar menghasilkan <tspan font-style=”italic”>b</tspan>”
       </text>
 
     </g>
