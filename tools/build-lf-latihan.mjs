@@ -39,6 +39,18 @@ function processLatex(text) {
   text = tabularToHtml(text);
   // strip \begin{center}...\end{center} wrapper (keep content)
   text = text.replace(/\\begin\{center\}([\s\S]*?)\\end\{center\}/g, '$1');
+  // wrap \begin{align*}...\end{align*} dengan \[...\] agar MathJax render
+  // dan restore row separator: '\ ' (satu backslash+spasi) → '\\ ' (dua backslash)
+  // Case 1: ada closing \end{align*}
+  text = text.replace(/\\begin\{(align\*?)\}([\s\S]*?)\\end\{align\*?\}/g, (_, env, body) => {
+    const fixed = body.replace(/\\ /g, '\\\\ ');
+    return `\\[\\begin{${env}}${fixed}\\end{${env}}\\]`;
+  });
+  // Case 2: \begin{align*} tanpa \end{align*} (parser membuang closing tag) → konten sampai EOS
+  text = text.replace(/\\begin\{(align\*?)\}([\s\S]*)$/, (_, env, body) => {
+    const fixed = body.replace(/\\ /g, '\\\\ ');
+    return `\\[\\begin{${env}}${fixed}\\end{${env}}\\]`;
+  });
   // wrap soal-gambar img dengan grafik-wrap
   text = text.replace(/<img([^>]+class="soal-gambar")[^>]*>/g, '<div class="grafik-wrap"><img$1></div>');
   return text;
