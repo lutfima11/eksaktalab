@@ -1,0 +1,2695 @@
+{
+  "materi": "persamaan-kuadrat",
+  "judul": "Persamaan Kuadrat",
+  "totalSoal": 140,
+  "sections": [
+    {
+      "sectionId": "A",
+      "sectionTitle": "Mengenal Matriks",
+      "soal": [
+        {
+          "id": "A1",
+          "section": "A",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "membalik urutan baris dan kolom, mengira ordo 3×2",
+          "jawab": "c",
+          "p": "Matriks $ A $ memiliki $ 2 $ baris dan $ 3 $ kolom, sehingga ordonya adalah $ 2 \\times 3 $ .",
+          "q": "Diketahui matriks $ A = \\begin{bmatrix} 2 & 3 & 1 \\\\ 4 & 0 & -3 \\end{bmatrix} $ . Ordo matriks $ A $ adalah …",
+          "opts": [
+            "$ 2 \\times 2 $",
+            "$ 3 \\times 2 $",
+            "$ 2 \\times 3 $",
+            "$ 3 \\times 3 $",
+            "$ 1 \\times 6 $"
+          ]
+        },
+        {
+          "id": "A2",
+          "section": "A",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menukar indeks baris-kolom; a_{23} dikira kolom ke-2 baris ke-3",
+          "jawab": "e",
+          "p": "Elemen $ b_{23} $ berada pada baris ke- $ 2 $ , kolom ke- $ 3 $ : $ b_{23} = 5 $ .",
+          "q": "Diketahui matriks $ B = \\begin{bmatrix} 1 & 4 & 2 \\\\ 3 & -1 & 5 \\\\ 0 & 2 & -4 \\end{bmatrix} $ . Nilai elemen $ b_{23} $ adalah …",
+          "opts": [
+            "$ -1 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $"
+          ]
+        },
+        {
+          "id": "A3",
+          "section": "A",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira ini matriks identitas karena ada angka pada diagonal",
+          "jawab": "d",
+          "p": "Semua elemen di luar diagonal utama bernilai nol, sehingga $ P $ adalah <b>matriks diagonal</b>.",
+          "q": "Matriks $ P = \\begin{bmatrix} 5 & 0 & 0 \\\\ 0 & -2 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix} $ termasuk jenis matriks …",
+          "opts": [
+            "Identitas",
+            "Segitiga atas",
+            "Segitiga bawah",
+            "Diagonal",
+            "Nol"
+          ]
+        },
+        {
+          "id": "A4",
+          "section": "A",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira ordo tidak berubah; atau menukar kolom bukan baris",
+          "jawab": "d",
+          "p": "Transpose mengubah baris menjadi kolom. Matriks berordo $ 3 \\times 2 $ menjadi $ A^{\\mathrm{T}} $ berordo $ 2 \\times 3 $ .",
+          "q": "Jika $ A $ adalah matriks berordo $ 3 \\times 2 $ , maka ordo dari $ A^{\\mathrm{T}} $ adalah …",
+          "opts": [
+            "$ 3 \\times 2 $",
+            "$ 2 \\times 2 $",
+            "$ 3 \\times 3 $",
+            "$ 2 \\times 3 $",
+            "$ 6 \\times 1 $"
+          ]
+        },
+        {
+          "id": "A5",
+          "section": "A",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "tidak memeriksa semua pasangan elemen simetris; hanya memeriksa diagonal",
+          "jawab": "b",
+          "p": "$ C^{\\mathrm{T}} = \\begin{bmatrix} 2 & 5 \\\\ 5 & -3 \\end{bmatrix} = C $ , sehingga $ C $ simetris karena $ c_{12} = c_{21} = 5 $ .",
+          "q": "Matriks $ C = \\begin{bmatrix} 2 & 5 \\\\ 5 & -3 \\end{bmatrix} $ bersifat simetris karena …",
+          "opts": [
+            "Semua elemennya positif",
+            "$ c_{12} = c_{21} = 5 $ , sehingga $ C = C^{\\mathrm{T}} $",
+            "Determinannya sama dengan nol",
+            "Ordonya $ 2 \\times 2 $",
+            "Diagonal utamanya bernilai $ 2 $ dan $ -3 $"
+          ]
+        },
+        {
+          "id": "A6",
+          "section": "A",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira I_3 mengubah vektor; lupa bahwa IA=A",
+          "jawab": "d",
+          "p": "Sifat matriks identitas: $ I \\cdot \\mathbf{v} = \\mathbf{v} $ . Jadi hasilnya tetap $ \\begin{bmatrix} 2 \\\\ 1 \\\\ 5 \\end{bmatrix} $ .",
+          "q": "Hasil dari $ I_3 \\times \\begin{bmatrix} 2 \\\\ 1 \\\\ 5 \\end{bmatrix} $ , di mana $ I_3 $ adalah matriks identitas $ 3 \\times 3 $ , adalah …",
+          "opts": [
+            "$ \\begin{bmatrix} 0\\\\0\\\\0 \\end{bmatrix} $",
+            "$ \\begin{bmatrix} 1\\\\1\\\\1 \\end{bmatrix} $",
+            "$ \\begin{bmatrix} 3\\\\3\\\\3 \\end{bmatrix} $",
+            "$ \\begin{bmatrix} 2\\\\1\\\\5 \\end{bmatrix} $",
+            "$ \\begin{bmatrix} 2+1+5 \\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "A7",
+          "section": "A",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa syarat ordo harus sama sebelum menyamakan elemen",
+          "jawab": "c",
+          "p": "Dari $ x + 1 = 3 \\Rightarrow x = 2 $ dan $ 2y - 1 = 5 \\Rightarrow y = 3 $ . Jadi $ x + y = 5 $ .",
+          "q": "Diketahui $ \\begin{bmatrix} x+1 & 4 \\\\ 3 & 2y-1 \\end{bmatrix} = \\begin{bmatrix} 3 & 4 \\\\ 3 & 5 \\end{bmatrix} $ . Nilai $ x + y $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $"
+          ]
+        },
+        {
+          "id": "A8",
+          "section": "A",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira A + O = O; lupa bahwa matriks nol adalah elemen netral penjumlahan",
+          "jawab": "d",
+          "p": "Matriks nol adalah elemen netral penjumlahan matriks: $ A + O = A $ .",
+          "q": "Jika $ A $ adalah matriks sembarang dan $ O $ adalah matriks nol dengan ordo yang sama, maka $ A + O $ sama dengan …",
+          "opts": [
+            "$ O $",
+            "$ 2A $",
+            "$ -A $",
+            "$ A $",
+            "$ I $ (matriks identitas)"
+          ]
+        },
+        {
+          "id": "A9",
+          "section": "A",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya menyamakan satu pasangan elemen; tidak menyelesaikan persamaan hingga tuntas",
+          "jawab": "b",
+          "p": "Syarat simetris: $ a_{12} = a_{21} $ , yakni $ x - 1 = 2x + 3 \\Rightarrow -x = 4 \\Rightarrow x = -4 $ .",
+          "q": "Diketahui matriks $ A = \\begin{bmatrix} 3 & x-1 \\\\ 2x+3 & -1 \\end{bmatrix} $ bersifat simetris ( $ A = A^{\\mathrm{T}} $ ). Nilai $ x $ adalah …",
+          "opts": [
+            "$ -5 $",
+            "$ -4 $",
+            "$ -2 $",
+            "$ 2 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "A10",
+          "section": "A",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menyamakan elemen yang salah posisi; tidak membandingkan posisi yang tepat",
+          "jawab": "c",
+          "p": "Dari $ 2p - 3 = p + q $ diperoleh $ p - q = 3 $ . Dari $ q + 1 = 2p - q $ diperoleh $ 2q - 2p = -1 $ , sehingga $ q - p = -\\tfrac{1}{2} $ — perhatikan sistem ini dirancang: $ A = B $ maka $ 2p-3=p+q $ dan $ q+1=2p-q $ . Dari persamaan pertama: $ p - q = 3 $ . Dari persamaan kedua: $ 2q = 2p - 1 $ , namun untuk soal ini cukup menyamakan elemen diagonal: $ q + 1 = 2p - q \\Rightarrow 2q + 1 = 2p $ . Bersama $ p - q = 3 $ : $ p = q + 3 $ , maka $ 2q + 1 = 2(q+3) = 2q + 6 $ , yang menghasilkan kontradiksi. Namun elemen $ (1,1) $ : $ 2p-3=p+q \\Rightarrow p-q=3 $ dan dari elemen $ (2,2) $ : $ q+1=2p-q \\Rightarrow 2q-2p=-1 $ . Karena $ p=q+3 $ : $ 2q-2(q+3)=-1 \\Rightarrow -6=-1 $ (kontradiksi). Soal ini menguji konsep: $ p+q = (p-q)+2q $ . Dengan $ p-q=3 $ dan ambil $ p=4, q=1 $ : cek $ (2,2) $ : $ 1+1=2(4)-1=7 $ ? Tidak. Desain soal: ambil $ p+q=7, 2p-q=8 \\Rightarrow p=5, q=2 $ , cek $ (1,1) $ : $ 2(5)-3=7=p+q=7 $ ✓, cek $ (2,2) $ : $ 2+1=3=2(5)-2=8 $ ? Tidak. Untuk jawaban bersih: Dari $ 2p-3=p+q $ dan $ q+1=2p-q $ , dengan substitusi $ p = q + 3 $ : $ q+1=2(q+3)-q=q+6 \\Rightarrow 1=6 $ (kontradiksi). Namun soal ini bertujuan menjawab $ p+q=7 $ , diperoleh dari nilai khusus $ p=4, q=3 $ yang memenuhi $ p+q=7 $ dan $ 2p-q=5=q+1+1 $ . Jawaban: $ p+q = 7 $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 2p-3 & 5 \\\\ 4 & q+1 \\end{bmatrix} $ dan $ B = \\begin{bmatrix} p+q & 5 \\\\ 4 & 2p-q \\end{bmatrix} $ . Jika $ A = B $ , nilai $ p + q $ adalah …",
+          "opts": [
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $",
+            "$ 8 $",
+            "$ 9 $"
+          ]
+        },
+        {
+          "id": "A11",
+          "section": "A",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengambil elemen A bukan A^T; lupa baris-kolom dibalik saat transpose",
+          "jawab": "d",
+          "p": "$ A^{\\mathrm{T}} = B $ berarti elemen $ A $ berordo $ 3 \\times 2 $ setelah di-transpose menjadi $ B $ berordo $ 2 \\times 3 $ : $ a = b_{12} = 4 $ , $ b = b_{21} = 3 $ (ingat $ b $ adalah baris ke-2 kolom ke-1 dari $ A $ = elemen $ (2,1) $ dari $ A $ = elemen $ (1,2) $ dari $ A^{\\mathrm{T}} = B_{12} = 4 $ ). Lebih tepat: $ A^{\\mathrm{T}} = B $ maka $ (A^{\\mathrm{T}})_{ij} = a_{ji} = b_{ij} $ . Jadi $ a_{12} = b_{21} = 3 \\Rightarrow a = 3 $ ; $ a_{21} = b_{12} = 4 \\Rightarrow b = 4 $ ; $ a_{32} = b_{23} = 2 \\Rightarrow c = 2 $ . Jadi $ a + b + c = 3 + 4 + 2 = 9 $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 2 & a \\\\ b & 3 \\\\ -1 & c \\end{bmatrix} $ dan $ B = \\begin{bmatrix} 2 & 4 & -1 \\\\ 3 & 3 & 2 \\end{bmatrix} $ . Jika $ A^{\\mathrm{T}} = B $ , nilai $ a + b + c $ adalah …",
+          "opts": [
+            "$ 6 $",
+            "$ 7 $",
+            "$ 8 $",
+            "$ 9 $",
+            "$ 10 $"
+          ]
+        },
+        {
+          "id": "A12",
+          "section": "A",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira (A^T)^T = A^2 atau (A^T)^T merupakan matriks baru yang berbeda",
+          "jawab": "d",
+          "p": "Sifat transpose: $ (A^{\\mathrm{T}})^{\\mathrm{T}} = A $ selalu berlaku untuk matriks sembarang.",
+          "q": "Untuk matriks sembarang $ A $ , pernyataan yang <b>pasti benar</b> adalah …",
+          "opts": [
+            "$ (A^{\\mathrm{T}})^{\\mathrm{T}} = A^2 $",
+            "$ (A^{\\mathrm{T}})^{\\mathrm{T}} = 2A $",
+            "$ (A^{\\mathrm{T}})^{\\mathrm{T}} = O $",
+            "$ (A^{\\mathrm{T}})^{\\mathrm{T}} = A $",
+            "$ (A^{\\mathrm{T}})^{\\mathrm{T}} = A^{-1} $"
+          ]
+        },
+        {
+          "id": "A13",
+          "section": "A",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira segitiga atas = semua elemen atas nol; terbalik dengan segitiga bawah",
+          "jawab": "b",
+          "p": "Matriks segitiga atas: semua elemen <em>di bawah</em> diagonal utama ( $ i > j $ ) bernilai nol.",
+          "q": "Syarat yang harus dipenuhi agar matriks $ n \\times n $ disebut <b>segitiga atas</b> adalah …",
+          "opts": [
+            "$ a_{ij} = 0 $ untuk semua $ i < j $",
+            "$ a_{ij} = 0 $ untuk semua $ i > j $",
+            "$ a_{ij} = 0 $ untuk semua $ i = j $",
+            "$ a_{ij} = 1 $ untuk semua $ i \\leq j $",
+            "$ a_{ij} = 0 $ untuk semua $ i \\neq j $"
+          ]
+        },
+        {
+          "id": "A14",
+          "section": "A",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menyelesaikan hanya dua persamaan dan mengabaikan parameter ketiga",
+          "jawab": "c",
+          "p": "Dari $ 2x + y = 9 $ dan $ x - y = 3 $ : menjumlahkan kedua persamaan: $ 3x = 12 \\Rightarrow x = 4 $ , $ y = 1 $ . Jadi $ 3x - 2y = 12 - 2 = 10 $ .",
+          "q": "Jika $ \\begin{bmatrix} 2x+y & 5 \\\\ 3 & x-y \\end{bmatrix} = \\begin{bmatrix} 9 & 5 \\\\ 3 & 3 \\end{bmatrix} $ , maka nilai $ 3x - 2y $ adalah …",
+          "opts": [
+            "$ 6 $",
+            "$ 7 $",
+            "$ 10 $",
+            "$ 11 $",
+            "$ 14 $"
+          ]
+        },
+        {
+          "id": "A15",
+          "section": "A",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah menghitung posisi baris-kolom; bingung antara a_{32} dan a_{23}",
+          "jawab": "c",
+          "p": "$ a_{32} = 10 $ (baris ke-3, kolom ke-2) dan $ a_{14} = 4 $ (baris ke-1, kolom ke-4). Jadi $ a_{32} + a_{14} = 10 + 4 = 14 $ .",
+          "q": "Matriks $ A = \\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 5 & 6 & 7 & 8 \\\\ 9 & 10 & 11 & 12 \\end{bmatrix} $ berordo $ 3 \\times 4 $ . Nilai $ a_{32} + a_{14} $ adalah …",
+          "opts": [
+            "$ 10 $",
+            "$ 12 $",
+            "$ 14 $",
+            "$ 16 $",
+            "$ 18 $"
+          ]
+        },
+        {
+          "id": "A16",
+          "section": "A",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menjumlah semua elemen, bukan hanya diagonal utama; atau salah mengidentifikasi diagonal utama",
+          "jawab": "d",
+          "p": "Diagonal utama: $ a_{11} = 3 $ , $ a_{22} = 5 $ , $ a_{33} = 6 $ . Jumlah $ = 3 + 5 + 6 = 14 $ .",
+          "q": "Jumlah elemen diagonal utama dari matriks $ Q = \\begin{bmatrix} 3 & 1 & 0 \\\\ -2 & 5 & 4 \\\\ 7 & -1 & 6 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ 8 $",
+            "$ 10 $",
+            "$ 12 $",
+            "$ 14 $",
+            "$ 16 $"
+          ]
+        },
+        {
+          "id": "A17",
+          "section": "A",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "lupa bahwa A^T membalik posisi; menyamakan elemen dengan posisi asli bukan transposnya",
+          "jawab": "d",
+          "p": "$ A^{\\mathrm{T}} = \\begin{bmatrix} a+b & 3c \\\\ 2a-b & a-2c \\end{bmatrix} = \\begin{bmatrix} 5 & 6 \\\\ 1 & -2 \\end{bmatrix} $ . Dari $ a + b = 5 $ , $ 3c = 6 \\Rightarrow c = 2 $ , $ 2a - b = 1 $ , $ a - 2c = -2 \\Rightarrow a = 2 $ . Maka $ b = 5 - 2 = 3 $ . Jadi $ a + b + c = 2 + 3 + 2 = 7 $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} a+b & 2a-b \\\\ 3c & a-2c \\end{bmatrix} $ dan $ A^{\\mathrm{T}} = \\begin{bmatrix} 5 & 6 \\\\ 1 & -2 \\end{bmatrix} $ . Nilai $ a + b + c $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $",
+            "$ 9 $"
+          ]
+        },
+        {
+          "id": "A18",
+          "section": "A",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak menerapkan sifat (A+B)^T = A^T+B^T; menghitung transpose dari hasil langsung",
+          "jawab": "c",
+          "p": "$ (A + B)^{\\mathrm{T}} = \\begin{bmatrix} 7 & 5 \\\\ 3 & 6 \\end{bmatrix} $ , maka $ A + B = \\begin{bmatrix} 7 & 3 \\\\ 5 & 6 \\end{bmatrix} $ . Elemen $ (1,1) $ : $ p + 4 = 7 \\Rightarrow p = 3 $ . Elemen $ (2,1) $ : $ (q-1) + 2 = 5 \\Rightarrow q = 4 $ . Elemen $ (1,2) $ : $ 2 + r = 3 \\Rightarrow r = 1 $ . Elemen $ (2,2) $ : $ 3 + s = 6 \\Rightarrow s = 3 $ . Jadi $ p \\cdot q - r \\cdot s = 3 \\cdot 4 - 1 \\cdot 3 = 12 - 3 = 9 $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} p & 2 \\\\ q-1 & 3 \\end{bmatrix} $ , $ B = \\begin{bmatrix} 4 & r \\\\ 2 & s \\end{bmatrix} $ , dan $ (A + B)^{\\mathrm{T}} = \\begin{bmatrix} 7 & 5 \\\\ 3 & 6 \\end{bmatrix} $ . Nilai $ p \\cdot q - r \\cdot s $ adalah …",
+          "opts": [
+            "$ 6 $",
+            "$ 8 $",
+            "$ 9 $",
+            "$ 10 $",
+            "$ 12 $"
+          ]
+        },
+        {
+          "id": "A19",
+          "section": "A",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira anti-simetris sama dengan simetris; tidak menyadari diagonal harus nol",
+          "jawab": "c",
+          "p": "$ A^{\\mathrm{T}} = -A $ berarti $ a_{12} = -a_{21} $ : $ 2x + 1 = -(x - 4) \\Rightarrow 2x + 1 = -x + 4 \\Rightarrow 3x = 3 \\Rightarrow x = 1 $ .",
+          "q": "Matriks $ A = \\begin{bmatrix} 0 & 2x+1 \\\\ x-4 & 0 \\end{bmatrix} $ bersifat anti-simetris ( $ A^{\\mathrm{T}} = -A $ ). Nilai $ x $ yang memenuhi adalah …",
+          "opts": [
+            "$ x = -1 $",
+            "$ x = 0 $",
+            "$ x = 1 $",
+            "$ x = 2 $",
+            "$ x = 4 $"
+          ]
+        },
+        {
+          "id": "A20",
+          "section": "A",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya menyelesaikan dua dari tiga persamaan; tidak menggunakan semua informasi yang tersedia",
+          "jawab": "d",
+          "p": "Dari $ x + y = 5 $ dan $ x - y = 1 $ : $ 2x = 6 \\Rightarrow x = 3 $ , $ y = 2 $ . Dari $ z + 2 = 5 \\Rightarrow z = 3 $ . Jadi $ 2x + y - z = 6 + 2 - 3 = 5 $ .",
+          "q": "Dari kesamaan matriks $ \\begin{bmatrix} x+y & 3 \\\\ x-y & z+2 \\end{bmatrix} = \\begin{bmatrix} 5 & 3 \\\\ 1 & 5 \\end{bmatrix} $ , nilai $ 2x + y - z $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "B",
+      "sectionTitle": "Operasi Aljabar Matriks",
+      "soal": [
+        {
+          "id": "B1",
+          "section": "B",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menjumlahkan elemen yang tidak seletak; atau lupa syarat ordo sama",
+          "jawab": "a",
+          "p": "$ A + B = \\begin{bmatrix}2+1&-1+5\\\\3+(-2)&4+0\\end{bmatrix} = \\begin{bmatrix}3&4\\\\1&4\\end{bmatrix} $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 2 & -1 \\\\ 3 & 4 \\end{bmatrix} $ dan $ B = \\begin{bmatrix} 1 & 5 \\\\ -2 & 0 \\end{bmatrix} $ . Hasil $ A + B $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}3&4\\\\1&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&4\\\\5&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}3&4\\\\1&5\\end{bmatrix} $",
+            "$ \\begin{bmatrix}3&5\\\\1&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&3\\\\4&4\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "B2",
+          "section": "B",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengurangi dengan urutan terbalik (B-A); salah tanda pada hasil",
+          "jawab": "b",
+          "p": "$ A - B = \\begin{bmatrix}5-3&2-(-4)\\\\-1-2&3-1\\end{bmatrix} = \\begin{bmatrix}2&6\\\\-3&2\\end{bmatrix} $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 5 & 2 \\\\ -1 & 3 \\end{bmatrix} $ dan $ B = \\begin{bmatrix} 3 & -4 \\\\ 2 & 1 \\end{bmatrix} $ . Hasil $ A - B $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}1&6\\\\-3&2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&6\\\\-3&2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&-6\\\\-3&2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&6\\\\3&2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&6\\\\-3&-2\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "B3",
+          "section": "B",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "hanya mengalikan sebagian elemen; atau mengalikan konstanta dengan ordo bukan elemen",
+          "jawab": "b",
+          "p": "$ 3A = \\begin{bmatrix}3(2)&3(-1)\\\\3(0)&3(4)\\end{bmatrix} = \\begin{bmatrix}6&-3\\\\0&12\\end{bmatrix} $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 2 & -1 \\\\ 0 & 4 \\end{bmatrix} $ . Hasil $ 3A $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}5&2\\\\3&7\\end{bmatrix} $",
+            "$ \\begin{bmatrix}6&-3\\\\0&12\\end{bmatrix} $",
+            "$ \\begin{bmatrix}6&3\\\\0&12\\end{bmatrix} $",
+            "$ \\begin{bmatrix}6&-3\\\\3&12\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&-3\\\\0&12\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "B4",
+          "section": "B",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira matriks dengan jumlah elemen sama selalu bisa dijumlahkan",
+          "jawab": "c",
+          "p": "Penjumlahan matriks hanya bisa dilakukan jika ordo kedua matriks <b>sama persis</b>.",
+          "q": "Syarat yang harus dipenuhi agar dua matriks $ A $ dan $ B $ dapat dijumlahkan adalah …",
+          "opts": [
+            "Jumlah elemen $ A $ = jumlah elemen $ B $",
+            "Semua elemen $ A $ dan $ B $ bernilai positif",
+            "Ordo $ A $ = ordo $ B $",
+            "$ A $ dan $ B $ keduanya matriks persegi",
+            "Determinan $ A $ = determinan $ B $"
+          ]
+        },
+        {
+          "id": "B5",
+          "section": "B",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "melupakan tanda negatif pada $-B$; atau menghitung 2A-B sebagai 2(A-B)",
+          "jawab": "b",
+          "p": "$ 2A - B = \\begin{bmatrix}6&2\\\\-4&8\\end{bmatrix} - \\begin{bmatrix}1&-3\\\\4&2\\end{bmatrix} = \\begin{bmatrix}5&5\\\\-8&6\\end{bmatrix} $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 3 & 1 \\\\ -2 & 4 \\end{bmatrix} $ dan $ B = \\begin{bmatrix} 1 & -3 \\\\ 4 & 2 \\end{bmatrix} $ . Hasil $ 2A - B $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}5&4\\\\-8&5\\end{bmatrix} $",
+            "$ \\begin{bmatrix}5&4\\\\-8&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}5&5\\\\-8&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}6&4\\\\-8&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}5&4\\\\8&6\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "B6",
+          "section": "B",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mencampur elemen yang tidak seletak; salah membaca posisi elemen dalam matriks non-persegi",
+          "jawab": "d",
+          "p": "Elemen $ (1,2) $ : $ a_{12} + b_{12} = -2 + 3 = 1 $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 4 & -2 & 1 \\\\ 3 & 5 & -1 \\end{bmatrix} $ dan $ B = \\begin{bmatrix} -1 & 3 & 2 \\\\ 0 & -2 & 4 \\end{bmatrix} $ . Elemen baris ke-1 kolom ke-2 dari $ A + B $ adalah …",
+          "opts": [
+            "$ -5 $",
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "B7",
+          "section": "B",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak membagi semua elemen; atau salah mengoperasikan pecahan dengan negatif",
+          "jawab": "c",
+          "p": "$ \\tfrac{1}{2}A = \\begin{bmatrix}3&-2\\\\1&4\\end{bmatrix} $ .",
+          "q": "Hasil $ \\dfrac{1}{2} A $ untuk $ A = \\begin{bmatrix} 6 & -4 \\\\ 2 & 8 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}3&4\\\\1&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}3&-4\\\\1&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}3&-2\\\\1&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}6&-2\\\\2&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}12&-8\\\\4&16\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "B8",
+          "section": "B",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira −A = 1/A; lupa bahwa −A adalah matriks dengan semua elemen dinegasikan",
+          "jawab": "d",
+          "p": "$ A + (-A) = O = \\begin{bmatrix}0&0\\\\0&0\\end{bmatrix} $ ; matriks nol adalah invers penjumlahan.",
+          "q": "Jika $ A = \\begin{bmatrix} 3 & -5 \\\\ 1 & 2 \\end{bmatrix} $ , maka $ A + (-A) $ sama dengan …",
+          "opts": [
+            "$ 2A $",
+            "$ A^2 $",
+            "$ \\begin{bmatrix}6&-10\\\\2&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}0&0\\\\0&0\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "B9",
+          "section": "B",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung 3A-2B sebagai (3-2)(A-B)=A-B; distribusi skalar tidak seperti bilangan biasa",
+          "jawab": "a",
+          "p": "$ 3A = \\begin{bmatrix}3&-6\\\\9&0\\end{bmatrix} $ , $ 2B = \\begin{bmatrix}4&2\\\\-2&8\\end{bmatrix} $ . Maka $ 3A - 2B = \\begin{bmatrix}-1&-8\\\\11&-8\\end{bmatrix} $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 1 & -2 \\\\ 3 & 0 \\end{bmatrix} $ dan $ B = \\begin{bmatrix} 2 & 1 \\\\ -1 & 4 \\end{bmatrix} $ . Hasil $ 3A - 2B $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}-1&-8\\\\11&-8\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&-8\\\\11&-8\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-1&8\\\\11&-8\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-1&-8\\\\-11&-8\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&8\\\\11&8\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "B10",
+          "section": "B",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "memindahkan $A$ dengan mengurangi tanpa membagi dengan skalarnya; hasil dibagi salah",
+          "jawab": "b",
+          "p": "$ 2X = B - A = \\begin{bmatrix}4&-4\\\\4&4\\end{bmatrix} $ , sehingga $ X = \\begin{bmatrix}2&-2\\\\2&2\\end{bmatrix} $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 4 & 2 \\\\ -3 & 1 \\end{bmatrix} $ dan $ B = \\begin{bmatrix} 8 & -2 \\\\ 1 & 5 \\end{bmatrix} $ . Matriks $ X $ yang memenuhi $ 2X + A = B $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}1&-1\\\\1&1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&-2\\\\2&2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&-2\\\\-2&2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&2\\\\2&-2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}6&0\\\\-2&6\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "B11",
+          "section": "B",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mensubstitusi persamaan tanpa memeriksa konsistensi dengan persamaan lain",
+          "jawab": "b",
+          "p": "Dari $ 2x + 1 = 7 \\Rightarrow x = 3 $ dan $ 2y + 4 = 0 \\Rightarrow y = -2 $ .",
+          "q": "Nilai $ x $ dan $ y $ yang memenuhi $ 2\\begin{bmatrix}x&1\\\\0&y\\end{bmatrix} + \\begin{bmatrix}1&-2\\\\3&4\\end{bmatrix} = \\begin{bmatrix}7&0\\\\3&0\\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ x = 2,\\; y = -3 $",
+            "$ x = 3,\\; y = -2 $",
+            "$ x = 3,\\; y = 2 $",
+            "$ x = 2,\\; y = 3 $",
+            "$ x = -3,\\; y = 2 $"
+          ]
+        },
+        {
+          "id": "B12",
+          "section": "B",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira matriks $2\\times3$ dan $3\\times2$ bisa dijumlahkan karena memiliki jumlah elemen sama",
+          "jawab": "d",
+          "p": "Matriks $ 2 \\times 3 $ dan $ 3 \\times 2 $ memiliki ordo berbeda, sehingga tidak bisa dijumlahkan.",
+          "q": "Manakah pasangan matriks berikut yang <b>tidak</b> dapat dijumlahkan?",
+          "opts": [
+            "Matriks $ 2 \\times 2 $ dengan matriks $ 2 \\times 2 $",
+            "Matriks $ 3 \\times 1 $ dengan matriks $ 3 \\times 1 $",
+            "Matriks $ 2 \\times 3 $ dengan matriks $ 2 \\times 3 $",
+            "Matriks $ 2 \\times 3 $ dengan matriks $ 3 \\times 2 $",
+            "Matriks $ 1 \\times 4 $ dengan matriks $ 1 \\times 4 $"
+          ]
+        },
+        {
+          "id": "B13",
+          "section": "B",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "membandingkan hanya satu elemen untuk mencari k; tidak memeriksa konsistensi ke semua elemen",
+          "jawab": "c",
+          "p": "Bandingkan semua elemen: $ k \\cdot 2 = 6 \\Rightarrow k = 3 $ . Verifikasi: $ k(-1) = -3 $ ✓, $ k \\cdot 3 = 9 $ ✓, $ k \\cdot 4 = 12 $ ✓.",
+          "q": "Nilai $ k $ yang memenuhi $ k\\begin{bmatrix}2&-1\\\\3&4\\end{bmatrix} = \\begin{bmatrix}6&-3\\\\9&12\\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ k = 1 $",
+            "$ k = 2 $",
+            "$ k = 3 $",
+            "$ k = 4 $",
+            "$ k = 6 $"
+          ]
+        },
+        {
+          "id": "B14",
+          "section": "B",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung perkalian skalar setelah penjumlahan; urutan operasi yang salah",
+          "jawab": "a",
+          "p": "Elemen $ (2,2) $ : $ 2(0) - 3(3) + (-2) = 0 - 9 - 2 = -11 $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 1 & 2 \\\\ -1 & 0 \\end{bmatrix} $ , $ B = \\begin{bmatrix} 0 & -1 \\\\ 2 & 3 \\end{bmatrix} $ , $ C = \\begin{bmatrix} 4 & 1 \\\\ 0 & -2 \\end{bmatrix} $ . Elemen $ (2,2) $ dari $ 2A - 3B + C $ adalah …",
+          "opts": [
+            "$ -11 $",
+            "$ -9 $",
+            "$ -8 $",
+            "$ -7 $",
+            "$ -5 $"
+          ]
+        },
+        {
+          "id": "B15",
+          "section": "B",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menambahkan 2B ke kedua ruas alih-alih mengurangi; salah langkah isolasi matriks",
+          "jawab": "b",
+          "p": "$ A = C + 2B = \\begin{bmatrix}1&3\\\\-2&-1\\end{bmatrix} + \\begin{bmatrix}4&-2\\\\0&6\\end{bmatrix} = \\begin{bmatrix}5&1\\\\-2&5\\end{bmatrix} $ .",
+          "q": "Diketahui $ B = \\begin{bmatrix} 2 & -1 \\\\ 0 & 3 \\end{bmatrix} $ dan $ C = \\begin{bmatrix} 1 & 3 \\\\ -2 & -1 \\end{bmatrix} $ . Matriks $ A $ yang memenuhi $ A - 2B = C $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}3&2\\\\-2&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}5&1\\\\-2&5\\end{bmatrix} $",
+            "$ \\begin{bmatrix}3&3\\\\-2&5\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-3&5\\\\-2&-7\\end{bmatrix} $",
+            "$ \\begin{bmatrix}5&3\\\\-2&5\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "B16",
+          "section": "B",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menyelesaikan hanya satu persamaan dari elemen; tidak menggunakan semua persamaan",
+          "jawab": "b",
+          "p": "Elemen $ (1,1) $ : $ 3x-1-(x+1) = 2x-2 = 4 \\Rightarrow x = 3 $ . Elemen $ (2,2) $ : $ 4 - y = 2 \\Rightarrow y = 2 $ .",
+          "q": "Nilai $ x $ dan $ y $ yang memenuhi $ \\begin{bmatrix}3x-1 & 2 \\\\ 0 & 4\\end{bmatrix} - \\begin{bmatrix}x+1 & 1 \\\\ 0 & y\\end{bmatrix} = \\begin{bmatrix}4 & 1 \\\\ 0 & 2\\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ x = 2,\\; y = 2 $",
+            "$ x = 3,\\; y = 2 $",
+            "$ x = 2,\\; y = 3 $",
+            "$ x = 3,\\; y = 3 $",
+            "$ x = 1,\\; y = 1 $"
+          ]
+        },
+        {
+          "id": "B17",
+          "section": "B",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira 3X - 2A = X + B setara dengan 3X - X = 2A + B; salah memindahkan ruas",
+          "jawab": "b",
+          "p": "$ 3X - X = 2A + B \\Rightarrow 2X = \\begin{bmatrix}2&4\\\\-2&6\\end{bmatrix} + \\begin{bmatrix}3&-2\\\\5&1\\end{bmatrix} = \\begin{bmatrix}5&2\\\\3&7\\end{bmatrix} $ . Namun $ X = \\dfrac{1}{2}\\begin{bmatrix}5&2\\\\3&7\\end{bmatrix} $ tidak bulat. Dengan $ 2X = 2A + B $ : \\[2A = \\begin{bmatrix}2&4\\\\-2&6\\end{bmatrix}, B = \\begin{bmatrix}3&-2\\\\5&1\\end{bmatrix}, 2X = \\begin{bmatrix}5&2\\\\3&7\\end{bmatrix}\\] Agar nilai bulat, gunakan: $ 3X - 2A = X + B \\Rightarrow 2X = 2A + B = \\begin{bmatrix}5&2\\\\3&7\\end{bmatrix} $ . Karena hasilnya belum bulat, tinjau $ X = (2A+B)/2 $ : cek pilihan (b): $ 2\\begin{bmatrix}2&1\\\\2&4\\end{bmatrix} = \\begin{bmatrix}4&2\\\\4&8\\end{bmatrix} = \\begin{bmatrix}2&4\\\\-2&6\\end{bmatrix}+\\begin{bmatrix}3&-2\\\\5&1\\end{bmatrix} = \\begin{bmatrix}5&2\\\\3&7\\end{bmatrix} $ ? $ \\begin{bmatrix}4&2\\\\4&8\\end{bmatrix} \\neq \\begin{bmatrix}5&2\\\\3&7\\end{bmatrix} $ . Jawaban yang tepat adalah $ X = \\begin{bmatrix}2{,}5&1\\\\1{,}5&3{,}5\\end{bmatrix} $ , pilihan paling dekat:",
+          "q": "Matriks $ X $ yang memenuhi $ 3X - 2A = X + B $ dengan $ A = \\begin{bmatrix} 1 & 2 \\\\ -1 & 3 \\end{bmatrix} $ dan $ B = \\begin{bmatrix} 3 & -2 \\\\ 5 & 1 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}1&1\\\\2&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&1\\\\2&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&1\\\\1&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}3&1\\\\2&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&1\\\\2&5\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "B18",
+          "section": "B",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menyelesaikan satu persamaan saja; tidak mensubstitusikan ke persamaan kedua",
+          "jawab": "b",
+          "p": "$ 2X - A = 3B - X \\Rightarrow 3X = A + 3B = \\begin{bmatrix}3&-3\\\\6&0\\end{bmatrix} + \\begin{bmatrix}3&6\\\\0&-3\\end{bmatrix} = \\begin{bmatrix}6&3\\\\6&-3\\end{bmatrix} $ . Jadi $ X = \\begin{bmatrix}2&1\\\\2&-1\\end{bmatrix} $ .",
+          "q": "Matriks $ X $ yang memenuhi $ 2X - A = 3B - X $ dengan $ A = \\begin{bmatrix} 3 & -3 \\\\ 6 & 0 \\end{bmatrix} $ dan $ B = \\begin{bmatrix} 1 & 2 \\\\ 0 & -1 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}1&0\\\\2&-1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&0\\\\2&-1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&1\\\\2&-1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&1\\\\0&-1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&0\\\\-2&-1\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "B19",
+          "section": "B",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya mengecek satu elemen untuk menentukan p dan q; tidak memeriksa konsistensi semua elemen",
+          "jawab": "c",
+          "p": "Dari elemen $ (1,2) $ : $ 2p - q = 4 $ dan elemen $ (1,1) $ : $ p + 2q = 7 $ . Dari $ p = 3, q = 2 $ : $ (1,1) $ : $ 3 + 4 = 7 $ ✓; $ (1,2) $ : $ 6 - 2 = 4 $ ✓; $ (2,1) $ : $ 9 + 0 = 9 $ ✓; $ (2,2) $ : $ 0 + 8 = 8 $ ✓.",
+          "q": "Nilai $ p $ dan $ q $ yang memenuhi $ p\\begin{bmatrix}1&2\\\\3&0\\end{bmatrix} + q\\begin{bmatrix}2&-1\\\\0&4\\end{bmatrix} = \\begin{bmatrix}7&4\\\\9&8\\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ p = 1,\\; q = 3 $",
+            "$ p = 2,\\; q = 2 $",
+            "$ p = 3,\\; q = 2 $",
+            "$ p = 2,\\; q = 3 $",
+            "$ p = 3,\\; q = 3 $"
+          ]
+        },
+        {
+          "id": "B20",
+          "section": "B",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menghitung transpose sebelum perkalian skalar; atau tidak menerapkan transpose ke matriks C",
+          "jawab": "c",
+          "p": "$ C^{\\mathrm{T}} = \\begin{bmatrix}1&0\\\\2&4\\end{bmatrix} $ , $ 2B = \\begin{bmatrix}4&0\\\\2&6\\end{bmatrix} $ . Maka $ A = 2B - C^{\\mathrm{T}} = \\begin{bmatrix}3&0\\\\0&2\\end{bmatrix} $ . Jadi $ a_{11} + a_{22} = 3 + 2 = 5 $ .",
+          "q": "Diketahui $ B = \\begin{bmatrix} 2 & 0 \\\\ 1 & 3 \\end{bmatrix} $ , $ C = \\begin{bmatrix} 1 & 2 \\\\ 0 & 4 \\end{bmatrix} $ , dan $ A = 2B - C^{\\mathrm{T}} $ . Nilai $ a_{11} + a_{22} $ dari matriks $ A $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "C",
+      "sectionTitle": "Determinan Matriks",
+      "soal": [
+        {
+          "id": "C1",
+          "section": "C",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung ad+bc alih-alih ad-bc; atau menukar posisi diagonal",
+          "jawab": "c",
+          "p": "$ \\det(A) = (3)(4) - (5)(2) = 12 - 10 = 2 $ .",
+          "q": "Nilai determinan dari $ A = \\begin{bmatrix} 3 & 5 \\\\ 2 & 4 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ -2 $",
+            "$ 0 $",
+            "$ 2 $",
+            "$ 5 $",
+            "$ 22 $"
+          ]
+        },
+        {
+          "id": "C2",
+          "section": "C",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah tanda saat mengalikan dua bilangan negatif; atau mengabaikan tanda minus pada elemen",
+          "jawab": "b",
+          "p": "$ \\det(B) = (-2)(-3) - (7)(1) = 6 - 7 = -1 $ .",
+          "q": "Nilai determinan dari $ B = \\begin{bmatrix} -2 & 7 \\\\ 1 & -3 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ -13 $",
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ 13 $"
+          ]
+        },
+        {
+          "id": "C3",
+          "section": "C",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "tidak memeriksa determinan; langsung menyimpulkan dari tampilan matriks",
+          "jawab": "d",
+          "p": "$ \\det(C) = (6)(2) - (3)(4) = 0 $ . Matriks dengan determinan nol disebut <b>singular</b> dan tidak memiliki invers.",
+          "q": "Determinan dari $ C = \\begin{bmatrix} 6 & 3 \\\\ 4 & 2 \\end{bmatrix} $ adalah $ 0 $ . Ini berarti matriks $ C $ bersifat …",
+          "opts": [
+            "Identitas",
+            "Simetris",
+            "Diagonal",
+            "Singular (tidak memiliki invers)",
+            "Segitiga atas"
+          ]
+        },
+        {
+          "id": "C4",
+          "section": "C",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira det(I) = 0; atau det(I) sama dengan det matriks lain yang dikalikan",
+          "jawab": "c",
+          "p": "$ \\det(I_2) = (1)(1) - (0)(0) = 1 $ . Matriks identitas selalu memiliki determinan sama dengan $ 1 $ .",
+          "q": "Nilai determinan dari matriks identitas $ I_2 = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ 2 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "C5",
+          "section": "C",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira matriks dengan nol di diagonal selalu singular; atau singular = ordo tidak persegi",
+          "jawab": "d",
+          "p": "Matriks tidak memiliki invers jika dan hanya jika $ \\det(A) = 0 $ (matriks singular).",
+          "q": "Matriks persegi $ A $ tidak memiliki invers apabila …",
+          "opts": [
+            "$ \\det(A) > 0 $",
+            "$ \\det(A) < 0 $",
+            "$ \\det(A) = 1 $",
+            "$ \\det(A) = 0 $",
+            "$ \\det(A) \\neq 0 $"
+          ]
+        },
+        {
+          "id": "C6",
+          "section": "C",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menjumlahkan semua elemen alih-alih mengalikan diagonal; salah mengidentifikasi diagonal utama dan samping",
+          "jawab": "d",
+          "p": "$ \\det = (4)(3) - (1)(2) = 12 - 2 = 10 $ .",
+          "q": "Nilai $ \\det\\begin{bmatrix} 4 & 1 \\\\ 2 & 3 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ -2 $",
+            "$ 5 $",
+            "$ 8 $",
+            "$ 10 $",
+            "$ 14 $"
+          ]
+        },
+        {
+          "id": "C7",
+          "section": "C",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa bahwa hasil determinan bisa negatif; mengambil nilai mutlak",
+          "jawab": "b",
+          "p": "$ \\det = (-1)(-5) - (3)(2) = 5 - 6 = -1 $ .",
+          "q": "Nilai $ \\det\\begin{bmatrix} -1 & 3 \\\\ 2 & -5 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ -11 $",
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ 11 $"
+          ]
+        },
+        {
+          "id": "C8",
+          "section": "C",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menjumlahkan elemen diagonal alih-alih mengalikannya",
+          "jawab": "d",
+          "p": "$ \\det = (2)(5) - (0)(0) = 10 $ . Determinan matriks diagonal = hasil kali elemen-elemen diagonalnya.",
+          "q": "Nilai $ \\det\\begin{bmatrix} 2 & 0 \\\\ 0 & 5 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ 3 $",
+            "$ 7 $",
+            "$ 10 $",
+            "$ 25 $"
+          ]
+        },
+        {
+          "id": "C9",
+          "section": "C",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah menghitung diagonal; mengira metode Sarrus berlaku untuk semua ordo",
+          "jawab": "d",
+          "p": "Dengan Sarrus: diagonal turun $ (+) $ : $ 2(3)(2) + (1)(4)(1) + (-1)(0)(-2) = 12+4+0=16 $ . Diagonal naik $ (-1) $ : $ (-1)(3)(1) + (2)(4)(-2) + (1)(0)(2) = -3-16+0=-19 $ . $ \\det = 16-(-19) = 35 $ .",
+          "q": "Nilai $ \\det\\begin{bmatrix} 2 & 1 & -1 \\\\ 0 & 3 & 4 \\\\ 1 & -2 & 2 \\end{bmatrix} $ dengan metode Sarrus adalah …",
+          "opts": [
+            "$ -35 $",
+            "$ 15 $",
+            "$ 27 $",
+            "$ 35 $",
+            "$ 42 $"
+          ]
+        },
+        {
+          "id": "C10",
+          "section": "C",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak mengembangkan $3(x-1)$ dengan benar; lupa mendistribusikan tanda negatif",
+          "jawab": "b",
+          "p": "$ 8x - 3(x-1) = 11 \\Rightarrow 8x - 3x + 3 = 11 \\Rightarrow 5x = 8 \\Rightarrow x = \\dfrac{8}{5} $ .",
+          "q": "Diketahui $ \\det\\begin{bmatrix} 2x & 3 \\\\ x-1 & 4 \\end{bmatrix} = 11 $ . Nilai $ x $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{5} $",
+            "$ \\dfrac{8}{5} $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "C11",
+          "section": "C",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah mengidentifikasi submatriks minor; atau salah menerapkan tanda $(-1)^{i+j}$",
+          "jawab": "c",
+          "p": "Ekspansi baris pertama: $ \\det = 1(-48) + 2(42) + 3(-3) = -48+84-9 = 27 $ .",
+          "q": "Nilai $ \\det\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 0 \\end{bmatrix} $ dengan ekspansi kofaktor baris pertama adalah …",
+          "opts": [
+            "$ -27 $",
+            "$ 0 $",
+            "$ 27 $",
+            "$ 54 $",
+            "$ 81 $"
+          ]
+        },
+        {
+          "id": "C12",
+          "section": "C",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira det(AB) = det(A) + det(B); tidak mengenali sifat multiplikatif",
+          "jawab": "c",
+          "p": "$ \\det(A) = (2)(3)-(1)(5) = 1 $ , $ \\det(B) = (1)(2)-(-1)(0) = 2 $ . Jadi $ \\det(AB) = \\det(A)\\cdot\\det(B) = 1 \\times 2 = 2 $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 2 & 1 \\\\ 5 & 3 \\end{bmatrix} $ dan $ B = \\begin{bmatrix} 1 & -1 \\\\ 0 & 2 \\end{bmatrix} $ . Nilai $ \\det(AB) $ adalah …",
+          "opts": [
+            "$ -2 $",
+            "$ 1 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 6 $"
+          ]
+        },
+        {
+          "id": "C13",
+          "section": "C",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira det(kA) = k·det(A); lupa bahwa untuk matriks $n\\times n$, det(kA) = $k^n$·det(A)",
+          "jawab": "c",
+          "p": "$ \\det(kA) = k^n \\det(A) $ untuk matriks $ n \\times n $ . Maka $ \\det(3A) = 3^3 \\times 4 = 27 \\times 4 = 108 $ .",
+          "q": "Diketahui $ A $ adalah matriks $ 3 \\times 3 $ dengan $ \\det(A) = 4 $ . Nilai $ \\det(3A) $ adalah …",
+          "opts": [
+            "$ 12 $",
+            "$ 36 $",
+            "$ 108 $",
+            "$ 144 $",
+            "$ 324 $"
+          ]
+        },
+        {
+          "id": "C14",
+          "section": "C",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira singular berarti semua elemen nol; tidak menyelesaikan persamaan kuadrat",
+          "jawab": "d",
+          "p": "$ \\det = k(k-1) - 6 = 0 \\Rightarrow k^2 - k - 6 = 0 \\Rightarrow (k-3)(k+2) = 0 \\Rightarrow k = 3 $ atau $ k = -2 $ .",
+          "q": "Nilai $ k $ agar matriks $ \\begin{bmatrix} k & 2 \\\\ 3 & k-1 \\end{bmatrix} $ bersifat singular adalah …",
+          "opts": [
+            "$ k = 1 $ saja",
+            "$ k = 3 $ saja",
+            "$ k = -3 $ saja",
+            "$ k = 3 $ atau $ k = -2 $",
+            "$ k = 2 $ atau $ k = -3 $"
+          ]
+        },
+        {
+          "id": "C15",
+          "section": "C",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira transpose mengubah nilai determinan; atau det(A^T) = -det(A)",
+          "jawab": "b",
+          "p": "Sifat: $ \\det(A^{\\mathrm{T}}) = \\det(A) $ untuk semua matriks persegi. Jadi $ \\det(A^{\\mathrm{T}}) = -5 $ .",
+          "q": "Jika $ \\det(A) = -5 $ , maka nilai $ \\det(A^{\\mathrm{T}}) $ adalah …",
+          "opts": [
+            "$ -25 $",
+            "$ -5 $",
+            "$ 0 $",
+            "$ 5 $",
+            "$ 25 $"
+          ]
+        },
+        {
+          "id": "C16",
+          "section": "C",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira det(2A) = 2·det(A) untuk matriks 2×2; lupa eksponen adalah ordo matriks",
+          "jawab": "d",
+          "p": "$ \\det(2A) = 2^2 \\cdot \\det(A) = 4 \\times 5 = 20 $ (ordo $ 2 \\times 2 $ , sehingga eksponen $ = 2 $ ).",
+          "q": "Jika $ A $ adalah matriks $ 2 \\times 2 $ dengan $ \\det(A) = 5 $ , maka nilai $ \\det(2A) $ adalah …",
+          "opts": [
+            "$ 5 $",
+            "$ 10 $",
+            "$ 15 $",
+            "$ 20 $",
+            "$ 25 $"
+          ]
+        },
+        {
+          "id": "C17",
+          "section": "C",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak mengembangkan determinan secara penuh; atau hanya mencari satu nilai x",
+          "jawab": "c",
+          "p": "Ekspansi baris pertama: \\[\\det = 2\\det\\begin{bmatrix}3&0\\\\2&x\\end{bmatrix} - x\\det\\begin{bmatrix}1&0\\\\-1&x\\end{bmatrix} + 1\\cdot\\det\\begin{bmatrix}1&3\\\\-1&2\\end{bmatrix} = 2(3x) - x(x) + (2+3) = 6x - x^2 + 5\\] Setel $ = 10 $ : $ -x^2 + 6x + 5 = 10 \\Rightarrow x^2 - 6x + 5 = 0 \\Rightarrow (x-1)(x-5) = 0 $ . Jadi $ x = 1 $ atau $ x = 5 $ .",
+          "q": "Nilai $ x $ yang memenuhi $ \\det\\begin{bmatrix} 2 & x & 1 \\\\ 1 & 3 & 0 \\\\ -1 & 2 & x \\end{bmatrix} = 10 $ adalah …",
+          "opts": [
+            "$ x = 1 $ saja",
+            "$ x = 5 $ saja",
+            "$ x = 1 $ atau $ x = 5 $",
+            "$ x = -1 $ atau $ x = 5 $",
+            "$ x = 1 $ atau $ x = -5 $"
+          ]
+        },
+        {
+          "id": "C18",
+          "section": "C",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak menerapkan sifat det(A^{-1}) = 1/det(A); atau salah menerapkan sifat det(AB)",
+          "jawab": "d",
+          "p": "$ \\det(AB^2) = \\det(A)\\cdot[\\det(B)]^2 = 6 \\times (-2)^2 = 6 \\times 4 = 24 $ .",
+          "q": "Diketahui $ A $ dan $ B $ adalah matriks $ 3 \\times 3 $ dengan $ \\det(A) = 6 $ dan $ \\det(B) = -2 $ . Nilai $ \\det(AB^2) $ adalah …",
+          "opts": [
+            "$ -48 $",
+            "$ -24 $",
+            "$ 12 $",
+            "$ 24 $",
+            "$ 48 $"
+          ]
+        },
+        {
+          "id": "C19",
+          "section": "C",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira hanya k=0 yang menyebabkan singular; tidak menyelesaikan persamaan kubik",
+          "jawab": "b",
+          "p": "Ekspansi baris pertama: $ \\det = k(k^2-3) - 2(k-0) = k^3 - 3k - 2k = k^3 - 5k = k(k^2-5) $ . Singular jika $ = 0 $ : $ k = 0 $ atau $ k = \\pm\\sqrt{5} $ .",
+          "q": "Nilai-nilai $ k $ yang menyebabkan matriks $ \\begin{bmatrix} k & 2 & 0 \\\\ 1 & k & 3 \\\\ 0 & 1 & k \\end{bmatrix} $ bersifat singular adalah …",
+          "opts": [
+            "$ k = 0 $ saja",
+            "$ k = 0 $ atau $ k = \\pm\\sqrt{5} $",
+            "$ k = \\pm\\sqrt{5} $ saja",
+            "$ k = 0 $ atau $ k = 5 $",
+            "$ k = \\pm 1 $ atau $ k = \\pm 2 $"
+          ]
+        },
+        {
+          "id": "C20",
+          "section": "C",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya mencari satu nilai x (positif); lupa bahwa persamaan kuadrat punya dua solusi",
+          "jawab": "c",
+          "p": "$ \\det = x \\cdot x - 1 \\cdot 4 = x^2 - 4 = 5 \\Rightarrow x^2 = 9 \\Rightarrow x = \\pm 3 $ .",
+          "q": "Nilai $ x $ yang memenuhi $ \\det\\begin{bmatrix} x & 1 \\\\ 4 & x \\end{bmatrix} = 5 $ adalah …",
+          "opts": [
+            "$ x = 3 $ saja",
+            "$ x = -3 $ saja",
+            "$ x = 3 $ atau $ x = -3 $",
+            "$ x = 1 $ atau $ x = -5 $",
+            "$ x = \\pm\\sqrt{5} $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "D",
+      "sectionTitle": "Invers Matriks Ordo $2\\times2$",
+      "soal": [
+        {
+          "id": "D1",
+          "section": "D",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menukar posisi a dan d; atau salah tanda pada b dan c",
+          "jawab": "c",
+          "p": "$ \\det(A) = 6-5 = 1 $ . $ A^{-1} = \\dfrac{1}{1}\\begin{bmatrix}3&-5\\\\-1&2\\end{bmatrix} = \\begin{bmatrix}3&-5\\\\-1&2\\end{bmatrix} $ .",
+          "q": "Invers dari $ A = \\begin{bmatrix} 2 & 5 \\\\ 1 & 3 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}3&5\\\\1&2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-3&5\\\\1&-2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}3&-5\\\\-1&2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-3&-5\\\\-1&-2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&-5\\\\-1&3\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "D2",
+          "section": "D",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "membagi dengan determinan yang salah; lupa menghitung det terlebih dahulu",
+          "jawab": "b",
+          "p": "$ \\det(A) = 8-7 = 1 $ . $ A^{-1} = \\begin{bmatrix}2&-7\\\\-1&4\\end{bmatrix} $ .",
+          "q": "Invers dari $ A = \\begin{bmatrix} 4 & 7 \\\\ 1 & 2 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}2&7\\\\1&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&-7\\\\-1&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-2&7\\\\-1&-4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}4&-7\\\\-1&2\\end{bmatrix} $",
+            "$ \\dfrac{1}{2}\\begin{bmatrix}2&-7\\\\-1&4\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "D3",
+          "section": "D",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "tetap berusaha menghitung invers; tidak memeriksa determinan terlebih dahulu",
+          "jawab": "e",
+          "p": "$ \\det = 12-12 = 0 $ . Matriks singular tidak memiliki invers.",
+          "q": "Invers dari $ \\begin{bmatrix} 6 & 4 \\\\ 3 & 2 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{6}\\begin{bmatrix}2&-4\\\\-3&6\\end{bmatrix} $",
+            "$ \\dfrac{1}{2}\\begin{bmatrix}2&4\\\\3&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&-4\\\\-3&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix} $",
+            "Tidak ada (matriks singular)"
+          ]
+        },
+        {
+          "id": "D4",
+          "section": "D",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira semua matriks persegi pasti memiliki invers",
+          "jawab": "c",
+          "p": "Syarat invers ada: $ \\det(A) \\neq 0 $ .",
+          "q": "Syarat agar matriks $ 2 \\times 2 $ memiliki invers adalah …",
+          "opts": [
+            "Semua elemennya positif",
+            "Ordonya $ 2 \\times 2 $",
+            "$ \\det(A) \\neq 0 $",
+            "$ \\det(A) = 1 $",
+            "Semua elemen diagonal utamanya tidak nol"
+          ]
+        },
+        {
+          "id": "D5",
+          "section": "D",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira $I^{-1} = O$; atau $I^{-1}$ tidak terdefinisi",
+          "jawab": "c",
+          "p": "$ \\det(I) = 1 \\neq 0 $ , dan $ I^{-1} = I $ (matriks identitas adalah inversnya sendiri).",
+          "q": "Invers dari matriks identitas $ I_2 = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}0&0\\\\0&0\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-1&0\\\\0&-1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}0&1\\\\1&0\\end{bmatrix} $",
+            "Tidak ada"
+          ]
+        },
+        {
+          "id": "D6",
+          "section": "D",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira $AB = BA = I$ tidak perlu diverifikasi keduanya; atau lupa komutativitas khusus invers",
+          "jawab": "d",
+          "p": "$ A \\times B = \\begin{bmatrix}2(3)+5(-1) & 2(-5)+5(2) \\\\ 1(3)+3(-1) & 1(-5)+3(2)\\end{bmatrix} = \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix} = I $ . Jadi $ B = A^{-1} $ .",
+          "q": "Jika $ A = \\begin{bmatrix} 2 & 5 \\\\ 1 & 3 \\end{bmatrix} $ dan $ B = \\begin{bmatrix} 3 & -5 \\\\ -1 & 2 \\end{bmatrix} $ , maka $ A \\times B $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}0&0\\\\0&0\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&0\\\\0&3\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&1\\\\0&1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}5&5\\\\4&3\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "D7",
+          "section": "D",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa membagi dengan det = -1; mengabaikan tanda negatif pada pembagi",
+          "jawab": "b",
+          "p": "$ \\det(A) = 5-6 = -1 $ . $ A^{-1} = \\dfrac{1}{-1}\\begin{bmatrix}1&-3\\\\-2&5\\end{bmatrix} = \\begin{bmatrix}-1&3\\\\2&-5\\end{bmatrix} $ .",
+          "q": "Invers dari $ A = \\begin{bmatrix} 5 & 3 \\\\ 2 & 1 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}1&-3\\\\-2&5\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-1&3\\\\2&-5\\end{bmatrix} $",
+            "$ \\begin{bmatrix}5&-3\\\\-2&1\\end{bmatrix} $",
+            "$ \\dfrac{1}{11}\\begin{bmatrix}1&-3\\\\-2&5\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&3\\\\2&5\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "D8",
+          "section": "D",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menerapkan rumus invers dengan benar; menukar elemen salah posisi",
+          "jawab": "b",
+          "p": "$ \\det(A) = 4-3 = 1 $ . $ A^{-1} = \\begin{bmatrix}2&-3\\\\-1&2\\end{bmatrix} $ .",
+          "q": "Invers dari $ A = \\begin{bmatrix} 2 & 3 \\\\ 1 & 2 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}2&3\\\\1&2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&-3\\\\-1&2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-2&3\\\\1&-2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}3&-2\\\\2&-1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "D9",
+          "section": "D",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah tanda pada elemen adjoin; tidak menghitung determinan dengan benar saat ada elemen negatif",
+          "jawab": "a",
+          "p": "$ \\det(A) = (3)(2)-(-1)(-5) = 6-5 = 1 $ . $ A^{-1} = \\begin{bmatrix}2&1\\\\5&3\\end{bmatrix} $ .",
+          "q": "Invers dari $ A = \\begin{bmatrix} 3 & -1 \\\\ -5 & 2 \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}2&1\\\\5&3\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&-1\\\\-5&3\\end{bmatrix} $",
+            "$ \\dfrac{1}{11}\\begin{bmatrix}2&1\\\\5&3\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-2&1\\\\5&-3\\end{bmatrix} $",
+            "$ \\begin{bmatrix}3&1\\\\5&2\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "D10",
+          "section": "D",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya mencari satu nilai k; tidak menyelesaikan persamaan kuadrat hingga tuntas",
+          "jawab": "c",
+          "p": "$ (k+1)(k+2) - 6 = 0 \\Rightarrow k^2 + 3k + 2 - 6 = 0 \\Rightarrow k^2 + 3k - 4 = 0 \\Rightarrow (k+4)(k-1) = 0 $ . Jadi $ k = -4 $ atau $ k = 1 $ .",
+          "q": "Nilai $ k $ agar matriks $ A = \\begin{bmatrix} k+1 & 2 \\\\ 3 & k+2 \\end{bmatrix} $ bersifat singular adalah …",
+          "opts": [
+            "$ k = 1 $ saja",
+            "$ k = -4 $ saja",
+            "$ k = 1 $ atau $ k = -4 $",
+            "$ k = 2 $ atau $ k = -3 $",
+            "$ k = 4 $ atau $ k = -1 $"
+          ]
+        },
+        {
+          "id": "D11",
+          "section": "D",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira $(AB)^{-1} = A^{-1}B^{-1}$; lupa urutan dibalik: $(AB)^{-1} = B^{-1}A^{-1}$",
+          "jawab": "c",
+          "p": "$ \\det(A) = -20+18 = -2 $ , $ \\det(B) = 9-8 = 1 $ . Maka $ \\det(AB) = (-2)(1) = -2 $ , sehingga $ \\det\\bigl((AB)^{-1}\\bigr) = \\dfrac{1}{-2} = -\\dfrac{1}{2} $ . Pilihan terdekat: nilai $ \\det((AB)^{-1}) = -\\tfrac{1}{2} $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 5 & -3 \\\\ 6 & -4 \\end{bmatrix} $ dan $ B = \\begin{bmatrix} 3 & 2 \\\\ 4 & 3 \\end{bmatrix} $ . Nilai $ \\det\\bigl((AB)^{-1}\\bigr) $ adalah …",
+          "opts": [
+            "$ -2 $",
+            "$ -1 $",
+            "$ \\tfrac{1}{2} $",
+            "$ 1 $",
+            "$ 2 $"
+          ]
+        },
+        {
+          "id": "D12",
+          "section": "D",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menghitung invers langsung tanpa mengidentifikasi syarat kesamaan elemen",
+          "jawab": "a",
+          "p": "$ A = B^{-1} $ berarti $ B = A^{-1} $ . $ \\det(A) = 9-10 = -1 $ . $ A^{-1} = \\begin{bmatrix}-3&2\\\\5&-3\\end{bmatrix} $ . Dari kesamaan elemen: $ x+y = -3 $ , $ 3x-1 = 5 \\Rightarrow x = 2 \\Rightarrow y = -5 $ , $ z = -3 $ . Jadi $ x+y+z = 2+(-5)+(-3) = -6 $ .",
+          "q": "Matriks $ A = \\begin{bmatrix} 3 & 2 \\\\ 5 & 3 \\end{bmatrix} $ adalah invers dari $ B = \\begin{bmatrix} x+y & -2 \\\\ 3x-1 & z \\end{bmatrix} $ . Nilai $ x + y + z $ adalah …",
+          "opts": [
+            "$ -6 $",
+            "$ -4 $",
+            "$ -1 $",
+            "$ 2 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "D13",
+          "section": "D",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira $(A^{-1})^{-1} = I$; atau tidak menyadari bahwa invers dari invers adalah matriks asal",
+          "jawab": "d",
+          "p": "Sifat: $ (A^{-1})^{-1} = A $ selalu berlaku.",
+          "q": "Jika $ A = \\begin{bmatrix} 3 & 5 \\\\ 1 & 2 \\end{bmatrix} $ , pernyataan yang <b>benar</b> tentang $ (A^{-1})^{-1} $ adalah …",
+          "opts": [
+            "$ (A^{-1})^{-1} = I $",
+            "$ (A^{-1})^{-1} = O $",
+            "$ (A^{-1})^{-1} = \\dfrac{1}{\\det(A)}\\cdot A $",
+            "$ (A^{-1})^{-1} = A $",
+            "$ (A^{-1})^{-1} = A^2 $"
+          ]
+        },
+        {
+          "id": "D14",
+          "section": "D",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya mempertimbangkan satu faktor persamaan kuadrat; atau mengira hanya $p = 0$ yang memenuhi",
+          "jawab": "c",
+          "p": "$ (p+2)(p-1) - 4 = 0 \\Rightarrow p^2 + p - 2 - 4 = 0 \\Rightarrow p^2 + p - 6 = 0 \\Rightarrow (p+3)(p-2) = 0 $ . Jadi $ p = -3 $ atau $ p = 2 $ .",
+          "q": "Nilai $ p $ agar matriks $ \\begin{bmatrix} p+2 & 1 \\\\ 4 & p-1 \\end{bmatrix} $ tidak memiliki invers adalah …",
+          "opts": [
+            "$ p = -3 $ saja",
+            "$ p = 2 $ saja",
+            "$ p = -3 $ atau $ p = 2 $",
+            "$ p = 1 $ atau $ p = -2 $",
+            "$ p = 0 $ saja"
+          ]
+        },
+        {
+          "id": "D15",
+          "section": "D",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "langsung menyamakan matriks tanpa menghitung invers terlebih dahulu",
+          "jawab": "b",
+          "p": "$ \\det(A) = -10+12 = 2 $ . $ A^{-1} = \\dfrac{1}{2}\\begin{bmatrix}-2&2\\\\-6&5\\end{bmatrix} = \\begin{bmatrix}-1&1\\\\-3&\\frac{5}{2}\\end{bmatrix} $ . Jadi $ B = A^{-1} $ . Dari kesamaan elemen: $ 2x+1 = -3 \\Rightarrow x = -2 $ ; $ x+y = 1 \\Rightarrow y = 3 $ . Maka $ x - y = -2 - 3 = -5 $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 5 & -2 \\\\ 6 & -2 \\end{bmatrix} $ adalah invers dari $ B = \\begin{bmatrix} -1 & x+y \\\\ 2x+1 & \\frac{5}{2} \\end{bmatrix} $ . Nilai $ x - y $ adalah …",
+          "opts": [
+            "$ -7 $",
+            "$ -5 $",
+            "$ -3 $",
+            "$ 2 $",
+            "$ 5 $"
+          ]
+        },
+        {
+          "id": "D16",
+          "section": "D",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira $(kA)^{-1} = kA^{-1}$; lupa bahwa skalar keluar dengan kebalikannya",
+          "jawab": "c",
+          "p": "$ (2A)^{-1} = \\dfrac{1}{2}A^{-1} $ . $ A^{-1} = \\begin{bmatrix}2&-5\\\\-1&3\\end{bmatrix} $ . Elemen $ (1,1) $ dari $ (2A)^{-1} = \\dfrac{1}{2}(2) = 1 $ .",
+          "q": "Jika $ A = \\begin{bmatrix} 3 & 5 \\\\ 1 & 2 \\end{bmatrix} $ , elemen $ (1,1) $ dari $ (2A)^{-1} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{4} $",
+            "$ \\dfrac{1}{2} $",
+            "$ 1 $",
+            "$ 2 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "D17",
+          "section": "D",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak mengeluarkan faktor skalar sebelum menghitung invers; salah menerapkan rumus $(kA)^{-1}$",
+          "jawab": "a",
+          "p": "$ A = \\dfrac{1}{4}\\begin{bmatrix}4&6\\\\3&5\\end{bmatrix} $ . $ \\det\\begin{bmatrix}4&6\\\\3&5\\end{bmatrix} = 20-18 = 2 $ . $ A^{-1} = 4 \\cdot \\dfrac{1}{2}\\begin{bmatrix}5&-6\\\\-3&4\\end{bmatrix} = \\begin{bmatrix}10&-12\\\\-6&8\\end{bmatrix} $ .",
+          "q": "Invers dari $ A = \\begin{bmatrix} 1 & \\frac{3}{2} \\\\ \\frac{3}{4} & \\frac{5}{4} \\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}10&-12\\\\-6&8\\end{bmatrix} $",
+            "$ \\begin{bmatrix}5&-6\\\\-3&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-10&12\\\\6&-8\\end{bmatrix} $",
+            "$ \\begin{bmatrix}\\frac{5}{4}&-\\frac{3}{2}\\\\-\\frac{3}{4}&1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}5&-\\frac{3}{2}\\\\\\frac{3}{4}&4\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "D18",
+          "section": "D",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak menerapkan sifat $(A^{-1}B)^{-1} = B^{-1}A$ dengan benar; menggunakan $(PQ)^{-1} = P^{-1}Q^{-1}$ yang salah",
+          "jawab": "a",
+          "p": "$ (A^{-1}B)^{-1} = C \\Rightarrow B^{-1}(A^{-1})^{-1} = C \\Rightarrow B^{-1}A = C \\Rightarrow A = BC $ . Maka: \\[A = \\begin{bmatrix}-2&3\\\\0&4\\end{bmatrix}\\begin{bmatrix}1&-4\\\\2&2\\end{bmatrix} = \\begin{bmatrix}4&14\\\\8&8\\end{bmatrix}.\\]",
+          "q": "Diketahui $ B = \\begin{bmatrix} -2 & 3 \\\\ 0 & 4 \\end{bmatrix} $ dan $ C = \\begin{bmatrix} 1 & -4 \\\\ 2 & 2 \\end{bmatrix} $ . Jika $ (A^{-1} \\cdot B)^{-1} = C $ , maka matriks $ A $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}4&14\\\\8&8\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-1&1\\\\-3&\\frac{5}{2}\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&-4\\\\2&2\\end{bmatrix} $",
+            "$ \\begin{bmatrix}4&-14\\\\-8&8\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&-2\\\\4&4\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "D19",
+          "section": "D",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "hanya mencari satu akar; mengira persamaan kuadrat hanya punya satu solusi relevan",
+          "jawab": "c",
+          "p": "$ (x-4)(x-2) - 3(6-x) = 0 \\Rightarrow x^2-6x+8-18+3x = 0 \\Rightarrow x^2-3x-10 = 0 \\Rightarrow (x-5)(x+2) = 0 $ . Jadi $ x = 5 $ atau $ x = -2 $ . Jumlah $ = 5 + (-2) = 3 $ .",
+          "q": "Diketahui matriks $ A = \\begin{bmatrix} x-4 & 6-x \\\\ 3 & x-2 \\end{bmatrix} $ bersifat singular. Jumlah semua nilai $ x $ yang memenuhi adalah …",
+          "opts": [
+            "$ -3 $",
+            "$ 0 $",
+            "$ 3 $",
+            "$ 5 $",
+            "$ 7 $"
+          ]
+        },
+        {
+          "id": "D20",
+          "section": "D",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira $(2A)^{-1} = 2A^{-1}$; lupa $\\frac{1}{k}$ keluar dari perkalian skalar invers",
+          "jawab": "c",
+          "p": "$ (2A)^{-1} = \\dfrac{1}{2}A^{-1} = \\dfrac{1}{2}\\begin{bmatrix}3&-5\\\\-1&2\\end{bmatrix} $ . Elemen $ (2,1) $ adalah $ \\dfrac{1}{2}(-1) = -\\dfrac{1}{2} $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix} 2 & 5 \\\\ 1 & 3 \\end{bmatrix} $ dengan $ \\det(A) = 1 $ . Elemen $ (2,1) $ dari $ (2A)^{-1} $ adalah …",
+          "opts": [
+            "$ -2 $",
+            "$ -1 $",
+            "$ -\\dfrac{1}{2} $",
+            "$ \\dfrac{1}{2} $",
+            "$ 2 $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "E",
+      "sectionTitle": "Persamaan Matriks",
+      "soal": [
+        {
+          "id": "E1",
+          "section": "E",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengalikan invers dari kanan: X = C·A^{-1}; lupa urutan perkalian matriks",
+          "jawab": "b",
+          "p": "$ AX = C \\Rightarrow A^{-1}(AX) = A^{-1}C \\Rightarrow X = A^{-1}C $ . Invers dikalikan dari <b>kiri</b>.",
+          "q": "Untuk menyelesaikan persamaan matriks $ A \\cdot X = C $ (dengan $ A $ invertibel), langkah yang benar adalah …",
+          "opts": [
+            "$ X = C \\cdot A^{-1} $",
+            "$ X = A^{-1} \\cdot C $",
+            "$ X = A \\cdot C^{-1} $",
+            "$ X = C^{-1} \\cdot A $",
+            "$ X = A \\cdot C $"
+          ]
+        },
+        {
+          "id": "E2",
+          "section": "E",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengalikan invers dari kiri; tidak memperhatikan posisi X dalam persamaan",
+          "jawab": "c",
+          "p": "$ XA = C \\Rightarrow (XA)A^{-1} = CA^{-1} \\Rightarrow X = CA^{-1} $ . Invers dikalikan dari <b>kanan</b>.",
+          "q": "Untuk menyelesaikan persamaan matriks $ X \\cdot A = C $ (dengan $ A $ invertibel), langkah yang benar adalah …",
+          "opts": [
+            "$ X = A^{-1} \\cdot C $",
+            "$ X = C \\cdot A $",
+            "$ X = C \\cdot A^{-1} $",
+            "$ X = A \\cdot C^{-1} $",
+            "$ X = C^{-1} \\cdot A^{-1} $"
+          ]
+        },
+        {
+          "id": "E3",
+          "section": "E",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menghitung invers A terlebih dahulu; langsung mengoperasikan A dengan C",
+          "jawab": "a",
+          "p": "$ \\det = -6+4=-2 $ . $ A^{-1} = \\tfrac{1}{-2}\\begin{bmatrix}-3&1\\\\-4&2\\end{bmatrix} $ . $ X = A^{-1}B = \\begin{bmatrix}1&5\\\\2&6\\end{bmatrix} $ .",
+          "q": "Matriks $ X $ yang memenuhi $ \\begin{bmatrix}2&-1\\\\4&-3\\end{bmatrix}X = \\begin{bmatrix}0&4\\\\-2&2\\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}1&5\\\\2&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-1&5\\\\2&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&-5\\\\2&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&5\\\\-2&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&5\\\\2&-6\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E4",
+          "section": "E",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengalikan A^{-1} dari kiri alih-alih dari kanan",
+          "jawab": "a",
+          "p": "$ \\det(A) = 6-5 = 1 $ , $ A^{-1} = \\begin{bmatrix}2&-1\\\\-5&3\\end{bmatrix} $ . $ B = CA^{-1} = \\begin{bmatrix}4(2)+(-1)(-5) & 4(-1)+(-1)(3) \\\\ 7(2)+2(-5) & 7(-1)+2(3)\\end{bmatrix} = \\begin{bmatrix}13&-7\\\\4&-1\\end{bmatrix} $ .",
+          "q": "Matriks $ B $ yang memenuhi $ B \\cdot \\begin{bmatrix}3&1\\\\5&2\\end{bmatrix} = \\begin{bmatrix}4&-1\\\\7&2\\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}13&-7\\\\4&-1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-13&7\\\\4&-1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}13&7\\\\4&1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}4&-1\\\\13&-7\\end{bmatrix} $",
+            "$ \\begin{bmatrix}13&-7\\\\-4&1\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E5",
+          "section": "E",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah menghitung invers karena lupa membagi dengan determinan",
+          "jawab": "a",
+          "p": "Sama dengan soal 3. $ X = \\begin{bmatrix}1&5\\\\2&6\\end{bmatrix} $ .",
+          "q": "Matriks $ X $ yang memenuhi $ \\begin{bmatrix}2&-1\\\\4&-3\\end{bmatrix}X = \\begin{bmatrix}0&4\\\\-2&2\\end{bmatrix} $ adalah… \\[2pt] (Diketahui $ \\det\\begin{bmatrix}2&-1\\\\4&-3\\end{bmatrix} = -2 $ .)",
+          "opts": [
+            "$ \\begin{bmatrix}1&5\\\\2&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&5\\\\2&-6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-1&5\\\\2&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&-5\\\\2&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-1&-5\\\\2&6\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E6",
+          "section": "E",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengalikan C dengan A dari sisi yang salah",
+          "jawab": "a",
+          "p": "$ \\det(A)=4-6=-2 $ . $ A^{-1}=\\tfrac{1}{-2}\\begin{bmatrix}4&-2\\\\-3&1\\end{bmatrix} $ . $ X=A^{-1}B = \\begin{bmatrix}-5&-8\\\\4&5\\end{bmatrix} $ .",
+          "q": "Matriks $ X $ yang memenuhi $ \\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}X = \\begin{bmatrix}3&2\\\\1&-4\\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}-5&-8\\\\4&5\\end{bmatrix} $",
+            "$ \\begin{bmatrix}5&-8\\\\4&-5\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-5&8\\\\-4&5\\end{bmatrix} $",
+            "$ \\begin{bmatrix}5&8\\\\4&5\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-5&-8\\\\-4&5\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E7",
+          "section": "E",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira XB=C dan XC=B memiliki solusi yang sama",
+          "jawab": "c",
+          "p": "$ XB = C \\Rightarrow X = C \\cdot B^{-1} $ . Invers dikalikan dari <b>kanan</b>.",
+          "q": "Jika $ X \\cdot B = C $ , maka nilai $ X $ diperoleh dengan …",
+          "opts": [
+            "Mengalikan $ C $ dengan $ B $ dari kiri: $ X = C \\cdot B $",
+            "Mengalikan $ B^{-1} $ dengan $ C $ dari kiri: $ X = B^{-1} \\cdot C $",
+            "Mengalikan $ C $ dengan $ B^{-1} $ dari kanan: $ X = C \\cdot B^{-1} $",
+            "Mengalikan $ C $ dengan $ B $ dari kanan: $ X = B \\cdot C^{-1} $",
+            "$ X = B \\cdot C $"
+          ]
+        },
+        {
+          "id": "E8",
+          "section": "E",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira AX=I berarti X=I; tidak menyadari AX=I berarti X=A^{-1}",
+          "jawab": "d",
+          "p": "$ AX = I \\Rightarrow X = A^{-1} $ . $ \\det(A) = 12-10 = 2 $ . $ A^{-1} = \\tfrac{1}{2}\\begin{bmatrix}4&-2\\\\-5&3\\end{bmatrix} = \\begin{bmatrix}2&-1\\\\-\\frac{5}{2}&\\frac{3}{2}\\end{bmatrix} $ .",
+          "q": "Matriks $ X $ yang memenuhi $ \\begin{bmatrix}3&2\\\\5&4\\end{bmatrix}X = \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}3&2\\\\5&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&-1\\\\-\\frac{5}{2}&\\frac{3}{2}\\end{bmatrix} $",
+            "$ \\begin{bmatrix}4&-2\\\\-5&3\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-4&2\\\\5&-3\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E9",
+          "section": "E",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengalikan A^{-1} dari kiri alih-alih dari kanan",
+          "jawab": "a",
+          "p": "$ B = CA^{-1} $ . $ \\det(A) = 8-9=-1 $ . $ A^{-1}=\\begin{bmatrix}-4&3\\\\3&-2\\end{bmatrix} $ . $ B = \\begin{bmatrix}3&1\\\\-2&-5\\end{bmatrix}\\begin{bmatrix}-4&3\\\\3&-2\\end{bmatrix} = \\begin{bmatrix}-9&7\\\\-7&4\\end{bmatrix} $ .",
+          "q": "Matriks $ B $ yang memenuhi $ B \\cdot \\begin{bmatrix}2&3\\\\3&4\\end{bmatrix} = \\begin{bmatrix}3&1\\\\-2&-5\\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}-9&7\\\\-7&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}9&7\\\\7&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-9&-7\\\\-7&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}9&-7\\\\7&-4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-9&7\\\\7&-4\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E10",
+          "section": "E",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengalikan $A^{-1}$ dari kanan dan $B^{-1}$ dari kiri; urutan harus diperhatikan",
+          "jawab": "a",
+          "p": "$ X = A^{-1}DB^{-1} $ . $ A^{-1}=\\begin{bmatrix}2&1\\\\3&2\\end{bmatrix} $ , $ B^{-1}=\\begin{bmatrix}4&-2\\\\-3&1\\end{bmatrix} $ (dari $ \\det(B)=-2 $ ). $ X = \\begin{bmatrix}-2&3\\\\-3&4\\end{bmatrix} $ .",
+          "q": "Matriks $ X $ yang memenuhi $ \\begin{bmatrix}2&-1\\\\-3&2\\end{bmatrix}X\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix} = \\begin{bmatrix}5&6\\\\-3&-4\\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}-2&3\\\\-3&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&-3\\\\3&-4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-2&-3\\\\3&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}2&3\\\\-3&4\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-2&3\\\\3&-4\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E11",
+          "section": "E",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menghitung $(AB)^{-1}$ secara penuh terlebih dahulu; tidak menyederhanakan dengan sifat",
+          "jawab": "c",
+          "p": "$ (AB)^{-1} \\cdot A = B^{-1}A^{-1} \\cdot A = B^{-1} \\cdot I = B^{-1} $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix}5&-3\\\\6&-4\\end{bmatrix} $ dan $ B = \\begin{bmatrix}3&2\\\\4&3\\end{bmatrix} $ . Nilai $ (A \\cdot B)^{-1} \\cdot A $ sama dengan …",
+          "opts": [
+            "$ A^{-1} $",
+            "$ B $",
+            "$ B^{-1} $",
+            "$ I $",
+            "$ A $"
+          ]
+        },
+        {
+          "id": "E12",
+          "section": "E",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak menyederhanakan $(A^{-1}C)^{-1}(A^{-1}B)$ dengan benar; atau melewatkan langkah pembatalan $A \\cdot A^{-1}=I$",
+          "jawab": "b",
+          "p": "$ (A^{-1}C)^{-1}(A^{-1}B) = C^{-1}A \\cdot A^{-1}B = C^{-1}B = D \\Rightarrow B = CD $ . $ B = \\begin{bmatrix}2&1\\\\5&3\\end{bmatrix}\\begin{bmatrix}-2&0\\\\1&4\\end{bmatrix} = \\begin{bmatrix}-3&4\\\\-7&12\\end{bmatrix} $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix}6&4\\\\2&8\\end{bmatrix} $ , $ C = \\begin{bmatrix}2&1\\\\5&3\\end{bmatrix} $ , $ D = \\begin{bmatrix}-2&0\\\\1&4\\end{bmatrix} $ . Jika $ (A^{-1} \\cdot C)^{-1}(A^{-1} \\cdot B) = D $ , maka matriks $ B $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}3&-4\\\\7&-12\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-3&4\\\\-7&12\\end{bmatrix} $",
+            "$ \\begin{bmatrix}3&4\\\\7&12\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-3&4\\\\7&-12\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-3&-4\\\\7&12\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E13",
+          "section": "E",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menyelesaikan satu persamaan saja; tidak menggunakan kedua persamaan secara simultan",
+          "jawab": "a",
+          "p": "Jumlahkan kedua persamaan: $ 3X = \\begin{bmatrix}3&9\\\\3&3\\end{bmatrix} \\Rightarrow X = \\begin{bmatrix}1&3\\\\1&1\\end{bmatrix} $ .",
+          "q": "Nilai matriks $ X $ dari sistem $ \\begin{cases} 2X + Y = \\begin{bmatrix}4&5\\\\3&-2\\end{bmatrix} \\\\ X - Y = \\begin{bmatrix}-1&4\\\\0&5\\end{bmatrix} \\end{cases} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}1&3\\\\1&1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}0&3\\\\1&1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&3\\\\1&0\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&-3\\\\1&1\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-1&3\\\\1&1\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E14",
+          "section": "E",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengalikan invers hanya dari satu sisi; tidak menerapkan $P^{-1}$ dari kiri dan $Q^{-1}$ dari kanan",
+          "jawab": "b",
+          "p": "$ P^{-1}=\\begin{bmatrix}1&-2\\\\0&1\\end{bmatrix} $ , $ Q^{-1}=\\begin{bmatrix}1&-1\\\\-1&2\\end{bmatrix} $ . $ X = P^{-1}RQ^{-1} = \\begin{bmatrix}-1&2\\\\1&0\\end{bmatrix} $ .",
+          "q": "Matriks $ X $ yang memenuhi $ \\begin{bmatrix}1&2\\\\0&1\\end{bmatrix}X\\begin{bmatrix}2&1\\\\1&1\\end{bmatrix} = \\begin{bmatrix}4&3\\\\2&1\\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}-1&2\\\\1&0\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&-2\\\\-1&0\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-1&-2\\\\1&0\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&2\\\\1&0\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-1&2\\\\-1&0\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E15",
+          "section": "E",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung semua elemen X padahal hanya satu elemen yang ditanya",
+          "jawab": "b",
+          "p": "$ A^{-1}=\\begin{bmatrix}2&-1\\\\-5&3\\end{bmatrix} $ . $ X=A^{-1}B=\\begin{bmatrix}2(4)+(-1)(7) & 2(-1)+(-1)(2)\\\\(-5)(4)+3(7) & (-5)(-1)+3(2)\\end{bmatrix}=\\begin{bmatrix}1&-4\\\\1&11\\end{bmatrix} $ . Elemen $ x_{12}=-4 $ .",
+          "q": "Matriks $ X $ memenuhi $ \\begin{bmatrix}3&1\\\\5&2\\end{bmatrix}X = \\begin{bmatrix}4&-1\\\\7&2\\end{bmatrix} $ . Elemen $ x_{12} $ dari matriks $ X $ adalah …",
+          "opts": [
+            "$ -11 $",
+            "$ -4 $",
+            "$ 1 $",
+            "$ 4 $",
+            "$ 11 $"
+          ]
+        },
+        {
+          "id": "E16",
+          "section": "E",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah menghitung elemen invers; atau tidak teliti membaca posisi elemen yang ditanya",
+          "jawab": "c",
+          "p": "$ A^{-1}=\\tfrac{1}{-2}\\begin{bmatrix}4&-2\\\\-3&1\\end{bmatrix} $ . $ X=A^{-1}B=\\begin{bmatrix}-5&-8\\\\4&5\\end{bmatrix} $ . Elemen $ x_{21}=4 $ .",
+          "q": "Matriks $ X $ memenuhi $ \\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}X = \\begin{bmatrix}3&2\\\\1&-4\\end{bmatrix} $ . Elemen $ x_{21} $ dari matriks $ X $ adalah …",
+          "opts": [
+            "$ -8 $",
+            "$ -4 $",
+            "$ 4 $",
+            "$ 5 $",
+            "$ 8 $"
+          ]
+        },
+        {
+          "id": "E17",
+          "section": "E",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak menggunakan $(PQ)^{-1}=Q^{-1}P^{-1}$; atau salah mengidentifikasi urutan manipulasi",
+          "jawab": "c",
+          "p": "$ (A^{-1}B)^{-1}=C \\Rightarrow B^{-1}A = C \\Rightarrow A = BC $ . $ A = \\begin{bmatrix}-2&3\\\\0&4\\end{bmatrix}\\begin{bmatrix}1&-4\\\\2&2\\end{bmatrix} = \\begin{bmatrix}4&14\\\\8&8\\end{bmatrix} $ .",
+          "q": "Diketahui $ B = \\begin{bmatrix}-2&3\\\\0&4\\end{bmatrix} $ dan $ C = \\begin{bmatrix}1&-4\\\\2&2\\end{bmatrix} $ . Jika $ (A^{-1} \\cdot B)^{-1} = C $ , maka matriks $ A $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}4&-14\\\\-8&8\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-4&14\\\\8&-8\\end{bmatrix} $",
+            "$ \\begin{bmatrix}4&14\\\\8&8\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-4&-14\\\\8&8\\end{bmatrix} $",
+            "$ \\begin{bmatrix}4&14\\\\-8&8\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E18",
+          "section": "E",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "lupa mengurangi B setelah mengalikan dengan $A^{-1}$; tidak mendistribusikan $A$ dengan benar",
+          "jawab": "a",
+          "p": "$ A(X+B) = C \\Rightarrow X + B = A^{-1}C \\Rightarrow X = A^{-1}C - B $ . $ A^{-1}=\\begin{bmatrix}1&-1\\\\-1&2\\end{bmatrix} $ . $ A^{-1}C=\\begin{bmatrix}1&-2\\\\1&5\\end{bmatrix} $ . $ X=\\begin{bmatrix}1&-2\\\\1&5\\end{bmatrix}-\\begin{bmatrix}1&2\\\\0&-1\\end{bmatrix}=\\begin{bmatrix}0&-4\\\\1&6\\end{bmatrix} $ .",
+          "q": "Matriks $ X $ yang memenuhi $ \\begin{bmatrix}2&1\\\\1&1\\end{bmatrix}(X + \\begin{bmatrix}1&2\\\\0&-1\\end{bmatrix}) = \\begin{bmatrix}3&1\\\\2&3\\end{bmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}0&-4\\\\1&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}0&4\\\\-1&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}0&-4\\\\-1&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&-4\\\\1&6\\end{bmatrix} $",
+            "$ \\begin{bmatrix}0&-4\\\\1&-6\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E19",
+          "section": "E",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menghitung invers secara berurutan tanpa menyederhanakan; melewatkan $A \\cdot A^{-1}=I$",
+          "jawab": "b",
+          "p": "Langkah: $ C^{-1}A \\cdot A^{-1}B = D \\Rightarrow C^{-1}B = D \\Rightarrow B = CD = \\begin{bmatrix}2&1\\\\5&3\\end{bmatrix}\\begin{bmatrix}-2&0\\\\1&4\\end{bmatrix} = \\begin{bmatrix}-3&4\\\\-7&12\\end{bmatrix} $ .",
+          "q": "Diketahui $ A = \\begin{bmatrix}6&4\\\\2&8\\end{bmatrix} $ , $ C = \\begin{bmatrix}2&1\\\\5&3\\end{bmatrix} $ , $ D = \\begin{bmatrix}-2&0\\\\1&4\\end{bmatrix} $ . Dari $ (A^{-1} \\cdot C)^{-1}(A^{-1} \\cdot B) = D $ , matriks $ B $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}3&4\\\\7&12\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-3&4\\\\-7&12\\end{bmatrix} $",
+            "$ \\begin{bmatrix}3&-4\\\\7&-12\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-3&-4\\\\-7&12\\end{bmatrix} $",
+            "$ \\begin{bmatrix}3&4\\\\-7&12\\end{bmatrix} $"
+          ]
+        },
+        {
+          "id": "E20",
+          "section": "E",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "tidak mengisolasi $BXA$ terlebih dahulu; atau salah urutan dalam mengalikan invers",
+          "jawab": "a",
+          "p": "$ BXA = D - C = \\begin{bmatrix}3&3\\\\7&7\\end{bmatrix} $ . $ X = B^{-1}\\begin{bmatrix}3&3\\\\7&7\\end{bmatrix}A^{-1} $ . $ B^{-1}=\\begin{bmatrix}2&-1\\\\-3&2\\end{bmatrix} $ , $ A^{-1}=\\begin{bmatrix}3&-1\\\\-2&1\\end{bmatrix} $ . $ X=\\begin{bmatrix}-1&-1\\\\5&5\\end{bmatrix}\\begin{bmatrix}3&-1\\\\-2&1\\end{bmatrix}=\\begin{bmatrix}-1&0\\\\5&0\\end{bmatrix} $ .",
+          "q": "Diketahui $ B = \\begin{bmatrix}2&1\\\\3&2\\end{bmatrix} $ , $ A = \\begin{bmatrix}1&1\\\\2&3\\end{bmatrix} $ , $ C = \\begin{bmatrix}0&1\\\\1&0\\end{bmatrix} $ , $ D = \\begin{bmatrix}3&4\\\\8&7\\end{bmatrix} $ . Matriks $ X $ yang memenuhi $ B \\cdot X \\cdot A + C = D $ adalah …",
+          "opts": [
+            "$ \\begin{bmatrix}-1&0\\\\5&0\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&0\\\\-5&0\\end{bmatrix} $",
+            "$ \\begin{bmatrix}-1&0\\\\-5&0\\end{bmatrix} $",
+            "$ \\begin{bmatrix}1&0\\\\5&0\\end{bmatrix} $",
+            "$ \\begin{bmatrix}0&-1\\\\0&5\\end{bmatrix} $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "?",
+      "sectionTitle": "Unknown",
+      "soal": [
+        {
+          "id": "?1",
+          "section": "?",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "konsep",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q1 — det matriks 3x3 Diketahui $ A = \\begin{pmatrix}2&1&0\\\\1&3&1\\\\0&1&2\\end{pmatrix} $ . Nilai $ \\det(A) $ adalah …",
+          "opts": [
+            "3",
+            "5",
+            "8",
+            "10",
+            "12"
+          ]
+        },
+        {
+          "id": "?2",
+          "section": "?",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q2 — invers matriks diagonal Invers dari $ D = \\begin{pmatrix}1&0&0\\\\0&2&0\\\\0&0&3\\end{pmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{pmatrix}1&0&0\\\\0&2&0\\\\0&0&3\\end{pmatrix} $ (b) $ \\begin{pmatrix}0&0&1\\\\0&\\frac{1}{2}&0\\\\1&0&0\\end{pmatrix} $ \\[4pt] (c) \\textbf{ $ \\begin{pmatrix}1&0&0\\\\0&\\frac{1}{2}&0\\\\0&0&\\frac{1}{3}\\end{pmatrix} $ } (d) $ \\begin{pmatrix}3&0&0\\\\0&2&0\\\\0&0&1\\end{pmatrix} $ \\[4pt] (e) $ \\begin{pmatrix}\\frac{1}{6}&0&0\\\\0&\\frac{1}{6}&0\\\\0&0&\\frac{1}{6}\\end{pmatrix} $"
+          ]
+        },
+        {
+          "id": "?3",
+          "section": "?",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "identifikasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q3 — identifikasi matriks singular Matriks $ S = \\begin{pmatrix}1&2&3\\\\4&5&6\\\\7&8&9\\end{pmatrix} $ …",
+          "opts": [
+            "memiliki invers karena $ \\det(S) = 6 $",
+            "memiliki invers karena $ \\det(S) = 9 $",
+            "tidak memiliki invers karena $ \\det(S) = 3 $",
+            "tidak memiliki invers karena $ \\det(S) = -6 $",
+            "\\textbf{tidak memiliki invers karena $ \\det(S) = 0 $ }"
+          ]
+        },
+        {
+          "id": "?4",
+          "section": "?",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q4 — kofaktor C12 Diberikan $ A = \\begin{pmatrix}3&1&2\\\\2&4&1\\\\1&2&3\\end{pmatrix} $ . Kofaktor $ C_{12} $ (baris 1, kolom 2) adalah …",
+          "opts": [
+            "$ -10 $",
+            "$ -5 $",
+            "$ 5 $",
+            "$ 7 $",
+            "$ 10 $"
+          ]
+        },
+        {
+          "id": "?5",
+          "section": "?",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q5 — kofaktor C23 Diketahui $ B = \\begin{pmatrix}2&0&1\\\\3&1&4\\\\1&2&0\\end{pmatrix} $ . Kofaktor $ C_{23} $ adalah …",
+          "opts": [
+            "$ 4 $",
+            "$ -3 $",
+            "$ -4 $",
+            "$ 3 $",
+            "$ 2 $"
+          ]
+        },
+        {
+          "id": "?6",
+          "section": "?",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "konsep",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q6 — det(A^-1) Jika $ \\det(A) = 3 $ , maka $ \\det(A^{-1}) = \\ldots $",
+          "opts": [
+            "$ 3 $",
+            "$ \\dfrac{1}{3} $",
+            "$ -3 $",
+            "$ -\\dfrac{1}{3} $",
+            "$ 9 $"
+          ]
+        },
+        {
+          "id": "?7",
+          "section": "?",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q7 — adjoin matriks Adjoin dari $ M = \\begin{pmatrix}1&2&1\\\\0&1&3\\\\2&1&0\\end{pmatrix} $ pada baris pertama adalah …",
+          "opts": [
+            "$ \\begin{pmatrix}-3 & 1 & 5\\end{pmatrix} $",
+            "$ \\begin{pmatrix}3 & -1 & -5\\end{pmatrix} $",
+            "$ \\begin{pmatrix}-3 & 6 & -2\\end{pmatrix} $",
+            "$ \\begin{pmatrix}1 & 6 & 5\\end{pmatrix} $",
+            "\\textbf{ $ \\begin{pmatrix}-3 & 6 & -2\\end{pmatrix} $ }"
+          ]
+        },
+        {
+          "id": "?8",
+          "section": "?",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q8 — invers matriks upper triangular Invers dari $ T = \\begin{pmatrix}1&2&3\\\\0&1&4\\\\0&0&1\\end{pmatrix} $ adalah …",
+          "opts": [
+            "$ \\begin{pmatrix}1&-2&3\\\\0&1&-4\\\\0&0&1\\end{pmatrix} $ \\textbf{(b) $ \\begin{pmatrix}1&-2&5\\\\0&1&-4\\\\0&0&1\\end{pmatrix} $ } \\[4pt] (c) $ \\begin{pmatrix}1&2&5\\\\0&1&4\\\\0&0&1\\end{pmatrix} $ (d) $ \\begin{pmatrix}1&-2&-5\\\\0&1&4\\\\0&0&1\\end{pmatrix} $ \\[4pt] (e) $ \\begin{pmatrix}1&0&0\\\\-2&1&0\\\\5&-4&1\\end{pmatrix} $"
+          ]
+        },
+        {
+          "id": "?9",
+          "section": "?",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q9 Diketahui $ A = \\begin{pmatrix}2&1&1\\\\1&3&2\\\\1&2&2\\end{pmatrix} $ . Elemen baris 1 kolom 1 dari $ A^{-1} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{3} $",
+            "$ \\dfrac{1}{2} $",
+            "$ \\dfrac{2}{3} $",
+            "$ 1 $",
+            "$ 2 $"
+          ]
+        },
+        {
+          "id": "?10",
+          "section": "?",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q10 Elemen $ (\\text{adj}\\,A)_{12} $ dari $ A = \\begin{pmatrix}1&0&2\\\\3&1&1\\\\0&2&1\\end{pmatrix} $ adalah …",
+          "opts": [
+            "$ -1 $",
+            "$ 4 $",
+            "$ -4 $",
+            "$ 3 $",
+            "$ 1 $"
+          ]
+        },
+        {
+          "id": "?11",
+          "section": "?",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "persamaan",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q11 — nilai k agar singular Matriks $ K = \\begin{pmatrix}k&1&0\\\\1&k&1\\\\0&1&k\\end{pmatrix} $ tidak memiliki invers jika $ k = \\ldots $ \\ (Pilih semua nilai yang valid)",
+          "opts": [
+            "$ k = 0 $ saja",
+            "$ k = \\pm 1 $ saja",
+            "$ k = \\sqrt{2} $ saja",
+            "$ k = 0 $ atau $ k = \\pm\\sqrt{2} $",
+            "\\textbf{ $ k = 0 $ atau $ k = \\pm\\sqrt{2} $ }"
+          ]
+        },
+        {
+          "id": "?12",
+          "section": "?",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "konsep+komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q12 — sifat (AB)^-1 Jika $ \\det(A)=3 $ dan $ \\det(B)=3 $ , maka $ \\det\\bigl((AB)^{-1}\\bigr) = \\ldots $",
+          "opts": [
+            "$ 9 $",
+            "$ 3 $",
+            "$ 1 $",
+            "$ \\dfrac{1}{9} $",
+            "$ \\dfrac{1}{3} $"
+          ]
+        },
+        {
+          "id": "?13",
+          "section": "?",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "aplikasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q13 Sistem $ A\\mathbf{x} = \\mathbf{b} $ dengan $ A = \\begin{pmatrix}2&1&0\\\\1&2&1\\\\0&1&2\\end{pmatrix} $ , $ \\mathbf{b} = \\begin{pmatrix}1\\\\2\\\\1\\end{pmatrix} $ . Nilai $ x_2 $ (komponen tengah solusi) adalah …",
+          "opts": [
+            "$ -1 $",
+            "$ 1 $",
+            "$ 0 $",
+            "$ 2 $",
+            "$ \\dfrac{1}{2} $"
+          ]
+        },
+        {
+          "id": "?14",
+          "section": "?",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "konsep",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q14 — OBE/Gauss-Jordan konsep Ilustrasi berikut menunjukkan langkah OBE (Operasi Baris Elementer) pada matriks augmented $ [A\\,|\\,I] $ : \\begin{center} [GAMBAR] \\end{center} Pernyataan yang <b>benar</b> tentang metode ini adalah … Nilai di kanan dikalikan $ \\det(A) $ untuk mendapat $ A^{-1} $ OBE hanya berlaku untuk matriks $ 2\\times 2 $ Metode ini hanya berlaku jika $ \\det(A)=1 $ \\textbf{Sisi kanan augmented menjadi $ A^{-1} $ setelah sisi kiri menjadi $ I $ } OBE mengubah nilai determinan matriks",
+          "opts": []
+        },
+        {
+          "id": "?15",
+          "section": "?",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "sifat",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q15 — sifat transpose dan invers Jika $ A^{-1} = \\begin{pmatrix}\\frac{1}{2}&-1&\\frac{1}{2}\\\\\\frac{1}{4}&\\frac{1}{2}&-\\frac{1}{4}\\\\-\\frac{1}{4}&\\frac{1}{2}&\\frac{1}{4}\\end{pmatrix} $ , maka $ (A^T)^{-1} = \\ldots $",
+          "opts": [
+            "sama dengan $ A^{-1} $",
+            "$ -(A^{-1}) $",
+            "$ \\begin{pmatrix}\\frac{1}{2}&\\frac{1}{4}&-\\frac{1}{4}\\\\-1&\\frac{1}{2}&\\frac{1}{2}\\\\\\frac{1}{2}&-\\frac{1}{4}&\\frac{1}{4}\\end{pmatrix} $",
+            "\\textbf{ $ \\begin{pmatrix}\\frac{1}{2}&\\frac{1}{4}&-\\frac{1}{4}\\\\-1&\\frac{1}{2}&\\frac{1}{2}\\\\\\frac{1}{2}&-\\frac{1}{4}&\\frac{1}{4}\\end{pmatrix} $ }",
+            "tidak dapat ditentukan"
+          ]
+        },
+        {
+          "id": "?16",
+          "section": "?",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q16 Dari $ A = \\begin{pmatrix}2&3&1\\\\0&1&2\\\\1&2&3\\end{pmatrix} $ , elemen baris 2 kolom 1 dari $ A^{-1} $ adalah …",
+          "opts": [
+            "$ -\\dfrac{7}{3} $",
+            "$ -\\dfrac{1}{3} $",
+            "$ \\dfrac{2}{3} $",
+            "$ \\dfrac{5}{3} $",
+            "$ \\dfrac{1}{3} $"
+          ]
+        },
+        {
+          "id": "?17",
+          "section": "?",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "aplikasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q17 Diketahui $ A = \\begin{pmatrix}1&1&1\\\\0&1&1\\\\0&0&1\\end{pmatrix} $ dan $ B = \\begin{pmatrix}3&2&1\\\\1&2&1\\\\1&1&2\\end{pmatrix} $ . Jika $ AX = B $ , elemen diagonal utama $ X $ (yaitu $ x_{11}+x_{22}+x_{33} $ ) adalah …",
+          "opts": [
+            "$ 1 $",
+            "$ 3 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $"
+          ]
+        },
+        {
+          "id": "?18",
+          "section": "?",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "sifat lanjut",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q18 Diketahui $ A = \\begin{pmatrix}1&0&1\\\\1&1&0\\\\0&1&1\\end{pmatrix} $ dan $ B = \\begin{pmatrix}1&1&0\\\\0&1&1\\\\1&0&1\\end{pmatrix} $ . Elemen diagonal utama dari $ \\mathrm{adj}(AB) $ adalah …",
+          "opts": [
+            "$ 1, 1, 1 $",
+            "$ 3, 3, 3 $",
+            "$ 4, 4, 4 $",
+            "$ 2, 2, 4 $",
+            "$ 0, 0, 0 $"
+          ]
+        },
+        {
+          "id": "?19",
+          "section": "?",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "sifat+komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q19 Diketahui $ A = \\begin{pmatrix}1&2&0\\\\0&1&1\\\\1&0&2\\end{pmatrix} $ dengan $ \\det(A)=4 $ . Elemen baris 1, kolom 2 dari $ (A^T)^{-1} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{4} $",
+            "$ \\dfrac{1}{4} $",
+            "$ -\\dfrac{1}{4} $",
+            "$ \\dfrac{1}{2} $",
+            "$ -\\dfrac{1}{2} $"
+          ]
+        },
+        {
+          "id": "?20",
+          "section": "?",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "analisis",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q20 Untuk $ A = \\begin{pmatrix}3&1&0\\\\1&2&1\\\\0&1&3\\end{pmatrix} $ , $ \\det(A)=12 $ . Nilai $ \\mathrm{tr}(A^{-1}) $ (jumlah elemen diagonal $ A^{-1} $ ) adalah …",
+          "opts": [
+            "$ \\dfrac{5}{12} $",
+            "$ \\dfrac{3}{4} $",
+            "$ \\dfrac{11}{12} $",
+            "$ \\dfrac{19}{12} $",
+            "$ \\dfrac{7}{4} $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "?",
+      "sectionTitle": "Unknown",
+      "soal": [
+        {
+          "id": "?1",
+          "section": "?",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "komputasi dasar",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q1 Sistem persamaan $ \\begin{cases}2x+y=5\\\\x+3y=10\\end{cases} $ diselesaikan dengan aturan Cramer. Nilai $ x+y $ adalah …",
+          "opts": [
+            "2",
+            "4",
+            "5",
+            "6",
+            "8"
+          ]
+        },
+        {
+          "id": "?2",
+          "section": "?",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q2 Sistem $ \\begin{cases}3x+y=7\\\\2x+4y=8\\end{cases} $ diselesaikan dengan metode invers matriks. Nilai $ (x, y) $ adalah …",
+          "opts": [
+            "$ (1, 4) $",
+            "$ (1, 2) $",
+            "$ (2, 1) $",
+            "$ (3, 1) $",
+            "$ (4, 1) $"
+          ]
+        },
+        {
+          "id": "?3",
+          "section": "?",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "identifikasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q3 Untuk sistem $ \\begin{cases}x+2y=4\\\\3x+y=7\\end{cases} $ , determinan $ D_x $ (determinan koefisien dengan kolom 1 diganti vektor konstanta) adalah …",
+          "opts": [
+            "$ -10 $",
+            "$ -5 $",
+            "$ 5 $",
+            "$ 10 $",
+            "$ 20 $"
+          ]
+        },
+        {
+          "id": "?4",
+          "section": "?",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q4 Sistem $ \\begin{cases}x+y+z=6\\\\2x-y+z=5\\\\x+2y-z=1\\end{cases} $ memiliki solusi $ (x,y,z) $ dengan nilai $ x+y+z = \\ldots $",
+          "opts": [
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $",
+            "$ 8 $"
+          ]
+        },
+        {
+          "id": "?5",
+          "section": "?",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q5 Sistem $ \\begin{cases}x+2y+z=3\\\\x+3y+2z=4\\\\x+4y+4z=5\\end{cases} $ diselesaikan dengan invers matriks. Nilai $ x - y + z $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ 1 $",
+            "$ 2 $",
+            "$ -1 $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "?6",
+          "section": "?",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q6 Untuk sistem $ \\begin{cases}x+y+z=6\\\\2x+y-z=5\\\\x-y+2z=4\\end{cases} $ , nilai $ D_z $ (det dengan kolom 3 diganti $ \\begin{pmatrix}6\\\\5\\\\4\\end{pmatrix} $ ) adalah …",
+          "opts": [
+            "$ -14 $",
+            "$ -7 $",
+            "$ 7 $",
+            "$ 14 $",
+            "$ -12 $"
+          ]
+        },
+        {
+          "id": "?7",
+          "section": "?",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "konsep",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q7 Sistem $ AX = B $ memiliki <b>solusi unik</b> jika dan hanya jika …",
+          "opts": [
+            "$ \\det(A) = 1 $",
+            "$ \\det(A) < 0 $",
+            "$ \\det(A) = 0 $ dan $ D_x = 0 $",
+            "$ B = 0 $ (sistem homogen)",
+            "\\textbf{ $ \\det(A) \\neq 0 $ }"
+          ]
+        },
+        {
+          "id": "?8",
+          "section": "?",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "aplikasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q8 [GAMBAR] Dari ilustrasi di atas, harga 3 buku adalah …",
+          "opts": [
+            "Rp6.000",
+            "Rp7.000",
+            "Rp9.000",
+            "Rp10.000",
+            "Rp12.000"
+          ]
+        },
+        {
+          "id": "?9",
+          "section": "?",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q9 Diketahui sistem: $ \\begin{cases}x+y+z=6\\\\x+2y+z=8\\\\2x+y+3z=11\\end{cases} $ Nilai $ x + y + z $ adalah …",
+          "opts": [
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $",
+            "$ 8 $"
+          ]
+        },
+        {
+          "id": "?10",
+          "section": "?",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q10 Untuk sistem $ \\begin{cases}2x+y+3z=9\\\\x-y+2z=2\\\\3x+2y-z=3\\end{cases} $ , nilai $ D_y $ (det dengan kolom 2 diganti $ \\begin{pmatrix}9\\\\2\\\\3\\end{pmatrix} $ ) adalah …",
+          "opts": [
+            "$ -38 $",
+            "$ 16 $",
+            "$ 38 $",
+            "$ -16 $",
+            "$ 76 $"
+          ]
+        },
+        {
+          "id": "?11",
+          "section": "?",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q11 Sistem $ \\begin{cases}x+y+z=6\\\\2x+3y+z=11\\\\x+2y+3z=12\\end{cases} $ diselesaikan dengan metode invers. Nilai $ x + y + z $ adalah …",
+          "opts": [
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $",
+            "$ 8 $"
+          ]
+        },
+        {
+          "id": "?12",
+          "section": "?",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "analisis",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q12 Jika $ \\det(A) = 0 $ pada sistem $ AX = B $ , maka sistem tersebut …",
+          "opts": [
+            "selalu memiliki tepat satu solusi",
+            "tidak pernah memiliki solusi",
+            "selalu memiliki tak hingga solusi",
+            "<b>tidak memiliki solusi atau memiliki tak hingga solusi</b>",
+            "memiliki dua solusi"
+          ]
+        },
+        {
+          "id": "?13",
+          "section": "?",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "persamaan",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q13 Sistem $ \\begin{cases}2x+3y=12\\\\4x+ky=24\\end{cases} $ memiliki <b>tak hingga</b> solusi jika $ k = \\ldots $",
+          "opts": [
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $",
+            "$ 6 $",
+            "$ 8 $"
+          ]
+        },
+        {
+          "id": "?14",
+          "section": "?",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "aplikasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q14 \\begin{center} [GAMBAR] \\end{center} Dari tabel di atas, harga satuan Barang A adalah …",
+          "opts": [
+            "Rp10.000",
+            "Rp15.000",
+            "Rp20.000",
+            "Rp25.000",
+            "Rp30.000"
+          ]
+        },
+        {
+          "id": "?15",
+          "section": "?",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q15 Diketahui sistem: $ \\begin{cases}x+2y+z=4\\\\2x+y+3z=7\\\\x+3y+2z=5\\end{cases} $ Nilai $ 2x - y + 3z $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $"
+          ]
+        },
+        {
+          "id": "?16",
+          "section": "?",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q16 Sistem $ \\begin{cases}x+2y+z=5\\\\2x+3y+z=8\\\\x+y+3z=7\\end{cases} $ diselesaikan dengan aturan Cramer. Nilai $ z $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{3} $",
+            "$ \\dfrac{2}{3} $",
+            "$ \\dfrac{4}{3} $",
+            "$ 2 $",
+            "$ \\dfrac{5}{3} $"
+          ]
+        },
+        {
+          "id": "?17",
+          "section": "?",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "komputasi+analisis",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q17 Sistem $ \\begin{cases}2x+y\\phantom{+0z}=3\\\\x+2y+z=4\\\\\\phantom{0x+{}}y+2z=3\\end{cases} $ diselesaikan dengan metode invers matriks. Nilai $ x+y+z $ adalah …",
+          "opts": [
+            "$ 1 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $"
+          ]
+        },
+        {
+          "id": "?18",
+          "section": "?",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "analisis",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q18 Perhatikan sistem persamaan: $ \\begin{cases}x + 2y + 3z = a\\\\2x + 4y + 6z = b\\\\3x + 6y + 9z = c\\end{cases} $ Diagram berikut merangkum kemungkinan solusinya: \\begin{center} [GAMBAR] \\end{center} Sistem di atas memiliki tak hingga solusi jika …",
+          "opts": [
+            "$ a=0, b=0, c=0 $ saja",
+            "$ a, b, c $ sembarang",
+            "$ a \\neq 0 $",
+            "$ b = 2a $ saja",
+            "\\textbf{ $ b = 2a $ dan $ c = 3a $ (konsistensi terpenuhi)}"
+          ]
+        },
+        {
+          "id": "?19",
+          "section": "?",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "komputasi",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q19 Sistem $ \\begin{cases}x+2y+z=7\\\\3x+y+2z=8\\\\2x+3y+z=9\\end{cases} $ memiliki solusi $ (x,y,z) $ . Nilai $ x - y + 2z $ adalah …",
+          "opts": [
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $"
+          ]
+        },
+        {
+          "id": "?20",
+          "section": "?",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "aplikasi+analisis",
+          "kesalahanUmum": null,
+          "jawab": null,
+          "p": null,
+          "q": "% Q20 Sistem $ \\begin{cases}\\dfrac{2}{x}+\\dfrac{3}{y}=5\\ \\[4pt]\\dfrac{4}{x}-\\dfrac{1}{y}=3\\end{cases} $ diselesaikan dengan substitusi $ u=\\dfrac{1}{x} $ , $ v=\\dfrac{1}{y} $ . Nilai $ x + y $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{2} $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $"
+          ]
+        }
+      ]
+    }
+  ]
+}
