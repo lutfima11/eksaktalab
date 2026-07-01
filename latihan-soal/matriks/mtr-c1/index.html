@@ -4,7 +4,7 @@
 <script src="../../../assets/js/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Latihan Soal MTR-C1 — EksaktaLab</title>
+<title>Latihan Soal MTR-C1 — Determinan Matriks · Paket 1 | EksaktaLab</title>
 <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -501,7 +501,7 @@ body{
 .q-pem-solve-hd{display:flex;align-items:center;gap:.45rem;padding:.5rem 1rem;background:rgba(0,191,165,.05);border-top:1px solid var(--border);border-bottom:1px solid rgba(0,191,165,.1);}
 .q-pem-solve-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;}
 .q-pem-solve-title{font-family:var(--mono);font-size:.58rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.1em;}
-.q-pem-body-inner{padding:.9rem 1rem;font-size:.845rem;color:var(--text-2);line-height:1.75;}
+.q-pem-body-inner{padding:.9rem 1rem;font-size:.845rem;color:var(--text-2);line-height:1.75;white-space:pre-wrap;}
 
 @media(min-width:601px) and (max-width:900px){
   /* Body: flex column, tinggi viewport */
@@ -706,7 +706,161 @@ body{
   .q-mob-nav-btn.next:hover{background:transparent;color:var(--teal);}
   .q-bs-btn:hover:not(:disabled):not(.sel-b):not(.sel-s){border-color:var(--border);color:var(--text-3);background:var(--surface-2);}
 }
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+/* tabel soal */
+.soal-table{border-collapse:collapse;font-size:.88em;margin:.4rem 0;width:100%;}
+.soal-table th{border:1px solid var(--border);padding:.28rem .55rem;background:var(--surface-2,#f4f5f7);font-weight:700;}
+.soal-table td{border:1px solid var(--border);padding:.28rem .55rem;text-align:center;}
+.soal-table td:first-child{text-align:left;}
+/* grafik wrapper */
+.grafik-wrap{
+  display:block;width:100%;max-width:340px;
+  margin:.6rem auto;padding:.5rem;
+  border-radius:8px;
+  background:var(--surface-2,#f4f5f7);
+  border:1px solid var(--border);
+}
+[data-theme="dark"] .grafik-wrap{
+  background:rgba(255,255,255,.04);
+  border-color:rgba(255,255,255,.1);
+}
+.grafik-wrap img,.grafik-wrap svg{display:block;width:100%;height:auto;}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/matriks/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Matriks"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/latihan-soal/matriks/mtr-c1/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/matriks/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Matriks"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/matriks/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Matriks"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -4 $"}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":"$ k \\neq 2 $"}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ (0,\\;1) $"}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/matriks/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Matriks"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -4 $"}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":"$ k \\neq 2 $"}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ (0,\\;1) $"}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/matriks/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Matriks"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -4 $"}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":"$ k \\neq 2 $"}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ (0,\\;1) $"}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/matriks/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Matriks"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -4 $"}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":"$ k \\neq 2 $"}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ (0,\\;1) $"}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/matriks/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Matriks"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -4 $"}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":"$ k \\neq 2 $"}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ (0,\\;1) $"}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/matriks/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Matriks"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -4 $"}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":"$ k \\neq 2 $"}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ (0,\\;1) $"}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal MTR-C1 — Determinan Matriks · Paket 1 | EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/matriks/mtr-c1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Matriks"},"hasPart":[{"@type":"Question","name":"Nilai determinan dari $ A = \\begin{bmatrix} 3 & 5 \\\\ 2 & 4 \\end{bmatrix} $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Determinan dari $ C = \\begin{bmatrix} 6 & 3 \\\\ 4 & 2 \\end{bmatrix} $ adalah $ 0 $ . Ini berarti matriks $ C $ bersifat …","acceptedAnswer":{"@type":"Answer","text":"Singular (tidak memiliki invers)"}},{"@type":"Question","name":"Matriks persegi $ A $ tidak memiliki invers apabila …","acceptedAnswer":{"@type":"Answer","text":"$ \\det(A) = 0 $"}},{"@type":"Question","name":"Nilai $ \\det\\begin{bmatrix} -1 & 3 \\\\ 2 & -5 \\end{bmatrix} $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -1 $"}},{"@type":"Question","name":"Nilai $ \\det\\begin{bmatrix} 2 & 1 & -1 \\\\ 0 & 3 & 4 \\\\ 1 & -2 & 2 \\end{bmatrix} $ dengan metode Sarrus adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 35 $"}},{"@type":"Question","name":"Nilai $ \\det\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 0 \\end{bmatrix} $ dengan ekspansi kofaktor baris pertama a","acceptedAnswer":{"@type":"Answer","text":"$ 27 $"}},{"@type":"Question","name":"Diketahui $ A $ adalah matriks $ 3 \\times 3 $ dengan $ \\det(A) = 4 $ . Nilai $ \\det(3A) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 108 $"}},{"@type":"Question","name":"Jika $ \\det(A) = -5 $ , maka nilai $ \\det(A^{\\mathrm{T}}) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -5 $"}},{"@type":"Question","name":"Nilai $ x $ yang memenuhi $ \\det\\begin{bmatrix} 2 & x & 1 \\\\ 1 & 3 & 0 \\\\ -1 & 2 & x \\end{bmatrix} = 10 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ x = 1 $ atau $ x = 5 $"}},{"@type":"Question","name":"Nilai-nilai $ k $ yang menyebabkan matriks $ \\begin{bmatrix} k & 2 & 0 \\\\ 1 & k & 3 \\\\ 0 & 1 & k \\end{bmatrix} $ bersifa","acceptedAnswer":{"@type":"Answer","text":"$ k = 0 $ atau $ k = \\pm\\sqrt{5} $"}}]}</script>
 </head>
 <body>
 
@@ -742,8 +896,6 @@ body{
   <span class="q-bc-kode">MTR-C1</span>
   <span class="q-bc-sep">·</span>
   <span class="q-bc-mode">Per Sub-Materi</span>
-  <span class="q-bc-sep">·</span>
-  <span class="q-bc-level" style="color:#EF4444">Expert</span>
 </div>
 
 <!-- LAYOUT -->
@@ -816,7 +968,7 @@ body{
 </div>
 
 
-<script>window.quizDB={"mtr-c1":{"title":"Determinan Matriks","kode":"MTR-C1","level":"Expert","soal":[{"type":"pg","q":"Nilai $x$ dari $7x + 3 = -4$ adalah …","opts":["$-1$","$-10$","$3$","$-4$"],"jawab":0,"p":"$7x=-4-(3)=-7$, maka $x=-1$."},{"type":"pg","q":"Diketahui $g(x)=3x^2 + 8$. Nilai $g(2)$ adalah …","opts":["$15$","$20$","$17$","$29$"],"jawab":1,"p":"$g(2)=3\\cdot2^2+(8)=20$."},{"type":"pg","q":"Nilai dari $5^2$ adalah …","opts":["$25$","$33$","$29$","$17$"],"jawab":0,"p":"$5^2=25$."},{"type":"pg","q":"Nilai $x$ dari $3x - 6 = -18$ adalah …","opts":["$-11$","$-5$","$5$","$-4$"],"jawab":3,"p":"$3x=-18-(-6)=-12$, maka $x=-4$."},{"type":"pg","q":"Nilai dari $9^2$ adalah …","opts":["$81$","$72$","$84$","$82$"],"jawab":0,"p":"$9^2=81$."},{"type":"pg","q":"Nilai $x$ dari $3x - 9 = 12$ adalah …","opts":["$15$","$8$","$4$","$7$"],"jawab":3,"p":"$3x=12-(-9)=21$, maka $x=7$."},{"type":"pg","q":"Nilai dari $8^2$ adalah …","opts":["$64$","$72$","$55$","$71$"],"jawab":0,"p":"$8^2=64$."},{"type":"pg","q":"Nilai $x$ dari $4x - 13 = -33$ adalah …","opts":["$-2$","$-4$","$4$","$-5$"],"jawab":3,"p":"$4x=-33-(-13)=-20$, maka $x=-5$."},{"type":"pg","q":"Nilai $x$ dari $4x - 15 = -23$ adalah …","opts":["$-7$","$-2$","$-11$","$2$"],"jawab":1,"p":"$4x=-23-(-15)=-8$, maka $x=-2$."},{"type":"pg","q":"Nilai dari $6^2$ adalah …","opts":["$36$","$29$","$30$","$43$"],"jawab":0,"p":"$6^2=36$."}]}};</script>
+<script>window.quizDB={"mtr-c1":{"title":"Determinan Matriks · Paket 1","kode":"MTR-C1","soal":[{"type":"pg","level":"Beginner","q":"Nilai determinan dari $ A = \\begin{bmatrix} 3 & 5 \\\\ 2 & 4 \\end{bmatrix} $ adalah …","opts":["$ -2 $","$ 0 $","$ 2 $","$ 5 $","$ 22 $"],"jawab":2,"p":"$ \\det(A) = (3)(4) - (5)(2) = 12 - 10 = 2 $ .","subMateri":"","kesalahanUmum":"menghitung ad+bc alih-alih ad-bc; atau menukar posisi diagonal"},{"type":"pg","level":"Beginner","q":"Determinan dari $ C = \\begin{bmatrix} 6 & 3 \\\\ 4 & 2 \\end{bmatrix} $ adalah $ 0 $ . Ini berarti matriks $ C $ bersifat …","opts":["Identitas","Simetris","Diagonal","Singular (tidak memiliki invers)","Segitiga atas"],"jawab":3,"p":"$ \\det(C) = (6)(2) - (3)(4) = 0 $ . Matriks dengan determinan nol disebut <b>singular</b> dan tidak memiliki invers.","subMateri":"","kesalahanUmum":"tidak memeriksa determinan; langsung menyimpulkan dari tampilan matriks"},{"type":"pg","level":"Beginner","q":"Matriks persegi $ A $ tidak memiliki invers apabila …","opts":["$ \\det(A) > 0 $","$ \\det(A) < 0 $","$ \\det(A) = 1 $","$ \\det(A) = 0 $","$ \\det(A) \\neq 0 $"],"jawab":3,"p":"Matriks tidak memiliki invers jika dan hanya jika $ \\det(A) = 0 $ (matriks singular).","subMateri":"","kesalahanUmum":"mengira matriks dengan nol di diagonal selalu singular; atau singular = ordo tidak persegi"},{"type":"pg","level":"Beginner","q":"Nilai $ \\det\\begin{bmatrix} -1 & 3 \\\\ 2 & -5 \\end{bmatrix} $ adalah …","opts":["$ -11 $","$ -1 $","$ 0 $","$ 1 $","$ 11 $"],"jawab":1,"p":"$ \\det = (-1)(-5) - (3)(2) = 5 - 6 = -1 $ .","subMateri":"","kesalahanUmum":"lupa bahwa hasil determinan bisa negatif; mengambil nilai mutlak"},{"type":"pg","level":"Intermediate","q":"Nilai $ \\det\\begin{bmatrix} 2 & 1 & -1 \\\\ 0 & 3 & 4 \\\\ 1 & -2 & 2 \\end{bmatrix} $ dengan metode Sarrus adalah …","opts":["$ -35 $","$ 15 $","$ 27 $","$ 35 $","$ 42 $"],"jawab":3,"p":"Dengan Sarrus: diagonal turun $ (+) $ : $ 2(3)(2) + (1)(4)(1) + (-1)(0)(-2) = 12+4+0=16 $ . Diagonal naik $ (-1) $ : $ (-1)(3)(1) + (2)(4)(-2) + (1)(0)(2) = -3-16+0=-19 $ . $ \\det = 16-(-19) = 35 $ .","subMateri":"","kesalahanUmum":"salah menghitung diagonal; mengira metode Sarrus berlaku untuk semua ordo"},{"type":"pg","level":"Intermediate","q":"Nilai $ \\det\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 0 \\end{bmatrix} $ dengan ekspansi kofaktor baris pertama adalah …","opts":["$ -27 $","$ 0 $","$ 27 $","$ 54 $","$ 81 $"],"jawab":2,"p":"Ekspansi baris pertama: $ \\det = 1(-48) + 2(42) + 3(-3) = -48+84-9 = 27 $ .","subMateri":"","kesalahanUmum":"salah mengidentifikasi submatriks minor; atau salah menerapkan tanda $(-1)^{i+j}$"},{"type":"pg","level":"Intermediate","q":"Diketahui $ A $ adalah matriks $ 3 \\times 3 $ dengan $ \\det(A) = 4 $ . Nilai $ \\det(3A) $ adalah …","opts":["$ 12 $","$ 36 $","$ 108 $","$ 144 $","$ 324 $"],"jawab":2,"p":"$ \\det(kA) = k^n \\det(A) $ untuk matriks $ n \\times n $ . Maka $ \\det(3A) = 3^3 \\times 4 = 27 \\times 4 = 108 $ .","subMateri":"","kesalahanUmum":"mengira det(kA) = k·det(A); lupa bahwa untuk matriks $n\\times n$, det(kA) = $k^n$·det(A)"},{"type":"pg","level":"Intermediate","q":"Jika $ \\det(A) = -5 $ , maka nilai $ \\det(A^{\\mathrm{T}}) $ adalah …","opts":["$ -25 $","$ -5 $","$ 0 $","$ 5 $","$ 25 $"],"jawab":1,"p":"Sifat: $ \\det(A^{\\mathrm{T}}) = \\det(A) $ untuk semua matriks persegi. Jadi $ \\det(A^{\\mathrm{T}}) = -5 $ .","subMateri":"","kesalahanUmum":"mengira transpose mengubah nilai determinan; atau det(A^T) = -det(A)"},{"type":"pg","level":"Expert","q":"Nilai $ x $ yang memenuhi $ \\det\\begin{bmatrix} 2 & x & 1 \\\\ 1 & 3 & 0 \\\\ -1 & 2 & x \\end{bmatrix} = 10 $ adalah …","opts":["$ x = 1 $ saja","$ x = 5 $ saja","$ x = 1 $ atau $ x = 5 $","$ x = -1 $ atau $ x = 5 $","$ x = 1 $ atau $ x = -5 $"],"jawab":2,"p":"Ekspansi baris pertama: \\[\\det = 2\\det\\begin{bmatrix}3&0\\\\2&x\\end{bmatrix} - x\\det\\begin{bmatrix}1&0\\\\-1&x\\end{bmatrix} + 1\\cdot\\det\\begin{bmatrix}1&3\\\\-1&2\\end{bmatrix} = 2(3x) - x(x) + (2+3) = 6x - x^2 + 5\\] Setel $ = 10 $ : $ -x^2 + 6x + 5 = 10 \\Rightarrow x^2 - 6x + 5 = 0 \\Rightarrow (x-1)(x-5) = 0 $ . Jadi $ x = 1 $ atau $ x = 5 $ .","subMateri":"","kesalahanUmum":"tidak mengembangkan determinan secara penuh; atau hanya mencari satu nilai x"},{"type":"pg","level":"Expert","q":"Nilai-nilai $ k $ yang menyebabkan matriks $ \\begin{bmatrix} k & 2 & 0 \\\\ 1 & k & 3 \\\\ 0 & 1 & k \\end{bmatrix} $ bersifat singular adalah …","opts":["$ k = 0 $ saja","$ k = 0 $ atau $ k = \\pm\\sqrt{5} $","$ k = \\pm\\sqrt{5} $ saja","$ k = 0 $ atau $ k = 5 $","$ k = \\pm 1 $ atau $ k = \\pm 2 $"],"jawab":1,"p":"Ekspansi baris pertama: $ \\det = k(k^2-3) - 2(k-0) = k^3 - 3k - 2k = k^3 - 5k = k(k^2-5) $ . Singular jika $ = 0 $ : $ k = 0 $ atau $ k = \\pm\\sqrt{5} $ .","subMateri":"","kesalahanUmum":"mengira hanya k=0 yang menyebabkan singular; tidak menyelesaikan persamaan kubik"}]}};</script>
 <script>
 // ── Scroll progress bar ──────────────────────────────────
 window.addEventListener('scroll', () => {
@@ -911,8 +1063,13 @@ function renderQ(i){
   // meta row
   const typeLabel={pg:'Pilihan Ganda',bs:'Benar / Salah',mma:'Multiple Answer'};
   const typeCls={pg:'qt-pg',bs:'qt-bs',mma:'qt-mma'};
+  const lvlCls={Beginner:'qlb-beginner',Intermediate:'qlb-intermediate',Expert:'qlb-expert'};
+  const lvlHtml=q.level?`<span class="q-level-badge ${lvlCls[q.level]||'qlb-beginner'}">${q.level}</span>`:'';
   html+=`<div class="q-soal-meta">
-    <span class="q-type ${typeCls[q.type]||'qt-pg'}">${typeLabel[q.type]||'Pilihan Ganda'}</span>
+    <div style="display:flex;align-items:center;gap:.45rem;">
+      <span class="q-type ${typeCls[q.type]||'qt-pg'}">${typeLabel[q.type]||'Pilihan Ganda'}</span>
+      ${lvlHtml}
+    </div>
     <button class="q-tandai${S.marked[i]?' on':''}" id="tm${i}" onclick="mark(${i})">
       <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 2h6v9l-3-2.2L4 11V2z"/></svg>
       ${S.marked[i]?'Ditandai':'Tandai Soal'}

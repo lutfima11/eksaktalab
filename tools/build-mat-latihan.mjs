@@ -193,8 +193,8 @@ for (const section of data.sections) {
   const paket1 = section.soal.filter((_, i) => i % 2 === 0);
   const paket2 = section.soal.filter((_, i) => i % 2 === 1);
   for (const [num, soalList] of [[1, paket1], [2, paket2]]) {
-    const paketId = `mat-${sid.toLowerCase()}${num}`;
-    const kode = `MAT-${sid}${num}`;
+    const paketId = `mtr-${sid.toLowerCase()}${num}`;
+    const kode = `MTR-${sid}${num}`;
     const judulPaket = `${judulSection} · Paket ${num}`;
     const outDir = join(outBase, paketId);
     mkdirSync(outDir, { recursive: true });
