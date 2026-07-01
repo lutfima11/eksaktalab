@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Latihan Soal Matriks — EksaktaLab</title>
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
-<meta name="description" content="Latihan soal Matriks SMA: 14 paket per sub-materi — Mengenal Matriks, Operasi Aljabar, Determinan, Invers, Persamaan Matriks, hingga SPL. Pilihan ganda interaktif, tingkat Beginner hingga Expert.">
+<meta name="description" content="Latihan soal Matriks SMA: 21 paket berlatih, 14 paket per sub-materi, dan sesi ujian bertimer. Pilihan ganda interaktif, tingkat Beginner hingga Expert.">
 <link rel="canonical" href="https://lutfima11.github.io/eksaktalab/latihan-soal/matriks/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -42,19 +42,72 @@
   <div class="hero-content">
     <div class="hero-eyebrow">&#128218; Latihan Soal · Matriks</div>
     <h1 class="hero-title">Berlatih <em>Matriks</em></h1>
-    <p class="hero-desc">14 paket soal tersusun per sub-materi — dari pengenalan matriks hingga sistem persamaan linear. Setiap soal dilengkapi pembahasan instan.</p>
+    <p class="hero-desc">21 paket berlatih plus 14 paket per sub-materi dan sesi ujian bertimer. Setiap soal ditandai level Beginner, Intermediate, atau Expert.</p>
     <div class="hero-stats">
-      <div class="hero-stat"><strong>140</strong> Soal</div>
+      <div class="hero-stat"><strong>21</strong> Paket Berlatih</div>
       <div class="hero-stat"><strong>7</strong> Sub-Materi</div>
-      <div class="hero-stat"><strong>14</strong> Paket</div>
-      <div class="hero-stat"><strong>Beginner → Expert</strong></div>
+      <div class="hero-stat"><strong>14</strong> Paket Sub-Materi</div>
+      <div class="hero-stat"><strong>2</strong> Sesi Ujian</div>
     </div>
   </div>
 </div>
 
 <div class="main-wrap">
 
-  <div class="view-panel active" id="view-sub">
+  <div class="mode-tabs">
+    <button class="mode-tab active" data-view="berlatih" onclick="switchView('berlatih',this)">
+      <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1.5" y="2" width="12" height="11" rx="2"/><line x1="5" y1="5" x2="10" y2="5"/><line x1="5" y1="7.5" x2="9" y2="7.5"/><line x1="5" y1="10" x2="7.5" y2="10"/></svg>
+      Paket Berlatih
+    </button>
+    <button class="mode-tab" data-view="sub" onclick="switchView('sub',this)">
+      <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="7.5" cy="7.5" r="5.5"/><line x1="7.5" y1="5" x2="7.5" y2="8"/><circle cx="7.5" cy="9.5" r=".6" fill="currentColor"/></svg>
+      Per Sub-Materi
+    </button>
+    <button class="mode-tab" data-view="ujian" onclick="switchView('ujian',this)">
+      <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 2h9a1 1 0 0 1 1 1v10l-2-1.5L9 13l-1.5-1.5L6 13l-2-1.5L2 13V3a1 1 0 0 1 1-1z"/><line x1="5" y1="5.5" x2="10" y2="5.5"/><line x1="5" y1="8" x2="8" y2="8"/></svg>
+      Sesi Ujian
+    </button>
+  </div>
+
+  <div class="view-panel active" id="view-berlatih">
+    <div class="sec-head">
+      <div class="sec-label">&#128218; Paket Berlatih</div>
+      <div class="sec-title">21 Paket Soal Variatif</div>
+      <div class="sec-desc">Setiap paket berisi 10 soal pilihan ganda dengan pembahasan instan.</div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">LEVEL:</span>
+      <button class="filter-btn active" onclick="filterPaket('semua',this)">Semua</button>
+      <button class="filter-btn" onclick="filterPaket('beginner',this)">Beginner</button>
+      <button class="filter-btn" onclick="filterPaket('intermediate',this)">Intermediate</button>
+      <button class="filter-btn" onclick="filterPaket('expert',this)">Expert</button>
+    </div>
+    <div class="paket-grid" id="paket-grid">
+      <div class="paket-card" data-level="beginner" data-paket="1" data-locked="false"><div class="card-top"><span class="card-kode">MAT-01</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Matriks 1</div><button class="card-btn" onclick="location.href='mat-01/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="beginner" data-paket="2" data-locked="false"><div class="card-top"><span class="card-kode">MAT-02</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Matriks 2</div><button class="card-btn" onclick="location.href='mat-02/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="beginner" data-paket="3" data-locked="false"><div class="card-top"><span class="card-kode">MAT-03</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Matriks 3</div><button class="card-btn" onclick="location.href='mat-03/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="beginner" data-paket="4" data-locked="false"><div class="card-top"><span class="card-kode">MAT-04</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Matriks 4</div><button class="card-btn" onclick="location.href='mat-04/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="beginner" data-paket="5" data-locked="false"><div class="card-top"><span class="card-kode">MAT-05</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Matriks 5</div><button class="card-btn" onclick="location.href='mat-05/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="beginner" data-paket="6" data-locked="false"><div class="card-top"><span class="card-kode">MAT-06</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Matriks 6</div><button class="card-btn" onclick="location.href='mat-06/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="beginner" data-paket="7" data-locked="false"><div class="card-top"><span class="card-kode">MAT-07</span><span class="level-badge badge-beginner">BEGINNER</span></div><div class="card-title">Matriks 7</div><button class="card-btn" onclick="location.href='mat-07/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="intermediate" data-paket="8" data-locked="false"><div class="card-top"><span class="card-kode">MAT-08</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Matriks 8</div><button class="card-btn" onclick="location.href='mat-08/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="intermediate" data-paket="9" data-locked="false"><div class="card-top"><span class="card-kode">MAT-09</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Matriks 9</div><button class="card-btn" onclick="location.href='mat-09/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="intermediate" data-paket="10" data-locked="false"><div class="card-top"><span class="card-kode">MAT-10</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Matriks 10</div><button class="card-btn" onclick="location.href='mat-10/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="intermediate" data-paket="11" data-locked="false"><div class="card-top"><span class="card-kode">MAT-11</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Matriks 11</div><button class="card-btn" onclick="location.href='mat-11/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="intermediate" data-paket="12" data-locked="false"><div class="card-top"><span class="card-kode">MAT-12</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Matriks 12</div><button class="card-btn" onclick="location.href='mat-12/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="intermediate" data-paket="13" data-locked="false"><div class="card-top"><span class="card-kode">MAT-13</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Matriks 13</div><button class="card-btn" onclick="location.href='mat-13/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="intermediate" data-paket="14" data-locked="false"><div class="card-top"><span class="card-kode">MAT-14</span><span class="level-badge badge-intermediate">INTERMEDIATE</span></div><div class="card-title">Matriks 14</div><button class="card-btn" onclick="location.href='mat-14/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="expert" data-paket="15" data-locked="false"><div class="card-top"><span class="card-kode">MAT-15</span><span class="level-badge badge-expert">EXPERT</span></div><div class="card-title">Matriks 15</div><button class="card-btn" onclick="location.href='mat-15/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="expert" data-paket="16" data-locked="false"><div class="card-top"><span class="card-kode">MAT-16</span><span class="level-badge badge-expert">EXPERT</span></div><div class="card-title">Matriks 16</div><button class="card-btn" onclick="location.href='mat-16/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="expert" data-paket="17" data-locked="false"><div class="card-top"><span class="card-kode">MAT-17</span><span class="level-badge badge-expert">EXPERT</span></div><div class="card-title">Matriks 17</div><button class="card-btn" onclick="location.href='mat-17/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="expert" data-paket="18" data-locked="false"><div class="card-top"><span class="card-kode">MAT-18</span><span class="level-badge badge-expert">EXPERT</span></div><div class="card-title">Matriks 18</div><button class="card-btn" onclick="location.href='mat-18/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="expert" data-paket="19" data-locked="false"><div class="card-top"><span class="card-kode">MAT-19</span><span class="level-badge badge-expert">EXPERT</span></div><div class="card-title">Matriks 19</div><button class="card-btn" onclick="location.href='mat-19/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="expert" data-paket="20" data-locked="false"><div class="card-top"><span class="card-kode">MAT-20</span><span class="level-badge badge-expert">EXPERT</span></div><div class="card-title">Matriks 20</div><button class="card-btn" onclick="location.href='mat-20/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+      <div class="paket-card" data-level="expert" data-paket="21" data-locked="false"><div class="card-top"><span class="card-kode">MAT-21</span><span class="level-badge badge-expert">EXPERT</span></div><div class="card-title">Matriks 21</div><button class="card-btn" onclick="location.href='mat-21/'"><span>Mulai</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button></div>
+    </div>
+  </div>
+
+  <div class="view-panel" id="view-sub">
     <div class="sec-head">
       <div class="sec-label">&#128218; Per Sub-Materi</div>
       <div class="sec-title">Pilih Topik yang Ingin Didalami</div>
@@ -88,6 +141,39 @@
     </div>
   </div>
 
+  <div class="view-panel" id="view-ujian">
+    <div class="sec-head">
+      <div class="sec-label">&#128218; Sesi Ujian</div>
+      <div class="sec-title">Uji Kemampuanmu Secara Komprehensif</div>
+      <div class="sec-desc">Soal terseleksi dengan timer. Nilai dan umpan balik tersedia setelah selesai.</div>
+    </div>
+    <div class="ujian-grid">
+      <div class="ujian-card featured">
+        <div class="ujian-badge">POPULER</div>
+        <div class="ujian-eyebrow">Ujian Standar</div>
+        <div class="ujian-title">Ujian Akhir Matriks</div>
+        <div class="ujian-desc">Mencakup seluruh sub-bab. Campuran tingkat kesulitan. Cocok untuk persiapan ujian sekolah.</div>
+        <div class="ujian-meta">
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 1v5l3 3"/><circle cx="6" cy="6" r="5"/></svg>45 menit</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="3" width="10" height="7" rx="1.5"/><line x1="3" y1="5.5" x2="9" y2="5.5"/><line x1="3" y1="7.5" x2="7" y2="7.5"/></svg>20 soal</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="5"/><polyline points="3,6 5,8 9,4"/></svg>Ada Nilai</div>
+        </div>
+        <button class="ujian-start-btn" onclick="location.href='ujian-akhir/'"><span>Mulai Ujian</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+      <div class="ujian-card">
+        <div class="ujian-eyebrow">Ujian Cepat</div>
+        <div class="ujian-title">Kuis Kilat 10 Soal</div>
+        <div class="ujian-desc">Uji pemahaman dalam waktu singkat. Cocok untuk warm-up sebelum belajar mendalam.</div>
+        <div class="ujian-meta">
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 1v5l3 3"/><circle cx="6" cy="6" r="5"/></svg>15 menit</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="3" width="10" height="7" rx="1.5"/><line x1="3" y1="5.5" x2="9" y2="5.5"/><line x1="3" y1="7.5" x2="7" y2="7.5"/></svg>10 soal</div>
+          <div class="ujian-meta-item"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="5"/><polyline points="3,6 5,8 9,4"/></svg>Ada Nilai</div>
+        </div>
+        <button class="ujian-start-btn" onclick="location.href='kuis-kilat/'"><span>Mulai Kuis</span><span class="card-btn-arrow"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,2 7,5 3,8"/></svg></span></button>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
@@ -95,6 +181,8 @@
 </button>
 <script>
 window.addEventListener('scroll',()=>{const el=document.documentElement;const pct=el.scrollTop/(el.scrollHeight-el.clientHeight)*100;const b=document.getElementById('scroll-top');if(b){pct>25?b.classList.add('visible'):b.classList.remove('visible');}});
+function switchView(id,btn){document.querySelectorAll('.view-panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.mode-tab').forEach(b=>b.classList.remove('active'));document.getElementById('view-'+id).classList.add('active');btn.classList.add('active');}
+function filterPaket(level,btn){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#paket-grid .paket-card').forEach(c=>{c.style.display=(level==='semua'||c.dataset.level===level)?'':'none';});}
 function filterSub(sub,btn){document.querySelectorAll('.sub-chip').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#sub-grid .paket-card').forEach(c=>{c.style.display=(sub==='semua'||c.dataset.sub===sub)?'':'none';});}
 </script>
 
