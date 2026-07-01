@@ -111,20 +111,23 @@ function buildPage(paketId, kode, judulPaket, soalList, bcMode) {
 let totalPages = 0;
 const outBase = join(ROOT, 'latihan-soal', 'limit-fungsi');
 
-// ── A. Sub-Materi pages: lim-a1, lim-b1, lim-c1, lim-d1 (all 20 soal per section) ──
+// ── A. Sub-Materi pages: lim-a1/a2, lim-b1/b2, lim-c1/c2, lim-d1/d2 (10 soal per paket) ──
 console.log('\n=== Sub-Materi Pages ===');
 for (const section of data.sections) {
   const sid = section.sectionId;
-  const paketId = `lim-${sid.toLowerCase()}1`;
-  const kode = `LIM-${sid}1`;
   const judulSection = SECTION_JUDUL[sid] || section.sectionTitle;
-  const judulPaket = judulSection;
-
-  const outDir = join(outBase, paketId);
-  mkdirSync(outDir, { recursive: true });
-  writeFileSync(join(outDir, 'index.html'), buildPage(paketId, kode, judulPaket, section.soal, 'Per Sub-Materi'), 'utf8');
-  console.log(`✓ ${kode} — ${section.soal.length} soal (${section.soal.map(s=>s.level[0]).join('')})`);
-  totalPages++;
+  const paket1 = section.soal.filter((_, i) => i % 2 === 0);
+  const paket2 = section.soal.filter((_, i) => i % 2 === 1);
+  for (const [num, soalList] of [[1, paket1], [2, paket2]]) {
+    const paketId = `lim-${sid.toLowerCase()}${num}`;
+    const kode = `LIM-${sid}${num}`;
+    const judulPaket = `${judulSection} · Paket ${num}`;
+    const outDir = join(outBase, paketId);
+    mkdirSync(outDir, { recursive: true });
+    writeFileSync(join(outDir, 'index.html'), buildPage(paketId, kode, judulPaket, soalList, 'Per Sub-Materi'), 'utf8');
+    console.log(`✓ ${kode} — ${soalList.length} soal`);
+    totalPages++;
+  }
 }
 
 // ── B. Numbered Paket Berlatih: lim-01 to lim-12 ──
