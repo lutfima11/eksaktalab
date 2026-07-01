@@ -4,7 +4,7 @@
 <script src="../../../assets/js/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Latihan Soal LIM-05 — EksaktaLab</title>
+<title>Latihan Soal LIM-05 — Definisi, Syarat & Sifat Limit · Intermediate | EksaktaLab</title>
 <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -501,7 +501,7 @@ body{
 .q-pem-solve-hd{display:flex;align-items:center;gap:.45rem;padding:.5rem 1rem;background:rgba(0,191,165,.05);border-top:1px solid var(--border);border-bottom:1px solid rgba(0,191,165,.1);}
 .q-pem-solve-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;}
 .q-pem-solve-title{font-family:var(--mono);font-size:.58rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.1em;}
-.q-pem-body-inner{padding:.9rem 1rem;font-size:.845rem;color:var(--text-2);line-height:1.75;}
+.q-pem-body-inner{padding:.9rem 1rem;font-size:.845rem;color:var(--text-2);line-height:1.75;white-space:pre-wrap;}
 
 @media(min-width:601px) and (max-width:900px){
   /* Body: flex column, tinggi viewport */
@@ -706,7 +706,146 @@ body{
   .q-mob-nav-btn.next:hover{background:transparent;color:var(--teal);}
   .q-bs-btn:hover:not(:disabled):not(.sel-b):not(.sel-s){border-color:var(--border);color:var(--text-3);background:var(--surface-2);}
 }
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+
+/* ── LEVEL BADGE PER SOAL ── */
+.q-level-badge{
+  display:inline-flex;align-items:center;
+  font-family:var(--mono);font-size:.56rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:.13rem .45rem;border-radius:4px;
+}
+.qlb-beginner{background:var(--green);color:var(--green-b);}
+[data-theme="dark"] .qlb-beginner{background:rgba(5,150,105,.15);color:#34D399;}
+.qlb-intermediate{background:var(--yellow);color:var(--yellow-b);}
+[data-theme="dark"] .qlb-intermediate{background:rgba(245,158,11,.1);color:#FBBF24;}
+.qlb-expert{background:var(--red);color:var(--red-b);}
+[data-theme="dark"] .qlb-expert{background:rgba(239,68,68,.1);color:#F87171;}
+/* tabel soal */
+.soal-table{border-collapse:collapse;font-size:.88em;margin:.4rem 0;}
+.soal-table td{border:1px solid var(--border);padding:.28rem .55rem;}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/limit-fungsi/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Fungsi Kuadrat"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/latihan-soal/limit-fungsi/lim-05/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/limit-fungsi/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Fungsi Kuadrat"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":""}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/limit-fungsi/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Fungsi Kuadrat"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -4 $"}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":"$ k \\neq 2 $"}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ (0,\\;1) $"}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/limit-fungsi/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Fungsi Kuadrat"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -4 $"}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":"$ k \\neq 2 $"}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ (0,\\;1) $"}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/limit-fungsi/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Fungsi Kuadrat"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -4 $"}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":"$ k \\neq 2 $"}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ (0,\\;1) $"}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/limit-fungsi/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Fungsi Kuadrat"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -4 $"}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":"$ k \\neq 2 $"}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ (0,\\;1) $"}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/limit-fungsi/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Fungsi Kuadrat"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -4 $"}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":"$ k \\neq 2 $"}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ (0,\\;1) $"}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal Pengertian · Paket 1 — EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/limit-fungsi/fk-a1/","educationalLevel":"high school","about":{"@type":"Thing","name":"Fungsi Kuadrat"},"hasPart":[{"@type":"Question","name":"Pernyataan berikut yang bukan merupakan fungsi kuadrat adalah …","acceptedAnswer":{"@type":"Answer","text":"$ h(x) = 4x - 7 $"}},{"@type":"Question","name":"Grafik fungsi $ f(x) = -x^2 + 5x $ terbuka ke … dan memiliki nilai …","acceptedAnswer":{"@type":"Answer","text":"bawah; maksimum"}},{"@type":"Question","name":"Nilai $ a $ pada fungsi $ f(x) = -(2x - 1)^2 + 3 $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ -4 $"}},{"@type":"Question","name":"Pernyataan yang benar tentang syarat fungsi kuadrat $ f(x) = ax^2 + bx + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"Hanya $ a \\neq 0 $ ; nilai $ b $ dan $ c $ boleh nol"}},{"@type":"Question","name":"Persamaan $ f(x) = (k - 2)x^2 + 3x - 1 $ merupakan fungsi kuadrat dalam $ x $ apabila …","acceptedAnswer":{"@type":"Answer","text":"$ k \\neq 2 $"}},{"@type":"Question","name":"Titik potong grafik $ f(x) = -(x + 2)^2 + 5 $ dengan sumbu $ Y $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ (0,\\;1) $"}},{"@type":"Question","name":"Nilai $ b $ dari fungsi $ g(x) = (x - 2)(x + 4) $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 2 $"}},{"@type":"Question","name":"Diketahui $ f(0) = 2 $ , $ f(1) = 5 $ , dan $ f(-1) = 3 $ . Nilai $ a - b + c $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Sebuah tali sepanjang $ 20 $ meter dibentangkan menjadi persegi panjang. Jika salah satu sisi panjangnya $ x $ meter, ma","acceptedAnswer":{"@type":"Answer","text":"$ L(x) = -x^2 + 10x $"}},{"@type":"Question","name":"Persamaan $ f(x) = (n^2 - 4)x^2 + (n-2)x + 1 $ bukan merupakan fungsi kuadrat jika …","acceptedAnswer":{"@type":"Answer","text":"$ n = 2 $ atau $ n = -2 $"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Latihan Soal LIM-05 — Definisi, Syarat & Sifat Limit · Intermediate | EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/latihan-soal/limit-fungsi/lim-05/","educationalLevel":"high school","about":{"@type":"Thing","name":"Limit Fungsi"},"hasPart":[{"@type":"Question","name":"Diketahui fungsi: \\[f(x) = \\begin{cases} 2x + 1 & x < 2 \\\\ x^2 - 1 & x \\geq 2 \\end{cases}\\] Nilai $ \\displaystyle\\lims{2","acceptedAnswer":{"@type":"Answer","text":"tidak ada, karena limit kiri $ \\neq $ limit kanan"}},{"@type":"Question","name":"Diketahui fungsi: \\[g(x) = \\begin{cases} x^2 & x \\leq 1 \\\\ x + 3 & x > 1 \\end{cases}\\] Pernyataan yang benar tentang $ \\","acceptedAnswer":{"@type":"Answer","text":"Limit tidak ada karena limit kiri $ =1 \\neq 4= $ limit kanan"}},{"@type":"Question","name":"Diketahui $ \\displaystyle\\lims{2} f(x) = 4 $ dan $ \\displaystyle\\lims{2} g(x) = 3 $ . Nilai $ \\displaystyle\\lims{2}\\bigl","acceptedAnswer":{"@type":"Answer","text":"$ 25 $"}},{"@type":"Question","name":"Diketahui $ \\displaystyle\\lims{2} f(x) = 4 $ dan $ \\displaystyle\\lims{2} g(x) = 3 $ . Nilai $ \\displaystyle\\lims{2}\\bigl","acceptedAnswer":{"@type":"Answer","text":"$ 21 $"}},{"@type":"Question","name":"Nilai $ \\displaystyle\\lims{4}\\sqrt{3x^2 - 2x + 1} $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ \\sqrt{41} $"}},{"@type":"Question","name":"Diketahui fungsi: \\[f(x) = \\begin{cases} ax + 1 & x  2 \\end{cases}\\] Agar $ f $ kontinu di $ x = 2 $ (limit kiri, limit ","acceptedAnswer":{"@type":"Answer","text":"$ 4 $"}},{"@type":"Question","name":"Diketahui fungsi: \\[f(x) = \\begin{cases} x^2 + 1 & x \\neq 2 \\\\ 7 & x = 2 \\end{cases}\\] Nilai $ \\displaystyle\\lims{2} f(x","acceptedAnswer":{"@type":"Answer","text":"$ 5 $"}},{"@type":"Question","name":"Diketahui $ \\displaystyle\\lims{3} f(x) = 6 $ dan $ \\displaystyle\\lims{3} g(x) = 2 $ . Nilai $ \\displaystyle\\lims{3} \\dfr","acceptedAnswer":{"@type":"Answer","text":"$ 3 $"}},{"@type":"Question","name":"Nilai $ \\displaystyle\\lims{1} \\dfrac{2x^2 + 3x - 1}{x + 2} $ adalah …","acceptedAnswer":{"@type":"Answer","text":"$ \\dfrac{4}{3} $"}}]}</script>
 </head>
 <body>
 
@@ -737,13 +876,11 @@ body{
 
 <!-- BREADCRUMB -->
 <div class="q-breadcrumb">
-  <a href="../../../latihan-soal/limit-fungsi/">Limit Fungsi</a>
+  <a href="../../../latihan-soal/limit-fungsi/">Fungsi Kuadrat</a>
   <span>/</span>
   <span class="q-bc-kode">LIM-05</span>
   <span class="q-bc-sep">·</span>
   <span class="q-bc-mode">Paket Berlatih</span>
-  <span class="q-bc-sep">·</span>
-  <span class="q-bc-level" style="color:#D97706">Intermediate</span>
 </div>
 
 <!-- LAYOUT -->
@@ -816,7 +953,7 @@ body{
 </div>
 
 
-<script>window.quizDB={"lim-05":{"title":"Limit Fungsi 5","kode":"LIM-05","level":"Intermediate","soal":[{"type":"pg","q":"Hasil dari $14 \\times 6$ adalah …","opts":["$88$","$84$","$75$","$90$"],"jawab":1,"p":"$14\\times6=84$."},{"type":"pg","q":"Diketahui $f(x)=4x+3$. Nilai $f(7)$ adalah …","opts":["$24$","$31$","$28$","$22$"],"jawab":1,"p":"$f(7)=4\\cdot7+3=31$."},{"type":"pg","q":"Diketahui $f(x)=3x+5$. Nilai $f(2)$ adalah …","opts":["$18$","$11$","$2$","$10$"],"jawab":1,"p":"$f(2)=3\\cdot2+5=11$."},{"type":"pg","q":"Nilai $x$ yang memenuhi $3x + 1 = 25$ adalah …","opts":["$8$","$10$","$6$","$14$"],"jawab":0,"p":"$3x=25-1=24$, maka $x=8$."},{"type":"pg","q":"Nilai $x$ yang memenuhi $5x + 15 = 70$ adalah …","opts":["$10$","$7$","$11$","$16$"],"jawab":2,"p":"$5x=70-15=55$, maka $x=11$."},{"type":"pg","q":"Diketahui $f(x)=7x+1$. Nilai $f(5)$ adalah …","opts":["$45$","$31$","$30$","$36$"],"jawab":3,"p":"$f(5)=7\\cdot5+1=36$."},{"type":"pg","q":"Hasil dari $19 \\times 9$ adalah …","opts":["$171$","$166$","$174$","$172$"],"jawab":0,"p":"$19\\times9=171$."},{"type":"pg","q":"Nilai $x$ yang memenuhi $3x + 7 = 31$ adalah …","opts":["$10$","$16$","$12$","$8$"],"jawab":3,"p":"$3x=31-7=24$, maka $x=8$."},{"type":"pg","q":"Nilai $x$ yang memenuhi $2x + 16 = 36$ adalah …","opts":["$12$","$13$","$10$","$1$"],"jawab":2,"p":"$2x=36-16=20$, maka $x=10$."},{"type":"pg","q":"Hasil dari $11 \\times 6$ adalah …","opts":["$58$","$64$","$61$","$66$"],"jawab":3,"p":"$11\\times6=66$."}]}};</script>
+<script>window.quizDB={"lim-05":{"title":"Definisi, Syarat & Sifat Limit · Intermediate","kode":"LIM-05","soal":[{"type":"pg","level":"Intermediate","q":"Diketahui fungsi: \\[f(x) = \\begin{cases} 2x + 1 & x < 2 \\\\ x^2 - 1 & x \\geq 2 \\end{cases}\\] Nilai $ \\displaystyle\\lims{2} f(x) $ adalah …","opts":["$ 3 $","$ 4 $","$ 5 $","tidak ada, karena $ f(2)=3 $","tidak ada, karena limit kiri $ \\neq $ limit kanan"],"jawab":4,"p":"Hitung limit kiri dan kanan: \\begin{align*} \\lim_{x\\to 2^-}(2x+1) &= 5, \\lim_{x\\to 2^+}(x^2-1) = 3.","subMateri":"","kesalahanUmum":"hanya menghitung limit kiri saja dan langsung menyimpulkan limit ada"},{"type":"pg","level":"Intermediate","q":"Diketahui fungsi: \\[g(x) = \\begin{cases} x^2 & x \\leq 1 \\\\ x + 3 & x > 1 \\end{cases}\\] Pernyataan yang <b>benar</b> tentang $ \\displaystyle\\lims{1} g(x) $ adalah …","opts":["Limit ada dan nilainya $ 1 $","Limit ada dan nilainya $ 4 $","Limit tidak ada karena $ g(1) $ tidak terdefinisi","Limit tidak ada karena limit kiri $ =1 \\neq 4= $ limit kanan","Limit ada dan nilainya $ \\dfrac{1+4}{2} = 2{,}5 $"],"jawab":3,"p":"Limit kiri: $ \\lim_{x\\to 1^-}x^2 = 1 $ . Limit kanan: $ \\lim_{x\\to 1^+}(x+3)=4 $ . Karena $ 1\\neq 4 $ , limit tidak ada. Perhatikan: $ g(1)=1^2=1 $ terdefinisi, tetapi itu bukan alasan limit tidak ada --- penyebabnya adalah ketidaksamaan limit kiri-kanan.","subMateri":"","kesalahanUmum":"mengira limit ada karena f(1) terdefinisi; tidak mengecek kiri dan kanan"},{"type":"pg","level":"Intermediate","q":"Diketahui $ \\displaystyle\\lims{2} f(x) = 4 $ dan $ \\displaystyle\\lims{2} g(x) = 3 $ . Nilai $ \\displaystyle\\lims{2}\\bigl[2f(x) - g(x)\\bigr]^2 $ adalah …","opts":["$ 13 $","$ 17 $","$ 23 $","$ 25 $","$ 49 $"],"jawab":3,"p":"Terapkan sifat limit dan aturan pangkat: \\[\\bigl[2\\lims{2}f(x) - \\lims{2}g(x)\\bigr]^2 = [2(4)-3]^2 = 5^2 = 25.\\]","subMateri":"","kesalahanUmum":"lupa aturan pangkat; menghitung [2(4)-3]^2 = 2(4)^2-3^2 = 23"},{"type":"pg","level":"Intermediate","q":"Diketahui $ \\displaystyle\\lims{2} f(x) = 4 $ dan $ \\displaystyle\\lims{2} g(x) = 3 $ . Nilai $ \\displaystyle\\lims{2}\\bigl[f(x)\\cdot g(x) + g^2(x)\\bigr] $ adalah …","opts":["$ 9 $","$ 12 $","$ 17 $","$ 21 $","$ 25 $"],"jawab":3,"p":"Terapkan sifat perkalian dan pangkat: \\[\\lims{2}f(x)\\cdot\\lims{2}g(x) + \\bigl[\\lims{2}g(x)\\bigr]^2 = 4\\cdot3 + 3^2 = 12+9 = 21.\\]","subMateri":"","kesalahanUmum":"menghitung f(x)·g(x)+g^2(x) = (4·3)+3^2 tapi mengira hasilnya (4·3+3)^2 = 225"},{"type":"pg","level":"Intermediate","q":"Nilai $ \\displaystyle\\lims{4}\\sqrt{3x^2 - 2x + 1} $ adalah …","opts":["$ \\sqrt{39} $","$ \\sqrt{40} $","$ \\sqrt{41} $","$ \\sqrt{43} $","$ \\sqrt{45} $"],"jawab":2,"p":"Substitusi $ x=4 $ terlebih dahulu: $ 3(16)-2(4)+1 = 48-8+1=41>0 $ , aman. \\[\\lims{4}\\sqrt{3x^2-2x+1} = \\sqrt{41}.\\]","subMateri":"","kesalahanUmum":"mengira lim sqrt(f(x)) = sqrt(lim x) bukan sqrt(lim f(x)); salah menghitung 3(16)-2(4)+1"},{"type":"pg","level":"Intermediate","q":"Diketahui fungsi: \\[f(x) = \\begin{cases} ax + 1 & x < 2 \\\\ b & x = 2 \\\\ 3x - b & x > 2 \\end{cases}\\] Agar $ f $ kontinu di $ x = 2 $ (limit kiri, limit kanan, dan $ f(2) $ semuanya sama), nilai $ a + b $ yang tepat adalah …","opts":["$ 3 $","$ 4 $","$ 5 $","$ 6 $","$ 7 $"],"jawab":1,"p":"Syarat $ f $ kontinu di $ x=2 $ : limit kiri $ = $ limit kanan $ = f(2) $ . \\[\\text{Limit kiri: } \\lim_{x\\to2^-}(ax+1) = 2a+1 \\qquad \\text{Limit kanan: } \\lim_{x\\to2^+}(3x-b) = 6-b \\qquad f(2) = b\\] Diperoleh sistem dua persamaan: \\[2a+1 = b \\qquad \\text{dan} \\qquad 2a+1 = 6-b\\] Substitusi $ b=2a+1 $ ke persamaan kedua: \\[2a+1 = 6-(2a+1) \\Longrightarrow 4a = 4 \\Longrightarrow a = 1\\] Sehingga $ b = 2(1)+1 = 3 $ , dan $ a+b = 1+3 = 4 $ .","subMateri":"","kesalahanUmum":"hanya menyamakan limit kiri dan kanan, lupa menyamakan juga dengan f(2); akibatnya sistem persamaan kurang satu sehingga a dan b tidak unik"},{"type":"pg","level":"Intermediate","q":"Diketahui fungsi: \\[f(x) = \\begin{cases} x^2 + 1 & x \\neq 2 \\\\ 7 & x = 2 \\end{cases}\\] Nilai $ \\displaystyle\\lims{2} f(x) $ adalah …","opts":["$ 1 $","$ 3 $","$ 5 $","$ 7 $","tidak ada"],"jawab":2,"p":"Nilai fungsi di $ x=2 $ didefinisikan khusus sebagai $ 7 $ . Namun limit melihat nilai yang didekati oleh $ f(x)=x^2+1 $ saat $ x\\to 2 $ (bukan saat $ x=2 $ ): \\[\\lims{2}(x^2+1) = 4+1 = 5 \\neq 7 = f(2).\\]","subMateri":"","kesalahanUmum":"mengira limit harus = f(a); tidak memahami bahwa f(a) boleh berbeda dari L"},{"type":"pg","level":"Intermediate","q":"Diketahui $ \\displaystyle\\lims{3} f(x) = 6 $ dan $ \\displaystyle\\lims{3} g(x) = 2 $ . Nilai $ \\displaystyle\\lims{3} \\dfrac{f(x)}{g(x)} $ adalah …","opts":["$ \\dfrac{1}{3} $","$ 2 $","$ 3 $","$ 4 $","$ 12 $"],"jawab":2,"p":"Penyebut di $ x=3 $ adalah $ g(x)=2\\neq 0 $ , sehingga sifat limit pembagian berlaku: \\[\\lims{3}\\frac{f(x)}{g(x)} = \\frac{6}{2} = 3.\\]","subMateri":"","kesalahanUmum":"menulis lim f/g = lim f / g(3) bukan lim f / lim g; atau lupa cek lim g ≠ 0"},{"type":"pg","level":"Intermediate","q":"Nilai $ \\displaystyle\\lims{1} \\dfrac{2x^2 + 3x - 1}{x + 2} $ adalah …","opts":["$ \\dfrac{1}{3} $","$ \\dfrac{4}{3} $","$ \\dfrac{3}{2} $","$ 2 $","$ 4 $"],"jawab":1,"p":"Substitusi $ x=1 $ ; penyebut $ x+2=3\\neq 0 $ : \\[\\lims{1}\\frac{2x^2+3x-1}{x+2} = \\frac{2+3-1}{3} = \\frac{4}{3}.\\]","subMateri":"","kesalahanUmum":"tidak mengecek bahwa penyebut di x=1 adalah 3 ≠ 0; langsung pakai faktorisasi padahal tidak perlu"}]}};</script>
 <script>
 // ── Scroll progress bar ──────────────────────────────────
 window.addEventListener('scroll', () => {
@@ -911,8 +1048,13 @@ function renderQ(i){
   // meta row
   const typeLabel={pg:'Pilihan Ganda',bs:'Benar / Salah',mma:'Multiple Answer'};
   const typeCls={pg:'qt-pg',bs:'qt-bs',mma:'qt-mma'};
+  const lvlCls={Beginner:'qlb-beginner',Intermediate:'qlb-intermediate',Expert:'qlb-expert'};
+  const lvlHtml=q.level?`<span class="q-level-badge ${lvlCls[q.level]||'qlb-beginner'}">${q.level}</span>`:'';
   html+=`<div class="q-soal-meta">
-    <span class="q-type ${typeCls[q.type]||'qt-pg'}">${typeLabel[q.type]||'Pilihan Ganda'}</span>
+    <div style="display:flex;align-items:center;gap:.45rem;">
+      <span class="q-type ${typeCls[q.type]||'qt-pg'}">${typeLabel[q.type]||'Pilihan Ganda'}</span>
+      ${lvlHtml}
+    </div>
     <button class="q-tandai${S.marked[i]?' on':''}" id="tm${i}" onclick="mark(${i})">
       <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 2h6v9l-3-2.2L4 11V2z"/></svg>
       ${S.marked[i]?'Ditandai':'Tandai Soal'}

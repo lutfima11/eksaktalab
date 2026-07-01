@@ -1,0 +1,1551 @@
+{
+  "materi": "persamaan-kuadrat",
+  "judul": "Persamaan Kuadrat",
+  "totalSoal": 80,
+  "sections": [
+    {
+      "sectionId": "A",
+      "sectionTitle": "Definisi, Syarat \\& Sifat Limit",
+      "soal": [
+        {
+          "id": "A1",
+          "section": "A",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira limit = nilai fungsi di titik itu; bingung antara f(a) dan lim f(x)",
+          "jawab": "b",
+          "p": "Limit $ \\displaystyle\\lims{a}f(x)=L $ berarti $ f(x) $ <em>mendekati</em> $ L $ saat $ x $ mendekati $ a $ , bukan berarti $ f(a)=L $ . Nilai $ f(a) $ boleh tidak terdefinisi, asalkan nilai pendekatannya ada.",
+          "q": "Pernyataan yang <b>paling tepat</b> mengenai konsep $ \\displaystyle\\lims{a} f(x) = L $ adalah …",
+          "opts": [
+            "$ f(a) = L $ selalu berlaku",
+            "$ f(a) $ tidak perlu terdefinisi, yang penting $ f(x) $ mendekati $ L $ saat $ x $ mendekati $ a $",
+            "$ L $ harus sama dengan $ f(a) $",
+            "Limit tidak ada jika $ f(a) $ tidak terdefinisi",
+            "$ x $ harus mencapai nilai $ a $"
+          ]
+        },
+        {
+          "id": "A2",
+          "section": "A",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung f(2) langsung; tidak menyederhanakan dulu (bentuk 0/0)",
+          "jawab": "c",
+          "p": "Dari tabel, $ f(x) $ mendekati $ 4 $ baik dari kiri ( $ 1{,}9\\to 3{,}9; 1{,}99\\to 3{,}99 $ ) maupun dari kanan ( $ 2{,}01\\to 4{,}01; 2{,}1\\to 4{,}1 $ ). Nilai limitnya adalah $ 4 $ .",
+          "q": "Berdasarkan tabel pendekatan nilai berikut: {\\small \\begin{tabular}{|c|c|c|c|c|} $ x $ & $ 1{,}9 $ & $ 1{,}99 $ & $ 2{,}01 $ & $ 2{,}1 $ \\ $ f(x) $ & $ 3{,}9 $ & $ 3{,}99 $ & $ 4{,}01 $ & $ 4{,}1 $ \\ \\end{tabular} } Nilai $ \\displaystyle\\lims{2} f(x) $ adalah …",
+          "opts": [
+            "$ 2 $",
+            "$ 3{,}99 $",
+            "$ 4 $",
+            "$ 4{,}1 $",
+            "tidak ada"
+          ]
+        },
+        {
+          "id": "A3",
+          "section": "A",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira lim k = k·a; mengalikan konstanta dengan titik pendekatan",
+          "jawab": "c",
+          "p": "Berdasarkan sifat limit (1): limit konstanta adalah konstanta itu sendiri, tidak bergantung pada titik pendekatan. \\[\\lims{100}7 = 7.\\]",
+          "q": "Nilai dari $ \\displaystyle\\lims{100} 7 $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ 1 $",
+            "$ 7 $",
+            "$ 100 $",
+            "$ 700 $"
+          ]
+        },
+        {
+          "id": "A4",
+          "section": "A",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengalikan 5 ke dalam tanda limit sehingga dianggap 5·2 dulu baru dipangkatkan",
+          "jawab": "d",
+          "p": "Substitusi $ x=2 $ : $ 5(2) = 10 $ . \\[\\lims{2}5x = 5\\cdot 2 = 10.\\]",
+          "q": "Nilai dari $ \\displaystyle\\lims{2} 5x $ adalah …",
+          "opts": [
+            "$ 2 $",
+            "$ 5 $",
+            "$ 7 $",
+            "$ 10 $",
+            "$ 25 $"
+          ]
+        },
+        {
+          "id": "A5",
+          "section": "A",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "substitusi x=3 ke (x+1) lalu dipangkat, tapi salah hitung (4)^3 = 64 bukan 27",
+          "jawab": "d",
+          "p": "Gunakan sifat pangkat, $ \\lims{2}(x+1)^3 = (2+1)^3 = 3^3 = 27 $ .",
+          "q": "Nilai dari $ \\displaystyle\\lims{2} (x+1)^3 $ adalah …",
+          "opts": [
+            "$ 9 $",
+            "$ 16 $",
+            "$ 25 $",
+            "$ 27 $",
+            "$ 64 $"
+          ]
+        },
+        {
+          "id": "A6",
+          "section": "A",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "langsung substitusi x=3, lupa cek pembilang dan penyebut (keduanya tidak nol, aman)",
+          "jawab": "a",
+          "p": "Substitusi $ x=3 $ : penyebut $ =4 \\neq 0 $ , aman disubstitusi langsung. \\[\\lims{3}\\frac{x^2-1}{x+1} = \\frac{9-1}{3+1} = \\frac{8}{4} = 2.\\]",
+          "q": "Nilai dari $ \\displaystyle\\lims{3} \\dfrac{x^2-1}{x+1} $ adalah …",
+          "opts": [
+            "$ 2 $",
+            "$ 4 $",
+            "$ 6 $",
+            "$ 8 $",
+            "tidak ada"
+          ]
+        },
+        {
+          "id": "A7",
+          "section": "A",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "hanya menghitung suku x^2 dan mengabaikan 2x-1",
+          "jawab": "c",
+          "p": "Substitusi $ x=3 $ : $ 3^2+2(3)-1 = 9+6-1 = 14 $ .",
+          "q": "Nilai dari $ \\displaystyle\\lims{3} (x^2 + 2x - 1) $ adalah …",
+          "opts": [
+            "$ 9 $",
+            "$ 12 $",
+            "$ 14 $",
+            "$ 16 $",
+            "$ 18 $"
+          ]
+        },
+        {
+          "id": "A8",
+          "section": "A",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Konseptual-Grafik",
+          "kesalahanUmum": "membaca f(1) dari grafik, bukan limit saat x mendekati 1",
+          "jawab": "c",
+          "p": "Dari grafik: $ f(x)=x+1 $ baik dari kiri maupun kanan $ x=1 $ , sehingga limit kiri $ = $ limit kanan $ = 2 $ . Titik padat di $ (1,3) $ hanya menunjukkan $ f(1)=3 $ , berbeda dengan limit, tetapi limit <em>tetap ada</em>.",
+          "q": "Perhatikan grafik fungsi $ h(x) $ berikut. \\begin{center} <img src=\"../../../assets/img/lf/lf-a8.svg\" alt=\"Grafik lf-a8\" class=\"soal-gambar\" style=\"display:block;max-width:100%;margin:.5rem auto;\"> \\end{center} Berdasarkan grafik, nilai $ \\displaystyle\\lims{1} h(x) $ adalah …",
+          "opts": [
+            "tidak ada",
+            "$ 1 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "A9",
+          "section": "A",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis-Konseptual",
+          "kesalahanUmum": "hanya menghitung limit kiri saja dan langsung menyimpulkan limit ada",
+          "jawab": "e",
+          "p": "Hitung limit kiri dan kanan: \\begin{align*} \\lim_{x\\to 2^-}(2x+1) &= 5, \\lim_{x\\to 2^+}(x^2-1) = 3.",
+          "q": "Diketahui fungsi: \\[f(x) = \\begin{cases} 2x + 1 & x < 2 \\\\ x^2 - 1 & x \\geq 2 \\end{cases}\\] Nilai $ \\displaystyle\\lims{2} f(x) $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $",
+            "tidak ada, karena $ f(2)=3 $",
+            "tidak ada, karena limit kiri $ \\neq $ limit kanan"
+          ]
+        },
+        {
+          "id": "A10",
+          "section": "A",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira limit ada karena f(1) terdefinisi; tidak mengecek kiri dan kanan",
+          "jawab": "d",
+          "p": "Limit kiri: $ \\lim_{x\\to 1^-}x^2 = 1 $ . Limit kanan: $ \\lim_{x\\to 1^+}(x+3)=4 $ . Karena $ 1\\neq 4 $ , limit tidak ada. Perhatikan: $ g(1)=1^2=1 $ terdefinisi, tetapi itu bukan alasan limit tidak ada --- penyebabnya adalah ketidaksamaan limit kiri-kanan.",
+          "q": "Diketahui fungsi: \\[g(x) = \\begin{cases} x^2 & x \\leq 1 \\\\ x + 3 & x > 1 \\end{cases}\\] Pernyataan yang <b>benar</b> tentang $ \\displaystyle\\lims{1} g(x) $ adalah …",
+          "opts": [
+            "Limit ada dan nilainya $ 1 $",
+            "Limit ada dan nilainya $ 4 $",
+            "Limit tidak ada karena $ g(1) $ tidak terdefinisi",
+            "Limit tidak ada karena limit kiri $ =1 \\neq 4= $ limit kanan",
+            "Limit ada dan nilainya $ \\dfrac{1+4}{2} = 2{,}5 $"
+          ]
+        },
+        {
+          "id": "A11",
+          "section": "A",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa aturan pangkat; menghitung [2(4)-3]^2 = 2(4)^2-3^2 = 23",
+          "jawab": "d",
+          "p": "Terapkan sifat limit dan aturan pangkat: \\[\\bigl[2\\lims{2}f(x) - \\lims{2}g(x)\\bigr]^2 = [2(4)-3]^2 = 5^2 = 25.\\]",
+          "q": "Diketahui $ \\displaystyle\\lims{2} f(x) = 4 $ dan $ \\displaystyle\\lims{2} g(x) = 3 $ . Nilai $ \\displaystyle\\lims{2}\\bigl[2f(x) - g(x)\\bigr]^2 $ adalah …",
+          "opts": [
+            "$ 13 $",
+            "$ 17 $",
+            "$ 23 $",
+            "$ 25 $",
+            "$ 49 $"
+          ]
+        },
+        {
+          "id": "A12",
+          "section": "A",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung f(x)·g(x)+g^2(x) = (4·3)+3^2 tapi mengira hasilnya (4·3+3)^2 = 225",
+          "jawab": "d",
+          "p": "Terapkan sifat perkalian dan pangkat: \\[\\lims{2}f(x)\\cdot\\lims{2}g(x) + \\bigl[\\lims{2}g(x)\\bigr]^2 = 4\\cdot3 + 3^2 = 12+9 = 21.\\]",
+          "q": "Diketahui $ \\displaystyle\\lims{2} f(x) = 4 $ dan $ \\displaystyle\\lims{2} g(x) = 3 $ . Nilai $ \\displaystyle\\lims{2}\\bigl[f(x)\\cdot g(x) + g^2(x)\\bigr] $ adalah …",
+          "opts": [
+            "$ 9 $",
+            "$ 12 $",
+            "$ 17 $",
+            "$ 21 $",
+            "$ 25 $"
+          ]
+        },
+        {
+          "id": "A13",
+          "section": "A",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira lim sqrt(f(x)) = sqrt(lim x) bukan sqrt(lim f(x)); salah menghitung 3(16)-2(4)+1",
+          "jawab": "c",
+          "p": "Substitusi $ x=4 $ terlebih dahulu: $ 3(16)-2(4)+1 = 48-8+1=41>0 $ , aman. \\[\\lims{4}\\sqrt{3x^2-2x+1} = \\sqrt{41}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{4}\\sqrt{3x^2 - 2x + 1} $ adalah …",
+          "opts": [
+            "$ \\sqrt{39} $",
+            "$ \\sqrt{40} $",
+            "$ \\sqrt{41} $",
+            "$ \\sqrt{43} $",
+            "$ \\sqrt{45} $"
+          ]
+        },
+        {
+          "id": "A14",
+          "section": "A",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis-Parametrik",
+          "kesalahanUmum": "hanya menyamakan limit kiri dan kanan, lupa menyamakan juga dengan f(2); akibatnya sistem persamaan kurang satu sehingga a dan b tidak unik",
+          "jawab": "b",
+          "p": "Syarat $ f $ kontinu di $ x=2 $ : limit kiri $ = $ limit kanan $ = f(2) $ . \\[\\text{Limit kiri: } \\lim_{x\\to2^-}(ax+1) = 2a+1 \\qquad \\text{Limit kanan: } \\lim_{x\\to2^+}(3x-b) = 6-b \\qquad f(2) = b\\] Diperoleh sistem dua persamaan: \\[2a+1 = b \\qquad \\text{dan} \\qquad 2a+1 = 6-b\\] Substitusi $ b=2a+1 $ ke persamaan kedua: \\[2a+1 = 6-(2a+1) \\Longrightarrow 4a = 4 \\Longrightarrow a = 1\\] Sehingga $ b = 2(1)+1 = 3 $ , dan $ a+b = 1+3 = 4 $ .",
+          "q": "Diketahui fungsi: \\[f(x) = \\begin{cases} ax + 1 & x < 2 \\\\ b & x = 2 \\\\ 3x - b & x > 2 \\end{cases}\\] Agar $ f $ kontinu di $ x = 2 $ (limit kiri, limit kanan, dan $ f(2) $ semuanya sama), nilai $ a + b $ yang tepat adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $"
+          ]
+        },
+        {
+          "id": "A15",
+          "section": "A",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Konseptual",
+          "kesalahanUmum": "mengira limit harus = f(a); tidak memahami bahwa f(a) boleh berbeda dari L",
+          "jawab": "c",
+          "p": "Nilai fungsi di $ x=2 $ didefinisikan khusus sebagai $ 7 $ . Namun limit melihat nilai yang didekati oleh $ f(x)=x^2+1 $ saat $ x\\to 2 $ (bukan saat $ x=2 $ ): \\[\\lims{2}(x^2+1) = 4+1 = 5 \\neq 7 = f(2).\\]",
+          "q": "Diketahui fungsi: \\[f(x) = \\begin{cases} x^2 + 1 & x \\neq 2 \\\\ 7 & x = 2 \\end{cases}\\] Nilai $ \\displaystyle\\lims{2} f(x) $ adalah …",
+          "opts": [
+            "$ 1 $",
+            "$ 3 $",
+            "$ 5 $",
+            "$ 7 $",
+            "tidak ada"
+          ]
+        },
+        {
+          "id": "A16",
+          "section": "A",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menulis lim f/g = lim f / g(3) bukan lim f / lim g; atau lupa cek lim g ≠ 0",
+          "jawab": "c",
+          "p": "Penyebut di $ x=3 $ adalah $ g(x)=2\\neq 0 $ , sehingga sifat limit pembagian berlaku: \\[\\lims{3}\\frac{f(x)}{g(x)} = \\frac{6}{2} = 3.\\]",
+          "q": "Diketahui $ \\displaystyle\\lims{3} f(x) = 6 $ dan $ \\displaystyle\\lims{3} g(x) = 2 $ . Nilai $ \\displaystyle\\lims{3} \\dfrac{f(x)}{g(x)} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{3} $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $",
+            "$ 12 $"
+          ]
+        },
+        {
+          "id": "A17",
+          "section": "A",
+          "num": 17,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak mengecek bahwa penyebut di x=1 adalah 3 ≠ 0; langsung pakai faktorisasi padahal tidak perlu",
+          "jawab": "b",
+          "p": "Substitusi $ x=1 $ ; penyebut $ x+2=3\\neq 0 $ : \\[\\lims{1}\\frac{2x^2+3x-1}{x+2} = \\frac{2+3-1}{3} = \\frac{4}{3}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{1} \\dfrac{2x^2 + 3x - 1}{x + 2} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{3} $",
+            "$ \\dfrac{4}{3} $",
+            "$ \\dfrac{3}{2} $",
+            "$ 2 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "A18",
+          "section": "A",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "menghitung [f^2+2g]^3 lalu dibagi [3f-g] tapi salah tanda: (-4)^2=16 dianggap -16",
+          "jawab": "b",
+          "p": "Terapkan sifat limit: \\begin{align*} f^2 + 2g &= 3^2 + 2(-2) = 9-4 = 5; [5]^3 = 125.\\ 3f - g &= 3(3) - (-2) = 11.",
+          "q": "Diketahui $ \\displaystyle\\lims{2} f(x) = 3 $ dan $ \\displaystyle\\lims{2} g(x) = -2 $ . Nilai $ \\displaystyle\\lims{2}\\dfrac{\\bigl[f^2(x) + 2g(x)\\bigr]^3}{3f(x) - g(x)} $ adalah …",
+          "opts": [
+            "$ \\dfrac{25}{11} $",
+            "$ \\dfrac{125}{11} $",
+            "$ \\dfrac{125}{7} $",
+            "$ \\dfrac{225}{11} $",
+            "$ \\dfrac{625}{11} $"
+          ]
+        },
+        {
+          "id": "A19",
+          "section": "A",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Parametrik",
+          "kesalahanUmum": "hanya menyamakan di satu titik (x=2) dan mengabaikan kontinuitas di x=4",
+          "jawab": "c",
+          "p": "Syarat di $ x=2 $ : limit kiri $ = 2^2+2 = 6 $ , limit kanan $ = 2a+b $ . Agar sama: $ 2a+b=6 $ . Syarat di $ x=4 $ : limit kiri $ = 4a+b $ , limit kanan $ = 3(4)-2=10 $ . Agar sama: $ 4a+b=10 $ . Kurangkan: $ 2a=4 \\Rightarrow a=2 $ , $ b=2 $ .",
+          "q": "Diketahui fungsi: \\[f(x)=\\begin{cases} x^2+2 & x<2 \\\\ ax+b & 2\\leq x<4 \\\\ 3x-2 & x\\geq 4 \\end{cases}\\] Agar $ \\displaystyle\\lims{2} f(x) $ dan $ \\displaystyle\\lims{4} f(x) $ keduanya ada, nilai $ a $ dan $ b $ berturut-turut adalah …",
+          "opts": [
+            "$ a=1,\\;b=4 $",
+            "$ a=2,\\;b=1 $",
+            "$ a=2,\\;b=2 $",
+            "$ a=3,\\;b=0 $",
+            "$ a=4,\\;b=-2 $"
+          ]
+        },
+        {
+          "id": "A20",
+          "section": "A",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Parametrik",
+          "kesalahanUmum": "tidak menyadari bahwa agar limit berhingga, pembilang harus nol di x=3; mencoba substitusi langsung",
+          "jawab": "b",
+          "p": "Agar limit berhingga, pembilang $ x^2+ax-6 $ harus nol di $ x=3 $ : \\[9+3a-6=0 \\Rightarrow 3a=-3 \\Rightarrow a=-1.\\] Substitusi: $ x^2-x-6 = (x-3)(x+2) $ , sehingga: \\[\\lims{3}\\frac{(x-3)(x+2)}{x-3} = \\lims{3}(x+2) = 5.\\]",
+          "q": "Agar $ \\displaystyle\\lims{3} \\dfrac{x^2 + ax - 6}{x - 3} $ bernilai berhingga, nilai $ a $ dan nilai limitnya berturut-turut adalah …",
+          "opts": [
+            "$ a = -1 $ , limit $ = 4 $",
+            "$ a = -1 $ , limit $ = 5 $",
+            "$ a = 1 $ , limit $ = 5 $",
+            "$ a = 2 $ , limit $ = 7 $",
+            "$ a = -2 $ , limit $ = 3 $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "B",
+      "sectionTitle": "Limit Berhingga Aljabar",
+      "soal": [
+        {
+          "id": "B1",
+          "section": "B",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "hanya menghitung x^2 saja, mengabaikan -3x+5; atau mencoba faktorisasi padahal substitusi langsung berlaku",
+          "jawab": "c",
+          "p": "Substitusi $ x=2 $ langsung: $ 4-6+5=3 $ . Penyebut tidak nol, aman. \\[\\lims{2}(x^2-3x+5) = 3.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{2}(x^2 - 3x + 5) $ adalah …",
+          "opts": [
+            "$ 1 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $"
+          ]
+        },
+        {
+          "id": "B2",
+          "section": "B",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira bentuk 0/4 tak tentu, lalu mencoba faktorisasi; padahal 0/4=0 adalah nilai limit yang sah",
+          "jawab": "b",
+          "p": "Substitusi $ x=1 $ : pembilang $ = 1+1-2 = 0 $ , penyebut $ = 1+3=4 $ . Nilai $ \\tfrac{0}{4}=0 $ adalah hasil sah (bukan bentuk tak tentu). \\[\\lims{1}\\frac{x^2+x-2}{x+3} = 0.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{1}\\dfrac{x^2 + x - 2}{x + 3} $ adalah …",
+          "opts": [
+            "$ -1 $",
+            "$ 0 $",
+            "$ \\dfrac{1}{4} $",
+            "$ \\dfrac{1}{2} $",
+            "$ 1 $"
+          ]
+        },
+        {
+          "id": "B3",
+          "section": "B",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "substitusi x=3 langsung → 0/0 lalu menyimpulkan limit tidak ada; tidak mencoba faktorisasi",
+          "jawab": "c",
+          "p": "Substitusi $ x=3 $ menghasilkan $ \\tfrac{0}{0} $ . Faktorkan: \\[\\lims{3}\\frac{(x-3)(x+3)}{x-3} = \\lims{3}(x+3) = 6.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{3}\\dfrac{x^2 - 9}{x - 3} $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ 3 $",
+            "$ 6 $",
+            "$ 9 $",
+            "tidak ada"
+          ]
+        },
+        {
+          "id": "B4",
+          "section": "B",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "salah memfaktorkan x^2+x-6, mengira (x+3)(x-2) padahal harus cek: 3×(-2)=-6 dan 3+(-2)=1 ✓",
+          "jawab": "c",
+          "p": "Substitusi $ x=2 $ menghasilkan $ \\tfrac{0}{0} $ . Faktorkan pembilang: $ x^2+x-6 = (x+3)(x-2) $ : \\[\\lims{2}\\frac{(x+3)(x-2)}{x-2} = \\lims{2}(x+3) = 5.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{2}\\dfrac{x^2 + x - 6}{x - 2} $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $"
+          ]
+        },
+        {
+          "id": "B5",
+          "section": "B",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "faktorisasi x^2-5x+6 = (x-2)(x-3) benar, tapi salah mencoret: membagi (x-3)/(x-3) dan mengira hasilnya 0",
+          "jawab": "c",
+          "p": "Faktorkan: $ x^2-5x+6 = (x-2)(x-3) $ : \\[\\lims{3}\\frac{(x-2)(x-3)}{x-3} = \\lims{3}(x-2) = 1.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{3}\\dfrac{x^2 - 5x + 6}{x - 3} $ adalah …",
+          "opts": [
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ 2 $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "B6",
+          "section": "B",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "memfaktorkan penyebut x^2-1 = (x-1)(x+1) tapi lupa mencoret (x-1) dengan pembilang",
+          "jawab": "b",
+          "p": "Faktorkan penyebut: $ x^2-1 = (x-1)(x+1) $ : \\[\\lims{1}\\frac{x-1}{(x-1)(x+1)} = \\lims{1}\\frac{1}{x+1} = \\frac{1}{2}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{1}\\dfrac{x - 1}{x^2 - 1} $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ \\dfrac{1}{2} $",
+            "$ 1 $",
+            "$ 2 $",
+            "tidak ada"
+          ]
+        },
+        {
+          "id": "B7",
+          "section": "B",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "hanya memfaktorkan pembilang saja; atau salah memfaktorkan penyebut x^2-x-2 = (x-2)(x+1)",
+          "jawab": "b",
+          "p": "Faktorkan kedua sisi: pembilang $ = (x-2)(x+2) $ , penyebut $ = (x-2)(x+1) $ : \\[\\lims{2}\\frac{(x-2)(x+2)}{(x-2)(x+1)} = \\lims{2}\\frac{x+2}{x+1} = \\frac{4}{3}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{2}\\dfrac{x^2 - 4}{x^2 - x - 2} $ adalah …",
+          "opts": [
+            "$ 1 $",
+            "$ \\dfrac{4}{3} $",
+            "$ \\dfrac{3}{2} $",
+            "$ 2 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "B8",
+          "section": "B",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira x^3-8 = (x-2)^3; tidak ingat rumus selisih kubik a^3-b^3=(a-b)(a^2+ab+b^2)",
+          "jawab": "d",
+          "p": "Gunakan rumus selisih kubik $ x^3-8 = (x-2)(x^2+2x+4) $ : \\[\\lims{2}\\frac{(x-2)(x^2+2x+4)}{x-2} = \\lims{2}(x^2+2x+4) = 4+4+4 = 12.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{2}\\dfrac{x^3 - 8}{x - 2} $ adalah …",
+          "opts": [
+            "$ 4 $",
+            "$ 6 $",
+            "$ 8 $",
+            "$ 12 $",
+            "$ 16 $"
+          ]
+        },
+        {
+          "id": "B9",
+          "section": "B",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengalikan sekawan hanya di pembilang saja; atau tidak menyadari (x-4)=(sqrt(x)-2)(sqrt(x)+2)",
+          "jawab": "b",
+          "p": "Kalikan dengan sekawan $ \\dfrac{\\sqrt{x}+2}{\\sqrt{x}+2} $ : \\[\\lims{4}\\frac{(\\sqrt{x}-2)(\\sqrt{x}+2)}{(x-4)(\\sqrt{x}+2)} = \\lims{4}\\frac{x-4}{(x-4)(\\sqrt{x}+2)} = \\lims{4}\\frac{1}{\\sqrt{x}+2} = \\frac{1}{4}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{4}\\dfrac{\\sqrt{x} - 2}{x - 4} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{8} $",
+            "$ \\dfrac{1}{4} $",
+            "$ \\dfrac{1}{2} $",
+            "$ 1 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "B10",
+          "section": "B",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "sekawan dari sqrt(x+5)-3 adalah sqrt(x+5)+3, lalu pembilang jadi x+5-9=x-4 yang bisa dicoret dengan penyebut",
+          "jawab": "b",
+          "p": "Kalikan dengan sekawan $ \\dfrac{\\sqrt{x+5}+3}{\\sqrt{x+5}+3} $ : \\begin{align*} \\lims{4}\\frac{(\\sqrt{x+5}-3)(\\sqrt{x+5}+3)}{(x-4)(\\sqrt{x+5}+3)} &= \\lims{4}\\frac{x+5-9}{(x-4)(\\sqrt{x+5}+3)} \\ &= \\lims{4}\\frac{x-4}{(x-4)(\\sqrt{x+5}+3)} = \\frac{1}{3+3} = \\frac{1}{6}.",
+          "q": "Nilai $ \\displaystyle\\lims{4}\\dfrac{\\sqrt{x+5} - 3}{x - 4} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{8} $",
+            "$ \\dfrac{1}{6} $",
+            "$ \\dfrac{1}{4} $",
+            "$ \\dfrac{1}{3} $",
+            "$ \\dfrac{1}{2} $"
+          ]
+        },
+        {
+          "id": "B11",
+          "section": "B",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengalikan sekawan di penyebut tapi tidak di pembilang; atau lupa identitas (sqrt(u)-2)(sqrt(u)+2) = u-4",
+          "jawab": "c",
+          "p": "Kalikan dengan sekawan $ \\dfrac{\\sqrt{x+1}+2}{\\sqrt{x+1}+2} $ : \\begin{align*} \\lims{3}\\frac{(x-3)(\\sqrt{x+1}+2)}{(\\sqrt{x+1}-2)(\\sqrt{x+1}+2)} &= \\lims{3}\\frac{(x-3)(\\sqrt{x+1}+2)}{(x+1)-4} \\ &= \\lims{3}\\frac{(x-3)(\\sqrt{x+1}+2)}{x-3} = \\lims{3}(\\sqrt{x+1}+2) = 4.",
+          "q": "Nilai $ \\displaystyle\\lims{3}\\dfrac{x - 3}{\\sqrt{x+1} - 2} $ adalah …",
+          "opts": [
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $",
+            "$ 6 $",
+            "$ 8 $"
+          ]
+        },
+        {
+          "id": "B12",
+          "section": "B",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "hanya merasionalisasi satu sisi; hasil akhir 2/sqrt(3) tidak disederhanakan menjadi 2sqrt(3)/3",
+          "jawab": "c",
+          "p": "Kalikan dengan dua sekawan secara bergantian: \\begin{align*} &\\lims{3}\\frac{(\\sqrt{x}-\\sqrt{3})(\\sqrt{x}+\\sqrt{3})(\\sqrt{x+1}+2)}{(\\sqrt{x+1}-2)(\\sqrt{x+1}+2)(\\sqrt{x}+\\sqrt{3})} \\ &= \\lims{3}\\frac{(x-3)(\\sqrt{x+1}+2)}{(x-3)(\\sqrt{x}+\\sqrt{3})} = \\frac{\\sqrt{4}+2}{\\sqrt{3}+\\sqrt{3}} = \\frac{4}{2\\sqrt{3}} = \\frac{2\\sqrt{3}}{3}.",
+          "q": "Nilai $ \\displaystyle\\lims{3}\\dfrac{\\sqrt{x} - \\sqrt{3}}{\\sqrt{x+1} - 2} $ adalah … \\begin{center} <img src=\"../../../assets/img/lf/lf-b12.svg\" alt=\"Grafik lf-b12\" class=\"soal-gambar\" style=\"display:block;max-width:100%;margin:.5rem auto;\"> \\end{center}",
+          "opts": [
+            "$ \\dfrac{\\sqrt{3}}{3} $",
+            "$ \\dfrac{\\sqrt{3}}{2} $",
+            "$ \\dfrac{2\\sqrt{3}}{3} $",
+            "$ \\sqrt{3} $",
+            "$ 2\\sqrt{3} $"
+          ]
+        },
+        {
+          "id": "B13",
+          "section": "B",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak melakukan substitusi; mencoba faktorisasi langsung cbrt(x)-2 yang tidak standar tanpa substitusi",
+          "jawab": "b",
+          "p": "Misalkan $ p = \\sqrt[3]{x} $ , maka $ x = p^3 $ dan $ x \\to 8 \\Rightarrow p \\to 2 $ : \\[\\lims{8}\\frac{\\sqrt[3]{x}-2}{x-8} = \\lim_{p\\to2}\\frac{p-2}{p^3-8} = \\lim_{p\\to2}\\frac{p-2}{(p-2)(p^2+2p+4)} = \\frac{1}{4+4+4} = \\frac{1}{12}.\\]",
+          "q": "Dengan substitusi $ p = \\sqrt[3]{x} $ , nilai $ \\displaystyle\\lims{8}\\dfrac{\\sqrt[3]{x}-2}{x-8} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{16} $",
+            "$ \\dfrac{1}{12} $",
+            "$ \\dfrac{1}{8} $",
+            "$ \\dfrac{1}{6} $",
+            "$ \\dfrac{1}{4} $"
+          ]
+        },
+        {
+          "id": "B14",
+          "section": "B",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira faktorisasi x^3+3x^2-4 = (x-1)(x^2+4x+4) lalu tidak menyadari x^2+4x+4=(x+2)^2 → nilai 9",
+          "jawab": "d",
+          "p": "Cek: $ x=1 $ $ \\Rightarrow $ pembilang $ = 1+3-4=0 $ $ \\checkmark $ . Faktorkan: $ x^3+3x^2-4 = (x-1)(x+2)^2 $ : \\[\\lims{1}\\frac{(x-1)(x+2)^2}{x-1} = \\lims{1}(x+2)^2 = 3^2 = 9.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{1}\\dfrac{x^3 + 3x^2 - 4}{x - 1} $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 5 $",
+            "$ 7 $",
+            "$ 9 $",
+            "$ 12 $"
+          ]
+        },
+        {
+          "id": "B15",
+          "section": "B",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis-Parametrik",
+          "kesalahanUmum": "tidak menyadari agar limit berhingga, pembilang harus nol di x=2 (karena penyebut nol di x=2); langsung substitusi",
+          "jawab": "b",
+          "p": "Penyebut $ = (x-2)(x+1) $ , nol di $ x=2 $ . Agar limit berhingga, pembilang juga nol di $ x=2 $ : \\[4+2a+b=0 \\Rightarrow 2a+b=-4.\\] Tulis pembilang $ = (x-2)(x-r) $ , maka $ a=-(2+r) $ , $ b=2r $ . Nilai limit: \\[\\lims{2}\\frac{(x-2)(x-r)}{(x-2)(x+1)} = \\frac{2-r}{3} = \\frac{5}{3} \\Rightarrow r=-3.\\] Maka $ a=1 $ , $ b=-6 $ , dan $ a+b = -5 $ .",
+          "q": "Diketahui $ \\displaystyle\\lims{2}\\dfrac{x^2 + ax + b}{x^2 - x - 2} = \\dfrac{5}{3} $ . Nilai $ a + b $ adalah …",
+          "opts": [
+            "$ -7 $",
+            "$ -5 $",
+            "$ -4 $",
+            "$ -3 $",
+            "$ 2 $"
+          ]
+        },
+        {
+          "id": "B16",
+          "section": "B",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak memfaktorkan x^2+3x-18 terlebih dahulu; langsung kalikan sekawan tanpa melihat (x-3) bisa dicoret",
+          "jawab": "d",
+          "p": "Faktorkan pembilang: $ x^2+3x-18 = (x+6)(x-3) $ . Kalikan sekawan penyebut: \\begin{align*} \\lims{3}\\frac{(x+6)(x-3)}{\\sqrt{x}-\\sqrt{3}} \\cdot \\frac{\\sqrt{x}+\\sqrt{3}}{\\sqrt{x}+\\sqrt{3}} &= \\lims{3}\\frac{(x+6)(x-3)(\\sqrt{x}+\\sqrt{3})}{x-3} \\ &= \\lims{3}(x+6)(\\sqrt{x}+\\sqrt{3}) = 9\\cdot 2\\sqrt{3} = 18\\sqrt{3}.",
+          "q": "Nilai $ \\displaystyle\\lims{3}\\dfrac{x^2 + 3x - 18}{\\sqrt{x} - \\sqrt{3}} $ adalah …",
+          "opts": [
+            "$ 6\\sqrt{3} $",
+            "$ 9\\sqrt{3} $",
+            "$ 12\\sqrt{3} $",
+            "$ 18\\sqrt{3} $",
+            "$ 36\\sqrt{3} $"
+          ]
+        },
+        {
+          "id": "B17",
+          "section": "B",
+          "num": 17,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak memfaktorkan penyebut x^2-9x = x(x-9) terlebih dahulu; mengira perlu substitusi akar pangkat dua",
+          "jawab": "b",
+          "p": "Faktorkan penyebut: $ x^2-9x = x(x-9) $ . Kalikan sekawan $ \\sqrt{x}+3 $ : \\begin{align*} \\lims{9}\\frac{\\sqrt{x}-3}{x(x-9)} \\cdot \\frac{\\sqrt{x}+3}{\\sqrt{x}+3} &= \\lims{9}\\frac{x-9}{x(x-9)(\\sqrt{x}+3)} = \\lims{9}\\frac{1}{x(\\sqrt{x}+3)} = \\frac{1}{9\\cdot 6} = \\frac{1}{54}.",
+          "q": "Nilai $ \\displaystyle\\lims{9}\\dfrac{\\sqrt{x} - 3}{x^2 - 9x} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{108} $",
+            "$ \\dfrac{1}{54} $",
+            "$ \\dfrac{1}{36} $",
+            "$ \\dfrac{1}{18} $",
+            "$ \\dfrac{1}{9} $"
+          ]
+        },
+        {
+          "id": "B18",
+          "section": "B",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Teknik Tinggi",
+          "kesalahanUmum": "hanya merasionalisasi satu lapisan; tidak menyadari perlu dua kali sekawan; atau berhenti di bentuk setengah jalan",
+          "jawab": "b",
+          "p": "Rasionalisasi lapisan luar dengan sekawan $ \\sqrt{1+\\sqrt{1+x}}+\\sqrt{2} $ : \\[\\frac{\\sqrt{1+\\sqrt{1+x}}-\\sqrt{2}}{x} = \\frac{\\sqrt{1+x}-1}{x\\bigl(\\sqrt{1+\\sqrt{1+x}}+\\sqrt{2}\\bigr)}.\\] Rasionalisasi lapisan dalam dengan sekawan $ \\sqrt{1+x}+1 $ : \\[\\frac{\\sqrt{1+x}-1}{x} \\cdot \\frac{1}{\\sqrt{1+x}+1} = \\frac{x}{x(\\sqrt{1+x}+1)} = \\frac{1}{\\sqrt{1+x}+1}.\\] Satukan dan substitusi $ x\\to 0 $ : \\[\\frac{1}{(\\sqrt{2}+\\sqrt{2})(1+1)} = \\frac{1}{2\\sqrt{2}\\cdot 2} = \\frac{\\sqrt{2}}{8}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\dfrac{\\sqrt{1+\\sqrt{1+x}}-\\sqrt{2}}{x} $ adalah … (<em>Petunjuk</em>: rasionalisasi dari lapisan <b>luar</b> ke dalam.)",
+          "opts": [
+            "$ \\dfrac{\\sqrt{2}}{16} $",
+            "$ \\dfrac{\\sqrt{2}}{8} $",
+            "$ \\dfrac{\\sqrt{2}}{4} $",
+            "$ \\dfrac{\\sqrt{2}}{2} $",
+            "$ \\sqrt{2} $"
+          ]
+        },
+        {
+          "id": "B19",
+          "section": "B",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Parametrik",
+          "kesalahanUmum": "langsung substitusi x=4 → 0/0 tanpa menyusun syarat agar limit berhingga; atau salah membangun sistem persamaan dari dua kondisi",
+          "jawab": "d",
+          "p": "Agar limit berhingga, kedua akar harus sama di $ x=4 $ : \\[\\sqrt{4+a} = \\sqrt{b-4} \\Rightarrow b = a+8.\\] Kalikan sekawan $ \\sqrt{x+a}+\\sqrt{b-x} $ : \\begin{align*} \\lims{4}\\frac{(x+a)-(b-x)}{(x-4)(\\sqrt{x+a}+\\sqrt{b-x})} &= \\lims{4}\\frac{2(x-4)}{(x-4) \\cdot 2\\sqrt{x+a}} = \\frac{1}{\\sqrt{4+a}} = \\frac{1}{4}.",
+          "q": "Diketahui $ \\displaystyle\\lims{4}\\dfrac{\\sqrt{x+a}-\\sqrt{b-x}}{x-4} = \\dfrac{1}{4} $ . Nilai $ a + b $ adalah … (<em>Petunjuk</em>: agar limit berhingga, pasti $ \\sqrt{4+a} = \\sqrt{b-4} $ , kemudian gunakan sekawan.)",
+          "opts": [
+            "$ 24 $",
+            "$ 28 $",
+            "$ 30 $",
+            "$ 32 $",
+            "$ 36 $"
+          ]
+        },
+        {
+          "id": "B20",
+          "section": "B",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Teknik Tinggi",
+          "kesalahanUmum": "tidak menyadari (x-4)^2 = [(sqrt(x)-2)(sqrt(x)+2)]^2 memungkinkan penyederhanaan dua tahap; atau berhenti di langkah pertama",
+          "jawab": "c",
+          "p": "Tulis $ (x-4)^2 = (x^2-8x+16) $ dan $ x-4 = (\\sqrt{x}-2)(\\sqrt{x}+2) $ : \\begin{align*} \\lims{4}\\frac{(x-4)^2}{(\\sqrt{x}-2)(x-4)} &= \\lims{4}\\frac{x-4}{\\sqrt{x}-2} = \\lims{4}\\frac{(\\sqrt{x}-2)(\\sqrt{x}+2)}{\\sqrt{x}-2}\\ &= \\lims{4}(\\sqrt{x}+2) = \\sqrt{4}+2 = 4.",
+          "q": "Nilai $ \\displaystyle\\lims{4}\\dfrac{x^2-8x+16}{(\\sqrt{x}-2)(x-4)} $ adalah … (<em>Petunjuk</em>: tulis $ x^2-8x+16 = (x-4)^2 $ , lalu sederhanakan bertahap.) \\begin{center} <img src=\"../../../assets/img/lf/lf-b20.svg\" alt=\"Grafik lf-b20\" class=\"soal-gambar\" style=\"display:block;max-width:100%;margin:.5rem auto;\"> \\end{center}",
+          "opts": [
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "C",
+      "sectionTitle": "Limit di Tak Hingga",
+      "soal": [
+        {
+          "id": "C1",
+          "section": "C",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "membagi dengan x^2 (pangkat pembilang) bukan x^3 (pangkat tertinggi keseluruhan); menyimpulkan hasil = koef tertinggi pembilang",
+          "jawab": "b",
+          "p": "Derajat pembilang $ p=2 < $ derajat penyebut $ q=3 $ , sehingga penyebut tumbuh jauh lebih cepat dan limitnya nol. \\[\\lim_{x\\to\\infty}\\frac{3x^2+2x-1}{x^3+5} = 0.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\dfrac{3x^2+2x-1}{x^3+5} $ adalah …",
+          "opts": [
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ 3 $",
+            "$ \\infty $"
+          ]
+        },
+        {
+          "id": "C2",
+          "section": "C",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengambil rasio semua koefisien (4+(-1)+2)/(2+3+(-1))=5/4; tidak memahami bahwa hanya koef x^3 tertinggi yang berperan",
+          "jawab": "d",
+          "p": "Derajat $ p=q=3 $ ; terapkan kaidah cepat, rasio koefisien $ x^3 $ tertinggi: \\[\\lim_{x\\to\\infty}\\frac{4x^3-x+2}{2x^3+3x^2-1} = \\frac{4}{2} = 2.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\dfrac{4x^3-x+2}{2x^3+3x^2-1} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{2} $",
+            "$ \\dfrac{2}{3} $",
+            "$ 1 $",
+            "$ 2 $",
+            "$ \\infty $"
+          ]
+        },
+        {
+          "id": "C3",
+          "section": "C",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira hasil = koef tertinggi pembilang / koef tertinggi penyebut = 1/3; tidak mengenali bahwa p>q → tak hingga",
+          "jawab": "e",
+          "p": "Derajat $ p=4 > q=2 $ ; pembilang tumbuh tak terbatas. \\[\\lim_{x\\to\\infty}\\frac{x^4+2x}{3x^2-1} = \\infty.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\dfrac{x^4+2x}{3x^2-1} $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ \\dfrac{1}{3} $",
+            "$ \\dfrac{2}{3} $",
+            "$ 1 $",
+            "$ \\infty $"
+          ]
+        },
+        {
+          "id": "C4",
+          "section": "C",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengalikan (2x-1)(3x+4) hanya sebagian; mengira hasilnya 6x^2 tanpa cek suku tengah",
+          "jawab": "d",
+          "p": "Uraikan pembilang: $ (2x-1)(3x+4)=6x^2+5x-4 $ . Derajat $ p=q=2 $ ; kaidah cepat: \\[\\lim_{x\\to\\infty}\\frac{6x^2+5x-4}{x^2+7x-5} = \\frac{6}{1} = 6.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\dfrac{(2x-1)(3x+4)}{x^2+7x-5} $ adalah …",
+          "opts": [
+            "$ 1 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 6 $",
+            "$ \\infty $"
+          ]
+        },
+        {
+          "id": "C5",
+          "section": "C",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menguraikan penyebut (x+4)(3x^2-x+2); mengira derajat penyebut = 2 bukan 3",
+          "jawab": "c",
+          "p": "Uraikan: pembilang $ = 2x^3-x^2+6x-3 $ (derajat 3), penyebut $ = 3x^3+11x^2-2x+8 $ (derajat 3); kaidah cepat: \\[\\lim_{x\\to\\infty}\\frac{(x^2+3)(2x-1)}{(x+4)(3x^2-x+2)} = \\frac{2}{3}.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\dfrac{(x^2+3)(2x-1)}{(x+4)(3x^2-x+2)} $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ \\dfrac{2}{9} $",
+            "$ \\dfrac{2}{3} $",
+            "$ 1 $",
+            "$ 2 $"
+          ]
+        },
+        {
+          "id": "C6",
+          "section": "C",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengalikan hanya faktor linear, mengira derajat pembilang dan penyebut sama-sama 2",
+          "jawab": "c",
+          "p": "Uraikan: pembilang $ = 2x^2-x-3 $ (derajat 2), penyebut $ = x^3-2x^2-x+2 $ (derajat 3). Karena $ p < q $ : \\[\\lim_{x\\to\\infty}\\frac{(2x-3)(x+1)}{(x^2+1)(x-2)} = 0.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\dfrac{(2x-3)(x+1)}{(x^2+1)(x-2)} $ adalah …",
+          "opts": [
+            "$ -2 $",
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ 2 $"
+          ]
+        },
+        {
+          "id": "C7",
+          "section": "C",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak mengeluarkan x dari dalam akar; langsung membagi dengan x^2 sehingga akar menjadi sqrt(9-4/x+1/x^2)/x → 0 yang salah",
+          "jawab": "d",
+          "p": "Untuk $ x>0 $ , keluarkan $ x $ dari akar: $ \\sqrt{9x^2-4x+1} = x\\sqrt{9-\\frac{4}{x}+\\frac{1}{x^2}} $ : \\[\\lim_{x\\to\\infty}\\frac{x\\sqrt{9-\\frac{4}{x}+\\frac{1}{x^2}}}{x\\!\\left(3+\\frac{5}{x}\\right)} = \\frac{\\sqrt{9}}{3} = 1.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\dfrac{\\sqrt{9x^2-4x+1}}{3x+5} $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ \\dfrac{1}{3} $",
+            "$ \\dfrac{2}{3} $",
+            "$ 1 $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "C8",
+          "section": "C",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "membagi penyebut dengan x^2 bukan x, sehingga sqrt(4x^2+6x-2)/x^2 → 0 dan hasilnya ∞",
+          "jawab": "c",
+          "p": "Untuk $ x>0 $ , keluarkan $ x $ dari akar penyebut: $ \\sqrt{4x^2+6x-2} = x\\sqrt{4+\\frac{6}{x}-\\frac{2}{x^2}} $ : \\[\\lim_{x\\to\\infty}\\frac{x\\!\\left(2-\\frac{3}{x}\\right)}{x\\sqrt{4+\\frac{6}{x}-\\frac{2}{x^2}}} = \\frac{2}{\\sqrt{4}} = 1.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\dfrac{2x-3}{\\sqrt{4x^2+6x-2}} $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ \\dfrac{1}{2} $",
+            "$ 1 $",
+            "$ 2 $",
+            "$ \\infty $"
+          ]
+        },
+        {
+          "id": "C9",
+          "section": "C",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira hasil = (8+4)/2 = 6; tidak menggunakan rumus (b1-b2)/(2*sqrt(a)), atau salah menentukan b2 = -4",
+          "jawab": "c",
+          "p": "Koefisien $ x^2 $ sama ( $ a=d=1 $ ); gunakan kaidah cepat dengan $ b_1=8 $ , $ b_2=-4 $ : \\[\\lim_{x\\to\\infty}\\!\\left(\\sqrt{x^2+8x-3}-\\sqrt{x^2-4x+1}\\right) = \\frac{8-(-4)}{2\\sqrt{1}} = 6.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\!\\left(\\sqrt{x^2+8x-3}-\\sqrt{x^2-4x+1}\\right) $ adalah …",
+          "opts": [
+            "$ 2 $",
+            "$ 4 $",
+            "$ 6 $",
+            "$ 8 $",
+            "$ \\infty $"
+          ]
+        },
+        {
+          "id": "C10",
+          "section": "C",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "membagi dengan 2 saja tanpa mengalikan dengan sqrt(a)=sqrt(4)=2 di bawah",
+          "jawab": "b",
+          "p": "Koefisien $ x^2 $ sama ( $ a=d=4 $ ); $ b_1=6 $ , $ b_2=-2 $ : \\[\\lim_{x\\to\\infty}\\!\\left(\\sqrt{4x^2+6x-1}-\\sqrt{4x^2-2x+5}\\right) = \\frac{6-(-2)}{2\\sqrt{4}} = \\frac{8}{4} = 2.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\!\\left(\\sqrt{4x^2+6x-1}-\\sqrt{4x^2-2x+5}\\right) $ adalah …",
+          "opts": [
+            "$ 1 $",
+            "$ 2 $",
+            "$ \\dfrac{8}{4} $",
+            "$ 4 $",
+            "$ 8 $"
+          ]
+        },
+        {
+          "id": "C11",
+          "section": "C",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak mengubah (x+3) menjadi sqrt((x+3)^2) sebelum menerapkan kaidah cepat; langsung memakai sekawan",
+          "jawab": "c",
+          "p": "Ubah $ (x+3) = \\sqrt{(x+3)^2} = \\sqrt{x^2+6x+9} $ . Koef $ x^2 $ sama, $ b_1=10 $ , $ b_2=6 $ : \\[\\lim_{x\\to\\infty}\\!\\left(\\sqrt{x^2+10x+3}-\\sqrt{x^2+6x+9}\\right) = \\frac{10-6}{2\\sqrt{1}} = 2.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\!\\left(\\sqrt{x^2+10x+3}-(x+3)\\right) $ adalah …",
+          "opts": [
+            "$ -1 $",
+            "$ 0 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "C12",
+          "section": "C",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira (2x-1)^2 = 4x^2-2x+1 (salah tanda); atau tidak memperhatikan bahwa hasilnya bisa negatif",
+          "jawab": "b",
+          "p": "Ubah $ (2x-1) = \\sqrt{(2x-1)^2} = \\sqrt{4x^2-4x+1} $ . Koef $ x^2 $ sama ( $ a=4 $ ), $ b_1=-8 $ , $ b_2=-4 $ : \\[\\lim_{x\\to\\infty}\\!\\left(\\sqrt{4x^2-8x+5}-\\sqrt{4x^2-4x+1}\\right) = \\frac{(-8)-(-4)}{2\\sqrt{4}} = \\frac{-4}{4} = -1.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\!\\left(\\sqrt{4x^2-8x+5}-(2x-1)\\right) $ adalah …",
+          "opts": [
+            "$ -2 $",
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ 2 $"
+          ]
+        },
+        {
+          "id": "C13",
+          "section": "C",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "lupa bahwa untuk x<0, sqrt(x^2)=|x|=-x; menghitung seperti x→+∞ sehingga hasil positif",
+          "jawab": "b",
+          "p": "Untuk $ x\\to-\\infty $ , berlaku $ x<0 $ sehingga $ \\sqrt{x^2}=|x|=-x $ . Faktorkan $ x^2 $ dari akar: \\begin{align*} \\lim_{x\\to-\\infty}\\frac{\\sqrt{x^2\\left(1-\\frac{3}{x}\\right)}}{x+2} = \\lim_{x\\to-\\infty}\\frac{-x\\sqrt{1-\\frac{3}{x}}}{x\\left(1+\\frac{2}{x}\\right)} = \\frac{-\\sqrt{1}}{1} = -1.",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to-\\infty}\\dfrac{\\sqrt{x^2-3x}}{x+2} $ adalah … \\begin{center} <img src=\"../../../assets/img/lf/lf-c13.svg\" alt=\"Grafik lf-c13\" class=\"soal-gambar\" style=\"display:block;max-width:100%;margin:.5rem auto;\"> \\end{center}",
+          "opts": [
+            "$ -2 $",
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ 2 $"
+          ]
+        },
+        {
+          "id": "C14",
+          "section": "C",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "untuk x→-∞, saat mengeluarkan x dari akar penyebut hasilnya -x bukan x; koreksi tanda membuat hasil negatif",
+          "jawab": "b",
+          "p": "Untuk $ x\\to-\\infty $ , faktorkan $ x^2 $ dari akar penyebut ( $ \\sqrt{x^2}=-x $ ): \\begin{align*} \\lim_{x\\to-\\infty}\\frac{x\\left(3+\\frac{1}{x}\\right)}{-x\\sqrt{9+\\frac{6}{x}-\\frac{4}{x^2}}} = \\frac{3}{-\\sqrt{9}} = \\frac{3}{-3} = -1.",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to-\\infty}\\dfrac{3x+1}{\\sqrt{9x^2+6x-4}} $ adalah …",
+          "opts": [
+            "$ -2 $",
+            "$ -1 $",
+            "$ -\\dfrac{1}{3} $",
+            "$ \\dfrac{1}{3} $",
+            "$ 1 $"
+          ]
+        },
+        {
+          "id": "C15",
+          "section": "C",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis-Parametrik",
+          "kesalahanUmum": "menggunakan rumus a/(2*sqrt(a))=a/2 (lupa sqrt(a)=1 hanya jika a=1); tidak menyadari koef x^2=1 sehingga hasilnya a/2",
+          "jawab": "c",
+          "p": "Gunakan sekawan $ \\sqrt{x^2+ax+4}+x $ : \\[\\lim_{x\\to\\infty}\\frac{ax+4}{\\sqrt{x^2+ax+4}+x} = \\lim_{x\\to\\infty}\\frac{x\\!\\left(a+\\frac{4}{x}\\right)}{x\\!\\left(\\sqrt{1+\\frac{a}{x}+\\frac{4}{x^2}}+1\\right)} = \\frac{a}{2} = 3 \\Rightarrow a=6.\\]",
+          "q": "Diketahui $ \\displaystyle\\lim_{x\\to\\infty}\\!\\left(\\sqrt{x^2+ax+4}-x\\right) = 3 $ . Nilai $ a $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 4 $",
+            "$ 6 $",
+            "$ 9 $",
+            "$ 12 $"
+          ]
+        },
+        {
+          "id": "C16",
+          "section": "C",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Analisis",
+          "kesalahanUmum": "mengira x·(selisih akar) = x·(a/2) lalu x·(a/2)→∞ salah karena menganggap \"a/2 adalah batas\"; tidak menyadari produk x·(sesuatu) selisih ini tumbuh tak terbatas",
+          "jawab": "d",
+          "p": "Gunakan sekawan pada bagian dalam kurung: \\[x\\cdot\\frac{(x^2+4x)-x^2}{\\sqrt{x^2+4x}+x} = x\\cdot\\frac{4x}{\\sqrt{x^2+4x}+x} = \\frac{4x^2}{x\\!\\left(\\sqrt{1+\\frac{4}{x}}+1\\right)} \\to \\infty.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty} x\\!\\left(\\sqrt{x^2+4x}-x\\right) $ adalah …",
+          "opts": [
+            "$ 2 $",
+            "$ 4 $",
+            "$ 8 $",
+            "$ \\infty $",
+            "tidak ada"
+          ]
+        },
+        {
+          "id": "C17",
+          "section": "C",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Parametrik",
+          "kesalahanUmum": "tidak menyadari bahwa syarat limit berhingga mensyaratkan b^2 = koef x^2 di bawah akar; atau mengira b bisa berupa nilai apa saja",
+          "jawab": "c",
+          "p": "Agar limit berhingga, koef $ x $ dari $ (-bx)^2 $ harus sama dengan koef $ x^2 $ di bawah akar: $ b^2=4 \\Rightarrow b=2 $ (diambil positif). Kemudian: \\[\\lim_{x\\to\\infty}\\!\\left(\\sqrt{4x^2+ax+1}-2x\\right) = \\frac{a}{2\\sqrt{4}} = \\frac{a}{4} = 3 \\Rightarrow a=12.\\] \\[a+b = 12+2 = 14.\\]",
+          "q": "Diketahui $ \\displaystyle\\lim_{x\\to\\infty}\\!\\left(\\sqrt{4x^2+ax+1}-bx\\right)=3 $ . Nilai $ a+b $ yang memenuhi adalah … (<em>Petunjuk</em>: agar limit berhingga, tentukan $ b $ dari koefisien $ x^2 $ , lalu cari $ a $ .) \\begin{center} <img src=\"../../../assets/img/lf/lf-c17.svg\" alt=\"Grafik lf-c17\" class=\"soal-gambar\" style=\"display:block;max-width:100%;margin:.5rem auto;\"> \\end{center}",
+          "opts": [
+            "$ 10 $",
+            "$ 12 $",
+            "$ 14 $",
+            "$ 16 $",
+            "$ 18 $"
+          ]
+        },
+        {
+          "id": "C18",
+          "section": "C",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Teknik Tinggi",
+          "kesalahanUmum": "membagi dengan x bukan x^2; tidak menyadari bahwa sqrt(16x^4+x^2)=x^2*sqrt(16+1/x^2) sehingga perlu bagi x^2",
+          "jawab": "c",
+          "p": "Faktorkan $ x^2 $ dari dalam akar: $ \\sqrt{16x^4+x^2} = x^2\\sqrt{16+\\frac{1}{x^2}} $ . Bagi pembilang dan penyebut dengan $ x^2 $ : \\[\\lim_{x\\to\\infty}\\frac{x^2\\!\\left(\\sqrt{16+\\frac{1}{x^2}}-3\\right)}{x^2\\!\\left(1-\\frac{1}{x^2}\\right)} = \\frac{\\sqrt{16}-3}{1} = \\frac{4-3}{1} = 1.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\dfrac{\\sqrt{16x^4+x^2}-3x^2}{x^2-1} $ adalah … (<em>Petunjuk</em>: faktorkan $ x^2 $ dari dalam akar terlebih dahulu.)",
+          "opts": [
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ 3 $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "C19",
+          "section": "C",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Teknik Tinggi",
+          "kesalahanUmum": "menganggap (sqrt(x^2+6x)-x)/(sqrt(4x^2+x)-2x) = (6x/2x)/(x/4x) = 3/(1/4) tanpa sekawan; atau salah menghitung nilai batas penyebut",
+          "jawab": "d",
+          "p": "Hitung dengan sekawan secara terpisah: \\begin{align*} \\text{Pembilang: } \\lim_{x\\to\\infty}\\left(\\sqrt{x^2+6x}-x\\right) &= \\frac{6}{2} = 3.\\ \\text{Penyebut: } \\lim_{x\\to\\infty}\\left(\\sqrt{4x^2+x}-2x\\right) &= \\frac{1}{2\\cdot 2} = \\frac{1}{4}.",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\infty}\\dfrac{\\sqrt{x^2+6x}-x}{\\sqrt{4x^2+x}-2x} $ adalah … (<em>Petunjuk</em>: hitung limit pembilang dan penyebut masing-masing dengan sekawan, lalu ambil rasionya.)",
+          "opts": [
+            "$ 3 $",
+            "$ 6 $",
+            "$ 9 $",
+            "$ 12 $",
+            "$ 24 $"
+          ]
+        },
+        {
+          "id": "C20",
+          "section": "C",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Teknik Tinggi",
+          "kesalahanUmum": "menggunakan rumus (b-e)/(2*sqrt(a)) langsung tanpa memperhatikan tanda x→-∞; hasil positif 5/2 sering ditulis -5/2 atau salah tanda",
+          "jawab": "e",
+          "p": "Gunakan sekawan $ \\sqrt{x^2-5x+3}-x $ : \\[\\lim_{x\\to-\\infty}\\frac{(x^2-5x+3)-x^2}{\\sqrt{x^2-5x+3}-x} = \\lim_{x\\to-\\infty}\\frac{-5x+3}{\\sqrt{x^2-5x+3}-x}.\\] Untuk $ x\\to-\\infty $ , $ \\sqrt{x^2}=-x $ ; bagi dengan $ x $ : \\[\\frac{-5+\\frac{3}{x}}{-\\sqrt{1-\\frac{5}{x}+\\frac{3}{x^2}}-1} \\to \\frac{-5}{-1-1} = \\frac{-5}{-2} = \\frac{5}{2}.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to-\\infty}\\!\\left(\\sqrt{x^2-5x+3}+x\\right) $ adalah … (<em>Petunjuk</em>: gunakan sekawan, lalu ingat bahwa untuk $ x \\to -\\infty $ , $ \\sqrt{x^2} = -x $ .)",
+          "opts": [
+            "$ -\\dfrac{5}{2} $",
+            "$ -\\dfrac{3}{2} $",
+            "$ 0 $",
+            "$ \\dfrac{3}{2} $",
+            "$ \\dfrac{5}{2} $"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "D",
+      "sectionTitle": "Limit Fungsi Trigonometri",
+      "soal": [
+        {
+          "id": "D1",
+          "section": "D",
+          "num": 1,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menulis lim sin(3x)/5x = sin(3)/5 dengan substitusi x=1; tidak memahami bahwa rumus berlaku saat x→0",
+          "jawab": "c",
+          "p": "Gunakan rumus $ \\displaystyle\\lims{0}\\dfrac{\\sin ax}{bx}=\\dfrac{a}{b} $ dengan $ a=3 $ , $ b=5 $ : \\[\\lims{0}\\frac{\\sin 3x}{5x} = \\frac{3}{5}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\dfrac{\\sin 3x}{5x} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{5} $",
+            "$ \\dfrac{3}{10} $",
+            "$ \\dfrac{3}{5} $",
+            "$ \\dfrac{5}{3} $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "D2",
+          "section": "D",
+          "num": 2,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira lim tan(4x)/7x = lim sin(4x)/(7x·cosx) → 4/7·(1/1)=4/7 dengan langkah benar tapi tanpa memahami mengapa cos(x)→1",
+          "jawab": "b",
+          "p": "Gunakan rumus $ \\displaystyle\\lims{0}\\dfrac{\\tan ax}{bx}=\\dfrac{a}{b} $ dengan $ a=4 $ , $ b=7 $ : \\[\\lims{0}\\frac{\\tan 4x}{7x} = \\frac{4}{7}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\dfrac{\\tan 4x}{7x} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{7} $",
+            "$ \\dfrac{4}{7} $",
+            "$ 1 $",
+            "$ \\dfrac{7}{4} $",
+            "$ 4 $"
+          ]
+        },
+        {
+          "id": "D3",
+          "section": "D",
+          "num": 3,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira 3x/sin(6x) = 3/6 = 1/2 sudah benar, tapi asal tebak tanpa memahami cara kerjanya — kadang ditulis 6/3=2 dengan terbalik",
+          "jawab": "a",
+          "p": "Balik rumus: $ \\displaystyle\\lims{0}\\dfrac{bx}{\\sin ax}=\\dfrac{b}{a} $ dengan $ b=3 $ , $ a=6 $ : \\[\\lims{0}\\frac{3x}{\\sin 6x} = \\frac{3}{6} = \\frac{1}{2}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\dfrac{3x}{\\sin 6x} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{2} $",
+            "$ 1 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 6 $"
+          ]
+        },
+        {
+          "id": "D4",
+          "section": "D",
+          "num": 4,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira sin(5x)/sin(2x) = sin5/sin2 (substitusi x=1); atau 5/2 dianggap salah karena \"harusnya pecahan biasa\"",
+          "jawab": "d",
+          "p": "Rasio dua sinus: $ \\displaystyle\\lims{0}\\dfrac{\\sin ax}{\\sin bx}=\\dfrac{a}{b} $ dengan $ a=5 $ , $ b=2 $ : \\[\\lims{0}\\frac{\\sin 5x}{\\sin 2x} = \\frac{5}{2}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\dfrac{\\sin 5x}{\\sin 2x} $ adalah …",
+          "opts": [
+            "$ \\dfrac{2}{5} $",
+            "$ 1 $",
+            "$ \\dfrac{5}{3} $",
+            "$ \\dfrac{5}{2} $",
+            "$ 5 $"
+          ]
+        },
+        {
+          "id": "D5",
+          "section": "D",
+          "num": 5,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menulis tan(3x)/sin(4x) = [sin(3x)/cos(3x)]/sin(4x) lalu mengira cos(3x)→3 bukan 1",
+          "jawab": "c",
+          "p": "Rasio tangen dan sinus: $ \\displaystyle\\lims{0}\\dfrac{\\tan ax}{\\sin bx}=\\dfrac{a}{b} $ dengan $ a=3 $ , $ b=4 $ : \\[\\lims{0}\\frac{\\tan 3x}{\\sin 4x} = \\frac{3}{4}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\dfrac{\\tan 3x}{\\sin 4x} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{4} $",
+            "$ \\dfrac{1}{3} $",
+            "$ \\dfrac{3}{4} $",
+            "$ \\dfrac{4}{3} $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "D6",
+          "section": "D",
+          "num": 6,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung setiap suku dengan benar tapi salah operasi: 4/3 - 1/3 + 4 dianggap (4-1)/3+4=5 benar, tapi ada yang hitung (4/3-1/3+8)/2=...",
+          "jawab": "c",
+          "p": "Terapkan rumus pada setiap suku: \\[\\frac{\\sin 4x}{3x} \\to \\frac{4}{3}, \\frac{\\tan 2x}{\\sin 6x} \\to \\frac{2}{6}=\\frac{1}{3}, \\frac{8x}{\\tan 2x} \\to \\frac{8}{2}=4.\\] \\[\\frac{4}{3} - \\frac{1}{3} + 4 = 1 + 4 = 5.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\!\\left[\\dfrac{\\sin 4x}{3x} - \\dfrac{\\tan 2x}{\\sin 6x} + \\dfrac{8x}{\\tan 2x}\\right] $ adalah …",
+          "opts": [
+            "$ 3 $",
+            "$ 4 $",
+            "$ 5 $",
+            "$ 6 $",
+            "$ 7 $"
+          ]
+        },
+        {
+          "id": "D7",
+          "section": "D",
+          "num": 7,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "memisah [sin(6x)]^2 sebagai [sin(6x)/6x]^2·(6x)^2 lalu lupa membagi (3x·tan4x) dengan benar; salah menghitung 36/(3·4)=3",
+          "jawab": "c",
+          "p": "Uraikan menjadi dua rasio: \\[\\lims{0}\\frac{\\sin 6x}{3x}\\cdot\\frac{\\sin 6x}{\\tan 4x} = \\frac{6}{3}\\cdot\\frac{6}{4} = 2\\cdot\\frac{3}{2} = 3.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\dfrac{\\sin^2 6x}{3x \\cdot \\tan 4x} $ adalah …",
+          "opts": [
+            "$ 1 $",
+            "$ 2 $",
+            "$ 3 $",
+            "$ 4 $",
+            "$ 6 $"
+          ]
+        },
+        {
+          "id": "D8",
+          "section": "D",
+          "num": 8,
+          "level": "Beginner",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menggunakan identitas 1-cos(4x)=2sin^2(2x); mencoba L'Hopital atau langsung substitusi x=0→0/0",
+          "jawab": "b",
+          "p": "Gunakan identitas $ 1-\\cos 4x = 2\\sin^2 2x $ : \\[\\lims{0}\\frac{2\\sin^2 2x}{\\sin^2 3x} = 2\\left(\\frac{\\sin 2x}{\\sin 3x}\\right)^2\\!\\to 2\\left(\\frac{2}{3}\\right)^{\\!2} = 2\\cdot\\frac{4}{9} = \\frac{8}{9}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\dfrac{1 - \\cos 4x}{\\sin^2 3x} $ adalah …",
+          "opts": [
+            "$ \\dfrac{4}{9} $",
+            "$ \\dfrac{8}{9} $",
+            "$ \\dfrac{4}{3} $",
+            "$ \\dfrac{8}{3} $",
+            "$ 2 $"
+          ]
+        },
+        {
+          "id": "D9",
+          "section": "D",
+          "num": 9,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "substitusi langsung x=π/6 → 0/0 lalu berhenti; tidak mencoba substitusi u=x-π/6 atau L'Hopital",
+          "jawab": "b",
+          "p": "Substitusi $ u = x - \\dfrac{\\pi}{6} $ , sehingga $ x \\to \\dfrac{\\pi}{6} $ berarti $ u \\to 0 $ : \\[2\\sin x - 1 = 2\\sin\\!\\left(u+\\tfrac{\\pi}{6}\\right)-1 \\approx 2\\!\\left[\\tfrac{1}{2}+\\tfrac{\\sqrt{3}}{2}u\\right]-1 = u\\sqrt{3}.\\] \\[\\cos 3x = \\cos\\!\\left(3u+\\tfrac{\\pi}{2}\\right) = -\\sin 3u \\approx -3u.\\] \\[\\lim_{u\\to 0}\\frac{u\\sqrt{3}}{-3u} = -\\frac{\\sqrt{3}}{3}.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\frac{\\pi}{6}}\\dfrac{2\\sin x - 1}{\\cos 3x} $ adalah … \\begin{center} <img src=\"../../../assets/img/lf/lf-d9.svg\" alt=\"Grafik lf-d9\" class=\"soal-gambar\" style=\"display:block;max-width:100%;margin:.5rem auto;\"> \\end{center}",
+          "opts": [
+            "$ -\\sqrt{3} $",
+            "$ -\\dfrac{\\sqrt{3}}{3} $",
+            "$ 0 $",
+            "$ \\dfrac{\\sqrt{3}}{3} $",
+            "$ \\sqrt{3} $"
+          ]
+        },
+        {
+          "id": "D10",
+          "section": "D",
+          "num": 10,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak mengenali bahwa sin(x-π)=sin(u) dengan u=x-π; langsung substitusi x=π→sin(0)/0 dan berhenti",
+          "jawab": "c",
+          "p": "Misalkan $ u = x-\\pi $ , maka $ \\sin(x-\\pi)=\\sin u $ dan $ u\\to 0 $ : \\[\\lims{\\pi}\\frac{\\sin(x-\\pi)}{2(x-\\pi)} = \\lim_{u\\to 0}\\frac{\\sin u}{2u} = \\frac{1}{2}.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\pi}\\dfrac{\\sin(x-\\pi)}{2(x-\\pi)} $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ \\dfrac{1}{4} $",
+            "$ \\dfrac{1}{2} $",
+            "$ 1 $",
+            "$ 2 $"
+          ]
+        },
+        {
+          "id": "D11",
+          "section": "D",
+          "num": 11,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak memfaktorkan penyebut x^2+2x-8=(x+4)(x-2); mencoba langsung bagi sin(x^2-4)/(x^2-4) tanpa melihat hubungannya dengan penyebut",
+          "jawab": "d",
+          "p": "Faktorkan: $ x^2-4 = (x+2)(x-2) $ dan $ x^2+2x-8=(x+4)(x-2) $ : \\[\\lims{2}\\frac{\\sin(x^2-4)}{x^2-4}\\cdot\\frac{x^2-4}{x^2+2x-8} = 1\\cdot\\lims{2}\\frac{(x+2)(x-2)}{(x+4)(x-2)} = \\frac{4}{6} = \\frac{2}{3}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{2}\\dfrac{\\sin(x^2-4)}{x^2+2x-8} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{4} $",
+            "$ \\dfrac{1}{3} $",
+            "$ \\dfrac{1}{2} $",
+            "$ \\dfrac{2}{3} $",
+            "$ 1 $"
+          ]
+        },
+        {
+          "id": "D12",
+          "section": "D",
+          "num": 12,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menggunakan 1-cos(6x)=2sin^2(6x) (salah argumen); tidak mengenali bahwa 6x=2·3x sehingga sin^2(3x) yang muncul",
+          "jawab": "c",
+          "p": "Gunakan identitas $ 1-\\cos 6x = 2\\sin^2 3x $ : \\[\\lims{0}\\frac{2\\sin^2 3x}{\\sin^2 3x} = 2.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\dfrac{1 - \\cos 6x}{\\sin^2 3x} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{2} $",
+            "$ 1 $",
+            "$ 2 $",
+            "$ 4 $",
+            "$ 6 $"
+          ]
+        },
+        {
+          "id": "D13",
+          "section": "D",
+          "num": 13,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menggunakan identitas cosA-cosB=-2sin((A+B)/2)sin((A-B)/2); mencoba L'Hopital dua kali yang lebih panjang",
+          "jawab": "d",
+          "p": "Gunakan identitas sum-to-product: \\[\\cos 3x - \\cos 7x = -2\\sin 5x\\sin(-2x) = 2\\sin 5x\\sin 2x.\\] \\[1-\\cos 4x = 2\\sin^2 2x.\\] \\[\\lims{0}\\frac{2\\sin 5x\\cdot\\sin 2x}{2\\sin^2 2x} = \\lims{0}\\frac{\\sin 5x}{\\sin 2x} = \\frac{5}{2}.\\]",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\dfrac{\\cos 3x - \\cos 7x}{1 - \\cos 4x} $ adalah …",
+          "opts": [
+            "$ \\dfrac{3}{7} $",
+            "$ \\dfrac{3}{4} $",
+            "$ 1 $",
+            "$ \\dfrac{5}{2} $",
+            "$ \\dfrac{10}{3} $"
+          ]
+        },
+        {
+          "id": "D14",
+          "section": "D",
+          "num": 14,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "menghitung 2·(3)^2·2/(4·6) = 36/24 = 3/2 benar tapi lewat cara tebak-tebak; tidak menunjukkan langkah urai tiap faktor",
+          "jawab": "c",
+          "p": "Uraikan setiap faktor menggunakan rumus dasar: \\begin{align*} \\frac{2\\tan^2 3x\\cdot\\sin 2x}{4x^2\\cdot\\sin 6x} &= \\frac{2}{4}\\cdot\\left(\\frac{\\tan 3x}{x}\\right)^2\\cdot\\frac{\\sin 2x}{\\sin 6x}\\ &= \\frac{1}{2}\\cdot(3)^2\\cdot\\frac{2}{6} = \\frac{1}{2}\\cdot 9\\cdot\\frac{1}{3} = \\frac{3}{2}.",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\dfrac{2\\tan^2 3x \\cdot \\sin 2x}{4x^2 \\cdot \\sin 6x} $ adalah …",
+          "opts": [
+            "$ \\dfrac{1}{2} $",
+            "$ 1 $",
+            "$ \\dfrac{3}{2} $",
+            "$ 2 $",
+            "$ 3 $"
+          ]
+        },
+        {
+          "id": "D15",
+          "section": "D",
+          "num": 15,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "mengira 6sin^3(2x)/(x^2·sin6x) = 6·(2x)^3/(x^2·6x) = 48x^3/6x^3 = 8 dengan metode singkat; valid, tapi banyak siswa salah tanda pangkat",
+          "jawab": "d",
+          "p": "Gunakan pendekatan $ \\sin(\\theta)\\approx\\theta $ saat $ \\theta\\to 0 $ : \\[\\frac{6\\sin^3 2x}{x^2\\cdot\\sin 6x} \\approx \\frac{6(2x)^3}{x^2\\cdot 6x} = \\frac{6\\cdot 8x^3}{6x^3} = 8.\\] Secara formal: $ \\displaystyle\\lims{0}\\frac{\\sin 2x}{x}\\cdot\\frac{\\sin 2x}{x}\\cdot\\frac{\\sin 2x}{\\sin 6x}\\cdot\\frac{6}{1}= 2\\cdot 2\\cdot\\frac{2}{6}\\cdot 6=8 $ .",
+          "q": "Nilai $ \\displaystyle\\lims{0}\\dfrac{6\\sin^3 2x}{x^2 \\cdot \\sin 6x} $ adalah …",
+          "opts": [
+            "$ 2 $",
+            "$ 4 $",
+            "$ 6 $",
+            "$ 8 $",
+            "$ 12 $"
+          ]
+        },
+        {
+          "id": "D16",
+          "section": "D",
+          "num": 16,
+          "level": "Intermediate",
+          "subMateri": null,
+          "jenis": "Komputasi",
+          "kesalahanUmum": "tidak menggunakan identitas cos^2(x)=(1-sinx)(1+sinx); mencoba substitusi langsung x=π/2→0/0 lalu berhenti",
+          "jawab": "c",
+          "p": "Gunakan identitas $ \\cos^2 x = (1-\\sin x)(1+\\sin x) $ : \\[\\lim_{x\\to\\frac{\\pi}{2}}\\frac{1-\\sin x}{(1-\\sin x)(1+\\sin x)} = \\lim_{x\\to\\frac{\\pi}{2}}\\frac{1}{1+\\sin x} = \\frac{1}{1+1} = \\frac{1}{2}.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\frac{\\pi}{2}}\\dfrac{1-\\sin x}{\\cos^2 x} $ adalah …",
+          "opts": [
+            "$ 0 $",
+            "$ \\dfrac{1}{4} $",
+            "$ \\dfrac{1}{2} $",
+            "$ 1 $",
+            "$ \\infty $"
+          ]
+        },
+        {
+          "id": "D17",
+          "section": "D",
+          "num": 17,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Teknik Tinggi",
+          "kesalahanUmum": "tidak mengenali bahwa cos(x)=sin(π/2-x)→0 dan π/2-x→0 saat x→π/2, sehingga hasilnya rumus dasar sin(t)/t=1",
+          "jawab": "d",
+          "p": "Misalkan $ t = \\dfrac{\\pi}{2}-x $ , maka $ \\cos x = \\cos\\!\\left(\\dfrac{\\pi}{2}-t\\right) = \\sin t $ dan $ t\\to 0 $ : \\[\\lim_{t\\to 0}\\frac{\\sin t}{t} = 1.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\frac{\\pi}{2}}\\dfrac{\\cos x}{\\dfrac{\\pi}{2}-x} $ adalah … (<em>Petunjuk</em>: misalkan $ t = \\dfrac{\\pi}{2}-x $ , ingat $ \\cos x = \\sin t $ .) \\begin{center} <img src=\"../../../assets/img/lf/lf-d17.svg\" alt=\"Grafik lf-d17\" class=\"soal-gambar\" style=\"display:block;max-width:100%;margin:.5rem auto;\"> \\end{center}",
+          "opts": [
+            "$ -1 $",
+            "$ 0 $",
+            "$ \\dfrac{1}{2} $",
+            "$ 1 $",
+            "$ \\infty $"
+          ]
+        },
+        {
+          "id": "D18",
+          "section": "D",
+          "num": 18,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Teknik Tinggi",
+          "kesalahanUmum": "tidak mengubah 1-tanx menjadi (cosx-sinx)/cosx; atau tidak menyadari sinx-cosx = -(cosx-sinx) sehingga faktor (cosx-sinx) bisa dicoret",
+          "jawab": "a",
+          "p": "Tulis $ 1-\\tan x = \\dfrac{\\cos x-\\sin x}{\\cos x} $ , dan amati $ \\sin x-\\cos x = -(\\cos x-\\sin x) $ : \\[\\lim_{x\\to\\frac{\\pi}{4}}\\frac{\\cos x-\\sin x}{\\cos x\\cdot(-(\\cos x-\\sin x))} = \\lim_{x\\to\\frac{\\pi}{4}}\\frac{-1}{\\cos x} = \\frac{-1}{\\cos\\frac{\\pi}{4}} = \\frac{-1}{\\frac{\\sqrt{2}}{2}} = -\\sqrt{2}.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\frac{\\pi}{4}}\\dfrac{1-\\tan x}{\\sin x - \\cos x} $ adalah … (<em>Petunjuk</em>: tulis $ 1-\\tan x = \\dfrac{\\cos x - \\sin x}{\\cos x} $ , lalu perhatikan pembilang dan penyebut.)",
+          "opts": [
+            "$ -\\sqrt{2} $",
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ \\sqrt{2} $"
+          ]
+        },
+        {
+          "id": "D19",
+          "section": "D",
+          "num": 19,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Teknik Tinggi",
+          "kesalahanUmum": "substitusi x=π/2 langsung → 3sin(2π)/cos(π/2)=0/0; tidak menguraikan sin4x=4sinx·cosx·cos2x agar cosx bisa dicoret",
+          "jawab": "a",
+          "p": "Gunakan $ \\sin 4x = 4\\sin x\\cos x\\cos 2x $ : \\[\\lim_{x\\to\\frac{\\pi}{2}}\\frac{3\\cdot 4\\sin x\\cos x\\cos 2x}{\\cos x} = \\lim_{x\\to\\frac{\\pi}{2}}12\\sin x\\cos 2x = 12\\cdot 1\\cdot\\cos\\pi = 12(-1) = -12.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\frac{\\pi}{2}}\\dfrac{3\\sin 4x}{\\cos x} $ adalah … (<em>Petunjuk</em>: gunakan $ \\sin 4x = 4\\sin x\\cos x\\cos 2x $ , lalu sederhanakan $ \\cos x $ .)",
+          "opts": [
+            "$ -12 $",
+            "$ -6 $",
+            "$ 0 $",
+            "$ 6 $",
+            "$ 12 $"
+          ]
+        },
+        {
+          "id": "D20",
+          "section": "D",
+          "num": 20,
+          "level": "Expert",
+          "subMateri": null,
+          "jenis": "Analisis-Teknik Tinggi",
+          "kesalahanUmum": "tidak menggunakan sum-to-product; mencoba substitusi langsung x=π/4 → (sin3π/2+sinπ/2)/(cos5π/4+cosπ/4) = (-1+1)/(-√2/2+√2/2)=0/0 lalu berhenti",
+          "jawab": "c",
+          "p": "Gunakan identitas jumlah: \\[\\sin 6x+\\sin 2x = 2\\sin 4x\\cos 2x,\\qquad \\cos 5x+\\cos x = 2\\cos 3x\\cos 2x.\\] \\[\\lim_{x\\to\\frac{\\pi}{4}}\\frac{2\\sin 4x\\cos 2x}{2\\cos 3x\\cos 2x} = \\lim_{x\\to\\frac{\\pi}{4}}\\frac{\\sin 4x}{\\cos 3x} = \\frac{\\sin\\pi}{\\cos\\frac{3\\pi}{4}} = \\frac{0}{-\\frac{\\sqrt{2}}{2}} = 0.\\]",
+          "q": "Nilai $ \\displaystyle\\lim_{x\\to\\frac{\\pi}{4}}\\dfrac{\\sin 6x + \\sin 2x}{\\cos 5x + \\cos x} $ adalah … (<em>Petunjuk</em>: gunakan $ \\sin A+\\sin B = 2\\sin\\!\\tfrac{A+B}{2}\\cos\\!\\tfrac{A-B}{2} $ dan $ \\cos A+\\cos B = 2\\cos\\!\\tfrac{A+B}{2}\\cos\\!\\tfrac{A-B}{2} $ .)",
+          "opts": [
+            "$ -\\sqrt{2} $",
+            "$ -1 $",
+            "$ 0 $",
+            "$ 1 $",
+            "$ \\sqrt{2} $"
+          ]
+        }
+      ]
+    }
+  ]
+}
