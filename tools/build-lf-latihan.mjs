@@ -17,6 +17,33 @@ const data = JSON.parse(readFileSync(dataPath, 'utf8'));
 
 const LETTER_TO_IDX = { a: 0, b: 1, c: 2, d: 3, e: 4 };
 
+// ── LaTeX post-processing untuk field q/opts/p ──
+function tabularToHtml(text) {
+  // Match: {\small \begin{tabular}{spec} ... \end{tabular} }
+  return text.replace(/\{\\small\s*\\begin\{tabular\}\{[^}]*\}([\s\S]*?)\\end\{tabular\}\s*\}/g, (_, body) => {
+    // rows split by '\' (satu backslash — hasil parser dari LaTeX '\\')
+    const rows = body.split(/\\\s+/).map(r => r.trim()).filter(r => r && !r.startsWith('\\hline') && r !== '');
+    const htmlRows = rows.map(row => {
+      const cells = row.split('&').map(c => `<td>${c.trim()}</td>`).join('');
+      return `<tr>${cells}</tr>`;
+    }).join('');
+    return `<div class="grafik-wrap"><table class="soal-table">${htmlRows}</table></div>`;
+  });
+}
+
+function processLatex(text) {
+  if (!text) return text;
+  // \lims{N} → \lim_{x\to N}
+  text = text.replace(/\\lims\{([^}]+)\}/g, '\\lim_{x\\to $1}');
+  // \begin{tabular}...
+  text = tabularToHtml(text);
+  // strip \begin{center}...\end{center} wrapper (keep content)
+  text = text.replace(/\\begin\{center\}([\s\S]*?)\\end\{center\}/g, '$1');
+  // wrap soal-gambar img dengan grafik-wrap
+  text = text.replace(/<img([^>]+class="soal-gambar")[^>]*>/g, '<div class="grafik-wrap"><img$1></div>');
+  return text;
+}
+
 const SECTION_JUDUL = {
   A: 'Definisi, Syarat & Sifat Limit',
   B: 'Limit Berhingga Aljabar',
@@ -41,6 +68,19 @@ const LEVEL_BADGE_CSS = `
 /* tabel soal */
 .soal-table{border-collapse:collapse;font-size:.88em;margin:.4rem 0;}
 .soal-table td{border:1px solid var(--border);padding:.28rem .55rem;}
+/* grafik wrapper — SVG/gambar soal */
+.grafik-wrap{
+  display:block;width:100%;max-width:320px;
+  margin:.6rem auto;padding:.5rem;
+  border-radius:8px;
+  background:var(--surface-2,#f4f5f7);
+  border:1px solid var(--border);
+}
+[data-theme="dark"] .grafik-wrap{
+  background:rgba(255,255,255,.04);
+  border-color:rgba(255,255,255,.1);
+}
+.grafik-wrap img,.grafik-wrap svg{display:block;width:100%;height:auto;}
 `;
 
 const RENDER_PATCH_FROM = `html+=\`<div class="q-soal-meta">
@@ -68,9 +108,12 @@ function buildPage(paketId, kode, judulPaket, soalList, bcMode) {
   const pageUrl = `${BASE_URL}/latihan-soal/limit-fungsi/${paketId}/`;
 
   const soalDB = soalList.map(s => ({
-    type: 'pg', level: s.level, q: s.q, opts: s.opts,
+    type: 'pg', level: s.level,
+    q: processLatex(s.q),
+    opts: s.opts.map(processLatex),
     jawab: LETTER_TO_IDX[s.jawab] ?? 0,
-    p: s.p || '', subMateri: s.subMateri || '', kesalahanUmum: s.kesalahanUmum || '',
+    p: processLatex(s.p || ''),
+    subMateri: s.subMateri || '', kesalahanUmum: s.kesalahanUmum || '',
   }));
 
   const quizDB = { [paketId]: { title: judulPaket, kode, soal: soalDB } };
@@ -105,6 +148,10 @@ function buildPage(paketId, kode, judulPaket, soalList, bcMode) {
   }
   // Ganti semua referensi fungsi-kuadrat → limit-fungsi di link navigasi
   html = html.replace(/latihan-soal\/fungsi-kuadrat\//g, 'latihan-soal/limit-fungsi/');
+  // Ganti teks breadcrumb
+  html = html.replace(/>Fungsi Kuadrat</g, '>Limit Fungsi<');
+  // Ganti nama materi di schema.org
+  html = html.replace(/"name":"Fungsi Kuadrat"/g, '"name":"Limit Fungsi"');
   return html;
 }
 
