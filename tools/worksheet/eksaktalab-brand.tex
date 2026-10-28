@@ -80,3 +80,74 @@
 \fancyfoot[R]{\headfont\small\textcolor{EkText2}{\WsTopik}}
 \renewcommand{\footrulewidth}{0.4pt}
 \renewcommand{\footrule}{{\color{EkBorder}\hrule width\headwidth height\footrulewidth}}
+
+% =============================================================
+% PERLINDUNGAN MEREK
+% Merek disebar ke dalam isi (bukan hanya header/footer), supaya worksheet
+% tidak bisa dicatut hanya dengan memotong tepi halaman.
+% =============================================================
+
+% --- Ikon logo di titik tertentu dalam tikzpicture yang sedang aktif ---
+% \EkIconAt{koordinat}{ukuran}
+\newcommand{\EkIconAt}[2]{%
+  \begin{scope}[shift={(#1)}]
+    \fill[EkTeal, rounded corners=0.2*#2] (-0.5*#2,-0.5*#2) rectangle (0.5*#2,0.5*#2);
+    \begin{scope}[shift={(-0.5*#2,0.5*#2)}, x=#2/448, y=-#2/448,
+                  white, line width=0.085*#2, line cap=round, line join=round]
+      \draw (128,168) -- (208,168);
+      \draw (128,224) -- (228,224);
+      \draw (128,280) -- (208,280);
+      \draw (258,164) -- (318,224) -- (258,284);
+    \end{scope}
+  \end{scope}%
+}
+
+% --- (1) Ikon logo kecil di garis atas setiap kotak isi ---
+\tcbset{
+  ekbadge/.style={overlay unbroken and first={\EkIconAt{[xshift=-18pt]frame.north east}{0.34cm}}},
+  materibox/.append style={ekbadge},
+  contohbox/.append style={ekbadge},
+  contohscaffold/.append style={ekbadge},
+  latihanbox/.append style={ekbadge},
+  drillbox/.append style={ekbadge},
+  thinkbox/.append style={ekbadge},
+  catatanbox/.append style={ekbadge},
+  rumusbox/.append style={ekbadge},
+}
+
+% --- (2) Tanda kecil di pojok grid koordinat: \EkGridSign{xmax}{ymin} ---
+\newcommand{\EkGridSign}[2]{%
+  \node[anchor=south east, inner sep=1.6pt, text=EkText3!80,
+        font=\sffamily\fontsize{5.2}{5.2}\selectfont] at (#1,#2) {\textls[120]{eksaktalab}};%
+}
+
+% --- (3) Kode soal di samping nomor soal, mis. "1." + EKS-1 ---
+\renewcommand{\soalnum}[1]{%
+  \noindent\textcolor{MatnAccent}{\textbf{#1.}}\,%
+  \raisebox{0.15ex}{\fontsize{6.5}{6.5}\selectfont\ttfamily\textcolor{EkText3}{\WsKode-#1}}\enspace%
+}
+
+% --- (4) Watermark samar di atas isi + jejak teks tersembunyi ---
+% Lapisan depan (FG) agar tidak tertutup latar kotak; kepekatan rendah agar tetap terbaca.
+\usepackage{eso-pic}
+\AddToShipoutPictureFG{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[rotate=35, text=EkTealDim, text opacity=0.07,
+          font=\sffamily\bfseries\fontsize{80}{80}\selectfont]
+      at (current page.center) {EksaktaLab};
+    \node[text=white, font=\fontsize{2}{2}\selectfont, anchor=south]
+      at ([yshift=6pt]current page.south)
+      {\textcopyright\ \the\year\ EksaktaLab -- lutfima11.github.io/eksaktalab -- Worksheet \WsTopik};
+  \end{tikzpicture}%
+}
+
+% --- (5) Metadata PDF ---
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Worksheet \WsTopik\ -- EksaktaLab},
+  pdfauthor={EksaktaLab},
+  pdfsubject={Worksheet Matematika SMA: \WsTopik},
+  pdfkeywords={EksaktaLab, worksheet, \WsTopik, matematika SMA},
+  pdfcreator={EksaktaLab -- lutfima11.github.io/eksaktalab},
+  pdfinfo={Copyright={(c) \the\year\ EksaktaLab. Dilarang menyebarluaskan ulang tanpa menyebut sumber.}},
+}

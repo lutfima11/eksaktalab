@@ -87,12 +87,18 @@ Soal di-inline ke tiap halaman (≈ sesuai rencana skala 10rb+ soal: tiap halama
 
 ## Worksheet PDF (LaTeX → PDF ber-identitas EksaktaLab)
 
-1. Salin `.tex` worksheet ke `content/worksheet/<slug>.tex` (file asli tidak perlu diubah)
-2. Tambah `{ "slug": "<slug>", "topik": "<Nama Topik>" }` di `tools/worksheet/worksheets.json`
-3. `node tools/build-worksheet.mjs <slug>` → `assets/worksheet/worksheet-<slug>.pdf` (butuh pdflatex/MiKTeX)
-4. Di `index.html` (tab Worksheet), ganti tombol "Segera" kartu topik itu dengan link ke PDF
+Sumber `.tex` **tidak** disimpan di repo (repo publik): dibaca langsung dari database lokal.
 
-Warna, logo, header & footer diatur di `tools/worksheet/eksaktalab-brand.tex`.
+1. Tambah `{ "slug", "topik", "kode", "src": "<path .tex di database>" }` di `tools/worksheet/worksheets.json`
+2. `node tools/build-worksheet.mjs <slug> --perbarui-database` → `assets/worksheet/worksheet-<slug>.pdf`
+   (butuh pdflatex/MiKTeX dan `pip install pypdf cryptography`). Opsi `--perbarui-database`
+   menulis blok gaya terbaru ke file database supaya kompilasi di TeXmaker sama dengan versi web.
+3. Di `index.html` (tab Worksheet), ganti tombol "Segera" kartu topik itu dengan link ke PDF
+
+Gaya diatur di `tools/worksheet/eksaktalab-brand.tex`: warna, header/footer, ikon logo di setiap
+kotak, watermark samar, kode soal (`\soalnum`), metadata PDF, dan jejak teks tersembunyi.
+Untuk grid koordinat, panggil `\EkGridSign{xmax}{ymin}` di dalam tikzpicture grid.
+PDF dikunci (`tools/worksheet/lock-pdf.py`): boleh dicetak, tidak boleh diedit/disalin.
 
 ## Setelah generate: meta SEO + sitemap
 
