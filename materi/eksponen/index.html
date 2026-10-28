@@ -2109,7 +2109,7 @@ window.MathJax = {
       <div class="box-label">Soal Latihan F</div>
       <ol class="soal-list">
         <li>Lukislah grafik $f(x) = 3^x$ dan $g(x) = 3^{-x}$ pada interval $-3 \leq x \leq 3$ dalam satu bidang koordinat. Jelaskan hubungan geometri antara kedua grafik tersebut.</li>
-        <li>Lukislah grafik $f(x) = 3^{x-1} - 2$ dengan menggeser grafik $y = 3^x$. Tentukan asimtot, titik potong sumbu-$Y$, dan titik potong sumbu-$X$-nya.</li>
+        <li>Lukislah grafik $f(x) = 3^{x-1} - 3$ dengan menggeser grafik $y = 3^x$. Tentukan asimtot, titik potong sumbu-$Y$, dan titik potong sumbu-$X$-nya.</li>
         <li>Tentukanlah fungsi eksponen $y = k \cdot a^x$ jika grafiknya melalui titik $(1,\,6)$ dan $(3,\,54)$.</li>
         <li>Grafik fungsi $y = a^x + c$ memiliki asimtot $y = 4$ dan melalui titik $(0,\,5)$ dan $(2,\,13)$. Tentukanlah rumus fungsinya.</li>
         <li>Grafik $y = 2^x$ digeser sehingga titik $(0,\,1)$ berpindah ke $(3,\,-1)$. Tentukanlah rumus fungsi hasil pergeseran beserta asimtotnya.</li>
@@ -2531,9 +2531,12 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     // F — Fungsi Eksponen
     5: [
-      { jawaban:`Grafik $g(x)=3^{-x}$ adalah pencerminan $f(x)=3^x$ terhadap sumbu-$Y$. Keduanya berpotongan di $(0,1)$ dan berasimtot $y=0$.` },
-      { jawaban:`$y = 2 \\cdot 3^x$` },
-      { jawaban:`(a) $g(x) = 2^{x+3}-4$; titik potong sumbu-$Y$: $(0,4)$; asimtot: $y=-4$.<br>(b) $h(x) = -2^{2x}$; titik potong sumbu-$Y$: $(0,-1)$; asimtot: $y=0$.` },
+      { jawaban:`Titik-titik $f(x)=3^x$: $(-3,\\tfrac{1}{27}),\\,(-2,\\tfrac19),\\,(-1,\\tfrac13),\\,(0,1),\\,(1,3),\\,(2,9),\\,(3,27)$; titik-titik $g(x)=3^{-x}$ adalah kebalikannya, misalnya $(-1,3)$ dan $(1,\\tfrac13)$.<br>Grafik $g(x)=3^{-x}$ adalah <strong>pencerminan</strong> $f(x)=3^x$ terhadap sumbu-$Y$: $f$ naik, $g$ turun. Keduanya berpotongan di $(0,1)$ dan berasimtot $y=0$.` },
+      { jawaban:`$f(x) = 3^{x-1}-3$: grafik $y=3^x$ digeser <strong>kanan 1</strong> dan <strong>bawah 3</strong>.<br>Titik kunci $(-1,\\tfrac13),(0,1),(1,3),(2,9)$ menjadi $(0,-\\tfrac83),\\,(1,-2),\\,(2,0),\\,(3,6)$.<br>Asimtot: $y=-3$.<br>Titik potong sumbu-$Y$: $f(0)=3^{-1}-3=-\\tfrac83$, yaitu $\\left(0,-\\tfrac83\\right)$.<br>Titik potong sumbu-$X$: $3^{x-1}=3=3^1 \\Rightarrow x-1=1 \\Rightarrow x=2$, yaitu $(2,0)$.` },
+      { jawaban:`Dari $(1,6)$: $k\\cdot a=6$. Dari $(3,54)$: $k\\cdot a^3=54$.<br>Bagi kedua persamaan: $a^2=\\dfrac{54}{6}=9 \\Rightarrow a=3$, lalu $k=\\dfrac{6}{3}=2$.<br>Jadi $y = 2 \\cdot 3^x$.` },
+      { jawaban:`Asimtot $y=4 \\Rightarrow c=4$, jadi $y=a^x+4$.<br>Cek $(0,5)$: $a^0+4=5$ ✓ (tidak ada pergeseran mendatar).<br>Titik $(2,13)$: $a^2+4=13 \\Rightarrow a^2=9 \\Rightarrow a=3$.<br>Jadi $y = 3^x + 4$.` },
+      { jawaban:`Titik $(0,1)$ berpindah ke $(3,-1)$: bergeser <strong>kanan 3</strong> ($h=3$) dan <strong>bawah 2</strong> ($c=-1-1=-2$).<br>Rumus: $y = 2^{x-3} - 2$, dengan asimtot $y=-2$.` },
+      { jawaban:`(a) $g(x) = 2^{x+3}-4$: geser kiri 3 dan bawah 4; titik potong sumbu-$Y$: $g(0)=2^3-4=4$, yaitu $(0,4)$; asimtot: $y=-4$.<br>(b) $h(x) = -2^{2x} = -4^x$: pencerminan $y=4^x$ terhadap sumbu-$X$; titik potong sumbu-$Y$: $(0,-1)$; asimtot: $y=0$.` },
       { jawaban:`$V(3) = 12.000.000 \\times (0{,}8)^3 = 12.000.000 \\times 0{,}512 = \\text{Rp}6.144.000$` },
     ],
   };
