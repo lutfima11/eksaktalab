@@ -136,15 +136,15 @@
   \ifdefined\subtopik
     \let\EkSubtopik\subtopik \renewcommand{\subtopik}[2]{\needspace{16\baselineskip}\EkSubtopik{#1}{#2}}
   \fi
-  \tcbset{
-    drillbox/.append style={unbreakable},
-    contohbox/.append style={unbreakable},
-    contohscaffold/.append style={unbreakable},
-  }
-  % kotak soal tidak dimulai di sisa halaman yang terlalu sempit, kecuali worksheet
-  % menandai \WsSoalFleksibel (soal boleh mulai di sisa halaman, langsung setelah contoh)
+  \tcbset{drillbox/.append style={unbreakable}}
+  % Contoh Terpandu tidak terpotong & kotak soal tidak dimulai di sisa halaman sempit,
+  % kecuali worksheet menandai \WsSoalFleksibel (soal & contoh mengalir bebas, tanpa ruang kosong)
   \ifdefined\WsSoalFleksibel\else
-    \tcbset{latihanbox/.append style={before={\par\needspace{8\baselineskip}\smallskip}}}
+    \tcbset{
+      contohbox/.append style={unbreakable},
+      contohscaffold/.append style={unbreakable},
+      latihanbox/.append style={before={\par\needspace{8\baselineskip}\smallskip}},
+    }
   \fi
 \fi
 
