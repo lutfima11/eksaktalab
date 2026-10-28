@@ -124,6 +124,9 @@
   \let\EkLevelA\levelA \renewcommand{\levelA}[1]{\needspace{9\baselineskip}\EkLevelA{#1}}
   \let\EkLevelB\levelB \renewcommand{\levelB}[1]{\needspace{9\baselineskip}\EkLevelB{#1}}
   \let\EkLevelC\levelC \renewcommand{\levelC}[1]{\needspace{9\baselineskip}\EkLevelC{#1}}
+  \ifdefined\subtopik
+    \let\EkSubtopik\subtopik \renewcommand{\subtopik}[2]{\needspace{16\baselineskip}\EkSubtopik{#1}{#2}}
+  \fi
   \tcbset{
     drillbox/.append style={unbreakable},
     contohbox/.append style={unbreakable},
