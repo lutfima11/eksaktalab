@@ -1,18 +1,23 @@
 (function () {
-  // Disable klik kanan
+  // Kolom isian (form Laporkan/Kontak, dll.) tetap bisa copy/paste & klik kanan
+  function isEditable(el) {
+    return !!(el && el.closest && el.closest('input, textarea, select, [contenteditable="true"]'));
+  }
+
+  // Disable klik kanan (kecuali di kolom isian)
   document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
+    if (!isEditable(e.target)) e.preventDefault();
   });
 
-  // Disable copy, cut, paste
-  document.addEventListener('copy', function (e) { e.preventDefault(); });
-  document.addEventListener('cut',  function (e) { e.preventDefault(); });
-  document.addEventListener('paste',function (e) { e.preventDefault(); });
+  // Disable copy & cut di konten (paste tidak diblokir; kolom isian bebas)
+  document.addEventListener('copy', function (e) { if (!isEditable(e.target)) e.preventDefault(); });
+  document.addEventListener('cut',  function (e) { if (!isEditable(e.target)) e.preventDefault(); });
 
-  // Disable seleksi teks via keyboard (Ctrl+A, Ctrl+C, dll)
+  // Disable seleksi teks via keyboard (Ctrl+A, Ctrl+C, dll). Ctrl+P (cetak) dibiarkan.
   document.addEventListener('keydown', function (e) {
     const key = e.key.toLowerCase();
-    if (e.ctrlKey && (key === 'a' || key === 'c' || key === 'x' || key === 'u' || key === 's' || key === 'p')) {
+    if (isEditable(e.target)) return;
+    if (e.ctrlKey && (key === 'a' || key === 'c' || key === 'x' || key === 'u' || key === 's')) {
       e.preventDefault();
     }
     // Disable F12 (DevTools)
@@ -35,7 +40,7 @@
       -ms-user-select: none !important;
       user-select: none !important;
     }
-    input, textarea {
+    input, textarea, select, [contenteditable="true"] {
       -webkit-user-select: text !important;
       -moz-user-select: text !important;
       user-select: text !important;

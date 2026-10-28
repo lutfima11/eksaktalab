@@ -85,6 +85,13 @@ Konfigurasi materi + prefix kode di `tools/topics.json`. fungsi-linear TIDAK iku
 tapi generik. Ganti dengan soal asli via pipeline `import-latex.mjs` per materi bila siap.
 Soal di-inline ke tiap halaman (≈ sesuai rencana skala 10rb+ soal: tiap halaman muat soalnya sendiri).
 
+## Setelah generate: meta SEO + sitemap
+
+```bash
+node tools/build-seo-meta.mjs   # tambah meta description + canonical ke halaman kuis (idempoten)
+node tools/build-sitemap.mjs    # tulis ulang sitemap.xml dari semua halaman yang ada
+```
+
 ## Roadmap Tahap 2 (belum dikerjakan)
 
 1. Satukan 3 engine (latihan/ujian/kilat) jadi **satu** `assets/js/quiz-engine.js`
