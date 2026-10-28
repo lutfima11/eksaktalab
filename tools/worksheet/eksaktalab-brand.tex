@@ -115,6 +115,23 @@
   rumusbox/.append style={ekbadge},
 }
 
+% --- Tata letak otomatis (opsional, aktif jika \WsTataLetakOtomatis didefinisikan;
+%     worksheet yang tata letaknya sudah diatur manual tidak memakainya):
+%     judul Level tidak tertinggal sendirian, Mini Drill & Contoh tidak terpotong,
+%     kotak soal tidak dimulai di sisa halaman yang terlalu sempit ---
+\ifdefined\WsTataLetakOtomatis
+  \usepackage{needspace}
+  \let\EkLevelA\levelA \renewcommand{\levelA}[1]{\needspace{9\baselineskip}\EkLevelA{#1}}
+  \let\EkLevelB\levelB \renewcommand{\levelB}[1]{\needspace{9\baselineskip}\EkLevelB{#1}}
+  \let\EkLevelC\levelC \renewcommand{\levelC}[1]{\needspace{9\baselineskip}\EkLevelC{#1}}
+  \tcbset{
+    drillbox/.append style={unbreakable},
+    contohbox/.append style={unbreakable},
+    contohscaffold/.append style={unbreakable},
+    latihanbox/.append style={before={\par\needspace{8\baselineskip}\smallskip}},
+  }
+\fi
+
 % --- (2) Tanda kecil di pojok grid koordinat: \EkGridSign{xmax}{ymin} ---
 \newcommand{\EkGridSign}[2]{%
   \node[anchor=south east, inner sep=1.6pt, text=EkText3!80,
