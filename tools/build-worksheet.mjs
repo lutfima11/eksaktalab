@@ -17,6 +17,7 @@ import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const BRAND = join(ROOT, 'tools', 'worksheet', 'eksaktalab-brand.tex').split('\\').join('/');
@@ -44,5 +45,13 @@ for (const { slug, topik } of todo) {
   }
   copyFileSync(join(work, 'ws.pdf'), join(OUT, `worksheet-${slug}.pdf`));
   rmSync(work, { recursive: true, force: true });
-  console.log(`✅ assets/worksheet/worksheet-${slug}.pdf`);
+
+  // Cache-busting: link di beranda diberi ?v=<hash PDF> agar browser tidak memakai PDF lama
+  const ver = createHash('sha1').update(readFileSync(join(OUT, `worksheet-${slug}.pdf`))).digest('hex').slice(0, 8);
+  const home = join(ROOT, 'index.html');
+  const html = readFileSync(home, 'utf8');
+  const linked = html.replace(new RegExp(`assets/worksheet/worksheet-${slug}\\.pdf(\\?v=[0-9a-f]+)?"`, 'g'),
+    `assets/worksheet/worksheet-${slug}.pdf?v=${ver}"`);
+  if (linked !== html) writeFileSync(home, linked);
+  console.log(`✅ assets/worksheet/worksheet-${slug}.pdf (v=${ver})`);
 }
