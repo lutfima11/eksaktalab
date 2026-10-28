@@ -115,6 +115,15 @@
   rumusbox/.append style={ekbadge},
 }
 
+% --- Judul sub-materi (standar semua worksheet), mis. \subtopik{A.1}{Barisan Aritmatika}.
+%     Penomoran mengikuti kode latihan online (EKS-A1, BD-A1, ...). ---
+\providecommand{\subtopik}[2]{%
+  \par\noindent\begin{tikzpicture}
+    \fill[MatnAccent] (0,0) rectangle (0.2,0.2);
+  \end{tikzpicture}%
+  \hspace{5pt}\textcolor{MatnText}{\headfont\bfseries #1\enspace #2}\par
+}
+
 % --- Tata letak otomatis (opsional, aktif jika \WsTataLetakOtomatis didefinisikan;
 %     worksheet yang tata letaknya sudah diatur manual tidak memakainya):
 %     judul Level tidak tertinggal sendirian, Mini Drill & Contoh tidak terpotong,
