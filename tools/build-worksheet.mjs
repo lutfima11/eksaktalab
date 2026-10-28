@@ -9,6 +9,7 @@
 // Daftar : tools/worksheet/worksheets.json  [{ slug, topik, kode, src, tataLetakOtomatis? }]
 //          tataLetakOtomatis: true → aktifkan aturan anti-terpotong di brand (untuk
 //          worksheet yang tata letaknya belum diatur manual)
+//          soalFleksibel: true → kotak soal boleh mulai di sisa halaman (tanpa needspace)
 // Hasil  : assets/worksheet/worksheet-<slug>.pdf (izin edit/salin dikunci, cetak boleh)
 //
 // Jika sumber sudah berisi blok "IDENTITAS EKSAKTALAB" (versi mandiri untuk TeXmaker),
@@ -48,23 +49,24 @@ function stripBrand(tex) {
   const b = lines.findIndex(l => l.trim() === BEGIN);
   return [...lines.slice(0, m - 1), ...lines.slice(b)].join('\n');
 }
-function brandBlock(topik, kode, tataLetakOtomatis) {
+function brandBlock(topik, kode, tataLetakOtomatis, soalFleksibel) {
   return ['% =============================================',
     `${MARK} (warna, logo, header & footer, watermark, kode soal)`,
     '% =============================================',
     `\\newcommand{\\WsTopik}{${topik}}`,
     `\\newcommand{\\WsKode}{${kode}}`,
     ...(tataLetakOtomatis ? ['\\newcommand{\\WsTataLetakOtomatis}{}'] : []),
+    ...(soalFleksibel ? ['\\newcommand{\\WsSoalFleksibel}{}'] : []),
     readFileSync(BRAND_FILE, 'utf8')].join('\n') + '\n';
 }
 
 mkdirSync(OUT, { recursive: true });
-for (const { slug, topik, kode, src: srcPath, tataLetakOtomatis } of todo) {
+for (const { slug, topik, kode, src: srcPath, tataLetakOtomatis, soalFleksibel } of todo) {
   if (!existsSync(srcPath)) { console.error(`❌ ${slug}: sumber tidak ditemukan di ${srcPath}`); process.exitCode = 1; continue; }
   const raw = readFileSync(srcPath, 'utf8');
   const body = stripBrand(raw);
   if (!body.includes(BEGIN)) throw new Error(`${slug}: ${BEGIN} tidak ditemukan`);
-  const branded = body.replace(BEGIN, brandBlock(topik, kode, tataLetakOtomatis) + BEGIN);
+  const branded = body.replace(BEGIN, brandBlock(topik, kode, tataLetakOtomatis, soalFleksibel) + BEGIN);
   if (syncDb && branded !== raw) { writeFileSync(srcPath, branded); console.log(`↻ blok brand di database diperbarui: ${srcPath}`); }
 
   const work = mkdtempSync(join(tmpdir(), `ws-${slug}-`));

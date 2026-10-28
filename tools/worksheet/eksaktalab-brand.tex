@@ -140,8 +140,12 @@
     drillbox/.append style={unbreakable},
     contohbox/.append style={unbreakable},
     contohscaffold/.append style={unbreakable},
-    latihanbox/.append style={before={\par\needspace{8\baselineskip}\smallskip}},
   }
+  % kotak soal tidak dimulai di sisa halaman yang terlalu sempit, kecuali worksheet
+  % menandai \WsSoalFleksibel (soal boleh mulai di sisa halaman, langsung setelah contoh)
+  \ifdefined\WsSoalFleksibel\else
+    \tcbset{latihanbox/.append style={before={\par\needspace{8\baselineskip}\smallskip}}}
+  \fi
 \fi
 
 % --- (2) Tanda kecil di pojok grid koordinat: \EkGridSign{xmax}{ymin} ---
