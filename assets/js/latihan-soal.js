@@ -3,7 +3,7 @@ window.addEventListener('scroll', () => {
   const el = document.documentElement;
   const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
   const btn = document.getElementById('scroll-top');
-  if (pct > 25) btn.classList.add('visible'); else btn.classList.remove('visible');
+  if (pct > 30) btn.classList.add('visible'); else btn.classList.remove('visible');
 });
 
 // ── View switching ───────────────────────────────────────

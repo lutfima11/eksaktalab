@@ -223,7 +223,7 @@
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
 </button>
 <script>
-window.addEventListener('scroll',()=>{const el=document.documentElement;const pct=el.scrollTop/(el.scrollHeight-el.clientHeight)*100;const b=document.getElementById('scroll-top');if(b){pct>25?b.classList.add('visible'):b.classList.remove('visible');}});
+window.addEventListener('scroll',()=>{const el=document.documentElement;const pct=el.scrollTop/(el.scrollHeight-el.clientHeight)*100;const b=document.getElementById('scroll-top');if(b){pct>30?b.classList.add('visible'):b.classList.remove('visible');}});
 function switchView(id,btn){document.querySelectorAll('.view-panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.mode-tab').forEach(b=>b.classList.remove('active'));document.getElementById('view-'+id).classList.add('active');btn.classList.add('active');}
 function filterPaket(level,btn){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#paket-grid .paket-card').forEach(c=>{c.style.display=(level==='semua'||c.dataset.level===level)?'':'none';});}
 function filterSub(sub,btn){document.querySelectorAll('.sub-chip').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#sub-grid .paket-card').forEach(c=>{c.style.display=(sub==='semua'||c.dataset.sub===sub)?'':'none';});}
