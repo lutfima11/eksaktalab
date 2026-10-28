@@ -85,6 +85,15 @@ Konfigurasi materi + prefix kode di `tools/topics.json`. fungsi-linear TIDAK iku
 tapi generik. Ganti dengan soal asli via pipeline `import-latex.mjs` per materi bila siap.
 Soal di-inline ke tiap halaman (≈ sesuai rencana skala 10rb+ soal: tiap halaman muat soalnya sendiri).
 
+## Worksheet PDF (LaTeX → PDF ber-identitas EksaktaLab)
+
+1. Salin `.tex` worksheet ke `content/worksheet/<slug>.tex` (file asli tidak perlu diubah)
+2. Tambah `{ "slug": "<slug>", "topik": "<Nama Topik>" }` di `tools/worksheet/worksheets.json`
+3. `node tools/build-worksheet.mjs <slug>` → `assets/worksheet/worksheet-<slug>.pdf` (butuh pdflatex/MiKTeX)
+4. Di `index.html` (tab Worksheet), ganti tombol "Segera" kartu topik itu dengan link ke PDF
+
+Warna, logo, header & footer diatur di `tools/worksheet/eksaktalab-brand.tex`.
+
 ## Setelah generate: meta SEO + sitemap
 
 ```bash

@@ -1,0 +1,79 @@
+% =============================================================
+% eksaktalab-brand.tex — identitas visual EksaktaLab untuk worksheet
+%
+% Disisipkan oleh tools/build-worksheet.mjs tepat sebelum \begin{document}.
+% Menimpa warna Matn* bawaan worksheet dan memasang header/footer EksaktaLab,
+% sehingga file .tex sumber tidak perlu diubah.
+%
+% Warna mengikuti token di assets/css/materi.css (navy, teal, surface, border).
+% \WsTopik diisi oleh build script (nama topik untuk header & footer).
+% =============================================================
+
+% --- Palet EksaktaLab ---
+\definecolor{EkNavy}{HTML}{0A0F1E}
+\definecolor{EkTeal}{HTML}{00BFA5}
+\definecolor{EkTealDim}{HTML}{009E87}
+\definecolor{EkTealSoft}{HTML}{E6F9F6}
+\definecolor{EkSurface}{HTML}{F0F4FF}
+\definecolor{EkBorder}{HTML}{D8E0F5}
+\definecolor{EkText2}{HTML}{3D4A6B}
+\definecolor{EkText3}{HTML}{7B8BB2}
+\definecolor{EkAmber}{HTML}{F59E0B}
+\definecolor{EkAmberSoft}{HTML}{FFF8E1}
+\definecolor{EkBlue}{HTML}{3B82F6}
+\definecolor{EkBlueSoft}{HTML}{EFF6FF}
+
+% --- Petakan warna bawaan worksheet ke palet EksaktaLab ---
+\colorlet{MatnPrimary}{EkNavy}        % strip judul, kotak indikator, kotak materi
+\colorlet{MatnAccent}{EkTealDim}      % contoh terpandu, nomor soal
+\colorlet{MatnLight}{EkSurface}       % latar kotak materi/rumus
+\colorlet{MatnYellow}{EkTealSoft}     % latar contoh terpandu
+\colorlet{MatnGreen}{EkAmberSoft}     % kotak "Ingat!" / catatan
+\definecolor{MatnGray}{HTML}{F7F9FE}  % kotak jawaban
+\colorlet{MatnBorder}{EkBorder}
+\colorlet{MatnText}{EkNavy}
+\colorlet{ShadeRegion}{EkBorder}
+\colorlet{DrillBG}{EkBlueSoft}        % Mini Drill
+\colorlet{DrillBorder}{EkBlue}
+\colorlet{ThinkBG}{EkSurface}         % Think About It!
+\colorlet{ThinkBorder}{EkNavy}
+\colorlet{ScaffoldBG}{EkTealSoft}
+\colorlet{ScaffoldBorder}{EkTealDim}
+
+% --- Logo EksaktaLab (sama dengan assets/favicon.svg) ---
+\newcommand{\EkLogo}[1][0.62cm]{%
+  \begin{tikzpicture}[x=#1/448, y=#1/448, baseline={([yshift=-0.32ex]current bounding box.center)}]
+    \fill[EkTeal, rounded corners=#1*100/448] (0,0) rectangle (448,448);
+    \begin{scope}[white, line width=#1*36/448, line cap=round, line join=round, yscale=-1, shift={(-32,-480)}]
+      \draw (160,200) -- (240,200);
+      \draw (160,256) -- (260,256);
+      \draw (160,312) -- (240,312);
+      \draw (290,196) -- (350,256) -- (290,316);
+    \end{scope}
+  \end{tikzpicture}%
+}
+\newcommand{\EkWordmark}{%
+  {\headfont\bfseries\textcolor{EkNavy}{Eksakta}\textcolor{EkTeal}{Lab}}%
+}
+
+% --- Header & footer ---
+\setlength{\headheight}{34pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\EkLogo\enspace
+  \begin{tabular}[c]{@{}l@{}}
+    {\large\EkWordmark}\\[-3pt]
+    {\headfont\tiny\textcolor{EkText3}{\MakeUppercase{Lab Belajar Matematika}}}
+  \end{tabular}}
+\fancyhead[R]{\headfont\small\textcolor{EkText2}{Worksheet}\enspace
+  \textcolor{EkTeal}{\textbullet}\enspace\textcolor{EkNavy}{\bfseries\WsTopik}}
+\renewcommand{\headrulewidth}{0.8pt}
+\renewcommand{\headrule}{{\color{EkTeal}\hrule width\headwidth height\headrulewidth}}
+
+\fancyfoot[L]{\headfont\small\textcolor{EkText2}{lutfima11.github.io/eksaktalab}}
+\fancyfoot[C]{\headfont\textcolor{EkBorder}{\small\rule[0.5ex]{1.6cm}{0.4pt}\enspace
+  \textcolor{EkTealDim}{\bfseries\thepage\ / \pageref{LastPage}}\enspace
+  \rule[0.5ex]{1.6cm}{0.4pt}}}
+\fancyfoot[R]{\headfont\small\textcolor{EkText2}{\WsTopik}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrule}{{\color{EkBorder}\hrule width\headwidth height\footrulewidth}}
