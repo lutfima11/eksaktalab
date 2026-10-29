@@ -33,6 +33,7 @@ window.MathJax = {
   <meta name="twitter:description" content="Materi lengkap Fungsi, Komposisi Fungsi, dan Fungsi Invers SMA: jenis fungsi, domain, komposisi, fungsi invers, dan hubungannya.">
   <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Fungsi, Komposisi Fungsi, dan Fungsi Invers","url":"https://lutfima11.github.io/eksaktalab/materi/fungsi-komposisi-invers/","description":"Materi lengkap Fungsi, Komposisi Fungsi, dan Fungsi Invers SMA: jenis fungsi, domain, komposisi, fungsi invers, dan hubungannya.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Aljabar 0026 Fungsi"},{"@type":"ListItem","position":4,"name":"Fungsi, Komposisi Fungsi, dan Fungsi Invers","item":"https://lutfima11.github.io/eksaktalab/materi/fungsi-komposisi-invers/"}]}}</script>
+<style>.fki-jenis{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin:1rem 0}.fki-jenis svg{width:100%;height:auto;display:block}@media(max-width:560px){.fki-jenis{grid-template-columns:1fr;max-width:230px;margin:1rem auto}}[data-theme="dark"] .grafik-wrap svg [stroke="#555"]{stroke:#94A3B8}[data-theme="dark"] .grafik-wrap svg [fill="#555"]{fill:#94A3B8}[data-theme="dark"] .grafik-wrap svg text[fill="#059669"]{fill:#34D399}[data-theme="dark"] .grafik-wrap svg [stroke="#059669"]{stroke:#34D399}[data-theme="dark"] .grafik-wrap svg text[fill="#94A3B8"]{fill:#CBD5E8}[data-theme="dark"] .grafik-wrap svg .c1-lgf{stroke:#60A5FA;fill:#60A5FA}[data-theme="dark"] .grafik-wrap svg text.t1-lgf{fill:#60A5FA}@media(max-width:500px){.table-wrap th,.table-wrap td{padding:.45rem .35rem}.table-wrap table{font-size:.72rem}}@media(max-width:400px){.table-wrap th,.table-wrap td{padding:.4rem .25rem}.table-wrap table{font-size:.66rem}.table-wrap mjx-container{font-size:85% !important}.soal-item-header{flex-wrap:wrap}.soal-key-btn{margin-left:auto}}@media(max-width:400px){.contoh-body mjx-container[display="true"],.rumus-body mjx-container[display="true"],.box mjx-container[display="true"],.contoh-question mjx-container[display="true"]{font-size:88% !important}}@media(max-width:360px){.rumus-status{display:none}}</style>
 </head>
 <body>
 
@@ -369,7 +370,7 @@ window.MathJax = {
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 2</div>
-      <p style="margin:0;font-size:.9rem;">Selidiki apakah relasi berikut merupakan <strong>fungsi</strong> atau <strong>bukan fungsi</strong> dari $C$ ke $D$: $$h = \{(1,a),\ (2,b),\ (3,a),\ (4,c)\}, \quad \text{dari } C=\{1,2,3,4\} \text{ ke } D=\{a,b,c\}$$</p>
+      <p style="margin:0;font-size:.9rem;">Selidiki apakah relasi berikut merupakan <strong>fungsi</strong> atau <strong>bukan fungsi</strong> dari $C$ ke $D$: $$\begin{gather*} h = \{(1,a),\ (2,b),\ (3,a),\ (4,c)\} \\ C=\{1,2,3,4\}, \quad D=\{a,b,c\} \end{gather*}$$</p>
     </div>
     <div class="penyelesaian">
       <br>
@@ -400,7 +401,7 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">Syarat Injektif</div>
-      <div class="math-block">$$f(x_1) = f(x_2) \implies x_1 = x_2 \qquad x_1 \neq x_2 \implies f(x_1) \neq f(x_2)$$</div>
+      <div class="math-block">$$\begin{gather*} f(x_1) = f(x_2) \implies x_1 = x_2 \\ \text{atau setara:} \\ x_1 \neq x_2 \implies f(x_1) \neq f(x_2) \end{gather*}$$</div>
     </div>
 
     <p><strong>b. Fungsi Surjektif (Pada)</strong> — $f(A) = B$ (range = kodomain). Setiap $y \in B$ punya paling sedikit satu pasangan $x \in A$.</p>
@@ -408,8 +409,8 @@ window.MathJax = {
     <p><strong>c. Fungsi Bijektif (Korespondensi Satu-Satu)</strong> — injektif sekaligus surjektif.</p>
 
     <!-- SVG: Jenis-jenis fungsi -->
-    <div class="grafik-wrap">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 450" width="100%" style="max-width:100%; background-color:transparent;">
+    <div class="fki-jenis">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 430" role="img" aria-label="Diagram fungsi injektif">
     <defs>
       <style>
         .fki5-panel { fill: #f8fafc; stroke: #e2e8f0; transition: all 0.3s ease; }
@@ -442,8 +443,7 @@ window.MathJax = {
         <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki5-bij" />
       </marker>
     </defs>
-
-    <g transform="translate(10, 10)">
+    <g>
       <rect width="320" height="430" rx="20" ry="20" class="fki5-panel" stroke-width="2" />
       
       <ellipse cx="90" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
@@ -464,11 +464,12 @@ window.MathJax = {
         <line x1="110" y1="235" x2="210" y2="212" class="fki5-inj" />
       </g>
       
-      <text x="160" y="355" text-anchor="middle" class="text-injektif" font-size="24">Injektif</text>
+      <text x="160" y="355" text-anchor="middle" class="fki5-text-inj" font-size="24">Injektif</text>
       <text x="160" y="385" text-anchor="middle" class="fki5-gray" font-size="20">(satu-satu)</text>
     </g>
-
-    <g transform="translate(365, 10)">
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 430" role="img" aria-label="Diagram fungsi surjektif">
+    <g>
       <rect width="320" height="430" rx="20" ry="20" class="fki5-panel" stroke-width="2" />
       
       <ellipse cx="90" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
@@ -490,11 +491,12 @@ window.MathJax = {
         <line x1="110" y1="246" x2="210" y2="235" class="fki5-sur" />
       </g>
       
-      <text x="160" y="355" text-anchor="middle" class="text-surjektif" font-size="24">Surjektif</text>
+      <text x="160" y="355" text-anchor="middle" class="fki5-text-sur" font-size="24">Surjektif</text>
       <text x="160" y="385" text-anchor="middle" class="fki5-gray" font-size="20">(onto)</text>
     </g>
-
-    <g transform="translate(720, 10)">
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 430" role="img" aria-label="Diagram fungsi bijektif">
+    <g>
       <rect width="320" height="430" rx="20" ry="20" class="fki5-panel" stroke-width="2" />
       
       <ellipse cx="90" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
@@ -514,11 +516,11 @@ window.MathJax = {
         <line x1="110" y1="235" x2="210" y2="235" class="fki5-bij" />
       </g>
       
-      <text x="160" y="355" text-anchor="middle" class="text-bijektif" font-size="24">Bijektif</text>
+      <text x="160" y="355" text-anchor="middle" class="fki5-text-bij" font-size="24">Bijektif</text>
       <text x="160" y="385" text-anchor="middle" class="fki5-gray" font-size="20">(korespondensi 1-1)</text>
     </g>
-  </svg>
-</div>
+      </svg>
+    </div>
 
 
     <div class="box box-catatan">
@@ -639,7 +641,7 @@ window.MathJax = {
     <div class="penyelesaian">
       <br>
       Syarat: penyebut $\neq 0$.
-      $$x^2-5x+6 \neq 0 \implies (x-2)(x-3) \neq 0$$
+      $$\begin{align*} x^2-5x+6 &\neq 0 \\ (x-2)(x-3) &\neq 0 \end{align*}$$
       $$x \neq 2 \quad \text{dan} \quad x \neq 3$$
       $$D_f = \mathbb{R} \setminus \{2,\, 3\}$$
       <div class="grafik-wrap" style="margin-top:.75rem;">
@@ -708,7 +710,7 @@ window.MathJax = {
     <div class="penyelesaian">
       <br>
       Syarat: $-x^2+4x+5 \geq 0$. Kalikan $-1$ (balik tanda ketidaksamaan):
-      $$x^2-4x-5 \leq 0 \implies (x-5)(x+1) \leq 0$$
+      $$\begin{align*} x^2-4x-5 &\leq 0 \\ (x-5)(x+1) &\leq 0 \end{align*}$$
       $$-1 \leq x \leq 5$$
       $$D_f = \{x \in \mathbb{R} \mid -1 \leq x \leq 5\}$$
       <div class="grafik-wrap" style="margin-top:.75rem;">
@@ -860,10 +862,10 @@ window.MathJax = {
     </div>
 
     <div class="box box-latihan">
-      <div class="box-label">Soal Latihan</div>
+      <div class="box-label">Soal Latihan A</div>
       <ol class="soal-list">
         <li>Diketahui $P = \{1,2,3\}$ dan $Q = \{a,b,c,d\}$, dengan diagram panah: $1 \to a$, $1 \to b$, $2 \to c$, $3 \to d$. Selidiki apakah diagram panah tersebut merupakan <strong>fungsi</strong> atau <strong>bukan fungsi</strong> dari $P$ ke $Q$.</li>
-        <li>Selidiki apakah relasi berikut merupakan <strong>fungsi</strong> atau <strong>bukan fungsi</strong>: $$k = \{(1,x),\ (2,y),\ (3,x),\ (4,z)\}, \quad \text{dari } \{1,2,3,4\} \text{ ke } \{x,y,z\}$$</li>
+        <li>Selidiki apakah relasi berikut merupakan <strong>fungsi</strong> atau <strong>bukan fungsi</strong>: $$\begin{gather*} k = \{(1,x),\ (2,y),\ (3,x),\ (4,z)\} \\ \text{dari } \{1,2,3,4\} \text{ ke } \{x,y,z\} \end{gather*}$$</li>
         <li>Selidiki apakah aturan berikut merupakan <strong>fungsi</strong> atau <strong>bukan fungsi</strong>: $$y^2 = x + 1, \quad x \in \{-1, 0, 3, 8\}$$</li>
         <li>Selidiki apakah grafik lingkaran $x^2 + y^2 = 9$ merupakan <strong>fungsi</strong> atau <strong>bukan fungsi</strong>. Gunakan uji garis vertikal untuk menjelaskan jawabanmu.</li>
         <li>Diketahui $A = \{1,2,3\}$ dan $B = \{p,q,r,s\}$ dengan $f = \{(1,p),(2,q),(3,r)\}$. Selidiki apakah $f$ injektif, surjektif, dan/atau bijektif.</li>
@@ -921,7 +923,7 @@ window.MathJax = {
       <g id="set-rg-df">
         <text x="540" y="325" text-anchor="middle" class="fki2-label" font-size="38">
           <tspan font-style="italic">R<tspan dy="10" font-size="26">g</tspan></tspan>
-          <tspan dy="-10" font-style="normal"> = </tspan>
+          <tspan dy="-10" font-style="normal"> ⊆ </tspan>
           <tspan font-style="italic">D<tspan dy="10" font-size="26">f</tspan></tspan>
         </text>
         <ellipse cx="540" cy="140" rx="95" ry="140" class="fki2-box" stroke-width="3" />
@@ -958,12 +960,12 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">Definisi Komposisi</div>
-      <div class="math-block">$$(f \circ g)(x) = f[g(x)] \qquad \text{dan} \qquad (g \circ f)(x) = g[f(x)]$$</div>
+      <div class="math-block">$$\begin{gather*} (f \circ g)(x) = f[g(x)] \\ (g \circ f)(x) = g[f(x)] \end{gather*}$$</div>
     </div>
       
 <div class="box box-catatan">
       <div class="box-label">💡 Syarat Terdefinisi</div>
-      <p style="margin:0;font-size:.9rem;">$f \circ g$ terdefinisi jika $R_g \subseteq D_f$ (daerah hasil $g$ harus merupakan bagian dari daerah asal $f$).</p>
+      <p style="margin:0;font-size:.9rem;">$f \circ g$ dapat dibentuk jika $R_g \cap D_f \neq \emptyset$ (ada hasil $g$ yang termasuk daerah asal $f$). Jika $R_g \subseteq D_f$, maka $D_{f \circ g} = D_g$; jika tidak, domain $f \circ g$ harus dibatasi (lihat kotak <em>Domain Komposisi</em> di bawah).</p>
     </div>
 
     <div class="box box-definisi">
@@ -1004,7 +1006,8 @@ window.MathJax = {
       \end{align*}$$
       <strong>Langkah 2 — Menentukan $(g \circ f)(x)$:</strong>
       $$\begin{align*}
-      (g \circ f)(x) &= g[2x-1] \\
+      &(g \circ f)(x) \\
+      &= g[2x-1] \\
       &= (2x-1)^2-3(2x-1)+5 \\
       &= 4x^2-10x+9
       \end{align*}$$
@@ -1076,7 +1079,7 @@ window.MathJax = {
 
     <div class="box box-catatan">
       <div class="box-label">💡 Domain Komposisi $f \circ g$</div>
-      <p style="margin:0;font-size:.9rem;">Syarat $R_g \subseteq D_f$ dapat digunakan untuk menentukan domain $f \circ g$ secara eksplisit:
+      <p style="margin:0;font-size:.9rem;">Domain $f \circ g$ ditentukan secara eksplisit dengan:
       $$D_{f \circ g} = \{x \in D_g \mid g(x) \in D_f\}$$
       Contoh ringkas: $f(x) = \sqrt{x}$ (sehingga $D_f = [0,+\infty)$) dan $g(x) = 1 - x^2$. Maka $D_{f \circ g}$ adalah $x$ yang memenuhi $g(x) \geq 0$, yaitu $1 - x^2 \geq 0 \Rightarrow -1 \leq x \leq 1$. Jadi $D_{f \circ g} = [-1,\,1]$.</p>
     </div>
@@ -1089,7 +1092,7 @@ window.MathJax = {
       <br>
       <strong>Langkah 1 — Tentukan $D_g$ dan $D_f$:</strong> $D_g = \mathbb{R}$ (fungsi linear); $D_f = [2, +\infty)$ (syarat $x-2 \geq 0$).<br><br>
       <strong>Langkah 2 — Bentuk $(f \circ g)(x)$:</strong>
-      $$(f \circ g)(x) = f[6-x] = \sqrt{(6-x)-2} = \sqrt{4-x}$$
+      $$\begin{align*} (f \circ g)(x) &= f[6-x] \\ &= \sqrt{(6-x)-2} = \sqrt{4-x} \end{align*}$$
       <strong>Langkah 3 — Terapkan syarat $g(x) \in D_f$</strong>, yaitu $g(x) \geq 2$:
       $$6 - x \geq 2 \implies x \leq 4$$
       Karena $D_g = \mathbb{R}$ tidak memberi batasan tambahan, maka:
@@ -1107,7 +1110,8 @@ window.MathJax = {
       <br>
       Karena $f[x+3] = 2x^2-4x-3$, misalkan $m = x+3$, sehingga $x = m-3$:
       $$\begin{align*}
-      f(m) &= 2(m-3)^2-4(m-3)-3 \\
+      &f(m) \\
+      &= 2(m-3)^2-4(m-3)-3 \\
       &= 2m^2-12m+18-4m+12-3 \\
       &= 2m^2-16m+27
       \end{align*}$$
@@ -1169,7 +1173,8 @@ window.MathJax = {
       <br>
       Misalkan $m = 2x+1$, sehingga $x = \dfrac{m-1}{2}$. Substitusi:
       $$\begin{align*}
-      f(m) &= 4\left(\frac{m-1}{2}\right)^2 - 8\left(\frac{m-1}{2}\right) + 5 \\
+      &f(m) \\
+      &= 4\left(\frac{m-1}{2}\right)^2 - 8\left(\frac{m-1}{2}\right) + 5 \\
       &= 4 \cdot \frac{(m-1)^2}{4} - 8 \cdot \frac{m-1}{2} + 5 \\
       &= (m-1)^2 - 4(m-1) + 5 \\
       &= (m^2 - 2m + 1) - 4m + 4 + 5 \\
@@ -1185,11 +1190,11 @@ window.MathJax = {
     <div class="penyelesaian">
       <br>
       Harga akhir adalah hasil pemberian diskon terlebih dahulu ($g$), kemudian pengenaan pajak ($f$), sehingga urutannya adalah $f \circ g$:
-      $$(f \circ g)(x) = f[g(x)] = f[0{,}8x] = 1{,}1(0{,}8x) = 0{,}88x$$
+      $$\begin{align*} (f \circ g)(x) &= f[g(x)] = f[0{,}8x] \\ &= 1{,}1(0{,}8x) = 0{,}88x \end{align*}$$
       Jadi $(f \circ g)(x) = 0{,}88x$.<br><br>
       Untuk $x = 250.000$:
-      $$(f \circ g)(250.000) = 0{,}88 \times 250.000 = Rp\,220.000$$
-      Jadi harga akhir $= Rp\,220.000$.
+      $$\begin{align*} (f \circ g)(250.000) &= 0{,}88 \times 250.000 \\ &= \text{Rp}220.000 \end{align*}$$
+      Jadi harga akhir $= \text{Rp}220.000$.
     </div>
 
     <div class="box box-catatan">
@@ -1198,7 +1203,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-latihan">
-      <div class="box-label">Soal Latihan</div>
+      <div class="box-label">Soal Latihan B</div>
       <ol class="soal-list">
         <li>Diketahui $f(x) = 3x + 1$ dan $g(x) = x^2 - 2x + 4$. Tentukan $(f \circ g)(x)$ dan $(g \circ f)(x)$.</li>
         <li>Diketahui $f(x) = 4x - 3$. Tentukan $(f \circ f \circ f)(x)$.</li>
@@ -1207,8 +1212,9 @@ window.MathJax = {
         <li>Diketahui $(f \circ g)(x) = 6x - 1$ dan $f(x) = 3x + 2$. Tentukan $g(x)$.</li>
         <li>Diketahui $f(3x - 2) = 6x^2 - 8x + 1$. Tentukan $f(x)$.</li>
         <li>Diketahui $f(x+1) = 2x^2 + 3x - 1$. Tentukan $f(x)$ dan nilai $f(3)$.</li>
-        <li>Suatu pabrik konveksi menetapkan biaya produksi $g(x) = 50000x + 200000$ (dalam rupiah) untuk memproduksi $x$ potong baju, kemudian menambahkan biaya pengiriman melalui fungsi $f(u) = u + 0{,}1u = 1{,}1u$ (biaya administrasi $10\%$ dari total biaya produksi). Nyatakan total biaya sebagai $(f \circ g)(x)$, lalu tentukan berapa potong baju maksimal yang dapat diproduksi jika anggaran total adalah Rp7.700.000.</li>
+        <li>Suatu pabrik konveksi menetapkan biaya produksi $g(x) = 50000x + 200000$ (dalam rupiah) untuk memproduksi $x$ potong baju, kemudian menambahkan biaya administrasi sebesar $10\%$ dari total biaya produksi melalui fungsi $f(u) = u + 0{,}1u = 1{,}1u$. Nyatakan total biaya sebagai $(f \circ g)(x)$, lalu tentukan berapa potong baju maksimal yang dapat diproduksi jika anggaran total adalah Rp7.700.000.</li>
         <li>Diketahui $g(x) = 2x - 1$ dan $h(x) = (f \circ g)(x) = 4x^2 - 8x + 5$. Tanpa menentukan $f(x)$ terlebih dahulu, tentukan nilai $f(3)$ dengan memanfaatkan hubungan $g(x) = 3$.</li>
+        <li>Fungsi $f$ dan $g$ didefinisikan pada $\{1, 2, 3, 4\}$ oleh tabel berikut.<div class="table-wrap" style="margin:.5rem 0 0;"><table><thead><tr><th>$x$</th><th>$1$</th><th>$2$</th><th>$3$</th><th>$4$</th></tr></thead><tbody><tr><td>$f(x)$</td><td>$3$</td><td>$4$</td><td>$1$</td><td>$2$</td></tr><tr><td>$g(x)$</td><td>$2$</td><td>$1$</td><td>$4$</td><td>$3$</td></tr></tbody></table></div>Tentukan nilai $(f \circ g)(1) + (g \circ f)(3)$ dan nilai $x$ yang memenuhi $(f \circ g)(x) = 1$.</li>
       </ol>
     </div>
   </section>
@@ -1408,13 +1414,13 @@ window.MathJax = {
     <p>Dengan melengkapi kuadrat sempurna, diperoleh:</p>
 
     <div class="box box-rumus">
-      <div class="box-label">Invers Fungsi Kuadrat</div>
-      <div class="math-block">$$f^{-1}(x) = \frac{-b \pm \sqrt{b^2 - 4a(c-x)}}{2a}$$</div>
+      <div class="box-label">Invers Fungsi Kuadrat ($a > 0$)</div>
+      <div class="math-block">$$\begin{gather*} \text{Jika } x \geq -\tfrac{b}{2a}: \\ f^{-1}(x) = \frac{-b + \sqrt{b^2 - 4a(c-x)}}{2a} \\ \text{Jika } x \leq -\tfrac{b}{2a}: \\ f^{-1}(x) = \frac{-b - \sqrt{b^2 - 4a(c-x)}}{2a} \end{gather*}$$</div>
     </div>
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Fungsi kuadrat secara alami <strong>tidak bijektif</strong> pada seluruh $\mathbb{R}$. Invers fungsi kuadrat hanya valid jika domain dibatasi sehingga fungsinya menjadi injektif, misalnya $x \geq -\dfrac{b}{2a}$ (diambil tanda $+$) atau $x \leq -\dfrac{b}{2a}$ (tanda $-$).</p>
+      <p style="margin:0;font-size:.9rem;">Fungsi kuadrat secara alami <strong>tidak bijektif</strong> pada seluruh $\mathbb{R}$. Invers fungsi kuadrat hanya ada jika domain dibatasi sehingga fungsinya injektif, yaitu $x \geq -\dfrac{b}{2a}$ (diambil tanda $+$) atau $x \leq -\dfrac{b}{2a}$ (diambil tanda $-$). Menulis $f^{-1}(x)$ dengan tanda $\pm$ <strong>tidak tepat</strong>, karena hasilnya bukan fungsi.</p>
     </div>
 
     <div class="box box-contoh">
@@ -1428,9 +1434,9 @@ window.MathJax = {
       <strong>a.</strong> Misalkan $y=3x-5$:
       $$x=\dfrac{y+5}{3} \quad \Rightarrow \quad f^{-1}(x)=\dfrac{x+5}{3}$$
       Verifikasi:
-      $$(f^{-1} \circ f)(x) = f^{-1}[3x-5] = \dfrac{3x}{3} = x \quad \checkmark$$
+      $$\begin{align*} (f^{-1} \circ f)(x) &= f^{-1}[3x-5] \\ &= \dfrac{(3x-5)+5}{3} = x \quad \checkmark \end{align*}$$
       <strong>b.</strong> Misalkan $12y=4x+9$:
-      $$x=\dfrac{12y-9}{4} \quad \Rightarrow \quad g^{-1}(x)=\dfrac{12x-9}{4}$$
+      $$\begin{gather*} x=\dfrac{12y-9}{4} \\ g^{-1}(x)=\dfrac{12x-9}{4} \end{gather*}$$
     </div>
 
     <div class="box box-contoh">
@@ -1442,16 +1448,16 @@ window.MathJax = {
     <div class="penyelesaian">
       <br>
       <strong>a.</strong> Misalkan $y(x-1)=2x-3$:
-      $$x(y-2)=y-3 \quad \Rightarrow \quad f^{-1}(x)=\dfrac{x-3}{x-2}$$
+      $$\begin{gather*} x(y-2)=y-3 \\ f^{-1}(x)=\dfrac{x-3}{x-2} \end{gather*}$$
       <strong>b.</strong> Misalkan $y(2x-4)=2-3x$:
-      $$x(2y+3)=4y+2 \quad \Rightarrow \quad g^{-1}(x)=\dfrac{4x+2}{2x+3}$$
+      $$\begin{gather*} x(2y+3)=4y+2 \\ g^{-1}(x)=\dfrac{4x+2}{2x+3} \end{gather*}$$
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 32</div>
       <p style="margin:0;font-size:.9rem;">Tentukan invers dari:<br>
-      a. $f(x) = x^2 - 6x + 5$<br>
-      b. $f(x) = 2x^2 - 8x + 4$</p>
+      a. $f(x) = x^2 - 6x + 5$ dengan $x \geq 3$<br>
+      b. $f(x) = 2x^2 - 8x + 4$ dengan $x \leq 2$</p>
     </div>
     <div class="penyelesaian">
       <br>
@@ -1459,10 +1465,10 @@ window.MathJax = {
       $$\begin{align*}
       y - 5 + 9 &= x^2 - 6x + 9 \\
       y + 4 &= (x-3)^2 \\
-      x &= 3 \pm \sqrt{y+4}
+      x - 3 &= \pm\sqrt{y+4}
       \end{align*}$$
-      Jadi:
-      $$f^{-1}(x) = 3 \pm \sqrt{x+4}$$
+      Karena $x \geq 3$, maka $x - 3 \geq 0$ sehingga dipilih tanda $+$: $x = 3 + \sqrt{y+4}$. Jadi:
+      $$\begin{gather*} f^{-1}(x) = 3 + \sqrt{x+4} \\ D_{f^{-1}} = [-4,\,+\infty) \end{gather*}$$
 
       <strong>b.</strong> Misalkan $y = 2x^2 - 8x + 4$:
       $$\begin{align*}
@@ -1471,8 +1477,8 @@ window.MathJax = {
       x - 2 &= \pm\sqrt{\frac{y}{2}+2} = \pm\frac{\sqrt{2y+8}}{2} \\
       x &= \frac{4 \pm \sqrt{2y+8}}{2}
       \end{align*}$$
-      Jadi:
-      $$f^{-1}(x) = \frac{4 \pm \sqrt{2x+8}}{2}$$
+      Karena $x \leq 2$, maka $x - 2 \leq 0$ sehingga dipilih tanda $-$. Jadi:
+      $$\begin{gather*} f^{-1}(x) = \frac{4 - \sqrt{2x+8}}{2} \\ D_{f^{-1}} = [-4,\,+\infty) \end{gather*}$$
     </div>
 
     <div class="box box-contoh">
@@ -1492,7 +1498,7 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">Domain &amp; Range Fungsi Invers</div>
-      <div class="math-block">$$D_{f^{-1}} = R_f \qquad \text{dan} \qquad R_{f^{-1}} = D_f$$</div>
+      <div class="math-block">$$\begin{gather*} D_{f^{-1}} = R_f \\ R_{f^{-1}} = D_f \end{gather*}$$</div>
     </div>
 
     <p>Artinya, <strong>domain</strong> $f^{-1}$ adalah semua nilai keluaran $f$, dan <strong>range</strong> $f^{-1}$ adalah semua nilai masukan $f$ yang diizinkan.</p>
@@ -1507,11 +1513,11 @@ window.MathJax = {
     $$D_{f^{-1}} = \mathbb{R} \qquad \text{dan} \qquad R_{f^{-1}} = \mathbb{R}$$
 
     <p><strong>b. Fungsi Akar</strong> $f(x) = \sqrt{x - k}$, &nbsp; $D_f = [k, +\infty)$, &nbsp; $R_f = [0, +\infty)$</p>
-    $$D_{f^{-1}} = [0, +\infty) \qquad \text{dan} \qquad R_{f^{-1}} = [k, +\infty)$$
+    $$\begin{gather*} D_{f^{-1}} = [0, +\infty) \\ R_{f^{-1}} = [k, +\infty) \end{gather*}$$
     <p>(memang benar: $f^{-1}(x) = x^2 + k$ dengan $x \geq 0$)</p>
 
     <p><strong>c. Fungsi Pecahan Linear</strong> $f(x) = \dfrac{ax+b}{cx+d}$, &nbsp; $D_f = \mathbb{R} \setminus \!\left\{-\dfrac{d}{c}\right\}$, &nbsp; $R_f = \mathbb{R} \setminus \!\left\{\dfrac{a}{c}\right\}$</p>
-    $$D_{f^{-1}} = \mathbb{R} \setminus \!\left\{\frac{a}{c}\right\} \qquad \text{dan} \qquad R_{f^{-1}} = \mathbb{R} \setminus \!\left\{-\frac{d}{c}\right\}$$
+    $$\begin{gather*} D_{f^{-1}} = \mathbb{R} \setminus \!\left\{\frac{a}{c}\right\} \\ R_{f^{-1}} = \mathbb{R} \setminus \!\left\{-\frac{d}{c}\right\} \end{gather*}$$
       </div>
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 34</div>
@@ -1543,15 +1549,15 @@ window.MathJax = {
     <h3 class="subsection-title">4. Invers Fungsi Eksponen dan Logaritma</h3>
 
     <p><strong>a. Fungsi Eksponen</strong> $f(x) = a^{bx+c}$</p>
-    <p>Dari $y = a^{bx+c}$ diperoleh $bx + c = \log_a y$, sehingga:</p>
+    <p>Dari $y = a^{bx+c}$ diperoleh $bx + c = {}^{a}\!\log y$, sehingga:</p>
 
     <div class="box box-rumus">
       <div class="box-label">Invers Fungsi Eksponen</div>
-      <div class="math-block">$$f^{-1}(x) = \frac{\log_a x - c}{b}$$</div>
+      <div class="math-block">$$f^{-1}(x) = \frac{{}^{a}\!\log x - c}{b}$$</div>
     </div>
 
-    <p><strong>b. Fungsi Logaritma</strong> $f(x) = \log_a(bx + c)$</p>
-    <p>Dari $y = \log_a(bx+c)$ diperoleh $bx + c = a^y$, sehingga:</p>
+    <p><strong>b. Fungsi Logaritma</strong> $f(x) = {}^{a}\!\log(bx + c)$</p>
+    <p>Dari $y = {}^{a}\!\log(bx+c)$ diperoleh $bx + c = a^y$, sehingga:</p>
 
     <div class="box box-rumus">
       <div class="box-label">Invers Fungsi Logaritma</div>
@@ -1562,11 +1568,11 @@ window.MathJax = {
       <div class="box-label">📘 Contoh 35</div>
       <p style="margin:0;font-size:.9rem;">Tentukan invers dari:<br>
       a. $f(x) = 2^{3x-1}$<br>
-      b. $g(x) = \log_3(2x+5)$</p>
+      b. $g(x) = {}^{3}\!\log(2x+5)$</p>
     </div>
     <div class="penyelesaian">
       <br>
-      <strong>a.</strong> Misalkan $\log_2 y = 3x-1$:
+      <strong>a.</strong> Misalkan ${}^{2}\!\log y = 3x-1$:
       $$f^{-1}(x)=\frac{{}^2\!\log x+1}{3}$$
       $$D_{f^{-1}}=\{x \in \mathbb{R} \mid x > 0\}$$
       <strong>b.</strong> Misalkan $3^y=2x+5$:
@@ -1574,13 +1580,13 @@ window.MathJax = {
       $$D_{g^{-1}}=\{x \in \mathbb{R}\}$$
     </div>
 
-    <h3 class="subsection-title">5. Fungsi Invers Diri Sendiri (Involusi)</h3>
+    <h3 class="subsection-title">5. Pengayaan: Fungsi Invers Diri Sendiri (Involusi)</h3>
 
     <p>Suatu fungsi disebut <strong>involusi</strong> (atau <em>self-inverse</em>) jika $f = f^{-1}$, yaitu $f(f(x)) = x$ untuk semua $x$ pada domainnya.</p>
 
     <div class="box box-catatan">
       <div class="box-label">💡 Syarat Self-Inverse</div>
-      <p style="margin:0;font-size:.9rem;">Fungsi pecahan linear $f(x)=\dfrac{ax+b}{cx+d}$ bersifat <strong>self-inverse</strong> jika dan hanya jika $a+d=0$ (jumlah koefisien diagonal sama dengan nol).</p>
+      <p style="margin:0;font-size:.9rem;">Fungsi pecahan linear $f(x)=\dfrac{ax+b}{cx+d}$ dengan $c \neq 0$ dan $ad - bc \neq 0$ bersifat <strong>self-inverse</strong> jika dan hanya jika $a+d=0$.</p>
     </div>
 
     <div class="box box-contoh">
@@ -1589,7 +1595,7 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <br>
-      Syarat: $a+d=0$, yaitu $p+(-p)=0$ — terpenuhi untuk semua $p \neq 0$.<br><br>
+      Syarat: $a+d=0$, yaitu $p+(-p)=0$, selalu terpenuhi. Syarat $ad - bc = -p^2 - 12 \neq 0$ juga selalu terpenuhi. Jadi $f$ self-inverse untuk <strong>setiap</strong> $p \in \mathbb{R}$ (termasuk $p = 0$, yaitu $f(x) = \dfrac{3}{x}$).<br><br>
       Untuk $p=2$:
       $$f(x)=\dfrac{2x+6}{2x-2}=\dfrac{x+3}{x-1}$$
       Verifikasi:
@@ -1611,12 +1617,12 @@ window.MathJax = {
       $$f - 32 = \frac{9}{5}c \implies c = \frac{5(f-32)}{9}$$
       Jadi $F^{-1}(f) = \dfrac{5(f-32)}{9}$, yang tidak lain adalah rumus konversi Fahrenheit ke Celsius yang sudah dikenal.<br><br>
       Untuk $f = 98{,}6$:
-      $$F^{-1}(98{,}6) = \frac{5(98{,}6-32)}{9} = \frac{5(66{,}6)}{9} = \frac{333}{9} = 37$$
+      $$\begin{align*} &F^{-1}(98{,}6) \\ &= \frac{5(98{,}6-32)}{9} = \frac{5(66{,}6)}{9} \\ &= \frac{333}{9} = 37 \end{align*}$$
       Jadi hasilnya $37\,{}^{\circ}\text{C}$.
     </div>
 
     <div class="box box-latihan">
-      <div class="box-label">Soal Latihan</div>
+      <div class="box-label">Soal Latihan C</div>
       <ol class="soal-list">
         <li>Tentukan $f^{-1}(x)$ dari $f(x) = 5x - 3$.</li>
         <li>Tentukan $f^{-1}(x)$ dari $f(x) = \dfrac{3x + 4}{x - 2}$.</li>
@@ -1630,6 +1636,7 @@ window.MathJax = {
         <li>Diketahui $f(x) = \dfrac{4x + k}{x - 4}$ bersifat <em>self-inverse</em>. Tentukan nilai $k$ yang mungkin, lalu verifikasi bahwa $f(f(x)) = x$.</li>
         <li>Diketahui $f(x) = \dfrac{4x - 1}{2x + 3}$. Jika $f^{-1}(k) = 3$, tentukan nilai $k$.</li>
         <li>Sebuah taksi daring mengenakan tarif $C(d) = 8000 + 2500d$ (rupiah), dengan $d$ = jarak tempuh dalam km. Tentukan rumus $C^{-1}(c)$ yang menyatakan jarak tempuh berdasarkan biaya yang dibayar, lalu tentukan jarak maksimal yang bisa ditempuh seorang penumpang dengan uang Rp58.000.</li>
+        <li>Grafik fungsi linear $y = f(x)$ melalui titik $(-1,\ 0)$ dan $(1,\ 4)$ seperti gambar berikut.<div class="grafik-wrap" style="margin:.5rem 0 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200" width="100%" style="max-width:220px;" role="img" aria-label="Grafik garis melalui (-1,0) dan (1,4)"><g stroke="var(--text-3,#94a3b8)" stroke-width="1" opacity=".3"><line x1="30" y1="10" x2="30" y2="190"/><line x1="60" y1="10" x2="60" y2="190"/><line x1="90" y1="10" x2="90" y2="190"/><line x1="120" y1="10" x2="120" y2="190"/><line x1="150" y1="10" x2="150" y2="190"/><line x1="180" y1="10" x2="180" y2="190"/><line x1="210" y1="10" x2="210" y2="190"/><line x1="10" y1="10" x2="210" y2="10"/><line x1="10" y1="40" x2="210" y2="40"/><line x1="10" y1="70" x2="210" y2="70"/><line x1="10" y1="100" x2="210" y2="100"/><line x1="10" y1="130" x2="210" y2="130"/><line x1="10" y1="160" x2="210" y2="160"/><line x1="10" y1="190" x2="210" y2="190"/></g><g stroke="var(--text-2,#334155)" stroke-width="1.6"><line x1="10" y1="160" x2="210" y2="160"/><line x1="60" y1="190" x2="60" y2="10"/></g><line x1="15" y1="190" x2="105" y2="10" stroke="#0014b3" stroke-width="2.6" class="c1-lgf"/><circle cx="30" cy="160" r="4" fill="#0014b3" class="c1-lgf"/><circle cx="90" cy="40" r="4" fill="#0014b3" class="c1-lgf"/><g font-size="12" fill="var(--text-2,#334155)" font-family="Cambria,serif" text-anchor="middle"><text x="30" y="176">−1</text><text x="90" y="176">1</text><text x="120" y="176">2</text><text x="50" y="44">4</text><text x="50" y="104">2</text><text x="205" y="152" font-style="italic">x</text><text x="68" y="18" font-style="italic">y</text><text x="150" y="70" font-style="italic" fill="#0014b3" class="t1-lgf">y = f(x)</text></g></svg></div>Tanpa terlebih dahulu menentukan rumus $f(x)$, tentukan $f^{-1}(4)$. Kemudian tentukan rumus $f^{-1}(x)$ dan nilai $f^{-1}(10)$.</li>
       </ol>
     </div>
   </section>
@@ -1650,7 +1657,7 @@ window.MathJax = {
     </div>
 
     <p><strong>Bukti sifat (1):</strong> Jika $f \circ g = h$, maka:</p>
-    $$f \circ g \circ g^{-1} = h \circ g^{-1} \implies f \circ I = h \circ g^{-1} \implies f = h \circ g^{-1} \quad \blacksquare$$
+    $$\begin{align*} f \circ g \circ g^{-1} &= h \circ g^{-1} \\ f \circ I &= h \circ g^{-1} \\ f &= h \circ g^{-1} \quad \blacksquare \end{align*}$$
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 38</div>
@@ -1672,7 +1679,8 @@ window.MathJax = {
       $g^{-1}(x) = \dfrac{x-1}{2}$. Gunakan $f = h \circ g^{-1}$:
       $$f(x) = h\!\left(\frac{x-1}{2}\right)$$
       $$= 4\!\left(\frac{x-1}{2}\right)^2-2\!\left(\frac{x-1}{2}\right)+3$$
-      $$= (x-1)^2-(x-1)+3 = x^2-3x+5$$
+      $$= (x-1)^2-(x-1)+3$$
+      $$= x^2-3x+5$$
     </div>
 
     <div class="box box-contoh">
@@ -1685,9 +1693,10 @@ window.MathJax = {
       $$(f \circ g)(x) = 2(3x+2)-5 = 6x-1$$
       $$(f \circ g)^{-1}(x) = \frac{x+1}{6}$$
       <strong>Cara 2:</strong>
-      $$g^{-1}(x)=\frac{x-2}{3}, \qquad f^{-1}(x)=\frac{x+5}{2}$$
+      $$\begin{gather*} g^{-1}(x)=\frac{x-2}{3} \\ f^{-1}(x)=\frac{x+5}{2} \end{gather*}$$
       $$\begin{align*}
-      (g^{-1} \circ f^{-1})(x) &= g^{-1}\!\left[\frac{x+5}{2}\right] \\
+      &(g^{-1} \circ f^{-1})(x) \\
+      &= g^{-1}\!\left[\frac{x+5}{2}\right] \\
       &= \frac{\frac{x+5}{2}-2}{3} = \frac{x+1}{6} \quad \checkmark
       \end{align*}$$
     </div>
@@ -1703,10 +1712,10 @@ window.MathJax = {
       &= \frac{6x+10-(4x-2)}{4x-2} \\
       &= \frac{x+6}{2x-1}
       \end{align*}$$
-      Jadi:
+      Fungsi $\dfrac{x+6}{2x-1}$ memiliki $a + d = 1 + (-1) = 0$, sehingga bersifat self-inverse (inversnya adalah dirinya sendiri). Jadi:
       $$(g \circ f)^{-1}(x) = \frac{x+6}{2x-1}$$
       Verifikasi:
-      $$f^{-1}(x)=\frac{2x+5}{4x-3}, \qquad g^{-1}(x)=\frac{x+1}{2}$$
+      $$\begin{gather*} f^{-1}(x)=\frac{2x+5}{4x-3} \\ g^{-1}(x)=\frac{x+1}{2} \end{gather*}$$
       $$\begin{align*}
       (f^{-1} \circ g^{-1})(x) &= f^{-1}\!\left[\frac{x+1}{2}\right] \\
       &= \frac{x+1+5}{2(x+1)-3} \\
@@ -1730,11 +1739,11 @@ window.MathJax = {
 
     <div class="box box-catatan">
       <div class="box-label">💡 Strategi HOTS</div>
-      <p style="margin:0;font-size:.9rem;">Untuk soal berbentuk $(f \circ g)^{-1}(a) = k$, tidak perlu mencari rumus invers secara eksplisit. Cukup gunakan kesetaraan $(f \circ g)^{-1}(a) = k \iff (f \circ g)(k) = a$, lalu hitung langsung nilai komposisinya. Strategi ini jauh lebih efisien, terutama saat $f$ atau $g$ berbentuk pecahan atau kuadrat.</p>
+      <p style="margin:0;font-size:.9rem;">Untuk soal berbentuk $(f \circ g)^{-1}(a) = k$, tidak perlu mencari rumus invers secara eksplisit. Cukup gunakan kesetaraan $(f \circ g)^{-1}(a) = k$ jika dan hanya jika $(f \circ g)(k) = a$, lalu hitung langsung nilai komposisinya. Strategi ini jauh lebih efisien, terutama saat $f$ atau $g$ berbentuk pecahan atau kuadrat.</p>
     </div>
 
     <div class="box box-latihan">
-      <div class="box-label">Soal Latihan</div>
+      <div class="box-label">Soal Latihan D</div>
       <ol class="soal-list">
         <li>Diketahui $f(x) = 3x + 1$ dan $h(x) = 9x + 7$. Jika $f \circ g = h$, tentukan $g(x)$.</li>
         <li>Diketahui $g(x) = x + 4$ dan $h(x) = 2x^2 + 16x + 33$. Jika $f \circ g = h$, tentukan $f(x)$.</li>
@@ -1744,8 +1753,9 @@ window.MathJax = {
         <li>Diketahui $f(x) = 2x + 3$ dan $g(x) = \dfrac{x-1}{x+2}$. Tentukan $(f \circ g)^{-1}(x)$ dan $(g^{-1} \circ f^{-1})(x)$, lalu verifikasi keduanya sama.</li>
         <li>Diketahui $f$ dan $g$ adalah fungsi bijektif dengan $(f \circ g)(x) = h(x)$. Buktikan secara umum bahwa $g^{-1} = h^{-1} \circ f$.</li>
         <li>Diketahui $f(x) = 3x - 2$ dan $g(x) = x + 5$. Jika $(g \circ f)^{-1}(a) = 4$, tentukan nilai $a$ dengan strategi efisien (tanpa mencari rumus invers eksplisit).</li>
-        <li>Diketahui $f(x) = x^2 + 3$ dan $g(x) = 2x - 1$. Jika $(f \circ g)^{-1}(a) = 5$, tentukan nilai $a$ dengan strategi efisien.</li>
+        <li>Diketahui $f(x) = x^2 + 3$ dan $g(x) = 2x - 1$ dengan domain $x \geq 1$ (agar $f \circ g$ injektif). Jika $(f \circ g)^{-1}(a) = 5$, tentukan nilai $a$ dengan strategi efisien.</li>
         <li>Diketahui $f(x) = \dfrac{2x+1}{x-3}$ dan $g(x) = x + 2$. Jika $(f \circ g)^{-1}(a) = 2$, tentukan nilai $a$ dengan strategi efisien.</li>
+        <li>Fungsi bijektif $f$ dan $g$ pada $\{1, 2, 3, 4\}$ diberikan oleh tabel berikut.<div class="table-wrap" style="margin:.5rem 0 0;"><table><thead><tr><th>$x$</th><th>$1$</th><th>$2$</th><th>$3$</th><th>$4$</th></tr></thead><tbody><tr><td>$f(x)$</td><td>$2$</td><td>$4$</td><td>$3$</td><td>$1$</td></tr><tr><td>$g(x)$</td><td>$3$</td><td>$1$</td><td>$4$</td><td>$2$</td></tr></tbody></table></div>Tentukan nilai $(f^{-1} \circ g)(2)$ dan $(g^{-1} \circ f)(3)$.</li>
       </ol>
     </div>
   </section>
@@ -1787,7 +1797,7 @@ window.MathJax = {
         <thead><tr><th>Konsep</th><th>Rumus / Notasi</th><th>Keterangan</th></tr></thead>
         <tbody>
           <tr><td>Definisi</td><td>$(f \circ g)(x) = f[g(x)]$</td><td>$g$ dikerjakan terlebih dahulu, lalu $f$</td></tr>
-          <tr><td>Syarat terdefinisi</td><td>$R_g \subseteq D_f$</td><td>Range $g$ harus termuat di domain $f$</td></tr>
+          <tr><td>Syarat terdefinisi</td><td>$R_g \cap D_f \neq \emptyset$</td><td>Jika $R_g \subseteq D_f$, maka $D_{f \circ g} = D_g$</td></tr>
           <tr><td>Domain komposisi</td><td>$D_{f \circ g} = \{x \in D_g \mid g(x) \in D_f\}$</td><td>Irisan syarat domain $g$ dan syarat $g(x) \in D_f$</td></tr>
           <tr><td>Tidak komutatif</td><td>$f \circ g \neq g \circ f$</td><td>Pada umumnya, urutan mempengaruhi hasil</td></tr>
           <tr><td>Asosiatif</td><td>$f \circ (g \circ h) = (f \circ g) \circ h$</td><td>Pengelompokan tidak mempengaruhi hasil</td></tr>
@@ -1803,9 +1813,9 @@ window.MathJax = {
         <tbody>
           <tr><td>Linear $ax + b$</td><td>$f^{-1}(x) = \dfrac{x - b}{a}$</td><td>Berlaku untuk $a \neq 0$</td></tr>
           <tr><td>Pecahan linear $\dfrac{ax+b}{cx+d}$</td><td>$f^{-1}(x) = \dfrac{dx - b}{-cx + a}$</td><td>Berlaku untuk $ad - bc \neq 0$</td></tr>
-          <tr><td>Kuadrat $ax^2 + bx + c$</td><td>$f^{-1}(x) = \dfrac{-b \pm \sqrt{b^2 - 4a(c-x)}}{2a}$</td><td>Perlu pembatasan domain agar bijektif</td></tr>
-          <tr><td>Eksponen $a^{bx+c}$</td><td>$f^{-1}(x) = \dfrac{\log_a x - c}{b}$</td><td>Domain $f^{-1}$: $(0, +\infty)$</td></tr>
-          <tr><td>Logaritma $\log_a(bx+c)$</td><td>$f^{-1}(x) = \dfrac{a^x - c}{b}$</td><td>Range berupa $\mathbb{R}$</td></tr>
+          <tr><td>Kuadrat $ax^2 + bx + c$</td><td>$f^{-1}(x) = \dfrac{-b + \sqrt{b^2 - 4a(c-x)}}{2a}$</td><td>Untuk $a > 0$, $x \geq -\frac{b}{2a}$ (tanda $-$ jika $x \leq -\frac{b}{2a}$)</td></tr>
+          <tr><td>Eksponen $a^{bx+c}$</td><td>$f^{-1}(x) = \dfrac{{}^{a}\!\log x - c}{b}$</td><td>Domain $f^{-1}$: $(0, +\infty)$</td></tr>
+          <tr><td>Logaritma ${}^{a}\!\log(bx+c)$</td><td>$f^{-1}(x) = \dfrac{a^x - c}{b}$</td><td>Range berupa $\mathbb{R}$</td></tr>
         </tbody>
       </table>
     </div>
@@ -1817,7 +1827,7 @@ window.MathJax = {
         <tbody>
           <tr><td>Domain invers = Range asal</td><td>$D_{f^{-1}} = R_f$</td><td>$f(x)=\sqrt{x-2}$: $R_f=[0,+\infty)$, maka $D_{f^{-1}}=[0,+\infty)$</td></tr>
           <tr><td>Range invers = Domain asal</td><td>$R_{f^{-1}} = D_f$</td><td>$f(x)=\sqrt{x-2}$: $D_f=[2,+\infty)$, maka $R_{f^{-1}}=[2,+\infty)$</td></tr>
-          <tr><td>Sifat involusi</td><td>$(f^{-1} \circ f)(x) = x$</td><td>Verifikasi: substitusikan $f(x)$ ke $f^{-1}$</td></tr>
+          <tr><td>Sifat invers</td><td>$(f^{-1} \circ f)(x) = (f \circ f^{-1})(x) = x$</td><td>Verifikasi: substitusikan $f(x)$ ke $f^{-1}$</td></tr>
         </tbody>
       </table>
     </div>
@@ -1843,7 +1853,7 @@ window.MathJax = {
         <tbody>
           <tr><td>Simetri terhadap $y = x$</td><td>Grafik $f^{-1}$ adalah refleksi grafik $f$ terhadap garis $y = x$</td></tr>
           <tr><td>Pertukaran koordinat</td><td>Jika $(a, b)$ pada grafik $f$, maka $(b, a)$ pada grafik $f^{-1}$</td></tr>
-          <tr><td>Titik tetap</td><td>Titik potong $f$ dan $f^{-1}$ selalu terletak pada garis $y = x$</td></tr>
+          <tr><td>Titik potong</td><td>Jika $f$ naik, titik potong $f$ dan $f^{-1}$ terletak pada garis $y = x$ (untuk $f$ turun belum tentu, misalnya $f(x) = 1 - x$)</td></tr>
         </tbody>
       </table>
     </div>
@@ -2143,6 +2153,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban:`$f(x) = 2x^2-x-2$ &nbsp;&nbsp; $f(3) = 13$` },
       { jawaban:`$(f \\circ g)(x) = 55000x+220000$ &nbsp;&nbsp; maksimal <strong>136 potong baju</strong>` },
       { jawaban:`$f(3) = 5$` },
+      { jawaban:`$(f \\circ g)(1) = f(2) = 4$, $(g \\circ f)(3) = g(1) = 2$, jumlahnya $6$.<br>$(f \\circ g)(x) = 1 \\Rightarrow g(x) = 3$<br>$\\Rightarrow x = 4$` },
     ],
     // C — Fungsi Invers (12 soal)
     2: [
@@ -2158,6 +2169,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban:`$k \\in \\mathbb{R},\\, k \\neq -16$ &nbsp;&nbsp; terverifikasi $f(f(x)) = x$` },
       { jawaban:`$k = \\dfrac{11}{9}$` },
       { jawaban:`$C^{-1}(c) = \\dfrac{c-8000}{2500}$ &nbsp;&nbsp; jarak maksimal $= 20$ km` },
+      { jawaban:`$f(1) = 4$, maka $f^{-1}(4) = 1$.<br>$f(x) = 2x + 2$, sehingga $f^{-1}(x) = \\dfrac{x-2}{2}$ dan $f^{-1}(10) = 4$` },
     ],
     // D — Hubungan Komposisi & Invers (10 soal)
     3: [
@@ -2166,11 +2178,12 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban:`$g(x) = x^2+2x$` },
       { jawaban:`$(f \\circ g)^{-1}(x) = \\dfrac{x-9}{6}$` },
       { jawaban:`$(g \\circ f)^{-1}(x) = \\dfrac{x+11}{x-1}$` },
-      { jawaban:`$(f \\circ g)^{-1}(x) = (g^{-1} \\circ f^{-1})(x) = \\dfrac{4-2x}{x-5}$` },
-      { jawaban:`Terbukti secara umum: $g^{-1} = h^{-1} \\circ f$ (lihat pembuktian pada materi).` },
+      { jawaban:`$(f \\circ g)^{-1}(x) = (g^{-1} \\circ f^{-1})(x)$<br>$= \\dfrac{4-2x}{x-5}$` },
+      { jawaban:`Dari $h = f \\circ g$, ambil invers kedua ruas: $h^{-1} = g^{-1} \\circ f^{-1}$.<br>Komposisikan dengan $f$ di kanan: $h^{-1} \\circ f = g^{-1} \\circ (f^{-1} \\circ f)$<br>$= g^{-1} \\circ I = g^{-1}$. $\\blacksquare$` },
       { jawaban:`$a = 15$` },
       { jawaban:`$a = 84$` },
       { jawaban:`$a = 9$` },
+      { jawaban:`$g(2) = 1$ dan $f(4) = 1$, maka $(f^{-1} \\circ g)(2) = f^{-1}(1) = 4$.<br>$f(3) = 3$ dan $g(1) = 3$, maka $(g^{-1} \\circ f)(3) = g^{-1}(3) = 1$` },
     ],
   };
 
