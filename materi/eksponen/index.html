@@ -1244,10 +1244,11 @@ window.MathJax = {
     <h3 class="subsection-title">2. Transformasi (Pergeseran) Grafik Fungsi Eksponen</h3>
     <p>Grafik fungsi eksponen yang lebih umum diperoleh dengan <strong>menggeser</strong> grafik $y = a^x$. Bentuk umumnya:</p>
     <div class="box box-rumus">
-      <div class="box-label">• Bentuk Umum Hasil Pergeseran</div>
-      <div class="math-block">$$y = a^{x-h} + c$$</div>
-      <p style="margin:.3rem 0 0;font-size:.88rem;">$h$ = pergeseran mendatar ($h&gt;0$ ke kanan, $h&lt;0$ ke kiri); &nbsp;$c$ = pergeseran tegak ($c&gt;0$ ke atas, $c&lt;0$ ke bawah).</p>
+      <div class="box-label">• Bentuk Umum Fungsi Eksponen</div>
+      <div class="math-block">$$y = k \cdot a^{x-h} + c$$</div>
+      <p style="margin:.3rem 0 0;font-size:.88rem;">$h$ = pergeseran mendatar ($h&gt;0$ ke kanan, $h&lt;0$ ke kiri); &nbsp;$c$ = pergeseran tegak ($c&gt;0$ ke atas, $c&lt;0$ ke bawah); &nbsp;$k \neq 0$ = faktor regangan tegak ($|k|&gt;1$ diregangkan, $0&lt;|k|&lt;1$ dimampatkan, $k&lt;0$ sekaligus dicerminkan terhadap sumbu-$X$). Asimtotnya $y = c$, dan titik $(0,\,1)$ pada $y = a^x$ berpindah ke $(h,\,k + c)$.</p>
     </div>
+    <p>Jika $k = 1$, yang terjadi hanya pergeseran: $y = a^{x-h} + c$. Untuk $k &gt; 0$, faktor $k$ juga dapat ditulis sebagai pergeseran mendatar karena $k = a^m$ untuk suatu $m$, sehingga $k \cdot a^{x-h} = a^{x-(h-m)}$. Contohnya $8 \cdot 2^x = 2^{x+3}$.</p>
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Logika Praktis Mengingat Arah Transformasi</div>
@@ -1463,7 +1464,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-definisi">
-      <div class="box-label">Ringkasan Pergeseran Grafik $y = a^x$</div>
+      <div class="box-label">Ringkasan Transformasi Grafik $y = a^x$</div>
       <div class="table-wrap">
         <table>
           <thead><tr><th>Bentuk</th><th>Pergeseran</th><th>Titik $(0,1)$ menjadi</th><th>Asimtot</th></tr></thead>
@@ -1471,6 +1472,7 @@ window.MathJax = {
             <tr><td>$y = a^x + c$</td><td>atas ($c&gt;0$) / bawah ($c&lt;0$) sejauh $|c|$</td><td>$(0,\,1+c)$</td><td>$y = c$</td></tr>
             <tr><td>$y = a^{x-h}$</td><td>kanan ($h&gt;0$) / kiri ($h&lt;0$) sejauh $|h|$</td><td>$(h,\,1)$</td><td>$y = 0$ (tetap)</td></tr>
             <tr><td>$y = a^{x-h} + c$</td><td>mendatar $h$, lalu tegak $c$</td><td>$(h,\,1+c)$</td><td>$y = c$</td></tr>
+            <tr><td>$y = k \cdot a^{x-h} + c$</td><td>regangan tegak $k$, lalu geser $h$ dan $c$</td><td>$(h,\,k+c)$</td><td>$y = c$</td></tr>
           </tbody>
         </table>
       </div>
@@ -1851,7 +1853,7 @@ window.MathJax = {
         <li><strong>Gunakan satu titik lain</strong> untuk menentukan basis $a$.</li>
         <li><strong>Cek</strong> dengan titik ketiga pada grafik.</li>
       </ol>
-      <p style="margin:.4rem 0 0;font-size:.88rem;">Untuk bentuk $y = k \cdot a^x$ (asimtot $y = 0$): titik potong sumbu-$Y$ langsung memberi $k$, karena $y(0) = k$.</p>
+      <p style="margin:.4rem 0 0;font-size:.88rem;">Untuk bentuk $y = k \cdot a^x$ (asimtot $y = 0$): titik potong sumbu-$Y$ langsung memberi $k$, karena $y(0) = k$. Pada bentuk umum $y = k \cdot a^{x-h} + c$, titik bayangan $(0,1)$ berada $k$ satuan dari asimtot, bukan 1 satuan, sehingga dibutuhkan satu titik lagi untuk menentukan $k$.</p>
     </div>
 
     <div class="box box-contoh">
