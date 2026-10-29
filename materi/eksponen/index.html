@@ -320,7 +320,7 @@ window.MathJax = {
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 1</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk berikut dan nyatakan hasilnya dalam pangkat positif terkecil.</p>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk berikut dan nyatakan hasilnya dengan pangkat positif.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\dfrac{3^2 \times 3^5}{3^4}$</li>
         <li>$\dfrac{2^4 \times 8^3}{4}$</li>
@@ -807,7 +807,7 @@ window.MathJax = {
         <li>Nyatakanlah dalam bentuk akar yang paling sederhana:<br>(a) $4^{\frac{3}{2}}$<br>(b) $8^{\frac{2}{3}}$<br>(c) $27^{\frac{4}{3}}$<br>(d) $(-32)^{\frac{3}{5}}$</li>
         <li>Nyatakanlah dalam notasi pangkat pecahan:<br>(a) $8\sqrt[3]{4}$<br>(b) $\sqrt[4]{27\sqrt{3}}$</li>
         <li>Sederhanakanlah: $\dfrac{\left(4^{\frac{3}{2}}\right)^2 \cdot \sqrt[3]{27}}{(9^{\frac{1}{2}})^3}$</li>
-        <li>Buktikanlah bahwa $\left(\dfrac{x^{\frac{1}{2}} + y^{\frac{1}{2}}}{x^{\frac{1}{2}} - y^{\frac{1}{2}}}\right)\left(\dfrac{x^{\frac{1}{2}} - y^{\frac{1}{2}}}{x^{\frac{1}{2}} + y^{\frac{1}{2}}}\right) = 1$ untuk $x, y &gt; 0$ dan $x \neq y$.</li>
+        <li>Buktikanlah bahwa $\dfrac{x - y}{x^{\frac{1}{2}} + y^{\frac{1}{2}}} = x^{\frac{1}{2}} - y^{\frac{1}{2}}$ untuk $x, y &gt; 0$.</li>
       </ol>
     </div>
 
@@ -917,7 +917,7 @@ window.MathJax = {
         <li>Tentukanlah himpunan penyelesaian dari $7^8 \cdot 3^{x^2-8} = 3^{2x} \cdot 7^{x^2-2x}$.</li>
         <li>Tentukanlah himpunan penyelesaian dari $(x^2 - 2x +1)^{3x+1} = (x^2 - 2x +1)^{x+9}$.</li>
         <li>Tentukanlah nilai $x$ jika $9^x - 4 \cdot 3^x - 45 = 0$.</li>
-        <li>Tentukanlah nilai $x$ jika $4^x - 6 \cdot 2^{x+1} + 32 = 0$.</li>
+        <li>Tentukanlah nilai $x$ jika $4^x - 10 \cdot 2^x + 16 = 0$.</li>
       </ol>
     </div>
 
@@ -2511,7 +2511,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban:`(a) $8$&nbsp; &nbsp;(b) $4$&nbsp; &nbsp;(c) $81$&nbsp; &nbsp;(d) $-8$` },
       { jawaban:`(a) $2^{\\frac{11}{3}}$&nbsp; &nbsp;(b) $3^{\\frac{7}{8}}$` },
       { jawaban:`$\\dfrac{64}{9}$` },
-      { jawaban:`Pembilang dan penyebut identik, sehingga $\\dfrac{(\\sqrt{x}+\\sqrt{y})(\\sqrt{x}-\\sqrt{y})}{(\\sqrt{x}-\\sqrt{y})(\\sqrt{x}+\\sqrt{y})} = \\dfrac{x-y}{x-y} = 1$. $\\blacksquare$` },
+      { jawaban:`Tulis $x - y = \\left(x^{\\frac12}\\right)^2 - \\left(y^{\\frac12}\\right)^2 = \\left(x^{\\frac12} - y^{\\frac12}\\right)\\left(x^{\\frac12} + y^{\\frac12}\\right)$, sehingga $\\dfrac{x-y}{x^{\\frac12}+y^{\\frac12}} = x^{\\frac12} - y^{\\frac12}$. $\\blacksquare$` },
     ],
     // D — Persamaan Eksponen
     3: [
@@ -2519,7 +2519,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban:`$HP = \\{-2,\\; 4\\}$` },
       { jawaban:`$HP = \\{0, 1, 2, 4\\}$` },
       { jawaban:`$x = 2$` },
-      { jawaban:`$x = 2$ atau $x = 3$` },
+      { jawaban:`$2^x = 2$ atau $2^x = 8$, jadi $x = 1$ atau $x = 3$` },
     ],
     // E — Pertidaksamaan Eksponen
     4: [
