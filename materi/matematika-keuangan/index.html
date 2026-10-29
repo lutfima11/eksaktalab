@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matematika Keuangan — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
+<meta name="description" content="Materi lengkap Matematika Keuangan SMA: bunga tunggal, bunga majemuk, deposito, angsuran, anuitas, dan tabel anuitas. Dilengkapi 18 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script>window.addEventListener("load",function(){var s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";document.head.appendChild(s);});</script>
+<link rel="canonical" href="https://web.eksaktalab.my.id/materi/matematika-keuangan/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://web.eksaktalab.my.id/materi/matematika-keuangan/">
+<meta property="og:title" content="Matematika Keuangan — EksaktaLab">
+<meta property="og:description" content="Materi lengkap Matematika Keuangan SMA: bunga tunggal, bunga majemuk, deposito, angsuran, anuitas, dan tabel anuitas. Dilengkapi 18 contoh soal dan pembahasan.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+<meta property="og:site_name" content="EksaktaLab">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Matematika Keuangan — EksaktaLab">
+<meta name="twitter:description" content="Materi lengkap Matematika Keuangan SMA: bunga tunggal, bunga majemuk, angsuran, dan anuitas.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Matematika Keuangan","url":"https://web.eksaktalab.my.id/materi/matematika-keuangan/","description":"Materi lengkap Matematika Keuangan SMA: bunga tunggal, bunga majemuk, angsuran, dan anuitas.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://web.eksaktalab.my.id/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://web.eksaktalab.my.id/"},{"@type":"ListItem","position":3,"name":"Matematika Keuangan","item":"https://web.eksaktalab.my.id/materi/matematika-keuangan/"}]}}</script>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Matematika Keuangan · 4 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Bunga Tunggal</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Bunga Majemuk</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Angsuran dan Anuitas</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Ringkasan</a>
+      </div>
+    </div>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<!-- Floating scroll to top -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#fase-1">Bilangan &amp; Bernalar</a>
+    <span>/</span>
+    Matematika Keuangan
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">FASE 1 · No.05</div>
+      <h1 class="materi-title">Matematika Keuangan</h1>
+      <p class="materi-desc">Pelajari bagaimana uang tumbuh dengan bunga tunggal dan bunga majemuk, menghitung deposito, hingga menyusun cicilan pinjaman dengan anuitas dan tabel anuitas.</p>
+      <div class="materi-tags">
+        <span class="tag">Keuangan</span>
+        <span class="tag">4 Sub-bab</span>
+        <span class="tag">18 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Uang Tumbuh — Bagaimana Caranya?</h2>
+
+    <p>Bayangkan Anda menyimpan uang Rp10.000.000 di bank hari ini. Setahun kemudian, bank memberikan bunga 6%. Kalau bunga itu langsung ditambahkan ke tabungan dan ikut "berbunga" lagi di tahun berikutnya — berapa uang Anda setelah 10 tahun? Hasilnya sangat berbeda dari sekadar mengalikan $6\% \times 10 = 60\%$. Fenomena ini disebut <strong>bunga majemuk</strong>, dan ia adalah jantung dari seluruh matematika keuangan.</p>
+
+    <p>Kata <em>bunga</em> (<em>interest</em>) berasal dari bahasa Latin <em>interesse</em>, yang berarti "ada di antara" — yakni selisih antara jumlah yang dipinjam dan jumlah yang dikembalikan. Sementara kata <em>anuitas</em> berasal dari <em>annuus</em> (Latin: tahunan), merujuk pada pembayaran berkala yang sama besarnya.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Bunga Tunggal vs Bunga Majemuk</h3>
+    <p>Perbedaan kedua sistem bunga ini terasa dramatis ketika dibandingkan secara visual. Grafik berikut menunjukkan modal Rp10.000.000 yang dibungakan 10% per tahun selama 20 tahun.</p>
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 540" width="100%" style="max-width:460px;" role="img" aria-label="Grafik perbandingan bunga tunggal dan bunga majemuk">
+  <defs>
+    <style>
+      .ax-mk{stroke:var(--text-2)}
+      .gl-mk{stroke:var(--text-3);opacity:.25}
+      .lb-mk{fill:var(--text-2);font-family:Cambria,'Times New Roman',serif}
+      .lt-mk{stroke:#0014b3}.tt-mk{fill:#0014b3;font-family:Cambria,'Times New Roman',serif}
+      .lm-mk{stroke:#b30000}.tm-mk{fill:#b30000;font-family:Cambria,'Times New Roman',serif}
+      [data-theme="dark"] .lt-mk{stroke:#60A5FA}[data-theme="dark"] .tt-mk{fill:#60A5FA}
+      [data-theme="dark"] .lm-mk{stroke:#F87171}[data-theme="dark"] .tm-mk{fill:#F87171}
+    </style>
+    <marker id="arr-mkc" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1.5L8 5 0 8.5z" fill="var(--text-2)"/></marker>
+  </defs>
+  <g class="gl-mk" stroke-width="1">
+    <line x1="135.0" y1="78.0" x2="135.0" y2="470"/>
+    <line x1="180.0" y1="78.0" x2="180.0" y2="470"/>
+    <line x1="225.0" y1="78.0" x2="225.0" y2="470"/>
+    <line x1="270.0" y1="78.0" x2="270.0" y2="470"/>
+    <line x1="315.0" y1="78.0" x2="315.0" y2="470"/>
+    <line x1="360.0" y1="78.0" x2="360.0" y2="470"/>
+    <line x1="405.0" y1="78.0" x2="405.0" y2="470"/>
+    <line x1="450.0" y1="78.0" x2="450.0" y2="470"/>
+    <line x1="495.0" y1="78.0" x2="495.0" y2="470"/>
+    <line x1="540.0" y1="78.0" x2="540.0" y2="470"/>
+    <line x1="90" y1="414.0" x2="540.0" y2="414.0"/>
+    <line x1="90" y1="358.0" x2="540.0" y2="358.0"/>
+    <line x1="90" y1="302.0" x2="540.0" y2="302.0"/>
+    <line x1="90" y1="246.0" x2="540.0" y2="246.0"/>
+    <line x1="90" y1="190.0" x2="540.0" y2="190.0"/>
+    <line x1="90" y1="134.0" x2="540.0" y2="134.0"/>
+    <line x1="90" y1="78.0" x2="540.0" y2="78.0"/>
+  </g>
+  <g class="ax-mk" stroke-width="2"><line x1="90" y1="482" x2="90" y2="50.0" marker-end="url(#arr-mkc)"/><line x1="78" y1="470" x2="570.0" y2="470" marker-end="url(#arr-mkc)"/></g>
+  <g class="lb-mk" font-size="14" text-anchor="middle">
+    <text x="78" y="488">O</text>
+    <text x="135.0" y="490">2</text>
+    <text x="180.0" y="490">4</text>
+    <text x="225.0" y="490">6</text>
+    <text x="270.0" y="490">8</text>
+    <text x="315.0" y="490">10</text>
+    <text x="360.0" y="490">12</text>
+    <text x="405.0" y="490">14</text>
+    <text x="450.0" y="490">16</text>
+    <text x="495.0" y="490">18</text>
+    <text x="540.0" y="490">20</text>
+    <text x="72" y="419.0">10</text>
+    <text x="72" y="363.0">20</text>
+    <text x="72" y="307.0">30</text>
+    <text x="72" y="251.0">40</text>
+    <text x="72" y="195.0">50</text>
+    <text x="72" y="139.0">60</text>
+    <text x="72" y="83.0">70</text>
+  </g>
+  <text x="90" y="40.0" class="lb-mk" font-size="15" font-weight="bold" text-anchor="middle">Nilai (juta Rp)</text>
+  <text x="568.0" y="508" class="lb-mk" font-size="15" font-weight="bold" text-anchor="end">Waktu (tahun)</text>
+  <line x1="90.0" y1="414.0" x2="540.0" y2="302.0" class="lt-mk" stroke-width="3"/>
+  <polyline points="90.0,414.0 95.6,412.6 101.2,411.3 106.9,409.9 112.5,408.4 118.1,406.9 123.8,405.4 129.4,403.8 135.0,402.2 140.6,400.6 146.2,398.9 151.9,397.2 157.5,395.5 163.1,393.7 168.8,391.8 174.4,389.9 180.0,388.0 185.6,386.0 191.2,384.0 196.9,381.9 202.5,379.8 208.1,377.6 213.8,375.4 219.4,373.1 225.0,370.8 230.6,368.4 236.2,366.0 241.9,363.4 247.5,360.9 253.1,358.2 258.8,355.5 264.4,352.8 270.0,350.0 275.6,347.1 281.2,344.1 286.9,341.1 292.5,338.0 298.1,334.8 303.8,331.5 309.4,328.2 315.0,324.8 320.6,321.2 326.2,317.7 331.9,314.0 337.5,310.2 343.1,306.4 348.8,302.4 354.4,298.4 360.0,294.2 365.6,290.0 371.2,285.7 376.9,281.2 382.5,276.7 388.1,272.0 393.8,267.2 399.4,262.3 405.0,257.3 410.6,252.2 416.2,247.0 421.9,241.6 427.5,236.1 433.1,230.4 438.8,224.7 444.4,218.7 450.0,212.7 455.6,206.5 461.2,200.1 466.9,193.6 472.5,186.9 478.1,180.1 483.8,173.1 489.4,166.0 495.0,158.6 500.6,151.1 506.2,143.4 511.9,135.6 517.5,127.5 523.1,119.3 528.8,110.8 534.4,102.1 540.0,93.3" class="lm-mk" stroke-width="3" fill="none"/>
+  <line x1="552.0" y1="302.0" x2="552.0" y2="93.3" stroke="var(--text-3)" stroke-width="1.5" stroke-dasharray="4 3" marker-start="url(#arr-mkc)" marker-end="url(#arr-mkc)"/>
+  <text x="544.0" y="197.8" class="lb-mk" font-size="13" text-anchor="end">selisih</text>
+  <text x="544.0" y="213.8" class="lb-mk" font-size="13" text-anchor="end">±37 jt</text>
+  <circle cx="315.0" cy="358.0" r="4.5" class="tt-mk"/>
+  <circle cx="540.0" cy="302.0" r="4.5" class="tt-mk"/>
+  <circle cx="315.0" cy="324.7" r="4.5" class="tm-mk"/>
+  <circle cx="540.0" cy="93.3" r="4.5" class="tm-mk"/>
+  <g class="tt-mk" font-style="italic"><text x="337.5" y="380.4" font-size="17" font-weight="bold">M<tspan font-size="12" dy="4">n</tspan><tspan dy="-4"> = 10(1 + 0,1n)</tspan></text><text x="337.5" y="400.4" font-size="14">bunga tunggal (linear)</text></g>
+  <g class="tm-mk" font-style="italic"><text x="157.5" y="178.8" font-size="17" font-weight="bold">M<tspan font-size="12" dy="4">n</tspan><tspan dy="-4"> = 10(1,1)</tspan><tspan font-size="12" dy="-8">n</tspan></text><text x="157.5" y="200.8" font-size="14">bunga majemuk (eksponen)</text></g>
+</svg>
+    </div>
+    <p>Pada tahun pertama keduanya sama-sama menjadi Rp11.000.000. Setelah 10 tahun, bunga tunggal menghasilkan Rp20.000.000, sedangkan bunga majemuk sekitar Rp25.900.000. Setelah 20 tahun selisihnya melebar jauh: Rp30.000.000 berbanding sekitar Rp67.300.000 — lebih dari dua kali lipat! Bunga tunggal tumbuh mengikuti <strong>garis lurus</strong> (pola aritmatika), sedangkan bunga majemuk tumbuh mengikuti <strong>kurva eksponen</strong> (pola geometri) yang makin lama makin curam.</p>
+
+    <h3 class="subsection-title">Sejarah Singkat</h3>
+    <p>Konsep bunga sudah ada sejak peradaban <strong>Babilonia</strong> ($\pm$3000 SM). Tablet tanah liat kuno mencatat pinjaman biji-bijian dengan bunga 20–33% per tahun — angka yang diatur oleh Kode Hammurabi sekitar 1754 SM, salah satu hukum tertulis tertua di dunia.</p>
+
+    <p>Matematika bunga majemuk berkembang pesat di tangan <strong>Luca Pacioli</strong> (Italia, 1494), yang dalam bukunya <em>Summa de Arithmetica</em> meletakkan dasar akuntansi dan perhitungan keuangan modern. Kemudian <strong>Richard Witt</strong> (Inggris, 1613) menulis buku pertama yang khusus membahas bunga majemuk dan tabel anuitas, yang langsung digunakan oleh para bankir dan pedagang Eropa. Warisan mereka adalah rumus-rumus yang kita pelajari hari ini.</p>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Peta Materi: Alur Belajar Matematika Keuangan</div>
+      <p style="margin:0 0 .4rem 0;font-size:.9rem;">Materi disusun secara bertahap, dari konsep dasar hingga aplikasi pinjaman:</p>
+      <ol style="margin:0;padding-left:1.3rem;font-size:.9rem;">
+        <li><strong>Bunga Tunggal</strong> — bentuk bunga paling sederhana, di mana bunga selalu dihitung dari modal awal sehingga modal tumbuh secara linear.</li>
+        <li><strong>Bunga Majemuk</strong> — memahami pertumbuhan modal simpanan dan deposito dengan sistem bunga yang "berbunga lagi".</li>
+        <li><strong>Angsuran dan Anuitas</strong> — menghitung cicilan pinjaman, baik tanpa bunga (pembagian sederhana) maupun dengan bunga tetap dan bunga majemuk.</li>
+      </ol>
+    </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Bunga Tunggal</a></li>
+      <li><a href="#bagian-b" data-num="B">Bunga Majemuk</a></li>
+      <li><a href="#bagian-c" data-num="C">Angsuran dan Anuitas</a></li>
+      <li><a href="#bagian-d" data-num="D">Ringkasan</a></li>
+    </ul>
+  </div>
+
+  </section>
+
+  <!-- ═══ A. BUNGA TUNGGAL ═════════════════════════════════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Bunga Tunggal</h2>
+
+    <h3 class="subsection-title">1. Konsep Dasar dan Rumus</h3>
+
+    <p>Bayangkan dua orang meminjam uang dengan jumlah dan suku bunga yang sama, tetapi dengan sistem bunga yang berbeda. Yang satu membayar bunga yang <strong>selalu sama besar</strong> setiap periode; yang lain membayar bunga yang <strong>makin membesar</strong> karena bunga sebelumnya ikut berbunga lagi. Yang pertama itulah <strong>bunga tunggal</strong> — bentuk bunga paling sederhana, dan menjadi dasar sebelum memahami bunga majemuk pada bagian berikutnya.</p>
+
+    <p>Pada bunga tunggal, bunga <strong>selalu dihitung dari modal awal</strong> ($M_0$), bukan dari sisa modal yang sudah bertambah. Akibatnya, besar bunga di setiap periode selalu sama, dan modal tumbuh secara <strong>linear</strong> (bertambah sama rata) — berbeda dengan bunga majemuk yang tumbuh secara eksponensial.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Bunga Total</div>
+      $$B = M_0 \cdot b \cdot n$$
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Modal Akhir</div>
+      $$M_n = M_0 + B = M_0\,(1 + bn)$$
+    </div>
+
+    <p><strong>Istilah-istilah penting:</strong></p>
+    <ul style="padding-left:1.3rem;line-height:1.9;">
+      <li>$M_0$ = modal awal (pokok pinjaman/simpanan)</li>
+      <li>$M_n$ = modal akhir setelah $n$ tahun</li>
+      <li>$b$ = suku bunga tunggal per tahun (dalam desimal)</li>
+      <li>$n$ = lama waktu (dalam tahun, boleh pecahan)</li>
+      <li>$B$ = total bunga yang terkumpul</li>
+    </ul>
+
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="100%" style="max-width:520px;" role="img" aria-label="Modal tumbuh sama rata (linear) — bunga tunggal">
+  <defs>
+    <marker id="arr-mkt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 1.5L8 5 0 8.5z" fill="var(--text-3)"/></marker>
+  </defs>
+  <line x1="30" y1="250" x2="530" y2="250" stroke="var(--text-2)" stroke-width="1.6" marker-end="url(#arr-mkt)"/>
+  <text x="506" y="272" text-anchor="start" font-size="13" fill="var(--text-2)" font-family="Inter,system-ui,sans-serif">Periode</text>
+  <rect x="60" y="170.0" width="60" height="80.0" rx="4" fill="var(--teal)" fill-opacity=".18" stroke="var(--teal)" stroke-width="1.8"/>
+  <text x="90" y="272" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text)" font-family="Cambria,'Times New Roman',serif">M<tspan font-size="11" dy="4">0</tspan></text>
+  <rect x="155" y="152.0" width="60" height="98.0" rx="4" fill="var(--teal)" fill-opacity=".18" stroke="var(--teal)" stroke-width="1.8"/>
+  <text x="185" y="272" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text)" font-family="Cambria,'Times New Roman',serif">M<tspan font-size="11" dy="4">1</tspan></text>
+  <rect x="250" y="134.0" width="60" height="116.0" rx="4" fill="var(--teal)" fill-opacity=".18" stroke="var(--teal)" stroke-width="1.8"/>
+  <text x="280" y="272" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text)" font-family="Cambria,'Times New Roman',serif">M<tspan font-size="11" dy="4">2</tspan></text>
+  <rect x="345" y="116.0" width="60" height="134.0" rx="4" fill="var(--teal)" fill-opacity=".18" stroke="var(--teal)" stroke-width="1.8"/>
+  <text x="375" y="272" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text)" font-family="Cambria,'Times New Roman',serif">M<tspan font-size="11" dy="4">3</tspan></text>
+  <rect x="440" y="98.0" width="60" height="152.0" rx="4" fill="var(--teal)" fill-opacity=".18" stroke="var(--teal)" stroke-width="1.8"/>
+  <text x="470" y="272" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text)" font-family="Cambria,'Times New Roman',serif">M<tspan font-size="11" dy="4">n</tspan></text>
+  <path d="M96 164.0 Q137.5 118.0 179 144.0" fill="none" stroke="var(--text-3)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-mkt)"/>
+  <text x="137.5" y="126.0" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Cambria,'Times New Roman',serif" font-style="italic">+B</text>
+  <path d="M191 146.0 Q232.5 100.0 274 126.0" fill="none" stroke="var(--text-3)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-mkt)"/>
+  <text x="232.5" y="108.0" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Cambria,'Times New Roman',serif" font-style="italic">+B</text>
+  <path d="M286 128.0 Q327.5 82.0 369 108.0" fill="none" stroke="var(--text-3)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-mkt)"/>
+  <text x="327.5" y="90.0" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Cambria,'Times New Roman',serif" font-style="italic">+B</text>
+  <path d="M381 110.0 Q422.5 64.0 464 90.0" fill="none" stroke="var(--text-3)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-mkt)"/>
+  <text x="422.5" y="72.0" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Cambria,'Times New Roman',serif" font-style="italic">+B</text>
+  <text x="280" y="292" text-anchor="middle" font-size="13" font-style="italic" fill="var(--text-2)" font-family="Inter,system-ui,sans-serif">Modal tumbuh sama rata (linear) — bunga tunggal</text>
+</svg>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Pak Rudi meminjam uang di koperasi sebesar Rp5.000.000 dengan bunga tunggal 8% per tahun. Jika ia melunasi pinjamannya tepat setelah 3 tahun, tentukan besar bunga total dan jumlah yang harus dibayar Pak Rudi.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1:</strong> Hitung bunga total.
+      $$B = M_0 \cdot b \cdot n = 5.000.000 \times 0{,}08 \times 3 = \boxed{\text{Rp}1.200.000}$$
+      <strong>Langkah 2:</strong> Hitung jumlah yang harus dibayar.
+      $$M_n = M_0 + B = 5.000.000 + 1.200.000 = \boxed{\text{Rp}6.200.000}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Bu Wati menabung Rp8.000.000 di sebuah koperasi dengan bunga tunggal 12% per tahun. Jika ia menyimpan uangnya selama 8 bulan, tentukan bunga yang diperoleh dan total tabungan Bu Wati.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Karena waktu diberikan dalam bulan, ubah dulu ke pecahan tahun: $n = \dfrac{8}{12}$ tahun.<br><br>
+      <strong>Langkah 1:</strong> Hitung bunga.
+      $$B = 8.000.000 \times 0{,}12 \times \frac{8}{12} = 8.000.000 \times 0{,}08 = \boxed{\text{Rp}640.000}$$
+      <strong>Langkah 2:</strong> Hitung total tabungan.
+      $$M_n = 8.000.000 + 640.000 = \boxed{\text{Rp}8.640.000}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Strategi Mengubah Satuan Waktu ke Tahun</div>
+      <p style="margin:0;font-size:.9rem;">Berapa pun satuan waktu yang diberikan soal (bulan, hari), selalu ubah dulu menjadi <strong>pecahan tahun</strong> sebelum disubstitusi ke rumus $B = M_0 \cdot b \cdot n$:</p>
+      $$n_{\text{bulan}} = \frac{\text{jumlah bulan}}{12}, \qquad n_{\text{hari}} = \frac{\text{jumlah hari}}{360 \text{ atau } 365}$$
+      <p style="margin:0;font-size:.9rem;"><strong>Perhatian:</strong> untuk satuan hari ada <strong>dua konvensi</strong> yang berbeda — lihat sub-bab berikutnya.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Bunga Tunggal dalam Satuan Hari</h3>
+
+    <p>Ketika jangka waktu pinjaman dihitung dalam hari (umum terjadi pada pinjaman jangka pendek di bank), muncul pertanyaan: <em>berapa hari sebenarnya dalam satu tahun?</em> Dunia perbankan mengenal <strong>dua konvensi berbeda</strong>:</p>
+    <ul style="padding-left:1.3rem;line-height:1.9;">
+      <li><strong>Tahun bank (komersial):</strong> 1 tahun dianggap $360$ hari (memudahkan perhitungan; 1 bulan dianggap 30 hari).</li>
+      <li><strong>Tahun takwim (kalender/eksak):</strong> 1 tahun dianggap $365$ hari (jumlah hari sebenarnya dalam kalender).</li>
+    </ul>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Bunga Harian</div>
+      $$B_{\text{bank}} = M_0 \cdot b \cdot \frac{h}{360}, \qquad B_{\text{takwim}} = M_0 \cdot b \cdot \frac{h}{365}$$
+      <p style="margin:0;font-size:.9rem;">dengan $h$ = jumlah hari pinjaman/simpanan.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Pak Herman meminjam uang di bank sebesar Rp12.000.000 dengan bunga tunggal 9% per tahun. Bank tersebut menggunakan sistem tahun bank (360 hari). Jika jangka waktu pinjaman 90 hari, tentukan besar bunga yang harus dibayar Pak Herman.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$\begin{align*} B &= M_0 \cdot b \cdot \frac{h}{360} = 12.000.000 \times 0{,}09 \times \frac{90}{360} \\ &= 12.000.000 \times 0{,}09 \times 0{,}25 = \boxed{\text{Rp}270.000} \end{align*}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Ibu Rina meminjam Rp20.000.000 dengan bunga tunggal 10% per tahun selama 73 hari. Hitunglah bunga yang harus dibayar Ibu Rina jika menggunakan (a) sistem tahun bank (360 hari), dan (b) sistem tahun takwim (365 hari)!</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>(a) Sistem tahun bank:</strong>
+      $$B_{\text{bank}} = 20.000.000 \times 0{,}10 \times \frac{73}{360} \approx \boxed{\text{Rp}405.556}$$
+      <strong>(b) Sistem tahun takwim:</strong>
+      $$B_{\text{takwim}} = 20.000.000 \times 0{,}10 \times \frac{73}{365} = 20.000.000 \times 0{,}10 \times 0{,}2 = \boxed{\text{Rp}400.000}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Mengapa Hasilnya Berbeda?</div>
+      <p style="margin:0;font-size:.9rem;">Untuk jumlah hari yang sama, sistem tahun bank (pembagi 360) selalu menghasilkan bunga yang <strong>sedikit lebih besar</strong> dibanding tahun takwim (pembagi 365) — karena membagi dengan angka yang lebih kecil membuat pecahan $\dfrac{h}{360}$ lebih besar dari $\dfrac{h}{365}$. Inilah salah satu alasan banyak bank memilih konvensi 360 hari: sedikit menguntungkan pihak bank sebagai pemberi pinjaman.</p>
+    </div>
+
+    <h3 class="subsection-title">3. Rumus Kebalikan: Mencari $M_0$, $b$, atau $n$</h3>
+
+    <p>Terkadang yang diketahui bukan modal awal, melainkan besar bunga yang diinginkan atau suku bunga yang dikenakan. Rumus $B = M_0 \cdot b \cdot n$ dapat dibalik untuk mencari besaran apa pun jika dua besaran lainnya sudah diketahui.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Kebalikan Bunga Tunggal</div>
+      $$M_0 = \frac{B}{b \cdot n} \qquad b = \frac{B}{M_0 \cdot n} \qquad n = \frac{B}{M_0 \cdot b}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Pak Yusuf ingin memperoleh bunga tunggal sebesar Rp900.000 dalam waktu 6 bulan, dari sebuah koperasi simpan pinjam yang menawarkan suku bunga 9% per tahun. Berapakah modal yang harus disetorkan Pak Yusuf?</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Ubah waktu ke tahun: $n = \dfrac{6}{12} = 0{,}5$.
+      $$M_0 = \frac{B}{b \cdot n} = \frac{900.000}{0{,}09 \times 0{,}5} = \frac{900.000}{0{,}045} = \boxed{\text{Rp}20.000.000}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Pak Doni meminjam uang Rp10.000.000 di koperasi dengan sistem bunga tunggal. Setelah 2 tahun, jumlah yang harus ia bayar seluruhnya adalah Rp13.000.000. Tentukan suku bunga tunggal per tahun yang dikenakan koperasi tersebut.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1:</strong> Cari besar bunga total terlebih dahulu.
+      $$B = M_n - M_0 = 13.000.000 - 10.000.000 = \text{Rp}3.000.000$$
+      <strong>Langkah 2:</strong> Gunakan rumus kebalikan untuk mencari $b$.
+      $$b = \frac{B}{M_0 \cdot n} = \frac{3.000.000}{10.000.000 \times 2} = \boxed{0{,}15 = 15\%}$$
+      <em>Verifikasi:</em> $M_n = 10.000.000\,(1 + 0{,}15 \times 2) = 10.000.000 \times 1{,}3 = 13.000.000$ ✓
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan A</div>
+      <ol class="soal-list">
+        <li>Bu Ratna menabung Rp6.000.000 di koperasi dengan bunga tunggal 10% per tahun. Tentukan besar bunga dan total tabungan Bu Ratna setelah 4 tahun.</li>
+        <li>Pak Slamet meminjam Rp3.000.000 dengan bunga tunggal 6% per tahun selama 9 bulan. Tentukan bunga yang harus dibayar Pak Slamet.</li>
+        <li>Ibu Yanti mendepositokan Rp15.000.000 dengan bunga tunggal 8% per tahun (sistem tahun bank, 360 hari) selama 120 hari. Tentukan bunga yang diperoleh Ibu Yanti.</li>
+        <li>Seorang pedagang meminjam Rp9.000.000 dengan bunga tunggal. Setelah 5 bulan, ia harus membayar bunga sebesar Rp270.000. Tentukan suku bunga tunggal per tahun yang dikenakan.</li>
+        <li>Pak Andre ingin memperoleh bunga sebesar Rp1.250.000 dari simpanan bunga tunggal 10% per tahun dalam waktu 250 hari (gunakan sistem tahun bank). Tentukan modal yang harus disetorkan Pak Andre.</li>
+        <li>Sebuah koperasi menawarkan pinjaman Rp12.000.000 dengan bunga tunggal 9% per tahun selama 146 hari.
+            <br>(a) Tentukan bunga menggunakan sistem tahun bank (360 hari).
+            <br>(b) Tentukan bunga menggunakan sistem tahun takwim (365 hari).
+            <br>(c) Berapa selisih bunga antara kedua sistem tersebut?</li>
+        <li>Pada hari yang sama, Andi menabung Rp6.000.000 dengan bunga tunggal 10% per tahun, sedangkan Budi menabung Rp8.000.000 dengan bunga tunggal 5% per tahun. Keduanya tidak pernah menambah atau mengambil tabungan.
+            <br>(a) Setelah berapa tahun tabungan Andi dan Budi sama besar?
+            <br>(b) Berapa besar tabungan masing-masing pada saat itu?
+            <br>(c) Setelah waktu tersebut, tabungan siapa yang lebih besar? Jelaskan alasannya tanpa menghitung ulang.</li>
+        <li>Sebuah koperasi memberikan pinjaman sebesar Rp8.000.000 dengan bunga tunggal, diangsur bulanan selama 8 bulan. Total yang harus dibayar peminjam setelah lunas adalah Rp8.800.000.
+            <br>(a) Tentukan suku bunga tunggal per tahun yang dikenakan koperasi tersebut.
+            <br>(b) Jika seluruh pembayaran (pokok dan bunga) dibagi rata setiap bulan, tentukan besar pembayaran setiap bulan.</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ B. BUNGA MAJEMUK ═════════════════════════════════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Bunga Majemuk</h2>
+
+    <h3 class="subsection-title">1. Konsep Dasar dan Istilah</h3>
+
+    <p>Dalam dunia simpan-pinjam, ada dua jenis pelaku: pihak yang <strong>menabung atau mendepositokan</strong> uang, dan pihak yang <strong>meminjam</strong>. Keduanya berurusan dengan <em>modal</em> dan <em>bunga</em>.</p>
+
+    <p>Perbedaan mendasar antara bunga tunggal dan bunga majemuk: pada bunga tunggal, bunga dihitung dari modal awal saja. Pada <strong>bunga majemuk</strong>, setiap akhir periode bunga ditambahkan ke modal, sehingga periode berikutnya modalnya lebih besar — dan bunganya pun lebih besar.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Bunga per Periode</div>
+      $$b = \frac{p\%}{t}$$
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Modal Akhir Bunga Majemuk</div>
+      $$M_n = M_0\,(1+b)^n$$
+    </div>
+
+    <p><strong>Istilah-istilah penting:</strong></p>
+    <ul style="padding-left:1.3rem;line-height:1.9;">
+      <li>$M_0$ = modal awal (modal yang disetorkan)</li>
+      <li>$M_n$ = modal setelah periode ke-$n$</li>
+      <li>$p$ = bunga tahunan (dalam %)</li>
+      <li>$b$ = bunga per periode $= \dfrac{p\%}{t}$</li>
+      <li>$t$ = jumlah periode dalam satu tahun</li>
+      <li>$n$ = total periode pembungaan</li>
+    </ul>
+
+    <div class="grafik-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="100%" style="max-width:520px;" role="img" aria-label="Modal tumbuh eksponensial — bunga majemuk">
+  <defs>
+    <marker id="arr-mkm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 1.5L8 5 0 8.5z" fill="var(--text-3)"/></marker>
+  </defs>
+  <line x1="30" y1="250" x2="530" y2="250" stroke="var(--text-2)" stroke-width="1.6" marker-end="url(#arr-mkm)"/>
+  <text x="506" y="272" text-anchor="start" font-size="13" fill="var(--text-2)" font-family="Inter,system-ui,sans-serif">Periode</text>
+  <rect x="60" y="170.0" width="60" height="80.0" rx="4" fill="var(--blue-b)" fill-opacity=".18" stroke="var(--blue-b)" stroke-width="1.8"/>
+  <text x="90" y="272" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text)" font-family="Cambria,'Times New Roman',serif">M<tspan font-size="11" dy="4">0</tspan></text>
+  <rect x="155" y="150.0" width="60" height="100.0" rx="4" fill="var(--blue-b)" fill-opacity=".18" stroke="var(--blue-b)" stroke-width="1.8"/>
+  <text x="185" y="272" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text)" font-family="Cambria,'Times New Roman',serif">M<tspan font-size="11" dy="4">1</tspan></text>
+  <rect x="250" y="125.0" width="60" height="125.0" rx="4" fill="var(--blue-b)" fill-opacity=".18" stroke="var(--blue-b)" stroke-width="1.8"/>
+  <text x="280" y="272" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text)" font-family="Cambria,'Times New Roman',serif">M<tspan font-size="11" dy="4">2</tspan></text>
+  <rect x="345" y="93.8" width="60" height="156.2" rx="4" fill="var(--blue-b)" fill-opacity=".18" stroke="var(--blue-b)" stroke-width="1.8"/>
+  <text x="375" y="272" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text)" font-family="Cambria,'Times New Roman',serif">M<tspan font-size="11" dy="4">3</tspan></text>
+  <rect x="440" y="54.7" width="60" height="195.3" rx="4" fill="var(--blue-b)" fill-opacity=".18" stroke="var(--blue-b)" stroke-width="1.8"/>
+  <text x="470" y="272" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text)" font-family="Cambria,'Times New Roman',serif">M<tspan font-size="11" dy="4">n</tspan></text>
+  <path d="M96 164.0 Q137.5 116.0 179 142.0" fill="none" stroke="var(--text-3)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-mkm)"/>
+  <text x="137.5" y="124.0" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Cambria,'Times New Roman',serif" font-style="italic">×(1+b)</text>
+  <path d="M191 144.0 Q232.5 91.0 274 117.0" fill="none" stroke="var(--text-3)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-mkm)"/>
+  <text x="232.5" y="99.0" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Cambria,'Times New Roman',serif" font-style="italic">×(1+b)</text>
+  <path d="M286 119.0 Q327.5 59.8 369 85.8" fill="none" stroke="var(--text-3)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-mkm)"/>
+  <text x="327.5" y="67.8" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Cambria,'Times New Roman',serif" font-style="italic">×(1+b)</text>
+  <path d="M381 87.8 Q422.5 20.7 464 46.7" fill="none" stroke="var(--text-3)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-mkm)"/>
+  <text x="422.5" y="28.7" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Cambria,'Times New Roman',serif" font-style="italic">×(1+b)</text>
+  <text x="280" y="292" text-anchor="middle" font-size="13" font-style="italic" fill="var(--text-2)" font-family="Inter,system-ui,sans-serif">Modal tumbuh eksponensial — bunga majemuk</text>
+</svg>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Pak Ahmad menyimpan uang di suatu bank sebesar Rp10.000.000 dengan sistem bunga majemuk 8% per tahun. Tentukan nilai suku bunga setiap periode jika frekuensi penggabungannya dilakukan setiap 3 bulan.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1:</strong> Tentukan jumlah periode dalam satu tahun.
+      $$t = \frac{12 \text{ bulan}}{3 \text{ bulan}} = 4 \text{ kali/tahun}$$
+      <strong>Langkah 2:</strong> Hitung bunga per periode.
+      $$b = \frac{8\%}{4} = \boxed{2\%}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Pak Jaka menyimpan uang di Bank Sejahtera sebesar Rp40.000.000. Bank ini menggunakan sistem bunga majemuk 6% setahun dengan penggabungan bunga setiap triwulan. Berapakah nilai simpanan Pak Jaka setelah periode kedua?</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1:</strong> Tentukan parameter.
+      $$t = \frac{12}{3} = 4, \quad b = \frac{6\%}{4} = 1{,}5\% = 0{,}015, \quad n = 2$$
+      <strong>Langkah 2:</strong> Hitung modal akhir.
+      $$\begin{align*} M_n &= M_0\,(1+b)^n \\ M_2 &= 40.000.000\,(1+0{,}015)^2 \\ &= 40.000.000\,(1{,}030225) \\ &= \boxed{\text{Rp}41.209.000} \end{align*}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Ibu Susan menabung di sebuah bank swasta sebesar Rp12.000.000. Bank ini menerapkan sistem bunga majemuk 4% per tahun dengan periode pembungaan setiap triwulan. Berapakah nilai simpanan Ibu Susan setelah 9 bulan?</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1:</strong> Tentukan parameter dasar.
+      $$t = 4, \quad b = \frac{4\%}{4} = 1\% = 0{,}01$$
+      <strong>Langkah 2:</strong> Konversi waktu ke jumlah periode: 9 bulan $= 3$ triwulan, jadi $n = 3$.<br><br>
+      <strong>Langkah 3:</strong> Hitung.
+      $$\begin{align*} M_3 &= 12.000.000\,(1{,}01)^3 = 12.000.000\,(1{,}030301) \\ &= \boxed{\text{Rp}12.363.612} \end{align*}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Strategi Menentukan $n$ (Total Periode)</div>
+      <p style="margin:0;font-size:.9rem;">Ini adalah langkah yang paling sering menimbulkan kesalahan. Ingat:</p>
+      $$n = (\text{lama pinjaman/simpanan dalam tahun}) \times t$$
+      <p style="margin:0 0 .5rem 0;font-size:.9rem;">Contoh: 2,5 tahun dengan penggabungan per semester ($t=2$): $n = 2{,}5 \times 2 = 5$.</p>
+      <p style="margin:0 0 .5rem 0;font-size:.9rem;"><strong>Perhatian:</strong> jangan langsung mengalikan persentase bunga tahunan dengan lamanya waktu. Bunga majemuk bukan perhitungan linear — hasilnya <strong>lebih besar</strong> dari bunga tunggal karena efek "bunga dari bunga".</p>
+      <p style="margin:0 0 .3rem 0;font-size:.9rem;"><strong>Urutan langkah:</strong></p>
+      <ol style="margin:0;padding-left:1.3rem;font-size:.9rem;">
+        <li>Temukan $t$ (berapa kali per tahun).</li>
+        <li>Hitung $b = \dfrac{p\%}{t}$.</li>
+        <li>Hitung $n$ (total periode $=$ waktu $\times\, t$).</li>
+        <li>Masukkan ke $M_n = M_0(1+b)^n$.</li>
+      </ol>
+    </div>
+
+    <h3 class="subsection-title">2. Deposito</h3>
+
+    <p>Deposito adalah simpanan khusus di bank di mana nasabah <em>tidak bisa</em> mengambil uangnya sebelum waktu yang disepakati. Sebagai kompensasi, bunga deposito biasanya lebih tinggi dari tabungan biasa.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Nilai Akhir (Waktu Bulat)</div>
+      $$M_n = M_0\,(1+b)^n$$
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Nilai Akhir (Waktu Tidak Bulat)</div>
+      $$M_n = M_0\,(1+b)^{k}\,(1 + f\cdot b)$$
+      <p style="margin:0;font-size:.9rem;">dengan $k$ = bagian bulat tahun dan $f$ = sisa waktu dalam tahun ($0 &lt; f &lt; 1$). Sisa waktu tersebut dikenai bunga tunggal $f \cdot b$. Contoh: untuk 2 tahun 6 bulan, $k = 2$ dan $f = \dfrac{6}{12} = 0{,}5$ sehingga $M_n = M_0(1+b)^2(1+0{,}5b)$.</p>
+    </div>
+
+    <p><strong>Tiga istilah kunci deposito:</strong></p>
+    <ul style="padding-left:1.3rem;line-height:1.9;">
+      <li><strong>Nilai Tunai ($M_0$):</strong> uang yang disetorkan di awal.</li>
+      <li><strong>Nilai Akhir ($M_n$):</strong> uang yang diterima saat jatuh tempo.</li>
+      <li><strong>Hari Valuta:</strong> tanggal pengambilan dana.</li>
+    </ul>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Pak Rama mendepositokan sejumlah dana selama dua tahun dengan suku bunga majemuk 10% setahun. Jika pada hari valuta Pak Rama menerima uang sebesar Rp15.000.000, berapakah nilai tunai yang disetorkan Pak Rama?</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      Ini soal <em>mencari</em> $M_0$ ketika $M_n$ diketahui — kita balikkan rumusnya.<br><br>
+      <strong>Langkah 1:</strong> Gunakan $M_n = M_0\,(1+b)^n$, substitusi nilai yang diketahui.
+      $$15.000.000 = M_0\,(1+0{,}1)^2 = M_0\,(1{,}21)$$
+      <strong>Langkah 2:</strong> Selesaikan untuk $M_0$.
+      $$M_0 = \frac{15.000.000}{1{,}21} \approx \boxed{\text{Rp}12.396.694}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Pak Amir mendepositokan uangnya di bank dengan bunga majemuk 8% per tahun sebesar Rp40.000.000 selama 2 tahun 6 bulan. Tentukan nilai akhir deposito Pak Amir pada hari valuta.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1:</strong> Waktu $= 2{,}5$ tahun (tidak bulat), $b = 8\% = 0{,}08$, bagian bulat $k = 2$, sisa $f = 0{,}5$.<br><br>
+      <strong>Langkah 2:</strong> Gunakan rumus waktu tidak bulat.
+      $$\begin{align*} M_n &= M_0\,(1+b)^2\,(1+0{,}5b) \\ &= 40.000.000\,(1{,}08)^2\,(1+0{,}04) \\ &= 40.000.000\,(1{,}1664)\,(1{,}04) \\ &= \boxed{\text{Rp}48.522.240} \end{align*}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Pak Jono menabung di bank dengan bunga majemuk 2% setahun, perhitungan bunga setiap semester. Jika modal yang disetorkan Rp10.000.000, tentukan besar tabungan Pak Jono setelah 2,5 tahun.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1:</strong> $t = 2$ (per semester), $b = \dfrac{2\%}{2} = 1\% = 0{,}01$.<br><br>
+      <strong>Langkah 2:</strong> $n = 2{,}5 \times 2 = 5$ semester.<br><br>
+      <strong>Langkah 3:</strong> Hitung.
+      $$M_5 = 10.000.000\,(1{,}01)^5 = 10.000.000\,(1{,}05101005) \approx \boxed{\text{Rp}10.510.101}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Mencari Nilai Tunai dari Nilai Akhir</div>
+      <p style="margin:0;font-size:.9rem;">Operasi ini sangat berguna dalam perencanaan keuangan: "Saya ingin punya Rp X tahun depan, berapa yang harus saya tabung sekarang?" Rumusnya tinggal dibalik:</p>
+      $$M_0 = \frac{M_n}{(1+b)^n}$$
+      <p style="margin:0;font-size:.9rem;">Ini disebut <strong>nilai sekarang</strong> (<em>present value</em>) — konsep fundamental dalam ekonomi dan investasi. Semakin jauh waktu dan semakin besar bunga, semakin kecil nilai sekarang dari uang di masa depan.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan B</div>
+      <ol class="soal-list">
+        <li>Pak Anton menyimpan uang di suatu bank sebesar Rp15.000.000 dengan sistem bunga majemuk 9% per tahun. Tentukan nilai suku bunga setiap periode jika penggabungan dilakukan setiap 4 bulan.</li>
+        <li>Pak Suryono menyimpan uang di Bank Sejahtera sebesar Rp60.000.000 dengan suku bunga majemuk 4% setahun dan penggabungan bunga setiap semester. Berapakah nilai simpanan Pak Suryono setelah memasuki periode ketiga?</li>
+        <li>Ibu Siska menabung di sebuah koperasi sebesar Rp16.000.000 dengan bunga majemuk 6% per tahun, periode pembungaan setiap caturwulan (4 bulan). Berapakah nilai simpanan Ibu Siska setelah 8 bulan?</li>
+        <li>Pak Jono menabung di bank dengan bunga majemuk 4% setahun dan perhitungan bunga setiap tiga bulan. Modal yang disetorkan Rp12.000.000. Tentukan besar tabungan Pak Jono setelah 1,5 tahun.</li>
+        <li>Pak Karni mendepositokan sejumlah dana selama tiga tahun dengan suku bunga majemuk 6% setahun. Jika pada hari valuta Pak Karni menerima Rp20.000.000, berapakah nilai tunai yang disetorkan Pak Karni?</li>
+        <li>Pak Samsudin mendepositokan uangnya di bank dengan bunga majemuk 5% per tahun sebesar Rp30.000.000 selama 3 tahun 4 bulan. Tentukan nilai akhir deposito Pak Samsudin pada hari valuta.</li>
+        <li>Bu Marina ingin memiliki uang Rp25.000.000 dalam 2,5 tahun. Ia akan mendepositokan uangnya di bank dengan bunga majemuk 4% setahun. Berapa nilai tunai yang harus disetorkan Bu Marina sekarang?</li>
+        <li>Sebuah bank menawarkan dua pilihan investasi:
+            <br>(a) Bunga majemuk 6% per tahun, penggabungan setiap semester, selama 2 tahun.
+            <br>(b) Bunga majemuk 5% per tahun, penggabungan setiap triwulan, selama 2 tahun.
+            <br>Jika modal awal Rp50.000.000, pilihan mana yang memberikan nilai akhir lebih besar? Jelaskan mengapa!</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ C. ANGSURAN DAN ANUITAS ══════════════════════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Angsuran dan Anuitas</h2>
+
+    <h3 class="subsection-title">1. Angsuran Tanpa Bunga</h3>
+
+    <p>Ketika kita membeli barang secara kredit di antara sesama kenalan atau di toko kecil, sering kali tidak ada bunga yang dikenakan. Keuntungan penjual sudah "tertanam" dalam harga jual. Dalam kasus ini, kita hanya membagi total harga ke dalam beberapa cicilan.</p>
+
+    <p>Jika total harga adalah $H$ dan rasio pembayaran adalah $r_1 : r_2 : \ldots : r_k$, maka angsuran ke-$i$ adalah:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Angsuran Tidak Berbunga (Berdasarkan Rasio)</div>
+      $$\text{Angsuran ke-}i = \frac{r_i}{r_1 + r_2 + \cdots + r_k} \times H$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Bu Diah membeli kompor gas seharga Rp840.000 pada temannya. Teman Bu Diah mengizinkan pembayaran cicilan setiap bulan selama 3 bulan dengan rasio $2:3:1$. Tentukan besar angsuran Bu Diah setiap bulan.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong>
+      $$\begin{align*} \text{Total rasio} &= 2 + 3 + 1 = 6 \\ \text{Angsuran bulan ke-1} &= \frac{2}{6} \times 840.000 = \text{Rp}280.000 \\ \text{Angsuran bulan ke-2} &= \frac{3}{6} \times 840.000 = \text{Rp}420.000 \\ \text{Angsuran bulan ke-3} &= \frac{1}{6} \times 840.000 = \text{Rp}140.000 \end{align*}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Pak Ali berencana membeli tempat tidur seharga Rp4.000.000 secara kredit. Gaji bulanannya Rp3.500.000 dengan pengeluaran rutin: 60% biaya hidup, 10% biaya anak sekolah, 15% menabung, dan sisanya untuk perabotan rumah. Berapa kali angsuran Pak Ali agar tempat tidur tersebut lunas?</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1:</strong> Hitung sisa persentase untuk perabotan.
+      $$100\% - (60\% + 10\% + 15\%) = 15\%$$
+      <strong>Langkah 2:</strong> Hitung jumlah uang untuk perabotan per bulan.
+      $$15\% \times 3.500.000 = \text{Rp}525.000$$
+      <strong>Langkah 3:</strong> Hitung banyak angsuran (pembulatan ke atas).
+      $$n = \frac{4.000.000}{525.000} \approx 7{,}62 \;\Rightarrow\; \boxed{8 \text{ kali angsuran}}$$
+    </div>
+
+    <h3 class="subsection-title">2. Anuitas dengan Bunga Tetap</h3>
+
+    <p>Saat meminjam uang ke bank atau koperasi, bunga selalu menyertai cicilan. Angsuran ditambah bunga inilah yang disebut <strong>anuitas</strong> (<em>annuity</em>).</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Pengertian Anuitas</div>
+      $$\text{Anuitas} = \text{Angsuran} + \text{Bunga}$$
+    </div>
+
+    <p>Pada sistem <strong>bunga tetap</strong>, bunga dihitung selalu dari modal awal (bukan sisa pinjaman). Akibatnya, bunga setiap periode sama besar, dan angsuran pun sama besar.</p>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Haryono meminjam uang di koperasi sebesar Rp4.000.000 dengan angsuran setiap bulan selama 5 bulan. Koperasi menetapkan bunga tetap 2% per bulan. Tentukan besarnya anuitas yang harus dibayar Haryono setiap bulan.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1:</strong> Hitung besar angsuran pokok.
+      $$\text{Angsuran} = \frac{4.000.000}{5} = \text{Rp}800.000$$
+      <strong>Langkah 2:</strong> Hitung bunga (dari modal awal, tetap tiap periode).
+      $$\text{Bunga} = 2\% \times 4.000.000 = \text{Rp}80.000$$
+      <strong>Langkah 3:</strong> Hitung anuitas.
+      $$A = 800.000 + 80.000 = \boxed{\text{Rp}880.000}$$
+    </div>
+
+    <h3 class="subsection-title">3. Anuitas dengan Bunga Majemuk</h3>
+
+    <p>Sistem yang lebih umum digunakan oleh lembaga keuangan formal adalah bunga majemuk. Di sini, bunga dihitung dari <strong>sisa pinjaman</strong> (bukan modal awal), sehingga bunga makin kecil setiap periode — namun total anuitas tetap sama.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Rumus Anuitas Bunga Majemuk</div>
+      $$A = b \cdot M \cdot \frac{(1+b)^n}{(1+b)^n - 1}$$
+    </div>
+
+    <p><strong>Keterangan:</strong></p>
+    <ul style="padding-left:1.3rem;line-height:1.9;">
+      <li>$A$ = besarnya anuitas (tetap tiap periode)</li>
+      <li>$M$ = besarnya pinjaman</li>
+      <li>$b$ = suku bunga per periode</li>
+      <li>$n$ = banyaknya angsuran (periode)</li>
+    </ul>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Pak Budi ingin membeli televisi seharga Rp6.000.000. Ia meminjam uang di koperasi dengan angsuran 5 bulan dan bunga majemuk 2% per bulan. Tentukan anuitas yang harus dibayar Pak Budi setiap bulan.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1:</strong> Identifikasi: $M = 6.000.000$, $b = 0{,}02$, $n = 5$.<br><br>
+      <strong>Langkah 2:</strong> Hitung komponen $(1+b)^n$.
+      $$(1{,}02)^5 = 1{,}1040808032$$
+      <strong>Langkah 3:</strong> Substitusi ke rumus.
+      $$\begin{align*} A &= (0{,}02)(6.000.000)\cdot\frac{1{,}1040808032}{1{,}1040808032 - 1} \\ &= 120.000 \times \frac{1{,}1040808032}{0{,}1040808032} \\ &= 120.000 \times 10{,}6079 \\ &\approx \boxed{\text{Rp}1.272.950} \end{align*}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Pada 1 Januari, Bu Rani meminjam uang di koperasi sebesar Rp3.000.000 dengan suku bunga majemuk 6% per tahun. Pinjaman diangsur setiap 3 bulan selama satu setengah tahun. Tentukan besar anuitasnya.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1:</strong> Tentukan bunga per periode.
+      $$b = \frac{6\%}{4} = 1{,}5\% = 0{,}015$$
+      <strong>Langkah 2:</strong> Hitung $n$ (total periode): 1,5 tahun $\times$ 4 periode/tahun $= 6$ periode.<br><br>
+      <strong>Langkah 3:</strong> Hitung anuitas.
+      $$\begin{align*} A &= (0{,}015)(3.000.000)\cdot\frac{(1{,}015)^6}{(1{,}015)^6 - 1} \\ &= 45.000 \times \frac{1{,}09344}{0{,}09344} \\ &= 45.000 \times 11{,}7017 \\ &\approx \boxed{\text{Rp}526.576} \end{align*}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Mengapa Anuitas Bunga Majemuk Lebih Umum Digunakan?</div>
+      <p style="margin:0 0 .5rem 0;font-size:.9rem;">Karena lebih adil: peminjam membayar bunga dari sisa utang yang sesungguhnya, bukan dari jumlah pinjaman awal. Artinya, seiring waktu bunga semakin kecil karena sisa utang berkurang — meskipun total anuitas tetap sama setiap periode.</p>
+      <p style="margin:0;font-size:.9rem;"><strong>Rumus turunan yang berguna:</strong> dari rumus anuitas, kita bisa mencari kapasitas pinjaman dari anuitas yang mampu dibayar:</p>
+      $$M = \frac{A}{b} \cdot \frac{(1+b)^n - 1}{(1+b)^n}$$
+      <p style="margin:0;font-size:.9rem;">Ini sangat berguna untuk menjawab: "Kalau saya mampu mencicil Rp X per bulan, berapa maksimal pinjaman yang bisa saya ambil?"</p>
+    </div>
+
+    <h3 class="subsection-title">4. Tabel Anuitas</h3>
+
+    <p>Tabel anuitas merinci setiap periode: berapa porsi bunga, berapa angsuran pokok, dan berapa sisa pinjaman. Ini adalah "rekaman" lengkap pelunasan utang.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Cara Mengisi Tabel Anuitas (per Baris)</div>
+      $$\begin{align*} \text{Bunga}_k &= b \times \text{Sisa Pinjaman}_{k-1} \\ \text{Angsuran}_k &= A - \text{Bunga}_k \\ \text{Sisa Pinjaman}_k &= \text{Sisa Pinjaman}_{k-1} - \text{Angsuran}_k \end{align*}$$
+      <p style="margin:0;font-size:.9rem;"><em>Catatan:</em> untuk baris pertama, "Sisa Pinjaman sebelumnya" adalah $M$ (pinjaman awal).</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Pak Budi meminjam uang di koperasi sebesar Rp2.000.000, akan dilunasi dengan 4 kali angsuran dalam satu tahun dengan suku bunga 12% per tahun. Buatlah tabel anuitas untuk empat kali angsuran tersebut.</p>
+    </div>
+    <div class="penyelesaian">
+      <strong>Penyelesaian:</strong><br>
+      <strong>Langkah 1:</strong> Tentukan parameter: $M = 2.000.000$, $b = \dfrac{12\%}{4} = 3\% = 0{,}03$, $n = 4$.<br><br>
+      <strong>Langkah 2:</strong> Hitung anuitas.
+      $$\begin{align*} A &= (2.000.000)(0{,}03)\cdot\frac{(1{,}03)^4}{(1{,}03)^4 - 1} \\ &= 60.000 \times \frac{1{,}12550881}{0{,}12550881} \\ &= 60.000 \times 8{,}9676 \\ &\approx \text{Rp}538.054 \end{align*}$$
+      <strong>Langkah 3:</strong> Isi tabel anuitas baris per baris.
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>No</th><th>Angsuran (Rp)</th><th>Bunga (Rp)</th><th>Anuitas (Rp)</th><th>Sisa Pinjaman (Rp)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>478.054</td><td>60.000</td><td>538.054</td><td>1.521.946</td></tr>
+            <tr><td>2</td><td>492.395</td><td>45.658</td><td>538.054</td><td>1.029.550</td></tr>
+            <tr><td>3</td><td>507.168</td><td>30.887</td><td>538.054</td><td>522.383</td></tr>
+            <tr><td>4</td><td>522.383</td><td>15.671</td><td>538.054</td><td>0</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>2.000.000</strong></td><td><strong>152.216</strong></td><td colspan="2" style="text-align:center;">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      Jadi anuitasnya $\boxed{\text{Rp}538.054}$ per periode dengan total bunga $\text{Rp}152.216$.
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Cara Verifikasi Tabel Anuitas</div>
+      <p style="margin:0 0 .3rem 0;font-size:.9rem;">Tiga pemeriksaan yang <em>harus</em> terpenuhi:</p>
+      <ol style="margin:0 0 .5rem 0;padding-left:1.3rem;font-size:.9rem;">
+        <li>Sisa pinjaman di baris terakhir $= 0$ (atau sangat dekat nol, akibat pembulatan).</li>
+        <li>Jumlah kolom Angsuran $= M$ (pinjaman awal).</li>
+        <li>Setiap baris: Anuitas $=$ Angsuran $+$ Bunga.</li>
+      </ol>
+      <p style="margin:0;font-size:.9rem;"><strong>Insight penting:</strong> pada setiap baris, <em>angsuran pokok semakin besar</em> sementara <em>bunga semakin kecil</em>. Ini karena sisa pinjaman berkurang, sehingga bunga berkurang, dan porsi yang tersisa untuk angsuran pokok pun bertambah — padahal total anuitas tetap sama!</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan C</div>
+      <ol class="soal-list">
+        <li>Pak Amir membeli almari pakaian seharga Rp960.000 pada tetangganya secara kredit selama 4 bulan dengan rasio pembayaran $5:3:2:2$. Tentukan besar angsuran Pak Amir pada bulan ketiga.</li>
+        <li>Arman berencana membeli laptop seharga Rp5.000.000. Ia mendapat kiriman Rp3.000.000/bulan dengan pengeluaran: 40% makan, 10% kost, 20% buku dan fotokopi, 15% menabung, sisanya untuk laptop. Berapa kali angsuran Arman?</li>
+        <li>Pak Sofyan menjual kompor gas seharga tertentu secara kredit kepada 12 ibu arisan RT, dengan angsuran Rp35.000/bulan selama satu tahun. Ia memberikan gratis 1 kompor sebagai promosi. Setelah setahun, keuntungannya Rp1.140.000. Berapakah modal awal Pak Sofyan per kompor?</li>
+        <li>Suryadi meminjam uang di koperasi sebesar Rp6.000.000 dengan angsuran setiap bulan selama 8 bulan. Koperasi menetapkan bunga tetap 1,5% per bulan. Tentukan besarnya anuitas yang harus dibayar Suryadi setiap bulan.</li>
+        <li>Pak Amir ingin membeli kursi ruang tamu seharga Rp12.000.000. Ia meminjam di koperasi dengan angsuran bulanan selama 1 tahun dan bunga majemuk 1,5% per bulan.
+            <br>(a) Tentukan besar anuitasnya.
+            <br>(b) Berapa total bunga yang dibayarkan selama 1 tahun?</li>
+        <li>Bu Sinta meminjam uang di koperasi sebesar Rp5.000.000 dengan bunga majemuk 6% per tahun, diangsur setiap 4 bulan selama dua tahun.
+            <br>(a) Tentukan besar anuitasnya.
+            <br>(b) Buatlah tabel anuitas untuk seluruh angsuran.</li>
+        <li>Pak Yanto meminjam Rp4.000.000 di koperasi, dilunasi 4 kali angsuran dalam satu tahun dengan suku bunga 15% per tahun. Buatlah tabel anuitas dan tentukan baris ke berapa sisa pinjaman pertama kali turun di bawah Rp2.000.000.</li>
+        <li>Pak Daud membeli sepeda motor Rp15.000.000 secara kredit, diangsur 5 bulan dengan bunga majemuk 2% per bulan. Buatlah tabel anuitasnya, lalu bandingkan: berapa total yang dibayar Pak Daud dibandingkan harga asli motor? Apa yang bisa Anda simpulkan tentang biaya kredit?</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ D. RINGKASAN ═════════════════════════════════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Ringkasan Matematika Keuangan</h2>
+
+    <h3 class="subsection-title">1. Bunga Tunggal</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Konsep</th><th>Rumus</th><th>Keterangan</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Bunga total</td><td>$B = M_0 \cdot b \cdot n$</td><td>$n$ dalam tahun (boleh pecahan)</td></tr>
+          <tr><td>Modal akhir</td><td>$M_n = M_0\,(1+bn)$</td><td>Pertumbuhan <em>linear</em></td></tr>
+          <tr><td>Bunga harian (tahun bank)</td><td>$B = M_0 \cdot b \cdot \dfrac{h}{360}$</td><td>$h$ = jumlah hari</td></tr>
+          <tr><td>Bunga harian (tahun takwim)</td><td>$B = M_0 \cdot b \cdot \dfrac{h}{365}$</td><td>$h$ = jumlah hari</td></tr>
+          <tr><td>Rumus kebalikan</td><td>$M_0 = \dfrac{B}{bn},\; b = \dfrac{B}{M_0 n},\; n = \dfrac{B}{M_0 b}$</td><td>Mencari besaran lain</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">2. Bunga Majemuk</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Konsep</th><th>Rumus</th><th>Keterangan</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Bunga per periode</td><td>$b = \dfrac{p\%}{t}$</td><td>$p$ = bunga tahunan, $t$ = periode/tahun</td></tr>
+          <tr><td>Modal akhir (waktu bulat)</td><td>$M_n = M_0\,(1+b)^n$</td><td>$n$ = total periode</td></tr>
+          <tr><td>Modal akhir (waktu tidak bulat)</td><td>$M_n = M_0\,(1+b)^{k}(1+f\cdot b)$</td><td>$k$ = bagian bulat tahun, $f$ = sisa tahun (mis. $0{,}5$)</td></tr>
+          <tr><td>Nilai tunai (<em>present value</em>)</td><td>$M_0 = \dfrac{M_n}{(1+b)^n}$</td><td>Membalik rumus modal akhir</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">3. Angsuran dan Anuitas</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Konsep</th><th>Rumus</th><th>Keterangan</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Angsuran rasio</td><td>$\dfrac{r_i}{\sum r_j} \times H$</td><td>$H$ = harga total</td></tr>
+          <tr><td>Anuitas</td><td>Angsuran $+$ Bunga</td><td>Berlaku untuk semua jenis anuitas</td></tr>
+          <tr><td>Anuitas bunga tetap</td><td>$A = \dfrac{M}{n} + b \cdot M$</td><td>$b$ = bunga dari modal awal</td></tr>
+          <tr><td>Anuitas bunga majemuk</td><td>$A = b \cdot M \cdot \dfrac{(1+b)^n}{(1+b)^n - 1}$</td><td>$b$ per periode, $n$ total periode</td></tr>
+          <tr><td>Tabel anuitas (baris $k$)</td><td>$\text{Bunga}_k = b \times \text{Sisa}_{k-1}$<br>$\text{Angsuran}_k = A - \text{Bunga}_k$<br>$\text{Sisa}_k = \text{Sisa}_{k-1} - \text{Angsuran}_k$</td><td>Baris pertama: $\text{Sisa}_0 = M$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <!-- Baris 1: Prev / Next -->
+    <div class="footer-nav">
+      <a class="nav-btn" href="../barisan-deret/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Barisan dan Deret
+      </a>
+      <a class="nav-btn" href="../persamaan-linear/">
+        Persamaan Linear
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <!-- Baris 2: Actions -->
+    <div class="footer-actions">
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- SECTION KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Disqus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi Matematika Keuangan? Tulis di kolom diskusi. Login dengan akun Google.</p>
+        <div id="disqus_thread"></div>
+    <script>
+    (function() {
+      var disqusLoaded = false;
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !disqusLoaded) {
+          disqusLoaded = true;
+          observer.disconnect();
+          var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://eksaktalab.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      }, { threshold: 0.1 });
+      var thread = document.getElementById('disqus_thread');
+      if (thread) observer.observe(thread);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── Scroll progress bar + scroll-to-top ──
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+// ── TOC Dropdown ──
+function toggleTOC() {
+  document.getElementById('tocDropdown').classList.toggle('open');
+}
+function closeTOC() {
+  document.getElementById('tocDropdown').classList.remove('open');
+}
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+// ── Bookmark ──
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ──
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Matematika Keuangan — EksaktaLab',
+      text:  'Belajar Matematika Keuangan di EksaktaLab, lengkap dengan 18 contoh soal!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+</script>
+
+<script>
+// ── SHARED HELPERS ────────────────────────
+const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+  <polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) {
+      MathJax.typesetPromise([typesetEl]).catch(() => {});
+    }
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── 1. BOX RUMUS → accordion hijau ───────
+  document.querySelectorAll('.box.box-rumus').forEach((box, i) => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+
+    let bodyHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body">
+        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
+      </div>`;
+
+    const header    = wrap.querySelector('.rumus-header');
+    const statusEl  = wrap.querySelector('.rumus-status');
+    const bodyInner = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+
+    box.replaceWith(wrap);
+  });
+
+  // ── 2. BOX CONTOH → accordion navy/teal ──
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+
+    let qHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header">
+            <span class="solve-dot"></span>
+            <span class="solve-title">Penyelesaian</span>
+          </div>
+          <div class="penyelesaian-inner">
+            ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
+          </div>
+        </div>
+      </div>`;
+
+    const header = wrap.querySelector('.contoh-header');
+    const pi     = wrap.querySelector('.penyelesaian-inner');
+
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+    });
+
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+  // ── 3. Buka / Tutup Semua per section ────
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+
+    const updateBtn = () => {
+      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
+    };
+    updateBtn();
+
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+  // ── 4. SOAL LATIHAN → accordion kunci jawaban ──
+  const jawabanData = {
+    // 0 — Latihan A: Bunga Tunggal (8 soal)
+    0: [
+      { jawaban: `Bunga Rp2.400.000 &nbsp;|&nbsp; Total tabungan Rp8.400.000` },
+      { jawaban: `$B = 3.000.000 \\times 0{,}06 \\times \\dfrac{9}{12} = \\text{Rp}135.000$` },
+      { jawaban: `$B = 15.000.000 \\times 0{,}08 \\times \\dfrac{120}{360} = \\text{Rp}400.000$` },
+      { jawaban: `$b = \\dfrac{270.000}{9.000.000 \\times \\frac{5}{12}} = 0{,}072 = 7{,}2\\%$ per tahun` },
+      { jawaban: `$M_0 = \\dfrac{1.250.000}{0{,}1 \\times \\frac{250}{360}} = \\text{Rp}18.000.000$` },
+      { jawaban: `(a) Rp438.000 &nbsp;|&nbsp; (b) Rp432.000 &nbsp;|&nbsp; (c) selisih Rp6.000` },
+      { jawaban: `(a) $6.000.000(1 + 0{,}1n) = 8.000.000(1 + 0{,}05n) \\Rightarrow 600.000n - 400.000n = 2.000.000 \\Rightarrow n = 10$ tahun<br>(b) Masing-masing Rp12.000.000<br>(c) Tabungan Andi, karena bunga Andi Rp600.000 per tahun, lebih besar daripada bunga Budi Rp400.000 per tahun (garis pertumbuhan Andi lebih curam).` },
+      { jawaban: `(a) $b = \\dfrac{800.000}{8.000.000 \\times \\frac{8}{12}} = 15\\%$ per tahun &nbsp;|&nbsp; (b) $\\dfrac{8.800.000}{8} = \\text{Rp}1.100.000$ per bulan` },
+    ],
+    // 1 — Latihan B: Bunga Majemuk (8 soal)
+    1: [
+      { jawaban: `$t = 3$, $\\;b = \\dfrac{9\\%}{3} = 3\\%$ per periode` },
+      { jawaban: `$M_3 = 60.000.000\\,(1{,}02)^3 = \\text{Rp}63.672.480$` },
+      { jawaban: `$b = 2\\%,\\; n = 2$: $\\;M_2 = 16.000.000\\,(1{,}02)^2 = \\text{Rp}16.646.400$` },
+      { jawaban: `$b = 1\\%,\\; n = 6$: $\\;M_6 = 12.000.000\\,(1{,}01)^6 \\approx \\text{Rp}12.738.242$` },
+      { jawaban: `$M_0 = \\dfrac{20.000.000}{(1{,}06)^3} \\approx \\text{Rp}16.792.386$` },
+      { jawaban: `$M_n = 30.000.000\\,(1{,}05)^3\\left(1 + \\tfrac{4}{12}\\times 0{,}05\\right) \\approx \\text{Rp}35.307.563$` },
+      { jawaban: `$M_0 = \\dfrac{25.000.000}{(1{,}04)^2(1{,}02)} \\approx \\text{Rp}22.660.691$` },
+      { jawaban: `(a) $50.000.000\\,(1{,}03)^4 \\approx \\text{Rp}56.275.441$ &nbsp;|&nbsp; (b) $50.000.000\\,(1{,}0125)^8 \\approx \\text{Rp}55.224.305$.<br>Pilihan (a) lebih besar: selisih suku bunga tahunan (6% vs 5%) lebih berpengaruh daripada frekuensi penggabungan yang lebih sering.` },
+    ],
+    // 2 — Latihan C: Angsuran dan Anuitas (8 soal)
+    2: [
+      { jawaban: `$\\dfrac{2}{12} \\times 960.000 = \\text{Rp}160.000$` },
+      { jawaban: `Dana laptop $15\\% \\times 3.000.000 = \\text{Rp}450.000$/bulan; $\\;\\dfrac{5.000.000}{450.000} \\approx 11{,}1$ → <strong>12 kali</strong> angsuran` },
+      { jawaban: `Pendapatan $12 \\times 35.000 \\times 12 = \\text{Rp}5.040.000$; modal 13 kompor $= 5.040.000 - 1.140.000 = 3.900.000$ → <strong>Rp300.000</strong> per kompor` },
+      { jawaban: `$A = \\dfrac{6.000.000}{8} + 1{,}5\\% \\times 6.000.000 = 750.000 + 90.000 = \\text{Rp}840.000$` },
+      { jawaban: `(a) $A \\approx \\text{Rp}1.100.160$ &nbsp;|&nbsp; (b) total bunga $\\approx 12 \\times 1.100.160 - 12.000.000 = \\text{Rp}1.201.919$` },
+      { jawaban: `(a) $b = 2\\%,\\; n = 6$: $\\;A \\approx \\text{Rp}892.629$<br>(b) Sisa pinjaman tiap baris: 4.207.371 → 3.398.889 → 2.574.238 → 1.733.094 → 875.127 → 0 (bunga: 100.000; 84.147; 67.978; 51.485; 34.662; 17.503)` },
+      { jawaban: `$b = 3{,}75\\%$, $A \\approx \\text{Rp}1.095.475$. Sisa: 3.054.525 → 2.073.595 → 1.055.880 → 0. Sisa pertama kali di bawah Rp2.000.000 pada <strong>baris ke-3</strong>.` },
+      { jawaban: `$A \\approx \\text{Rp}3.182.376$; total dibayar $\\approx \\text{Rp}15.911.880$, lebih mahal $\\text{Rp}911.880$ (±6,1%) dari harga asli. Kredit membuat harga barang lebih mahal karena ada biaya bunga.` },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+
+    const items = [...list.querySelectorAll('li')];
+    const newList = document.createElement('div');
+    newList.className = 'soal-list-accordion';
+
+    items.forEach((li, i) => {
+      const ans     = answers[i] || {};
+      const jawaban = ans.jawaban || '';
+
+      const item = document.createElement('div');
+      item.className = 'soal-item';
+      item.innerHTML = `
+        <div class="soal-item-header" role="button" tabindex="0">
+          <span class="soal-num">${i+1}</span>
+          <span class="soal-text">${li.innerHTML}</span>
+          <button class="soal-key-btn" tabindex="-1">Kunci</button>
+        </div>
+        <div class="soal-answer">
+          <div class="soal-answer-inner">
+            <div class="soal-answer-label">Jawaban</div>
+            ${jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
+          </div>
+        </div>`;
+
+      const header = item.querySelector('.soal-item-header');
+      const toggle = () => {
+        const open = item.classList.toggle('open');
+        if (open && window.MathJax) {
+          MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
+        }
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+
+      newList.appendChild(item);
+    });
+
+    list.replaceWith(newList);
+  });
+
+});
+</script>
+
+<!-- FOOTER -->
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+</body>
+</html>
