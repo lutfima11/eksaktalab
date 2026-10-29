@@ -419,11 +419,19 @@ window.MathJax = {
       d. ${}^{7}\!\log \sqrt{7} = \dfrac{1}{2}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> $2^5 = 32 \;\Longleftrightarrow\; {}^{2}\!\log 32 = 5$<br><br>
-      <strong>b.</strong> $5^{-2} = \dfrac{1}{25} \;\Longleftrightarrow\; {}^{5}\!\log\dfrac{1}{25} = -2$<br><br>
-      <strong>c.</strong> ${}^{3}\!\log 81 = 4 \;\Longleftrightarrow\; 3^4 = 81$<br><br>
-      <strong>d.</strong> ${}^{7}\!\log\sqrt{7} = \dfrac{1}{2} \;\Longleftrightarrow\; 7^{1/2} = \sqrt{7}$
+      <p class="sol-step">Gunakan definisi: $a^c = b \iff {}^{a}\!\log b = c$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span>$2^5 = 32$</div>
+      <p class="sol-step">Bilangan pokok 2, hasil 32, pangkat 5.</p>
+      <div class="sol-jadi">${}^{2}\!\log 32 = 5$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$5^{-2} = \tfrac{1}{25}$</div>
+      <p class="sol-step">Bilangan pokok 5, hasil $\tfrac{1}{25}$, pangkat $-2$.</p>
+      <div class="sol-jadi">${}^{5}\!\log \tfrac{1}{25} = -2$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>${}^{3}\!\log 81 = 4$</div>
+      <p class="sol-step">Basis 3 menjadi bilangan pokok, hasil logaritma 4 menjadi pangkat.</p>
+      <div class="sol-jadi">$3^4 = 81$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span>${}^{7}\!\log \sqrt{7} = \tfrac{1}{2}$</div>
+      <p class="sol-step">Basis 7 menjadi bilangan pokok, hasil $\tfrac{1}{2}$ menjadi pangkat.</p>
+      <div class="sol-jadi">$7^{1/2} = \sqrt{7}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -437,13 +445,25 @@ window.MathJax = {
       f. $\log 0{,}001$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> Misalkan ${}^{2}\!\log 64 = x$, maka $2^x = 64 = 2^6$, sehingga $x = \mathbf{6}$.<br><br>
-      <strong>b.</strong> $3^x = 243 = 3^5$, sehingga $x = \mathbf{5}$.<br><br>
-      <strong>c.</strong> $5^x = \dfrac{1}{125} = 5^{-3}$, sehingga $x = \mathbf{-3}$.<br><br>
-      <strong>d.</strong> $4^x = 8 \Rightarrow (2^2)^x = 2^3$<br>$\Rightarrow 2x = 3 \Rightarrow x = \mathbf{\dfrac{3}{2}}$<br><br>
-      <strong>e.</strong> $9^x = 27 \Rightarrow (3^2)^x = 3^3$<br>$\Rightarrow 2x = 3 \Rightarrow x = \mathbf{\dfrac{3}{2}}$<br><br>
-      <strong>f.</strong> $\log 0{,}001 = {}^{10}\!\log 10^{-3} = \mathbf{-3}$
+      <p class="sol-step">Misalkan nilai logaritmanya $x$, ubah ke bentuk eksponen, lalu samakan bilangan pokoknya.</p>
+      <div class="sol-part"><span class="sol-tag">a</span>${}^{2}\!\log 64$</div>
+      $$2^x = 64 = 2^6 \;\Rightarrow\; x = 6$$
+      <div class="sol-jadi">nilainya $6$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>${}^{3}\!\log 243$</div>
+      $$3^x = 243 = 3^5 \;\Rightarrow\; x = 5$$
+      <div class="sol-jadi">nilainya $5$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>${}^{5}\!\log \tfrac{1}{125}$</div>
+      $$5^x = \tfrac{1}{125} = 5^{-3} \;\Rightarrow\; x = -3$$
+      <div class="sol-jadi">nilainya $-3$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span>${}^{4}\!\log 8$</div>
+      $$\begin{align*} 4^x &= 8 \\ (2^2)^x &= 2^3 \\ 2x &= 3 \;\Rightarrow\; x = \tfrac{3}{2} \end{align*}$$
+      <div class="sol-jadi">nilainya $\tfrac{3}{2}$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span>${}^{9}\!\log 27$</div>
+      $$\begin{align*} 9^x &= 27 \\ (3^2)^x &= 3^3 \\ 2x &= 3 \;\Rightarrow\; x = \tfrac{3}{2} \end{align*}$$
+      <div class="sol-jadi">nilainya $\tfrac{3}{2}$.</div>
+      <div class="sol-part"><span class="sol-tag">f</span>$\log 0{,}001$</div>
+      $$\log 0{,}001 = {}^{10}\!\log 10^{-3} = -3$$
+      <div class="sol-jadi">nilainya $-3$.</div>
     </div>
 
     <div class="box box-latihan">
@@ -567,15 +587,31 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       h. ${}^{3}\!\log 6 + {}^{3}\!\log 9 - {}^{3}\!\log 2$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> $\log 4 + \log 25$<br>$= \log(4 \times 25) = \log 100 = \mathbf{2}$<br><br>
-      <strong>b.</strong> ${}^{2}\!\log 48 - {}^{2}\!\log 3$<br>$= {}^{2}\!\log\dfrac{48}{3} = {}^{2}\!\log 16 = \mathbf{4}$<br><br>
-      <strong>c.</strong> ${}^{6}\!\log 9 + {}^{6}\!\log 4$<br>$= {}^{6}\!\log(9 \times 4) = {}^{6}\!\log 36 = \mathbf{2}$<br><br>
-      <strong>d.</strong> ${}^{5}\!\log 50 - {}^{5}\!\log 2$<br>$= {}^{5}\!\log\dfrac{50}{2} = {}^{5}\!\log 25 = \mathbf{2}$<br><br>
-      <strong>e.</strong> ${}^{3}\!\log 54 + {}^{3}\!\log 2 - {}^{3}\!\log 4$<br>$= {}^{3}\!\log\dfrac{54 \times 2}{4} = {}^{3}\!\log 27 = \mathbf{3}$<br><br>
-      <strong>f.</strong> $\log 5 + \log 4 - \log 2$<br>$= \log\dfrac{5 \times 4}{2} = \log 10 = \mathbf{1}$<br><br>
-      <strong>g.</strong> ${}^{2}\!\log 3 + {}^{2}\!\log 10 - {}^{2}\!\log 15$<br>$= {}^{2}\!\log\dfrac{3 \times 10}{15} = {}^{2}\!\log 2 = \mathbf{1}$<br><br>
-      <strong>h.</strong> ${}^{3}\!\log 6 + {}^{3}\!\log 9 - {}^{3}\!\log 2$<br>$= {}^{3}\!\log\dfrac{6 \times 9}{2} = {}^{3}\!\log 27 = \mathbf{3}$
+      <p class="sol-step">Gabungkan memakai S3 (penjumlahan menjadi perkalian) dan S4 (pengurangan menjadi pembagian).</p>
+      <div class="sol-part"><span class="sol-tag">a</span>$\log 4 + \log 25$</div>
+      $$\log(4 \times 25) = \log 100 = 2$$
+      <div class="sol-jadi">nilainya $2$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>${}^{2}\!\log 48 - {}^{2}\!\log 3$</div>
+      $${}^{2}\!\log\frac{48}{3} = {}^{2}\!\log 16 = 4$$
+      <div class="sol-jadi">nilainya $4$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>${}^{6}\!\log 9 + {}^{6}\!\log 4$</div>
+      $${}^{6}\!\log(9 \times 4) = {}^{6}\!\log 36 = 2$$
+      <div class="sol-jadi">nilainya $2$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span>${}^{5}\!\log 50 - {}^{5}\!\log 2$</div>
+      $${}^{5}\!\log\frac{50}{2} = {}^{5}\!\log 25 = 2$$
+      <div class="sol-jadi">nilainya $2$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span>${}^{3}\!\log 54 + {}^{3}\!\log 2 - {}^{3}\!\log 4$</div>
+      $${}^{3}\!\log\frac{54 \times 2}{4} = {}^{3}\!\log 27 = 3$$
+      <div class="sol-jadi">nilainya $3$.</div>
+      <div class="sol-part"><span class="sol-tag">f</span>$\log 5 + \log 4 - \log 2$</div>
+      $$\log\frac{5 \times 4}{2} = \log 10 = 1$$
+      <div class="sol-jadi">nilainya $1$.</div>
+      <div class="sol-part"><span class="sol-tag">g</span>${}^{2}\!\log 3 + {}^{2}\!\log 10 - {}^{2}\!\log 15$</div>
+      $${}^{2}\!\log\frac{3 \times 10}{15} = {}^{2}\!\log 2 = 1$$
+      <div class="sol-jadi">nilainya $1$.</div>
+      <div class="sol-part"><span class="sol-tag">h</span>${}^{3}\!\log 6 + {}^{3}\!\log 9 - {}^{3}\!\log 2$</div>
+      $${}^{3}\!\log\frac{6 \times 9}{2} = {}^{3}\!\log 27 = 3$$
+      <div class="sol-jadi">nilainya $3$.</div>
     </div>
 
     <h3 class="subsection-title">3. Sifat Pangkat (S5)</h3>
@@ -591,13 +627,26 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       f. ${}^{2}\!\log 3 \cdot \log 4 + {}^{2}\!\log 3 \cdot \log 25$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> ${}^{5}\!\log 125 = {}^{5}\!\log 5^3 = 3 \cdot {}^{5}\!\log 5 = \mathbf{3}$<br><br>
-      <strong>b.</strong> $2\,{}^{3}\!\log 6 = {}^{3}\!\log 36$, lalu ${}^{3}\!\log 36 - {}^{3}\!\log 4 = {}^{3}\!\log 9 = \mathbf{2}$<br><br>
-      <strong>c.</strong> $3\,{}^{2}\!\log 4 = {}^{2}\!\log 64$, &nbsp; $2\,{}^{2}\!\log 8 = {}^{2}\!\log 64$, &nbsp; lalu $6 + 6 = \mathbf{12}$<br><br>
-      <strong>d.</strong> $\dfrac{1}{2}\log 36 = \log\sqrt{36} = \log 6$, &nbsp; lalu $\log 6 - \log 3 = \log 2 = \mathbf{\log 2}$<br><br>
-      <strong>e.</strong> ${}^{5}\!\log 8 + {}^{5}\!\log 4 - {}^{5}\!\log 32$<br>$= {}^{5}\!\log\dfrac{8 \times 4}{32} = {}^{5}\!\log 1 = \mathbf{0}$<br><br>
-      <strong>f.</strong> Keluarkan faktor ${}^{2}\!\log 3$: <br>${}^{2}\!\log 3 \cdot (\log 4 + \log 25)$<br>$= {}^{2}\!\log 3 \cdot \log 100$<br>$= {}^{2}\!\log 3 \cdot 2 = \mathbf{2\,{}^{2}\!\log 3}$
+      <p class="sol-step">Ubah koefisien menjadi pangkat numerus (S5), lalu gabungkan dengan S3/S4.</p>
+      <div class="sol-part"><span class="sol-tag">a</span>${}^{5}\!\log 125$</div>
+      $${}^{5}\!\log 5^3 = 3 \cdot {}^{5}\!\log 5 = 3$$
+      <div class="sol-jadi">nilainya $3$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$2\,{}^{3}\!\log 6 - {}^{3}\!\log 4$</div>
+      $$\begin{align*} &{}^{3}\!\log 6^2 - {}^{3}\!\log 4 \\ &= {}^{3}\!\log\tfrac{36}{4} = {}^{3}\!\log 9 = 2 \end{align*}$$
+      <div class="sol-jadi">nilainya $2$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>$3\,{}^{2}\!\log 4 + 2\,{}^{2}\!\log 8$</div>
+      $$\begin{align*} &{}^{2}\!\log 4^3 + {}^{2}\!\log 8^2 \\ &= {}^{2}\!\log 64 + {}^{2}\!\log 64 \\ &= 6 + 6 = 12 \end{align*}$$
+      <div class="sol-jadi">nilainya $12$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span>$\tfrac{1}{2}\log 36 - \log 3$</div>
+      $$\begin{align*} &\log 36^{1/2} - \log 3 \\ &= \log 6 - \log 3 = \log 2 \end{align*}$$
+      <div class="sol-jadi">nilainya $\log 2$ (sekitar $0{,}301$).</div>
+      <div class="sol-part"><span class="sol-tag">e</span>$3\,{}^{5}\!\log 2 + {}^{5}\!\log 4 - {}^{5}\!\log 32$</div>
+      $$\begin{align*} &{}^{5}\!\log 2^3 + {}^{5}\!\log 4 - {}^{5}\!\log 32 \\ &= {}^{5}\!\log\frac{8 \times 4}{32} = {}^{5}\!\log 1 = 0 \end{align*}$$
+      <div class="sol-jadi">nilainya $0$.</div>
+      <div class="sol-part"><span class="sol-tag">f</span>${}^{2}\!\log 3 \cdot \log 4 + {}^{2}\!\log 3 \cdot \log 25$</div>
+      <p class="sol-step">Keluarkan faktor bersama ${}^{2}\!\log 3$:</p>
+      $$\begin{align*} &{}^{2}\!\log 3\,(\log 4 + \log 25) \\ &= {}^{2}\!\log 3 \cdot \log 100 \\ &= 2\,{}^{2}\!\log 3 \end{align*}$$
+      <div class="sol-jadi">nilainya $2\,{}^{2}\!\log 3$.</div>
     </div>
 
     <h3 class="subsection-title">4. Pergantian Basis (S6 &amp; S7)</h3>
@@ -613,13 +662,25 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       f. $\dfrac{{}^{2}\!\log 27}{{}^{2}\!\log 9}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> ${}^{27}\!\log 81 = \dfrac{{}^{3}\!\log 81}{{}^{3}\!\log 27} = \dfrac{4}{3} = \mathbf{\dfrac{4}{3}}$<br><br>
-      <strong>b.</strong> ${}^{8}\!\log 32 = \dfrac{{}^{2}\!\log 32}{{}^{2}\!\log 8} = \dfrac{5}{3} = \mathbf{\dfrac{5}{3}}$<br><br>
-      <strong>c.</strong> ${}^{4}\!\log 2 = \dfrac{1}{2}$, &nbsp; ${}^{8}\!\log 4 = \dfrac{2}{3}$, &nbsp; jumlah $= \dfrac{1}{2}+\dfrac{2}{3} = \mathbf{\dfrac{7}{6}}$<br><br>
-      <strong>d.</strong> ${}^{9}\!\log 27 = \dfrac{3}{2}$, &nbsp; ${}^{3}\!\log 9 = 2$, &nbsp; jumlah $= \mathbf{\dfrac{7}{2}}$<br><br>
-      <strong>e.</strong> ${}^{16}\!\log 8 = \dfrac{3}{4}$, &nbsp; ${}^{4}\!\log 8 = \dfrac{3}{2}$, &nbsp; selisih $= \mathbf{-\dfrac{3}{4}}$<br><br>
-      <strong>f.</strong> $\dfrac{{}^{2}\!\log 3^3}{{}^{2}\!\log 3^2} = \dfrac{3\,{}^{2}\!\log 3}{2\,{}^{2}\!\log 3} = \mathbf{\dfrac{3}{2}}$
+      <p class="sol-step">Ganti ke basis yang sama (S6), biasanya basis prima dari bilangan-bilangannya.</p>
+      <div class="sol-part"><span class="sol-tag">a</span>${}^{27}\!\log 81$</div>
+      $${}^{27}\!\log 81 = \frac{{}^{3}\!\log 81}{{}^{3}\!\log 27} = \frac{4}{3}$$
+      <div class="sol-jadi">nilainya $\tfrac{4}{3}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>${}^{8}\!\log 32$</div>
+      $${}^{8}\!\log 32 = \frac{{}^{2}\!\log 32}{{}^{2}\!\log 8} = \frac{5}{3}$$
+      <div class="sol-jadi">nilainya $\tfrac{5}{3}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>${}^{4}\!\log 2 + {}^{8}\!\log 4$</div>
+      $$\begin{gather*} {}^{4}\!\log 2 = \frac{1}{2}, \quad {}^{8}\!\log 4 = \frac{2}{3} \\ \frac{1}{2} + \frac{2}{3} = \frac{7}{6} \end{gather*}$$
+      <div class="sol-jadi">nilainya $\tfrac{7}{6}$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span>${}^{9}\!\log 27 + {}^{3}\!\log 9$</div>
+      $$\begin{gather*} {}^{9}\!\log 27 = \frac{3}{2}, \quad {}^{3}\!\log 9 = 2 \\ \frac{3}{2} + 2 = \frac{7}{2} \end{gather*}$$
+      <div class="sol-jadi">nilainya $\tfrac{7}{2}$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span>${}^{16}\!\log 8 - {}^{4}\!\log 8$</div>
+      $$\begin{gather*} {}^{16}\!\log 8 = \frac{3}{4}, \quad {}^{4}\!\log 8 = \frac{3}{2} \\ \frac{3}{4} - \frac{3}{2} = -\frac{3}{4} \end{gather*}$$
+      <div class="sol-jadi">nilainya $-\tfrac{3}{4}$.</div>
+      <div class="sol-part"><span class="sol-tag">f</span>$\dfrac{{}^{2}\!\log 27}{{}^{2}\!\log 9}$</div>
+      $$\frac{{}^{2}\!\log 3^3}{{}^{2}\!\log 3^2} = \frac{3\,{}^{2}\!\log 3}{2\,{}^{2}\!\log 3} = \frac{3}{2}$$
+      <div class="sol-jadi">nilainya $\tfrac{3}{2}$.</div>
     </div>
 
     <h3 class="subsection-title">5. Rantai Logaritma dan Sifat S9 (S8 &amp; S9)</h3>
@@ -636,14 +697,34 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       g. $5^{2\,{}^{5}\!\log 3} - 2^{{}^{2}\!\log 9}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> Sifat S8: ${}^{2}\!\log 3 \cdot {}^{3}\!\log 8 = {}^{2}\!\log 8 = \mathbf{3}$<br><br>
-      <strong>b.</strong> ${}^{4}\!\log 9 = \dfrac{2\,{}^{2}\!\log 3}{2} = {}^{2}\!\log 3$, &nbsp; ${}^{3}\!\log 8 = \dfrac{3}{{}^{2}\!\log 3}$, &nbsp; lalu ${}^{2}\!\log 3 \cdot \dfrac{3}{{}^{2}\!\log 3} = \mathbf{3}$<br><br>
-      <strong>c.</strong> Rantai tiga: ${}^{2}\!\log 3 \cdot {}^{3}\!\log 4 \cdot {}^{4}\!\log 16 = {}^{2}\!\log 16 = \mathbf{4}$<br><br>
-      <strong>d.</strong> ${}^{2}\!\log 5 \cdot {}^{5}\!\log 9 = {}^{2}\!\log 9 = 2\,{}^{2}\!\log 3$, lalu $\cdot\, {}^{3}\!\log 4 = 2 \cdot {}^{2}\!\log 4 = 2 \times 2 = \mathbf{4}$<br><br>
-      <strong>e.</strong> $\dfrac{1}{{}^{5}\!\log 2} = {}^{2}\!\log 5$; &nbsp; $\dfrac{1}{{}^{5}\!\log 4} = {}^{4}\!\log 5 = \dfrac{{}^{2}\!\log 5}{2}$; &nbsp; jumlah $= {}^{2}\!\log 5 + \dfrac{{}^{2}\!\log 5}{2} = \mathbf{\dfrac{3\,{}^{2}\!\log 5}{2}}$<br><br>
-      <strong>f.</strong> Sifat S9: $3^{{}^{3}\!\log 7} = \mathbf{7}$<br><br>
-      <strong>g.</strong> $5^{2\,{}^{5}\!\log 3} = 5^{{}^{5}\!\log 9} = 9$; &nbsp; $2^{{}^{2}\!\log 9} = 9$; &nbsp; jadi $9 - 9 = \mathbf{0}$
+      <div class="sol-part"><span class="sol-tag">a</span>${}^{2}\!\log 3 \cdot {}^{3}\!\log 8$</div>
+      <p class="sol-step">Rantai (S8): numerus pertama sama dengan basis kedua.</p>
+      $${}^{2}\!\log 3 \cdot {}^{3}\!\log 8 = {}^{2}\!\log 8 = 3$$
+      <div class="sol-jadi">nilainya $3$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>${}^{4}\!\log 9 \cdot {}^{3}\!\log 8$</div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sederhanakan faktor pertama</strong> (S6 dan S5):</p>
+      $${}^{4}\!\log 9 = \frac{{}^{2}\!\log 3^2}{{}^{2}\!\log 2^2} = {}^{2}\!\log 3$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan rantai</strong> (S8):</p>
+      $${}^{2}\!\log 3 \cdot {}^{3}\!\log 8 = {}^{2}\!\log 8 = 3$$
+      <div class="sol-jadi">nilainya $3$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>${}^{2}\!\log 3 \cdot {}^{3}\!\log 4 \cdot {}^{4}\!\log 16$</div>
+      <p class="sol-step">Rantai tiga suku (S8):</p>
+      $$= {}^{2}\!\log 16 = 4$$
+      <div class="sol-jadi">nilainya $4$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span>${}^{2}\!\log 5 \cdot {}^{5}\!\log 9 \cdot {}^{3}\!\log 4$</div>
+      $$\begin{align*} &{}^{2}\!\log 5 \cdot {}^{5}\!\log 9 \cdot {}^{3}\!\log 4 \\ &= {}^{2}\!\log 9 \cdot {}^{3}\!\log 4 \\ &= 2\,{}^{2}\!\log 3 \cdot {}^{3}\!\log 4 \\ &= 2\,{}^{2}\!\log 4 = 4 \end{align*}$$
+      <div class="sol-jadi">nilainya $4$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span>$\dfrac{1}{{}^{5}\!\log 2} + \dfrac{1}{{}^{5}\!\log 4}$</div>
+      <p class="sol-step">Gunakan S7: $\dfrac{1}{{}^{a}\!\log b} = {}^{b}\!\log a$.</p>
+      $$\begin{align*} &{}^{2}\!\log 5 + {}^{4}\!\log 5 \\ &= {}^{2}\!\log 5 + \tfrac{1}{2}\,{}^{2}\!\log 5 \\ &= \tfrac{3}{2}\,{}^{2}\!\log 5 \end{align*}$$
+      <div class="sol-jadi">nilainya $\tfrac{3}{2}\,{}^{2}\!\log 5$.</div>
+      <div class="sol-part"><span class="sol-tag">f</span>$3^{{}^{3}\!\log 7}$</div>
+      <p class="sol-step">Sifat S9: $a^{{}^{a}\!\log b} = b$.</p>
+      $$3^{{}^{3}\!\log 7} = 7$$
+      <div class="sol-jadi">nilainya $7$.</div>
+      <div class="sol-part"><span class="sol-tag">g</span>$5^{2\,{}^{5}\!\log 3} - 2^{{}^{2}\!\log 9}$</div>
+      $$\begin{align*} &5^{{}^{5}\!\log 9} - 2^{{}^{2}\!\log 9} \\ &= 9 - 9 = 0 \end{align*}$$
+      <div class="sol-jadi">nilainya $0$.</div>
     </div>
 
     <div class="box box-latihan">
@@ -684,13 +765,25 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       f. ${}^{15}\!\log 8$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> $\log 6 = \log(2 \times 3)$<br>$\phantom{\log 6} = \log 2 + \log 3 = \mathbf{a + b}$<br><br>
-      <strong>b.</strong> $\log 5 = 1 - a$, &nbsp; maka $\log 15 = \log 3 + \log 5$<br>$\phantom{\log 15} = b + (1-a) = \mathbf{1 - a + b}$<br><br>
-      <strong>c.</strong> $0{,}18 = \dfrac{2 \cdot 3^2}{10^2}$, &nbsp; maka $\log 0{,}18 = \log 2 + 2\log 3 - 2$<br>$\phantom{\log 0{,}18} = \mathbf{a + 2b - 2}$<br><br>
-      <strong>d.</strong> ${}^{6}\!\log 5 = \dfrac{\log 5}{\log 6} = \mathbf{\dfrac{1-a}{a+b}}$<br><br>
-      <strong>e.</strong> ${}^{4}\!\log 15 = \dfrac{\log 15}{\log 4} = \mathbf{\dfrac{1-a+b}{2a}}$<br><br>
-      <strong>f.</strong> ${}^{15}\!\log 8 = \dfrac{\log 8}{\log 15} = \mathbf{\dfrac{3a}{1-a+b}}$
+      <p class="sol-step">Faktorkan numerus menjadi 2, 3, dan 10. Ingat $\log 5 = \log\tfrac{10}{2} = 1 - a$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span>$\log 6$</div>
+      $$\begin{align*} \log 6 &= \log(2 \times 3) \\ &= \log 2 + \log 3 \end{align*}$$
+      <div class="sol-jadi">$\log 6 = a + b$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$\log 15$</div>
+      $$\begin{align*} \log 15 &= \log 3 + \log 5 \\ &= b + (1 - a) \end{align*}$$
+      <div class="sol-jadi">$\log 15 = 1 - a + b$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>$\log 0{,}18$</div>
+      $$\begin{align*} \log 0{,}18 &= \log\frac{2 \cdot 3^2}{10^2} \\ &= \log 2 + 2\log 3 - 2 \end{align*}$$
+      <div class="sol-jadi">$\log 0{,}18 = a + 2b - 2$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span>${}^{6}\!\log 5$</div>
+      $${}^{6}\!\log 5 = \frac{\log 5}{\log 6}$$
+      <div class="sol-jadi">${}^{6}\!\log 5 = \dfrac{1-a}{a+b}$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span>${}^{4}\!\log 15$</div>
+      $${}^{4}\!\log 15 = \frac{\log 15}{\log 4}$$
+      <div class="sol-jadi">${}^{4}\!\log 15 = \dfrac{1-a+b}{2a}$.</div>
+      <div class="sol-part"><span class="sol-tag">f</span>${}^{15}\!\log 8$</div>
+      $${}^{15}\!\log 8 = \frac{\log 8}{\log 15}$$
+      <div class="sol-jadi">${}^{15}\!\log 8 = \dfrac{3a}{1-a+b}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -704,13 +797,24 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       f. ${}^{0{,}5}\!\log 200$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> $\log 50 = \log(2 \times 5^2)$<br>$\phantom{\log 50} = \log 2 + 2\log 5 = \mathbf{a + 2b}$<br><br>
-      <strong>b.</strong> $\log 0{,}4 = \log\dfrac{4}{10}$<br>$\phantom{\log 0{,}4} = 2\log 2 - 1 = \mathbf{2a - 1}$<br><br>
-      <strong>c.</strong> ${}^{4}\!\log 25 = \dfrac{\log 25}{\log 4} = \dfrac{2b}{2a} = \mathbf{\dfrac{b}{a}}$<br><br>
-      <strong>d.</strong> ${}^{50}\!\log 8 = \dfrac{\log 8}{\log 50} = \mathbf{\dfrac{3a}{a+2b}}$<br><br>
-      <strong>e.</strong> $\log 20 = 2a + b$, &nbsp; $\log 250 = a + 3b$, &nbsp; maka ${}^{20}\!\log 250 = \mathbf{\dfrac{a+3b}{2a+b}}$<br><br>
-      <strong>f.</strong> $\log 0{,}5 = \log\dfrac{1}{2} = -\log 2 = -a$; &nbsp; $\log 200 = \log(2^3 \times 5^2) = 3a + 2b$; &nbsp; maka ${}^{0{,}5}\!\log 200 = \dfrac{3a+2b}{-a} = \mathbf{-\dfrac{3a+2b}{a}}$
+      <div class="sol-part"><span class="sol-tag">a</span>$\log 50$</div>
+      $$\begin{align*} \log 50 &= \log(2 \times 5^2) \\ &= \log 2 + 2\log 5 \end{align*}$$
+      <div class="sol-jadi">$\log 50 = a + 2b$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$\log 0{,}4$</div>
+      $$\begin{align*} \log 0{,}4 &= \log\frac{4}{10} \\ &= 2\log 2 - 1 \end{align*}$$
+      <div class="sol-jadi">$\log 0{,}4 = 2a - 1$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>${}^{4}\!\log 25$</div>
+      $${}^{4}\!\log 25 = \frac{\log 25}{\log 4} = \frac{2b}{2a}$$
+      <div class="sol-jadi">${}^{4}\!\log 25 = \dfrac{b}{a}$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span>${}^{50}\!\log 8$</div>
+      $${}^{50}\!\log 8 = \frac{\log 8}{\log 50}$$
+      <div class="sol-jadi">${}^{50}\!\log 8 = \dfrac{3a}{a+2b}$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span>${}^{20}\!\log 250$</div>
+      $$\begin{gather*} \log 20 = \log(2^2 \times 5) = 2a + b \\ \log 250 = \log(2 \times 5^3) = a + 3b \end{gather*}$$
+      <div class="sol-jadi">${}^{20}\!\log 250 = \dfrac{a+3b}{2a+b}$.</div>
+      <div class="sol-part"><span class="sol-tag">f</span>${}^{0{,}5}\!\log 200$</div>
+      $$\begin{gather*} \log 0{,}5 = -\log 2 = -a \\ \log 200 = \log(2^3 \times 5^2) = 3a + 2b \end{gather*}$$
+      <div class="sol-jadi">${}^{0{,}5}\!\log 200 = -\dfrac{3a+2b}{a}$.</div>
     </div>
 
     <div class="box box-latihan">
@@ -760,20 +864,30 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       b. $\log(x^2 - 3x) = 1$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> Ubah ke eksponen: $2x - 1 = 3^3 = 27 \Rightarrow x = 14$.<br>
-      Periksa: $2(14) - 1 = 27 > 0$ ✓ &nbsp; Jadi $\text{HP} = \{\mathbf{14}\}$.<br><br>
-      <strong>b.</strong> $x^2 - 3x = 10^1 = 10$<br>$x^2 - 3x - 10 = 0$<br>$(x-5)(x+2) = 0$<br>
-      $x = 5$ atau $x = -2$. Periksa numerus $x^2 - 3x > 0$:<br>
-      &nbsp;&nbsp;$x = 5$: $25 - 15 = 10 > 0$ ✓ &nbsp; $x = -2$: $4 + 6 = 10 > 0$ ✓<br>
-      Jadi $\text{HP} = \{\mathbf{-2,\; 5}\}$.
+      <div class="sol-part"><span class="sol-tag">a</span>${}^{3}\!\log(2x - 1) = 3$</div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah ke bentuk eksponen:</strong></p>
+      $$2x - 1 = 3^3 = 27 \;\Rightarrow\; x = 14$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cek syarat numerus</strong> $2x - 1 > 0$:</p>
+      <ul class="sol-cek">
+        <li>$x = 14$: $2(14) - 1 = 27 > 0$ ✓</li>
+      </ul>
+      <div class="sol-jadi">$\text{HP} = \{14\}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$\log(x^2 - 3x) = 1$</div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah ke bentuk eksponen:</strong></p>
+      $$\begin{align*} x^2 - 3x &= 10^1 = 10 \\ x^2 - 3x - 10 &= 0 \\ (x-5)(x+2) &= 0 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cek syarat numerus</strong> $x^2 - 3x > 0$:</p>
+      <ul class="sol-cek">
+        <li>$x = 5$: $25 - 15 = 10 > 0$ ✓</li>
+        <li>$x = -2$: $4 + 6 = 10 > 0$ ✓</li>
+      </ul>
+      <div class="sol-jadi">$\text{HP} = \{-2,\ 5\}$.</div>
     </div>
 
     <h3 class="subsection-title">2. Tipe 2 — Basis Sama, Kedua Ruas Logaritma</h3>
 
     <div class="box box-rumus">
       <div class="box-label">Rumus Tipe 2</div>
-      <div class="math-block">$$\begin{gather*} {}^{a}\!\log f(x) = {}^{a}\!\log g(x) \\ \Longleftrightarrow\; f(x) = g(x) \end{gather*}$$</div>
+      <div class="math-block">$${}^{a}\!\log f(x) = {}^{a}\!\log g(x) \;\Leftrightarrow\; f(x) = g(x)$$</div>
     </div>
     <p style="margin-top:.4rem;font-size:.85rem;">Berlaku dengan syarat $f(x) > 0$ <strong>dan</strong> $g(x) > 0$.</p>
 
@@ -784,17 +898,28 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       b. $2\,{}^{2}\!\log(x+3) = 1 + {}^{2}\!\log(x+7)$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> Samakan numerus:
+      <div class="sol-part"><span class="sol-tag">a</span>${}^{3}\!\log(x-1)^2 = {}^{3}\!\log(x+5)$</div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Samakan numerus</strong> (basis kedua ruas sama):</p>
       $$\begin{align*} (x-1)^2 &= x+5 \\ x^2 - 3x - 4 &= 0 \\ (x-4)(x+1) &= 0 \end{align*}$$
-      Diperoleh $x = 4$ atau $x = -1$. Periksa syarat $(x-1)^2 > 0$ dan $x+5 > 0$:<br>
-      &nbsp;&nbsp;$x = 4$: $9 > 0$ dan $9 > 0$ ✓ &nbsp; $x = -1$: $4 > 0$ dan $4 > 0$ ✓<br>
-      Jadi $\text{HP} = \{\mathbf{-1,\; 4}\}$. Perhatikan bahwa $x = -1$ tetap sah karena numerusnya $(x-1)^2$, bukan $x-1$.<br><br>
-      <strong>b.</strong> Ubah $1 = {}^{2}\!\log 2$, lalu gunakan S3 dan S5:
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cek syarat numerus</strong> $(x-1)^2 > 0$ dan $x+5 > 0$:</p>
+      <ul class="sol-cek">
+        <li>$x = 4$: $9 > 0$ dan $9 > 0$ ✓</li>
+        <li>$x = -1$: $4 > 0$ dan $4 > 0$ ✓</li>
+      </ul>
+      <p class="sol-step">$x = -1$ tetap sah karena numerusnya $(x-1)^2$, bukan $x-1$.</p>
+      <div class="sol-jadi">$\text{HP} = \{-1,\ 4\}$.</div>
+
+      <div class="sol-part"><span class="sol-tag">b</span>$2\,{}^{2}\!\log(x+3) = 1 + {}^{2}\!\log(x+7)$</div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis kedua ruas sebagai satu logaritma</strong> ($1 = {}^{2}\!\log 2$, sifat S3 dan S5):</p>
       $${}^{2}\!\log(x+3)^2 = {}^{2}\!\log 2(x+7)$$
-      $(x+3)^2 = 2(x+7)$<br>$x^2 + 4x - 5 = 0$<br>$(x+5)(x-1) = 0$<br>
-      $x = -5$: $x+3 = -2 < 0$ — <strong>buang</strong>. &nbsp; $x = 1$: $1+3 = 4 > 0$ ✓<br>
-      Jadi $\text{HP} = \{\mathbf{1}\}$.
+      <p class="sol-step"><span class="sol-no">2</span><strong>Samakan numerus:</strong></p>
+      $$\begin{align*} (x+3)^2 &= 2(x+7) \\ x^2 + 4x - 5 &= 0 \\ (x+5)(x-1) &= 0 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Cek syarat numerus</strong> $x+3 > 0$ dan $x+7 > 0$:</p>
+      <ul class="sol-cek">
+        <li>$x = -5$: $x+3 = -2 < 0$ ✗ (dibuang)</li>
+        <li>$x = 1$: $x+3 = 4 > 0$ dan $x+7 = 8 > 0$ ✓</li>
+      </ul>
+      <div class="sol-jadi">$\text{HP} = \{1\}$.</div>
     </div>
 
     <h3 class="subsection-title">3. Tipe 3 — Bentuk Kuadrat dalam Logaritma</h3>
@@ -812,16 +937,26 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       b. $({}^{3}\!\log x)^2 - 2\,({}^{3}\!\log x^2) - 12 = 0$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> Misalkan $t = {}^{2}\!\log x$:
-      $$\begin{align*} t^2 - 3t - 4 &= 0 \\ (t-4)(t+1) &= 0 \\ t = 4 \text{ atau } t &= -1 \end{align*}$$
-      $t=4$: $x = 2^4 = 16$ ✓ &nbsp;&nbsp; $t=-1$: $x = 2^{-1} = \dfrac{1}{2}$ ✓<br>
-      Jadi $\text{HP} = \left\{\dfrac{1}{2},\; 16\right\}$.<br><br>
-      <strong>b.</strong> ${}^{3}\!\log x^2 = 2\,{}^{3}\!\log x$, sehingga persamaan menjadi $({}^{3}\!\log x)^2 - 4\,{}^{3}\!\log x - 12 = 0$.<br>
-      Misalkan $t = {}^{3}\!\log x$:
+      <div class="sol-part"><span class="sol-tag">a</span>$({}^{2}\!\log x)^2 - 3\,{}^{2}\!\log x - 4 = 0$</div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Misalkan</strong> $t = {}^{2}\!\log x$:</p>
+      $$\begin{align*} t^2 - 3t - 4 &= 0 \\ (t-4)(t+1) &= 0 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kembalikan ke $x$</strong> ($x = 2^t$) dan cek $x > 0$:</p>
+      <ul class="sol-cek">
+        <li>$t = 4$: $x = 2^4 = 16$ ✓</li>
+        <li>$t = -1$: $x = 2^{-1} = \tfrac{1}{2}$ ✓</li>
+      </ul>
+      <div class="sol-jadi">$\text{HP} = \left\{\tfrac{1}{2},\ 16\right\}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$({}^{3}\!\log x)^2 - 2\,({}^{3}\!\log x^2) - 12 = 0$</div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sederhanakan dengan S5:</strong> ${}^{3}\!\log x^2 = 2\,{}^{3}\!\log x$, sehingga</p>
+      $$({}^{3}\!\log x)^2 - 4\,{}^{3}\!\log x - 12 = 0$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Misalkan</strong> $t = {}^{3}\!\log x$:</p>
       $$\begin{align*} t^2 - 4t - 12 &= 0 \\ (t-6)(t+2) &= 0 \end{align*}$$
-      $t=6$: $x = 3^6 = 729$ ✓ &nbsp;&nbsp; $t=-2$: $x = 3^{-2} = \dfrac{1}{9}$ ✓<br>
-      Jadi $\text{HP} = \left\{\dfrac{1}{9},\; 729\right\}$.
+      <p class="sol-step"><span class="sol-no">3</span><strong>Kembalikan ke $x$</strong> ($x = 3^t$) dan cek $x > 0$:</p>
+      <ul class="sol-cek">
+        <li>$t = 6$: $x = 3^6 = 729$ ✓</li>
+        <li>$t = -2$: $x = 3^{-2} = \tfrac{1}{9}$ ✓</li>
+      </ul>
+      <div class="sol-jadi">$\text{HP} = \left\{\tfrac{1}{9},\ 729\right\}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -829,12 +964,16 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Selesaikan $({}^{3}\!\log x)^2 - {}^{3}\!\log x^3 - 10 = 0$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      ${}^{3}\!\log x^3 = 3\,{}^{3}\!\log x$, sehingga: $({}^{3}\!\log x)^2 - 3\,{}^{3}\!\log x - 10 = 0$.<br>
-      Misalkan $p = {}^{3}\!\log x$:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sederhanakan dengan S5:</strong> ${}^{3}\!\log x^3 = 3\,{}^{3}\!\log x$, sehingga</p>
+      $$({}^{3}\!\log x)^2 - 3\,{}^{3}\!\log x - 10 = 0$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Misalkan</strong> $p = {}^{3}\!\log x$:</p>
       $$\begin{align*} p^2 - 3p - 10 &= 0 \\ (p-5)(p+2) &= 0 \end{align*}$$
-      $p=5$: $x = 3^5 = \mathbf{243}$ ✓ &nbsp;&nbsp; $p=-2$: $x = 3^{-2} = \mathbf{\dfrac{1}{9}}$ ✓<br>
-      Jadi $\text{HP} = \left\{\dfrac{1}{9},\; 243\right\}$.
+      <p class="sol-step"><span class="sol-no">3</span><strong>Kembalikan ke $x$</strong> ($x = 3^p$) dan cek $x > 0$:</p>
+      <ul class="sol-cek">
+        <li>$p = 5$: $x = 3^5 = 243$ ✓</li>
+        <li>$p = -2$: $x = 3^{-2} = \tfrac{1}{9}$ ✓</li>
+      </ul>
+      <div class="sol-jadi">$\text{HP} = \left\{\tfrac{1}{9},\ 243\right\}$.</div>
     </div>
 
     <h3 class="subsection-title">4. Tipe 4 — Basis Mengandung $x$</h3>
@@ -849,12 +988,21 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Selesaikan ${}^{(x-2)}\!\log(2x^2-7x+5) = 2$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>Syarat:</strong> $x - 2 > 0 \Rightarrow x > 2$; &nbsp; $x - 2 \neq 1 \Rightarrow x \neq 3$; &nbsp; $2x^2-7x+5 > 0$.<br><br>
-      Ubah ke eksponen: $2x^2 - 7x + 5 = (x-2)^2$<br>$= x^2 - 4x + 4$
-      $$x^2 - 3x + 1 = 0 \Rightarrow x = \frac{3 \pm \sqrt{5}}{2}$$
-      $x_1 = \dfrac{3+\sqrt{5}}{2} \approx 2{,}618 > 2$ dan $\neq 3$ ✓ &nbsp;&nbsp; $x_2 = \dfrac{3-\sqrt{5}}{2} \approx 0{,}382 < 2$ — <strong>buang</strong>.<br>
-      Jadi $\text{HP} = \left\{\dfrac{3+\sqrt{5}}{2}\right\}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis syaratnya:</strong></p>
+      <ul class="sol-cek">
+        <li>basis $x - 2 > 0 \Rightarrow x > 2$</li>
+        <li>basis $x - 2 \neq 1 \Rightarrow x \neq 3$</li>
+        <li>numerus $2x^2 - 7x + 5 > 0$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Ubah ke bentuk eksponen:</strong></p>
+      $$\begin{align*} 2x^2 - 7x + 5 &= (x-2)^2 \\ 2x^2 - 7x + 5 &= x^2 - 4x + 4 \\ x^2 - 3x + 1 &= 0 \end{align*}$$
+      $$x = \frac{3 \pm \sqrt{5}}{2}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Cek syarat:</strong></p>
+      <ul class="sol-cek">
+        <li>$x = \tfrac{3+\sqrt{5}}{2} \approx 2{,}618$: $> 2$ dan $\neq 3$ ✓</li>
+        <li>$x = \tfrac{3-\sqrt{5}}{2} \approx 0{,}382$: $< 2$ ✗ (dibuang)</li>
+      </ul>
+      <div class="sol-jadi">$\text{HP} = \left\{\tfrac{3+\sqrt{5}}{2}\right\}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -862,15 +1010,21 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Selesaikan ${}^{3x+4}\!\log(2x+1)^2$ $+\, {}^{2x+1}\!\log(6x^2+11x+4) = 4$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Faktorkan $6x^2+11x+4 = (3x+4)(2x+1)$, maka:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Faktorkan numerus kedua:</strong> $6x^2 + 11x + 4 = (3x+4)(2x+1)$, sehingga</p>
       $$\begin{align*} &{}^{3x+4}\!\log(2x+1)^2 \\ &+ {}^{2x+1}\!\log(3x+4) \\ &+ {}^{2x+1}\!\log(2x+1) = 4 \end{align*}$$
-      Karena ${}^{2x+1}\!\log(2x+1) = 1$ (S1) dan ${}^{2x+1}\!\log(3x+4) = \dfrac{1}{{}^{3x+4}\!\log(2x+1)}$ (S7), misalkan $m = {}^{3x+4}\!\log(2x+1)$:
+      <p class="sol-step"><span class="sol-no">2</span><strong>Sederhanakan:</strong> ${}^{2x+1}\!\log(2x+1) = 1$ (S1) dan ${}^{2x+1}\!\log(3x+4) = \dfrac{1}{{}^{3x+4}\!\log(2x+1)}$ (S7). Misalkan $m = {}^{3x+4}\!\log(2x+1)$:</p>
       $$\begin{align*} 2m + \frac{1}{m} + 1 &= 4 \\ 2m^2 - 3m + 1 &= 0 \\ (2m-1)(m-1) &= 0 \end{align*}$$
-      <strong>Kasus 1</strong> ($m = \frac{1}{2}$): <br>$(2x+1)^2 = 3x+4$<br>$4x^2+x-3=0 \Rightarrow x = \frac{3}{4}$ atau $x=-1$.<br>
-      &nbsp;&nbsp;$x=-1$: basis $= 1$ — <strong>buang</strong>. &nbsp; $x=\frac{3}{4}$: semua syarat terpenuhi ✓<br>
-      <strong>Kasus 2</strong> ($m = 1$): $2x+1 = 3x+4 \Rightarrow x = -3$. Basis $= 3(-3)+4 = -5 < 0$ — <strong>buang</strong>.<br>
-      Jadi $\text{HP} = \left\{\dfrac{3}{4}\right\}$.
+      <p class="sol-step"><span class="sol-no">3</span><strong>Kasus $m = \tfrac{1}{2}$:</strong> $(2x+1)^2 = 3x+4$</p>
+      $$\begin{align*} 4x^2 + x - 3 &= 0 \\ (4x-3)(x+1) &= 0 \end{align*}$$
+      <ul class="sol-cek">
+        <li>$x = -1$: basis $2x+1 = -1 < 0$ ✗ (dibuang)</li>
+        <li>$x = \tfrac{3}{4}$: basis $\tfrac{25}{4}$ dan $\tfrac{5}{2}$, keduanya $> 0$ dan $\neq 1$ ✓</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">4</span><strong>Kasus $m = 1$:</strong> $2x+1 = 3x+4 \Rightarrow x = -3$</p>
+      <ul class="sol-cek">
+        <li>$x = -3$: basis $3x+4 = -5 < 0$ ✗ (dibuang)</li>
+      </ul>
+      <div class="sol-jadi">$\text{HP} = \left\{\tfrac{3}{4}\right\}$.</div>
     </div>
 
     <div class="box box-latihan">
@@ -918,9 +1072,9 @@ $ a \neq 1 $, dan semua numerus positif.</p>
 
     <h3 class="subsection-title">2. Langkah-Langkah Penyelesaian</h3>
 
-    <div class="box box-rumus">
+    <div class="box box-definisi">
       <div class="box-label">Langkah-Langkah Umum</div>
-      <ol class="step-list" style="margin:0;font-size:.9rem;padding-left:1.4rem;">
+      <ol style="margin:0;font-size:.9rem;padding-left:1.4rem;">
         <li><strong>Samakan basis.</strong> Ubah seluruh ekspresi ke basis yang sama jika perlu.</li>
         <li><strong>Tentukan arah.</strong> Periksa apakah $a>1$ (arah tetap) atau $0&lt;a&lt;1$ (arah berbalik).</li>
         <li><strong>Selesaikan ketaksamaan numerus.</strong> Tulis dan selesaikan pertidaksamaan dari numerusnya.</li>
@@ -936,11 +1090,14 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{2}\!\log(3x-2) > 3$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Ubah ruas kanan: ${}^{2}\!\log(3x-2) > {}^{2}\!\log 8$.<br>
-      Basis $2 > 1$, arah <strong>tetap</strong>: $3x - 2 > 8 \Rightarrow x > \dfrac{10}{3}$. &nbsp;(1)<br>
-      Syarat numerus: $3x - 2 > 0 \Rightarrow x > \dfrac{2}{3}$. &nbsp;(2)<br>
-      Irisan (1) $\cap$ (2): $\boxed{\text{HP} = \left\{x \mid x > \dfrac{10}{3}\right\}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis ruas kanan sebagai logaritma</strong> berbasis 2:</p>
+      $${}^{2}\!\log(3x-2) > {}^{2}\!\log 8$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan numerus.</strong> Basis $2 > 1$, jadi arah tanda <strong>tetap</strong>:</p>
+      $$3x - 2 > 8 \;\Rightarrow\; x > \tfrac{10}{3} \qquad (1)$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Syarat numerus:</strong></p>
+      $$3x - 2 > 0 \;\Rightarrow\; x > \tfrac{2}{3} \qquad (2)$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Iris</strong> (1) dan (2): yang memenuhi keduanya adalah $x > \tfrac{10}{3}$.</p>
+      <div class="sol-jadi">$\text{HP} = \left\{x \mid x > \tfrac{10}{3}\right\}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -948,11 +1105,12 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{3}\!\log(x^2-4) < {}^{3}\!\log(3x)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Basis $3 > 1$, arah <strong>tetap</strong>:
-      $$\begin{align*} x^2 - 4 &< 3x \\ x^2 - 3x - 4 &< 0 \\ (x-4)(x+1) &< 0 \\ -1 < x &< 4 \tag{1} \end{align*}$$
-      Syarat numerus: $x^2-4 > 0 \Rightarrow x < -2$ atau $x > 2$ (2); &nbsp; $3x > 0 \Rightarrow x > 0$ (3).<br>
-      Irisan: $(-1<x<4)\cap(x>2)\cap(x>0) = \boxed{\{x \mid 2 < x < 4\}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bandingkan numerus.</strong> Basis $3 > 1$, jadi arah tanda <strong>tetap</strong>:</p>
+      $$\begin{align*} x^2 - 4 &< 3x \\ x^2 - 3x - 4 &< 0 \\ (x-4)(x+1) &< 0 \\ -1 < x &< 4 \qquad (1) \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Syarat numerus:</strong></p>
+      $$\begin{gather*} x^2 - 4 > 0 \\ x < -2 \text{ atau } x > 2 \qquad (2) \\ 3x > 0 \;\Rightarrow\; x > 0 \qquad (3) \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Iris</strong> (1), (2), dan (3): yang memenuhi semuanya adalah $2 < x < 4$.</p>
+      <div class="sol-jadi">$\text{HP} = \{x \mid 2 < x < 4\}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -960,10 +1118,12 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{2}\!\log(3x-6) \leq {}^{2}\!\log(2x+4)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Basis $2 > 1$, arah <strong>tetap</strong>: $3x-6 \leq 2x+4 \Rightarrow x \leq 10$. (1)<br>
-      Syarat: $3x-6 > 0 \Rightarrow x > 2$ (2); &nbsp; $2x+4 > 0 \Rightarrow x > -2$ (3).<br>
-      Irisan: $\boxed{\text{HP} = \{x \mid 2 < x \leq 10\}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bandingkan numerus.</strong> Basis $2 > 1$, jadi arah tanda <strong>tetap</strong>:</p>
+      $$3x - 6 \leq 2x + 4 \;\Rightarrow\; x \leq 10 \qquad (1)$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Syarat numerus:</strong></p>
+      $$\begin{gather*} 3x - 6 > 0 \;\Rightarrow\; x > 2 \qquad (2) \\ 2x + 4 > 0 \;\Rightarrow\; x > -2 \qquad (3) \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Iris</strong> (1), (2), dan (3): $2 < x \leq 10$.</p>
+      <div class="sol-jadi">$\text{HP} = \{x \mid 2 < x \leq 10\}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -971,12 +1131,14 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{3}\!\log(x-4) + {}^{3}\!\log(x-2)$ $<\, {}^{3}\!\log(4x-8)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Gabung kiri: ${}^{3}\!\log(x-4)(x-2) < {}^{3}\!\log(4x-8)$.<br>
-      Basis $3>1$, arah <strong>tetap</strong>:
-      $$(x-4)(x-2) < 4x-8 \Rightarrow x^2-10x+16 < 0 \Rightarrow (x-8)(x-2)<0 \Rightarrow 2<x<8 \tag{1}$$
-      Syarat: $x-4>0\Rightarrow x>4$ (2); $x-2>0$ (3); $4x-8>0\Rightarrow x>2$ (4).<br>
-      Irisan: $(2<x<8)\cap(x>4) = \boxed{\{x \mid 4 < x < 8\}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gabungkan ruas kiri</strong> (S3):</p>
+      $${}^{3}\!\log(x-4)(x-2) < {}^{3}\!\log(4x-8)$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan numerus.</strong> Basis $3 > 1$, jadi arah tanda <strong>tetap</strong>:</p>
+      $$\begin{align*} (x-4)(x-2) &< 4x - 8 \\ x^2 - 10x + 16 &< 0 \\ (x-2)(x-8) &< 0 \\ 2 < x &< 8 \qquad (1) \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Syarat numerus:</strong></p>
+      $$\begin{gather*} x - 4 > 0 \;\Rightarrow\; x > 4 \qquad (2) \\ x - 2 > 0 \;\Rightarrow\; x > 2 \qquad (3) \\ 4x - 8 > 0 \;\Rightarrow\; x > 2 \qquad (4) \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Iris</strong> (1) sampai (4): $4 < x < 8$.</p>
+      <div class="sol-jadi">$\text{HP} = \{x \mid 4 < x < 8\}$.</div>
     </div>
 
     <h3 class="subsection-title">4. Basis $0 < a < 1$ (Arah Berbalik)</h3>
@@ -986,11 +1148,14 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{1/3}\!\log(2x+1) \geq -2$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Ubah ruas kanan: $-2 = {}^{1/3}\!\log\left(\tfrac{1}{3}\right)^{-2} = {}^{1/3}\!\log 9$.<br>
-      Basis $\frac{1}{3} < 1$, arah <strong>berbalik</strong>: $2x+1 \leq 9 \Rightarrow x \leq 4$. (1)<br>
-      Syarat: $2x+1 > 0 \Rightarrow x > -\frac{1}{2}$. (2)<br>
-      Irisan: $\boxed{\text{HP} = \left\{x \mid -\dfrac{1}{2} < x \leq 4\right\}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis ruas kanan sebagai logaritma</strong> berbasis $\tfrac{1}{3}$:</p>
+      $$-2 = {}^{1/3}\!\log\left(\tfrac{1}{3}\right)^{-2} = {}^{1/3}\!\log 9$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan numerus.</strong> Basis $\tfrac{1}{3} < 1$, jadi arah tanda <strong>berbalik</strong>:</p>
+      $$2x + 1 \leq 9 \;\Rightarrow\; x \leq 4 \qquad (1)$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Syarat numerus:</strong></p>
+      $$2x + 1 > 0 \;\Rightarrow\; x > -\tfrac{1}{2} \qquad (2)$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Iris</strong> (1) dan (2): $-\tfrac{1}{2} < x \leq 4$.</p>
+      <div class="sol-jadi">$\text{HP} = \left\{x \mid -\tfrac{1}{2} < x \leq 4\right\}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -998,12 +1163,14 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Tentukan HP dari $2\,{}^{1/2}\!\log(x-5) \leq {}^{1/2}\!\log(x^2-8x+7)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Gunakan S5: $2\,{}^{1/2}\!\log(x-5) = {}^{1/2}\!\log(x-5)^2$.<br>
-      Basis $\frac{1}{2}<1$, arah <strong>berbalik</strong>:
-      $$\begin{align*} (x-5)^2 &\geq x^2-8x+7 \\ x^2 - 10x + 25 &\geq x^2 - 8x + 7 \\ -2x &\geq -18 \\ x &\leq 9 \tag{1} \end{align*}$$
-      Syarat: $x-5>0\Rightarrow x>5$ (2); &nbsp; $x^2-8x+7>0\Rightarrow x<1$ atau $x>7$ (3).<br>
-      Irisan: $x \leq 9$, $x > 5$, dan $x > 7$ menghasilkan $\boxed{\{x \mid 7 < x \leq 9\}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah koefisien menjadi pangkat</strong> (S5):</p>
+      $$2\,{}^{1/2}\!\log(x-5) = {}^{1/2}\!\log(x-5)^2$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan numerus.</strong> Basis $\tfrac{1}{2} < 1$, jadi arah tanda <strong>berbalik</strong>:</p>
+      $$\begin{align*} (x-5)^2 &\geq x^2 - 8x + 7 \\ x^2 - 10x + 25 &\geq x^2 - 8x + 7 \\ -2x &\geq -18 \\ x &\leq 9 \qquad (1) \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Syarat numerus:</strong></p>
+      $$\begin{gather*} x - 5 > 0 \;\Rightarrow\; x > 5 \qquad (2) \\ x^2 - 8x + 7 > 0 \\ x < 1 \text{ atau } x > 7 \qquad (3) \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Iris</strong> (1), (2), dan (3): $7 < x \leq 9$.</p>
+      <div class="sol-jadi">$\text{HP} = \{x \mid 7 < x \leq 9\}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1011,14 +1178,14 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{1/3}\!\log(2x^2-3x-2) \geq {}^{1/3}\!\log(x+2)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Basis $\frac{1}{3}<1$, arah <strong>berbalik</strong>:
-      $$\begin{align*} 2x^2-3x-2 &\leq x+2 \\ 2x^2-4x-4 &\leq 0 \\ x^2-2x-2 &\leq 0 \end{align*}$$
-      Akar: $x = 1 \pm \sqrt{3}$, sehingga $1-\sqrt{3} \leq x \leq 1+\sqrt{3}$. (1)<br>
-      Syarat: <br>$2x^2-3x-2>0$<br>$(2x+1)(x-2)>0 \Rightarrow x<-\frac{1}{2}$ atau $x>2$ (2); &nbsp; $x+2>0\Rightarrow x>-2$ (3).<br>
-      Catatan: $1-\sqrt{3}\approx-0{,}73$, $1+\sqrt{3}\approx 2{,}73$.<br>
-      Irisan:
-      $$\boxed{\begin{gathered} \text{HP} = \{x \mid 1-\sqrt{3} \leq x < -\tfrac{1}{2} \\ \text{atau } 2 < x \leq 1+\sqrt{3}\} \end{gathered}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bandingkan numerus.</strong> Basis $\tfrac{1}{3} < 1$, jadi arah tanda <strong>berbalik</strong>:</p>
+      $$\begin{align*} 2x^2 - 3x - 2 &\leq x + 2 \\ 2x^2 - 4x - 4 &\leq 0 \\ x^2 - 2x - 2 &\leq 0 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cari batasnya.</strong> Akar $x^2 - 2x - 2 = 0$ adalah $x = 1 \pm \sqrt{3}$, sehingga</p>
+      $$1 - \sqrt{3} \leq x \leq 1 + \sqrt{3} \qquad (1)$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Syarat numerus:</strong></p>
+      $$\begin{gather*} 2x^2 - 3x - 2 > 0 \\ (2x+1)(x-2) > 0 \\ x < -\tfrac{1}{2} \text{ atau } x > 2 \qquad (2) \\ x + 2 > 0 \;\Rightarrow\; x > -2 \qquad (3) \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Iris</strong> (1), (2), dan (3), dengan $1 - \sqrt{3} \approx -0{,}73$ dan $1 + \sqrt{3} \approx 2{,}73$.</p>
+      <div class="sol-jadi">$\text{HP} = \{x \mid 1-\sqrt{3} \leq x < -\tfrac{1}{2}$ atau $2 < x \leq 1+\sqrt{3}\}$.</div>
     </div>
 
     <h3 class="subsection-title">5. Pertidaksamaan Bentuk Kuadrat</h3>
@@ -1028,11 +1195,12 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Tentukan nilai $x > 0$ yang memenuhi $({}^{3}\!\log x)^2 - 2\,{}^{3}\!\log x - 3 \leq 0$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Misalkan $t = {}^{3}\!\log x$:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Misalkan</strong> $t = {}^{3}\!\log x$:</p>
       $$\begin{align*} t^2 - 2t - 3 &\leq 0 \\ (t-3)(t+1) &\leq 0 \\ -1 \leq t &\leq 3 \end{align*}$$
-      Kembalikan ke $x$: $3^{-1} \leq x \leq 3^3$, yaitu $\dfrac{1}{3} \leq x \leq 27$.<br>
-      Syarat $x > 0$ terpenuhi. &nbsp; $\boxed{\text{HP} = \left\{x \mid \dfrac{1}{3} \leq x \leq 27\right\}}$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kembalikan ke $x$.</strong> Basis $3 > 1$, arah tanda tetap:</p>
+      $$3^{-1} \leq x \leq 3^3 \;\Rightarrow\; \tfrac{1}{3} \leq x \leq 27$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Cek syarat:</strong> $x > 0$ sudah terpenuhi.</p>
+      <div class="sol-jadi">$\text{HP} = \left\{x \mid \tfrac{1}{3} \leq x \leq 27\right\}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1040,11 +1208,12 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Tentukan HP dari ${}^{1/2}\!\log(x^2-6x+8) > {}^{1/2}\!\log(x-2)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Basis $\frac{1}{2}<1$, arah <strong>berbalik</strong>:
-      $$x^2-6x+8 < x-2 \Rightarrow x^2-7x+10<0 \Rightarrow (x-2)(x-5)<0 \Rightarrow 2<x<5 \tag{1}$$
-      Syarat: $x^2-6x+8>0\Rightarrow(x-4)(x-2)>0\Rightarrow x<2$ atau $x>4$ (2); &nbsp; $x-2>0\Rightarrow x>2$ (3).<br>
-      Irisan: $(2<x<5)\cap(x>4)\cap(x>2) = \boxed{\{x \mid 4 < x < 5\}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bandingkan numerus.</strong> Basis $\tfrac{1}{2} < 1$, jadi arah tanda <strong>berbalik</strong>:</p>
+      $$\begin{align*} x^2 - 6x + 8 &< x - 2 \\ x^2 - 7x + 10 &< 0 \\ (x-2)(x-5) &< 0 \\ 2 < x &< 5 \qquad (1) \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Syarat numerus:</strong></p>
+      $$\begin{gather*} x^2 - 6x + 8 > 0 \\ (x-2)(x-4) > 0 \\ x < 2 \text{ atau } x > 4 \qquad (2) \\ x - 2 > 0 \;\Rightarrow\; x > 2 \qquad (3) \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Iris</strong> (1), (2), dan (3): $4 < x < 5$.</p>
+      <div class="sol-jadi">$\text{HP} = \{x \mid 4 < x < 5\}$.</div>
     </div>
 
     <div class="box box-latihan">
@@ -1200,12 +1369,13 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Sketsa grafik $y = {}^{2}\!\log x$: tentukan domain, titik potong, dan asimtot.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>Domain:</strong> $x > 0$, yaitu $D = (0,+\infty)$.<br>
-      <strong>Asimtot vertikal:</strong> $x = 0$.<br>
-      <strong>Titik potong sumbu-$X$:</strong> $y=0 \Rightarrow {}^{2}\!\log x = 0 \Rightarrow x = 1$. Titik: $(1,\,0)$.<br>
-      <strong>Titik potong sumbu-$Y$:</strong> $x=0$ tidak di domain — tidak ada.<br>
-      Gunakan tabel titik bantu di atas untuk membuat sketsa.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Domain:</strong> numerus $x > 0$, yaitu $D = (0, +\infty)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Asimtot tegak:</strong> $x = 0$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Titik potong sumbu-$X$:</strong> $y = 0$</p>
+      $${}^{2}\!\log x = 0 \;\Rightarrow\; x = 2^0 = 1$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Titik potong sumbu-$Y$:</strong> $x = 0$ bukan anggota domain, jadi tidak ada.</p>
+      <p class="sol-step"><span class="sol-no">5</span><strong>Sketsa:</strong> gunakan tabel titik bantu di atas; grafik naik karena basis $2 > 1$.</p>
+      <div class="sol-jadi">domainnya $x > 0$, asimtotnya $x = 0$, grafik memotong sumbu-$X$ di $(1, 0)$ dan tidak memotong sumbu-$Y$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1215,14 +1385,21 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       b. $h(x) = {}^{3}\!\log(4-x)$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> Domain: $x-2>0 \Rightarrow D_g=(2,+\infty)$. &nbsp; Asimtot: $x=2$.<br>
-      Titik potong sumbu-$X$: <br>${}^{3}\!\log(x-2)+1=0$<br>$\Rightarrow x-2=3^{-1}=\frac{1}{3}$<br>$\Rightarrow x=\frac{7}{3}$. Titik: $\left(\frac{7}{3},0\right)$.<br>
-      Titik potong sumbu-$Y$: $x=0\notin D_g$ — tidak ada.<br>
-      Transformasi: $f(x)={}^{3}\!\log x$ digeser 2 satuan kanan dan 1 satuan atas.<br><br>
-      <strong>b.</strong> Domain: $4-x>0 \Rightarrow x<4$, yaitu $D_h=(-\infty,4)$. &nbsp; Asimtot: $x=4$.<br>
-      Titik potong sumbu-$X$: $4-x=1 \Rightarrow x=3$. Titik: $(3,0)$.<br>
-      Titik potong sumbu-$Y$: $h(0)={}^{3}\!\log 4$. Titik: $(0,\,{}^{3}\!\log 4)$.
+      <div class="sol-part"><span class="sol-tag">a</span>$g(x) = {}^{3}\!\log(x-2) + 1$</div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Domain:</strong> $x - 2 > 0 \Rightarrow D_g = (2, +\infty)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Asimtot tegak:</strong> $x = 2$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Titik potong sumbu-$X$:</strong> $g(x) = 0$</p>
+      $$\begin{align*} {}^{3}\!\log(x-2) + 1 &= 0 \\ {}^{3}\!\log(x-2) &= -1 \\ x - 2 &= 3^{-1} \;\Rightarrow\; x = \tfrac{7}{3} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Titik potong sumbu-$Y$:</strong> $x = 0 \notin D_g$, jadi tidak ada.</p>
+      <p class="sol-step">Grafik $g$ adalah $f(x) = {}^{3}\!\log x$ yang digeser 2 satuan ke kanan dan 1 satuan ke atas.</p>
+      <div class="sol-jadi">$D_g = (2, +\infty)$, asimtot $x = 2$, titik potong sumbu-$X$ $\left(\tfrac{7}{3}, 0\right)$, tanpa titik potong sumbu-$Y$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$h(x) = {}^{3}\!\log(4-x)$</div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Domain:</strong> $4 - x > 0 \Rightarrow D_h = (-\infty, 4)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Asimtot tegak:</strong> $x = 4$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Titik potong sumbu-$X$:</strong> $h(x) = 0$</p>
+      $$4 - x = 3^0 = 1 \;\Rightarrow\; x = 3$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Titik potong sumbu-$Y$:</strong> $h(0) = {}^{3}\!\log 4$.</p>
+      <div class="sol-jadi">$D_h = (-\infty, 4)$, asimtot $x = 4$, titik potong $(3, 0)$ dan $(0,\ {}^{3}\!\log 4)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1230,12 +1407,12 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Sketsalah grafik $y = {}^{1/3}\!\log x$ dan tentukan sifat kemonotonannya.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>Domain:</strong> $x > 0$.<br>
-      <strong>Basis</strong> $a = \dfrac{1}{3} &lt; 1$, maka fungsi <strong>monoton turun</strong>.<br>
-      <strong>Titik potong sumbu-$X$:</strong> $y=0 \Rightarrow {}^{1/3}\!\log x = 0$<br>$\Rightarrow x = \left(\tfrac{1}{3}\right)^0 = 1$. Titik: $(1,\,0)$.<br>
-      <strong>Asimtot vertikal:</strong> $x = 0$.<br><br>
-      <strong>Tabel titik bantu:</strong>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Domain:</strong> numerus $x > 0$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kemonotonan:</strong> basis $\tfrac{1}{3} < 1$, maka fungsi <strong>monoton turun</strong>.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Titik potong sumbu-$X$:</strong> $y = 0$</p>
+      $${}^{1/3}\!\log x = 0 \;\Rightarrow\; x = \left(\tfrac{1}{3}\right)^0 = 1$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Asimtot tegak:</strong> $x = 0$.</p>
+      <p class="sol-step"><span class="sol-no">5</span><strong>Tabel titik bantu:</strong></p>
       <div class="table-wrap" style="margin-top:.4rem;">
         <table>
           <thead><tr><th>$x$</th><th>$y = {}^{1/3}\!\log x$</th></tr></thead>
@@ -1248,7 +1425,8 @@ $ a \neq 1 $, dan semua numerus positif.</p>
           </tbody>
         </table>
       </div>
-      Seperti pada ${}^{1/2}\!\log x = -{}^{2}\!\log x$ (Sifat S6 dan S5), demikian pula ${}^{1/3}\!\log x = -{}^{3}\!\log x$, sehingga grafiknya adalah refleksi $y = {}^{3}\!\log x$ terhadap sumbu-$X$.
+      <p class="sol-step"><span class="sol-no">6</span><strong>Hubungan dengan basis 3:</strong> ${}^{1/3}\!\log x = -{}^{3}\!\log x$ (S6 dan S5), jadi grafiknya adalah pencerminan $y = {}^{3}\!\log x$ terhadap sumbu-$X$.</p>
+      <div class="sol-jadi">grafik $y = {}^{1/3}\!\log x$ monoton turun, melalui $(1, 0)$, dengan asimtot $x = 0$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1256,11 +1434,14 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Tentukan titik potong dengan sumbu-$X$ dari $y = {}^{3}\!\log(2x^2-12x+17)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Titik potong sumbu-$X$: $y=0 \Rightarrow 2x^2-12x+17=1$
-      $$\begin{align*} 2x^2-12x+16 &= 0 \\ x^2-6x+8 &= 0 \\ (x-4)(x-2) &= 0 \end{align*}$$
-      $x=4$: $2(16)-12(4)+17=1>0$ ✓ &nbsp;&nbsp; $x=2$: $2(4)-12(2)+17=1>0$ ✓<br>
-      Titik potong: $T_1(2,\;0)$ dan $T_2(4,\;0)$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik potong sumbu-$X$:</strong> $y = 0$, sehingga numerusnya $= 3^0 = 1$:</p>
+      $$\begin{align*} 2x^2 - 12x + 17 &= 1 \\ 2x^2 - 12x + 16 &= 0 \\ x^2 - 6x + 8 &= 0 \\ (x-2)(x-4) &= 0 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cek syarat numerus</strong> $2x^2 - 12x + 17 > 0$:</p>
+      <ul class="sol-cek">
+        <li>$x = 2$: $8 - 24 + 17 = 1 > 0$ ✓</li>
+        <li>$x = 4$: $32 - 48 + 17 = 1 > 0$ ✓</li>
+      </ul>
+      <div class="sol-jadi">titik potongnya $(2, 0)$ dan $(4, 0)$.</div>
     </div>
 
     <div class="box box-latihan">
@@ -1302,12 +1483,16 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       c. ${}^{2}\!\log 3$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>a.</strong> $\ln 12 = \ln(2^2 \times 3) = 2\ln 2 + \ln 3$<br>
-      $\phantom{\ln 12} \approx 2(0{,}693) + 1{,}099 = \mathbf{2{,}485}$<br><br>
-      <strong>b.</strong> $\ln \dfrac{e^2}{3} = 2\ln e - \ln 3$<br>$= 2 - \ln 3 \approx \mathbf{0{,}901}$<br><br>
-      <strong>c.</strong> Pergantian basis ke basis $e$:<br>
-      ${}^{2}\!\log 3 = \dfrac{\ln 3}{\ln 2} \approx \dfrac{1{,}099}{0{,}693} \approx \mathbf{1{,}586}$
+      <div class="sol-part"><span class="sol-tag">a</span>$\ln 12$</div>
+      $$\begin{align*} \ln 12 &= \ln(2^2 \times 3) \\ &= 2\ln 2 + \ln 3 \\ &\approx 2(0{,}693) + 1{,}099 \end{align*}$$
+      <div class="sol-jadi">$\ln 12 \approx 2{,}485$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$\ln \dfrac{e^2}{3}$</div>
+      $$\begin{align*} \ln \frac{e^2}{3} &= 2\ln e - \ln 3 \\ &= 2 - \ln 3 \approx 2 - 1{,}099 \end{align*}$$
+      <div class="sol-jadi">$\ln \dfrac{e^2}{3} \approx 0{,}901$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>${}^{2}\!\log 3$</div>
+      <p class="sol-step">Ganti ke basis $e$ (S6):</p>
+      $${}^{2}\!\log 3 = \frac{\ln 3}{\ln 2} \approx \frac{1{,}099}{0{,}693}$$
+      <div class="sol-jadi">${}^{2}\!\log 3 \approx 1{,}586$.</div>
     </div>
   </section>
 
@@ -1337,9 +1522,13 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Sebuah kota berpenduduk 200.000 jiwa tumbuh 5% per tahun. Setelah berapa tahun penduduknya mencapai 400.000 jiwa? &nbsp;($\log 2 = 0{,}3010$; $\log 1{,}05 = 0{,}0212$)</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Model: $N(t) = 200.000 \times (1{,}05)^t$. Syarat: $N(t) = 400.000$:
-      $$\begin{align*} (1{,}05)^t &= 2 \\ t \cdot \log 1{,}05 &= \log 2 \\ t &= \frac{0{,}3010}{0{,}0212} \approx \mathbf{14{,}2 \text{ tahun}} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis modelnya:</strong></p>
+      $$N(t) = 200.000 \times (1{,}05)^t$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Samakan dengan target</strong> 400.000 jiwa:</p>
+      $$\begin{align*} 200.000 \times (1{,}05)^t &= 400.000 \\ (1{,}05)^t &= 2 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Logaritmakan kedua ruas:</strong></p>
+      $$\begin{align*} t \cdot \log 1{,}05 &= \log 2 \\ t &= \frac{0{,}3010}{0{,}0212} \approx 14{,}2 \end{align*}$$
+      <div class="sol-jadi">penduduk mencapai 400.000 jiwa setelah sekitar 14,2 tahun.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1347,9 +1536,11 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Intensitas gempa A adalah $10^{6{,}5}$ kali $I_0$ dan gempa B adalah $10^8$ kali $I_0$. Berapa kali lebih kuat gempa B dibanding A?</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $M_A = 6{,}5$, $M_B = 8$. Selisih: $M_B - M_A = 1{,}5$.<br>
-      Gempa B lebih kuat $10^{1{,}5} = 10\sqrt{10} \approx \mathbf{31{,}6}$ kali.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung skala Richter</strong> dengan $M = \log\dfrac{I}{I_0}$:</p>
+      $$\begin{gather*} M_A = \log 10^{6{,}5} = 6{,}5 \\ M_B = \log 10^{8} = 8 \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan intensitasnya:</strong></p>
+      $$\frac{I_B}{I_A} = \frac{10^{8}}{10^{6{,}5}} = 10^{1{,}5} = 10\sqrt{10} \approx 31{,}6$$
+      <div class="sol-jadi">gempa B sekitar 31,6 kali lebih kuat daripada gempa A.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1357,8 +1548,9 @@ $ a \neq 1 $, dan semua numerus positif.</p>
       <p style="margin:0;font-size:.9rem;">Suatu larutan memiliki $[\text{H}^+] = 5 \times 10^{-4}$ mol/L. Tentukan pH-nya. &nbsp;($\log 5 = 0{,}699$)</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{align*} \text{pH} &= -\log(5 \times 10^{-4}) \\ &= -(\log 5 + \log 10^{-4}) \\ &= -(0{,}699 - 4) = \mathbf{3{,}301} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan</strong> $\text{pH} = -\log[\text{H}^+]$:</p>
+      $$\begin{align*} \text{pH} &= -\log(5 \times 10^{-4}) \\ &= -(\log 5 + \log 10^{-4}) \\ &= -(0{,}699 - 4) \end{align*}$$
+      <div class="sol-jadi">pH larutan $= 3{,}301$.</div>
     </div>
 
     <div class="box box-latihan">

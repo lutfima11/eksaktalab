@@ -1334,3 +1334,18 @@ mjx-container[display="true"] {
 .soal-answer-inner {
   position: relative;
 }
+/* ── FORMAT BAKU PENYELESAIAN ─────────────────
+   .sol-part  : judul bagian soal (a, b, …)
+   .sol-step  : satu langkah = nomor + nama langkah, lalu kalimat/rumus
+   .sol-cek   : daftar pemeriksaan nilai (✓ / ✗)
+   .sol-jadi  : kotak jawaban akhir (satu-satunya penekanan hasil) */
+.sol-part{display:flex;align-items:center;gap:.5rem;margin:1.1rem 0 .3rem;font-weight:600;color:var(--text);}
+.penyelesaian-inner > .sol-part:first-child{margin-top:.1rem;}
+.sol-tag{display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:50%;background:var(--teal);color:#fff;font-family:var(--mono);font-size:.75rem;font-weight:700;flex-shrink:0;}
+.sol-step{margin:.55rem 0 .1rem;}
+.sol-no{font-family:var(--mono);font-size:.72rem;font-weight:700;color:var(--teal);margin-right:.35rem;}
+.sol-step strong{color:var(--text);}
+.sol-cek{list-style:none;margin:.2rem 0 .3rem;padding-left:.2rem;}
+.sol-cek li{margin:.15rem 0;}
+.sol-jadi{margin:.7rem 0 .2rem;padding:.5rem .8rem;border-left:3px solid var(--teal);background:rgba(0,191,165,.08);border-radius:0 var(--radius-sm) var(--radius-sm) 0;color:var(--text);}
+.sol-jadi::before{content:"Jadi, ";font-weight:600;}
