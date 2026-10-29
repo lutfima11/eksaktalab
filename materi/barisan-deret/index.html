@@ -33,6 +33,7 @@ window.MathJax = {
 <meta name="twitter:description" content="Materi lengkap Barisan dan Deret SMA: barisan aritmatika, geometri, deret tak hingga, dan aplikasinya.">
   <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Barisan dan Deret","url":"https://web.eksaktalab.my.id/materi/barisan-deret/","description":"Materi lengkap Barisan dan Deret SMA: barisan aritmatika, geometri, deret tak hingga, dan aplikasinya.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://web.eksaktalab.my.id/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://web.eksaktalab.my.id/"},{"@type":"ListItem","position":3,"name":"Barisan dan Deret","item":"https://web.eksaktalab.my.id/materi/barisan-deret/"}]}}</script>
+<style>@media(max-width:500px){.table-wrap th,.table-wrap td{padding:.45rem .35rem}.table-wrap table{font-size:.72rem}}@media(max-width:400px){.table-wrap th,.table-wrap td{padding:.4rem .25rem}.table-wrap table{font-size:.66rem}.soal-item-header{flex-wrap:wrap}.soal-key-btn{margin-left:auto}}@media(max-width:360px){.rumus-status{display:none}}</style>
 </head>
 <body>
 
@@ -307,7 +308,7 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">• Hubungan $U_n$ dan $S_n$</div>
-      $$U_1 = S_1 \qquad \text{dan} \qquad U_n = S_n - S_{n-1} \quad \text{untuk } n \geq 2$$
+      $$\begin{gather*} U_1 = S_1 \\ U_n = S_n - S_{n-1} \quad (n \geq 2) \end{gather*}$$
     </div>
 
     <div class="box box-contoh">
@@ -329,7 +330,7 @@ window.MathJax = {
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong><br>
       Karena $U_n = S_n - S_{n-1}$, maka:
-      $$\begin{align*} U_n &= an^2 + bn - a(n-1)^2 - b(n-1) \\ &= 2an - a + b \end{align*}$$
+      $$\begin{align*} U_n &= an^2 + bn - a(n-1)^2 \\ &\quad - b(n-1) \\ &= 2an - a + b \end{align*}$$
       Sehingga:
       $$\begin{align*} U_3 &= 5a + b = 11 \quad \cdots(1) \\ U_5 &= 9a + b = 19 \quad \cdots(2) \end{align*}$$
       Dari $(2) - (1)$: $4a = 8 \Rightarrow a = 2$. Substitusi ke (1): $b = 1$.
@@ -411,14 +412,15 @@ window.MathJax = {
     <h3 class="subsection-title">3. Jumlah $n$ Suku Pertama Deret Aritmatika</h3>
 
     <p>Jumlah $n$ suku pertama deret aritmatika diturunkan sebagai berikut:</p>
-    $$S_n = a + (a+b) + (a+2b) + \cdots + U_n$$
-    $$S_n = U_n + (U_n-b) + (U_n-2b) + \cdots + a$$
-    <p>Menjumlahkan kedua baris: $2S_n = \underbrace{(a+U_n) + (a+U_n) + \cdots + (a+U_n)}_{n \text{ kali}}$</p>
+    $$\begin{align*} S_n &= a + (a+b) + (a+2b) \\ &\quad + \cdots + U_n \end{align*}$$
+    $$\begin{align*} S_n &= U_n + (U_n-b) + (U_n-2b) \\ &\quad + \cdots + a \end{align*}$$
+    <p>Menjumlahkan kedua baris:</p>
+    $$2S_n = \underbrace{(a+U_n) + \cdots + (a+U_n)}_{n \text{ kali}}$$
     <p>Sehingga $2S_n = n\,(a+U_n)$, dan:</p>
 
     <div class="box box-rumus">
       <div class="box-label">• Rumus Jumlah $n$ Suku Pertama Deret Aritmatika</div>
-      $$S_n = \frac{n}{2}(a + U_n) \qquad \text{atau} \qquad S_n = \frac{n}{2}\bigl[2a + (n-1)\,b\bigr]$$
+      $$\begin{gather*} S_n = \frac{n}{2}(a + U_n) \\ \text{atau} \\ S_n = \frac{n}{2}\bigl[2a + (n-1)\,b\bigr] \end{gather*}$$
     </div>
 
     <h3 class="subsection-title">4. Suku Tengah Barisan Aritmatika</h3>
@@ -491,7 +493,7 @@ window.MathJax = {
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong><br>
       Setelah penyisipan, barisan memiliki $2 + 5 = 7$ suku, dengan $U_1 = 4$ dan $U_7 = 28$.
-      $$U_7 = a + 6b \;\Rightarrow\; 28 = 4 + 6b \;\Rightarrow\; b = 4$$
+      $$\begin{align*} U_7 &= a + 6b \\ 28 &= 4 + 6b \;\Rightarrow\; b = 4 \end{align*}$$
       Kelima bilangan yang disisipkan: 
       $$U_2= a + b = 4 + 4 = 8$$
       $$U_3= a + 2b = 4 + 8 = 12$$
@@ -507,7 +509,7 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong>
-      $$\begin{align*} U_8 &= a + 7b = 33 \;\Rightarrow\; a = 33 - 28 = 5 \\ S_{10} &= \frac{10}{2}\bigl[2(5) + (10-1)(4)\bigr] \\ &= 5\bigl[10 + 36\bigr] \\ &= 230 \end{align*}$$
+      $$\begin{align*} U_8 &= a + 7b = 33 \\ a &= 33 - 28 = 5 \\ S_{10} &= \frac{10}{2}\bigl[2(5) + (10-1)(4)\bigr] \\ &= 5\bigl[10 + 36\bigr] \\ &= 230 \end{align*}$$
     </div>
 
     <div class="box box-contoh">
@@ -528,7 +530,7 @@ window.MathJax = {
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong><br>
       Misalkan tiga suku pertama adalah $a-b,\; a,\; a+b$.
-      $$\begin{align*} (a-b) + a + (a+b) &= 21 \\ 3a &= 21 \;\Rightarrow\; a = 7 \\ (a-b)(a+b) &= 45 \;\Rightarrow\; a^2 - b^2 = 45 \\ 49 - b^2 &= 45 \\ b^2 &= 4 \;\Rightarrow\; b = \pm 2 \end{align*}$$
+      $$\begin{align*} (a-b) + a + (a+b) &= 21 \\ 3a &= 21 \;\Rightarrow\; a = 7 \\ (a-b)(a+b) &= 45 \\ a^2 - b^2 &= 45 \\ 49 - b^2 &= 45 \\ b^2 &= 4 \;\Rightarrow\; b = \pm 2 \end{align*}$$
       Karena barisan naik, bedanya positif, sehingga $b = 2$ (nilai $b = -2$ tidak dipakai karena membuat barisan turun).<br><br>
       Suku ke-10 dari suku pertama $U_1 = a - b$:
       $$\begin{align*} U_{10} &= (7-2) + 9(2) \\ &= 5 + 18 \\ &= 23 \end{align*}$$
@@ -541,9 +543,9 @@ window.MathJax = {
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong><br>
       Total tiang yang dapat dibeli: $\dfrac{480.000.000}{2.000.000} = 240$ tiang.<br><br>
-      Jumlah tiang untuk $n$ baris: $S_n = \dfrac{n}{2}[2(8)+(n-1)(3)] = \dfrac{n(3n+13)}{2}$<br><br>
+      Jumlah tiang untuk $n$ baris: $S_n = \dfrac{n}{2}[2(8)+(n-1)(3)]$<br>$\phantom{S_n} = \dfrac{n(3n+13)}{2}$<br><br>
       Syarat: $S_n \leq 240$:
-      $$\frac{n(3n+13)}{2} \leq 240 \;\Rightarrow\; 3n^2 + 13n - 480 \leq 0$$
+      $$\begin{gather*} \frac{n(3n+13)}{2} \leq 240 \\ 3n^2 + 13n - 480 \leq 0 \end{gather*}$$
       Dengan rumus kuadrat: 
       $$ \begin{align*} n &= \dfrac{-13 \pm \sqrt{169 + 5760}}{6} \\ &= \dfrac{-13 \pm \sqrt{5929}}{6} \\ &= \dfrac{-13 \pm 77}{6} \end{align*}$$<br><br>
       Ambil $n$ positif: $n = \dfrac{64}{6} \approx 10{,}67$, maka $n_{\max} = 10$.<br><br>
@@ -640,7 +642,7 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">• Rumus Jumlah $n$ Suku Pertama Deret Geometri</div>
-      $$S_n = \frac{a(r^n - 1)}{r - 1} = \frac{a(1 - r^n)}{1 - r}, \qquad r \neq 1$$
+      $$\begin{gather*} S_n = \frac{a(r^n - 1)}{r - 1} = \frac{a(1 - r^n)}{1 - r} \\ (r \neq 1) \end{gather*}$$
     </div>
     <p>Jika $r = 1$, maka $S_n = na$.</p>
     <h3 class="subsection-title">4. Suku Tengah Barisan Geometri</h3>
@@ -689,7 +691,7 @@ window.MathJax = {
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong><br>
       Misalkan ketiga bilangan adalah $\dfrac{a}{r},\; a,\; ar$.
-      $$\begin{align*} \frac{a}{r} \cdot a \cdot ar &= 64 \;\Rightarrow\; a^3 = 64 \;\Rightarrow\; a = 4 \\ \frac{4}{r} + 4 + 4r &= 14 \\ 4 + 4r + 4r^2 &= 14r \\ 4r^2 - 10r + 4 &= 0 \\ 2r^2 - 5r + 2 &= 0 \\ (2r - 1)(r - 2) &= 0 \end{align*}$$
+      $$\begin{align*} \frac{a}{r} \cdot a \cdot ar &= 64 \\ a^3 &= 64 \;\Rightarrow\; a = 4 \\ \frac{4}{r} + 4 + 4r &= 14 \\ 4 + 4r + 4r^2 &= 14r \\ 4r^2 - 10r + 4 &= 0 \\ 2r^2 - 5r + 2 &= 0 \\ (2r - 1)(r - 2) &= 0 \end{align*}$$
       Jadi $r = \dfrac{1}{2}$ atau $r = 2$.<br><br>
       Ketiga bilangan: $8,\; 4,\; 2$ atau $2,\; 4,\; 8$.
     </div>
@@ -741,10 +743,10 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong>
-      $$\begin{align*} U_3 + U_5 &= ar^2(1+r^2) = 180 \quad\cdots(1) \\ U_2 \cdot U_6 &= a^2r^6 = (ar^3)^2 = 2304 \quad\cdots(2) \end{align*}$$
+      $$\begin{align*} U_3 + U_5 &= ar^2(1+r^2) \\ &= 180 \quad\cdots(1) \\ U_2 \cdot U_6 &= a^2r^6 = (ar^3)^2 \\ &= 2304 \quad\cdots(2) \end{align*}$$
       Dari (2): $(ar^3)^2 = 2304 \;\Rightarrow\; ar^3 = 48$ (positif), sehingga $U_4 = ar^3 = 48$.<br><br>
       Verifikasi dari (1): $\dfrac{48}{r}(1+r^2) = 180$, sehingga:
-      $$\begin{align*} 48r^2 - 180r + 48 &= 0 \\ 4r^2 - 15r + 4 &= 0 \\ (4r-1)(r-4) &= 0 \;\Rightarrow\; r = 4 \text{ atau } r = \tfrac{1}{4} \end{align*}$$
+      $$\begin{align*} 48r^2 - 180r + 48 &= 0 \\ 4r^2 - 15r + 4 &= 0 \\ (4r-1)(r-4) &= 0 \\ r = 4 \text{ atau } r &= \tfrac{1}{4} \end{align*}$$
     </div>
 
     <div class="box box-contoh">
@@ -759,10 +761,10 @@ window.MathJax = {
       $3^7 = 2187 &lt; 5001$ dan $3^8 = 6561 &gt; 5001$, jadi lockdown diberlakukan pada <strong>hari ke-8</strong>.<br><br>
       Jumlah terinfeksi di hari ke-8: $U_8 = 4 \cdot 3^7 = 4 \cdot 2187 = 8748$ orang.<br><br>
       <strong>Bagian 2:</strong> Setelah lockdown, deret geometri tak hingga baru dimulai dari $U_8 = 8748$ dengan rasio $r = \dfrac{1}{2}$.
-      $$S_{\text{lockdown}} = \frac{8748}{1 - \tfrac{1}{2}} = 8748 \times 2 = 17.496$$
+      $$\begin{align*} S_{\text{lockdown}} &= \frac{8748}{1 - \tfrac{1}{2}} \\ &= 8748 \times 2 = 17.496 \end{align*}$$
       Total infeksi $= S_7 + S_{\text{lockdown}}$:
       $$S_7 = 2(3^7-1) = 2(2187-1) = 4372$$
-      $$\text{Total} = 4372 + 17.496 = 21.868 \text{ orang}$$
+      $$\begin{align*} \text{Total} &= 4372 + 17.496 \\ &= 21.868 \text{ orang} \end{align*}$$
     </div>
 
     <div class="box box-latihan">
@@ -960,7 +962,7 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">• Rumus Deret Geometri Tak Hingga (Konvergen)</div>
-      $$S_\infty = \frac{a}{1-r}, \qquad \text{syarat: } |r| < 1 \;\; (-1 < r < 1)$$
+      $$\begin{gather*} S_\infty = \frac{a}{1-r} \\ \text{syarat: } |r| < 1 \;\; (-1 < r < 1) \end{gather*}$$
     </div>
     <p style="margin:.4rem 0 0;font-size:.9rem;">Jika $|r| \geq 1$, deret <strong>divergen</strong> dan jumlahnya tidak berhingga.</p>
     <div class="box box-catatan">
@@ -994,7 +996,7 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong><br>
-      $0{,}3\overline{6} = 0{,}3 + 0{,}06 + 0{,}006 + 0{,}0006 + \cdots$<br><br>
+      $0{,}3\overline{6} = 0{,}3 + 0{,}06$<br>$\phantom{0{,}3\overline{6}} \quad + 0{,}006 + 0{,}0006 + \cdots$<br><br>
       Bagian berulangnya: $a = 0{,}06$, $r = 0{,}1$, maka:
       $$\begin{align*} \text{Bagian berulang} &= \frac{0{,}06}{1 - 0{,}1} \\ &= \frac{0{,}06}{0{,}9} = \frac{1}{15} \\ 0{,}3\overline{6} &= 0{,}3 + \frac{1}{15} \\ &= \frac{3}{10} + \frac{1}{15} \\ &= \frac{9}{30} + \frac{2}{30} = \frac{11}{30} \end{align*}$$
     </div>
@@ -1066,7 +1068,7 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong><br>
-      Suku-suku bernomor genap: $U_2 + U_4 + U_6 + \cdots = ar + ar^3 + ar^5 + \cdots$<br><br>
+      Suku-suku bernomor genap: $U_2 + U_4 + U_6 + \cdots$<br>$= ar + ar^3 + ar^5 + \cdots$<br><br>
       Ini adalah deret geometri tak hingga baru dengan suku pertama $ar$ dan rasio $r^2$:
       $$\begin{align*} S_{\text{genap}} &= \frac{ar}{1 - r^2} \\ &= \frac{24 \cdot \frac{1}{3}}{1 - \left(\frac{1}{3}\right)^2} \\ &= \frac{8}{1 - \frac{1}{9}} \\ &= \frac{8}{\frac{8}{9}} \\ &= 9 \end{align*}$$
     </div>
@@ -1099,7 +1101,7 @@ window.MathJax = {
       $$S_2 = \frac{40}{\frac{1}{4}} = 160 \text{ cm}$$
       Perhatikan pola suku awal tiap siklus: $120, 40, \dfrac{40}{3}, \ldots$ — ini sendiri adalah barisan geometri dengan rasio $\dfrac{1}{3}$.<br><br>
       Total jarak = deret geometri tak hingga dengan suku pertama $S_1 = 480$ dan rasio $\dfrac{1}{3}$:
-      $$\text{Total} = \frac{480}{1 - \frac{1}{3}} = \frac{480}{\frac{2}{3}} = 480 \times \frac{3}{2} = 720 \text{ cm}$$
+      $$\begin{align*} \text{Total} &= \frac{480}{1 - \frac{1}{3}} = \frac{480}{\frac{2}{3}} \\ &= 480 \times \frac{3}{2} = 720 \text{ cm} \end{align*}$$
     </div>
 
     <div class="box box-latihan">
@@ -1181,7 +1183,7 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong>
-      $$M_6 = 4.000.000 \times (1{,}02)^6 \approx 4.000.000 \times 1{,}1262 = \text{Rp 4.504.800}$$
+      $$\begin{align*} M_6 &= 4.000.000 \times (1{,}02)^6 \\ &\approx 4.000.000 \times 1{,}1262 \\ &= \text{Rp 4.504.800} \end{align*}$$
     </div>
 
     <h3 class="subsection-title">2. Pertumbuhan dan Peluruhan</h3>
@@ -1200,7 +1202,7 @@ window.MathJax = {
 </p>
     <div class="box box-rumus">
       <div class="box-label">• Pertumbuhan Geometri</div>
-      $$M_n = M_0 \cdot r^n \quad (r > 1) \qquad \text{atau} \qquad M_n = M_0(1+p)^n$$
+      $$\begin{gather*} M_n = M_0 \cdot r^n \quad (r > 1) \\ \text{atau} \\ M_n = M_0(1+p)^n \end{gather*}$$
     </div>
     <p>dengan:
     <ul>
@@ -1225,7 +1227,7 @@ window.MathJax = {
 </p>
     <div class="box box-rumus">
       <div class="box-label">• Peluruhan Geometri</div>
-      $$M_n = M_0 \cdot r^n \quad (0 < r < 1) \qquad \text{atau} \qquad M_n = M_0(1-p)^n$$
+      $$\begin{gather*} M_n = M_0 \cdot r^n \quad (0 < r < 1) \\ \text{atau} \\ M_n = M_0(1-p)^n \end{gather*}$$
     </div>
     <p>dengan:
     <ul>
@@ -1243,7 +1245,7 @@ window.MathJax = {
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong><br>
       Dalam 2 jam $= 120$ menit $\;\Rightarrow\; n = \dfrac{120}{20} = 6$ kali pembelahan.
-      $$M_6 = 50 \times 2^6 = 50 \times 64 = 3200 \text{ bakteri}$$
+      $$\begin{align*} M_6 &= 50 \times 2^6 = 50 \times 64 \\ &= 3200 \text{ bakteri} \end{align*}$$
     </div>
 
     <div class="box box-contoh">
@@ -1283,9 +1285,9 @@ window.MathJax = {
       Tabungan Andi (pola geometri): $M_A = 8.000.000 \times (1{,}1)^n$<br>
       Tabungan Budi (pola aritmatika): $M_B = 10.000.000 \times (1 + 0{,}05n)$<br><br>
       Pemeriksaan nilai:
-      $$n=3: \quad M_A = 10.648.000 < M_B = 11.500.000$$
-      $$n=4: \quad M_A = 11.712.800 < M_B = 12.000.000$$
-      $$n=5: \quad M_A = 12.884.080 > M_B = 12.500.000$$
+      $$\begin{aligned} n=3: \quad M_A &= 10.648.000 \\ M_B &= 11.500.000 \\ &\Rightarrow M_A < M_B \end{aligned}$$
+      $$\begin{aligned} n=4: \quad M_A &= 11.712.800 \\ M_B &= 12.000.000 \\ &\Rightarrow M_A < M_B \end{aligned}$$
+      $$\begin{aligned} n=5: \quad M_A &= 12.884.080 \\ M_B &= 12.500.000 \\ &\Rightarrow M_A > M_B \end{aligned}$$
       Jadi tabungan Andi pertama kali melebihi tabungan Budi pada <strong>tahun ke-5</strong>. Walaupun modal awal Andi lebih kecil, bunga majemuk tumbuh secara geometri sehingga akhirnya menyusul bunga tunggal yang tumbuh secara aritmatika.
     </div>
 
@@ -1296,7 +1298,7 @@ window.MathJax = {
     <div class="penyelesaian">
       <strong>Penyelesaian:</strong><br>
       <strong>(a) Bunga majemuk:</strong> syarat dua kali lipat
-      $$500 \times (1{,}06)^n \geq 1000 \;\Rightarrow\; (1{,}06)^n \geq 2$$
+      $$\begin{gather*} 500 \times (1{,}06)^n \geq 1000 \\ (1{,}06)^n \geq 2 \end{gather*}$$
       Karena $(1{,}06)^{11} = 1{,}8983 < 2$ dan $(1{,}06)^{12} = 2{,}0122 > 2$, modal menjadi dua kali lipat dalam <strong>12 tahun</strong>.<br><br>
       <strong>(b) Bunga tunggal:</strong>
       $$\begin{align*} 500(1 + 0{,}06n) &\geq 1000 \\ 1 + 0{,}06n &\geq 2 \\ n &\geq 16{,}67 \end{align*}$$
@@ -1339,7 +1341,7 @@ window.MathJax = {
     <div class="box box-definisi">
       <div class="box-label">Cara membaca $a$ dan $b$ dari rumus $U_n$:</div>
     <p>Jika diketahui $U_n = pn + q$ (bentuk linier dalam $n$), maka:
-    $$b = p \qquad \text{dan} \qquad a - b = q \;\Rightarrow\; a = p + q$$
+    $$\begin{gather*} b = p \\ a - b = q \;\Rightarrow\; a = p + q \end{gather*}$$
     Contoh: <br>
     $U_n = 3n + 4 \;\Rightarrow\; b = 3$ dan $a = 3 + 4 = 7$, sehingga barisan: $7,\; 10,\; 13,\; \ldots$</p>
     </div>
@@ -1353,15 +1355,15 @@ window.MathJax = {
     <div class="box box-definisi">
       <div class="box-label">Cara membaca $a$ dan $b$ dari rumus $S_n$:</div>
     <p>Jika diketahui $S_n = \alpha n^2 + \beta n$ (bentuk kuadrat dalam $n$), dengan membandingkan:
-    $$\frac{b}{2} = \alpha \;\Rightarrow\; b = 2\alpha \qquad \text{dan} \qquad a - \frac{b}{2} = \beta \;\Rightarrow\; a = \alpha + \beta$$</p>
+    $$\begin{gather*} \frac{b}{2} = \alpha \;\Rightarrow\; b = 2\alpha \\ a - \frac{b}{2} = \beta \;\Rightarrow\; a = \alpha + \beta \end{gather*}$$</p>
       <p>Contoh: <br>
     $S_n = n^2 + 2n \;\Rightarrow\; b = 2\times 1 = 2$ dan $a = 1 + 2 = 3$</p>
   </div>
     <div class="box box-catatan">
       <div class="box-label">⚠ Ringkasan membaca koefisien</div>
       <p style="margin:0;font-size:.9rem;">
-      $$S_n = \underbrace{\alpha}_{\frac{b}{2}} n^2 + \underbrace{\beta}_{a\,-\,\frac{b}{2}} n \quad\Longrightarrow\quad b = 2\alpha, \quad a = \alpha + \beta$$
-      $$U_n = \underbrace{p}_{b}\, n + \underbrace{q}_{a\,-\,b} \quad\Longrightarrow\quad b = p, \quad a = p + q$$
+      $$\begin{gather*} S_n = \underbrace{\alpha}_{\frac{b}{2}} n^2 + \underbrace{\beta}_{a\,-\,\frac{b}{2}} n \\ \Longrightarrow\quad b = 2\alpha, \quad a = \alpha + \beta \end{gather*}$$
+      $$\begin{gather*} U_n = \underbrace{p}_{b}\, n + \underbrace{q}_{a\,-\,b} \\ \Longrightarrow\quad b = p, \quad a = p + q \end{gather*}$$
       </p>
     </div>
 
@@ -1424,7 +1426,7 @@ window.MathJax = {
     <h3 class="subsection-title">2. Rahasia Beda: Selisih Suku pada Barisan Aritmatika</h3>
 
     <p>Bentuk linier $U_n = bn + (a-b)$ memperlihatkan bahwa $U_n$ adalah fungsi linear terhadap $n$. Dari sini kita dapat menurunkan sifat selisih antar suku secara langsung:</p>
-    $$\begin{align*} U_n - U_k &= [bn + (a-b)] - [bk + (a-b)] \\ &= bn - bk \\ &= b(n-k) \end{align*}$$
+    $$\begin{align*} U_n - U_k &= [bn + (a-b)] \\ &\quad - [bk + (a-b)] \\ &= bn - bk \\ &= b(n-k) \end{align*}$$
 
     <div class="box box-rumus">
       <div class="box-label">Rahasia Beda</div>
@@ -1919,7 +1921,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4 — Latihan Pengayaan (7 soal)
     4: [
       { jawaban: `$U_n = 3n+4$; $S_n = \\dfrac{3n^2+11n}{2}$; $U_{10}=34$; $S_{10}=205$` },
-      { jawaban: `$b=4,\\; a=5,\\; U_n=4n+1,\\; U_7=29$` },
+      { jawaban: `$b=4$, $a=5$, $U_n=4n+1$, $U_7=29$` },
       { jawaban: `$U_1=5,\\; U_5=13,\\; U_{10}=23$` },
       { jawaban: `$b=4,\\; a=3,\\; S_{10}=210$` },
       { jawaban: `$r=2,\\; a=3,\\; U_8=384$` },
