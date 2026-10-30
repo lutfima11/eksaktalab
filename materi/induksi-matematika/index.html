@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Induksi Matematika — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
+<meta name="description" content="Materi lengkap Induksi Matematika SMA: prinsip induksi, pembuktian rumus deret, barisan rekursif, keterbagian, ketaksamaan, dan induksi kuat. Dilengkapi 24 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script>window.addEventListener("load",function(){var s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";document.head.appendChild(s);});</script>
+<link rel="canonical" href="https://web.eksaktalab.my.id/materi/induksi-matematika/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://web.eksaktalab.my.id/materi/induksi-matematika/">
+<meta property="og:title" content="Induksi Matematika — EksaktaLab">
+<meta property="og:description" content="Materi lengkap Induksi Matematika SMA: prinsip induksi, pembuktian rumus deret, barisan rekursif, keterbagian, ketaksamaan, dan induksi kuat. Dilengkapi 24 contoh soal dan pembahasan.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+<meta property="og:site_name" content="EksaktaLab">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Induksi Matematika — EksaktaLab">
+<meta name="twitter:description" content="Materi lengkap Induksi Matematika SMA: pembuktian rumus deret, keterbagian, ketaksamaan, dan induksi kuat.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Induksi Matematika","url":"https://web.eksaktalab.my.id/materi/induksi-matematika/","description":"Materi lengkap Induksi Matematika SMA: pembuktian rumus deret, keterbagian, ketaksamaan, dan induksi kuat.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://web.eksaktalab.my.id/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://web.eksaktalab.my.id/"},{"@type":"ListItem","position":3,"name":"Induksi Matematika","item":"https://web.eksaktalab.my.id/materi/induksi-matematika/"}]}}</script>
+<style>@media(max-width:500px){.table-wrap th,.table-wrap td{padding:.45rem .35rem}.table-wrap table{font-size:.72rem}}@media(max-width:400px){.table-wrap th,.table-wrap td{padding:.4rem .25rem}.table-wrap table{font-size:.66rem}.soal-item-header{flex-wrap:wrap}.soal-key-btn{margin-left:auto}}@media(max-width:360px){.rumus-status{display:none}}.tt-bool th,.tt-bool td{text-align:center}.tt .hl{font-weight:600}td.hl{background:rgba(0,191,165,.10)}.ind-svg{font-family:var(--sans)}.ind-t{fill:var(--text);font-size:14px}.ind-bold{font-weight:700;font-size:22px}.ind-s{fill:var(--text-2);font-size:13px;font-style:italic}.ind-acc{fill:var(--teal);font-weight:700}.ind-ok{fill:var(--green-b);font-weight:700}.ind-ground{stroke:var(--text-2);stroke-width:2}.ind-dom{fill:var(--surface-2);stroke:var(--text-2);stroke-width:1.5}.ind-fall{fill:rgba(0,191,165,.25);stroke:var(--teal)}.ind-hit{stroke:var(--teal)}.ind-arrow{fill:none;stroke:var(--teal);stroke-width:2}.ind-arrowhead{fill:var(--teal)}.rumus-body-inner strong,.rumus-body-inner b,.rumus-body-inner em{color:#fff}</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Induksi Matematika · 6 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Prinsip Induksi Matematika</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Pembuktian Rumus dan Barisan</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Pembuktian Keterbagian</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Pembuktian Ketaksamaan</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Pengayaan: Induksi Kuat</a>
+        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Ringkasan</a>
+      </div>
+    </div>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<!-- Floating scroll to top -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#fase-1">Bilangan &amp; Bernalar</a>
+    <span>/</span>
+    Induksi Matematika
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">FASE 1 · No.04</div>
+      <h1 class="materi-title">Induksi Matematika</h1>
+      <p class="materi-desc">Pelajari cara membuktikan pernyataan untuk semua bilangan asli: rumus deret, barisan rekursif, sifat keterbagian, ketaksamaan, hingga induksi kuat — dari pola menuju kepastian.</p>
+      <div class="materi-tags">
+        <span class="tag">Bernalar</span>
+        <span class="tag">6 Sub-bab</span>
+        <span class="tag">24 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Dari Pola Menuju Kepastian</h2>
+
+    <p>Perhatikan pola berikut: $1 = 1^2$, $\;1 + 3 = 2^2$, $\;1 + 3 + 5 = 3^2$, $\;1 + 3 + 5 + 7 = 4^2$. Tampaknya jumlah $n$ bilangan ganjil pertama selalu $n^2$. Tetapi bolehkah kita yakin hanya karena polanya cocok beberapa kali? Coba pola lain: $n^2 + n + 41$ menghasilkan bilangan prima untuk $n = 1, 2, 3, \ldots, 39$ — tiga puluh sembilan kali berturut-turut! Namun untuk $n = 40$, hasilnya $1681 = 41^2$, <strong>bukan prima</strong>.</p>
+
+    <div class="table-wrap">
+      <table class="tt tt-bool">
+        <thead><tr><th>$n$</th><th>$1$</th><th>$2$</th><th>$3$</th><th>$4$</th><th>$\cdots$</th><th>$39$</th><th class="hl">$40$</th></tr></thead>
+        <tbody><tr><td>$n^2 + n + 41$</td><td>$43$</td><td>$47$</td><td>$53$</td><td>$61$</td><td>$\cdots$</td><td>$1601$</td><td class="hl">$1681 = 41^2$</td></tr></tbody>
+      </table>
+    </div>
+
+    <p>Pelajarannya: <strong>pola yang cocok berkali-kali belum tentu benar untuk selamanya</strong>. Kita butuh alat yang memberi kepastian untuk <em>semua</em> bilangan asli. Alat itu adalah <strong>induksi matematika</strong>.</p>
+
+    <div class="grafik-wrap">
+      <svg class="ind-svg" viewBox="0 0 380 210" width="100%" style="max-width:440px;" role="img" aria-label="Analogi domino: domino pertama roboh dan setiap domino yang roboh merobohkan domino berikutnya">
+        <line x1="10" y1="150" x2="370" y2="150" class="ind-ground"/>
+        <polygon points="22,150 34,150 82,104 70,96" class="ind-dom ind-fall"/>
+        <rect x="88" y="78" width="13" height="72" rx="2" class="ind-dom ind-hit"/>
+        <rect x="140" y="78" width="13" height="72" rx="2" class="ind-dom"/>
+        <rect x="192" y="78" width="13" height="72" rx="2" class="ind-dom"/>
+        <rect x="244" y="78" width="13" height="72" rx="2" class="ind-dom"/>
+        <rect x="296" y="78" width="13" height="72" rx="2" class="ind-dom"/>
+        <text x="338" y="122" class="ind-t ind-bold">⋯</text>
+        <text x="46" y="172" text-anchor="middle" class="ind-s">P(1)</text>
+        <text x="94" y="172" text-anchor="middle" class="ind-s">P(2)</text>
+        <text x="146" y="172" text-anchor="middle" class="ind-s">P(3)</text>
+        <text x="198" y="172" text-anchor="middle" class="ind-s">P(4)</text>
+        <text x="250" y="172" text-anchor="middle" class="ind-s">P(5)</text>
+        <path d="M 108 70 Q 128 46 148 70" class="ind-arrow"/>
+        <polygon points="148,70 140,66 146,62" class="ind-arrowhead"/>
+        <text x="128" y="38" text-anchor="middle" class="ind-t ind-acc">P(k) ⇒ P(k+1)</text>
+        <text x="46" y="196" text-anchor="middle" class="ind-t ind-ok">Basis</text>
+        <text x="200" y="196" text-anchor="middle" class="ind-t ind-acc">Langkah induksi</text>
+      </svg>
+    </div>
+
+    <h3 class="subsection-title">Ide Dasar: Efek Domino</h3>
+    <p>Bayangkan deretan domino yang panjangnya tak terbatas. Semua domino pasti roboh jika dua hal terjamin: <strong>domino pertama roboh</strong>, dan <strong>setiap domino yang roboh pasti merobohkan domino berikutnya</strong>. Induksi matematika bekerja persis seperti itu. Berbeda dengan "induksi" dalam ilmu alam yang hanya menyimpulkan dari pengamatan, induksi matematika adalah <strong>pembuktian deduktif</strong>: kesimpulannya pasti benar.</p>
+
+    <h3 class="subsection-title">Sejarah Singkat</h3>
+    <p>Argumen berbentuk induksi sudah muncul pada karya <strong>Al-Karaji</strong> (953–1029) tentang jumlah bilangan kubus. Rumusan eksplisit pertama dicatat oleh <strong>Francesco Maurolico</strong> (1575), lalu dipakai secara sistematis oleh <strong>Blaise Pascal</strong> (1654) dalam kajian segitiga Pascal. Nama "induksi matematika" sendiri diberikan oleh <strong>Augustus De Morgan</strong> pada 1838. Kini induksi menjadi alat utama dalam teori bilangan, kombinatorika, hingga pembuktian kebenaran program komputer.</p>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Prinsip Induksi Matematika</a></li>
+      <li><a href="#bagian-b" data-num="B">Pembuktian Rumus dan Barisan</a></li>
+      <li><a href="#bagian-c" data-num="C">Pembuktian Keterbagian</a></li>
+      <li><a href="#bagian-d" data-num="D">Pembuktian Ketaksamaan</a></li>
+      <li><a href="#bagian-e" data-num="E">Pengayaan: Induksi Kuat</a></li>
+      <li><a href="#bagian-f" data-num="F">Ringkasan</a></li>
+    </ul>
+  </div>
+
+  </section>
+
+  <!-- ═══ A. PRINSIP INDUKSI ═════════════════════════════════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Prinsip Induksi Matematika</h2>
+
+    <h3 class="subsection-title">1. Dua Langkah Induksi</h3>
+    <p>Misalkan $P(n)$ adalah pernyataan tentang bilangan asli $n$, misalnya $P(n)$: "$1 + 3 + 5 + \cdots + (2n-1) = n^2$". Untuk membuktikan $P(n)$ benar bagi <em>setiap</em> bilangan asli, cukup dua langkah berikut.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Prinsip Induksi Matematika</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;"><strong>Basis:</strong> $P(1)$ benar. &nbsp; <strong>Langkah induksi:</strong> untuk setiap $k \ge 1$, jika $P(k)$ benar maka $P(k+1)$ benar.</p>
+      $$\bigl[P(1) \wedge \bigl(P(k) \Rightarrow P(k+1)\bigr)\bigr] \Rightarrow P(n)\ \forall n \in \mathbb{N}$$
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Langkah Baku Pembuktian Induksi</div>
+      <ol class="step-list" style="margin:0;padding-left:1.2rem;font-size:.9rem;">
+        <li><strong>Basis:</strong> tunjukkan $P(1)$ benar (hitung ruas kiri dan ruas kanan).</li>
+        <li><strong>Hipotesis induksi:</strong> asumsikan $P(k)$ benar untuk suatu bilangan asli $k$.</li>
+        <li><strong>Target:</strong> tuliskan dengan jelas pernyataan $P(k+1)$ yang akan dibuktikan.</li>
+        <li><strong>Langkah induksi:</strong> buktikan $P(k+1)$ dengan <em>memakai</em> hipotesis $P(k)$.</li>
+        <li><strong>Kesimpulan:</strong> berdasarkan prinsip induksi, $P(n)$ benar untuk setiap $n \in \mathbb{N}$.</li>
+      </ol>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Kedua Langkah Wajib Ada</div>
+      <p style="margin:0;font-size:.9rem;">Tanpa basis, aturan "jika satu roboh maka berikutnya roboh" tidak berguna karena tidak ada domino yang pertama kali roboh. Tanpa langkah induksi, robohnya domino pertama tidak menjamin domino lain ikut roboh. Hipotesis $P(k)$ <strong>diasumsikan</strong>, bukan dibuktikan; yang dibuktikan adalah implikasi $P(k) \Rightarrow P(k+1)$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $P(n)$: $1 + 3 + 5 + \cdots + (2n-1) = n^2$. Tuliskan $P(1)$, hipotesis $P(k)$, dan target $P(k+1)$, lalu periksa apakah $P(1)$ benar.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Substitusi $n = 1$:</strong> ruas kiri hanya berisi suku pertama $2(1) - 1 = 1$, ruas kanan $1^2 = 1$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Ganti $n$ dengan $k$ dan $k+1$:</strong></p>
+      $$\begin{align*} P(k)&:\ 1 + 3 + \cdots + (2k-1) = k^2 \\ P(k+1)&:\ 1 + 3 + \cdots + (2k-1) + (2k+1) = (k+1)^2 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Perhatikan suku terakhir $P(k+1)$:</strong> $2(k+1) - 1 = 2k + 1$, sehingga $P(k+1)$ adalah $P(k)$ ditambah satu suku.</p>
+      <div class="sol-jadi">$P(1)$ benar karena $1 = 1^2$, dan $P(k+1)$ diperoleh dari $P(k)$ dengan menambahkan suku $2k + 1$.</div>
+    </div>
+
+    <h3 class="subsection-title">2. Basis Tidak Harus $n = 1$</h3>
+    <p>Beberapa pernyataan baru berlaku mulai bilangan tertentu, misalnya $n! > 2^n$ yang benar untuk $n \ge 4$. Prinsipnya sama, hanya basisnya digeser.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Induksi dengan Basis $n_0$</div>
+      $$\bigl[P(n_0) \wedge \bigl(P(k) \Rightarrow P(k+1),\ k \ge n_0\bigr)\bigr] \Rightarrow P(n)\ \forall n \ge n_0$$
+    </div>
+
+    <h3 class="subsection-title">3. Kesalahan yang Sering Terjadi</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Seorang siswa menghitung $n^2 + n + 41$ untuk $n = 1, 2, 3, 4, 5$ dan selalu mendapat bilangan prima, lalu menyimpulkan "$n^2 + n + 41$ prima untuk setiap bilangan asli $n$". Tunjukkan bahwa kesimpulan itu salah.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari contoh penyangkal:</strong> pilih $n = 40$ agar setiap suku memuat faktor $41$.</p>
+      $$40^2 + 40 + 41 = 40(40+1) + 41 = 41(40 + 1) = 41^2$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Periksa keprimaan:</strong> $41^2 = 1681$ habis dibagi $41$, jadi bukan bilangan prima.</p>
+      <div class="sol-jadi">kesimpulan siswa salah karena $n = 40$ menghasilkan $1681 = 41^2$; pola yang cocok beberapa kali bukan bukti.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Perhatikan "bukti" berikut untuk $P(n)$: $n = n + 1$. "Andaikan $k = k + 1$. Tambahkan $1$ pada kedua ruas: $k + 1 = k + 2$, jadi $P(k+1)$ benar." Langkah induksinya sah, tetapi $P(n)$ jelas salah. Di mana kesalahannya?</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Periksa langkah induksi:</strong> dari $k = k + 1$ memang diperoleh $k + 1 = k + 2$, jadi implikasi $P(k) \Rightarrow P(k+1)$ benar.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Periksa basis:</strong> $P(1)$ berbunyi $1 = 2$, yang salah. Tidak ada "domino pertama" yang roboh.</p>
+      <div class="sol-jadi">"bukti" itu gagal karena basis tidak pernah diperiksa; implikasi yang benar tidak berguna tanpa basis yang benar.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan A</div>
+      <ol class="soal-list">
+        <li>Diketahui $P(n)$: $2 + 4 + 6 + \cdots + 2n = n(n+1)$. Tuliskan $P(1)$, hipotesis $P(k)$, dan target $P(k+1)$, lalu periksa kebenaran $P(1)$.</li>
+        <li>Seorang siswa "membuktikan" bahwa $2n + 1$ selalu genap: "Jika $2k + 1$ genap, maka $2(k+1) + 1 = (2k+1) + 2$ juga genap." Jelaskan kesalahannya.</li>
+        <li>Rumus $n^2 - n + 41$ menghasilkan bilangan prima untuk banyak nilai $n$. Tentukan bilangan asli $n$ terkecil yang membuatnya <em>bukan</em> prima.</li>
+        <li>Pernyataan $3^n > n^3$ benar untuk $n = 1$ dan $n = 2$. (a) Periksa $n = 3$ dan $n = 4$. (b) Tentukan $n_0$ terkecil sehingga $3^n > n^3$ benar untuk <em>semua</em> $n \ge n_0$, dan jelaskan mengapa basis induksinya harus $n_0$, bukan $1$.</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ B. PEMBUKTIAN RUMUS DAN BARISAN ═══════════════════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Pembuktian Rumus dan Barisan</h2>
+
+    <p>Rumus jumlah deret sering ditemukan dari pengamatan pola, tetapi <strong>menemukan</strong> pola berbeda dengan <strong>membuktikan</strong> pola. Kunci langkah induksi pada deret: tuliskan ruas kiri $P(k+1)$, <strong>pisahkan suku terakhir</strong>, lalu ganti sisanya dengan hipotesis.</p>
+
+    <div class="box box-definisi">
+      <div class="box-label">Strategi Langkah Induksi pada Deret</div>
+      <ol class="step-list" style="margin:0;padding-left:1.2rem;font-size:.9rem;">
+        <li>Tulis ruas kiri untuk $n = k + 1$.</li>
+        <li>Pisahkan suku ke-$(k+1)$ sehingga sisanya persis ruas kiri $P(k)$.</li>
+        <li>Ganti bagian itu dengan ruas kanan hipotesis.</li>
+        <li>Sederhanakan, biasanya dengan memfaktorkan $(k+1)$, hingga sama dengan ruas kanan $P(k+1)$.</li>
+      </ol>
+    </div>
+
+    <h3 class="subsection-title">1. Deret Aritmetika dan Geometri</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan dengan induksi matematika bahwa $1 + 2 + 3 + \cdots + n$ $= \dfrac{n(n+1)}{2}$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> ruas kiri $= 1$, ruas kanan $= \dfrac{1 \cdot 2}{2} = 1$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis</strong> ($n = k$): $1 + 2 + \cdots + k = \dfrac{k(k+1)}{2}$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Buktikan untuk $n = k + 1$:</strong> targetnya $\dfrac{(k+1)(k+2)}{2}$.</p>
+      $$\begin{align*} 1 + 2 + \cdots + k + (k+1) &= \frac{k(k+1)}{2} + (k+1) \\ &= (k+1)\left(\frac{k}{2} + 1\right) \\ &= \frac{(k+1)(k+2)}{2} \end{align*}$$
+      <div class="sol-jadi">terbukti $1 + 2 + \cdots + n = \dfrac{n(n+1)}{2}$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $3 + 7 + 11 + \cdots + (4n-1) = n(2n+1)$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> ruas kiri $= 3$, ruas kanan $= 1(2 + 1) = 3$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis</strong> ($n = k$): $3 + 7 + \cdots + (4k-1) = k(2k+1)$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Buktikan untuk $n = k + 1$:</strong> suku berikutnya $4(k+1) - 1 = 4k + 3$.</p>
+      $$\begin{align*} 3 + 7 + \cdots + (4k-1) + (4k+3) &= k(2k+1) + 4k + 3 \\ &= 2k^2 + 5k + 3 \\ &= (k+1)(2k+3) \\ &= (k+1)\bigl(2(k+1) + 1\bigr) \end{align*}$$
+      <div class="sol-jadi">terbukti $3 + 7 + \cdots + (4n-1) = n(2n+1)$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $2 + 2^2 + 2^3 + \cdots + 2^n$ $= 2(2^n - 1)$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> ruas kiri $= 2$, ruas kanan $= 2(2 - 1) = 2$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis</strong> ($n = k$): $2 + 2^2 + \cdots + 2^k = 2(2^k - 1)$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Buktikan untuk $n = k + 1$:</strong></p>
+      $$\begin{align*} 2 + 2^2 + \cdots + 2^k + 2^{k+1} &= 2(2^k - 1) + 2^{k+1} \\ &= 2^{k+1} - 2 + 2^{k+1} \\ &= 2 \cdot 2^{k+1} - 2 = 2(2^{k+1} - 1) \end{align*}$$
+      <div class="sol-jadi">terbukti $2 + 2^2 + \cdots + 2^n = 2(2^n - 1)$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <h3 class="subsection-title">2. Jumlah Kuadrat, Kubus, dan Deret Teleskopik</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $1^2 + 2^2 + 3^2 + \cdots + n^2$ $= \dfrac{n(n+1)(2n+1)}{6}$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> ruas kiri $= 1$, ruas kanan $= \dfrac{1 \cdot 2 \cdot 3}{6} = 1$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis</strong> ($n = k$): $1^2 + \cdots + k^2$ $= \dfrac{k(k+1)(2k+1)}{6}$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Buktikan untuk $n = k + 1$:</strong> targetnya $\dfrac{(k+1)(k+2)(2k+3)}{6}$.</p>
+      $$\begin{align*} \sum_{i=1}^{k+1} i^2 &= \frac{k(k+1)(2k+1)}{6} + (k+1)^2 \\ &= (k+1) \cdot \frac{k(2k+1) + 6(k+1)}{6} \\ &= (k+1) \cdot \frac{2k^2 + 7k + 6}{6} \\ &= \frac{(k+1)(k+2)(2k+3)}{6} \end{align*}$$
+      <div class="sol-jadi">terbukti $1^2 + 2^2 + \cdots + n^2$ $= \dfrac{n(n+1)(2n+1)}{6}$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $1^3 + 2^3 + 3^3 + \cdots + n^3$ $= \left[\dfrac{n(n+1)}{2}\right]^2$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> ruas kiri $= 1$, ruas kanan $= \left[\dfrac{1 \cdot 2}{2}\right]^2$ $= 1$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis</strong> ($n = k$): $1^3 + \cdots + k^3$ $= \left[\dfrac{k(k+1)}{2}\right]^2$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Buktikan untuk $n = k + 1$:</strong></p>
+      $$\begin{align*} 1^3 + \cdots + k^3 + (k+1)^3 &= \frac{k^2(k+1)^2}{4} + (k+1)^3 \\ &= (k+1)^2 \cdot \frac{k^2 + 4k + 4}{4} \\ &= \left[\frac{(k+1)(k+2)}{2}\right]^2 \end{align*}$$
+      <div class="sol-jadi">terbukti $1^3 + 2^3 + \cdots + n^3$ $= \left[\dfrac{n(n+1)}{2}\right]^2$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Jumlah Kubus = Kuadrat Jumlah</div>
+      <p style="margin:0;font-size:.9rem;">Karena $\dfrac{n(n+1)}{2} = 1 + 2 + \cdots + n$, Contoh 8 menyatakan $1^3 + 2^3 + \cdots + n^3 = (1 + 2 + \cdots + n)^2$. Cek untuk $n = 3$: $1 + 8 + 27 = 36 = 6^2$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $\dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \cdots + \dfrac{1}{n(n+1)}$ $= \dfrac{n}{n+1}$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> ruas kiri $= \dfrac{1}{2}$, ruas kanan $= \dfrac{1}{1+1} = \dfrac{1}{2}$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis</strong> ($n = k$): jumlah $k$ suku pertama $= \dfrac{k}{k+1}$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Buktikan untuk $n = k + 1$:</strong> suku baru $\dfrac{1}{(k+1)(k+2)}$.</p>
+      $$\begin{align*} \frac{k}{k+1} + \frac{1}{(k+1)(k+2)} &= \frac{k(k+2) + 1}{(k+1)(k+2)} \\ &= \frac{(k+1)^2}{(k+1)(k+2)} = \frac{k+1}{k+2} \end{align*}$$
+      <div class="sol-jadi">terbukti $\dfrac{1}{1 \cdot 2} + \cdots + \dfrac{1}{n(n+1)}$ $= \dfrac{n}{n+1}$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Mengapa Disebut Teleskopik?</div>
+      <p style="margin:0;font-size:.9rem;">Dengan pecahan parsial $\dfrac{1}{k(k+1)} = \dfrac{1}{k} - \dfrac{1}{k+1}$, suku-suku tengah saling menghapus seperti teleskop yang dilipat, menyisakan $1 - \dfrac{1}{n+1} = \dfrac{n}{n+1}$. Cara ini membantu <em>menemukan</em> rumus; induksi yang <em>membuktikannya</em>.</p>
+    </div>
+
+    <h3 class="subsection-title">3. Barisan Rekursif dan Aplikasi Geometri</h3>
+    <p>Induksi juga dipakai untuk membuktikan rumus suku ke-$n$ dari barisan yang didefinisikan secara <strong>rekursif</strong> (suku berikutnya dihitung dari suku sebelumnya), dan untuk sifat-sifat bangun geometri.</p>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Barisan $(a_n)$ didefinisikan dengan $a_1 = 1$ dan $a_{n+1} = 2a_n + 1$. Tebak rumus $a_n$ dari beberapa suku pertama, lalu buktikan dengan induksi.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung beberapa suku:</strong> $a_1 = 1$, $a_2 = 3$, $a_3 = 7$, $a_4 = 15$. Polanya $a_n = 2^n - 1$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Uji basis $n = 1$:</strong> $2^1 - 1 = 1$ $= a_1$ ✓</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Langkah induksi:</strong> andaikan $a_k = 2^k - 1$, maka</p>
+      $$a_{k+1} = 2a_k + 1 = 2(2^k - 1) + 1 = 2^{k+1} - 1$$
+      <div class="sol-jadi">terbukti $a_n = 2^n - 1$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa banyak diagonal segi-$n$ konveks adalah $D(n) = \dfrac{n(n-3)}{2}$ untuk setiap $n \ge 3$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 3$:</strong> segitiga tidak punya diagonal, dan $D(3) = \dfrac{3 \cdot 0}{2}$ $= 0$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tambahkan satu titik sudut:</strong> dari segi-$k$ ke segi-$(k+1)$, titik baru terhubung diagonal ke $k - 2$ titik (semua kecuali dua tetangganya), dan satu sisi lama berubah menjadi diagonal.</p>
+      $$\begin{align*} D(k+1) &= D(k) + (k-2) + 1 \\ &= \frac{k(k-3)}{2} + k - 1 = \frac{(k+1)(k-2)}{2} \end{align*}$$
+      <div class="sol-jadi">terbukti segi-$n$ konveks memiliki $\dfrac{n(n-3)}{2}$ diagonal untuk setiap $n \ge 3$.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan B</div>
+      <ol class="soal-list">
+        <li>Buktikan dengan induksi matematika bahwa $2 + 4 + 6 + \cdots + 2n = n(n+1)$.</li>
+        <li>Buktikan dengan induksi matematika bahwa $1 + 4 + 7 + \cdots + (3n-2)$ $= \dfrac{n(3n-1)}{2}$.</li>
+        <li>Buktikan bahwa $\dfrac{1}{1 \cdot 3} + \dfrac{1}{3 \cdot 5} + \cdots + \dfrac{1}{(2n-1)(2n+1)}$ $= \dfrac{n}{2n+1}$.</li>
+        <li>Buktikan bahwa $1 \cdot 2 + 2 \cdot 3 + \cdots + n(n+1)$ $= \dfrac{n(n+1)(n+2)}{3}$.</li>
+        <li>Buktikan bahwa $5 + 5^2 + 5^3 + \cdots + 5^n$ $= \dfrac{5(5^n - 1)}{4}$.</li>
+        <li>Perhatikan deret $1 \cdot 1! + 2 \cdot 2! + \cdots + n \cdot n!$.<br>(a) Hitung nilainya untuk $n = 1, 2, 3$. &nbsp; (b) Tebak rumus tutupnya dalam bentuk faktorial. &nbsp; (c) Buktikan tebakanmu dengan induksi.</li>
+        <li>Barisan $(a_n)$ memenuhi $a_1 = 2$ dan $a_{n+1} = 3a_n - 2$. Tebak rumus $a_n$, lalu buktikan dengan induksi.</li>
+        <li>Tanpa induksi baru, gunakan $\displaystyle\sum_{k=1}^{n} k$ $= \dfrac{n(n+1)}{2}$ untuk membuktikan $\displaystyle\sum_{k=1}^{n} (2k-1) = n^2$.</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ C. KETERBAGIAN ═════════════════════════════════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Pembuktian Keterbagian</h2>
+
+    <p>Notasi $d \mid a$ dibaca "$d$ membagi habis $a$", artinya $a = d \cdot m$ untuk suatu bilangan bulat $m$. Untuk membuktikan $d \mid f(n)$ bagi semua $n$, kita tidak mencari rumus; kita cukup menulis $f(k+1)$ sebagai gabungan $f(k)$ dan kelipatan $d$.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Bentuk Kunci Langkah Induksi</div>
+      $$f(k+1) = A \cdot f(k) + d \cdot B$$
+      <p style="margin:.4rem 0 0;font-size:.9rem;">Karena $d \mid f(k)$ (hipotesis) dan $d \mid d \cdot B$, maka $d \mid f(k+1)$.</p>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Memilih Teknik</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;">
+        <li><strong>Bentuk pangkat</strong> $a^n \pm c$: teknik <strong>tambah-kurang</strong>, yaitu tambahkan dan kurangi konstanta agar $f(k)$ muncul.</li>
+        <li><strong>Bentuk polinomial</strong> dalam $n$: <strong>ekspansi langsung</strong> $f(k+1)$, lalu kelompokkan sehingga $f(k)$ muncul.</li>
+      </ul>
+    </div>
+
+    <h3 class="subsection-title">1. Bentuk Pangkat (Teknik Tambah-Kurang)</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $6^n - 1$ habis dibagi $5$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> $6 - 1 = 5$ $= 5 \times 1$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis:</strong> $5 \mid (6^k - 1)$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Tambah-kurang $6$:</strong></p>
+      $$6^{k+1} - 1 = 6 \cdot 6^k - 6 + 5 = 6(6^k - 1) + 5$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Periksa kedua suku:</strong> $5 \mid 6(6^k - 1)$ dari hipotesis, dan $5 \mid 5$.</p>
+      <div class="sol-jadi">terbukti $5 \mid (6^n - 1)$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $7^{2n+1} + 1$ habis dibagi $8$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> $7^3 + 1 = 344$ $= 8 \times 43$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis:</strong> $8 \mid (7^{2k+1} + 1)$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Tambah-kurang $49$:</strong> karena $7^{2(k+1)+1} = 49 \cdot 7^{2k+1}$,</p>
+      $$\begin{align*} 7^{2k+3} + 1 &= 49 \cdot 7^{2k+1} + 49 - 48 \\ &= 49\,(7^{2k+1} + 1) - 48 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Periksa kedua suku:</strong> $8 \mid 49(7^{2k+1} + 1)$ dari hipotesis, dan $48 = 8 \times 6$.</p>
+      <div class="sol-jadi">terbukti $8 \mid (7^{2n+1} + 1)$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Memilih Angka Tambah-Kurang</div>
+      <p style="margin:0;font-size:.9rem;">Angka yang ditambah-kurangkan adalah <strong>faktor pengali</strong> dari $f(k)$ ke $f(k+1)$: di Contoh 13, $7^{2k+3} = 49 \cdot 7^{2k+1}$, sehingga kita menambah dan mengurangi $49$. Sisanya ($-48$) harus kelipatan pembagi ($8$).</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $3^{4n} - 1$ habis dibagi $80$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> $3^4 - 1 = 80$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis:</strong> $80 \mid (3^{4k} - 1)$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Tambah-kurang $81$:</strong></p>
+      $$3^{4k+4} - 1 = 81 \cdot 3^{4k} - 81 + 80 = 81(3^{4k} - 1) + 80$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Periksa kedua suku:</strong> $80 \mid 81(3^{4k} - 1)$ dari hipotesis, dan $80 \mid 80$.</p>
+      <div class="sol-jadi">terbukti $80 \mid (3^{4n} - 1)$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $5^n + 2 \cdot 11^n$ habis dibagi $3$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> $5 + 22 = 27$ $= 3 \times 9$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis:</strong> $3 \mid (5^k + 2 \cdot 11^k)$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Pecah $11 = 5 + 6$</strong> agar faktor $5$ seragam:</p>
+      $$\begin{align*} 5^{k+1} + 2 \cdot 11^{k+1} &= 5 \cdot 5^k + 2 \cdot 11^k (5 + 6) \\ &= 5\,(5^k + 2 \cdot 11^k) + 12 \cdot 11^k \end{align*}$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Periksa kedua suku:</strong> suku pertama habis dibagi $3$ dari hipotesis, dan $12 \cdot 11^k = 3 \cdot 4 \cdot 11^k$.</p>
+      <div class="sol-jadi">terbukti $3 \mid (5^n + 2 \cdot 11^n)$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <h3 class="subsection-title">2. Bentuk Polinomial (Ekspansi Langsung)</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $n^3 + 2n$ habis dibagi $3$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> $1 + 2 = 3$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis:</strong> $3 \mid (k^3 + 2k)$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Ekspansi lalu kelompokkan:</strong></p>
+      $$\begin{align*} (k+1)^3 + 2(k+1) &= k^3 + 3k^2 + 3k + 1 + 2k + 2 \\ &= (k^3 + 2k) + 3(k^2 + k + 1) \end{align*}$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Periksa kedua suku:</strong> $3 \mid (k^3 + 2k)$ dari hipotesis, dan $3 \mid 3(k^2 + k + 1)$.</p>
+      <div class="sol-jadi">terbukti $3 \mid (n^3 + 2n)$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $n(n+1)(n+2)$ habis dibagi $6$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> $1 \cdot 2 \cdot 3 = 6$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis:</strong> $6 \mid k(k+1)(k+2)$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Pecah faktor $(k+3) = k + 3$:</strong></p>
+      $$(k+1)(k+2)(k+3) = k(k+1)(k+2) + 3(k+1)(k+2)$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Periksa suku kedua:</strong> salah satu dari $k + 1$ dan $k + 2$ pasti genap, jadi $(k+1)(k+2) = 2m$ dan $3(k+1)(k+2) = 6m$.</p>
+      <div class="sol-jadi">terbukti $6 \mid n(n+1)(n+2)$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Sudut Pandang Kombinatorik</div>
+      <p style="margin:0;font-size:.9rem;">Di antara tiga bilangan berurutan selalu ada kelipatan $2$ dan kelipatan $3$. Bahkan $\dfrac{n(n+1)(n+2)}{6} = \dbinom{n+2}{3}$ adalah banyak cara memilih $3$ benda dari $n + 2$ benda, sehingga pasti bilangan bulat.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan C</div>
+      <ol class="soal-list">
+        <li>Buktikan bahwa $4^n - 1$ habis dibagi $3$ untuk setiap bilangan asli $n$.</li>
+        <li>Buktikan bahwa $5^n - 1$ habis dibagi $4$ untuk setiap bilangan asli $n$.</li>
+        <li>Buktikan bahwa $3^{2n} - 1$ habis dibagi $8$ untuk setiap bilangan asli $n$.</li>
+        <li>Buktikan dengan induksi bahwa $n^2 + n$ habis dibagi $2$, lalu jelaskan mengapa fakta ini juga jelas tanpa induksi.</li>
+        <li>Buktikan bahwa $2^{n+2} + 3^{2n+1}$ habis dibagi $7$ untuk setiap bilangan asli $n$.</li>
+        <li>Buktikan bahwa $3^{2n+2} - 8n - 9$ habis dibagi $64$.<br>(a) Periksa untuk $n = 1$ dan $n = 2$. &nbsp; (b) Tunjukkan $f(k+1) = 9f(k) + 64(k+1)$, lalu simpulkan.</li>
+        <li>Buktikan bahwa $x^n - 1$ habis dibagi $x - 1$ untuk setiap bilangan asli $n$ dan bilangan bulat $x \ne 1$.</li>
+        <li>Buktikan bahwa $3^n + 7^n$ habis dibagi $10$ untuk setiap $n$ ganjil. <em>(Petunjuk: tulis $n = 2m - 1$ dan lakukan induksi pada $m$.)</em></li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ D. KETAKSAMAAN ═════════════════════════════════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Pembuktian Ketaksamaan</h2>
+
+    <p>Pada ketaksamaan, langkah induksi jarang menghasilkan bentuk yang persis sama. Kita memakai hipotesis untuk menaksir ruas kiri, lalu menunjukkan taksiran itu <strong>sudah melampaui</strong> ruas kanan $P(k+1)$.</p>
+
+    <div class="box box-definisi">
+      <div class="box-label">Strategi Ketaksamaan</div>
+      <ol class="step-list" style="margin:0;padding-left:1.2rem;font-size:.9rem;">
+        <li>Tulis ruas kiri $P(k+1)$ dalam bentuk yang memuat ruas kiri $P(k)$, misalnya $2^{k+1} = 2 \cdot 2^k$.</li>
+        <li>Terapkan hipotesis untuk memperoleh rantai $\ldots > \ldots$.</li>
+        <li>Tunjukkan ujung rantai $\ge$ ruas kanan $P(k+1)$; di sinilah syarat $k \ge n_0$ biasanya dipakai.</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $2^n > n$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> $2 > 1$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis:</strong> $2^k > k$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Buktikan untuk $n = k + 1$:</strong></p>
+      $$2^{k+1} = 2 \cdot 2^k > 2k = k + k \ge k + 1$$
+      <div class="sol-jadi">terbukti $2^n > n$ untuk setiap bilangan asli $n$ (langkah terakhir memakai $k \ge 1$).</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $3^n \ge 2n + 1$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> $3 \ge 3$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis:</strong> $3^k \ge 2k + 1$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Buktikan untuk $n = k + 1$:</strong> targetnya $2(k+1) + 1 = 2k + 3$.</p>
+      $$3^{k+1} = 3 \cdot 3^k \ge 3(2k + 1) = 6k + 3 \ge 2k + 3$$
+      <div class="sol-jadi">terbukti $3^n \ge 2n + 1$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $n! > 2^n$ untuk setiap bilangan asli $n \ge 4$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 4$:</strong> $4! = 24$ $> 16$ $= 2^4$ ✓ (untuk $n = 1, 2, 3$ pernyataan ini salah).</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis</strong> ($k \ge 4$): $k! > 2^k$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Buktikan untuk $n = k + 1$:</strong></p>
+      $$(k+1)! = (k+1) \cdot k! > (k+1) \cdot 2^k > 2 \cdot 2^k = 2^{k+1}$$
+      <div class="sol-jadi">terbukti $n! > 2^n$ untuk setiap bilangan asli $n \ge 4$ (memakai $k + 1 > 2$).</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan bahwa $2^n > n^2$ untuk setiap bilangan asli $n \ge 5$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 5$:</strong> $32 > 25$ ✓ (untuk $n = 2, 3, 4$ pernyataan ini gagal).</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis</strong> ($k \ge 5$): $2^k > k^2$, sehingga $2^{k+1} = 2 \cdot 2^k$ $> 2k^2$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Tunjukkan $2k^2 \ge (k+1)^2$:</strong></p>
+      $$2k^2 - (k+1)^2 = k^2 - 2k - 1 = (k-1)^2 - 2 > 0 \text{ untuk } k \ge 5$$
+      <div class="sol-jadi">terbukti $2^n > n^2$ untuk setiap bilangan asli $n \ge 5$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">(Ketaksamaan Bernoulli) Buktikan bahwa $(1 + x)^n \ge 1 + nx$ untuk setiap bilangan asli $n$ dan bilangan real $x > -1$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji basis $n = 1$:</strong> $1 + x \ge 1 + x$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis hipotesis:</strong> $(1 + x)^k \ge 1 + kx$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Kalikan dengan $1 + x > 0$</strong> (arah tanda tetap):</p>
+      $$\begin{align*} (1+x)^{k+1} &\ge (1 + kx)(1 + x) \\ &= 1 + (k+1)x + kx^2 \ge 1 + (k+1)x \end{align*}$$
+      <div class="sol-jadi">terbukti $(1 + x)^n \ge 1 + nx$ untuk setiap bilangan asli $n$ dan $x > -1$ (karena $kx^2 \ge 0$).</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan D</div>
+      <ol class="soal-list">
+        <li>Buktikan bahwa $2^n \ge n + 1$ untuk setiap bilangan asli $n$.</li>
+        <li>Buktikan bahwa $n! \ge 2^{n-1}$ untuk setiap bilangan asli $n$.</li>
+        <li>Buktikan bahwa $3^n > n^2$ untuk setiap bilangan asli $n \ge 2$.</li>
+        <li>(a) Tentukan bilangan asli $n_0$ terkecil sehingga $n! > 3^n$ benar untuk semua $n \ge n_0$. &nbsp; (b) Buktikan dengan induksi.</li>
+        <li>Buktikan bahwa $\dfrac{1}{1^2} + \dfrac{1}{2^2} + \cdots + \dfrac{1}{n^2}$ $\le 2 - \dfrac{1}{n}$ untuk setiap bilangan asli $n$.</li>
+        <li>Seorang siswa mengklaim "$4^n > n^4$ untuk setiap bilangan asli $n$" karena benar untuk $n = 1$. (a) Periksa $n = 2, 3, 4, 5$. &nbsp; (b) Tentukan $n_0$ terkecil agar klaim benar untuk semua $n \ge n_0$.</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ E. INDUKSI KUAT ════════════════════════════════════════════ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Pengayaan: Induksi Kuat</h2>
+
+    <p>Kadang $P(k+1)$ tidak cukup diturunkan dari $P(k)$ saja, tetapi membutuhkan beberapa kasus sebelumnya. Untuk itu dipakai <strong>induksi kuat</strong>: hipotesisnya adalah <em>semua</em> $P(n_0), P(n_0+1), \ldots, P(k)$ benar.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Prinsip Induksi Kuat</div>
+      $$\bigl[P(n_0) \wedge \bigl(P(n_0) \wedge \cdots \wedge P(k) \Rightarrow P(k+1)\bigr)\bigr] \Rightarrow P(n)\ \forall n \ge n_0$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 23</div>
+      <p style="margin:0;font-size:.9rem;">Tersedia perangko senilai $3$ dan $5$ rupiah. Buktikan bahwa setiap ongkos $n \ge 8$ rupiah dapat dibayar tepat dengan perangko-perangko tersebut.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji tiga basis:</strong> $8 = 3 + 5$, $\;9 = 3 + 3 + 3$, $\;10 = 5 + 5$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Langkah induksi kuat</strong> ($k + 1 \ge 11$): ongkos $k - 2 \ge 8$ sudah bisa dibayar menurut hipotesis, lalu tambahkan satu perangko $3$.</p>
+      $$k + 1 = (k - 2) + 3$$
+      <div class="sol-jadi">terbukti setiap ongkos $n \ge 8$ dapat dibayar dengan perangko $3$ dan $5$; tiga basis diperlukan karena langkahnya mundur $3$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Barisan Fibonacci didefinisikan $F_1 = F_2$ $= 1$ dan $F_{n+1} = F_n + F_{n-1}$. Buktikan bahwa $F_n &lt; 2^n$ untuk setiap bilangan asli $n$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji dua basis:</strong> $F_1 = 1$ $&lt; 2$ dan $F_2 = 1$ $&lt; 4$ ✓</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hipotesis kuat</strong> ($k \ge 2$): $F_k &lt; 2^k$ dan $F_{k-1} &lt; 2^{k-1}$.</p>
+      $$F_{k+1} = F_k + F_{k-1} &lt; 2^k + 2^{k-1} &lt; 2^k + 2^k = 2^{k+1}$$
+      <div class="sol-jadi">terbukti $F_n &lt; 2^n$ untuk setiap bilangan asli $n$.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan E</div>
+      <ol class="soal-list">
+        <li>Buktikan bahwa setiap bilangan asli $n \ge 12$ dapat ditulis sebagai $4a + 5b$ dengan $a, b$ bilangan cacah. Mengapa $11$ tidak bisa?</li>
+        <li>Barisan $(a_n)$ memenuhi $a_1 = 1$, $a_2 = 3$, dan $a_{n+1} = a_n + 2a_{n-1}$. Buktikan bahwa $a_n = \dfrac{2^{n+1} + (-1)^n}{3}$ untuk setiap bilangan asli $n$.</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ F. RINGKASAN ═══════════════════════════════════════════════ -->
+  <section class="section" id="bagian-f">
+    <h2 class="section-title"><span class="section-badge">F</span>Ringkasan Induksi Matematika</h2>
+
+    <h3 class="subsection-title">1. Kerangka Pembuktian</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Langkah</th><th>Isi</th></tr></thead>
+        <tbody>
+          <tr><td>Basis</td><td>Tunjukkan $P(n_0)$ benar (biasanya $n_0 = 1$)</td></tr>
+          <tr><td>Hipotesis</td><td>Asumsikan $P(k)$ benar untuk suatu $k \ge n_0$</td></tr>
+          <tr><td>Langkah induksi</td><td>Buktikan $P(k+1)$ dengan memakai $P(k)$</td></tr>
+          <tr><td>Kesimpulan</td><td>$P(n)$ benar untuk setiap $n \ge n_0$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">2. Rumus Deret Penting</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Deret</th><th>Rumus jumlah</th></tr></thead>
+        <tbody>
+          <tr><td>$1 + 2 + \cdots + n$</td><td>$\dfrac{n(n+1)}{2}$</td></tr>
+          <tr><td>$1 + 3 + 5 + \cdots + (2n-1)$</td><td>$n^2$</td></tr>
+          <tr><td>$1^2 + 2^2 + \cdots + n^2$</td><td>$\dfrac{n(n+1)(2n+1)}{6}$</td></tr>
+          <tr><td>$1^3 + 2^3 + \cdots + n^3$</td><td>$\left[\dfrac{n(n+1)}{2}\right]^2$</td></tr>
+          <tr><td>$\dfrac{1}{1 \cdot 2} + \cdots + \dfrac{1}{n(n+1)}$</td><td>$\dfrac{n}{n+1}$</td></tr>
+          <tr><td>$a + ar + \cdots + ar^{n-1}$</td><td>$\dfrac{a(r^n - 1)}{r - 1}$, $\;r \ne 1$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">3. Teknik Langkah Induksi</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Jenis soal</th><th>Teknik</th><th>Contoh</th></tr></thead>
+        <tbody>
+          <tr><td>Rumus deret</td><td>Pisahkan suku terakhir, pakai hipotesis</td><td>Contoh 4–9</td></tr>
+          <tr><td>Barisan rekursif</td><td>Substitusi $a_k$ ke rumus rekursi</td><td>Contoh 10</td></tr>
+          <tr><td>Keterbagian pangkat</td><td>Tambah-kurang: $A \cdot f(k) + d \cdot B$</td><td>Contoh 12–15</td></tr>
+          <tr><td>Keterbagian polinomial</td><td>Ekspansi lalu kelompokkan $f(k)$</td><td>Contoh 16–17</td></tr>
+          <tr><td>Ketaksamaan</td><td>Hipotesis lalu rantai taksiran</td><td>Contoh 18–22</td></tr>
+          <tr><td>Induksi kuat</td><td>Beberapa basis, pakai kasus-kasus sebelumnya</td><td>Contoh 23–24</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <!-- Baris 1: Prev / Next -->
+    <div class="footer-nav">
+      <a class="nav-btn" href="../barisan-deret/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Barisan dan Deret
+      </a>
+      <a class="nav-btn" href="../matematika-keuangan/">
+        Matematika Keuangan
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <!-- Baris 2: Actions -->
+    <div class="footer-actions">
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- SECTION KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Disqus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi Induksi Matematika? Tulis di kolom diskusi. Login dengan akun Google.</p>
+        <div id="disqus_thread"></div>
+    <script>
+    (function() {
+      var disqusLoaded = false;
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !disqusLoaded) {
+          disqusLoaded = true;
+          observer.disconnect();
+          var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://eksaktalab.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      }, { threshold: 0.1 });
+      var thread = document.getElementById('disqus_thread');
+      if (thread) observer.observe(thread);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── Scroll progress bar + scroll-to-top ──
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+// ── TOC Dropdown ──
+function toggleTOC() {
+  document.getElementById('tocDropdown').classList.toggle('open');
+}
+function closeTOC() {
+  document.getElementById('tocDropdown').classList.remove('open');
+}
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+// ── Bookmark ──
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ──
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Induksi Matematika — EksaktaLab',
+      text:  'Belajar Induksi Matematika di EksaktaLab, lengkap dengan 24 contoh soal!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+</script>
+
+<script>
+// ── SHARED HELPERS ────────────────────────
+const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+  <polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) {
+      MathJax.typesetPromise([typesetEl]).catch(() => {});
+    }
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── 1. BOX RUMUS → accordion hijau ───────
+  document.querySelectorAll('.box.box-rumus').forEach((box, i) => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+
+    let bodyHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body">
+        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
+      </div>`;
+
+    const header    = wrap.querySelector('.rumus-header');
+    const statusEl  = wrap.querySelector('.rumus-status');
+    const bodyInner = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+
+    box.replaceWith(wrap);
+  });
+
+  // ── 2. BOX CONTOH → accordion navy/teal ──
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+
+    let qHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header">
+            <span class="solve-dot"></span>
+            <span class="solve-title">Penyelesaian</span>
+          </div>
+          <div class="penyelesaian-inner">
+            ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
+          </div>
+        </div>
+      </div>`;
+
+    const header = wrap.querySelector('.contoh-header');
+    const pi     = wrap.querySelector('.penyelesaian-inner');
+
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+    });
+
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+  // ── 3. Buka / Tutup Semua per section ────
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+
+    const updateBtn = () => {
+      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
+    };
+    updateBtn();
+
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+  // ── 4. SOAL LATIHAN → accordion kunci jawaban ──
+  const jawabanData = {
+    // 0 — Latihan A: Prinsip Induksi (4 soal)
+    0: [
+      { jawaban: `$P(1)$: $2 = 1 \\cdot 2$ (benar) &nbsp;|&nbsp; $P(k)$: $2 + 4 + \\cdots + 2k = k(k+1)$ &nbsp;|&nbsp; $P(k+1)$: $2 + 4 + \\cdots + 2k + 2(k+1)$ $= (k+1)(k+2)$` },
+      { jawaban: `Langkah induksinya sah, tetapi basisnya salah: $P(1)$ berbunyi "$3$ genap". Tanpa basis yang benar, kesimpulan tidak berlaku (bahkan $2n + 1$ selalu ganjil).` },
+      { jawaban: `$n = 41$: $41^2 - 41 + 41 = 41^2$ $= 1681$, bukan prima` },
+      { jawaban: `(a) $n = 3$: $27 > 27$ salah; $n = 4$: $81 > 64$ benar &nbsp;|&nbsp; (b) $n_0 = 4$; basis harus $4$ karena $P(3)$ salah, sehingga rantai domino baru dapat dimulai dari $n = 4$` },
+    ],
+    // 1 — Latihan B: Rumus dan Barisan (8 soal)
+    1: [
+      { jawaban: `Basis $2 = 1 \\cdot 2$ &nbsp;|&nbsp; Langkah: $k(k+1) + 2(k+1) = (k+1)(k+2)$` },
+      { jawaban: `Basis $1 = \\dfrac{1 \\cdot 2}{2}$ &nbsp;|&nbsp; Langkah: $\\dfrac{k(3k-1)}{2} + (3k+1)$ $= \\dfrac{3k^2 + 5k + 2}{2}$ $= \\dfrac{(k+1)(3k+2)}{2}$` },
+      { jawaban: `Basis $\\dfrac{1}{3} = \\dfrac{1}{3}$ &nbsp;|&nbsp; Langkah: $\\dfrac{k}{2k+1} + \\dfrac{1}{(2k+1)(2k+3)}$ $= \\dfrac{(k+1)(2k+1)}{(2k+1)(2k+3)}$ $= \\dfrac{k+1}{2k+3}$` },
+      { jawaban: `Basis $2 = \\dfrac{1 \\cdot 2 \\cdot 3}{3}$ &nbsp;|&nbsp; Langkah: $\\dfrac{k(k+1)(k+2)}{3} + (k+1)(k+2)$ $= \\dfrac{(k+1)(k+2)(k+3)}{3}$` },
+      { jawaban: `Basis $5 = \\dfrac{5 \\cdot 4}{4}$ &nbsp;|&nbsp; Langkah: $\\dfrac{5(5^k - 1)}{4} + 5^{k+1}$ $= \\dfrac{5 \\cdot 5^{k+1} - 5}{4}$ $= \\dfrac{5(5^{k+1} - 1)}{4}$` },
+      { jawaban: `(a) $1$, $5$, $23$ &nbsp;|&nbsp; (b) $(n+1)! - 1$ &nbsp;|&nbsp; (c) Langkah: $(k+1)! - 1 + (k+1)(k+1)!$ $= (k+2)(k+1)! - 1$ $= (k+2)! - 1$` },
+      { jawaban: `$a_n = 3^{n-1} + 1$ &nbsp;|&nbsp; Basis $a_1 = 3^0 + 1$ $= 2$ &nbsp;|&nbsp; Langkah: $a_{k+1} = 3(3^{k-1} + 1) - 2$ $= 3^k + 1$` },
+      { jawaban: `$\\displaystyle\\sum_{k=1}^{n} (2k-1)$ $= 2\\sum_{k=1}^{n} k - n$ $= n(n+1) - n$ $= n^2$` },
+    ],
+    // 2 — Latihan C: Keterbagian (8 soal)
+    2: [
+      { jawaban: `Basis $3$ &nbsp;|&nbsp; $4^{k+1} - 1 = 4(4^k - 1) + 3$` },
+      { jawaban: `Basis $4$ &nbsp;|&nbsp; $5^{k+1} - 1 = 5(5^k - 1) + 4$` },
+      { jawaban: `Basis $8$ &nbsp;|&nbsp; $3^{2k+2} - 1 = 9(3^{2k} - 1) + 8$` },
+      { jawaban: `Basis $2$ &nbsp;|&nbsp; $(k+1)^2 + (k+1) = (k^2 + k) + 2(k+1)$ &nbsp;|&nbsp; Tanpa induksi: $n^2 + n = n(n+1)$ adalah hasil kali dua bilangan berurutan, salah satunya genap` },
+      { jawaban: `Basis $8 + 27 = 35$ &nbsp;|&nbsp; $2^{k+3} + 3^{2k+3}$ $= 2(2^{k+2} + 3^{2k+1}) + 7 \\cdot 3^{2k+1}$` },
+      { jawaban: `(a) $64$ dan $704 = 64 \\times 11$ &nbsp;|&nbsp; (b) $f(k+1)$ $= 9 \\cdot 3^{2k+2} - 8k - 17$ $= 9f(k) + 64k + 64$, habis dibagi $64$` },
+      { jawaban: `Basis $x - 1$ &nbsp;|&nbsp; $x^{k+1} - 1 = x(x^k - 1) + (x - 1)$` },
+      { jawaban: `Basis $m = 1$: $3 + 7 = 10$ &nbsp;|&nbsp; $3^{2m+1} + 7^{2m+1}$ $= 9(3^{2m-1} + 7^{2m-1}) + 40 \\cdot 7^{2m-1}$` },
+    ],
+    // 3 — Latihan D: Ketaksamaan (6 soal)
+    3: [
+      { jawaban: `Basis $2 \\ge 2$ &nbsp;|&nbsp; $2^{k+1}$ $= 2 \\cdot 2^k \\ge 2(k+1)$ $= 2k + 2 \\ge k + 2$` },
+      { jawaban: `Basis $1 \\ge 1$ &nbsp;|&nbsp; $(k+1)!$ $= (k+1)k! \\ge (k+1)2^{k-1} \\ge 2 \\cdot 2^{k-1}$ $= 2^k$` },
+      { jawaban: `Basis $9 > 4$ &nbsp;|&nbsp; $3^{k+1} > 3k^2 \\ge (k+1)^2$ karena $2k^2 - 2k - 1 > 0$ untuk $k \\ge 2$` },
+      { jawaban: `(a) $n_0 = 7$ ($6! = 720$ $&lt; 729$, $7! = 5040$ $> 2187$) &nbsp;|&nbsp; (b) $(k+1)!$ $> (k+1)3^k$ $> 3 \\cdot 3^k$ $= 3^{k+1}$` },
+      { jawaban: `Basis $1 \\le 1$ &nbsp;|&nbsp; $2 - \\dfrac{1}{k} + \\dfrac{1}{(k+1)^2} \\le 2 - \\dfrac{1}{k+1}$ karena $\\dfrac{1}{(k+1)^2} \\le \\dfrac{1}{k(k+1)}$ $= \\dfrac{1}{k} - \\dfrac{1}{k+1}$` },
+      { jawaban: `(a) $n = 2$: $16 = 16$; $n = 3$: $64 &lt; 81$; $n = 4$: $256 = 256$ (ketiganya salah); $n = 5$: $1024 > 625$ &nbsp;|&nbsp; (b) $n_0 = 5$` },
+    ],
+    // 4 — Latihan E: Induksi Kuat (2 soal)
+    4: [
+      { jawaban: `Basis $12 = 4 \\cdot 3$, $13 = 4 \\cdot 2 + 5$, $14 = 4 + 5 \\cdot 2$, $15 = 5 \\cdot 3$ &nbsp;|&nbsp; Langkah: $k + 1 = (k - 3) + 4$ &nbsp;|&nbsp; $11$ tidak bisa: $11 - 4b$ untuk $b = 0, 1, 2$ menghasilkan $11, 6, 1$, tidak ada yang kelipatan $5$` },
+      { jawaban: `Basis $a_1 = \\dfrac{4 - 1}{3}$ $= 1$, $a_2 = \\dfrac{8 + 1}{3}$ $= 3$ &nbsp;|&nbsp; Langkah: $a_{k+1}$ $= \\dfrac{2^{k+1} + (-1)^k + 2 \\cdot 2^{k} + 2(-1)^{k-1}}{3}$ $= \\dfrac{2^{k+2} + (-1)^{k+1}}{3}$` },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+
+    const items = [...list.querySelectorAll('li')];
+    const newList = document.createElement('div');
+    newList.className = 'soal-list-accordion';
+
+    items.forEach((li, i) => {
+      const ans     = answers[i] || {};
+      const jawaban = ans.jawaban || '';
+
+      const item = document.createElement('div');
+      item.className = 'soal-item';
+      item.innerHTML = `
+        <div class="soal-item-header" role="button" tabindex="0">
+          <span class="soal-num">${i+1}</span>
+          <span class="soal-text">${li.innerHTML}</span>
+          <button class="soal-key-btn" tabindex="-1">Kunci</button>
+        </div>
+        <div class="soal-answer">
+          <div class="soal-answer-inner">
+            <div class="soal-answer-label">Jawaban</div>
+            ${jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
+          </div>
+        </div>`;
+
+      const header = item.querySelector('.soal-item-header');
+      const toggle = () => {
+        const open = item.classList.toggle('open');
+        if (open && window.MathJax) {
+          MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
+        }
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+
+      newList.appendChild(item);
+    });
+
+    list.replaceWith(newList);
+  });
+
+});
+</script>
+
+<!-- FOOTER -->
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+</body>
+</html>
