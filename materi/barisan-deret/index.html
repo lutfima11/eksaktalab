@@ -316,11 +316,13 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $S_n = 3n^2 + n$. Tentukan $U_1$ dan $U_3$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$U_1 = S_1 = 3(1)^2 + 1 = 4$</li>
-        <li>$S_3 = 3(9) + 3 = 30$ dan $S_2 = 3(4) + 2 = 14$, sehingga $U_3 = S_3 - S_2 = 30 - 14 = 16$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span>$U_1$</div>
+      $$U_1 = S_1 = 3(1)^2 + 1 = 4$$
+      <div class="sol-jadi">$U_1 = 4$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$U_3$</div>
+      <p class="sol-step">Gunakan $U_n = S_n - S_{n-1}$:</p>
+      $$\begin{align*} S_3 &= 3(9) + 3 = 30 \\ S_2 &= 3(4) + 2 = 14 \\ U_3 &= S_3 - S_2 = 30 - 14 \end{align*}$$
+      <div class="sol-jadi">$U_3 = 16$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -328,13 +330,14 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $S_n = an^2 + bn$. Jika $U_3 = 11$ dan $U_5 = 19$, tentukan nilai $a$, $b$, dan $S_{10}$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Karena $U_n = S_n - S_{n-1}$, maka:
-      $$\begin{align*} U_n &= an^2 + bn - a(n-1)^2 \\ &\quad - b(n-1) \\ &= 2an - a + b \end{align*}$$
-      Sehingga:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari rumus $U_n$</strong> dengan $U_n = S_n - S_{n-1}$:</p>
+      $$\begin{align*} U_n &= an^2 + bn \\ &\quad - a(n-1)^2 - b(n-1) \\ &= 2an - a + b \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Substitusi data:</strong></p>
       $$\begin{align*} U_3 &= 5a + b = 11 \quad \cdots(1) \\ U_5 &= 9a + b = 19 \quad \cdots(2) \end{align*}$$
-      Dari $(2) - (1)$: $4a = 8 \Rightarrow a = 2$. Substitusi ke (1): $b = 1$.
+      <p class="sol-step"><span class="sol-no">3</span><strong>Eliminasi</strong> $(2) - (1)$: $4a = 8 \Rightarrow a = 2$, lalu dari (1) $b = 1$.</p>
+      <p class="sol-step"><span class="sol-no">4</span><strong>Hitung $S_{10}$:</strong></p>
       $$S_{10} = 2(100) + 1(10) = 210$$
+      <div class="sol-jadi">$a = 2$, $b = 1$, dan $S_{10} = 210$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -342,14 +345,13 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui jumlah $n$ suku pertama suatu barisan dinyatakan oleh $S_n = 2n^2 + n$. Tentukan nilai $U_1$, $U_2$, $U_3$, dan $U_n$ untuk $n \geq 2$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Untuk $U_1$, gunakan $U_1 = S_1$:
-      $$U_1 = S_1 = 2(1)^2 + 1 = 3$$
-      Untuk $n \geq 2$, gunakan $U_n = S_n - S_{n-1}$:
-      $$\begin{align*} S_n &= 2n^2 + n \\ S_{n-1} &= 2(n-1)^2 + (n-1) \\ &= 2n^2 - 4n + 2 + n - 1 \\ &= 2n^2 - 3n + 1 \\ U_n &= S_n - S_{n-1} \\ &= (2n^2 + n) - (2n^2 - 3n + 1) \\ &= 4n - 1 \end{align*}$$
-      Cek kecocokan dengan $U_1$: $4(1)-1 = 3$ ✓<br><br>
-      Nilai suku-suku awal:
-      $$\begin{align*} U_2 &= 4(2)-1 = 7 \\ U_3 &= 4(3)-1 = 11 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Suku pertama:</strong> $U_1 = S_1$</p>
+      $$U_1 = 2(1)^2 + 1 = 3$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Rumus $U_n$ untuk $n \geq 2$:</strong> gunakan $U_n = S_n - S_{n-1}$</p>
+      $$\begin{align*} S_{n-1} &= 2(n-1)^2 + (n-1) \\ &= 2n^2 - 3n + 1 \\ U_n &= (2n^2 + n) - (2n^2 - 3n + 1) \\ &= 4n - 1 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Cek dan hitung suku awal:</strong> $4(1) - 1 = 3 = U_1$ ✓</p>
+      $$\begin{align*} U_2 &= 4(2) - 1 = 7 \\ U_3 &= 4(3) - 1 = 11 \end{align*}$$
+      <div class="sol-jadi">$U_1 = 3$, $U_2 = 7$, $U_3 = 11$, dan $U_n = 4n - 1$.</div>
     </div>
 
   </section>
@@ -441,14 +443,13 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Diketahui $a = 3$ dan $b = 7 - 3 = 4$.
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>Gunakan rumus $U_n = a + (n-1)b$:
-          $$\begin{align*} U_{20} &= 3 + (20-1) \cdot 4 \\ &= 3 + 76 \\ &= 79 \end{align*}$$</li>
-        <li>Gunakan rumus $S_n = \dfrac{n}{2}[2a + (n-1)b]$:
-          $$\begin{align*} S_{15} &= \frac{15}{2}\bigl[2(3) + (15-1)(4)\bigr] \\ &= \frac{15}{2}\bigl[6 + 56\bigr] \\ &= \frac{15}{2} \cdot 62 \\ &= 465 \end{align*}$$</li>
-      </ol>
+      <p class="sol-step">Diketahui $a = 3$ dan $b = 7 - 3 = 4$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span>Suku ke-20</div>
+      $$\begin{align*} U_{20} &= 3 + (20-1) \cdot 4 \\ &= 3 + 76 \end{align*}$$
+      <div class="sol-jadi">$U_{20} = 79$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>Jumlah 15 suku pertama</div>
+      $$\begin{align*} S_{15} &= \frac{15}{2}\bigl[2(3) + (15-1)(4)\bigr] \\ &= \frac{15}{2} \cdot 62 \end{align*}$$
+      <div class="sol-jadi">$S_{15} = 465$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -456,11 +457,12 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Suatu barisan aritmatika diketahui $U_3 = 12$ dan $U_6 = 27$. Tentukan suku ke-9 dan jumlah 9 suku pertama!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Dari $U_n = a + (n-1)b$:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis dalam $a$ dan $b$:</strong></p>
       $$\begin{align*} U_3 &= a + 2b = 12 \quad \cdots (1) \\ U_6 &= a + 5b = 27 \quad \cdots (2) \end{align*}$$
-      Dari $(2) - (1)$: $3b = 15$, sehingga $b = 5$. Substitusi ke $(1)$: $a = 2$.
-      $$\begin{align*} U_9 &= 2 + 8 \cdot 5 = 42 \\ S_9 &= \frac{9}{2}(a + U_9) \\ &= \frac{9}{2}(2 + 42) \\ &= \frac{9}{2} \cdot 44 \\ &= 198 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Eliminasi</strong> $(2) - (1)$: $3b = 15 \Rightarrow b = 5$, lalu $a = 2$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Hitung $U_9$ dan $S_9$:</strong></p>
+      $$\begin{align*} U_9 &= 2 + 8 \cdot 5 = 42 \\ S_9 &= \frac{9}{2}(a + U_9) = \frac{9}{2} \cdot 44 \end{align*}$$
+      <div class="sol-jadi">$U_9 = 42$ dan $S_9 = 198$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -468,10 +470,11 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Hitunglah nilai dari $2 + 5 + 8 + 11 + \cdots + 50$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      $a = 2$, $b = 3$, $U_n = 50$. Tentukan $n$:
-      $$\begin{align*} 50 &= 2 + (n-1) \cdot 3 \\ 48 &= 3(n-1) \\ n &= 17 \end{align*}$$
-      $$S_{17} = \frac{17}{2}(2 + 50) = \frac{17}{2} \cdot 52 = 442$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan banyak suku:</strong> $a = 2$, $b = 3$, $U_n = 50$</p>
+      $$\begin{align*} 50 &= 2 + (n-1) \cdot 3 \\ 48 &= 3(n-1) \;\Rightarrow\; n = 17 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung jumlahnya:</strong></p>
+      $$S_{17} = \frac{17}{2}(2 + 50) = \frac{17}{2} \cdot 52$$
+      <div class="sol-jadi">nilainya $442$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -479,11 +482,11 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $S_n = 2n^2 + 4n$. Tentukan $U_5$ dan beda barisan tersebut!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      $$\begin{align*} S_5 &= 2(25) + 4(5) = 70 \\ S_4 &= 2(16) + 4(4) = 48 \\ U_5 &= S_5 - S_4 = 70 - 48 = 22 \end{align*}$$
-      Untuk beda, cari $U_1$ dan $U_2$:
-      $$\begin{align*} U_1 &= S_1 = 2(1) + 4(1) = 6 \\ U_2 &= S_2 - S_1 = 16 - 6 = 10 \end{align*}$$
-      maka $b = U_2 - U_1 = 10 - 6 = 4$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung $U_5$:</strong></p>
+      $$\begin{align*} S_5 &= 2(25) + 4(5) = 70 \\ S_4 &= 2(16) + 4(4) = 48 \\ U_5 &= S_5 - S_4 = 22 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cari beda</strong> dari $U_1$ dan $U_2$:</p>
+      $$\begin{align*} U_1 &= S_1 = 6 \\ U_2 &= S_2 - S_1 = 16 - 6 = 10 \\ b &= U_2 - U_1 = 4 \end{align*}$$
+      <div class="sol-jadi">$U_5 = 22$ dan beda $b = 4$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -491,16 +494,12 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Di antara bilangan 4 dan 28 disisipkan 5 bilangan sehingga membentuk barisan aritmatika. Tentukan kelima bilangan yang disisipkan tersebut!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Setelah penyisipan, barisan memiliki $2 + 5 = 7$ suku, dengan $U_1 = 4$ dan $U_7 = 28$.
-      $$\begin{align*} U_7 &= a + 6b \\ 28 &= 4 + 6b \;\Rightarrow\; b = 4 \end{align*}$$
-      Kelima bilangan yang disisipkan: 
-      $$U_2= a + b = 4 + 4 = 8$$
-      $$U_3= a + 2b = 4 + 8 = 12$$
-      $$U_4= a + 3b = 4 + 12 = 16$$
-      $$U_5= a + 4b = 4 + 16 = 20$$
-      $$U_6= a + 5b = 4 + 20 = 24$$
-
+      <p class="sol-step"><span class="sol-no">1</span><strong>Banyak suku baru:</strong> $2 + 5 = 7$ suku, dengan $U_1 = 4$ dan $U_7 = 28$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cari beda:</strong></p>
+      $$28 = 4 + 6b \;\Rightarrow\; b = 4$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Tulis suku ke-2 sampai ke-6:</strong></p>
+      $$U_2, \ldots, U_6 = 8,\ 12,\ 16,\ 20,\ 24$$
+      <div class="sol-jadi">bilangan yang disisipkan adalah 8, 12, 16, 20, dan 24.</div>
     </div>
 
     <div class="box box-contoh">
@@ -508,8 +507,11 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Suku ke-8 suatu barisan aritmatika adalah 33 dan bedanya 4. Tentukan suku pertama dan jumlah 10 suku pertamanya!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      $$\begin{align*} U_8 &= a + 7b = 33 \\ a &= 33 - 28 = 5 \\ S_{10} &= \frac{10}{2}\bigl[2(5) + (10-1)(4)\bigr] \\ &= 5\bigl[10 + 36\bigr] \\ &= 230 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari suku pertama:</strong></p>
+      $$U_8 = a + 7(4) = 33 \;\Rightarrow\; a = 5$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung $S_{10}$:</strong></p>
+      $$\begin{align*} S_{10} &= \frac{10}{2}\bigl[2(5) + 9(4)\bigr] \\ &= 5 \cdot 46 \end{align*}$$
+      <div class="sol-jadi">$a = 5$ dan $S_{10} = 230$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -517,10 +519,12 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Jumlah $n$ suku pertama suatu barisan aritmatika dinyatakan sebagai $S_n = 4n^2 - 2n$. Tentukan suku tengah jika barisan tersebut memiliki 11 suku!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      $$\begin{align*} U_1 &= S_1 = 4 - 2 = 2 \\ U_2 &= S_2 - S_1 = (16-4) - 2 = 10 \\ b &= U_2 - U_1 = 10 - 2 = 8 \end{align*}$$
-      Suku tengah ke-6 (posisi tengah dari 11 suku):
-      $$\begin{align*} U_6 &= a + 5b = 2 + 40 = 42 \\ U_T &= \frac{a + U_{11}}{2} \\ &= \frac{2 + (2 + 80)}{2} \\ &= \frac{84}{2} = 42 \checkmark \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari $a$ dan $b$</strong> dari rumus $S_n$:</p>
+      $$\begin{align*} U_1 &= S_1 = 4 - 2 = 2 \\ U_2 &= S_2 - S_1 = 12 - 2 = 10 \\ b &= U_2 - U_1 = 8 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Suku tengah</strong> dari 11 suku adalah suku ke-6:</p>
+      $$U_6 = a + 5b = 2 + 40 = 42$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Cek</strong> dengan $U_T = \dfrac{a + U_{11}}{2} = \dfrac{2 + 82}{2} = 42$ ✓</p>
+      <div class="sol-jadi">suku tengahnya $42$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -528,12 +532,12 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui barisan aritmatika naik dengan suku-suku positif. Jumlah tiga suku pertama adalah 21 dan hasil kali suku pertama dan suku ketiga adalah 45. Tentukan suku ke-10!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Misalkan tiga suku pertama adalah $a-b,\; a,\; a+b$.
-      $$\begin{align*} (a-b) + a + (a+b) &= 21 \\ 3a &= 21 \;\Rightarrow\; a = 7 \\ (a-b)(a+b) &= 45 \\ a^2 - b^2 &= 45 \\ 49 - b^2 &= 45 \\ b^2 &= 4 \;\Rightarrow\; b = \pm 2 \end{align*}$$
-      Karena barisan naik, bedanya positif, sehingga $b = 2$ (nilai $b = -2$ tidak dipakai karena membuat barisan turun).<br><br>
-      Suku ke-10 dari suku pertama $U_1 = a - b$:
-      $$\begin{align*} U_{10} &= (7-2) + 9(2) \\ &= 5 + 18 \\ &= 23 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Misalkan</strong> tiga suku pertama $a-b,\ a,\ a+b$.</p>
+      $$\begin{gather*} (a-b) + a + (a+b) = 21 \\ 3a = 21 \;\Rightarrow\; a = 7 \\ (a-b)(a+b) = 45 \\ 49 - b^2 = 45 \;\Rightarrow\; b = \pm 2 \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Pilih beda:</strong> barisan naik, jadi $b = 2$ ($b = -2$ membuat barisan turun).</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Hitung $U_{10}$</strong> dengan suku pertama $U_1 = a - b = 5$:</p>
+      $$U_{10} = 5 + 9(2) = 23$$
+      <div class="sol-jadi">$U_{10} = 23$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -541,16 +545,16 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Sebuah perusahaan konstruksi membangun jembatan dengan susunan tiang baja. Baris pertama menggunakan 8 tiang, setiap baris berikutnya bertambah 3 tiang. Total anggaran untuk tiang adalah Rp 480.000.000 dan setiap tiang berharga Rp 2.000.000. Jika perusahaan ingin memaksimalkan baris yang dapat dibangun, berapa baris maksimum yang bisa dibuat dan berapa sisa anggarannya?</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Total tiang yang dapat dibeli: $\dfrac{480.000.000}{2.000.000} = 240$ tiang.<br><br>
-      Jumlah tiang untuk $n$ baris: $S_n = \dfrac{n}{2}[2(8)+(n-1)(3)]$<br>$\phantom{S_n} = \dfrac{n(3n+13)}{2}$<br><br>
-      Syarat: $S_n \leq 240$:
-      $$\begin{gather*} \frac{n(3n+13)}{2} \leq 240 \\ 3n^2 + 13n - 480 \leq 0 \end{gather*}$$
-      Dengan rumus kuadrat: 
-      $$ \begin{align*} n &= \dfrac{-13 \pm \sqrt{169 + 5760}}{6} \\ &= \dfrac{-13 \pm \sqrt{5929}}{6} \\ &= \dfrac{-13 \pm 77}{6} \end{align*}$$<br><br>
-      Ambil $n$ positif: $n = \dfrac{64}{6} \approx 10{,}67$, maka $n_{\max} = 10$.<br><br>
-      Tiang yang digunakan: $S_{10} = \dfrac{10(30+13)}{2} = \dfrac{10 \times 43}{2} = 215$ tiang.<br><br>
-      Sisa tiang: $240 - 215 = 25$ tiang $\;\Rightarrow\;$ sisa anggaran $= 25 \times 2.000.000 = \text{Rp 50.000.000}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Banyak tiang yang terbeli:</strong></p>
+      $$\frac{480.000.000}{2.000.000} = 240 \text{ tiang}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Jumlah tiang untuk $n$ baris:</strong></p>
+      $$\begin{align*} S_n &= \frac{n}{2}\bigl[2(8) + (n-1)(3)\bigr] \\ &= \frac{n(3n+13)}{2} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Syarat</strong> $S_n \leq 240$:</p>
+      $$\begin{gather*} 3n^2 + 13n - 480 \leq 0 \\ n = \frac{-13 \pm 77}{6} \end{gather*}$$
+      <p class="sol-step">Akar positifnya $n = \tfrac{64}{6} \approx 10{,}67$, jadi $n$ terbesar adalah $10$.</p>
+      <p class="sol-step"><span class="sol-no">4</span><strong>Hitung sisa:</strong></p>
+      $$\begin{align*} S_{10} &= \frac{10 \cdot 43}{2} = 215 \text{ tiang} \\ \text{sisa} &= (240 - 215) \times 2.000.000 \end{align*}$$
+      <div class="sol-jadi">paling banyak 10 baris, dengan sisa anggaran Rp50.000.000.</div>
     </div>
 
     <div class="box box-latihan">
@@ -663,14 +667,13 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Diketahui $a = 2$ dan $r = \dfrac{6}{2} = 3$.
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>Gunakan rumus $U_n = a \cdot r^{n-1}$:
-          $$\begin{align*} U_8 &= 2 \cdot 3^{7} \\ &= 2 \cdot 2187 \\ &= 4374 \end{align*}$$</li>
-        <li>Gunakan rumus $S_n = \dfrac{a(r^n-1)}{r-1}$:
-          $$\begin{align*} S_6 &= \frac{2(3^6 - 1)}{3 - 1} \\ &= \frac{2(729-1)}{2} \\ &= 728 \end{align*}$$</li>
-      </ol>
+      <p class="sol-step">Diketahui $a = 2$ dan $r = \dfrac{6}{2} = 3$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span>Suku ke-8</div>
+      $$U_8 = 2 \cdot 3^{7} = 2 \cdot 2187$$
+      <div class="sol-jadi">$U_8 = 4374$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>Jumlah 6 suku pertama</div>
+      $$S_6 = \frac{2(3^6 - 1)}{3 - 1} = \frac{2 \cdot 728}{2}$$
+      <div class="sol-jadi">$S_6 = 728$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -678,10 +681,12 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Suatu barisan geometri diketahui $U_3 = 12$ dan $U_6 = 96$. Tentukan nilai $a$, $r$, dan $S_5$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis dalam $a$ dan $r$:</strong></p>
       $$\begin{align*} U_3 &= ar^2 = 12 \quad \cdots (1) \\ U_6 &= ar^5 = 96 \quad \cdots (2) \end{align*}$$
-      Bagi $(2)$ dengan $(1)$: $r^3 = \dfrac{96}{12} = 8 \;\Rightarrow\; r = 2$. Dari $(1)$: $a \cdot 4 = 12 \;\Rightarrow\; a = 3$.
-      $$\begin{align*} S_5 &= \frac{3(2^5 - 1)}{2 - 1} \\ &= 3(32-1) \\ &= 93 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bagi (2) dengan (1):</strong> $r^3 = 8 \Rightarrow r = 2$, lalu $4a = 12 \Rightarrow a = 3$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Hitung $S_5$:</strong></p>
+      $$S_5 = \frac{3(2^5 - 1)}{2 - 1} = 3 \cdot 31$$
+      <div class="sol-jadi">$a = 3$, $r = 2$, dan $S_5 = 93$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -689,11 +694,12 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tiga bilangan membentuk barisan geometri. Jumlah ketiga bilangan adalah 14 dan hasil kalinya adalah 64. Tentukan ketiga bilangan tersebut!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Misalkan ketiga bilangan adalah $\dfrac{a}{r},\; a,\; ar$.
-      $$\begin{align*} \frac{a}{r} \cdot a \cdot ar &= 64 \\ a^3 &= 64 \;\Rightarrow\; a = 4 \\ \frac{4}{r} + 4 + 4r &= 14 \\ 4 + 4r + 4r^2 &= 14r \\ 4r^2 - 10r + 4 &= 0 \\ 2r^2 - 5r + 2 &= 0 \\ (2r - 1)(r - 2) &= 0 \end{align*}$$
-      Jadi $r = \dfrac{1}{2}$ atau $r = 2$.<br><br>
-      Ketiga bilangan: $8,\; 4,\; 2$ atau $2,\; 4,\; 8$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Misalkan</strong> ketiga bilangan $\dfrac{a}{r},\ a,\ ar$.</p>
+      $$\frac{a}{r} \cdot a \cdot ar = a^3 = 64 \;\Rightarrow\; a = 4$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan jumlahnya:</strong></p>
+      $$\begin{align*} \frac{4}{r} + 4 + 4r &= 14 \\ 4r^2 - 10r + 4 &= 0 \\ (2r - 1)(r - 2) &= 0 \end{align*}$$
+      <p class="sol-step">Jadi $r = \tfrac{1}{2}$ atau $r = 2$.</p>
+      <div class="sol-jadi">ketiga bilangan adalah 8, 4, 2 atau 2, 4, 8.</div>
     </div>
 
     <div class="box box-contoh">
@@ -701,10 +707,11 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Hitunglah nilai dari $3 + 6 + 12 + \cdots + 384$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      $a = 3$, $r = 2$, $U_n = 384$. Tentukan $n$:
-      $$\begin{align*} 384 &= 3 \cdot 2^{n-1} \\ 2^{n-1} &= 128 = 2^7 \\ n &= 8 \end{align*}$$
-      $$S_8 = \frac{3(2^8 - 1)}{2-1} = 3(256 - 1) = 765$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan banyak suku:</strong> $a = 3$, $r = 2$, $U_n = 384$</p>
+      $$\begin{align*} 3 \cdot 2^{n-1} &= 384 \\ 2^{n-1} &= 128 = 2^7 \;\Rightarrow\; n = 8 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung jumlahnya:</strong></p>
+      $$S_8 = \frac{3(2^8 - 1)}{2-1} = 3 \cdot 255$$
+      <div class="sol-jadi">nilainya $765$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -712,9 +719,12 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Barisan $3,\; 3\sqrt{2},\; 6,\; 6\sqrt{2},\; \ldots$ diteruskan sampai 11 suku. Tentukan suku tengahnya!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      $a = 3$, $r = \dfrac{3\sqrt{2}}{3} = \sqrt{2}$.
-      $$\begin{align*} U_{11} &= 3 \cdot (\sqrt{2})^{10} = 3 \cdot 2^5 = 96 \\ U_T &= \sqrt{a \cdot U_{11}} \\ &= \sqrt{3 \cdot 96} \\ &= \sqrt{288} = 12\sqrt{2} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan rasio:</strong> $a = 3$, $r = \dfrac{3\sqrt{2}}{3} = \sqrt{2}$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Suku terakhir:</strong></p>
+      $$U_{11} = 3 \cdot (\sqrt{2})^{10} = 3 \cdot 2^5 = 96$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Suku tengah:</strong></p>
+      $$U_T = \sqrt{a \cdot U_{11}} = \sqrt{288}$$
+      <div class="sol-jadi">suku tengahnya $12\sqrt{2}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -722,8 +732,8 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Barisan geometri diketahui $U_1 = 5$ dan $r = 3$. Tentukan $U_6$ dan $S_5$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      $$\begin{align*} U_6 &= 5 \cdot 3^{5} = 5 \cdot 243 = 1215 \\ S_5 &= \frac{5(3^5-1)}{3-1} \\ &= \frac{5(243-1)}{2} \\ &= \frac{5 \times 242}{2} = 605 \end{align*}$$
+      $$\begin{align*} U_6 &= 5 \cdot 3^{5} = 5 \cdot 243 = 1215 \\ S_5 &= \frac{5(3^5-1)}{3-1} = \frac{5 \cdot 242}{2} \end{align*}$$
+      <div class="sol-jadi">$U_6 = 1215$ dan $S_5 = 605$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -731,10 +741,12 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Suku kedua barisan geometri adalah 6 dan suku kelima adalah 162. Tentukan $a$, $r$, dan $S_6$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis dalam $a$ dan $r$:</strong></p>
       $$\begin{align*} U_2 &= ar = 6 \quad \cdots(1) \\ U_5 &= ar^4 = 162 \quad \cdots(2) \end{align*}$$
-      Bagi (2) dengan (1): $r^3 = \dfrac{162}{6} = 27 \;\Rightarrow\; r = 3$. Dari (1): $a = \dfrac{6}{3} = 2$.
-      $$\begin{align*} S_6 &= \frac{2(3^6-1)}{3-1} \\ &= \frac{2(729-1)}{2} \\ &= 728 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bagi (2) dengan (1):</strong> $r^3 = 27 \Rightarrow r = 3$, lalu $a = \tfrac{6}{3} = 2$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Hitung $S_6$:</strong></p>
+      $$S_6 = \frac{2(3^6-1)}{3-1} = 728$$
+      <div class="sol-jadi">$a = 2$, $r = 3$, dan $S_6 = 728$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -742,11 +754,13 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui barisan geometri dengan semua suku positif. Jumlah suku ke-3 dan ke-5 adalah 180, sedangkan hasil kali suku ke-2 dan ke-6 adalah 2304. Tentukan suku ke-4!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      $$\begin{align*} U_3 + U_5 &= ar^2(1+r^2) \\ &= 180 \quad\cdots(1) \\ U_2 \cdot U_6 &= a^2r^6 = (ar^3)^2 \\ &= 2304 \quad\cdots(2) \end{align*}$$
-      Dari (2): $(ar^3)^2 = 2304 \;\Rightarrow\; ar^3 = 48$ (positif), sehingga $U_4 = ar^3 = 48$.<br><br>
-      Verifikasi dari (1): $\dfrac{48}{r}(1+r^2) = 180$, sehingga:
-      $$\begin{align*} 48r^2 - 180r + 48 &= 0 \\ 4r^2 - 15r + 4 &= 0 \\ (4r-1)(r-4) &= 0 \\ r = 4 \text{ atau } r &= \tfrac{1}{4} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis kedua syarat:</strong></p>
+      $$\begin{align*} U_3 + U_5 &= ar^2(1+r^2) \\ &= 180 \quad\cdots(1) \\ U_2 \cdot U_6 &= (ar^3)^2 \\ &= 2304 \quad\cdots(2) \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Dari (2):</strong> $ar^3 = 48$ (semua suku positif), dan $ar^3$ tepat sama dengan $U_4$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Cek dengan (1):</strong> $\dfrac{48}{r}(1+r^2) = 180$</p>
+      $$\begin{align*} 4r^2 - 15r + 4 &= 0 \\ (4r-1)(r-4) &= 0 \end{align*}$$
+      <p class="sol-step">Keduanya ($r = 4$ atau $r = \tfrac{1}{4}$) positif, jadi data konsisten.</p>
+      <div class="sol-jadi">$U_4 = 48$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -754,17 +768,16 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Sebuah virus menyebar di kota. Hari pertama ada 4 orang terinfeksi, dan setiap harinya jumlah orang yang terinfeksi menjadi 3 kali lipat hari sebelumnya. Kapasitas rumah sakit hanya 10.000 tempat tidur. Pada hari keberapa jumlah kumulatif orang terinfeksi pertama kali melebihi kapasitas tersebut? Jika pada hari itu pemerintah memberlakukan lockdown sehingga rasio penyebaran turun menjadi $\frac{1}{2}$, berapa total orang terinfeksi setelah lockdown berjalan tanpa batas waktu?</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      <strong>Bagian 1:</strong> Total infeksi kumulatif $S_n = \dfrac{4(3^n-1)}{3-1} = 2(3^n - 1)$.<br><br>
-      Syarat $S_n > 10.000$:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Infeksi kumulatif:</strong></p>
+      $$S_n = \frac{4(3^n-1)}{3-1} = 2(3^n - 1)$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Syarat melebihi kapasitas:</strong></p>
       $$2(3^n-1) > 10.000 \;\Rightarrow\; 3^n > 5001$$
-      $3^7 = 2187 &lt; 5001$ dan $3^8 = 6561 &gt; 5001$, jadi lockdown diberlakukan pada <strong>hari ke-8</strong>.<br><br>
-      Jumlah terinfeksi di hari ke-8: $U_8 = 4 \cdot 3^7 = 4 \cdot 2187 = 8748$ orang.<br><br>
-      <strong>Bagian 2:</strong> Setelah lockdown, deret geometri tak hingga baru dimulai dari $U_8 = 8748$ dengan rasio $r = \dfrac{1}{2}$.
-      $$\begin{align*} S_{\text{lockdown}} &= \frac{8748}{1 - \tfrac{1}{2}} \\ &= 8748 \times 2 = 17.496 \end{align*}$$
-      Total infeksi $= S_7 + S_{\text{lockdown}}$:
-      $$S_7 = 2(3^7-1) = 2(2187-1) = 4372$$
-      $$\begin{align*} \text{Total} &= 4372 + 17.496 \\ &= 21.868 \text{ orang} \end{align*}$$
+      <p class="sol-step">$3^7 = 2187 < 5001$ dan $3^8 = 6561 > 5001$, jadi kapasitas terlampaui pada <strong>hari ke-8</strong>. Pada hari itu $U_8 = 4 \cdot 3^7 = 8748$ orang.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Setelah lockdown:</strong> deret tak hingga mulai dari $U_8 = 8748$ dengan $r = \tfrac{1}{2}$</p>
+      $$S_{\text{lockdown}} = \frac{8748}{1 - \tfrac{1}{2}} = 17.496$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Jumlahkan</strong> dengan infeksi 7 hari pertama $S_7 = 2(3^7-1) = 4372$:</p>
+      $$4372 + 17.496 = 21.868$$
+      <div class="sol-jadi">kapasitas terlampaui pada hari ke-8, dan total orang terinfeksi 21.868 orang.</div>
     </div>
 
     <div class="box box-latihan">
@@ -976,9 +989,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Suatu deret geometri tak hingga diketahui suku pertamanya 6 dan rasionya $\dfrac{1}{3}$. Tentukan jumlah tak hingganya!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      $a = 6$, $r = \dfrac{1}{3}$. Karena $|r| &lt; 1$, deret konvergen.
-      $$S_\infty = \frac{6}{1 - \dfrac{1}{3}} = \frac{6}{\dfrac{2}{3}} = 6 \cdot \frac{3}{2} = 9$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cek konvergen:</strong> $a = 6$, $r = \tfrac{1}{3}$, dan $|r| < 1$.</p>
+      $$S_\infty = \frac{6}{1 - \frac{1}{3}} = 6 \cdot \frac{3}{2}$$
+      <div class="sol-jadi">$S_\infty = 9$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -986,8 +999,11 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Jumlah tak hingga suatu deret geometri adalah 16 dan suku pertamanya 8. Tentukan rasio dan suku ke-4!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      $$\begin{align*} 16 &= \frac{8}{1-r} \\ 1-r &= \frac{8}{16} = \frac{1}{2} \\ r &= \frac{1}{2} \\ U_4 &= 8 \cdot \left(\frac{1}{2}\right)^3 \\ &= 8 \cdot \frac{1}{8} = 1 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari rasio:</strong></p>
+      $$\begin{align*} 16 &= \frac{8}{1-r} \\ 1 - r &= \frac{1}{2} \;\Rightarrow\; r = \frac{1}{2} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung $U_4$:</strong></p>
+      $$U_4 = 8 \cdot \left(\tfrac{1}{2}\right)^3 = 1$$
+      <div class="sol-jadi">$r = \tfrac{1}{2}$ dan $U_4 = 1$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -995,10 +1011,13 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Ubahlah $0{,}3\overline{6} = 0{,}3666\ldots$ menjadi pecahan biasa!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      $0{,}3\overline{6} = 0{,}3 + 0{,}06$<br>$\phantom{0{,}3\overline{6}} \quad + 0{,}006 + 0{,}0006 + \cdots$<br><br>
-      Bagian berulangnya: $a = 0{,}06$, $r = 0{,}1$, maka:
-      $$\begin{align*} \text{Bagian berulang} &= \frac{0{,}06}{1 - 0{,}1} \\ &= \frac{0{,}06}{0{,}9} = \frac{1}{15} \\ 0{,}3\overline{6} &= 0{,}3 + \frac{1}{15} \\ &= \frac{3}{10} + \frac{1}{15} \\ &= \frac{9}{30} + \frac{2}{30} = \frac{11}{30} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pisahkan bagian berulang:</strong></p>
+      $$0{,}3\overline{6} = 0{,}3 + (0{,}06 + 0{,}006 + \cdots)$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Jumlahkan bagian berulang</strong> ($a = 0{,}06$, $r = 0{,}1$):</p>
+      $$\frac{0{,}06}{1 - 0{,}1} = \frac{0{,}06}{0{,}9} = \frac{1}{15}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Jumlahkan:</strong></p>
+      $$\frac{3}{10} + \frac{1}{15} = \frac{9}{30} + \frac{2}{30}$$
+      <div class="sol-jadi">$0{,}3\overline{6} = \tfrac{11}{30}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1006,7 +1025,6 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Sebuah bola dijatuhkan dari ketinggian 25 m. Setiap kali menyentuh lantai, bola memantul setinggi $\dfrac{3}{5}$ dari ketinggian sebelumnya. Tentukan panjang total lintasan bola!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
       <div class="grafik-wrap">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 400" width="240px" height="100%" style="background-color: transparent;">
     <defs>
@@ -1055,11 +1073,14 @@ window.MathJax = {
     </defs>
   </svg>
 </div>
-      <br>
-      Pantul pertama: $25 \times \dfrac{3}{5} = 15$ m, pantul kedua: $15 \times \dfrac{3}{5} = 9$ m, dst.
-      $$\begin{align*} S_{\text{turun}} &= \frac{25}{1 - \frac{3}{5}} = \frac{25}{\frac{2}{5}} = \frac{125}{2} \\ S_{\text{naik}} &= \frac{15}{1 - \frac{3}{5}} = \frac{15}{\frac{2}{5}} = \frac{75}{2} \\ \text{Total} &= \frac{125}{2} + \frac{75}{2} \\ &= \frac{200}{2} = 100 \text{ m} \end{align*}$$
-      Cara cepat (rumus lintasan bola):
-      $$\begin{align*} L &= h \cdot \frac{1+r}{1-r} \\ &= 25 \cdot \frac{1 + \frac{3}{5}}{1 - \frac{3}{5}} \\ &= 25 \cdot \frac{\frac{8}{5}}{\frac{2}{5}} \\ &= 25 \cdot 4 \\ &= 100 \text{ m} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Lintasan turun</strong> (25, 15, 9, …):</p>
+      $$S_{\text{turun}} = \frac{25}{1 - \frac{3}{5}} = \frac{125}{2}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Lintasan naik</strong> (15, 9, …):</p>
+      $$S_{\text{naik}} = \frac{15}{1 - \frac{3}{5}} = \frac{75}{2}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Jumlahkan:</strong></p>
+      $$\frac{125}{2} + \frac{75}{2} = 100$$
+      <p class="sol-step">Cara cepat: $L = h \cdot \dfrac{1+r}{1-r}$<br>$\phantom{L} = 25 \cdot \dfrac{8/5}{2/5} = 25 \cdot 4 = 100$.</p>
+      <div class="sol-jadi">panjang lintasan bola 100 m.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1067,10 +1088,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Suatu deret geometri tak hingga diketahui suku pertamanya 24 dan rasionya $\dfrac{1}{3}$. Tentukan jumlah suku-suku <strong>bernomor genap</strong>!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Suku-suku bernomor genap: $U_2 + U_4 + U_6 + \cdots$<br>$= ar + ar^3 + ar^5 + \cdots$<br><br>
-      Ini adalah deret geometri tak hingga baru dengan suku pertama $ar$ dan rasio $r^2$:
-      $$\begin{align*} S_{\text{genap}} &= \frac{ar}{1 - r^2} \\ &= \frac{24 \cdot \frac{1}{3}}{1 - \left(\frac{1}{3}\right)^2} \\ &= \frac{8}{1 - \frac{1}{9}} \\ &= \frac{8}{\frac{8}{9}} \\ &= 9 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Suku bernomor genap</strong> $ar + ar^3 + ar^5 + \cdots$ membentuk deret baru dengan suku pertama $ar$ dan rasio $r^2$.</p>
+      $$\begin{align*} S_{\text{genap}} &= \frac{ar}{1 - r^2} = \frac{24 \cdot \frac{1}{3}}{1 - \frac{1}{9}} \\ &= \frac{8}{\frac{8}{9}} \end{align*}$$
+      <div class="sol-jadi">jumlahnya $9$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1078,9 +1098,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan jumlah tak hingga deret geometri $16 + 8 + 4 + 2 + \cdots$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      $a = 16$, $r = \dfrac{8}{16} = \dfrac{1}{2}$. Karena $|r| &lt; 1$, deret konvergen.
-      $$S_\infty = \frac{16}{1 - \dfrac{1}{2}} = \frac{16}{\dfrac{1}{2}} = 32$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cek konvergen:</strong> $a = 16$, $r = \tfrac{1}{2}$, dan $|r| < 1$.</p>
+      $$S_\infty = \frac{16}{1 - \frac{1}{2}}$$
+      <div class="sol-jadi">$S_\infty = 32$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1094,14 +1114,13 @@ window.MathJax = {
   Jika proses ini berlangsung terus tanpa batas, tentukan total jarak getaran keseluruhan mesin!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      <strong>Siklus 1:</strong> $a_1 = 120$, $r = \dfrac{3}{4}$:
-      $$S_1 = \frac{120}{1 - \frac{3}{4}} = \frac{120}{\frac{1}{4}} = 480 \text{ cm}$$
-      <strong>Siklus 2:</strong> $a_2 = 40$, $r = \dfrac{3}{4}$:
-      $$S_2 = \frac{40}{\frac{1}{4}} = 160 \text{ cm}$$
-      Perhatikan pola suku awal tiap siklus: $120, 40, \dfrac{40}{3}, \ldots$ — ini sendiri adalah barisan geometri dengan rasio $\dfrac{1}{3}$.<br><br>
-      Total jarak = deret geometri tak hingga dengan suku pertama $S_1 = 480$ dan rasio $\dfrac{1}{3}$:
-      $$\begin{align*} \text{Total} &= \frac{480}{1 - \frac{1}{3}} = \frac{480}{\frac{2}{3}} \\ &= 480 \times \frac{3}{2} = 720 \text{ cm} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Siklus pertama:</strong></p>
+      $$S_1 = \frac{120}{1 - \frac{3}{4}} = 480 \text{ cm}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Siklus kedua</strong> (getaran pertama 40 cm):</p>
+      $$S_2 = \frac{40}{1 - \frac{3}{4}} = 160 \text{ cm}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Pola antarsiklus:</strong> jumlah tiap siklus $480, 160, \ldots$ membentuk deret geometri dengan rasio $\tfrac{1}{3}$.</p>
+      $$\text{Total} = \frac{480}{1 - \frac{1}{3}} = 480 \times \frac{3}{2}$$
+      <div class="sol-jadi">total jarak getaran 720 cm.</div>
     </div>
 
     <div class="box box-latihan">
@@ -1173,8 +1192,8 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Pak Budi meminjam uang di koperasi sebesar Rp 5.000.000 dengan bunga tunggal 3% per bulan. Jika dilunasi setelah 8 bulan, berapa total pengembaliannya?</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      $$\begin{align*} M_8 &= 5.000.000\,(1 + 0{,}03 \times 8) \\ &= 5.000.000 \times 1{,}24 \\ &= \text{Rp 6.200.000} \end{align*}$$
+      $$\begin{align*} M_8 &= 5.000.000\,(1 + 0{,}03 \times 8) \\ &= 5.000.000 \times 1{,}24 \end{align*}$$
+      <div class="sol-jadi">total pengembalian Rp6.200.000.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1182,8 +1201,8 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Santi menyimpan Rp 4.000.000 di bank dengan bunga majemuk 2% per bulan. Berapa tabungan Santi setelah 6 bulan? ($(1{,}02)^6 \approx 1{,}1262$)</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      $$\begin{align*} M_6 &= 4.000.000 \times (1{,}02)^6 \\ &\approx 4.000.000 \times 1{,}1262 \\ &= \text{Rp 4.504.800} \end{align*}$$
+      $$\begin{align*} M_6 &= 4.000.000 \times (1{,}02)^6 \\ &\approx 4.000.000 \times 1{,}1262 \end{align*}$$
+      <div class="sol-jadi">tabungan Santi sekitar Rp4.504.800.</div>
     </div>
 
     <h3 class="subsection-title">2. Pertumbuhan dan Peluruhan</h3>
@@ -1243,9 +1262,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Populasi bakteri membelah dua setiap 20 menit. Jika mula-mula terdapat 50 bakteri, berapa banyak bakteri setelah 2 jam?</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Dalam 2 jam $= 120$ menit $\;\Rightarrow\; n = \dfrac{120}{20} = 6$ kali pembelahan.
-      $$\begin{align*} M_6 &= 50 \times 2^6 = 50 \times 64 \\ &= 3200 \text{ bakteri} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Banyak pembelahan:</strong> $\dfrac{120}{20} = 6$ kali.</p>
+      $$M_6 = 50 \times 2^6 = 50 \times 64$$
+      <div class="sol-jadi">setelah 2 jam terdapat 3.200 bakteri.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1253,8 +1272,8 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Sebuah mobil dibeli seharga Rp 200.000.000. Setiap tahun nilainya menyusut 10% dari nilai tahun sebelumnya. Berapa nilai mobil setelah 4 tahun? ($(0{,}9)^4 = 0{,}6561$)</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      $$\begin{align*} M_4 &= 200.000.000 \times (1 - 0{,}1)^4 \\ &= 200.000.000 \times (0{,}9)^4 \\ &= 200.000.000 \times 0{,}6561 \\ &= \text{Rp 131.220.000} \end{align*}$$
+      $$\begin{align*} M_4 &= 200.000.000 \times (0{,}9)^4 \\ &= 200.000.000 \times 0{,}6561 \end{align*}$$
+      <div class="sol-jadi">nilai mobil setelah 4 tahun Rp131.220.000.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1262,9 +1281,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Seorang karyawan memiliki gaji awal Rp 3.000.000 per bulan. Setiap tahun gajinya naik Rp 500.000. Berapa gaji karyawan tersebut pada tahun ke-6?</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Ini adalah barisan aritmatika dengan $a = 3.000.000$ dan $b = 500.000$.
-      $$\begin{align*} U_6 &= 3.000.000 + (6-1)(500.000) \\ &= 3.000.000 + 2.500.000 \\ &= \text{Rp 5.500.000} \end{align*}$$
+      <p class="sol-step">Barisan aritmatika dengan $a = 3.000.000$ dan $b = 500.000$.</p>
+      $$U_6 = 3.000.000 + 5 \times 500.000$$
+      <div class="sol-jadi">gaji pada tahun ke-6 Rp5.500.000.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1272,8 +1291,8 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Modal sebesar Rp 6.000.000 ditabung dengan bunga majemuk 5% per tahun. Berapa jumlah tabungan setelah 3 tahun? ($(1{,}05)^3 = 1{,}1576$)</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      $$\begin{align*} M_3 &= 6.000.000 \times (1{,}05)^3 \\ &= 6.000.000 \times 1{,}1576 \\ &= \text{Rp 6.945.600} \end{align*}$$
+      $$\begin{align*} M_3 &= 6.000.000 \times (1{,}05)^3 \\ &= 6.000.000 \times 1{,}1576 \end{align*}$$
+      <div class="sol-jadi">tabungan setelah 3 tahun Rp6.945.600.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1281,14 +1300,15 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Dua orang menabung dengan skema berbeda. Andi menabung Rp8.000.000 dengan bunga majemuk 10% per tahun. Budi menabung Rp10.000.000 dengan bunga tunggal 5% per tahun. Setelah berapa tahun tabungan Andi pertama kali melebihi tabungan Budi? ($(1{,}1)^3=1{,}331$, $(1{,}1)^4=1{,}4641$, $(1{,}1)^5=1{,}61051$)</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Tabungan Andi (pola geometri): $M_A = 8.000.000 \times (1{,}1)^n$<br>
-      Tabungan Budi (pola aritmatika): $M_B = 10.000.000 \times (1 + 0{,}05n)$<br><br>
-      Pemeriksaan nilai:
-      $$\begin{aligned} n=3: \quad M_A &= 10.648.000 \\ M_B &= 11.500.000 \\ &\Rightarrow M_A < M_B \end{aligned}$$
-      $$\begin{aligned} n=4: \quad M_A &= 11.712.800 \\ M_B &= 12.000.000 \\ &\Rightarrow M_A < M_B \end{aligned}$$
-      $$\begin{aligned} n=5: \quad M_A &= 12.884.080 \\ M_B &= 12.500.000 \\ &\Rightarrow M_A > M_B \end{aligned}$$
-      Jadi tabungan Andi pertama kali melebihi tabungan Budi pada <strong>tahun ke-5</strong>. Walaupun modal awal Andi lebih kecil, bunga majemuk tumbuh secara geometri sehingga akhirnya menyusul bunga tunggal yang tumbuh secara aritmatika.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis model keduanya:</strong> $M_A = 8.000.000 \times (1{,}1)^n$ (geometri) dan $M_B = 10.000.000 \times (1 + 0{,}05n)$ (aritmatika).</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan per tahun:</strong></p>
+      <ul class="sol-cek">
+        <li>$n = 3$: $M_A = 10.648.000$ dan $M_B = 11.500.000$, jadi $M_A < M_B$</li>
+        <li>$n = 4$: $M_A = 11.712.800$ dan $M_B = 12.000.000$, jadi $M_A < M_B$</li>
+        <li>$n = 5$: $M_A = 12.884.080$ dan $M_B = 12.500.000$, jadi $M_A > M_B$ ✓</li>
+      </ul>
+      <p class="sol-step">Walaupun modal awal Andi lebih kecil, bunga majemuk tumbuh secara geometri sehingga akhirnya menyusul bunga tunggal yang tumbuh secara aritmatika.</p>
+      <div class="sol-jadi">tabungan Andi pertama kali melebihi tabungan Budi pada tahun ke-5.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1296,14 +1316,14 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Seorang pengusaha menginvestasikan modal Rp500.000.000. Dalam berapa tahun modal tersebut menjadi dua kali lipat jika diinvestasikan dengan (a) bunga majemuk 6% per tahun, dan (b) bunga tunggal 6% per tahun? Skema mana yang lebih menguntungkan? ($(1{,}06)^{11}=1{,}8983$, $(1{,}06)^{12}=2{,}0122$)</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      <strong>(a) Bunga majemuk:</strong> syarat dua kali lipat
+      <div class="sol-part"><span class="sol-tag">a</span>Bunga majemuk 6%</div>
       $$\begin{gather*} 500 \times (1{,}06)^n \geq 1000 \\ (1{,}06)^n \geq 2 \end{gather*}$$
-      Karena $(1{,}06)^{11} = 1{,}8983 < 2$ dan $(1{,}06)^{12} = 2{,}0122 > 2$, modal menjadi dua kali lipat dalam <strong>12 tahun</strong>.<br><br>
-      <strong>(b) Bunga tunggal:</strong>
-      $$\begin{align*} 500(1 + 0{,}06n) &\geq 1000 \\ 1 + 0{,}06n &\geq 2 \\ n &\geq 16{,}67 \end{align*}$$
-      Modal menjadi dua kali lipat dalam <strong>17 tahun</strong>.<br><br>
-      <strong>Kesimpulan:</strong> bunga majemuk lebih menguntungkan, karena bunga dihitung dari modal yang terus bertambah (pola geometri), sedangkan bunga tunggal selalu dihitung dari modal awal (pola aritmatika).
+      <p class="sol-step">$(1{,}06)^{11} = 1{,}8983 < 2$ dan $(1{,}06)^{12} = 2{,}0122 > 2$.</p>
+      <div class="sol-jadi">modal menjadi dua kali lipat dalam 12 tahun.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>Bunga tunggal 6%</div>
+      $$\begin{align*} 500(1 + 0{,}06n) &\geq 1000 \\ 0{,}06n &\geq 1 \;\Rightarrow\; n \geq 16{,}67 \end{align*}$$
+      <div class="sol-jadi">modal menjadi dua kali lipat dalam 17 tahun.</div>
+      <p class="sol-step">Bunga majemuk lebih menguntungkan karena bunganya dihitung dari modal yang terus bertambah (pola geometri), sedangkan bunga tunggal selalu dihitung dari modal awal (pola aritmatika).</p>
     </div>
 
     <div class="box box-latihan">
@@ -1372,12 +1392,16 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui barisan $1,\; 3,\; 5,\; \ldots$ dengan $a = 1$ dan $b = 2$. Turunkan rumus $U_n$ ke bentuk linier dan $S_n$ ke bentuk kuadrat, kemudian verifikasi dengan $n = 3$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      <strong>Rumus $U_n$ bentuk linier:</strong>
-      $$\begin{align*} U_n &= bn + (a - b) \\ &= 2n + (1 - 2) \\ &= 2n - 1 \end{align*}$$
-      <strong>Rumus $S_n$ bentuk kuadrat:</strong>
-      $$\begin{align*} S_n &= \frac{b}{2}n^2 + \left(a - \frac{b}{2}\right)n \\ &= \frac{2}{2}n^2 + \left(1 - \frac{2}{2}\right)n \\ &= n^2 + 0 \cdot n \\ &= n^2 \end{align*}$$
-      <strong>Verifikasi</strong> $n = 3$: $U_3 = 2(3)-1 = 5$ ✓ &nbsp; dan &nbsp; $S_3 = 3^2 = 9 = 1+3+5$ ✓
+      <p class="sol-step"><span class="sol-no">1</span><strong>Rumus $U_n$ bentuk linier:</strong></p>
+      $$\begin{align*} U_n &= bn + (a - b) \\ &= 2n + (1 - 2) = 2n - 1 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Rumus $S_n$ bentuk kuadrat:</strong></p>
+      $$\begin{align*} S_n &= \frac{b}{2}n^2 + \left(a - \frac{b}{2}\right)n \\ &= n^2 + 0 \cdot n = n^2 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Verifikasi $n = 3$:</strong></p>
+      <ul class="sol-cek">
+        <li>$U_3 = 2(3) - 1 = 5$ ✓</li>
+        <li>$S_3 = 3^2 = 9 = 1 + 3 + 5$ ✓</li>
+      </ul>
+      <div class="sol-jadi">$U_n = 2n - 1$ dan $S_n = n^2$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1385,14 +1409,16 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $S_n = 4n^2 + 5n$. Tentukan nilai $b$, $a$, dan rumus $U_n$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Dari $S_n = 4n^2 + 5n$: $\alpha = 4$, $\beta = 5$.
-      $$b = 2\alpha = 2 \times 4 = 8$$
-      $$a = \alpha + \beta = 4 + 5 = 9$$
-      Rumus $U_n$ bentuk linier:
-      $$\begin{align*} U_n &= bn + (a - b) \\ &= 8n + (9 - 8) \\ &= 8n + 1 \end{align*}$$
-      Verifikasi: <br> 
-      $U_1 = 8(1)+1 = 9 = a$ ✓ <br> $U_2 - U_1 = 17 - 9 = 8 = b$ ✓
+      <p class="sol-step"><span class="sol-no">1</span><strong>Baca koefisien:</strong> $S_n = 4n^2 + 5n$, jadi $\alpha = 4$ dan $\beta = 5$.</p>
+      $$\begin{gather*} b = 2\alpha = 8 \\ a = \alpha + \beta = 9 \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Rumus $U_n$:</strong></p>
+      $$U_n = bn + (a - b) = 8n + 1$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Verifikasi:</strong></p>
+      <ul class="sol-cek">
+        <li>$U_1 = 8(1) + 1 = 9 = a$ ✓</li>
+        <li>$U_2 - U_1 = 17 - 9 = 8 = b$ ✓</li>
+      </ul>
+      <div class="sol-jadi">$b = 8$, $a = 9$, dan $U_n = 8n + 1$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1400,14 +1426,15 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $U_n = 4n - 5$. Tentukan $b$, $a$, dan rumus $S_n$ bentuk kuadrat!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Dari $U_n = 4n - 5$: $p = 4$, $q = -5$.
-      $$b = p = 4$$
-      $$a = p + q = 4 + (-5) = -1$$
-      Rumus $S_n$ bentuk kuadrat:
-      $$\begin{align*} S_n &= \frac{b}{2}n^2 + \left(a - \frac{b}{2}\right)n \\ &= \frac{4}{2}n^2 + \left(-1 - \frac{4}{2}\right)n \\ &= 2n^2 - 3n \end{align*}$$
-      Verifikasi: <br>
-      $$\begin{align*} S_3 &= 2(9) - 3(3) \\ &= 18 - 9 \\ &= 9 \\ &= (-1) + 3 + 7 \\& = 9 \end{align*}$$ ✓
+      <p class="sol-step"><span class="sol-no">1</span><strong>Baca koefisien:</strong> $U_n = 4n - 5$, jadi $p = 4$ dan $q = -5$.</p>
+      $$\begin{gather*} b = p = 4 \\ a = p + q = -1 \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Rumus $S_n$:</strong></p>
+      $$\begin{align*} S_n &= \frac{b}{2}n^2 + \left(a - \frac{b}{2}\right)n \\ &= 2n^2 + (-1 - 2)n = 2n^2 - 3n \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Verifikasi $n = 3$:</strong></p>
+      <ul class="sol-cek">
+        <li>$S_3 = 2(9) - 3(3) = 9$ dan $(-1) + 3 + 7 = 9$ ✓</li>
+      </ul>
+      <div class="sol-jadi">$b = 4$, $a = -1$, dan $S_n = 2n^2 - 3n$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1415,12 +1442,11 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $S_n = 2n^2 - 3n$. Tentukan $b$, $a$, rumus $U_n$, dan nilai $U_4$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      $\alpha = 2$, $\beta = -3$.
-      $$b = 2(2) = 4$$
-      $$a = 2 + (-3) = -1$$
-      $$U_n = 4n + (-1 - 4) = 4n - 5$$
-      $$U_4 = 4(4) - 5 = 11$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Baca koefisien:</strong> $\alpha = 2$, $\beta = -3$.</p>
+      $$\begin{gather*} b = 2(2) = 4 \\ a = 2 + (-3) = -1 \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Rumus $U_n$ dan $U_4$:</strong></p>
+      $$\begin{gather*} U_n = 4n + (-1 - 4) = 4n - 5 \\ U_4 = 4(4) - 5 = 11 \end{gather*}$$
+      <div class="sol-jadi">$b = 4$, $a = -1$, $U_n = 4n - 5$, dan $U_4 = 11$.</div>
     </div>
 
     <h3 class="subsection-title">2. Rahasia Beda: Selisih Suku pada Barisan Aritmatika</h3>
@@ -1445,9 +1471,12 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui barisan aritmatika $2,\; 4,\; 6,\; 8,\; \ldots$ ($b = 2$). Verifikasikan bahwa $U_3 - U_1 = 2b$ dan $U_4 - U_1 = 3b$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      $$\begin{align*} U_3 - U_1 &= 6 - 2 \\ &= 4 \\ & = (3-1) \times 2 \\ &= 2b \quad \checkmark \end{align*}$$
-      $$\begin{align*} U_4 - U_1 &= 8 - 2 \\ &= 6 \\ &= (4-1) \times 2 \\ &= 3b \quad \checkmark \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">a</span>$U_3 - U_1 = 2b$</div>
+      $$\begin{align*} U_3 - U_1 &= 6 - 2 = 4 \\ &= (3-1) \times 2 = 2b \end{align*}$$
+      <div class="sol-jadi">$U_3 - U_1 = 2b$ terbukti ✓.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$U_4 - U_1 = 3b$</div>
+      $$\begin{align*} U_4 - U_1 &= 8 - 2 = 6 \\ &= (4-1) \times 2 = 3b \end{align*}$$
+      <div class="sol-jadi">$U_4 - U_1 = 3b$ terbukti ✓.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1455,29 +1484,13 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Barisan aritmatika diketahui $U_3 = 10$ dan $U_7 = 26$. Tentukan $b$, $a$, dan $U_{10}$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Menggunakan rahasia beda:<br>
-      1. Mencari b
-      \begin{align*}
-      U_7 - U_3 &= (7-3)b \\
-        26 - 10 &= 4b \\
-              16 &= 4b \\
-              b &= 4
-\end{align*}
-      2. Mencari a
-      \begin{align*}
-        a &= U_3 - (3-1)b \\
-          &= 10 - 2(4) \\
-           &= 10 - 8 \\
-           &= 2
-\end{align*}
-3. Mencari $U_{10}$
-     \begin{align*}
-    U_{10} &= a + 9b \\
-           &= 2 + 9(4) \\
-           &= 2 + 36 \\
-           &= 38
-\end{align*}
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari $b$</strong> dengan rahasia beda:</p>
+      $$\begin{align*} U_7 - U_3 &= (7-3)b \\ 26 - 10 &= 4b \;\Rightarrow\; b = 4 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cari $a$:</strong></p>
+      $$a = U_3 - 2b = 10 - 8 = 2$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Hitung $U_{10}$:</strong></p>
+      $$U_{10} = a + 9b = 2 + 36 = 38$$
+      <div class="sol-jadi">$b = 4$, $a = 2$, dan $U_{10} = 38$.</div>
     </div>
 
     <h3 class="subsection-title">3. Rahasia Rasio: Perbandingan Suku pada Barisan Geometri</h3>
@@ -1501,9 +1514,12 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui barisan geometri $2,\; 4,\; 8,\; 16,\; \ldots$ ($r = 2$). Verifikasikan bahwa $\dfrac{U_3}{U_1} = r^2$ dan $\dfrac{U_4}{U_1} = r^3$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong>
-      $$\begin{align*} \frac{U_3}{U_1} &= \frac{8}{2} \\ &= 4 \\ &= 2^{3-1} \\& = r^2 \quad \checkmark \end{align*}$$
-      $$\begin{align*} \frac{U_4}{U_1} &= \frac{16}{2} \\ &= 8 \\ &= 2^{4-1} \\ &= r^3 \quad \checkmark \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">a</span>$\dfrac{U_3}{U_1} = r^2$</div>
+      $$\frac{U_3}{U_1} = \frac{8}{2} = 4 = 2^{3-1} = r^2$$
+      <div class="sol-jadi">$\dfrac{U_3}{U_1} = r^2$ terbukti ✓.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$\dfrac{U_4}{U_1} = r^3$</div>
+      $$\frac{U_4}{U_1} = \frac{16}{2} = 8 = 2^{4-1} = r^3$$
+      <div class="sol-jadi">$\dfrac{U_4}{U_1} = r^3$ terbukti ✓.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1511,28 +1527,14 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Barisan geometri diketahui $U_2 = 4$ dan $U_4 = 16$. Tentukan $r$, $a$, dan $U_6$!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Penyelesaian:</strong><br>
-      Menggunakan rahasia rasio:<br>
-      1. Mencari r
-      \begin{align*}
-      \frac{U_4}{U_2} &= r^{4-2} \\
-        \frac{16}{4} &= r^2 \\
-                4 &= r^2 \\
-                r &= 2
-\end{align*}
-2. Mencari a
-      \begin{align*}
-a &= \frac{U_2}{r} \\
-  &= \frac{4}{2} \\
-  &= 2
-\end{align*}
-3. Mencari $U_6$
-      \begin{align*}
-U_6 &= U_4 \cdot r^{6-4} \\
-    &= 16 \times 2^2 \\
-    &= 16 \times 4 \\
-    &= 64
-\end{align*}
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari $r$</strong> dengan rahasia rasio:</p>
+      $$\begin{align*} \frac{U_4}{U_2} &= r^{4-2} \\ \frac{16}{4} &= r^2 \;\Rightarrow\; r = 2 \end{align*}$$
+      <p class="sol-step">Nilai $r = -2$ juga memenuhi $r^2 = 4$ (dengan $a = -2$), tetapi menghasilkan $U_6$ yang sama.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cari $a$:</strong></p>
+      $$a = \frac{U_2}{r} = \frac{4}{2} = 2$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Hitung $U_6$:</strong></p>
+      $$U_6 = U_4 \cdot r^{2} = 16 \times 4 = 64$$
+      <div class="sol-jadi">$r = 2$, $a = 2$, dan $U_6 = 64$.</div>
     </div>
 
     <div class="box box-latihan">
