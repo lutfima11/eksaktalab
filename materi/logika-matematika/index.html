@@ -278,9 +278,9 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">• Negasi Pernyataan</div>
-      <p style="margin:0 0 .5rem;font-size:.9rem;">Negasi dari $p$ ditulis $\neg p$ (sering juga ditulis $\sim p$), dibaca "tidak $p$" atau "tidak benar bahwa $p$". Nilai kebenarannya selalu <strong>berlawanan</strong> dengan $p$.</p>
-      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th class="hl">$\neg p$</th></tr></thead><tbody><tr><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td class="hl">B</td></tr></tbody></table></div>
-      $$\neg(\neg p) \equiv p$$
+      <p style="margin:0 0 .5rem;font-size:.9rem;">Negasi dari $p$ ditulis ${\sim}p$, dibaca "tidak $p$" atau "tidak benar bahwa $p$". Nilai kebenarannya selalu <strong>berlawanan</strong> dengan $p$.</p>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th class="hl">${\sim}p$</th></tr></thead><tbody><tr><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td class="hl">B</td></tr></tbody></table></div>
+      $${\sim}({\sim}p) \equiv p$$
     </div>
 
     <div class="box box-catatan">
@@ -300,14 +300,14 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <div class="sol-part"><span class="sol-tag">a</span>$p$: Bandung ibu kota Jawa Barat (B)</div>
-      <div class="sol-jadi">$\neg p$: "Bandung bukan ibu kota Provinsi Jawa Barat", bernilai S.</div>
+      <div class="sol-jadi">${\sim}p$: "Bandung bukan ibu kota Provinsi Jawa Barat", bernilai S.</div>
       <div class="sol-part"><span class="sol-tag">b</span>$p$: $5 + 7 = 11$ (S, sebab $5 + 7 = 12$)</div>
-      <div class="sol-jadi">$\neg p$: "$5 + 7 \neq 11$", bernilai B.</div>
+      <div class="sol-jadi">${\sim}p$: "$5 + 7 \neq 11$", bernilai B.</div>
       <div class="sol-part"><span class="sol-tag">c</span>$p$: kubus dibatasi enam persegi (B)</div>
-      <div class="sol-jadi">$\neg p$: "Kubus tidak dibatasi oleh enam buah persegi", bernilai S.</div>
+      <div class="sol-jadi">${\sim}p$: "Kubus tidak dibatasi oleh enam buah persegi", bernilai S.</div>
       <div class="sol-part"><span class="sol-tag">d</span>$p$: $15 > 20$ (S)</div>
       <p class="sol-step"><strong>Ingat:</strong> lawan dari "lebih dari" adalah "kurang dari <em>atau sama dengan</em>".</p>
-      <div class="sol-jadi">$\neg p$: "$15 \le 20$", bernilai B.</div>
+      <div class="sol-jadi">${\sim}p$: "$15 \le 20$", bernilai B.</div>
     </div>
 
     <div class="box box-definisi">
@@ -552,18 +552,18 @@ window.MathJax = {
         <tbody>
           <tr><td>Implikasi</td><td>$p \Rightarrow q$</td><td>—</td></tr>
           <tr><td>Konvers</td><td>$q \Rightarrow p$</td><td>tukar</td></tr>
-          <tr><td>Invers</td><td>$\neg p \Rightarrow \neg q$</td><td>negasikan</td></tr>
-          <tr><td>Kontraposisi</td><td>$\neg q \Rightarrow \neg p$</td><td>tukar + negasikan</td></tr>
+          <tr><td>Invers</td><td>${\sim}p \Rightarrow {\sim}q$</td><td>negasikan</td></tr>
+          <tr><td>Kontraposisi</td><td>${\sim}q \Rightarrow {\sim}p$</td><td>tukar + negasikan</td></tr>
         </tbody>
       </table></div>
     </div>
 
     <p>Tabel kebenarannya menunjukkan hubungan penting:</p>
-    <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$\neg p$</th><th>$\neg q$</th><th class="hl">$p \Rightarrow q$</th><th>$q \Rightarrow p$</th><th>$\neg p \Rightarrow \neg q$</th><th class="hl">$\neg q \Rightarrow \neg p$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td>S</td><td class="hl">B</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>S</td><td>B</td><td class="hl">S</td><td>B</td><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td>B</td><td>S</td><td class="hl">B</td><td>S</td><td>S</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td>B</td><td>B</td><td class="hl">B</td><td>B</td><td>B</td><td class="hl">B</td></tr></tbody></table></div>
+    <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>${\sim}p$</th><th>${\sim}q$</th><th class="hl">$p \Rightarrow q$</th><th>$q \Rightarrow p$</th><th>${\sim}p \Rightarrow {\sim}q$</th><th class="hl">${\sim}q \Rightarrow {\sim}p$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td>S</td><td class="hl">B</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>S</td><td>B</td><td class="hl">S</td><td>B</td><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td>B</td><td>S</td><td class="hl">B</td><td>S</td><td>S</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td>B</td><td>B</td><td class="hl">B</td><td>B</td><td>B</td><td class="hl">B</td></tr></tbody></table></div>
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Yang Setara dan yang Tidak</div>
-      <p style="margin:0;font-size:.9rem;">Implikasi selalu <strong>setara</strong> dengan kontraposisinya: $p \Rightarrow q \equiv \neg q \Rightarrow \neg p$. Konvers setara dengan invers, tetapi <strong>tidak</strong> setara dengan implikasi semula. Jadi, jika suatu implikasi benar, konversnya belum tentu benar.</p>
+      <p style="margin:0;font-size:.9rem;">Implikasi selalu <strong>setara</strong> dengan kontraposisinya: $p \Rightarrow q \equiv {\sim}q \Rightarrow {\sim}p$. Konvers setara dengan invers, tetapi <strong>tidak</strong> setara dengan implikasi semula. Jadi, jika suatu implikasi benar, konversnya belum tentu benar.</p>
     </div>
 
     <div class="box box-contoh">
@@ -575,8 +575,8 @@ window.MathJax = {
       <p class="sol-step"><span class="sol-no">2</span><strong>Bentuk ketiga implikasi:</strong></p>
       <ul class="sol-cek">
         <li>Konvers ($q \Rightarrow p$): Jika jalan basah maka hari hujan.</li>
-        <li>Invers ($\neg p \Rightarrow \neg q$): Jika hari tidak hujan maka jalan tidak basah.</li>
-        <li>Kontraposisi ($\neg q \Rightarrow \neg p$): Jika jalan tidak basah maka hari tidak hujan.</li>
+        <li>Invers (${\sim}p \Rightarrow {\sim}q$): Jika hari tidak hujan maka jalan tidak basah.</li>
+        <li>Kontraposisi (${\sim}q \Rightarrow {\sim}p$): Jika jalan tidak basah maka hari tidak hujan.</li>
       </ul>
       <div class="sol-jadi">hanya kontraposisi yang setara dengan implikasi semula; jalan bisa basah karena disiram, sehingga konvers dan invers belum tentu benar.</div>
     </div>
@@ -591,8 +591,8 @@ window.MathJax = {
       <ul class="sol-cek">
         <li>Implikasi $p \Rightarrow q$: $\text{S} \Rightarrow \text{B}$ → B</li>
         <li>Konvers $q \Rightarrow p$: $\text{B} \Rightarrow \text{S}$ → S</li>
-        <li>Invers $\neg p \Rightarrow \neg q$: $\text{B} \Rightarrow \text{S}$ → S</li>
-        <li>Kontraposisi $\neg q \Rightarrow \neg p$: $\text{S} \Rightarrow \text{B}$ → B</li>
+        <li>Invers ${\sim}p \Rightarrow {\sim}q$: $\text{B} \Rightarrow \text{S}$ → S</li>
+        <li>Kontraposisi ${\sim}q \Rightarrow {\sim}p$: $\text{S} \Rightarrow \text{B}$ → B</li>
       </ul>
       <div class="sol-jadi">implikasi dan kontraposisinya bernilai B, sedangkan konvers dan inversnya bernilai S.</div>
     </div>
@@ -604,13 +604,13 @@ window.MathJax = {
       <div class="table-wrap"><table class="tt">
         <thead><tr><th>Pernyataan</th><th>Negasinya</th></tr></thead>
         <tbody>
-          <tr><td>$p \wedge q$</td><td>$\neg p \vee \neg q$</td></tr>
-          <tr><td>$p \vee q$</td><td>$\neg p \wedge \neg q$</td></tr>
-          <tr><td>$p \Rightarrow q$</td><td>$p \wedge \neg q$</td></tr>
-          <tr><td>$p \Leftrightarrow q$</td><td>$(p \wedge \neg q) \vee (q \wedge \neg p)$</td></tr>
+          <tr><td>$p \wedge q$</td><td>${\sim}p \vee {\sim}q$</td></tr>
+          <tr><td>$p \vee q$</td><td>${\sim}p \wedge {\sim}q$</td></tr>
+          <tr><td>$p \Rightarrow q$</td><td>$p \wedge {\sim}q$</td></tr>
+          <tr><td>$p \Leftrightarrow q$</td><td>$(p \wedge {\sim}q) \vee (q \wedge {\sim}p)$</td></tr>
         </tbody>
       </table></div>
-      <p style="margin:.5rem 0 0;font-size:.9rem;">Dua baris pertama dikenal sebagai <strong>Hukum De Morgan</strong>. Negasi biimplikasi juga dapat ditulis singkat $p \Leftrightarrow \neg q$.</p>
+      <p style="margin:.5rem 0 0;font-size:.9rem;">Dua baris pertama dikenal sebagai <strong>Hukum De Morgan</strong>. Negasi biimplikasi juga dapat ditulis singkat $p \Leftrightarrow {\sim}q$.</p>
     </div>
 
     <div class="box box-catatan">
@@ -629,13 +629,13 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <div class="sol-part"><span class="sol-tag">a</span>$\neg(p \wedge q) \equiv \neg p \vee \neg q$</div>
+      <div class="sol-part"><span class="sol-tag">a</span>${\sim}(p \wedge q) \equiv {\sim}p \vee {\sim}q$</div>
       <div class="sol-jadi">negasinya: "Ayah tidak pergi ke sawah atau ibu tidak memasak di dapur."</div>
-      <div class="sol-part"><span class="sol-tag">b</span>$\neg(p \vee q) \equiv \neg p \wedge \neg q$</div>
+      <div class="sol-part"><span class="sol-tag">b</span>${\sim}(p \vee q) \equiv {\sim}p \wedge {\sim}q$</div>
       <div class="sol-jadi">negasinya: "$2$ bukan faktor dari $20$ dan $5$ bukan faktor dari $20$."</div>
-      <div class="sol-part"><span class="sol-tag">c</span>$\neg(p \Rightarrow q) \equiv p \wedge \neg q$</div>
+      <div class="sol-part"><span class="sol-tag">c</span>${\sim}(p \Rightarrow q) \equiv p \wedge {\sim}q$</div>
       <div class="sol-jadi">negasinya: "Andi naik kelas tetapi ia tidak dibelikan sepeda."</div>
-      <div class="sol-part"><span class="sol-tag">d</span>$\neg(p \Leftrightarrow q) \equiv (p \wedge \neg q) \vee (q \wedge \neg p)$</div>
+      <div class="sol-part"><span class="sol-tag">d</span>${\sim}(p \Leftrightarrow q) \equiv (p \wedge {\sim}q) \vee (q \wedge {\sim}p)$</div>
       <p class="sol-step"><strong>Ingat:</strong> negasi "minimal $75$" ($\ge 75$) adalah "kurang dari $75$".</p>
       <div class="sol-jadi">negasinya: "Budi lulus tetapi nilainya kurang dari $75$, atau nilainya minimal $75$ tetapi Budi tidak lulus."</div>
     </div>
@@ -647,7 +647,7 @@ window.MathJax = {
     <div class="penyelesaian">
       <p class="sol-step"><span class="sol-no">1</span><strong>Tulis simbolnya:</strong> $p$: harga BBM naik; $q$: harga sembako naik; $r$: daya beli turun. Pernyataan: $p \Rightarrow (q \wedge r)$.</p>
       <p class="sol-step"><span class="sol-no">2</span><strong>Negasikan implikasi, lalu terapkan De Morgan:</strong></p>
-      $$\neg\bigl(p \Rightarrow (q \wedge r)\bigr) \equiv p \wedge \neg(q \wedge r) \equiv p \wedge (\neg q \vee \neg r)$$
+      $${\sim}\bigl(p \Rightarrow (q \wedge r)\bigr) \equiv p \wedge {\sim}(q \wedge r) \equiv p \wedge ({\sim}q \vee {\sim}r)$$
       <div class="sol-jadi">negasinya: "Harga BBM naik, tetapi harga sembako tidak naik atau daya beli masyarakat tidak turun."</div>
     </div>
 
@@ -655,7 +655,7 @@ window.MathJax = {
       <div class="box-label">Soal Latihan B</div>
       <ol class="soal-list">
         <li>Tentukan nilai kebenaran setiap pernyataan berikut!<br>(a) $5$ adalah bilangan prima dan $10$ adalah bilangan genap. &nbsp; (b) $4 &lt; 3$ atau $7 > 5$. &nbsp; (c) Jika $4 \times 3 = 12$ maka $12 : 4 = 3$. &nbsp; (d) Jika $3 > 5$ maka $10 &lt; 2$.</li>
-        <li>Jika $p$ bernilai B dan $q$ bernilai S, tentukan nilai kebenaran dari:<br>(a) $(\neg p \wedge q) \Rightarrow \neg p$ &nbsp; (b) $(p \vee q) \Leftrightarrow (\neg p \Rightarrow q)$ &nbsp; (c) $(p \wedge \neg q) \Rightarrow (q \vee \neg p)$</li>
+        <li>Jika $p$ bernilai B dan $q$ bernilai S, tentukan nilai kebenaran dari:<br>(a) $({\sim}p \wedge q) \Rightarrow {\sim}p$ &nbsp; (b) $(p \vee q) \Leftrightarrow ({\sim}p \Rightarrow q)$ &nbsp; (c) $(p \wedge {\sim}q) \Rightarrow (q \vee {\sim}p)$</li>
         <li>Tentukan nilai $x \in \mathbb{R}$ agar pernyataan berikut bernilai benar!<br>(a) $2x - 5 = 1$ atau $x^2 + 2x - 15 = 0$.<br>(b) Jika $2x - 6 = 8$ maka $3x + 5 = 2$.</li>
         <li>Tentukan nilai $x \in \mathbb{R}$ agar biimplikasi berikut bernilai benar!<br>(a) $x - 5 = 3$ jika dan hanya jika $3x + 2 = 8$.<br>(b) $x^2 - 6x + 8 = 0$ jika dan hanya jika $x^2 + 3x - 10 = 0$.</li>
         <li>Tentukan konvers, invers, dan kontraposisi dari "Jika suatu bilangan habis dibagi $4$ maka bilangan itu genap", beserta nilai kebenaran masing-masing!</li>
@@ -699,8 +699,8 @@ window.MathJax = {
     <div class="box box-definisi">
       <div class="box-label">Tiga Jenis Pernyataan Majemuk</div>
       <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;">
-        <li><strong>Tautologi</strong>: selalu bernilai B untuk semua kemungkinan nilai komponennya. Contoh: $p \vee \neg p$.</li>
-        <li><strong>Kontradiksi</strong>: selalu bernilai S. Contoh: $p \wedge \neg p$.</li>
+        <li><strong>Tautologi</strong>: selalu bernilai B untuk semua kemungkinan nilai komponennya. Contoh: $p \vee {\sim}p$.</li>
+        <li><strong>Kontradiksi</strong>: selalu bernilai S. Contoh: $p \wedge {\sim}p$.</li>
         <li><strong>Kontingensi</strong>: memuat nilai B dan S (bukan tautologi, bukan kontradiksi).</li>
       </ul>
     </div>
@@ -709,17 +709,17 @@ window.MathJax = {
       <div class="box-label">📘 Contoh 18</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Selidiki apakah setiap pernyataan berikut tautologi, kontradiksi, atau kontingensi!</p>
       <ol class="alpha-list" style="margin:0;">
-        <li>$(p \Rightarrow \neg q) \Leftrightarrow (q \Rightarrow \neg p)$</li>
-        <li>$(p \Rightarrow q) \Leftrightarrow (p \wedge \neg q)$</li>
+        <li>$(p \Rightarrow {\sim}q) \Leftrightarrow (q \Rightarrow {\sim}p)$</li>
+        <li>$(p \Rightarrow q) \Leftrightarrow (p \wedge {\sim}q)$</li>
         <li>$(p \Rightarrow q) \Rightarrow p$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <div class="sol-part"><span class="sol-tag">a</span>$(p \Rightarrow \neg q) \Leftrightarrow (q \Rightarrow \neg p)$</div>
-      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$p \Rightarrow \neg q$</th><th>$q \Rightarrow \neg p$</th><th class="hl">$(\ldots) \Leftrightarrow (\ldots)$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td>S</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>S</td><td>B</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td>B</td><td>B</td><td class="hl">B</td></tr></tbody></table></div>
+      <div class="sol-part"><span class="sol-tag">a</span>$(p \Rightarrow {\sim}q) \Leftrightarrow (q \Rightarrow {\sim}p)$</div>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$p \Rightarrow {\sim}q$</th><th>$q \Rightarrow {\sim}p$</th><th class="hl">$(\ldots) \Leftrightarrow (\ldots)$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td>S</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>S</td><td>B</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td>B</td><td>B</td><td class="hl">B</td></tr></tbody></table></div>
       <div class="sol-jadi">kolom terakhir seluruhnya B, sehingga pernyataan tersebut tautologi.</div>
-      <div class="sol-part"><span class="sol-tag">b</span>$(p \Rightarrow q) \Leftrightarrow (p \wedge \neg q)$</div>
-      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$p \Rightarrow q$</th><th>$p \wedge \neg q$</th><th class="hl">$(\ldots) \Leftrightarrow (\ldots)$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>B</td><td>S</td><td class="hl">S</td></tr><tr><td>B</td><td>S</td><td>S</td><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td>B</td><td>S</td><td class="hl">S</td></tr><tr><td>S</td><td>S</td><td>B</td><td>S</td><td class="hl">S</td></tr></tbody></table></div>
+      <div class="sol-part"><span class="sol-tag">b</span>$(p \Rightarrow q) \Leftrightarrow (p \wedge {\sim}q)$</div>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$p \Rightarrow q$</th><th>$p \wedge {\sim}q$</th><th class="hl">$(\ldots) \Leftrightarrow (\ldots)$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>B</td><td>S</td><td class="hl">S</td></tr><tr><td>B</td><td>S</td><td>S</td><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td>B</td><td>S</td><td class="hl">S</td></tr><tr><td>S</td><td>S</td><td>B</td><td>S</td><td class="hl">S</td></tr></tbody></table></div>
       <div class="sol-jadi">kolom terakhir seluruhnya S, sehingga pernyataan tersebut kontradiksi.</div>
       <div class="sol-part"><span class="sol-tag">c</span>$(p \Rightarrow q) \Rightarrow p$</div>
       <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$p \Rightarrow q$</th><th class="hl">$(p \Rightarrow q) \Rightarrow p$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>S</td><td class="hl">B</td></tr><tr><td>S</td><td>B</td><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td>S</td><td>B</td><td class="hl">S</td></tr></tbody></table></div>
@@ -736,17 +736,17 @@ window.MathJax = {
       <div class="box-label">📘 Contoh 19</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Buktikan dengan tabel kebenaran!</p>
       <ol class="alpha-list" style="margin:0;">
-        <li>$p \Rightarrow q \equiv \neg p \vee q$</li>
-        <li>$\neg(p \Rightarrow q) \equiv p \wedge \neg q$</li>
+        <li>$p \Rightarrow q \equiv {\sim}p \vee q$</li>
+        <li>${\sim}(p \Rightarrow q) \equiv p \wedge {\sim}q$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <div class="sol-part"><span class="sol-tag">a</span>$p \Rightarrow q \equiv \neg p \vee q$</div>
-      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$\neg p$</th><th class="hl">$p \Rightarrow q$</th><th class="hl">$\neg p \vee q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td class="hl">B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>S</td><td class="hl">S</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td>B</td><td class="hl">B</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td>B</td><td class="hl">B</td><td class="hl">B</td></tr></tbody></table></div>
-      <div class="sol-jadi">kedua kolom yang ditandai identik, sehingga $p \Rightarrow q \equiv \neg p \vee q$ terbukti.</div>
-      <div class="sol-part"><span class="sol-tag">b</span>$\neg(p \Rightarrow q) \equiv p \wedge \neg q$</div>
-      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$\neg q$</th><th>$p \Rightarrow q$</th><th class="hl">$\neg(p \Rightarrow q)$</th><th class="hl">$p \wedge \neg q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td>B</td><td class="hl">S</td><td class="hl">S</td></tr><tr><td>B</td><td>S</td><td>B</td><td>S</td><td class="hl">B</td><td class="hl">B</td></tr><tr><td>S</td><td>B</td><td>S</td><td>B</td><td class="hl">S</td><td class="hl">S</td></tr><tr><td>S</td><td>S</td><td>B</td><td>B</td><td class="hl">S</td><td class="hl">S</td></tr></tbody></table></div>
-      <div class="sol-jadi">kedua kolom yang ditandai identik, sehingga $\neg(p \Rightarrow q) \equiv p \wedge \neg q$ terbukti.</div>
+      <div class="sol-part"><span class="sol-tag">a</span>$p \Rightarrow q \equiv {\sim}p \vee q$</div>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>${\sim}p$</th><th class="hl">$p \Rightarrow q$</th><th class="hl">${\sim}p \vee q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td class="hl">B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>S</td><td class="hl">S</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td>B</td><td class="hl">B</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td>B</td><td class="hl">B</td><td class="hl">B</td></tr></tbody></table></div>
+      <div class="sol-jadi">kedua kolom yang ditandai identik, sehingga $p \Rightarrow q \equiv {\sim}p \vee q$ terbukti.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>${\sim}(p \Rightarrow q) \equiv p \wedge {\sim}q$</div>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>${\sim}q$</th><th>$p \Rightarrow q$</th><th class="hl">${\sim}(p \Rightarrow q)$</th><th class="hl">$p \wedge {\sim}q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td>B</td><td class="hl">S</td><td class="hl">S</td></tr><tr><td>B</td><td>S</td><td>B</td><td>S</td><td class="hl">B</td><td class="hl">B</td></tr><tr><td>S</td><td>B</td><td>S</td><td>B</td><td class="hl">S</td><td class="hl">S</td></tr><tr><td>S</td><td>S</td><td>B</td><td>B</td><td class="hl">S</td><td class="hl">S</td></tr></tbody></table></div>
+      <div class="sol-jadi">kedua kolom yang ditandai identik, sehingga ${\sim}(p \Rightarrow q) \equiv p \wedge {\sim}q$ terbukti.</div>
     </div>
 
     <h3 class="subsection-title">4. Hukum-Hukum Aljabar Logika</h3>
@@ -760,14 +760,14 @@ window.MathJax = {
           <tr><td>Komutatif</td><td>$p \wedge q \equiv q \wedge p$, &nbsp; $p \vee q \equiv q \vee p$</td></tr>
           <tr><td>Asosiatif</td><td>$(p \wedge q) \wedge r \equiv p \wedge (q \wedge r)$</td></tr>
           <tr><td>Distributif</td><td>$p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)$<br>$p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)$</td></tr>
-          <tr><td>De Morgan</td><td>$\neg(p \wedge q) \equiv \neg p \vee \neg q$<br>$\neg(p \vee q) \equiv \neg p \wedge \neg q$</td></tr>
-          <tr><td>Negasi ganda</td><td>$\neg(\neg p) \equiv p$</td></tr>
+          <tr><td>De Morgan</td><td>${\sim}(p \wedge q) \equiv {\sim}p \vee {\sim}q$<br>${\sim}(p \vee q) \equiv {\sim}p \wedge {\sim}q$</td></tr>
+          <tr><td>Negasi ganda</td><td>${\sim}({\sim}p) \equiv p$</td></tr>
           <tr><td>Idempoten</td><td>$p \wedge p \equiv p$, &nbsp; $p \vee p \equiv p$</td></tr>
           <tr><td>Identitas</td><td>$p \wedge \text{B} \equiv p$, &nbsp; $p \vee \text{S} \equiv p$</td></tr>
           <tr><td>Dominasi</td><td>$p \vee \text{B} \equiv \text{B}$, &nbsp; $p \wedge \text{S} \equiv \text{S}$</td></tr>
-          <tr><td>Komplemen</td><td>$p \vee \neg p \equiv \text{B}$, &nbsp; $p \wedge \neg p \equiv \text{S}$</td></tr>
+          <tr><td>Komplemen</td><td>$p \vee {\sim}p \equiv \text{B}$, &nbsp; $p \wedge {\sim}p \equiv \text{S}$</td></tr>
           <tr><td>Absorpsi</td><td>$p \vee (p \wedge q) \equiv p$, &nbsp; $p \wedge (p \vee q) \equiv p$</td></tr>
-          <tr><td>Implikasi</td><td>$p \Rightarrow q \equiv \neg p \vee q \equiv \neg q \Rightarrow \neg p$</td></tr>
+          <tr><td>Implikasi</td><td>$p \Rightarrow q \equiv {\sim}p \vee q \equiv {\sim}q \Rightarrow {\sim}p$</td></tr>
           <tr><td>Biimplikasi</td><td>$p \Leftrightarrow q \equiv (p \Rightarrow q) \wedge (q \Rightarrow p)$</td></tr>
         </tbody>
       </table></div>
@@ -775,11 +775,11 @@ window.MathJax = {
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 20</div>
-      <p style="margin:0;font-size:.9rem;">Sederhanakan $\neg(p \Rightarrow q) \vee q$ dengan hukum-hukum aljabar logika!</p>
+      <p style="margin:0;font-size:.9rem;">Sederhanakan ${\sim}(p \Rightarrow q) \vee q$ dengan hukum-hukum aljabar logika!</p>
     </div>
     <div class="penyelesaian">
       <p class="sol-step"><span class="sol-no">1</span><strong>Ubah negasi implikasi</strong>, lalu <strong>distribusikan</strong>:</p>
-      $$\begin{align*} \neg(p \Rightarrow q) \vee q &\equiv (p \wedge \neg q) \vee q \\ &\equiv (p \vee q) \wedge (\neg q \vee q) \end{align*}$$
+      $$\begin{align*} {\sim}(p \Rightarrow q) \vee q &\equiv (p \wedge {\sim}q) \vee q \\ &\equiv (p \vee q) \wedge ({\sim}q \vee q) \end{align*}$$
       <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan komplemen dan identitas:</strong></p>
       $$(p \vee q) \wedge \text{B} \equiv p \vee q$$
       <div class="sol-jadi">bentuk sederhananya $p \vee q$.</div>
@@ -787,13 +787,13 @@ window.MathJax = {
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 21</div>
-      <p style="margin:0;font-size:.9rem;">Tanpa tabel kebenaran, buktikan bahwa $(p \Rightarrow q) \Leftrightarrow (\neg q \Rightarrow \neg p)$ adalah tautologi!</p>
+      <p style="margin:0;font-size:.9rem;">Tanpa tabel kebenaran, buktikan bahwa $(p \Rightarrow q) \Leftrightarrow ({\sim}q \Rightarrow {\sim}p)$ adalah tautologi!</p>
     </div>
     <div class="penyelesaian">
       <p class="sol-step"><span class="sol-no">1</span><strong>Sederhanakan ruas kanan</strong> dengan hukum implikasi:</p>
-      $$\begin{align*} \neg q \Rightarrow \neg p &\equiv \neg(\neg q) \vee \neg p \\ &\equiv q \vee \neg p \\ &\equiv \neg p \vee q \equiv p \Rightarrow q \end{align*}$$
+      $$\begin{align*} {\sim}q \Rightarrow {\sim}p &\equiv {\sim}({\sim}q) \vee {\sim}p \\ &\equiv q \vee {\sim}p \\ &\equiv {\sim}p \vee q \equiv p \Rightarrow q \end{align*}$$
       <p class="sol-step"><span class="sol-no">2</span><strong>Simpulkan:</strong> kedua ruas ekivalen, sehingga keduanya selalu bernilai sama dan biimplikasinya selalu B.</p>
-      <div class="sol-jadi">$(p \Rightarrow q) \Leftrightarrow (\neg q \Rightarrow \neg p)$ adalah tautologi.</div>
+      <div class="sol-jadi">$(p \Rightarrow q) \Leftrightarrow ({\sim}q \Rightarrow {\sim}p)$ adalah tautologi.</div>
     </div>
 
     <div class="box box-contoh">
@@ -802,7 +802,7 @@ window.MathJax = {
     </div>
     <div class="penyelesaian">
       <p class="sol-step"><span class="sol-no">1</span><strong>Tulis simbolnya:</strong> $p$: Dina rajin belajar; $q$: Dina lulus ujian. Pernyataan: $p \Rightarrow q$.</p>
-      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan $p \Rightarrow q \equiv \neg q \Rightarrow \neg p \equiv \neg p \vee q$:</strong></p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan $p \Rightarrow q \equiv {\sim}q \Rightarrow {\sim}p \equiv {\sim}p \vee q$:</strong></p>
       <ul class="sol-cek">
         <li>Kontraposisi: "Jika Dina tidak lulus ujian maka ia tidak rajin belajar." ✓</li>
         <li>Disjungsi: "Dina tidak rajin belajar atau ia lulus ujian." ✓</li>
@@ -814,11 +814,11 @@ window.MathJax = {
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan C</div>
       <ol class="soal-list">
-        <li>Buktikan dengan tabel kebenaran!<br>(a) $(p \wedge q) \vee \neg p \equiv p \Rightarrow q$ &nbsp; (b) $\neg(p \vee q) \equiv \neg p \wedge \neg q$</li>
-        <li>Selidiki dengan tabel kebenaran apakah pasangan berikut ekivalen!<br>(a) $\neg(p \Rightarrow q)$ dan $\neg p \Rightarrow \neg q$ &nbsp; (b) $p \Leftrightarrow q$ dan $(p \wedge q) \vee (\neg p \wedge \neg q)$</li>
-        <li>Selidiki apakah pernyataan berikut tautologi, kontradiksi, atau kontingensi!<br>(a) $(p \Rightarrow q) \Rightarrow \bigl[(\neg p \Rightarrow q) \Rightarrow q\bigr]$ &nbsp; (b) $p \wedge \neg p$ &nbsp; (c) $(p \vee q) \wedge \neg p$</li>
+        <li>Buktikan dengan tabel kebenaran!<br>(a) $(p \wedge q) \vee {\sim}p \equiv p \Rightarrow q$ &nbsp; (b) ${\sim}(p \vee q) \equiv {\sim}p \wedge {\sim}q$</li>
+        <li>Selidiki dengan tabel kebenaran apakah pasangan berikut ekivalen!<br>(a) ${\sim}(p \Rightarrow q)$ dan ${\sim}p \Rightarrow {\sim}q$ &nbsp; (b) $p \Leftrightarrow q$ dan $(p \wedge q) \vee ({\sim}p \wedge {\sim}q)$</li>
+        <li>Selidiki apakah pernyataan berikut tautologi, kontradiksi, atau kontingensi!<br>(a) $(p \Rightarrow q) \Rightarrow \bigl[({\sim}p \Rightarrow q) \Rightarrow q\bigr]$ &nbsp; (b) $p \wedge {\sim}p$ &nbsp; (c) $(p \vee q) \wedge {\sim}p$</li>
         <li>Buktikan dengan tabel kebenaran (8 baris) bahwa $p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)$.</li>
-        <li>Sederhanakan dengan hukum-hukum aljabar logika!<br>(a) $\neg(\neg p \wedge q) \wedge q$ &nbsp; (b) $(p \Rightarrow q) \wedge (p \Rightarrow \neg q)$</li>
+        <li>Sederhanakan dengan hukum-hukum aljabar logika!<br>(a) ${\sim}({\sim}p \wedge q) \wedge q$ &nbsp; (b) $(p \Rightarrow q) \wedge (p \Rightarrow {\sim}q)$</li>
         <li>Tuliskan dua pernyataan yang setara dengan "Jika harga cabai naik maka banyak pedagang mengeluh"!</li>
         <li>Tanpa tabel kebenaran, tunjukkan bahwa $p \Rightarrow (q \Rightarrow r) \equiv (p \wedge q) \Rightarrow r$. Kemudian nyatakan "Jika hujan turun, maka jika aku tidak membawa payung, aku basah kuyup" sebagai satu implikasi.</li>
       </ol>
@@ -879,8 +879,8 @@ window.MathJax = {
     <h3 class="subsection-title">2. Negasi Pernyataan Berkuantor</h3>
     <div class="box box-rumus">
       <div class="box-label">• Negasi Kuantor</div>
-      $$\neg\bigl(\forall x,\ p(x)\bigr) \equiv \exists x,\ \neg p(x)$$
-      $$\neg\bigl(\exists x,\ p(x)\bigr) \equiv \forall x,\ \neg p(x)$$
+      $${\sim}\bigl(\forall x,\ p(x)\bigr) \equiv \exists x,\ {\sim}p(x)$$
+      $${\sim}\bigl(\exists x,\ p(x)\bigr) \equiv \forall x,\ {\sim}p(x)$$
     </div>
 
     <div class="table-wrap">
@@ -915,7 +915,7 @@ window.MathJax = {
       <div class="sol-part"><span class="sol-tag">b</span>Pernyataan semula S</div>
       <div class="sol-jadi">negasinya "Semua bilangan prima tidak habis dibagi $4$", bernilai B.</div>
       <div class="sol-part"><span class="sol-tag">c</span>Bentuk $\forall x,\ \bigl(p(x) \Rightarrow q(x)\bigr)$</div>
-      <p class="sol-step"><strong>Negasikan kuantor dan implikasinya:</strong> $\exists x,\ \bigl(p(x) \wedge \neg q(x)\bigr)$. Bilangan genap yang habis dibagi $3$ pasti habis dibagi $6$, jadi tidak ada contoh seperti itu.</p>
+      <p class="sol-step"><strong>Negasikan kuantor dan implikasinya:</strong> $\exists x,\ \bigl(p(x) \wedge {\sim}q(x)\bigr)$. Bilangan genap yang habis dibagi $3$ pasti habis dibagi $6$, jadi tidak ada contoh seperti itu.</p>
       <div class="sol-jadi">negasinya "Ada bilangan genap $x$ yang habis dibagi $3$ tetapi bukan kelipatan $6$", bernilai S.</div>
     </div>
 
@@ -929,12 +929,12 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <div class="sol-part"><span class="sol-tag">a</span>$\neg\bigl(\forall x,\ (p \wedge q)\bigr) \equiv \exists x,\ (\neg p \vee \neg q)$</div>
+      <div class="sol-part"><span class="sol-tag">a</span>${\sim}\bigl(\forall x,\ (p \wedge q)\bigr) \equiv \exists x,\ ({\sim}p \vee {\sim}q)$</div>
       <div class="sol-jadi">negasinya: "Ada siswa yang tidak memakai seragam atau tidak membawa kartu pelajar."</div>
-      <div class="sol-part"><span class="sol-tag">b</span>Negasi implikasi: $p \wedge \neg q$</div>
+      <div class="sol-part"><span class="sol-tag">b</span>Negasi implikasi: $p \wedge {\sim}q$</div>
       <p class="sol-step"><strong>Pertahankan anteseden</strong> "semua guru hadir" apa adanya, lalu negasikan konsekuennya.</p>
       <div class="sol-jadi">negasinya: "Semua guru hadir tetapi rapat tidak dimulai."</div>
-      <div class="sol-part"><span class="sol-tag">c</span>$\neg\bigl(\exists x,\ \neg p(x)\bigr) \equiv \forall x,\ p(x)$</div>
+      <div class="sol-part"><span class="sol-tag">c</span>${\sim}\bigl(\exists x,\ {\sim}p(x)\bigr) \equiv \forall x,\ p(x)$</div>
       <div class="sol-jadi">negasinya: "Semua peserta lulus seleksi."</div>
     </div>
 
@@ -976,7 +976,7 @@ window.MathJax = {
     </div>
     <div class="box box-rumus">
       <div class="box-label">• Modus Tollens</div>
-      $$\begin{array}{rl} P_1: & p \Rightarrow q \\ P_2: & \neg q \\ \hline \therefore & \neg p \end{array}$$
+      $$\begin{array}{rl} P_1: & p \Rightarrow q \\ P_2: & {\sim}q \\ \hline \therefore & {\sim}p \end{array}$$
     </div>
     <div class="box box-rumus">
       <div class="box-label">• Silogisme</div>
@@ -984,7 +984,7 @@ window.MathJax = {
     </div>
     <div class="box box-rumus">
       <div class="box-label">• Silogisme Disjungtif</div>
-      $$\begin{array}{rl} P_1: & p \vee q \\ P_2: & \neg p \\ \hline \therefore & q \end{array}$$
+      $$\begin{array}{rl} P_1: & p \vee q \\ P_2: & {\sim}p \\ \hline \therefore & q \end{array}$$
     </div>
 
     <div class="box box-contoh">
@@ -1011,12 +1011,12 @@ window.MathJax = {
     <div class="penyelesaian">
       <div class="sol-part"><span class="sol-tag">a</span>Modus ponens ($p \Rightarrow q$, $p$)</div>
       <div class="sol-jadi">kesimpulannya "Ahmad mengikuti try out".</div>
-      <div class="sol-part"><span class="sol-tag">b</span>Modus tollens ($p \Rightarrow q$, $\neg q$)</div>
-      <p class="sol-step"><strong>Terapkan pada $x = 8$:</strong> $P_2$ menyatakan $\neg q$ untuk $x = 8$, maka $\neg p$ untuk $x = 8$.</p>
+      <div class="sol-part"><span class="sol-tag">b</span>Modus tollens ($p \Rightarrow q$, ${\sim}q$)</div>
+      <p class="sol-step"><strong>Terapkan pada $x = 8$:</strong> $P_2$ menyatakan ${\sim}q$ untuk $x = 8$, maka ${\sim}p$ untuk $x = 8$.</p>
       <div class="sol-jadi">kesimpulannya "$8$ bukan kelipatan $6$".</div>
       <div class="sol-part"><span class="sol-tag">c</span>Silogisme ($p \Rightarrow q$, $q \Rightarrow r$)</div>
       <div class="sol-jadi">kesimpulannya "Jika Pak Madi pergi ke kantor maka ia memakai helm".</div>
-      <div class="sol-part"><span class="sol-tag">d</span>Silogisme disjungtif ($p \vee q$, $\neg q$)</div>
+      <div class="sol-part"><span class="sol-tag">d</span>Silogisme disjungtif ($p \vee q$, ${\sim}q$)</div>
       <div class="sol-jadi">kesimpulannya "Rina pergi ke perpustakaan".</div>
     </div>
 
@@ -1025,9 +1025,9 @@ window.MathJax = {
       <div class="box-label">Langkah Menyusun Rantai Premis</div>
       <ol class="step-list" style="margin:0;padding-left:1.2rem;font-size:.9rem;">
         <li>Lambangkan setiap pernyataan tunggal dengan huruf ($p$, $q$, $r$, …).</li>
-        <li>Ubah premis ke bentuk implikasi: $\neg p \vee q \equiv p \Rightarrow q$; gunakan kontraposisi jika arahnya belum cocok.</li>
+        <li>Ubah premis ke bentuk implikasi: ${\sim}p \vee q \equiv p \Rightarrow q$; gunakan kontraposisi jika arahnya belum cocok.</li>
         <li>Urutkan premis sehingga konsekuen satu premis menjadi anteseden premis berikutnya.</li>
-        <li>Gabungkan dengan silogisme; jika ada premis tunggal ($p$ atau $\neg q$), akhiri dengan modus ponens/tollens.</li>
+        <li>Gabungkan dengan silogisme; jika ada premis tunggal ($p$ atau ${\sim}q$), akhiri dengan modus ponens/tollens.</li>
       </ol>
     </div>
 
@@ -1047,9 +1047,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan kesimpulan dari:<br>$P_1$: Amir tidak sarapan atau ia mengantuk di kelas.<br>$P_2$: Amir sarapan.</p>
     </div>
     <div class="penyelesaian">
-      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah disjungsi menjadi implikasi:</strong> dengan $p$: Amir sarapan dan $q$: Amir mengantuk di kelas, $\neg p \vee q \equiv p \Rightarrow q$.</p>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah disjungsi menjadi implikasi:</strong> dengan $p$: Amir sarapan dan $q$: Amir mengantuk di kelas, ${\sim}p \vee q \equiv p \Rightarrow q$.</p>
       <p class="sol-step"><span class="sol-no">2</span><strong>Terapkan modus ponens</strong> dengan $P_2$: $p$.</p>
-      <div class="sol-jadi">kesimpulannya "Amir mengantuk di kelas" (cara lain: silogisme disjungtif dengan $\neg(\neg p)$).</div>
+      <div class="sol-jadi">kesimpulannya "Amir mengantuk di kelas" (cara lain: silogisme disjungtif dengan ${\sim}({\sim}p)$).</div>
     </div>
 
     <div class="box box-contoh">
@@ -1069,10 +1069,10 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan kesimpulan dari:<br>$P_1$: Jika Dodi begadang maka ia mengantuk di kelas.<br>$P_2$: Jika Dodi tidak ditegur guru maka ia tidak mengantuk di kelas.<br>$P_3$: Dodi tidak ditegur guru.</p>
     </div>
     <div class="penyelesaian">
-      <p class="sol-step"><span class="sol-no">1</span><strong>Lambangkan:</strong> $p$: begadang; $q$: mengantuk; $r$: ditegur guru. Premis: $p \Rightarrow q$, $\neg r \Rightarrow \neg q$, dan $\neg r$.</p>
-      <p class="sol-step"><span class="sol-no">2</span><strong>Ubah $P_2$ dengan kontraposisi:</strong> $\neg r \Rightarrow \neg q \equiv q \Rightarrow r$.</p>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Lambangkan:</strong> $p$: begadang; $q$: mengantuk; $r$: ditegur guru. Premis: $p \Rightarrow q$, ${\sim}r \Rightarrow {\sim}q$, dan ${\sim}r$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Ubah $P_2$ dengan kontraposisi:</strong> ${\sim}r \Rightarrow {\sim}q \equiv q \Rightarrow r$.</p>
       <p class="sol-step"><span class="sol-no">3</span><strong>Silogisme</strong> $P_1$ dan $P_2$: $p \Rightarrow r$.</p>
-      <p class="sol-step"><span class="sol-no">4</span><strong>Modus tollens</strong> dengan $P_3$ ($\neg r$): $\neg p$.</p>
+      <p class="sol-step"><span class="sol-no">4</span><strong>Modus tollens</strong> dengan $P_3$ (${\sim}r$): ${\sim}p$.</p>
       <div class="sol-jadi">kesimpulannya "Dodi tidak begadang".</div>
     </div>
 
@@ -1085,7 +1085,7 @@ window.MathJax = {
         <thead><tr><th>Nama</th><th>Bentuk</th><th>Mirip dengan</th></tr></thead>
         <tbody>
           <tr><td>Menegaskan konsekuen</td><td>$p \Rightarrow q,\ q \;\therefore\; p$</td><td>modus ponens</td></tr>
-          <tr><td>Menyangkal anteseden</td><td>$p \Rightarrow q,\ \neg p \;\therefore\; \neg q$</td><td>modus tollens</td></tr>
+          <tr><td>Menyangkal anteseden</td><td>$p \Rightarrow q,\ {\sim}p \;\therefore\; {\sim}q$</td><td>modus tollens</td></tr>
         </tbody>
       </table></div>
       <p style="margin:.5rem 0 0;font-size:.9rem;">Keduanya gagal pada baris $p$ S, $q$ B: semua premis benar, tetapi kesimpulannya salah.</p>
@@ -1104,10 +1104,10 @@ window.MathJax = {
       <div class="sol-part"><span class="sol-tag">a</span>$p \Rightarrow q,\ q \;\therefore\; p$</div>
       <p class="sol-step"><strong>Cari contoh penyangkal:</strong> Rudi bisa mendapat hadiah karena juara lomba lain walaupun bukan juara kelas.</p>
       <div class="sol-jadi">argumen tidak sah (menegaskan konsekuen).</div>
-      <div class="sol-part"><span class="sol-tag">b</span>$p \Rightarrow q,\ \neg p \;\therefore\; \neg q$</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$p \Rightarrow q,\ {\sim}p \;\therefore\; {\sim}q$</div>
       <p class="sol-step"><strong>Cari contoh penyangkal:</strong> jalan bisa basah karena disiram walaupun tidak hujan.</p>
       <div class="sol-jadi">argumen tidak sah (menyangkal anteseden).</div>
-      <div class="sol-part"><span class="sol-tag">c</span>$p \Rightarrow q,\ \neg q \;\therefore\; \neg p$</div>
+      <div class="sol-part"><span class="sol-tag">c</span>$p \Rightarrow q,\ {\sim}q \;\therefore\; {\sim}p$</div>
       <div class="sol-jadi">argumen sah (modus tollens).</div>
     </div>
 
@@ -1184,19 +1184,19 @@ window.MathJax = {
     <h2 class="section-title"><span class="section-badge">F</span>Ringkasan Logika Matematika</h2>
 
     <h3 class="subsection-title">1. Tabel Kebenaran Dasar</h3>
-    <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$\neg p$</th><th>$p \wedge q$</th><th>$p \vee q$</th><th>$p \Rightarrow q$</th><th>$p \Leftrightarrow q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td>B</td><td>B</td><td>B</td><td>B</td></tr><tr><td>B</td><td>S</td><td>S</td><td>S</td><td>B</td><td>S</td><td>S</td></tr><tr><td>S</td><td>B</td><td>B</td><td>S</td><td>B</td><td>B</td><td>S</td></tr><tr><td>S</td><td>S</td><td>B</td><td>S</td><td>S</td><td>B</td><td>B</td></tr></tbody></table></div>
+    <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>${\sim}p$</th><th>$p \wedge q$</th><th>$p \vee q$</th><th>$p \Rightarrow q$</th><th>$p \Leftrightarrow q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td>B</td><td>B</td><td>B</td><td>B</td></tr><tr><td>B</td><td>S</td><td>S</td><td>S</td><td>B</td><td>S</td><td>S</td></tr><tr><td>S</td><td>B</td><td>B</td><td>S</td><td>B</td><td>B</td><td>S</td></tr><tr><td>S</td><td>S</td><td>B</td><td>S</td><td>S</td><td>B</td><td>B</td></tr></tbody></table></div>
 
     <h3 class="subsection-title">2. Negasi dan Ekivalensi Penting</h3>
     <div class="table-wrap">
       <table class="tt">
         <thead><tr><th>Bentuk</th><th>Negasi</th><th>Bentuk setara</th></tr></thead>
         <tbody>
-          <tr><td>$p \wedge q$</td><td>$\neg p \vee \neg q$</td><td>$q \wedge p$</td></tr>
-          <tr><td>$p \vee q$</td><td>$\neg p \wedge \neg q$</td><td>$\neg p \Rightarrow q$</td></tr>
-          <tr><td>$p \Rightarrow q$</td><td>$p \wedge \neg q$</td><td>$\neg q \Rightarrow \neg p$, &nbsp; $\neg p \vee q$</td></tr>
-          <tr><td>$p \Leftrightarrow q$</td><td>$p \Leftrightarrow \neg q$</td><td>$(p \Rightarrow q) \wedge (q \Rightarrow p)$</td></tr>
-          <tr><td>$\forall x,\ p(x)$</td><td>$\exists x,\ \neg p(x)$</td><td>—</td></tr>
-          <tr><td>$\exists x,\ p(x)$</td><td>$\forall x,\ \neg p(x)$</td><td>—</td></tr>
+          <tr><td>$p \wedge q$</td><td>${\sim}p \vee {\sim}q$</td><td>$q \wedge p$</td></tr>
+          <tr><td>$p \vee q$</td><td>${\sim}p \wedge {\sim}q$</td><td>${\sim}p \Rightarrow q$</td></tr>
+          <tr><td>$p \Rightarrow q$</td><td>$p \wedge {\sim}q$</td><td>${\sim}q \Rightarrow {\sim}p$, &nbsp; ${\sim}p \vee q$</td></tr>
+          <tr><td>$p \Leftrightarrow q$</td><td>$p \Leftrightarrow {\sim}q$</td><td>$(p \Rightarrow q) \wedge (q \Rightarrow p)$</td></tr>
+          <tr><td>$\forall x,\ p(x)$</td><td>$\exists x,\ {\sim}p(x)$</td><td>—</td></tr>
+          <tr><td>$\exists x,\ p(x)$</td><td>$\forall x,\ {\sim}p(x)$</td><td>—</td></tr>
         </tbody>
       </table>
     </div>
@@ -1206,7 +1206,7 @@ window.MathJax = {
       <table class="tt">
         <thead><tr><th>Implikasi</th><th>Konvers</th><th>Invers</th><th>Kontraposisi</th></tr></thead>
         <tbody>
-          <tr><td>$p \Rightarrow q$</td><td>$q \Rightarrow p$</td><td>$\neg p \Rightarrow \neg q$</td><td>$\neg q \Rightarrow \neg p$</td></tr>
+          <tr><td>$p \Rightarrow q$</td><td>$q \Rightarrow p$</td><td>${\sim}p \Rightarrow {\sim}q$</td><td>${\sim}q \Rightarrow {\sim}p$</td></tr>
           <tr><td colspan="4">Implikasi $\equiv$ kontraposisi; &nbsp; konvers $\equiv$ invers</td></tr>
         </tbody>
       </table>
@@ -1218,11 +1218,11 @@ window.MathJax = {
         <thead><tr><th>Aturan</th><th>Premis</th><th>Kesimpulan</th><th>Status</th></tr></thead>
         <tbody>
           <tr><td>Modus ponens</td><td>$p \Rightarrow q,\ p$</td><td>$q$</td><td>sah</td></tr>
-          <tr><td>Modus tollens</td><td>$p \Rightarrow q,\ \neg q$</td><td>$\neg p$</td><td>sah</td></tr>
+          <tr><td>Modus tollens</td><td>$p \Rightarrow q,\ {\sim}q$</td><td>${\sim}p$</td><td>sah</td></tr>
           <tr><td>Silogisme</td><td>$p \Rightarrow q,\ q \Rightarrow r$</td><td>$p \Rightarrow r$</td><td>sah</td></tr>
-          <tr><td>Silogisme disjungtif</td><td>$p \vee q,\ \neg p$</td><td>$q$</td><td>sah</td></tr>
+          <tr><td>Silogisme disjungtif</td><td>$p \vee q,\ {\sim}p$</td><td>$q$</td><td>sah</td></tr>
           <tr><td>Menegaskan konsekuen</td><td>$p \Rightarrow q,\ q$</td><td>$p$</td><td>tidak sah</td></tr>
-          <tr><td>Menyangkal anteseden</td><td>$p \Rightarrow q,\ \neg p$</td><td>$\neg q$</td><td>tidak sah</td></tr>
+          <tr><td>Menyangkal anteseden</td><td>$p \Rightarrow q,\ {\sim}p$</td><td>${\sim}q$</td><td>tidak sah</td></tr>
         </tbody>
       </table>
     </div>
@@ -1232,8 +1232,8 @@ window.MathJax = {
       <table class="tt">
         <thead><tr><th>Jenis</th><th>Ciri</th><th>Contoh</th></tr></thead>
         <tbody>
-          <tr><td>Tautologi</td><td>selalu B</td><td>$p \vee \neg p$</td></tr>
-          <tr><td>Kontradiksi</td><td>selalu S</td><td>$p \wedge \neg p$</td></tr>
+          <tr><td>Tautologi</td><td>selalu B</td><td>$p \vee {\sim}p$</td></tr>
+          <tr><td>Kontradiksi</td><td>selalu S</td><td>$p \wedge {\sim}p$</td></tr>
           <tr><td>Kontingensi</td><td>memuat B dan S</td><td>$p \Rightarrow q$</td></tr>
         </tbody>
       </table>
@@ -1505,7 +1505,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban: `(a) $\\text{HP} = \\{-2,\\ 10\\}$ &nbsp;|&nbsp; (b) $\\text{HP} = \\mathbb{R}$ &nbsp;|&nbsp; (c) $\\text{HP} = \\{4\\}$ &nbsp;|&nbsp; (d) $\\text{HP} = \\varnothing$` },
       { jawaban: `(a) B &nbsp;|&nbsp; (b) B` },
       { jawaban: `(a) B: "segitiga sama kaki memiliki dua sisi sama panjang" B, "… bukan segitiga yang …" S, "tidak benar bahwa …" B &nbsp;|&nbsp; (b) B (dua kali negasi)` },
-      { jawaban: `(a) $(x-1)(x-4) \\le 0 \\Rightarrow 1 \\le x \\le 4$, $\\text{HP} = \\{1,\\ 2,\\ 3,\\ 4\\}$ &nbsp;|&nbsp; (b) $\\neg p(x)$: $x^2 - 5x + 4 > 0$, $\\text{HP} = \\{0,\\ 5,\\ 6\\}$` },
+      { jawaban: `(a) $(x-1)(x-4) \\le 0 \\Rightarrow 1 \\le x \\le 4$, $\\text{HP} = \\{1,\\ 2,\\ 3,\\ 4\\}$ &nbsp;|&nbsp; (b) \${\\sim}p(x)$: $x^2 - 5x + 4 > 0$, $\\text{HP} = \\{0,\\ 5,\\ 6\\}$` },
     ],
     // 1 — Latihan B: Pernyataan Majemuk (7 soal)
     1: [
@@ -1515,17 +1515,17 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban: `(a) semua $x \\in \\mathbb{R}$ kecuali $x = 2$ dan $x = 8$ &nbsp;|&nbsp; (b) semua $x \\in \\mathbb{R}$ kecuali $x = 4$ dan $x = -5$` },
       { jawaban: `Implikasi: B &nbsp;|&nbsp; Konvers: Jika suatu bilangan genap maka habis dibagi $4$, S (contoh: $6$) &nbsp;|&nbsp; Invers: Jika suatu bilangan tidak habis dibagi $4$ maka bilangan itu tidak genap, S (contoh: $6$) &nbsp;|&nbsp; Kontraposisi: Jika suatu bilangan tidak genap maka tidak habis dibagi $4$, B` },
       { jawaban: `(a) Kerbau berkaki empat dan ayam berkaki dua, tetapi kambing tidak berkaki empat. &nbsp;|&nbsp; (b) Arman bolos sekolah, tetapi ia tidak pergi ke pantai dan tidak menonton bioskop. &nbsp;|&nbsp; (c) Harga naik tetapi permintaan tidak naik, atau permintaan naik tetapi harga tidak naik.` },
-      { jawaban: `(a) $(p \\vee q) \\wedge \\neg r$: Hari ini Senin atau Selasa, tetapi tidak ada upacara bendera. &nbsp;|&nbsp; (b) Jika tidak ada upacara bendera maka hari ini bukan Senin dan bukan Selasa. &nbsp;|&nbsp; (c) Ya (jika pernyataan semula benar): kontraposisinya setara, sehingga hari ini bukan Senin dan bukan Selasa.` },
+      { jawaban: `(a) $(p \\vee q) \\wedge {\\sim}r$: Hari ini Senin atau Selasa, tetapi tidak ada upacara bendera. &nbsp;|&nbsp; (b) Jika tidak ada upacara bendera maka hari ini bukan Senin dan bukan Selasa. &nbsp;|&nbsp; (c) Ya (jika pernyataan semula benar): kontraposisinya setara, sehingga hari ini bukan Senin dan bukan Selasa.` },
     ],
     // 2 — Latihan C: Ekivalensi, Tautologi, Aljabar Logika (7 soal)
     2: [
       { jawaban: `(a) kedua kolom: B, S, B, B (identik) &nbsp;|&nbsp; (b) kedua kolom: S, S, S, B (identik)` },
       { jawaban: `(a) tidak ekivalen: S, B, S, S dan B, B, S, B &nbsp;|&nbsp; (b) ekivalen: keduanya B, S, S, B` },
-      { jawaban: `(a) tautologi &nbsp;|&nbsp; (b) kontradiksi &nbsp;|&nbsp; (c) kontingensi (setara dengan $\\neg p \\wedge q$)` },
+      { jawaban: `(a) tautologi &nbsp;|&nbsp; (b) kontradiksi &nbsp;|&nbsp; (c) kontingensi (setara dengan \${\\sim}p \\wedge q$)` },
       { jawaban: `Kedua kolom akhir: B, B, B, S, S, S, S, S (identik)` },
-      { jawaban: `(a) $(p \\vee \\neg q) \\wedge q$ $\\equiv (p \\wedge q) \\vee (\\neg q \\wedge q)$ $\\equiv p \\wedge q$ &nbsp;|&nbsp; (b) $(\\neg p \\vee q) \\wedge (\\neg p \\vee \\neg q)$ $\\equiv \\neg p \\vee (q \\wedge \\neg q)$ $\\equiv \\neg p$` },
+      { jawaban: `(a) $(p \\vee {\\sim}q) \\wedge q$ $\\equiv (p \\wedge q) \\vee ({\\sim}q \\wedge q)$ $\\equiv p \\wedge q$ &nbsp;|&nbsp; (b) $({\\sim}p \\vee q) \\wedge ({\\sim}p \\vee {\\sim}q)$ $\\equiv {\\sim}p \\vee (q \\wedge {\\sim}q)$ $\\equiv {\\sim}p$` },
       { jawaban: `Jika tidak banyak pedagang mengeluh maka harga cabai tidak naik. &nbsp;|&nbsp; Harga cabai tidak naik atau banyak pedagang mengeluh.` },
-      { jawaban: `$p \\Rightarrow (q \\Rightarrow r) \\equiv \\neg p \\vee (\\neg q \\vee r)$ $\\equiv \\neg(p \\wedge q) \\vee r$ $\\equiv (p \\wedge q) \\Rightarrow r$ &nbsp;|&nbsp; Jika hujan turun dan aku tidak membawa payung maka aku basah kuyup.` },
+      { jawaban: `$p \\Rightarrow (q \\Rightarrow r) \\equiv {\\sim}p \\vee ({\\sim}q \\vee r)$ $\\equiv {\\sim}(p \\wedge q) \\vee r$ $\\equiv (p \\wedge q) \\Rightarrow r$ &nbsp;|&nbsp; Jika hujan turun dan aku tidak membawa payung maka aku basah kuyup.` },
     ],
     // 3 — Latihan D: Pernyataan Berkuantor (6 soal)
     3: [
