@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logika Matematika — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
+<meta name="description" content="Materi lengkap Logika Matematika SMA: pernyataan, negasi, pernyataan majemuk, konvers-invers-kontraposisi, ekivalensi, kuantor, dan penarikan kesimpulan. Dilengkapi 33 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script>window.addEventListener("load",function(){var s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";document.head.appendChild(s);});</script>
+<link rel="canonical" href="https://web.eksaktalab.my.id/materi/logika-matematika/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://web.eksaktalab.my.id/materi/logika-matematika/">
+<meta property="og:title" content="Logika Matematika — EksaktaLab">
+<meta property="og:description" content="Materi lengkap Logika Matematika SMA: pernyataan, negasi, pernyataan majemuk, konvers-invers-kontraposisi, ekivalensi, kuantor, dan penarikan kesimpulan. Dilengkapi 33 contoh soal dan pembahasan.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+<meta property="og:site_name" content="EksaktaLab">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Logika Matematika — EksaktaLab">
+<meta name="twitter:description" content="Materi lengkap Logika Matematika SMA: pernyataan majemuk, ekivalensi, kuantor, dan penarikan kesimpulan.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Logika Matematika","url":"https://web.eksaktalab.my.id/materi/logika-matematika/","description":"Materi lengkap Logika Matematika SMA: pernyataan majemuk, ekivalensi, kuantor, dan penarikan kesimpulan.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://web.eksaktalab.my.id/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://web.eksaktalab.my.id/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://web.eksaktalab.my.id/"},{"@type":"ListItem","position":3,"name":"Logika Matematika","item":"https://web.eksaktalab.my.id/materi/logika-matematika/"}]}}</script>
+<style>@media(max-width:500px){.table-wrap th,.table-wrap td{padding:.45rem .35rem}.table-wrap table{font-size:.72rem}}@media(max-width:400px){.table-wrap th,.table-wrap td{padding:.4rem .25rem}.table-wrap table{font-size:.66rem}.soal-item-header{flex-wrap:wrap}.soal-key-btn{margin-left:auto}}@media(max-width:360px){.rumus-status{display:none}}.tt-bool th,.tt-bool td{text-align:center}.tt .hl{font-weight:600}td.hl{background:rgba(0,191,165,.10)}.lgk-svg{font-family:var(--sans)}.lgk-t{fill:var(--text);font-size:14.5px}.lgk-bold{font-weight:700}.lgk-head{font-size:15px;font-weight:700}.lgk-okt{fill:var(--green-b)}.lgk-not{fill:var(--red-b)}.lgk-box{fill:var(--surface-2);stroke:var(--border);stroke-width:1.5}.lgk-ok{fill:var(--green);stroke:var(--green-b);stroke-width:1.5}.lgk-no{fill:var(--red);stroke:var(--red-b);stroke-width:1.5}.lgk-line{stroke:var(--text-2);stroke-width:2}.lgk-s{fill:var(--text-2);font-size:14px}.lgk-set{fill:rgba(59,130,246,.10);stroke:var(--blue-b);stroke-width:2}.lgk-set2{fill:rgba(0,191,165,.18);stroke:var(--teal);stroke-width:2}.lgk-set3{fill:rgba(239,68,68,.12);stroke:var(--red-b);stroke-width:2}</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Logika Matematika · 6 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Pernyataan, Kalimat Terbuka, dan Negasi</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Pernyataan Majemuk</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Ekivalensi, Tautologi, dan Aljabar Logika</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Pernyataan Berkuantor</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Penarikan Kesimpulan</a>
+        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Ringkasan</a>
+      </div>
+    </div>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<!-- Floating scroll to top -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#fase-1">Bilangan &amp; Bernalar</a>
+    <span>/</span>
+    Logika Matematika
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">FASE 1 · No.06</div>
+      <h1 class="materi-title">Logika Matematika</h1>
+      <p class="materi-desc">Pelajari pernyataan dan negasinya, pernyataan majemuk, ekivalensi dan aljabar logika, kuantor, hingga cara menarik kesimpulan yang sah dan mengenali penalaran yang keliru.</p>
+      <div class="materi-tags">
+        <span class="tag">Bernalar</span>
+        <span class="tag">6 Sub-bab</span>
+        <span class="tag">33 Contoh Soal</span>
+      </div>
+  </div>
+
+<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Bisakah Sebuah Argumen Dipercaya?</h2>
+
+    <p>Perhatikan dua cara berpikir berikut. Seorang guru berkata, <em>"Jika kamu rajin belajar, kamu pasti lulus."</em> Andi rajin belajar, maka kita yakin Andi lulus. Tetapi bagaimana jika yang kita tahu justru <em>"Andi lulus"</em>? Bolehkah kita menyimpulkan bahwa Andi pasti rajin belajar? Sekilas terdengar masuk akal, padahal penalaran kedua itu <strong>cacat</strong> — Andi bisa saja lulus karena alasan lain.</p>
+
+    <div class="grafik-wrap">
+      <svg class="lgk-svg" viewBox="0 0 360 430" width="100%" style="max-width:400px;" role="img" aria-label="Perbandingan argumen sah (modus ponens) dan argumen tidak sah (menegaskan konsekuen)">
+        <text x="180" y="24" text-anchor="middle" class="lgk-head lgk-okt">Argumen Sah — Modus Ponens</text>
+        <rect x="14" y="38" width="332" height="38" rx="8" class="lgk-box"/>
+        <text x="28" y="62" class="lgk-t">P₁: Jika Andi rajin belajar, maka ia lulus.</text>
+        <rect x="14" y="84" width="332" height="38" rx="8" class="lgk-box"/>
+        <text x="28" y="108" class="lgk-t">P₂: Andi rajin belajar.</text>
+        <line x1="14" y1="136" x2="346" y2="136" class="lgk-line"/>
+        <rect x="14" y="148" width="332" height="40" rx="8" class="lgk-ok"/>
+        <text x="28" y="173" class="lgk-t lgk-bold">∴ Andi lulus.</text>
+        <text x="330" y="174" text-anchor="end" class="lgk-head lgk-okt">✓ sah</text>
+
+        <text x="180" y="240" text-anchor="middle" class="lgk-head lgk-not">Tidak Sah — Menegaskan Konsekuen</text>
+        <rect x="14" y="254" width="332" height="38" rx="8" class="lgk-box"/>
+        <text x="28" y="278" class="lgk-t">P₁: Jika Andi rajin belajar, maka ia lulus.</text>
+        <rect x="14" y="300" width="332" height="38" rx="8" class="lgk-box"/>
+        <text x="28" y="324" class="lgk-t">P₂: Andi lulus.</text>
+        <line x1="14" y1="352" x2="346" y2="352" class="lgk-line"/>
+        <rect x="14" y="364" width="332" height="40" rx="8" class="lgk-no"/>
+        <text x="28" y="389" class="lgk-t lgk-bold">∴ Andi rajin belajar.</text>
+        <text x="330" y="390" text-anchor="end" class="lgk-head lgk-not">✗ tidak sah</text>
+      </svg>
+    </div>
+
+    <p>Logika matematika lahir untuk menjawab pertanyaan semacam ini secara pasti, tanpa bergantung pada perasaan. Kata <em>logika</em> berasal dari bahasa Yunani <em>logos</em> (alasan, pikiran). Dalam matematika, logika adalah ilmu tentang <strong>cara bernalar yang sah</strong>: alat untuk memastikan apakah sebuah kesimpulan benar-benar mengikuti dari premis-premisnya.</p>
+
+    <h3 class="subsection-title">Ide Dasar: Nilai Kebenaran</h3>
+    <p>Seluruh logika dibangun dari satu gagasan sederhana: setiap <strong>pernyataan</strong> bernilai <strong>Benar (B)</strong> atau <strong>Salah (S)</strong>, tidak keduanya. Dari pernyataan-pernyataan tunggal kita membentuk pernyataan majemuk dengan kata hubung <em>dan, atau, jika … maka, jika dan hanya jika</em>; lalu kita menguji kapan dua bentuk selalu setara, dan akhirnya kapan sebuah kesimpulan <em>sah</em>. Kemampuan inilah yang diuji pada soal-soal penalaran (termasuk SNBT) dan menjadi fondasi pembuktian matematika, seperti induksi matematika.</p>
+
+    <h3 class="subsection-title">Sejarah Singkat</h3>
+    <p><strong>Aristoteles</strong> (384–322 SM) adalah orang pertama yang menyusun aturan penarikan kesimpulan secara sistematis, termasuk <em>silogisme</em>. Lebih dari dua ribu tahun kemudian, <strong>George Boole</strong> (1815–1864) menunjukkan bahwa logika dapat ditulis seperti aljabar — gagasan yang kini menjadi dasar rangkaian digital di setiap ponsel dan komputer — sementara <strong>Augustus De Morgan</strong> (1806–1871) merumuskan hukum negasi yang akan kita pelajari di bagian B.</p>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Pernyataan, Kalimat Terbuka, dan Negasi</a></li>
+      <li><a href="#bagian-b" data-num="B">Pernyataan Majemuk</a></li>
+      <li><a href="#bagian-c" data-num="C">Ekivalensi, Tautologi, dan Aljabar Logika</a></li>
+      <li><a href="#bagian-d" data-num="D">Pernyataan Berkuantor</a></li>
+      <li><a href="#bagian-e" data-num="E">Penarikan Kesimpulan</a></li>
+      <li><a href="#bagian-f" data-num="F">Ringkasan</a></li>
+    </ul>
+  </div>
+
+  </section>
+
+  <!-- ═══ A. PERNYATAAN, KALIMAT TERBUKA, NEGASI ════════════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Pernyataan, Kalimat Terbuka, dan Negasi</h2>
+
+    <h3 class="subsection-title">1. Kalimat dan Pernyataan</h3>
+    <p>Sebelum bernalar, kita harus sepakat kalimat mana yang bisa dinilai. Tidak semua kalimat berguna dalam logika: kalimat tanya, perintah, atau pendapat pribadi tidak dapat dinilai benar atau salah.</p>
+
+    <div class="box box-definisi">
+      <div class="box-label">Definisi Pernyataan</div>
+      <p style="margin:0;font-size:.9rem;"><strong>Pernyataan</strong> (proposisi) adalah kalimat yang bernilai <strong>benar saja</strong> atau <strong>salah saja</strong>, tidak sekaligus keduanya. Pernyataan biasanya dilambangkan dengan huruf kecil $p$, $q$, $r$, …, dan nilai kebenarannya ditulis B (benar) atau S (salah).</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Jenis kalimat</th><th>Contoh</th><th>Pernyataan?</th></tr></thead>
+        <tbody>
+          <tr><td>Fakta yang dapat diuji</td><td>$7$ adalah bilangan prima.</td><td>Ya (B)</td></tr>
+          <tr><td>Fakta yang keliru</td><td>$2 + 2 = 5$</td><td>Ya (S)</td></tr>
+          <tr><td>Nilainya belum diketahui</td><td>Ada kehidupan di planet lain.</td><td>Ya (B atau S)</td></tr>
+          <tr><td>Kalimat tanya / perintah / harapan</td><td>Tutup pintunya!</td><td>Bukan</td></tr>
+          <tr><td>Pendapat (subjektif)</td><td>Matematika itu menyenangkan.</td><td>Bukan</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Cara Cepat Membedakan</div>
+      <p style="margin:0;font-size:.9rem;">Tanyakan: <em>"Apakah kalimat ini pasti bernilai benar atau pasti bernilai salah, walaupun mungkin aku belum tahu yang mana?"</em> Jika ya, kalimat itu pernyataan. "Ada kehidupan di planet lain" tetap pernyataan — nilainya pasti B atau S, hanya belum kita ketahui. Sebaliknya, "Matematika itu menyenangkan" bergantung pada selera, sehingga bukan pernyataan.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan apakah setiap kalimat berikut pernyataan benar, pernyataan salah, atau bukan pernyataan!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Matahari terbit dari arah timur.</li>
+        <li>$3 + 4 = 8$</li>
+        <li>Apakah kamu sudah makan?</li>
+        <li>Jangan berisik!</li>
+        <li>Pulau Sumatra lebih indah daripada Pulau Jawa.</li>
+        <li>Jumlah besar sudut-sudut dalam segitiga adalah $180^\circ$.</li>
+        <li>Ada bilangan prima yang habis dibagi $4$.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji setiap kalimat:</strong> apakah nilainya pasti B atau pasti S?</p>
+      <ul class="sol-cek">
+        <li>(a) dapat dibuktikan secara ilmiah → pernyataan <strong>benar</strong> ✓</li>
+        <li>(b) $3 + 4 = 7 \neq 8$ → pernyataan <strong>salah</strong> ✓</li>
+        <li>(c) kalimat tanya → <strong>bukan</strong> pernyataan ✗</li>
+        <li>(d) kalimat perintah → <strong>bukan</strong> pernyataan ✗</li>
+        <li>(e) "lebih indah" bersifat subjektif → <strong>bukan</strong> pernyataan ✗</li>
+        <li>(f) teorema geometri → pernyataan <strong>benar</strong> ✓</li>
+        <li>(g) satu-satunya bilangan prima genap adalah $2$, dan $2$ tidak habis dibagi $4$ → pernyataan <strong>salah</strong> ✓</li>
+      </ul>
+      <div class="sol-jadi">(a) dan (f) pernyataan benar, (b) dan (g) pernyataan salah, sedangkan (c), (d), dan (e) bukan pernyataan.</div>
+    </div>
+
+    <h3 class="subsection-title">2. Kalimat Terbuka</h3>
+    <p>Kalimat "$x + 3 = 7$" belum bisa dinilai: benar jika $x = 4$, salah untuk nilai lain. Kalimat seperti ini memuat <strong>variabel</strong> (peubah), dan nilai kebenarannya bergantung pada nilai variabel tersebut.</p>
+
+    <div class="box box-definisi">
+      <div class="box-label">Definisi Kalimat Terbuka</div>
+      <p style="margin:0;font-size:.9rem;"><strong>Kalimat terbuka</strong> adalah kalimat yang memuat variabel sehingga nilai kebenarannya belum dapat ditentukan. Kalimat terbuka menjadi pernyataan jika variabelnya <strong>diganti</strong> dengan nilai tertentu (atau jika diberi <strong>kuantor</strong> "untuk setiap"/"ada", lihat bagian D).<br><br><strong>Himpunan penyelesaian (HP)</strong> kalimat terbuka adalah himpunan semua nilai variabel yang membuat kalimat itu bernilai benar.</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Identitas dan Kalimat Mustahil</div>
+      <p style="margin:0;font-size:.9rem;">Kalimat $(x+1)^2 = x^2 + 2x + 1$ benar untuk <em>setiap</em> $x$, sehingga $\text{HP} = \mathbb{R}$; kalimat $x + 1 = x$ tidak pernah benar, sehingga $\text{HP} = \varnothing$. Keduanya tetap kalimat terbuka. Jika ditulis lengkap "<em>untuk setiap</em> bilangan real $x$, $(x+1)^2 = x^2 + 2x + 1$", barulah kalimat itu menjadi pernyataan (bernilai B).</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan himpunan penyelesaian setiap kalimat terbuka berikut untuk $x$ bilangan real (kecuali disebutkan lain)!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$4x + 6 = 18$</li>
+        <li>$x^2 - 4x - 12 = 0$</li>
+        <li>$x^2 + 5x - 24 = (x+8)(x-3)$</li>
+        <li>$2x + 6 = 2x - 4$</li>
+        <li>$x$ adalah bilangan prima di antara $20$ dan $30$ ($x$ bilangan asli).</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>$4x + 6 = 18$</div>
+      $$4x = 12 \;\Rightarrow\; x = 3$$
+      <div class="sol-jadi">$\text{HP} = \{3\}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$x^2 - 4x - 12 = 0$</div>
+      $$(x-6)(x+2) = 0 \;\Rightarrow\; x = 6 \text{ atau } x = -2$$
+      <div class="sol-jadi">$\text{HP} = \{-2,\ 6\}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>$x^2 + 5x - 24 = (x+8)(x-3)$</div>
+      <p class="sol-step"><strong>Jabarkan ruas kanan:</strong> $(x+8)(x-3) = x^2 + 5x - 24$, sama persis dengan ruas kiri, sehingga kalimat benar untuk setiap $x$ (identitas).</p>
+      <div class="sol-jadi">$\text{HP} = \mathbb{R}$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span>$2x + 6 = 2x - 4$</div>
+      <p class="sol-step"><strong>Kurangi kedua ruas dengan $2x$:</strong> diperoleh $6 = -4$, yang tidak pernah benar.</p>
+      <div class="sol-jadi">$\text{HP} = \varnothing$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span>Bilangan prima di antara 20 dan 30</div>
+      <p class="sol-step"><strong>Periksa $21, \ldots, 29$:</strong> yang hanya memiliki faktor $1$ dan dirinya sendiri adalah $23$ dan $29$.</p>
+      <div class="sol-jadi">$\text{HP} = \{23,\ 29\}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui kalimat terbuka $p(x)$: "$2x - 1 &lt; 7$" dengan $x \in \{1, 2, 3, 4, 5, 6\}$. Ubahlah $p(x)$ menjadi pernyataan dengan mengganti $x = 3$ dan $x = 5$, lalu tentukan nilai kebenarannya serta HP dari $p(x)$!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Substitusi nilai $x$:</strong></p>
+      <ul class="sol-cek">
+        <li>$p(3)$: $2(3) - 1 = 5 &lt; 7$ → pernyataan <strong>benar</strong> ✓</li>
+        <li>$p(5)$: $2(5) - 1 = 9 &lt; 7$ → pernyataan <strong>salah</strong> ✗</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Selesaikan pertidaksamaan:</strong> $2x &lt; 8 \Rightarrow x &lt; 4$, lalu ambil anggota semesta yang memenuhi.</p>
+      <div class="sol-jadi">$p(3)$ bernilai B, $p(5)$ bernilai S, dan $\text{HP} = \{1,\ 2,\ 3\}$.</div>
+    </div>
+
+    <h3 class="subsection-title">3. Negasi (Ingkaran)</h3>
+    <p>Setiap pernyataan dapat "dibalik" nilai kebenarannya dengan menambahkan kata <em>tidak</em>, <em>bukan</em>, atau <em>tidak benar bahwa</em>. Hasilnya disebut <strong>negasi</strong>.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Negasi Pernyataan</div>
+      <p style="margin:0 0 .5rem;font-size:.9rem;">Negasi dari $p$ ditulis $\neg p$ (sering juga ditulis $\sim p$), dibaca "tidak $p$" atau "tidak benar bahwa $p$". Nilai kebenarannya selalu <strong>berlawanan</strong> dengan $p$.</p>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th class="hl">$\neg p$</th></tr></thead><tbody><tr><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td class="hl">B</td></tr></tbody></table></div>
+      $$\neg(\neg p) \equiv p$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Negasi Tanda Ketaksamaan</div>
+      <p style="margin:0;font-size:.9rem;">Negasi dari "$a > b$" adalah "$a \le b$", <strong>bukan</strong> "$a &lt; b$". Negasi dari "$a \ge b$" adalah "$a &lt; b$", dan negasi dari "$a = b$" adalah "$a \neq b$". Kemungkinan "sama dengan" jangan sampai hilang.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tuliskan negasi setiap pernyataan berikut, kemudian tentukan nilai kebenaran negasinya!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Bandung adalah ibu kota Provinsi Jawa Barat.</li>
+        <li>$5 + 7 = 11$</li>
+        <li>Kubus dibatasi oleh enam buah persegi.</li>
+        <li>$15 > 20$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>$p$: Bandung ibu kota Jawa Barat (B)</div>
+      <div class="sol-jadi">$\neg p$: "Bandung bukan ibu kota Provinsi Jawa Barat", bernilai S.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$p$: $5 + 7 = 11$ (S, sebab $5 + 7 = 12$)</div>
+      <div class="sol-jadi">$\neg p$: "$5 + 7 \neq 11$", bernilai B.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>$p$: kubus dibatasi enam persegi (B)</div>
+      <div class="sol-jadi">$\neg p$: "Kubus tidak dibatasi oleh enam buah persegi", bernilai S.</div>
+      <div class="sol-part"><span class="sol-tag">d</span>$p$: $15 > 20$ (S)</div>
+      <p class="sol-step"><strong>Ingat:</strong> lawan dari "lebih dari" adalah "kurang dari <em>atau sama dengan</em>".</p>
+      <div class="sol-jadi">$\neg p$: "$15 \le 20$", bernilai B.</div>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Langkah Menilai Negasi Berlapis</div>
+      <ol class="step-list" style="margin:0;padding-left:1.2rem;font-size:.9rem;">
+        <li>Temukan pernyataan paling dalam (tanpa kata negasi) dan tentukan nilainya.</li>
+        <li>Terapkan kata negasi satu per satu dari dalam ke luar; setiap "tidak"/"bukan" membalik nilai sekali.</li>
+        <li>Jumlah negasi genap → nilai sama dengan pernyataan dasar; ganjil → berlawanan.</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan nilai kebenaran pernyataan berikut!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Tidak benar bahwa $9$ habis dibagi $6$.</li>
+        <li>Tidak benar bahwa $7$ bukan bilangan yang tidak prima.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>Satu lapis negasi</div>
+      <p class="sol-step"><strong>Nilai pernyataan dasar:</strong> "$9$ habis dibagi $6$" bernilai S, karena $9 : 6 = 1{,}5$.</p>
+      <div class="sol-jadi">pernyataan tersebut bernilai B.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>Tiga lapis negasi</div>
+      <ul class="sol-cek">
+        <li>"$7$ bilangan prima" → B</li>
+        <li>"$7$ bilangan yang tidak prima" → S</li>
+        <li>"$7$ bukan bilangan yang tidak prima" → B</li>
+        <li>"Tidak benar bahwa $7$ bukan bilangan yang tidak prima" → S</li>
+      </ul>
+      <div class="sol-jadi">pernyataan tersebut bernilai S (tiga negasi membalik nilai dasar B).</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan A</div>
+      <ol class="soal-list">
+        <li>Tentukan apakah setiap kalimat berikut pernyataan benar, pernyataan salah, atau bukan pernyataan!<br>(a) $2 \times 5 = 10$ &nbsp; (b) Selamat ulang tahun! &nbsp; (c) $17$ adalah bilangan prima. &nbsp; (d) Berapa umurmu? &nbsp; (e) Bumi memiliki tiga satelit alami.</li>
+        <li>Tuliskan negasi setiap pernyataan berikut beserta nilai kebenarannya!<br>(a) $\sqrt{4} = 3$ &nbsp; (b) Persegi panjang adalah jajargenjang. &nbsp; (c) $12$ kurang dari $10$.</li>
+        <li>Tentukan himpunan penyelesaian setiap kalimat terbuka berikut untuk $x$ bilangan real!<br>(a) $x^2 - 8x - 20 = 0$ &nbsp; (b) $x^2 + 4x + 4 = (x+2)^2$ &nbsp; (c) $3x - 5 = 7$ &nbsp; (d) $5x + 2 = 5x - 3$</li>
+        <li>Tentukan nilai kebenaran pernyataan berikut!<br>(a) Tidak benar bahwa $2$ adalah bilangan ganjil. &nbsp; (b) Tidak benar bahwa $\sqrt{2}$ adalah bilangan rasional.</li>
+        <li>Tentukan nilai kebenaran pernyataan berikut dengan menguraikannya lapis demi lapis!<br>(a) Tidak benar bahwa segitiga sama kaki bukan segitiga yang memiliki dua sisi sama panjang.<br>(b) Tidak benar bahwa tidak benar bahwa $7$ adalah bilangan prima.</li>
+        <li>Diketahui kalimat terbuka $p(x)$: "$x^2 - 5x + 4 \le 0$" dengan $x$ bilangan bulat dan $0 \le x \le 6$.<br>(a) Tentukan HP dari $p(x)$.<br>(b) Tuliskan negasi $p(x)$ dan tentukan HP-nya pada semesta yang sama.</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ B. PERNYATAAN MAJEMUK ══════════════════════════════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Pernyataan Majemuk</h2>
+
+    <p>Pernyataan tunggal seperti "hari hujan" dan "jalan macet" dapat digabung dengan kata hubung (<em>operator logika</em>) menjadi <strong>pernyataan majemuk</strong>. Nilai kebenaran pernyataan majemuk ditentukan sepenuhnya oleh nilai komponen-komponennya.</p>
+
+    <h3 class="subsection-title">1. Konjungsi ("dan")</h3>
+    <div class="box box-rumus">
+      <div class="box-label">• Konjungsi $p \wedge q$</div>
+      <p style="margin:0 0 .5rem;font-size:.9rem;">$p \wedge q$ (dibaca "$p$ dan $q$") bernilai <strong>B hanya jika kedua komponen B</strong>. Kata lain yang bermakna konjungsi: <em>tetapi, meskipun, sedangkan, juga</em>.</p>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th class="hl">$p \wedge q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td>S</td><td class="hl">S</td></tr></tbody></table></div>
+    </div>
+    <p>Bayangkan dua saklar yang dipasang <strong>seri</strong>: lampu hanya menyala jika kedua saklar sama-sama ON.</p>
+
+    <h3 class="subsection-title">2. Disjungsi ("atau")</h3>
+    <div class="box box-rumus">
+      <div class="box-label">• Disjungsi $p \vee q$</div>
+      <p style="margin:0 0 .5rem;font-size:.9rem;">$p \vee q$ (dibaca "$p$ atau $q$") bernilai <strong>S hanya jika kedua komponen S</strong>.</p>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th class="hl">$p \vee q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td class="hl">B</td></tr><tr><td>S</td><td>B</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td class="hl">S</td></tr></tbody></table></div>
+    </div>
+    <p>Ini seperti saklar <strong>paralel</strong>: cukup satu saklar ON agar lampu menyala. Dalam logika, "atau" bersifat <em>inklusif</em>: $p \vee q$ tetap benar ketika keduanya benar.</p>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan nilai kebenaran setiap pernyataan majemuk berikut!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$9$ dan $14$ adalah bilangan yang habis dibagi $3$.</li>
+        <li>Bandung atau Palembang terletak di Pulau Jawa.</li>
+        <li>$20$ habis dibagi $6$ dan jumlah sudut dalam segitiga adalah $360^\circ$.</li>
+        <li>$2$ adalah bilangan prima atau $2$ adalah bilangan ganjil.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>Konjungsi</div>
+      <p class="sol-step">$p$: $9$ habis dibagi $3$ (B), $q$: $14$ habis dibagi $3$ (S), sehingga $p \wedge q \equiv \text{B} \wedge \text{S}$.</p>
+      <div class="sol-jadi">pernyataan tersebut bernilai S.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>Disjungsi</div>
+      <p class="sol-step">$p$: Bandung di Pulau Jawa (B), $q$: Palembang di Pulau Jawa (S), sehingga $p \vee q \equiv \text{B} \vee \text{S}$.</p>
+      <div class="sol-jadi">pernyataan tersebut bernilai B.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>Konjungsi</div>
+      <p class="sol-step">$p$: $20$ habis dibagi $6$ (S), $q$: jumlah sudut segitiga $360^\circ$ (S), sehingga $p \wedge q \equiv \text{S} \wedge \text{S}$.</p>
+      <div class="sol-jadi">pernyataan tersebut bernilai S.</div>
+      <div class="sol-part"><span class="sol-tag">d</span>Disjungsi</div>
+      <p class="sol-step">$p$: $2$ bilangan prima (B), $q$: $2$ bilangan ganjil (S), sehingga $p \vee q \equiv \text{B} \vee \text{S}$.</p>
+      <div class="sol-jadi">pernyataan tersebut bernilai B.</div>
+    </div>
+
+    <h3 class="subsection-title">3. Implikasi ("jika … maka …")</h3>
+    <div class="box box-rumus">
+      <div class="box-label">• Implikasi $p \Rightarrow q$</div>
+      <p style="margin:0 0 .5rem;font-size:.9rem;">$p \Rightarrow q$ (dibaca "jika $p$ maka $q$"), dengan $p$ disebut <strong>anteseden</strong> dan $q$ <strong>konsekuen</strong>. Implikasi bernilai <strong>S hanya jika $p$ B dan $q$ S</strong>.</p>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th class="hl">$p \Rightarrow q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td class="hl">B</td></tr></tbody></table></div>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Ungkapan Lain untuk $p \Rightarrow q$</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;">
+        <li>$q$ jika $p$</li>
+        <li>$p$ hanya jika $q$</li>
+        <li>$p$ <strong>syarat cukup</strong> bagi $q$</li>
+        <li>$q$ <strong>syarat perlu</strong> bagi $p$</li>
+      </ul>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Mengapa Anteseden Salah Membuat Implikasi Benar?</div>
+      <p style="margin:0;font-size:.9rem;">Seorang guru berjanji: <em>"Jika nilaimu 100, kamu mendapat hadiah."</em> Jika nilaimu bukan 100 (anteseden S), guru tidak melanggar janji, apa pun yang terjadi dengan hadiahnya. Janji itu hanya dilanggar dalam satu keadaan: nilaimu 100 tetapi hadiah tidak diberikan (B $\Rightarrow$ S).</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan nilai kebenaran setiap implikasi berikut!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Jika kambing berkaki dua maka kerbau berkaki empat.</li>
+        <li>Jika $3$ adalah faktor dari $12$ maka $12$ habis dibagi $5$.</li>
+        <li>Jika $2 + 3 = 6$ maka $5$ adalah bilangan genap.</li>
+        <li>Jika $\sqrt{9} = 3$ maka $3^2 = 9$.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ul class="sol-cek">
+        <li>(a) $\text{S} \Rightarrow \text{B}$ → B</li>
+        <li>(b) $\text{B} \Rightarrow \text{S}$ → S (satu-satunya kasus implikasi salah)</li>
+        <li>(c) $\text{S} \Rightarrow \text{S}$ → B</li>
+        <li>(d) $\text{B} \Rightarrow \text{B}$ → B</li>
+      </ul>
+      <div class="sol-jadi">(a), (c), dan (d) bernilai B, sedangkan (b) bernilai S.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Nyatakan implikasi "Jika segi empat $ABCD$ persegi maka diagonal-diagonalnya sama panjang" dengan ungkapan (a) "hanya jika", (b) "syarat cukup", dan (c) "syarat perlu"!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan komponen:</strong> $p$: $ABCD$ persegi; $q$: diagonal-diagonal $ABCD$ sama panjang.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan pola ungkapan:</strong></p>
+      <ul class="sol-cek">
+        <li>(a) $p$ hanya jika $q$: "$ABCD$ persegi hanya jika diagonal-diagonalnya sama panjang."</li>
+        <li>(b) $p$ syarat cukup bagi $q$: "$ABCD$ persegi merupakan syarat cukup agar diagonal-diagonalnya sama panjang."</li>
+        <li>(c) $q$ syarat perlu bagi $p$: "Diagonal-diagonal yang sama panjang merupakan syarat perlu agar $ABCD$ persegi."</li>
+      </ul>
+      <div class="sol-jadi">ketiga kalimat di atas setara dengan implikasi semula (persegi panjang juga berdiagonal sama, jadi "sama panjang" saja belum cukup untuk menjamin persegi).</div>
+    </div>
+
+    <h3 class="subsection-title">4. Biimplikasi ("jika dan hanya jika")</h3>
+    <div class="box box-rumus">
+      <div class="box-label">• Biimplikasi $p \Leftrightarrow q$</div>
+      <p style="margin:0 0 .5rem;font-size:.9rem;">$p \Leftrightarrow q$ (dibaca "$p$ jika dan hanya jika $q$") bernilai <strong>B jika $p$ dan $q$ bernilai sama</strong>. Biimplikasi berarti $(p \Rightarrow q) \wedge (q \Rightarrow p)$; $p$ adalah syarat perlu <em>sekaligus</em> cukup bagi $q$.</p>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th class="hl">$p \Leftrightarrow q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td>S</td><td class="hl">B</td></tr></tbody></table></div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan nilai kebenaran setiap biimplikasi berikut!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Soeharto adalah presiden pertama RI jika dan hanya jika Danau Toba terletak di Sumatra Barat.</li>
+        <li>$15$ bilangan genap jika dan hanya jika $15$ tidak habis dibagi $2$.</li>
+        <li>$2^3 = 8$ jika dan hanya jika ${}^{2}\!\log 8 = 3$.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ul class="sol-cek">
+        <li>(a) presiden pertama RI adalah Soekarno (S); Danau Toba di Sumatra Utara (S): $\text{S} \Leftrightarrow \text{S}$ → B</li>
+        <li>(b) $15$ genap (S); $15$ tidak habis dibagi $2$ (B): $\text{S} \Leftrightarrow \text{B}$ → S</li>
+        <li>(c) kedua komponen B: $\text{B} \Leftrightarrow \text{B}$ → B</li>
+      </ul>
+      <div class="sol-jadi">(a) dan (c) bernilai B, sedangkan (b) bernilai S.</div>
+    </div>
+
+    <h3 class="subsection-title">5. Pernyataan Majemuk yang Memuat Variabel</h3>
+    <p>Jika komponennya kalimat terbuka, pernyataan majemuk juga menjadi kalimat terbuka; nilainya bergantung pada $x$. Misalkan $P$ dan $Q$ adalah HP dari $p(x)$ dan $q(x)$ pada semesta $S$. HP pernyataan majemuknya dapat dicari dengan operasi himpunan.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• HP Kalimat Terbuka Majemuk</div>
+      <div class="table-wrap"><table class="tt">
+        <thead><tr><th>Bentuk</th><th>Bernilai B untuk $x$ di</th></tr></thead>
+        <tbody>
+          <tr><td>$p(x) \wedge q(x)$</td><td>$P \cap Q$</td></tr>
+          <tr><td>$p(x) \vee q(x)$</td><td>$P \cup Q$</td></tr>
+          <tr><td>$p(x) \Rightarrow q(x)$</td><td>$P^c \cup Q$ (semua $x$ kecuali $x \in P,\ x \notin Q$)</td></tr>
+          <tr><td>$p(x) \Leftrightarrow q(x)$</td><td>$(P \cap Q) \cup (P^c \cap Q^c)$</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $p(x)$: $x^2 - 7x + 10 = 0$ dan $q(x)$: $x^2 + 5x - 14 = 0$, $x \in \mathbb{R}$. Tentukan nilai $x$ agar (a) $p(x) \wedge q(x)$ dan (b) $p(x) \vee q(x)$ bernilai benar!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari HP masing-masing:</strong></p>
+      $$\begin{align*} (x-2)(x-5) = 0 &\;\Rightarrow\; P = \{2,\ 5\} \\ (x+7)(x-2) = 0 &\;\Rightarrow\; Q = \{-7,\ 2\} \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">a</span>Konjungsi → irisan</div>
+      <div class="sol-jadi">$p(x) \wedge q(x)$ benar untuk $x = 2$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>Disjungsi → gabungan</div>
+      <div class="sol-jadi">$p(x) \vee q(x)$ benar untuk $x \in \{-7,\ 2,\ 5\}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x \in \mathbb{R}$ agar implikasi "Jika $x^2 - 9 = 0$ maka $x^2 - 5x + 6 = 0$" bernilai benar!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari HP komponen:</strong> $P = \{-3,\ 3\}$ dan $Q = \{2,\ 3\}$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cari kasus B $\Rightarrow$ S:</strong> implikasi salah hanya jika $x \in P$ tetapi $x \notin Q$.</p>
+      <ul class="sol-cek">
+        <li>$x = 3$: $p$ B dan $q$ B → implikasi B ✓</li>
+        <li>$x = -3$: $p$ B tetapi $q$ S → implikasi S ✗</li>
+        <li>$x$ lainnya: $p$ S → implikasi B ✓</li>
+      </ul>
+      <div class="sol-jadi">implikasi bernilai benar untuk semua $x \in \mathbb{R}$ kecuali $x = -3$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $x \in \mathbb{R}$ agar biimplikasi "$x > 6$ jika dan hanya jika $x > 3$" bernilai benar!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tinjau kapan nilai keduanya sama:</strong></p>
+      <ul class="sol-cek">
+        <li>$x > 6$: kedua komponen B → B ✓</li>
+        <li>$3 &lt; x \le 6$: $x > 6$ S tetapi $x > 3$ B → S ✗</li>
+        <li>$x \le 3$: kedua komponen S → B ✓</li>
+      </ul>
+      <div class="sol-jadi">biimplikasi bernilai benar untuk $x \le 3$ atau $x > 6$.</div>
+    </div>
+
+    <h3 class="subsection-title">6. Konvers, Invers, dan Kontraposisi</h3>
+    <p>Dari satu implikasi $p \Rightarrow q$ dapat dibentuk tiga implikasi lain dengan menukar dan/atau menegasikan komponennya.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Konvers, Invers, Kontraposisi</div>
+      <div class="table-wrap"><table class="tt">
+        <thead><tr><th>Nama</th><th>Bentuk</th><th>Cara membentuk</th></tr></thead>
+        <tbody>
+          <tr><td>Implikasi</td><td>$p \Rightarrow q$</td><td>—</td></tr>
+          <tr><td>Konvers</td><td>$q \Rightarrow p$</td><td>tukar</td></tr>
+          <tr><td>Invers</td><td>$\neg p \Rightarrow \neg q$</td><td>negasikan</td></tr>
+          <tr><td>Kontraposisi</td><td>$\neg q \Rightarrow \neg p$</td><td>tukar + negasikan</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <p>Tabel kebenarannya menunjukkan hubungan penting:</p>
+    <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$\neg p$</th><th>$\neg q$</th><th class="hl">$p \Rightarrow q$</th><th>$q \Rightarrow p$</th><th>$\neg p \Rightarrow \neg q$</th><th class="hl">$\neg q \Rightarrow \neg p$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td>S</td><td class="hl">B</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>S</td><td>B</td><td class="hl">S</td><td>B</td><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td>B</td><td>S</td><td class="hl">B</td><td>S</td><td>S</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td>B</td><td>B</td><td class="hl">B</td><td>B</td><td>B</td><td class="hl">B</td></tr></tbody></table></div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Yang Setara dan yang Tidak</div>
+      <p style="margin:0;font-size:.9rem;">Implikasi selalu <strong>setara</strong> dengan kontraposisinya: $p \Rightarrow q \equiv \neg q \Rightarrow \neg p$. Konvers setara dengan invers, tetapi <strong>tidak</strong> setara dengan implikasi semula. Jadi, jika suatu implikasi benar, konversnya belum tentu benar.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan konvers, invers, dan kontraposisi dari "Jika hari hujan maka jalan basah"!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan komponen:</strong> $p$: hari hujan; $q$: jalan basah.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bentuk ketiga implikasi:</strong></p>
+      <ul class="sol-cek">
+        <li>Konvers ($q \Rightarrow p$): Jika jalan basah maka hari hujan.</li>
+        <li>Invers ($\neg p \Rightarrow \neg q$): Jika hari tidak hujan maka jalan tidak basah.</li>
+        <li>Kontraposisi ($\neg q \Rightarrow \neg p$): Jika jalan tidak basah maka hari tidak hujan.</li>
+      </ul>
+      <div class="sol-jadi">hanya kontraposisi yang setara dengan implikasi semula; jalan bisa basah karena disiram, sehingga konvers dan invers belum tentu benar.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui implikasi "Jika $6$ habis dibagi $4$ maka $6$ bilangan genap". Tentukan nilai kebenaran implikasi tersebut beserta konvers, invers, dan kontraposisinya!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Nilai komponen:</strong> $p$: $6$ habis dibagi $4$ (S); $q$: $6$ bilangan genap (B).</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung keempat bentuk:</strong></p>
+      <ul class="sol-cek">
+        <li>Implikasi $p \Rightarrow q$: $\text{S} \Rightarrow \text{B}$ → B</li>
+        <li>Konvers $q \Rightarrow p$: $\text{B} \Rightarrow \text{S}$ → S</li>
+        <li>Invers $\neg p \Rightarrow \neg q$: $\text{B} \Rightarrow \text{S}$ → S</li>
+        <li>Kontraposisi $\neg q \Rightarrow \neg p$: $\text{S} \Rightarrow \text{B}$ → B</li>
+      </ul>
+      <div class="sol-jadi">implikasi dan kontraposisinya bernilai B, sedangkan konvers dan inversnya bernilai S.</div>
+    </div>
+
+    <h3 class="subsection-title">7. Negasi Pernyataan Majemuk</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Negasi Pernyataan Majemuk</div>
+      <div class="table-wrap"><table class="tt">
+        <thead><tr><th>Pernyataan</th><th>Negasinya</th></tr></thead>
+        <tbody>
+          <tr><td>$p \wedge q$</td><td>$\neg p \vee \neg q$</td></tr>
+          <tr><td>$p \vee q$</td><td>$\neg p \wedge \neg q$</td></tr>
+          <tr><td>$p \Rightarrow q$</td><td>$p \wedge \neg q$</td></tr>
+          <tr><td>$p \Leftrightarrow q$</td><td>$(p \wedge \neg q) \vee (q \wedge \neg p)$</td></tr>
+        </tbody>
+      </table></div>
+      <p style="margin:.5rem 0 0;font-size:.9rem;">Dua baris pertama dikenal sebagai <strong>Hukum De Morgan</strong>. Negasi biimplikasi juga dapat ditulis singkat $p \Leftrightarrow \neg q$.</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Kesalahan yang Sering Terjadi</div>
+      <p style="margin:0;font-size:.9rem;">Saat negasi "masuk" ke dalam kurung, <strong>kata hubungnya ikut berganti</strong>: "dan" menjadi "atau", "atau" menjadi "dan". Negasi "Ayah ke sawah dan ibu memasak" adalah "Ayah tidak ke sawah <em>atau</em> ibu tidak memasak", bukan "… <em>dan</em> ibu tidak memasak". Negasi implikasi <strong>bukan</strong> implikasi lagi, melainkan konjungsi "$p$ tetapi tidak $q$".</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tuliskan negasi setiap pernyataan berikut dalam kalimat yang wajar!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Ayah pergi ke sawah dan ibu memasak di dapur.</li>
+        <li>$2$ atau $5$ adalah faktor dari $20$.</li>
+        <li>Jika Andi naik kelas maka ia dibelikan sepeda.</li>
+        <li>Budi lulus jika dan hanya jika nilainya minimal $75$.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>$\neg(p \wedge q) \equiv \neg p \vee \neg q$</div>
+      <div class="sol-jadi">negasinya: "Ayah tidak pergi ke sawah atau ibu tidak memasak di dapur."</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$\neg(p \vee q) \equiv \neg p \wedge \neg q$</div>
+      <div class="sol-jadi">negasinya: "$2$ bukan faktor dari $20$ dan $5$ bukan faktor dari $20$."</div>
+      <div class="sol-part"><span class="sol-tag">c</span>$\neg(p \Rightarrow q) \equiv p \wedge \neg q$</div>
+      <div class="sol-jadi">negasinya: "Andi naik kelas tetapi ia tidak dibelikan sepeda."</div>
+      <div class="sol-part"><span class="sol-tag">d</span>$\neg(p \Leftrightarrow q) \equiv (p \wedge \neg q) \vee (q \wedge \neg p)$</div>
+      <p class="sol-step"><strong>Ingat:</strong> negasi "minimal $75$" ($\ge 75$) adalah "kurang dari $75$".</p>
+      <div class="sol-jadi">negasinya: "Budi lulus tetapi nilainya kurang dari $75$, atau nilainya minimal $75$ tetapi Budi tidak lulus."</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan negasi dari "Jika harga BBM naik maka harga sembako naik dan daya beli masyarakat turun"!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis simbolnya:</strong> $p$: harga BBM naik; $q$: harga sembako naik; $r$: daya beli turun. Pernyataan: $p \Rightarrow (q \wedge r)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Negasikan implikasi, lalu terapkan De Morgan:</strong></p>
+      $$\neg\bigl(p \Rightarrow (q \wedge r)\bigr) \equiv p \wedge \neg(q \wedge r) \equiv p \wedge (\neg q \vee \neg r)$$
+      <div class="sol-jadi">negasinya: "Harga BBM naik, tetapi harga sembako tidak naik atau daya beli masyarakat tidak turun."</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan B</div>
+      <ol class="soal-list">
+        <li>Tentukan nilai kebenaran setiap pernyataan berikut!<br>(a) $5$ adalah bilangan prima dan $10$ adalah bilangan genap. &nbsp; (b) $4 &lt; 3$ atau $7 > 5$. &nbsp; (c) Jika $4 \times 3 = 12$ maka $12 : 4 = 3$. &nbsp; (d) Jika $3 > 5$ maka $10 &lt; 2$.</li>
+        <li>Jika $p$ bernilai B dan $q$ bernilai S, tentukan nilai kebenaran dari:<br>(a) $(\neg p \wedge q) \Rightarrow \neg p$ &nbsp; (b) $(p \vee q) \Leftrightarrow (\neg p \Rightarrow q)$ &nbsp; (c) $(p \wedge \neg q) \Rightarrow (q \vee \neg p)$</li>
+        <li>Tentukan nilai $x \in \mathbb{R}$ agar pernyataan berikut bernilai benar!<br>(a) $2x - 5 = 1$ atau $x^2 + 2x - 15 = 0$.<br>(b) Jika $2x - 6 = 8$ maka $3x + 5 = 2$.</li>
+        <li>Tentukan nilai $x \in \mathbb{R}$ agar biimplikasi berikut bernilai benar!<br>(a) $x - 5 = 3$ jika dan hanya jika $3x + 2 = 8$.<br>(b) $x^2 - 6x + 8 = 0$ jika dan hanya jika $x^2 + 3x - 10 = 0$.</li>
+        <li>Tentukan konvers, invers, dan kontraposisi dari "Jika suatu bilangan habis dibagi $4$ maka bilangan itu genap", beserta nilai kebenaran masing-masing!</li>
+        <li>Tuliskan negasi setiap pernyataan berikut!<br>(a) Jika kerbau berkaki empat dan ayam berkaki dua maka kambing berkaki empat.<br>(b) Jika Arman bolos sekolah maka ia pergi ke pantai atau menonton bioskop.<br>(c) Harga naik jika dan hanya jika permintaan naik.</li>
+        <li>Diberikan pernyataan: "Jika hari ini hari Senin atau hari Selasa maka ada upacara bendera."<br>(a) Tuliskan negasinya dalam simbol dan dalam kalimat.<br>(b) Tuliskan kontraposisinya.<br>(c) Hari ini tidak ada upacara bendera. Dapatkah dipastikan bahwa hari ini bukan hari Senin? Jelaskan.</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ C. EKIVALENSI, TAUTOLOGI, ALJABAR LOGIKA ═════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Ekivalensi, Tautologi, dan Aljabar Logika</h2>
+
+    <p>Setelah bisa membentuk pernyataan majemuk, kita ingin tahu: kapan dua bentuk yang tampak berbeda sebenarnya <em>selalu</em> bernilai sama, dan kapan sebuah pernyataan selalu benar apa pun nilai komponennya.</p>
+
+    <h3 class="subsection-title">1. Menyusun Tabel Kebenaran</h3>
+    <div class="box box-definisi">
+      <div class="box-label">Langkah Menyusun Tabel Kebenaran</div>
+      <ol class="step-list" style="margin:0;padding-left:1.2rem;font-size:.9rem;">
+        <li>Hitung banyak baris: $n$ pernyataan tunggal menghasilkan $2^n$ baris (2 variabel → 4 baris, 3 variabel → 8 baris).</li>
+        <li>Isi kolom variabel secara teratur: kolom pertama setengah B lalu setengah S, kolom berikutnya berselang separuhnya, dan seterusnya.</li>
+        <li>Buat kolom bantu dari bagian terdalam (negasi, isi kurung) ke bagian terluar.</li>
+        <li>Kolom terakhir adalah nilai kebenaran pernyataan yang ditanyakan.</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Susunlah tabel kebenaran dari $(p \vee q) \Rightarrow r$, lalu tentukan pada baris mana pernyataan tersebut bernilai salah!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan banyak baris:</strong> ada 3 variabel, jadi $2^3 = 8$ baris.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Isi kolom bantu $p \vee q$, lalu kolom akhir:</strong></p>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$r$</th><th>$p \vee q$</th><th class="hl">$(p \vee q) \Rightarrow r$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>B</td><td>B</td><td>S</td><td>B</td><td class="hl">S</td></tr><tr><td>B</td><td>S</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>S</td><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>S</td><td>B</td><td>S</td><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td>S</td><td>B</td><td>S</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td>S</td><td>S</td><td class="hl">B</td></tr></tbody></table></div>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Cari baris bernilai S:</strong> implikasi salah ketika $p \vee q$ B tetapi $r$ S, yaitu baris ke-2, ke-4, dan ke-6.</p>
+      <div class="sol-jadi">$(p \vee q) \Rightarrow r$ bernilai S tepat ketika $r$ salah dan sedikitnya satu dari $p$, $q$ benar.</div>
+    </div>
+
+    <h3 class="subsection-title">2. Tautologi, Kontradiksi, dan Kontingensi</h3>
+    <div class="box box-definisi">
+      <div class="box-label">Tiga Jenis Pernyataan Majemuk</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;">
+        <li><strong>Tautologi</strong>: selalu bernilai B untuk semua kemungkinan nilai komponennya. Contoh: $p \vee \neg p$.</li>
+        <li><strong>Kontradiksi</strong>: selalu bernilai S. Contoh: $p \wedge \neg p$.</li>
+        <li><strong>Kontingensi</strong>: memuat nilai B dan S (bukan tautologi, bukan kontradiksi).</li>
+      </ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Selidiki apakah setiap pernyataan berikut tautologi, kontradiksi, atau kontingensi!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$(p \Rightarrow \neg q) \Leftrightarrow (q \Rightarrow \neg p)$</li>
+        <li>$(p \Rightarrow q) \Leftrightarrow (p \wedge \neg q)$</li>
+        <li>$(p \Rightarrow q) \Rightarrow p$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>$(p \Rightarrow \neg q) \Leftrightarrow (q \Rightarrow \neg p)$</div>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$p \Rightarrow \neg q$</th><th>$q \Rightarrow \neg p$</th><th class="hl">$(\ldots) \Leftrightarrow (\ldots)$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td>S</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>S</td><td>B</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td>B</td><td>B</td><td class="hl">B</td></tr></tbody></table></div>
+      <div class="sol-jadi">kolom terakhir seluruhnya B, sehingga pernyataan tersebut tautologi.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$(p \Rightarrow q) \Leftrightarrow (p \wedge \neg q)$</div>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$p \Rightarrow q$</th><th>$p \wedge \neg q$</th><th class="hl">$(\ldots) \Leftrightarrow (\ldots)$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>B</td><td>S</td><td class="hl">S</td></tr><tr><td>B</td><td>S</td><td>S</td><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td>B</td><td>S</td><td class="hl">S</td></tr><tr><td>S</td><td>S</td><td>B</td><td>S</td><td class="hl">S</td></tr></tbody></table></div>
+      <div class="sol-jadi">kolom terakhir seluruhnya S, sehingga pernyataan tersebut kontradiksi.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>$(p \Rightarrow q) \Rightarrow p$</div>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$p \Rightarrow q$</th><th class="hl">$(p \Rightarrow q) \Rightarrow p$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>S</td><td class="hl">B</td></tr><tr><td>S</td><td>B</td><td>B</td><td class="hl">S</td></tr><tr><td>S</td><td>S</td><td>B</td><td class="hl">S</td></tr></tbody></table></div>
+      <div class="sol-jadi">kolom terakhir memuat B dan S, sehingga pernyataan tersebut kontingensi.</div>
+    </div>
+
+    <h3 class="subsection-title">3. Ekivalensi Logis</h3>
+    <div class="box box-definisi">
+      <div class="box-label">Definisi Ekivalensi</div>
+      <p style="margin:0;font-size:.9rem;">Dua pernyataan $A$ dan $B$ <strong>ekivalen</strong> (setara), ditulis $A \equiv B$, jika nilai kebenarannya selalu sama untuk setiap kemungkinan nilai komponennya. Dengan kata lain, $A \equiv B$ tepat ketika $A \Leftrightarrow B$ tautologi.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Buktikan dengan tabel kebenaran!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$p \Rightarrow q \equiv \neg p \vee q$</li>
+        <li>$\neg(p \Rightarrow q) \equiv p \wedge \neg q$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>$p \Rightarrow q \equiv \neg p \vee q$</div>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$\neg p$</th><th class="hl">$p \Rightarrow q$</th><th class="hl">$\neg p \vee q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td class="hl">B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>S</td><td class="hl">S</td><td class="hl">S</td></tr><tr><td>S</td><td>B</td><td>B</td><td class="hl">B</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td>B</td><td class="hl">B</td><td class="hl">B</td></tr></tbody></table></div>
+      <div class="sol-jadi">kedua kolom yang ditandai identik, sehingga $p \Rightarrow q \equiv \neg p \vee q$ terbukti.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$\neg(p \Rightarrow q) \equiv p \wedge \neg q$</div>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$\neg q$</th><th>$p \Rightarrow q$</th><th class="hl">$\neg(p \Rightarrow q)$</th><th class="hl">$p \wedge \neg q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td>B</td><td class="hl">S</td><td class="hl">S</td></tr><tr><td>B</td><td>S</td><td>B</td><td>S</td><td class="hl">B</td><td class="hl">B</td></tr><tr><td>S</td><td>B</td><td>S</td><td>B</td><td class="hl">S</td><td class="hl">S</td></tr><tr><td>S</td><td>S</td><td>B</td><td>B</td><td class="hl">S</td><td class="hl">S</td></tr></tbody></table></div>
+      <div class="sol-jadi">kedua kolom yang ditandai identik, sehingga $\neg(p \Rightarrow q) \equiv p \wedge \neg q$ terbukti.</div>
+    </div>
+
+    <h3 class="subsection-title">4. Hukum-Hukum Aljabar Logika</h3>
+    <p>Tabel kebenaran selalu berhasil, tetapi melelahkan untuk 3 variabel atau lebih. Seperti aljabar biasa, logika memiliki hukum-hukum yang memungkinkan kita menyederhanakan dan membuktikan ekivalensi <strong>tanpa tabel</strong>. Di sini B dan S juga dipakai sebagai lambang "pernyataan yang selalu benar" dan "selalu salah".</p>
+
+    <div class="box box-definisi">
+      <div class="box-label">Hukum-Hukum Ekivalensi</div>
+      <div class="table-wrap"><table class="tt">
+        <thead><tr><th>Hukum</th><th>Bentuk</th></tr></thead>
+        <tbody>
+          <tr><td>Komutatif</td><td>$p \wedge q \equiv q \wedge p$, &nbsp; $p \vee q \equiv q \vee p$</td></tr>
+          <tr><td>Asosiatif</td><td>$(p \wedge q) \wedge r \equiv p \wedge (q \wedge r)$</td></tr>
+          <tr><td>Distributif</td><td>$p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)$<br>$p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)$</td></tr>
+          <tr><td>De Morgan</td><td>$\neg(p \wedge q) \equiv \neg p \vee \neg q$<br>$\neg(p \vee q) \equiv \neg p \wedge \neg q$</td></tr>
+          <tr><td>Negasi ganda</td><td>$\neg(\neg p) \equiv p$</td></tr>
+          <tr><td>Idempoten</td><td>$p \wedge p \equiv p$, &nbsp; $p \vee p \equiv p$</td></tr>
+          <tr><td>Identitas</td><td>$p \wedge \text{B} \equiv p$, &nbsp; $p \vee \text{S} \equiv p$</td></tr>
+          <tr><td>Dominasi</td><td>$p \vee \text{B} \equiv \text{B}$, &nbsp; $p \wedge \text{S} \equiv \text{S}$</td></tr>
+          <tr><td>Komplemen</td><td>$p \vee \neg p \equiv \text{B}$, &nbsp; $p \wedge \neg p \equiv \text{S}$</td></tr>
+          <tr><td>Absorpsi</td><td>$p \vee (p \wedge q) \equiv p$, &nbsp; $p \wedge (p \vee q) \equiv p$</td></tr>
+          <tr><td>Implikasi</td><td>$p \Rightarrow q \equiv \neg p \vee q \equiv \neg q \Rightarrow \neg p$</td></tr>
+          <tr><td>Biimplikasi</td><td>$p \Leftrightarrow q \equiv (p \Rightarrow q) \wedge (q \Rightarrow p)$</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin:0;font-size:.9rem;">Sederhanakan $\neg(p \Rightarrow q) \vee q$ dengan hukum-hukum aljabar logika!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah negasi implikasi</strong>, lalu <strong>distribusikan</strong>:</p>
+      $$\begin{align*} \neg(p \Rightarrow q) \vee q &\equiv (p \wedge \neg q) \vee q \\ &\equiv (p \vee q) \wedge (\neg q \vee q) \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan komplemen dan identitas:</strong></p>
+      $$(p \vee q) \wedge \text{B} \equiv p \vee q$$
+      <div class="sol-jadi">bentuk sederhananya $p \vee q$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;">Tanpa tabel kebenaran, buktikan bahwa $(p \Rightarrow q) \Leftrightarrow (\neg q \Rightarrow \neg p)$ adalah tautologi!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sederhanakan ruas kanan</strong> dengan hukum implikasi:</p>
+      $$\begin{align*} \neg q \Rightarrow \neg p &\equiv \neg(\neg q) \vee \neg p \\ &\equiv q \vee \neg p \\ &\equiv \neg p \vee q \equiv p \Rightarrow q \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Simpulkan:</strong> kedua ruas ekivalen, sehingga keduanya selalu bernilai sama dan biimplikasinya selalu B.</p>
+      <div class="sol-jadi">$(p \Rightarrow q) \Leftrightarrow (\neg q \Rightarrow \neg p)$ adalah tautologi.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">Tuliskan dua pernyataan yang setara dengan "Jika Dina rajin belajar maka ia lulus ujian"!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis simbolnya:</strong> $p$: Dina rajin belajar; $q$: Dina lulus ujian. Pernyataan: $p \Rightarrow q$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan $p \Rightarrow q \equiv \neg q \Rightarrow \neg p \equiv \neg p \vee q$:</strong></p>
+      <ul class="sol-cek">
+        <li>Kontraposisi: "Jika Dina tidak lulus ujian maka ia tidak rajin belajar." ✓</li>
+        <li>Disjungsi: "Dina tidak rajin belajar atau ia lulus ujian." ✓</li>
+        <li>Konvers "Jika Dina lulus ujian maka ia rajin belajar" <strong>tidak</strong> setara ✗</li>
+      </ul>
+      <div class="sol-jadi">dua pernyataan yang setara adalah "Jika Dina tidak lulus ujian maka ia tidak rajin belajar" dan "Dina tidak rajin belajar atau ia lulus ujian".</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan C</div>
+      <ol class="soal-list">
+        <li>Buktikan dengan tabel kebenaran!<br>(a) $(p \wedge q) \vee \neg p \equiv p \Rightarrow q$ &nbsp; (b) $\neg(p \vee q) \equiv \neg p \wedge \neg q$</li>
+        <li>Selidiki dengan tabel kebenaran apakah pasangan berikut ekivalen!<br>(a) $\neg(p \Rightarrow q)$ dan $\neg p \Rightarrow \neg q$ &nbsp; (b) $p \Leftrightarrow q$ dan $(p \wedge q) \vee (\neg p \wedge \neg q)$</li>
+        <li>Selidiki apakah pernyataan berikut tautologi, kontradiksi, atau kontingensi!<br>(a) $(p \Rightarrow q) \Rightarrow \bigl[(\neg p \Rightarrow q) \Rightarrow q\bigr]$ &nbsp; (b) $p \wedge \neg p$ &nbsp; (c) $(p \vee q) \wedge \neg p$</li>
+        <li>Buktikan dengan tabel kebenaran (8 baris) bahwa $p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)$.</li>
+        <li>Sederhanakan dengan hukum-hukum aljabar logika!<br>(a) $\neg(\neg p \wedge q) \wedge q$ &nbsp; (b) $(p \Rightarrow q) \wedge (p \Rightarrow \neg q)$</li>
+        <li>Tuliskan dua pernyataan yang setara dengan "Jika harga cabai naik maka banyak pedagang mengeluh"!</li>
+        <li>Tanpa tabel kebenaran, tunjukkan bahwa $p \Rightarrow (q \Rightarrow r) \equiv (p \wedge q) \Rightarrow r$. Kemudian nyatakan "Jika hujan turun, maka jika aku tidak membawa payung, aku basah kuyup" sebagai satu implikasi.</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ D. PERNYATAAN BERKUANTOR ═══════════════════════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Pernyataan Berkuantor</h2>
+
+    <p>Kalimat "$x^2 \ge 0$" adalah kalimat terbuka. Dengan menambahkan "<em>untuk setiap</em> bilangan real $x$" atau "<em>ada</em> bilangan real $x$", kalimat itu berubah menjadi pernyataan. Kata "setiap" dan "ada" disebut <strong>kuantor</strong>: penanda cakupan berlakunya suatu sifat.</p>
+
+    <h3 class="subsection-title">1. Kuantor Universal dan Eksistensial</h3>
+    <div class="box box-rumus">
+      <div class="box-label">• Dua Jenis Kuantor</div>
+      <div class="table-wrap"><table class="tt">
+        <thead><tr><th>Kuantor</th><th>Simbol</th><th>Bernilai B jika</th><th>Bernilai S jika</th></tr></thead>
+        <tbody>
+          <tr><td>Universal<br>(semua, setiap)</td><td>$\forall x,\ p(x)$</td><td>$p(x)$ benar untuk <strong>semua</strong> $x$</td><td>ada <strong>satu</strong> contoh penyangkal</td></tr>
+          <tr><td>Eksistensial<br>(ada, beberapa, sebagian)</td><td>$\exists x,\ p(x)$</td><td>ada <strong>satu</strong> $x$ yang memenuhi</td><td>tidak ada $x$ yang memenuhi</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Bentuk Kalimat Sehari-hari</div>
+      <p style="margin:0;font-size:.9rem;">"Semua A adalah B" berarti $\forall x,\ \bigl(A(x) \Rightarrow B(x)\bigr)$, sedangkan "Ada A yang B" berarti $\exists x,\ \bigl(A(x) \wedge B(x)\bigr)$. Kata "beberapa" dan "sebagian" dalam logika berarti "sedikitnya satu".</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 23</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan nilai kebenaran setiap pernyataan berikut beserta alasannya!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Untuk setiap bilangan positif $x$, $2x - 6$ adalah bilangan positif.</li>
+        <li>Setiap segitiga sama sisi adalah segitiga sama kaki.</li>
+        <li>Ada bilangan bulat $x$ dan $y$ sehingga $x + y$ habis dibagi $3$.</li>
+        <li>Semua bilangan prima adalah bilangan ganjil.</li>
+        <li>$\forall x \in \mathbb{R},\ \exists y \in \mathbb{R}$ sehingga $x + y = 8$.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <ul class="sol-cek">
+        <li>(a) contoh penyangkal $x = 1$: $2(1) - 6 = -4$ tidak positif → S ✗</li>
+        <li>(b) sama sisi berarti ketiga sisinya sama, jadi pasti ada dua sisi yang sama → B ✓</li>
+        <li>(c) cukup satu contoh: $x = 5,\ y = 7$, $x + y = 12$ habis dibagi $3$ → B ✓</li>
+        <li>(d) contoh penyangkal: $2$ prima tetapi genap → S ✗</li>
+        <li>(e) untuk sembarang $x$, pilih $y = 8 - x \in \mathbb{R}$ → B ✓</li>
+      </ul>
+      <div class="sol-jadi">(b), (c), dan (e) bernilai B, sedangkan (a) dan (d) bernilai S.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Urutan Kuantor Itu Penting</div>
+      <p style="margin:0;font-size:.9rem;">Pada (e), $y$ boleh dipilih <em>setelah</em> $x$ diketahui. Jika urutannya ditukar menjadi $\exists y \in \mathbb{R},\ \forall x \in \mathbb{R},\ x + y = 8$, artinya ada <em>satu</em> $y$ yang cocok untuk <em>semua</em> $x$ — dan itu salah.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Negasi Pernyataan Berkuantor</h3>
+    <div class="box box-rumus">
+      <div class="box-label">• Negasi Kuantor</div>
+      $$\neg\bigl(\forall x,\ p(x)\bigr) \equiv \exists x,\ \neg p(x)$$
+      $$\neg\bigl(\exists x,\ p(x)\bigr) \equiv \forall x,\ \neg p(x)$$
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Pernyataan</th><th>Negasinya</th></tr></thead>
+        <tbody>
+          <tr><td>Semua A adalah B.</td><td>Ada A yang bukan B.</td></tr>
+          <tr><td>Ada A yang B.</td><td>Semua A bukan B. (Tidak ada A yang B.)</td></tr>
+          <tr><td>Semua A bersifat B dan C.</td><td>Ada A yang tidak B atau tidak C.</td></tr>
+          <tr><td>Beberapa A tidak B.</td><td>Semua A adalah B.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Jebakan "Semua … Tidak"</div>
+      <p style="margin:0;font-size:.9rem;">Negasi "Semua siswa hadir" adalah "<strong>Ada</strong> siswa yang tidak hadir" (sama dengan "Tidak semua siswa hadir"), <strong>bukan</strong> "Semua siswa tidak hadir". Kuantornya berganti, lalu sifatnya dinegasikan.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 24</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan negasi setiap pernyataan berikut beserta nilai kebenaran negasinya!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Semua persegi adalah persegi panjang.</li>
+        <li>Ada bilangan prima yang habis dibagi $4$.</li>
+        <li>Untuk setiap bilangan genap $x$, jika $x$ habis dibagi $3$ maka $x$ kelipatan $6$.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>Pernyataan semula B</div>
+      <div class="sol-jadi">negasinya "Ada persegi yang bukan persegi panjang", bernilai S.</div>
+      <div class="sol-part"><span class="sol-tag">b</span>Pernyataan semula S</div>
+      <div class="sol-jadi">negasinya "Semua bilangan prima tidak habis dibagi $4$", bernilai B.</div>
+      <div class="sol-part"><span class="sol-tag">c</span>Bentuk $\forall x,\ \bigl(p(x) \Rightarrow q(x)\bigr)$</div>
+      <p class="sol-step"><strong>Negasikan kuantor dan implikasinya:</strong> $\exists x,\ \bigl(p(x) \wedge \neg q(x)\bigr)$. Bilangan genap yang habis dibagi $3$ pasti habis dibagi $6$, jadi tidak ada contoh seperti itu.</p>
+      <div class="sol-jadi">negasinya "Ada bilangan genap $x$ yang habis dibagi $3$ tetapi bukan kelipatan $6$", bernilai S.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan negasi setiap pernyataan berikut!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Semua siswa memakai seragam dan membawa kartu pelajar.</li>
+        <li>Jika semua guru hadir maka rapat dimulai.</li>
+        <li>Beberapa peserta tidak lulus seleksi.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>$\neg\bigl(\forall x,\ (p \wedge q)\bigr) \equiv \exists x,\ (\neg p \vee \neg q)$</div>
+      <div class="sol-jadi">negasinya: "Ada siswa yang tidak memakai seragam atau tidak membawa kartu pelajar."</div>
+      <div class="sol-part"><span class="sol-tag">b</span>Negasi implikasi: $p \wedge \neg q$</div>
+      <p class="sol-step"><strong>Pertahankan anteseden</strong> "semua guru hadir" apa adanya, lalu negasikan konsekuennya.</p>
+      <div class="sol-jadi">negasinya: "Semua guru hadir tetapi rapat tidak dimulai."</div>
+      <div class="sol-part"><span class="sol-tag">c</span>$\neg\bigl(\exists x,\ \neg p(x)\bigr) \equiv \forall x,\ p(x)$</div>
+      <div class="sol-jadi">negasinya: "Semua peserta lulus seleksi."</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan D</div>
+      <ol class="soal-list">
+        <li>Tentukan nilai kebenaran setiap pernyataan berikut!<br>(a) Untuk setiap bilangan prima $x$, $x$ bilangan ganjil. &nbsp; (b) Ada bilangan asli $n$ sehingga $n^2 = 25$. &nbsp; (c) Semua persegi panjang adalah persegi. &nbsp; (d) Ada segitiga yang ketiga sudutnya siku-siku.</li>
+        <li>Tuliskan negasi setiap pernyataan berikut!<br>(a) Semua bilangan prima tidak habis dibagi $4$.<br>(b) Ada siswa yang tidak mengumpulkan tugas.<br>(c) Semua artis film adalah penyanyi atau presenter.</li>
+        <li>Tentukan nilai kebenaran setiap pernyataan berikut beserta alasannya!<br>(a) $\forall x \in \mathbb{R}^+,\ \exists y \in \mathbb{R}^+$ sehingga $xy = 1$.<br>(b) Untuk setiap bilangan genap $x$ dan setiap bilangan ganjil $y$, $xy$ bilangan genap.<br>(c) Ada bilangan prima $x$ dan $y$ sehingga $x + y$ bilangan ganjil.<br>(d) $\exists y \in \mathbb{R}^+,\ \forall x \in \mathbb{R}^+$ berlaku $xy = 1$.</li>
+        <li>Tuliskan negasi pernyataan berikut!<br>(a) Beberapa siswa membawa peralatan olahraga dan perlengkapan prakarya.<br>(b) Jika semua siswa hadir maka ujian dimulai tepat waktu.</li>
+        <li>Perhatikan pernyataan "Ada bilangan bulat $x$ sehingga $x^2 &lt; x$".<br>(a) Tentukan nilai kebenarannya beserta alasannya.<br>(b) Tuliskan negasinya dan tentukan nilai kebenarannya.<br>(c) Bagaimana nilai kebenarannya jika "bilangan bulat" diganti "bilangan real"?</li>
+        <li>Seorang siswa mengklaim: "Semua bilangan yang habis dibagi $4$ adalah bilangan genap, dan semua bilangan genap habis dibagi $4$."<br>(a) Pecah klaim tersebut menjadi dua pernyataan berkuantor dan tentukan nilai masing-masing.<br>(b) Tuliskan negasi pernyataan yang salah beserta contoh penyangkalnya.<br>(c) Apakah klaim siswa tersebut secara keseluruhan benar?</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ E. PENARIKAN KESIMPULAN ════════════════════════════════════ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Penarikan Kesimpulan</h2>
+
+    <p>Inilah tujuan akhir logika: menentukan kapan kesimpulan <em>pasti</em> mengikuti dari premis-premisnya. Sebuah <strong>argumen</strong> terdiri atas beberapa <strong>premis</strong> (pernyataan yang diketahui) dan satu <strong>kesimpulan</strong>.</p>
+
+    <h3 class="subsection-title">1. Keabsahan Argumen</h3>
+    <div class="box box-definisi">
+      <div class="box-label">Definisi Argumen yang Sah</div>
+      <p style="margin:0;font-size:.9rem;">Argumen dengan premis $P_1, P_2, \ldots, P_n$ dan kesimpulan $K$ disebut <strong>sah</strong> (valid) jika $(P_1 \wedge P_2 \wedge \cdots \wedge P_n) \Rightarrow K$ merupakan <strong>tautologi</strong>. Artinya, tidak mungkin semua premis benar sementara kesimpulannya salah.</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Sah Tidak Sama dengan Benar</div>
+      <p style="margin:0;font-size:.9rem;">Keabsahan hanya menilai <em>bentuk</em> penalaran. Argumen yang sah dengan premis yang keliru dapat menghasilkan kesimpulan yang keliru; argumen yang tidak sah bisa saja kebetulan berkesimpulan benar. Kesimpulan dijamin benar hanya jika argumennya sah <strong>dan</strong> semua premisnya benar.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Empat Aturan Penarikan Kesimpulan</h3>
+    <div class="box box-rumus">
+      <div class="box-label">• Modus Ponens</div>
+      $$\begin{array}{rl} P_1: & p \Rightarrow q \\ P_2: & p \\ \hline \therefore & q \end{array}$$
+    </div>
+    <div class="box box-rumus">
+      <div class="box-label">• Modus Tollens</div>
+      $$\begin{array}{rl} P_1: & p \Rightarrow q \\ P_2: & \neg q \\ \hline \therefore & \neg p \end{array}$$
+    </div>
+    <div class="box box-rumus">
+      <div class="box-label">• Silogisme</div>
+      $$\begin{array}{rl} P_1: & p \Rightarrow q \\ P_2: & q \Rightarrow r \\ \hline \therefore & p \Rightarrow r \end{array}$$
+    </div>
+    <div class="box box-rumus">
+      <div class="box-label">• Silogisme Disjungtif</div>
+      $$\begin{array}{rl} P_1: & p \vee q \\ P_2: & \neg p \\ \hline \therefore & q \end{array}$$
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Buktikan dengan tabel kebenaran bahwa modus ponens adalah argumen yang sah!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis bentuk yang harus diuji:</strong> $\bigl[(p \Rightarrow q) \wedge p\bigr] \Rightarrow q$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Susun tabel kebenaran:</strong></p>
+      <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$p \Rightarrow q$</th><th>$(p \Rightarrow q) \wedge p$</th><th class="hl">$[\ldots] \Rightarrow q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>B</td><td>B</td><td class="hl">B</td></tr><tr><td>B</td><td>S</td><td>S</td><td>S</td><td class="hl">B</td></tr><tr><td>S</td><td>B</td><td>B</td><td>S</td><td class="hl">B</td></tr><tr><td>S</td><td>S</td><td>B</td><td>S</td><td class="hl">B</td></tr></tbody></table></div>
+      <div class="sol-jadi">kolom terakhir seluruhnya B (tautologi), sehingga modus ponens sah.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 27</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan kesimpulan dari premis-premis berikut beserta aturan yang digunakan!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$P_1$: Jika Ahmad siswa kelas XII maka ia mengikuti try out. &nbsp; $P_2$: Ahmad siswa kelas XII.</li>
+        <li>$P_1$: Jika $x$ kelipatan $6$ maka $x$ habis dibagi $3$. &nbsp; $P_2$: $8$ tidak habis dibagi $3$.</li>
+        <li>$P_1$: Jika Pak Madi pergi ke kantor maka ia mengendarai sepeda motor. &nbsp; $P_2$: Jika Pak Madi mengendarai sepeda motor maka ia memakai helm.</li>
+        <li>$P_1$: Rina pergi ke perpustakaan atau ke kantin. &nbsp; $P_2$: Rina tidak pergi ke kantin.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>Modus ponens ($p \Rightarrow q$, $p$)</div>
+      <div class="sol-jadi">kesimpulannya "Ahmad mengikuti try out".</div>
+      <div class="sol-part"><span class="sol-tag">b</span>Modus tollens ($p \Rightarrow q$, $\neg q$)</div>
+      <p class="sol-step"><strong>Terapkan pada $x = 8$:</strong> $P_2$ menyatakan $\neg q$ untuk $x = 8$, maka $\neg p$ untuk $x = 8$.</p>
+      <div class="sol-jadi">kesimpulannya "$8$ bukan kelipatan $6$".</div>
+      <div class="sol-part"><span class="sol-tag">c</span>Silogisme ($p \Rightarrow q$, $q \Rightarrow r$)</div>
+      <div class="sol-jadi">kesimpulannya "Jika Pak Madi pergi ke kantor maka ia memakai helm".</div>
+      <div class="sol-part"><span class="sol-tag">d</span>Silogisme disjungtif ($p \vee q$, $\neg q$)</div>
+      <div class="sol-jadi">kesimpulannya "Rina pergi ke perpustakaan".</div>
+    </div>
+
+    <h3 class="subsection-title">3. Rantai Premis</h3>
+    <div class="box box-definisi">
+      <div class="box-label">Langkah Menyusun Rantai Premis</div>
+      <ol class="step-list" style="margin:0;padding-left:1.2rem;font-size:.9rem;">
+        <li>Lambangkan setiap pernyataan tunggal dengan huruf ($p$, $q$, $r$, …).</li>
+        <li>Ubah premis ke bentuk implikasi: $\neg p \vee q \equiv p \Rightarrow q$; gunakan kontraposisi jika arahnya belum cocok.</li>
+        <li>Urutkan premis sehingga konsekuen satu premis menjadi anteseden premis berikutnya.</li>
+        <li>Gabungkan dengan silogisme; jika ada premis tunggal ($p$ atau $\neg q$), akhiri dengan modus ponens/tollens.</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan kesimpulan dari:<br>$P_1$: Jika Irma lulus seleksi masuk PTN maka ia berangkat ke Yogyakarta.<br>$P_2$: Jika Irma berangkat ke Yogyakarta maka ia naik kereta api.<br>$P_3$: Jika Irma naik kereta api maka ia membeli tiket secara daring.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Lambangkan:</strong> $p$: lulus seleksi; $q$: berangkat ke Yogyakarta; $r$: naik kereta api; $s$: membeli tiket daring.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Rangkai dengan silogisme:</strong></p>
+      $$\begin{align*} p \Rightarrow q,\ q \Rightarrow r &\;\therefore\; p \Rightarrow r \\ p \Rightarrow r,\ r \Rightarrow s &\;\therefore\; p \Rightarrow s \end{align*}$$
+      <div class="sol-jadi">kesimpulannya "Jika Irma lulus seleksi masuk PTN maka ia membeli tiket secara daring".</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 29</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan kesimpulan dari:<br>$P_1$: Amir tidak sarapan atau ia mengantuk di kelas.<br>$P_2$: Amir sarapan.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah disjungsi menjadi implikasi:</strong> dengan $p$: Amir sarapan dan $q$: Amir mengantuk di kelas, $\neg p \vee q \equiv p \Rightarrow q$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Terapkan modus ponens</strong> dengan $P_2$: $p$.</p>
+      <div class="sol-jadi">kesimpulannya "Amir mengantuk di kelas" (cara lain: silogisme disjungtif dengan $\neg(\neg p)$).</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 30</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan kesimpulan dari:<br>$P_1$: Jika Parto menggembala kambing maka ia membawa bekal.<br>$P_2$: Jika anjing datang menghampiri maka Parto lari terbirit-birit.<br>$P_3$: Jika pagi hari cerah maka Parto menggembala kambing.<br>$P_4$: Jika Parto membawa bekal maka anjing datang menghampiri.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Lambangkan:</strong> $a$: pagi cerah; $b$: menggembala; $c$: membawa bekal; $d$: anjing datang; $e$: lari terbirit-birit.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Urutkan premis:</strong> $P_3: a \Rightarrow b$, $P_1: b \Rightarrow c$, $P_4: c \Rightarrow d$, $P_2: d \Rightarrow e$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Rangkai dengan silogisme berturut-turut:</strong></p>
+      $$a \Rightarrow b \Rightarrow c \Rightarrow d \Rightarrow e \;\;\therefore\;\; a \Rightarrow e$$
+      <div class="sol-jadi">kesimpulannya "Jika pagi hari cerah maka Parto lari terbirit-birit".</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 31</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan kesimpulan dari:<br>$P_1$: Jika Dodi begadang maka ia mengantuk di kelas.<br>$P_2$: Jika Dodi tidak ditegur guru maka ia tidak mengantuk di kelas.<br>$P_3$: Dodi tidak ditegur guru.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Lambangkan:</strong> $p$: begadang; $q$: mengantuk; $r$: ditegur guru. Premis: $p \Rightarrow q$, $\neg r \Rightarrow \neg q$, dan $\neg r$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Ubah $P_2$ dengan kontraposisi:</strong> $\neg r \Rightarrow \neg q \equiv q \Rightarrow r$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Silogisme</strong> $P_1$ dan $P_2$: $p \Rightarrow r$.</p>
+      <p class="sol-step"><span class="sol-no">4</span><strong>Modus tollens</strong> dengan $P_3$ ($\neg r$): $\neg p$.</p>
+      <div class="sol-jadi">kesimpulannya "Dodi tidak begadang".</div>
+    </div>
+
+    <h3 class="subsection-title">4. Kesalahan Penalaran</h3>
+    <p>Dua bentuk berikut <em>terlihat</em> mirip modus ponens dan modus tollens, tetapi <strong>tidak sah</strong>. Keduanya adalah jebakan favorit dalam soal penalaran.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Dua Bentuk Argumen Tidak Sah</div>
+      <div class="table-wrap"><table class="tt">
+        <thead><tr><th>Nama</th><th>Bentuk</th><th>Mirip dengan</th></tr></thead>
+        <tbody>
+          <tr><td>Menegaskan konsekuen</td><td>$p \Rightarrow q,\ q \;\therefore\; p$</td><td>modus ponens</td></tr>
+          <tr><td>Menyangkal anteseden</td><td>$p \Rightarrow q,\ \neg p \;\therefore\; \neg q$</td><td>modus tollens</td></tr>
+        </tbody>
+      </table></div>
+      <p style="margin:.5rem 0 0;font-size:.9rem;">Keduanya gagal pada baris $p$ S, $q$ B: semua premis benar, tetapi kesimpulannya salah.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 32</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Selidiki apakah setiap argumen berikut sah!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Jika Rudi juara kelas maka ia mendapat hadiah. Rudi mendapat hadiah. Jadi, Rudi juara kelas.</li>
+        <li>Jika hari hujan maka jalan basah. Hari tidak hujan. Jadi, jalan tidak basah.</li>
+        <li>Jika hari hujan maka jalan basah. Jalan tidak basah. Jadi, hari tidak hujan.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>$p \Rightarrow q,\ q \;\therefore\; p$</div>
+      <p class="sol-step"><strong>Cari contoh penyangkal:</strong> Rudi bisa mendapat hadiah karena juara lomba lain walaupun bukan juara kelas.</p>
+      <div class="sol-jadi">argumen tidak sah (menegaskan konsekuen).</div>
+      <div class="sol-part"><span class="sol-tag">b</span>$p \Rightarrow q,\ \neg p \;\therefore\; \neg q$</div>
+      <p class="sol-step"><strong>Cari contoh penyangkal:</strong> jalan bisa basah karena disiram walaupun tidak hujan.</p>
+      <div class="sol-jadi">argumen tidak sah (menyangkal anteseden).</div>
+      <div class="sol-part"><span class="sol-tag">c</span>$p \Rightarrow q,\ \neg q \;\therefore\; \neg p$</div>
+      <div class="sol-jadi">argumen sah (modus tollens).</div>
+    </div>
+
+    <h3 class="subsection-title">5. Penarikan Kesimpulan Berkuantor</h3>
+    <p>Premis berbentuk "semua" dan "sebagian" paling mudah dianalisis dengan <strong>diagram Venn</strong>. "Semua A adalah B" berarti himpunan A berada di dalam B.</p>
+
+    <div class="grafik-wrap">
+      <svg class="lgk-svg" viewBox="0 0 400 230" width="100%" style="max-width:420px;" role="img" aria-label="Diagram Venn: A di dalam B; P di dalam O dan K beririsan dengan O tetapi tidak dengan P">
+        <circle cx="100" cy="105" r="82" class="lgk-set"/>
+        <circle cx="100" cy="128" r="42" class="lgk-set2"/>
+        <text x="100" y="48" text-anchor="middle" class="lgk-t lgk-bold">B</text>
+        <text x="100" y="134" text-anchor="middle" class="lgk-t lgk-bold">A</text>
+        <text x="100" y="214" text-anchor="middle" class="lgk-s">Semua A adalah B</text>
+
+        <circle cx="285" cy="110" r="78" class="lgk-set"/>
+        <circle cx="262" cy="128" r="34" class="lgk-set2"/>
+        <circle cx="352" cy="64" r="42" class="lgk-set3"/>
+        <text x="236" y="70" text-anchor="middle" class="lgk-t lgk-bold">O</text>
+        <text x="262" y="134" text-anchor="middle" class="lgk-t lgk-bold">P</text>
+        <text x="365" y="56" text-anchor="middle" class="lgk-t lgk-bold">K</text>
+        <text x="290" y="214" text-anchor="middle" class="lgk-s">P di dalam O, K ∩ O ≠ ∅</text>
+      </svg>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">• Pola Kesimpulan Berkuantor</div>
+      <div class="table-wrap"><table class="tt">
+        <thead><tr><th>Premis</th><th>Kesimpulan</th></tr></thead>
+        <tbody>
+          <tr><td>Semua A adalah B; $x$ adalah A</td><td>$x$ adalah B</td></tr>
+          <tr><td>Semua A adalah B; $x$ bukan B</td><td>$x$ bukan A</td></tr>
+          <tr><td>Semua A adalah B; semua B adalah C</td><td>Semua A adalah C</td></tr>
+          <tr><td>Semua A adalah B; sebagian C adalah A</td><td>Sebagian C adalah B</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 33</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan kesimpulan yang sah dari premis-premis berikut (jika ada)!</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Semua siswa kelas XII mengikuti ujian praktik. Dina siswa kelas XII.</li>
+        <li>Semua mamalia bernapas dengan paru-paru. Ikan hiu tidak bernapas dengan paru-paru.</li>
+        <li>Semua peserta lomba adalah anggota OSIS. Sebagian anggota OSIS adalah anggota pramuka.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>Pola modus ponens berkuantor</div>
+      <div class="sol-jadi">kesimpulannya "Dina mengikuti ujian praktik".</div>
+      <div class="sol-part"><span class="sol-tag">b</span>Pola modus tollens berkuantor</div>
+      <div class="sol-jadi">kesimpulannya "Ikan hiu bukan mamalia".</div>
+      <div class="sol-part"><span class="sol-tag">c</span>Gambarkan diagram Venn</div>
+      <p class="sol-step"><strong>Bandingkan dengan diagram kanan di atas</strong> (P: peserta lomba, O: anggota OSIS, K: anggota pramuka). Himpunan K bisa beririsan dengan O di luar P, tetapi bisa juga beririsan dengan P. Kedua keadaan sama-sama mungkin.</p>
+      <div class="sol-jadi">tidak ada kesimpulan pasti tentang hubungan peserta lomba dengan anggota pramuka.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan E</div>
+      <ol class="soal-list">
+        <li>Tentukan kesimpulan dan aturan yang digunakan!<br>(a) $P_1$: Jika Wati malas belajar maka ia tidak naik kelas. $P_2$: Wati naik kelas.<br>(b) $P_1$: Jika Ahmad rajin berolahraga maka badannya bugar. $P_2$: Jika badannya bugar maka ia mudah berkonsentrasi.<br>(c) $P_1$: Jika $4 \times 5 = 20$ maka $100 : 5 = 20$. $P_2$: $4 \times 5 = 20$.<br>(d) $P_1$: Toko itu buka atau hari ini hari libur. $P_2$: Hari ini bukan hari libur.</li>
+        <li>Tentukan kesimpulan dari:<br>(a) $P_1$: Jika Andi membawa tas dan memakai sepatu maka ia pergi ke sekolah. $P_2$: Andi tidak pergi ke sekolah.<br>(b) $P_1$: Semua bilangan kelipatan $6$ adalah bilangan genap. $P_2$: $27$ bukan bilangan genap.</li>
+        <li>Tentukan kesimpulan dari:<br>(a) $P_1$: Jika ibu pergi ke pasar maka adik minta dibelikan mainan. $P_2$: Jika ayah tidak datang memarahi maka adik tidak minta dibelikan mainan.<br>(b) $P_1$: Jika Budi makan jengkol maka Wati pergi menghindar. $P_2$: Wati tidak pergi menghindar atau Budi cemberut.</li>
+        <li>Tentukan kesimpulan dari:<br>$P_1$: Jika siswa itu disiplin maka nilainya baik.<br>$P_2$: Jika ia mendapat beasiswa maka orang tuanya bangga.<br>$P_3$: Jika nilainya baik maka ia mendapat beasiswa.<br>$P_4$: Siswa itu disiplin.</li>
+        <li>Tentukan kesimpulan dari:<br>$P_1$: Jika harimau mencari kancil maka kancil lari menyeberangi sungai.<br>$P_2$: Jika harimau tidak pergi menghindar maka buaya tidak datang mengintai.<br>$P_3$: Jika harimau lapar maka ia pergi mencari kancil.<br>$P_4$: Jika buaya tidak datang mengintai maka kancil tidak lari menyeberangi sungai.<br><em>(Petunjuk: ubah $P_2$ dan $P_4$ ke kontraposisinya.)</em></li>
+        <li>Selidiki apakah setiap argumen berikut sah!<br>(a) Jika $x > 5$ maka $x > 2$. Diketahui $x > 2$. Jadi, $x > 5$.<br>(b) Jika segitiga $ABC$ sama sisi maka $ABC$ sama kaki. $ABC$ bukan segitiga sama sisi. Jadi, $ABC$ bukan segitiga sama kaki.<br>(c) Jika Sinta lulus maka ia kuliah. Sinta tidak kuliah. Jadi, Sinta tidak lulus.</li>
+        <li>Perhatikan argumen: "Semua orang yang rajin pasti berhasil. Sebagian orang yang berhasil menjadi kaya. Jadi, sebagian orang yang rajin menjadi kaya."<br>(a) Tuliskan premis dan kesimpulannya dalam notasi kuantor.<br>(b) Apakah argumen tersebut sah? Jelaskan dengan diagram Venn.<br>(c) Berikan contoh konkret yang menunjukkan kesimpulannya bisa salah walaupun premisnya benar.</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══ F. RINGKASAN ═══════════════════════════════════════════════ -->
+  <section class="section" id="bagian-f">
+    <h2 class="section-title"><span class="section-badge">F</span>Ringkasan Logika Matematika</h2>
+
+    <h3 class="subsection-title">1. Tabel Kebenaran Dasar</h3>
+    <div class="table-wrap"><table class="tt tt-bool"><thead><tr><th>$p$</th><th>$q$</th><th>$\neg p$</th><th>$p \wedge q$</th><th>$p \vee q$</th><th>$p \Rightarrow q$</th><th>$p \Leftrightarrow q$</th></tr></thead><tbody><tr><td>B</td><td>B</td><td>S</td><td>B</td><td>B</td><td>B</td><td>B</td></tr><tr><td>B</td><td>S</td><td>S</td><td>S</td><td>B</td><td>S</td><td>S</td></tr><tr><td>S</td><td>B</td><td>B</td><td>S</td><td>B</td><td>B</td><td>S</td></tr><tr><td>S</td><td>S</td><td>B</td><td>S</td><td>S</td><td>B</td><td>B</td></tr></tbody></table></div>
+
+    <h3 class="subsection-title">2. Negasi dan Ekivalensi Penting</h3>
+    <div class="table-wrap">
+      <table class="tt">
+        <thead><tr><th>Bentuk</th><th>Negasi</th><th>Bentuk setara</th></tr></thead>
+        <tbody>
+          <tr><td>$p \wedge q$</td><td>$\neg p \vee \neg q$</td><td>$q \wedge p$</td></tr>
+          <tr><td>$p \vee q$</td><td>$\neg p \wedge \neg q$</td><td>$\neg p \Rightarrow q$</td></tr>
+          <tr><td>$p \Rightarrow q$</td><td>$p \wedge \neg q$</td><td>$\neg q \Rightarrow \neg p$, &nbsp; $\neg p \vee q$</td></tr>
+          <tr><td>$p \Leftrightarrow q$</td><td>$p \Leftrightarrow \neg q$</td><td>$(p \Rightarrow q) \wedge (q \Rightarrow p)$</td></tr>
+          <tr><td>$\forall x,\ p(x)$</td><td>$\exists x,\ \neg p(x)$</td><td>—</td></tr>
+          <tr><td>$\exists x,\ p(x)$</td><td>$\forall x,\ \neg p(x)$</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">3. Implikasi dan Turunannya</h3>
+    <div class="table-wrap">
+      <table class="tt">
+        <thead><tr><th>Implikasi</th><th>Konvers</th><th>Invers</th><th>Kontraposisi</th></tr></thead>
+        <tbody>
+          <tr><td>$p \Rightarrow q$</td><td>$q \Rightarrow p$</td><td>$\neg p \Rightarrow \neg q$</td><td>$\neg q \Rightarrow \neg p$</td></tr>
+          <tr><td colspan="4">Implikasi $\equiv$ kontraposisi; &nbsp; konvers $\equiv$ invers</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">4. Penarikan Kesimpulan</h3>
+    <div class="table-wrap">
+      <table class="tt">
+        <thead><tr><th>Aturan</th><th>Premis</th><th>Kesimpulan</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Modus ponens</td><td>$p \Rightarrow q,\ p$</td><td>$q$</td><td>sah</td></tr>
+          <tr><td>Modus tollens</td><td>$p \Rightarrow q,\ \neg q$</td><td>$\neg p$</td><td>sah</td></tr>
+          <tr><td>Silogisme</td><td>$p \Rightarrow q,\ q \Rightarrow r$</td><td>$p \Rightarrow r$</td><td>sah</td></tr>
+          <tr><td>Silogisme disjungtif</td><td>$p \vee q,\ \neg p$</td><td>$q$</td><td>sah</td></tr>
+          <tr><td>Menegaskan konsekuen</td><td>$p \Rightarrow q,\ q$</td><td>$p$</td><td>tidak sah</td></tr>
+          <tr><td>Menyangkal anteseden</td><td>$p \Rightarrow q,\ \neg p$</td><td>$\neg q$</td><td>tidak sah</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">5. Jenis Pernyataan Majemuk</h3>
+    <div class="table-wrap">
+      <table class="tt">
+        <thead><tr><th>Jenis</th><th>Ciri</th><th>Contoh</th></tr></thead>
+        <tbody>
+          <tr><td>Tautologi</td><td>selalu B</td><td>$p \vee \neg p$</td></tr>
+          <tr><td>Kontradiksi</td><td>selalu S</td><td>$p \wedge \neg p$</td></tr>
+          <tr><td>Kontingensi</td><td>memuat B dan S</td><td>$p \Rightarrow q$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <!-- Baris 1: Prev / Next -->
+    <div class="footer-nav">
+      <a class="nav-btn" href="../matematika-keuangan/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Matematika Keuangan
+      </a>
+      <a class="nav-btn" href="../persamaan-linear/">
+        Persamaan Linear
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <!-- Baris 2: Actions -->
+    <div class="footer-actions">
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- SECTION KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Disqus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi Logika Matematika? Tulis di kolom diskusi. Login dengan akun Google.</p>
+        <div id="disqus_thread"></div>
+    <script>
+    (function() {
+      var disqusLoaded = false;
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !disqusLoaded) {
+          disqusLoaded = true;
+          observer.disconnect();
+          var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://eksaktalab.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      }, { threshold: 0.1 });
+      var thread = document.getElementById('disqus_thread');
+      if (thread) observer.observe(thread);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── Scroll progress bar + scroll-to-top ──
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+// ── TOC Dropdown ──
+function toggleTOC() {
+  document.getElementById('tocDropdown').classList.toggle('open');
+}
+function closeTOC() {
+  document.getElementById('tocDropdown').classList.remove('open');
+}
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+// ── Bookmark ──
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ──
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Logika Matematika — EksaktaLab',
+      text:  'Belajar Logika Matematika di EksaktaLab, lengkap dengan 33 contoh soal!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+</script>
+
+<script>
+// ── SHARED HELPERS ────────────────────────
+const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+  <polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) {
+      MathJax.typesetPromise([typesetEl]).catch(() => {});
+    }
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── 1. BOX RUMUS → accordion hijau ───────
+  document.querySelectorAll('.box.box-rumus').forEach((box, i) => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+
+    let bodyHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body">
+        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
+      </div>`;
+
+    const header    = wrap.querySelector('.rumus-header');
+    const statusEl  = wrap.querySelector('.rumus-status');
+    const bodyInner = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+
+    box.replaceWith(wrap);
+  });
+
+  // ── 2. BOX CONTOH → accordion navy/teal ──
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+
+    let qHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header">
+            <span class="solve-dot"></span>
+            <span class="solve-title">Penyelesaian</span>
+          </div>
+          <div class="penyelesaian-inner">
+            ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
+          </div>
+        </div>
+      </div>`;
+
+    const header = wrap.querySelector('.contoh-header');
+    const pi     = wrap.querySelector('.penyelesaian-inner');
+
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+    });
+
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+  // ── 3. Buka / Tutup Semua per section ────
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+
+    const updateBtn = () => {
+      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
+    };
+    updateBtn();
+
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+  // ── 4. SOAL LATIHAN → accordion kunci jawaban ──
+  const jawabanData = {
+    // 0 — Latihan A: Pernyataan, Kalimat Terbuka, Negasi (6 soal)
+    0: [
+      { jawaban: `(a) pernyataan benar &nbsp;|&nbsp; (b) bukan pernyataan &nbsp;|&nbsp; (c) pernyataan benar &nbsp;|&nbsp; (d) bukan pernyataan &nbsp;|&nbsp; (e) pernyataan salah (Bumi hanya punya satu satelit alami)` },
+      { jawaban: `(a) $\\sqrt{4} \\neq 3$, bernilai B &nbsp;|&nbsp; (b) Persegi panjang bukan jajargenjang, bernilai S &nbsp;|&nbsp; (c) $12$ tidak kurang dari $10$ ($12 \\ge 10$), bernilai B` },
+      { jawaban: `(a) $\\text{HP} = \\{-2,\\ 10\\}$ &nbsp;|&nbsp; (b) $\\text{HP} = \\mathbb{R}$ &nbsp;|&nbsp; (c) $\\text{HP} = \\{4\\}$ &nbsp;|&nbsp; (d) $\\text{HP} = \\varnothing$` },
+      { jawaban: `(a) B &nbsp;|&nbsp; (b) B` },
+      { jawaban: `(a) B: "segitiga sama kaki memiliki dua sisi sama panjang" B, "… bukan segitiga yang …" S, "tidak benar bahwa …" B &nbsp;|&nbsp; (b) B (dua kali negasi)` },
+      { jawaban: `(a) $(x-1)(x-4) \\le 0 \\Rightarrow 1 \\le x \\le 4$, $\\text{HP} = \\{1,\\ 2,\\ 3,\\ 4\\}$ &nbsp;|&nbsp; (b) $\\neg p(x)$: $x^2 - 5x + 4 > 0$, $\\text{HP} = \\{0,\\ 5,\\ 6\\}$` },
+    ],
+    // 1 — Latihan B: Pernyataan Majemuk (7 soal)
+    1: [
+      { jawaban: `(a) B &nbsp;|&nbsp; (b) B &nbsp;|&nbsp; (c) B &nbsp;|&nbsp; (d) B ($\\text{S} \\Rightarrow \\text{S}$)` },
+      { jawaban: `(a) B &nbsp;|&nbsp; (b) B &nbsp;|&nbsp; (c) S` },
+      { jawaban: `(a) $x \\in \\{-5,\\ 3\\}$ &nbsp;|&nbsp; (b) semua $x \\in \\mathbb{R}$ kecuali $x = 7$` },
+      { jawaban: `(a) semua $x \\in \\mathbb{R}$ kecuali $x = 2$ dan $x = 8$ &nbsp;|&nbsp; (b) semua $x \\in \\mathbb{R}$ kecuali $x = 4$ dan $x = -5$` },
+      { jawaban: `Implikasi: B &nbsp;|&nbsp; Konvers: Jika suatu bilangan genap maka habis dibagi $4$, S (contoh: $6$) &nbsp;|&nbsp; Invers: Jika suatu bilangan tidak habis dibagi $4$ maka bilangan itu tidak genap, S (contoh: $6$) &nbsp;|&nbsp; Kontraposisi: Jika suatu bilangan tidak genap maka tidak habis dibagi $4$, B` },
+      { jawaban: `(a) Kerbau berkaki empat dan ayam berkaki dua, tetapi kambing tidak berkaki empat. &nbsp;|&nbsp; (b) Arman bolos sekolah, tetapi ia tidak pergi ke pantai dan tidak menonton bioskop. &nbsp;|&nbsp; (c) Harga naik tetapi permintaan tidak naik, atau permintaan naik tetapi harga tidak naik.` },
+      { jawaban: `(a) $(p \\vee q) \\wedge \\neg r$: Hari ini Senin atau Selasa, tetapi tidak ada upacara bendera. &nbsp;|&nbsp; (b) Jika tidak ada upacara bendera maka hari ini bukan Senin dan bukan Selasa. &nbsp;|&nbsp; (c) Ya (jika pernyataan semula benar): kontraposisinya setara, sehingga hari ini bukan Senin dan bukan Selasa.` },
+    ],
+    // 2 — Latihan C: Ekivalensi, Tautologi, Aljabar Logika (7 soal)
+    2: [
+      { jawaban: `(a) kedua kolom: B, S, B, B (identik) &nbsp;|&nbsp; (b) kedua kolom: S, S, S, B (identik)` },
+      { jawaban: `(a) tidak ekivalen: S, B, S, S dan B, B, S, B &nbsp;|&nbsp; (b) ekivalen: keduanya B, S, S, B` },
+      { jawaban: `(a) tautologi &nbsp;|&nbsp; (b) kontradiksi &nbsp;|&nbsp; (c) kontingensi (setara dengan $\\neg p \\wedge q$)` },
+      { jawaban: `Kedua kolom akhir: B, B, B, S, S, S, S, S (identik)` },
+      { jawaban: `(a) $(p \\vee \\neg q) \\wedge q$ $\\equiv (p \\wedge q) \\vee (\\neg q \\wedge q)$ $\\equiv p \\wedge q$ &nbsp;|&nbsp; (b) $(\\neg p \\vee q) \\wedge (\\neg p \\vee \\neg q)$ $\\equiv \\neg p \\vee (q \\wedge \\neg q)$ $\\equiv \\neg p$` },
+      { jawaban: `Jika tidak banyak pedagang mengeluh maka harga cabai tidak naik. &nbsp;|&nbsp; Harga cabai tidak naik atau banyak pedagang mengeluh.` },
+      { jawaban: `$p \\Rightarrow (q \\Rightarrow r) \\equiv \\neg p \\vee (\\neg q \\vee r)$ $\\equiv \\neg(p \\wedge q) \\vee r$ $\\equiv (p \\wedge q) \\Rightarrow r$ &nbsp;|&nbsp; Jika hujan turun dan aku tidak membawa payung maka aku basah kuyup.` },
+    ],
+    // 3 — Latihan D: Pernyataan Berkuantor (6 soal)
+    3: [
+      { jawaban: `(a) S (contoh penyangkal: $2$) &nbsp;|&nbsp; (b) B ($n = 5$) &nbsp;|&nbsp; (c) S &nbsp;|&nbsp; (d) S` },
+      { jawaban: `(a) Ada bilangan prima yang habis dibagi $4$. &nbsp;|&nbsp; (b) Semua siswa mengumpulkan tugas. &nbsp;|&nbsp; (c) Ada artis film yang bukan penyanyi dan bukan presenter.` },
+      { jawaban: `(a) B (pilih $y = \\tfrac{1}{x}$) &nbsp;|&nbsp; (b) B &nbsp;|&nbsp; (c) B ($2 + 3 = 5$) &nbsp;|&nbsp; (d) S` },
+      { jawaban: `(a) Semua siswa tidak membawa peralatan olahraga atau tidak membawa perlengkapan prakarya. &nbsp;|&nbsp; (b) Semua siswa hadir tetapi ujian tidak dimulai tepat waktu.` },
+      { jawaban: `(a) S: untuk $x \\le 0$, $x^2 \\ge 0 \\ge x$; untuk $x \\ge 1$, $x^2 \\ge x$ &nbsp;|&nbsp; (b) Untuk setiap bilangan bulat $x$, $x^2 \\ge x$; bernilai B &nbsp;|&nbsp; (c) B, misalnya $x = \\tfrac{1}{2}$` },
+      { jawaban: `(a) "Semua bilangan yang habis dibagi $4$ genap": B; "Semua bilangan genap habis dibagi $4$": S &nbsp;|&nbsp; (b) Ada bilangan genap yang tidak habis dibagi $4$, misalnya $6$ &nbsp;|&nbsp; (c) Tidak, karena $\\text{B} \\wedge \\text{S}$ bernilai S` },
+    ],
+    // 4 — Latihan E: Penarikan Kesimpulan (7 soal)
+    4: [
+      { jawaban: `(a) Wati tidak malas belajar (modus tollens) &nbsp;|&nbsp; (b) Jika Ahmad rajin berolahraga maka ia mudah berkonsentrasi (silogisme) &nbsp;|&nbsp; (c) $100 : 5 = 20$ (modus ponens) &nbsp;|&nbsp; (d) Toko itu buka (silogisme disjungtif)` },
+      { jawaban: `(a) Andi tidak membawa tas atau tidak memakai sepatu. &nbsp;|&nbsp; (b) $27$ bukan kelipatan $6$.` },
+      { jawaban: `(a) Jika ibu pergi ke pasar maka ayah datang memarahi. &nbsp;|&nbsp; (b) Jika Budi makan jengkol maka Budi cemberut.` },
+      { jawaban: `Orang tua siswa itu bangga ($P_1, P_3, P_2$ dirangkai silogisme, lalu modus ponens dengan $P_4$).` },
+      { jawaban: `Jika harimau lapar maka harimau pergi menghindar.` },
+      { jawaban: `(a) tidak sah, menegaskan konsekuen (contoh: $x = 3$) &nbsp;|&nbsp; (b) tidak sah, menyangkal anteseden (segitiga sama kaki yang bukan sama sisi) &nbsp;|&nbsp; (c) sah (modus tollens)` },
+      { jawaban: `(a) $\\forall x\\,(R \\Rightarrow H)$, $\\exists x\\,(H \\wedge K)$ $\\therefore$ $\\exists x\\,(R \\wedge K)$ &nbsp;|&nbsp; (b) tidak sah: orang kaya yang berhasil bisa seluruhnya berada di luar himpunan orang rajin &nbsp;|&nbsp; (c) misalnya rajin $= \\{\\text{Ana}\\}$, berhasil $= \\{\\text{Ana}, \\text{Budi}\\}$, kaya $= \\{\\text{Budi}\\}$` },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+
+    const items = [...list.querySelectorAll('li')];
+    const newList = document.createElement('div');
+    newList.className = 'soal-list-accordion';
+
+    items.forEach((li, i) => {
+      const ans     = answers[i] || {};
+      const jawaban = ans.jawaban || '';
+
+      const item = document.createElement('div');
+      item.className = 'soal-item';
+      item.innerHTML = `
+        <div class="soal-item-header" role="button" tabindex="0">
+          <span class="soal-num">${i+1}</span>
+          <span class="soal-text">${li.innerHTML}</span>
+          <button class="soal-key-btn" tabindex="-1">Kunci</button>
+        </div>
+        <div class="soal-answer">
+          <div class="soal-answer-inner">
+            <div class="soal-answer-label">Jawaban</div>
+            ${jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
+          </div>
+        </div>`;
+
+      const header = item.querySelector('.soal-item-header');
+      const toggle = () => {
+        const open = item.classList.toggle('open');
+        if (open && window.MathJax) {
+          MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
+        }
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+
+      newList.appendChild(item);
+    });
+
+    list.replaceWith(newList);
+  });
+
+});
+</script>
+
+<!-- FOOTER -->
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+</body>
+</html>
