@@ -1,0 +1,1420 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program Linear — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
+<meta name="description" content="Materi lengkap Program Linear SMA: model matematika, kendala dan fungsi sasaran, metode titik pojok, garis selidik, kasus khusus, dan masalah kontekstual. Dilengkapi 18 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script>window.addEventListener("load",function(){var s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";document.head.appendChild(s);});</script>
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/program-linear/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/program-linear/">
+<meta property="og:title" content="Program Linear — EksaktaLab">
+<meta property="og:description" content="Materi lengkap Program Linear SMA: model matematika, kendala dan fungsi sasaran, metode titik pojok, garis selidik, kasus khusus, dan masalah kontekstual. Dilengkapi 18 contoh soal dan pembahasan.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+<meta property="og:site_name" content="EksaktaLab">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Program Linear — EksaktaLab">
+<meta name="twitter:description" content="Materi lengkap Program Linear SMA: model matematika, metode titik pojok, garis selidik, dan masalah kontekstual.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Program Linear","url":"https://lutfima11.github.io/eksaktalab/materi/program-linear/","description":"Materi lengkap Program Linear SMA: model matematika, metode titik pojok, garis selidik, dan masalah kontekstual.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Aljabar &amp; Fungsi"},{"@type":"ListItem","position":4,"name":"Program Linear","item":"https://lutfima11.github.io/eksaktalab/materi/program-linear/"}]}}</script>
+<style>
+[data-theme="dark"] .nline-wrap svg .nl-ax,
+[data-theme="dark"] .nline-wrap svg line[stroke="#888"] { stroke:#94A3B8; }
+[data-theme="dark"] .nline-wrap svg .nl-axh,
+[data-theme="dark"] .nline-wrap svg path[fill="#555"] { fill:#94A3B8; }
+[data-theme="dark"] .nline-wrap svg text[fill="#555"] { fill:#CBD5E8; }
+[data-theme="dark"] .nline-wrap svg .nl-open,
+[data-theme="dark"] .nline-wrap svg circle[fill="white"] { fill:#1E2640; }
+.penyelesaian .nline-wrap svg { margin:0 auto; }
+.tb-opt td{text-align:center}.tb-opt tr.opt td{background:rgba(0,191,165,.14);font-weight:600}.section p a{color:var(--teal);font-weight:600}.nw{white-space:nowrap}
+</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Program Linear · 5 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Prasyarat dan Istilah Penting</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Model Matematika</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Nilai Optimum</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Masalah Kontekstual</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Tabel Ringkasan</a>
+      </div>
+    </div>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#fase-2">Aljabar &amp; Fungsi</a>
+    <span>/</span>
+    Program Linear
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">FASE 2 · No.10</div>
+      <h1 class="materi-title">Program Linear</h1>
+      <p class="materi-desc">Pelajari cara mengambil keputusan terbaik dengan sumber daya terbatas: menyusun model matematika, menggambar daerah layak, dan menentukan nilai maksimum atau minimum dengan metode titik pojok dan garis selidik.</p>
+      <div class="materi-tags">
+        <span class="tag">Aljabar &amp; Fungsi</span>
+        <span class="tag">5 Sub-bab</span>
+        <span class="tag">18 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+<!-- ═══ PENGANTAR ════════════════════════════════════════════════════ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Keputusan Terbaik di Tengah Keterbatasan</h2>
+
+    <p>Sebuah UMKM roti hanya punya 6 kg tepung, 8 jam kerja, dan modal terbatas. Ia bisa membuat roti manis atau roti tawar dengan keuntungan berbeda. Berapa banyak masing-masing harus dibuat agar untung sebesar-besarnya? Pertanyaan seperti ini muncul setiap hari di pabrik, toko, rumah sakit, hingga perusahaan logistik: <strong>sumber daya terbatas</strong>, tetapi kita ingin hasil <strong>terbaik</strong>.</p>
+
+    <p><strong>Program linear</strong> adalah cara matematis untuk menjawabnya. Batasan-batasan ditulis sebagai sistem pertidaksamaan linear (<em>kendala</em>), sedangkan hal yang ingin dimaksimumkan atau diminimumkan ditulis sebagai fungsi linear (<em>fungsi sasaran</em>). Semua kombinasi yang memenuhi kendala membentuk <strong>daerah layak</strong>, dan jawaban terbaik selalu dapat dicari di <strong>titik pojok</strong> daerah itu.</p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 308 272" width="308" style="max-width:330px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustrasi daerah layak dan garis selidik">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="252"/><line x1="54" y1="12" x2="54" y2="252"/><line x1="84" y1="12" x2="84" y2="252"/><line x1="114" y1="12" x2="114" y2="252"/><line x1="144" y1="12" x2="144" y2="252"/><line x1="174" y1="12" x2="174" y2="252"/><line x1="204" y1="12" x2="204" y2="252"/><line x1="234" y1="12" x2="234" y2="252"/><line x1="264" y1="12" x2="264" y2="252"/><line x1="294" y1="12" x2="294" y2="252"/><line x1="24" y1="252" x2="294" y2="252"/><line x1="24" y1="222" x2="294" y2="222"/><line x1="24" y1="192" x2="294" y2="192"/><line x1="24" y1="162" x2="294" y2="162"/><line x1="24" y1="132" x2="294" y2="132"/><line x1="24" y1="102" x2="294" y2="102"/><line x1="24" y1="72" x2="294" y2="72"/><line x1="24" y1="42" x2="294" y2="42"/><line x1="24" y1="12" x2="294" y2="12"/></g>
+        <polygon points="234,222 174,162 54,102 54,222" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="222" x2="302" y2="222" stroke="#555" stroke-width="1.5"/>
+        <path d="M306,222 l-7,-4 v8z" fill="#555"/>
+        <text x="300" y="216" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="54" y1="258" x2="54" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M54,2 l-4,7 h8z" fill="#555"/>
+        <text x="60" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="24" y="234" font-size="9" fill="#777" text-anchor="middle">−1</text>
+        <text x="84" y="234" font-size="9" fill="#777" text-anchor="middle">1</text>
+        <text x="114" y="234" font-size="9" fill="#777" text-anchor="middle">2</text>
+        <text x="144" y="234" font-size="9" fill="#777" text-anchor="middle">3</text>
+        <text x="174" y="234" font-size="9" fill="#777" text-anchor="middle">4</text>
+        <text x="204" y="234" font-size="9" fill="#777" text-anchor="middle">5</text>
+        <text x="234" y="234" font-size="9" fill="#777" text-anchor="middle">6</text>
+        <text x="264" y="234" font-size="9" fill="#777" text-anchor="middle">7</text>
+        <text x="294" y="234" font-size="9" fill="#777" text-anchor="middle">8</text>
+        <text x="50" y="255" font-size="9" fill="#777" text-anchor="end">−1</text>
+        <text x="50" y="195" font-size="9" fill="#777" text-anchor="end">1</text>
+        <text x="50" y="165" font-size="9" fill="#777" text-anchor="end">2</text>
+        <text x="50" y="135" font-size="9" fill="#777" text-anchor="end">3</text>
+        <text x="50" y="105" font-size="9" fill="#777" text-anchor="end">4</text>
+        <text x="50" y="75" font-size="9" fill="#777" text-anchor="end">5</text>
+        <text x="50" y="45" font-size="9" fill="#777" text-anchor="end">6</text>
+        <text x="50" y="15" font-size="9" fill="#777" text-anchor="end">7</text>
+        <text x="50" y="234" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="24" y1="12" x2="264" y2="252" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="84" y="54" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">kendala 1</text>
+        <line x1="24" y1="87" x2="294" y2="222" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="60" y="87" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">kendala 2</text>
+        <line x1="24" y1="109.5" x2="214" y2="252" stroke="#059669" stroke-width="2.2" stroke-dasharray="6 4"/>
+        <text x="60" y="150" font-size="10" fill="#059669" font-weight="600" text-anchor="start">f kecil</text>
+        <line x1="24" y1="49.5" x2="294" y2="252" stroke="#059669" stroke-width="2.2" stroke-dasharray="6 4"/>
+        <text x="252" y="204" font-size="10" fill="#059669" font-weight="600" text-anchor="start">f terbesar</text>
+        <circle cx="54" cy="222" r="3.6" fill="#1e293b"/>
+        <circle cx="54" cy="102" r="3.6" fill="#1e293b"/>
+        <circle cx="174" cy="162" r="3.6" fill="#1e293b"/>
+        <text x="180" y="157" font-size="10" fill="#1e293b" text-anchor="start">titik optimum</text>
+        <circle cx="234" cy="222" r="3.6" fill="#1e293b"/>
+        <text x="102" y="186" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+
+    <p>Gagasan ini dikembangkan oleh <strong>George Dantzig</strong> pada 1947 untuk merencanakan logistik militer, lalu menyebar ke industri, transportasi, dan keuangan. Di SMA, kita menyelesaikan program linear dua variabel secara grafik: menyusun model, menggambar daerah layak, lalu menentukan nilai optimum dengan <em>metode titik pojok</em> atau <em>metode garis selidik</em>.</p>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Prasyarat dan Istilah Penting</a></li>
+      <li><a href="#bagian-b" data-num="B">Model Matematika</a></li>
+      <li><a href="#bagian-c" data-num="C">Nilai Optimum</a></li>
+      <li><a href="#bagian-d" data-num="D">Masalah Kontekstual</a></li>
+      <li><a href="#bagian-e" data-num="E">Tabel Ringkasan</a></li>
+    </ul>
+  </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       A. PRASYARAT DAN ISTILAH PENTING
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Prasyarat dan Istilah Penting</h2>
+
+    <p>Program linear dibangun di atas <strong>sistem pertidaksamaan linear dua variabel</strong>. Jika kamu belum lancar menggambar daerah penyelesaian, pelajari dulu materi <a href="../pertidaksamaan-linear/">Sistem Pertidaksamaan Linear</a>. Berikut ringkasan yang akan sering dipakai.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Ingat Kembali: Menggambar Daerah Penyelesaian</div>
+      <div class="table-wrap" style="margin-top:.5rem;"><table><thead><tr><th>Langkah</th><th>Keterangan</th></tr></thead><tbody><tr><td>1. Garis batas</td><td>Ubah $ax + by \;\square\; c$ menjadi <span class="nw">$ax + by = c$,</span> lalu cari titik potong sumbu $x$ dan sumbu $y$</td></tr><tr><td>2. Jenis garis</td><td>$\leq$ / $\geq$ digambar penuh; $&lt;$ / $>$ digambar putus-putus</td></tr><tr><td>3. Uji titik</td><td>Substitusi $(0, 0)$ (atau titik lain jika garis melalui titik asal)</td></tr><tr><td>4. Arsir</td><td>Benar: arsir sisi yang memuat titik uji. Salah: arsir sisi sebaliknya</td></tr><tr><td>5. Irisan</td><td>Daerah penyelesaian sistem adalah irisan semua daerah</td></tr></tbody></table></div>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Istilah Penting dalam Program Linear</div>
+      <div class="table-wrap" style="margin-top:.5rem;"><table><thead><tr><th>Istilah</th><th>Arti</th></tr></thead><tbody><tr><td>Variabel keputusan</td><td>Besaran yang dicari, misalnya $x$ = banyak produk A dan $y$ = banyak produk B</td></tr><tr><td>Kendala</td><td>Batasan berupa pertidaksamaan linear, termasuk syarat $x \geq 0$ dan $y \geq 0$</td></tr><tr><td>Fungsi sasaran (objektif)</td><td>$f(x, y) = ax + by$ yang ingin dimaksimumkan atau diminimumkan</td></tr><tr><td>Daerah layak (HP)</td><td>Semua titik $(x, y)$ yang memenuhi seluruh kendala</td></tr><tr><td>Titik pojok</td><td>Titik sudut daerah layak, yaitu perpotongan dua garis batas yang memenuhi semua kendala</td></tr><tr><td>Nilai optimum</td><td>Nilai maksimum atau minimum fungsi sasaran pada daerah layak</td></tr></tbody></table></div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       B. MODEL MATEMATIKA: KENDALA DAN FUNGSI SASARAN
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Model Matematika: Kendala dan Fungsi Sasaran</h2>
+
+    <p>Setiap masalah program linear terdiri dari dua bagian. <strong>Kendala</strong> adalah batasan yang tidak boleh dilanggar, misalnya persediaan bahan, modal, waktu, atau kebutuhan minimum. <strong>Fungsi sasaran</strong> adalah besaran yang ingin dioptimumkan, misalnya keuntungan (dimaksimumkan) atau biaya (diminimumkan).</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Langkah Menyusun Model Matematika</div>
+      <ol style="margin:.3rem 0 .6rem;padding-left:1.3rem;line-height:1.9;"><li>Tentukan variabel: $x$ = …, $y$ = …</li><li>Susun tabel: baris = sumber daya, kolom = jenis produk, kolom terakhir = batas</li><li>Baca setiap baris tabel sebagai satu pertidaksamaan (kendala)</li><li>Tambahkan syarat tak negatif <span class="nw">$x \geq 0$,</span> $y \geq 0$</li><li>Tulis fungsi sasaran $f(x, y) = ax + by$</li></ol><div class="table-wrap" style="margin-top:.5rem;"><table><thead><tr><th>Sumber daya</th><th>Produk $x$</th><th>Produk $y$</th><th>Batas</th></tr></thead><tbody><tr><td>Bahan 1</td><td>$a_1$</td><td>$b_1$</td><td>$p_1$</td></tr><tr><td>Bahan 2</td><td>$a_2$</td><td>$b_2$</td><td>$p_2$</td></tr><tr><td>Keuntungan</td><td>$c_1$</td><td>$c_2$</td><td>—</td></tr></tbody></table></div><p style="margin:.6rem 0 0;font-size:.9rem;">Kendala: $a_1 x + b_1 y \leq p_1$ dan <span class="nw">$a_2 x + b_2 y \leq p_2$;</span> fungsi sasaran <span class="nw">$f(x, y) = c_1 x + c_2 y$.</span></p>
+    </div>
+
+    <h3 class="subsection-title">1. Menerjemahkan Tabel menjadi Kendala</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Suatu jenis makanan ternak membutuhkan 5 kg daging dan 3 kg tepung. Makanan ternak jenis lain membutuhkan 6 kg daging dan 8 kg tepung. Tersedia daging 60 kg dan tepung 48 kg. Susunlah model matematikanya!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan variabel:</strong> $x$ = banyak makanan jenis pertama, $y$ = banyak makanan jenis kedua.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Susun tabel sumber daya:</strong></p>
+      <div class="table-wrap"><table><thead><tr><th>Bahan</th><th>Jenis $x$</th><th>Jenis $y$</th><th>Persediaan</th></tr></thead><tbody><tr><td>Daging (kg)</td><td>5</td><td>6</td><td>60</td></tr><tr><td>Tepung (kg)</td><td>3</td><td>8</td><td>48</td></tr></tbody></table></div>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Baca setiap baris sebagai kendala</strong> (persediaan tidak boleh dilampaui, jadi tandanya $\leq$):</p>
+      <ul class="sol-cek">
+        <li>Daging: $5x + 6y \leq 60$</li>
+        <li>Tepung: $3x + 8y \leq 48$</li>
+        <li>Banyak makanan tidak negatif: <span class="nw">$x \geq 0$,</span> $y \geq 0$</li>
+      </ul>
+      <div class="sol-jadi">modelnya <span class="nw">$5x + 6y \leq 60$,</span> <span class="nw">$3x + 8y \leq 48$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$.</span></div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Seorang pasien dianjurkan memakan paling sedikit 18 gr vitamin A dan 24 gr vitamin B tiap hari. Obat jenis I mengandung 6 gr vitamin A dan 4 gr vitamin B per takaran, sedangkan obat jenis II mengandung 3 gr vitamin A dan 6 gr vitamin B per takaran. Harga obat jenis I Rp2.000 dan jenis II Rp3.000 per takaran. Susunlah model matematika agar biaya minimum!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan variabel:</strong> $x$ = takaran obat I, $y$ = takaran obat II.</p>
+      <div class="table-wrap"><table><thead><tr><th>Kandungan</th><th>Obat I ($x$)</th><th>Obat II ($y$)</th><th>Kebutuhan minimum</th></tr></thead><tbody><tr><td>Vitamin A (gr)</td><td>6</td><td>3</td><td>18</td></tr><tr><td>Vitamin B (gr)</td><td>4</td><td>6</td><td>24</td></tr><tr><td>Harga (Rp)</td><td>2.000</td><td>3.000</td><td>—</td></tr></tbody></table></div>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Susun kendala.</strong> Kebutuhan harus <em>terpenuhi</em> (paling sedikit), jadi tandanya <span class="nw">$\geq$:</span></p>
+      $$\begin{align*} 6x + 3y \geq 18 &amp;\;\Rightarrow\; 2x + y \geq 6 \\ 4x + 6y \geq 24 &amp;\;\Rightarrow\; 2x + 3y \geq 12 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Tulis fungsi sasaran</strong> (biaya, diminimumkan): <span class="nw">$f(x, y) = 2.000x + 3.000y$.</span></p>
+      <div class="sol-jadi">modelnya <span class="nw">$2x + y \geq 6$,</span> <span class="nw">$2x + 3y \geq 12$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$,</span> dengan biaya minimum <span class="nw">$f(x, y) = 2.000x + 3.000y$.</span></div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Memilih Arah Tanda</div>
+      <ul style="margin:.3rem 0 0;padding-left:1.2rem;line-height:1.9;font-size:.9rem;"><li><strong>Persediaan, modal, kapasitas, maksimum</strong> → tanda $\leq$ (tidak boleh melebihi).</li><li><strong>Kebutuhan, paling sedikit, minimal</strong> → tanda $\geq$ (harus terpenuhi).</li><li>Syarat $x \geq 0$ dan $y \geq 0$ <strong>selalu</strong> ditulis karena banyak barang tidak mungkin negatif, walaupun tidak disebut di soal.</li></ul>
+    </div>
+
+    <h3 class="subsection-title">2. Menentukan Fungsi Sasaran: Laba, Pendapatan, atau Biaya</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Seorang pedagang mainan ingin membeli maksimum 100 paket mainan. Mainan jenis A harganya Rp6.000/paket dengan keuntungan Rp2.000/paket, dan mainan jenis B harganya Rp8.000/paket dengan keuntungan Rp1.500/paket. Modal yang tersedia Rp720.000. Susunlah model matematika agar keuntungan maksimum!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan variabel:</strong> $x$ = paket mainan A, $y$ = paket mainan B.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Susun kendala:</strong></p>
+      <ul class="sol-cek">
+        <li>Daya tampung: $x + y \leq 100$</li>
+        <li>Modal: <span class="nw">$6.000x + 8.000y \leq 720.000$;</span> dibagi $2.000$ menjadi $3x + 4y \leq 360$</li>
+        <li>Tak negatif: <span class="nw">$x \geq 0$,</span> $y \geq 0$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Tulis fungsi sasaran</strong> (keuntungan): <span class="nw">$f(x, y) = 2.000x + 1.500y$.</span></p>
+      <div class="sol-jadi">modelnya <span class="nw">$x + y \leq 100$,</span> <span class="nw">$3x + 4y \leq 360$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$,</span> dengan keuntungan maksimum <span class="nw">$f(x, y) = 2.000x + 1.500y$.</span></div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Suatu gerbong kereta mempunyai tempat duduk maksimum 50 penumpang, terdiri dari kelas eksekutif dan ekonomi. Bagasi tiap penumpang eksekutif maksimum 60 kg dan ekonomi 30 kg, dengan total bagasi maksimum 1.800 kg. Harga tiket eksekutif Rp30.000 dan ekonomi Rp15.000. Susunlah model matematika agar pendapatan maksimum, lalu gambarlah daerah penyelesaiannya!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan variabel:</strong> $x$ = penumpang eksekutif, $y$ = penumpang ekonomi.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Susun kendala:</strong></p>
+      <ul class="sol-cek">
+        <li>Tempat duduk: $x + y \leq 50$</li>
+        <li>Bagasi: <span class="nw">$60x + 30y \leq 1.800$;</span> dibagi $30$ menjadi $2x + y \leq 60$</li>
+        <li>Tak negatif: <span class="nw">$x \geq 0$,</span> $y \geq 0$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Tulis fungsi sasaran:</strong> <span class="nw">$f(x, y) = 30.000x + 15.000y$.</span></p>
+      <p class="sol-step"><span class="sol-no">4</span><strong>Gambar daerah penyelesaian</strong> (satu kotak = 10 penumpang). Kedua garis berpotongan di <span class="nw">$(10, 40)$.</span></p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 248 272" width="248" style="max-width:260px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daerah penyelesaian contoh 4">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="252"/><line x1="54" y1="12" x2="54" y2="252"/><line x1="84" y1="12" x2="84" y2="252"/><line x1="114" y1="12" x2="114" y2="252"/><line x1="144" y1="12" x2="144" y2="252"/><line x1="174" y1="12" x2="174" y2="252"/><line x1="204" y1="12" x2="204" y2="252"/><line x1="234" y1="12" x2="234" y2="252"/><line x1="24" y1="252" x2="234" y2="252"/><line x1="24" y1="222" x2="234" y2="222"/><line x1="24" y1="192" x2="234" y2="192"/><line x1="24" y1="162" x2="234" y2="162"/><line x1="24" y1="132" x2="234" y2="132"/><line x1="24" y1="102" x2="234" y2="102"/><line x1="24" y1="72" x2="234" y2="72"/><line x1="24" y1="42" x2="234" y2="42"/><line x1="24" y1="12" x2="234" y2="12"/></g>
+        <polygon points="144,222 84,102 54,72 54,222" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="222" x2="242" y2="222" stroke="#555" stroke-width="1.5"/>
+        <path d="M246,222 l-7,-4 v8z" fill="#555"/>
+        <text x="240" y="216" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="54" y1="258" x2="54" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M54,2 l-4,7 h8z" fill="#555"/>
+        <text x="60" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="24" y="234" font-size="9" fill="#777" text-anchor="middle">−10</text>
+        <text x="84" y="234" font-size="9" fill="#777" text-anchor="middle">10</text>
+        <text x="114" y="234" font-size="9" fill="#777" text-anchor="middle">20</text>
+        <text x="174" y="234" font-size="9" fill="#777" text-anchor="middle">40</text>
+        <text x="204" y="234" font-size="9" fill="#777" text-anchor="middle">50</text>
+        <text x="234" y="234" font-size="9" fill="#777" text-anchor="middle">60</text>
+        <text x="50" y="255" font-size="9" fill="#777" text-anchor="end">−10</text>
+        <text x="50" y="195" font-size="9" fill="#777" text-anchor="end">10</text>
+        <text x="50" y="165" font-size="9" fill="#777" text-anchor="end">20</text>
+        <text x="50" y="135" font-size="9" fill="#777" text-anchor="end">30</text>
+        <text x="50" y="105" font-size="9" fill="#777" text-anchor="end">40</text>
+        <text x="50" y="45" font-size="9" fill="#777" text-anchor="end">60</text>
+        <text x="50" y="15" font-size="9" fill="#777" text-anchor="end">70</text>
+        <text x="50" y="234" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="24" y1="42" x2="234" y2="252" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="156" y="162" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">x + y = 50</text>
+        <line x1="159" y1="252" x2="39" y2="12" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="69" y="30" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">2x + y = 60</text>
+        <circle cx="54" cy="222" r="3.6" fill="#1e293b"/>
+        <circle cx="54" cy="72" r="3.6" fill="#1e293b"/>
+        <text x="49" y="76" font-size="10" fill="#1e293b" text-anchor="end">(0, 50)</text>
+        <circle cx="84" cy="102" r="3.6" fill="#1e293b"/>
+        <text x="90" y="98" font-size="10" fill="#1e293b" text-anchor="start">(10, 40)</text>
+        <circle cx="144" cy="222" r="3.6" fill="#1e293b"/>
+        <text x="144" y="235" font-size="10" fill="#1e293b" text-anchor="middle">(30, 0)</text>
+        <text x="84" y="174" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+      <div class="sol-jadi">modelnya <span class="nw">$x + y \leq 50$,</span> <span class="nw">$2x + y \leq 60$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$,</span> dengan pendapatan <span class="nw">$f(x, y) = 30.000x + 15.000y$.</span></div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Seorang pedagang ikan menggunakan sepeda motor dengan kapasitas angkut 40 kg dan modal Rp300.000. Ikan mas dibeli Rp15.000/kg dan dijual Rp18.000/kg. Ikan mujair dibeli Rp12.000/kg dan dijual Rp15.000/kg. Susunlah model matematika agar laba maksimum!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan variabel:</strong> $x$ = kg ikan mas, $y$ = kg ikan mujair.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung laba per kg</strong> (harga jual dikurangi harga beli):</p>
+      <ul class="sol-cek">
+        <li>Ikan mas: $18.000 - 15.000 = 3.000$ rupiah</li>
+        <li>Ikan mujair: $15.000 - 12.000 = 3.000$ rupiah</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Susun kendala:</strong></p>
+      <ul class="sol-cek">
+        <li>Modal: <span class="nw">$15.000x + 12.000y \leq 300.000$;</span> dibagi $3.000$ menjadi $5x + 4y \leq 100$</li>
+        <li>Kapasitas: $x + y \leq 40$</li>
+        <li>Tak negatif: <span class="nw">$x \geq 0$,</span> $y \geq 0$</li>
+      </ul>
+      <div class="sol-jadi">modelnya <span class="nw">$5x + 4y \leq 100$,</span> <span class="nw">$x + y \leq 40$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$,</span> dengan laba <span class="nw">$f(x, y) = 3.000x + 3.000y$.</span></div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Laba Berbeda dengan Pendapatan</div>
+      <p style="margin:0;font-size:.9rem;">Laba per unit = harga jual − harga beli. Gunakan harga jual langsung hanya jika soal menanyakan <strong>pendapatan</strong> (hasil penjualan). Sederhanakan kendala dengan membagi semua suku dengan FPB koefisiennya; tandanya tidak berubah karena pembaginya positif.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Seorang penjahit membuat dua macam pakaian dari kain katun dan tetoron. Pakaian jenis I memerlukan 1 m katun dan 0,8 m tetoron; pakaian jenis II memerlukan 0,5 m katun dan 0,2 m tetoron. Tersedia 140 m katun dan 96 m tetoron. Keuntungan pakaian jenis I Rp50.000 dan jenis II Rp40.000. Susunlah model matematika agar keuntungan maksimum!</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan variabel:</strong> $x$ = pakaian jenis I, $y$ = pakaian jenis II.</p>
+      <div class="table-wrap"><table><thead><tr><th>Bahan</th><th>Jenis I ($x$)</th><th>Jenis II ($y$)</th><th>Persediaan</th></tr></thead><tbody><tr><td>Katun (m)</td><td>1</td><td>0,5</td><td>140</td></tr><tr><td>Tetoron (m)</td><td>0,8</td><td>0,2</td><td>96</td></tr></tbody></table></div>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Susun kendala</strong> lalu hilangkan desimal dengan mengalikan bilangan positif:</p>
+      $$\begin{align*} x + 0{,}5y \leq 140 &amp;\;\Rightarrow\; 2x + y \leq 280 \\ 0{,}8x + 0{,}2y \leq 96 &amp;\;\Rightarrow\; 4x + y \leq 480 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Tulis fungsi sasaran:</strong> <span class="nw">$f(x, y) = 50.000x + 40.000y$.</span></p>
+      <div class="sol-jadi">modelnya <span class="nw">$2x + y \leq 280$,</span> <span class="nw">$4x + y \leq 480$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$,</span> dengan keuntungan <span class="nw">$f(x, y) = 50.000x + 40.000y$.</span></div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan — Bagian B</div>
+      <ol class="soal-list">
+        <li>Sebuah toko menjual tas A dan tas B dengan stok maksimum 80 buah. Harga beli tas A Rp20.000 dan tas B Rp50.000, dengan modal Rp2.500.000. Misalkan $x$ = banyak tas A dan $y$ = banyak tas B. Susunlah sistem pertidaksamaan kendalanya!</li>
+        <li>Seorang petani menanam dua jenis tanaman pada lahan 20 hektar. Tanaman P membutuhkan 2 liter pupuk per hektar dan tanaman Q 3 liter pupuk per hektar, dengan pupuk tersedia 45 liter. Misalkan $x$ = luas tanaman P dan $y$ = luas tanaman Q. Susunlah model matematikanya!</li>
+        <li>Sebuah pabrik memakai solar dan bensin. Setiap liter solar menghasilkan 3 unit energi dan 2 gram emisi; setiap liter bensin menghasilkan 4 unit energi dan 5 gram emisi. Pabrik membutuhkan minimal 120 unit energi dan emisi tidak boleh melebihi 200 gram. Harga solar Rp8.000 dan bensin Rp12.000 per liter. Susunlah model matematika agar biaya minimum!</li>
+        <li>Setiap loyang kue A memerlukan 200 gr tepung, 100 gr gula, dan 20 menit; setiap loyang kue B memerlukan 300 gr tepung, 150 gr gula, dan 30 menit. Tersedia tepung 6 kg, gula 3 kg, dan waktu 8 jam. Keuntungan kue A Rp15.000 dan kue B Rp25.000 per loyang. Susunlah model matematikanya! Apa yang kamu amati dari ketiga kendala?</li>
+        <li>Kapal kargo mengangkut muatan berat ($x$ ton) dan muatan ringan ($y$ ton). Muatan berat bervolume 2 m$^3$ per ton dan muatan ringan 4 m$^3$ per ton. Kapasitas volume maksimum 40 m<span class="nw">$^3$.</span> Berat muatan dibatasi: <span class="nw">$x + 0{,}5y \leq 15$.</span> Ongkos kirim muatan berat Rp500.000 per ton dan ringan Rp300.000 per ton. Susunlah dan sederhanakan model matematika agar ongkos kirim maksimum.</li>
+        <li><strong>[HOTS]</strong> Produk P memakai plastik 50 cm$^2$ dan kardus 80 cm<span class="nw">$^2$;</span> produk Q memakai plastik 30 cm$^2$ dan kardus 40 cm<span class="nw">$^2$.</span> Persediaan plastik 1.500 cm$^2$ dan kardus 2.400 cm<span class="nw">$^2$.</span> Keuntungan <span class="nw">$f(x, y) = 8.000x + 5.000y$.</span><br>(a) Susunlah dan sederhanakan kendalanya.<br>(b) Tunjukkan bahwa salah satu kendala sebenarnya tidak membatasi produksi.<br>(c) Tentukan keuntungan maksimumnya.</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       C. NILAI OPTIMUM FUNGSI SASARAN
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Nilai Optimum Fungsi Sasaran</h2>
+
+    <h3 class="subsection-title">1. Metode Titik Pojok</h3>
+
+    <div class="box box-rumus">
+      <div class="box-label">Teorema Titik Pojok</div>
+      <p style="margin:0 0 .4rem;">Jika fungsi sasaran linear $f(x, y) = ax + by$ mempunyai nilai optimum pada daerah layak, maka nilai optimum itu dicapai di salah satu <strong>titik pojok</strong> daerah layak.</p><ol style="margin:0;padding-left:1.3rem;line-height:1.9;"><li>Gambar daerah layak dan tentukan semua titik pojok.</li><li>Substitusikan setiap titik pojok ke <span class="nw">$f(x, y)$.</span></li><li>Nilai terbesar = maksimum, nilai terkecil = minimum.</li></ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai maksimum $f(x, y) = 6x + 2y$ pada daerah penyelesaian <span class="nw">$2x + y \leq 8$,</span> <span class="nw">$x + y \leq 5$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$.</span></p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gambar daerah penyelesaian:</strong> $2x + y = 8$ melalui $(4, 0)$ dan <span class="nw">$(0, 8)$;</span> $x + y = 5$ melalui $(5, 0)$ dan <span class="nw">$(0, 5)$.</span></p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 220 292" width="220" style="max-width:260px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daerah penyelesaian contoh 7">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="272"/><line x1="50" y1="12" x2="50" y2="272"/><line x1="76" y1="12" x2="76" y2="272"/><line x1="102" y1="12" x2="102" y2="272"/><line x1="128" y1="12" x2="128" y2="272"/><line x1="154" y1="12" x2="154" y2="272"/><line x1="180" y1="12" x2="180" y2="272"/><line x1="206" y1="12" x2="206" y2="272"/><line x1="24" y1="272" x2="206" y2="272"/><line x1="24" y1="246" x2="206" y2="246"/><line x1="24" y1="220" x2="206" y2="220"/><line x1="24" y1="194" x2="206" y2="194"/><line x1="24" y1="168" x2="206" y2="168"/><line x1="24" y1="142" x2="206" y2="142"/><line x1="24" y1="116" x2="206" y2="116"/><line x1="24" y1="90" x2="206" y2="90"/><line x1="24" y1="64" x2="206" y2="64"/><line x1="24" y1="38" x2="206" y2="38"/><line x1="24" y1="12" x2="206" y2="12"/></g>
+        <polygon points="154,246 128,194 50,116 50,246" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="246" x2="214" y2="246" stroke="#555" stroke-width="1.5"/>
+        <path d="M218,246 l-7,-4 v8z" fill="#555"/>
+        <text x="212" y="240" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="50" y1="278" x2="50" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M50,2 l-4,7 h8z" fill="#555"/>
+        <text x="56" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="24" y="258" font-size="9" fill="#777" text-anchor="middle">−1</text>
+        <text x="76" y="258" font-size="9" fill="#777" text-anchor="middle">1</text>
+        <text x="102" y="258" font-size="9" fill="#777" text-anchor="middle">2</text>
+        <text x="128" y="258" font-size="9" fill="#777" text-anchor="middle">3</text>
+        <text x="180" y="258" font-size="9" fill="#777" text-anchor="middle">5</text>
+        <text x="206" y="258" font-size="9" fill="#777" text-anchor="middle">6</text>
+        <text x="46" y="275" font-size="9" fill="#777" text-anchor="end">−1</text>
+        <text x="46" y="223" font-size="9" fill="#777" text-anchor="end">1</text>
+        <text x="46" y="197" font-size="9" fill="#777" text-anchor="end">2</text>
+        <text x="46" y="171" font-size="9" fill="#777" text-anchor="end">3</text>
+        <text x="46" y="145" font-size="9" fill="#777" text-anchor="end">4</text>
+        <text x="46" y="93" font-size="9" fill="#777" text-anchor="end">6</text>
+        <text x="46" y="67" font-size="9" fill="#777" text-anchor="end">7</text>
+        <text x="46" y="41" font-size="9" fill="#777" text-anchor="end">8</text>
+        <text x="46" y="15" font-size="9" fill="#777" text-anchor="end">9</text>
+        <text x="46" y="258" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="167" y1="272" x2="37" y2="12" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="60.4" y="30.2" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">2x + y = 8</text>
+        <line x1="24" y1="90" x2="206" y2="272" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="156.6" y="204.4" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">x + y = 5</text>
+        <circle cx="50" cy="246" r="3.6" fill="#1e293b"/>
+        <circle cx="50" cy="116" r="3.6" fill="#1e293b"/>
+        <text x="45" y="120" font-size="10" fill="#1e293b" text-anchor="end">(0, 5)</text>
+        <circle cx="128" cy="194" r="3.6" fill="#1e293b"/>
+        <text x="134" y="190" font-size="10" fill="#1e293b" text-anchor="start">(3, 2)</text>
+        <circle cx="154" cy="246" r="3.6" fill="#1e293b"/>
+        <text x="154" y="259" font-size="10" fill="#1e293b" text-anchor="middle">(4, 0)</text>
+        <text x="81.2" y="204.4" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cari titik potong kedua garis:</strong></p>
+      $$\begin{align*} (2x + y) - (x + y) &amp;= 8 - 5 \\ x &amp;= 3, \quad y = 5 - 3 = 2 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Substitusikan setiap titik pojok</strong> ke <span class="nw">$f(x, y) = 6x + 2y$:</span></p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Titik pojok</th><th>$f(x, y) = 6x + 2y$</th></tr></thead><tbody><tr><td>$O(0, 0)$</td><td>$0$</td></tr><tr><td>$A(0, 5)$</td><td>$10$</td></tr><tr><td>$B(3, 2)$</td><td>$18 + 4 = 22$</td></tr><tr class="opt"><td>$C(4, 0)$</td><td>$24$</td></tr></tbody></table></div>
+      <div class="sol-jadi">nilai maksimumnya <span class="nw">$24$,</span> dicapai di titik <span class="nw">$(4, 0)$.</span></div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai maksimum $f(x, y) = 5x + 3y$ untuk <span class="nw">$x + y \leq 6$,</span> <span class="nw">$2x + 3y \leq 15$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$.</span></p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gambar daerah penyelesaian:</strong> $x + y = 6$ melalui $(6, 0)$ dan <span class="nw">$(0, 6)$;</span> $2x + 3y = 15$ melalui $(7{,}5;\, 0)$ dan <span class="nw">$(0, 5)$.</span> Uji $(0, 0)$ memenuhi keduanya.</p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 272 240" width="272" style="max-width:270px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daerah penyelesaian contoh 8">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="220"/><line x1="50" y1="12" x2="50" y2="220"/><line x1="76" y1="12" x2="76" y2="220"/><line x1="102" y1="12" x2="102" y2="220"/><line x1="128" y1="12" x2="128" y2="220"/><line x1="154" y1="12" x2="154" y2="220"/><line x1="180" y1="12" x2="180" y2="220"/><line x1="206" y1="12" x2="206" y2="220"/><line x1="232" y1="12" x2="232" y2="220"/><line x1="258" y1="12" x2="258" y2="220"/><line x1="24" y1="220" x2="258" y2="220"/><line x1="24" y1="194" x2="258" y2="194"/><line x1="24" y1="168" x2="258" y2="168"/><line x1="24" y1="142" x2="258" y2="142"/><line x1="24" y1="116" x2="258" y2="116"/><line x1="24" y1="90" x2="258" y2="90"/><line x1="24" y1="64" x2="258" y2="64"/><line x1="24" y1="38" x2="258" y2="38"/><line x1="24" y1="12" x2="258" y2="12"/></g>
+        <polygon points="206,194 128,116 50,64 50,194" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="194" x2="266" y2="194" stroke="#555" stroke-width="1.5"/>
+        <path d="M270,194 l-7,-4 v8z" fill="#555"/>
+        <text x="264" y="188" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="50" y1="226" x2="50" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M50,2 l-4,7 h8z" fill="#555"/>
+        <text x="56" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="24" y="206" font-size="9" fill="#777" text-anchor="middle">−1</text>
+        <text x="76" y="206" font-size="9" fill="#777" text-anchor="middle">1</text>
+        <text x="102" y="206" font-size="9" fill="#777" text-anchor="middle">2</text>
+        <text x="128" y="206" font-size="9" fill="#777" text-anchor="middle">3</text>
+        <text x="154" y="206" font-size="9" fill="#777" text-anchor="middle">4</text>
+        <text x="180" y="206" font-size="9" fill="#777" text-anchor="middle">5</text>
+        <text x="232" y="206" font-size="9" fill="#777" text-anchor="middle">7</text>
+        <text x="258" y="206" font-size="9" fill="#777" text-anchor="middle">8</text>
+        <text x="46" y="223" font-size="9" fill="#777" text-anchor="end">−1</text>
+        <text x="46" y="171" font-size="9" fill="#777" text-anchor="end">1</text>
+        <text x="46" y="145" font-size="9" fill="#777" text-anchor="end">2</text>
+        <text x="46" y="119" font-size="9" fill="#777" text-anchor="end">3</text>
+        <text x="46" y="93" font-size="9" fill="#777" text-anchor="end">4</text>
+        <text x="46" y="41" font-size="9" fill="#777" text-anchor="end">6</text>
+        <text x="46" y="15" font-size="9" fill="#777" text-anchor="end">7</text>
+        <text x="46" y="206" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="24" y1="12" x2="232" y2="220" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="169.6" y="134.2" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">x + y = 6</text>
+        <line x1="24" y1="46.7" x2="258" y2="202.7" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="57.8" y="48.4" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">2x + 3y = 15</text>
+        <circle cx="50" cy="194" r="3.6" fill="#1e293b"/>
+        <circle cx="50" cy="64" r="3.6" fill="#1e293b"/>
+        <text x="45" y="68" font-size="10" fill="#1e293b" text-anchor="end">(0, 5)</text>
+        <circle cx="128" cy="116" r="3.6" fill="#1e293b"/>
+        <text x="134" y="112" font-size="10" fill="#1e293b" text-anchor="start">(3, 3)</text>
+        <circle cx="206" cy="194" r="3.6" fill="#1e293b"/>
+        <text x="206" y="207" font-size="10" fill="#1e293b" text-anchor="middle">(6, 0)</text>
+        <text x="89" y="152.4" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cari titik potong kedua garis:</strong> kalikan $x + y = 6$ dengan <span class="nw">$2$,</span> lalu kurangkan.</p>
+      $$\begin{align*} (2x + 3y) - (2x + 2y) &amp;= 15 - 12 \\ y &amp;= 3 \\ x &amp;= 6 - 3 = 3 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Substitusikan setiap titik pojok:</strong></p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Titik pojok</th><th>$f(x, y) = 5x + 3y$</th></tr></thead><tbody><tr><td>$O(0, 0)$</td><td>$0$</td></tr><tr><td>$A(0, 5)$</td><td>$15$</td></tr><tr><td>$B(3, 3)$</td><td>$15 + 9 = 24$</td></tr><tr class="opt"><td>$C(6, 0)$</td><td>$30$</td></tr></tbody></table></div>
+      <div class="sol-jadi">nilai maksimumnya <span class="nw">$30$,</span> dicapai di titik <span class="nw">$(6, 0)$.</span></div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai <strong>minimum</strong> $f(x, y) = 4x + 3y$ pada daerah <span class="nw">$6x + y \geq 6$,</span> <span class="nw">$2x + y \geq 4$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$.</span></p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gambar daerah penyelesaian:</strong> $6x + y = 6$ melalui $(1, 0)$ dan <span class="nw">$(0, 6)$;</span> $2x + y = 4$ melalui $(2, 0)$ dan <span class="nw">$(0, 4)$.</span> Uji <span class="nw">$(0, 0)$:</span> $0 \geq 6$ salah, jadi HP di sisi yang <em>menjauhi</em> titik asal.</p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 194 266" width="194" style="max-width:230px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daerah penyelesaian contoh 9">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="246"/><line x1="50" y1="12" x2="50" y2="246"/><line x1="76" y1="12" x2="76" y2="246"/><line x1="102" y1="12" x2="102" y2="246"/><line x1="128" y1="12" x2="128" y2="246"/><line x1="154" y1="12" x2="154" y2="246"/><line x1="180" y1="12" x2="180" y2="246"/><line x1="24" y1="246" x2="180" y2="246"/><line x1="24" y1="220" x2="180" y2="220"/><line x1="24" y1="194" x2="180" y2="194"/><line x1="24" y1="168" x2="180" y2="168"/><line x1="24" y1="142" x2="180" y2="142"/><line x1="24" y1="116" x2="180" y2="116"/><line x1="24" y1="90" x2="180" y2="90"/><line x1="24" y1="64" x2="180" y2="64"/><line x1="24" y1="38" x2="180" y2="38"/><line x1="24" y1="12" x2="180" y2="12"/></g>
+        <polygon points="180,220 180,12 50,12 50,64 63,142 102,220" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="220" x2="188" y2="220" stroke="#555" stroke-width="1.5"/>
+        <path d="M192,220 l-7,-4 v8z" fill="#555"/>
+        <text x="186" y="214" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="50" y1="252" x2="50" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M50,2 l-4,7 h8z" fill="#555"/>
+        <text x="56" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="24" y="232" font-size="9" fill="#777" text-anchor="middle">−1</text>
+        <text x="76" y="232" font-size="9" fill="#777" text-anchor="middle">1</text>
+        <text x="128" y="232" font-size="9" fill="#777" text-anchor="middle">3</text>
+        <text x="154" y="232" font-size="9" fill="#777" text-anchor="middle">4</text>
+        <text x="180" y="232" font-size="9" fill="#777" text-anchor="middle">5</text>
+        <text x="46" y="249" font-size="9" fill="#777" text-anchor="end">−1</text>
+        <text x="46" y="197" font-size="9" fill="#777" text-anchor="end">1</text>
+        <text x="46" y="171" font-size="9" fill="#777" text-anchor="end">2</text>
+        <text x="46" y="145" font-size="9" fill="#777" text-anchor="end">3</text>
+        <text x="46" y="119" font-size="9" fill="#777" text-anchor="end">4</text>
+        <text x="46" y="93" font-size="9" fill="#777" text-anchor="end">5</text>
+        <text x="46" y="41" font-size="9" fill="#777" text-anchor="end">7</text>
+        <text x="46" y="15" font-size="9" fill="#777" text-anchor="end">8</text>
+        <text x="46" y="232" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="80.3" y1="246" x2="41.3" y2="12" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="79.9" y="100.4" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">6x + y = 6</text>
+        <line x1="24" y1="64" x2="115" y2="246" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="107.2" y="204.4" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">2x + y = 4</text>
+        <circle cx="50" cy="64" r="3.6" fill="#1e293b"/>
+        <text x="45" y="68" font-size="10" fill="#1e293b" text-anchor="end">(0, 6)</text>
+        <circle cx="63" cy="142" r="3.6" fill="#1e293b"/>
+        <text x="57" y="139" font-size="10" fill="#1e293b" text-anchor="end">(½, 3)</text>
+        <circle cx="102" cy="220" r="3.6" fill="#1e293b"/>
+        <text x="102" y="233" font-size="10" fill="#1e293b" text-anchor="middle">(2, 0)</text>
+        <text x="128" y="90" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cari titik potong kedua garis:</strong></p>
+      $$\begin{align*} (6x + y) - (2x + y) &amp;= 6 - 4 \\ 4x = 2 \;\Rightarrow\; x &amp;= \tfrac{1}{2} \\ y &amp;= 4 - 1 = 3 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Substitusikan setiap titik pojok:</strong></p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Titik pojok</th><th>$f(x, y) = 4x + 3y$</th></tr></thead><tbody><tr><td>$A(0, 6)$</td><td>$18$</td></tr><tr><td>$B\left(\tfrac{1}{2}, 3\right)$</td><td>$2 + 9 = 11$</td></tr><tr class="opt"><td>$C(2, 0)$</td><td>$8$</td></tr></tbody></table></div>
+      <p class="sol-step">Daerahnya tak terbatas ke kanan atas, tetapi nilai minimum tetap ada karena $f$ makin besar saat menjauhi titik asal.</p>
+      <div class="sol-jadi">nilai minimumnya <span class="nw">$8$,</span> dicapai di titik <span class="nw">$(2, 0)$.</span></div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai maksimum $f(x, y) = 2x + 2y$ yang memenuhi <span class="nw">$2x + y \leq 8$,</span> <span class="nw">$3x + 4y \geq 12$,</span> <span class="nw">$x \geq 2$,</span> <span class="nw">$y \geq 0$.</span></p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gambar ketiga garis batas:</strong> <span class="nw">$g: 2x + y = 8$,</span> <span class="nw">$h: 3x + 4y = 12$,</span> dan garis tegak <span class="nw">$x = 2$.</span> HP berada di kanan <span class="nw">$x = 2$,</span> di atas <span class="nw">$3x + 4y = 12$,</span> dan di bawah <span class="nw">$2x + y = 8$.</span></p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 194 292" width="194" style="max-width:230px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daerah penyelesaian contoh 10">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="272"/><line x1="50" y1="12" x2="50" y2="272"/><line x1="76" y1="12" x2="76" y2="272"/><line x1="102" y1="12" x2="102" y2="272"/><line x1="128" y1="12" x2="128" y2="272"/><line x1="154" y1="12" x2="154" y2="272"/><line x1="180" y1="12" x2="180" y2="272"/><line x1="24" y1="272" x2="180" y2="272"/><line x1="24" y1="246" x2="180" y2="246"/><line x1="24" y1="220" x2="180" y2="220"/><line x1="24" y1="194" x2="180" y2="194"/><line x1="24" y1="168" x2="180" y2="168"/><line x1="24" y1="142" x2="180" y2="142"/><line x1="24" y1="116" x2="180" y2="116"/><line x1="24" y1="90" x2="180" y2="90"/><line x1="24" y1="64" x2="180" y2="64"/><line x1="24" y1="38" x2="180" y2="38"/><line x1="24" y1="12" x2="180" y2="12"/></g>
+        <polygon points="154,246 102,142 102,207" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="246" x2="188" y2="246" stroke="#555" stroke-width="1.5"/>
+        <path d="M192,246 l-7,-4 v8z" fill="#555"/>
+        <text x="186" y="240" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="50" y1="278" x2="50" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M50,2 l-4,7 h8z" fill="#555"/>
+        <text x="56" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="24" y="258" font-size="9" fill="#777" text-anchor="middle">−1</text>
+        <text x="76" y="258" font-size="9" fill="#777" text-anchor="middle">1</text>
+        <text x="102" y="258" font-size="9" fill="#777" text-anchor="middle">2</text>
+        <text x="128" y="258" font-size="9" fill="#777" text-anchor="middle">3</text>
+        <text x="180" y="258" font-size="9" fill="#777" text-anchor="middle">5</text>
+        <text x="46" y="275" font-size="9" fill="#777" text-anchor="end">−1</text>
+        <text x="46" y="223" font-size="9" fill="#777" text-anchor="end">1</text>
+        <text x="46" y="197" font-size="9" fill="#777" text-anchor="end">2</text>
+        <text x="46" y="171" font-size="9" fill="#777" text-anchor="end">3</text>
+        <text x="46" y="145" font-size="9" fill="#777" text-anchor="end">4</text>
+        <text x="46" y="119" font-size="9" fill="#777" text-anchor="end">5</text>
+        <text x="46" y="93" font-size="9" fill="#777" text-anchor="end">6</text>
+        <text x="46" y="67" font-size="9" fill="#777" text-anchor="end">7</text>
+        <text x="46" y="41" font-size="9" fill="#777" text-anchor="end">8</text>
+        <text x="46" y="15" font-size="9" fill="#777" text-anchor="end">9</text>
+        <text x="46" y="258" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="167" y1="272" x2="37" y2="12" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="69.5" y="64" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">g</text>
+        <line x1="24" y1="148.5" x2="180" y2="265.5" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="59.1" y="162.8" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">h</text>
+        <line x1="102" y1="272" x2="102" y2="12" stroke="#059669" stroke-width="2.2"/>
+        <text x="104.6" y="27.6" font-size="10" fill="#059669" font-weight="600" text-anchor="start">x = 2</text>
+        <circle cx="102" cy="142" r="3.6" fill="#1e293b"/>
+        <text x="96" y="139" font-size="10" fill="#1e293b" text-anchor="end">(2, 4)</text>
+        <circle cx="102" cy="207" r="3.6" fill="#1e293b"/>
+        <text x="96" y="211" font-size="10" fill="#1e293b" text-anchor="end">(2, 3/2)</text>
+        <circle cx="154" cy="246" r="3.6" fill="#1e293b"/>
+        <text x="154" y="259" font-size="10" fill="#1e293b" text-anchor="middle">(4, 0)</text>
+        <text x="117.6" y="186.2" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cari titik-titik pojok:</strong></p>
+      <ul class="sol-cek">
+        <li>$x = 2$ dan <span class="nw">$2x + y = 8$:</span> <span class="nw">$y = 4$,</span> titik $(2, 4)$</li>
+        <li>$x = 2$ dan <span class="nw">$3x + 4y = 12$:</span> <span class="nw">$4y = 6$,</span> titik $\left(2, \tfrac{3}{2}\right)$</li>
+        <li>$2x + y = 8$ dan <span class="nw">$3x + 4y = 12$:</span> $8x + 4y = 32$ dikurangi $3x + 4y = 12$ memberi <span class="nw">$x = 4$,</span> <span class="nw">$y = 0$,</span> titik $(4, 0)$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Substitusikan setiap titik pojok:</strong></p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Titik pojok</th><th>$f(x, y) = 2x + 2y$</th></tr></thead><tbody><tr class="opt"><td>$A(2, 4)$</td><td>$4 + 8 = 12$</td></tr><tr><td>$B\left(2, \tfrac{3}{2}\right)$</td><td>$4 + 3 = 7$</td></tr><tr><td>$C(4, 0)$</td><td>$8$</td></tr></tbody></table></div>
+      <div class="sol-jadi">nilai maksimumnya <span class="nw">$12$,</span> dicapai di titik <span class="nw">$(2, 4)$.</span></div>
+    </div>
+
+    <h3 class="subsection-title">2. Metode Garis Selidik</h3>
+
+    <p>Garis selidik adalah garis $ax + by = k$ yang sejajar dengan fungsi sasaran. Semakin jauh garis itu digeser dari titik asal (untuk $a, b > 0$), semakin besar nilai <span class="nw">$k$.</span> Titik pojok terakhir yang disentuh saat digeser menjauh adalah titik maksimum; titik pertama yang disentuh dari arah titik asal adalah titik minimum.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Cara Cepat: Membandingkan Gradien</div>
+      <p style="margin:0;">Misalkan titik pojok $P$ adalah perpotongan garis batas $g_1$ dan <span class="nw">$g_2$.</span> Jika gradien fungsi sasaran $m_f = -\dfrac{a}{b}$ berada <strong>di antara</strong> gradien $g_1$ dan <span class="nw">$g_2$,</span> maka nilai optimum dicapai di <span class="nw">$P$.</span> Jika tidak, optimum berpindah ke titik pojok di sumbu yang sesuai.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Dengan metode garis selidik, tentukan nilai maksimum $f(x, y) = 3x + 4y$ pada daerah <span class="nw">$x + y \leq 6$,</span> <span class="nw">$x + 2y \leq 8$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$.</span></p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gambar daerah penyelesaian:</strong> titik pojoknya <span class="nw">$O(0, 0)$,</span> <span class="nw">$(0, 4)$,</span> <span class="nw">$(4, 2)$,</span> dan <span class="nw">$(6, 0)$.</span> Titik $(4, 2)$ diperoleh dari <span class="nw">$(x + 2y) - (x + y) = 8 - 6$,</span> sehingga $y = 2$ dan <span class="nw">$x = 4$.</span></p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Buat garis selidik</strong> <span class="nw">$3x + 4y = k$,</span> misalnya $3x + 4y = 12$ (garis putus-putus hijau).</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Geser garis selidik sejajar</strong> ke arah nilai $k$ membesar (menjauhi titik asal). Titik pojok <em>terakhir</em> yang tersentuh adalah <span class="nw">$(4, 2)$.</span></p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 272 240" width="272" style="max-width:270px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Garis selidik contoh 11">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="220"/><line x1="50" y1="12" x2="50" y2="220"/><line x1="76" y1="12" x2="76" y2="220"/><line x1="102" y1="12" x2="102" y2="220"/><line x1="128" y1="12" x2="128" y2="220"/><line x1="154" y1="12" x2="154" y2="220"/><line x1="180" y1="12" x2="180" y2="220"/><line x1="206" y1="12" x2="206" y2="220"/><line x1="232" y1="12" x2="232" y2="220"/><line x1="258" y1="12" x2="258" y2="220"/><line x1="24" y1="220" x2="258" y2="220"/><line x1="24" y1="194" x2="258" y2="194"/><line x1="24" y1="168" x2="258" y2="168"/><line x1="24" y1="142" x2="258" y2="142"/><line x1="24" y1="116" x2="258" y2="116"/><line x1="24" y1="90" x2="258" y2="90"/><line x1="24" y1="64" x2="258" y2="64"/><line x1="24" y1="38" x2="258" y2="38"/><line x1="24" y1="12" x2="258" y2="12"/></g>
+        <polygon points="206,194 154,142 50,90 50,194" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="194" x2="266" y2="194" stroke="#555" stroke-width="1.5"/>
+        <path d="M270,194 l-7,-4 v8z" fill="#555"/>
+        <text x="264" y="188" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="50" y1="226" x2="50" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M50,2 l-4,7 h8z" fill="#555"/>
+        <text x="56" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="24" y="206" font-size="9" fill="#777" text-anchor="middle">−1</text>
+        <text x="76" y="206" font-size="9" fill="#777" text-anchor="middle">1</text>
+        <text x="102" y="206" font-size="9" fill="#777" text-anchor="middle">2</text>
+        <text x="128" y="206" font-size="9" fill="#777" text-anchor="middle">3</text>
+        <text x="154" y="206" font-size="9" fill="#777" text-anchor="middle">4</text>
+        <text x="180" y="206" font-size="9" fill="#777" text-anchor="middle">5</text>
+        <text x="232" y="206" font-size="9" fill="#777" text-anchor="middle">7</text>
+        <text x="258" y="206" font-size="9" fill="#777" text-anchor="middle">8</text>
+        <text x="46" y="223" font-size="9" fill="#777" text-anchor="end">−1</text>
+        <text x="46" y="171" font-size="9" fill="#777" text-anchor="end">1</text>
+        <text x="46" y="145" font-size="9" fill="#777" text-anchor="end">2</text>
+        <text x="46" y="119" font-size="9" fill="#777" text-anchor="end">3</text>
+        <text x="46" y="67" font-size="9" fill="#777" text-anchor="end">5</text>
+        <text x="46" y="41" font-size="9" fill="#777" text-anchor="end">6</text>
+        <text x="46" y="15" font-size="9" fill="#777" text-anchor="end">7</text>
+        <text x="46" y="206" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="24" y1="12" x2="232" y2="220" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="187.8" y="160.2" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">x + y = 6</text>
+        <line x1="24" y1="77" x2="258" y2="194" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="89" y="91.3" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">x + 2y = 8</text>
+        <line x1="24" y1="96.5" x2="188.7" y2="220" stroke="#059669" stroke-width="2.2" stroke-dasharray="6 4"/>
+        <text x="55.2" y="129" font-size="10" fill="#059669" font-weight="600" text-anchor="start">k = 12</text>
+        <line x1="24" y1="44.5" x2="258" y2="220" stroke="#059669" stroke-width="2.2" stroke-dasharray="6 4"/>
+        <text x="216.4" y="170.6" font-size="10" fill="#059669" font-weight="600" text-anchor="start">k = 20</text>
+        <circle cx="50" cy="90" r="3.6" fill="#1e293b"/>
+        <text x="45" y="94" font-size="10" fill="#1e293b" text-anchor="end">(0, 4)</text>
+        <circle cx="154" cy="142" r="3.6" fill="#1e293b"/>
+        <text x="160" y="138" font-size="10" fill="#1e293b" text-anchor="start">(4, 2)</text>
+        <circle cx="206" cy="194" r="3.6" fill="#1e293b"/>
+        <text x="206" y="207" font-size="10" fill="#1e293b" text-anchor="middle">(6, 0)</text>
+        <text x="91.6" y="162.8" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+      <p class="sol-step"><span class="sol-no">4</span><strong>Hitung nilai di titik itu:</strong> <span class="nw">$f(4, 2) = 12 + 8 = 20$.</span> Cek: $f(0, 4) = 16$ dan <span class="nw">$f(6, 0) = 18$,</span> keduanya lebih kecil ✓</p>
+      <div class="sol-jadi">nilai maksimumnya <span class="nw">$20$,</span> dicapai di titik <span class="nw">$(4, 2)$.</span></div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Daerah penyelesaian sistem <span class="nw">$6x + y \geq 6$,</span> <span class="nw">$2x + y \geq 4$,</span> <span class="nw">$x \geq 0$,</span> $y \geq 0$ sama dengan Contoh 9. Tanpa menghitung semua titik pojok, tentukan nilai minimum <span class="nw">$f(x, y) = 6x + 2y$.</span></p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan gradien setiap garis:</strong> garis batas $6x + y = 6$ bergradien <span class="nw">$-6$,</span> garis batas $2x + y = 4$ bergradien <span class="nw">$-2$,</span> dan garis selidik $6x + 2y = k$ bergradien <span class="nw">$-3$.</span></p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan gradien.</strong> Karena <span class="nw">$-6 &lt; -3 &lt; -2$,</span> gradien fungsi sasaran berada <em>di antara</em> gradien kedua garis batas. Artinya garis selidik pertama kali menyentuh HP di titik potong kedua garis, yaitu <span class="nw">$\left(\tfrac{1}{2}, 3\right)$.</span></p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 194 266" width="194" style="max-width:230px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Garis selidik contoh 12">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="246"/><line x1="50" y1="12" x2="50" y2="246"/><line x1="76" y1="12" x2="76" y2="246"/><line x1="102" y1="12" x2="102" y2="246"/><line x1="128" y1="12" x2="128" y2="246"/><line x1="154" y1="12" x2="154" y2="246"/><line x1="180" y1="12" x2="180" y2="246"/><line x1="24" y1="246" x2="180" y2="246"/><line x1="24" y1="220" x2="180" y2="220"/><line x1="24" y1="194" x2="180" y2="194"/><line x1="24" y1="168" x2="180" y2="168"/><line x1="24" y1="142" x2="180" y2="142"/><line x1="24" y1="116" x2="180" y2="116"/><line x1="24" y1="90" x2="180" y2="90"/><line x1="24" y1="64" x2="180" y2="64"/><line x1="24" y1="38" x2="180" y2="38"/><line x1="24" y1="12" x2="180" y2="12"/></g>
+        <polygon points="180,220 180,12 50,12 50,64 63,142 102,220" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="220" x2="188" y2="220" stroke="#555" stroke-width="1.5"/>
+        <path d="M192,220 l-7,-4 v8z" fill="#555"/>
+        <text x="186" y="214" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="50" y1="252" x2="50" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M50,2 l-4,7 h8z" fill="#555"/>
+        <text x="56" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="24" y="232" font-size="9" fill="#777" text-anchor="middle">−1</text>
+        <text x="76" y="232" font-size="9" fill="#777" text-anchor="middle">1</text>
+        <text x="128" y="232" font-size="9" fill="#777" text-anchor="middle">3</text>
+        <text x="154" y="232" font-size="9" fill="#777" text-anchor="middle">4</text>
+        <text x="180" y="232" font-size="9" fill="#777" text-anchor="middle">5</text>
+        <text x="46" y="249" font-size="9" fill="#777" text-anchor="end">−1</text>
+        <text x="46" y="197" font-size="9" fill="#777" text-anchor="end">1</text>
+        <text x="46" y="171" font-size="9" fill="#777" text-anchor="end">2</text>
+        <text x="46" y="145" font-size="9" fill="#777" text-anchor="end">3</text>
+        <text x="46" y="119" font-size="9" fill="#777" text-anchor="end">4</text>
+        <text x="46" y="93" font-size="9" fill="#777" text-anchor="end">5</text>
+        <text x="46" y="41" font-size="9" fill="#777" text-anchor="end">7</text>
+        <text x="46" y="15" font-size="9" fill="#777" text-anchor="end">8</text>
+        <text x="46" y="232" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="80.3" y1="246" x2="41.3" y2="12" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="79.9" y="100.4" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">6x + y = 6</text>
+        <line x1="24" y1="64" x2="115" y2="246" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="107.2" y="204.4" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">2x + y = 4</text>
+        <line x1="24" y1="25" x2="97.7" y2="246" stroke="#059669" stroke-width="2.2" stroke-dasharray="6 4"/>
+        <text x="99.4" y="196.6" font-size="10" fill="#059669" font-weight="600" text-anchor="start">k = 9</text>
+        <circle cx="50" cy="64" r="3.6" fill="#1e293b"/>
+        <text x="45" y="68" font-size="10" fill="#1e293b" text-anchor="end">(0, 6)</text>
+        <circle cx="63" cy="142" r="3.6" fill="#1e293b"/>
+        <text x="57" y="139" font-size="10" fill="#1e293b" text-anchor="end">(½, 3)</text>
+        <circle cx="102" cy="220" r="3.6" fill="#1e293b"/>
+        <text x="102" y="233" font-size="10" fill="#1e293b" text-anchor="middle">(2, 0)</text>
+        <text x="128" y="90" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Hitung nilai minimum:</strong> <span class="nw">$f\left(\tfrac{1}{2}, 3\right) = 3 + 6 = 9$.</span> Cek: $f(0, 6) = 12$ dan <span class="nw">$f(2, 0) = 12$,</span> keduanya lebih besar ✓</p>
+      <div class="sol-jadi">nilai minimumnya <span class="nw">$9$,</span> dicapai di titik <span class="nw">$\left(\tfrac{1}{2}, 3\right)$.</span></div>
+    </div>
+
+    <h3 class="subsection-title">3. Kasus Khusus</h3>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Tiga Kasus yang Sering Muncul</div>
+      <ul style="margin:.3rem 0 0;padding-left:1.2rem;line-height:1.9;font-size:.9rem;"><li><strong>Solusi optimal berganda</strong>: dua titik pojok memberi nilai sama karena fungsi sasaran sejajar dengan salah satu garis batas. Semua titik pada ruas garis di antaranya juga optimal.</li><li><strong>Daerah tak terbatas</strong>: nilai minimum bisa ada, tetapi nilai maksimum tidak ada (atau sebaliknya). Selalu periksa apakah $f$ dapat dibuat terus membesar.</li><li><strong>Solusi bilangan bulat</strong>: jika titik optimum berupa pecahan tetapi variabel harus utuh, periksa titik-titik bulat di dalam daerah layak di sekitarnya. Pembulatan begitu saja bisa melanggar kendala atau tidak optimal.</li></ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui sistem <span class="nw">$2x + y \geq 6$,</span> <span class="nw">$x + 2y \geq 6$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$.</span> Tentukan nilai minimum dan nilai maksimum <span class="nw">$f(x, y) = x + y$,</span> jika ada.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan titik pojok:</strong> <span class="nw">$(0, 6)$,</span> <span class="nw">$(6, 0)$,</span> dan titik potong kedua garis. Dari $(2x + y) - (x + 2y) = 0$ diperoleh <span class="nw">$x = y$,</span> lalu <span class="nw">$3x = 6$,</span> sehingga titiknya <span class="nw">$(2, 2)$.</span></p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 254 248" width="254" style="max-width:260px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daerah tak terbatas contoh 13">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="228"/><line x1="48" y1="12" x2="48" y2="228"/><line x1="72" y1="12" x2="72" y2="228"/><line x1="96" y1="12" x2="96" y2="228"/><line x1="120" y1="12" x2="120" y2="228"/><line x1="144" y1="12" x2="144" y2="228"/><line x1="168" y1="12" x2="168" y2="228"/><line x1="192" y1="12" x2="192" y2="228"/><line x1="216" y1="12" x2="216" y2="228"/><line x1="240" y1="12" x2="240" y2="228"/><line x1="24" y1="228" x2="240" y2="228"/><line x1="24" y1="204" x2="240" y2="204"/><line x1="24" y1="180" x2="240" y2="180"/><line x1="24" y1="156" x2="240" y2="156"/><line x1="24" y1="132" x2="240" y2="132"/><line x1="24" y1="108" x2="240" y2="108"/><line x1="24" y1="84" x2="240" y2="84"/><line x1="24" y1="60" x2="240" y2="60"/><line x1="24" y1="36" x2="240" y2="36"/><line x1="24" y1="12" x2="240" y2="12"/></g>
+        <polygon points="240,204 240,12 48,12 48,60 96,156 192,204" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="204" x2="248" y2="204" stroke="#555" stroke-width="1.5"/>
+        <path d="M252,204 l-7,-4 v8z" fill="#555"/>
+        <text x="246" y="198" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="48" y1="234" x2="48" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M48,2 l-4,7 h8z" fill="#555"/>
+        <text x="54" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="24" y="216" font-size="9" fill="#777" text-anchor="middle">−1</text>
+        <text x="72" y="216" font-size="9" fill="#777" text-anchor="middle">1</text>
+        <text x="96" y="216" font-size="9" fill="#777" text-anchor="middle">2</text>
+        <text x="120" y="216" font-size="9" fill="#777" text-anchor="middle">3</text>
+        <text x="144" y="216" font-size="9" fill="#777" text-anchor="middle">4</text>
+        <text x="168" y="216" font-size="9" fill="#777" text-anchor="middle">5</text>
+        <text x="216" y="216" font-size="9" fill="#777" text-anchor="middle">7</text>
+        <text x="240" y="216" font-size="9" fill="#777" text-anchor="middle">8</text>
+        <text x="44" y="231" font-size="9" fill="#777" text-anchor="end">−1</text>
+        <text x="44" y="183" font-size="9" fill="#777" text-anchor="end">1</text>
+        <text x="44" y="159" font-size="9" fill="#777" text-anchor="end">2</text>
+        <text x="44" y="135" font-size="9" fill="#777" text-anchor="end">3</text>
+        <text x="44" y="111" font-size="9" fill="#777" text-anchor="end">4</text>
+        <text x="44" y="87" font-size="9" fill="#777" text-anchor="end">5</text>
+        <text x="44" y="39" font-size="9" fill="#777" text-anchor="end">7</text>
+        <text x="44" y="15" font-size="9" fill="#777" text-anchor="end">8</text>
+        <text x="44" y="216" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="24" y1="12" x2="132" y2="228" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="93.6" y="76.8" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">2x + y = 6</text>
+        <line x1="24" y1="120" x2="240" y2="228" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="151.2" y="168" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">x + 2y = 6</text>
+        <line x1="24" y1="84" x2="168" y2="228" stroke="#059669" stroke-width="2.2" stroke-dasharray="6 4"/>
+        <text x="51.6" y="100.8" font-size="10" fill="#059669" font-weight="600" text-anchor="start">x + y = 4</text>
+        <circle cx="48" cy="60" r="3.6" fill="#1e293b"/>
+        <text x="43" y="64" font-size="10" fill="#1e293b" text-anchor="end">(0, 6)</text>
+        <circle cx="96" cy="156" r="3.6" fill="#1e293b"/>
+        <text x="90" y="152" font-size="10" fill="#1e293b" text-anchor="end">(2, 2)</text>
+        <circle cx="192" cy="204" r="3.6" fill="#1e293b"/>
+        <text x="192" y="217" font-size="10" fill="#1e293b" text-anchor="middle">(6, 0)</text>
+        <text x="168" y="84" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cari nilai minimum:</strong></p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Titik pojok</th><th>$f(x, y) = x + y$</th></tr></thead><tbody><tr><td>$(0, 6)$</td><td>$6$</td></tr><tr class="opt"><td>$(2, 2)$</td><td>$4$</td></tr><tr><td>$(6, 0)$</td><td>$6$</td></tr></tbody></table></div>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Periksa nilai maksimum.</strong> HP tak terbatas ke kanan atas. Titik $(100, 0)$ memenuhi semua syarat dan memberi <span class="nw">$f = 100$;</span> titik $(1.000, 0)$ memberi <span class="nw">$1.000$.</span> Nilai $f$ dapat dibuat sebesar apa pun.</p>
+      <div class="sol-jadi">nilai minimumnya $4$ di titik <span class="nw">$(2, 2)$,</span> sedangkan nilai maksimum <strong>tidak ada</strong> karena daerahnya tak terbatas.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Seorang pengrajin membuat $x$ meja dan $y$ kursi dengan kendala $x + y \leq 5$ dan <span class="nw">$3x + 5y \leq 20$.</span> Keuntungannya $f(x, y) = 2x + 3y$ (ratusan ribu rupiah). Karena meja dan kursi harus utuh, tentukan banyak meja dan kursi agar keuntungan maksimum.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari titik pojok:</strong> <span class="nw">$O(0, 0)$,</span> <span class="nw">$(0, 4)$,</span> <span class="nw">$(5, 0)$,</span> dan titik potong $x + y = 5$ dengan <span class="nw">$3x + 5y = 20$.</span> Substitusi <span class="nw">$x = 5 - y$:</span> <span class="nw">$15 + 2y = 20$,</span> jadi $y = 2{,}5$ dan <span class="nw">$x = 2{,}5$.</span></p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Titik pojok</th><th>$f(x, y) = 2x + 3y$</th></tr></thead><tbody><tr><td>$(0, 4)$</td><td>$12$</td></tr><tr class="opt"><td>$(2{,}5;\, 2{,}5)$</td><td>$12{,}5$</td></tr><tr><td>$(5, 0)$</td><td>$10$</td></tr></tbody></table></div>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Periksa syarat bilangan bulat.</strong> Titik $(2{,}5;\, 2{,}5)$ tidak mungkin dibuat. Membulatkan ke atas $(3, 3)$ melanggar kendala, dan ke bawah $(2, 2)$ hanya memberi <span class="nw">$10$.</span> Periksa titik bulat di dekat titik optimum (titik hijau pada grafik):</p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 248 212" width="248" style="max-width:260px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Titik bulat contoh 14">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="192"/><line x1="54" y1="12" x2="54" y2="192"/><line x1="84" y1="12" x2="84" y2="192"/><line x1="114" y1="12" x2="114" y2="192"/><line x1="144" y1="12" x2="144" y2="192"/><line x1="174" y1="12" x2="174" y2="192"/><line x1="204" y1="12" x2="204" y2="192"/><line x1="234" y1="12" x2="234" y2="192"/><line x1="24" y1="192" x2="234" y2="192"/><line x1="24" y1="162" x2="234" y2="162"/><line x1="24" y1="132" x2="234" y2="132"/><line x1="24" y1="102" x2="234" y2="102"/><line x1="24" y1="72" x2="234" y2="72"/><line x1="24" y1="42" x2="234" y2="42"/><line x1="24" y1="12" x2="234" y2="12"/></g>
+        <polygon points="204,162 129,87 54,42 54,162" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="162" x2="242" y2="162" stroke="#555" stroke-width="1.5"/>
+        <path d="M246,162 l-7,-4 v8z" fill="#555"/>
+        <text x="240" y="156" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="54" y1="198" x2="54" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M54,2 l-4,7 h8z" fill="#555"/>
+        <text x="60" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="24" y="174" font-size="9" fill="#777" text-anchor="middle">−1</text>
+        <text x="84" y="174" font-size="9" fill="#777" text-anchor="middle">1</text>
+        <text x="114" y="174" font-size="9" fill="#777" text-anchor="middle">2</text>
+        <text x="144" y="174" font-size="9" fill="#777" text-anchor="middle">3</text>
+        <text x="174" y="174" font-size="9" fill="#777" text-anchor="middle">4</text>
+        <text x="204" y="174" font-size="9" fill="#777" text-anchor="middle">5</text>
+        <text x="234" y="174" font-size="9" fill="#777" text-anchor="middle">6</text>
+        <text x="50" y="195" font-size="9" fill="#777" text-anchor="end">−1</text>
+        <text x="50" y="135" font-size="9" fill="#777" text-anchor="end">1</text>
+        <text x="50" y="105" font-size="9" fill="#777" text-anchor="end">2</text>
+        <text x="50" y="75" font-size="9" fill="#777" text-anchor="end">3</text>
+        <text x="50" y="45" font-size="9" fill="#777" text-anchor="end">4</text>
+        <text x="50" y="15" font-size="9" fill="#777" text-anchor="end">5</text>
+        <text x="50" y="174" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="234" y1="192" x2="54" y2="12" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="177" y="117" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">x + y = 5</text>
+        <line x1="24" y1="24" x2="234" y2="150" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="60" y="33" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">3x + 5y = 20</text>
+        <circle cx="54" cy="162" r="3.4" fill="#00BFA5"/>
+        <circle cx="54" cy="132" r="3.4" fill="#00BFA5"/>
+        <circle cx="54" cy="102" r="3.4" fill="#00BFA5"/>
+        <circle cx="54" cy="72" r="3.4" fill="#00BFA5"/>
+        <circle cx="54" cy="42" r="3.4" fill="#00BFA5"/>
+        <circle cx="84" cy="162" r="3.4" fill="#00BFA5"/>
+        <circle cx="84" cy="132" r="3.4" fill="#00BFA5"/>
+        <circle cx="84" cy="102" r="3.4" fill="#00BFA5"/>
+        <circle cx="84" cy="72" r="3.4" fill="#00BFA5"/>
+        <circle cx="114" cy="162" r="3.4" fill="#00BFA5"/>
+        <circle cx="114" cy="132" r="3.4" fill="#00BFA5"/>
+        <circle cx="114" cy="102" r="3.4" fill="#00BFA5"/>
+        <circle cx="144" cy="162" r="3.4" fill="#00BFA5"/>
+        <circle cx="144" cy="132" r="3.4" fill="#00BFA5"/>
+        <circle cx="144" cy="102" r="3.4" fill="#00BFA5"/>
+        <circle cx="174" cy="162" r="3.4" fill="#00BFA5"/>
+        <circle cx="174" cy="132" r="3.4" fill="#00BFA5"/>
+        <circle cx="204" cy="162" r="3.4" fill="#00BFA5"/>
+        <circle cx="129" cy="87" r="3.6" fill="#1e293b"/>
+        <text x="135" y="83" font-size="10" fill="#1e293b" text-anchor="start">(2,5; 2,5)</text>
+        </svg>
+      </div>
+      <ul class="sol-cek">
+        <li><span class="nw">$(3, 2)$:</span> $5 \leq 5$ ✓, $19 \leq 20$ ✓, $f = 6 + 6 = 12$</li>
+        <li><span class="nw">$(0, 4)$:</span> memenuhi ✓, $f = 12$</li>
+        <li>$(1, 3)$ dan <span class="nw">$(4, 1)$:</span> memenuhi ✓, $f = 11$</li>
+        <li><span class="nw">$(2, 2)$:</span> memenuhi ✓, $f = 10$</li>
+      </ul>
+      <div class="sol-jadi">keuntungan maksimum dengan barang utuh adalah Rp1.200.000, yaitu membuat 3 meja dan 2 kursi atau 4 kursi saja.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan — Bagian C</div>
+      <ol class="soal-list">
+        <li>Tentukan nilai maksimum $f(x, y) = 3x + 2y$ pada daerah dengan titik pojok <span class="nw">$O(0, 0)$,</span> <span class="nw">$A(0, 4)$,</span> <span class="nw">$B(2, 3)$,</span> dan <span class="nw">$C(5, 0)$.</span></li>
+        <li>Tentukan nilai minimum $f(x, y) = x + 2y$ pada daerah dengan titik pojok <span class="nw">$A(0, 6)$,</span> <span class="nw">$B(2, 3)$,</span> dan <span class="nw">$C(8, 0)$.</span> Apa yang istimewa dari jawabannya?</li>
+        <li>Tentukan nilai maksimum $f(x, y) = 4x + y$ untuk <span class="nw">$x + y \leq 5$,</span> <span class="nw">$x + 2y \leq 8$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$.</span></li>
+        <li>Tentukan nilai minimum $f(x, y) = 3x + 5y$ untuk <span class="nw">$x + y \geq 4$,</span> <span class="nw">$2x + y \geq 6$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$.</span></li>
+        <li>Tentukan nilai maksimum dan minimum $f(x, y) = 2x + 5y$ untuk <span class="nw">$x + 2y \leq 12$,</span> <span class="nw">$3x + 2y \leq 18$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$.</span></li>
+        <li>Dengan membandingkan gradien (garis selidik), tentukan di titik mana $f(x, y) = 5x + 4y$ mencapai maksimum pada daerah <span class="nw">$x + y \leq 6$,</span> <span class="nw">$2x + y \leq 10$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$,</span> lalu tentukan nilainya.</li>
+        <li>Tentukan nilai minimum dan maksimum $f(x, y) = 2x + y$ pada daerah <span class="nw">$x + y \geq 3$,</span> <span class="nw">$x \leq 4$,</span> <span class="nw">$x \geq 0$,</span> <span class="nw">$y \geq 0$,</span> jika ada.</li>
+        <li><strong>[HOTS]</strong> Fungsi sasaran $f(x, y) = kx + 4y$ didefinisikan pada daerah dengan titik pojok <span class="nw">$O(0, 0)$,</span> <span class="nw">$A(0, 3)$,</span> <span class="nw">$B(4, 2)$,</span> dan <span class="nw">$C(6, 0)$.</span><br>(a) Tentukan semua nilai $k$ agar nilai maksimum <em>hanya</em> terjadi di <span class="nw">$B$.</span><br>(b) Jika $k$ bilangan bulat, tentukan nilai maksimum untuk setiap $k$ tersebut.<br>(c) Di mana maksimum terjadi jika <span class="nw">$k = 8$?</span></li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       D. MENYELESAIKAN MASALAH PROGRAM LINEAR KONTEKSTUAL
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Menyelesaikan Masalah Program Linear Kontekstual</h2>
+
+    <div class="box box-rumus">
+      <div class="box-label">Tiga Tahap Penyelesaian</div>
+      <ol style="margin:0;padding-left:1.3rem;line-height:1.9;"><li><strong>Menyusun model</strong>: variabel, kendala, dan fungsi sasaran.</li><li><strong>Menentukan titik pojok</strong>: gambar daerah layak, cari perpotongan garis, dan periksa semua kendala.</li><li><strong>Menafsirkan nilai optimum</strong>: substitusi titik pojok, pilih nilai terbaik, lalu jawab dalam konteks soal (berapa nilainya, pada kondisi apa, dan apa artinya).</li></ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Sepeda jenis A (harga jual Rp600.000) memerlukan biaya produksi Rp200.000 dan waktu 20 jam. Sepeda jenis B (harga jual Rp800.000) memerlukan biaya Rp100.000 dan waktu 30 jam. Dana tersedia Rp1.200.000 dan waktu kerja 240 jam per bulan. Tentukan hasil penjualan maksimum per bulan!</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">1</span><span>Menyusun model</span></div>
+      <ul class="sol-cek">
+        <li>Biaya: $200.000x + 100.000y$ <span class="nw">$\leq 1.200.000$,</span> disederhanakan $2x + y \leq 12$</li>
+        <li>Waktu: <span class="nw">$20x + 30y \leq 240$,</span> disederhanakan $2x + 3y \leq 24$</li>
+        <li>Penjualan: <span class="nw">$f(x, y) = 600.000x + 800.000y$,</span> dengan $x$ = sepeda A dan $y$ = sepeda B</li>
+      </ul>
+      <div class="sol-part"><span class="sol-tag">2</span><span>Menentukan titik pojok</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari titik potong:</strong> <span class="nw">$(2x + 3y) - (2x + y) = 24 - 12$,</span> jadi $y = 6$ dan <span class="nw">$x = 3$.</span></p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 290 284" width="290" style="max-width:280px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daerah penyelesaian contoh 15">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="264"/><line x1="42" y1="12" x2="42" y2="264"/><line x1="60" y1="12" x2="60" y2="264"/><line x1="78" y1="12" x2="78" y2="264"/><line x1="96" y1="12" x2="96" y2="264"/><line x1="114" y1="12" x2="114" y2="264"/><line x1="132" y1="12" x2="132" y2="264"/><line x1="150" y1="12" x2="150" y2="264"/><line x1="168" y1="12" x2="168" y2="264"/><line x1="186" y1="12" x2="186" y2="264"/><line x1="204" y1="12" x2="204" y2="264"/><line x1="222" y1="12" x2="222" y2="264"/><line x1="240" y1="12" x2="240" y2="264"/><line x1="258" y1="12" x2="258" y2="264"/><line x1="276" y1="12" x2="276" y2="264"/><line x1="24" y1="264" x2="276" y2="264"/><line x1="24" y1="246" x2="276" y2="246"/><line x1="24" y1="228" x2="276" y2="228"/><line x1="24" y1="210" x2="276" y2="210"/><line x1="24" y1="192" x2="276" y2="192"/><line x1="24" y1="174" x2="276" y2="174"/><line x1="24" y1="156" x2="276" y2="156"/><line x1="24" y1="138" x2="276" y2="138"/><line x1="24" y1="120" x2="276" y2="120"/><line x1="24" y1="102" x2="276" y2="102"/><line x1="24" y1="84" x2="276" y2="84"/><line x1="24" y1="66" x2="276" y2="66"/><line x1="24" y1="48" x2="276" y2="48"/><line x1="24" y1="30" x2="276" y2="30"/><line x1="24" y1="12" x2="276" y2="12"/></g>
+        <polygon points="150,246 96,138 42,102 42,246" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="246" x2="284" y2="246" stroke="#555" stroke-width="1.5"/>
+        <path d="M288,246 l-7,-4 v8z" fill="#555"/>
+        <text x="282" y="240" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="42" y1="270" x2="42" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M42,2 l-4,7 h8z" fill="#555"/>
+        <text x="48" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="78" y="258" font-size="9" fill="#777" text-anchor="middle">2</text>
+        <text x="114" y="258" font-size="9" fill="#777" text-anchor="middle">4</text>
+        <text x="186" y="258" font-size="9" fill="#777" text-anchor="middle">8</text>
+        <text x="222" y="258" font-size="9" fill="#777" text-anchor="middle">10</text>
+        <text x="258" y="258" font-size="9" fill="#777" text-anchor="middle">12</text>
+        <text x="38" y="213" font-size="9" fill="#777" text-anchor="end">2</text>
+        <text x="38" y="177" font-size="9" fill="#777" text-anchor="end">4</text>
+        <text x="38" y="141" font-size="9" fill="#777" text-anchor="end">6</text>
+        <text x="38" y="69" font-size="9" fill="#777" text-anchor="end">10</text>
+        <text x="38" y="33" font-size="9" fill="#777" text-anchor="end">12</text>
+        <text x="38" y="258" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="159" y1="264" x2="33" y2="12" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="60" y="37.2" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">2x + y = 12</text>
+        <line x1="24" y1="90" x2="276" y2="258" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="186" y="184.8" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">2x + 3y = 24</text>
+        <circle cx="42" cy="246" r="3.6" fill="#1e293b"/>
+        <circle cx="42" cy="102" r="3.6" fill="#1e293b"/>
+        <text x="37" y="106" font-size="10" fill="#1e293b" text-anchor="end">(0, 8)</text>
+        <circle cx="96" cy="138" r="3.6" fill="#1e293b"/>
+        <text x="102" y="134" font-size="10" fill="#1e293b" text-anchor="start">(3, 6)</text>
+        <circle cx="150" cy="246" r="3.6" fill="#1e293b"/>
+        <text x="150" y="259" font-size="10" fill="#1e293b" text-anchor="middle">(6, 0)</text>
+        <text x="78" y="192" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+      <div class="sol-part"><span class="sol-tag">3</span><span>Menentukan dan menafsirkan nilai optimum</span></div>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Titik pojok</th><th>$f(x, y)$ (rupiah)</th></tr></thead><tbody><tr><td>$(0, 8)$</td><td>$6.400.000$</td></tr><tr class="opt"><td>$(3, 6)$</td><td>$6.600.000$</td></tr><tr><td>$(6, 0)$</td><td>$3.600.000$</td></tr></tbody></table></div>
+      <div class="sol-jadi">hasil penjualan maksimum Rp6.600.000 per bulan, dengan memproduksi 3 sepeda A dan 6 sepeda B.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah kapal penyeberangan mempunyai 70 tempat duduk. Bagasi kelas utama 100 kg per penumpang dan kelas ekonomi 50 kg per penumpang, dengan total bagasi maksimum 5.000 kg. Tiket kelas utama Rp600.000 dan ekonomi Rp300.000. Tentukan pendapatan maksimum per perjalanan!</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">1</span><span>Menyusun model</span></div>
+      <ul class="sol-cek">
+        <li>Tempat duduk: $x + y \leq 70$</li>
+        <li>Bagasi: <span class="nw">$100x + 50y \leq 5.000$,</span> disederhanakan $2x + y \leq 100$</li>
+        <li>Pendapatan: <span class="nw">$f(x, y) = 600.000x + 300.000y$,</span> dengan $x$ = kelas utama dan $y$ = ekonomi</li>
+      </ul>
+      <div class="sol-part"><span class="sol-tag">2</span><span>Menentukan titik pojok</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari titik potong:</strong> <span class="nw">$(2x + y) - (x + y) = 100 - 70$,</span> jadi $x = 30$ dan <span class="nw">$y = 40$.</span></p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 236 296" width="236" style="max-width:260px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daerah penyelesaian contoh 16">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="276"/><line x1="46" y1="12" x2="46" y2="276"/><line x1="68" y1="12" x2="68" y2="276"/><line x1="90" y1="12" x2="90" y2="276"/><line x1="112" y1="12" x2="112" y2="276"/><line x1="134" y1="12" x2="134" y2="276"/><line x1="156" y1="12" x2="156" y2="276"/><line x1="178" y1="12" x2="178" y2="276"/><line x1="200" y1="12" x2="200" y2="276"/><line x1="222" y1="12" x2="222" y2="276"/><line x1="24" y1="276" x2="222" y2="276"/><line x1="24" y1="254" x2="222" y2="254"/><line x1="24" y1="232" x2="222" y2="232"/><line x1="24" y1="210" x2="222" y2="210"/><line x1="24" y1="188" x2="222" y2="188"/><line x1="24" y1="166" x2="222" y2="166"/><line x1="24" y1="144" x2="222" y2="144"/><line x1="24" y1="122" x2="222" y2="122"/><line x1="24" y1="100" x2="222" y2="100"/><line x1="24" y1="78" x2="222" y2="78"/><line x1="24" y1="56" x2="222" y2="56"/><line x1="24" y1="34" x2="222" y2="34"/><line x1="24" y1="12" x2="222" y2="12"/></g>
+        <polygon points="156,254 112,166 46,100 46,254" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="254" x2="230" y2="254" stroke="#555" stroke-width="1.5"/>
+        <path d="M234,254 l-7,-4 v8z" fill="#555"/>
+        <text x="228" y="248" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="46" y1="282" x2="46" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M46,2 l-4,7 h8z" fill="#555"/>
+        <text x="52" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="90" y="266" font-size="9" fill="#777" text-anchor="middle">20</text>
+        <text x="134" y="266" font-size="9" fill="#777" text-anchor="middle">40</text>
+        <text x="178" y="266" font-size="9" fill="#777" text-anchor="middle">60</text>
+        <text x="222" y="266" font-size="9" fill="#777" text-anchor="middle">80</text>
+        <text x="42" y="213" font-size="9" fill="#777" text-anchor="end">20</text>
+        <text x="42" y="169" font-size="9" fill="#777" text-anchor="end">40</text>
+        <text x="42" y="125" font-size="9" fill="#777" text-anchor="end">60</text>
+        <text x="42" y="81" font-size="9" fill="#777" text-anchor="end">80</text>
+        <text x="42" y="37" font-size="9" fill="#777" text-anchor="end">100</text>
+        <text x="42" y="266" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="24" y1="78" x2="222" y2="276" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="156" y="199" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">x + y = 70</text>
+        <line x1="167" y1="276" x2="35" y2="12" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="57" y="42.8" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">2x + y = 100</text>
+        <circle cx="46" cy="254" r="3.6" fill="#1e293b"/>
+        <circle cx="46" cy="100" r="3.6" fill="#1e293b"/>
+        <text x="41" y="104" font-size="10" fill="#1e293b" text-anchor="end">(0, 70)</text>
+        <circle cx="112" cy="166" r="3.6" fill="#1e293b"/>
+        <text x="118" y="162" font-size="10" fill="#1e293b" text-anchor="start">(30, 40)</text>
+        <circle cx="156" cy="254" r="3.6" fill="#1e293b"/>
+        <text x="156" y="267" font-size="10" fill="#1e293b" text-anchor="middle">(50, 0)</text>
+        <text x="81.2" y="201.2" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+      <div class="sol-part"><span class="sol-tag">3</span><span>Menentukan dan menafsirkan nilai optimum</span></div>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Titik pojok</th><th>$f(x, y)$ (rupiah)</th></tr></thead><tbody><tr><td>$(0, 70)$</td><td>$21.000.000$</td></tr><tr class="opt"><td>$(30, 40)$</td><td>$30.000.000$</td></tr><tr class="opt"><td>$(50, 0)$</td><td>$30.000.000$</td></tr></tbody></table></div>
+      <p class="sol-step">Dua titik pojok memberi nilai yang sama. Ini terjadi karena fungsi sasaran $600.000x + 300.000y$ $= 300.000(2x + y)$ sejajar dengan garis bagasi <span class="nw">$2x + y = 100$.</span> Semua titik bulat pada ruas garis dari $(30, 40)$ ke $(50, 0)$ juga optimal (<strong>solusi optimal berganda</strong>).</p>
+      <div class="sol-jadi">pendapatan maksimum Rp30.000.000 per perjalanan, misalnya dengan 30 penumpang kelas utama dan 40 ekonomi, atau 50 penumpang kelas utama saja.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Seorang anak harus memakan dua jenis tablet tiap hari. Tablet I mengandung 2 unit vitamin A dan 2 unit vitamin B; tablet II mengandung 3 unit vitamin A dan 1 unit vitamin B. Kebutuhan harian minimal 12 unit vitamin A dan 8 unit vitamin B. Tablet I seharga Rp500 per butir dan tablet II Rp1.000 per butir. Agar pengeluaran minimum, berapa butir tablet I dan II yang harus dibeli?</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">1</span><span>Menyusun model</span></div>
+      <div class="table-wrap"><table><thead><tr><th>Kandungan</th><th>Tablet I ($x$)</th><th>Tablet II ($y$)</th><th>Kebutuhan minimum</th></tr></thead><tbody><tr><td>Vitamin A</td><td>2</td><td>3</td><td>12</td></tr><tr><td>Vitamin B</td><td>2</td><td>1</td><td>8</td></tr></tbody></table></div>
+      <ul class="sol-cek">
+        <li>Kendala: <span class="nw">$2x + 3y \geq 12$,</span> <span class="nw">$2x + y \geq 8$,</span> <span class="nw">$x \geq 0$,</span> $y \geq 0$</li>
+        <li>Biaya: $f(x, y) = 500x + 1.000y$</li>
+      </ul>
+      <div class="sol-part"><span class="sol-tag">2</span><span>Menentukan titik pojok</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari titik potong:</strong> <span class="nw">$(2x + 3y) - (2x + y) = 12 - 8$,</span> jadi $y = 2$ dan <span class="nw">$x = 3$.</span></p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 236 274" width="236" style="max-width:250px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daerah penyelesaian contoh 17">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="254"/><line x1="46" y1="12" x2="46" y2="254"/><line x1="68" y1="12" x2="68" y2="254"/><line x1="90" y1="12" x2="90" y2="254"/><line x1="112" y1="12" x2="112" y2="254"/><line x1="134" y1="12" x2="134" y2="254"/><line x1="156" y1="12" x2="156" y2="254"/><line x1="178" y1="12" x2="178" y2="254"/><line x1="200" y1="12" x2="200" y2="254"/><line x1="222" y1="12" x2="222" y2="254"/><line x1="24" y1="254" x2="222" y2="254"/><line x1="24" y1="232" x2="222" y2="232"/><line x1="24" y1="210" x2="222" y2="210"/><line x1="24" y1="188" x2="222" y2="188"/><line x1="24" y1="166" x2="222" y2="166"/><line x1="24" y1="144" x2="222" y2="144"/><line x1="24" y1="122" x2="222" y2="122"/><line x1="24" y1="100" x2="222" y2="100"/><line x1="24" y1="78" x2="222" y2="78"/><line x1="24" y1="56" x2="222" y2="56"/><line x1="24" y1="34" x2="222" y2="34"/><line x1="24" y1="12" x2="222" y2="12"/></g>
+        <polygon points="222,232 222,12 46,12 46,56 112,188 178,232" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="232" x2="230" y2="232" stroke="#555" stroke-width="1.5"/>
+        <path d="M234,232 l-7,-4 v8z" fill="#555"/>
+        <text x="228" y="226" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="46" y1="260" x2="46" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M46,2 l-4,7 h8z" fill="#555"/>
+        <text x="52" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="24" y="244" font-size="9" fill="#777" text-anchor="middle">−1</text>
+        <text x="68" y="244" font-size="9" fill="#777" text-anchor="middle">1</text>
+        <text x="90" y="244" font-size="9" fill="#777" text-anchor="middle">2</text>
+        <text x="112" y="244" font-size="9" fill="#777" text-anchor="middle">3</text>
+        <text x="134" y="244" font-size="9" fill="#777" text-anchor="middle">4</text>
+        <text x="156" y="244" font-size="9" fill="#777" text-anchor="middle">5</text>
+        <text x="200" y="244" font-size="9" fill="#777" text-anchor="middle">7</text>
+        <text x="222" y="244" font-size="9" fill="#777" text-anchor="middle">8</text>
+        <text x="42" y="257" font-size="9" fill="#777" text-anchor="end">−1</text>
+        <text x="42" y="213" font-size="9" fill="#777" text-anchor="end">1</text>
+        <text x="42" y="191" font-size="9" fill="#777" text-anchor="end">2</text>
+        <text x="42" y="169" font-size="9" fill="#777" text-anchor="end">3</text>
+        <text x="42" y="147" font-size="9" fill="#777" text-anchor="end">4</text>
+        <text x="42" y="125" font-size="9" fill="#777" text-anchor="end">5</text>
+        <text x="42" y="103" font-size="9" fill="#777" text-anchor="end">6</text>
+        <text x="42" y="81" font-size="9" fill="#777" text-anchor="end">7</text>
+        <text x="42" y="37" font-size="9" fill="#777" text-anchor="end">9</text>
+        <text x="42" y="15" font-size="9" fill="#777" text-anchor="end">10</text>
+        <text x="42" y="244" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="24" y1="129.3" x2="211" y2="254" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="156" y="210" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">2x + 3y = 12</text>
+        <line x1="24" y1="12" x2="145" y2="254" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="76.8" y="86.8" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">2x + y = 8</text>
+        <circle cx="46" cy="56" r="3.6" fill="#1e293b"/>
+        <text x="41" y="60" font-size="10" fill="#1e293b" text-anchor="end">(0, 8)</text>
+        <circle cx="112" cy="188" r="3.6" fill="#1e293b"/>
+        <text x="106" y="184" font-size="10" fill="#1e293b" text-anchor="end">(3, 2)</text>
+        <circle cx="178" cy="232" r="3.6" fill="#1e293b"/>
+        <text x="178" y="245" font-size="10" fill="#1e293b" text-anchor="middle">(6, 0)</text>
+        <text x="156" y="100" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+      <div class="sol-part"><span class="sol-tag">3</span><span>Menentukan dan menafsirkan nilai optimum</span></div>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Titik pojok</th><th>$f(x, y)$ (rupiah)</th></tr></thead><tbody><tr><td>$(0, 8)$</td><td>$8.000$</td></tr><tr><td>$(3, 2)$</td><td>$3.500$</td></tr><tr class="opt"><td>$(6, 0)$</td><td>$3.000$</td></tr></tbody></table></div>
+      <div class="sol-jadi">pengeluaran minimum Rp3.000, dengan membeli 6 butir tablet I tanpa tablet II.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Buku jenis A dibeli Rp2.500 dan dijual Rp3.000. Buku jenis B dibeli Rp5.000 dan dijual Rp6.000. Seorang pedagang bermodal Rp2.500.000 dan kiosnya menampung maksimum 600 buku. Tentukan keuntungan maksimumnya!</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">1</span><span>Menyusun model</span></div>
+      <ul class="sol-cek">
+        <li>Laba per buku: A <span class="nw">$= 3.000 - 2.500 = 500$,</span> B $= 6.000 - 5.000 = 1.000$ rupiah</li>
+        <li>Kapasitas: $x + y \leq 600$</li>
+        <li>Modal: <span class="nw">$2.500x + 5.000y \leq 2.500.000$,</span> disederhanakan $x + 2y \leq 1.000$</li>
+        <li>Laba: $f(x, y) = 500x + 1.000y$</li>
+      </ul>
+      <div class="sol-part"><span class="sol-tag">2</span><span>Menentukan titik pojok</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari titik potong:</strong> $(x + 2y) - (x + y)$ <span class="nw">$= 1.000 - 600$,</span> jadi $y = 400$ dan <span class="nw">$x = 200$.</span></p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 302 208" width="302" style="max-width:280px;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daerah penyelesaian contoh 18">
+        <g stroke="#e2e8f0" stroke-width="0.7"><line x1="24" y1="12" x2="24" y2="188"/><line x1="46" y1="12" x2="46" y2="188"/><line x1="68" y1="12" x2="68" y2="188"/><line x1="90" y1="12" x2="90" y2="188"/><line x1="112" y1="12" x2="112" y2="188"/><line x1="134" y1="12" x2="134" y2="188"/><line x1="156" y1="12" x2="156" y2="188"/><line x1="178" y1="12" x2="178" y2="188"/><line x1="200" y1="12" x2="200" y2="188"/><line x1="222" y1="12" x2="222" y2="188"/><line x1="244" y1="12" x2="244" y2="188"/><line x1="266" y1="12" x2="266" y2="188"/><line x1="288" y1="12" x2="288" y2="188"/><line x1="24" y1="188" x2="288" y2="188"/><line x1="24" y1="166" x2="288" y2="166"/><line x1="24" y1="144" x2="288" y2="144"/><line x1="24" y1="122" x2="288" y2="122"/><line x1="24" y1="100" x2="288" y2="100"/><line x1="24" y1="78" x2="288" y2="78"/><line x1="24" y1="56" x2="288" y2="56"/><line x1="24" y1="34" x2="288" y2="34"/><line x1="24" y1="12" x2="288" y2="12"/></g>
+        <polygon points="178,166 90,78 46,56 46,166" fill="#3B82F6" fill-opacity="0.22" stroke="none"/>
+        <line x1="18" y1="166" x2="296" y2="166" stroke="#555" stroke-width="1.5"/>
+        <path d="M300,166 l-7,-4 v8z" fill="#555"/>
+        <text x="294" y="160" font-size="11" fill="#555" font-style="italic">x</text>
+        <line x1="46" y1="194" x2="46" y2="6" stroke="#555" stroke-width="1.5"/>
+        <path d="M46,2 l-4,7 h8z" fill="#555"/>
+        <text x="52" y="10" font-size="11" fill="#555" font-style="italic">y</text>
+        <text x="90" y="178" font-size="9" fill="#777" text-anchor="middle">200</text>
+        <text x="134" y="178" font-size="9" fill="#777" text-anchor="middle">400</text>
+        <text x="222" y="178" font-size="9" fill="#777" text-anchor="middle">800</text>
+        <text x="266" y="178" font-size="9" fill="#777" text-anchor="middle">1000</text>
+        <text x="42" y="125" font-size="9" fill="#777" text-anchor="end">200</text>
+        <text x="42" y="81" font-size="9" fill="#777" text-anchor="end">400</text>
+        <text x="42" y="37" font-size="9" fill="#777" text-anchor="end">600</text>
+        <text x="42" y="178" font-size="9" fill="#777" text-anchor="end">O</text>
+        <line x1="24" y1="12" x2="200" y2="188" stroke="#e53e3e" stroke-width="2.2"/>
+        <text x="51.5" y="25.2" font-size="10" fill="#e53e3e" font-weight="600" text-anchor="start">x + y = 600</text>
+        <line x1="24" y1="45" x2="288" y2="177" stroke="#3B82F6" stroke-width="2.2"/>
+        <text x="167" y="100" font-size="10" fill="#3B82F6" font-weight="600" text-anchor="start">x + 2y = 1.000</text>
+        <circle cx="46" cy="166" r="3.6" fill="#1e293b"/>
+        <circle cx="46" cy="56" r="3.6" fill="#1e293b"/>
+        <text x="41" y="60" font-size="10" fill="#1e293b" text-anchor="end">(0, 500)</text>
+        <circle cx="90" cy="78" r="3.6" fill="#1e293b"/>
+        <text x="94" y="72" font-size="10" fill="#1e293b" text-anchor="start">(200, 400)</text>
+        <circle cx="178" cy="166" r="3.6" fill="#1e293b"/>
+        <text x="178" y="179" font-size="10" fill="#1e293b" text-anchor="middle">(600, 0)</text>
+        <text x="79" y="126.4" font-size="12" fill="#3B82F6" font-weight="700" text-anchor="middle">HP</text>
+        </svg>
+      </div>
+      <div class="sol-part"><span class="sol-tag">3</span><span>Menentukan dan menafsirkan nilai optimum</span></div>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Titik pojok</th><th>$f(x, y)$ (rupiah)</th></tr></thead><tbody><tr class="opt"><td>$(0, 500)$</td><td>$500.000$</td></tr><tr class="opt"><td>$(200, 400)$</td><td>$500.000$</td></tr><tr><td>$(600, 0)$</td><td>$300.000$</td></tr></tbody></table></div>
+      <p class="sol-step">Fungsi laba $500x + 1.000y = 500(x + 2y)$ sejajar dengan garis modal, sehingga terjadi solusi optimal berganda.</p>
+      <div class="sol-jadi">keuntungan maksimum Rp500.000, misalnya dengan membeli 500 buku B saja atau 200 buku A dan 400 buku B.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Jawab Pertanyaan Soal Secara Lengkap</div>
+      <p style="margin:0;font-size:.9rem;">Nilai optimum saja belum cukup. Tuliskan <strong>berapa</strong> nilainya (dengan satuan), <strong>pada kondisi apa</strong> nilai itu dicapai (nilai $x$ dan $y$), dan <strong>apa artinya</strong> dalam konteks soal. Contoh: “Penjualan maksimum Rp6.600.000 per bulan diperoleh dengan memproduksi 3 sepeda A dan 6 sepeda B.”</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan — Bagian D</div>
+      <ol class="soal-list">
+        <li>Pedagang buah menjual mangga (laba Rp2.000/kg) dan jeruk (laba Rp1.500/kg). Kapasitas gerobak 50 kg dan modal Rp400.000; harga beli mangga Rp10.000/kg dan jeruk Rp6.000/kg. Tentukan keuntungan maksimumnya!</li>
+        <li>Pakan P (Rp1.000/kg) mengandung 2 unit protein dan 1 unit karbohidrat per kg. Pakan Q (Rp1.500/kg) mengandung 1 unit protein dan 2 unit karbohidrat per kg. Ternak memerlukan minimal 10 unit protein dan 8 unit karbohidrat per hari. Tentukan komposisi pakan agar biaya minimum!</li>
+        <li>Sepatu sport (untung Rp40.000/pasang) memerlukan 2 dm$^2$ kulit dan 1 jam kerja; sepatu formal (untung Rp60.000/pasang) memerlukan 3 dm$^2$ kulit dan 2 jam kerja. Tersedia kulit 120 dm$^2$ dan waktu 60 jam. Tentukan produksi optimal dan keuntungan maksimumnya!</li>
+        <li>Pedagang keliling menjual botol kecil (laba Rp800) dan botol besar (laba Rp1.200). Tasnya memuat maksimum 40 botol. Harga beli botol kecil Rp2.000 dan botol besar Rp4.000, dengan modal Rp100.000. Tentukan komposisi dagangan agar laba maksimum!</li>
+        <li>Suplemen X (Rp5.000/kapsul) mengandung 3 mg zat besi dan 4 mg kalsium; suplemen Y (Rp8.000/kapsul) mengandung 5 mg zat besi dan 2 mg kalsium. Pasien perlu minimal 15 mg zat besi dan 12 mg kalsium per hari.<br>(a) Susunlah modelnya.<br>(b) Tentukan titik-titik pojok daerah penyelesaian.<br>(c) Karena kapsul harus utuh, berapa kapsul masing-masing agar biaya minimum?</li>
+        <li><strong>[HOTS]</strong> Gelang A memerlukan 10 cm kawat dan 5 cm benang; gelang B memerlukan 6 cm kawat dan 8 cm benang. Tersedia kawat 120 cm dan benang 80 cm. Gelang A dijual Rp15.000 dan gelang B Rp20.000.<br>(a) Susunlah modelnya dan tentukan titik pojoknya.<br>(b) Tentukan pendapatan maksimum jika gelang boleh dihitung pecahan, lalu jika gelang harus utuh.<br>(c) Jika harga gelang A naik menjadi Rp40.000, apakah komposisi optimal berubah? Jelaskan dengan gradien.</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       E. TABEL RINGKASAN PROGRAM LINEAR
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Tabel Ringkasan Program Linear</h2>
+
+    <h3 class="subsection-title">1. Struktur Model dan Arah Tanda</h3>
+    <div class="table-wrap" style="margin-top:.5rem;"><table><thead><tr><th>Komponen</th><th>Bentuk</th><th>Keterangan</th></tr></thead><tbody><tr><td>Kendala batas atas</td><td>$ax + by \leq p$</td><td>persediaan, modal, kapasitas, “maksimal”</td></tr><tr><td>Kendala batas bawah</td><td>$ax + by \geq p$</td><td>kebutuhan, “minimal”, “paling sedikit”</td></tr><tr><td>Syarat tak negatif</td><td><span class="nw">$x \geq 0$,</span> $y \geq 0$</td><td>selalu ditulis</td></tr><tr><td>Fungsi sasaran</td><td>$f(x, y) = cx + dy$</td><td>laba = jual − beli; pendapatan = harga jual</td></tr></tbody></table></div>
+
+    <h3 class="subsection-title">2. Menentukan Nilai Optimum</h3>
+    <div class="table-wrap" style="margin-top:.5rem;"><table><thead><tr><th>Metode</th><th>Langkah</th><th>Kapan dipakai</th></tr></thead><tbody><tr><td>Titik pojok</td><td>Cari semua titik pojok, substitusi ke <span class="nw">$f$,</span> bandingkan</td><td>Selalu bisa; aman untuk semua soal</td></tr><tr><td>Garis selidik</td><td>Geser $ax + by = k$ sejajar; bandingkan gradien</td><td>Cepat untuk soal pilihan ganda</td></tr></tbody></table></div>
+
+    <h3 class="subsection-title">3. Kasus Khusus</h3>
+    <div class="table-wrap" style="margin-top:.5rem;"><table><thead><tr><th>Kasus</th><th>Ciri</th><th>Kesimpulan</th></tr></thead><tbody><tr><td>Optimal berganda</td><td>Fungsi sasaran sejajar garis batas</td><td>Seluruh ruas garis di antara dua titik pojok optimal</td></tr><tr><td>Daerah tak terbatas</td><td>Kendala $\geq$ tanpa batas atas</td><td>Minimum bisa ada, maksimum bisa tidak ada</td></tr><tr><td>Solusi bulat</td><td>Titik optimum berupa pecahan</td><td>Periksa titik bulat di daerah layak sekitar titik optimum</td></tr></tbody></table></div>
+
+  </section>
+
+  <!-- ACTION FOOTER -->
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <div class="footer-nav">
+      <a class="nav-btn" href="../pertidaksamaan-linear/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Sistem Pertidaksamaan Linier
+      </a>
+      <a class="nav-btn" href="../persamaan-kuadrat/">
+        Persamaan Kuadrat
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <div class="footer-actions">
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+
+  <!-- SECTION KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Disqus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi ini? Tulis di kolom diskusi. Login dengan akun Google.</p>
+    <div id="disqus_thread"></div>
+    <script>
+    (function() {
+      var disqusLoaded = false;
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !disqusLoaded) {
+          disqusLoaded = true;
+          observer.disconnect();
+          var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://eksaktalab.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      }, { threshold: 0.1 });
+      var thread = document.getElementById('disqus_thread');
+      if (thread) observer.observe(thread);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── Scroll progress + scroll-to-top ────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible'); else btn.classList.remove('visible');
+});
+
+// ── TOC Dropdown ───────────────────────────────────────────────────────────────
+function toggleTOC() { document.getElementById('tocDropdown').classList.toggle('open'); }
+function closeTOC()  { document.getElementById('tocDropdown').classList.remove('open'); }
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+
+// ── Bookmark ──────────────────────────────────────────────────────────────────
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ────────────────────────────────────────────────────────────────────────────────
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({ title: 'Program Linear — EksaktaLab', text: 'Pelajari program linear di EksaktaLab, lengkap dengan contoh soal dan pembahasan.', url: window.location.href });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+
+// ── SHARED HELPERS ──────────────────────────────────────────────────────────────────
+const chevronSVG = () => '<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11"><polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) MathJax.typesetPromise([typesetEl]).catch(() => {});
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); } });
+}
+
+// ── 1. BOX RUMUS → accordion ──────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.box.box-rumus').forEach(box => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+    let bodyHTML = '';
+    box.childNodes.forEach(n => { if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || ''); });
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body"><div class="rumus-body-inner">${bodyHTML.trim()}</div></div>`;
+    const header = wrap.querySelector('.rumus-header');
+    const status = wrap.querySelector('.rumus-status');
+    const inner  = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, status, wrap.querySelector('.rumus-body'), inner);
+    box.replaceWith(wrap);
+  });
+
+// ── 2. BOX CONTOH → accordion ───────────────────────────────────────────────────
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+    let qHTML = '';
+    box.childNodes.forEach(n => { if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || ''); });
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header"><span class="solve-dot"></span><span class="solve-title">Penyelesaian</span></div>
+          <div class="penyelesaian-inner">
+            ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
+          </div>
+        </div>
+      </div>`;
+    const header = wrap.querySelector('.contoh-header');
+    const pi     = wrap.querySelector('.penyelesaian-inner');
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); } });
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+// ── 3. BUKA / TUTUP SEMUA per section ─────────────────────────────────────────────
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+    const updateBtn = () => { btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`; };
+    updateBtn();
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+// ── 4. SOAL LATIHAN → accordion kunci jawaban ─────────────────────────────────────────
+  const jawabanData = {
+    // Bagian B
+    0: [
+      { jawaban: `$x + y \\leq 80$; $20.000x + 50.000y \\leq 2.500.000$ $\\Rightarrow$ $2x + 5y \\leq 250$; $x \\geq 0$, $y \\geq 0$.` },
+      { jawaban: `$x + y \\leq 20$ (lahan); $2x + 3y \\leq 45$ (pupuk); $x \\geq 0$, $y \\geq 0$.` },
+      { jawaban: `$3x + 4y \\geq 120$ (energi); $2x + 5y \\leq 200$ (emisi); $x \\geq 0$, $y \\geq 0$; biaya minimum $f(x, y) = 8.000x + 12.000y$.` },
+      { jawaban: `Tepung: $200x + 300y \\leq 6.000$ $\\Rightarrow$ $2x + 3y \\leq 60$. Gula: $100x + 150y \\leq 3.000$ $\\Rightarrow$ $2x + 3y \\leq 60$. Waktu: $20x + 30y \\leq 480$ $\\Rightarrow$ $2x + 3y \\leq 48$. Ketiganya sejajar dan kendala waktu paling ketat, jadi model cukup $2x + 3y \\leq 48$, $x \\geq 0$, $y \\geq 0$, $f(x, y) = 15.000x + 25.000y$.` },
+      { jawaban: `Volume: $2x + 4y \\leq 40$ $\\Rightarrow$ $x + 2y \\leq 20$. Berat: $x + 0{,}5y \\leq 15$ $\\Rightarrow$ $2x + y \\leq 30$. $x \\geq 0$, $y \\geq 0$; $f(x, y) = 500.000x + 300.000y$.` },
+      { jawaban: `(a) Plastik $5x + 3y \\leq 150$, kardus $2x + y \\leq 60$, $x, y \\geq 0$ &nbsp;|&nbsp; (b) Kedua garis memotong sumbu $x$ di $(30, 0)$, tetapi garis plastik memotong sumbu $y$ di $(0, 50)$, di bawah $(0, 60)$. Seluruh daerah plastik termuat dalam daerah kardus, jadi kendala kardus tidak membatasi &nbsp;|&nbsp; (c) Titik pojok $(0, 0)$, $(30, 0)$, $(0, 50)$: $f = 240.000$ dan $250.000$. Maksimum Rp250.000 di $(0, 50)$.` },
+    ],
+    // Bagian C
+    1: [
+      { jawaban: `$f(O) = 0$, $f(A) = 8$, $f(B) = 12$, $f(C) = 15$. Maksimum $15$ di $C(5, 0)$.` },
+      { jawaban: `$f(A) = 12$, $f(B) = 8$, $f(C) = 8$. Minimum $8$ dicapai di $B$ dan $C$ sekaligus (solusi optimal berganda), karena $x + 2y$ sejajar dengan sisi $BC$.` },
+      { jawaban: `Titik pojok $(0, 0)$, $(0, 4)$, $(2, 3)$, $(5, 0)$. Nilai $f$: $0$, $4$, $11$, $20$. Maksimum $20$ di $(5, 0)$.` },
+      { jawaban: `Titik pojok $(0, 6)$, $(2, 2)$, $(4, 0)$. Nilai $f$: $30$, $16$, $12$. Minimum $12$ di $(4, 0)$.` },
+      { jawaban: `Titik pojok $(0, 0)$, $(0, 6)$, $(3;\\, 4{,}5)$, $(6, 0)$. Nilai $f$: $0$, $30$, $28{,}5$, $12$. Maksimum $30$ di $(0, 6)$, minimum $0$ di $(0, 0)$.` },
+      { jawaban: `Gradien $x + y = 6$ adalah $-1$, gradien $2x + y = 10$ adalah $-2$, gradien $5x + 4y = k$ adalah $-\\tfrac{5}{4}$. Karena $-2 &lt; -\\tfrac{5}{4} &lt; -1$, maksimum di titik potong kedua garis, yaitu $(4, 2)$, dengan $f = 28$. Cek: $f(0, 6) = 24$, $f(5, 0) = 25$.` },
+      { jawaban: `Titik pojok $(0, 3)$, $(3, 0)$, $(4, 0)$; daerah tak terbatas ke atas di antara $x = 0$ dan $x = 4$. Minimum $f = 3$ di $(0, 3)$. Maksimum tidak ada karena $y$ dapat dibuat sebesar apa pun.` },
+      { jawaban: `(a) $f(A) = 12$, $f(B) = 4k + 8$, $f(C) = 6k$. Syarat $4k + 8 > 12$ dan $4k + 8 > 6k$ memberi $1 &lt; k &lt; 4$ &nbsp;|&nbsp; (b) $k = 2$: maksimum $16$; $k = 3$: maksimum $20$ &nbsp;|&nbsp; (c) $f(A) = 12$, $f(B) = 40$, $f(C) = 48$; maksimum $48$ di $C(6, 0)$.` },
+    ],
+    // Bagian D
+    2: [
+      { jawaban: `$x + y \\leq 50$, $5x + 3y \\leq 200$. Titik pojok $(0, 50)$, $(25, 25)$, $(40, 0)$ dengan laba $75.000$, $87.500$, $80.000$. Maksimum Rp87.500 dengan 25 kg mangga dan 25 kg jeruk.` },
+      { jawaban: `$2x + y \\geq 10$, $x + 2y \\geq 8$, biaya $f = 1.000x + 1.500y$. Titik pojok $(0, 10)$, $(4, 2)$, $(8, 0)$ dengan biaya $15.000$, $7.000$, $8.000$. Minimum Rp7.000 dengan 4 kg pakan P dan 2 kg pakan Q.` },
+      { jawaban: `$2x + 3y \\leq 120$, $x + 2y \\leq 60$. Kedua garis memotong sumbu $x$ di $(60, 0)$ dan garis kulit seluruhnya di atas garis waktu, jadi titik pojoknya $(0, 0)$, $(0, 30)$, $(60, 0)$. Keuntungan $1.800.000$ dan $2.400.000$. Maksimum Rp2.400.000 dengan 60 pasang sepatu sport.` },
+      { jawaban: `$x + y \\leq 40$, $x + 2y \\leq 50$. Titik pojok $(0, 25)$, $(30, 10)$, $(40, 0)$ dengan laba $30.000$, $36.000$, $32.000$. Maksimum Rp36.000 dengan 30 botol kecil dan 10 botol besar.` },
+      { jawaban: `(a) $3x + 5y \\geq 15$, $2x + y \\geq 6$, $x, y \\geq 0$, biaya $f = 5.000x + 8.000y$ &nbsp;|&nbsp; (b) $(0, 6)$, $\\left(\\tfrac{15}{7}, \\tfrac{12}{7}\\right)$, $(5, 0)$ dengan biaya $48.000$, $\\approx 24.429$, $25.000$ &nbsp;|&nbsp; (c) Titik $\\left(\\tfrac{15}{7}, \\tfrac{12}{7}\\right)$ tidak bulat. Titik bulat terdekat yang memenuhi: $(2, 2)$ biaya $26.000$, $(4, 1)$ biaya $28.000$, $(5, 0)$ biaya $25.000$. Minimum Rp25.000 dengan 5 kapsul X.` },
+      { jawaban: `(a) $5x + 3y \\leq 60$, $5x + 8y \\leq 80$, $x, y \\geq 0$; titik pojok $(0, 0)$, $(12, 0)$, $\\left(\\tfrac{48}{5}, 4\\right)$, $(0, 10)$ &nbsp;|&nbsp; (b) Pecahan: maksimum Rp224.000 di $(9{,}6;\\, 4)$. Utuh: periksa titik bulat di sekitarnya, misalnya $(9, 4)$ Rp215.000 dan $(10, 3)$ Rp210.000; terbesar $(8, 5)$ Rp220.000 &nbsp;|&nbsp; (c) Gradien $40.000x + 20.000y$ adalah $-2$, lebih curam daripada garis kawat ($-\\tfrac{5}{3}$), sehingga maksimum pindah ke $(12, 0)$: 12 gelang A, Rp480.000.` },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+    const items   = [...list.querySelectorAll('li')];
+    const newList = document.createElement('div');
+    newList.className = 'soal-list-accordion';
+    items.forEach((li, i) => {
+      const jawaban = answers[i]?.jawaban || '';
+      const item = document.createElement('div');
+      item.className = 'soal-item';
+      item.innerHTML = `
+        <div class="soal-item-header" role="button" tabindex="0">
+          <span class="soal-num">${i+1}</span>
+          <span class="soal-text">${li.innerHTML}</span>
+          <button class="soal-key-btn" tabindex="-1">Kunci</button>
+        </div>
+        <div class="soal-answer">
+          <div class="soal-answer-inner">
+            <div class="soal-answer-label">Jawaban</div>
+            ${jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
+          </div>
+        </div>`;
+      const header = item.querySelector('.soal-item-header');
+      const toggle = () => {
+        const open = item.classList.toggle('open');
+        if (open && window.MathJax) MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(() => {});
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+      newList.appendChild(item);
+    });
+    list.replaceWith(newList);
+  });
+
+});
+</script>
+
+<!-- FOOTER -->
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+</body>
+</html>
