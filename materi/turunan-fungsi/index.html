@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
 <link rel="apple-touch-icon" href="../../assets/favicon.svg">
-<meta name="description" content="Materi lengkap Turunan Fungsi SMA: definisi, aturan dasar, aturan rantai, garis singgung, fungsi naik/turun, titik stasioner, kecekungan, turunan trigonometri, melukis grafik, dan aplikasi. Dilengkapi 39 contoh soal dan pembahasan.">
+<meta name="description" content="Materi lengkap Turunan Fungsi SMA: definisi, aturan dasar, aturan rantai, garis singgung, fungsi naik/turun, titik stasioner, kecekungan, turunan trigonometri, melukis grafik, dan aplikasi. Dilengkapi 42 contoh soal dan pembahasan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
@@ -63,9 +63,9 @@ window.MathJax = {
         <div class="toc-menu-header">Turunan Fungsi &middot; 8 Sub-bab</div>
         <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Definisi &amp; Aturan Dasar</a>
         <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Pengembangan Rumus Turunan</a>
-        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Persamaan Garis Singgung</a>
-        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Fungsi Naik, Turun &amp; Stasioner</a>
-        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Turunan Fungsi Trigonometri</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Turunan Fungsi Trigonometri</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Persamaan Garis Singgung</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Fungsi Naik, Turun &amp; Stasioner</a>
         <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Melukis Grafik Fungsi Polinom</a>
         <a class="toc-menu-item" href="#bagian-g" onclick="closeTOC()"><span class="toc-menu-badge">G</span>Aplikasi Turunan</a>
         <a class="toc-menu-item" href="#bagian-h" onclick="closeTOC()"><span class="toc-menu-badge">H</span>Ringkasan Rumus</a>
@@ -102,7 +102,7 @@ window.MathJax = {
       <div class="materi-tags">
         <span class="tag">Kalkulus</span>
         <span class="tag">8 Sub-bab</span>
-        <span class="tag">39 Contoh Soal</span>
+        <span class="tag">42 Contoh Soal</span>
       </div>
     </div>
   </div>
@@ -220,9 +220,9 @@ window.MathJax = {
     <ul class="toc-list">
       <li><a href="#bagian-a" data-num="A">Definisi &amp; Aturan Dasar Turunan</a></li>
       <li><a href="#bagian-b" data-num="B">Pengembangan Rumus Turunan</a></li>
-      <li><a href="#bagian-c" data-num="C">Persamaan Garis Singgung Kurva</a></li>
-      <li><a href="#bagian-d" data-num="D">Fungsi Naik, Turun, dan Titik Stasioner</a></li>
-      <li><a href="#bagian-e" data-num="E">Turunan Fungsi Trigonometri</a></li>
+      <li><a href="#bagian-c" data-num="C">Turunan Fungsi Trigonometri</a></li>
+      <li><a href="#bagian-d" data-num="D">Persamaan Garis Singgung Kurva</a></li>
+      <li><a href="#bagian-e" data-num="E">Fungsi Naik, Turun, dan Titik Stasioner</a></li>
       <li><a href="#bagian-f" data-num="F">Melukis Grafik Fungsi Polinom</a></li>
       <li><a href="#bagian-g" data-num="G">Aplikasi Turunan dalam Kehidupan</a></li>
       <li><a href="#bagian-h" data-num="H">Ringkasan Rumus Turunan</a></li>
@@ -246,7 +246,7 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Notasi Turunan</div>
-      <div class="math-block">$$y' \quad \text{atau} \quad f'(x) \quad \text{atau} \quad \frac{dy}{dx} \quad \text{atau} \quad \frac{df}{dx}$$</div>
+      <div class="math-block">$$ \begin{gather*} y' \\ \text{atau} \\ f'(x) \\ \text{atau} \\ \frac{dy}{dx} \\ \text{atau} \\ \frac{df}{dx} \end{gather*} $$</div>
     </div>
 
     <div class="box box-catatan">
@@ -255,7 +255,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 1</div>
+      <div class="box-label">📘 Contoh 1</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Dengan menggunakan definisi turunan, tentukanlah turunan dari:</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$f(x) = 3x - 5$</li>
@@ -264,11 +264,22 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$$f'(x) = \lim_{h \to 0} \frac{[3(x+h)-5]-[3x-5]}{h} = \lim_{h \to 0} \frac{3h}{h} = \boxed{3}$$</li>
-        <li>$$\begin{align*} f'(x) &= \lim_{h \to 0} \frac{[4(x+h)^2+3(x+h)]-[4x^2+3x]}{h} \\ &= \lim_{h \to 0} \frac{8hx+4h^2+3h}{h} = \lim_{h \to 0}(8x+4h+3) = \boxed{8x+3} \end{align*}$$</li>
-        <li>$$\begin{align*} f'(x) &= \lim_{h \to 0} \frac{[(x+h)^3-2(x+h)]-[x^3-2x]}{h} \\ &= \lim_{h \to 0} \frac{3x^2h+3xh^2+h^3-2h}{h} = \lim_{h \to 0}(3x^2+3xh+h^2-2) = \boxed{3x^2-2} \end{align*}$$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$f(x) = 3x - 5$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Selisih fungsi:</strong> $f(x + h) - f(x)$ $= 3(x + h) - 5 - (3x - 5)$ $= 3h$.</p>
+      $$f'(x) = \lim_{h \to 0} \frac{3h}{h} = 3$$
+      <div class="sol-jadi">$f'(x) = 3$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$f(x) = 4x^2 + 3x$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Selisih fungsi:</strong></p>
+      $$ \begin{align*} &f(x + h) - f(x) \\ &= 4(x + h)^2 + 3(x + h) - 4x^2 - 3x \\ &= 8xh + 4h^2 + 3h \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bagi dengan $h$,</strong> lalu $h \to 0$:</p>
+      $$ \begin{align*} f'(x) &= \lim_{h \to 0} (8x + 4h + 3) \\ &= 8x + 3 \end{align*} $$
+      <div class="sol-jadi">$f'(x) = 8x + 3$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$f(x) = x^3 - 2x$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Selisih fungsi:</strong></p>
+      $$ \begin{align*} &f(x + h) - f(x) \\ &= (x + h)^3 - 2(x + h) - x^3 + 2x \\ &= 3x^2h + 3xh^2 + h^3 - 2h \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bagi dengan $h$,</strong> lalu $h \to 0$:</p>
+      $$ \begin{align*} f'(x) &= \lim_{h \to 0} (3x^2 + 3xh + h^2 - 2) \end{align*} $$
+      <div class="sol-jadi">$f'(x) = 3x^2 - 2$.</div>
     </div>
 
     <h3 class="subsection-title">2. Rumus Dasar Turunan Fungsi Aljabar</h3>
@@ -290,32 +301,42 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Aturan Pangkat</div>
-      <div class="math-block">$$\text{Jika } f(x) = ax^n, \text{ maka } f'(x) = n \cdot ax^{n-1}$$</div>
+      <div class="math-block">$$ \begin{align*} \text{Jika } f(x) &= ax^n, \text{ maka } f'(x) \\ &= n \cdot ax^{n-1} \end{align*} $$</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 2</div>
+      <div class="box-label">📘 Contoh 2</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan pertama dari setiap fungsi berikut:</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$f(x) = 7$</li>
         <li>$f(x) = -4x$</li>
-        <li>$f(x) = 3x^{-2} + 4x^{-5} - 4x^{-1}$</li>
-        <li>$f(x) = 6x^{1/2} - 12x^{-1/3} + 4x^{3/2} + 5$</li>
-        <li>$f(x) = 3\sqrt{x} - 2\sqrt[3]{x^2} + \sqrt[4]{x^3}$</li>
-        <li>$f(x) = \dfrac{5}{x} - \dfrac{3}{x^2} + \dfrac{2}{x^4}$</li>
+        <li>$f(x) = 3x^{-2}$ $+ 4x^{-5}$ $- 4x^{-1}$</li>
+        <li>$f(x) = 6x^{1/2}$ $- 12x^{-1/3}$ $+ 4x^{3/2}$ $+ 5$</li>
+        <li>$f(x) = 3\sqrt{x}$ $- 2\sqrt[3]{x^2}$ $+ \sqrt[4]{x^3}$</li>
+        <li>$f(x) = \dfrac{5}{x}$ $- \dfrac{3}{x^2}$ $+ \dfrac{2}{x^4}$</li>
       </ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$f(x) = 7x^0 \;\Rightarrow\; f'(x) = \boxed{0}$</li>
-        <li>$f(x) = -4x^1 \;\Rightarrow\; f'(x) = \boxed{-4}$</li>
-        <li>$$f'(x) = 3(-2)x^{-3}+4(-5)x^{-6}-4(-1)x^{-2} = \boxed{-6x^{-3}-20x^{-6}+4x^{-2}}$$</li>
-        <li>$$f'(x) = 6\cdot\tfrac{1}{2}x^{-1/2} - 12\cdot(-\tfrac{1}{3})x^{-4/3} + 4\cdot\tfrac{3}{2}x^{1/2} = \boxed{3x^{-1/2}+4x^{-4/3}+6x^{1/2}}$$</li>
-        <li>Ubah ke pangkat pecahan: $f(x) = 3x^{1/2}-2x^{2/3}+x^{3/4}$
-          $$f'(x) = \tfrac{3}{2}x^{-1/2}-\tfrac{4}{3}x^{-1/3}+\tfrac{3}{4}x^{-1/4} = \boxed{\dfrac{3}{2\sqrt{x}}-\dfrac{4}{3\sqrt[3]{x}}+\dfrac{3}{4\sqrt[4]{x}}}$$</li>
-        <li>Ubah ke pangkat negatif: $f(x) = 5x^{-1}-3x^{-2}+2x^{-4}$
-          $$f'(x) = -5x^{-2}+6x^{-3}-8x^{-5} = \boxed{-\dfrac{5}{x^2}+\dfrac{6}{x^3}-\dfrac{8}{x^5}}$$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$f(x) = 7$</span></div>
+      <p class="sol-step">Turunan konstanta selalu nol.</p>
+      <div class="sol-jadi">$f'(x) = 0$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$f(x) = -4x$</span></div>
+      <p class="sol-step">Turunan $ax$ adalah $a$.</p>
+      <div class="sol-jadi">$f'(x) = -4$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Pangkat negatif</span></div>
+      $$ \begin{align*} &f'(x) \\  &= 3(-2)x^{-3} \\ &\quad + 4(-5)x^{-6} \\ &\quad - 4(-1)x^{-2} \end{align*} $$
+      <div class="sol-jadi">$f'(x)$ $= -6x^{-3}$ $- 20x^{-6}$ $+ 4x^{-2}$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>Pangkat pecahan</span></div>
+      $$ \begin{align*} f'(x) &= 6 \cdot \tfrac{1}{2}x^{-1/2} - 12\left(-\tfrac{1}{3}\right)x^{-4/3} \\ &\quad + 4 \cdot \tfrac{3}{2}x^{1/2} \end{align*} $$
+      <div class="sol-jadi">$f'(x)$ $= 3x^{-1/2}$ $+ 4x^{-4/3}$ $+ 6x^{1/2}$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span><span>Bentuk akar</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah ke pangkat pecahan:</strong> $f(x) = 3x^{1/2}$ $- 2x^{2/3}$ $+ x^{3/4}$.</p>
+      $$f'(x) = \tfrac{3}{2}x^{-1/2} - \tfrac{4}{3}x^{-1/3} + \tfrac{3}{4}x^{-1/4}$$
+      <div class="sol-jadi">$f'(x)$ $= \dfrac{3}{2\sqrt{x}}$ $- \dfrac{4}{3\sqrt[3]{x}}$ $+ \dfrac{3}{4\sqrt[4]{x}}$.</div>
+      <div class="sol-part"><span class="sol-tag">f</span><span>Bentuk pecahan</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah ke pangkat negatif:</strong> $f(x) = 5x^{-1}$ $- 3x^{-2}$ $+ 2x^{-4}$.</p>
+      $$f'(x) = -5x^{-2} + 6x^{-3} - 8x^{-5}$$
+      <div class="sol-jadi">$f'(x)$ $= -\dfrac{5}{x^2}$ $+ \dfrac{6}{x^3}$ $- \dfrac{8}{x^5}$.</div>
     </div>
 
     <div class="box box-catatan">
@@ -338,7 +359,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 3</div>
+      <div class="box-label">📘 Contoh 3</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan pertama dari fungsi-fungsi berikut dengan menyederhanakan terlebih dahulu:</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$f(x) = x\sqrt{x}$</li>
@@ -347,23 +368,29 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$f(x) = x \cdot x^{1/2} = x^{3/2} \;\to\; f'(x) = \boxed{\dfrac{3}{2}x^{1/2} = \dfrac{3\sqrt{x}}{2}}$</li>
-        <li>$f(x) = \dfrac{x^3-2x}{x^{1/2}} = x^{5/2}-2x^{1/2} \;\to\; f'(x) = \boxed{\dfrac{5}{2}x^{3/2}-\dfrac{1}{\sqrt{x}}}$</li>
-        <li>$f(x) = \left(x^{1/2}+1\right)^2 = x+2x^{1/2}+1 \;\to\; f'(x) = 1+2\cdot\tfrac{1}{2}x^{-1/2} = \boxed{1+\dfrac{1}{\sqrt{x}}}$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$f(x) = x\sqrt{x}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sederhanakan:</strong> $f(x) = x^{3/2}$.</p>
+      $$f'(x) = \tfrac{3}{2}x^{1/2}$$
+      <div class="sol-jadi">$f'(x)$ $= \dfrac{3\sqrt{x}}{2}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$f(x) = \dfrac{x^3 - 2x}{\sqrt{x}}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sederhanakan:</strong> $f(x) = x^{5/2} - 2x^{1/2}$.</p>
+      <div class="sol-jadi">$f'(x)$ $= \dfrac{5}{2}x^{3/2}$ $- \dfrac{1}{\sqrt{x}}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$f(x) = (\sqrt{x} + 1)^2$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Jabarkan:</strong> $f(x) = x + 2x^{1/2} + 1$.</p>
+      $$f'(x) = 1 + 2 \cdot \tfrac{1}{2}x^{-1/2}$$
+      <div class="sol-jadi">$f'(x)$ $= 1 + \dfrac{1}{\sqrt{x}}$.</div>
     </div>
 
     <div class="box box-catatan">
       <div class="box-label">&#9888; Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Sebelum menurunkan fungsi yang mengandung akar, pecahan, atau perkalian, <strong>ubah dahulu</strong> ke dalam bentuk pangkat pecahan: $\sqrt[n]{x^m} = x^{m/n}$, $\; x\cdot x^n = x^{1+n}$, $\;\dfrac{x^m}{x^n} = x^{m-n}$. Setelah bentuknya $ax^n$, terapkan aturan turunan pangkat seperti biasa.</p>
+      <p style="margin:0;font-size:.9rem;">Sebelum menurunkan fungsi yang mengandung akar, pecahan, atau perkalian, <strong>ubah dahulu</strong> ke dalam bentuk pangkat pecahan: $\sqrt[n]{x^m} = x^{m/n}$, $\; x\cdot x^n = x^{1+n}$, $\;\dfrac{x^m}{x^n}$ $= x^{m-n}$. Setelah bentuknya $ax^n$, terapkan aturan turunan pangkat seperti biasa.</p>
     </div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan A</div>
       <ol class="soal-list">
         <li>Gunakan definisi turunan untuk mencari $f'(x)$ dari:<br>(a) $f(x) = 2x^2-5x+1$<br>(b) $f(x) = x^3-3x^2$<br>(c) $f(x) = \dfrac{1}{x}$</li>
-        <li>Tentukan turunan pertama dari setiap fungsi berikut:<br>(a) $f(x) = \dfrac{3}{x^4}-\dfrac{5}{2x^3}+\dfrac{7}{x}-4$<br>(b) $f(x) = 2\sqrt{x^5}-3\sqrt[3]{x^4}+5\sqrt[4]{x^3}$<br>(c) $f(x) = \dfrac{6}{\sqrt{x^3}}-\dfrac{4}{5\sqrt[3]{x^2}}+\dfrac{2}{x^{3/2}}$<br>(d) $f(x) = \dfrac{1}{2}x^{-3/2}-4x^{2/3}+\sqrt[5]{x^4}-\dfrac{3}{\sqrt{x}}$</li>
+        <li>Tentukan turunan pertama dari setiap fungsi berikut:<br>(a) $f(x) = \dfrac{3}{x^4}$ $-\dfrac{5}{2x^3}$ $+\dfrac{7}{x}$ $-4$<br>(b) $f(x) = 2\sqrt{x^5}$ $-3\sqrt[3]{x^4}$ $+5\sqrt[4]{x^3}$<br>(c) $f(x) = \dfrac{6}{\sqrt{x^3}}$ $-\dfrac{4}{5\sqrt[3]{x^2}}$ $+\dfrac{2}{x^{3/2}}$<br>(d) $f(x) = \dfrac{1}{2}x^{-3/2}$ $-4x^{2/3}$ $+\sqrt[5]{x^4}$ $-\dfrac{3}{\sqrt{x}}$</li>
         <li>Sederhanakan terlebih dahulu, kemudian tentukan turunan pertamanya:<br>(a) $f(x) = x^2\sqrt{x}$<br>(b) $f(x) = \dfrac{x^4-3x^2+x}{\sqrt{x}}$<br>(c) $f(x) = \left(\sqrt{x}-\dfrac{1}{\sqrt{x}}\right)^2$<br>(d) $f(x) = \left(\sqrt[3]{x^2}+x\right)\!\left(\sqrt[3]{x^2}-x\right)$</li>
         <li>Diberikan $f(x) = \dfrac{(x^2-1)^2}{\sqrt{x}}$.<br>(a) Jabarkan dan ubah $f(x)$ ke dalam bentuk jumlah suku $ax^n$.<br>(b) Tentukan $f'(x)$.<br>(c) Tentukan nilai $f'(4)$.</li>
       </ol>
@@ -393,7 +420,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 4</div>
+      <div class="box-label">📘 Contoh 4</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan pertama dari fungsi-fungsi berikut:</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$f(x) = (x^2-4x)(2x+3)$</li>
@@ -403,16 +430,22 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$u = x^2-4x \Rightarrow u'=2x-4$;&ensp; $v=2x+3 \Rightarrow v'=2$
-          $$f'(x) = (2x-4)(2x+3)+(x^2-4x)(2) = 4x^2+6x-8x-12+2x^2-8x = \boxed{6x^2-10x-12}$$</li>
-        <li>$u=4x^2-5 \Rightarrow u'=8x$;&ensp; $v=2x+3 \Rightarrow v'=2$
-          $$f'(x) = \frac{8x(2x+3)-(4x^2-5)(2)}{(2x+3)^2} = \boxed{\frac{8x^2+24x+10}{(2x+3)^2}}$$</li>
-        <li>$u=3x-1 \Rightarrow u'=3$;&ensp; $v=(2x+5)^{-1/2} \Rightarrow v'=-(2x+5)^{-3/2}$
-          $$f'(x) = \frac{3}{(2x+5)^{1/2}}-\frac{3x-1}{(2x+5)^{3/2}} = \frac{3(2x+5)-(3x-1)}{(2x+5)^{3/2}} = \boxed{\frac{3x+16}{(2x+5)^{3/2}}}$$</li>
-        <li>$u=x^2-3x$, $v=x+1$, $w=x-2$;&ensp; $u'=2x-3$, $v'=1$, $w'=1$
-          $$\begin{align*} f'(x) &= (2x-3)(x+1)(x-2)+(x^2-3x)(x-2)+(x^2-3x)(x+1) \\ &= (2x-3)(x^2-x-2)+(x^2-3x)(2x-1) \\ &= \boxed{4x^3-12x^2+2x+6} \end{align*}$$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Hasil kali</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan $u, v$:</strong> $u = x^2 - 4x$, $u' = 2x - 4$; $v = 2x + 3$, $v' = 2$.</p>
+      $$ \begin{align*} &f'(x) \\  &= (2x - 4)(2x + 3) \\ &\quad + (x^2 - 4x)(2) \\ &= 4x^2 - 2x - 12 + 2x^2 - 8x \end{align*} $$
+      <div class="sol-jadi">$f'(x) = 6x^2 - 10x - 12$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Hasil bagi</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan $u, v$:</strong> $u = 4x^2 - 5$, $u' = 8x$; $v = 2x + 3$, $v' = 2$.</p>
+      $$ \begin{align*} &f'(x) \\  &= \frac{8x(2x + 3) - 2(4x^2 - 5)}{(2x + 3)^2} \end{align*} $$
+      <div class="sol-jadi">$f'(x)$ $= \dfrac{8x^2 + 24x + 10}{(2x + 3)^2}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Hasil bagi dengan akar</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis sebagai hasil kali:</strong> $u = 3x - 1$, $v = (2x + 5)^{-1/2}$, $v' = -(2x + 5)^{-3/2}$.</p>
+      $$ \begin{align*} &f'(x) \\  &= \frac{3}{(2x + 5)^{1/2}} \\ &\quad - \frac{3x - 1}{(2x + 5)^{3/2}} \\  &= \frac{3(2x + 5) - (3x - 1)}{(2x + 5)^{3/2}} \end{align*} $$
+      <div class="sol-jadi">$f'(x)$ $= \dfrac{3x + 16}{(2x + 5)^{3/2}}$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>Tiga faktor</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan $u, v, w$:</strong> $u = x^2 - 3x$, $v = x + 1$, $w = x - 2$; $u' = 2x - 3$, $v' = w' = 1$.</p>
+      $$ \begin{align*} f'(x) &= (2x - 3)(x + 1)(x - 2) \\  &\quad \\ &\quad + (x^2 - 3x)(x - 2) \\ &\quad + (x^2 - 3x)(x + 1) \\  &= (2x^3 - 5x^2 - x + 6) \\ &\quad + (2x^3 - 7x^2 + 3x) \end{align*} $$
+      <div class="sol-jadi">$f'(x)$ $= 4x^3 - 12x^2 + 2x + 6$.</div>
     </div>
 
     <h3 class="subsection-title">2. Aturan Pangkat Fungsi dan Aturan Rantai</h3>
@@ -422,11 +455,11 @@ window.MathJax = {
     <div class="box box-rumus">
       <div class="box-label">&bull; Pangkat Fungsi &amp; Aturan Rantai</div>
       <p><strong>Pangkat Fungsi:</strong> Jika $y = [u(x)]^n$, maka $y' = n\,u^{n-1} \cdot u'$</p>
-      <p><strong>Aturan Rantai:</strong> Jika $y = f\{g(x)\}$, maka $y' = f'\{g(x)\} \cdot g'(x)$</p>
+      <p><strong>Aturan Rantai:</strong> Jika $y = f(g(x))$, maka $y' = f'(g(x)) \cdot g'(x)$</p>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 5</div>
+      <div class="box-label">📘 Contoh 5</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan pertama dari:</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$f(x) = (2x+5)^4$</li>
@@ -436,18 +469,26 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$u=2x+5 \Rightarrow u'=2$. $\;f'(x) = 4(2x+5)^3\cdot 2 = \boxed{8(2x+5)^3}$</li>
-        <li>$u=(2x+5)^3 \Rightarrow u'=6(2x+5)^2$;&ensp; $v=2x-1 \Rightarrow v'=2$
-          $$f'(x) = 6(2x+5)^2(2x-1)+2(2x+5)^3 = (2x+5)^2[6(2x-1)+2(2x+5)] = \boxed{4(2x+5)^2(4x+1)}$$</li>
-        <li>$u=5x^2-4x+3 \Rightarrow u'=10x-4$. $\;f'(x) = \tfrac{1}{2}(5x^2-4x+3)^{-1/2}\cdot(10x-4) = \boxed{\dfrac{5x-2}{\sqrt{5x^2-4x+3}}}$</li>
-        <li>$u=(x^2+1)^3 \Rightarrow u'=6x(x^2+1)^2$;&ensp; $v=x-2 \Rightarrow v'=1$
-          $$f'(x) = \frac{6x(x^2+1)^2(x-2)-(x^2+1)^3}{(x-2)^2} = \boxed{\frac{(x^2+1)^2(5x^2-12x-1)}{(x-2)^2}}$$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$f(x) = (2x + 5)^4$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pangkat fungsi:</strong> $u = 2x + 5$, $u' = 2$.</p>
+      $$f'(x) = 4(2x + 5)^3 \cdot 2$$
+      <div class="sol-jadi">$f'(x) = 8(2x + 5)^3$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$f(x) = (2x + 5)^3(2x - 1)$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hasil kali:</strong> $u = (2x + 5)^3$, $u' = 6(2x + 5)^2$; $v = 2x - 1$, $v' = 2$.</p>
+      $$ \begin{align*} &f'(x) \\  &= 6(2x + 5)^2(2x - 1) \\ &\quad + 2(2x + 5)^3 \\  &= (2x + 5)^2\bigl[6(2x - 1) \\ &\quad + 2(2x + 5)\bigr] \\ &= (2x + 5)^2(16x + 4) \end{align*} $$
+      <div class="sol-jadi">$f'(x)$ $= 4(2x + 5)^2(4x + 1)$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$f(x) = \sqrt{5x^2 - 4x + 3}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pangkat $\tfrac{1}{2}$:</strong> $u = 5x^2 - 4x + 3$, $u' = 10x - 4$.</p>
+      $$f'(x) = \frac{10x - 4}{2\sqrt{5x^2 - 4x + 3}}$$
+      <div class="sol-jadi">$f'(x)$ $= \dfrac{5x - 2}{\sqrt{5x^2 - 4x + 3}}$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>$f(x) = \dfrac{(x^2 + 1)^3}{x - 2}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hasil bagi:</strong> $u' = 6x(x^2 + 1)^2$, $v' = 1$.</p>
+      $$ \begin{align*} &f'(x) \\  &= \frac{6x(x^2 + 1)^2(x - 2) - (x^2 + 1)^3}{(x - 2)^2} \\  &= \frac{(x^2 + 1)^2\bigl[6x^2 - 12x - x^2 - 1\bigr]}{(x - 2)^2} \end{align*} $$
+      <div class="sol-jadi">$f'(x)$ $= \dfrac{(x^2 + 1)^2(5x^2 - 12x - 1)}{(x - 2)^2}$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 6</div>
+      <div class="box-label">📘 Contoh 6</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan pertama dari:</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$f(x) = \left(\dfrac{x+2}{3x-1}\right)^4$</li>
@@ -455,16 +496,19 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>Misalkan $u = \dfrac{x+2}{3x-1}$, maka $u' = \dfrac{(3x-1)-(x+2)(3)}{(3x-1)^2} = \dfrac{-7}{(3x-1)^2}$
-          $$f'(x) = 4\!\left(\frac{x+2}{3x-1}\right)^3\!\cdot\frac{-7}{(3x-1)^2} = \boxed{\frac{-28(x+2)^3}{(3x-1)^5}}$$</li>
-        <li>$u=x^2+x^{-1} \Rightarrow u'=2x-x^{-2}$
-          $$f'(x) = 3\!\left(x^2+\frac{1}{x}\right)^2\!\!\left(2x-\frac{1}{x^2}\right) = \boxed{3\!\left(x^2+\frac{1}{x}\right)^2\!\!\!\left(2x-\frac{1}{x^2}\right)}$$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$f(x) = \left(\dfrac{x + 2}{3x - 1}\right)^4$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Turunan bagian dalam:</strong> $u = \dfrac{x + 2}{3x - 1}$.</p>
+      $$ \begin{align*} u' &= \frac{(3x - 1) - 3(x + 2)}{(3x - 1)^2} \\ &= \frac{-7}{(3x - 1)^2} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Pangkat fungsi:</strong></p>
+      $$f'(x) = 4\left(\frac{x + 2}{3x - 1}\right)^3 \cdot \frac{-7}{(3x - 1)^2}$$
+      <div class="sol-jadi">$f'(x)$ $= \dfrac{-28(x + 2)^3}{(3x - 1)^5}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$f(x) = \left(x^2 + \dfrac{1}{x}\right)^3$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Turunan bagian dalam:</strong> $u = x^2 + x^{-1}$, $u' = 2x - x^{-2}$.</p>
+      <div class="sol-jadi">$f'(x)$ $= 3\left(x^2 + \dfrac{1}{x}\right)^2\left(2x - \dfrac{1}{x^2}\right)$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 7</div>
+      <div class="box-label">📘 Contoh 7</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah:</p>
       <ol class="alpha-list" style="margin:0;">
         <li>Nilai $f'(2)$ dari $f(x) = (3x^2-4)^3$</li>
@@ -472,11 +516,14 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$u=3x^2-4 \Rightarrow u'=6x$. $\;f'(x)=18x(3x^2-4)^2$;&ensp; $f'(2)=36\cdot(8)^2=\boxed{2304}$</li>
-        <li>$f'(x)=4(x^2-3x)^3(2x-3)=0 \implies x^2-3x=0$ atau $2x-3=0$
-          $$\boxed{x=0,\quad x=\tfrac{3}{2},\quad x=3}$$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Nilai $f'(2)$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Turunkan:</strong> $f'(x)$ $= 3(3x^2 - 4)^2 \cdot 6x$ $= 18x(3x^2 - 4)^2$.</p>
+      $$f'(2) = 36 \cdot 8^2 = 2304$$
+      <div class="sol-jadi">$f'(2) = 2304$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Syarat $f'(x) = 0$</span></div>
+      $$ \begin{align*} f'(x) &= 4(x^2 - 3x)^3(2x - 3) \\ &= 0 \end{align*} $$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Faktor nol:</strong> $x(x - 3) = 0$ atau $2x - 3 = 0$.</p>
+      <div class="sol-jadi">$x = 0$, $x = \tfrac{3}{2}$, atau $x = 3$.</div>
     </div>
 
     <h3 class="subsection-title">3. Turunan Kedua</h3>
@@ -484,7 +531,7 @@ window.MathJax = {
     <p>Turunan kedua dilambangkan $f''(x)$, $y''$, atau $\dfrac{d^2y}{dx^2}$, yaitu turunan dari turunan pertama.</p>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 8</div>
+      <div class="box-label">📘 Contoh 8</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan kedua dari:</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$f(x) = 5x^4-3x^2+7$</li>
@@ -492,14 +539,16 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$f'(x) = 20x^3-6x \;\to\; f''(x) = \boxed{60x^2-6}$</li>
-        <li>$f'(x) = -12x^2+2 \;\to\; f''(x) = \boxed{-24x}$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$f(x) = 5x^4 - 3x^2 + 7$</span></div>
+      $$f'(x) = 20x^3 - 6x$$
+      <div class="sol-jadi">$f''(x) = 60x^2 - 6$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$f(x) = -4x^3 + 2x - 9$</span></div>
+      $$f'(x) = -12x^2 + 2$$
+      <div class="sol-jadi">$f''(x) = -24x$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 9</div>
+      <div class="box-label">📘 Contoh 9</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan kedua, kemudian hitung nilainya pada titik yang diberikan:</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$f(x) = (3x-2)^4$, hitung $f''(1)$</li>
@@ -507,44 +556,51 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$f'(x)=12(3x-2)^3$;&ensp; $f''(x)=108(3x-2)^2$;&ensp; $f''(1)=108(1)^2=\boxed{108}$</li>
-        <li>$f'(x)=6x(x^2+1)^2$;&ensp; $f''(x)=6(x^2+1)^2+24x^2(x^2+1)=6(x^2+1)(5x^2+1)$;&ensp; $f''(0)=6(1)(1)=\boxed{6}$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$f(x) = (3x - 2)^4$</span></div>
+      $$ \begin{align*} f'(x) &= 12(3x - 2)^3 \\ f''(x) &= 108(3x - 2)^2 \end{align*} $$
+      <div class="sol-jadi">$f''(1)$ $= 108 \cdot 1^2$ $= 108$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$f(x) = (x^2 + 1)^3$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Turunan pertama:</strong> $f'(x) = 6x(x^2 + 1)^2$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hasil kali:</strong> $u = 6x$, $v = (x^2 + 1)^2$.</p>
+      $$ \begin{align*} &f''(x) \\  &= 6(x^2 + 1)^2 + 24x^2(x^2 + 1) \\ &= 6(x^2 + 1)(5x^2 + 1) \end{align*} $$
+      <div class="sol-jadi">$f''(0)$ $= 6 \cdot 1 \cdot 1$ $= 6$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 10</div>
+      <div class="box-label">📘 Contoh 10</div>
       <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = x^4-2x^3-12x^2+5x-1$. Tentukanlah nilai $x$ sehingga $f''(x) = 0$.</p>
     </div>
     <div class="penyelesaian">
-      $f'(x)=4x^3-6x^2-24x+5$;&ensp; $f''(x)=12x^2-12x-24$<br><br>
-      Syarat $f''(x)=0$:
-      $$12x^2-12x-24=0 \implies x^2-x-2=0 \implies (x-2)(x+1)=0$$
-      $$\boxed{x=2 \quad\text{atau}\quad x=-1}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Turunkan dua kali:</strong></p>
+      $$ \begin{align*} f'(x) &= 4x^3 - 6x^2 - 24x + 5 \\ f''(x) &= 12x^2 - 12x - 24 \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Syarat $f''(x) = 0$:</strong></p>
+      $$ \begin{align*} 12(x^2 - x - 2) &= 0 \\ (x - 2)(x + 1) &= 0 \end{align*} $$
+      <div class="sol-jadi">$x = 2$ atau $x = -1$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 11</div>
+      <div class="box-label">📘 Contoh 11</div>
       <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = (2x+3)^3$. Tentukanlah nilai $x$ sehingga $f''(x) = 120$.</p>
     </div>
     <div class="penyelesaian">
-      $f'(x)=6(2x+3)^2$;&ensp; $f''(x)=24(2x+3)$<br><br>
-      Syarat $f''(x)=120$:
-      $$24(2x+3)=120 \implies 2x+3=5 \implies \boxed{x=1}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Turunkan dua kali:</strong></p>
+      $$ \begin{align*} f'(x) &= 6(2x + 3)^2 \\ f''(x) &= 24(2x + 3) \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Syarat $f''(x) = 120$:</strong></p>
+      $$ \begin{align*} 24(2x + 3) &= 120 \\ 2x + 3 &= 5 \end{align*} $$
+      <div class="sol-jadi">$x = 1$.</div>
     </div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan B</div>
       <ol class="soal-list">
-        <li>Tentukan turunan dari setiap fungsi berikut (aturan hasil kali dan hasil bagi):<br>(a) $f(x)=(3x+2)(x^2-5)$<br>(b) $f(x)=(2x^2+3x-5)(4x-2)$<br>(c) $f(x)=\dfrac{x^2+1}{x-3}$<br>(d) $f(x)=\dfrac{x^3-2x+1}{\sqrt{x}}$</li>
-        <li>Tentukan turunan dari setiap fungsi tiga faktor berikut:<br>(a) $f(x)=(x+1)(x-2)(x+3)$<br>(b) $f(x)=(2x-1)(x+4)(3x-2)$</li>
-        <li>Tentukan turunan dari setiap fungsi berikut (aturan pangkat fungsi dan rantai):<br>(a) $f(x)=3(2x+4)^5$<br>(b) $f(x)=\sqrt{x^2-3x+2}$<br>(c) $f(x)=\left(\dfrac{2x-4}{3x+2}\right)^2$</li>
-        <li>Tentukan turunan dari setiap fungsi berikut (gabungan aturan):<br>(a) $f(x)=(x^2+3)(2x-1)^4$<br>(b) $f(x)=\dfrac{\sqrt{x+1}}{x^2-1}$<br>(c) $f(x)=\dfrac{(x^2-4)^3}{2x+1}$</li>
-        <li>Diketahui $f(x)=(2x^2-5x+4)(x^2-6x+15)$. Tentukanlah $f'(3)$.</li>
-        <li>Tentukanlah turunan dari $f(x)=\left(x+\dfrac{1}{x}\right)^4$, kemudian hitung $f'(1)$.</li>
-        <li>Tentukanlah turunan kedua $f''(x)$ dari:<br>(a) $f(x)=3x^5-4x^3+2x$<br>(b) $f(x)=x^{-2}+4x^{-1}-3x^{1/2}$<br>(c) $f(x)=(2x+1)^3$<br>(d) $f(x)=(x^2-3)^4$</li>
-        <li>Diketahui $f(x)=x^4-6x^2+8x-3$.<br>(a) Tentukan $f'(x)$ dan $f''(x)$.<br>(b) Hitung $f''(-1)$ dan $f''(2)$.<br>(c) Tentukan nilai $x$ sehingga $f''(x)=0$.</li>
+        <li>Tentukan turunan dari setiap fungsi berikut (aturan hasil kali dan hasil bagi):<br>(a) $f(x) =(3x+2)(x^2-5)$<br>(b) $f(x) =(2x^2+3x-5)(4x-2)$<br>(c) $f(x) =\dfrac{x^2+1}{x-3}$<br>(d) $f(x) =\dfrac{x^3-2x+1}{\sqrt{x}}$</li>
+        <li>Tentukan turunan dari setiap fungsi tiga faktor berikut:<br>(a) $f(x) =(x+1)(x-2)(x+3)$<br>(b) $f(x) =(2x-1)(x+4)(3x-2)$</li>
+        <li>Tentukan turunan dari setiap fungsi berikut (aturan pangkat fungsi dan rantai):<br>(a) $f(x)=3(2x+4)^5$<br>(b) $f(x) =\sqrt{x^2-3x+2}$<br>(c) $f(x) =\left(\dfrac{2x-4}{3x+2}\right)^2$</li>
+        <li>Tentukan turunan dari setiap fungsi berikut (gabungan aturan):<br>(a) $f(x) =(x^2+3)(2x-1)^4$<br>(b) $f(x) =\dfrac{\sqrt{x+1}}{x^2-1}$<br>(c) $f(x) =\dfrac{(x^2-4)^3}{2x+1}$</li>
+        <li>Diketahui $f(x) =(2x^2-5x+4)\,\cdot$ $(x^2-6x+15)$. Tentukanlah $f'(3)$.</li>
+        <li>Tentukanlah turunan dari $f(x) =\left(x+\dfrac{1}{x}\right)^4$, kemudian hitung $f'(1)$.</li>
+        <li>Tentukanlah turunan kedua $f''(x)$ dari:<br>(a) $f(x) =3x^5-4x^3+2x$<br>(b) $f(x) =x^{-2}$ $+4x^{-1}$ $-3x^{1/2}$<br>(c) $f(x)=(2x+1)^3$<br>(d) $f(x)=(x^2-3)^4$</li>
+        <li>Diketahui $f(x) =x^4$ $-6x^2$ $+8x$ $-3$.<br>(a) Tentukan $f'(x)$ dan $f''(x)$.<br>(b) Hitung $f''(-1)$ dan $f''(2)$.<br>(c) Tentukan nilai $x$ sehingga $f''(x)=0$.</li>
         <li>Diketahui $f(x)=(3x-1)^3$. Tentukanlah nilai $x$ sehingga $f''(x)=54$.</li>
       </ol>
     </div>
@@ -552,16 +608,181 @@ window.MathJax = {
   </section>
 
 
-  <!-- ═══ C. PERSAMAAN GARIS SINGGUNG ═══════════════════════════════ -->
+  <!-- ═══ C. TURUNAN FUNGSI TRIGONOMETRI ════════════════════════════ -->
   <section class="section" id="bagian-c">
-    <h2 class="section-title"><span class="section-badge">C</span>Persamaan Garis Singgung Kurva</h2>
+    <h2 class="section-title"><span class="section-badge">C</span>Turunan Fungsi Trigonometri</h2>
+
+    <h3 class="subsection-title">1. Rumus Dasar Turunan Trigonometri</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Fungsi $f(x)$</th><th>Turunan $f'(x)$</th><th>Fungsi $f(x)$</th><th>Turunan $f'(x)$</th></tr></thead>
+        <tbody>
+          <tr><td>$\sin x$</td><td>$\cos x$</td><td>$\cot x$</td><td>$-\csc^2 x$</td></tr>
+          <tr><td>$\cos x$</td><td>$-\sin x$</td><td>$\sec x$</td><td>$\sec x \tan x$</td></tr>
+          <tr><td>$\tan x$</td><td>$\sec^2 x$</td><td>$\csc x$</td><td>$-\csc x \cot x$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">&#9888; Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Turunan $\sin x$ adalah $\cos x$ (positif), sedangkan turunan $\cos x$ adalah $-\sin x$ (negatif). Fungsi-fungsi yang diawali huruf &ldquo;<strong>co</strong>&rdquo; ($\cos$, $\cot$, $\csc$) selalu menghasilkan turunan <strong>bertanda negatif</strong>.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan pertama dari:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$f(x) = 3\sin x - 2\cos x$</li>
+        <li>$f(x) = 5\tan x + \cot x$</li>
+        <li>$f(x) = \sin x \cdot \cos x$</li>
+        <li>$f(x) = \dfrac{\sin x}{1+\cos x}$</li>
+        <li>$f(x) = x^2 \tan x$</li>
+        <li>$f(x) = \dfrac{\cos x}{\sin x+1}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>$3\sin x - 2\cos x$</span></div>
+      $$f'(x) = 3\cos x - 2(-\sin x)$$
+      <div class="sol-jadi">$f'(x)$ $= 3\cos x + 2\sin x$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$5\tan x + \cot x$</span></div>
+      <div class="sol-jadi">$f'(x)$ $= 5\sec^2 x - \csc^2 x$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$\sin x \cos x$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hasil kali:</strong> $u = \sin x$, $v = \cos x$.</p>
+      $$f'(x) = \cos^2 x - \sin^2 x$$
+      <div class="sol-jadi">$f'(x) = \cos 2x$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>$\dfrac{\sin x}{1 + \cos x}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hasil bagi</strong> dengan $\sin^2 x + \cos^2 x = 1$:</p>
+      $$ \begin{align*} &f'(x) \\  &= \frac{\cos x(1 + \cos x) + \sin^2 x}{(1 + \cos x)^2} \\ &= \frac{1 + \cos x}{(1 + \cos x)^2} \end{align*} $$
+      <div class="sol-jadi">$f'(x)$ $= \dfrac{1}{1 + \cos x}$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span><span>$x^2\tan x$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hasil kali:</strong> $u = x^2$, $v = \tan x$.</p>
+      <div class="sol-jadi">$f'(x)$ $= 2x\tan x + x^2\sec^2 x$.</div>
+      <div class="sol-part"><span class="sol-tag">f</span><span>$\dfrac{\cos x}{\sin x + 1}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hasil bagi:</strong></p>
+      $$ \begin{align*} &f'(x) \\  &= \frac{-\sin x(\sin x + 1) - \cos^2 x}{(\sin x + 1)^2} \\ &= \frac{-(1 + \sin x)}{(\sin x + 1)^2} \end{align*} $$
+      <div class="sol-jadi">$f'(x)$ $= \dfrac{-1}{\sin x + 1}$.</div>
+    </div>
+
+    <h3 class="subsection-title">2. Pengembangan dengan Aturan Rantai</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Fungsi $y$</th><th>Turunan $y'$</th><th>Fungsi $y$</th><th>Turunan $y'$</th></tr></thead>
+        <tbody>
+          <tr><td>$\sin u$</td><td>$u'\cos u$</td><td>$\cot u$</td><td>$-u'\csc^2 u$</td></tr>
+          <tr><td>$\cos u$</td><td>$-u'\sin u$</td><td>$\sec u$</td><td>$u'\sec u\tan u$</td></tr>
+          <tr><td>$\tan u$</td><td>$u'\sec^2 u$</td><td>$\csc u$</td><td>$-u'\csc u\cot u$</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan pertama dari:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$f(x) = \cos(3x-4)$</li>
+        <li>$f(x) = 3\tan(x^2-4)$</li>
+        <li>$f(x) = \sin(3x+2)\cos(3x-3)$</li>
+        <li>$f(x) = 5\sec^3 x$</li>
+        <li>$f(x) = \sin^4(3x+5)$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>$\cos(3x - 4)$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Rantai:</strong> $u = 3x - 4$, $u' = 3$.</p>
+      <div class="sol-jadi">$f'(x) = -3\sin(3x - 4)$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$3\tan(x^2 - 4)$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Rantai:</strong> $u = x^2 - 4$, $u' = 2x$.</p>
+      <div class="sol-jadi">$f'(x)$ $= 6x\sec^2(x^2 - 4)$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$\sin(3x + 2)\cos(3x - 3)$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hasil kali:</strong> $u' = 3\cos(3x + 2)$, $v' = -3\sin(3x - 3)$.</p>
+      $$ \begin{align*} &f'(x) \\  &= 3\bigl[\cos(3x + 2)\cos(3x - 3) \\ &\qquad - \sin(3x + 2)\sin(3x - 3)\bigr] \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Identitas</strong> $\cos A\cos B - \sin A\sin B$ $= \cos(A + B)$.</p>
+      <div class="sol-jadi">$f'(x) = 3\cos(6x - 1)$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>$5\sec^3 x$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pangkat fungsi:</strong> $u = \sec x$, $u' = \sec x\tan x$.</p>
+      $$f'(x) = 15\sec^2 x \cdot \sec x\tan x$$
+      <div class="sol-jadi">$f'(x) = 15\sec^3 x\tan x$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span><span>$\sin^4(3x + 5)$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pangkat lalu rantai:</strong></p>
+      $$ \begin{align*} f'(x) &= 4\sin^3(3x + 5) \cdot 3\cos(3x + 5) \end{align*} $$
+      <div class="sol-jadi">$f'(x)$ $= 12\sin^3(3x + 5)\cos(3x + 5)$.</div>
+    </div>
+
+    <h3 class="subsection-title">3. Turunan Trigonometri dengan Aturan Hasil Kali dan Hasil Bagi</h3>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan pertama dari:</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$f(x) = x^2\sin 3x$</li>
+        <li>$f(x) = \dfrac{\tan 2x}{1+\cos 2x}$</li>
+        <li>$f(x) = \sin^2 x \cdot \cos^3 x$</li>
+        <li>$f(x) = \cos^4(2x^2-3)$</li>
+        <li>$f(x) = \sqrt{\tan(3x+1)}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>$x^2\sin 3x$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hasil kali:</strong> $u' = 2x$, $v' = 3\cos 3x$.</p>
+      <div class="sol-jadi">$f'(x)$ $= 2x\sin 3x + 3x^2\cos 3x$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$\dfrac{\tan 2x}{1 + \cos 2x}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hasil bagi:</strong> $u' = 2\sec^2 2x$, $v' = -2\sin 2x$.</p>
+      $$f'(x) = \frac{N}{(1 + \cos 2x)^2}$$
+      $$ \begin{align*} N &= 2\sec^2 2x(1 + \cos 2x) \\ &\quad + 2\tan 2x\sin 2x \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kalikan $N$ dan penyebut</strong> dengan $\cos^2 2x$; misalkan $c = \cos 2x$ dan $\sin^2 2x = 1 - c^2$:</p>
+      $$ \begin{align*} &N\cos^2 2x \\  &= 2(1 + c) + 2c(1 - c^2) \\ &= 2(1 + c)(1 + c - c^2) \end{align*} $$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Coret satu faktor $(1 + c)$:</strong></p>
+      <div class="sol-jadi">$f'(x)$ $= \dfrac{2(1 + \cos 2x - \cos^2 2x)}{\cos^2 2x\,(1 + \cos 2x)}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$\sin^2 x\cos^3 x$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hasil kali:</strong> $u' = 2\sin x\cos x$, $v' = -3\cos^2 x\sin x$.</p>
+      $$ \begin{align*} &f'(x) \\  &= \sin x\cos^2 x\,(2\cos^2 x - 3\sin^2 x) \\ &= \sin x\cos^2 x\,(5\cos^2 x - 3) \end{align*} $$
+      <div class="sol-jadi">$f'(x)$ $= \sin x\cos^2 x\,(5\cos^2 x - 3)$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>$\cos^4(2x^2 - 3)$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pangkat lalu rantai:</strong> $u = \cos(2x^2 - 3)$, $u' = -4x\sin(2x^2 - 3)$.</p>
+      <div class="sol-jadi">$f'(x)$ $= -16x\cos^3(2x^2 - 3)\sin(2x^2 - 3)$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span><span>$\sqrt{\tan(3x + 1)}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pangkat $\tfrac{1}{2}$:</strong> $u = \tan(3x + 1)$, $u' = 3\sec^2(3x + 1)$.</p>
+      <div class="sol-jadi">$f'(x)$ $= \dfrac{3\sec^2(3x + 1)}{2\sqrt{\tan(3x + 1)}}$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">&#9888; Strategi Menurunkan Fungsi Trigonometri Komposit</div>
+      <ol style="margin:.3rem 0;padding-left:1.3rem;font-size:.9rem;">
+        <li>Identifikasi struktur: perkalian, pembagian, pangkat, atau komposisi?</li>
+        <li>Untuk $[\sin u]^n$ atau $[\cos u]^n$: aturan pangkat fungsi dua kali &mdash; turunkan pangkat, lalu turunkan fungsi trigonometri (aturan rantai).</li>
+        <li>Untuk perkalian dua fungsi trigonometri: aturan hasil kali, lalu aturan rantai pada masing-masing faktor.</li>
+        <li>Sederhanakan hasil akhir menggunakan identitas trigonometri bila perlu.</li>
+      </ol>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan C</div>
+      <ol class="soal-list">
+        <li>Tentukanlah turunan pertama dari:<br>(a) $f(x) =4\sin x$ $+3\cos x$ $-\tan x$<br>(b) $f(x) =2\sec x$ $-\csc x$ $+5$<br>(c) $f(x) =\sin x\cdot\tan x$<br>(d) $f(x) =\dfrac{\tan x}{\sec x}$</li>
+        <li>Tentukanlah turunan pertama dari:<br>(a) $f(x)=\sin(4x+1)$<br>(b) $f(x) =\cos(x^2-3x)$<br>(c) $f(x) =\tan\!\left(\dfrac{x}{2}+\pi\right)$<br>(d) $f(x) =3\cot(2x^2+1)$</li>
+        <li>Tentukanlah turunan pertama dari:<br>(a) $f(x)=\sin^3(2x)$<br>(b) $f(x) =\cos^4(x^2-1)$<br>(c) $f(x) =\sqrt{\sin(3x-2)}$<br>(d) $f(x) =\tan^2(x^2+x)$</li>
+        <li>Tentukanlah turunan pertama dari:<br>(a) $f(x)=x^2\cos(3x)$<br>(b) $f(x) =\sin^2 x\cos(2x)$<br>(c) $f(x) =\dfrac{\sin(2x)}{1+\cos(2x)}$<br>(d) $f(x) =\dfrac{x}{\sin x+\cos x}$</li>
+        <li>Tentukanlah nilai $f'(x)$ pada titik yang diberikan:<br>(a) $f(x) =2\sin\!\left(3x-\dfrac{2}{3}\pi\right)$, $x=\dfrac{\pi}{2}$<br>(b) $f(x)=8\cos^3 x$, $x=\dfrac{\pi}{3}$<br>(c) $f(x)=\tan^2(2x)$, $x=\dfrac{\pi}{8}$<br>(d) $f(x)=x\sin x$, $x=\dfrac{\pi}{2}$</li>
+        <li>Diketahui $f(x) =\sin^2 x$ $+\cos^2 x$.<br>(a) Tentukanlah $f'(x)$ dengan menurunkan langsung.<br>(b) Apa yang dapat kamu simpulkan? Jelaskan mengapa hasilnya demikian.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <!-- ═══ D. PERSAMAAN GARIS SINGGUNG ═══════════════════════════════ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Persamaan Garis Singgung Kurva</h2>
 
     <p>Jika diketahui titik singgung $T(x_1, y_1)$ pada kurva $y = f(x)$, maka gradien garis singgung di titik tersebut adalah $m = f'(x_1)$.</p>
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Persamaan Garis Singgung dan Garis Normal</div>
       <p><strong>Garis Singgung:</strong></p>
-      <div class="math-block">$$y - y_1 = m(x - x_1), \quad \text{dengan } m = f'(x_1)$$</div>
+      <div class="math-block">$$ \begin{gather*} y - y_1 = m(x - x_1) \\ \text{dengan } m = f'(x_1) \end{gather*} $$</div>
       <p><strong>Garis Normal:</strong> $m_n = -\dfrac{1}{m_s}$, persamaan: $y-y_1 = m_n(x-x_1)$</p>
     </div>
 
@@ -573,7 +794,7 @@ window.MathJax = {
     </ol>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 12</div>
+      <div class="box-label">📘 Contoh 15</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan persamaan garis singgung dari fungsi berikut:</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$f(x) = x^3-6x^2+4x+11$ di titik $T(3,-4)$</li>
@@ -583,86 +804,99 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$f'(x)=3x^2-12x+4$;&ensp; $m=3(9)-12(3)+4=-5$
-          $$y-(-4)=-5(x-3) \implies \boxed{y=-5x+11}$$</li>
-        <li>$f'(x)=2x-5=3 \implies x_1=4$;&ensp; $y_1=16-20+6=2$
-          $$y-2=3(x-4) \implies \boxed{y=3x-10}$$</li>
-        <li>$y(1)=0$;&ensp; $y'=(x-1)(3x+3)$;&ensp; $m=y'(1)=0$. Garis singgung: $\boxed{y=0}$ (sejajar sumbu-$x$)</li>
-        <li>$f'(x_1)=3x_1^2-6x_1-5=4 \implies x_1^2-2x_1-3=0 \implies (x_1-3)(x_1+1)=0$<br>
-          Untuk $x_1=3$: $y_1=-5 \implies \boxed{y=4x-17}$<br>
-          Untuk $x_1=-1$: $y_1=11 \implies \boxed{y=4x+15}$<br>
-          Terdapat <strong>dua garis singgung</strong> dengan gradien yang sama (sejajar).</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Di titik $T(3, -4)$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gradien:</strong> $f'(x) = 3x^2 - 12x + 4$, $m = 27 - 36 + 4 = -5$.</p>
+      $$y + 4 = -5(x - 3)$$
+      <div class="sol-jadi">$y = -5x + 11$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Gradien $3$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari titik singgung:</strong> $f'(x) = 2x - 5 = 3$, jadi $x_1 = 4$ dan $y_1 = 16 - 20 + 6 = 2$.</p>
+      $$y - 2 = 3(x - 4)$$
+      <div class="sol-jadi">$y = 3x - 10$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Di $x = 1$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik dan gradien:</strong> $y(1) = 0$; $y' = 2(x - 1)(x + 2)$ $+ (x - 1)^2$ $= (x - 1)(3x + 3)$, jadi $m = 0$.</p>
+      <div class="sol-jadi">garis singgungnya $y = 0$ (sumbu-$x$).</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>Gradien $4$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari titik singgung:</strong></p>
+      $$ \begin{align*} 3x_1^2 - 6x_1 - 5 &= 4 \\ (x_1 - 3)(x_1 + 1) &= 0 \end{align*} $$
+      <ul class="sol-cek">
+        <li>$x_1 = 3$: $y_1 = -5$, garis $y = 4x - 17$</li>
+        <li>$x_1 = -1$: $y_1 = 11$, garis $y = 4x + 15$</li>
+      </ul>
+      <div class="sol-jadi">ada dua garis singgung yang sejajar: $y = 4x - 17$ dan $y = 4x + 15$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 13</div>
+      <div class="box-label">📘 Contoh 16</div>
       <p style="margin:0;font-size:.9rem;">Kurva $y = ax^3+bx$ memiliki garis singgung $y = 5x+4$ di titik yang berabsis $-1$. Tentukanlah nilai $a$ dan $b$.</p>
     </div>
     <div class="penyelesaian">
-      Titik singgung di $x=-1$: $y_1=5(-1)+4=-1$. Dari kurva: $-a-b=-1 \implies a+b=1 \quad\cdots(i)$<br><br>
-      Gradien kurva: $y'=3ax^2+b$;&ensp; $y'(-1)=3a+b=5 \quad\cdots(ii)$<br><br>
-      Dari $(ii)-(i)$: $2a=4 \implies a=2$;&ensp; substitusi ke $(i)$: $b=-1$<br><br>
-      Jadi $\boxed{a=2 \text{ dan } b=-1}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik singgung</strong> ada di garis: $y_1 = 5(-1) + 4 = -1$, sehingga dari kurva $-a - b = -1$ atau $a + b = 1$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gradien:</strong> $y' = 3ax^2 + b$, jadi $y'(-1) = 3a + b = 5$.</p>
+      $$ \begin{align*} (3a + b) - (a + b) &= 5 - 1 \\ 2a &= 4 \end{align*} $$
+      <div class="sol-jadi">$a = 2$ dan $b = -1$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 14</div>
+      <div class="box-label">📘 Contoh 17</div>
       <p style="margin:0;font-size:.9rem;">Tentukan persamaan garis normal kurva $y = x^2-4x+3$ yang sejajar dengan $x-2y+6=0$.</p>
     </div>
     <div class="penyelesaian">
-      Garis $x-2y+6=0 \implies y=\tfrac{1}{2}x+3$, gradiennya $\tfrac{1}{2}$. Karena garis normal sejajar: $m_n=\tfrac{1}{2}$.<br><br>
-      Hubungan gradien: $m_s = -\dfrac{1}{m_n} = -2$<br><br>
-      Gradien kurva $y'=2x-4=-2 \implies x_1=1$;&ensp; $y_1=1-4+3=0$. Titik singgung $(1,0)$.<br><br>
-      Persamaan garis normal: $y-0=\tfrac{1}{2}(x-1) \implies \boxed{x-2y-1=0}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gradien normal:</strong> $x - 2y + 6 = 0$ bergradien $\tfrac{1}{2}$, jadi $m_n = \tfrac{1}{2}$ dan $m_s = -\dfrac{1}{m_n}$ $= -2$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Titik singgung:</strong> $y' = 2x - 4 = -2$, jadi $x_1 = 1$ dan $y_1 = 0$.</p>
+      $$y - 0 = \tfrac{1}{2}(x - 1)$$
+      <div class="sol-jadi">garis normalnya $x - 2y - 1 = 0$.</div>
     </div>
 
     <div class="box box-latihan">
-      <div class="box-label">Soal Latihan C</div>
+      <div class="box-label">Soal Latihan D</div>
       <ol class="soal-list">
         <li>Tentukan persamaan garis singgung dan garis normal dari kurva $y = 2x^3-5x^2+3x-4$ tepat di titik yang memotong sumbu-$y$.</li>
         <li>Tentukan persamaan garis singgung kurva $f(x) = (2x-3)^3(x+1)$ di titik yang memiliki absis $x=2$.</li>
         <li>Tentukan persamaan semua garis singgung kurva $y = x^3-2x^2-4x+8$ di titik potong kurva tersebut dengan sumbu-$x$.</li>
         <li>Kurva $y = ax^2+bx+c$ melalui titik $(0,2)$. Jika garis $y=3x-1$ menyinggung kurva tersebut di titik yang berabsis $x=1$, tentukanlah nilai $a$, $b$, dan $c$.</li>
-        <li>Tentukan persamaan garis normal dari kurva $y=\dfrac{4}{x}$ yang posisinya tegak lurus dengan garis $x-4y+12=0$.</li>
+        <li>Tentukan persamaan garis normal dari kurva $y=\dfrac{4}{x}$ yang sejajar dengan garis $x-4y+12=0$.</li>
       </ol>
     </div>
 
   </section>
 
 
-  <!-- ═══ D. FUNGSI NAIK, TURUN, STASIONER ═════════════════════════ -->
-  <section class="section" id="bagian-d">
-    <h2 class="section-title"><span class="section-badge">D</span>Fungsi Naik, Turun, dan Titik Stasioner</h2>
+  <!-- ═══ E. FUNGSI NAIK, TURUN, STASIONER ═════════════════════════ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Fungsi Naik, Turun, dan Titik Stasioner</h2>
 
     <h3 class="subsection-title">1. Fungsi Naik dan Fungsi Turun</h3>
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Kriteria Naik &amp; Turun</div>
-      <p>Misalkan $A = \{x \mid a < x < b\}$:</p>
+      <p>Misalkan $A = \{x \mid a &lt; x &lt; b\}$:</p>
       <ul style="margin:.3rem 0;padding-left:1.3rem;font-size:.9rem;">
         <li>$f(x)$ <strong>naik</strong> pada $A$ $\Leftrightarrow$ $f'(x) > 0$ untuk setiap $x \in A$</li>
-        <li>$f(x)$ <strong>turun</strong> pada $A$ $\Leftrightarrow$ $f'(x) < 0$ untuk setiap $x \in A$</li>
+        <li>$f(x)$ <strong>turun</strong> pada $A$ $\Leftrightarrow$ $f'(x) &lt; 0$ untuk setiap $x \in A$</li>
         <li>$f(x)$ <strong>tidak naik</strong> pada $A$ $\Leftrightarrow$ $f'(x) \leq 0$ untuk setiap $x \in A$</li>
         <li>$f(x)$ <strong>tidak turun</strong> pada $A$ $\Leftrightarrow$ $f'(x) \geq 0$ untuk setiap $x \in A$</li>
       </ul>
     </div>
 
-    <p><strong>Langkah menentukan interval naik/turun:</strong> Tentukan $f'(x)$ &rarr; selesaikan $f'(x)=0$ untuk mendapat titik kritis &rarr; gambar garis bilangan dan tentukan tanda $f'(x)$ &rarr; simpulkan interval naik ($f'>0$) dan turun ($f'<0$).</p>
+    <p><strong>Langkah menentukan interval naik/turun:</strong> Tentukan $f'(x)$ &rarr; selesaikan $f'(x)=0$ untuk mendapat titik kritis &rarr; gambar garis bilangan dan tentukan tanda $f'(x)$ &rarr; simpulkan interval naik ($f'>0$) dan turun ($f'&lt;0$).</p>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 15</div>
+      <div class="box-label">📘 Contoh 18</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah interval naik dan interval turun dari $f(x) = x^3+3x^2-45x+10$.</p>
     </div>
     <div class="penyelesaian">
-      $f'(x)=3x^2+6x-45=0 \implies (x+5)(x-3)=0 \implies x_1=-5$, $x_2=3$<br><br>
-      Uji: $f'(-10)=195>0$ (naik);&ensp; $f'(0)=-45<0$ (turun);&ensp; $f'(5)=60>0$ (naik)
-      $$\boxed{\text{Naik pada } x<-5 \text{ atau } x>3,\qquad\text{Turun pada } -5<x<3}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik kritis:</strong> $f'(x)$ $= 3x^2 + 6x - 45$ $= 3(x + 5)(x - 3)$ $= 0$, jadi $x = -5$ atau $x = 3$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Uji tanda:</strong></p>
+      <ul class="sol-cek">
+        <li>$f'(-10) = 195 > 0$: naik</li>
+        <li>$f'(0) = -45 &lt; 0$: turun</li>
+        <li>$f'(5) = 60 > 0$: naik</li>
+      </ul>
+      <div class="sol-jadi">naik pada $x &lt; -5$ atau $x > 3$; turun pada $-5 &lt; x &lt; 3$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 16</div>
+      <div class="box-label">📘 Contoh 19</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah interval naik dan interval turun dari:</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$f(x) = x^4-4x^3-8x^2+48x$</li>
@@ -670,14 +904,14 @@ window.MathJax = {
       </ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$f'(x)=4(x-3)(x-2)(x+2)=0 \implies x=-2, 2, 3$<br>
-          Uji tanda: $(-\infty,-2)$: $(-)$;&ensp; $(-2,2)$: $(+)$;&ensp; $(2,3)$: $(-)$;&ensp; $(3,\infty)$: $(+)$
-          $$\boxed{\text{Naik: }{-2}<x<2 \text{ atau } x>3;\quad\text{Turun: } x<{-2} \text{ atau } 2<x<3}$$</li>
-        <li>$f'(x)=12x(x-2)^2=0 \implies x=0, x=2$<br>
-          Tanda $f'$: $x<0$: $(-)$;&ensp; $x\in(0,2)$: $(+)$;&ensp; $x>2$: $(+)$. Tanda tidak berubah di $x=2$ (titik belok stasioner, bukan titik balik).
-          $$\boxed{\text{Naik: } x>0;\quad\text{Turun: } x<0}$$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$f(x) = x^4 - 4x^3 - 8x^2 + 48x$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik kritis:</strong> $f'(x)$ $= 4(x + 2)(x - 2)(x - 3)$ $= 0$, jadi $x = -2, 2, 3$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tanda $f'$:</strong> $(-)$ pada $x &lt; -2$, $(+)$ pada $-2 &lt; x &lt; 2$, $(-)$ pada $2 &lt; x &lt; 3$, $(+)$ pada $x > 3$.</p>
+      <div class="sol-jadi">naik pada $-2 &lt; x &lt; 2$ atau $x > 3$; turun pada $x &lt; -2$ atau $2 &lt; x &lt; 3$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$f(x) = 3x^4$ $- 16x^3$ $+ 24x^2$ $- 9$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik kritis:</strong> $f'(x) = 12x(x - 2)^2 = 0$, jadi $x = 0$ atau $x = 2$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tanda $f'$:</strong> $(-)$ pada $x &lt; 0$, $(+)$ pada $0 &lt; x &lt; 2$ dan $x > 2$. Faktor $(x - 2)^2$ tidak mengubah tanda.</p>
+      <div class="sol-jadi">naik pada $x > 0$; turun pada $x &lt; 0$.</div>
     </div>
 
     <div class="box box-catatan">
@@ -713,42 +947,44 @@ window.MathJax = {
     </ol>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 17</div>
+      <div class="box-label">📘 Contoh 20</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah titik stasioner dan jenisnya untuk $f(x) = x^3-3x^2-9x+10$.</p>
     </div>
     <div class="penyelesaian">
-      $f'(x)=3x^2-6x-9=3(x+1)(x-3)=0 \implies x_1=-1$, $x_2=3$<br><br>
-      Titik: $f(-1)=15 \to (-1,\,15)$;&ensp; $f(3)=-17 \to (3,\,-17)$<br><br>
-      Uji tanda $f'(x)$: $x<-1$: $(+)$;&ensp; $-1<x<3$: $(-)$;&ensp; $x>3$: $(+)$<br><br>
-      <ul style="margin:.4rem 0;padding-left:1.3rem;font-size:.9rem;">
-        <li>$(-1,\,15)$: tanda berubah $(+\to-)$ $\Rightarrow$ <strong>titik maksimum stasioner</strong></li>
-        <li>$(3,\,-17)$: tanda berubah $(-\to+)$ $\Rightarrow$ <strong>titik minimum stasioner</strong></li>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik kritis:</strong> $f'(x)$ $= 3(x + 1)(x - 3)$ $= 0$, jadi $x = -1$ atau $x = 3$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Nilai fungsi:</strong> $f(-1) = 15$ dan $f(3) = -17$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Tanda $f'$:</strong> $(+)$ pada $x &lt; -1$, $(-)$ pada $-1 &lt; x &lt; 3$, $(+)$ pada $x > 3$.</p>
+      <ul class="sol-cek">
+        <li>$(-1, 15)$: $+ \to -$, titik balik maksimum</li>
+        <li>$(3, -17)$: $- \to +$, titik balik minimum</li>
       </ul>
+      <div class="sol-jadi">maksimum $(-1, 15)$ dan minimum $(3, -17)$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 18</div>
+      <div class="box-label">📘 Contoh 21</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah titik-titik stasioner dan jenisnya untuk $f(x) = x^4-4x^3+4x^2+2$.</p>
     </div>
     <div class="penyelesaian">
-      $f'(x)=4x(x-1)(x-2)=0 \implies x=0, 1, 2$<br><br>
-      Titik: $(0,\,2)$, $(1,\,3)$, $(2,\,2)$<br><br>
-      Uji tanda: $x<0$: $(-)$;&ensp; $0<x<1$: $(+)$;&ensp; $1<x<2$: $(-)$;&ensp; $x>2$: $(+)$<br><br>
-      <ul style="margin:.4rem 0;padding-left:1.3rem;font-size:.9rem;">
-        <li>$(0,\,2)$: $(-\to+)$ $\Rightarrow$ <strong>titik minimum stasioner</strong></li>
-        <li>$(1,\,3)$: $(+\to-)$ $\Rightarrow$ <strong>titik maksimum stasioner</strong></li>
-        <li>$(2,\,2)$: $(-\to+)$ $\Rightarrow$ <strong>titik minimum stasioner</strong></li>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik kritis:</strong> $f'(x)$ $= 4x(x - 1)(x - 2)$ $= 0$, jadi $x = 0, 1, 2$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Nilai fungsi:</strong> $(0, 2)$, $(1, 3)$, $(2, 2)$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Tanda $f'$:</strong> $-, +, -, +$ pada keempat interval.</p>
+      <ul class="sol-cek">
+        <li>$(0, 2)$: $- \to +$, minimum</li>
+        <li>$(1, 3)$: $+ \to -$, maksimum</li>
+        <li>$(2, 2)$: $- \to +$, minimum</li>
       </ul>
+      <div class="sol-jadi">minimum $(0, 2)$ dan $(2, 2)$; maksimum $(1, 3)$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 19</div>
-      <p style="margin:0;font-size:.9rem;">Tentukanlah titik-titik stasioner dan jenisnya untuk $f(x) = x^5-5x^4+10x^3-10x^2+5x+1$.</p>
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah titik-titik stasioner dan jenisnya untuk $f(x) = x^5$ $-5x^4$ $+10x^3$ $-10x^2$ $+5x$ $+1$.</p>
     </div>
     <div class="penyelesaian">
-      $f'(x)=5(x-1)^4=0 \implies x=1$. Nilai $f(1)=2$, titik stasioner $(1,\,2)$.<br><br>
-      Uji tanda: $f'(x)=5(x-1)^4 \geq 0$ untuk semua $x$, tanda <strong>tidak berubah</strong> di sekitar $x=1$.<br><br>
-      Kesimpulan: $(1,\,2)$ adalah <strong>titik belok stasioner</strong> (bukan titik balik).
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik kritis:</strong> $f'(x)$ $= 5x^4$ $- 20x^3$ $+ 30x^2$ $- 20x$ $+ 5$ $= 5(x - 1)^4$ $= 0$, jadi $x = 1$ dan $f(1) = 2$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tanda $f'$:</strong> $5(x - 1)^4 \geq 0$ di kiri dan kanan $x = 1$, tanda tidak berubah.</p>
+      <div class="sol-jadi">$(1, 2)$ adalah <strong>titik belok stasioner</strong>, bukan titik balik.</div>
     </div>
 
     <h3 class="subsection-title">3. Kecekungan dan Titik Belok</h3>
@@ -757,7 +993,7 @@ window.MathJax = {
       <div class="box-label">&bull; Kecekungan &amp; Titik Belok</div>
       <ul style="margin:.3rem 0;padding-left:1.3rem;font-size:.9rem;">
         <li>$f''(x) > 0$ pada interval $A$ $\Rightarrow$ kurva <strong>cekung ke atas</strong> pada $A$</li>
-        <li>$f''(x) < 0$ pada interval $A$ $\Rightarrow$ kurva <strong>cekung ke bawah</strong> pada $A$</li>
+        <li>$f''(x) &lt; 0$ pada interval $A$ $\Rightarrow$ kurva <strong>cekung ke bawah</strong> pada $A$</li>
         <li>$f''(x_1)=0$ dan tanda $f''$ berubah $\Rightarrow$ $T(x_1, f(x_1))$ adalah <strong>titik belok</strong></li>
       </ul>
     </div>
@@ -772,7 +1008,7 @@ window.MathJax = {
       <li>Uji tanda $f''(x)$ pada setiap interval:
         <ul style="margin:.3rem 0;padding-left:1.3rem;font-size:.9rem;">
           <li>$f''(x) > 0$ $\Rightarrow$ kurva <strong>cekung ke atas</strong> pada interval tersebut</li>
-          <li>$f''(x) < 0$ $\Rightarrow$ kurva <strong>cekung ke bawah</strong> pada interval tersebut</li>
+          <li>$f''(x) &lt; 0$ $\Rightarrow$ kurva <strong>cekung ke bawah</strong> pada interval tersebut</li>
         </ul>
       </li>
       <li>Tentukan koordinat titik belok: jika tanda $f''$ <strong>berubah</strong> di $x = x_1$, maka hitung $y_1 = f(x_1)$ dan nyatakan titik beloknya sebagai $T(x_1, y_1)$.</li>
@@ -784,157 +1020,75 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 20</div>
+      <div class="box-label">📘 Contoh 23</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah interval kecekungan dan titik belok dari $f(x) = x^3-3x^2-9x+10$.</p>
     </div>
     <div class="penyelesaian">
-      $f'(x)=3x^2-6x-9$;&ensp; $f''(x)=6x-6=0 \implies x=1$ (kandidat titik belok)<br><br>
-      Uji tanda $f''$: $x<1$: $f''(0)=-6<0$ (cekung ke bawah);&ensp; $x>1$: $f''(2)=6>0$ (cekung ke atas)<br><br>
-      Tanda $f''$ berubah di $x=1$: $f(1)=1-3-9+10=-1$<br><br>
-      Jadi <strong>titik belok</strong> berada di $\boldsymbol{(1,\,-1)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Turunan kedua:</strong> $f''(x) = 6x - 6 = 0$, jadi $x = 1$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tanda $f''$:</strong> $f''(0) = -6 &lt; 0$ (cekung ke bawah pada $x &lt; 1$); $f''(2) = 6 > 0$ (cekung ke atas pada $x > 1$).</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Tanda berubah,</strong> jadi titik belok di $x = 1$: $f(1) = 1 - 3 - 9 + 10$ $= -1$.</p>
+      <div class="sol-jadi">cekung ke bawah pada $x &lt; 1$, cekung ke atas pada $x > 1$, titik belok $(1, -1)$.</div>
     </div>
 
-    <div class="box box-latihan">
-      <div class="box-label">Soal Latihan D</div>
-      <ol class="soal-list">
-        <li>Tentukanlah interval naik dan interval turun dari $f(x) = 2x^3-3x^2-36x+5$.</li>
-        <li>Tentukanlah koordinat semua titik stasioner beserta jenisnya dari $f(x) = 2x^3+3x^2-12x+7$.</li>
-        <li>Tentukanlah interval kecekungan dan koordinat titik belok dari $f(x) = x^3-6x^2+3x+4$.</li>
-        <li>Diberikan $f(x) = x^4-4x^3+4x^2+2$.<br>(a) Tentukanlah semua titik stasioner beserta jenisnya.<br>(b) Tentukanlah interval di mana $f$ naik dan di mana $f$ turun.</li>
-        <li>Diberikan $f(x) = x^3-3x^2-9x+11$. Tentukanlah:<br>(a) Interval naik dan interval turun.<br>(b) Koordinat semua titik stasioner beserta jenisnya.<br>(c) Interval kecekungan dan koordinat titik belok.</li>
-        <li>Diketahui $f(x) = x^3+ax^2+bx+5$ mempunyai titik stasioner di $x=1$ dan $x=3$. Tentukanlah nilai $a$ dan $b$.</li>
-      </ol>
-    </div>
-
-  </section>
-
-
-  <!-- ═══ E. TURUNAN FUNGSI TRIGONOMETRI ════════════════════════════ -->
-  <section class="section" id="bagian-e">
-    <h2 class="section-title"><span class="section-badge">E</span>Turunan Fungsi Trigonometri</h2>
-
-    <h3 class="subsection-title">1. Rumus Dasar Turunan Trigonometri</h3>
-
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Fungsi $f(x)$</th><th>Turunan $f'(x)$</th><th>Fungsi $f(x)$</th><th>Turunan $f'(x)$</th></tr></thead>
-        <tbody>
-          <tr><td>$\sin x$</td><td>$\cos x$</td><td>$\cot x$</td><td>$-\csc^2 x$</td></tr>
-          <tr><td>$\cos x$</td><td>$-\sin x$</td><td>$\sec x$</td><td>$\sec x \tan x$</td></tr>
-          <tr><td>$\tan x$</td><td>$\sec^2 x$</td><td>$\csc x$</td><td>$-\csc x \cot x$</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="box box-catatan">
-      <div class="box-label">&#9888; Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Turunan $\sin x$ adalah $\cos x$ (positif), sedangkan turunan $\cos x$ adalah $-\sin x$ (negatif). Fungsi-fungsi yang diawali huruf &ldquo;<strong>co</strong>&rdquo; ($\cos$, $\cot$, $\csc$) selalu menghasilkan turunan <strong>bertanda negatif</strong>.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Uji Turunan Kedua</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Jika $f'(a) = 0$, jenis titik stasioner dapat ditentukan tanpa garis bilangan:</p>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>$f''(a) &lt; 0$: titik balik <strong>maksimum</strong>;</li><li>$f''(a) > 0$: titik balik <strong>minimum</strong>;</li><li>$f''(a) = 0$: uji gagal, kembali ke uji tanda $f'$.</li></ul>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 21</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan pertama dari:</p>
-      <ol class="alpha-list" style="margin:0;">
-        <li>$f(x) = 3\sin x - 2\cos x$</li>
-        <li>$f(x) = 5\tan x + \cot x$</li>
-        <li>$f(x) = \sin x \cdot \cos x$</li>
-        <li>$f(x) = \dfrac{\sin x}{1+\cos x}$</li>
-        <li>$f(x) = x^2 \tan x$</li>
-        <li>$f(x) = \dfrac{\cos x}{\sin x+1}$</li>
-      </ol>
+      <div class="box-label">📘 Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Dengan uji turunan kedua, tentukan jenis titik stasioner $f(x) = 2x^3 - 3x^2 - 12x + 5$.</p>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$f'(x) = 3\cos x - 2(-\sin x) = \boxed{3\cos x + 2\sin x}$</li>
-        <li>$f'(x) = 5\sec^2 x + (-\csc^2 x) = \boxed{5\sec^2 x - \csc^2 x}$</li>
-        <li>$u=\sin x$, $v=\cos x$;&ensp; $f'(x) = \cos^2 x - \sin^2 x = \boxed{\cos 2x}$</li>
-        <li>$u=\sin x$, $v=1+\cos x$:
-          $$f'(x) = \frac{\cos x(1+\cos x)+\sin^2 x}{(1+\cos x)^2} = \frac{\cos x+1}{(1+\cos x)^2} = \boxed{\frac{1}{1+\cos x}}$$</li>
-        <li>$u=x^2$, $v=\tan x$;&ensp; $f'(x) = 2x\tan x + x^2\sec^2 x = \boxed{2x\tan x + x^2\sec^2 x}$</li>
-        <li>$u=\cos x$, $v=\sin x+1$:
-          $$f'(x) = \frac{-\sin x(\sin x+1)-\cos^2 x}{(\sin x+1)^2} = \frac{-(1+\sin x)}{(\sin x+1)^2} = \boxed{\frac{-1}{\sin x+1}}$$</li>
-      </ol>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik kritis:</strong> $f'(x)$ $= 6x^2 - 6x - 12$ $= 6(x + 1)(x - 2)$ $= 0$, jadi $x = -1$ atau $x = 2$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Turunan kedua:</strong> $f''(x) = 12x - 6$.</p>
+      <ul class="sol-cek">
+        <li>$f''(-1) = -18 &lt; 0$: maksimum, $f(-1) = 12$</li>
+        <li>$f''(2) = 18 > 0$: minimum, $f(2) = -15$</li>
+      </ul>
+      <div class="sol-jadi">titik balik maksimum $(-1, 12)$ dan titik balik minimum $(2, -15)$.</div>
     </div>
 
-    <h3 class="subsection-title">2. Pengembangan dengan Aturan Rantai</h3>
-
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Fungsi $y$</th><th>Turunan $y'$</th><th>Fungsi $y$</th><th>Turunan $y'$</th></tr></thead>
-        <tbody>
-          <tr><td>$\sin u$</td><td>$u'\cos u$</td><td>$\cot u$</td><td>$-u'\csc^2 u$</td></tr>
-          <tr><td>$\cos u$</td><td>$-u'\sin u$</td><td>$\sec u$</td><td>$u'\sec u\tan u$</td></tr>
-          <tr><td>$\tan u$</td><td>$u'\sec^2 u$</td><td>$\csc u$</td><td>$-u'\csc u\cot u$</td></tr>
-        </tbody>
-      </table>
+    <h3 class="subsection-title">4. Nilai Maksimum dan Minimum pada Interval Tertutup</h3>
+    <p>Pada interval tertutup $[a, b]$, nilai terbesar dan terkecil fungsi bisa terjadi di titik stasioner <strong>atau di ujung interval</strong>.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Langkah Nilai Ekstrem di [a, b]</div>
+      <ol style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Selesaikan $f'(x) = 0$; ambil hanya $x$ yang ada di $[a, b]$.</li><li>Hitung $f$ di titik-titik itu dan di $x = a$, $x = b$.</li><li>Nilai terbesar adalah maksimum, nilai terkecil adalah minimum.</li></ol>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 22</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan pertama dari:</p>
-      <ol class="alpha-list" style="margin:0;">
-        <li>$f(x) = \cos(3x-4)$</li>
-        <li>$f(x) = 3\tan(x^2-4)$</li>
-        <li>$f(x) = \sin(3x+2)\cos(3x-3)$</li>
-        <li>$f(x) = 5\sec^3 x$</li>
-        <li>$f(x) = \sin^4(3x+5)$</li>
-      </ol>
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai maksimum dan minimum $f(x) = x^3 - 3x^2 - 9x + 5$ pada interval $-2 \leq x \leq 4$.</p>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$u=3x-4 \Rightarrow u'=3$;&ensp; $f'(x)=3(-\sin(3x-4))=\boxed{-3\sin(3x-4)}$</li>
-        <li>$u=x^2-4 \Rightarrow u'=2x$;&ensp; $f'(x)=3\cdot 2x\sec^2(x^2-4)=\boxed{6x\sec^2(x^2-4)}$</li>
-        <li>$u'=3\cos(3x+2)$, $v'=-3\sin(3x-3)$. Gunakan identitas $\cos A\cos B-\sin A\sin B=\cos(A+B)$:
-          $$f'(x)=3[\cos(3x+2)\cos(3x-3)-\sin(3x+2)\sin(3x-3)]=\boxed{3\cos(6x-1)}$$</li>
-        <li>$u=\sec x \Rightarrow u'=\sec x\tan x$;&ensp; $f'(x)=5\cdot 3\sec^2 x\cdot\sec x\tan x=\boxed{15\sec^3 x\tan x}$</li>
-        <li>$u=\sin(3x+5) \Rightarrow u'=3\cos(3x+5)$;&ensp; $f'(x)=4\sin^3(3x+5)\cdot 3\cos(3x+5)=\boxed{12\sin^3(3x+5)\cos(3x+5)}$</li>
-      </ol>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik stasioner:</strong> $f'(x)$ $= 3(x + 1)(x - 3)$ $= 0$, jadi $x = -1$ dan $x = 3$ (keduanya di dalam interval).</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan nilai fungsi:</strong></p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>$x$</th><th>$-2$</th><th>$-1$</th><th>$3$</th><th>$4$</th></tr></thead><tbody><tr><td>$f(x)$</td><td>$3$</td><td>$10$</td><td>$-22$</td><td>$-15$</td></tr></tbody></table></div>
+      <div class="sol-jadi">nilai maksimum $10$ (di $x = -1$) dan nilai minimum $-22$ (di $x = 3$).</div>
     </div>
-
-    <h3 class="subsection-title">3. Turunan Trigonometri dengan Aturan Hasil Kali dan Hasil Bagi</h3>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 23</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukanlah turunan pertama dari:</p>
-      <ol class="alpha-list" style="margin:0;">
-        <li>$f(x) = x^2\sin 3x$</li>
-        <li>$f(x) = \dfrac{\tan 2x}{1+\cos 2x}$</li>
-        <li>$f(x) = \sin^2 x \cdot \cos^3 x$</li>
-        <li>$f(x) = \cos^4(2x^2-3)$</li>
-        <li>$f(x) = \sqrt{\tan(3x+1)}$</li>
-      </ol>
+      <div class="box-label">📘 Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai maksimum dan minimum $f(x) = x^3 - 6x^2 + 9x + 1$ pada interval $0 \leq x \leq 2$.</p>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$u=x^2$, $v=\sin 3x \Rightarrow v'=3\cos 3x$;&ensp; $f'(x)=\boxed{2x\sin 3x+3x^2\cos 3x}$</li>
-        <li>$u=\tan 2x \Rightarrow u'=2\sec^2 2x$;&ensp; $v=1+\cos 2x \Rightarrow v'=-2\sin 2x$
-          $$f'(x) = \frac{2\sec^2 2x(1+\cos 2x)+2\tan 2x\sin 2x}{(1+\cos 2x)^2} = \boxed{\frac{2(1+\cos 2x-\cos^2 2x)}{\cos^2 2x\,(1+\cos 2x)^2}}$$</li>
-        <li>$u=\sin^2 x \Rightarrow u'=2\sin x\cos x$;&ensp; $v=\cos^3 x \Rightarrow v'=-3\cos^2 x\sin x$
-          $$f'(x)=\sin x\cos^2 x(2\cos^2 x-3\sin^2 x)=\boxed{\sin x\cos^2 x\,(5\cos^2 x-3)}$$</li>
-        <li>$u=\cos(2x^2-3) \Rightarrow u'=-4x\sin(2x^2-3)$;&ensp; $f'(x)=\boxed{-16x\cos^3(2x^2-3)\sin(2x^2-3)}$</li>
-        <li>$u=\tan(3x+1) \Rightarrow u'=3\sec^2(3x+1)$;&ensp; $f'(x)=\boxed{\dfrac{3\sec^2(3x+1)}{2\sqrt{\tan(3x+1)}}}$</li>
-      </ol>
-    </div>
-
-    <div class="box box-catatan">
-      <div class="box-label">&#9888; Strategi Menurunkan Fungsi Trigonometri Komposit</div>
-      <ol style="margin:.3rem 0;padding-left:1.3rem;font-size:.9rem;">
-        <li>Identifikasi struktur: perkalian, pembagian, pangkat, atau komposisi?</li>
-        <li>Untuk $[\sin u]^n$ atau $[\cos u]^n$: aturan pangkat fungsi dua kali &mdash; turunkan pangkat, lalu turunkan fungsi trigonometri (aturan rantai).</li>
-        <li>Untuk perkalian dua fungsi trigonometri: aturan hasil kali, lalu aturan rantai pada masing-masing faktor.</li>
-        <li>Sederhanakan hasil akhir menggunakan identitas trigonometri bila perlu.</li>
-      </ol>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik stasioner:</strong> $f'(x)$ $= 3(x - 1)(x - 3)$ $= 0$, jadi $x = 1$ atau $x = 3$. Hanya $x = 1$ di dalam $[0, 2]$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan nilai fungsi:</strong></p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>$x$</th><th>$0$</th><th>$1$</th><th>$2$</th></tr></thead><tbody><tr><td>$f(x)$</td><td>$1$</td><td>$5$</td><td>$3$</td></tr></tbody></table></div>
+      <div class="sol-jadi">nilai maksimum $5$ (di $x = 1$) dan nilai minimum $1$ (di ujung $x = 0$).</div>
     </div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan E</div>
       <ol class="soal-list">
-        <li>Tentukanlah turunan pertama dari:<br>(a) $f(x)=4\sin x+3\cos x-\tan x$<br>(b) $f(x)=2\sec x-\csc x+5$<br>(c) $f(x)=\sin x\cdot\tan x$<br>(d) $f(x)=\dfrac{\tan x}{\sec x}$</li>
-        <li>Tentukanlah turunan pertama dari:<br>(a) $f(x)=\sin(4x+1)$<br>(b) $f(x)=\cos(x^2-3x)$<br>(c) $f(x)=\tan\!\left(\dfrac{x}{2}+\pi\right)$<br>(d) $f(x)=3\cot(2x^2+1)$</li>
-        <li>Tentukanlah turunan pertama dari:<br>(a) $f(x)=\sin^3(2x)$<br>(b) $f(x)=\cos^4(x^2-1)$<br>(c) $f(x)=\sqrt{\sin(3x-2)}$<br>(d) $f(x)=\tan^2(x^2+x)$</li>
-        <li>Tentukanlah turunan pertama dari:<br>(a) $f(x)=x^2\cos(3x)$<br>(b) $f(x)=\sin^2 x\cos(2x)$<br>(c) $f(x)=\dfrac{\sin(2x)}{1+\cos(2x)}$<br>(d) $f(x)=\dfrac{x}{\sin x+\cos x}$</li>
-        <li>Tentukanlah nilai $f'(x)$ pada titik yang diberikan:<br>(a) $f(x)=2\sin\!\left(3x-\dfrac{2}{3}\pi\right)$, $x=\dfrac{\pi}{2}$<br>(b) $f(x)=8\cos^3 x$, $x=\dfrac{\pi}{3}$<br>(c) $f(x)=\tan^2(2x)$, $x=\dfrac{\pi}{8}$<br>(d) $f(x)=x\sin x$, $x=\dfrac{\pi}{2}$</li>
-        <li>Diketahui $f(x)=\sin^2 x+\cos^2 x$.<br>(a) Tentukanlah $f'(x)$ dengan menurunkan langsung.<br>(b) Apa yang dapat kamu simpulkan? Jelaskan mengapa hasilnya demikian.</li>
+        <li>Tentukanlah interval naik dan interval turun dari $f(x) = 2x^3$ $-3x^2$ $-36x$ $+5$.</li>
+        <li>Tentukanlah koordinat semua titik stasioner beserta jenisnya dari $f(x) = 2x^3$ $+3x^2$ $-12x$ $+7$.</li>
+        <li>Tentukanlah interval kecekungan dan koordinat titik belok dari $f(x) = x^3$ $-6x^2$ $+3x$ $+4$.</li>
+        <li>Diberikan $f(x) = x^4$ $-4x^3$ $+4x^2$ $+2$.<br>(a) Tentukanlah semua titik stasioner beserta jenisnya.<br>(b) Tentukanlah interval di mana $f$ naik dan di mana $f$ turun.</li>
+        <li>Diberikan $f(x) = x^3$ $-3x^2$ $-9x$ $+11$. Tentukanlah:<br>(a) Interval naik dan interval turun.<br>(b) Koordinat semua titik stasioner beserta jenisnya.<br>(c) Interval kecekungan dan koordinat titik belok.</li>
+        <li>Diketahui $f(x) = x^3$ $+ax^2$ $+bx$ $+5$ mempunyai titik stasioner di $x=1$ dan $x=3$. Tentukanlah nilai $a$ dan $b$.</li>
+        <li>Tentukan nilai maksimum dan minimum $f(x) = 2x^3$ $- 9x^2$ $+ 12x$ pada interval $0 \leq x \leq 3$.</li>
       </ol>
     </div>
 
@@ -956,29 +1110,28 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 24</div>
+      <div class="box-label">📘 Contoh 27</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik fungsi polinom $f(x) = x^3-9x^2+24x-10$.</p>
     </div>
     <div class="penyelesaian">
-      <strong>Langkah 1 &mdash; Titik potong sumbu.</strong> Titik potong sumbu-$y$ ($x=0$): $(0,\,-10)$.<br><br>
-      <strong>Langkah 2 &mdash; Interval naik/turun.</strong>
-      $$f'(x)=3x^2-18x+24=0 \implies (x-4)(x-2)=0 \implies x_1=2,\; x_2=4$$
-      <ul style="margin:.4rem 0;padding-left:1.3rem;font-size:.9rem;">
-        <li>$x&lt;2$: $(+)$ naik;&ensp; $2&lt;x&lt;4$: $(-)$ turun;&ensp; $x>4$: $(+)$ naik</li>
-        <li>$x=2$: $f(2)=10$ (maksimum lokal);&ensp; $x=4$: $f(4)=6$ (minimum lokal)</li>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik potong sumbu-$y$:</strong> $f(0) = -10$, titik $(0, -10)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Naik/turun dan stasioner:</strong> $f'(x)$ $= 3x^2 - 18x + 24$ $= 3(x - 2)(x - 4)$.</p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Interval</th><th>Tanda $f'$</th><th>Sifat</th></tr></thead><tbody><tr><td>$x &lt; 2$</td><td>$+$</td><td>naik</td></tr><tr><td>$2 &lt; x &lt; 4$</td><td>$-$</td><td>turun</td></tr><tr><td>$x > 4$</td><td>$+$</td><td>naik</td></tr></tbody></table></div>
+      <ul class="sol-cek">
+        <li>$f(2) = 10$: maksimum lokal $(2, 10)$</li>
+        <li>$f(4) = 6$: minimum lokal $(4, 6)$</li>
       </ul>
-      <strong>Langkah 3 &mdash; Cekung atas/bawah.</strong>
-      $$f''(x)=6x-18=0 \implies x=3$$
-      Titik belok: $f(3)=8$, yaitu $(3,\,8)$.<br><br>
-      <strong>Langkah 4 &mdash; Ringkasan titik istimewa.</strong><br>
-      $(0,\,-10)$ potong sumbu-$y$;&ensp; $(2,\,10)$ maks. lokal;&ensp; $(3,\,8)$ titik belok;&ensp; $(4,\,6)$ min. lokal.
+      <p class="sol-step"><span class="sol-no">3</span><strong>Titik belok:</strong> $f''(x) = 6x - 18 = 0$, jadi $x = 3$ dan $f(3) = 8$; cekung ke bawah pada $x &lt; 3$, ke atas pada $x > 3$.</p>
+      <p class="sol-step"><span class="sol-no">4</span><strong>Lukis sketsa</strong> melalui titik-titik istimewa tersebut:</p>
+      <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 270 200" width="100%" style="max-width:300px" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="122.5" x2="266" y2="122.5" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><line x1="30" y1="194" x2="30" y2="6" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><text x="260" y="118.5" style="fill:var(--text-2,#475569);font-size:9px">x</text><text x="35" y="12" style="fill:var(--text-2,#475569);font-size:9px">y</text><line x1="70" y1="119.5" x2="70" y2="125.5" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><text x="70" y="135.5" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:9px">1</text><line x1="110" y1="119.5" x2="110" y2="125.5" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><text x="110" y="135.5" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:9px">2</text><line x1="150" y1="119.5" x2="150" y2="125.5" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><text x="150" y="135.5" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:9px">3</text><line x1="190" y1="119.5" x2="190" y2="125.5" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><text x="190" y="135.5" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:9px">4</text><line x1="230" y1="119.5" x2="230" y2="125.5" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><text x="230" y="135.5" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:9px">5</text><line x1="27" y1="66.2" x2="33" y2="66.2" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><text x="24" y="69.2" text-anchor="end" style="fill:var(--text-2,#475569);font-size:9px">10</text><line x1="27" y1="178.8" x2="33" y2="178.8" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><text x="24" y="181.8" text-anchor="end" style="fill:var(--text-2,#475569);font-size:9px">-10</text><line x1="110" y1="122.5" x2="110" y2="66.2" style="stroke:var(--text-3,#94a3b8);stroke-width:1;stroke-dasharray:3 3"/><line x1="150" y1="122.5" x2="150" y2="77.5" style="stroke:var(--text-3,#94a3b8);stroke-width:1;stroke-dasharray:3 3"/><line x1="190" y1="122.5" x2="190" y2="88.8" style="stroke:var(--text-3,#94a3b8);stroke-width:1;stroke-dasharray:3 3"/><polyline points="30.0,178.8 32.0,172.1 34.0,165.8 36.0,159.6 38.0,153.7 40.0,148.1 42.0,142.7 44.0,137.5 46.0,132.5 48.0,127.7 50.0,123.2 52.0,118.9 54.0,114.8 56.0,110.8 58.0,107.1 60.0,103.6 62.0,100.3 64.0,97.1 66.0,94.2 68.0,91.4 70.0,88.8 72.0,86.3 74.0,84.0 76.0,81.9 78.0,79.9 80.0,78.1 82.0,76.4 84.0,74.9 86.0,73.5 88.0,72.3 90.0,71.2 92.0,70.2 94.0,69.3 96.0,68.6 98.0,67.9 100.0,67.4 102.0,67.0 104.0,66.6 106.0,66.4 108.0,66.3 110.0,66.2 112.0,66.3 114.0,66.4 116.0,66.6 118.0,66.9 120.0,67.2 122.0,67.6 124.0,68.1 126.0,68.6 128.0,69.2 130.0,69.8 132.0,70.4 134.0,71.1 136.0,71.8 138.0,72.6 140.0,73.4 142.0,74.2 144.0,75.0 146.0,75.8 148.0,76.7 150.0,77.5 152.0,78.3 154.0,79.2 156.0,80.0 158.0,80.8 160.0,81.6 162.0,82.4 164.0,83.2 166.0,83.9 168.0,84.6 170.0,85.2 172.0,85.8 174.0,86.4 176.0,86.9 178.0,87.4 180.0,87.8 182.0,88.1 184.0,88.4 186.0,88.6 188.0,88.7 190.0,88.8 192.0,88.7 194.0,88.6 196.0,88.4 198.0,88.0 200.0,87.6 202.0,87.1 204.0,86.4 206.0,85.7 208.0,84.8 210.0,83.8 212.0,82.7 214.0,81.5 216.0,80.1 218.0,78.6 220.0,76.9 222.0,75.1 224.0,73.1 226.0,71.0 228.0,68.7 230.0,66.2 232.0,63.6 234.0,60.8 236.0,57.9 238.0,54.7 240.0,51.4 242.0,47.9 244.0,44.2 246.0,40.2 248.0,36.1 250.0,31.8 252.0,27.3 254.0,22.5" style="fill:none;stroke:#0d9488;stroke-width:2.2"/><circle cx="30" cy="178.8" r="3.6" style="fill:#0d9488"/><text x="38.0" y="182.8" text-anchor="start" style="fill:var(--text-2,#475569);font-size:9px;font-weight:600">(0, −10)</text><circle cx="110" cy="66.2" r="3.6" style="fill:#0d9488"/><text x="110.0" y="57.2" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:9px;font-weight:600">maks (2, 10)</text><circle cx="150" cy="77.5" r="3.6" style="fill:#e11d48"/><text x="150.0" y="93.5" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:9px;font-weight:600">belok (3, 8)</text><circle cx="190" cy="88.8" r="3.6" style="fill:#0d9488"/><text x="190.0" y="104.8" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:9px;font-weight:600">min (4, 6)</text></svg></div>
+      <div class="sol-jadi">grafik naik sampai $(2, 10)$, turun ke $(4, 6)$ melewati titik belok $(3, 8)$, lalu naik lagi.</div>
     </div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan F</div>
       <p style="font-size:.9rem;margin-bottom:.6rem;">Lukislah grafik fungsi polinom berikut (tentukan titik potong, stasioner, dan belok):</p>
       <ol class="soal-list">
-        <li>$f(x) = x^3+3x^2-9x-20$</li>
+        <li>$f(x) = x^3$ $+3x^2$ $-9x$ $-20$</li>
         <li>$f(x) = x^4-8x^2+12$</li>
       </ol>
     </div>
@@ -1002,86 +1155,106 @@ window.MathJax = {
     <h3 class="subsection-title">1. Optimasi Nilai</h3>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 25</div>
+      <div class="box-label">📘 Contoh 28</div>
       <p style="margin:0;font-size:.9rem;">Dua buah bilangan real positif mempunyai hasil kali 80. Supaya jumlah kedua bilangan itu minimum, tentukanlah kedua bilangan tersebut.</p>
     </div>
     <div class="penyelesaian">
-      Misalkan bilangan $= x$ dan $y = \dfrac{80}{x}$. Jumlah $H = x+\dfrac{80}{x}$.<br><br>
-      Syarat minimum: $H'=1-\dfrac{80}{x^2}=0 \implies x^2=80 \implies x=4\sqrt{5}$;&ensp; $y=\dfrac{80}{4\sqrt{5}}=4\sqrt{5}$<br><br>
-      Jadi kedua bilangan adalah $\boxed{4\sqrt{5}}$ dan $\boxed{4\sqrt{5}}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Fungsi jumlah:</strong> misalkan bilangannya $x$ dan $\dfrac{80}{x}$, maka $H(x) = x + \dfrac{80}{x}$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Syarat minimum:</strong></p>
+      $$ \begin{align*} H'(x) = 1 - \frac{80}{x^2} &= 0 \\ x^2 &= 80 \end{align*} $$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Ambil $x > 0$:</strong> $x = 4\sqrt{5}$ dan bilangan kedua $\dfrac{80}{4\sqrt{5}}$ $= 4\sqrt{5}$.</p>
+      <div class="sol-jadi">kedua bilangan adalah $4\sqrt{5}$ dan $4\sqrt{5}$.</div>
     </div>
 
     <h3 class="subsection-title">2. Optimasi Luas dan Volume</h3>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 26</div>
+      <div class="box-label">📘 Contoh 29</div>
       <p style="margin:0;font-size:.9rem;">Suatu persegi panjang mempunyai keliling 24 cm. Supaya luasnya maksimum, tentukanlah ukuran panjang dan lebarnya.</p>
     </div>
     <div class="penyelesaian">
-      $2x+2y=24 \implies y=12-x$. Luas $L=x(12-x)=12x-x^2$.<br><br>
-      $L'=12-2x=0 \implies x=6$, $y=6$. Luas maksimum $=36$ cm$^2$ (persegi).
+      <p class="sol-step"><span class="sol-no">1</span><strong>Fungsi luas:</strong> $2x + 2y = 24$ memberi $y = 12 - x$, sehingga $L = 12x - x^2$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Syarat maksimum:</strong> $L' = 12 - 2x = 0$, jadi $x = 6$ dan $y = 6$.</p>
+      <div class="sol-jadi">ukurannya $6 \times 6$ cm (persegi), luas maksimum $36$ cm$^2$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 27</div>
+      <div class="box-label">📘 Contoh 30</div>
       <p style="margin:0;font-size:.9rem;">Sebuah balok beralas persegi dengan luas permukaan $24$ cm$^2$. Tentukanlah volume terbesar yang mungkin dicapai.</p>
     </div>
     <div class="penyelesaian">
-      $2x^2+4xy=24 \implies y=\dfrac{12-x^2}{2x}$. Volume $V=x^2y=6x-\dfrac{x^3}{2}$.<br><br>
-      $V'=6-\dfrac{3x^2}{2}=0 \implies x=2$;&ensp; $V_{\max}=12-4=\boxed{8 \text{ cm}^3}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hubungan ukuran:</strong> sisi alas $x$, tinggi $y$; $2x^2 + 4xy = 24$ memberi $y = \dfrac{12 - x^2}{2x}$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Fungsi volume:</strong> $V = x^2y$ $= 6x - \tfrac{1}{2}x^3$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Syarat maksimum:</strong> $V' = 6 - \tfrac{3}{2}x^2$ $= 0$, jadi $x = 2$.</p>
+      $$V_{\max} = 12 - 4 = 8$$
+      <div class="sol-jadi">volume terbesar $8$ cm$^3$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 28</div>
+      <div class="box-label">📘 Contoh 31</div>
       <p style="margin:0;font-size:.9rem;">Sebuah balok tanpa tutup beralas persegi dengan volume 32 cm$^3$. Tentukanlah luas permukaan minimum yang mungkin.</p>
     </div>
     <div class="penyelesaian">
-      $x^2y=32 \implies y=\dfrac{32}{x^2}$. Luas $L=x^2+4x\cdot\dfrac{32}{x^2}=x^2+\dfrac{128}{x}$.<br><br>
-      $L'=2x-\dfrac{128}{x^2}=0 \implies x^3=64 \implies x=4$;&ensp; $L_{\min}=16+32=\boxed{48 \text{ cm}^2}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hubungan ukuran:</strong> $x^2y = 32$ memberi $y = \dfrac{32}{x^2}$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Luas tanpa tutup:</strong> $L = x^2 + 4xy$ $= x^2 + \dfrac{128}{x}$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Syarat minimum:</strong> $L' = 2x - \dfrac{128}{x^2}$ $= 0$, jadi $x^3 = 64$ dan $x = 4$.</p>
+      $$L_{\min} = 16 + 32 = 48$$
+      <div class="sol-jadi">luas permukaan minimum $48$ cm$^2$.</div>
     </div>
 
     <h3 class="subsection-title">3. Optimasi Geometri: Tabung dalam Bola</h3>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 29</div>
+      <div class="box-label">📘 Contoh 32</div>
       <p style="margin:0;font-size:.9rem;">Di dalam sebuah bola berjari-jari 6 cm dibuat tabung dengan jari-jari alas $r$ dan tinggi $2h$. (a) Nyatakan volume tabung sebagai fungsi dari $h$. (b) Tentukanlah $r$ dan $2h$ agar volume tabung maksimum.</p>
     </div>
     <div class="penyelesaian">
-      <strong>a.</strong> Dari hubungan $r^2+h^2=36$: $V=2\pi h(36-h^2)=72\pi h-2\pi h^3$<br><br>
-      <strong>b.</strong> $V'=72\pi-6\pi h^2=0 \implies h^2=12 \implies h=2\sqrt{3}$ cm<br>
-      $r=\sqrt{36-12}=2\sqrt{6}$ cm;&ensp; tinggi $=2h=4\sqrt{3}$ cm.
+      <div class="sol-part"><span class="sol-tag">a</span><span>Fungsi volume</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pythagoras:</strong> $r^2 + h^2 = 36$, jadi $r^2 = 36 - h^2$.</p>
+      $$V = \pi r^2(2h) = 72\pi h - 2\pi h^3$$
+      <div class="sol-jadi">$V(h) = 72\pi h - 2\pi h^3$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Volume maksimum</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat:</strong> $V' = 72\pi - 6\pi h^2$ $= 0$, jadi $h^2 = 12$ dan $h = 2\sqrt{3}$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Jari-jari:</strong> $r = \sqrt{36 - 12}$ $= 2\sqrt{6}$.</p>
+      <div class="sol-jadi">$r = 2\sqrt{6}$ cm dan tinggi $2h = 4\sqrt{3}$ cm.</div>
     </div>
 
     <h3 class="subsection-title">4. Optimasi pada Parabola</h3>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 30</div>
+      <div class="box-label">📘 Contoh 33</div>
       <p style="margin:0;font-size:.9rem;">Sebuah parabola $y=12-x^2$. Tentukanlah luas maksimum persegi panjang $ABCD$ yang dibuat di dalam parabola (sisi $AB$ pada sumbu-$x$).</p>
     </div>
     <div class="penyelesaian">
-      Panjang $=2x$, lebar $=y=12-x^2$. Luas $L=(2x)(12-x^2)=24x-2x^3$.<br><br>
-      $L'=24-6x^2=0 \implies x=2$;&ensp; $L_{\max}=48-16=\boxed{32 \text{ satuan luas}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Fungsi luas:</strong> panjang $2x$, lebar $12 - x^2$, sehingga $L = 24x - 2x^3$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Syarat maksimum:</strong> $L' = 24 - 6x^2 = 0$, jadi $x = 2$.</p>
+      $$L_{\max} = 48 - 16 = 32$$
+      <div class="sol-jadi">luas maksimum $32$ satuan luas.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 31</div>
+      <div class="box-label">📘 Contoh 34</div>
       <p style="margin:0;font-size:.9rem;">Di dalam sebuah lingkaran berjari-jari $R=6$ cm dibuat segitiga sama kaki yang tingginya $h$. Tentukanlah $h$ agar luas segitiga maksimum.</p>
     </div>
     <div class="penyelesaian">
-      Setengah alas: $a=\sqrt{R^2-(h-R)^2}=\sqrt{36-(h-6)^2}$. Luas $L=h\sqrt{36-(h-6)^2}$.<br><br>
-      Kuadratkan: $L^2=h^2(12h-h^2)=12h^3-h^4$. Syarat maksimum: $\dfrac{d(L^2)}{dh}=36h^2-4h^3=4h^2(9-h)=0 \implies h=9$ cm<br><br>
-      $a=\sqrt{36-9}=3\sqrt{3}$ cm;&ensp; $L_{\max}=\dfrac{1}{2}\cdot 6\sqrt{3}\cdot 9=\boxed{27\sqrt{3} \text{ cm}^2}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Setengah alas:</strong> pusat lingkaran berjarak $h - 6$ dari alas, jadi $a^2 = 36 - (h - 6)^2$ $= 12h - h^2$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Fungsi luas:</strong> $L = ah$; maksimumkan $L^2 = h^2(12h - h^2)$ $= 12h^3 - h^4$.</p>
+      $$ \begin{align*} \frac{d(L^2)}{dh} = 36h^2 - 4h^3 &= 0 \\ 4h^2(9 - h) &= 0 \end{align*} $$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Untuk $h = 9$:</strong> $a = \sqrt{108 - 81}$ $= 3\sqrt{3}$, $L = 3\sqrt{3} \cdot 9$.</p>
+      <div class="sol-jadi">$h = 9$ cm dengan luas maksimum $27\sqrt{3}$ cm$^2$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 32</div>
+      <div class="box-label">📘 Contoh 35</div>
       <p style="margin:0;font-size:.9rem;">Sebuah kebun persegi panjang berarea 600 m$^2$ akan dipagari. Sisi yang menghadap jalan (panjang) Rp150.000/m, ketiga sisi lainnya Rp100.000/m. Tentukanlah ukuran kebun agar biaya pagar minimum.</p>
     </div>
     <div class="penyelesaian">
-      $xy=600 \implies y=\dfrac{600}{x}$. Biaya total:
-      $$B=250.000x+200.000y=250.000x+\frac{120.000.000}{x}$$
-      $B'=250.000-\dfrac{120.000.000}{x^2}=0 \implies x^2=480 \implies x=4\sqrt{30}$ m;&ensp; $y=5\sqrt{30}$ m<br><br>
-      $B_{\min}=250.000(4\sqrt{30})+\dfrac{120.000.000}{4\sqrt{30}}=\boxed{500.000\sqrt{30} \approx \text{Rp2.739.000}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Fungsi biaya:</strong> $xy = 600$, panjang $x$ menghadap jalan.</p>
+      $$ \begin{align*} &B \\  &= 150.000x \\ &\quad + 100.000(x + 2y) \\ &= 250.000x + \frac{120.000.000}{x} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Syarat minimum:</strong> $B' = 250.000$ $- \dfrac{120.000.000}{x^2}$ $= 0$, jadi $x^2 = 480$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Ukuran:</strong> $x = 4\sqrt{30} \approx 21{,}9$ m dan $y = \dfrac{600}{4\sqrt{30}}$ $= 5\sqrt{30} \approx 27{,}4$ m.</p>
+      $$ \begin{align*} &B_{\min} \\  &= 1.000.000\sqrt{30} \\ &\quad + 1.000.000\sqrt{30} \\ &= 2.000.000\sqrt{30} \end{align*} $$
+      <div class="sol-jadi">ukuran kebun $4\sqrt{30}$ m $\times$ $5\sqrt{30}$ m, biaya minimum $\approx$ Rp10.954.000.</div>
     </div>
 
     <h3 class="subsection-title">5. Aplikasi dalam Fisika: Kecepatan dan Percepatan</h3>
@@ -1089,39 +1262,58 @@ window.MathJax = {
     <div class="box box-rumus">
       <div class="box-label">&bull; Kecepatan dan Percepatan</div>
       <p>Jika $s(t)$ menyatakan posisi benda pada waktu $t$, maka:</p>
-      <div class="math-block">$$v(t) = s'(t) \quad\text{(kecepatan sesaat)} \qquad a(t) = v'(t) = s''(t) \quad\text{(percepatan)}$$</div>
+      <div class="math-block">$$ \begin{gather*} v(t) = s'(t) \;\text{(kecepatan)} \\ a(t) \\ = v'(t) \\ = s''(t) \;\text{(percepatan)} \end{gather*} $$</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 33</div>
+      <div class="box-label">📘 Contoh 36</div>
       <p style="margin:0;font-size:.9rem;">Suatu benda bergerak dengan persamaan posisi $s(t) = t^3-6t^2+9t+2$ (meter). Tentukanlah: (a) kecepatan pada $t=4$ s, (b) waktu ketika benda berhenti sesaat, (c) percepatan pada $t=3$ s.</p>
     </div>
     <div class="penyelesaian">
-      $v(t)=3t^2-12t+9$<br><br>
-      <strong>a.</strong> $v(4)=48-48+9=\boxed{9 \text{ m/s}}$<br><br>
-      <strong>b.</strong> $3t^2-12t+9=0 \implies (t-1)(t-3)=0 \implies \boxed{t=1 \text{ s dan } t=3 \text{ s}}$<br><br>
-      <strong>c.</strong> $a(t)=6t-12$;&ensp; $a(3)=18-12=\boxed{6 \text{ m/s}^2}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kecepatan:</strong> $v(t) = s'(t)$ $= 3t^2 - 12t + 9$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$t = 4$</span></div>
+      $$v(4) = 48 - 48 + 9 = 9$$
+      <div class="sol-jadi">kecepatannya $9$ m/s.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Berhenti sesaat</span></div>
+      $$3(t - 1)(t - 3) = 0$$
+      <div class="sol-jadi">$t = 1$ s dan $t = 3$ s.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$t = 3$</span></div>
+      $$a(t) = 6t - 12 \Rightarrow a(3) = 6$$
+      <div class="sol-jadi">percepatannya $6$ m/s$^2$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 34</div>
+      <div class="box-label">📘 Contoh 37</div>
       <p style="margin:0;font-size:.9rem;">Sebuah benda dilempar ke atas dengan $h(t)=-5t^2+40t+15$ (meter). Tentukanlah: (a) kecepatan awal, (b) waktu ketika mencapai ketinggian maksimum, (c) ketinggian maksimum, (d) waktu ketika benda menyentuh tanah.</p>
     </div>
     <div class="penyelesaian">
-      $v(t)=-10t+40$<br><br>
-      <strong>a.</strong> $v(0)=\boxed{40 \text{ m/s}}$<br><br>
-      <strong>b.</strong> $v(t)=0 \implies t=\boxed{4 \text{ sekon}}$<br><br>
-      <strong>c.</strong> $h(4)=-80+160+15=\boxed{95 \text{ m}}$<br><br>
-      <strong>d.</strong> $-5t^2+40t+15=0 \implies t^2-8t-3=0 \implies t=4+\sqrt{19}\approx\boxed{8{,}36 \text{ sekon}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kecepatan:</strong> $v(t) = h'(t) = -10t + 40$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Kecepatan awal</span></div>
+      <div class="sol-jadi">$v(0) = 40$ m/s.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Tinggi maksimum</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat:</strong> $v(t) = 0$, jadi $t = 4$.</p>
+      <div class="sol-jadi">$t = 4$ sekon.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Ketinggian maksimum</span></div>
+      $$h(4) = -80 + 160 + 15 = 95$$
+      <div class="sol-jadi">$95$ m.</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>Menyentuh tanah</span></div>
+      $$ \begin{align*} -5t^2 + 40t + 15 &= 0 \\ t^2 - 8t - 3 &= 0 \end{align*} $$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ambil akar positif:</strong> $t = 4 + \sqrt{19}$.</p>
+      <div class="sol-jadi">$t \approx 8{,}36$ sekon.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 35</div>
-      <p style="margin:0;font-size:.9rem;">Dua benda bergerak pada sumbu-$x$: $s_1(t)=t^3-3t^2$ dan $s_2(t)=2t^2-4t$. (a) Kapan kedua benda berada di posisi yang sama? (b) Kapan kecepatan kedua benda sama?</p>
+      <div class="box-label">📘 Contoh 38</div>
+      <p style="margin:0;font-size:.9rem;">Dua benda bergerak pada sumbu-$x$: $s_1(t)=t^3-3t^2$ dan $s_2(t)=t^2-4t$. (a) Kapan kedua benda berada di posisi yang sama? (b) Kapan kecepatan kedua benda sama?</p>
     </div>
     <div class="penyelesaian">
-      <strong>a.</strong> $s_1=s_2$: $t^3-5t^2+4t=t(t-1)(t-4)=0 \implies \boxed{t=0, 1, 4 \text{ sekon}}$<br><br>
-      <strong>b.</strong> $v_1=3t^2-6t$, $v_2=4t-4$. $v_1=v_2$: $3t^2-10t+4=(3t-2)(t-2)=0 \implies \boxed{t=\tfrac{2}{3} \text{ s dan } t=2 \text{ s}}$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Posisi sama</span></div>
+      $$ \begin{align*} t^3 - 3t^2 &= t^2 - 4t \\ t^3 - 4t^2 + 4t &= 0 \\ t(t - 2)^2 &= 0 \end{align*} $$
+      <div class="sol-jadi">$t = 0$ s dan $t = 2$ s.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Kecepatan sama</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kecepatan:</strong> $v_1 = 3t^2 - 6t$, $v_2 = 2t - 4$.</p>
+      $$ \begin{align*} 3t^2 - 8t + 4 &= 0 \\ (3t - 2)(t - 2) &= 0 \end{align*} $$
+      <div class="sol-jadi">$t = \tfrac{2}{3}$ s dan $t = 2$ s.</div>
     </div>
 
     <h3 class="subsection-title">6. Aplikasi dalam Ekonomi: Biaya, Pendapatan, dan Keuntungan</h3>
@@ -1136,15 +1328,20 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 36</div>
-      <p style="margin:0;font-size:.9rem;">Fungsi biaya $C(x)=x^3-6x^2+15x+10$ (juta Rp) dan fungsi pendapatan $R(x)=9x$ (juta Rp). (a) Fungsi keuntungan $\pi(x)$. (b) Jumlah unit agar keuntungan maksimum. (c) Keuntungan maksimum.</p>
+      <div class="box-label">📘 Contoh 39</div>
+      <p style="margin:0;font-size:.9rem;">Fungsi biaya $C(x)=x^3-6x^2+15x+10$ (juta Rp) dan fungsi pendapatan $R(x)=15x$ (juta Rp). (a) Fungsi keuntungan $\pi(x)$. (b) Jumlah unit agar keuntungan maksimum. (c) Keuntungan maksimum.</p>
     </div>
     <div class="penyelesaian">
-      <strong>a.</strong> $\pi(x)=9x-(x^3-6x^2+15x+10)=-x^3+6x^2-6x-10$<br><br>
-      <strong>b.</strong> $\pi'(x)=-3x^2+12x-6=0 \implies x^2-4x+2=0 \implies x=2\pm\sqrt{2}$<br>
-      Ambil $x=2+\sqrt{2}\approx 3{,}41$ unit. $\pi''(2+\sqrt{2})=-6\sqrt{2}<0$ (maksimum).<br><br>
-      <strong>c.</strong> Ekspansi $(2+\sqrt{2})^2=6+4\sqrt{2}$, $(2+\sqrt{2})^3=20+14\sqrt{2}$:
-      $$\pi_{\max}=-(20+14\sqrt{2})+6(6+4\sqrt{2})-6(2+\sqrt{2})-10=\boxed{-6+4\sqrt{2}\approx -0{,}34 \text{ juta Rp}}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Fungsi keuntungan</span></div>
+      $$ \begin{align*} \pi(x) &= 15x - (x^3 - 6x^2 + 15x + 10) \end{align*} $$
+      <div class="sol-jadi">$\pi(x)$ $= -x^3 + 6x^2 - 10$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Unit optimal</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat stasioner:</strong> $\pi'(x)$ $= -3x^2 + 12x$ $= -3x(x - 4)$ $= 0$, jadi $x = 0$ atau $x = 4$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Uji turunan kedua:</strong> $\pi''(x) = -6x + 12$; $\pi''(4) = -12 &lt; 0$ (maksimum).</p>
+      <div class="sol-jadi">$4$ unit.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Keuntungan maksimum</span></div>
+      $$\pi(4) = -64 + 96 - 10 = 22$$
+      <div class="sol-jadi">keuntungan maksimum Rp22 juta.</div>
     </div>
 
     <div class="box box-catatan">
@@ -1155,31 +1352,36 @@ window.MathJax = {
     <h3 class="subsection-title">7. Aplikasi Laju Perubahan Terkait</h3>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 37</div>
+      <div class="box-label">📘 Contoh 40</div>
       <p style="margin:0;font-size:.9rem;">Volume bola mengembang dengan laju $\dfrac{dV}{dt}=10$ cm$^3$/s. Tentukanlah laju pertambahan jari-jarinya ketika $r=5$ cm.</p>
     </div>
     <div class="penyelesaian">
-      $V=\dfrac{4}{3}\pi r^3 \implies \dfrac{dV}{dt}=4\pi r^2\dfrac{dr}{dt}$<br><br>
-      Substitusi $\dfrac{dV}{dt}=10$ dan $r=5$: $10=4\pi(25)\dfrac{dr}{dt} \implies \dfrac{dr}{dt}=\dfrac{1}{10\pi}\approx\boxed{0{,}032 \text{ cm/s}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Turunkan terhadap $t$:</strong> $V = \tfrac{4}{3}\pi r^3$ memberi $\dfrac{dV}{dt}$ $= 4\pi r^2\dfrac{dr}{dt}$.</p>
+      $$10 = 4\pi(25)\frac{dr}{dt} \Rightarrow \frac{dr}{dt} = \frac{1}{10\pi}$$
+      <div class="sol-jadi">jari-jari bertambah $\dfrac{1}{10\pi} \approx 0{,}032$ cm/s.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 38</div>
+      <div class="box-label">📘 Contoh 41</div>
       <p style="margin:0;font-size:.9rem;">Luas sebuah persegi bertambah dengan laju 8 cm$^2$/s. Tentukanlah laju pertambahan sisinya ketika sisi $= 5$ cm.</p>
     </div>
     <div class="penyelesaian">
-      $L=s^2 \implies \dfrac{dL}{dt}=2s\dfrac{ds}{dt}$<br><br>
-      $8=2(5)\dfrac{ds}{dt} \implies \dfrac{ds}{dt}=\boxed{0{,}8 \text{ cm/s}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Turunkan terhadap $t$:</strong> $L = s^2$ memberi $\dfrac{dL}{dt}$ $= 2s\dfrac{ds}{dt}$.</p>
+      $$8 = 2(5)\frac{ds}{dt}$$
+      <div class="sol-jadi">sisi bertambah $0{,}8$ cm/s.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 39</div>
+      <div class="box-label">📘 Contoh 42</div>
       <p style="margin:0;font-size:.9rem;">Sebuah tangga sepanjang 10 m bersandar di dinding vertikal. Kaki tangga bergerak menjauhi dinding dengan laju 0,5 m/s. Tentukanlah laju penurunan ujung atas tangga ketika kaki tangga berjarak 6 m dari dinding.</p>
     </div>
     <div class="penyelesaian">
-      $x^2+y^2=100$. Diferensialkan: $2x\dfrac{dx}{dt}+2y\dfrac{dy}{dt}=0 \implies \dfrac{dy}{dt}=-\dfrac{x}{y}\dfrac{dx}{dt}$<br><br>
-      Saat $x=6$: $y=8$ m. $\;\dfrac{dy}{dt}=-\dfrac{6}{8}(0{,}5)=-\dfrac{3}{8}=\boxed{-0{,}375 \text{ m/s}}$<br><br>
-      Tanda negatif berarti ujung atas tangga <strong>turun</strong> dengan laju 0,375 m/s.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pythagoras:</strong> $x^2 + y^2 = 100$ ($x$ jarak kaki tangga, $y$ tinggi ujung atas).</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Turunkan terhadap $t$:</strong></p>
+      $$2x\frac{dx}{dt} + 2y\frac{dy}{dt} = 0$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Saat $x = 6$:</strong> $y = 8$, sehingga</p>
+      $$\frac{dy}{dt} = -\frac{6}{8}(0{,}5) = -0{,}375$$
+      <div class="sol-jadi">ujung atas tangga turun dengan laju $0{,}375$ m/s (tanda negatif berarti turun).</div>
     </div>
 
     <div class="box box-latihan">
@@ -1187,10 +1389,10 @@ window.MathJax = {
       <ol class="soal-list">
         <li>Dua bilangan positif mempunyai jumlah 40. Supaya hasil kalinya maksimum, tentukanlah kedua bilangan itu.</li>
         <li>Dari selembar karton berukuran $30\times 20$ cm dibuat kotak tanpa tutup dengan cara memotong persegi kecil berukuran $x\times x$ di setiap sudutnya. Tentukanlah nilai $x$ agar volume kotak maksimum.</li>
-        <li>Suatu benda bergerak dengan $s(t)=2t^3-9t^2+12t$ meter.<br>(a) Tentukanlah kecepatan benda saat $t=2$ s.<br>(b) Kapan benda berhenti sesaat?<br>(c) Tentukanlah percepatan saat $t=1$ s.</li>
+        <li>Suatu benda bergerak dengan $s(t) =2t^3$ $-9t^2$ $+12t$ meter.<br>(a) Tentukanlah kecepatan benda saat $t=2$ s.<br>(b) Kapan benda berhenti sesaat?<br>(c) Tentukanlah percepatan saat $t=1$ s.</li>
         <li>Sebuah kawat sepanjang 100 cm dibengkokkan membentuk persegi panjang. Tentukanlah ukuran persegi panjang agar luasnya maksimum.</li>
         <li>Sebuah kaleng silinder tanpa tutup akan dibuat dari bahan seluas $300\pi$ cm$^2$. Tentukanlah jari-jari dan tinggi kaleng agar volumenya maksimum.</li>
-        <li>Fungsi biaya total suatu perusahaan adalah $C(x)=2x^3-15x^2+36x+10$ (ribu rupiah).<br>(a) Tentukanlah biaya marginal $C'(x)$.<br>(b) Jumlah produksi ketika biaya marginal minimum.</li>
+        <li>Fungsi biaya total suatu perusahaan adalah $C(x) =2x^3$ $-15x^2$ $+36x$ $+10$ (ribu rupiah).<br>(a) Tentukanlah biaya marginal $C'(x)$.<br>(b) Jumlah produksi ketika biaya marginal minimum.</li>
         <li>Air dipompa ke dalam tangki berbentuk bola berjari-jari 4 m dengan laju $\dfrac{dV}{dt}=2$ m$^3$/menit. Tentukanlah laju kenaikan jari-jarinya saat $r=2$ m.</li>
       </ol>
     </div>
@@ -1215,7 +1417,7 @@ window.MathJax = {
           <tr><td>$u \cdot v$</td><td>$u'v + uv'$</td></tr>
           <tr><td>$\dfrac{u}{v}$</td><td>$\dfrac{u'v - uv'}{v^2}$</td></tr>
           <tr><td>$u^n$</td><td>$nu^{n-1} \cdot u'$</td></tr>
-          <tr><td>$f\{g(x)\}$ (aturan rantai)</td><td>$f'\{g(x)\} \cdot g'(x)$</td></tr>
+          <tr><td>$f(g(x))$ (aturan rantai)</td><td>$f'(g(x)) \cdot g'(x)$</td></tr>
         </tbody>
       </table>
     </div>
@@ -1242,13 +1444,13 @@ window.MathJax = {
         <tbody>
           <tr><td>Garis singgung di $T(x_1,y_1)$</td><td>$m=f'(x_1)$</td><td>Persamaan: $y-y_1=m(x-x_1)$</td></tr>
           <tr><td>Fungsi naik</td><td>$f'(x)>0$</td><td>Nilai $y$ bertambah saat $x$ bertambah</td></tr>
-          <tr><td>Fungsi turun</td><td>$f'(x)<0$</td><td>Nilai $y$ berkurang saat $x$ bertambah</td></tr>
+          <tr><td>Fungsi turun</td><td>$f'(x)&lt;0$</td><td>Nilai $y$ berkurang saat $x$ bertambah</td></tr>
           <tr><td>Titik stasioner</td><td>$f'(x)=0$</td><td>Perlu uji tanda $f'$ di kiri-kanan titik</td></tr>
           <tr><td>Titik maksimum</td><td>$f':(+\to-)$</td><td>Maksimum lokal</td></tr>
           <tr><td>Titik minimum</td><td>$f':(-\to+)$</td><td>Minimum lokal</td></tr>
           <tr><td>Titik belok</td><td>$f''=0$, tanda berubah</td><td>Kurva berganti kecekungan</td></tr>
           <tr><td>Cekung ke atas</td><td>$f''(x)>0$</td><td>Garis singgung di bawah kurva</td></tr>
-          <tr><td>Cekung ke bawah</td><td>$f''(x)<0$</td><td>Garis singgung di atas kurva</td></tr>
+          <tr><td>Cekung ke bawah</td><td>$f''(x)&lt;0$</td><td>Garis singgung di atas kurva</td></tr>
           <tr><td>Kecepatan</td><td>$v=s'(t)$</td><td>Turunan posisi terhadap waktu</td></tr>
           <tr><td>Percepatan</td><td>$a=v'(t)=s''(t)$</td><td>Turunan kecepatan terhadap waktu</td></tr>
         </tbody>
@@ -1474,58 +1676,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── 4. SOAL LATIHAN ──
   const jawabanData = {
-    0:[
-      {jawaban:`(a) $f'(x)=4x-5$&nbsp; (b) $f'(x)=3x^2-6x$&nbsp; (c) $f'(x)=-\\dfrac{1}{x^2}$`},
-      {jawaban:`(a) $-12x^{-5}+\\tfrac{15}{2}x^{-4}-7x^{-2}$&nbsp; (b) $5x^{3/2}-4x^{1/3}+\\tfrac{15}{4}x^{-1/4}$&nbsp; (c) $-9x^{-5/2}+\\tfrac{8}{15}x^{-5/3}-3x^{-5/2}$&nbsp; (d) $-\\tfrac{3}{4}x^{-5/2}-\\tfrac{8}{3}x^{-1/3}+\\tfrac{4}{5}x^{-1/5}+\\tfrac{3}{2}x^{-3/2}$`},
-      {jawaban:`(a) $f'(x)=\\tfrac{5}{2}x^{3/2}$&nbsp; (b) $f'(x)=\\tfrac{7}{2}x^{3/2}-\\tfrac{3}{2}x^{-1/2}+\\tfrac{1}{2}x^{-3/2}$&nbsp; (c) $f'(x)=1-x^{-2}$ [dari $f=x-2+x^{-1}$]&nbsp; (d) $f'(x)=x^{-1/3}-1$ [dari $f=x^{5/3}-x^3$, koreksi: $f=(x^{2/3})^2-x^2=x^{4/3}-x^2$ ... selesaikan dengan $x^{4/3}-x^2$: $f'=\\tfrac{4}{3}x^{1/3}-2x$]`},
-      {jawaban:`(a) $f(x)=x^{7/2}-2x^{3/2}+x^{-3/2}$&nbsp; (b) $f'(x)=\\tfrac{7}{2}x^{5/2}-3x^{1/2}-\\tfrac{3}{2}x^{-5/2}$&nbsp; (c) $f'(4)=\\tfrac{7}{2}(32)-3(2)-\\tfrac{3}{2}(\\tfrac{1}{32})=112-6-\\tfrac{3}{64}\\approx 105{,}95$`},
+    // Latihan A
+    0: [
+      { jawaban: `(a) $f'(x) = 4x - 5$ &nbsp; (b) $f'(x)$ $= 3x^2 - 6x$<br>(c) $f(x + h) - f(x)$ $= \\dfrac{-h}{x(x + h)}$, jadi $f'(x)$ $= -\\dfrac{1}{x^2}$` },
+      { jawaban: `(a) $-12x^{-5}$ $+ \\tfrac{15}{2}x^{-4}$ $- 7x^{-2}$<br>(b) $5x^{3/2}$ $- 4x^{1/3}$ $+ \\tfrac{15}{4}x^{-1/4}$<br>(c) $f = 8x^{-3/2}$ $- \\tfrac{4}{5}x^{-2/3}$, jadi $f' = -12x^{-5/2}$ $+ \\tfrac{8}{15}x^{-5/3}$<br>(d) $-\\tfrac{3}{4}x^{-5/2}$ $- \\tfrac{8}{3}x^{-1/3}$ $+ \\tfrac{4}{5}x^{-1/5}$ $+ \\tfrac{3}{2}x^{-3/2}$` },
+      { jawaban: `(a) $f = x^{5/2}$, $f' = \\tfrac{5}{2}x^{3/2}$<br>(b) $f = x^{7/2}$ $- 3x^{3/2}$ $+ x^{1/2}$, $f' = \\tfrac{7}{2}x^{5/2}$ $- \\tfrac{9}{2}x^{1/2}$ $+ \\tfrac{1}{2}x^{-1/2}$<br>(c) $f = x - 2 + x^{-1}$, $f' = 1 - x^{-2}$<br>(d) $f = x^{4/3} - x^2$, $f' = \\tfrac{4}{3}x^{1/3}$ $- 2x$` },
+      { jawaban: `(a) $f(x) = x^{7/2}$ $- 2x^{3/2}$ $+ x^{-1/2}$<br>(b) $f'(x)$ $= \\tfrac{7}{2}x^{5/2}$ $- 3x^{1/2}$ $- \\tfrac{1}{2}x^{-3/2}$<br>(c) $f'(4)$ $= 112$ $- 6$ $- \\tfrac{1}{16}$ $= 105\\tfrac{15}{16}$` },
     ],
-    1:[
-      {jawaban:`(a) $f'(x)=3x^2-10+2x\\cdot 3=-10+3x^2+6x$... selesaikan: $f'=(3x+2)(x^2-5)+(3x+2)\\cdot 2x$... $(3x+2)'=3$, $(x^2-5)'=2x$: $f'=3(x^2-5)+(3x+2)(2x)=3x^2-15+6x^2+4x=9x^2+4x-15$&nbsp; (b) $f'=(4x+3)(4x-2)+(2x^2+3x-5)(4)=24x^2+4x-6$&nbsp; (c) $f'=\\dfrac{2x(x-3)-(x^2+1)}{(x-3)^2}=\\dfrac{x^2-6x-1}{(x-3)^2}$&nbsp; (d) $f'=\\dfrac{(3x^2-2)\\sqrt{x}-(x^3-2x+1)\\cdot\\frac{1}{2\\sqrt{x}}}{x}=\\dfrac{5x^3-2x^2-3x-2x-1}{2x\\sqrt{x}}$... sederhanakan lebih lanjut`},
-      {jawaban:`(a) $f'=3x^2+4x-1$&nbsp; (b) $f'=18x^2+43x-8$... tentukan masing-masing dengan perluasan tiga faktor`},
-      {jawaban:`(a) $f'=30(2x+4)^4$&nbsp; (b) $f'=\\dfrac{2x-3}{2\\sqrt{x^2-3x+2}}$&nbsp; (c) $f'=\\dfrac{-28(2x-4)}{(3x+2)^3}$`},
-      {jawaban:`(a) $f'=2x(2x-1)^4+4(x^2+3)(2x-1)^3$&nbsp; (b) $f'=\\dfrac{(x^2-1)\\cdot\\frac{1}{2\\sqrt{x+1}}-\\sqrt{x+1}\\cdot 2x}{(x^2-1)^2}$&nbsp; (c) $f'=\\dfrac{3(x^2-4)^2\\cdot 2x(2x+1)-(x^2-4)^3\\cdot 2}{(2x+1)^2}=\\dfrac{(x^2-4)^2(10x^2+6x+8)}{(2x+1)^2}$`},
-      {jawaban:`$f'(3)=0$<br><small>$f'(x)=(4x-5)(x^2-6x+15)+(2x^2-5x+4)(2x-6)$; $f'(3)=(7)(6)+(7)(0)=42+0=42$... periksa ulang: $4(3)-5=7$, $9-18+15=6$, $2(9)-5(3)+4=7$, $2(3)-6=0$; $f'(3)=7\\cdot 6+7\\cdot 0=42$</small>`},
-      {jawaban:`$f'(x)=4\\left(x+\\dfrac{1}{x}\\right)^3\\!\\left(1-\\dfrac{1}{x^2}\\right)$;&ensp; $f'(1)=4(2)^3(0)=0$`},
-      {jawaban:`(a) $f''=60x^3-24x$&nbsp; (b) $f''=6x^{-4}-4x^{-3}+\\tfrac{3}{4}x^{-3/2}$&nbsp; (c) $f''=12(2x+1)$&nbsp; (d) $f''=12(x^2-3)^2\\cdot 2+4(x^2-3)^3\\cdot... = 4(x^2-3)^2(7x^2-9)$`},
-      {jawaban:`(a) $f'=4x^3-12x+8$, $f''=12x^2-12$&nbsp; (b) $f''(-1)=0$, $f''(2)=36$&nbsp; (c) $12x^2-12=0 \\Rightarrow x=\\pm 1$`},
-      {jawaban:`$f'(x)=9(3x-1)^2$, $f''(x)=54(3x-1)=54 \\Rightarrow 3x-1=1 \\Rightarrow x=\\tfrac{2}{3}$`},
+    // Latihan B
+    1: [
+      { jawaban: `(a) $3(x^2 - 5)$ $+ 2x(3x + 2)$ $= 9x^2 + 4x - 15$<br>(b) $(4x + 3)(4x - 2)$ $+ 4(2x^2 + 3x - 5)$ $= 24x^2 + 16x - 26$<br>(c) $\\dfrac{x^2 - 6x - 1}{(x - 3)^2}$<br>(d) $f = x^{5/2}$ $- 2x^{1/2}$ $+ x^{-1/2}$, $f' = \\dfrac{5x^3 - 2x - 1}{2x\\sqrt{x}}$` },
+      { jawaban: `(a) $f = x^3$ $+ 2x^2$ $- 5x$ $- 6$, $f' = 3x^2 + 4x - 5$<br>(b) $f = 6x^3$ $+ 17x^2$ $- 26x$ $+ 8$, $f' = 18x^2$ $+ 34x$ $- 26$` },
+      { jawaban: `(a) $30(2x + 4)^4$ &nbsp; (b) $\\dfrac{2x - 3}{2\\sqrt{x^2 - 3x + 2}}$<br>(c) $u' = \\dfrac{16}{(3x + 2)^2}$, jadi $f' = \\dfrac{32(2x - 4)}{(3x + 2)^3}$` },
+      { jawaban: `(a) $2x(2x - 1)^4$ $+ 8(x^2 + 3)(2x - 1)^3$ $= 2(2x - 1)^3(6x^2 - x + 12)$<br>(b) $f = \\dfrac{1}{(x - 1)\\sqrt{x + 1}}$, $f' = -\\dfrac{3x + 1}{2(x - 1)^2(x + 1)\\sqrt{x + 1}}$<br>(c) $\\dfrac{(x^2 - 4)^2(10x^2 + 6x + 8)}{(2x + 1)^2}$` },
+      { jawaban: `$f'(x)$ $= (4x - 5)(x^2 - 6x + 15)$ $+ (2x^2 - 5x + 4)(2x - 6)$<br>$f'(3)$ $= 7 \\cdot 6$ $+ 7 \\cdot 0$ $= 42$` },
+      { jawaban: `$f'(x)$ $= 4\\left(x + \\dfrac{1}{x}\\right)^3\\left(1 - \\dfrac{1}{x^2}\\right)$; $f'(1)$ $= 4 \\cdot 8 \\cdot 0$ $= 0$` },
+      { jawaban: `(a) $60x^3 - 24x$ &nbsp; (b) $6x^{-4}$ $+ 8x^{-3}$ $+ \\tfrac{3}{4}x^{-3/2}$<br>(c) $24(2x + 1)$ &nbsp; (d) $8(x^2 - 3)^2(7x^2 - 3)$` },
+      { jawaban: `(a) $f' = 4x^3$ $- 12x$ $+ 8$, $f'' = 12x^2 - 12$<br>(b) $f''(-1) = 0$, $f''(2) = 36$ &nbsp; (c) $x = \\pm 1$` },
+      { jawaban: `$f'' = 54(3x - 1)$ $= 54$, jadi $3x - 1 = 1$ dan $x = \\tfrac{2}{3}$` },
     ],
-    2:[
-      {jawaban:`Potong sumbu-$y$: $(0,-4)$. Turunan $y'=6x^2-10x+3$, nilai di $x=0$: $m=3$. Garis singgung: $y=3x-4$. Garis normal: gradien $-\\tfrac{1}{3}$, persamaan $y=-\\tfrac{1}{3}x-4$.`},
-      {jawaban:`$f(2)=(1)^3(3)=3$. $f'(x)=3(2x-3)^2(x+1)+(2x-3)^3=(2x-3)^2(3x+3+2x-3)=(2x-3)^2(5x)$. $m=f'(2)=(1)^2(10)=10$. Garis singgung: $y-3=10(x-2) \\Rightarrow y=10x-17$.`},
-      {jawaban:`$y=x^3-2x^2-4x+8=(x-2)^2(x+2)$. Akar: $x=2$ (dobel) dan $x=-2$. $y'=3x^2-4x-4=(3x+2)(x-2)$. Di $x=2$: $m=0$, garis $y=0$. Di $x=-2$: $y=0$, $m=3(4)+8-4=16$, garis $y=16(x+2)=16x+32$.`},
-      {jawaban:`$c=2$ (dari titik $(0,2)$). Di $x=1$: $y=a+b+2$. Dari garis singgung $y=3x-1$: $y(1)=2$ dan $m=3$. Dari $y=2$: $a+b+2=2 \\Rightarrow a+b=0$. Dari $y'=2ax+b=3$ di $x=1$: $2a+b=3$. Selisih: $a=3$, $b=-3$.`},
-      {jawaban:`$y=4x^{-1}$, $y'=-4x^{-2}$. Garis $x-4y+12=0 \\Rightarrow$ gradien $\\tfrac{1}{4}$. Garis normal tegak lurus: $m_n=\\tfrac{1}{4}$, $m_s=-4$. $y'=-\\tfrac{4}{x^2}=-4 \\Rightarrow x^2=1 \\Rightarrow x=\\pm 1$. Di $x=1$: $y=4$, garis normal $y-4=\\tfrac{1}{4}(x-1) \\Rightarrow x-4y+15=0$. Di $x=-1$: $y=-4$, garis $x-4y-15=0$.`},
+    // Latihan C
+    2: [
+      { jawaban: `(a) $4\\cos x$ $- 3\\sin x$ $- \\sec^2 x$ &nbsp; (b) $2\\sec x\\tan x$ $+ \\csc x\\cot x$<br>(c) $\\sin x$ $+ \\sin x\\sec^2 x$ &nbsp; (d) $f = \\sin x$, $f' = \\cos x$` },
+      { jawaban: `(a) $4\\cos(4x + 1)$ &nbsp; (b) $-(2x - 3)\\sin(x^2 - 3x)$<br>(c) $\\tfrac{1}{2}\\sec^2\\left(\\tfrac{x}{2} + \\pi\\right)$ &nbsp; (d) $-12x\\csc^2(2x^2 + 1)$` },
+      { jawaban: `(a) $6\\sin^2 2x\\cos 2x$ &nbsp; (b) $-8x\\cos^3(x^2 - 1)\\sin(x^2 - 1)$<br>(c) $\\dfrac{3\\cos(3x - 2)}{2\\sqrt{\\sin(3x - 2)}}$ &nbsp; (d) $2(2x + 1)\\tan(x^2 + x)\\sec^2(x^2 + x)$` },
+      { jawaban: `(a) $2x\\cos 3x$ $- 3x^2\\sin 3x$ &nbsp; (b) $\\sin 2x(2\\cos 2x - 1)$<br>(c) $\\dfrac{2}{1 + \\cos 2x}$ &nbsp; (d) $\\dfrac{\\sin x + \\cos x - x(\\cos x - \\sin x)}{(\\sin x + \\cos x)^2}$` },
+      { jawaban: `(a) $6\\cos\\left(-\\tfrac{\\pi}{6}\\right)$ $= 3\\sqrt{3}$ &nbsp; (b) $-24\\cos^2 x\\sin x \\to$ $-3\\sqrt{3}$<br>(c) $4\\tan 2x\\sec^2 2x \\to 8$ &nbsp; (d) $\\sin x$ $+ x\\cos x \\to 1$` },
+      { jawaban: `(a) $2\\sin x\\cos x$ $- 2\\cos x\\sin x$ $= 0$<br>(b) $f(x) = 1$ (konstanta), jadi turunannya $0$` },
     ],
-    3:[
-      {jawaban:`$f'(x)=6x^2-6x-36=0 \\Rightarrow x=4$ atau $x=-3$. Naik: $x>4$ atau $x<-3$; Turun: $-3<x<4$.`},
-      {jawaban:`$f'(x)=6x^2+6x-12=6(x+2)(x-1)=0 \\Rightarrow x=-2, 1$. $f(-2)=7$: maks. lokal $(-2,7)$. $f(1)=0$... $f(1)=2-12-12+7=-15$... $f(1)=2(1)+3(1)-12(1)+7=0$. Min. lokal $(1,0)$.`},
-      {jawaban:`$f''(x)=6x-12=0 \\Rightarrow x=2$. Cekung bawah: $x<2$; atas: $x>2$. $f(2)=8-24+6+4=-6$. Titik belok $(2,-6)$.`},
-      {jawaban:`(a) Stasioner di $x=0,1,2$: $(0,2)$ min, $(1,3)$ maks, $(2,2)$ min. (b) Naik: $0<x<1$ atau $x>2$; Turun: $x<0$ atau $1<x<2$.`},
-      {jawaban:`(a) Naik: $x<-1$ atau $x>3$; Turun: $-1<x<3$. (b) $f(-1)=23$ maks. lokal, $f(3)=-13$ min. lokal. (c) $f''=6x-6=0 \\Rightarrow x=1$, $f(1)=1-3-9+11=0$. Titik belok $(1,0)$.`},
-      {jawaban:`$f'(x)=3x^2+2ax+b=0$ di $x=1$ dan $x=3$. Oleh Vieta: $1+3=-\\tfrac{2a}{3} \\Rightarrow a=-6$; $1\\cdot 3=\\tfrac{b}{3} \\Rightarrow b=9$.`},
+    // Latihan D
+    3: [
+      { jawaban: `Titik $(0, -4)$, $y' = 6x^2$ $- 10x$ $+ 3$, $m = 3$<br>Singgung $y = 3x - 4$; normal $y = -\\tfrac{1}{3}x$ $- 4$` },
+      { jawaban: `$f(2) = 3$; $f' = 6(2x - 3)^2(x + 1)$ $+ (2x - 3)^3$ $= (2x - 3)^2(8x + 3)$<br>$m = f'(2) = 19$, garis $y = 19x - 35$` },
+      { jawaban: `$y = (x - 2)^2(x + 2)$, $y' = (3x + 2)(x - 2)$<br>Di $x = 2$: $y = 0$; di $x = -2$: $m = 16$, $y = 16x + 32$` },
+      { jawaban: `$c = 2$; $y(1) = 2$ memberi $a + b = 0$; $y'(1)$ $= 2a + b$ $= 3$<br>$a = 3$, $b = -3$, $c = 2$` },
+      { jawaban: `Normal sejajar garis bergradien $\\tfrac{1}{4}$: $m_n = \\tfrac{1}{4}$, $m_s = -4$<br>$-\\dfrac{4}{x^2}$ $= -4$, jadi $x = \\pm 1$<br>Normal $x - 4y + 15 = 0$ dan $x - 4y - 15 = 0$` },
     ],
-    4:[
-      {jawaban:`(a) $f'(x)=4\\cos x-3\\sin x-\\sec^2 x$&nbsp; (b) $f'(x)=2\\sec x\\tan x+\\csc x\\cot x$&nbsp; (c) $f'(x)=\\cos x\\tan x+\\sin x\\sec^2 x=\\sin x+\\sin x\\sec^2 x=\\sin x(1+\\sec^2 x)$&nbsp; (d) $f'(x)=\\dfrac{\\sec^2 x\\cdot\\sec x-\\tan x\\cdot\\sec x\\tan x}{\\sec^2 x}=\\dfrac{\\sec x(\\sec^2 x-\\tan^2 x)}{\\sec^2 x}=\\dfrac{1}{\\sec x}=\\cos x$`},
-      {jawaban:`(a) $4\\cos(4x+1)$&nbsp; (b) $-(2x-3)\\sin(x^2-3x)$&nbsp; (c) $\\tfrac{1}{2}\\sec^2(\\tfrac{x}{2}+\\pi)$&nbsp; (d) $-12x\\csc^2(2x^2+1)$`},
-      {jawaban:`(a) $6\\sin^2(2x)\\cos(2x)$&nbsp; (b) $-8x\\cos^3(x^2-1)\\sin(x^2-1)$&nbsp; (c) $\\dfrac{3\\cos(3x-2)}{2\\sqrt{\\sin(3x-2)}}$&nbsp; (d) $2\\tan(x^2+x)\\sec^2(x^2+x)\\cdot(2x+1)$`},
-      {jawaban:`(a) $2x\\cos(3x)-3x^2\\sin(3x)$&nbsp; (b) $2\\sin x\\cos x\\cos(2x)+\\sin^2 x\\cdot(-2\\sin 2x)=\\sin(2x)\\cos(2x)-2\\sin^2 x\\sin(2x)$... (c) $\\dfrac{2\\cos(2x)(1+\\cos 2x)+2\\sin^2(2x)}{(1+\\cos 2x)^2}=\\dfrac{2\\cos(2x)+2}{(1+\\cos 2x)^2}=\\dfrac{2}{1+\\cos 2x}$&nbsp; (d) $\\dfrac{(\\sin x+\\cos x)-x(\\cos x-\\sin x)}{(\\sin x+\\cos x)^2}$`},
-      {jawaban:`(a) $f(x)=2\\sin(3x-\\tfrac{2}{3}\\pi)$, $f'(x)=6\\cos(3x-\\tfrac{2}{3}\\pi)$, $f'(\\tfrac{\\pi}{2})=6\\cos(\\tfrac{\\pi}{2}-\\tfrac{2\\pi}{3})=6\\cos(-\\tfrac{\\pi}{6})=6\\cdot\\tfrac{\\sqrt{3}}{2}=3\\sqrt{3}$&nbsp; (b) $f'(x)=-24\\cos^2 x\\sin x$, $f'(\\tfrac{\\pi}{3})=-24(\\tfrac{1}{4})(\\tfrac{\\sqrt{3}}{2})=-3\\sqrt{3}$&nbsp; (c) $f'(x)=4\\tan(2x)\\sec^2(2x)$, $f'(\\tfrac{\\pi}{8})=4(1)(2)=8$&nbsp; (d) $f'(x)=\\sin x+x\\cos x$, $f'(\\tfrac{\\pi}{2})=1+0=1$`},
-      {jawaban:`(a) $f'(x)=2\\sin x\\cos x+2\\cos x(-\\sin x)=0$&nbsp; (b) Hasil selalu 0 karena $f(x)=\\sin^2 x+\\cos^2 x=1$ (konstanta); turunan konstanta adalah 0.`},
+    // Latihan E
+    4: [
+      { jawaban: `$f' = 6(x - 3)(x + 2)$<br>Naik: $x &lt; -2$ atau $x > 3$; turun: $-2 &lt; x &lt; 3$` },
+      { jawaban: `$f' = 6(x + 2)(x - 1)$<br>Maksimum $(-2, 27)$, minimum $(1, 0)$` },
+      { jawaban: `$f'' = 6x - 12$ $= 0$, $x = 2$<br>Cekung bawah $x &lt; 2$, atas $x > 2$; belok $(2, -6)$` },
+      { jawaban: `(a) $(0, 2)$ min, $(1, 3)$ maks, $(2, 2)$ min<br>(b) Naik: $0 &lt; x &lt; 1$ atau $x > 2$; turun: $x &lt; 0$ atau $1 &lt; x &lt; 2$` },
+      { jawaban: `(a) Naik $x &lt; -1$ atau $x > 3$; turun $-1 &lt; x &lt; 3$<br>(b) Maksimum $(-1, 16)$, minimum $(3, -16)$<br>(c) Cekung bawah $x &lt; 1$, atas $x > 1$; belok $(1, 0)$` },
+      { jawaban: `$f' = 3x^2$ $+ 2ax$ $+ b$ berakar $1$ dan $3$<br>$1 + 3$ $= -\\tfrac{2a}{3}$, $1 \\cdot 3$ $= \\tfrac{b}{3}$, jadi $a = -6$, $b = 9$` },
+      { jawaban: `$f'(x)$ $= 6(x - 1)(x - 2)$; $f(0) = 0$, $f(1) = 5$, $f(2) = 4$, $f(3) = 9$<br>Maksimum $9$ (di ujung $x = 3$), minimum $0$ (di $x = 0$)` },
     ],
-    5:[
-      {jawaban:`$f(x)=x^3+3x^2-9x-20=(x-2)(x^2+5x+10)$... akar mudah: $x=2$ (coba); $(0,-20)$ potong sumbu $y$; maks. lokal $(-3,7)$; min. lokal $(1,-25)$; belok $(−1, −8.5+...)$`},
-      {jawaban:`$f(0)=12$; $f'(x)=4x^3-16x=4x(x^2-4)=0 \\Rightarrow x=0, \\pm 2$. Maks: $(±2, -4)$... $(0,12)$ maks. lokal; $(\\pm 2,-4)$ min. lokal; belok: $f''=12x^2-16=0 \\Rightarrow x=±\\tfrac{2}{\\sqrt{3}}$.`},
+    // Latihan F
+    5: [
+      { jawaban: `Potong sumbu-$y$ $(0, -20)$; $f' = 3(x + 3)(x - 1)$<br>Maksimum $(-3, 7)$, minimum $(1, -25)$; $f'' = 6x + 6$, belok $(-1, -9)$<br>Naik $x &lt; -3$ atau $x > 1$, turun $-3 &lt; x &lt; 1$` },
+      { jawaban: `Potong sumbu-$y$ $(0, 12)$, sumbu-$x$ di $x = \\pm\\sqrt{2}$, $\\pm\\sqrt{6}$<br>$f' = 4x(x - 2)(x + 2)$: maksimum $(0, 12)$, minimum $(\\pm 2, -4)$<br>$f'' = 12x^2 - 16$ $= 0$: belok $\\left(\\pm\\tfrac{2\\sqrt{3}}{3}, \\tfrac{28}{9}\\right)$` },
     ],
-    6:[
-      {jawaban:`Misalkan $x$ dan $y=40-x$. $P=x(40-x)=40x-x^2$. $P'=40-2x=0 \\Rightarrow x=y=20$. Kedua bilangan adalah <strong>20</strong> dan <strong>20</strong>.`},
-      {jawaban:`Setelah dipotong: panjang $30-2x$, lebar $20-2x$, tinggi $x$. $V=x(30-2x)(20-2x)=4x^3-100x^2+600x$. $V'=12x^2-200x+600=0 \\Rightarrow x=\\dfrac{200\\pm\\sqrt{40000-28800}}{24}=\\dfrac{200\\pm\\sqrt{11200}}{24}$. Pilih $x\\approx 3{,}9$ cm (yang memenuhi $x<10$).`},
-      {jawaban:`(a) $v(2)=6(4)-18(2)+12=24-36+12=0$ m/s (berhenti sesaat)&nbsp; (b) $v(t)=6t^2-18t+12=6(t-1)(t-2)=0 \\Rightarrow t=1$ s dan $t=2$ s&nbsp; (c) $a(t)=12t-18$, $a(1)=-6$ m/s²`},
-      {jawaban:`$2x+2y=100 \\Rightarrow y=50-x$. $L=x(50-x)$. Maks. saat $x=y=25$ cm. Luas maks. $=625$ cm².`},
-      {jawaban:`$\\pi r^2+2\\pi rh=300\\pi \\Rightarrow h=\\dfrac{300-r^2}{2r}$. $V=\\pi r^2 h=\\dfrac{\\pi r(300-r^2)}{2}$. $V'=\\dfrac{\\pi(300-3r^2)}{2}=0 \\Rightarrow r^2=100 \\Rightarrow r=10$ cm, $h=10$ cm.`},
-      {jawaban:`(a) $C'(x)=6x^2-30x+36$&nbsp; (b) $C''(x)=12x-30=0 \\Rightarrow x=2{,}5$ (min. biaya marginal saat 2,5 unit).`},
-      {jawaban:`$V=\\dfrac{4}{3}\\pi r^3 \\Rightarrow \\dfrac{dV}{dt}=4\\pi r^2\\dfrac{dr}{dt}$. Saat $r=2$: $2=4\\pi(4)\\dfrac{dr}{dt} \\Rightarrow \\dfrac{dr}{dt}=\\dfrac{1}{8\\pi}\\approx 0{,}04$ m/menit.`},
+    // Latihan G
+    6: [
+      { jawaban: `$P = x(40 - x)$, $P' = 40 - 2x = 0$<br>Kedua bilangan $20$ dan $20$` },
+      { jawaban: `$V = x(30 - 2x)(20 - 2x)$ $= 4x^3$ $- 100x^2$ $+ 600x$<br>$V' = 0$ $\\Rightarrow 3x^2$ $- 50x$ $+ 150$ $= 0$<br>$x = \\dfrac{25 - 5\\sqrt{7}}{3} \\approx 3{,}92$ cm (syarat $x &lt; 10$)` },
+      { jawaban: `$v = 6t^2$ $- 18t$ $+ 12$ $= 6(t - 1)(t - 2)$<br>(a) $v(2) = 0$ m/s &nbsp; (b) $t = 1$ s dan $t = 2$ s &nbsp; (c) $a = 12t - 18$, $a(1) = -6$ m/s$^2$` },
+      { jawaban: `$y = 50 - x$, $L = x(50 - x)$ maksimum di $x = 25$<br>Ukuran $25 \\times 25$ cm, luas $625$ cm$^2$` },
+      { jawaban: `$\\pi r^2 + 2\\pi rh$ $= 300\\pi$, $V = \\tfrac{\\pi}{2}(300r - r^3)$<br>$V' = 0$ $\\Rightarrow r$ $= 10$ cm, $h = 10$ cm` },
+      { jawaban: `(a) $C'(x)$ $= 6x^2 - 30x + 36$<br>(b) $C''(x)$ $= 12x - 30$ $= 0$, jadi $x = 2{,}5$ unit` },
+      { jawaban: `$2 = 4\\pi(2)^2\\dfrac{dr}{dt}$, jadi $\\dfrac{dr}{dt}$ $= \\dfrac{1}{8\\pi} \\approx 0{,}04$ m/menit` },
     ],
   };
 
