@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
 <link rel="apple-touch-icon" href="../../assets/favicon.svg">
-<meta name="description" content="Materi lengkap Limit Fungsi SMA: definisi limit, sifat-sifat limit, limit berhingga aljabar, limit tak hingga, dan limit trigonometri. Dilengkapi 36 contoh soal dan pembahasan.">
+<meta name="description" content="Materi lengkap Limit Fungsi SMA: definisi limit, sifat-sifat limit, kekontinuan, limit berhingga aljabar, limit tak hingga, dan limit trigonometri. Dilengkapi 38 contoh soal dan pembahasan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
@@ -96,7 +96,7 @@ window.MathJax = {
       <div class="materi-tags">
         <span class="tag">Kalkulus</span>
         <span class="tag">5 Sub-bab</span>
-        <span class="tag">36 Contoh Soal</span>
+        <span class="tag">38 Contoh Soal</span>
       </div>
     </div>
   </div>
@@ -162,7 +162,7 @@ window.MathJax = {
         <li><strong>Limit Fungsi</strong> — memahami definisi limit fungsi, limit kiri-kanan, dan sifat-sifat/teorema limit fungsi</li>
         <li><strong>Limit Berhingga Fungsi Aljabar</strong> — cara menghitungnya (substitusi, faktorisasi, perkalian sekawan)</li>
         <li><strong>Limit Fungsi Aljabar di Tak Hingga</strong> — limit untuk $x \to \infty$ dan selisih akar</li>
-        <li><strong>Limit Fungsi Trigonometri</strong> — rumus dasar $\lim_{x\to 0}\frac{\sin x}{x} = 1$ dan pengembangannya</li>
+        <li><strong>Limit Fungsi Trigonometri</strong> — rumus dasar $\lim_{x\to 0}\frac{\sin x}{x}$ $= 1$ dan pengembangannya</li>
       </ol>
     </div>
 
@@ -295,7 +295,7 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">Syarat Limit Ada</div>
-      <div class="math-block">$$\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L \implies \lim_{x \to a} f(x) = L$$</div>
+      <div class="math-block">$$ \begin{align*} \lim_{x \to a^-} f(x) &= \lim_{x \to a^+} f(x) \\ &= L \implies \lim_{x \to a} f(x) \\ &= L \end{align*} $$</div>
     </div>
 
     <div class="box box-contoh">
@@ -304,14 +304,10 @@ window.MathJax = {
       $$f(x) = \begin{cases} x^2 & \text{jika } x \leq 1 \\ x + 1 & \text{jika } x > 1 \end{cases}$$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Hitung limit kiri dan limit kanan secara terpisah.<br><br>
-      <strong>Limit kiri</strong> (gunakan $f(x)=x^2$, karena $x\leq 1$):
-      $$\lim_{x \to 1^-} f(x) = \lim_{x \to 1^-} x^2 = 1^2 = 1$$
-      <strong>Limit kanan</strong> (gunakan $f(x)=x+1$, karena $x>1$):
-      $$\lim_{x \to 1^+} f(x) = \lim_{x \to 1^+} (x+1) = 1+1 = 2$$
-
-      <!-- Grafik ilustrasi -->
+      <p class="sol-step"><span class="sol-no">1</span><strong>Limit kiri</strong> (pakai $f(x) = x^2$ karena $x \leq 1$):</p>
+      $$\lim_{x \to 1^-} x^2 = 1$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Limit kanan</strong> (pakai $f(x) = x + 1$ karena $x > 1$):</p>
+      $$\lim_{x \to 1^+} (x + 1) = 2$$
       <div class="grafik-wrap" style="margin-top:1rem;">
         <svg viewBox="0 0 230 200" width="230" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -356,23 +352,22 @@ window.MathJax = {
           <text x="88" y="58" font-size="8" fill="#2563eb">y=x+1</text>
         </svg>
       </div>
-
-      Karena limit kiri $\neq$ limit kanan ($1 \neq 2$), maka $\displaystyle\lim_{x\to 1} f(x)$ <strong>tidak ada</strong>.
+      <div class="sol-jadi">karena limit kiri $\neq$ limit kanan ($1 \neq 2$), $\lim_{x \to 1} f(x)$ <strong>tidak ada</strong>.</div>
     </div>
 
     <h3 class="subsection-title">3. Sifat-Sifat Limit Fungsi</h3>
-    <p>Sifat-sifat berikut merupakan teorema yang sangat berguna untuk mempermudah penyelesaian limit. Misalkan $\displaystyle\lim_{x\to a} f(x) = F$, $\displaystyle\lim_{x\to a} g(x) = G$, dan $k$ adalah konstanta.</p>
+    <p>Sifat-sifat berikut merupakan teorema yang sangat berguna untuk mempermudah penyelesaian limit. Misalkan $\displaystyle\lim_{x\to a} f(x)$ $= F$, $\displaystyle\lim_{x\to a} g(x)$ $= G$, dan $k$ adalah konstanta.</p>
 
     <div class="box box-rumus">
       <div class="box-label">Teorema Sifat-Sifat Limit</div>
       <ol style="padding-left:1.4rem;line-height:2.4;">
-        <li>$\displaystyle\lim_{x\to a} k = k$</li>
-        <li>$\displaystyle\lim_{x\to a} k\,f(x) = k \cdot \lim_{x\to a} f(x) = k \cdot F$</li>
-        <li>$\displaystyle\lim_{x\to a} \bigl[f(x) \pm g(x)\bigr] = \lim_{x\to a} f(x) \pm \lim_{x\to a} g(x) = F \pm G$</li>
-        <li>$\displaystyle\lim_{x\to a} \bigl[f(x) \cdot g(x)\bigr] = F \cdot G$</li>
-        <li>$\displaystyle\lim_{x\to a} \frac{f(x)}{g(x)} = \frac{F}{G}$, $\quad G \neq 0$</li>
-        <li>$\displaystyle\lim_{x\to a} \bigl[f(x)\bigr]^n = F^n$</li>
-        <li>$\displaystyle\lim_{x\to a} \sqrt[n]{f(x)} = \sqrt[n]{F}$</li>
+        <li>$\displaystyle\lim_{x\to a} k$ $= k$</li>
+        <li>$\displaystyle\lim_{x\to a} k\,f(x)$ $= k \cdot \lim_{x\to a} f(x)$ $= k \cdot F$</li>
+        <li>$\displaystyle\lim_{x\to a} \bigl[f(x) \pm g(x)\bigr]$ $= \lim_{x\to a} f(x) \pm \lim_{x\to a} g(x)$ $= F \pm G$</li>
+        <li>$\displaystyle\lim_{x\to a} \bigl[f(x) \cdot g(x)\bigr]$ $= F \cdot G$</li>
+        <li>$\displaystyle\lim_{x\to a} \frac{f(x)}{g(x)}$ $= \frac{F}{G}$, $\quad G \neq 0$</li>
+        <li>$\displaystyle\lim_{x\to a} \bigl[f(x)\bigr]^n$ $= F^n$</li>
+        <li>$\displaystyle\lim_{x\to a} \sqrt[n]{f(x)}$ $= \sqrt[n]{F}$</li>
       </ol>
     </div>
 
@@ -386,29 +381,37 @@ window.MathJax = {
       (e) $\displaystyle\lim_{x\to 3} \sqrt[3]{x^2 - 1}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Sifat (1): $\displaystyle\lim_{x\to 2} 5 = \boxed{5}$<br><br>
-      <strong>(b)</strong> Sifat (2): $\displaystyle\lim_{x\to 3} 2x^3 = 2 \cdot 3^3 = 2 \cdot 27 = \boxed{54}$<br><br>
-      <strong>(c)</strong> Sifat (3) dan (2):
-      $$\lim_{x\to 1}(x^2 + x) = \lim_{x\to 1} x^2 + \lim_{x\to 1} x = 1^2 + 1 = \boxed{2}$$
-      <strong>(d)</strong> Sifat (5), (3), dan (1):
-      $$\lim_{x\to 3}\frac{x^2-1}{x+1} = \frac{\lim_{x\to 3}x^2 - \lim_{x\to 3}1}{\lim_{x\to 3}x + \lim_{x\to 3}1} = \frac{3^2 - 1}{3 + 1} = \frac{8}{4} = \boxed{2}$$
-      <strong>(e)</strong> Sifat (7) dan (3):
-      $$\lim_{x\to 3}\sqrt[3]{x^2-1} = \sqrt[3]{\lim_{x\to 3}x^2 - \lim_{x\to 3}1} = \sqrt[3]{3^2 - 1} = \sqrt[3]{8} = \boxed{2}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>$\lim_{x \to 2} 5$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Limit konstanta:</strong> nilainya konstanta itu sendiri.</p>
+      <div class="sol-jadi">hasilnya $5$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$\lim_{x \to 3} 2x^3$</span></div>
+      $$2 \cdot 3^3 = 54$$
+      <div class="sol-jadi">hasilnya $54$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$\lim_{x \to 1} (x^2 + x)$</span></div>
+      $$1^2 + 1 = 2$$
+      <div class="sol-jadi">hasilnya $2$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>$\lim_{x \to 3} \dfrac{x^2 - 1}{x + 1}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Penyebut tidak nol,</strong> jadi sifat hasil bagi berlaku:</p>
+      $$\frac{3^2 - 1}{3 + 1} = \frac{8}{4} = 2$$
+      <div class="sol-jadi">hasilnya $2$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span><span>$\lim_{x \to 3} \sqrt[3]{x^2 - 1}$</span></div>
+      $$\sqrt[3]{3^2 - 1} = \sqrt[3]{8} = 2$$
+      <div class="sol-jadi">hasilnya $2$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 3</div>
-      <p style="margin:0;font-size:.9rem;">Jika diketahui $\displaystyle\lim_{x\to 2} f(x) = 5$ dan $\displaystyle\lim_{x\to 2} g(x) = -4$, hitunglah nilai:<br>
+      <p style="margin:0;font-size:.9rem;">Jika diketahui $\displaystyle\lim_{x\to 2} f(x)$ $= 5$ dan $\displaystyle\lim_{x\to 2} g(x)$ $= -4$, hitunglah nilai:<br>
       (a) $\lim_{x\to 2}\left[2f(x) + 3g(x)\right]^2$ &emsp;
       (b) $\lim_{x\to 2}\left[g^2(x) - 6\right]^3$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Sifat (2), (3), dan (6):
-      $$\lim_{x\to 2}\left[2f(x)+3g(x)\right]^2 = \left[2\lim_{x\to 2}f(x) + 3\lim_{x\to 2}g(x)\right]^2 = \left[2(5)+3(-4)\right]^2 = (-2)^2 = \boxed{4}$$
-      <strong>(b)</strong> Sifat (4) dan (6):
-      $$\lim_{x\to 2}\left[g^2(x)-6\right]^3 = \left[\left(\lim_{x\to 2}g(x)\right)^2 - 6\right]^3 = \left[(-4)^2 - 6\right]^3 = [10]^3 = \boxed{1000}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>$[2f(x) + 3g(x)]^2$</span></div>
+      $$ \begin{align*} \bigl[2(5) + 3(-4)\bigr]^2 &= (-2)^2 \\ &= 4 \end{align*} $$
+      <div class="sol-jadi">hasilnya $4$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$[g^2(x) - 6]^3$</span></div>
+      $$\bigl[(-4)^2 - 6\bigr]^3 = 10^3 = 1000$$
+      <div class="sol-jadi">hasilnya $1000$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -418,17 +421,53 @@ window.MathJax = {
       (b) $\displaystyle\lim_{x\to 3}\left[\frac{x^2+3x-18}{x^2-7x+12}\right]\sqrt{\frac{x^2+2x-15}{x^2-5x+6}}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Faktorkan pembilang dan penyebut, lalu gunakan sifat (5) dan (6):
-      $$\begin{align*} &\left[\lim_{x\to 2}\frac{x^2+2x-8}{x^2-6x+8}\right]^2\left[\lim_{x\to 2}\frac{x^2+6x-16}{x^2+x-6}\right]^3 \\ &= \left[\lim_{x\to 2}\frac{(x+4)(x-2)}{(x-4)(x-2)}\right]^2\left[\lim_{x\to 2}\frac{(x+8)(x-2)}{(x+3)(x-2)}\right]^3 \\ &= \left[\lim_{x\to 2}\frac{x+4}{x-4}\right]^2\left[\lim_{x\to 2}\frac{x+8}{x+3}\right]^3 = \left[\frac{6}{-2}\right]^2\left[\frac{10}{5}\right]^3 = (-3)^2 \cdot 2^3 = 9 \cdot 8 = \boxed{72} \end{align*}$$
-
-      <strong>(b)</strong> Faktorkan pembilang dan penyebut, lalu gunakan sifat (5) dan (7):
-      $$\begin{align*} &\left[\lim_{x\to 3}\frac{(x+6)(x-3)}{(x-4)(x-3)}\right]\sqrt{\lim_{x\to 3}\frac{(x+5)(x-3)}{(x-2)(x-3)}} = \left[\frac{3+6}{3-4}\right]\sqrt{\frac{3+5}{3-2}} = (-9)\sqrt{8} = -9 \cdot 2\sqrt{2} = \boxed{-18\sqrt{2}} \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Bentuk pertama</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Faktorkan tiap pecahan</strong> lalu coret $(x - 2)$:</p>
+      $$ \begin{align*} \frac{x^2 + 2x - 8}{x^2 - 6x + 8} &= \frac{(x + 4)(x - 2)}{(x - 4)(x - 2)} \\ \frac{x^2 + 6x - 16}{x^2 + x - 6} &= \frac{(x + 8)(x - 2)}{(x + 3)(x - 2)} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Substitusi $x = 2$:</strong></p>
+      $$\left(\frac{6}{-2}\right)^2 \left(\frac{10}{5}\right)^3 = 9 \cdot 8 = 72$$
+      <div class="sol-jadi">hasilnya $72$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Bentuk kedua</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Faktorkan</strong> lalu coret $(x - 3)$:</p>
+      $$ \begin{align*} \frac{x^2 + 3x - 18}{x^2 - 7x + 12} &= \frac{x + 6}{x - 4} \\ \frac{x^2 + 2x - 15}{x^2 - 5x + 6} &= \frac{x + 5}{x - 2} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Substitusi $x = 3$:</strong></p>
+      $$\frac{9}{-1}\sqrt{\frac{8}{1}} = -9 \cdot 2\sqrt{2}$$
+      <div class="sol-jadi">hasilnya $-18\sqrt{2}$.</div>
     </div>
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Untuk fungsi-fungsi yang kontinu di $x = a$, penerapan sifat-sifat limit di atas sama dengan langsung mensubstitusi $x = a$ ke dalam fungsi. Jadi, selama $f(a)$ terdefinisi, kita dapat langsung menghitung $\displaystyle\lim_{x\to a} f(x) = f(a)$.</p>
+      <p style="margin:0;font-size:.9rem;">Untuk fungsi-fungsi yang kontinu di $x = a$, penerapan sifat-sifat limit di atas sama dengan langsung mensubstitusi $x = a$ ke dalam fungsi. Jadi, selama $f(a)$ terdefinisi, kita dapat langsung menghitung $\displaystyle\lim_{x\to a} f(x)$ $= f(a)$.</p>
+    </div>
+
+    <h3 class="subsection-title">4. Kekontinuan Fungsi</h3>
+    <p>Fungsi $f$ disebut <strong>kontinu</strong> di $x = a$ jika grafiknya tidak terputus di titik itu: dapat digambar tanpa mengangkat pensil.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Syarat Kontinu</div>
+      <ol style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>$f(a)$ terdefinisi;</li><li>$\lim_{x \to a} f(x)$ ada (limit kiri $=$ limit kanan);</li><li>$\lim_{x \to a} f(x)$ $= f(a)$.</li></ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Selidiki apakah $f(x) = \begin{cases} x^2 - 1, & x &lt; 2 \\ 3, & x = 2 \\ x + 1, & x > 2 \end{cases}$ kontinu di $x = 2$.</p>
+    </div>
+    <div class="penyelesaian">
+      <ul class="sol-cek">
+        <li>$f(2) = 3$ terdefinisi ✓</li>
+        <li>Limit kiri $2^2 - 1 = 3$, limit kanan $2 + 1 = 3$, jadi limitnya $3$ ✓</li>
+        <li>Limit $= f(2) = 3$ ✓</li>
+      </ul>
+      <div class="sol-jadi">ketiga syarat terpenuhi, sehingga $f$ <strong>kontinu</strong> di $x = 2$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $a$ agar $f(x) = \begin{cases} ax + 1, & x \leq 1 \\ x^2 + 3, & x > 1 \end{cases}$ kontinu di $x = 1$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat kontinu:</strong> limit kiri $=$ limit kanan $= f(1)$.</p>
+      $$ \begin{align*} a(1) + 1 &= 1^2 + 3 \\ a + 1 &= 4 \end{align*} $$
+      <div class="sol-jadi">$a = 3$.</div>
     </div>
 
     <div class="box box-latihan">
@@ -478,6 +517,7 @@ window.MathJax = {
             </svg>
           </div>
         </li>
+        <li>Tentukan nilai $k$ agar $f(x) = \begin{cases} \dfrac{x^2 - 9}{x - 3}, & x \neq 3 \\ k, & x = 3 \end{cases}$ kontinu di $x = 3$.</li>
       </ol>
     </div>
   </section>
@@ -501,30 +541,34 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">Teknik 1: Substitusi Langsung</div>
-      <p style="margin:.3rem 0 0;font-size:.9rem;">Jika $f(a)$ terdefinisi, maka $\lim_{x\to a} f(x) = f(a)$.</p>
+      <p style="margin:.3rem 0 0;font-size:.9rem;">Jika $f(a)$ terdefinisi, maka $\lim_{x\to a} f(x)$ $= f(a)$.</p>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 5</div>
+      <div class="box-label">📘 Contoh 7</div>
       <p style="margin:0;font-size:.9rem;">Hitunglah $\lim_{x\to 3}(2x^2 - 5x + 1)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\lim_{x\to 3}(2x^2 - 5x + 1) = 2(3)^2 - 5(3) + 1 = 18 - 15 + 1 = \boxed{4}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Substitusi langsung $x = 3$:</strong></p>
+      $$2(3)^2 - 5(3) + 1 = 18 - 15 + 1$$
+      <div class="sol-jadi">hasilnya $4$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 6</div>
+      <div class="box-label">📘 Contoh 8</div>
       <p style="margin:0;font-size:.9rem;">Hitunglah nilai-nilai limit berikut menggunakan substitusi langsung.<br>
       (a) $\displaystyle\lim_{x\to 4}\frac{x^2 - 3x + 1}{2x + 5}$ &emsp;
       (b) $\displaystyle\lim_{x\to 2}\sqrt{3x^2 - 2x + 1}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Substitusi $x = 4$ (penyebut $\neq 0$):
-      $$\lim_{x\to 4}\frac{x^2 - 3x + 1}{2x + 5} = \frac{4^2 - 3(4) + 1}{2(4) + 5} = \frac{16 - 12 + 1}{13} = \boxed{\dfrac{5}{13}}$$
-      <strong>(b)</strong> Substitusi $x = 2$ (nilai di dalam akar $> 0$):
-      $$\lim_{x\to 2}\sqrt{3x^2 - 2x + 1} = \sqrt{3(4) - 4 + 1} = \sqrt{9} = \boxed{3}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Pecahan</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Penyebut tidak nol di $x = 4$,</strong> jadi substitusi langsung:</p>
+      $$\frac{16 - 12 + 1}{8 + 5} = \frac{5}{13}$$
+      <div class="sol-jadi">hasilnya $\dfrac{5}{13}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Akar</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Isi akar positif di $x = 2$:</strong></p>
+      $$\sqrt{12 - 4 + 1} = \sqrt{9} = 3$$
+      <div class="sol-jadi">hasilnya $3$.</div>
     </div>
 
     <h3 class="subsection-title">b. Bentuk Tak Tentu $\tfrac{0}{0}$</h3>
@@ -541,69 +585,88 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 7</div>
+      <div class="box-label">📘 Contoh 9</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
       (a) $\displaystyle\lim_{x\to 3} \frac{x^2 + 2x - 15}{x^2 - 4x + 3}$ &emsp;
       (b) $\displaystyle\lim_{x\to 4} \frac{x^2 - 8x + 16}{x^2 - 6x + 8}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Cek: $\frac{9+6-15}{9-12+3} = \frac{0}{0}$ (bentuk tak tentu, gunakan faktorisasi):
-      $$\lim_{x\to 3} \frac{x^2 + 2x - 15}{x^2 - 4x + 3} = \lim_{x\to 3} \frac{(x+5)(x-3)}{(x-1)(x-3)} = \lim_{x\to 3} \frac{x+5}{x-1} = \frac{3+5}{3-1} = \boxed{4}$$
-      <strong>(b)</strong> Cek: $\frac{16-32+16}{16-24+8} = \frac{0}{0}$ (bentuk tak tentu):
-      $$\lim_{x\to 4} \frac{x^2 - 8x + 16}{x^2 - 6x + 8} = \lim_{x\to 4} \frac{(x-4)(x-4)}{(x-4)(x-2)} = \lim_{x\to 4} \frac{x-4}{x-2} = \frac{4-4}{4-2} = \boxed{0}$$
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 8</div>
-      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
-      (a) $\displaystyle\lim_{x\to 1} \frac{x^4 + 3x^2 - 4}{x^2 + x - 2}$ &emsp;
-      (b) $\displaystyle\lim_{x\to 2} \frac{x^3 + 3x^2 - 10x}{x^3 - 4x^2 + 4x}$</p>
-    </div>
-    <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Misalkan $p = x^2$:
-      $$\begin{align*} \lim_{x\to 1} \frac{x^4 + 3x^2 - 4}{x^2 + x - 2} &= \lim_{x\to 1} \frac{(p+4)(p-1)}{(x+2)(x-1)} = \lim_{x\to 1} \frac{(x^2+4)(x^2-1)}{(x+2)(x-1)} \\ &= \lim_{x\to 1} \frac{(x^2+4)(x+1)(x-1)}{(x+2)(x-1)} = \lim_{x\to 1} \frac{(x^2+4)(x+1)}{x+2} = \frac{(1+4)(1+1)}{1+2} = \boxed{\dfrac{10}{3}} \end{align*}$$
-      <strong>(b)</strong>
-      $$\begin{align*} \lim_{x\to 2} \frac{x^3 + 3x^2 - 10x}{x^3 - 4x^2 + 4x} &= \lim_{x\to 2} \frac{x(x^2+3x-10)}{x(x^2-4x+4)} = \lim_{x\to 2} \frac{(x+5)(x-2)}{(x-2)^2} = \lim_{x\to 2} \frac{x+5}{x-2} = \frac{7}{0} = \boxed{\infty} \end{align*}$$
-    </div>
-
-    <div class="box box-catatan">
-      <div class="box-label">⚠ Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Jika setelah faktorisasi penyebut tetap nol tetapi pembilang <strong>tidak</strong> nol, maka hasilnya adalah <strong>tak hingga</strong>. Ini berbeda dengan bentuk $\tfrac{0}{0}$ yang tak tentu.
-      $$\frac{k}{0} = \pm\infty \quad (k \neq 0), \qquad \text{Contoh: } \lim_{x\to 2}\frac{x+5}{x-2} = \frac{7}{0} = \infty$$
-      Semakin kecil penyebutnya, semakin besar nilai pecahan tersebut — tanpa batas.</p>
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 9</div>
-      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
-      (a) $\displaystyle\lim_{x\to 3} \frac{x^3 - 7x^2 + 12x}{x^3 - 27}$ &emsp;
-      (b) $\displaystyle\lim_{x\to -2} \frac{2x^3 + 16}{x^2 + 6x + 8}$</p>
-    </div>
-    <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong>
-      $$\begin{align*} \lim_{x\to 3} \frac{x^3 - 7x^2 + 12x}{x^3 - 27} &= \lim_{x\to 3} \frac{x(x^2-7x+12)}{(x-3)(x^2+3x+9)} = \lim_{x\to 3} \frac{x(x-3)(x-4)}{(x-3)(x^2+3x+9)} \\ &= \lim_{x\to 3} \frac{x(x-4)}{x^2+3x+9} = \frac{3(3-4)}{9+9+9} = \frac{-3}{27} = \boxed{-\dfrac{1}{9}} \end{align*}$$
-      <strong>(b)</strong>
-      $$\begin{align*} \lim_{x\to -2} \frac{2x^3 + 16}{x^2 + 6x + 8} &= \lim_{x\to -2} \frac{2(x+2)(x^2-2x+4)}{(x+4)(x+2)} = \lim_{x\to -2} \frac{2(x^2-2x+4)}{x+4} = \frac{2(4+4+4)}{-2+4} = \frac{24}{2} = \boxed{12} \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>$x \to 3$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cek:</strong> substitusi memberi $\tfrac{0}{0}$, jadi faktorkan.</p>
+      $$ \begin{align*} &\lim_{x \to 3} \frac{(x + 5)(x - 3)}{(x - 1)(x - 3)} \\  &= \lim_{x \to 3} \frac{x + 5}{x - 1} \\ &= \frac{8}{2} \end{align*} $$
+      <div class="sol-jadi">hasilnya $4$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$x \to 4$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cek:</strong> bentuk $\tfrac{0}{0}$.</p>
+      $$ \begin{align*} &\lim_{x \to 4} \frac{(x - 4)^2}{(x - 4)(x - 2)} \\  &= \lim_{x \to 4} \frac{x - 4}{x - 2} \\ &= \frac{0}{2} \end{align*} $$
+      <div class="sol-jadi">hasilnya $0$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 10</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to 1} \frac{x^4 + 3x^2 - 4}{x^2 + x - 2}$ &emsp;
+      (b) $\displaystyle\lim_{x\to 2} \frac{x^3 + 3x^2 - 10x}{x^3 - 4x^2 + 4x}$</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>$x \to 1$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Faktorkan pembilang</strong> seperti kuadrat dalam $x^2$: $x^4 + 3x^2 - 4$ $= (x^2 + 4)(x + 1)(x - 1)$.</p>
+      $$ \begin{align*} &\lim_{x \to 1} \frac{(x^2 + 4)(x + 1)(x - 1)}{(x + 2)(x - 1)} \\  &= \frac{(5)(2)}{3} \end{align*} $$
+      <div class="sol-jadi">hasilnya $\dfrac{10}{3}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$x \to 2$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Faktorkan:</strong></p>
+      $$ \begin{align*} \frac{x(x + 5)(x - 2)}{x(x - 2)^2} &= \frac{x + 5}{x - 2} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Substitusi memberi $\tfrac{7}{0}$:</strong> pembilang tidak nol, penyebut menuju nol. Untuk $x \to 2^-$ penyebut negatif (hasil $\to -\infty$), untuk $x \to 2^+$ positif (hasil $\to +\infty$).</p>
+      <div class="sol-jadi">limitnya <strong>tidak ada</strong> (limit kiri $-\infty$, limit kanan $+\infty$).</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Jika setelah disederhanakan penyebut tetap menuju nol tetapi pembilang <strong>tidak</strong> nol (bentuk $\tfrac{k}{0}$, $k \neq 0$), nilai fungsi membesar tanpa batas. Periksa tanda dari kiri dan kanan:</p>
+      <ul style="margin:.4rem 0 0;padding-left:1.2rem;font-size:.9rem;"><li>tanda sama: limitnya $+\infty$ atau $-\infty$;</li><li>tanda berbeda (seperti Contoh 10b): limitnya <strong>tidak ada</strong>.</li></ul>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Pengayaan: Dalil L'Hôpital</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Jika $\lim_{x \to a} \dfrac{f(x)}{g(x)}$ berbentuk $\tfrac{0}{0}$ atau $\tfrac{\infty}{\infty}$, maka $\lim_{x \to a} \dfrac{f(x)}{g(x)}$ $= \lim_{x \to a} \dfrac{f'(x)}{g'(x)}$ (turunan dibahas di materi <strong>Turunan Fungsi</strong>).</p>
+      <p style="margin:0;font-size:.9rem;">Cek: $\lim_{x \to 3} \dfrac{x^2 + 2x - 15}{x^2 - 4x + 3}$ $= \lim_{x \to 3} \dfrac{2x + 2}{2x - 4}$ $= \dfrac{8}{2}$ $= 4$, sama dengan hasil faktorisasi.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to 3} \frac{x^3 - 7x^2 + 12x}{x^3 - 27}$ &emsp;
+      (b) $\displaystyle\lim_{x\to -2} \frac{2x^3 + 16}{x^2 + 6x + 8}$</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>$x \to 3$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Faktorkan,</strong> termasuk selisih kubik $x^3 - 27$ $= (x - 3)(x^2 + 3x + 9)$:</p>
+      $$ \begin{align*} &\frac{x(x - 3)(x - 4)}{(x - 3)(x^2 + 3x + 9)} \\ &= \frac{x(x - 4)}{x^2 + 3x + 9} \\ &\to \frac{3(-1)}{27} \end{align*} $$
+      <div class="sol-jadi">hasilnya $-\dfrac{1}{9}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$x \to -2$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Faktorkan</strong> $2x^3 + 16$ $= 2(x + 2)(x^2 - 2x + 4)$:</p>
+      $$ \begin{align*} &\frac{2(x + 2)(x^2 - 2x + 4)}{(x + 4)(x + 2)} \\  &= \frac{2(x^2 - 2x + 4)}{x + 4} \\ &\to \frac{2 \cdot 12}{2} \end{align*} $$
+      <div class="sol-jadi">hasilnya $12$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
       (a) $\displaystyle\lim_{x\to 2} \frac{(x-2)^2 + 3(x-2)}{2x - 4}$ &emsp;
-      (b) $\displaystyle\lim_{x\to 2} \frac{x^2 - 4}{3x - 6} + \frac{(x-2)^2}{x^2 - 4}$ &emsp;
+      (b) $\displaystyle\lim_{x\to 2} \frac{x^2 - 4}{3x - 6}$ $+ \frac{(x-2)^2}{x^2 - 4}$ &emsp;
       (c) $\displaystyle\lim_{x\to 1} \frac{x^3 - 3x + 2}{(x-1)^2 + 2(x^2 - 1)}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Misalkan $h = x - 2$:
-      $$\lim_{x\to 2} \frac{(x-2)^2 + 3(x-2)}{2(x-2)} = \lim_{h \to 0} \frac{h^2 + 3h}{2h} = \lim_{h \to 0} \frac{h(h + 3)}{2h} = \lim_{h \to 0} \frac{h + 3}{2} = \frac{3}{2} = \boxed{\dfrac{3}{2}}$$
-      <strong>(b)</strong> Misalkan $h = x - 2$:
-      $$\begin{align*} \lim_{h\to 0}\left(\frac{h(h+4)}{3h} + \frac{h^2}{h(h+4)}\right) = \lim_{h\to 0}\left(\frac{h+4}{3} + \frac{h}{h+4}\right) = \frac{4}{3} + 0 = \boxed{\dfrac{4}{3}} \end{align*}$$
-      <strong>(c)</strong> Misalkan $h = x - 1$:
-      $$\lim_{x\to 1} \frac{x^3 - 3x + 2}{(x-1)^2 + 2(x^2-1)} = \lim_{h \to 0} \frac{h^2(h+3)}{h(3h+4)} = \lim_{h \to 0} \frac{h(h+3)}{3h+4} = \frac{0}{4} = \boxed{0}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Misalkan $h = x - 2$</span></div>
+      $$ \begin{align*} \lim_{h \to 0} \frac{h^2 + 3h}{2h} &= \lim_{h \to 0} \frac{h + 3}{2} \end{align*} $$
+      <div class="sol-jadi">hasilnya $\dfrac{3}{2}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Misalkan $h = x - 2$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis tiap suku dalam $h$:</strong> $x^2 - 4 = h(h + 4)$ dan $3x - 6 = 3h$.</p>
+      $$ \begin{align*} \lim_{h \to 0} \left(\frac{h + 4}{3} + \frac{h}{h + 4}\right) &= \frac{4}{3} + 0 \end{align*} $$
+      <div class="sol-jadi">hasilnya $\dfrac{4}{3}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Misalkan $h = x - 1$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis dalam $h$:</strong> $x^3 - 3x + 2$ $= h^2(h + 3)$ dan penyebutnya $h(3h + 4)$.</p>
+      $$ \begin{align*} \lim_{h \to 0} \frac{h(h + 3)}{3h + 4} &= \frac{0}{4} \end{align*} $$
+      <div class="sol-jadi">hasilnya $0$.</div>
     </div>
 
     <div class="box box-catatan">
@@ -612,20 +675,15 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 11</div>
-      <p style="margin:0;font-size:.9rem;">Tentukanlah nilai $a$ dan $b$ jika $\displaystyle\lim_{x\to 2}\frac{x^2 + ax + b}{x^2 - x - 2} = \frac{5}{3}$.</p>
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah nilai $a$ dan $b$ jika $\displaystyle\lim_{x\to 2}\frac{x^2 + ax + b}{x^2 - x - 2}$ $= \frac{5}{3}$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Faktorkan penyebut: $x^2 - x - 2 = (x-2)(x+1)$. Penyebut nol di $x = 2$. Agar limit berhingga, pembilang <strong>harus</strong> nol di $x = 2$:
-      $$(2)^2 + a(2) + b = 0 \implies b = -4 - 2a \quad \cdots (1)$$
-      Tulis $x^2 + ax + b = (x-2)(x-r)$. Dengan mengembangkan: $a = -(2+r)$, $b = 2r$. Substitusikan ke nilai limit:
-      $$\lim_{x\to 2}\frac{(x-2)(x-r)}{(x-2)(x+1)} = \lim_{x\to 2}\frac{x-r}{x+1} = \frac{2-r}{3} = \frac{5}{3}$$
-      $$2 - r = 5 \implies r = -3$$
-      Maka: $a = -(2+(-3)) = 1$ dan $b = 2(-3) = -6$.
-
-      Verifikasi: $\displaystyle\lim_{x\to 2}\frac{x^2+x-6}{x^2-x-2} = \lim_{x\to 2}\frac{(x+3)(x-2)}{(x+1)(x-2)} = \frac{5}{3}$ ✓
-      $$\boxed{a = 1,\quad b = -6}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat limit berhingga:</strong> penyebut $(x - 2)(x + 1)$ nol di $x = 2$, jadi pembilang juga harus nol: $4 + 2a + b = 0$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis pembilang</strong> sebagai $(x - 2)(x - r)$, lalu hitung limitnya:</p>
+      $$ \begin{align*} \lim_{x \to 2} \frac{x - r}{x + 1} &= \frac{2 - r}{3} = \frac{5}{3} \\ r &= -3 \end{align*} $$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Kembalikan ke $a$ dan $b$:</strong> $(x - 2)(x + 3)$ $= x^2 + x - 6$.</p>
+      <div class="sol-jadi">$a = 1$ dan $b = -6$.</div>
     </div>
 
     <div class="box box-rumus">
@@ -634,45 +692,54 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 12</div>
+      <div class="box-label">📘 Contoh 14</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
       (a) $\displaystyle\lim_{x\to 3} \frac{x^2 + 3x - 18}{\sqrt{x} - \sqrt{3}}$ &emsp;
       (b) $\displaystyle\lim_{x\to 4} \frac{\sqrt{x} - 2}{x^2 - 16}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Kalikan dengan sekawan $\dfrac{\sqrt{x}+\sqrt{3}}{\sqrt{x}+\sqrt{3}}$:
-      $$\begin{align*} \lim_{x\to 3} \frac{x^2 + 3x - 18}{\sqrt{x} - \sqrt{3}} &= \lim_{x\to 3} \frac{(x+6)(x-3)}{\sqrt{x}-\sqrt{3}} \cdot \frac{\sqrt{x}+\sqrt{3}}{\sqrt{x}+\sqrt{3}} = \lim_{x\to 3} \frac{(x+6)(x-3)(\sqrt{x}+\sqrt{3})}{x - 3} \\ &= \lim_{x\to 3} (x+6)(\sqrt{x}+\sqrt{3}) = (3+6)(\sqrt{3}+\sqrt{3}) = 9 \cdot 2\sqrt{3} = \boxed{18\sqrt{3}} \end{align*}$$
-      <strong>(b)</strong> Kalikan dengan sekawan $\dfrac{\sqrt{x}+2}{\sqrt{x}+2}$:
-      $$\begin{align*} \lim_{x\to 4} \frac{\sqrt{x}-2}{x^2-16} &= \lim_{x\to 4} \frac{\sqrt{x}-2}{(x-4)(x+4)} \cdot \frac{\sqrt{x}+2}{\sqrt{x}+2} = \lim_{x\to 4} \frac{x-4}{(x-4)(x+4)(\sqrt{x}+2)} \\ &= \lim_{x\to 4} \frac{1}{(x+4)(\sqrt{x}+2)} = \frac{1}{(4+4)(\sqrt{4}+2)} = \frac{1}{8 \cdot 4} = \boxed{\dfrac{1}{32}} \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>$x \to 3$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kalikan sekawan</strong> $\sqrt{x} + \sqrt{3}$ pada penyebut:</p>
+      $$ \begin{align*} &\frac{(x + 6)(x - 3)}{\sqrt{x} - \sqrt{3}} \\  &= (x + 6)(\sqrt{x} + \sqrt{3}) \\ &\to 9 \cdot 2\sqrt{3} \end{align*} $$
+      <div class="sol-jadi">hasilnya $18\sqrt{3}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$x \to 4$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kalikan sekawan</strong> $\sqrt{x} + 2$:</p>
+      $$ \begin{align*} &\frac{\sqrt{x} - 2}{x^2 - 16} \\  &= \frac{1}{(x + 4)(\sqrt{x} + 2)} \\ &\to \frac{1}{8 \cdot 4} \end{align*} $$
+      <div class="sol-jadi">hasilnya $\dfrac{1}{32}$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 13</div>
+      <div class="box-label">📘 Contoh 15</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
       (a) $\displaystyle\lim_{x\to 2} \frac{2-\sqrt{x+2}}{3-\sqrt{3x+3}}$ &emsp;
       (b) $\displaystyle\lim_{x\to 3} \frac{\sqrt{x}-\sqrt{3}}{\sqrt{x+1}-2}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Kalikan dengan sekawan masing-masing:
-      $$\begin{align*} \lim_{x\to 2}\frac{2-\sqrt{x+2}}{3-\sqrt{3x+3}} &= \lim_{x\to 2}\frac{(4-(x+2))(3+\sqrt{3x+3})}{(9-(3x+3))(2+\sqrt{x+2})} = \lim_{x\to 2}\frac{(2-x)(3+\sqrt{3x+3})}{3(2-x)(2+\sqrt{x+2})} \\ &= \lim_{x\to 2}\frac{3+\sqrt{3x+3}}{3(2+\sqrt{x+2})} = \frac{3+\sqrt{9}}{3(2+\sqrt{4})} = \frac{6}{3 \cdot 4} = \boxed{\dfrac{1}{2}} \end{align*}$$
-      <strong>(b)</strong> Kalikan dengan dua sekawan:
-      $$\begin{align*} \lim_{x\to 3}\frac{\sqrt{x}-\sqrt{3}}{\sqrt{x+1}-2} &= \lim_{x\to 3}\frac{(x-3)(\sqrt{x+1}+2)}{(x-3)(\sqrt{x}+\sqrt{3})} = \lim_{x\to 3}\frac{\sqrt{x+1}+2}{\sqrt{x}+\sqrt{3}} = \frac{\sqrt{4}+2}{\sqrt{3}+\sqrt{3}} = \frac{4}{2\sqrt{3}} = \boxed{\dfrac{2\sqrt{3}}{3}} \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>$x \to 2$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kalikan sekawan pembilang dan penyebut:</strong> pembilang menjadi $2 - x$, penyebut menjadi $3(2 - x)$.</p>
+      $$ \begin{align*} &\lim_{x \to 2} \frac{3 + \sqrt{3x + 3}}{3(2 + \sqrt{x + 2})} \\  &= \frac{6}{12} \end{align*} $$
+      <div class="sol-jadi">hasilnya $\dfrac{1}{2}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$x \to 3$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Dua sekawan:</strong> pembilang dan penyebut sama-sama menjadi $x - 3$.</p>
+      $$ \begin{align*} &\lim_{x \to 3} \frac{\sqrt{x + 1} + 2}{\sqrt{x} + \sqrt{3}} \\  &= \frac{4}{2\sqrt{3}} \end{align*} $$
+      <div class="sol-jadi">hasilnya $\dfrac{2\sqrt{3}}{3}$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 14</div>
+      <div class="box-label">📘 Contoh 16</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit berikut.<br>
       (a) $\displaystyle\lim_{x\to 4} \frac{(x-4)^2}{\left(\sqrt{x}-2\right)\bigl[(x-4)^2 + 2(x-4)\bigr]}$ &emsp;
       (b) $\displaystyle\lim_{x\to 9} \frac{(x-9)^2 + 4(x-9)}{\sqrt{x} - 3}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Misalkan $h = x - 4$. Kalikan dengan sekawan $\dfrac{\sqrt{h+4}+2}{\sqrt{h+4}+2}$:
-      $$\begin{align*} &= \lim_{h\to 0}\frac{h^2}{(\sqrt{h+4}-2)(h^2+2h)} \cdot \frac{\sqrt{h+4}+2}{\sqrt{h+4}+2} = \lim_{h\to 0}\frac{h^2(\sqrt{h+4}+2)}{h \cdot h(h+2)} = \lim_{h\to 0}\frac{\sqrt{h+4}+2}{h+2} = \frac{\sqrt{4}+2}{0+2} = \frac{4}{2} = \boxed{2} \end{align*}$$
-      <strong>(b)</strong> Misalkan $h = x - 9$. Kalikan dengan sekawan $\dfrac{\sqrt{h+9}+3}{\sqrt{h+9}+3}$:
-      $$\begin{align*} \lim_{h\to 0}\frac{h^2 + 4h}{\sqrt{h+9}-3} &= \lim_{h\to 0}\frac{h(h+4)(\sqrt{h+9}+3)}{h} = \lim_{h\to 0}(h+4)(\sqrt{h+9}+3) = 4(\sqrt{9}+3) = 4 \cdot 6 = \boxed{24} \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Misalkan $h = x - 4$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sederhanakan</strong> dengan $\sqrt{h + 4} - 2$ $= \dfrac{h}{\sqrt{h + 4} + 2}$:</p>
+      $$ \begin{align*} &\frac{h^2}{(\sqrt{h + 4} - 2)\,h(h + 2)} \\ &= \frac{\sqrt{h + 4} + 2}{h + 2} \to \frac{4}{2} \end{align*} $$
+      <div class="sol-jadi">hasilnya $2$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Misalkan $h = x - 9$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kalikan sekawan</strong> $\sqrt{h + 9} + 3$:</p>
+      $$ \begin{align*} &\frac{h(h + 4)}{\sqrt{h + 9} - 3} \\  &= (h + 4)(\sqrt{h + 9} + 3) \\ &\to 4 \cdot 6 \end{align*} $$
+      <div class="sol-jadi">hasilnya $24$.</div>
     </div>
 
     <div class="box box-catatan">
@@ -681,15 +748,14 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 15</div>
+      <div class="box-label">📘 Contoh 17</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil dari $\displaystyle\lim_{x\to 0} \frac{\sqrt{1+\sqrt{1+x}}-\sqrt{2}}{x}$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Rasionalisasi lapisan luar terlebih dahulu dengan sekawan $\sqrt{1+\sqrt{1+x}}+\sqrt{2}$:
-      $$\begin{align*} \lim_{x\to 0}\frac{\sqrt{1+\sqrt{1+x}}-\sqrt{2}}{x} &= \lim_{x\to 0}\frac{\bigl(1+\sqrt{1+x}\bigr)-2}{x\bigl(\sqrt{1+\sqrt{1+x}}+\sqrt{2}\bigr)} = \lim_{x\to 0}\frac{\sqrt{1+x}-1}{x\bigl(\sqrt{1+\sqrt{1+x}}+\sqrt{2}\bigr)} \end{align*}$$
-      Kemudian rasionalisasi lapisan dalam dengan sekawan $\sqrt{1+x}+1$:
-      $$\begin{align*} &= \lim_{x\to 0}\frac{(1+x)-1}{x\bigl(\sqrt{1+\sqrt{1+x}}+\sqrt{2}\bigr)\bigl(\sqrt{1+x}+1\bigr)} = \lim_{x\to 0}\frac{1}{\bigl(\sqrt{1+\sqrt{1+x}}+\sqrt{2}\bigr)\bigl(\sqrt{1+x}+1\bigr)} \\ &= \frac{1}{(\sqrt{2}+\sqrt{2})(1+1)} = \frac{1}{2\sqrt{2}\cdot 2} = \boxed{\dfrac{1}{4\sqrt{2}} = \dfrac{\sqrt{2}}{8}} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Rasionalkan lapisan luar</strong> dengan $\sqrt{1 + \sqrt{1 + x}}$ $+ \sqrt{2}$: pembilang menjadi $\sqrt{1 + x} - 1$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Rasionalkan lapisan dalam</strong> dengan $\sqrt{1 + x} + 1$: pembilang menjadi $x$, lalu coret dengan penyebut.</p>
+      $$ \begin{align*}  &\frac{1}{\bigl(\sqrt{1 + \sqrt{1 + x}} + \sqrt{2}\bigr)\bigl(\sqrt{1 + x} + 1\bigr)} \\ &\to \frac{1}{2\sqrt{2} \cdot 2} \end{align*} $$
+      <div class="sol-jadi">hasilnya $\dfrac{1}{4\sqrt{2}}$ $= \dfrac{\sqrt{2}}{8}$.</div>
     </div>
 
     <div class="box box-catatan">
@@ -698,40 +764,34 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 16</div>
+      <div class="box-label">📘 Contoh 18</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah nilai dari $\displaystyle\lim_{x\to 2} \frac{\sqrt{x^2+5}-3}{x^2-2x}$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Cek substitusi: $x=2$ menghasilkan $\tfrac{\sqrt{9}-3}{0} = \tfrac{0}{0}$. Kalikan dengan sekawan $\sqrt{x^2+5}+3$, lalu faktorkan:
-      $$\begin{align*} \lim_{x\to 2}\frac{\sqrt{x^2+5}-3}{x^2-2x} &= \lim_{x\to 2}\frac{(x^2+5)-9}{x(x-2)\bigl(\sqrt{x^2+5}+3\bigr)} = \lim_{x\to 2}\frac{x^2-4}{x(x-2)\bigl(\sqrt{x^2+5}+3\bigr)} \\ &= \lim_{x\to 2}\frac{(x-2)(x+2)}{x(x-2)\bigl(\sqrt{x^2+5}+3\bigr)} = \lim_{x\to 2}\frac{x+2}{x\bigl(\sqrt{x^2+5}+3\bigr)} = \frac{4}{2(\sqrt{9}+3)} = \frac{4}{12} = \boxed{\dfrac{1}{3}} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cek:</strong> bentuk $\tfrac{0}{0}$. Kalikan sekawan $\sqrt{x^2 + 5} + 3$, lalu faktorkan:</p>
+      $$ \begin{align*} &\frac{x^2 - 4}{x(x - 2)\bigl(\sqrt{x^2 + 5} + 3\bigr)} \\  &= \frac{x + 2}{x\bigl(\sqrt{x^2 + 5} + 3\bigr)} \\ &\to \frac{4}{2 \cdot 6} \end{align*} $$
+      <div class="sol-jadi">hasilnya $\dfrac{1}{3}$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 17</div>
-      <p style="margin:0;font-size:.9rem;">Tentukanlah nilai $a$ dan $b$ yang memenuhi $\displaystyle\lim_{x\to 3}\frac{\sqrt{x+a}-\sqrt{b-x}}{x-3} = \dfrac{1}{2}$.</p>
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah nilai $a$ dan $b$ yang memenuhi $\displaystyle\lim_{x\to 3}\frac{\sqrt{x+a}-\sqrt{b-x}}{x-3}$ $= \dfrac{1}{2}$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Agar kedua akar terdefinisi dan limit berhingga, <strong>keduanya</strong> harus nol di $x=3$:
-      $$\sqrt{3+a} - \sqrt{b-3} = 0 \implies 3 + a = b - 3 \implies b = a + 6 \quad \cdots (1)$$
-      Tulis pembilang sebagai selisih dua akar lalu kalikan dengan sekawan $\sqrt{x+a}+\sqrt{b-x}$:
-      $$\begin{align*} \lim_{x\to 3}\frac{\sqrt{x+a}-\sqrt{b-x}}{x-3} &= \lim_{x\to 3}\frac{(x+a)-(b-x)}{(x-3)\bigl(\sqrt{x+a}+\sqrt{b-x}\bigr)} = \lim_{x\to 3}\frac{2x+a-b}{(x-3)\bigl(\sqrt{x+a}+\sqrt{b-x}\bigr)} \end{align*}$$
-      Substitusi $b = a+6$: $2x + a - b = 2(x-3)$. Maka:
-      $$\lim_{x\to 3}\frac{2(x-3)}{(x-3)\bigl(\sqrt{x+a}+\sqrt{b-x}\bigr)} = \frac{2}{2\sqrt{3+a}} = \frac{1}{\sqrt{3+a}} = \frac{1}{2}$$
-      $$\sqrt{3+a} = 2 \implies a = 1, \quad b = 7$$
-      Verifikasi: $\displaystyle\lim_{x\to 3}\frac{\sqrt{x+1}-\sqrt{7-x}}{x-3} = \lim_{x\to 3}\frac{2(x-3)}{(x-3)\cdot 2\sqrt{x+1}} = \frac{1}{\sqrt{4}} = \frac{1}{2}$ ✓
-      $$\boxed{a = 1,\quad b = 7}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat limit berhingga:</strong> pembilang nol di $x = 3$, jadi $3 + a = b - 3$ atau $b = a + 6$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kalikan sekawan:</strong> pembilang menjadi $2x + a - b = 2(x - 3)$.</p>
+      $$ \begin{align*} &\lim_{x \to 3} \frac{2}{\sqrt{x + a} + \sqrt{b - x}} \\  &= \frac{2}{2\sqrt{3 + a}} \\ &= \frac{1}{2} \\ \sqrt{3 + a} &= 2 \end{align*} $$
+      <div class="sol-jadi">$a = 1$ dan $b = 7$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 18</div>
+      <div class="box-label">📘 Contoh 20</div>
       <p style="margin:0;font-size:.9rem;">Hitunglah $\displaystyle\lim_{x\to 1} \dfrac{\sqrt[3]{x^2} - 2\sqrt[3]{x} + 1}{(x-1)^2}$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Misalkan $\sqrt[3]{x} = p$, maka $x = p^3$ dan $x \to 1 \Rightarrow p \to 1$:
-      $$\begin{align*} \lim_{x\to 1} \frac{\sqrt[3]{x^2} - 2\sqrt[3]{x} + 1}{(x-1)^2} &= \lim_{p \to 1} \frac{p^2 - 2p + 1}{(p^3-1)^2} = \lim_{p \to 1} \frac{(p-1)^2}{\left[(p-1)(p^2+p+1)\right]^2} \\ &= \lim_{p \to 1} \frac{1}{(p^2+p+1)^2} = \frac{1}{(1+1+1)^2} = \boxed{\dfrac{1}{9}} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Misalkan $p = \sqrt[3]{x}$,</strong> jadi $x = p^3$ dan $p \to 1$.</p>
+      $$ \begin{align*} &\lim_{p \to 1} \frac{(p - 1)^2}{\bigl[(p - 1)(p^2 + p + 1)\bigr]^2} \\  &= \lim_{p \to 1} \frac{1}{(p^2 + p + 1)^2} \end{align*} $$
+      <div class="sol-jadi">hasilnya $\dfrac{1}{9}$.</div>
     </div>
 
     <div class="box box-catatan">
@@ -742,7 +802,7 @@ window.MathJax = {
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan — Bagian B (Set 1)</div>
       <ol class="soal-list">
-        <li>Tentukanlah nilai setiap limit berikut menggunakan substitusi langsung:<br>(a) $\displaystyle\lim_{x\to -1}\frac{x^2 + 4x + 3}{x + 1}$<br>(b) $\displaystyle\lim_{x\to 3}\frac{x^2 - 9}{x - 3}$</li>
+        <li>Tentukanlah nilai setiap limit berikut (substitusi langsung menghasilkan $\tfrac{0}{0}$, jadi sederhanakan dulu):<br>(a) $\displaystyle\lim_{x\to -1}\frac{x^2 + 4x + 3}{x + 1}$<br>(b) $\displaystyle\lim_{x\to 3}\frac{x^2 - 9}{x - 3}$</li>
         <li>Tentukanlah nilai setiap limit berikut menggunakan faktorisasi:<br>(a) $\displaystyle\lim_{x\to 4}\frac{x^2 - 8x + 16}{x^2 - 3x - 4}$<br>(b) $\displaystyle\lim_{x\to -2}\frac{x^3 + 8}{x^2 + 5x + 6}$</li>
         <li>Tentukanlah nilai setiap limit berikut menggunakan perkalian sekawan:<br>(a) $\displaystyle\lim_{x\to 4}\frac{x^2 - 16}{\sqrt{x} - 2}$<br>(b) $\displaystyle\lim_{x\to 5}\frac{\sqrt{x - 1} - 2}{x^2 - 7x + 10}$</li>
       </ol>
@@ -750,11 +810,11 @@ window.MathJax = {
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan — Bagian B (Set 2)</div>
       <ol class="soal-list">
-        <li>Tentukanlah nilai setiap limit berikut:<br>(a) $\displaystyle\lim_{x\to 0}\frac{\sqrt{1 + \sqrt{1 + x}} - \sqrt{2}}{x}$<br>(b) $\displaystyle\lim_{x\to 4}\frac{\sqrt{x^2 + 9} - 5}{x^2 - 6x + 8}$</li>
-        <li>Jika $\displaystyle\lim_{x\to 2}\frac{x^2 + ax + b}{x^2 - x - 2} = \dfrac{4}{3}$, tentukan nilai $a$ dan $b$.</li>
-        <li>Jika $\displaystyle\lim_{x\to 4}\frac{\sqrt{x + a} - \sqrt{b - x}}{x - 4} = \dfrac{1}{4}$, tentukan nilai $a$ dan $b$, kemudian verifikasi jawabanmu.</li>
+        <li>Tentukanlah nilai setiap limit berikut:<br>(a) $\displaystyle\lim_{x\to 0}\frac{\sqrt{2 + \sqrt{4 + x}} - 2}{x}$<br>(b) $\displaystyle\lim_{x\to 4}\frac{\sqrt{x^2 + 9} - 5}{x^2 - 6x + 8}$</li>
+        <li>Jika $\displaystyle\lim_{x\to 2}\frac{x^2 + ax + b}{x^2 - x - 2}$ $= \dfrac{4}{3}$, tentukan nilai $a$ dan $b$.</li>
+        <li>Jika $\displaystyle\lim_{x\to 4}\frac{\sqrt{x + a} - \sqrt{b - x}}{x - 4}$ $= \dfrac{1}{4}$, tentukan nilai $a$ dan $b$, kemudian verifikasi jawabanmu.</li>
         <li>Tentukanlah $\displaystyle\lim_{x\to 8}\dfrac{\sqrt[3]{x} - 2}{x - 8}$. (Gunakan substitusi $\sqrt[3]{x} = p$.)</li>
-        <li>Diketahui $\displaystyle\lim_{x\to a}\frac{x^2 - (a+2)x + 2a}{\sqrt{x - a} \cdot (x - a)} = k$. Nyatakan $k$ dalam $a$, dan tentukan nilai $a$ agar $k = 4$.</li>
+        <li>Diketahui $\displaystyle\lim_{x\to a}\frac{x^2 - (a+2)x + 2a}{\sqrt{x} - \sqrt{a}}$ $= k$ dengan $a > 0$. Nyatakan $k$ dalam $a$, lalu tentukan $a$ agar $k = 8$.</li>
       </ol>
     </div>
   </section>
@@ -770,12 +830,12 @@ window.MathJax = {
     <div class="box box-rumus">
       <div class="box-label">Dua Jenis Limit yang Berbeda</div>
       <ul style="margin:.4rem 0 0;padding-left:1.3rem;line-height:2.3;">
-        <li><strong>Limit tak hingga</strong> (<em>infinite limit</em>): $x$ mendekati bilangan real tertentu, tetapi <em>hasilnya</em> tak hingga. Contoh: $\displaystyle\lim_{x\to 0}\dfrac{1}{x^2} = \infty$.</li>
-        <li><strong>Limit di tak hingga</strong> (<em>limit at infinity</em>): $x$ <em>sendiri</em> yang mendekati $\pm\infty$. Contoh: $\displaystyle\lim_{x\to\infty}\dfrac{1}{x} = 0$.</li>
+        <li><strong>Limit tak hingga</strong> (<em>infinite limit</em>): $x$ mendekati bilangan real tertentu, tetapi <em>hasilnya</em> tak hingga. Contoh: $\displaystyle\lim_{x\to 0}\dfrac{1}{x^2}$ $= \infty$.</li>
+        <li><strong>Limit di tak hingga</strong> (<em>limit at infinity</em>): $x$ <em>sendiri</em> yang mendekati $\pm\infty$. Contoh: $\displaystyle\lim_{x\to\infty}\dfrac{1}{x}$ $= 0$.</li>
       </ul>
     </div>
 
-    <p><strong>Teorema kunci:</strong> Jika $a \neq 0$ dan $n > 0$, maka $\displaystyle\lim_{x\to\infty}\frac{a}{x^n} = 0$. Ketika $x \to \infty$, suku berpangkat rendah mengecil jauh lebih cepat, sehingga dapat diabaikan.</p>
+    <p><strong>Teorema kunci:</strong> Jika $a \neq 0$ dan $n > 0$, maka $\displaystyle\lim_{x\to\infty}\frac{a}{x^n}$ $= 0$. Ketika $x \to \infty$, suku berpangkat rendah mengecil jauh lebih cepat, sehingga dapat diabaikan.</p>
 
     <h3 class="subsection-title">2. Limit Fungsi Rasional di Tak Hingga</h3>
     <p>Untuk $\displaystyle\lim_{x\to\infty}\frac{f(x)}{g(x)}$, bagi pembilang dan penyebut dengan $x^n$ di mana $n$ adalah pangkat tertinggi yang muncul.</p>
@@ -801,44 +861,41 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 19</div>
+      <div class="box-label">📘 Contoh 21</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil dari setiap limit berikut.<br>
       (a) $\displaystyle\lim_{x\to\infty}\frac{6x^3 + 4x + 6}{4x^2 + 2x^3 - 3x}$ &emsp;
       (b) $\displaystyle\lim_{x\to\infty}\frac{2x^3-4x^2+3x^5}{x^3-2x^2-4}$ &emsp;
       (c) $\displaystyle\lim_{x\to\infty}\frac{5x^2 - 3}{2x^4 + x - 1}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Pangkat tertinggi $x^3$ ($p = q = 3$), bagi dengan $x^3$:
-      $$\lim_{x\to\infty}\frac{6x^3+4x+6}{4x^2+2x^3-3x} = \lim_{x\to\infty}\frac{6+\frac{4}{x^2}+\frac{6}{x^3}}{\frac{4}{x}+2-\frac{3}{x^2}} = \frac{6+0+0}{0+2-0} = \boxed{3}$$
-      <strong>(b)</strong> Pangkat tertinggi $x^5$ di pembilang, sedangkan penyebut hanya $x^3$ ($p > q$):
-      $$\lim_{x\to\infty}\frac{2x^3-4x^2+3x^5}{x^3-2x^2-4} = \lim_{x\to\infty}\frac{\frac{2}{x^2}-\frac{4}{x^3}+3}{1-\frac{2}{x}-\frac{4}{x^3}} \to \boxed{\infty}$$
-      <strong>(c)</strong> Derajat pembilang $p = 2$ lebih kecil dari penyebut $q = 4$:
-      $$\lim_{x\to\infty}\frac{5x^2-3}{2x^4+x-1} = \boxed{0}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Derajat sama ($3$)</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bandingkan koefisien tertinggi:</strong> $\dfrac{6}{2}$.</p>
+      <div class="sol-jadi">hasilnya $3$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Derajat pembilang $5 > 3$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pembilang tumbuh lebih cepat</strong> dengan koefisien positif.</p>
+      <div class="sol-jadi">hasilnya $\infty$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Derajat pembilang $2 &lt; 4$</span></div>
+      <div class="sol-jadi">hasilnya $0$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 20</div>
+      <div class="box-label">📘 Contoh 22</div>
       <p style="margin:0;font-size:.9rem;">Tentukan nilai dari $\displaystyle\lim_{x\to\infty}\frac{(2x^2-3)(2x^3-x)}{x^4+6x^5-3x^2+4}$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Uraikan pembilang: $(2x^2-3)(2x^3-x) = 4x^5-8x^3+3x$. Pangkat tertinggi $x^5$ ($p = q = 5$):
-      $$\lim_{x\to\infty}\frac{4x^5-8x^3+3x}{x^4+6x^5-3x^2+4} = \frac{4}{6} = \boxed{\dfrac{2}{3}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uraikan pembilang:</strong> $(2x^2 - 3)(2x^3 - x)$ $= 4x^5 - 8x^3 + 3x$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Derajat sama ($5$):</strong> koefisien tertinggi $\dfrac{4}{6}$.</p>
+      <div class="sol-jadi">hasilnya $\dfrac{2}{3}$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 21</div>
+      <div class="box-label">📘 Contoh 23</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah nilai dari $\displaystyle\lim_{x\to\infty}\frac{(3x^2-2x+1)(x^3+4x-5)}{(2x^4-x^2+3)(x+2)-6x^5+10}$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>Pembilang:</strong>
-      $$\begin{align*} (3x^2-2x+1)(x^3+4x-5) &= 3x^5 - 2x^4 + 13x^3 - 23x^2 + 14x - 5 \end{align*}$$
-      <strong>Penyebut:</strong>
-      $$\begin{align*} (2x^4-x^2+3)(x+2) - 6x^5 + 10 &= -4x^5 + 4x^4 - x^3 - 2x^2 + 3x + 16 \end{align*}$$
-      Pangkat tertinggi di pembilang maupun penyebut adalah $x^5$ ($p = q = 5$). Terapkan kaidah cepat:
-      $$\lim_{x\to\infty}\frac{3x^5 - 2x^4 + \cdots}{-4x^5 + 4x^4 + \cdots} = \frac{3}{-4} = \boxed{-\dfrac{3}{4}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari suku pangkat tertinggi saja:</strong> pembilang $3x^2 \cdot x^3 = 3x^5$; penyebut $2x^4 \cdot x - 6x^5$ $= -4x^5$.</p>
+      <p class="sol-step">Hati-hati: penyebut tampak berderajat $5$ dengan koefisien $2$, tetapi $-6x^5$ mengubahnya menjadi $-4$.</p>
+      <div class="sol-jadi">hasilnya $\dfrac{3}{-4}$ $= -\dfrac{3}{4}$.</div>
     </div>
 
     <div class="box box-catatan">
@@ -847,7 +904,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 22</div>
+      <div class="box-label">📘 Contoh 24</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil dari setiap limit berikut.<br>
       (a) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{4x^2 + 3x - 1}}{2x - 5}$ &emsp;
       (b) $\displaystyle\lim_{x\to\infty}\frac{3x + 1}{\sqrt{9x^2 - x + 4}}$ &emsp;
@@ -855,20 +912,25 @@ window.MathJax = {
       (d) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{4x^2+x}-3x}{\sqrt{x^2+2}+x}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Untuk $x>0$: $\sqrt{4x^2+3x-1} = x\sqrt{4+\frac{3}{x}-\frac{1}{x^2}}$:
-      $$\lim_{x\to\infty}\frac{x\sqrt{4+\frac{3}{x}-\frac{1}{x^2}}}{x\left(2-\frac{5}{x}\right)} = \frac{\sqrt{4+0-0}}{2-0} = \frac{2}{2} = \boxed{1}$$
-      <strong>(b)</strong> Untuk $x>0$: $\sqrt{9x^2-x+4} = x\sqrt{9-\frac{1}{x}+\frac{4}{x^2}}$:
-      $$\lim_{x\to\infty}\frac{x\left(3+\frac{1}{x}\right)}{x\sqrt{9-\frac{1}{x}+\frac{4}{x^2}}} = \frac{3+0}{\sqrt{9-0+0}} = \frac{3}{3} = \boxed{1}$$
-      <strong>(c)</strong> Kalikan dengan sekawan $\dfrac{\sqrt{x^2+5x}+x}{\sqrt{x^2+5x}+x}$:
-      $$\begin{align*} \lim_{x\to\infty}\left(\sqrt{x^2+5x}-x\right) &= \lim_{x\to\infty}\frac{5x}{\sqrt{x^2+5x}+x} = \lim_{x\to\infty}\frac{5x}{x\left(\sqrt{1+\frac{5}{x}}+1\right)} = \frac{5}{\sqrt{1}+1} = \boxed{\dfrac{5}{2}} \end{align*}$$
-      <strong>(d)</strong> Bagi pembilang dan penyebut dengan $x$:
-      $$\lim_{x\to\infty}\frac{x\left(\sqrt{4+\frac{1}{x}}-3\right)}{x\left(\sqrt{1+\frac{2}{x^2}}+1\right)} = \frac{\sqrt{4}-3}{\sqrt{1}+1} = \frac{2-3}{1+1} = \boxed{-\dfrac{1}{2}}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Akar di pembilang</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Keluarkan $x$</strong> ($x > 0$): $\sqrt{4x^2 + \cdots}$ $= x\sqrt{4 + \cdots}$.</p>
+      $$\frac{\sqrt{4}}{2} = 1$$
+      <div class="sol-jadi">hasilnya $1$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Akar di penyebut</span></div>
+      $$\frac{3}{\sqrt{9}} = 1$$
+      <div class="sol-jadi">hasilnya $1$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Bentuk $\infty - \infty$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kalikan sekawan:</strong></p>
+      $$ \begin{align*} \sqrt{x^2 + 5x} - x &= \frac{5x}{\sqrt{x^2 + 5x} + x} \\ &\to \frac{5}{1 + 1} \end{align*} $$
+      <div class="sol-jadi">hasilnya $\dfrac{5}{2}$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>Bagi dengan $x$</span></div>
+      $$\frac{\sqrt{4} - 3}{\sqrt{1} + 1} = \frac{-1}{2}$$
+      <div class="sol-jadi">hasilnya $-\dfrac{1}{2}$.</div>
     </div>
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Jika $x\to+\infty$, faktorkan $x$ keluar dari dalam akar: $\sqrt{ax^2+\cdots} = x\sqrt{a+\cdots}$ sehingga $x$ dapat dicoret. Suku-suku yang tersisa di dalam akar menuju 0, dan nilai limit bergantung hanya pada koefisien tertinggi.</p>
+      <p style="margin:0;font-size:.9rem;">Jika $x\to+\infty$, faktorkan $x$ keluar dari dalam akar: $\sqrt{ax^2+\cdots}$ $= x\sqrt{a+\cdots}$ sehingga $x$ dapat dicoret. Suku-suku yang tersisa di dalam akar menuju 0, dan nilai limit bergantung hanya pada koefisien tertinggi.</p>
     </div>
 
     <h3 class="subsection-title">3. Limit Bentuk $(\sqrt{\phantom{x}} - \sqrt{\phantom{x}})$ di Tak Hingga</h3>
@@ -876,41 +938,46 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">Teknik 2: Sekawan untuk Selisih Akar</div>
-      <div class="math-block">$$\lim_{x\to\infty}\!\left(\sqrt{ax^2+bx+c}-\sqrt{dx^2+ex+f}\right) = \begin{cases} +\infty & \text{jika } a > d \\ \dfrac{b-e}{2\sqrt{a}} & \text{jika } a = d \\ -\infty & \text{jika } a < d \end{cases}$$</div>
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 23</div>
-      <p style="margin:0;font-size:.9rem;">Tentukanlah $\displaystyle\lim_{x\to\infty}(\sqrt{3x+2}-\sqrt{3x-4})$.</p>
-    </div>
-    <div class="penyelesaian">
-      <br>
-      Kedua akar linear ($a = c = 3$). Kalikan dengan sekawan:
-      $$\begin{align*} \lim_{x\to\infty}(\sqrt{3x+2}-\sqrt{3x-4}) &= \lim_{x\to\infty}\frac{(3x+2)-(3x-4)}{\sqrt{3x+2}+\sqrt{3x-4}} = \lim_{x\to\infty}\frac{6}{\sqrt{3x+2}+\sqrt{3x-4}} = \frac{6}{2\sqrt{3}} = \frac{6\sqrt{3}}{6} = \boxed{\sqrt{3}} \end{align*}$$
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 24</div>
-      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil dari setiap limit berikut.<br>
-      (a) $\displaystyle\lim_{x\to\infty}\left(\sqrt{4x^2+3x-5}-\sqrt{4x^2-7x+2}\right)$ &emsp;
-      (b) $\displaystyle\lim_{x\to\infty}\left(\sqrt{3x^2+8x-2}-\sqrt{3x^2+2x+5}\right)$</p>
-    </div>
-    <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Koefisien $x^2$ sama ($a = d = 4$), gunakan kaidah cepat dengan $b = 3$, $e = -7$:
-      $$= \lim_{x\to\infty}\frac{(4x^2+3x-5)-(4x^2-7x+2)}{\sqrt{4x^2+3x-5}+\sqrt{4x^2-7x+2}} = \lim_{x\to\infty}\frac{10x-7}{\sqrt{4x^2+3x-5}+\sqrt{4x^2-7x+2}} = \frac{10}{\sqrt{4}+\sqrt{4}} = \frac{10}{4} = \boxed{\dfrac{5}{2}}$$
-      <strong>(b)</strong> Koefisien $x^2$ sama ($a = d = 3$), $b = 8$, $e = 2$:
-      $$= \frac{b-e}{2\sqrt{a}} = \frac{8-2}{2\sqrt{3}} = \frac{6}{2\sqrt{3}} = \boxed{\sqrt{3}}$$
+      <div class="math-block">$$ \begin{gather*} \lim_{x\to\infty}\Bigl(\sqrt{ax^2+bx+c} \\ -\sqrt{dx^2+ex+f}\Bigr) \\ = \begin{cases} +\infty & \text{jika } a > d \\ \dfrac{b-e}{2\sqrt{a}} & \text{jika } a = d \\ -\infty & \text{jika } a &lt; d \end{cases} \end{gather*} $$</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah $\displaystyle\lim_{x\to\infty}(\sqrt{3x+2}-\sqrt{3x-4})$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kalikan sekawan:</strong></p>
+      $$ \begin{align*} &\sqrt{3x + 2} - \sqrt{3x - 4} \\  &= \frac{6}{\sqrt{3x + 2} + \sqrt{3x - 4}} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Perhatikan penyebutnya:</strong> kedua akar tumbuh tanpa batas, jadi pecahan $\to \dfrac{6}{\infty}$ $= 0$.</p>
+      <p class="sol-step">Rumus cepat $\dfrac{b - e}{2\sqrt{a}}$ hanya untuk akar dari bentuk <strong>kuadrat</strong> $ax^2 + bx + c$. Untuk akar bentuk linear seperti ini, hasilnya $0$.</p>
+      <div class="sol-jadi">hasilnya $0$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Tentukanlah hasil dari setiap limit berikut.<br>
+      (a) $\displaystyle\lim_{x\to\infty}\bigl(\sqrt{4x^2+3x-5}$ $-\, \sqrt{4x^2-7x+2}\bigr)$ &emsp;
+      (b) $\displaystyle\lim_{x\to\infty}\bigl(\sqrt{3x^2+8x-2}$ $-\, \sqrt{3x^2+2x+5}\bigr)$</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>$a = d = 4$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kalikan sekawan:</strong> pembilang menjadi $10x - 7$.</p>
+      $$\frac{10}{\sqrt{4} + \sqrt{4}} = \frac{10}{4}$$
+      <div class="sol-jadi">hasilnya $\dfrac{5}{2}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$a = d = 3$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Rumus cepat:</strong> $\dfrac{b - e}{2\sqrt{a}}$ $= \dfrac{8 - 2}{2\sqrt{3}}$.</p>
+      <div class="sol-jadi">hasilnya $\sqrt{3}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 27</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah nilai dari $\displaystyle\lim_{x\to\infty}\left(\sqrt{4x^2-5x+3}-(2x-1)\right)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Ubah ekspresi linear menjadi bentuk akar: $(2x-1) = \sqrt{(2x-1)^2} = \sqrt{4x^2-4x+1}$, sehingga:
-      $$\lim_{x\to\infty}\left(\sqrt{4x^2-5x+3}-\sqrt{4x^2-4x+1}\right) = \frac{(-5)-(-4)}{2\sqrt{4}} = \frac{-1}{4} = \boxed{-\dfrac{1}{4}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah bentuk linear menjadi akar:</strong> untuk $x$ besar, $2x - 1$ $= \sqrt{4x^2 - 4x + 1}$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Rumus cepat</strong> dengan $a = d = 4$, $b = -5$, $e = -4$:</p>
+      $$\frac{-5 - (-4)}{2\sqrt{4}} = \frac{-1}{4}$$
+      <div class="sol-jadi">hasilnya $-\dfrac{1}{4}$.</div>
     </div>
 
     <div class="box box-catatan">
@@ -921,47 +988,47 @@ window.MathJax = {
     <h3 class="subsection-title">4. Kondisi Khusus: Limit di $-\infty$</h3>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 26</div>
+      <div class="box-label">📘 Contoh 28</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah nilai dari $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{4x^2+3x}}{2x+1}$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Untuk $x \to -\infty$, berlaku $x &lt; 0$ sehingga $\sqrt{x^2} = |x| = -x$. Faktorkan $x^2$ dari dalam akar, lalu keluarkan $|x| = -x$:
-      $$\begin{align*} \lim_{x\to-\infty}\frac{\sqrt{4x^2+3x}}{2x+1} &= \lim_{x\to-\infty}\frac{\sqrt{x^2\!\left(4+\frac{3}{x}\right)}}{x\!\left(2+\frac{1}{x}\right)} = \lim_{x\to-\infty}\frac{|x|\sqrt{4+\frac{3}{x}}}{x\!\left(2+\frac{1}{x}\right)} \\ &= \lim_{x\to-\infty}\frac{-x\sqrt{4+\frac{3}{x}}}{x\!\left(2+\frac{1}{x}\right)} = \frac{-\sqrt{4+0}}{2+0} = \boxed{-1} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Untuk $x \to -\infty$,</strong> $x &lt; 0$ sehingga $\sqrt{x^2} = |x| = -x$.</p>
+      $$ \begin{align*} &\frac{\sqrt{4x^2 + 3x}}{2x + 1} \\  &= \frac{-x\sqrt{4 + \frac{3}{x}}}{x\left(2 + \frac{1}{x}\right)} \\ &\to \frac{-2}{2} \end{align*} $$
+      <div class="sol-jadi">hasilnya $-1$.</div>
     </div>
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Untuk $x \to -\infty$, selalu ingat bahwa $\sqrt{x^2} = |x| = \mathbf{-x}$ (bukan $+x$), karena $x$ bernilai negatif. Kelupaan tanda ini adalah kesalahan paling umum pada tipe soal ini.</p>
+      <p style="margin:0;font-size:.9rem;">Untuk $x \to -\infty$, selalu ingat bahwa $\sqrt{x^2} = |x| = -x$ (<strong>bukan</strong> $+x$), karena $x$ bernilai negatif. Kelupaan tanda ini adalah kesalahan paling umum pada tipe soal ini.</p>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 27</div>
-      <p style="margin:0;font-size:.9rem;">Jika $\displaystyle\lim_{x\to\infty}\left(\sqrt{x^2+ax+4} - bx\right) = 5$, tentukan nilai $a$ dan $b$.</p>
+      <div class="box-label">📘 Contoh 29</div>
+      <p style="margin:0;font-size:.9rem;">Jika $\displaystyle\lim_{x\to\infty}\left(\sqrt{x^2+ax+4} - bx\right)$ $= 5$, tentukan nilai $a$ dan $b$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Agar limit tidak menuju $\pm\infty$, koefisien $x^2$ di bawah akar harus sama dengan $b^2$, yaitu $b^2 = 1$, sehingga $b = 1$ (diambil positif).<br><br>
-      Dengan $b = 1$, kalikan dengan sekawan $\dfrac{\sqrt{x^2+ax+4}+x}{\sqrt{x^2+ax+4}+x}$:
-      $$\begin{align*} \lim_{x\to\infty}\left(\sqrt{x^2+ax+4}-x\right) &= \lim_{x\to\infty}\frac{ax+4}{\sqrt{x^2+ax+4}+x} = \lim_{x\to\infty}\frac{x\!\left(a+\frac{4}{x}\right)}{x\!\left(\sqrt{1+\frac{a}{x}+\frac{4}{x^2}}+1\right)} = \frac{a}{2} \end{align*}$$
-      Samakan dengan nilai limit yang diberikan: $\dfrac{a}{2} = 5 \implies a = 10$.
-      $$\boxed{a = 10,\quad b = 1}$$
-      Verifikasi: $\displaystyle\lim_{x\to\infty}\left(\sqrt{x^2+10x+4}-x\right) = \dfrac{10}{2} = 5$ ✓
+      <p class="sol-step"><span class="sol-no">1</span><strong>Agar limit berhingga,</strong> koefisien $x^2$ harus sama: $b^2 = 1$, dan $b = 1$ (jika $b = -1$ limitnya $+\infty$).</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kalikan sekawan:</strong></p>
+      $$ \begin{align*} &\sqrt{x^2 + ax + 4} - x \\  &= \frac{ax + 4}{\sqrt{x^2 + ax + 4} + x} \\ &\to \frac{a}{2} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Samakan:</strong> $\dfrac{a}{2} = 5$, jadi $a = 10$.</p>
+      <div class="sol-jadi">$a = 10$ dan $b = 1$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 28</div>
+      <div class="box-label">📘 Contoh 30</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah nilai dari $\displaystyle\lim_{x\to\infty} x\!\left(\sqrt{x^2+6x}-x\right)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Rasionalisasi bagian dalam kurung terlebih dahulu:
-      $$\begin{align*} \lim_{x\to\infty} x\!\left(\sqrt{x^2+6x}-x\right) &= \lim_{x\to\infty} x \cdot \frac{(x^2+6x)-x^2}{\sqrt{x^2+6x}+x} = \lim_{x\to\infty} \frac{6x^2}{\sqrt{x^2+6x}+x} \\ &= \lim_{x\to\infty} \frac{6x^2}{x\!\left(\sqrt{1+\frac{6}{x}}+1\right)} = \lim_{x\to\infty} \frac{6x}{\sqrt{1+\frac{6}{x}}+1} \to \boxed{+\infty} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Rasionalkan isi kurung:</strong></p>
+      $$ \begin{align*} &x\left(\sqrt{x^2 + 6x} - x\right) \\  &= \frac{6x^2}{\sqrt{x^2 + 6x} + x} \\ &= \frac{6x}{\sqrt{1 + \frac{6}{x}} + 1} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Perhatikan perilakunya:</strong> penyebut $\to 2$, pembilang $6x \to \infty$.</p>
+      <p class="sol-step">Tanpa faktor $x$ di depan, hasilnya berhingga: $\lim_{x \to \infty}(\sqrt{x^2 + 6x} - x)$ $= 3$.</p>
+      <div class="sol-jadi">hasilnya $+\infty$.</div>
     </div>
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Bandingkan dengan $\displaystyle\lim_{x\to\infty}\!\left(\sqrt{x^2+6x}-x\right) = \dfrac{6}{2} = 3$ yang berhingga. Faktor $x$ di depan menaikkan laju pertumbuhan satu tingkat, sehingga hasil akhirnya tak hingga. Pada soal ujian, tipe ini sering dimodifikasi menjadi $\displaystyle\lim_{x\to\infty} x^k\!\left(\sqrt{x^2+bx}-x\right)$ — perhatikan baik-baik nilai $k$-nya.</p>
+      <p style="margin:0;font-size:.9rem;">Bandingkan dengan $\displaystyle\lim_{x\to\infty}\!\left(\sqrt{x^2+6x}-x\right)$ $= \dfrac{6}{2}$ $= 3$ yang berhingga. Faktor $x$ di depan menaikkan laju pertumbuhan satu tingkat, sehingga hasil akhirnya tak hingga. Pada soal ujian, tipe ini sering dimodifikasi menjadi $\displaystyle\lim_{x\to\infty} x^k\!\left(\sqrt{x^2+bx}-x\right)$ — perhatikan baik-baik nilai $k$-nya.</p>
     </div>
 
     <div class="box box-latihan">
@@ -970,7 +1037,7 @@ window.MathJax = {
         <li>Tentukan nilai dari limit berikut:<br>(a) $\displaystyle\lim_{x\to\infty}\frac{4x^3 - 7x + 2}{3x^3 + 5x^2 - 1}$<br>(b) $\displaystyle\lim_{x\to\infty}\frac{5x^2 + 3x - 4}{2x^4 - x + 6}$<br>(c) $\displaystyle\lim_{x\to\infty}\frac{6x^5 - 4x^3 + 1}{2x^3 + x - 8}$</li>
         <li>Tentukan nilai dari limit berikut:<br>(a) $\displaystyle\lim_{x\to\infty}\frac{(2x - 1)(3x + 4)}{x^2 + 7x - 5}$<br>(b) $\displaystyle\lim_{x\to\infty}\frac{x^3 - 2x}{(x-1)(x^2+x+3)}$<br>(c) $\displaystyle\lim_{x\to\infty}\frac{(x^2+3)(2x-1)}{(x+4)(3x^2-x+2)}$</li>
         <li>Tentukan nilai dari limit berikut:<br>(a) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{9x^2 - 4x + 1}}{3x + 5}$<br>(b) $\displaystyle\lim_{x\to\infty}\frac{2x - 3}{\sqrt{4x^2 + 6x - 2}}$<br>(c) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{16x^4 + x^2} - 3x^2}{x^2 - 1}$</li>
-        <li>Tentukan nilai dari limit berikut:<br>(a) $\displaystyle\lim_{x\to\infty}\left(\sqrt{x^2 + 8x - 3} - \sqrt{x^2 - 4x + 1}\right)$<br>(b) $\displaystyle\lim_{x\to\infty}\left(\sqrt{4x^2 + 6x - 1} - \sqrt{4x^2 - 2x + 5}\right)$<br>(c) $\displaystyle\lim_{x\to\infty}\left(\sqrt{9x^2 + 3x + 2} - \sqrt{9x^2 - 9x + 4}\right)$</li>
+        <li>Tentukan nilai dari limit berikut:<br>(a) $\displaystyle\lim_{x\to\infty}\bigl(\sqrt{x^2 + 8x - 3}$ $-\, \sqrt{x^2 - 4x + 1}\bigr)$<br>(b) $\displaystyle\lim_{x\to\infty}\bigl(\sqrt{4x^2 + 6x - 1}$ $-\, \sqrt{4x^2 - 2x + 5}\bigr)$<br>(c) $\displaystyle\lim_{x\to\infty}\bigl(\sqrt{9x^2 + 3x + 2}$ $-\, \sqrt{9x^2 - 9x + 4}\bigr)$</li>
       </ol>
     </div>
     <div class="box box-latihan">
@@ -978,7 +1045,7 @@ window.MathJax = {
       <ol class="soal-list">
         <li>Tentukan nilai dari limit berikut:<br>(a) $\displaystyle\lim_{x\to\infty}\left(\sqrt{x^2 + 10x + 3} - (x + 3)\right)$<br>(b) $\displaystyle\lim_{x\to\infty}\left(\sqrt{4x^2 - 8x + 5} - (2x - 1)\right)$<br>(c) $\displaystyle\lim_{x\to\infty}\left(\sqrt{9x^2 + 6x - 4} - (3x + 2)\right)$</li>
         <li>Tentukan nilai dari limit berikut (perhatikan $x \to -\infty$):<br>(a) $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{x^2 - 3x}}{x + 2}$<br>(b) $\displaystyle\lim_{x\to-\infty}\frac{3x + 1}{\sqrt{9x^2 + 6x - 4}}$<br>(c) $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{4x^2 + x + 5}}{1 - 2x}$</li>
-        <li>Tentukan nilai dari limit berikut:<br>(a) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x+1}-\sqrt{x}}{\sqrt{x+2}-\sqrt{x+1}}$<br>(b) $\displaystyle\lim_{x\to\infty}\left[\left(\sqrt{x^2+4x+1}-(x+2)\right)\cdot x\right]$<br>(c) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x^2+3x}-x}{\sqrt{x+2}-\sqrt{x}}$</li>
+        <li>Tentukan nilai dari limit berikut:<br>(a) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x+1}-\sqrt{x}}{\sqrt{x+2}-\sqrt{x+1}}$<br>(b) $\displaystyle\lim_{x\to\infty}\bigl[\bigl(\sqrt{x^2+4x+1}$ $-\,(x+2)\bigr)\cdot x\bigr]$<br>(c) $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x^2+3x}-x}{\sqrt{x+2}-\sqrt{x}}$</li>
       </ol>
     </div>
   </section>
@@ -991,16 +1058,16 @@ window.MathJax = {
 
     <h3 class="subsection-title">1. Penurunan Rumus Dasar</h3>
 
-    <p>Misalkan $x$ dalam radian dan $0 &lt; x &lt; \dfrac{\pi}{2}$. Dari perbandingan luas segitiga dan juring lingkaran diperoleh ketidaksamaan:</p>
-    $$\sin x < x < \tan x$$
+    <p>Misalkan $x$ dalam radian dan $0 &lt; x$ $&lt; \dfrac{\pi}{2}$. Dari perbandingan luas segitiga dan juring lingkaran diperoleh ketidaksamaan:</p>
+    $$\sin x &lt; x &lt; \tan x$$
     <p>Dengan membagi seluruh bagian dengan $\sin x > 0$:</p>
-    $$1 < \frac{x}{\sin x} < \frac{1}{\cos x}$$
-    <p>Karena $\displaystyle\lim_{x\to 0}\cos x = 1$, berdasarkan <strong>Teorema Apit</strong> (<em>Squeeze Theorem</em>), nilai $\dfrac{x}{\sin x}$ terjepit menuju $1$.</p>
+    $$1 &lt; \frac{x}{\sin x} &lt; \frac{1}{\cos x}$$
+    <p>Karena $\displaystyle\lim_{x\to 0}\cos x$ $= 1$, berdasarkan <strong>Teorema Apit</strong> (<em>Squeeze Theorem</em>), nilai $\dfrac{x}{\sin x}$ terjepit menuju $1$.</p>
 
     <div class="box box-rumus">
       <div class="box-label">Empat Rumus Dasar Limit Trigonometri</div>
       <p style="margin:.3rem 0 .5rem;font-size:.85rem;font-style:italic;">(berlaku untuk $x$ dalam radian)</p>
-      <div class="math-block">$$\lim_{x\to 0}\frac{\sin x}{x} = 1 \qquad \lim_{x\to 0}\frac{x}{\sin x} = 1 \qquad \lim_{x\to 0}\frac{\tan x}{x} = 1 \qquad \lim_{x\to 0}\frac{x}{\tan x} = 1$$</div>
+      <div class="math-block">$$ \begin{gather*} \lim_{x\to 0}\frac{\sin x}{x} = 1 \\ \lim_{x\to 0}\frac{x}{\sin x} = 1 \\ \lim_{x\to 0}\frac{\tan x}{x} = 1 \\ \lim_{x\to 0}\frac{x}{\tan x} = 1 \end{gather*} $$</div>
     </div>
 
     <h3 class="subsection-title">2. Pengembangan Rumus Dasar</h3>
@@ -1011,18 +1078,18 @@ window.MathJax = {
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem;margin:.5rem 0;font-size:.88rem;">
         <div style="text-align:center;">
           <strong>(1)</strong><br>
-          $\displaystyle\lim_{x\to 0}\frac{\sin ax}{bx} = \frac{a}{b}$<br>
-          $\displaystyle\lim_{x\to 0}\frac{bx}{\sin ax} = \frac{b}{a}$
+          $\displaystyle\lim_{x\to 0}\frac{\sin ax}{bx}$ $= \frac{a}{b}$<br>
+          $\displaystyle\lim_{x\to 0}\frac{bx}{\sin ax}$ $= \frac{b}{a}$
         </div>
         <div style="text-align:center;">
           <strong>(2)</strong><br>
-          $\displaystyle\lim_{x\to 0}\frac{\tan ax}{bx} = \frac{a}{b}$<br>
-          $\displaystyle\lim_{x\to 0}\frac{bx}{\tan ax} = \frac{b}{a}$
+          $\displaystyle\lim_{x\to 0}\frac{\tan ax}{bx}$ $= \frac{a}{b}$<br>
+          $\displaystyle\lim_{x\to 0}\frac{bx}{\tan ax}$ $= \frac{b}{a}$
         </div>
         <div style="text-align:center;">
           <strong>(3)</strong><br>
-          $\displaystyle\lim_{x\to 0}\frac{\sin ax}{\tan bx} = \frac{a}{b}$<br>
-          $\displaystyle\lim_{x\to 0}\frac{\tan bx}{\sin ax} = \frac{b}{a}$
+          $\displaystyle\lim_{x\to 0}\frac{\sin ax}{\tan bx}$ $= \frac{a}{b}$<br>
+          $\displaystyle\lim_{x\to 0}\frac{\tan bx}{\sin ax}$ $= \frac{b}{a}$
         </div>
       </div>
     </div>
@@ -1033,17 +1100,16 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 29</div>
+      <div class="box-label">📘 Contoh 31</div>
       <p style="margin:0;font-size:.9rem;">Hitunglah $\displaystyle\lim_{x\to 0}\frac{\sin 3x}{5x}$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Gunakan rumus pengembangan (1) dengan $a = 3$ dan $b = 5$:
-      $$\lim_{x\to 0}\frac{\sin 3x}{5x} = \frac{3}{5} = \boxed{\dfrac{3}{5}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Rumus pengembangan</strong> $\lim_{x \to 0} \dfrac{\sin ax}{bx}$ $= \dfrac{a}{b}$ dengan $a = 3$, $b = 5$.</p>
+      <div class="sol-jadi">hasilnya $\dfrac{3}{5}$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 30</div>
+      <div class="box-label">📘 Contoh 32</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br>
       (a) $\displaystyle\lim_{x\to 0}\left[\frac{\sin 4x}{3x} - \frac{\tan 2x}{\sin 6x} + \frac{8x}{\tan 2x}\right]$<br>
       (b) $\displaystyle\lim_{x\to 0}\frac{\sin^2 6x}{3x \cdot \tan 4x}$<br>
@@ -1051,15 +1117,22 @@ window.MathJax = {
       (d) $\displaystyle\lim_{x\to 0}\frac{6\sin^3 2x}{\sin 4x \cdot \sin 3x}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Terapkan rumus langsung pada setiap suku:
-      $$\frac{4}{3} - \frac{2}{6} + \frac{8}{2} = \frac{4}{3} - \frac{1}{3} + 4 = 1 + 4 = \boxed{5}$$
-      <strong>(b)</strong> Urai menjadi dua rasio:
-      $$\lim_{x\to 0}\frac{\sin 6x}{3x}\cdot\frac{\sin 6x}{\tan 4x} = \left(\frac{6}{3}\right)\left(\frac{6}{4}\right) = 2 \cdot \frac{3}{2} = \boxed{3}$$
-      <strong>(c)</strong> Susun ulang faktor-faktornya:
-      $$\lim_{x\to 0}2\cdot\frac{\tan 3x}{4x}\cdot\frac{\tan 3x}{x}\cdot\frac{\sin 2x}{\sin 6x} = 2\cdot\frac{3}{4}\cdot\frac{3}{1}\cdot\frac{2}{6} = 2\cdot\frac{3}{4}\cdot3\cdot\frac{1}{3} = \boxed{\dfrac{3}{2}}$$
-      <strong>(d)</strong> Perhatikan $\sin 2x \to 0$ saat $x \to 0$, sehingga perkalian dengan konstanta tetap menghasilkan 0:
-      $$\lim_{x\to 0}6\cdot\frac{\sin 2x}{\sin 4x}\cdot\frac{\sin 2x}{\sin 3x}\cdot\sin 2x = 6\cdot\frac{2}{4}\cdot\frac{2}{3}\cdot 0 = \boxed{0}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Tiga suku</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Terapkan rumus pada tiap suku:</strong></p>
+      $$\frac{4}{3} - \frac{2}{6} + \frac{8}{2} = \frac{4}{3} - \frac{1}{3} + 4$$
+      <div class="sol-jadi">hasilnya $5$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$\dfrac{\sin^2 6x}{3x \tan 4x}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pecah menjadi dua rasio:</strong></p>
+      $$\frac{\sin 6x}{3x} \cdot \frac{\sin 6x}{\tan 4x} \to \frac{6}{3} \cdot \frac{6}{4}$$
+      <div class="sol-jadi">hasilnya $3$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$\dfrac{2\tan^2 3x \sin 2x}{4x^2 \sin 6x}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Susun ulang:</strong></p>
+      $$ \begin{align*} &2 \cdot \frac{\tan 3x}{4x} \cdot \frac{\tan 3x}{x} \cdot \frac{\sin 2x}{\sin 6x} \\ &\to 2 \cdot \frac{3}{4} \cdot 3 \cdot \frac{1}{3} \end{align*} $$
+      <div class="sol-jadi">hasilnya $\dfrac{3}{2}$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>$\dfrac{6\sin^3 2x}{\sin 4x \sin 3x}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pangkat sinus di pembilang lebih tinggi:</strong> tersisa satu faktor $\sin 2x \to 0$.</p>
+      $$ \begin{align*} &6 \cdot \frac{\sin 2x}{\sin 4x} \cdot \frac{\sin 2x}{\sin 3x} \cdot \sin 2x \\ &\to 6 \cdot \frac{1}{2} \cdot \frac{2}{3} \cdot 0 \end{align*} $$
+      <div class="sol-jadi">hasilnya $0$.</div>
     </div>
 
     <div class="box box-catatan">
@@ -1068,17 +1141,18 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 31</div>
+      <div class="box-label">📘 Contoh 33</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br>
       (a) $\displaystyle\lim_{x\to 0}\left[\frac{\sin 2x + 4x}{\sin 3x + \tan x}\right]$ &emsp;
       (b) $\displaystyle\lim_{x\to 0}\left[\frac{6x^2 + \sin^2 3x}{\tan^2 2x - x^2}\right]$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Bagi pembilang dan penyebut dengan $x$:
-      $$\lim_{x\to 0}\frac{\frac{\sin 2x}{x}+4}{\frac{\sin 3x}{x}+\frac{\tan x}{x}} = \frac{2+4}{3+1} = \frac{6}{4} = \boxed{\dfrac{3}{2}}$$
-      <strong>(b)</strong> Bagi pembilang dan penyebut dengan $x^2$:
-      $$\lim_{x\to 0}\frac{6+\left(\frac{\sin 3x}{x}\right)^2}{\left(\frac{\tan 2x}{x}\right)^2-1} = \frac{6+9}{4-1} = \frac{15}{3} = \boxed{5}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Bagi dengan $x$</span></div>
+      $$\frac{\frac{\sin 2x}{x} + 4}{\frac{\sin 3x}{x} + \frac{\tan x}{x}} \to \frac{2 + 4}{3 + 1}$$
+      <div class="sol-jadi">hasilnya $\dfrac{3}{2}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Bagi dengan $x^2$</span></div>
+      $$\frac{6 + \left(\frac{\sin 3x}{x}\right)^2}{\left(\frac{\tan 2x}{x}\right)^2 - 1} \to \frac{6 + 9}{4 - 1}$$
+      <div class="sol-jadi">hasilnya $5$.</div>
     </div>
 
     <h3 class="subsection-title">3. Limit Trigonometri untuk $x \to a \neq 0$</h3>
@@ -1087,34 +1161,39 @@ window.MathJax = {
     <div class="box box-rumus">
       <div class="box-label">Teknik Substitusi $p = x - a$</div>
       <p style="margin:.3rem 0 .5rem;font-size:.9rem;">Jika $x \to a$, misalkan $p = x - a$ sehingga $x = p + a$ dan $p \to 0$. Setiap suku $(x - a)$ menjadi $p$, dan rumus dasar bisa diterapkan.</p>
-      <div class="math-block">$$\lim_{x\to a}\frac{\sin a(x-a)}{b(x-a)} = \lim_{p\to 0}\frac{\sin ap}{bp} = \frac{a}{b}$$</div>
+      <div class="math-block">$$ \begin{align*} \lim_{x\to a}\frac{\sin a(x-a)}{b(x-a)} &= \lim_{p\to 0}\frac{\sin ap}{bp} \\ &= \frac{a}{b} \end{align*} $$</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 32</div>
+      <div class="box-label">📘 Contoh 34</div>
       <p style="margin:0;font-size:.9rem;">Hitunglah $\displaystyle\lim_{x\to 3}\frac{5\sin(x-3)}{2(x-3)}$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Misalkan $p = x - 3$, maka $p \to 0$:
-      $$\lim_{x\to 3}\frac{5\sin(x-3)}{2(x-3)} = \lim_{p\to 0}\frac{5\sin p}{2p} = \frac{5}{2} = \boxed{\dfrac{5}{2}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Misalkan $p = x - 3$,</strong> maka $p \to 0$:</p>
+      $$\lim_{p \to 0} \frac{5\sin p}{2p} = \frac{5}{2}$$
+      <div class="sol-jadi">hasilnya $\dfrac{5}{2}$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 33</div>
+      <div class="box-label">📘 Contoh 35</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br>
       (a) $\displaystyle\lim_{x\to 2}\frac{3\sin(x-2)}{4x-8}$ &emsp;
       (b) $\displaystyle\lim_{x\to 3}\frac{6\tan^2(2x-6)}{(3x-9)^2}$ &emsp;
       (c) $\displaystyle\lim_{x\to 1}\frac{\tan(2x^2-6x+4)}{3x^2-9x+6}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Faktorkan penyebut: $4x - 8 = 4(x-2)$, lalu terapkan rumus:
-      $$\lim_{x\to 2}\frac{3\sin(x-2)}{4(x-2)} = 3\cdot\frac{1}{4} = \boxed{\dfrac{3}{4}}$$
-      <strong>(b)</strong> Faktorkan: $6x - 6 = 6(x-3)$ dan $3x-9 = 3(x-3)$:
-      $$\lim_{x\to 3}6\left(\frac{\tan 2(x-3)}{3(x-3)}\right)^2 = 6\left(\frac{2}{3}\right)^2 = 6\cdot\frac{4}{9} = \boxed{\dfrac{8}{3}}$$
-      <strong>(c)</strong> Faktorkan: $2x^2-6x+4 = 2(x-1)(x-2)$ dan $3x^2-9x+6 = 3(x-1)(x-2)$, sehingga faktor $(x-2)$ dapat dicoret:
-      $$\lim_{x\to 1}\frac{\tan 2(x-1)(x-2)}{3(x-1)(x-2)} = \lim_{x\to 1}\frac{\tan 2(x-1)}{3(x-1)} = \frac{2}{3} = \boxed{\dfrac{2}{3}}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>$x \to 2$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Faktorkan penyebut:</strong> $4x - 8 = 4(x - 2)$.</p>
+      $$\lim_{x \to 2} \frac{3\sin(x - 2)}{4(x - 2)} = \frac{3}{4}$$
+      <div class="sol-jadi">hasilnya $\dfrac{3}{4}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$x \to 3$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Faktorkan:</strong> $2x - 6 = 2(x - 3)$ dan $3x - 9 = 3(x - 3)$.</p>
+      $$6\left(\frac{\tan 2(x - 3)}{3(x - 3)}\right)^2 \to 6 \cdot \frac{4}{9}$$
+      <div class="sol-jadi">hasilnya $\dfrac{8}{3}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$x \to 1$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Faktorkan:</strong> $2x^2 - 6x + 4 = 2u$ dan $3x^2 - 9x + 6 = 3u$ dengan $u = (x - 1)(x - 2)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Saat $x \to 1$,</strong> $u \to 0$, sehingga $\dfrac{\tan 2u}{3u} \to \dfrac{2}{3}$.</p>
+      <div class="sol-jadi">hasilnya $\dfrac{2}{3}$.</div>
     </div>
 
     <h3 class="subsection-title">4. Limit Trigonometri dengan Identitas Cosinus Ganda</h3>
@@ -1123,26 +1202,26 @@ window.MathJax = {
     <div class="box box-rumus">
       <div class="box-label">Identitas Cosinus Ganda yang Sering Digunakan</div>
       <ol style="padding-left:1.4rem;line-height:2.5;">
-        <li>$1 - \cos 2\alpha = 2\sin^2\alpha$</li>
-        <li>$\cos 2\alpha - 1 = -2\sin^2\alpha$</li>
-        <li>$1 - \cos^2\alpha = \sin^2\alpha$</li>
-        <li>$\cos A - \cos B = -2\sin\dfrac{A+B}{2}\cdot\sin\dfrac{A-B}{2}$</li>
+        <li>$1 - \cos 2\alpha$ $= 2\sin^2\alpha$</li>
+        <li>$\cos 2\alpha - 1$ $= -2\sin^2\alpha$</li>
+        <li>$1 - \cos^2\alpha$ $= \sin^2\alpha$</li>
+        <li>$\cos A - \cos B$ $= -2\sin\dfrac{A+B}{2}\cdot\sin\dfrac{A-B}{2}$</li>
       </ol>
     </div>
     <p>Setelah menggunakan identitas ini, bentuk $\sin^2(\cdot)$ atau $\sin(\cdot)$ yang muncul dapat diselesaikan dengan rumus dasar limit trigonometri.</p>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 34</div>
+      <div class="box-label">📘 Contoh 36</div>
       <p style="margin:0;font-size:.9rem;">Hitunglah $\displaystyle\lim_{x\to 0}\frac{1 - \cos 4x}{x^2}$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Gunakan identitas $1 - \cos 4x = 2\sin^2 2x$:
-      $$\lim_{x\to 0}\frac{1-\cos 4x}{x^2} = \lim_{x\to 0}\frac{2\sin^2 2x}{x^2} = 2\left(\frac{\sin 2x}{x}\right)^2 \to 2\cdot 2^2 = \boxed{8}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan</strong> $1 - \cos 4x = 2\sin^2 2x$:</p>
+      $$\frac{2\sin^2 2x}{x^2} = 2\left(\frac{\sin 2x}{x}\right)^2 \to 2 \cdot 2^2$$
+      <div class="sol-jadi">hasilnya $8$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 35</div>
+      <div class="box-label">📘 Contoh 37</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br>
       (a) $\displaystyle\lim_{x\to 0}\frac{1-\cos 6x}{\cos 8x - 1}$ &emsp;
       (b) $\displaystyle\lim_{x\to 0}\frac{3\cos 4x - 3}{2\sin^2 3x}$ &emsp;
@@ -1152,19 +1231,25 @@ window.MathJax = {
       (f) $\displaystyle\lim_{x\to 0}\frac{3\cos 6x - 3\cos 2x}{1 - \cos^2 2x}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Gunakan $1-\cos 2\theta = 2\sin^2\theta$:
-      $$\lim_{x\to 0}\frac{1-\cos 6x}{\cos 8x-1} = \lim_{x\to 0}\frac{2\sin^2 3x}{-2\sin^2 4x} = -\lim_{x\to 0}\left(\frac{\sin 3x}{\sin 4x}\right)^2 = -\left(\frac{3}{4}\right)^2 = \boxed{-\dfrac{9}{16}}$$
-      <strong>(b)</strong> Gunakan $\cos 4x - 1 = -2\sin^2 2x$:
-      $$\lim_{x\to 0}\frac{3\cos 4x-3}{2\sin^2 3x} = \lim_{x\to 0}\frac{-3\cdot 2\sin^2 2x}{2\sin^2 3x} = -3\left(\frac{2}{3}\right)^2 = -3\cdot\frac{4}{9} = \boxed{-\dfrac{4}{3}}$$
-      <strong>(c)</strong> Gunakan $1-\cos 2x = 2\sin^2 x$ dan $1-\cos^2 3x = \sin^2 3x$:
-      $$\lim_{x\to 0}\frac{4(1-\cos 2x)}{1-\cos^2 3x} = \lim_{x\to 0}\frac{4\cdot 2\sin^2 x}{\sin^2 3x} = 8\left(\frac{1}{3}\right)^2 = \frac{8}{9} = \boxed{\dfrac{8}{9}}$$
-      <strong>(d)</strong> Gunakan $2-2\cos^2\theta = 2\sin^2\theta$ dan $\cos^2 2x - 1 = -\sin^2 2x$:
-      $$\lim_{x\to 0}\frac{2\sin^2 6x}{-3\sin^2 2x} = -\frac{2}{3}\left(\frac{6}{2}\right)^2 = -\frac{2}{3}\cdot 9 = \boxed{-6}$$
-      <strong>(e)</strong> Gunakan $\cos A - \cos B = -2\sin\dfrac{A+B}{2}\sin\dfrac{A-B}{2}$ dan $1-\cos 8x = 2\sin^2 4x$:
-      $$\lim_{x\to 0}\frac{\cos 5x-\cos 3x}{1-\cos 8x} = \lim_{x\to 0}\frac{-2\sin 4x\sin x}{2\sin^2 4x} = \lim_{x\to 0}\frac{-\sin x}{\sin 4x} = -\frac{1}{4} = \boxed{-\dfrac{1}{4}}$$
-      <strong>(f)</strong> Gunakan $\cos 6x - \cos 2x = -2\sin 4x\sin 2x$ dan $1-\cos^2 2x = \sin^2 2x$:
-      $$\lim_{x\to 0}\frac{3(\cos 6x-\cos 2x)}{\sin^2 2x} = \lim_{x\to 0}\frac{-6\sin 4x\sin 2x}{\sin^2 2x} = \lim_{x\to 0}\frac{-6\sin 4x}{\sin 2x} = -6\cdot\frac{4}{2} = \boxed{-12}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>$\dfrac{1 - \cos 6x}{\cos 8x - 1}$</span></div>
+      $$\frac{2\sin^2 3x}{-2\sin^2 4x} \to -\left(\frac{3}{4}\right)^2$$
+      <div class="sol-jadi">hasilnya $-\dfrac{9}{16}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$\dfrac{3\cos 4x - 3}{2\sin^2 3x}$</span></div>
+      $$\frac{-6\sin^2 2x}{2\sin^2 3x} \to -3 \cdot \frac{4}{9}$$
+      <div class="sol-jadi">hasilnya $-\dfrac{4}{3}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$\dfrac{4 - 4\cos 2x}{1 - \cos^2 3x}$</span></div>
+      $$\frac{8\sin^2 x}{\sin^2 3x} \to 8 \cdot \frac{1}{9}$$
+      <div class="sol-jadi">hasilnya $\dfrac{8}{9}$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>$\dfrac{2 - 2\cos^2 6x}{3\cos^2 2x - 3}$</span></div>
+      $$\frac{2\sin^2 6x}{-3\sin^2 2x} \to -\frac{2}{3} \cdot 9$$
+      <div class="sol-jadi">hasilnya $-6$.</div>
+      <div class="sol-part"><span class="sol-tag">e</span><span>$\dfrac{\cos 5x - \cos 3x}{1 - \cos 8x}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan</strong> $\cos A - \cos B$ $= -2\sin\tfrac{A + B}{2}\sin\tfrac{A - B}{2}$:</p>
+      $$\frac{-2\sin 4x \sin x}{2\sin^2 4x} = \frac{-\sin x}{\sin 4x} \to -\frac{1}{4}$$
+      <div class="sol-jadi">hasilnya $-\dfrac{1}{4}$.</div>
+      <div class="sol-part"><span class="sol-tag">f</span><span>$\dfrac{3\cos 6x - 3\cos 2x}{1 - \cos^2 2x}$</span></div>
+      $$ \begin{align*} \frac{-6\sin 4x \sin 2x}{\sin^2 2x} &= \frac{-6\sin 4x}{\sin 2x} \to -12 \end{align*} $$
+      <div class="sol-jadi">hasilnya $-12$.</div>
     </div>
 
     <div class="box box-catatan">
@@ -1182,27 +1267,32 @@ window.MathJax = {
     <div class="box box-rumus">
       <div class="box-label">Identitas untuk Sudut Khusus</div>
       <ul style="margin:.3rem 0 0;padding-left:1.3rem;line-height:2.3;">
-        <li>Rumus sudut ganda: $\sin 2A = 2\sin A\cos A$, $\quad \cos 2A = 1-2\sin^2 A$</li>
-        <li>Rumus jumlah sinus: $\sin A + \sin B = 2\sin\dfrac{A+B}{2}\cos\dfrac{A-B}{2}$</li>
-        <li>Rumus jumlah cosinus: $\cos A + \cos B = 2\cos\dfrac{A+B}{2}\cos\dfrac{A-B}{2}$</li>
+        <li>Rumus sudut ganda: $\sin 2A = 2\sin A\cos A$, $\quad \cos 2A$ $= 1-2\sin^2 A$</li>
+        <li>Rumus jumlah sinus: $\sin A + \sin B$ $= 2\sin\dfrac{A+B}{2}\cos\dfrac{A-B}{2}$</li>
+        <li>Rumus jumlah cosinus: $\cos A + \cos B$ $= 2\cos\dfrac{A+B}{2}\cos\dfrac{A-B}{2}$</li>
       </ul>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 36</div>
+      <div class="box-label">📘 Contoh 38</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah hasil setiap limit fungsi trigonometri berikut.<br>
       (a) $\displaystyle\lim_{x\to\frac{\pi}{2}}\frac{3\sin 4x}{\cos x}$ &emsp;
       (b) $\displaystyle\lim_{x\to\frac{\pi}{4}}\frac{\sin 6x + \sin 2x}{\cos 5x + \cos x}$ &emsp;
       (c) $\displaystyle\lim_{x\to\frac{\pi}{2}}\frac{1-\sin x}{\cos^2 x}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Gunakan $\sin 4x = 2\sin 2x\cos 2x = 4\sin x\cos x\cos 2x$ agar faktor $\cos x$ bisa dicoret:
-      $$\begin{align*} \lim_{x\to\frac{\pi}{2}}\frac{3\sin 4x}{\cos x} &= \lim_{x\to\frac{\pi}{2}}\frac{3\cdot 4\sin x\cos x\cos 2x}{\cos x} = \lim_{x\to\frac{\pi}{2}}12\sin x\cos 2x = 12\sin\frac{\pi}{2}\cos\pi = 12\cdot 1\cdot(-1) = \boxed{-12} \end{align*}$$
-      <strong>(b)</strong> Gunakan rumus jumlah sinus dan cosinus untuk menyederhanakan:
-      $$\begin{align*} \lim_{x\to\frac{\pi}{4}}\frac{\sin 6x+\sin 2x}{\cos 5x+\cos x} &= \lim_{x\to\frac{\pi}{4}}\frac{2\sin 4x\cos 2x}{2\cos 3x\cos 2x} = \lim_{x\to\frac{\pi}{4}}\frac{\sin 4x}{\cos 3x} = \frac{\sin\pi}{\cos\frac{3\pi}{4}} = \frac{0}{-\frac{\sqrt{2}}{2}} = \boxed{0} \end{align*}$$
-      <strong>(c)</strong> Cek: substitusi $x = \tfrac{\pi}{2}$ memberikan $\tfrac{0}{0}$. Gunakan $\cos^2 x = (1-\sin x)(1+\sin x)$:
-      $$\lim_{x\to\frac{\pi}{2}}\frac{1-\sin x}{\cos^2 x} = \lim_{x\to\frac{\pi}{2}}\frac{1-\sin x}{(1-\sin x)(1+\sin x)} = \lim_{x\to\frac{\pi}{2}}\frac{1}{1+\sin x} = \frac{1}{1+1} = \boxed{\dfrac{1}{2}}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>$x \to \tfrac{\pi}{2}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uraikan</strong> $\sin 4x$ $= 4\sin x \cos x \cos 2x$ agar $\cos x$ tercoret:</p>
+      $$12\sin x \cos 2x \to 12 \cdot 1 \cdot (-1)$$
+      <div class="sol-jadi">hasilnya $-12$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$x \to \tfrac{\pi}{4}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Rumus jumlah:</strong> $\sin 6x + \sin 2x$ $= 2\sin 4x\cos 2x$ dan $\cos 5x + \cos x$ $= 2\cos 3x\cos 2x$.</p>
+      $$\frac{\sin 4x}{\cos 3x} \to \frac{\sin\pi}{\cos\frac{3\pi}{4}} = 0$$
+      <div class="sol-jadi">hasilnya $0$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$x \to \tfrac{\pi}{2}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Faktorkan</strong> $\cos^2 x$ $= (1 - \sin x)(1 + \sin x)$:</p>
+      $$\frac{1}{1 + \sin x} \to \frac{1}{2}$$
+      <div class="sol-jadi">hasilnya $\dfrac{1}{2}$.</div>
     </div>
 
     <div class="box box-latihan">
@@ -1213,7 +1303,7 @@ window.MathJax = {
         <li>Tentukanlah nilai limit berikut ($x \to a \neq 0$):<br>(a) $\displaystyle\lim_{x\to \pi}\frac{\sin(x-\pi)}{2(x-\pi)}$<br>(b) $\displaystyle\lim_{x\to 2}\frac{\sin(x^2-4)}{x^2+2x-8}$<br>(c) $\displaystyle\lim_{x\to 3}\frac{2-2\cos^2(x-3)}{(x^2-9)^2}$</li>
         <li>Tentukanlah nilai setiap limit berikut menggunakan identitas cosinus ganda:<br>(a) $\displaystyle\lim_{x\to 0}\frac{1-\cos 4x}{\sin^2 3x}$<br>(b) $\displaystyle\lim_{x\to 0}\frac{1-\cos 6x}{\cos 10x-1}$<br>(c) $\displaystyle\lim_{x\to 0}\frac{\cos 3x - \cos 7x}{1 - \cos 4x}$</li>
         <li>Tentukanlah nilai setiap limit berikut:<br>(a) $\displaystyle\lim_{x\to\frac{\pi}{2}}\frac{\cos x}{\frac{\pi}{2}-x}$<br>(b) $\displaystyle\lim_{x\to\frac{\pi}{4}}\frac{1-\tan x}{\sin x - \cos x}$</li>
-        <li>Buktikan bahwa $\displaystyle\lim_{x\to 0}\frac{1-\cos x}{x^2} = \dfrac{1}{2}$. (Gunakan identitas $1-\cos x = 2\sin^2\frac{x}{2}$.)</li>
+        <li>Buktikan bahwa $\displaystyle\lim_{x\to 0}\frac{1-\cos x}{x^2}$ $= \dfrac{1}{2}$. (Gunakan identitas $1-\cos x$ $= 2\sin^2\frac{x}{2}$.)</li>
       </ol>
     </div>
   </section>
@@ -1262,7 +1352,7 @@ window.MathJax = {
     </div>
 
     <h3 class="subsection-title">4. Limit Selisih Akar di Tak Hingga</h3>
-    <div class="math-block" style="margin:.5rem 0;">$$\lim_{x\to\infty}\Bigl(\sqrt{ax^2+bx+c}-\sqrt{dx^2+ex+f}\Bigr)$$</div>
+    <div class="math-block" style="margin:.5rem 0;">$$ \begin{gather*} \lim_{x\to\infty}\Bigl(\sqrt{ax^2+bx+c} \\ -\sqrt{dx^2+ex+f}\Bigr) \end{gather*} $$</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Kondisi ($a$ vs $d$)</th><th>Hasil</th><th>Keterangan</th></tr></thead>
@@ -1523,45 +1613,46 @@ document.addEventListener('DOMContentLoaded', () => {
   const jawabanData = {
     // Bagian A
     0: [
-      { jawaban: `Limit kiri: $\\lim_{x\\to 2^-}(2x+1)=5$. Limit kanan: $\\lim_{x\\to 2^+}(x^2-1)=3$. Karena $5\\neq 3$, maka $\\lim_{x\\to 2}f(x)$ <strong>tidak ada</strong>.` },
-      { jawaban: `(a) $\\lim_{x\\to 1^-}g(x)=1^2+3=4$; $\\lim_{x\\to 1^+}g(x)=4(1)=4$. (b) Karena limit kiri = limit kanan = 4, maka $\\lim_{x\\to 1}g(x)=4$ ada. (c) $g(1)=1^2+3=4$ (terdefinisi). Nilainya sama dengan limitnya.` },
-      { jawaban: `(a) $\\lim_{x\\to 0^-}h(x)=-(0)+1=1$; $\\lim_{x\\to 0^+}h(x)=0+2=2$. (b) $h(0)=3$. (c) Karena $\\lim^-\\neq\\lim^+$ ($1\\neq 2$), maka $\\lim_{x\\to 0}h(x)$ <strong>tidak ada</strong>.` },
+      { jawaban: `Limit kiri $2(2) + 1 = 5$, limit kanan $2^2 - 1 = 3$<br>Karena $5 \\neq 3$, $\\lim_{x \\to 2} f(x)$ <strong>tidak ada</strong>` },
+      { jawaban: `(a) Kiri $1 + 3 = 4$, kanan $4(1) = 4$<br>(b) Ada, nilainya $4$<br>(c) $g(1) = 4$, sama dengan limitnya (jadi $g$ kontinu di $x = 1$)` },
+      { jawaban: `(a) Kiri $1$, kanan $2$ &nbsp; (b) $h(0) = 3$<br>(c) Tidak ada, karena $1 \\neq 2$` },
+      { jawaban: `$\\lim_{x \\to 3} \\dfrac{(x - 3)(x + 3)}{x - 3}$ $= 6$, jadi agar kontinu $k = f(3) = 6$` },
     ],
     // Bagian B Set 1
     1: [
-      { jawaban: `(a) Substitusi $x=-1$: $\\frac{(-1)^2+4(-1)+3}{(-1)+1}=\\frac{0}{0}$. Faktorisasi: $\\lim_{x\\to-1}\\frac{(x+1)(x+3)}{x+1}=\\lim_{x\\to-1}(x+3)=2$. (b) Substitusi $x=3$: $\\frac{0}{0}$. Faktorisasi: $\\lim_{x\\to 3}\\frac{(x-3)(x+3)}{x-3}=\\lim_{x\\to 3}(x+3)=6$.` },
-      { jawaban: `(a) Substitusi $x=4$: $\\frac{0}{0}$. $\\lim_{x\\to 4}\\frac{(x-4)^2}{(x-4)(x+1)}=\\lim_{x\\to 4}\\frac{x-4}{x+1}=\\frac{0}{5}=0$. (b) Substitusi $x=-2$: $\\frac{0}{0}$. $\\lim_{x\\to-2}\\frac{2(x+2)(x^2-2x+4)}{(x+2)(x+3)}=\\lim_{x\\to-2}\\frac{2(x^2-2x+4)}{x+3}=\\frac{2(12)}{1}=24$.` },
-      { jawaban: `(a) Kalikan dengan sekawan $\\frac{\\sqrt{x}+2}{\\sqrt{x}+2}$: $\\lim_{x\\to 4}\\frac{(x-4)(\\sqrt{x}+2)}{(\\sqrt{x}-2)(\\sqrt{x}+2)(x+4)}\\cdot(x+4)$... $=\\lim_{x\\to 4}(\\sqrt{x}+2)(x+4)/(x+4) $... Jawab: $\\lim_{x\\to 4}(\\sqrt{x}+2)=4$... Lebih teliti: $\\frac{x^2-16}{\\sqrt{x}-2}=\\frac{(x-4)(x+4)}{\\sqrt{x}-2}\\cdot\\frac{\\sqrt{x}+2}{\\sqrt{x}+2}=(x+4)(\\sqrt{x}+2)=8\\cdot 4=\\boxed{32}$. (b) Kalikan dengan sekawan $\\frac{\\sqrt{x-1}+2}{\\sqrt{x-1}+2}$: $\\lim_{x\\to 5}\\frac{(x-1)-4}{(x-5)(x-2)(\\sqrt{x-1}+2)}=\\lim_{x\\to 5}\\frac{x-5}{(x-5)(x-2)(\\sqrt{x-1}+2)}=\\frac{1}{(3)(4)}=\\frac{1}{12}$.` },
+      { jawaban: `(a) Bentuk $\\tfrac{0}{0}$: $\\dfrac{(x + 1)(x + 3)}{x + 1}$ $= x + 3 \\to 2$<br>(b) $\\dfrac{(x - 3)(x + 3)}{x - 3}$ $= x + 3 \\to 6$` },
+      { jawaban: `(a) $\\dfrac{(x - 4)^2}{(x - 4)(x + 1)}$ $= \\dfrac{x - 4}{x + 1} \\to 0$<br>(b) $\\dfrac{(x + 2)(x^2 - 2x + 4)}{(x + 2)(x + 3)}$ $= \\dfrac{x^2 - 2x + 4}{x + 3} \\to \\dfrac{12}{1}$ $= 12$` },
+      { jawaban: `(a) $\\dfrac{(x - 4)(x + 4)}{\\sqrt{x} - 2}$ $= (x + 4)(\\sqrt{x} + 2) \\to 8 \\cdot 4$ $= 32$<br>(b) Sekawan: $\\dfrac{x - 5}{(x - 5)(x - 2)(\\sqrt{x - 1} + 2)}$<br>$\\to \\dfrac{1}{3 \\cdot 4}$ $= \\dfrac{1}{12}$` },
     ],
     // Bagian B Set 2
     2: [
-      { jawaban: `(a) $\\dfrac{\\sqrt{2}}{8}$ (seperti Contoh 15). (b) Kalikan dengan sekawan $\\sqrt{x^2+9}+5$: $\\lim_{x\\to 4}\\frac{x^2-16}{(x-4)(x-2)(\\sqrt{x^2+9}+5)}=\\lim_{x\\to 4}\\frac{x+4}{(x-2)(\\sqrt{x^2+9}+5)}=\\frac{8}{(2)(10)}=\\frac{2}{5}$.` },
-      { jawaban: `Penyebut $x^2-x-2=(x-2)(x+1)$ nol di $x=2$. Agar limit berhingga: $4+2a+b=0$. Tulis pembilang $(x-2)(x-r)$, sehingga $\\frac{2-r}{3}=\\frac{4}{3}\\Rightarrow r=-2$. Maka $a=0, b=-4$.` },
-      { jawaban: `Syarat: $4+a=b-4\\Rightarrow b=a+8$. Dengan sekawan: $\\frac{1}{\\sqrt{4+a}}=\\frac{1}{4}\\Rightarrow\\sqrt{4+a}=4\\Rightarrow a=12, b=20$. Verifikasi: $\\lim_{x\\to 4}\\frac{\\sqrt{x+12}-\\sqrt{20-x}}{x-4}=\\frac{2(x-4)}{(x-4)\\cdot 2\\sqrt{x+12}}=\\frac{1}{\\sqrt{16}}=\\frac{1}{4}$ ✓.` },
-      { jawaban: `Misalkan $p=\\sqrt[3]{x}$, maka $x=p^3$, $x\\to 8\\Rightarrow p\\to 2$: $\\lim_{p\\to 2}\\frac{p-2}{p^3-8}=\\lim_{p\\to 2}\\frac{p-2}{(p-2)(p^2+2p+4)}=\\frac{1}{4+4+4}=\\frac{1}{12}$.` },
-      { jawaban: `Faktorkan: $x^2-(a+2)x+2a=(x-a)(x-2)$. Maka $\\lim_{x\\to a}\\frac{(x-a)(x-2)}{\\sqrt{x-a}(x-a)}=\\lim_{x\\to a}\\frac{x-2}{\\sqrt{x-a}}$. Biarkan $h=x-a$: $\\lim_{h\\to 0}\\frac{h+a-2}{\\sqrt{h}}\\to\\infty$ kecuali $a=2$. Jika $a=2$: $\\lim_{h\\to 0}\\frac{h}{\\sqrt{h}}=\\lim_{h\\to 0}\\sqrt{h}=0$. Jadi $k=0$ dan $k=4$ tidak mungkin dari rumus ini (periksa ulang soal).` },
+      { jawaban: `(a) Sekawan luar lalu dalam memberi $\\dfrac{1}{AB}$ dengan $A = \\sqrt{2 + \\sqrt{4 + x}}$ $+ 2 \\to 4$ dan $B = \\sqrt{4 + x}$ $+ 2 \\to 4$, jadi limitnya $\\dfrac{1}{16}$<br>(b) $\\dfrac{x + 4}{(x - 2)(\\sqrt{x^2 + 9} + 5)} \\to \\dfrac{8}{2 \\cdot 10}$ $= \\dfrac{2}{5}$` },
+      { jawaban: `Pembilang $= (x - 2)(x - r)$ dengan $\\dfrac{2 - r}{3}$ $= \\dfrac{4}{3}$, jadi $r = -2$<br>$x^2 - 4$: $a = 0$, $b = -4$` },
+      { jawaban: `Syarat $4 + a = b - 4$; hasil limit $\\dfrac{1}{\\sqrt{4 + a}}$ $= \\dfrac{1}{4}$<br>$a = 12$, $b = 20$; cek: $\\dfrac{2}{2\\sqrt{16}}$ $= \\dfrac{1}{4}$ ✓` },
+      { jawaban: `$p = \\sqrt[3]{x} \\to 2$: $\\dfrac{p - 2}{(p - 2)(p^2 + 2p + 4)} \\to \\dfrac{1}{12}$` },
+      { jawaban: `$x^2$ $- (a + 2)x$ $+ 2a$ $= (x - a)(x - 2)$ dan $x - a$ $= (\\sqrt{x} - \\sqrt{a})(\\sqrt{x} + \\sqrt{a})$<br>$k = (a - 2) \\cdot 2\\sqrt{a}$; $k = 8$ memberi $(a - 2)\\sqrt{a}$ $= 4$, jadi $a = 4$` },
     ],
     // Bagian C Set 1
     3: [
-      { jawaban: `(a) $p=q=3$: $\\frac{4}{3}$. (b) $p<q$: $0$. (c) $p>q$: $\\infty$.` },
-      { jawaban: `(a) Uraikan: $\\frac{6x^2+5x-4}{x^2+7x-5}$, $p=q=2$: $6$. (b) Uraikan: $\\frac{x^3-2x}{x^3+...}$, $p=q=3$: $1$. (c) Uraikan: $\\frac{2x^3+...}{3x^3+...}$, $p=q=3$: $\\frac{2}{3}$.` },
-      { jawaban: `(a) $\\frac{\\sqrt{9}}{3}=1$. (b) $\\frac{2}{\\sqrt{4}}=1$. (c) $\\frac{\\sqrt{16x^4}-3x^2}{x^2}=\\frac{4x^2-3x^2}{x^2}=1$ (untuk suku pertama dominan).` },
-      { jawaban: `(a) $a=d=1$: $\\frac{8-(-4)}{2\\cdot 1}=6$. (b) $a=d=4$: $\\frac{6-(-2)}{2\\cdot 2}=2$. (c) $a=d=9$: $\\frac{3-(-9)}{2\\cdot 3}=2$.` },
+      { jawaban: `(a) Derajat sama: $\\tfrac{4}{3}$ &nbsp; (b) $0$ &nbsp; (c) $\\infty$` },
+      { jawaban: `(a) $\\dfrac{6x^2 + \\cdots}{x^2 + \\cdots} \\to 6$ &nbsp; (b) $\\dfrac{x^3 + \\cdots}{x^3 + \\cdots} \\to 1$ &nbsp; (c) $\\dfrac{2x^3 + \\cdots}{3x^3 + \\cdots} \\to \\dfrac{2}{3}$` },
+      { jawaban: `(a) $\\dfrac{3}{3} = 1$ &nbsp; (b) $\\dfrac{2}{2} = 1$ &nbsp; (c) $\\dfrac{4x^2 - 3x^2}{x^2} \\to 1$` },
+      { jawaban: `(a) $\\dfrac{8 - (-4)}{2 \\cdot 1}$ $= 6$ &nbsp; (b) $\\dfrac{6 - (-2)}{2 \\cdot 2}$ $= 2$ &nbsp; (c) $\\dfrac{3 - (-9)}{2 \\cdot 3}$ $= 2$` },
     ],
     // Bagian C Set 2
     4: [
-      { jawaban: `(a) Ubah $(x+3)=\\sqrt{(x+3)^2}=\\sqrt{x^2+6x+9}$. Kaidah: $\\frac{10-6}{2\\cdot 1}=2$. (b) Ubah $(2x-1)=\\sqrt{4x^2-4x+1}$. Kaidah: $\\frac{(-8)-(-4)}{2\\cdot 2}=-1$. (c) Ubah $(3x+2)=\\sqrt{9x^2+12x+4}$. Kaidah: $\\frac{6-12}{2\\cdot 3}=-1$.` },
-      { jawaban: `(a) $x<0$, $\\sqrt{x^2}=-x$: $\\frac{-x\\sqrt{1-3/x}}{x+2}\\to\\frac{-1}{0^+}=-\\infty$... lebih teliti: $\\frac{|x|\\sqrt{1-3/x}}{x+2}=\\frac{-x\\sqrt{1-3/x}}{x(1+2/x)}\\to\\frac{-1}{1}=-1$. (b) $x\\to-\\infty$: $\\frac{3x+1}{|x|\\sqrt{9+...}}=\\frac{x(3+1/x)}{-x\\sqrt{9}}\\to\\frac{3}{-3}=-1$. (c) $x<0$: $\\frac{|x|\\sqrt{4+...}}{1-2x}=\\frac{-x\\cdot 2}{1-2x}\\to\\frac{-x\\cdot 2}{-2x}=1$.` },
-      { jawaban: `(a) Kalikan dua sekawan: $\\frac{(x+1)-x}{(\\sqrt{x+2}-\\sqrt{x+1})(\\sqrt{x+1}+\\sqrt{x})}\\cdot\\frac{\\sqrt{x+2}+\\sqrt{x+1}}{\\sqrt{x+2}+\\sqrt{x+1}}=\\frac{\\sqrt{x+2}+\\sqrt{x+1}}{\\sqrt{x+1}+\\sqrt{x}}\\to 1$. (b) $x(\\sqrt{x^2+4x+1}-(x+2))=x\\cdot\\frac{-3}{\\sqrt{x^2+4x+1}+(x+2)}\\to x\\cdot\\frac{-3}{2x}=-\\frac{3}{2}$. (c) $\\frac{3x/2}{\\sqrt{x}/2}\\to\\sqrt{x}\\to\\infty$... lebih teliti: $\\frac{\\frac{3}{2}\\cdot\\frac{1}{\\sqrt{x}}}{\\frac{1}{2\\sqrt{x}}}=3$.` },
+      { jawaban: `(a) $x + 3$ $= \\sqrt{x^2 + 6x + 9}$: $\\dfrac{10 - 6}{2}$ $= 2$<br>(b) $\\dfrac{-8 - (-4)}{4}$ $= -1$ &nbsp; (c) $\\dfrac{6 - 12}{6}$ $= -1$` },
+      { jawaban: `Untuk $x \\to -\\infty$, $\\sqrt{x^2} = -x$<br>(a) $\\dfrac{-x}{x} \\to$ $-1$ &nbsp; (b) $\\dfrac{3x}{-3x} \\to$ $-1$ &nbsp; (c) $\\dfrac{-2x}{-2x} \\to 1$` },
+      { jawaban: `(a) Dua sekawan: $\\dfrac{\\sqrt{x + 2} + \\sqrt{x + 1}}{\\sqrt{x + 1} + \\sqrt{x}} \\to 1$<br>(b) $x \\cdot \\dfrac{-3}{\\sqrt{x^2 + 4x + 1} + x + 2} \\to$ $-\\dfrac{3}{2}$<br>(c) Pembilang $\\to \\tfrac{3}{2}$, penyebut $\\dfrac{2}{\\sqrt{x + 2} + \\sqrt{x}} \\to 0^+$, jadi limitnya $+\\infty$` },
     ],
     // Bagian D
     5: [
-      { jawaban: `(a) $\\frac{7}{3}$. (b) $\\frac{4}{2}=2$. (c) $\\frac{5}{3}$.` },
-      { jawaban: `(a) $\\frac{\\sin 5x}{x}\\cdot\\frac{\\tan 3x}{x}\\cdot\\frac{1}{2}=5\\cdot 3\\cdot\\frac{1}{2}=\\frac{15}{2}$. (b) $\\frac{4\\sin^2 2x-\\sin^2 x}{\\tan^2 3x}=\\frac{4(2)^2-(1)^2}{(3)^2}=\\frac{15}{9}=\\frac{5}{3}$. (c) Bagi dengan $x$: $\\frac{2+3}{4-1}=\\frac{5}{3}$.` },
-      { jawaban: `(a) Misalkan $p=x-\\pi$: $\\frac{1}{2}$. (b) Faktorkan $x^2-4=(x-2)(x+2)$ dan $x^2+2x-8=(x-2)(x+4)$: $\\lim_{x\\to 2}\\frac{\\sin(x-2)(x+2)}{(x-2)(x+4)}=\\frac{1\\cdot 4}{6}=\\frac{2}{3}$. (c) $\\frac{2-2\\cos^2(x-3)}{((x-3)(x+3))^2}=\\frac{2\\sin^2(x-3)}{(x-3)^2(x+3)^2}\\to\\frac{2}{36}=\\frac{1}{18}$.` },
-      { jawaban: `(a) $1-\\cos 4x=2\\sin^2 2x$, $\\sin^2 3x$: $2(2/3)^2=\\frac{8}{9}$. (b) $\\frac{2\\sin^2 3x}{-2\\sin^2 5x}=-\\left(\\frac{3}{5}\\right)^2=-\\frac{9}{25}$. (c) $\\cos 3x-\\cos 7x=-2\\sin 5x\\sin(-2x)=4\\sin 5x\\sin 2x$... $\\frac{4\\sin 5x\\sin 2x}{2\\sin^2 2x}=\\frac{2\\sin 5x}{\\sin 2x}=\\frac{2\\cdot 5}{2}=5$.` },
-      { jawaban: `(a) Misalkan $p=x-\\pi/2$: $\\lim_{p\\to 0}\\frac{\\cos(p+\\pi/2)}{\\pi/2-(p+\\pi/2)}=\\lim_{p\\to 0}\\frac{-\\sin p}{-p}=1$. (b) $1-\\tan x=\\frac{\\cos x-\\sin x}{\\cos x}$, $\\sin x-\\cos x=-(\\cos x-\\sin x)$: $\\lim_{x\\to\\pi/4}\\frac{-(\\sin x-\\cos x)\\cos x}{\\cos x(\\sin x-\\cos x)}$... sebenarnya $\\frac{\\cos x-\\sin x}{\\cos x}\\cdot\\frac{1}{\\sin x-\\cos x}=\\frac{-(\\sin x-\\cos x)}{\\cos x(\\sin x-\\cos x)}=\\frac{-1}{\\cos(\\pi/4)}=-\\sqrt{2}$.` },
-      { jawaban: `$\\frac{1-\\cos x}{x^2}=\\frac{2\\sin^2(x/2)}{x^2}=\\frac{2\\sin^2(x/2)}{4(x/2)^2}=\\frac{1}{2}\\left(\\frac{\\sin(x/2)}{x/2}\\right)^2\\to\\frac{1}{2}\\cdot 1^2=\\frac{1}{2}$ ✓` },
+      { jawaban: `(a) $\\tfrac{7}{3}$ &nbsp; (b) $\\tfrac{4}{2} = 2$ &nbsp; (c) $\\tfrac{5}{3}$` },
+      { jawaban: `(a) $\\dfrac{5 \\cdot 3}{2}$ $= \\dfrac{15}{2}$ &nbsp; (b) $\\dfrac{4 \\cdot 4 - 1}{9}$ $= \\dfrac{5}{3}$ &nbsp; (c) $\\dfrac{2 + 3}{4 - 1}$ $= \\dfrac{5}{3}$` },
+      { jawaban: `(a) $\\tfrac{1}{2}$<br>(b) $\\dfrac{\\sin(x^2 - 4)}{x^2 - 4} \\cdot \\dfrac{x + 2}{x + 4} \\to 1 \\cdot \\dfrac{4}{6}$ $= \\dfrac{2}{3}$<br>(c) $\\dfrac{2\\sin^2(x - 3)}{(x - 3)^2(x + 3)^2} \\to \\dfrac{2}{36}$ $= \\dfrac{1}{18}$` },
+      { jawaban: `(a) $\\dfrac{2\\sin^2 2x}{\\sin^2 3x} \\to \\dfrac{8}{9}$ &nbsp; (b) $\\dfrac{2\\sin^2 3x}{-2\\sin^2 5x} \\to$ $-\\dfrac{9}{25}$<br>(c) $\\cos 3x - \\cos 7x$ $= 2\\sin 5x\\sin 2x$ dan $1 - \\cos 4x$ $= 2\\sin^2 2x$: $\\dfrac{\\sin 5x}{\\sin 2x} \\to \\dfrac{5}{2}$` },
+      { jawaban: `(a) $p = x$ $- \\tfrac{\\pi}{2}$: $\\dfrac{-\\sin p}{-p} \\to 1$<br>(b) $\\dfrac{(\\cos x - \\sin x)/\\cos x}{\\sin x - \\cos x}$ $= -\\dfrac{1}{\\cos x} \\to$ $-\\sqrt{2}$` },
+      { jawaban: `$\\dfrac{2\\sin^2 \\frac{x}{2}}{x^2}$ $= \\dfrac{1}{2}\\left(\\dfrac{\\sin \\frac{x}{2}}{\\frac{x}{2}}\\right)^2 \\to \\dfrac{1}{2}$ ✓` },
     ],
   };
 
