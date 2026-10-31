@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
 <link rel="apple-touch-icon" href="../../assets/favicon.svg">
-<meta name="description" content="Materi lengkap Transformasi Geometri SMA: translasi, rotasi, refleksi, dilatasi, dan komposisi transformasi. Dilengkapi 48 contoh soal dan pembahasan lengkap dengan ilustrasi.">
+<meta name="description" content="Materi lengkap Transformasi Geometri SMA dengan rumus koordinat: translasi, rotasi, refleksi, dilatasi, dan komposisinya, termasuk bayangan garis dan kurva.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
@@ -92,11 +92,11 @@ window.MathJax = {
     <div class="materi-hero-content">
       <div class="materi-eyebrow">FASE 4 · No.28</div>
       <h1 class="materi-title">Transformasi Geometri</h1>
-      <p class="materi-desc">Pelajari empat jenis transformasi dasar — translasi, rotasi, refleksi, dan dilatasi — beserta komposisinya, lengkap dengan rumus matriks, ilustrasi koordinat presisi, dan penerapan pada kurva dan garis.</p>
+      <p class="materi-desc">Pelajari translasi, rotasi, refleksi, dilatasi, dan komposisinya dengan rumus koordinat, lengkap dengan bayangan garis dan kurva.</p>
       <div class="materi-tags">
         <span class="tag">Geometri</span>
         <span class="tag">7 Sub-bab</span>
-        <span class="tag">48 Contoh Soal</span>
+        <span class="tag">49 Contoh Soal</span>
       </div>
     </div>
   </div>
@@ -127,141 +127,18 @@ window.MathJax = {
 
     <p>Jika titik $P(x, y)$ dipetakan ke titik $P'(x', y')$, maka $P'$ adalah bayangan dari $P$. Terdapat empat jenis transformasi dasar yang dipelajari di tingkat SMA:</p>
 
-    <!-- ── ILUSTRASI 4-PANEL ── -->
-    <div class="panels-wrap">
-      <svg viewBox="0 0 520 190" width="520" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;">
-        <defs>
-          <marker id="pax" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L0,5 L5,2.5z" fill="#666"/></marker>
-          <marker id="darr" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L0,5 L5,2.5z" fill="#555" stroke="none"/></marker>
-        </defs>
-
-        <!-- ── PANEL 1: TRANSLASI (x=0) ── -->
-        <g transform="translate(5,10)">
-          <line x1="0" y1="80" x2="115" y2="80" stroke="#888" stroke-width="1" marker-end="url(#pax)"/>
-          <line x1="10" y1="90" x2="10" y2="5" stroke="#888" stroke-width="1" marker-end="url(#pax)"/>
-          <text x="117" y="83" font-size="7" fill="#888">x</text>
-          <text x="7" y="4" font-size="7" fill="#888">y</text>
-          <!-- asal: triangle, gray filled -->
-          <polygon points="18,68 48,68 33,50" fill="#ccc" stroke="#555" stroke-width="1.5"/>
-          <!-- bayangan: dashed outline, shifted +38 right +30 up -->
-          <polygon points="56,38 86,38 71,20" fill="white" stroke="#444" stroke-width="1.5" stroke-dasharray="4,2"/>
-          <!-- arrows parallel -->
-          <line x1="18" y1="68" x2="54" y2="39" stroke="#555" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#darr)"/>
-          <line x1="48" y1="68" x2="84" y2="39" stroke="#555" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#darr)"/>
-          <line x1="33" y1="50" x2="69" y2="21" stroke="#555" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#darr)"/>
-          <text x="40" y="100" font-size="8.5" font-weight="700" text-anchor="middle" fill="currentColor">1. Translasi</text>
-        </g>
-
-        <!-- separator -->
-        <line x1="127" y1="5" x2="127" y2="105" stroke="#ccc" stroke-width="1" stroke-dasharray="3,2"/>
-
-        <!-- ── PANEL 2: ROTASI (x=130) ── -->
-        <g transform="translate(133,10)">
-          <line x1="0" y1="80" x2="115" y2="80" stroke="#888" stroke-width="1" marker-end="url(#pax)"/>
-          <line x1="20" y1="90" x2="20" y2="5" stroke="#888" stroke-width="1" marker-end="url(#pax)"/>
-          <text x="117" y="83" font-size="7" fill="#888">x</text>
-          <text x="17" y="4" font-size="7" fill="#888">y</text>
-          <!-- asal: at bottom right -->
-          <polygon points="50,55 90,55 70,75" fill="#ccc" stroke="#555" stroke-width="1.5"/>
-          <!-- bayangan: rotated ~90° to upper left -->
-          <polygon points="5,32 5,72 25,52" fill="white" stroke="#444" stroke-width="1.5" stroke-dasharray="4,2"/>
-          <!-- arc arrow -->
-          <path d="M 70,67 A 48,48 0 0 0 17,50" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#darr)"/>
-          <text x="40" y="100" font-size="8.5" font-weight="700" text-anchor="middle" fill="currentColor">2. Rotasi</text>
-        </g>
-
-        <!-- separator -->
-        <line x1="257" y1="5" x2="257" y2="105" stroke="#ccc" stroke-width="1" stroke-dasharray="3,2"/>
-
-        <!-- ── PANEL 3: REFLEKSI (x=260) ── -->
-        <g transform="translate(263,10)">
-          <line x1="0" y1="80" x2="115" y2="80" stroke="#888" stroke-width="1" marker-end="url(#pax)"/>
-          <line x1="10" y1="90" x2="10" y2="5" stroke="#888" stroke-width="1" marker-end="url(#pax)"/>
-          <text x="117" y="83" font-size="7" fill="#888">x</text>
-          <text x="7" y="4" font-size="7" fill="#888">y</text>
-          <!-- mirror line y=45 -->
-          <line x1="-2" y1="45" x2="116" y2="45" stroke="#aaa" stroke-width="1.5" stroke-dasharray="5,3"/>
-          <text x="110" y="42" font-size="7" fill="#888">y=b</text>
-          <!-- asal: above mirror -->
-          <polygon points="18,20 58,20 38,35" fill="#ccc" stroke="#555" stroke-width="1.5"/>
-          <!-- bayangan: below mirror -->
-          <polygon points="18,70 58,70 38,55" fill="white" stroke="#444" stroke-width="1.5" stroke-dasharray="4,2"/>
-          <!-- perpendicular arrows -->
-          <line x1="38" y1="35" x2="38" y2="55" stroke="#888" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#darr)"/>
-          <line x1="18" y1="20" x2="18" y2="70" stroke="#888" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#darr)"/>
-          <line x1="58" y1="20" x2="58" y2="70" stroke="#888" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#darr)"/>
-          <text x="40" y="100" font-size="8.5" font-weight="700" text-anchor="middle" fill="currentColor">3. Refleksi</text>
-        </g>
-
-        <!-- separator -->
-        <line x1="387" y1="5" x2="387" y2="105" stroke="#ccc" stroke-width="1" stroke-dasharray="3,2"/>
-
-        <!-- ── PANEL 4: DILATASI (x=390) ── -->
-        <g transform="translate(393,10)">
-          <line x1="0" y1="80" x2="115" y2="80" stroke="#888" stroke-width="1" marker-end="url(#pax)"/>
-          <line x1="8" y1="90" x2="8" y2="5" stroke="#888" stroke-width="1" marker-end="url(#pax)"/>
-          <text x="117" y="83" font-size="7" fill="#888">x</text>
-          <text x="5" y="4" font-size="7" fill="#888">y</text>
-          <!-- pusat O(8,80)px = (0,0) -->
-          <circle cx="8" cy="80" r="2.5" fill="#888"/>
-          <!-- asal: small triangle -->
-          <polygon points="22,62 38,62 30,50" fill="#ccc" stroke="#555" stroke-width="1.5"/>
-          <!-- bayangan k=2 -->
-          <polygon points="36,44 68,44 52,20" fill="white" stroke="#444" stroke-width="1.5" stroke-dasharray="4,2"/>
-          <!-- lines from O -->
-          <line x1="8" y1="80" x2="68" y2="44" stroke="#888" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#darr)"/>
-          <line x1="8" y1="80" x2="52" y2="20" stroke="#888" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#darr)"/>
-          <text x="72" y="38" font-size="7" fill="#666">k=2</text>
-          <text x="40" y="100" font-size="8.5" font-weight="700" text-anchor="middle" fill="currentColor">4. Dilatasi</text>
-        </g>
-      </svg>
-    </div>
-
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>No.</th><th>Jenis Transformasi</th><th>Sifat Utama</th></tr></thead>
-        <tbody>
-          <tr><td style="text-align:center;">1</td><td>Translasi (Pergeseran)</td><td>Posisi berubah; bentuk dan ukuran tetap</td></tr>
-          <tr><td style="text-align:center;">2</td><td>Rotasi (Perputaran)</td><td>Posisi berputar terhadap suatu pusat; bentuk dan ukuran tetap</td></tr>
-          <tr><td style="text-align:center;">3</td><td>Refleksi (Pencerminan)</td><td>Posisi dicerminkan terhadap suatu garis; bentuk dan ukuran tetap</td></tr>
-          <tr><td style="text-align:center;">4</td><td>Dilatasi (Perkalian)</td><td>Posisi dan ukuran berubah sesuai faktor skala terhadap suatu pusat</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 class="subsection-title">Isometri dan Non-Isometri</h3>
-    <div class="box box-definisi">
-      <div class="box-label">Klasifikasi Transformasi</div>
-      <ul style="margin:.3rem 0 0;padding-left:1.3rem;line-height:2.2;">
-        <li><strong>Isometri</strong> adalah transformasi yang <em>mempertahankan</em> jarak antar titik, sehingga bentuk dan ukuran bangun tidak berubah (kongruen dengan aslinya). Translasi, rotasi, dan refleksi termasuk isometri.</li>
-        <li><strong>Non-isometri</strong> adalah transformasi yang <em>mengubah</em> jarak antar titik, sehingga ukuran bangun berubah (tidak kongruen, tetapi sebangun). Dilatasi dengan $|k| \neq 1$ termasuk non-isometri.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════
-       B. TRANSLASI
-  ══════════════════════════════════════════════════════════ -->
+    <!-- ═══ B. TRANSLASI (PERGESERAN) ═══ -->
   <section class="section" id="bagian-b">
     <h2 class="section-title"><span class="section-badge">B</span>Translasi (Pergeseran)</h2>
-
     <h3 class="subsection-title">1. Konsep Translasi</h3>
-    <p>Bayangkan Anda menggeser sebuah meja ke pojok ruangan. Meja tersebut bergerak sejauh tertentu ke kanan dan ke atas. Setiap titik pada meja bergerak dengan <strong>jarak dan arah yang sama</strong>. Inilah konsep translasi.</p>
-    <p><strong>Translasi</strong> adalah transformasi yang memindahkan setiap titik sejauh $a$ satuan ke arah horizontal dan sejauh $b$ satuan ke arah vertikal, di mana nilai $a$ dan $b$ konstan untuk semua titik. Translasi dinyatakan dengan vektor $T = \begin{bmatrix} a \\ b \end{bmatrix}$ di mana $a$ positif = kanan, $b$ positif = atas.</p>
-
+    <p>Bayangkan menggeser sebuah meja ke pojok ruangan: setiap titik pada meja bergerak dengan <strong>jarak dan arah yang sama</strong>. Inilah translasi.</p>
+    <p><strong>Translasi</strong> memindahkan setiap titik sejauh $a$ satuan mendatar dan $b$ satuan tegak, ditulis $T = (a, b)$: $a$ positif ke kanan, $b$ positif ke atas.</p>
     <h3 class="subsection-title">2. Rumus Translasi</h3>
-    <p>Jika titik $P(x, y)$ ditranslasikan oleh $T = \begin{bmatrix} a \\ b \end{bmatrix}$, maka bayangannya adalah $P'(x', y')$ dengan:</p>
-
     <div class="box box-rumus">
-      <div class="box-label">Rumus Translasi (Koordinat)</div>
-      <div class="math-block">$$x' = x + a \qquad \text{dan} \qquad y' = y + b$$</div>
-    </div>
-    <div class="box box-rumus">
-      <div class="box-label">Rumus Translasi (Matriks)</div>
-      <div class="math-block">$$\begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} x \\ y \end{bmatrix} + \begin{bmatrix} a \\ b \end{bmatrix}$$</div>
+      <div class="box-label">Rumus Translasi</div>
+      $$x' = x + a, \qquad y' = y + b$$
     </div>
 
-    <!-- Ilustrasi translasi presisi -->
     <div class="grafik-wrap">
       <svg viewBox="0 0 280 220" width="280" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -316,35 +193,29 @@ window.MathJax = {
         <text x="108" y="142" font-size="7" fill="#2563eb">⎣+2⎦</text>
       </svg>
     </div>
-
     <div class="box box-catatan">
-      <div class="box-label">⚠ Catatan Penting</div>
-      <ul style="margin:.3rem 0 0;padding-left:1.3rem;line-height:2.1;">
-        <li>Translasi <strong>tidak mengubah</strong> bentuk, ukuran, maupun orientasi bangun (isometri).</li>
-        <li>Untuk mencari vektor translasi: $\begin{bmatrix}a\\b\end{bmatrix} = \begin{bmatrix}x'\\y'\end{bmatrix} - \begin{bmatrix}x\\y\end{bmatrix}$.</li>
-        <li>Translasi <strong>tidak memiliki titik tetap</strong>: tidak ada titik $P$ yang memenuhi $T(P) = P$, kecuali translasi nol $\begin{bmatrix}0\\0\end{bmatrix}$.</li>
-        <li>Translasi dapat dinyatakan sebagai komposisi <strong>dua refleksi</strong> terhadap dua garis yang <strong>sejajar</strong>.</li>
-      </ul>
+      <div class="box-label">💡 Catatan</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Translasi tidak mengubah bentuk, ukuran, maupun arah hadap bangun (isometri).</li><li>Vektor translasi dicari dari $(a, b)$ $= (x' - x,\; y' - y)$.</li><li>Tidak ada titik yang tetap, kecuali pada translasi nol $(0, 0)$.</li></ul>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 1</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $A(3, -2)$ jika ditranslasikan oleh $T = \begin{bmatrix} 4 \\ 5 \end{bmatrix}$.</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $A(3, -2)$ jika ditranslasikan oleh $T = (4, 5)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} 3 \\ -2 \end{bmatrix} + \begin{bmatrix} 4 \\ 5 \end{bmatrix} = \begin{bmatrix} 7 \\ 3 \end{bmatrix}$$
-      Jadi bayangan titik $A$ adalah $\boxed{A'(7, 3)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan rumus translasi</strong> $x' = x + a$, $y' = y + b$:</p>
+      $$ \begin{gather*} x' = 3 + 4 = 7 \\ y' = -2 + 5 = 3 \end{gather*} $$
+      <div class="sol-jadi">bayangan titik $A$ adalah $A'(7, 3)$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 2</div>
-      <p style="margin:0;font-size:.9rem;">Diketahui $B'(1, 6)$ adalah bayangan titik $B$ oleh translasi $T = \begin{bmatrix} 6 \\ 8 \end{bmatrix}$. Tentukan koordinat titik asal $B$.</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan titik asal $B$ jika bayangannya $B\'(1, -4)$ setelah ditranslasikan oleh $T = (6, -2)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} x' \\ y' \end{bmatrix} - \begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} 1 \\ 6 \end{bmatrix} - \begin{bmatrix} 6 \\ 8 \end{bmatrix} = \begin{bmatrix} -5 \\ -2 \end{bmatrix}$$
-      Jadi titik asal $B$ adalah $\boxed{B(-5, -2)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Balik rumus translasi:</strong> $x = x' - a$ dan $y = y' - b$.</p>
+      $$ \begin{gather*} x = 1 - 6 = -5 \\ y = -4 - (-2) = -2 \end{gather*} $$
+      <div class="sol-jadi">titik asal $B(-5, -2)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -352,147 +223,125 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Titik $A(2, -3)$ ditranslasikan sehingga bayangannya menjadi $A'(5, 1)$. Dengan translasi yang sama, tentukan bayangan titik $B(-1, 4)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Vektor translasi: $T = \begin{bmatrix} 5 \\ 1 \end{bmatrix} - \begin{bmatrix} 2 \\ -3 \end{bmatrix} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}$<br><br>
-      Terapkan pada $B(-1, 4)$: $\begin{bmatrix} -1 \\ 4 \end{bmatrix} + \begin{bmatrix} 3 \\ 4 \end{bmatrix} = \begin{bmatrix} 2 \\ 8 \end{bmatrix}$<br><br>
-      Jadi bayangan titik $B$ adalah $\boxed{B'(2, 8)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari vektor translasi</strong> dari selisih bayangan dan asal: $a = 5 - 2 = 3$, $b = 1 - (-3) = 4$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Terapkan pada $B(-1, 4)$:</strong> $(-1 + 3,\; 4 + 4)$ $= (2, 8)$.</p>
+      <div class="sol-jadi">bayangan titik $B$ adalah $B'(2, 8)$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 4</div>
-      <p style="margin:0;font-size:.9rem;">Titik $P(2a, a+b)$ ditranslasikan oleh $T = \begin{bmatrix} b \\ 2 \end{bmatrix}$ menghasilkan $P'(8, 10)$. Tentukan nilai $a$ dan $b$.</p>
+      <p style="margin:0;font-size:.9rem;">Titik $P(2a, a+b)$ ditranslasikan oleh $T = (b, 2)$ menghasilkan $P'(8, 10)$. Tentukan nilai $a$ dan $b$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{bmatrix} 2a+b \\ a+b+2 \end{bmatrix} = \begin{bmatrix} 8 \\ 10 \end{bmatrix}$$
-      Sistem persamaan:
-      $$2a + b = 8 \quad\text{dan}\quad a + b = 8$$
-      Eliminasi: $a = 0$, substitusi: $b = 8$.<br>
-      Jadi $\boxed{a = 0 \text{ dan } b = 8}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Terapkan translasi pada tiap koordinat:</strong></p>
+      $$ \begin{align*} 2a + b &= 8 \\ a + b + 2 &= 10 \;\Rightarrow\; a + b = 8 \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kurangkan kedua persamaan:</strong> $a = 0$, lalu $b = 8$.</p>
+      <p class="sol-step">Nilai $a = 0$ sah; titik asalnya $P(0, 8)$.</p>
+      <div class="sol-jadi">$a = 0$ dan $b = 8$.</div>
     </div>
 
-    <h3 class="subsection-title">3. Translasi pada Kurva dan Garis</h3>
-    <p>Untuk mencari bayangan kurva/garis oleh translasi $T = \begin{bmatrix} a \\ b \end{bmatrix}$: nyatakan $(x,y)$ dalam $(x', y')$, yaitu $x = x' - a$ dan $y = y' - b$, lalu substitusikan ke persamaan asal.</p>
-
+    <h3 class="subsection-title">3. Translasi pada Garis dan Kurva</h3>
+    <p>Nyatakan titik asal dalam bayangan, yaitu $x = x' - a$ dan $y = y' - b$, lalu substitusikan ke persamaan asal.</p>
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 5</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan bayangan garis $3x - 2y + 6 = 0$ oleh translasi $T = \begin{bmatrix} -1 \\ 3 \end{bmatrix}$.</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan bayangan garis $3x - 2y + 6 = 0$ oleh translasi $T = (-1, 3)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $x = x' + 1$ dan $y = y' - 3$. Substitusikan:
-      $$3(x'+1) - 2(y'-3) + 6 = 0 \;\Rightarrow\; 3x' + 3 - 2y' + 6 + 6 = 0 \;\Rightarrow\; \boxed{3x - 2y + 15 = 0}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Nyatakan titik asal dalam bayangan:</strong> $x = x' + 1$ dan $y = y' - 3$.</p>
+      $$ \begin{align*} 3(x' + 1) - 2(y' - 3) + 6 &= 0 \\ 3x' - 2y' + 15 &= 0 \end{align*} $$
+      <div class="sol-jadi">bayangannya $3x - 2y + 15 = 0$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 6</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan bayangan lingkaran $x^2 + y^2 - 4x + 6y - 3 = 0$ oleh translasi $T = \begin{bmatrix} 2 \\ -1 \end{bmatrix}$.</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan bayangan lingkaran $x^2 + y^2 - 4x + 6y - 3$ $= 0$ oleh translasi $T = (2, -1)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $x = x' - 2$, $y = y' + 1$. Substitusikan:
-      $$\begin{align*}(x'-2)^2 + (y'+1)^2 - 4(x'-2) + 6(y'+1) - 3 &= 0 \\ x'^2 - 4x' + 4 + y'^2 + 2y' + 1 - 4x' + 8 + 6y' + 6 - 3 &= 0 \\ x'^2 + y'^2 - 8x' + 8y' + 16 &= 0 \end{align*}$$
-      Jadi persamaan bayangannya adalah $\boxed{x^2 + y^2 - 8x + 8y + 16 = 0}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Nyatakan titik asal dalam bayangan:</strong> $x = x' - 2$ dan $y = y' + 1$.</p>
+      $$ \begin{align*} &(x' - 2)^2 + (y' + 1)^2 \\ &\quad - 4(x' - 2) + 6(y' + 1) - 3 = 0 \\ &x'^2 + y'^2 - 8x' + 8y' + 16 = 0 \end{align*} $$
+      <p class="sol-step">Cek: pusat lingkaran $(2, -3)$ bergeser ke $(4, -4)$ dan jari-jarinya tetap $4$.</p>
+      <div class="sol-jadi">bayangannya $x^2 + y^2 - 8x + 8y + 16$ $= 0$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 7</div>
-      <p style="margin:0;font-size:.9rem;">Garis $g: 3x - 2y + 6 = 0$ ditranslasikan oleh $T = \begin{bmatrix} a \\ b \end{bmatrix}$ menghasilkan $g': 3x - 2y + 2 = 0$. Jika $a + 2b = 4$, tentukan vektor $T$.</p>
+      <p style="margin:0;font-size:.9rem;">Garis $g: 3x - 2y + 6 = 0$ ditranslasikan oleh $T = (a, b)$ menghasilkan $g': 3x - 2y + 2 = 0$. Jika $a + 2b = 4$, tentukan vektor $T$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Substitusi $x = x'-a$, $y = y'-b$: persamaan bayangan menjadi $3x - 2y + (6 - 3a + 2b) = 0$. Bandingkan konstanta:
-      $$6 - 3a + 2b = 2 \;\Rightarrow\; -3a + 2b = -4 \quad \cdots(1)$$
-      Dengan $a + 2b = 4$ (2). Eliminasi (1)−(2): $-4a = -8 \Rightarrow a = 2$, lalu $b = 1$.<br>
-      Jadi $T = \begin{bmatrix} 2 \\ 1 \end{bmatrix}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Substitusi</strong> $x = x' - a$, $y = y' - b$ ke garis $g$:</p>
+      $$3x' - 2y' + (6 - 3a + 2b) = 0$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Samakan konstanta dengan $g'$:</strong> $6 - 3a + 2b = 2$, jadi $-3a + 2b = -4$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Selesaikan bersama $a + 2b = 4$:</strong> kurangkan, $-4a = -8$, sehingga $a = 2$ dan $b = 1$.</p>
+      <div class="sol-jadi">$T = (2, 1)$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 8</div>
-      <p style="margin:0;font-size:.9rem;">Parabola $y = x^2 - 4x + 7$ ditranslasikan oleh $T = \begin{bmatrix} a \\ b \end{bmatrix}$ sehingga puncaknya berpindah ke titik $O(0, 0)$. Tentukan vektor $T$ dan persamaan bayangannya.</p>
+      <p style="margin:0;font-size:.9rem;">Parabola $y = x^2 - 4x + 7$ ditranslasikan oleh $T = (a, b)$ sehingga puncaknya berpindah ke titik $O(0, 0)$. Tentukan vektor $T$ dan persamaan bayangannya.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Bentuk kuadrat sempurna: $y = (x-2)^2 + 3$ → puncak $(2, 3)$.<br>
-      Vektor translasi: $T = \begin{bmatrix} 0 \\ 0 \end{bmatrix} - \begin{bmatrix} 2 \\ 3 \end{bmatrix} = \begin{bmatrix} -2 \\ -3 \end{bmatrix}$<br><br>
-      Dengan $x = x'+2$ dan $y = y'+3$:
-      $$y'+3 = (x'+2)^2 - 4(x'+2) + 7 = x'^2 + 4x' + 4 - 4x' - 8 + 7 \;\Rightarrow\; y' = x'^2$$
-      Jadi $T = \begin{bmatrix} -2 \\ -3 \end{bmatrix}$ dan persamaan bayangan adalah $\boxed{y = x^2}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari puncak:</strong> $y = (x - 2)^2 + 3$, puncaknya $(2, 3)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Vektor translasi</strong> dari $(2, 3)$ ke $(0, 0)$: $a = -2$, $b = -3$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Cek persamaannya:</strong> $x = x' + 2$, $y = y' + 3$ memberi $y' + 3 = (x')^2 + 3$.</p>
+      <div class="sol-jadi">$T = (-2, -3)$ dan bayangannya $y = x^2$.</div>
     </div>
 
     <div class="box box-catatan">
-      <div class="box-label">⚠ Cara Mencari Titik Puncak Parabola $y = ax^2 + bx + c$</div>
-      <ul style="margin:.3rem 0 0;padding-left:1.3rem;line-height:2.2;">
-        <li><strong>Metode Rumus:</strong> $x_p = -\dfrac{b}{2a}$ dan $y_p = f(x_p)$ atau $y_p = -\dfrac{D}{4a}$</li>
-        <li><strong>Metode Kuadrat Sempurna:</strong> Ubah ke bentuk $y = a(x-h)^2 + k$; puncak $(h, k)$.</li>
-      </ul>
+      <div class="box-label">💡 Titik Puncak Parabola $y = ax^2 + bx + c$</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Rumus: $x_p = -\dfrac{b}{2a}$, lalu $y_p = f(x_p)$.</li><li>Kuadrat sempurna: ubah ke $y = a(x - h)^2 + k$, puncaknya $(h, k)$.</li></ul>
     </div>
 
     <h3 class="subsection-title">4. Komposisi Translasi</h3>
-    <p>Komposisi dua translasi $T_1$ dilanjutkan $T_2$ ekuivalen dengan translasi tunggal yang merupakan jumlah vektor translasinya.</p>
-
     <div class="box box-rumus">
       <div class="box-label">Komposisi Translasi</div>
-      <div class="math-block">$$T_\text{tot} = T_2 \circ T_1 = T_1 + T_2 = \begin{bmatrix} a + c \\ b + d \end{bmatrix}$$</div>
-    </div>
-
-    <div class="box box-catatan">
-      <div class="box-label">⚠ Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Komposisi translasi bersifat <strong>komutatif</strong> ($T_1 + T_2 = T_2 + T_1$), sehingga urutan pengerjaan tidak mengubah hasil akhir.</p>
+      $$ \begin{align*} T_1 &= (a, b),\; T_2 \\ &= (c, d) \; \\ &\Rightarrow\; T_{\text{tot}} \\ &= (a + c,\; b + d) \end{align*} $$<p style="margin:0;font-size:.9rem;">Urutannya tidak berpengaruh (komutatif).</p>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 9</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $A(2, -5)$ oleh komposisi $T_1 = \begin{bmatrix} 3 \\ 2 \end{bmatrix}$ dilanjutkan $T_2 = \begin{bmatrix} -1 \\ 4 \end{bmatrix}$.</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $A(2, -5)$ oleh komposisi $T_1 = (3, 2)$ dilanjutkan $T_2 = (-1, 4)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$T_\text{tot} = \begin{bmatrix} 3 \\ 2 \end{bmatrix} + \begin{bmatrix} -1 \\ 4 \end{bmatrix} = \begin{bmatrix} 2 \\ 6 \end{bmatrix}$$
-      $$\begin{bmatrix} x'' \\ y'' \end{bmatrix} = \begin{bmatrix} 2 \\ -5 \end{bmatrix} + \begin{bmatrix} 2 \\ 6 \end{bmatrix} = \begin{bmatrix} 4 \\ 1 \end{bmatrix}$$
-      Jadi bayangan akhirnya adalah $\boxed{A''(4, 1)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Jumlahkan kedua translasi:</strong> $T = (3 + (-1),\; 2 + 4)$ $= (2, 6)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Terapkan pada $A(2, -5)$:</strong> $(2 + 2,\; -5 + 6)$.</p>
+      <div class="sol-jadi">bayangan akhirnya $A''(4, 1)$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 10</div>
-      <p style="margin:0;font-size:.9rem;">Garis $g: 2x - 3y + 6 = 0$ ditranslasikan oleh $T_1 = \begin{bmatrix} a \\ 2 \end{bmatrix}$ dilanjutkan $T_2 = \begin{bmatrix} 3 \\ b \end{bmatrix}$. Jika bayangan akhirnya adalah $g'': 2x - 3y - 5 = 0$, tentukan nilai $2a - 3b$.</p>
+      <p style="margin:0;font-size:.9rem;">Garis $g: 2x - 3y + 6 = 0$ ditranslasikan oleh $T_1 = (a, 2)$ dilanjutkan $T_2 = (3, b)$. Jika bayangan akhirnya adalah $g'': 2x - 3y - 5 = 0$, tentukan nilai $2a - 3b$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $T_\text{tot} = \begin{bmatrix} a+3 \\ b+2 \end{bmatrix}$, sehingga $x = x'' - (a+3)$ dan $y = y'' - (b+2)$. Substitusikan ke garis $g$:
-      $$2(x''-a-3) - 3(y''-b-2) + 6 = 0 \;\Rightarrow\; 2x'' - 3y'' + (6 - 2a + 3b) = 0$$
-      Bandingkan dengan $g'': 2x - 3y - 5 = 0$:
-      $$6 - 2a + 3b = -5 \;\Rightarrow\; -2a + 3b = -11 \;\Rightarrow\; 2a - 3b = 11$$
-      Jadi nilai $2a - 3b = \boxed{11}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Translasi total:</strong> $T = (a + 3,\; b + 2)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Substitusi ke $g$:</strong></p>
+      $$ \begin{align*}  &2(x'' - a - 3) \\ &\quad - 3(y'' - b - 2) \\ &\quad + 6 \\ &= 0 \\ &2x'' - 3y'' + (6 - 2a + 3b) = 0 \end{align*} $$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Samakan konstanta dengan $g''$:</strong> $6 - 2a + 3b = -5$, jadi $2a - 3b = 11$.</p>
+      <div class="sol-jadi">$2a - 3b = 11$.</div>
     </div>
 
     <div class="box box-latihan">
-      <div class="box-label">Soal Latihan — Bagian B</div>
+      <div class="box-label">Soal Latihan B</div>
       <ol class="soal-list">
-        <li>Tentukan bayangan titik $P(-3, 5)$ oleh translasi $T = \begin{bmatrix} 4 \\ -2 \end{bmatrix}$.</li>
-        <li>Titik $Q'(-1, 7)$ adalah bayangan titik $Q$ oleh translasi $T = \begin{bmatrix} -3 \\ 4 \end{bmatrix}$. Tentukan koordinat titik asal $Q$.</li>
+        <li>Tentukan bayangan titik $P(-3, 5)$ oleh translasi $T = (4, -2)$.</li>
+        <li>Titik $Q'(-1, 7)$ adalah bayangan titik $Q$ oleh translasi $T = (-3, 4)$. Tentukan koordinat titik asal $Q$.</li>
         <li>Titik $A(1, -2)$ ditranslasikan sehingga bayangannya menjadi $A'(4, 3)$. Dengan translasi yang sama, tentukan bayangan titik $B(-2, 5)$.</li>
-        <li>Tentukan bayangan garis $2x + 3y - 6 = 0$ oleh translasi $T = \begin{bmatrix} 3 \\ -1 \end{bmatrix}$.</li>
-        <li>Parabola $y = x^2 + 6x + 5$ ditranslasikan oleh $T = \begin{bmatrix} 2 \\ -3 \end{bmatrix}$. Tentukan persamaan bayangan parabola dan koordinat puncaknya.</li>
-        <li>Titik $P(3a-1, 2b)$ ditranslasikan oleh $T = \begin{bmatrix} a \\ b-1 \end{bmatrix}$ menghasilkan $P'(7, 4)$. Tentukan nilai $a$ dan $b$.</li>
-        <li><strong>[HOTS]</strong> Garis $g: 3x - y + 4 = 0$ ditranslasikan oleh $T_1 = \begin{bmatrix} a \\ 1 \end{bmatrix}$ dilanjutkan $T_2 = \begin{bmatrix} 2 \\ b \end{bmatrix}$. Jika bayangan akhirnya adalah $g'': 3x - y - 4 = 0$, tentukan nilai $a + b$.</li>
+        <li>Tentukan bayangan garis $2x + 3y - 6 = 0$ oleh translasi $T = (3, -1)$.</li>
+        <li>Parabola $y = x^2 + 6x + 5$ ditranslasikan oleh $T = (2, -3)$. Tentukan persamaan bayangan parabola dan koordinat puncaknya.</li>
+        <li>Titik $P(3a-1, 2b)$ ditranslasikan oleh $T = (a, b-1)$ menghasilkan $P'(7, 4)$. Tentukan nilai $a$ dan $b$.</li>
+        <li><strong>HOTS.</strong> Garis $g: 3x - y + 4$ $= 0$ ditranslasikan oleh $T_1 = (a, 1)$ dilanjutkan $T_2 = (2, b)$. Jika bayangan akhirnya $g\'\': 3x - y - 4$ $= 0$, tentukan nilai $3a - b$.</li>
       </ol>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════
-       C. ROTASI
-  ══════════════════════════════════════════════════════════ -->
+  <!-- ═══ C. ROTASI (PERPUTARAN) ═══ -->
   <section class="section" id="bagian-c">
     <h2 class="section-title"><span class="section-badge">C</span>Rotasi (Perputaran)</h2>
-
     <h3 class="subsection-title">1. Konsep Rotasi</h3>
-    <p>Dalam geometri, <strong>rotasi</strong> adalah transformasi yang memutar setiap titik pada bidang mengelilingi suatu titik tetap yang disebut <strong>pusat rotasi</strong> ($P$), sejauh sudut tertentu $\alpha$. Jarak setiap titik ke pusat rotasi tidak berubah — hanya posisi sudutnya yang bergeser.</p>
+    <p>Baling-baling kipas dan jarum jam berputar mengelilingi satu titik tetap. <strong>Rotasi</strong> memutar setiap titik sejauh sudut $\alpha$ terhadap <strong>pusat rotasi</strong>; jarak setiap titik ke pusat tidak berubah.</p>
     <ul>
-      <li>Jika $\alpha > 0$: perputaran <strong>berlawanan arah jarum jam</strong> (<em>counter-clockwise</em>).</li>
-      <li>Jika $\alpha &lt; 0$: perputaran <strong>searah jarum jam</strong> (<em>clockwise</em>).</li>
+      <li>$\alpha > 0$: berlawanan arah jarum jam.</li>
+      <li>$\alpha &lt; 0$: searah jarum jam.</li>
     </ul>
-
-    <!-- Ilustrasi rotasi presisi -->
     <div class="grafik-wrap">
       <svg viewBox="0 0 300 230" width="300" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -551,41 +400,20 @@ window.MathJax = {
         <text x="200" y="114" font-size="8" fill="#2563eb" text-anchor="middle">jarum jam</text>
       </svg>
     </div>
-
     <h3 class="subsection-title">2. Rumus Rotasi</h3>
-
     <div class="box box-rumus">
-      <div class="box-label">Rotasi Pusat $O(0,0)$ Sudut $\alpha$ — Koordinat</div>
-      <div class="math-block">$$x' = x\cos\alpha - y\sin\alpha \qquad y' = x\sin\alpha + y\cos\alpha$$</div>
-    </div>
-    <div class="box box-rumus">
-      <div class="box-label">Rotasi Pusat $O(0,0)$ Sudut $\alpha$ — Matriks</div>
-      <div class="math-block">$$\begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} \cos\alpha & -\sin\alpha \\ \sin\alpha & \cos\alpha \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix}$$</div>
-    </div>
-    <div class="box box-rumus">
-      <div class="box-label">Rotasi Pusat $A(h,k)$ Sudut $\alpha$ — Matriks</div>
-      <div class="math-block">$$\begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} \cos\alpha & -\sin\alpha \\ \sin\alpha & \cos\alpha \end{bmatrix} \begin{bmatrix} x-h \\ y-k \end{bmatrix} + \begin{bmatrix} h \\ k \end{bmatrix}$$</div>
+      <div class="box-label">Pusat $O(0, 0)$, Sudut $\alpha$</div>
+      $$ \begin{gather*} x' = x\cos\alpha - y\sin\alpha \\ y' = x\sin\alpha + y\cos\alpha \end{gather*} $$
     </div>
 
-    <p><strong>Nilai trigonometri sudut-sudut istimewa:</strong></p>
-    <div class="table-wrap">
-      <table class="trig-table">
-        <thead><tr><th>$\alpha$</th><th>$0°$</th><th>$30°$</th><th>$45°$</th><th>$60°$</th><th>$90°$</th><th>$180°$</th><th>$270°$</th><th>$360°$</th></tr></thead>
-        <tbody>
-          <tr><td>$\sin\alpha$</td><td>$0$</td><td>$\frac{1}{2}$</td><td>$\frac{\sqrt{2}}{2}$</td><td>$\frac{\sqrt{3}}{2}$</td><td>$1$</td><td>$0$</td><td>$-1$</td><td>$0$</td></tr>
-          <tr><td>$\cos\alpha$</td><td>$1$</td><td>$\frac{\sqrt{3}}{2}$</td><td>$\frac{\sqrt{2}}{2}$</td><td>$\frac{1}{2}$</td><td>$0$</td><td>$-1$</td><td>$0$</td><td>$1$</td></tr>
-        </tbody>
-      </table>
+    <div class="box box-rumus">
+      <div class="box-label">Pusat $A(h, k)$, Sudut $\alpha$</div>
+      $$ \begin{gather*} x' - h \\ = (x - h)\cos\alpha - (y - k)\sin\alpha \\ y' - k \\ = (x - h)\sin\alpha + (y - k)\cos\alpha \end{gather*} $$
     </div>
 
     <div class="box box-catatan">
-      <div class="box-label">⚠ Rumus Cepat Rotasi Pusat O</div>
-      <ul style="margin:.3rem 0 0;padding-left:1.3rem;line-height:2.3;">
-        <li>$R[O, 90°]$ atau $R[O, -270°]$: $(x, y) \to (-y,\; x)$; matriks $\begin{bmatrix}0&-1\\1&0\end{bmatrix}$</li>
-        <li>$R[O, -90°]$ atau $R[O, 270°]$: $(x, y) \to (y,\; -x)$; matriks $\begin{bmatrix}0&1\\-1&0\end{bmatrix}$</li>
-        <li>$R[O, 180°]$: $(x, y) \to (-x,\; -y)$; matriks $\begin{bmatrix}-1&0\\0&-1\end{bmatrix}$</li>
-        <li>$\cos(-\alpha) = \cos\alpha$ (tetap); $\sin(-\alpha) = -\sin\alpha$ (tanda berubah).</li>
-      </ul>
+      <div class="box-label">💡 Rumus Cepat Pusat $O$</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>$R[O, 90^\circ]$ atau $R[O, -270^\circ]$: $(x, y) \to (-y, x)$</li><li>$R[O, -90^\circ]$ atau $R[O, 270^\circ]$: $(x, y) \to (y, -x)$</li><li>$R[O, 180^\circ]$: $(x, y) \to (-x, -y)$</li><li>Rotasi adalah isometri dan <strong>tidak</strong> membalik arah hadap bangun; satu-satunya titik tetap adalah pusatnya.</li></ul>
     </div>
 
     <div class="box box-contoh">
@@ -593,9 +421,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $B(4, 0)$ jika dirotasikan sejauh $90°$ berlawanan arah jarum jam dengan pusat $O(0, 0)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 4 \\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\ 4 \end{bmatrix}$$
-      Jadi bayangan titik $B$ adalah $\boxed{B'(0, 4)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan rumus cepat $R[O, 90^\circ]$:</strong> $(x, y) \to (-y, x)$.</p>
+      $$(4, 0) \to (0, 4)$$
+      <div class="sol-jadi">$B'(0, 4)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -603,9 +431,10 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $P(3, -1)$ jika dirotasikan sejauh $180°$ dengan pusat $A(1, 2)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{bmatrix} x'-1 \\ y'-2 \end{bmatrix} = \begin{bmatrix} -1 & 0 \\ 0 & -1 \end{bmatrix}\begin{bmatrix} 3-1 \\ -1-2 \end{bmatrix} = \begin{bmatrix} -1 & 0 \\ 0 & -1 \end{bmatrix}\begin{bmatrix} 2 \\ -3 \end{bmatrix} = \begin{bmatrix} -2 \\ 3 \end{bmatrix}$$
-      Sehingga $x' = 1-2 = -1$ dan $y' = 2+3 = 5$. Jadi $\boxed{P'(-1, 5)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Geser pusat ke titik asal:</strong> $(x - h,\; y - k)$ $= (2, -3)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Putar $180^\circ$:</strong> $(2, -3) \to (-2, 3)$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Kembalikan pusat:</strong> $x' = -2 + 1 = -1$, $y' = 3 + 2 = 5$.</p>
+      <div class="sol-jadi">$P'(-1, 5)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -613,24 +442,22 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $D(5, 3)$ jika dirotasikan sejauh $-90°$ (searah jarum jam) terhadap pusat $A(1, 2)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $\cos(-90°) = 0$, $\sin(-90°) = -1$:
-      $$\begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix} \begin{bmatrix} 4 \\ 1 \end{bmatrix} + \begin{bmatrix} 1 \\ 2 \end{bmatrix} = \begin{bmatrix} 1 \\ -4 \end{bmatrix} + \begin{bmatrix} 1 \\ 2 \end{bmatrix} = \begin{bmatrix} 2 \\ -2 \end{bmatrix}$$
-      Jadi $\boxed{D'(2, -2)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Geser pusat:</strong> $(5 - 1,\; 3 - 2)$ $= (4, 1)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Putar $-90^\circ$:</strong> $(x, y) \to (y, -x)$, jadi $(4, 1) \to (1, -4)$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Kembalikan pusat:</strong> $(1 + 1,\; -4 + 2)$ $= (2, -2)$.</p>
+      <div class="sol-jadi">$D'(2, -2)$.</div>
     </div>
 
-    <h3 class="subsection-title">3. Rotasi pada Kurva dan Garis</h3>
-    <p>Untuk mencari bayangan kurva/garis oleh rotasi: cari hubungan invers (nyatakan $x, y$ dalam $x', y'$), lalu substitusikan ke persamaan asal.</p>
-
+    <h3 class="subsection-title">3. Rotasi pada Garis dan Kurva</h3>
+    <p>Nyatakan $x$ dan $y$ dalam $x'$ dan $y'$ (balik rotasinya), lalu substitusikan ke persamaan asal.</p>
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 14</div>
       <p style="margin:0;font-size:.9rem;">Tentukan persamaan bayangan garis $2x - 3y + 6 = 0$ jika dirotasikan sejauh $90°$ terhadap pusat $O(0, 0)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Invers rotasi $90°$: $x = y'$ dan $y = -x'$. Substitusikan:
-      $$2(y') - 3(-x') + 6 = 0 \;\Rightarrow\; 3x' + 2y' + 6 = 0$$
-      Jadi persamaan bayangan adalah $\boxed{3x + 2y + 6 = 0}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Balik rotasi $90^\circ$:</strong> dari $x' = -y$, $y' = x$ diperoleh $x = y'$ dan $y = -x'$.</p>
+      $$ \begin{align*} 2y' - 3(-x') + 6 &= 0 \\ 3x' + 2y' + 6 &= 0 \end{align*} $$
+      <div class="sol-jadi">bayangannya $3x + 2y + 6 = 0$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -638,18 +465,16 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan persamaan bayangan parabola $y = x^2 - 4$ jika dirotasikan sejauh $-90°$ terhadap pusat $A(2, 1)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Matriks rotasi $-90°$ terhadap $(2,1)$: invers memberikan $x = -(y'-1)+2 = -y'+3$ dan $y = (x'-2)+1 = x'-1$.<br>
-      Substitusikan ke $y = x^2 - 4$:
-      $$(x'-1) = (-y'+3)^2 - 4 = y'^2 - 6y' + 9 - 4 \;\Rightarrow\; x' = y'^2 - 6y' + 6$$
-      Jadi $\boxed{x = y^2 - 6y + 6}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Rotasi $-90^\circ$ terhadap $A(2, 1)$:</strong> $x' - 2 = y - 1$ dan $y' - 1 = -(x - 2)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Nyatakan titik asal:</strong> $x = 3 - y'$ dan $y = x' - 1$.</p>
+      $$ \begin{align*} x' - 1 &= (3 - y')^2 - 4 \\ x' &= y'^2 - 6y' + 6 \end{align*} $$
+      <div class="sol-jadi">bayangannya $x = y^2 - 6y + 6$.</div>
     </div>
 
     <h3 class="subsection-title">4. Komposisi Rotasi</h3>
     <div class="box box-rumus">
-      <div class="box-label">Teorema Komposisi Rotasi (Pusat Sama)</div>
-      <div class="math-block">$$R[P,\,\alpha] \circ R[P,\,\beta] = R[P,\,\alpha+\beta]$$</div>
-      <p style="margin:.3rem 0 0;font-size:.85rem;font-style:italic;">Berlaku hanya jika kedua rotasi memiliki titik pusat $P$ yang sama.</p>
+      <div class="box-label">Dua Rotasi dengan Pusat Sama</div>
+      $$ \begin{gather*} R[P, \alpha] \text{ lalu } R[P, \beta] \\ = R[P, \alpha + \beta] \end{gather*} $$
     </div>
 
     <div class="box box-contoh">
@@ -657,10 +482,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Titik $A(5, -2)$ dirotasikan sejauh $35°$ terhadap $O(0, 0)$, kemudian $55°$ terhadap pusat yang sama. Tentukan koordinat bayangan akhir.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Sudut total: $\theta = 35° + 55° = 90°$. Gunakan matriks $R_{90°} = \begin{bmatrix}0&-1\\1&0\end{bmatrix}$:
-      $$\begin{bmatrix} x'' \\ y'' \end{bmatrix} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 5 \\ -2 \end{bmatrix} = \begin{bmatrix} 2 \\ 5 \end{bmatrix}$$
-      Jadi $\boxed{A''(2, 5)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Jumlahkan sudut</strong> (pusat sama): $35^\circ + 55^\circ$ $= 90^\circ$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Putar $90^\circ$:</strong> $(5, -2) \to (2, 5)$.</p>
+      <div class="sol-jadi">$A''(2, 5)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -668,10 +492,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Titik $B(4, 1)$ dirotasikan sejauh $120°$ terhadap pusat $P(1, 1)$, lalu $-30°$ terhadap pusat $P$. Tentukan bayangan akhirnya.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Sudut total: $\theta = 120° + (-30°) = 90°$.
-      $$\begin{bmatrix} x'' \\ y'' \end{bmatrix} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 4-1 \\ 1-1 \end{bmatrix} + \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 0 \\ 3 \end{bmatrix} + \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 4 \end{bmatrix}$$
-      Jadi $\boxed{B''(1, 4)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Jumlahkan sudut:</strong> $120^\circ + (-30^\circ)$ $= 90^\circ$ terhadap $P(1, 1)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Geser, putar $90^\circ$, kembalikan:</strong> $(3, 0) \to (0, 3) \to (1, 4)$.</p>
+      <div class="sol-jadi">$B''(1, 4)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -679,16 +502,14 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan persamaan bayangan garis $g: x + y - 2 = 0$ jika dirotasikan sejauh $90°$ terhadap $O(0, 0)$, kemudian $90°$ terhadap pusat $P(1, 1)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>Rotasi $90°$ terhadap $O$:</strong> invers: $x = y'$, $y = -x'$. Substitusikan ke $g$:
-      $$y' + (-x') - 2 = 0 \;\Rightarrow\; -x' + y' - 2 = 0 \;\Rightarrow\; g': x - y + 2 = 0$$
-      <strong>Rotasi $90°$ terhadap $P(1,1)$:</strong> invers rotasi $90°$ terhadap $(1,1)$: $x' = y''$, $y' = -x'' + 2$. Substitusikan ke $g'$:
-      $$y'' - (-x'' + 2) + 2 = 0 \;\Rightarrow\; x'' + y'' = 0$$
-      Jadi persamaan bayangan akhir adalah $\boxed{x + y = 0}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Rotasi $90^\circ$ terhadap $O$:</strong> $x = y'$, $y = -x'$, sehingga $g': x - y + 2 = 0$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Rotasi $90^\circ$ terhadap $P(1, 1)$:</strong> $x'' - 1 = -(y' - 1)$ dan $y'' - 1 = x' - 1$, jadi $x' = y''$ dan $y' = 2 - x''$.</p>
+      $$ \begin{align*} y'' - (2 - x'') + 2 &= 0 \\ x'' + y'' &= 0 \end{align*} $$
+      <div class="sol-jadi">bayangan akhirnya $x + y = 0$.</div>
     </div>
 
     <div class="box box-latihan">
-      <div class="box-label">Soal Latihan — Bagian C</div>
+      <div class="box-label">Soal Latihan C</div>
       <ol class="soal-list">
         <li>Tentukan bayangan titik $A(3\sqrt{3}, -1)$ jika dirotasikan sejauh $120°$ terhadap pusat $O(0, 0)$.</li>
         <li>Tentukan bayangan titik $C(4, -2)$ jika dirotasikan sejauh $-90°$ terhadap pusat $P(2, 1)$.</li>
@@ -703,16 +524,11 @@ window.MathJax = {
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════
-       D. REFLEKSI
-  ══════════════════════════════════════════════════════════ -->
+  <!-- ═══ D. REFLEKSI (PENCERMINAN) ═══ -->
   <section class="section" id="bagian-d">
     <h2 class="section-title"><span class="section-badge">D</span>Refleksi (Pencerminan)</h2>
-
     <h3 class="subsection-title">1. Konsep Refleksi</h3>
-    <p>Bayangan Anda di cermin memiliki bentuk yang identik, namun dengan orientasi kiri dan kanan yang tertukar. Dalam geometri, fenomena ini disebut <strong>refleksi</strong> (pencerminan).</p>
-
-    <!-- Ilustrasi refleksi terhadap y=x, presisi -->
+    <p>Bayangan di cermin berbentuk sama, tetapi kiri dan kanannya tertukar. <strong>Refleksi</strong> (pencerminan) memindahkan setiap titik ke sisi seberang garis cermin dengan jarak yang sama.</p>
     <div class="grafik-wrap">
       <svg viewBox="0 0 260 220" width="260" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -758,35 +574,27 @@ window.MathJax = {
         <text x="118" y="88" font-size="7.5" fill="#e53e3e">M(2,2)</text>
       </svg>
     </div>
-
-    <h3 class="subsection-title">2. Rumus Refleksi dan Matriks Refleksi</h3>
-
+    <h3 class="subsection-title">2. Rumus Refleksi</h3>
     <div class="table-wrap">
-      <table class="reflek-table">
-        <thead><tr><th>Garis Cermin</th><th>Rumus $x'$</th><th>Rumus $y'$</th><th>Matriks Transformasi</th></tr></thead>
+      <table class="ringkasan-table">
+        <thead><tr><th>Cermin</th><th>$x'$</th><th>$y'$</th></tr></thead>
         <tbody>
-          <tr><td>Sumbu-$X$ ($y=0$)</td><td>$x$</td><td>$-y$</td><td>$\begin{bmatrix}1&0\\0&-1\end{bmatrix}$</td></tr>
-          <tr><td>Sumbu-$Y$ ($x=0$)</td><td>$-x$</td><td>$y$</td><td>$\begin{bmatrix}-1&0\\0&1\end{bmatrix}$</td></tr>
-          <tr><td>Garis $x = a$</td><td>$2a-x$</td><td>$y$</td><td>$\begin{bmatrix}-1&0\\0&1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}+\begin{bmatrix}2a\\0\end{bmatrix}$</td></tr>
-          <tr><td>Garis $y = b$</td><td>$x$</td><td>$2b-y$</td><td>$\begin{bmatrix}1&0\\0&-1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}+\begin{bmatrix}0\\2b\end{bmatrix}$</td></tr>
-          <tr><td>Garis $y = x$</td><td>$y$</td><td>$x$</td><td>$\begin{bmatrix}0&1\\1&0\end{bmatrix}$</td></tr>
-          <tr><td>Garis $y = -x$</td><td>$-y$</td><td>$-x$</td><td>$\begin{bmatrix}0&-1\\-1&0\end{bmatrix}$</td></tr>
-          <tr><td>Garis $y = x + c$</td><td>$y-c$</td><td>$x+c$</td><td>(gunakan substitusi)</td></tr>
-          <tr><td>Garis $y = -x + c$</td><td>$-y+c$</td><td>$-x+c$</td><td>(gunakan substitusi)</td></tr>
-          <tr><td>Titik $O(0,0)$</td><td>$-x$</td><td>$-y$</td><td>$\begin{bmatrix}-1&0\\0&-1\end{bmatrix}$</td></tr>
-          <tr><td>Titik $(a,b)$</td><td>$2a-x$</td><td>$2b-y$</td><td>$\begin{bmatrix}-1&0\\0&-1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}+\begin{bmatrix}2a\\2b\end{bmatrix}$</td></tr>
+          <tr><td>Sumbu-$X$</td><td>$x$</td><td>$-y$</td></tr>
+          <tr><td>Sumbu-$Y$</td><td>$-x$</td><td>$y$</td></tr>
+          <tr><td>Garis $x = a$</td><td>$2a - x$</td><td>$y$</td></tr>
+          <tr><td>Garis $y = b$</td><td>$x$</td><td>$2b - y$</td></tr>
+          <tr><td>Garis $y = x$</td><td>$y$</td><td>$x$</td></tr>
+          <tr><td>Garis $y = -x$</td><td>$-y$</td><td>$-x$</td></tr>
+          <tr><td>Garis $y = x + c$</td><td>$y - c$</td><td>$x + c$</td></tr>
+          <tr><td>Garis $y = -x + c$</td><td>$-y + c$</td><td>$-x + c$</td></tr>
+          <tr><td>Titik $O$</td><td>$-x$</td><td>$-y$</td></tr>
+          <tr><td>Titik $(a, b)$</td><td>$2a - x$</td><td>$2b - y$</td></tr>
         </tbody>
       </table>
     </div>
-
     <div class="box box-catatan">
-      <div class="box-label">⚠ Sifat-Sifat Refleksi</div>
-      <ul style="margin:.3rem 0 0;padding-left:1.3rem;line-height:2.1;">
-        <li><strong>Isometri Rigid:</strong> Refleksi mempertahankan jarak, besar sudut, dan luas bangun (kongruen).</li>
-        <li><strong>Titik Invarian:</strong> Titik-titik yang terletak pada garis cermin tidak berpindah ($P = P'$).</li>
-        <li><strong>Perubahan Orientasi:</strong> Refleksi <strong>membalik orientasi</strong> bangun; bayangan tidak dapat ditumpuk dengan aslinya melalui rotasi atau translasi.</li>
-        <li><strong>Involusi:</strong> Setiap matriks refleksi memenuhi $M^{-1} = M$ (refleksi dua kali menghasilkan identitas).</li>
-      </ul>
+      <div class="box-label">💡 Sifat Refleksi</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Isometri: jarak, sudut, dan luas tetap.</li><li>Titik pada garis cermin tidak berpindah.</li><li>Arah hadap bangun terbalik.</li><li><strong>Involusi:</strong> mencerminkan dua kali terhadap cermin yang sama mengembalikan titik semula, jadi titik asal dicari dengan mencerminkan bayangannya.</li></ul>
     </div>
 
     <div class="box box-contoh">
@@ -794,13 +602,12 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $P(-3, 5)$ oleh pencerminan terhadap: (a) Sumbu-$X$, (b) Sumbu-$Y$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a) Refleksi terhadap Sumbu-$X$</strong> $\left(M_X = \begin{bmatrix}1&0\\0&-1\end{bmatrix}\right)$:
-      $$\begin{bmatrix}x'\\y'\end{bmatrix} = \begin{bmatrix}1&0\\0&-1\end{bmatrix}\begin{bmatrix}-3\\5\end{bmatrix} = \begin{bmatrix}-3\\-5\end{bmatrix}$$
-      Jadi $\boxed{P'(-3,-5)}$.<br><br>
-      <strong>(b) Refleksi terhadap Sumbu-$Y$</strong> $\left(M_Y = \begin{bmatrix}-1&0\\0&1\end{bmatrix}\right)$:
-      $$\begin{bmatrix}x'\\y'\end{bmatrix} = \begin{bmatrix}-1&0\\0&1\end{bmatrix}\begin{bmatrix}-3\\5\end{bmatrix} = \begin{bmatrix}3\\5\end{bmatrix}$$
-      Jadi $\boxed{P'(3,5)}$.
+      <div class="sol-part"><span class="sol-tag">a</span><span>Sumbu-$X$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Aturan</strong> $(x, y) \to (x, -y)$.</p>
+      <div class="sol-jadi">$P'(-3, -5)$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Sumbu-$Y$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Aturan</strong> $(x, y) \to (-x, y)$.</p>
+      <div class="sol-jadi">$P'(3, 5)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -808,10 +615,8 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui bayangan sebuah titik setelah dicerminkan terhadap garis $y = x$ adalah $A'(7, -3)$. Tentukan koordinat titik asal $A$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $M_{y=x}$ bersifat involusi: cukup terapkan matriks yang sama pada bayangan.
-      $$\begin{bmatrix}x\\y\end{bmatrix} = \begin{bmatrix}0&1\\1&0\end{bmatrix}\begin{bmatrix}7\\-3\end{bmatrix} = \begin{bmatrix}-3\\7\end{bmatrix}$$
-      Jadi titik asal adalah $\boxed{A(-3, 7)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Refleksi bersifat involusi:</strong> cerminkan lagi bayangannya terhadap $y = x$: $(7, -3) \to (-3, 7)$.</p>
+      <div class="sol-jadi">titik asal $A(-3, 7)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -819,22 +624,20 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui titik $K(n+2, 3n-1)$ direfleksikan terhadap garis $y = -x$ menghasilkan $K'(-5, -4)$. Tentukan nilai $n$ dan koordinat titik $K$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{bmatrix}-5\\-4\end{bmatrix} = \begin{bmatrix}0&-1\\-1&0\end{bmatrix}\begin{bmatrix}n+2\\3n-1\end{bmatrix} = \begin{bmatrix}-(3n-1)\\-(n+2)\end{bmatrix} = \begin{bmatrix}-3n+1\\-n-2\end{bmatrix}$$
-      Dari kesamaan: $-3n+1=-5 \Rightarrow n=2$ dan $-n-2=-4 \Rightarrow n=2$ ✓<br>
-      Substitusi: $K(4, 5)$. Jadi $\boxed{n=2}$ dan $\boxed{K(4,5)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Aturan $y = -x$:</strong> $(x, y) \to (-y, -x)$, jadi $K\' = (-(3n - 1),\; -(n + 2))$.</p>
+      $$ \begin{align*} -3n + 1 &= -5 \;\Rightarrow\; n = 2 \\ -n - 2 &= -4 \;\Rightarrow\; n = 2 \;\checkmark \end{align*} $$
+      <div class="sol-jadi">$n = 2$ dan $K(4, 5)$.</div>
     </div>
 
-    <h3 class="subsection-title">3. Refleksi pada Kurva dan Garis</h3>
-
+    <h3 class="subsection-title">3. Refleksi pada Garis dan Kurva</h3>
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 22</div>
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan garis $3x - 2y + 6 = 0$ oleh pencerminan terhadap garis $y = x$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Dari $M_{y=x}$: $x' = y$ dan $y' = x$, sehingga $x = y'$ dan $y = x'$. Substitusikan:
-      $$3(y') - 2(x') + 6 = 0 \;\Rightarrow\; \boxed{2x - 3y - 6 = 0}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Aturan $y = x$:</strong> $x' = y$, $y' = x$, jadi $x = y'$ dan $y = x'$.</p>
+      $$ \begin{align*} 3y' - 2x' + 6 &= 0 \end{align*} $$
+      <div class="sol-jadi">bayangannya $2x - 3y - 6 = 0$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -842,24 +645,15 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui bayangan sebuah garis setelah dicerminkan terhadap garis $y = -x$ adalah $4x - y + 8 = 0$. Tentukan persamaan garis asal.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $M_{y=-x}$ adalah involusi: terapkan matriks yang sama pada bayangan. Dari $M_{y=-x}$: $x = -y'$ dan $y = -x'$. Substitusikan ke persamaan bayangan $4x' - y' + 8 = 0$:
-      $$4(-y) - (-x) + 8 = 0 \;\Rightarrow\; \boxed{x - 4y + 8 = 0}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Refleksi involusi:</strong> cerminkan bayangannya kembali terhadap $y = -x$: $x = -y\'$, $y = -x\'$.</p>
+      $$ \begin{align*} 4(-y) - (-x) + 8 &= 0 \end{align*} $$
+      <div class="sol-jadi">garis asal $x - 4y + 8 = 0$.</div>
     </div>
 
     <h3 class="subsection-title">4. Komposisi Refleksi</h3>
-    <div class="box box-rumus">
-      <div class="box-label">Matriks Komposisi Refleksi</div>
-      <div class="math-block">$$M = M_2 \cdot M_1$$</div>
-      <p style="margin:.3rem 0 0;font-size:.85rem;">dibaca dari <strong>kanan ke kiri</strong> — $M_1$ diterapkan lebih dahulu, baru $M_2$.</p>
-    </div>
-
     <div class="box box-catatan">
-      <div class="box-label">⚠ Catatan Penting — Komposisi</div>
-      <ul style="margin:.3rem 0 0;padding-left:1.3rem;line-height:2.1;">
-        <li><strong>Non-Komutatif:</strong> $M_2 \cdot M_1 \neq M_1 \cdot M_2$; urutan pencerminan mempengaruhi hasil.</li>
-        <li><strong>Involusi:</strong> Untuk mencari titik asal, cukup terapkan matriks yang sama pada bayangannya ($M^{-1}=M$).</li>
-      </ul>
+      <div class="box-label">💡 Dua Pencerminan Berurutan</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Dua cermin <strong>sejajar</strong> berjarak $d$: setara translasi sejauh $2d$ tegak lurus cermin.</li><li>Dua cermin <strong>berpotongan</strong> dengan sudut $\theta$: setara rotasi $2\theta$ terhadap titik potongnya.</li><li>Urutan berpengaruh: umumnya tidak komutatif.</li></ul>
     </div>
 
     <div class="box box-contoh">
@@ -867,10 +661,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $A(3, -2)$ oleh komposisi pencerminan terhadap sumbu-$X$ dilanjutkan sumbu-$Y$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$M = M_Y \cdot M_X = \begin{bmatrix}-1&0\\0&1\end{bmatrix}\begin{bmatrix}1&0\\0&-1\end{bmatrix} = \begin{bmatrix}-1&0\\0&-1\end{bmatrix}$$
-      $$\begin{bmatrix}x'\\y'\end{bmatrix} = \begin{bmatrix}-1&0\\0&-1\end{bmatrix}\begin{bmatrix}3\\-2\end{bmatrix} = \begin{bmatrix}-3\\2\end{bmatrix}$$
-      Jadi $\boxed{A'(-3, 2)}$. (Ekuivalen dengan refleksi terhadap titik pusat $O$.)
+      <p class="sol-step"><span class="sol-no">1</span><strong>Terapkan berurutan:</strong> $(3, -2) \xrightarrow{X} (3, 2) \xrightarrow{Y} (-3, 2)$.</p>
+      <p class="sol-step">Dua cermin sumbu yang saling tegak lurus setara dengan pencerminan terhadap titik $O$.</p>
+      <div class="sol-jadi">$A'(-3, 2)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -878,10 +671,10 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan garis $2x + y - 5 = 0$ oleh komposisi pencerminan terhadap garis $y = x$ dilanjutkan sumbu-$X$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$M = M_X \cdot M_{y=x} = \begin{bmatrix}1&0\\0&-1\end{bmatrix}\begin{bmatrix}0&1\\1&0\end{bmatrix} = \begin{bmatrix}0&1\\-1&0\end{bmatrix}$$
-      Dari matriks: $x' = y$, $y' = -x$, sehingga $x = -y'$ dan $y = x'$. Substitusikan:
-      $$2(-y') + (x') - 5 = 0 \;\Rightarrow\; \boxed{x - 2y - 5 = 0}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Aturan gabungan:</strong> $(x, y) \xrightarrow{y = x} (y, x) \xrightarrow{X} (y, -x)$, jadi $x' = y$, $y' = -x$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Nyatakan titik asal:</strong> $x = -y'$, $y = x'$.</p>
+      $$ \begin{align*} 2(-y') + x' - 5 &= 0 \end{align*} $$
+      <div class="sol-jadi">bayangannya $x - 2y - 5 = 0$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -889,10 +682,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Titik $B(a, 2a-1)$ dicerminkan terhadap $y = -x$ kemudian terhadap sumbu-$Y$, menghasilkan $B''(5, -3)$. Tentukan $a$ dan koordinat $B$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$M = M_Y \cdot M_{y=-x} = \begin{bmatrix}-1&0\\0&1\end{bmatrix}\begin{bmatrix}0&-1\\-1&0\end{bmatrix} = \begin{bmatrix}0&1\\-1&0\end{bmatrix}$$
-      $$\begin{bmatrix}5\\-3\end{bmatrix} = \begin{bmatrix}0&1\\-1&0\end{bmatrix}\begin{bmatrix}a\\2a-1\end{bmatrix} = \begin{bmatrix}2a-1\\-a\end{bmatrix}$$
-      Dari kesamaan: $2a-1=5 \Rightarrow a=3$ dan $-a=-3$ ✓. Jadi $\boxed{a=3}$ dan $\boxed{B(3,5)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Aturan gabungan:</strong> $(x, y) \xrightarrow{y = -x} (-y, -x) \xrightarrow{Y} (y, -x)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Terapkan pada $B(a, 2a - 1)$:</strong> $(2a - 1,\; -a) = (5, -3)$.</p>
+      <div class="sol-jadi">$a = 3$ dan $B(3, 5)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -900,38 +692,41 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan kurva $y = 2x^2 - x + 1$ oleh komposisi pencerminan terhadap garis $y = 3$ dilanjutkan $x = -1$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>Refleksi terhadap $y = 3$:</strong> $x_1 = x$, $y_1 = 6 - y$. Substitusikan ke kurva asal ($y = y_1 = 6 - y_1'$... lebih mudah: nyatakan $y = y_1$ dalam $y'_1$): gunakan $y = 6 - y_1$ → $6 - y_1 = 2x^2 - x + 1 \Rightarrow y_1 = -2x^2 + x + 5$.<br><br>
-      <strong>Refleksi terhadap $x = -1$:</strong> $x'' = -2 - x_1$, $y'' = y_1$. Maka $x_1 = -2 - x''$. Substitusikan:
-      $$y'' = -2(-2-x'')^2 + (-2-x'') + 5 = -2(x''+2)^2 - x'' - 2 + 5 = -2x''^2 - 9x'' - 5$$
-      Jadi bayangan: $\boxed{y = -2x^2 - 9x - 5}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cermin $y = 3$:</strong> $(x, y) \to (x, 6 - y)$, sehingga kurva menjadi $6 - y = 2x^2 - x + 1$, yaitu $y = -2x^2 + x + 5$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cermin $x = -1$:</strong> $(x, y) \to (-2 - x, y)$; ganti $x$ dengan $-2 - x$:</p>
+      $$ \begin{align*} y &= -2(-2 - x)^2 + (-2 - x) + 5 \\ &= -2x^2 - 9x - 5 \end{align*} $$
+      <div class="sol-jadi">bayangannya $y = -2x^2 - 9x - 5$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Titik $C(p, q)$ dicerminkan terhadap garis $y = 2$ menghasilkan $C\'$, kemudian $C\'$ dicerminkan terhadap garis $x = 1$ menghasilkan $C\'\'(4, -1)$. Tentukan koordinat titik $C$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Mundur dari $C''$:</strong> refleksi bersifat involusi, jadi cerminkan $C\'\'(4, -1)$ terhadap $x = 1$: $C\'(2 - 4,\; -1)$ $= (-2, -1)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Cerminkan $C'$ terhadap $y = 2$:</strong> $(-2,\; 4 - (-1))$ $= (-2, 5)$.</p>
+      <div class="sol-jadi">$C(-2, 5)$.</div>
     </div>
 
     <div class="box box-latihan">
-      <div class="box-label">Soal Latihan — Bagian D</div>
+      <div class="box-label">Soal Latihan D</div>
       <ol class="soal-list">
-        <li>Tentukan bayangan titik $Q(4, -7)$ oleh refleksi terhadap:<br>(a) garis $x = 2$<br>(b) garis $y = 3$<br>(c) garis $y = x$<br>(d) garis $y = -x$</li>
-        <li>Diketahui bayangan titik $A(p, q)$ setelah dicerminkan terhadap garis $y = x$ adalah $A'(5, -2)$. Tentukan nilai $p$ dan $q$.</li>
-        <li>Titik $C(2m-1, m+3)$ dicerminkan terhadap sumbu-$Y$ menghasilkan $C'(-5, 6)$. Tentukan nilai $m$ dan koordinat $C$.</li>
-        <li>Tentukan bayangan garis $4x - 3y + 12 = 0$ oleh pencerminan terhadap garis $y = x$.</li>
-        <li>Tentukan bayangan lingkaran $x^2 + y^2 - 6x + 4y - 3 = 0$ oleh refleksi terhadap sumbu-$X$.</li>
-        <li>Tentukan bayangan titik $P(2, -1)$ oleh komposisi: refleksi terhadap garis $y = -x$ dilanjutkan refleksi terhadap sumbu-$Y$.</li>
-        <li>Tentukan matriks komposisi dari: refleksi terhadap $y = x$, dilanjutkan refleksi terhadap $y = -x$. Apa transformasi tunggal yang ekuivalen?</li>
-        <li>Tentukan bayangan parabola $y = x^2 - 2x + 3$ oleh komposisi: refleksi terhadap sumbu-$X$ dilanjutkan refleksi terhadap garis $y = 1$.</li>
+        <li>Titik $P(6, -4)$ direfleksikan terhadap garis $y = -x$. Tentukan koordinat bayangannya.</li>
+        <li>Bayangan sebuah garis setelah dicerminkan terhadap $y = x$ adalah $3x - y + 6 = 0$. Tentukan persamaan garis asal.</li>
+        <li>Tentukan bayangan kurva $y = x^2 - 6x + 5$ oleh pencerminan terhadap sumbu-$Y$, lalu tentukan titik puncaknya.</li>
+        <li>Titik $D(-2, 5)$ dicerminkan terhadap sumbu-$X$ dilanjutkan terhadap garis $y = x$. Tentukan $D''$ dan transformasi tunggal yang setara.</li>
+        <li>Tentukan bayangan kurva $y = x^2 + 2x - 3$ oleh pencerminan terhadap $y = 1$ dilanjutkan terhadap $x = 2$.</li>
+        <li>Titik $E(m, 3m + 2)$ dicerminkan terhadap garis $y = x$, dilanjutkan terhadap sumbu-$Y$, menghasilkan $E\'\'(-8, 2)$. Tentukan nilai $m$ dan koordinat $E$.</li>
+        <li><strong>HOTS.</strong> Titik $C(p, q)$ dicerminkan terhadap $y = -1$ menghasilkan $C'$, lalu $C'$ dicerminkan terhadap $x = 3$ menghasilkan $C''(5, 4)$. Tentukan $C$ dengan sifat involusi.</li>
       </ol>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════
-       E. DILATASI
-  ══════════════════════════════════════════════════════════ -->
+  <!-- ═══ E. DILATASI (PERKALIAN UKURAN) ═══ -->
   <section class="section" id="bagian-e">
     <h2 class="section-title"><span class="section-badge">E</span>Dilatasi (Perkalian Ukuran)</h2>
-
     <h3 class="subsection-title">1. Konsep Dilatasi</h3>
-    <p>Bayangkan memotret sebuah objek dengan lensa zoom. Semakin besar faktor zoom, semakin besar objek terlihat — tetapi bentuk dan proporsinya tetap sama. Inilah konsep <strong>dilatasi</strong>: transformasi yang mengubah ukuran objek secara proporsional terhadap suatu titik pusat.</p>
-
-    <!-- Ilustrasi dilatasi presisi -->
+    <p>Saat memperbesar foto, semua bagian membesar dengan rasio yang sama terhadap satu titik. <strong>Dilatasi</strong> mengubah ukuran bangun dengan faktor skala $k$ terhadap <strong>pusat dilatasi</strong>.</p>
     <div class="grafik-wrap">
       <svg viewBox="0 0 300 240" width="300" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -984,39 +779,34 @@ window.MathJax = {
         <text x="200" y="70" font-size="9" fill="#2563eb" font-weight="600">k = 2</text>
       </svg>
     </div>
-
     <h3 class="subsection-title">2. Rumus Dilatasi</h3>
     <div class="box box-rumus">
-      <div class="box-label">Dilatasi Pusat $O(0,0)$ — Matriks</div>
-      <div class="math-block">$$\begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} k & 0 \\ 0 & k \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = k\begin{bmatrix} x \\ y \end{bmatrix}$$</div>
+      <div class="box-label">Pusat $O(0, 0)$</div>
+      $$x' = kx, \qquad y' = ky$$
     </div>
+
     <div class="box box-rumus">
-      <div class="box-label">Dilatasi Pusat $P(m,n)$ — Koordinat dan Matriks</div>
-      <div class="math-block">$$x' = k(x-m)+m, \quad y' = k(y-n)+n$$</div>
-      <div class="math-block">$$\begin{bmatrix} x' \\ y' \end{bmatrix} = k\begin{bmatrix} x-m \\ y-n \end{bmatrix} + \begin{bmatrix} m \\ n \end{bmatrix}$$</div>
+      <div class="box-label">Pusat $A(m, n)$</div>
+      $$ \begin{gather*} x' = k(x - m) + m \\ y' = k(y - n) + n \end{gather*} $$
     </div>
 
     <div class="box box-catatan">
-      <div class="box-label">⚠ Sifat-Sifat Dilatasi</div>
-      <ul style="margin:.3rem 0 0;padding-left:1.3rem;line-height:2.2;">
-        <li><strong>Sifat penting:</strong> Luas bayangan $= k^2 \times$ luas asal; panjang sisi berubah $|k|$ kali.</li>
-        <li>$k > 1$: bayangan <strong>lebih besar</strong>, sisi yang sama dengan pusat.</li>
-        <li>$0 &lt; k &lt; 1$: bayangan <strong>lebih kecil</strong>, sisi yang sama dengan pusat.</li>
-        <li>$k &lt; 0$: bayangan berada di <strong>sisi berlawanan</strong> pusat.</li>
-        <li><strong>Non-Isometri:</strong> $|k| \neq 1$ → sebangun tapi tidak kongruen.</li>
-        <li><strong>Titik Invarian:</strong> Hanya titik pusat dilatasi yang tidak berpindah.</li>
-      </ul>
+      <div class="box-label">💡 Sifat Dilatasi</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Panjang menjadi $|k|$ kali dan luas menjadi $k^2$ kali.</li><li>$|k| > 1$ memperbesar, $0 &lt; |k| &lt; 1$ memperkecil.</li><li>$k &lt; 0$: bayangan di sisi berlawanan pusat (setara dilatasi $|k|$ lalu rotasi $180^\circ$).</li><li>Satu-satunya titik tetap adalah pusat dilatasi.</li></ul>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 29</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan bayangan menggunakan matriks dilatasi pusat $O(0,0)$:<br>
+      <p style="margin:0;font-size:.9rem;">Tentukan bayangan oleh dilatasi pusat $O(0,0)$:<br>
       (a) Titik $C(3, -4)$ dengan $k = 3$. &emsp; (b) Titik $E(-2, 5)$ dengan $k = -3$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> $\begin{bmatrix}x'\\y'\end{bmatrix} = \begin{bmatrix}3&0\\0&3\end{bmatrix}\begin{bmatrix}3\\-4\end{bmatrix} = \begin{bmatrix}9\\-12\end{bmatrix}$ → $\boxed{C'(9,-12)}$<br><br>
-      <strong>(b)</strong> $\begin{bmatrix}x'\\y'\end{bmatrix} = \begin{bmatrix}-3&0\\0&-3\end{bmatrix}\begin{bmatrix}-2\\5\end{bmatrix} = \begin{bmatrix}6\\-15\end{bmatrix}$ → $\boxed{E'(6,-15)}$ (sisi berlawanan dari O karena $k&lt;0$).
+      <div class="sol-part"><span class="sol-tag">a</span><span>$k = 3$</span></div>
+      $$(3 \cdot 3,\; 3 \cdot (-4)) = (9, -12)$$
+      <div class="sol-jadi">$C'(9, -12)$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$k = -3$</span></div>
+      $$(-3 \cdot (-2),\; -3 \cdot 5) = (6, -15)$$
+      <div class="sol-jadi">$E'(6, -15)$, di sisi berlawanan dari $O$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1024,9 +814,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Titik $D(5, 2)$ didilatasi terhadap pusat $A(1, -1)$ dengan faktor skala $-2$. Tentukan koordinat bayangan $D'$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{bmatrix}x'\\y'\end{bmatrix} = -2\begin{bmatrix}5-1\\2-(-1)\end{bmatrix} + \begin{bmatrix}1\\-1\end{bmatrix} = -2\begin{bmatrix}4\\3\end{bmatrix} + \begin{bmatrix}1\\-1\end{bmatrix} = \begin{bmatrix}-8\\-6\end{bmatrix} + \begin{bmatrix}1\\-1\end{bmatrix} = \begin{bmatrix}-7\\-7\end{bmatrix}$$
-      Jadi $\boxed{D'(-7,-7)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan $x\' = k(x - m) + m$:</strong></p>
+      $$ \begin{align*} x' &= -2(5 - 1) + 1 = -7 \\ y' &= -2(2 + 1) - 1 = -7 \end{align*} $$
+      <div class="sol-jadi">$D'(-7, -7)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1034,55 +824,59 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Segitiga $PQR$ dengan $P(2,2)$, $Q(6,2)$, $R(4,6)$ didilatasi terhadap pusat $A(2,2)$ dengan $k = \tfrac{1}{2}$. Tentukan koordinat bayangan dan bandingkan luas.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{align*} P(2,2) &\to \tfrac{1}{2}\begin{bmatrix}0\\0\end{bmatrix}+\begin{bmatrix}2\\2\end{bmatrix} = P'(2,2) \quad\text{(pusat tidak bergerak)}\\ Q(6,2) &\to \tfrac{1}{2}\begin{bmatrix}4\\0\end{bmatrix}+\begin{bmatrix}2\\2\end{bmatrix} = Q'(4,2)\\ R(4,6) &\to \tfrac{1}{2}\begin{bmatrix}2\\4\end{bmatrix}+\begin{bmatrix}2\\2\end{bmatrix} = R'(3,4) \end{align*}$$
-      Luas $\triangle PQR = \tfrac{1}{2}(4)(4) = 8$. Luas $\triangle P'Q'R' = \left(\tfrac{1}{2}\right)^2 \times 8 = \boxed{2 \text{ satuan luas}}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Dilatasi tiap titik</strong> terhadap $A(2, 2)$ dengan $k = \tfrac{1}{2}$:</p>
+      <ul class="sol-cek">
+        <li>$P(2, 2) \to P'(2, 2)$ (pusat tetap)</li>
+        <li>$Q(6, 2) \to Q'(4, 2)$</li>
+        <li>$R(4, 6) \to R'(3, 4)$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan luas:</strong> luas asal $\tfrac{1}{2} \cdot 4 \cdot 4$ $= 8$, bayangan $\left(\tfrac{1}{2}\right)^2 \cdot 8$ $= 2$.</p>
+      <div class="sol-jadi">luas bayangan $2$ satuan luas, seperempat luas asal.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 32</div>
       <p style="margin:0;font-size:.9rem;">Dua dilatasi berurutan: $D_1$ pusat $O$, $k_1=2$; $D_2$ pusat $O$, $k_2=3$.<br>
-      (a) Tentukan matriks komposisi $(D_2\circ D_1)$ dan $(D_1\circ D_2)$. (b) Apakah komutatif? (c) Terapkan pada $P(1,-2)$.</p>
+      (a) Tentukan faktor skala $(D_2\circ D_1)$ dan $(D_1\circ D_2)$. (b) Apakah komutatif? (c) Terapkan pada $P(1,-2)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> $D_2\circ D_1 = \begin{bmatrix}3&0\\0&3\end{bmatrix}\begin{bmatrix}2&0\\0&2\end{bmatrix} = \begin{bmatrix}6&0\\0&6\end{bmatrix}$; $D_1\circ D_2 = \begin{bmatrix}6&0\\0&6\end{bmatrix}$ (sama).<br>
-      <strong>(b)</strong> Ya, komutatif. Matriks dilatasi berpusat $O$ selalu diagonal skalar; perkaliannya komutatif.<br>
-      <strong>(c)</strong> $P' = \begin{bmatrix}6&0\\0&6\end{bmatrix}\begin{bmatrix}1\\-2\end{bmatrix} = \begin{bmatrix}6\\-12\end{bmatrix}$ → $\boxed{P'(6,-12)}$. Rasio: $k_1\cdot k_2 = 6$ kali lebih jauh dari $O$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pusat sama:</strong> faktor skala digabung $k = 2 \cdot 3 = 6$, dalam urutan mana pun (komutatif).</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Terapkan pada $P(1, -2)$:</strong> $(6, -12)$.</p>
+      <div class="sol-jadi">$P'(6, -12)$; komposisinya setara dengan dilatasi $k = 6$.</div>
     </div>
 
-    <h3 class="subsection-title">3. Dilatasi pada Kurva dan Garis</h3>
-    <p>Metode: gunakan invers matriks dilatasi sehingga $x = \dfrac{x'}{k}$ dan $y = \dfrac{y'}{k}$, lalu substitusikan ke persamaan asal.</p>
-
+    <h3 class="subsection-title">3. Dilatasi pada Garis dan Kurva</h3>
+    <p>Untuk pusat $O$: $x = \dfrac{x'}{k}$ dan $y = \dfrac{y'}{k}$, lalu substitusikan ke persamaan asal.</p>
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 33</div>
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan garis $y = 3x - 1$ oleh dilatasi pusat $O(0,0)$ dan $k = 2$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $x = \dfrac{x'}{2}$, $y = \dfrac{y'}{2}$. Substitusikan: $\dfrac{y'}{2} = 3\cdot\dfrac{x'}{2} - 1 \Rightarrow y' = 3x' - 2$. Jadi $\boxed{y = 3x - 2}$ (gradien tetap; garis sejajar dengan aslinya).
+      <p class="sol-step"><span class="sol-no">1</span><strong>Nyatakan titik asal:</strong> $x = \tfrac{x'}{2}$, $y = \tfrac{y'}{2}$.</p>
+      $$ \begin{align*} \frac{y'}{2} &= 3 \cdot \frac{x'}{2} - 1 \\ y' &= 3x' - 2 \end{align*} $$
+      <div class="sol-jadi">bayangannya $y = 3x - 2$ (sejajar garis asal).</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 34</div>
-      <p style="margin:0;font-size:.9rem;">Lingkaran $x^2 + y^2 - 4x + 2y - 4 = 0$ didilatasi pusat $O(0,0)$, $k=2$. Tentukan persamaan, pusat, dan jari-jari bayangan.</p>
+      <p style="margin:0;font-size:.9rem;">Lingkaran $x^2 + y^2 - 4x + 2y - 4$ $= 0$ didilatasi pusat $O(0,0)$, $k=2$. Tentukan persamaan, pusat, dan jari-jari bayangan.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $x = \dfrac{x'}{2}$, $y = \dfrac{y'}{2}$. Substitusikan dan kalikan 4:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Substitusi</strong> $x = \tfrac{x'}{2}$, $y = \tfrac{y'}{2}$, lalu kalikan $4$:</p>
       $$x'^2 + y'^2 - 8x' + 4y' - 16 = 0$$
-      Bayangan: $\boxed{x^2 + y^2 - 8x + 4y - 16 = 0}$, pusat $(4,-2)$, $r = \sqrt{16+4+16} = 6$.
+      <p class="sol-step"><span class="sol-no">2</span><strong>Pusat dan jari-jari:</strong> pusat $(4, -2)$, $r = \sqrt{16 + 4 + 16}$ $= 6$ (semula $3$).</p>
+      <div class="sol-jadi">bayangannya $x^2 + y^2 - 8x + 4y - 16$ $= 0$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 35</div>
-      <p style="margin:0;font-size:.9rem;">Elips $\dfrac{x^2}{9} + \dfrac{y^2}{4} = 1$ didilatasi pusat $O(0,0)$, $k=3$. Tentukan persamaan elips bayangan.</p>
+      <p style="margin:0;font-size:.9rem;">Elips $\dfrac{x^2}{9}$ $+ \dfrac{y^2}{4}$ $= 1$ didilatasi pusat $O(0,0)$, $k=3$. Tentukan persamaan elips bayangan.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $x = \dfrac{x'}{3}$, $y = \dfrac{y'}{3}$. Substitusikan:
-      $$\frac{(x'/3)^2}{9} + \frac{(y'/3)^2}{4} = 1 \;\Rightarrow\; \boxed{\frac{x^2}{81} + \frac{y^2}{36} = 1}$$
-      Sumbu panjang: $2a'=18$ (semula $6$); sumbu pendek: $2b'=12$ (semula $4$) — keduanya menjadi $3$ kali.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Substitusi</strong> $x = \tfrac{x'}{3}$, $y = \tfrac{y'}{3}$:</p>
+      $$\frac{x'^2}{81} + \frac{y'^2}{36} = 1$$
+      <p class="sol-step">Sumbu panjang $6 \to 18$ dan sumbu pendek $4 \to 12$; keduanya menjadi $3$ kali.</p>
+      <div class="sol-jadi">bayangannya $\dfrac{x^2}{81}$ $+ \dfrac{y^2}{36}$ $= 1$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1090,35 +884,25 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui bayangan sebuah garis setelah didilatasi pusat $O(0,0)$ dan $k=2$ adalah $3x-y+8=0$. Tentukan persamaan garis asal.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Substitusi $x' = 2x$, $y' = 2y$ ke bayangan:
-      $$3(2x) - (2y) + 8 = 0 \;\Rightarrow\; 6x - 2y + 8 = 0 \;\Rightarrow\; \boxed{3x - y + 4 = 0}$$
-      (Gradien tetap; garis asal dan bayangan selalu sejajar untuk dilatasi pusat $O$.)
+      <p class="sol-step"><span class="sol-no">1</span><strong>Substitusi</strong> $x' = 2x$, $y' = 2y$ ke persamaan bayangan:</p>
+      $$ \begin{align*} 6x - 2y + 8 &= 0 \end{align*} $$
+      <div class="sol-jadi">garis asal $3x - y + 4 = 0$.</div>
     </div>
 
     <h3 class="subsection-title">4. Komposisi Dilatasi</h3>
-    <div class="box box-rumus">
-      <div class="box-label">Matriks Komposisi Dilatasi</div>
-      <div class="math-block">$$D = D_2 \cdot D_1$$</div>
-    </div>
     <div class="box box-catatan">
-      <div class="box-label">⚠ Sifat Komposisi Dilatasi</div>
-      <ul style="margin:.3rem 0 0;padding-left:1.3rem;line-height:2.1;">
-        <li><strong>Pusat sama:</strong> $k = k_1 \cdot k_2$; bersifat <strong>komutatif</strong>.</li>
-        <li><strong>Pusat berbeda:</strong> faktor skala total sama, tetapi pusat hasilnya berbeda; <strong>tidak komutatif</strong>.</li>
-        <li><strong>Perubahan luas:</strong> $L'' = (k_1 \cdot k_2)^2 \cdot L$.</li>
-        <li>Jika $k_1 \cdot k_2 = 1$ dan pusat berbeda, hasilnya adalah <strong>translasi</strong>.</li>
-      </ul>
+      <div class="box-label">💡 Komposisi Dilatasi</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Pusat sama: $k = k_1 k_2$ dan komutatif.</li><li>Pusat berbeda: umumnya tidak komutatif.</li><li>Luas akhir $= (k_1 k_2)^2 \times$ luas asal.</li></ul>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 37</div>
-      <p style="margin:0;font-size:.9rem;">Titik $A(1,-2)$ didilatasi pusat $O$, $k_1=3$, kemudian pusat $O$, $k_2=-2$. Tentukan bayangan akhir menggunakan matriks komposisi.</p>
+      <p style="margin:0;font-size:.9rem;">Titik $A(1,-2)$ didilatasi pusat $O$, $k_1=3$, kemudian pusat $O$, $k_2=-2$. Tentukan bayangan akhir.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$D = D_2\cdot D_1 = \begin{bmatrix}-2&0\\0&-2\end{bmatrix}\begin{bmatrix}3&0\\0&3\end{bmatrix} = \begin{bmatrix}-6&0\\0&-6\end{bmatrix}$$
-      $$\begin{bmatrix}x''\\y''\end{bmatrix} = \begin{bmatrix}-6&0\\0&-6\end{bmatrix}\begin{bmatrix}1\\-2\end{bmatrix} = \begin{bmatrix}-6\\12\end{bmatrix} \;\Rightarrow\; \boxed{A''(-6,12)}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pusat sama:</strong> $k = 3 \cdot (-2) = -6$.</p>
+      $$(-6 \cdot 1,\; -6 \cdot (-2)) = (-6, 12)$$
+      <div class="sol-jadi">$A''(-6, 12)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1126,10 +910,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan garis $x-2y+3=0$ oleh $D_1$ (pusat $O$, $k=2$) dilanjutkan $D_2$ (pusat $O$, $k=3$). Identifikasi transformasi tunggal yang ekuivalen.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $D=D_2\cdot D_1 = \begin{bmatrix}6&0\\0&6\end{bmatrix}$. Invers: $x=\dfrac{x'}{6}$, $y=\dfrac{y'}{6}$:
-      $$\frac{x'}{6} - 2\cdot\frac{y'}{6} + 3 = 0 \;\Rightarrow\; \boxed{x-2y+18=0}$$
-      Transformasi tunggal: dilatasi pusat $O$, $k = 2\times 3 = 6$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gabungkan:</strong> pusat sama, $k = 2 \cdot 3 = 6$; jadi $x = \tfrac{x\'}{6}$, $y = \tfrac{y\'}{6}$.</p>
+      $$ \begin{align*} \frac{x'}{6} - \frac{2y'}{6} + 3 &= 0 \end{align*} $$
+      <div class="sol-jadi">bayangannya $x - 2y + 18 = 0$, setara dilatasi pusat $O$ dengan $k = 6$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1138,67 +921,64 @@ window.MathJax = {
       (a) $(D_2\circ D_1)(P(5,3))$ &emsp; (b) $(D_1\circ D_2)(P(5,3))$ &emsp; (c) Simpulkan sifat komutativitas.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> $D_1$ dulu: $P' = \tfrac{1}{2}(5,3) = (2.5, 1.5)$. Lalu $D_2$ pada $P'$:
-      $$P'' = 4\begin{bmatrix}2.5-3\\1.5-(-1)\end{bmatrix}+\begin{bmatrix}3\\-1\end{bmatrix} = 4\begin{bmatrix}-0.5\\2.5\end{bmatrix}+\begin{bmatrix}3\\-1\end{bmatrix} = \begin{bmatrix}-2\\10\end{bmatrix}+\begin{bmatrix}3\\-1\end{bmatrix} = \boxed{(1,9)}$$
-      <strong>(b)</strong> $D_2$ dulu pada $P(5,3)$: $P' = 4(2,4)+(3,-1) = (11,15)$. Lalu $D_1$: $P'' = \tfrac{1}{2}(11,15) = \boxed{(5.5, 7.5)}$.<br>
-      <strong>(c)</strong> $(1,9) \neq (5.5,7.5)$. Komposisi dua dilatasi bersifat <strong>komutatif hanya jika berpusat di titik yang sama</strong>.
+      <div class="sol-part"><span class="sol-tag">a</span><span>$D_1$ dulu</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Terapkan $D_1$:</strong> $P\' = \left(\tfrac{5}{2}, \tfrac{3}{2}\right)$.</p>
+      $$ \begin{align*} P'' &= 4\left(\tfrac{5}{2} - 3,\; \tfrac{3}{2} + 1\right) + (3, -1) \\ &= (-2, 10) + (3, -1) = (1, 9) \end{align*} $$
+      <div class="sol-jadi">$(D_2 \circ D_1)(P)$ $= (1, 9)$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$D_2$ dulu</span></div>
+      $$ \begin{align*} P' &= 4(2, 4) + (3, -1) \\ &= (11, 15) \\ P'' &= \tfrac{1}{2}(11, 15) \end{align*} $$
+      <div class="sol-jadi">$(D_1 \circ D_2)(P)$ $= \left(\tfrac{11}{2}, \tfrac{15}{2}\right)$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Kesimpulan</span></div>
+      <div class="sol-jadi">hasilnya berbeda: dilatasi dengan pusat berbeda tidak komutatif.</div>
     </div>
 
     <div class="box box-latihan">
-      <div class="box-label">Soal Latihan — Bagian E</div>
+      <div class="box-label">Soal Latihan E</div>
       <ol class="soal-list">
         <li>Tentukan bayangan titik $P(-3, 5)$ oleh dilatasi pusat $O(0,0)$, $k=4$.</li>
         <li>Titik $Q'(10,-4)$ adalah bayangan titik $Q$ oleh dilatasi terhadap pusat $A(2,0)$ dengan $k=2$. Tentukan $Q$.</li>
         <li>Garis $3x - y + 6 = 0$ didilatasi pusat $B(1,3)$, $k=3$. Tentukan persamaan garis bayangan.</li>
         <li>Segitiga $PQR$ dengan $P(0,0)$, $Q(4,0)$, $R(2,4)$ didilatasi terhadap $M(2,1)$, $k=2$. Tentukan bayangan dan rasio luas.</li>
-        <li>Lingkaran $(x-1)^2+(y+2)^2=9$ didilatasi pusat $A(1,-2)$, $k=3$. Tentukan persamaan, pusat, dan jari-jari bayangan.</li>
-        <li>Elips $\dfrac{x^2}{4}+\dfrac{y^2}{9}=1$ didilatasi pusat $O$, $k=3$. Tentukan persamaan dan bandingkan sumbu mayor-minor.</li>
+        <li>Lingkaran $(x-1)^2+(y+2)^2$ $=9$ didilatasi pusat $A(1,-2)$, $k=3$. Tentukan persamaan, pusat, dan jari-jari bayangan.</li>
+        <li>Elips $\dfrac{x^2}{4}$ $+\dfrac{y^2}{9}$ $=1$ didilatasi pusat $O$, $k=3$. Tentukan persamaan dan bandingkan sumbu mayor-minor.</li>
         <li>Bayangan garis $ax-3y+4=0$ setelah dilatasi pusat $O$, $k=3$ adalah $2x-by+12=0$. Tentukan $a$ dan $b$.</li>
         <li><strong>[HOTS]</strong> Titik $R(4,1)$ dikenai $D_1$ (pusat $A(1,-1)$, $k_1=\tfrac{1}{2}$) dilanjutkan $D_2$ (pusat $B(3,2)$, $k_2=3$).<br>(a) $(D_2\circ D_1)(R)$<br>(b) $(D_1\circ D_2)(R)$<br>(c) Simpulkan sifat komutativitas.</li>
       </ol>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════
-       F. KOMPOSISI TRANSFORMASI
-  ══════════════════════════════════════════════════════════ -->
+  <!-- ═══ F. KOMPOSISI TRANSFORMASI ═══ -->
   <section class="section" id="bagian-f">
     <h2 class="section-title"><span class="section-badge">F</span>Komposisi Transformasi</h2>
-
     <h3 class="subsection-title">1. Konsep Komposisi</h3>
     <div class="box box-rumus">
       <div class="box-label">Notasi Komposisi</div>
-      <div class="math-block">$$(T_2 \circ T_1)(P) = T_2[T_1(P)]$$</div>
-      <p style="margin:.3rem 0 0;font-size:.9rem;">Terapkan $T_1$ lebih dahulu pada titik $P$, lalu terapkan $T_2$ pada hasilnya.</p>
+      $$ \begin{align*} (T_2 \circ T_1)(P) &= T_2[T_1(P)] \end{align*} $$<p style="margin:0;font-size:.9rem;">Terapkan $T_1$ dulu, lalu $T_2$ pada hasilnya.</p>
     </div>
+
     <div class="box box-catatan">
       <div class="box-label">⚠ Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Pada umumnya, komposisi transformasi <strong>tidak komutatif</strong>: $(T_2 \circ T_1) \neq (T_1 \circ T_2)$. Urutan penerapan sangat mempengaruhi hasil.</p>
+      <p style="margin:0;font-size:.9rem;">Umumnya komposisi <strong>tidak komutatif</strong>: urutan sangat memengaruhi hasil.</p>
     </div>
 
-    <h3 class="subsection-title">2. Komposisi Transformasi pada Titik</h3>
-
+    <h3 class="subsection-title">2. Komposisi pada Titik</h3>
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 40</div>
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $Q(4,2)$ oleh pencerminan terhadap sumbu-$Y$ dilanjutkan rotasi $90°$ berlawanan arah jarum jam terhadap $O(0,0)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Matriks komposisi $(R_{90°} \circ M_Y)$:
-      $$T = \begin{bmatrix}0&-1\\1&0\end{bmatrix}\begin{bmatrix}-1&0\\0&1\end{bmatrix} = \begin{bmatrix}0&-1\\-1&0\end{bmatrix}$$
-      $$\begin{bmatrix}x''\\y''\end{bmatrix} = \begin{bmatrix}0&-1\\-1&0\end{bmatrix}\begin{bmatrix}4\\2\end{bmatrix} = \begin{bmatrix}-2\\-4\end{bmatrix}$$
-      Jadi $\boxed{Q''(-2,-4)}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Terapkan berurutan:</strong> $(4, 2) \xrightarrow{Y} (-4, 2) \xrightarrow{R_{90^\circ}} (-2, -4)$.</p>
+      <div class="sol-jadi">$Q''(-2, -4)$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 41</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan matriks komposisi yang ekuivalen dengan dilatasi $k=3$ terhadap $O$ dilanjutkan refleksi terhadap sumbu-$Y$. Terapkan pada $P(2,-1)$.</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan transformasi tunggal yang ekuivalen dengan dilatasi $k=3$ terhadap $O$ dilanjutkan refleksi terhadap sumbu-$Y$. Terapkan pada $P(2,-1)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$T = M_Y\cdot D_3 = \begin{bmatrix}-1&0\\0&1\end{bmatrix}\begin{bmatrix}3&0\\0&3\end{bmatrix} = \begin{bmatrix}-3&0\\0&3\end{bmatrix}$$
-      $$\begin{bmatrix}x'\\y'\end{bmatrix} = \begin{bmatrix}-3&0\\0&3\end{bmatrix}\begin{bmatrix}2\\-1\end{bmatrix} = \begin{bmatrix}-6\\-3\end{bmatrix} \;\Rightarrow\; \boxed{P'(-6,-3)}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Aturan gabungan:</strong> $(x, y) \xrightarrow{k = 3} (3x, 3y) \xrightarrow{Y} (-3x, 3y)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Terapkan pada $P(2, -1)$:</strong> $(-6, -3)$.</p>
+      <div class="sol-jadi">transformasi tunggalnya $(x, y) \to (-3x, 3y)$, dan $P'(-6, -3)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1206,20 +986,22 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $A(2,1)$ oleh komposisi: refleksi terhadap sumbu-$X$ dilanjutkan dilatasi $k=2$ terhadap $O(0,0)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$T = D_2\cdot M_X = \begin{bmatrix}2&0\\0&2\end{bmatrix}\begin{bmatrix}1&0\\0&-1\end{bmatrix} = \begin{bmatrix}2&0\\0&-2\end{bmatrix}$$
-      $$\begin{bmatrix}x'\\y'\end{bmatrix} = \begin{bmatrix}2&0\\0&-2\end{bmatrix}\begin{bmatrix}2\\1\end{bmatrix} = \begin{bmatrix}4\\-2\end{bmatrix} \;\Rightarrow\; \boxed{A'(4,-2)}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Terapkan berurutan:</strong> $(2, 1) \xrightarrow{X} (2, -1) \xrightarrow{k = 2} (4, -2)$.</p>
+      <div class="sol-jadi">$A'(4, -2)$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 43</div>
-      <p style="margin:0;font-size:.9rem;">Titik $A(-2, 4)$ dikenai komposisi tiga transformasi: refleksi terhadap $y=x$, dilanjutkan rotasi $180°$ terhadap $O$, kemudian translasi $T=\begin{bmatrix}-1\\3\end{bmatrix}$.</p>
+      <p style="margin:0;font-size:.9rem;">Titik $A(-2, 4)$ dikenai komposisi tiga transformasi: refleksi terhadap $y=x$, dilanjutkan rotasi $180°$ terhadap $O$, kemudian translasi $T=(-1, 3)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>Langkah 1 — Refleksi $y=x$:</strong> $A'(4,-2)$<br><br>
-      <strong>Langkah 2 — Rotasi $180°$:</strong> $\begin{bmatrix}-1&0\\0&-1\end{bmatrix}\begin{bmatrix}4\\-2\end{bmatrix} = \begin{bmatrix}-4\\2\end{bmatrix}$ → $A''(-4,2)$<br><br>
-      <strong>Langkah 3 — Translasi:</strong> $\begin{bmatrix}-4\\2\end{bmatrix}+\begin{bmatrix}-1\\3\end{bmatrix} = \begin{bmatrix}-5\\5\end{bmatrix}$ → $\boxed{A'''(-5,5)}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Terapkan satu per satu:</strong></p>
+      <ul class="sol-cek">
+        <li>Refleksi $y = x$: $(-2, 4) \to (4, -2)$</li>
+        <li>Rotasi $180^\circ$: $(4, -2) \to (-4, 2)$</li>
+        <li>Translasi $(-1, 3)$: $(-4, 2) \to (-5, 5)$</li>
+      </ul>
+      <div class="sol-jadi">$A'''(-5, 5)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1227,57 +1009,52 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $B(-1,3)$ oleh komposisi: rotasi $90°$ berlawanan arah jarum jam terhadap $O$, dilanjutkan refleksi terhadap $y=x$. Tunjukkan hasilnya berbeda jika urutan dibalik.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>Urutan 1 — $(M_{y=x}\circ R_{90°})$:</strong>
-      $$M_{y=x}\cdot R_{90°} = \begin{bmatrix}0&1\\1&0\end{bmatrix}\begin{bmatrix}0&-1\\1&0\end{bmatrix} = \begin{bmatrix}1&0\\0&-1\end{bmatrix}$$
-      $$\begin{bmatrix}x'\\y'\end{bmatrix} = \begin{bmatrix}1&0\\0&-1\end{bmatrix}\begin{bmatrix}-1\\3\end{bmatrix} = \begin{bmatrix}-1\\-3\end{bmatrix} \;\Rightarrow\; \boxed{B'(-1,-3)}$$
-      <strong>Urutan 2 — $(R_{90°}\circ M_{y=x})$:</strong>
-      $$R_{90°}\cdot M_{y=x} = \begin{bmatrix}0&-1\\1&0\end{bmatrix}\begin{bmatrix}0&1\\1&0\end{bmatrix} = \begin{bmatrix}-1&0\\0&1\end{bmatrix}$$
-      $$\begin{bmatrix}x''\\y''\end{bmatrix} = \begin{bmatrix}-1&0\\0&1\end{bmatrix}\begin{bmatrix}-1\\3\end{bmatrix} = \begin{bmatrix}1\\3\end{bmatrix} \;\Rightarrow\; \boxed{B''(1,3)}$$
-      Karena $(-1,-3) \neq (1,3)$, terbukti komposisi <strong>tidak komutatif</strong>.
+      <div class="sol-part"><span class="sol-tag">1</span><span>Rotasi dulu, lalu cermin $y = x$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Terapkan:</strong> $(-1, 3) \xrightarrow{R_{90^\circ}} (-3, -1) \xrightarrow{y = x} (-1, -3)$.</p>
+      <div class="sol-part"><span class="sol-tag">2</span><span>Urutan dibalik</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Terapkan:</strong> $(-1, 3) \xrightarrow{y = x} (3, -1) \xrightarrow{R_{90^\circ}} (1, 3)$.</p>
+      <div class="sol-jadi">$B'(-1, -3)$ dan $B''(1, 3)$ berbeda, jadi komposisinya tidak komutatif.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 45</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan matriks komposisi $T$ yang merupakan dilatasi $k=2$ terhadap $O$ dilanjutkan rotasi $180°$ terhadap $O$. Terapkan pada titik $C(3,-1)$ dan segitiga $PQR$ dengan $P(1,0)$, $Q(2,0)$, $R(1,3)$.</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan bayangan titik $C(3,-1)$ dan segitiga $PQR$ dengan $P(1,0)$, $Q(2,0)$, $R(1,3)$ oleh dilatasi $k=2$ terhadap $O$ dilanjutkan rotasi $180°$ terhadap $O$. Bandingkan luasnya.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$T = R_{180°}\cdot D_2 = \begin{bmatrix}-1&0\\0&-1\end{bmatrix}\begin{bmatrix}2&0\\0&2\end{bmatrix} = \begin{bmatrix}-2&0\\0&-2\end{bmatrix}$$
-      <strong>Titik $C$:</strong> $T\begin{bmatrix}3\\-1\end{bmatrix} = \begin{bmatrix}-6\\2\end{bmatrix}$ → $\boxed{C'(-6,2)}$<br><br>
-      <strong>Segitiga:</strong> $P'=(-2,0)$, $Q'=(-4,0)$, $R'=(-2,-6)$. Luas $\triangle PQR = \tfrac{3}{2}$. Luas $\triangle P'Q'R' = |\det T|\cdot\tfrac{3}{2} = 4\cdot\tfrac{3}{2} = \boxed{6 \text{ satuan luas}}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Aturan gabungan:</strong> $(x, y) \xrightarrow{k = 2} (2x, 2y) \xrightarrow{R_{180^\circ}} (-2x, -2y)$.</p>
+      <ul class="sol-cek">
+        <li>$C(3, -1) \to C'(-6, 2)$</li>
+        <li>$P'(-2, 0)$, $Q'(-4, 0)$, $R'(-2, -6)$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan luas:</strong> asal $\tfrac{1}{2} \cdot 1 \cdot 3$ $= \tfrac{3}{2}$, bayangan $\tfrac{1}{2} \cdot 2 \cdot 6$ $= 6$ (empat kali, karena $k^2 = 4$).</p>
+      <div class="sol-jadi">$C'(-6, 2)$ dan luas bayangan $6$ satuan luas.</div>
     </div>
 
-    <h3 class="subsection-title">3. Komposisi Transformasi pada Kurva dan Garis</h3>
+    <h3 class="subsection-title">3. Komposisi pada Garis dan Kurva</h3>
     <div class="box box-catatan">
-      <div class="box-label">⚠ Langkah-Langkah Umum</div>
-      <ol style="margin:.3rem 0 0;padding-left:1.3rem;line-height:2.1;">
-        <li>Nyatakan hubungan antara $(x,y)$ dan $(x', y')$ menurut aturan transformasi.</li>
-        <li>Inverskan relasi tersebut: nyatakan $x$ dan $y$ dalam $x'$ dan $y'$.</li>
-        <li>Substitusikan ke persamaan kurva asal.</li>
-        <li>Sederhanakan untuk mendapat persamaan kurva bayangan.</li>
-      </ol>
+      <div class="box-label">💡 Langkah Umum</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Tulis aturan gabungan $(x, y) \to (x', y')$.</li><li>Nyatakan $x$ dan $y$ dalam $x'$ dan $y'$.</li><li>Substitusikan ke persamaan asal, lalu sederhanakan.</li></ul>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 46</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan bayangan parabola $y=x^2$ oleh komposisi: rotasi $90°$ berlawanan arah jarum jam terhadap $O$ dilanjutkan translasi $T=\begin{bmatrix}1\\2\end{bmatrix}$.</p>
+      <p style="margin:0;font-size:.9rem;">Tentukan bayangan parabola $y=x^2$ oleh komposisi: rotasi $90°$ berlawanan arah jarum jam terhadap $O$ dilanjutkan translasi $T=(1, 2)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>Rotasi $90°$:</strong> invers: $x = y_1$ dan $y = -x_1$. Substitusi ke $y=x^2$: $-x_1 = y_1^2$, atau $x_1 = -y_1^2$.<br><br>
-      <strong>Translasi:</strong> $x_1 = x'-1$ dan $y_1 = y'-2$. Substitusi:
-      $$(x'-1) = -(y'-2)^2 \;\Rightarrow\; x' - 1 = -(y'^2-4y'+4) \;\Rightarrow\; \boxed{x = -y^2+4y-3}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Rotasi $90^\circ$:</strong> $x = y_1$, $y = -x_1$, sehingga $y = x^2$ menjadi $x_1 = -y_1^2$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Translasi $(1, 2)$:</strong> $x_1 = x' - 1$, $y_1 = y' - 2$.</p>
+      $$ \begin{align*} x' - 1 &= -(y' - 2)^2 \\ x' &= -y'^2 + 4y' - 3 \end{align*} $$
+      <div class="sol-jadi">bayangannya $x = -y^2 + 4y - 3$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 47</div>
-      <p style="margin:0;font-size:.9rem;">Garis $x-2y+4=0$ dikenai komposisi: dilatasi $k=2$ terhadap $O$ dilanjutkan rotasi $180°$ terhadap $O$. Tentukan persamaan bayangan menggunakan matriks komposisi.</p>
+      <p style="margin:0;font-size:.9rem;">Garis $x-2y+4=0$ dikenai komposisi: dilatasi $k=2$ terhadap $O$ dilanjutkan rotasi $180°$ terhadap $O$. Tentukan persamaan bayangan.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Matriks komposisi $(R_{180}\circ D_2) = \begin{bmatrix}-2&0\\0&-2\end{bmatrix}$. Inversnya: $x = -\dfrac{x'}{2}$, $y = -\dfrac{y'}{2}$. Substitusikan:
-      $$-\frac{x'}{2} - 2\left(-\frac{y'}{2}\right) + 4 = 0 \;\Rightarrow\; -\frac{x'}{2} + y' + 4 = 0 \;\Rightarrow\; \boxed{x - 2y - 8 = 0}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Aturan gabungan:</strong> $(x, y) \to (-2x, -2y)$, jadi $x = -\tfrac{x'}{2}$, $y = -\tfrac{y'}{2}$.</p>
+      $$ \begin{align*} -\frac{x'}{2} + y' + 4 &= 0 \end{align*} $$
+      <div class="sol-jadi">bayangannya $x - 2y - 8 = 0$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1285,11 +1062,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan persamaan bayangan garis $3x+2y-6=0$ oleh refleksi terhadap $y=x$ dilanjutkan dilatasi $k=2$ terhadap $O(0,0)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Matriks komposisi $(D_2\circ M_{y=x})$:
-      $$T = \begin{bmatrix}2&0\\0&2\end{bmatrix}\begin{bmatrix}0&1\\1&0\end{bmatrix} = \begin{bmatrix}0&2\\2&0\end{bmatrix}$$
-      Hubungan koordinat: $x' = 2y$, $y' = 2x$, sehingga $x = \tfrac{1}{2}y'$ dan $y = \tfrac{1}{2}x'$. Substitusikan:
-      $$3\left(\tfrac{1}{2}y'\right) + 2\left(\tfrac{1}{2}x'\right) - 6 = 0 \;\Rightarrow\; \boxed{2x + 3y - 12 = 0}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Aturan gabungan:</strong> $(x, y) \xrightarrow{y = x} (y, x) \xrightarrow{k = 2} (2y, 2x)$, jadi $x = \tfrac{y'}{2}$, $y = \tfrac{x'}{2}$.</p>
+      $$ \begin{align*} \frac{3y'}{2} + x' - 6 &= 0 \end{align*} $$
+      <div class="sol-jadi">bayangannya $2x + 3y - 12 = 0$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -1297,100 +1072,71 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan bayangan lingkaran $x^2+y^2=4$ oleh komposisi: rotasi $90°$ terhadap $O(0,0)$ dilanjutkan pencerminan terhadap sumbu-$X$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Matriks komposisi $(M_X\circ R_{90°})$:
-      $$T = \begin{bmatrix}1&0\\0&-1\end{bmatrix}\begin{bmatrix}0&-1\\1&0\end{bmatrix} = \begin{bmatrix}0&-1\\-1&0\end{bmatrix}$$
-      Dari matriks: $x' = -y$ dan $y' = -x$, sehingga $x = -y'$ dan $y = -x'$. Substitusikan ke $x^2+y^2=4$:
-      $$(-y')^2 + (-x')^2 = 4 \;\Rightarrow\; \boxed{x^2 + y^2 = 4}$$
-      (Lingkaran tetap! Karena merupakan isometri dan lingkaran berpusat di $O$.)
+      <p class="sol-step"><span class="sol-no">1</span><strong>Aturan gabungan:</strong> $(x, y) \xrightarrow{R_{90^\circ}} (-y, x) \xrightarrow{X} (-y, -x)$, jadi $x = -y'$, $y = -x'$.</p>
+      $$(-y')^2 + (-x')^2 = 4$$
+      <p class="sol-step">Lingkaran berpusat di $O$ tidak berubah oleh rotasi atau refleksi terhadap garis melalui $O$.</p>
+      <div class="sol-jadi">bayangannya tetap $x^2 + y^2 = 4$.</div>
     </div>
 
     <div class="box box-latihan">
-      <div class="box-label">Soal Latihan — Bagian F</div>
+      <div class="box-label">Soal Latihan F</div>
       <ol class="soal-list">
         <li>Tentukan bayangan titik $A(-2,6)$ jika dicerminkan terhadap $y=-x$ dilanjutkan rotasi $90°$ searah jarum jam terhadap $O(0,0)$.</li>
-        <li>Titik $B(4,1)$ didilatasi $k=-2$ terhadap $O(0,0)$, kemudian ditranslasikan oleh $T=\begin{bmatrix}3\\-5\end{bmatrix}$. Tentukan bayangan akhir.</li>
+        <li>Titik $B(4,1)$ didilatasi $k=-2$ terhadap $O(0,0)$, kemudian ditranslasikan oleh $T=(3, -5)$. Tentukan bayangan akhir.</li>
         <li>Tentukan persamaan bayangan garis $2x-3y+6=0$ oleh dilatasi $k=3$ terhadap $O(0,0)$ dilanjutkan refleksi terhadap sumbu-$X$.</li>
         <li>Kurva $y=x^2+1$ diputar sejauh $180°$ terhadap $O(0,0)$ dilanjutkan refleksi terhadap $y=x$. Tentukan persamaan bayangan akhirnya.</li>
-        <li>Tentukan matriks tunggal yang ekuivalen dengan komposisi: refleksi terhadap sumbu-$Y$, dilanjutkan rotasi $90°$ berlawanan arah jarum jam terhadap $O$, diakhiri dilatasi $k=\tfrac{1}{2}$ terhadap $O$. Terapkan pada $K(8,-4)$.</li>
-        <li>Garis $g: 4x-y+2=0$ ditransformasikan oleh $M=\begin{bmatrix}1&2\\0&1\end{bmatrix}$ dilanjutkan refleksi terhadap sumbu-$Y$. Tentukan bayangan garis $g$.</li>
+        <li>Tentukan aturan tunggal $(x, y) \to (x\', y\')$ yang setara dengan refleksi terhadap sumbu-$Y$, dilanjutkan rotasi $90^\circ$ berlawanan arah jarum jam terhadap $O$, lalu dilatasi $k = \tfrac{1}{2}$ terhadap $O$. Terapkan pada $K(8, -4)$.</li>
+        <li><strong>HOTS.</strong> Garis $g: 4x - y + 2$ $= 0$ dicerminkan terhadap $y = -x$, dilanjutkan dilatasi $k = 2$ terhadap $O$, lalu refleksi terhadap sumbu-$Y$. Tentukan bayangan garis $g$.</li>
       </ol>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════
-       G. TABEL RINGKASAN
-  ══════════════════════════════════════════════════════════ -->
+  <!-- ═══ G. TABEL RINGKASAN ═══ -->
   <section class="section" id="bagian-g">
-    <h2 class="section-title"><span class="section-badge">G</span>Tabel Ringkasan Transformasi Geometri</h2>
-
-    <h3 class="subsection-title">1. Translasi (Pergeseran)</h3>
+    <h2 class="section-title"><span class="section-badge">G</span>Tabel Ringkasan</h2>
+    <h3 class="subsection-title">1. Translasi dan Dilatasi</h3>
     <div class="table-wrap">
-      <table>
-        <thead><tr><th>Konsep</th><th>Persamaan Matriks</th><th>Keterangan</th></tr></thead>
+      <table class="ringkasan-table">
+        <thead><tr><th>Transformasi</th><th>Aturan</th></tr></thead>
         <tbody>
-          <tr><td>Titik $P(x,y)$</td><td>$\begin{bmatrix}x'\\y'\end{bmatrix} = \begin{bmatrix}x\\y\end{bmatrix} + \begin{bmatrix}a\\b\end{bmatrix}$</td><td>$T=\begin{bmatrix}a\\b\end{bmatrix}$ adalah vektor geser</td></tr>
-          <tr><td>Garis / Kurva</td><td>$x = x'-a$, $y = y'-b$</td><td>Substitusikan nilai $x$ dan $y$ ke persamaan awal</td></tr>
-          <tr><td>Komposisi</td><td>$T_\text{tot} = T_1 + T_2 = \begin{bmatrix}a+c\\b+d\end{bmatrix}$</td><td>Bersifat <strong>komutatif</strong></td></tr>
+          <tr><td>Translasi $(a, b)$</td><td>$(x + a,\; y + b)$</td></tr>
+          <tr><td>Dilatasi $[O, k]$</td><td>$(kx,\; ky)$</td></tr>
+          <tr><td>Dilatasi $[(m, n), k]$</td><td>$(k(x - m) + m,\; k(y - n) + n)$</td></tr>
         </tbody>
       </table>
     </div>
-
-    <h3 class="subsection-title">2. Refleksi (Pencerminan)</h3>
+    <h3 class="subsection-title">2. Rotasi Pusat $O$</h3>
     <div class="table-wrap">
-      <table>
-        <thead><tr><th>Sumbu Cermin</th><th>Matriks Transformasi</th><th>Titik Bayangan</th></tr></thead>
+      <table class="ringkasan-table">
+        <thead><tr><th>Sudut</th><th>Aturan</th></tr></thead>
         <tbody>
-          <tr><td>Sumbu-$X$</td><td>$\begin{bmatrix}1&0\\0&-1\end{bmatrix}$</td><td>$(x,-y)$</td></tr>
-          <tr><td>Sumbu-$Y$</td><td>$\begin{bmatrix}-1&0\\0&1\end{bmatrix}$</td><td>$(-x,y)$</td></tr>
-          <tr><td>Garis $y=x$</td><td>$\begin{bmatrix}0&1\\1&0\end{bmatrix}$</td><td>$(y,x)$</td></tr>
-          <tr><td>Garis $y=-x$</td><td>$\begin{bmatrix}0&-1\\-1&0\end{bmatrix}$</td><td>$(-y,-x)$</td></tr>
-          <tr><td>Titik asal $O(0,0)$</td><td>$\begin{bmatrix}-1&0\\0&-1\end{bmatrix}$</td><td>$(-x,-y)$</td></tr>
-          <tr><td>Garis $x=a$</td><td>$\begin{bmatrix}-1&0\\0&1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}+\begin{bmatrix}2a\\0\end{bmatrix}$</td><td>$(2a-x,\;y)$</td></tr>
-          <tr><td>Garis $y=b$</td><td>$\begin{bmatrix}1&0\\0&-1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}+\begin{bmatrix}0\\2b\end{bmatrix}$</td><td>$(x,\;2b-y)$</td></tr>
-          <tr><td>Titik $(a,b)$</td><td>$\begin{bmatrix}-1&0\\0&-1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}+\begin{bmatrix}2a\\2b\end{bmatrix}$</td><td>$(2a-x,\;2b-y)$</td></tr>
+          <tr><td>$90^\circ$</td><td>$(-y,\; x)$</td></tr>
+          <tr><td>$180^\circ$</td><td>$(-x,\; -y)$</td></tr>
+          <tr><td>$270^\circ$ atau $-90^\circ$</td><td>$(y,\; -x)$</td></tr>
+          <tr><td>$\alpha$</td><td>$(x\cos\alpha - y\sin\alpha,\; x\sin\alpha + y\cos\alpha)$</td></tr>
         </tbody>
       </table>
     </div>
-
-    <h3 class="subsection-title">3. Rotasi (Perputaran) terhadap Pusat $O(0,0)$</h3>
+    <h3 class="subsection-title">3. Refleksi</h3>
     <div class="table-wrap">
-      <table>
-        <thead><tr><th>Sudut ($\theta$)</th><th>Matriks Rotasi</th><th>Bayangan $(x',y')$</th></tr></thead>
+      <table class="ringkasan-table">
+        <thead><tr><th>Cermin</th><th>$x'$</th><th>$y'$</th></tr></thead>
         <tbody>
-          <tr><td>Umum $\theta$</td><td>$\begin{bmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{bmatrix}$</td><td>$(x\cos\theta-y\sin\theta,\;x\sin\theta+y\cos\theta)$</td></tr>
-          <tr><td>$90°$ (atau $-270°$)</td><td>$\begin{bmatrix}0&-1\\1&0\end{bmatrix}$</td><td>$(-y,\;x)$</td></tr>
-          <tr><td>$180°$ (atau $-180°$)</td><td>$\begin{bmatrix}-1&0\\0&-1\end{bmatrix}$</td><td>$(-x,\;-y)$</td></tr>
-          <tr><td>$270°$ (atau $-90°$)</td><td>$\begin{bmatrix}0&1\\-1&0\end{bmatrix}$</td><td>$(y,\;-x)$</td></tr>
+          <tr><td>Sumbu-$X$</td><td>$x$</td><td>$-y$</td></tr>
+          <tr><td>Sumbu-$Y$</td><td>$-x$</td><td>$y$</td></tr>
+          <tr><td>Garis $x = a$</td><td>$2a - x$</td><td>$y$</td></tr>
+          <tr><td>Garis $y = b$</td><td>$x$</td><td>$2b - y$</td></tr>
+          <tr><td>Garis $y = x$</td><td>$y$</td><td>$x$</td></tr>
+          <tr><td>Garis $y = -x$</td><td>$-y$</td><td>$-x$</td></tr>
+          <tr><td>Garis $y = x + c$</td><td>$y - c$</td><td>$x + c$</td></tr>
+          <tr><td>Garis $y = -x + c$</td><td>$-y + c$</td><td>$-x + c$</td></tr>
+          <tr><td>Titik $O$</td><td>$-x$</td><td>$-y$</td></tr>
+          <tr><td>Titik $(a, b)$</td><td>$2a - x$</td><td>$2b - y$</td></tr>
         </tbody>
       </table>
     </div>
-
-    <h3 class="subsection-title">4. Dilatasi (Perkalian Ukuran)</h3>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Pusat</th><th>Matriks / Rumus</th><th>Keterangan</th></tr></thead>
-        <tbody>
-          <tr><td>$O(0,0)$</td><td>$\begin{bmatrix}x'\\y'\end{bmatrix} = \begin{bmatrix}k&0\\0&k\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}$</td><td>$k$ = faktor skala; luas $= k^2 \times$ luas asal</td></tr>
-          <tr><td>$P(m,n)$</td><td>$x'=k(x-m)+m$, $\;y'=k(y-n)+n$</td><td>Perbesaran terhadap titik acuan tertentu</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 class="subsection-title">5. Komposisi Transformasi</h3>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Jenis</th><th>Aturan Komposisi</th><th>Catatan</th></tr></thead>
-        <tbody>
-          <tr><td>Dua matriks $M_1, M_2$</td><td>$M_\text{total} = M_2 \cdot M_1$</td><td>Perkalian dilakukan dari <strong>kanan ke kiri</strong></td></tr>
-          <tr><td>Luas bangun</td><td>$L' = |\det(M)| \times L_\text{awal}$</td><td>Berlaku untuk poligon atau kurva tertutup</td></tr>
-          <tr><td>Invers transformasi</td><td>$\begin{bmatrix}x\\y\end{bmatrix} = M^{-1}\begin{bmatrix}x'\\y'\end{bmatrix}$</td><td>Digunakan untuk mencari persamaan kurva asal</td></tr>
-          <tr><td>Komposisi rotasi (pusat sama)</td><td>$\theta = \alpha + \beta$</td><td>Dapat dijumlah sudutnya</td></tr>
-          <tr><td>Komposisi translasi</td><td>$T_\text{tot} = T_1 + T_2$</td><td>Komutatif; dapat dijumlah vektornya</td></tr>
-        </tbody>
-      </table>
-    </div>
-
+    <h3 class="subsection-title">4. Bayangan Garis dan Kurva</h3>
+    <p>Nyatakan $x$ dan $y$ dalam $x'$ dan $y'$, substitusikan ke persamaan asal, lalu hapus tanda aksen.</p>
   </section>
 
   <!-- ACTION FOOTER -->
@@ -1401,8 +1147,8 @@ window.MathJax = {
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
         Grafik Fungsi Trigonometri
       </a>
-      <a class="nav-btn" href="../limit-fungsi/">
-        Limit Fungsi
+      <a class="nav-btn" href="../transformasi-fungsi/">
+        Transformasi Fungsi
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
       </a>
     </div>
@@ -1609,53 +1355,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ── 4. SOAL LATIHAN → accordion kunci jawaban ─────────────────────────────────────────
   const jawabanData = {
-    0: [ // Bagian B
-      {jawaban:'$P\'(1,3)$'},
-      {jawaban:'$Q = Q\'- T = (-1,7)-(-3,4)=(2,3)$'},
-      {jawaban:'$T=\\begin{bmatrix}3\\\\5\\end{bmatrix}$; $B\'=(-2+3,5+5)=\\boxed{B\'(1,10)}$'},
-      {jawaban:'$x=x\'-3, y=y\'+1$: $2(x\'-3)+3(y\'+1)-6=0\\Rightarrow 2x\'+3y\'-9=0$'},
-      {jawaban:'$y=x^2+6x+5=(x+3)^2-4$, puncak $(-3,-4)$. Dengan $T=\\begin{bmatrix}2\\\\-3\\end{bmatrix}$: $x=x\'-2,y=y\'+3$. Substitusi: $y\'=x\'^2+2x\'-3$; puncak $(-1,-4)$.'},
-      {jawaban:'$(3a-1+a)=7\\Rightarrow 4a=8\\Rightarrow a=2$; $(2b+b-1)=4\\Rightarrow 3b=5\\Rightarrow b=5/3$.'},
-      {jawaban:'$T_{tot}=\\begin{bmatrix}a+2\\\\1+b\\end{bmatrix}$. $3x-y+(4-3(a+2)+(1+b))=4-3a-6+1+b=-3a+b-1$. Bandingkan dengan $-4$: $-3a+b-1=-4\\Rightarrow -3a+b=-3$. Dengan $a+2b=4$... $a+b=2$? Periksa ulang: $(a+b)+(a-b)=?$... $a=-3+b\\Rightarrow (-3+b)+2b=4\\Rightarrow 3b=7\\Rightarrow b=7/3, a=-2/3$. Jadi $a+b=5/3$.'},
+    // B
+    0: [
+      { jawaban:`$P'(-3 + 4,\\; 5 - 2)$ $= P'(1, 3)$` },
+      { jawaban:`$Q = (-1 + 3,\\; 7 - 4)$ $= (2, 3)$` },
+      { jawaban:`$T = (3, 5)$, jadi $B'(-2 + 3,\\; 5 + 5)$ $= B'(1, 10)$` },
+      { jawaban:`$x = x' - 3$, $y = y' + 1$: bayangannya $2x + 3y - 9 = 0$` },
+      { jawaban:`$x = x' - 2$, $y = y' + 3$: $y' = x'^2$ $+ 2x'$ $- 6$<br>Bayangan $y = x^2 + 2x - 6$, puncak $(-1, -7)$ (puncak asal $(-3, -4)$ bergeser $(2, -3)$)` },
+      { jawaban:`$3a - 1 + a$ $= 7$ $\\Rightarrow a$ $= 2$; $2b + b - 1$ $= 4$ $\\Rightarrow b$ $= \\tfrac{5}{3}$` },
+      { jawaban:`Translasi total $(a + 2,\\; b + 1)$; konstanta bayangan $4$ $- 3(a + 2)$ $+ (b + 1)$ $= -4$<br>$-3a + b = -3$, jadi $3a - b = 3$` },
     ],
-    1: [ // Bagian C
-      {jawaban:'$\\theta=120°$: $\\begin{bmatrix}-1/2&-\\sqrt3/2\\\\\\sqrt3/2&-1/2\\end{bmatrix}\\begin{bmatrix}3\\sqrt3\\\\-1\\end{bmatrix}=\\begin{bmatrix}-3\\sqrt3/2\\cdot(-1)-\\sqrt3/2\\cdot(-1)\\\\...\\end{bmatrix}$... $A\'(-3\\sqrt3/2+\\sqrt3/2, 9/2+1/2)=(-\\sqrt3,5)$.'},
-      {jawaban:'$R_{-90°}=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}$; $(4-2,−2-1)=(2,-3)$; $\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}\\begin{bmatrix}2\\\\-3\\end{bmatrix}=\\begin{bmatrix}-3\\\\-2\\end{bmatrix}$; $C\'=(2-3,-2+1)=(-1,-1)$... Tambah pusat: $C\'=(-3+2,-2+1)=(-1,-1)$.'},
-      {jawaban:'$R_{270°}=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}$; invers=$R_{-270°}=R_{90°}=\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}$. $\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}\\begin{bmatrix}4-(-2)\\\\1-3\\end{bmatrix}+\\begin{bmatrix}-2\\\\3\\end{bmatrix}=\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}\\begin{bmatrix}6\\\\-2\\end{bmatrix}+...=\\begin{bmatrix}2\\\\6\\end{bmatrix}+\\begin{bmatrix}-2\\\\3\\end{bmatrix}=B(0,9)$.'},
-      {jawaban:'Invers $R_{60°}$: $x=x\'\\cos60°+y\'\\sin60°$, $y=-x\'\\sin60°+y\'\\cos60°$. Substitusi ke $y=\\sqrt3 x+1$...'},
-      {jawaban:'$R_{-90°}$: invers $x=y\'$, $y=-x\'$. $y\' - 2(-x\')+4=0\\Rightarrow 2x\'+y\'+4=0$.'},
-      {jawaban:'$P\'=(−1,2)$; $P\'\'=(−2,−1)$; rotasi tunggal: $R_{180°}$.'},
-      {jawaban:'$R_{180°}$ terhadap $G(1,2)$: invers $x=2\\cdot1-x\'=2-x\'$, $y=2\\cdot2-y\'=4-y\'$. Substitusi ke $y=x^2-4x+3$: $(4-y\')=(2-x\')^2-4(2-x\')+3=x\'^2-8x\'+4-8+4x\'+3$. $y\'=-x\'^2+4x\'-3$.'},
-      {jawaban:'Total sudut $=45°+135°=180°$. $R_{180°}$ terhadap $P(1,1)$: $K\'=2\\cdot1-2\\sqrt2+2\\cdot1-0=(2-2\\sqrt2,2)$... $\\begin{bmatrix}-1&0\\\\0&-1\\end{bmatrix}\\begin{bmatrix}2\\sqrt2-1\\\\-1\\end{bmatrix}+\\begin{bmatrix}1\\\\1\\end{bmatrix}=\\begin{bmatrix}2-2\\sqrt2\\\\2\\end{bmatrix}$.'},
-      {jawaban:'$g\'$ setelah $R_{90°}$ terhadap $O$: $-x\'+y\'+4=0$. Lalu $R_{90°}$ terhadap $P(2,0)$: invers $x\'=(y\'\')+2=y\'\'$... Bayangan akhir: $x+y-4=0$.'},
+    // C
+    1: [
+      { jawaban:`$\\cos 120^\\circ$ $= -\\tfrac{1}{2}$, $\\sin 120^\\circ$ $= \\tfrac{\\sqrt{3}}{2}$<br>$x' = -\\tfrac{3\\sqrt{3}}{2}$ $+ \\tfrac{\\sqrt{3}}{2}$ $= -\\sqrt{3}$, $y' = \\tfrac{9}{2}$ $+ \\tfrac{1}{2}$ $= 5$<br>$A'(-\\sqrt{3}, 5)$` },
+      { jawaban:`$(4 - 2,\\; -2 - 1)$ $= (2, -3) \\xrightarrow{-90^\\circ} (-3, -2)$, lalu $+ (2, 1)$: $C'(-1, -1)$` },
+      { jawaban:`Balik dengan rotasi $90^\\circ$: $(4 + 2,\\; 1 - 3)$ $= (6, -2) \\to (2, 6)$, lalu $+ (-2, 3)$: $B(0, 9)$` },
+      { jawaban:`Garis bersudut $60^\\circ$ diputar $60^\\circ$ menjadi bersudut $120^\\circ$ (gradien $-\\sqrt{3}$), melalui bayangan $(0, 1)$, yaitu $\\left(-\\tfrac{\\sqrt{3}}{2}, \\tfrac{1}{2}\\right)$<br>Bayangan: $\\sqrt{3}x + y + 1$ $= 0$` },
+      { jawaban:`Rotasi $-90^\\circ$: $x' = y$, $y' = -x$, jadi $x = -y'$, $y = x'$<br>$-y' - 2x' + 4$ $= 0$, bayangannya $2x + y - 4 = 0$` },
+      { jawaban:`$P'(-1, 2)$, $P''(-2, -1)$; setara dengan rotasi $180^\\circ$ terhadap $O$` },
+      { jawaban:`$x = 2 - x'$, $y = 4 - y'$: $4 - y'$ $= (2 - x')^2$ $- 4(2 - x')$ $+ 3$ $= x'^2 - 1$<br>Bayangan $y = 5 - x^2$ (puncak $(2, -1)$ berpindah ke $(0, 5)$)` },
+      { jawaban:`Total $45^\\circ$ $+ 135^\\circ$ $= 180^\\circ$ terhadap $P(1, 1)$: $K' = (2 - 2\\sqrt{2},\\; 2)$` },
+      { jawaban:`Rotasi $90^\\circ$ terhadap $O$: $g': x + y + 4$ $= 0$<br>Rotasi $90^\\circ$ terhadap $P(2, 0)$: $x' = y''+ 2$, $y' = 2 - x''$, bayangan akhir $x - y - 8 = 0$` },
     ],
-    2: [ // Bagian D
-      {jawaban:'(a) $(2\\cdot2-4,−7)=(0,-7)$. (b) $(4,2\\cdot3+7)=(4,13)$. (c) $(-7,4)$. (d) $(7,-4)$.'},
-      {jawaban:'$M_{y=x}$ bersifat involusi: $(p,q)=(q,p)$. Karena $A\'=(5,-2)$, maka $A=(p,q)=(-2,5)$, jadi $p=-2,q=5$.'},
-      {jawaban:'Refleksi sumbu-$Y$: $x\'=-x$. $-x=-5\\Rightarrow x=5$... wait, $C\'=(-x,y)=(-5,6)\\Rightarrow x=5,y=6$. $2m-1=5\\Rightarrow m=3$; $m+3=6$ ✓. $C(5,6)$.'},
-      {jawaban:'Dari $M_{y=x}$: $x=y\'$, $y=x\'$. $4y\'-3x\'+12=0\\Rightarrow 3x-4y-12=0$.'},
-      {jawaban:'Refleksi sumbu-$X$: $y\'=-y$, $x\'=x$. $(x)^2+(-y)^2-6x+4(-y)-3=x^2+y^2-6x-4y-3=0$.'},
-      {jawaban:'$M=M_Y\\cdot M_{y=-x}=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}$. $\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}\\begin{bmatrix}2\\\\-1\\end{bmatrix}=\\begin{bmatrix}-1\\\\-2\\end{bmatrix}$.'},
-      {jawaban:'$M_{y=x}\\cdot M_{y=-x}=\\begin{bmatrix}0&1\\\\1&0\\end{bmatrix}\\begin{bmatrix}0&-1\\\\-1&0\\end{bmatrix}=\\begin{bmatrix}-1&0\\\\0&-1\\end{bmatrix}$ = rotasi $180°$ terhadap $O$.'},
-      {jawaban:'Langkah 1: refleksi sumbu-$X$ → $y_1=-y$. Substitusi: $-y_1=x^2-2x+3\\Rightarrow y_1=-x^2+2x-3$. Langkah 2: refleksi $y=1$ → $y\'\'=2-y_1=-2-(-x^2+2x-3)=x^2-2x+1$. $y=x^2-2x+1=(x-1)^2$.'},
+    // D
+    2: [
+      { jawaban:`$(x, y) \\to (-y, -x)$: $P'(4, -6)$` },
+      { jawaban:`Cerminkan balik terhadap $y = x$: garis asal $x - 3y - 6 = 0$` },
+      { jawaban:`$y = x^2 + 6x + 5$, puncak $(-3, -4)$` },
+      { jawaban:`$D'(-2, -5)$, $D''(-5, -2)$; setara dengan rotasi $90^\\circ$ terhadap $O$: $(x, y) \\to (-y, x)$` },
+      { jawaban:`Cermin $y = 1$: $y = -x^2 - 2x + 5$; cermin $x = 2$: $y = -x^2$ $+ 10x$ $- 19$ (puncak $(-1, -4) \\to (5, 6)$)` },
+      { jawaban:`$E(m, 3m + 2) \\to (3m + 2,\\; m)$<br>$\\to (-3m - 2,\\; m)$ $= (-8, 2)$<br>$m = 2$, jadi $E(2, 8)$` },
+      { jawaban:`$C'' (5, 4)$ dicerminkan balik terhadap $x = 3$: $C'(1, 4)$; terhadap $y = -1$: $C(1, -6)$` },
     ],
-    3: [ // Bagian E
-      {jawaban:'$P\'(-12,20)$.'},
-      {jawaban:'$Q\'=(x\'-(k-1)m,y\'-(k-1)n)/k=(10-2\\cdot2,−4+2\\cdot0)/2=(6/2,-4/2)... $ lebih tepat: $Q=(x\'-k\\cdot m+m)/... $; $Q=A+(Q\'-A)/k=(2,0)+((10,-4)-(2,0))/2=(2+4,-0+(-2))=(6,-2)$.'},
-      {jawaban:'Pusat $B(1,3)$, $k=3$: $x\'=3(x-1)+1=3x-2$, $y\'=3(y-3)+3=3y-6$. Maka $x=(x\'+2)/3$, $y=(y\'+6)/3$. Substitusi: $3(x\'+2)/3-(y\'+6)/3+6=0\\Rightarrow (x\'+2-y\'-6+18)/3=0\\Rightarrow x\'-y\'+14=0$. Gradien tetap ($3x-y=0$: gradien 3; $x-y+14=0$: gradien 1... periksa). Sebenarnya: $3x-y+6=0$, $y=3x+6$. Bayangan: $y\'=3x\'-12+6+...$'},
-      {jawaban:'$P\'=(-4,-1),Q\'=(-2,-1),R\'=(-2,3)$. Luas asal $=8$; luas bayangan $=k^2\\cdot 8=4\\cdot 8=32$.'},
-      {jawaban:'Pusat $A(1,-2)$, $k=3$: setiap titik dilatasi dari $A$ → jari-jari baru $= 3\\cdot 3=9$; pusat tetap $(1,-2)$. $(x-1)^2+(y+2)^2=81$.'},
-      {jawaban:'$x\'=3x,y\'=3y$: $x^2/36+y^2/81=1$. Sumbu mayor $2b\'=18$ (dari $\\sqrt{81}=9$, semula $3$); sumbu minor $2a\'=12$ (dari $\\sqrt{36}=6$, semula $2$) — keduanya 3 kali lipat.'},
-      {jawaban:'Bayangan dilatasi $k=3$ pusat $O$: $3ax-3\\cdot3y+4=0\\Rightarrow 3ax/3-y+4/3... $ lebih tepat: $x=x\'/3,y=y\'/3$, substitusi ke bayangan $2x\'-by\'+12=0$: $2(3x)-b(3y)+12=0\\Rightarrow 6x-3by+12=0\\Rightarrow 2x-by+4=0$. Bandingkan dengan asal $ax-3y+4=0$: $a=2,b=3$.'},
-      {jawaban:'(a) $D_1$ pada $R(4,1)$: $R\'=A+(1/2)(R-A)=(1,-1)+(1/2)(3,2)=(2.5,0)$. $D_2$ pada $R\'$: $R\'\'=B+3(R\'-B)=(3,2)+3(-0.5,-2)=(3-1.5,2-6)=(1.5,-4)$. (b) $D_2$ pada $R(4,1)$: $R\'=B+3(R-B)=(3,2)+3(1,-1)=(6,-1)$. $D_1$ pada $R\'$: $R\'\'=A+(1/2)(R\'-A)=(1,-1)+(1/2)(5,0)=(3.5,-1)$. (c) $(1.5,-4)\\neq(3.5,-1)$: tidak komutatif.'},
+    // E
+    3: [
+      { jawaban:`$P'(-12, 20)$` },
+      { jawaban:`$Q = A$ $+ \\tfrac{1}{2}(Q' - A)$ $= (2, 0)$ $+ \\tfrac{1}{2}(8, -4)$ $= (6, -2)$` },
+      { jawaban:`$x = \\tfrac{x' + 2}{3}$, $y = \\tfrac{y' + 6}{3}$: $(x' + 2)$ $- \\tfrac{y' + 6}{3}$ $+ 6$ $= 0$<br>Bayangan $3x - y + 18 = 0$ (gradien tetap $3$, sejajar)` },
+      { jawaban:`$P'(-2, -1)$, $Q'(6, -1)$, $R'(2, 7)$<br>Luas $8 \\to 32$, rasio $k^2 = 4$` },
+      { jawaban:`Pusat tetap $(1, -2)$, jari-jari $3 \\to 9$: $(x - 1)^2$ $+ (y + 2)^2$ $= 81$` },
+      { jawaban:`$\\tfrac{x^2}{36}$ $+ \\tfrac{y^2}{81}$ $= 1$<br>Sumbu mayor $6 \\to 18$, sumbu minor $4 \\to 12$ (tiga kali)` },
+      { jawaban:`Bayangan $ax - 3y + 4 = 0$ oleh $k = 3$: $ax - 3y + 12 = 0$; bandingkan dengan $2x - by + 12 = 0$: $a = 2$, $b = 3$` },
+      { jawaban:`(a) $R' = (1, -1)$ $+ \\tfrac{1}{2}(3, 2)$ $= (\\tfrac{5}{2}, 0)$, $R'' = (3, 2)$ $+ 3(-\\tfrac{1}{2}, -2)$ $= (\\tfrac{3}{2}, -4)$<br>(b) $R' = (3, 2)$ $+ 3(1, -1)$ $= (6, -1)$, $R'' = (1, -1)$ $+ \\tfrac{1}{2}(5, 0)$ $= (\\tfrac{7}{2}, -1)$<br>(c) Berbeda: tidak komutatif` },
     ],
-    4: [ // Bagian F
-      {jawaban:'$M_{y=-x}$: $A\'=(-6,2)$. $R_{-90°}=\\begin{bmatrix}0&1\\\\-1&0\\end{bmatrix}$: $A\'\'=\\begin{bmatrix}2\\\\6\\end{bmatrix}$. Jadi $A\'\'(2,6)$.'},
-      {jawaban:'Dilatasi $k=-2$: $B\'=(-8,-2)$. Translasi: $(-8+3,-2-5)=(-5,-7)$.'},
-      {jawaban:'$T=M_X\\cdot D_3=\\begin{bmatrix}3&0\\\\0&-3\\end{bmatrix}$. Invers: $x=x\'/3,y=-y\'/3$. Substitusi: $2x\'/3-3(-y\'/3)+6=0\\Rightarrow 2x\'+3y\'+18=0$.'},
-      {jawaban:'$R_{180°}$: $(x,y)\\to(-x,-y)$, jadi $y=-x^2+1$ jadi $-y=(-x)^2+1=x^2+1\\to y=-x^2-1$... Setelah $R_{180°}$: $y\'=-(-x\')^2-1=-x\'^2-1$... Lalu $M_{y=x}$: tukar $x\'\\leftrightarrow y\'$: $x=−y^2−1$.'},
-      {jawaban:'$T=D_{1/2}\\cdot R_{90°}\\cdot M_Y=\\frac{1}{2}\\begin{bmatrix}0&-1\\\\1&0\\end{bmatrix}\\begin{bmatrix}-1&0\\\\0&1\\end{bmatrix}=\\frac{1}{2}\\begin{bmatrix}0&-1\\\\-1&0\\end{bmatrix}=\\begin{bmatrix}0&-1/2\\\\-1/2&0\\end{bmatrix}$. $K\'=\\begin{bmatrix}0&-1/2\\\\-1/2&0\\end{bmatrix}\\begin{bmatrix}8\\\\-4\\end{bmatrix}=\\begin{bmatrix}2\\\\-4\\end{bmatrix}$.'},
-      {jawaban:'$M=\\begin{bmatrix}1&2\\\\0&1\\end{bmatrix}$. Hubungan: $x\'=x+2y,y\'=y$. Invers: $x=x\'-2y\'=x\'-2y,y=y\'$. Substitusi ke $g$: $4(x\'-2y\')-y\'+2=0\\Rightarrow 4x\'-9y\'+2=0$. Lalu $M_Y$: $x\'\\to -x\'$: $-4x-9y+2=0\\Rightarrow 4x+9y-2=0$.'},
+    // F
+    4: [
+      { jawaban:`$y = -x$: $A'(-6, 2)$; rotasi $-90^\\circ$ $(x, y) \\to (y, -x)$: $A''(2, 6)$` },
+      { jawaban:`$k = -2$: $B'(-8, -2)$; translasi: $B''(-5, -7)$` },
+      { jawaban:`Aturan gabungan $(x, y) \\to (3x, -3y)$: $x = \\tfrac{x'}{3}$, $y = -\\tfrac{y'}{3}$<br>Bayangan $2x + 3y + 18 = 0$` },
+      { jawaban:`Rotasi $180^\\circ$: $y = -x^2 - 1$; cermin $y = x$: $x = -y^2 - 1$` },
+      { jawaban:`Aturan $(x, y) \\to \\left(-\\tfrac{y}{2}, -\\tfrac{x}{2}\\right)$; $K(8, -4) \\to K'(2, -4)$` },
+      { jawaban:`Cermin $y = -x$: $x - 4y + 2 = 0$; dilatasi $k = 2$: $x - 4y + 4 = 0$; cermin sumbu-$Y$: $x + 4y - 4 = 0$` },
     ],
   };
 
