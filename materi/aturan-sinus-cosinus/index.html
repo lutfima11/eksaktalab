@@ -1,0 +1,897 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aturan Sinus, Aturan Cosinus, dan Luas Segitiga — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
+<meta name="description" content="Materi lengkap Aturan Sinus, Aturan Cosinus, dan Luas Segitiga SMA: penurunan rumus, kasus ambigu, rumus luas dua sisi dan sudut apit, rumus Heron, serta aplikasi navigasi dan pengukuran. Dilengkapi 20 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script>window.addEventListener("load",function(){var s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";document.head.appendChild(s);});</script>
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/aturan-sinus-cosinus/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/aturan-sinus-cosinus/">
+  <meta property="og:title" content="Aturan Sinus, Aturan Cosinus, dan Luas Segitiga — EksaktaLab">
+  <meta property="og:description" content="Materi lengkap Aturan Sinus, Aturan Cosinus, dan Luas Segitiga SMA: penurunan rumus, kasus ambigu, rumus luas dua sisi dan sudut apit, rumus Heron, serta aplikasi navigasi dan pengukuran.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+  <meta property="og:site_name" content="EksaktaLab">
+  <meta property="og:locale" content="id_ID">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aturan Sinus, Aturan Cosinus, dan Luas Segitiga — EksaktaLab">
+  <meta name="twitter:description" content="Materi lengkap Aturan Sinus, Aturan Cosinus, dan Luas Segitiga SMA: penurunan rumus, kasus ambigu, rumus luas dua sisi dan sudut apit, rumus Heron, serta aplikasi navigasi dan pengukuran.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Aturan Sinus, Aturan Cosinus, dan Luas Segitiga","url":"https://lutfima11.github.io/eksaktalab/materi/aturan-sinus-cosinus/","description":"Materi lengkap Aturan Sinus, Aturan Cosinus, dan Luas Segitiga SMA: penurunan rumus, kasus ambigu, rumus luas dua sisi dan sudut apit, rumus Heron, serta aplikasi navigasi dan pengukuran.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Aljabar 0026 Fungsi"},{"@type":"ListItem","position":4,"name":"Aturan Sinus, Aturan Cosinus, dan Luas Segitiga","item":"https://lutfima11.github.io/eksaktalab/materi/aturan-sinus-cosinus/"}]}}</script>
+<style>.fki-jenis{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin:1rem 0}.fki-jenis svg{width:100%;height:auto;display:block}@media(max-width:560px){.fki-jenis{grid-template-columns:1fr;max-width:230px;margin:1rem auto}}[data-theme="dark"] .grafik-wrap svg [stroke="#555"]{stroke:#94A3B8}[data-theme="dark"] .grafik-wrap svg [fill="#555"]{fill:#94A3B8}[data-theme="dark"] .grafik-wrap svg text[fill="#059669"]{fill:#34D399}[data-theme="dark"] .grafik-wrap svg [stroke="#059669"]{stroke:#34D399}[data-theme="dark"] .grafik-wrap svg text[fill="#94A3B8"]{fill:#CBD5E8}[data-theme="dark"] .grafik-wrap svg .c1-lgf{stroke:#60A5FA;fill:#60A5FA}[data-theme="dark"] .grafik-wrap svg text.t1-lgf{fill:#60A5FA}@media(max-width:500px){.table-wrap th,.table-wrap td{padding:.45rem .35rem}.table-wrap table{font-size:.72rem}}@media(max-width:400px){.table-wrap th,.table-wrap td{padding:.4rem .25rem}.table-wrap table{font-size:.66rem}.table-wrap mjx-container{font-size:85% !important}.soal-item-header{flex-wrap:wrap}.soal-key-btn{margin-left:auto}}@media(max-width:400px){.contoh-body mjx-container[display="true"],.rumus-body mjx-container[display="true"],.box mjx-container[display="true"],.contoh-question mjx-container[display="true"]{font-size:88% !important}}@media(max-width:360px){.rumus-status{display:none}}.kf-fig{text-align:center;margin:.8rem 0}.kf-fig svg{display:inline-block;max-width:100%;height:auto}.kf-cap{font-size:.8rem;opacity:.8;margin-top:.3rem;line-height:1.4}.kf-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.6rem;align-items:end;margin:.8rem 0}.kf-row .kf-fig{margin:0}.kf-ov{fill:none;stroke:#94A3B8;stroke-width:1.6}.kf-box{fill:#F1F5F9;stroke:#475569;stroke-width:1.6}.kf-t{fill:#334155}.kf-dot{fill:#334155}.kf-mute{fill:#CBD5E1}.kf-mute2{fill:#94A3B8}.kf-ln-b{stroke:#2563EB}.kf-ar-b{fill:#2563EB}.kf-ln-r{stroke:#DC2626}.kf-ar-r{fill:#DC2626}.kf-ln-g{stroke:#059669}.kf-ax{stroke:#555}.kf-axh{fill:#555}.kf-dash{stroke:#CBD5E1}.kf-pt-b{fill:#2563EB}.kf-pt-r{fill:#DC2626}.kf-pt-g{fill:#059669}[data-theme="dark"] .kf-t,[data-theme="dark"] .kf-dot{fill:#E2E8F0}[data-theme="dark"] .kf-ov{stroke:#64748B}[data-theme="dark"] .kf-box{fill:#1E293B;stroke:#94A3B8}[data-theme="dark"] .kf-mute{fill:#475569}[data-theme="dark"] .kf-mute2{fill:#64748B}[data-theme="dark"] .kf-ln-b{stroke:#60A5FA}[data-theme="dark"] .kf-ar-b,[data-theme="dark"] .kf-pt-b{fill:#60A5FA}[data-theme="dark"] .kf-ln-r{stroke:#F87171}[data-theme="dark"] .kf-ar-r,[data-theme="dark"] .kf-pt-r{fill:#F87171}[data-theme="dark"] .kf-ln-g{stroke:#34D399}[data-theme="dark"] .kf-pt-g{fill:#34D399}[data-theme="dark"] .kf-ax{stroke:#94A3B8}[data-theme="dark"] .kf-axh{fill:#94A3B8}[data-theme="dark"] .kf-dash{stroke:#475569}[data-theme="dark"] .nline-wrap svg .nl-ax{stroke:#94A3B8}[data-theme="dark"] .nline-wrap svg .nl-axh{fill:#94A3B8}[data-theme="dark"] .nline-wrap svg text[fill="#555"]{fill:#CBD5E8}[data-theme="dark"] .nline-wrap svg .nl-open{fill:#1E2640}.penyelesaian .nline-wrap svg{margin:0 auto;max-width:100%;height:auto}</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <!-- Daftar Isi Dropdown -->
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Aturan Sinus &amp; Cosinus · 5 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Aturan Sinus</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Aturan Cosinus</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Luas Segitiga</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Aplikasi Terpadu</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Tabel Ringkasan</a>
+      </div>
+    </div>
+    <!-- Tema -->
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<!-- Floating scroll to top -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#fase-3">Trigonometri</a>
+    <span>/</span>
+    Aturan Sinus &amp; Cosinus
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">FASE 3 · No.24</div>
+      <h1 class="materi-title">Aturan Sinus, Aturan Cosinus &amp; Luas Segitiga</h1>
+      <p class="materi-desc">Selesaikan segitiga sembarang, bukan hanya siku-siku: aturan sinus, aturan cosinus, luas segitiga dari dua sisi dan sudut apit, rumus Heron, dan penerapannya.</p>
+      <div class="materi-tags">
+        <span class="tag">Trigonometri</span>
+        <span class="tag">5 Sub-bab</span>
+        <span class="tag">20 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PENGANTAR ═══ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Ketika Segitiga Tidak Siku-Siku</h2>
+    <p>Bayangkan seorang insinyur yang harus menghitung panjang kabel antara dua menara, padahal tidak ada satu pun sudut $90^\circ$ dalam strukturnya. Atau seorang kapten kapal yang ingin tahu seberapa jauh ia dari pelabuhan setelah dua kali berbelok. Perbandingan $\sin$, $\cos$, dan $\tan$ yang kita pelajari di Trigonometri Dasar hanya berlaku langsung pada <strong>segitiga siku-siku</strong>. Lalu bagaimana dengan segitiga lainnya?</p>
+    <div class="box box-catatan">
+      <div class="box-label">💡 Gagasan Utama</div>
+      <p style="margin:0;font-size:.9rem;text-align:center;"><strong>Aturan Sinus dan Aturan Cosinus memperluas trigonometri ke semua jenis segitiga.</strong></p>
+    </div>
+    <p>Kedua aturan ini berlaku pada segitiga <em>sembarang</em>, baik lancip, tumpul, maupun siku-siku. Dengan keduanya, mengetahui tiga dari enam unsur segitiga (tiga sisi dan tiga sudut, asalkan bukan hanya tiga sudut) sudah cukup untuk menentukan unsur yang lain, termasuk luasnya.</p>
+    <h3 class="subsection-title">Sejarah Singkat</h3>
+    <p><strong>Ptolemy</strong> (sekitar 100&ndash;170 M) sudah memakai bentuk awal aturan sinus dalam tabel tali busur di karyanya <em>Almagest</em>. Rumusan yang sistematis muncul di tangan ilmuwan Muslim: <strong>al-Battani</strong> (858&ndash;929 M) dan <strong>Abu Nasr Mansur</strong> (sekitar 970&ndash;1036 M) membuktikan aturan sinus untuk keperluan astronomi, sedangkan <strong>al-Biruni</strong> (973&ndash;1048 M) memakai triangulasi untuk mengukur jarak antarkota dengan akurat, tanpa GPS dan tanpa satelit.</p>
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Aturan Sinus</a></li>
+      <li><a href="#bagian-b" data-num="B">Aturan Cosinus</a></li>
+      <li><a href="#bagian-c" data-num="C">Luas Segitiga Sembarang</a></li>
+      <li><a href="#bagian-d" data-num="D">Aplikasi Terpadu</a></li>
+      <li><a href="#bagian-e" data-num="E">Tabel Ringkasan</a></li>
+    </ul>
+  </div>
+
+  </section>
+
+  <!-- ═══ A. ATURAN SINUS ═══ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Aturan Sinus</h2>
+    <h3 class="subsection-title">1. Penurunan dan Rumus</h3>
+    <p>Perhatikan segitiga sembarang $ABC$ dengan sisi $a = BC$, $b = CA$, $c = AB$. Sisi selalu dinamai dengan huruf kecil dari sudut <strong>di depannya</strong>. Tarik garis tinggi $h$ dari $C$ ke sisi $AB$ dengan kaki di $D$.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Penurunan Aturan Sinus</div>
+      <div class="kf-fig"><svg class="kf-svg" viewBox="0 0 250 171" width="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gambar segitiga"><defs><marker id="asar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><line x1="105.2" y1="26.0" x2="105.2" y2="144.8" class="kf-dash" stroke-width="1.4" stroke-dasharray="5 4"/><polygon points="26.0,144.8 224.0,144.8 105.2,26.0" fill="none" class="kf-ln-b" stroke-width="2"/><polyline points="105.2,135.8 114.2,135.8 114.2,144.8" fill="none" class="kf-ax" stroke-width="1"/><circle cx="26.0" cy="144.8" r="2.4" class="kf-dot"/><text x="14.1" y="154.4" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">A</text><circle cx="224.0" cy="144.8" r="2.4" class="kf-dot"/><text x="236.2" y="153.9" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">B</text><circle cx="105.2" cy="26.0" r="2.4" class="kf-dot"/><text x="103.1" y="17.7" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">C</text><circle cx="105.2" cy="144.8" r="2.4" class="kf-dot"/><text x="101.1" y="161.6" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">D</text><text x="175.6" y="84.7" class="kf-t" font-size="12" text-anchor="middle"><tspan font-style="italic">a</tspan></text><text x="54.4" y="85.2" class="kf-t" font-size="12" text-anchor="middle"><tspan font-style="italic">b</tspan></text><text x="127.0" y="160.6" class="kf-t" font-size="12" text-anchor="middle"><tspan font-style="italic">c</tspan></text><text x="98.5" y="79.4" class="kf-t" font-size="12" text-anchor="middle"><tspan font-style="italic">h</tspan></text></svg></div><ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Segitiga $ACD$ siku-siku di $D$: $\sin A = \dfrac{h}{b}$, jadi $h = b\sin A$.</li><li>Segitiga $BCD$ siku-siku di $D$: $\sin B = \dfrac{h}{a}$, jadi $h = a\sin B$.</li><li>Samakan: $b\sin A = a\sin B$, sehingga $\dfrac{a}{\sin A}$ $= \dfrac{b}{\sin B}$.</li><li>Dengan garis tinggi dari titik lain diperoleh juga $\dfrac{b}{\sin B}$ $= \dfrac{c}{\sin C}$.</li></ul>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Aturan Sinus</div>
+      $$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R$$<p style="margin:0;font-size:.9rem;">dengan $R$ jari-jari <strong>lingkaran luar</strong> segitiga $ABC$.</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Kapan Memakai Aturan Sinus?</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li><strong>Cara hafal:</strong> "sisi dibagi sinus sudut di depannya, hasilnya selalu sama".</li><li>Diketahui <strong>dua sudut dan satu sisi</strong> (sd-sd-s atau sd-s-sd): cari sisi lain.</li><li>Diketahui <strong>dua sisi dan satu sudut yang bukan apitnya</strong> (s-s-sd): cari sudut lain. Hati-hati, bisa ada <strong>dua segitiga</strong> karena $\sin\theta$ $= \sin(180^\circ - \theta)$. Periksa apakah kedua sudut itu sama-sama mungkin.</li></ul>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">📌 Nilai Sinus yang Sering Dipakai</div>
+      $$ \begin{gather*} \sin 15^\circ = \frac{\sqrt{6} - \sqrt{2}}{4} \\ \sin 75^\circ = \frac{\sqrt{6} + \sqrt{2}}{4} \\ \sin 105^\circ = \sin 75^\circ \\ \sin 120^\circ = \frac{\sqrt{3}}{2} \\ \cos 120^\circ = -\frac{1}{2} \end{gather*} $$<p style="margin:0;font-size:.9rem;">Nilai $\sin 15^\circ$ dan $\sin 75^\circ$ diturunkan dari rumus jumlah dan selisih sudut, yang dibahas pada trigonometri lanjut. Untuk sekarang, cukup gunakan nilainya.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Contoh Penerapan</h3>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Pada segitiga $ABC$ diketahui $BC = 8$ cm, $\angle A = 30^\circ$, dan $\angle B = 45^\circ$. Tentukan panjang $AC$.</p>
+    </div>
+    <div class="penyelesaian">
+<div class="kf-fig"><svg class="kf-svg" viewBox="0 0 250 124" width="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gambar segitiga"><defs><marker id="asar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><polygon points="26.0,98.5 224.0,98.5 151.5,26.0" fill="none" class="kf-ln-b" stroke-width="2"/><circle cx="26.0" cy="98.5" r="2.4" class="kf-dot"/><text x="13.3" y="105.8" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">A</text><circle cx="224.0" cy="98.5" r="2.4" class="kf-dot"/><text x="236.6" y="106.3" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">B</text><circle cx="151.5" cy="26.0" r="2.4" class="kf-dot"/><text x="156.0" y="18.3" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">C</text><text x="199.5" y="63.6" class="kf-t" font-size="12" text-anchor="middle"><tspan font-style="italic">a</tspan> = 8</text><text x="77.2" y="63.1" class="kf-t" font-size="12" text-anchor="middle"><tspan font-style="italic">b</tspan></text><text x="51.4" y="96.8" class="kf-pt-r" font-size="11" text-anchor="middle">30°</text><text x="198.9" y="95.7" class="kf-pt-r" font-size="11" text-anchor="middle">45°</text></svg></div>      <p class="sol-step"><span class="sol-no">1</span><strong>Kenali pasangan sisi dan sudut:</strong> $a = BC = 8$ berhadapan dengan $\angle A$, dan yang dicari $b = AC$ berhadapan dengan $\angle B$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan aturan sinus:</strong></p>
+      $$ \begin{align*} \frac{b}{\sin 45^\circ} &= \frac{8}{\sin 30^\circ} \\ b &= \frac{8 \cdot \frac{\sqrt{2}}{2}}{\frac{1}{2}} = 8\sqrt{2} \end{align*} $$
+      <div class="sol-jadi">$AC = 8\sqrt{2}$ cm.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Pada segitiga $PQR$ diketahui $PQ = 6$ cm, $\angle Q = 45^\circ$, dan $\angle R = 120^\circ$. Tentukan panjang $PR$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kenali pasangan:</strong> $PQ = r = 6$ berhadapan dengan $\angle R$, dan $PR = q$ berhadapan dengan $\angle Q$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan aturan sinus:</strong></p>
+      $$ \begin{align*} \frac{q}{\sin 45^\circ} &= \frac{6}{\sin 120^\circ} \\ q &= \frac{6 \cdot \frac{\sqrt{2}}{2}}{\frac{\sqrt{3}}{2}} = \frac{6\sqrt{2}}{\sqrt{3}} \\ &= 2\sqrt{6} \end{align*} $$
+      <div class="sol-jadi">$PR = 2\sqrt{6}$ cm.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Pada segitiga $ABC$ diketahui $AB = 12\sqrt{2}$ cm, $AC = 4\sqrt{6}$ cm, dan $\angle C = 60^\circ$. Tentukan besar $\angle B$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kenali pasangan:</strong> $c = AB$ berhadapan dengan $\angle C$, dan $b = AC$ berhadapan dengan $\angle B$.</p>
+      $$ \begin{align*} \frac{\sin B}{4\sqrt{6}} &= \frac{\sin 60^\circ}{12\sqrt{2}} \\ \sin B &= \frac{4\sqrt{6} \cdot \frac{\sqrt{3}}{2}}{12\sqrt{2}} \\ &= \frac{6\sqrt{2}}{12\sqrt{2}} \\ &= \frac{1}{2} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Periksa dua kemungkinan:</strong> $B = 30^\circ$ atau $B = 150^\circ$. Nilai $150^\circ$ tidak mungkin, karena $150^\circ + 60^\circ$ $> 180^\circ$.</p>
+      <div class="sol-jadi">$\angle B = 30^\circ$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Pada segitiga $ABC$ diketahui $a = 10$ cm dan $\angle A = 30^\circ$. Tentukan jari-jari lingkaran luar segitiga, lalu panjang $b$ jika $\angle B = 45^\circ$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan $\dfrac{a}{\sin A} = 2R$:</strong></p>
+      $$2R = \frac{10}{\sin 30^\circ} = 20 \;\Rightarrow\; R = 10$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan lagi $b = 2R\sin B$:</strong> $b = 20 \cdot \dfrac{\sqrt{2}}{2}$ $= 10\sqrt{2}$.</p>
+      <div class="sol-jadi">$R = 10$ cm dan $b = 10\sqrt{2}$ cm.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Pada segitiga $PQR$ diketahui $p = 4$ cm, $q = 4\sqrt{3}$ cm, dan $\angle P = 30^\circ$. Tentukan semua kemungkinan panjang $r$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari $\sin Q$:</strong></p>
+      $$ \begin{align*} \sin Q &= \frac{q \sin P}{p} \\ &= \frac{4\sqrt{3} \cdot \frac{1}{2}}{4} = \frac{\sqrt{3}}{2} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Dua kemungkinan:</strong> $Q = 60^\circ$ atau $Q = 120^\circ$; keduanya mungkin karena masing-masing ditambah $30^\circ$ masih kurang dari $180^\circ$.</p>
+      <div class="sol-part"><span class="sol-tag">1</span><span>$Q = 60^\circ$, jadi $R = 90^\circ$</span></div>
+      $$r = \frac{p\sin R}{\sin P} = \frac{4 \cdot 1}{\frac{1}{2}} = 8$$
+      <div class="sol-part"><span class="sol-tag">2</span><span>$Q = 120^\circ$, jadi $R = 30^\circ$</span></div>
+      $$r = \frac{4 \cdot \frac{1}{2}}{\frac{1}{2}} = 4$$
+      <p class="sol-step">Inilah <strong>kasus ambigu</strong>: data s-s-sd bisa menghasilkan dua segitiga berbeda.</p>
+      <div class="sol-jadi">$r = 8$ cm (saat $\angle R = 90^\circ$) atau $r = 4$ cm (saat $\angle R = 30^\circ$).</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Pada segi empat $ABCD$ diketahui $AD = 12$ cm, $\angle DAC = 30^\circ$, $\angle ACD = 45^\circ$, $\angle ACB = 60^\circ$, dan $\angle ABC = 45^\circ$. Tentukan panjang $BC$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Selesaikan $\triangle ACD$ dulu:</strong> $\angle ADC$ $= 180^\circ$ $- 30^\circ$ $- 45^\circ$ $= 105^\circ$.</p>
+      $$ \begin{align*} AC &= \frac{AD \sin 105^\circ}{\sin 45^\circ} \\ &= \frac{12 \cdot \frac{\sqrt{6} + \sqrt{2}}{4}}{\frac{\sqrt{2}}{2}} \\ &= 6(\sqrt{3} + 1) \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Lanjut ke $\triangle ABC$:</strong> $\angle BAC$ $= 180^\circ$ $- 60^\circ$ $- 45^\circ$ $= 75^\circ$.</p>
+      $$ \begin{align*} BC &= \frac{AC \sin 75^\circ}{\sin 45^\circ} \\ &= \frac{6(\sqrt{3} + 1)(\sqrt{6} + \sqrt{2})}{2\sqrt{2}} \\ &= 3(\sqrt{3} + 1)^2 = 3(4 + 2\sqrt{3}) \end{align*} $$
+      <div class="sol-jadi">$BC = 12 + 6\sqrt{3}$ cm.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Titik $P$ dan $Q$ di tepi sungai berjarak $80$ m. Sebuah pohon $T$ di seberang sungai terlihat dengan $\angle TPQ = 75^\circ$ dan $\angle TQP = 60^\circ$. Tentukan jarak pohon ke $P$.</p>
+    </div>
+    <div class="penyelesaian">
+<div class="kf-fig"><svg class="kf-svg" viewBox="0 0 210 239" width="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gambar segitiga"><defs><marker id="asar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><polygon points="26.0,212.9 184.0,212.9 76.1,26.0" fill="none" class="kf-ln-b" stroke-width="2"/><circle cx="26.0" cy="212.9" r="2.4" class="kf-dot"/><text x="16.3" y="226.1" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">P</text><circle cx="184.0" cy="212.9" r="2.4" class="kf-dot"/><text x="194.6" y="224.9" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">Q</text><circle cx="76.1" cy="26.0" r="2.4" class="kf-dot"/><text x="74.1" y="17.7" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">T</text><text x="106.8" y="228.8" class="kf-t" font-size="12" text-anchor="middle">80 <tspan font-style="italic">m</tspan></text><text x="41.2" y="116.6" class="kf-t" font-size="12" text-anchor="middle">TP</text><text x="45.3" y="199.5" class="kf-pt-r" font-size="11" text-anchor="middle">75°</text><text x="162.7" y="202.0" class="kf-pt-r" font-size="11" text-anchor="middle">60°</text></svg></div>      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung sudut di $T$:</strong> $\angle T$ $= 180^\circ$ $- 75^\circ$ $- 60^\circ$ $= 45^\circ$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan aturan sinus:</strong> $TP$ berhadapan dengan $\angle Q$, dan $PQ$ berhadapan dengan $\angle T$.</p>
+      $$ \begin{align*} TP &= \frac{80 \sin 60^\circ}{\sin 45^\circ} \\ &= \frac{80\sqrt{3}}{\sqrt{2}} = 40\sqrt{6} \end{align*} $$
+      <div class="sol-jadi">jarak pohon ke $P$ adalah $40\sqrt{6} \approx 98$ m.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan A</div>
+      <ol class="soal-list">
+        <li>Pada segitiga $ABC$ diketahui $\angle A$ $= 30^\circ$, $\angle B$ $= 45^\circ$, dan $a = 6$ cm. Tentukan panjang $b$.</li>
+        <li>Pada segitiga $PQR$ diketahui $\angle P$ $= 60^\circ$, $\angle Q$ $= 45^\circ$, dan $r = 4\sqrt{2}$ cm. Tentukan panjang $q$.</li>
+        <li>Pada segitiga $KLM$ diketahui $KL = 10$ cm, $\angle K$ $= 75^\circ$, dan $\angle M$ $= 45^\circ$. Tentukan panjang $KM$.</li>
+        <li>Segitiga $ABC$ memiliki $b = 6$ cm, $c = 4\sqrt{3}$ cm, dan $\angle B$ $= 45^\circ$. (a) Tentukan $\sin C$ dan semua kemungkinan $\angle C$. (b) Untuk setiap kemungkinan, tentukan panjang $a$.</li>
+        <li>Dua stasiun cuaca $A$ dan $B$ berjarak $20$ km. Awan badai $C$ terdeteksi dengan $\angle BAC$ $= 70^\circ$ dan $\angle ABC$ $= 65^\circ$. Tentukan jarak awan ke stasiun $A$ (gunakan $\sin 65^\circ \approx 0{,}906$).</li>
+        <li>Pada segi empat $ABCD$ diketahui $AB = 8$ cm, $\angle ABD$ $= 30^\circ$, $\angle ADB$ $= 45^\circ$, $\angle BDC$ $= 60^\circ$, dan $\angle BCD$ $= 75^\circ$. Tentukan panjang $DC$.</li>
+        <li><strong>HOTS.</strong> Buktikan bahwa pada segitiga $ABC$ berlaku $\dfrac{a - b}{a + b}$ $= \dfrac{\tan\frac{A - B}{2}}{\tan\frac{A + B}{2}}$. (Petunjuk: tulis $a = 2R\sin A$, $b = 2R\sin B$, lalu gunakan rumus jumlah dan selisih sinus.)</li>
+        <li><strong>HOTS.</strong> Kapal berlayar dari pelabuhan $P$ ke titik $A$ sejauh $d$ km dengan arah $\alpha$ dari utara. Pelabuhan $Q$ berada pada arah $\beta$ dari $P$ sejauh $D$ km ($\beta > \alpha$). Nyatakan jarak $AQ$ dalam $d$, $D$, $\alpha$, dan $\beta$.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ B. ATURAN COSINUS ═══ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Aturan Cosinus</h2>
+    <h3 class="subsection-title">1. Penurunan dan Rumus</h3>
+    <p>Aturan sinus tidak bisa dipakai jika yang diketahui hanya <strong>tiga sisi</strong>, atau <strong>dua sisi dan sudut apitnya</strong>, karena tidak ada pasangan sisi–sudut yang lengkap. Untuk kasus ini kita memerlukan aturan cosinus. Gunakan lagi garis tinggi $h$ dari $C$ ke $AB$.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Penurunan Aturan Cosinus</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Dari $\triangle ACD$: $AD = b\cos A$ dan $h = b\sin A$.</li><li>Maka $DB = c - b\cos A$.</li></ul>$$ \begin{align*} a^2 &= DB^2 + h^2 \\ &= (c - b\cos A)^2 + (b\sin A)^2 \\  &= c^2 \\ &\quad - 2bc\cos A \\ &\quad + b^2(\cos^2 A + \sin^2 A) \\ &= b^2 + c^2 - 2bc\cos A \end{align*} $$
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Aturan Cosinus</div>
+      $$ \begin{gather*} a^2 = b^2 + c^2 - 2bc\cos A \\ b^2 = a^2 + c^2 - 2ac\cos B \\ c^2 = a^2 + b^2 - 2ab\cos C \end{gather*} $$<p style="margin:.3rem 0;font-size:.9rem;">Bentuk untuk mencari sudut:</p>$$\cos A = \frac{b^2 + c^2 - a^2}{2bc}$$
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Kapan Memakai Aturan Cosinus?</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Diketahui <strong>tiga sisi</strong> (s-s-s): cari sudut.</li><li>Diketahui <strong>dua sisi dan sudut apit</strong> (s-sd-s): cari sisi ketiga.</li><li>Jika $A = 90^\circ$, $\cos A = 0$ dan rumusnya menjadi $a^2 = b^2 + c^2$: aturan cosinus adalah <strong>perluasan teorema Pythagoras</strong>.</li><li>Tanda $\cos A$ menunjukkan jenis sudut: positif berarti lancip, nol berarti siku-siku, negatif berarti tumpul.</li></ul>
+    </div>
+
+    <h3 class="subsection-title">2. Contoh Penerapan</h3>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Pada segitiga $ABC$ diketahui $AC = 6$ cm, $BC = 4$ cm, dan $\angle C = 120^\circ$. Tentukan panjang $AB$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Data s-sd-s,</strong> jadi gunakan aturan cosinus dengan $a = 4$, $b = 6$:</p>
+      $$ \begin{align*} &c^2 \\  &= 4^2 + 6^2 - 2(4)(6)\cos 120^\circ \\ &= 16 + 36 + 24 = 76 \end{align*} $$
+      <div class="sol-jadi">$AB = \sqrt{76}$ $= 2\sqrt{19}$ cm.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Segitiga $KLM$ memiliki $KL = 6$ cm, $LM = \sqrt{27}$ cm, dan $KM = 3$ cm. Tentukan besar $\angle L$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sudut $L$ diapit oleh $KL$ dan $LM$;</strong> sisi di depannya $KM$.</p>
+      $$ \begin{align*} \cos L &= \frac{KL^2 + LM^2 - KM^2}{2 \cdot KL \cdot LM} \\ &= \frac{36 + 27 - 9}{2 \cdot 6 \cdot 3\sqrt{3}} \\ &= \frac{54}{36\sqrt{3}} = \frac{\sqrt{3}}{2} \end{align*} $$
+      <div class="sol-jadi">$\angle L = 30^\circ$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Segitiga $ABC$ memiliki $c = 2$ cm, $a = \sqrt{12}$ cm, dan $\angle C = 30^\circ$. Tentukan panjang $b$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis aturan cosinus untuk sisi $c$:</strong></p>
+      $$ \begin{align*} c^2 &= a^2 + b^2 - 2ab\cos C \\ 4 &= 12 + b^2 - 2(2\sqrt{3})b \cdot \tfrac{\sqrt{3}}{2} \\ 0 &= b^2 - 6b + 8 = (b - 2)(b - 4) \end{align*} $$
+      <p class="sol-step">Persamaan kuadrat memberi dua nilai positif, jadi ada dua segitiga yang memenuhi.</p>
+      <div class="sol-jadi">$b = 2$ cm atau $b = 4$ cm.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Kapal $A$ berlayar dari pelabuhan $P$ dengan arah $110^\circ$ dan kecepatan $12$ km/jam. Pada saat yang sama kapal $B$ berlayar dengan arah $50^\circ$ dan kecepatan $8$ km/jam. Berapa jarak kedua kapal setelah $5$ jam?</p>
+    </div>
+    <div class="penyelesaian">
+<div class="kf-fig"><svg class="kf-svg" viewBox="0 0 230 224" width="230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gambar segitiga"><defs><marker id="asar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><polygon points="26.0,133.3 204.0,198.1 122.7,52.2" fill="none" class="kf-ln-b" stroke-width="2"/><line x1="26.0" y1="133.3" x2="26.0" y2="26.0" class="kf-ln-r" stroke-width="1.6" marker-end="url(#asar)"/><circle cx="26.0" cy="133.3" r="2.4" class="kf-dot"/><text x="13.0" y="138.6" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">P</text><circle cx="204.0" cy="198.1" r="2.4" class="kf-dot"/><text x="214.1" y="210.8" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">A</text><circle cx="122.7" cy="52.2" r="2.4" class="kf-dot"/><text x="123.6" y="43.7" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">B</text><circle cx="26.0" cy="26.0" r="2.4" class="kf-dot"/><text x="17.3" y="20.8" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">U</text><text x="114.2" y="181.7" class="kf-t" font-size="12" text-anchor="middle">60 km</text><text x="65.1" y="89.2" class="kf-t" font-size="12" text-anchor="middle">40 km</text><text x="52.0" y="135.8" class="kf-pt-r" font-size="11" text-anchor="middle">60°</text></svg><div class="kf-cap">Arah $50^\circ$ dan $110^\circ$ diukur dari utara (U) searah jarum jam.</div></div>      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung jarak tempuh:</strong> $PA = 12 \cdot 5 = 60$ km dan $PB = 8 \cdot 5 = 40$ km.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Sudut apit:</strong> $\angle APB$ $= 110^\circ - 50^\circ$ $= 60^\circ$.</p>
+      $$ \begin{align*} &AB^2 \\  &= 60^2 \\ &\quad + 40^2 \\ &\quad - 2(60)(40)\cos 60^\circ \\ &= 5200 - 2400 = 2800 \end{align*} $$
+      <div class="sol-jadi">jarak kedua kapal $AB = \sqrt{2800}$ $= 20\sqrt{7} \approx 52{,}9$ km.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Jajar genjang $ABCD$ memiliki $AB = 7$ cm, $AD = 6$ cm, dan diagonal $BD = 8$ cm. Tentukan $\cos\angle ADC$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan $\triangle ABD$</strong> untuk mencari $\cos\angle DAB$:</p>
+      $$ \begin{align*} &BD^2 \\  &= AB^2 \\ &\quad + AD^2 \\ &\quad - 2 \cdot AB \cdot AD \cos\angle DAB \\ 64 &= 85 - 84\cos\angle DAB \\ \cos\angle DAB &= \frac{21}{84} = \frac{1}{4} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Sudut berdekatan jajar genjang saling berpelurus:</strong> $\angle ADC$ $= 180^\circ - \angle DAB$, sehingga $\cos\angle ADC$ $= -\cos\angle DAB$.</p>
+      <div class="sol-jadi">$\cos\angle ADC$ $= -\dfrac{1}{4}$.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan B</div>
+      <ol class="soal-list">
+        <li>Pada segitiga $ABC$ diketahui $a = 5$ cm, $b = 7$ cm, dan $\angle C$ $= 60^\circ$. Tentukan panjang $c$.</li>
+        <li>Pada segitiga $PQR$ diketahui $p = 3$ cm, $q = 5$ cm, dan $r = 7$ cm. Tentukan besar $\angle R$.</li>
+        <li>Segitiga $ABC$ memiliki $a = \sqrt{12}$ cm, $b = 4$ cm, dan $\angle A$ $= 30^\circ$. Tentukan semua kemungkinan panjang $c$.</li>
+        <li>Lahan segitiga dengan tonggak $A$, $B$, $C$ memiliki $AC = 12$ m, $BC = 16$ m, dan $\angle ACB$ $= 60^\circ$. Tentukan jarak $AB$.</li>
+        <li>Menara $MN$ berdiri tegak. Titik $A$ dan $B$ berada segaris dengan kaki menara $N$ tetapi di sisi yang berlawanan, dengan $AB = d$ meter. Dari $A$ puncak menara terlihat dengan sudut elevasi $\alpha$, dari $B$ dengan sudut elevasi $\beta$. Nyatakan tinggi menara dalam $d$, $\tan\alpha$, dan $\tan\beta$.</li>
+        <li>Kapal $P$ dan $Q$ berangkat bersamaan dari pelabuhan $R$. Kapal $P$ berlayar dengan arah $035^\circ$ dan kecepatan $15$ km/jam, kapal $Q$ dengan arah $125^\circ$ dan kecepatan $20$ km/jam. Tentukan jarak kedua kapal setelah $2$ jam.</li>
+        <li><strong>HOTS.</strong> Buktikan bahwa pada segitiga $ABC$ berlaku $a^2\sin 2B$ $+ b^2\sin 2A$ $= 2ab\sin C$. (Petunjuk: $\sin 2x$ $= 2\sin x\cos x$, lalu gunakan aturan sinus.)</li>
+        <li><strong>HOTS.</strong> Jajar genjang $ABCD$ memiliki $AB = p$, $AD = q$, dan $\angle DAB$ $= \theta$. Nyatakan panjang kedua diagonalnya dalam $p$, $q$, $\theta$. Kapan kedua diagonal sama panjang?</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ C. LUAS SEGITIGA SEMBARANG ═══ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Luas Segitiga Sembarang</h2>
+    <h3 class="subsection-title">1. Luas dari Dua Sisi dan Sudut Apit</h3>
+    <p>Rumus $L = \tfrac{1}{2} \times \text{alas} \times \text{tinggi}$ membutuhkan tinggi, yang sering tidak diketahui. Karena tinggi dari $C$ ke $AB$ adalah $h = b\sin A$, luas dapat dihitung langsung dari dua sisi dan sudut apitnya.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Luas Segitiga (s-sd-s)</div>
+      $$ \begin{gather*} L = \tfrac{1}{2}\,bc\sin A \\ = \tfrac{1}{2}\,ac\sin B = \tfrac{1}{2}\,ab\sin C \end{gather*} $$
+    </div>
+
+    <h3 class="subsection-title">2. Rumus Heron (Luas dari Tiga Sisi)</h3>
+    <p>Jika ketiga sisi diketahui tetapi tidak ada sudut, gunakan rumus <strong>Heron</strong> (Heron dari Alexandria, sekitar 60 M).</p>
+    <div class="box box-rumus">
+      <div class="box-label">Rumus Heron</div>
+      $$L = \sqrt{s(s - a)(s - b)(s - c)}$$<p style="margin:0;font-size:.9rem;">dengan $s = \dfrac{a + b + c}{2}$ (setengah keliling).</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Memilih Rumus Luas</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Dua sisi dan sudut apit: $L = \tfrac{1}{2}ab\sin C$.</li><li>Tiga sisi: rumus Heron.</li><li>Jika salah satu dari $s - a$, $s - b$, $s - c$ bernilai nol atau negatif, ketiga sisi itu <strong>tidak dapat</strong> membentuk segitiga (cek ketidaksamaan segitiga).</li></ul>
+    </div>
+
+    <h3 class="subsection-title">3. Contoh Penerapan</h3>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan luas segitiga $ABC$ jika $BC = 4$ cm, $AC = 7\sqrt{3}$ cm, dan $\angle C = 60^\circ$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>$\angle C$ diapit oleh $BC$ dan $AC$:</strong></p>
+      $$L = \tfrac{1}{2} \cdot 4 \cdot 7\sqrt{3} \cdot \frac{\sqrt{3}}{2} = 21$$
+      <div class="sol-jadi">luasnya $21$ cm².</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Luas segitiga $ABC$ adalah $18$ cm², $BC = 4$ cm, dan $AB = 6\sqrt{3}$ cm. Tentukan besar $\angle B$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>$\angle B$ diapit oleh $BC$ dan $AB$:</strong></p>
+      $$ \begin{align*} 18 &= \tfrac{1}{2} \cdot 4 \cdot 6\sqrt{3}\sin B \\ &= 12\sqrt{3}\sin B \\ \sin B &= \frac{18}{12\sqrt{3}} = \frac{\sqrt{3}}{2} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Dua kemungkinan:</strong> $B = 60^\circ$ atau $B = 120^\circ$; keduanya sah karena tidak ada sudut lain yang diketahui.</p>
+      <div class="sol-jadi">$\angle B = 60^\circ$ atau $\angle B = 120^\circ$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan luas segitiga $PQR$ dengan $PQ = 5$ cm, $PR = 7$ cm, dan $QR = 8$ cm.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung setengah keliling:</strong> $s = \dfrac{5 + 7 + 8}{2}$ $= 10$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan rumus Heron:</strong></p>
+      $$ \begin{align*} &L \\  &= \sqrt{10(10 - 8)(10 - 7)(10 - 5)} \\ &= \sqrt{300} = 10\sqrt{3} \end{align*} $$
+      <div class="sol-jadi">luasnya $10\sqrt{3}$ cm².</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Luas segitiga $PQR$ adalah $12\sqrt{3}$ cm², $PR = 6$ cm, dan $PQ = 8$ cm. Tentukan panjang $QR$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari $\angle P$ dari rumus luas:</strong></p>
+      $$ \begin{align*} 12\sqrt{3} &= \tfrac{1}{2} \cdot 6 \cdot 8\sin P = 24\sin P \\ \sin P &= \frac{\sqrt{3}}{2} \end{align*} $$
+      <p class="sol-step">Jadi $\angle P = 60^\circ$ atau $\angle P = 120^\circ$.</p>
+      <div class="sol-part"><span class="sol-tag">1</span><span>$\angle P = 60^\circ$</span></div>
+      $$ \begin{align*} QR^2 &= 36 + 64 - 96\cos 60^\circ \\ &= 52 \end{align*} $$
+      <div class="sol-jadi">$QR = 2\sqrt{13}$ cm.</div>
+      <div class="sol-part"><span class="sol-tag">2</span><span>$\angle P = 120^\circ$</span></div>
+      $$ \begin{align*} QR^2 &= 36 + 64 - 96\cos 120^\circ \\ &= 148 \end{align*} $$
+      <div class="sol-jadi">$QR = 2\sqrt{37}$ cm.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Hitung luas segi enam beraturan yang panjang setiap sisinya $4$ cm.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bagi menjadi $6$ segitiga</strong> dari pusat $O$; sudut pusat masing-masing $\dfrac{360^\circ}{6}$ $= 60^\circ$, dan $OA = OB = 4$ (segitiga sama sisi).</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Luas satu segitiga:</strong></p>
+      $$\tfrac{1}{2} \cdot 4 \cdot 4 \cdot \sin 60^\circ = 4\sqrt{3}$$
+      <div class="sol-jadi">luas segi enam $= 6 \cdot 4\sqrt{3}$ $= 24\sqrt{3}$ cm².</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Lahan berbentuk segi empat $ABCD$ dengan $AB = 16$ m, $BC = 10$ m, $\angle ABC = 60^\circ$, $CD = 16$ m, dan $\angle ACD = 60^\circ$. Hitung luas lahan.</p>
+    </div>
+    <div class="penyelesaian">
+<div class="kf-fig"><svg class="kf-svg" viewBox="0 0 260 180" width="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gambar segitiga"><defs><marker id="asar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><line x1="99.7" y1="26.0" x2="118.1" y2="153.7" class="kf-dash" stroke-width="1.4" stroke-dasharray="5 4"/><polygon points="99.7,26.0 26.0,153.7 118.1,153.7 234.0,62.5" fill="none" class="kf-ln-b" stroke-width="2"/><circle cx="26.0" cy="153.7" r="2.4" class="kf-dot"/><text x="14.8" y="164.8" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">B</text><circle cx="118.1" cy="153.7" r="2.4" class="kf-dot"/><text x="117.8" y="171.2" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">C</text><circle cx="99.7" cy="26.0" r="2.4" class="kf-dot"/><text x="96.3" y="18.0" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">A</text><circle cx="234.0" cy="62.5" r="2.4" class="kf-dot"/><text x="246.4" y="63.0" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">D</text><text x="51.0" y="91.9" class="kf-t" font-size="12" text-anchor="middle">16</text><text x="64.2" y="166.8" class="kf-t" font-size="12" text-anchor="middle">10</text><text x="187.9" y="114.0" class="kf-t" font-size="12" text-anchor="middle">16</text><text x="48.4" y="144.6" class="kf-pt-r" font-size="11" text-anchor="middle">60°</text></svg></div>      <p class="sol-step"><span class="sol-no">1</span><strong>Bagi dengan diagonal $AC$</strong> menjadi $\triangle ABC$ dan $\triangle ACD$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Luas $\triangle ABC$ dan panjang $AC$:</strong></p>
+      $$ \begin{align*} L_1 &= \tfrac{1}{2} \cdot 16 \cdot 10 \cdot \sin 60^\circ \\ &= 40\sqrt{3} \\ &AC^2 \\  &= 256 \\ &\quad + 100 \\ &\quad - 2(16)(10)\cos 60^\circ \\ &= 196 \;\Rightarrow\; AC = 14 \end{align*} $$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Luas $\triangle ACD$:</strong></p>
+      $$ \begin{align*} L_2 &= \tfrac{1}{2} \cdot 14 \cdot 16 \cdot \sin 60^\circ \\ &= 56\sqrt{3} \end{align*} $$
+      <div class="sol-jadi">luas lahan $= 40\sqrt{3} + 56\sqrt{3}$ $= 96\sqrt{3} \approx 166{,}3$ m².</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan C</div>
+      <ol class="soal-list">
+        <li>Hitung luas segitiga $ABC$ jika $AB = 6$ cm, $AC = 8$ cm, dan $\angle A$ $= 45^\circ$.</li>
+        <li>Hitung luas segitiga dengan sisi $5$ cm, $7$ cm, dan $6$ cm menggunakan rumus Heron.</li>
+        <li>Luas segitiga $ABC$ adalah $30$ cm², $AB = 10$ cm, dan $BC = 12$ cm. Tentukan semua kemungkinan besar $\angle B$.</li>
+        <li>Segitiga $ABC$ memiliki $AB = 8$ cm, $BC = 5$ cm, dan $AC = 5$ cm. Hitung luasnya dengan rumus Heron.</li>
+        <li>Jajar genjang $ABCD$ memiliki $AB = 6$ cm, $AD = 4$ cm, dan luas $12\sqrt{3}$ cm². Tentukan (a) besar $\angle DAB$ dan (b) panjang kedua diagonalnya.</li>
+        <li>Taman berbentuk segi empat $ABCD$ dengan $AB = 10$ m, $BC = 8$ m, $\angle ABC$ $= 120^\circ$, $CD = 6$ m, dan $\angle ACD$ $= 90^\circ$. Hitung luas taman.</li>
+        <li><strong>HOTS.</strong> Buktikan bahwa luas segitiga dapat ditulis $L = \dfrac{abc}{4R}$, dengan $R$ jari-jari lingkaran luar.</li>
+        <li><strong>HOTS.</strong> Segi empat $ABCD$ dengan $\angle B$ $= 90^\circ$ memiliki $AB = 3$ m, $BC = 4$ m, $CD = 5$ m, dan $DA = 6$ m. Tentukan luasnya, lalu periksa dengan cara lain.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ D. APLIKASI TERPADU ═══ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Aplikasi Terpadu</h2>
+    <p>Soal ujian dan masalah nyata sering menggabungkan aturan sinus, aturan cosinus, dan rumus luas sekaligus. Kuncinya: gambar sketsa, tandai unsur yang diketahui, lalu pilih aturan yang sesuai.</p>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Kabel jembatan dipasang dari puncak menara $A$ ke titik $P$ di dek, lalu dari $P$ ke puncak menara $B$. Diketahui $AP = 70$ m, $BP = 80$ m, dan jarak kedua puncak $AB = 130$ m. Tentukan sudut yang dibentuk kabel di $P$.</p>
+    </div>
+    <div class="penyelesaian">
+<div class="kf-fig"><svg class="kf-svg" viewBox="0 0 250 113" width="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gambar segitiga"><defs><marker id="asar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><polygon points="118.4,87.0 26.0,33.6 224.0,26.0" fill="none" class="kf-ln-b" stroke-width="2"/><circle cx="118.4" cy="87.0" r="2.4" class="kf-dot"/><text x="116.9" y="104.4" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">P</text><circle cx="26.0" cy="33.6" r="2.4" class="kf-dot"/><text x="13.2" y="36.1" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">A</text><circle cx="224.0" cy="26.0" r="2.4" class="kf-dot"/><text x="236.7" y="27.6" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">B</text><text x="60.5" y="66.9" class="kf-t" font-size="12" text-anchor="middle">70 <tspan font-style="italic">m</tspan></text><text x="183.1" y="62.4" class="kf-t" font-size="12" text-anchor="middle">80 <tspan font-style="italic">m</tspan></text><text x="126.4" y="21.9" class="kf-t" font-size="12" text-anchor="middle">130 <tspan font-style="italic">m</tspan></text><text x="121.4" y="65.1" class="kf-pt-r" font-size="11" text-anchor="middle">?</text></svg></div>      <p class="sol-step"><span class="sol-no">1</span><strong>Data s-s-s,</strong> jadi gunakan aturan cosinus untuk $\angle APB$:</p>
+      $$ \begin{align*} \cos\angle APB &= \frac{70^2 + 80^2 - 130^2}{2 \cdot 70 \cdot 80} \\ &= \frac{4900 + 6400 - 16900}{11200} \\ &= -\frac{5600}{11200} = -\frac{1}{2} \end{align*} $$
+      <div class="sol-jadi">$\angle APB = 120^\circ$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin:0;font-size:.9rem;">Kapal berlayar dari pelabuhan $A$ ke $B$ sejauh $60$ mil dengan arah $040^\circ$, kemudian dari $B$ ke $C$ sejauh $90$ mil dengan arah $160^\circ$. Hitung (a) jarak $A$ ke $C$ dan (b) luas segitiga $ABC$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan $\angle ABC$:</strong> arah dari $B$ kembali ke $A$ adalah $040^\circ + 180^\circ$ $= 220^\circ$, sehingga $\angle ABC$ $= 220^\circ - 160^\circ$ $= 60^\circ$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Jarak $AC$</span></div>
+      $$ \begin{align*} &AC^2 \\  &= 60^2 \\ &\quad + 90^2 \\ &\quad - 2(60)(90)\cos 60^\circ \\ &= 11700 - 5400 = 6300 \end{align*} $$
+      <div class="sol-jadi">$AC = 30\sqrt{7} \approx 79{,}4$ mil.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Luas</span></div>
+      $$ \begin{align*} L &= \tfrac{1}{2} \cdot 60 \cdot 90 \cdot \sin 60^\circ \\ &= 1350\sqrt{3} \end{align*} $$
+      <div class="sol-jadi">luasnya $1350\sqrt{3} \approx 2338$ mil².</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan D</div>
+      <ol class="soal-list">
+        <li>Pada segitiga $ABC$ diketahui $a = 7$ cm, $b = 5$ cm, dan $\angle C$ $= 60^\circ$. Tentukan (a) panjang $c$ dan (b) luas segitiga.</li>
+        <li>Segitiga $PQR$ memiliki $\angle P$ $= 45^\circ$, $\angle Q$ $= 75^\circ$, dan $p = 6\sqrt{2}$ cm. Tentukan (a) panjang $q$ dan (b) luas segitiga.</li>
+        <li>Taman segitiga $ABC$ memiliki $AB = 12$ m, $BC = 9$ m, dan $\angle B$ $= 120^\circ$. Hitung panjang $AC$ dan luas taman.</li>
+        <li>Pengamat $A$ dan $B$ di tepi danau berjarak $100$ m. Batu $C$ di tengah danau terlihat dengan $\angle BAC$ $= 55^\circ$ dan $\angle ABC$ $= 70^\circ$. Tentukan luas segitiga $ABC$ (gunakan $\sin 70^\circ \approx 0{,}94$).</li>
+        <li>Kapal berlayar dari $A$ ke $B$ sejauh $150$ km dengan arah $020^\circ$, lalu dari $B$ ke $C$ sejauh $200$ km dengan arah $110^\circ$. Tentukan (a) jarak $A$ ke $C$ dan (b) arah dari $A$ langsung ke $C$.</li>
+        <li><strong>HOTS.</strong> Tanah segi empat $ABCD$ disurvei: $AB = 50$ m, $BC = 40$ m, $CD = 36$ m, $DA = 48$ m, dan diagonal $AC = 60$ m. Hitung luas $\triangle ABC$, luas $\triangle ACD$, dan luas total.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ E. TABEL RINGKASAN ═══ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Tabel Ringkasan</h2>
+    <h3 class="subsection-title">1. Rumus Utama</h3>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Rumus</th><th>Bentuk</th></tr></thead>
+        <tbody>
+          <tr><td>Aturan sinus</td><td>$\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R$</td></tr>
+          <tr><td>Aturan cosinus</td><td>$a^2 = b^2 + c^2 - 2bc\cos A$</td></tr>
+          <tr><td>Mencari sudut</td><td>$\cos A = \dfrac{b^2 + c^2 - a^2}{2bc}$</td></tr>
+          <tr><td>Luas (s-sd-s)</td><td>$L = \tfrac{1}{2}ab\sin C$</td></tr>
+          <tr><td>Luas (Heron)</td><td>$L = \sqrt{s(s-a)(s-b)(s-c)}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="subsection-title">2. Memilih Aturan</h3>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Diketahui</th><th>Gunakan</th></tr></thead>
+        <tbody>
+          <tr><td>Dua sudut + satu sisi</td><td>Aturan sinus</td></tr>
+          <tr><td>Dua sisi + sudut bukan apit</td><td>Aturan sinus (cek dua kemungkinan)</td></tr>
+          <tr><td>Dua sisi + sudut apit</td><td>Aturan cosinus; luas $\tfrac{1}{2}ab\sin C$</td></tr>
+          <tr><td>Tiga sisi</td><td>Aturan cosinus; luas Heron</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <!-- Baris 1: Prev / Next -->
+    <div class="footer-nav">
+      <a class="nav-btn" href="../trigonometri/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Trigonometri Dasar
+      </a>
+      <a class="nav-btn" href="../grafik-fungsi-trigonometri/">
+        Grafik Fungsi Trigonometri
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <!-- Baris 2: Actions -->
+    <div class="footer-actions">
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- SECTION KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Disqus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi ini? Tulis di kolom diskusi. Login dengan akun Google.</p>
+        <div id="disqus_thread"></div>
+    <script>
+    (function() {
+      var disqusLoaded = false;
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !disqusLoaded) {
+          disqusLoaded = true;
+          observer.disconnect();
+          var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://eksaktalab.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      }, { threshold: 0.1 });
+      var thread = document.getElementById('disqus_thread');
+      if (thread) observer.observe(thread);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </div><!-- /komentar-section -->
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── Scroll progress bar tipis + scroll-to-top ──
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  // Tampilkan tombol scroll-to-top setelah 30%
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+// ── Theme toggle ──────────────────────────
+
+
+// ── TOC Dropdown ──────────────────────────
+function toggleTOC() {
+  document.getElementById('tocDropdown').classList.toggle('open');
+}
+function closeTOC() {
+  document.getElementById('tocDropdown').classList.remove('open');
+}
+// Tutup dropdown saat klik di luar
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+// ── Bookmark ──────────────────────────────
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ─────────────────────────────────
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Aturan Sinus & Cosinus — EksaktaLab',
+      text:  'Belajar Aturan Sinus, Aturan Cosinus, dan Luas Segitiga di EksaktaLab, lengkap dengan contoh soal!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+
+// ── SHARED HELPERS ────────────────────────
+const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+  <polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) {
+      MathJax.typesetPromise([typesetEl]).catch(() => {});
+    }
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── 1. BOX RUMUS → accordion hijau ───────
+  document.querySelectorAll('.box.box-rumus').forEach((box, i) => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+
+    // Semua konten kecuali label
+    let bodyHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body">
+        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
+      </div>`;
+
+    const header   = wrap.querySelector('.rumus-header');
+    const statusEl = wrap.querySelector('.rumus-status');
+    const bodyInner = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+
+    box.replaceWith(wrap);
+  });
+
+  // ── 2. BOX CONTOH → accordion navy/teal ──
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+
+    let qHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header">
+            <span class="solve-dot"></span>
+            <span class="solve-title">Penyelesaian</span>
+          </div>
+          <div class="penyelesaian-inner">
+            ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
+          </div>
+        </div>
+      </div>`;
+
+    const header   = wrap.querySelector('.contoh-header');
+    const statusEl = null;
+    const pi       = wrap.querySelector('.penyelesaian-inner');
+
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (statusEl) statusEl.textContent = '';
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+    });
+
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+  // ── 3. Buka / Tutup Semua per section ────
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+
+    const updateBtn = () => {
+      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
+    };
+    updateBtn();
+
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+  // ── 4. SOAL LATIHAN → accordion kunci jawaban ──
+  const jawabanData = {
+    // A
+    0: [
+      { jawaban:`$b = \\dfrac{6\\sin 45^\\circ}{\\sin 30^\\circ}$ $= 6\\sqrt{2}$ cm` },
+      { jawaban:`$\\angle R$ $= 75^\\circ$<br>$q = \\dfrac{4\\sqrt{2}\\sin 45^\\circ}{\\sin 75^\\circ}$ $= \\dfrac{16}{\\sqrt{6} + \\sqrt{2}}$ $= 4(\\sqrt{6} - \\sqrt{2})$ cm` },
+      { jawaban:`$\\angle L$ $= 60^\\circ$, $KL$ berhadapan dengan $\\angle M$:<br>$KM = \\dfrac{10\\sin 60^\\circ}{\\sin 45^\\circ}$ $= 5\\sqrt{6}$ cm` },
+      { jawaban:`(a) $\\sin C$ $= \\dfrac{4\\sqrt{3}\\sin 45^\\circ}{6}$ $= \\dfrac{\\sqrt{6}}{3}$, jadi $C \\approx 54{,}7^\\circ$ atau $C \\approx 125{,}3^\\circ$ (keduanya mungkin)<br>(b) Dari aturan cosinus $a^2$ $- 4\\sqrt{6}\\,a$ $+ 12$ $= 0$: $a = 2\\sqrt{6}$ $+ 2\\sqrt{3} \\approx 8{,}36$ cm (untuk $C \\approx 54{,}7^\\circ$) atau $a = 2\\sqrt{6}$ $- 2\\sqrt{3} \\approx 1{,}43$ cm (untuk $C \\approx 125{,}3^\\circ$)` },
+      { jawaban:`$\\angle C$ $= 45^\\circ$, $AC$ berhadapan dengan $\\angle B$:<br>$AC = \\dfrac{20\\sin 65^\\circ}{\\sin 45^\\circ} \\approx 25{,}6$ km` },
+      { jawaban:`$\\triangle ABD$: $\\angle A$ $= 105^\\circ$, $BD = \\dfrac{8\\sin 105^\\circ}{\\sin 45^\\circ}$ $= 4(\\sqrt{3} + 1)$<br>$\\triangle BCD$: $\\angle DBC$ $= 45^\\circ$, $DC = \\dfrac{BD\\sin 45^\\circ}{\\sin 75^\\circ}$ $= 8$ cm` },
+      { jawaban:`$\\dfrac{a - b}{a + b}$ $= \\dfrac{\\sin A - \\sin B}{\\sin A + \\sin B}$ $= \\dfrac{2\\cos\\frac{A+B}{2}\\sin\\frac{A-B}{2}}{2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}}$ $= \\dfrac{\\tan\\frac{A-B}{2}}{\\tan\\frac{A+B}{2}}$ ✓` },
+      { jawaban:`Pada $\\triangle PAQ$: $PA = d$, $PQ = D$, dan sudut apit $\\angle APQ$ $= \\beta - \\alpha$<br>$AQ = \\sqrt{d^2 + D^2 - 2dD\\cos(\\beta - \\alpha)}$ (aturan cosinus)` },
+    ],
+    // B
+    1: [
+      { jawaban:`$c^2 = 25$ $+ 49$ $- 2(5)(7)\\cos 60^\\circ$ $= 39$, jadi $c = \\sqrt{39}$ cm` },
+      { jawaban:`$\\cos R$ $= \\dfrac{9 + 25 - 49}{2 \\cdot 3 \\cdot 5}$ $= -\\dfrac{1}{2}$, jadi $\\angle R$ $= 120^\\circ$` },
+      { jawaban:`$12 = 16$ $+ c^2$ $- 8c\\cos 30^\\circ$, jadi $c^2$ $- 4\\sqrt{3}\\,c$ $+ 4$ $= 0$<br>$c = 2\\sqrt{3}$ $+ 2\\sqrt{2}$ atau $c = 2\\sqrt{3}$ $- 2\\sqrt{2}$ cm` },
+      { jawaban:`$AB^2 = 144$ $+ 256$ $- 2(12)(16)\\cos 60^\\circ$ $= 208$, jadi $AB = 4\\sqrt{13}$ m` },
+      { jawaban:`$AN = \\dfrac{t}{\\tan\\alpha}$, $BN = \\dfrac{t}{\\tan\\beta}$, dan $AN + BN = d$<br>$t = \\dfrac{d\\tan\\alpha\\tan\\beta}{\\tan\\alpha + \\tan\\beta}$` },
+      { jawaban:`$RP = 30$ km, $RQ = 40$ km, sudut apit $125^\\circ$ $- 35^\\circ$ $= 90^\\circ$<br>$PQ = \\sqrt{30^2 + 40^2}$ $= 50$ km` },
+      { jawaban:`Kiri $= 2a^2\\sin B\\cos B$ $+ 2b^2\\sin A\\cos A$. Dengan $a = 2R\\sin A$, $b = 2R\\sin B$:<br>kiri $= 8R^2\\sin A\\sin B$<br>$\\quad \\cdot (\\sin A\\cos B + \\cos A\\sin B)$<br>$= 8R^2\\sin A\\sin B\\sin(A + B)$<br>$= 2ab\\sin C$ (karena $\\sin(A + B)$ $= \\sin C$) ✓` },
+      { jawaban:`$BD^2 = p^2$ $+ q^2$ $- 2pq\\cos\\theta$ dan $AC^2 = p^2$ $+ q^2$ $+ 2pq\\cos\\theta$<br>Sama panjang jika $\\cos\\theta = 0$, yaitu $\\theta$ $= 90^\\circ$ (persegi panjang)` },
+    ],
+    // C
+    2: [
+      { jawaban:`$L = \\tfrac{1}{2} \\cdot 6 \\cdot 8 \\cdot \\sin 45^\\circ$ $= 12\\sqrt{2}$ cm²` },
+      { jawaban:`$s = 9$, $L = \\sqrt{9 \\cdot 4 \\cdot 2 \\cdot 3}$ $= \\sqrt{216}$ $= 6\\sqrt{6}$ cm²` },
+      { jawaban:`$30 = \\tfrac{1}{2} \\cdot 10 \\cdot 12\\sin B$, jadi $\\sin B$ $= \\tfrac{1}{2}$<br>$\\angle B$ $= 30^\\circ$ atau $150^\\circ$` },
+      { jawaban:`$s = 9$, $L = \\sqrt{9 \\cdot 1 \\cdot 4 \\cdot 4}$ $= 12$ cm²` },
+      { jawaban:`(a) $6 \\cdot 4\\sin\\angle DAB$ $= 12\\sqrt{3}$, jadi $\\sin\\angle DAB$ $= \\tfrac{\\sqrt{3}}{2}$: $60^\\circ$ (atau $120^\\circ$, jajar genjang yang sama dengan sudut tumpul)<br>(b) $BD^2 = 52$ $- 48\\cos 60^\\circ$ $= 28$ dan $AC^2 = 52 + 24$ $= 76$: diagonal $2\\sqrt{7}$ cm dan $2\\sqrt{19}$ cm` },
+      { jawaban:`$L_{ABC}$ $= \\tfrac{1}{2} \\cdot 10 \\cdot 8\\sin 120^\\circ$ $= 20\\sqrt{3}$, $AC^2 = 100$ $+ 64$ $+ 80$ $= 244$, $AC = 2\\sqrt{61}$<br>$L_{ACD}$ $= \\tfrac{1}{2} \\cdot 2\\sqrt{61} \\cdot 6$ $= 6\\sqrt{61}$<br>Luas $= 20\\sqrt{3}$ $+ 6\\sqrt{61} \\approx 81{,}5$ m²` },
+      { jawaban:`$\\sin C$ $= \\dfrac{c}{2R}$, jadi $L = \\tfrac{1}{2}ab\\sin C$ $= \\tfrac{1}{2}ab \\cdot \\dfrac{c}{2R}$ $= \\dfrac{abc}{4R}$ ✓` },
+      { jawaban:`$AC = 5$ (Pythagoras), $L_{ABC} = 6$<br>$\\triangle ACD$ bersisi $5, 5, 6$: Heron $s = 8$, $L = \\sqrt{8 \\cdot 3 \\cdot 3 \\cdot 2}$ $= 12$<br>Cek: segitiga sama kaki, tinggi ke alas $6$ adalah $4$, luas $\\tfrac{1}{2} \\cdot 6 \\cdot 4$ $= 12$ ✓<br>Luas total $18$ m²` },
+    ],
+    // D
+    3: [
+      { jawaban:`(a) $c^2 = 49 + 25 - 35$ $= 39$, $c = \\sqrt{39}$ cm<br>(b) $L = \\tfrac{1}{2} \\cdot 7 \\cdot 5 \\cdot \\sin 60^\\circ$ $= \\dfrac{35\\sqrt{3}}{4}$ cm²` },
+      { jawaban:`$\\angle R$ $= 60^\\circ$<br>(a) $q = \\dfrac{6\\sqrt{2}\\sin 75^\\circ}{\\sin 45^\\circ}$ $= 3(\\sqrt{6} + \\sqrt{2})$ cm<br>(b) $L = \\tfrac{1}{2}pq\\sin R$ $= 27$ $+ 9\\sqrt{3} \\approx 42{,}6$ cm²` },
+      { jawaban:`$AC^2 = 144$ $+ 81$ $+ 108$ $= 333$, $AC = 3\\sqrt{37}$ m<br>$L = \\tfrac{1}{2} \\cdot 12 \\cdot 9 \\cdot \\sin 120^\\circ$ $= 27\\sqrt{3}$ m²` },
+      { jawaban:`$\\angle C$ $= 55^\\circ$ $= \\angle A$, jadi $BC = AB = 100$ m<br>$L = \\tfrac{1}{2} \\cdot 100 \\cdot 100 \\cdot \\sin 70^\\circ \\approx 4700$ m²` },
+      { jawaban:`$\\angle ABC$ $= (020^\\circ + 180^\\circ)$ $- 110^\\circ$ $= 90^\\circ$<br>(a) $AC = \\sqrt{150^2 + 200^2}$ $= 250$ km<br>(b) $\\tan\\angle BAC$ $= \\tfrac{200}{150}$, $\\angle BAC \\approx 53{,}1^\\circ$, arah $\\approx 020^\\circ$ $+ 53{,}1^\\circ$ $= 073{,}1^\\circ$` },
+      { jawaban:`$\\triangle ABC$: $s = 75$, $L = \\sqrt{75 \\cdot 25 \\cdot 35 \\cdot 15}$ $= 375\\sqrt{7} \\approx 992{,}2$ m²<br>$\\triangle ACD$: $36^2 + 48^2$ $= 60^2$, siku-siku di $D$, $L = \\tfrac{1}{2} \\cdot 36 \\cdot 48$ $= 864$ m²<br>Total $\\approx 1856{,}2$ m²` },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+
+    const items = [...list.querySelectorAll('li')];
+    const newList = document.createElement('div');
+    newList.className = 'soal-list-accordion';
+
+    items.forEach((li, i) => {
+      const ans   = answers[i] || {};
+      const diff  = ans.diff || 'sedang';
+      const diffLabel = { mudah:'★ Mudah', sedang:'★★ Sedang', sulit:'★★★ Sulit' }[diff] || '';
+      const jawaban = ans.jawaban || '';
+
+      const item = document.createElement('div');
+      item.className = 'soal-item';
+      item.innerHTML = `
+        <div class="soal-item-header" role="button" tabindex="0">
+          <span class="soal-num">${i+1}</span>
+          <span class="soal-text">${li.innerHTML}</span>
+          <button class="soal-key-btn" tabindex="-1">Kunci</button>
+        </div>
+        <div class="soal-answer">
+          <div class="soal-answer-inner">
+            <div class="soal-answer-label">Jawaban</div>
+            ${jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
+          </div>
+        </div>`;
+
+      const header = item.querySelector('.soal-item-header');
+      const toggle = () => {
+        const open = item.classList.toggle('open');
+        if (open && window.MathJax) {
+          MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
+        }
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+
+      newList.appendChild(item);
+    });
+
+    list.replaceWith(newList);
+  });
+
+});
+</script>
+
+<!-- FOOTER -->
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+</body>
+</html>
