@@ -1,0 +1,1640 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Konsep Fungsi: Relasi, Domain, Range, dan Jenis Fungsi — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
+<meta name="description" content="Materi lengkap Konsep Fungsi SMA: relasi, fungsi (pemetaan), domain, kodomain, range, korespondensi satu-satu, fungsi injektif, surjektif, bijektif, notasi dan nilai fungsi, serta domain alami. Dilengkapi 36 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script>window.addEventListener("load",function(){var s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";document.head.appendChild(s);});</script>
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/konsep-fungsi/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/konsep-fungsi/">
+  <meta property="og:title" content="Konsep Fungsi: Relasi, Domain, Range, dan Jenis Fungsi — EksaktaLab">
+  <meta property="og:description" content="Materi lengkap Konsep Fungsi SMA: relasi, fungsi (pemetaan), domain, kodomain, range, korespondensi satu-satu, fungsi injektif, surjektif, bijektif, notasi dan nilai fungsi, serta domain alami.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+  <meta property="og:site_name" content="EksaktaLab">
+  <meta property="og:locale" content="id_ID">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Konsep Fungsi: Relasi, Domain, Range, dan Jenis Fungsi — EksaktaLab">
+  <meta name="twitter:description" content="Materi lengkap Konsep Fungsi SMA: relasi, fungsi (pemetaan), domain, kodomain, range, korespondensi satu-satu, fungsi injektif, surjektif, bijektif, notasi dan nilai fungsi, serta domain alami.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Konsep Fungsi","url":"https://lutfima11.github.io/eksaktalab/materi/konsep-fungsi/","description":"Materi lengkap Konsep Fungsi SMA: relasi, fungsi (pemetaan), domain, kodomain, range, korespondensi satu-satu, fungsi injektif, surjektif, bijektif, notasi dan nilai fungsi, serta domain alami.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Aljabar 0026 Fungsi"},{"@type":"ListItem","position":4,"name":"Konsep Fungsi","item":"https://lutfima11.github.io/eksaktalab/materi/konsep-fungsi/"}]}}</script>
+<style>.fki-jenis{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin:1rem 0}.fki-jenis svg{width:100%;height:auto;display:block}@media(max-width:560px){.fki-jenis{grid-template-columns:1fr;max-width:230px;margin:1rem auto}}[data-theme="dark"] .grafik-wrap svg [stroke="#555"]{stroke:#94A3B8}[data-theme="dark"] .grafik-wrap svg [fill="#555"]{fill:#94A3B8}[data-theme="dark"] .grafik-wrap svg text[fill="#059669"]{fill:#34D399}[data-theme="dark"] .grafik-wrap svg [stroke="#059669"]{stroke:#34D399}[data-theme="dark"] .grafik-wrap svg text[fill="#94A3B8"]{fill:#CBD5E8}[data-theme="dark"] .grafik-wrap svg .c1-lgf{stroke:#60A5FA;fill:#60A5FA}[data-theme="dark"] .grafik-wrap svg text.t1-lgf{fill:#60A5FA}@media(max-width:500px){.table-wrap th,.table-wrap td{padding:.45rem .35rem}.table-wrap table{font-size:.72rem}}@media(max-width:400px){.table-wrap th,.table-wrap td{padding:.4rem .25rem}.table-wrap table{font-size:.66rem}.table-wrap mjx-container{font-size:85% !important}.soal-item-header{flex-wrap:wrap}.soal-key-btn{margin-left:auto}}@media(max-width:400px){.contoh-body mjx-container[display="true"],.rumus-body mjx-container[display="true"],.box mjx-container[display="true"],.contoh-question mjx-container[display="true"]{font-size:88% !important}}@media(max-width:360px){.rumus-status{display:none}}.kf-fig{text-align:center;margin:.8rem 0}.kf-fig svg{display:inline-block;max-width:100%;height:auto}.kf-cap{font-size:.8rem;opacity:.8;margin-top:.3rem;line-height:1.4}.kf-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.6rem;align-items:end;margin:.8rem 0}.kf-row .kf-fig{margin:0}.kf-ov{fill:none;stroke:#94A3B8;stroke-width:1.6}.kf-box{fill:#F1F5F9;stroke:#475569;stroke-width:1.6}.kf-t{fill:#334155}.kf-dot{fill:#334155}.kf-mute{fill:#CBD5E1}.kf-mute2{fill:#94A3B8}.kf-ln-b{stroke:#2563EB}.kf-ar-b{fill:#2563EB}.kf-ln-r{stroke:#DC2626}.kf-ar-r{fill:#DC2626}.kf-ln-g{stroke:#059669}.kf-ax{stroke:#555}.kf-axh{fill:#555}.kf-dash{stroke:#CBD5E1}.kf-pt-b{fill:#2563EB}.kf-pt-r{fill:#DC2626}.kf-pt-g{fill:#059669}[data-theme="dark"] .kf-t,[data-theme="dark"] .kf-dot{fill:#E2E8F0}[data-theme="dark"] .kf-ov{stroke:#64748B}[data-theme="dark"] .kf-box{fill:#1E293B;stroke:#94A3B8}[data-theme="dark"] .kf-mute{fill:#475569}[data-theme="dark"] .kf-mute2{fill:#64748B}[data-theme="dark"] .kf-ln-b{stroke:#60A5FA}[data-theme="dark"] .kf-ar-b,[data-theme="dark"] .kf-pt-b{fill:#60A5FA}[data-theme="dark"] .kf-ln-r{stroke:#F87171}[data-theme="dark"] .kf-ar-r,[data-theme="dark"] .kf-pt-r{fill:#F87171}[data-theme="dark"] .kf-ln-g{stroke:#34D399}[data-theme="dark"] .kf-pt-g{fill:#34D399}[data-theme="dark"] .kf-ax{stroke:#94A3B8}[data-theme="dark"] .kf-axh{fill:#94A3B8}[data-theme="dark"] .kf-dash{stroke:#475569}[data-theme="dark"] .nline-wrap svg .nl-ax{stroke:#94A3B8}[data-theme="dark"] .nline-wrap svg .nl-axh{fill:#94A3B8}[data-theme="dark"] .nline-wrap svg text[fill="#555"]{fill:#CBD5E8}[data-theme="dark"] .nline-wrap svg .nl-open{fill:#1E2640}.penyelesaian .nline-wrap svg{margin:0 auto;max-width:100%;height:auto}</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <!-- Daftar Isi Dropdown -->
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Konsep Fungsi · 7 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Relasi</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Fungsi (Pemetaan)</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Domain, Kodomain &amp; Range</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Korespondensi &amp; Jenis Fungsi</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Notasi &amp; Nilai Fungsi</a>
+        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Domain Alami &amp; Range</a>
+        <a class="toc-menu-item" href="#bagian-g" onclick="closeTOC()"><span class="toc-menu-badge">G</span>Tabel Ringkasan</a>
+      </div>
+    </div>
+    <!-- Tema -->
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<!-- Floating scroll to top -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#fase-2">Aljabar &amp; Fungsi</a>
+    <span>/</span>
+    Konsep Fungsi
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">FASE 2 · No.07</div>
+      <h1 class="materi-title">Konsep Fungsi</h1>
+      <p class="materi-desc">Pelajari relasi, syarat fungsi, domain, kodomain, dan range, jenis-jenis fungsi, notasi dan nilai fungsi, hingga domain alami. Fondasi untuk semua materi fungsi berikutnya.</p>
+      <div class="materi-tags">
+        <span class="tag">Aljabar &amp; Fungsi</span>
+        <span class="tag">7 Sub-bab</span>
+        <span class="tag">36 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PENGANTAR ═══ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Bagaimana Dua Himpunan Saling Berhubungan?</h2>
+    <p>Bagaimana sebuah aplikasi <em>e-commerce</em> tahu persis paket mana yang harus dikirim ke alamat rumahmu, padahal ada ribuan pesanan dan ribuan alamat setiap hari? Bagaimana pula setiap siswa di sekolahmu bisa memiliki tepat satu Nomor Induk Siswa (NIS), tidak kurang dan tidak lebih? Jawabannya terletak pada satu gagasan matematika yang sangat mendasar: <strong>relasi</strong> dan <strong>fungsi</strong>.</p>
+    <p>Kata <em>relasi</em> berasal dari bahasa Latin <em>relatio</em> yang berarti "hubungan", sedangkan <em>fungsi</em> berasal dari <em>functio</em> yang berarti "pelaksanaan". Secara sederhana, relasi menyatakan <strong>hubungan</strong> antara anggota dua himpunan, sedangkan fungsi adalah relasi yang <strong>aturannya tegas dan tidak ambigu</strong>.</p>
+    <h3 class="subsection-title">Ide Dasar: Dari Hubungan Bebas Menuju Aturan yang Pasti</h3>
+    <p>Pada relasi "menyukai pelajaran", satu siswa boleh menyukai banyak pelajaran, dan satu pelajaran boleh disukai banyak siswa. Pada relasi "memiliki NIS", setiap siswa <strong>harus</strong> punya NIS, dan NIS itu <strong>harus tunggal</strong>.</p>
+<div class="kf-row"><div class="kf-fig"><svg class="kf-svg" viewBox="0 0 248 130" width="248" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari Siswa ke Pelajaran"><defs><marker id="kfa1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><ellipse cx="36.8" cy="74.0" rx="32.8" ry="50.0" class="kf-ov"/><ellipse cx="188.6" cy="74.0" rx="55.0" ry="50.0" class="kf-ov"/><text x="36.8" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">Siswa</text><text x="188.6" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">Pelajaran</text><circle cx="55.6" cy="60.0" r="3" class="kf-dot"/><text x="47.6" y="64.5" class="kf-t" font-size="13" text-anchor="end">Ani</text><circle cx="55.6" cy="88.0" r="3" class="kf-dot"/><text x="47.6" y="92.5" class="kf-t" font-size="13" text-anchor="end">Budi</text><circle cx="147.6" cy="46.0" r="3" class="kf-dot kf-t"/><text x="155.6" y="50.5" class="kf-t" font-size="13">Matematika</text><circle cx="147.6" cy="74.0" r="3" class="kf-dot kf-t"/><text x="155.6" y="78.5" class="kf-t" font-size="13">Seni</text><circle cx="147.6" cy="102.0" r="3" class="kf-dot kf-t"/><text x="155.6" y="106.5" class="kf-t" font-size="13">IPA</text><line x1="59.6" y1="60.0" x2="140.7" y2="47.1" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa1)"/><line x1="59.6" y1="60.0" x2="140.7" y2="72.9" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa1)"/><line x1="59.6" y1="88.0" x2="140.7" y2="75.1" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa1)"/><line x1="59.6" y1="88.0" x2="140.7" y2="100.9" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa1)"/></svg><div class="kf-cap">Relasi "menyukai pelajaran": Ani punya dua pasangan, hubungannya bebas.</div></div><div class="kf-fig"><svg class="kf-svg" viewBox="0 0 233 102" width="233" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari Siswa ke NIS"><defs><marker id="kfa2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><ellipse cx="36.8" cy="60.0" rx="32.8" ry="36.0" class="kf-ov"/><ellipse cx="181.2" cy="60.0" rx="47.6" ry="36.0" class="kf-ov"/><text x="36.8" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">Siswa</text><text x="181.2" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle">NIS</text><circle cx="55.6" cy="46.0" r="3" class="kf-dot"/><text x="47.6" y="50.5" class="kf-t" font-size="13" text-anchor="end">Ani</text><circle cx="55.6" cy="74.0" r="3" class="kf-dot"/><text x="47.6" y="78.5" class="kf-t" font-size="13" text-anchor="end">Budi</text><circle cx="147.6" cy="46.0" r="3" class="kf-dot kf-t"/><text x="155.6" y="50.5" class="kf-t" font-size="13">NIS 2401</text><circle cx="147.6" cy="74.0" r="3" class="kf-dot kf-t"/><text x="155.6" y="78.5" class="kf-t" font-size="13">NIS 2402</text><line x1="59.6" y1="46.0" x2="140.6" y2="46.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa2)"/><line x1="59.6" y1="74.0" x2="140.6" y2="74.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa2)"/></svg><div class="kf-cap">Relasi "memiliki NIS": setiap siswa tepat satu pasangan. Inilah fungsi.</div></div></div>
+    <div class="box box-catatan">
+      <div class="box-label">💡 Gagasan Utama</div>
+      <p style="margin:0;font-size:.9rem;text-align:center;"><strong>Semua fungsi adalah relasi, tetapi tidak semua relasi adalah fungsi.</strong></p>
+    </div>
+    <p>Fungsi adalah relasi "yang disiplin": setiap anggota daerah asal wajib mendapat pasangan, dan pasangannya wajib tunggal. Konsep inilah yang menjadi fondasi hampir seluruh matematika lanjutan, mulai dari fungsi linear, fungsi kuadrat, fungsi eksponen, hingga kalkulus.</p>
+    <h3 class="subsection-title">Sejarah Singkat</h3>
+    <p>Istilah <em>function</em> pertama kali dipakai secara eksplisit oleh <strong>Gottfried Wilhelm Leibniz</strong> (1646&ndash;1716) pada akhir abad ke-17. Notasi $f(x)$ yang kita pakai sekarang diperkenalkan oleh <strong>Leonhard Euler</strong> (1707&ndash;1783). Jauh sebelumnya, <strong>Al-Khwarizmi</strong> (780&ndash;850 M) meletakkan dasar berpikir sistematis lewat karyanya <em>Al-Jabr</em>, cikal bakal aljabar. Definisi modern fungsi sebagai aturan pemasangan antarhimpunan, yang kita pelajari di halaman ini, dirumuskan oleh <strong>Peter Gustav Lejeune Dirichlet</strong> (1805&ndash;1859).</p>
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Relasi</a></li>
+      <li><a href="#bagian-b" data-num="B">Fungsi (Pemetaan)</a></li>
+      <li><a href="#bagian-c" data-num="C">Domain, Kodomain, dan Range</a></li>
+      <li><a href="#bagian-d" data-num="D">Korespondensi Satu-satu dan Jenis Fungsi</a></li>
+      <li><a href="#bagian-e" data-num="E">Notasi dan Nilai Fungsi</a></li>
+      <li><a href="#bagian-f" data-num="F">Domain Alami dan Range Fungsi Real</a></li>
+      <li><a href="#bagian-g" data-num="G">Tabel Ringkasan</a></li>
+    </ul>
+  </div>
+
+  </section>
+
+  <!-- ═══ A. RELASI ═══ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Relasi</h2>
+    <h3 class="subsection-title">1. Pengertian Relasi</h3>
+    <p><strong>Relasi</strong> dari himpunan $A$ ke himpunan $B$ adalah aturan yang memasangkan anggota-anggota $A$ dengan anggota-anggota $B$. Anggota $A$ boleh berpasangan dengan satu, banyak, atau bahkan tidak ada anggota $B$: relasi bersifat <strong>bebas</strong>.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Contoh Relasi: "menyukai olahraga"</div>
+      <div class="kf-fig"><svg class="kf-svg" viewBox="0 0 253 130" width="253" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari A ke B"><defs><marker id="kfa3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><ellipse cx="40.5" cy="74.0" rx="36.5" ry="50.0" class="kf-ov"/><ellipse cx="209.2" cy="74.0" rx="40.2" ry="50.0" class="kf-ov"/><text x="40.5" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">A</tspan></text><text x="209.2" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">B</tspan></text><circle cx="63.0" cy="46.0" r="3" class="kf-dot"/><text x="55.0" y="50.5" class="kf-t" font-size="13" text-anchor="end">Ani</text><circle cx="63.0" cy="74.0" r="3" class="kf-dot"/><text x="55.0" y="78.5" class="kf-t" font-size="13" text-anchor="end">Budi</text><circle cx="63.0" cy="102.0" r="3" class="kf-dot"/><text x="55.0" y="106.5" class="kf-t" font-size="13" text-anchor="end">Citra</text><circle cx="183.0" cy="46.0" r="3" class="kf-dot kf-t"/><text x="191.0" y="50.5" class="kf-t" font-size="13">Voli</text><circle cx="183.0" cy="74.0" r="3" class="kf-dot kf-t"/><text x="191.0" y="78.5" class="kf-t" font-size="13">Basket</text><circle cx="183.0" cy="102.0" r="3" class="kf-dot kf-t"/><text x="191.0" y="106.5" class="kf-t" font-size="13">Renang</text><line x1="67.0" y1="46.0" x2="176.0" y2="46.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa3)"/><line x1="67.0" y1="46.0" x2="176.2" y2="72.4" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa3)"/><line x1="67.0" y1="74.0" x2="176.2" y2="100.4" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa3)"/><line x1="67.0" y1="102.0" x2="176.7" y2="49.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa3)"/><line x1="67.0" y1="102.0" x2="176.0" y2="102.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa3)"/></svg></div><p style="margin:.4rem 0 0;font-size:.9rem;">Ani berpasangan dengan <strong>dua</strong> anggota $B$, dan pada relasi biasa hal ini tidak dilarang.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Cara Menyatakan Relasi</h3>
+    <ol>
+      <li><strong>Diagram panah</strong>: dua himpunan digambar berdampingan, anggotanya dihubungkan dengan panah.</li>
+      <li><strong>Himpunan pasangan berurutan</strong>: setiap hubungan ditulis sebagai $(a, b)$ dengan $a \in A$ dan $b \in B$.</li>
+      <li><strong>Diagram Cartesius</strong>: setiap pasangan $(a, b)$ digambar sebagai titik, sumbu $x$ mewakili $A$ dan sumbu $y$ mewakili $B$.</li>
+    </ol>
+    <div class="box box-catatan">
+      <div class="box-label">💡 Catatan</div>
+      <p style="margin:0;font-size:.9rem;">Ketiga cara ini hanyalah <strong>representasi berbeda</strong> dari relasi yang <strong>sama</strong>. Jika kamu lancar mengubah satu bentuk ke bentuk lain, berarti kamu memahami relasinya, bukan sekadar menghafal gambarnya.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $A = \{2, 3, 5\}$ dan $B = \{4, 6, 9, 10, 15\}$. Relasi dari $A$ ke $B$ adalah "faktor dari". Nyatakan relasi tersebut dengan diagram panah dan himpunan pasangan berurutan.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Periksa setiap anggota $A$:</strong></p>
+      <ul class="sol-cek">
+        <li>$2$ faktor dari $4$, $6$, dan $10$</li>
+        <li>$3$ faktor dari $6$, $9$, dan $15$</li>
+        <li>$5$ faktor dari $10$ dan $15$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gambar diagram panahnya:</strong></p>
+<div class="kf-fig"><svg class="kf-svg" viewBox="0 0 194 186" width="194" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari A ke B"><defs><marker id="kfa4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><ellipse cx="25.7" cy="102.0" rx="21.7" ry="78.0" class="kf-ov"/><ellipse cx="164.8" cy="102.0" rx="25.4" ry="78.0" class="kf-ov"/><text x="25.7" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">A</tspan></text><text x="164.8" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">B</tspan></text><circle cx="33.4" cy="74.0" r="3" class="kf-dot"/><text x="25.4" y="78.5" class="kf-t" font-size="13" text-anchor="end">2</text><circle cx="33.4" cy="102.0" r="3" class="kf-dot"/><text x="25.4" y="106.5" class="kf-t" font-size="13" text-anchor="end">3</text><circle cx="33.4" cy="130.0" r="3" class="kf-dot"/><text x="25.4" y="134.5" class="kf-t" font-size="13" text-anchor="end">5</text><circle cx="153.4" cy="46.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="50.5" class="kf-t" font-size="13">4</text><circle cx="153.4" cy="74.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="78.5" class="kf-t" font-size="13">6</text><circle cx="153.4" cy="102.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="106.5" class="kf-t" font-size="13">9</text><circle cx="153.4" cy="130.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="134.5" class="kf-t" font-size="13">10</text><circle cx="153.4" cy="158.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="162.5" class="kf-t" font-size="13">15</text><line x1="37.4" y1="74.0" x2="146.6" y2="47.6" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa4)"/><line x1="37.4" y1="74.0" x2="146.4" y2="74.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa4)"/><line x1="37.4" y1="74.0" x2="147.1" y2="127.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa4)"/><line x1="37.4" y1="102.0" x2="146.6" y2="75.6" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa4)"/><line x1="37.4" y1="102.0" x2="146.4" y2="102.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa4)"/><line x1="37.4" y1="102.0" x2="147.1" y2="155.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa4)"/><line x1="37.4" y1="130.0" x2="146.4" y2="130.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa4)"/><line x1="37.4" y1="130.0" x2="146.6" y2="156.4" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa4)"/></svg></div>      <p class="sol-step"><span class="sol-no">3</span><strong>Tulis himpunan pasangan berurutannya:</strong></p>
+      $$\begin{gather*} R = \{(2,4), (2,6), (2,10), (3,6), \\ (3,9), (3,15), (5,10), (5,15)\} \end{gather*}$$
+      <div class="sol-jadi">relasi "faktor dari" terdiri atas $8$ pasangan berurutan.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Himpunan pasangan berurutan $R = \{(1,1), (2,4), (3,9), (4,16)\}$ menyatakan relasi dari $A = \{1, 2, 3, 4\}$ ke $B = \{1, 4, 9, 16\}$. Gambarkan diagram Cartesiusnya dan sebutkan nama relasinya.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gambar setiap pasangan sebagai titik:</strong></p>
+<div class="kf-fig"><svg class="kf-svg" viewBox="0 0 213 190" width="213" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram Cartesius"><polyline points="66.0,166.0 66.0,157.2 30.0,157.2" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><polyline points="102.0,166.0 102.0,130.8 30.0,130.8" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><polyline points="138.0,166.0 138.0,86.8 30.0,86.8" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><polyline points="174.0,166.0 174.0,25.3 30.0,25.3" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><line x1="24.0" y1="166.0" x2="199.2" y2="166.0" class="kf-ax" stroke-width="1.4"/><polygon points="205.2,166.0 198.2,162.0 198.2,170.0" class="kf-axh"/><line x1="30.0" y1="172.0" x2="30.0" y2="10.0" class="kf-ax" stroke-width="1.4"/><polygon points="30.0,4.0 26.0,11.0 34.0,11.0" class="kf-axh"/><text x="203.2" y="182.0" class="kf-t" font-size="12" font-style="italic">x</text><text x="38.0" y="14.0" class="kf-t" font-size="12" font-style="italic">y</text><text x="25.0" y="180.0" class="kf-t" font-size="11" text-anchor="end">0</text><line x1="66.0" y1="163.0" x2="66.0" y2="169.0" class="kf-ax"/><text x="66.0" y="181.0" class="kf-t" font-size="11" text-anchor="middle">1</text><line x1="102.0" y1="163.0" x2="102.0" y2="169.0" class="kf-ax"/><text x="102.0" y="181.0" class="kf-t" font-size="11" text-anchor="middle">2</text><line x1="138.0" y1="163.0" x2="138.0" y2="169.0" class="kf-ax"/><text x="138.0" y="181.0" class="kf-t" font-size="11" text-anchor="middle">3</text><line x1="174.0" y1="163.0" x2="174.0" y2="169.0" class="kf-ax"/><text x="174.0" y="181.0" class="kf-t" font-size="11" text-anchor="middle">4</text><line x1="27.0" y1="157.2" x2="33.0" y2="157.2" class="kf-ax"/><text x="24.0" y="161.2" class="kf-t" font-size="11" text-anchor="end">1</text><line x1="27.0" y1="130.8" x2="33.0" y2="130.8" class="kf-ax"/><text x="24.0" y="134.8" class="kf-t" font-size="11" text-anchor="end">4</text><line x1="27.0" y1="86.8" x2="33.0" y2="86.8" class="kf-ax"/><text x="24.0" y="90.8" class="kf-t" font-size="11" text-anchor="end">9</text><line x1="27.0" y1="25.3" x2="33.0" y2="25.3" class="kf-ax"/><text x="24.0" y="29.3" class="kf-t" font-size="11" text-anchor="end">16</text><circle cx="66.0" cy="157.2" r="3.8" class="kf-pt-b"/><circle cx="102.0" cy="130.8" r="3.8" class="kf-pt-b"/><circle cx="138.0" cy="86.8" r="3.8" class="kf-pt-b"/><circle cx="174.0" cy="25.3" r="3.8" class="kf-pt-b"/></svg></div>      <p class="sol-step"><span class="sol-no">2</span><strong>Cari pola:</strong> anggota kedua selalu kuadrat dari anggota pertama: $1^2 = 1$, $2^2 = 4$, $3^2 = 9$, $4^2 = 16$.</p>
+      <p class="sol-step">Dibaca dari $A$ ke $B$: "$2$ adalah akar kuadrat dari $4$", "$3$ adalah akar kuadrat dari $9$", dan seterusnya.</p>
+      <div class="sol-jadi">nama relasinya "<strong>akar kuadrat dari</strong>"; dengan kata lain, setiap anggota $B$ adalah kuadrat pasangannya di $A$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0;font-size:.9rem;">Diagram Cartesius berikut menyatakan relasi dari $P = \{1, 2, 3\}$ ke $Q = \{2, 3, 4, 5, 6\}$.</p><div class="kf-fig"><svg class="kf-svg" viewBox="0 0 177 180" width="177" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram Cartesius"><polyline points="66.0,156.0 66.0,112.2 30.0,112.2" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><polyline points="102.0,156.0 102.0,112.2 30.0,112.2" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><polyline points="102.0,156.0 102.0,68.3 30.0,68.3" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><polyline points="138.0,156.0 138.0,90.3 30.0,90.3" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><polyline points="138.0,156.0 138.0,24.5 30.0,24.5" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><line x1="24.0" y1="156.0" x2="163.2" y2="156.0" class="kf-ax" stroke-width="1.4"/><polygon points="169.2,156.0 162.2,152.0 162.2,160.0" class="kf-axh"/><line x1="30.0" y1="162.0" x2="30.0" y2="10.0" class="kf-ax" stroke-width="1.4"/><polygon points="30.0,4.0 26.0,11.0 34.0,11.0" class="kf-axh"/><text x="167.2" y="172.0" class="kf-t" font-size="12" font-style="italic">x</text><text x="38.0" y="14.0" class="kf-t" font-size="12" font-style="italic">y</text><text x="25.0" y="170.0" class="kf-t" font-size="11" text-anchor="end">0</text><line x1="66.0" y1="153.0" x2="66.0" y2="159.0" class="kf-ax"/><text x="66.0" y="171.0" class="kf-t" font-size="11" text-anchor="middle">1</text><line x1="102.0" y1="153.0" x2="102.0" y2="159.0" class="kf-ax"/><text x="102.0" y="171.0" class="kf-t" font-size="11" text-anchor="middle">2</text><line x1="138.0" y1="153.0" x2="138.0" y2="159.0" class="kf-ax"/><text x="138.0" y="171.0" class="kf-t" font-size="11" text-anchor="middle">3</text><line x1="27.0" y1="112.2" x2="33.0" y2="112.2" class="kf-ax"/><text x="24.0" y="116.2" class="kf-t" font-size="11" text-anchor="end">2</text><line x1="27.0" y1="90.3" x2="33.0" y2="90.3" class="kf-ax"/><text x="24.0" y="94.3" class="kf-t" font-size="11" text-anchor="end">3</text><line x1="27.0" y1="68.3" x2="33.0" y2="68.3" class="kf-ax"/><text x="24.0" y="72.3" class="kf-t" font-size="11" text-anchor="end">4</text><line x1="27.0" y1="46.4" x2="33.0" y2="46.4" class="kf-ax"/><text x="24.0" y="50.4" class="kf-t" font-size="11" text-anchor="end">5</text><line x1="27.0" y1="24.5" x2="33.0" y2="24.5" class="kf-ax"/><text x="24.0" y="28.5" class="kf-t" font-size="11" text-anchor="end">6</text><circle cx="66.0" cy="112.2" r="3.8" class="kf-pt-r"/><circle cx="102.0" cy="112.2" r="3.8" class="kf-pt-r"/><circle cx="102.0" cy="68.3" r="3.8" class="kf-pt-r"/><circle cx="138.0" cy="90.3" r="3.8" class="kf-pt-r"/><circle cx="138.0" cy="24.5" r="3.8" class="kf-pt-r"/></svg></div><p style="margin:0;font-size:.9rem;">Tentukan himpunan pasangan berurutan dan diagram panahnya. Aturan apa yang menghubungkan $P$ dan $Q$?</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Baca koordinat setiap titik:</strong></p>
+      $$R = \{(1,2), (2,2), (2,4), (3,3), (3,6)\}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gambar diagram panahnya:</strong></p>
+<div class="kf-fig"><svg class="kf-svg" viewBox="0 0 187 186" width="187" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari P ke Q"><defs><marker id="kfa5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><ellipse cx="25.7" cy="102.0" rx="21.7" ry="78.0" class="kf-ov"/><ellipse cx="161.1" cy="102.0" rx="21.7" ry="78.0" class="kf-ov"/><text x="25.7" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">P</tspan></text><text x="161.1" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">Q</tspan></text><circle cx="33.4" cy="74.0" r="3" class="kf-dot"/><text x="25.4" y="78.5" class="kf-t" font-size="13" text-anchor="end">1</text><circle cx="33.4" cy="102.0" r="3" class="kf-dot"/><text x="25.4" y="106.5" class="kf-t" font-size="13" text-anchor="end">2</text><circle cx="33.4" cy="130.0" r="3" class="kf-dot"/><text x="25.4" y="134.5" class="kf-t" font-size="13" text-anchor="end">3</text><circle cx="153.4" cy="46.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="50.5" class="kf-t" font-size="13">2</text><circle cx="153.4" cy="74.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="78.5" class="kf-t" font-size="13">3</text><circle cx="153.4" cy="102.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="106.5" class="kf-t" font-size="13">4</text><circle cx="153.4" cy="130.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="134.5" class="kf-t" font-size="13">5</text><circle cx="153.4" cy="158.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="162.5" class="kf-t" font-size="13">6</text><line x1="37.4" y1="74.0" x2="146.6" y2="47.6" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa5)"/><line x1="37.4" y1="102.0" x2="147.1" y2="49.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa5)"/><line x1="37.4" y1="102.0" x2="146.4" y2="102.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa5)"/><line x1="37.4" y1="130.0" x2="147.1" y2="77.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa5)"/><line x1="37.4" y1="130.0" x2="146.6" y2="156.4" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa5)"/></svg></div>      <p class="sol-step"><span class="sol-no">3</span><strong>Cari pola setiap pasangan:</strong></p>
+      <ul class="sol-cek">
+        <li>$1 \to 2 = 2 \times 1$</li>
+        <li>$2 \to 2$ dan $2 \to 4 = 2 \times 2$</li>
+        <li>$3 \to 3$ dan $3 \to 6 = 2 \times 3$</li>
+      </ul>
+      <p class="sol-step">Setiap anggota $P$ dipasangkan dengan <em>dirinya sendiri</em> dan dengan <em>dua kalinya</em>, selama hasilnya ada di $Q$. Pasangan $(1, 1)$ tidak muncul karena $1 \notin Q$.</p>
+      <div class="sol-jadi">aturannya: $p$ berpasangan dengan $q$ jika $q = p$ atau $q = 2p$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Dimas mengikuti ekstrakurikuler Pramuka dan Futsal; Eka mengikuti Paduan Suara; Fara mengikuti Futsal dan Paduan Suara. Nyatakan situasi ini sebagai relasi, lalu selidiki apakah relasi ini juga fungsi.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan himpunannya:</strong> $A$ = {Dimas, Eka, Fara} dan $B$ = {Pramuka, Futsal, Paduan Suara}.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tulis pasangan berurutannya:</strong></p>
+      <ul class="sol-cek">
+        <li>(Dimas, Pramuka), (Dimas, Futsal)</li>
+        <li>(Eka, Paduan Suara)</li>
+        <li>(Fara, Futsal), (Fara, Paduan Suara)</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Periksa jumlah pasangan setiap anggota $A$:</strong> Dimas dan Fara masing-masing punya dua pasangan.</p>
+      <div class="sol-jadi">situasi ini adalah relasi yang sah, tetapi <strong>bukan fungsi</strong>, karena ada anggota $A$ yang berpasangan dengan lebih dari satu anggota $B$.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan A</div>
+      <ol class="soal-list">
+        <li>Diketahui $A = \{1, 2, 3\}$ dan $B = \{1, 2, 3, 4, 5, 6\}$ dengan relasi "setengah dari". Nyatakan relasi tersebut dengan diagram panah dan himpunan pasangan berurutan.</li>
+        <li>Diketahui $R = \{(a,1), (b,2), (a,3), (c,1)\}$ dengan $A = \{a, b, c\}$ dan $B = \{1, 2, 3\}$. Jelaskan diagram panahnya: anggota $A$ mana yang punya lebih dari satu panah?</li>
+        <li>Diketahui $P = \{2, 3, 4, 5\}$ dan $Q = \{6, 8, 10, 15\}$ dengan relasi "faktor dari". Tentukan himpunan pasangan berurutannya.</li>
+        <li>Diagram Cartesius memuat titik-titik $(1,3)$, $(2,5)$, $(3,7)$ yang menyatakan relasi dari $A = \{1, 2, 3\}$ ke $B = \{3, 5, 7\}$. Tentukan himpunan pasangan berurutan dan aturan yang menghubungkannya.</li>
+        <li>Diketahui $A = \{2, 3, 5, 7\}$ dan $B = \{10, 15, 21, 25, 35\}$. Tentukan relasi "faktor dari" dari $A$ ke $B$ dalam bentuk himpunan pasangan berurutan.</li>
+        <li>Sebuah aplikasi pengiriman mencatat relasi "mengirim paket ke kota" dari kurir $K = \{K_1, K_2, K_3\}$ ke kota $C = \{\text{Bandung}, \text{Jakarta}, \text{Surabaya}\}$. Setiap kurir bisa mengirim ke lebih dari satu kota, dan satu kota bisa menerima paket dari beberapa kurir. Jelaskan mengapa situasi ini relasi yang sah tetapi tidak bisa langsung disebut fungsi, dan beri contoh pasangannya.</li>
+        <li>Diketahui relasi "kurang dari" dari $A = \{1, 2, 3, 4, 5\}$ ke $B = \{1, 2, 3, 4, 5\}$. Tentukan banyaknya pasangan berurutan yang terbentuk.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ B. FUNGSI (PEMETAAN) ═══ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Fungsi (Pemetaan)</h2>
+    <h3 class="subsection-title">1. Pengertian Fungsi</h3>
+    <p><strong>Fungsi</strong> (pemetaan) dari himpunan $A$ ke himpunan $B$ adalah relasi khusus yang memasangkan <strong>setiap</strong> anggota $A$ dengan <strong>tepat satu</strong> anggota $B$. Fungsi ditulis $f: A \to B$, dibaca "$f$ memetakan $A$ ke $B$".</p>
+    <div class="grafik-wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-45 100 600 290" width="100%" style="max-width:100%; background-color:transparent;">
+    <defs>
+      <style>
+        .fki4-box { fill: none; stroke: #334155; transition: all 0.3s ease; }
+        .fki4-label { fill: #334155; font-family: Cambria, 'Times New Roman', serif; }
+        .fki4-line-blue { stroke: #1010A0; fill: none; }
+        .fki4-arrow-blue { fill: #1010A0; }
+        [data-theme="dark"] .fki4-box { stroke: #94a3b8; }
+        [data-theme="dark"] .fki4-label { fill: #f1f5f9 !important; }
+        [data-theme="dark"] .fki4-line-blue { stroke: #60A5FA; }
+        [data-theme="dark"] .fki4-arrow-blue { fill: #60A5FA; }
+      </style>
+      <marker id="fki4-arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki4-arrow-blue" />
+      </marker>
+    </defs>
+
+    <g transform="translate(60, 130) scale(0.65)">
+
+      <ellipse cx="100" cy="150" rx="100" ry="160" class="fki4-box" stroke-width="2" />
+      <text x="100" y="350" text-anchor="middle" class="fki4-label" font-size="42">
+        <tspan font-style="italic">A</tspan> (Domain)
+      </text>
+
+      <text x="100" y="60" text-anchor="middle" class="fki4-label" font-size="38" font-style="italic">a</text>
+      <text x="100" y="125" text-anchor="middle" class="fki4-label" font-size="38" font-style="italic">b</text>
+      <text x="100" y="190" text-anchor="middle" class="fki4-label" font-size="38" font-style="italic">c</text>
+      <text x="100" y="255" text-anchor="middle" class="fki4-label" font-size="38" font-style="italic">d</text>
+
+      <ellipse cx="500" cy="150" rx="100" ry="160" class="fki4-box" stroke-width="2" />
+      <text x="500" y="350" text-anchor="middle" class="fki4-label" font-size="42">
+        <tspan font-style="italic">B</tspan> (Kodomain)
+      </text>
+
+      <text x="500" y="60" text-anchor="middle" class="fki4-label" font-size="38">1</text>
+      <text x="500" y="125" text-anchor="middle" class="fki4-label" font-size="38">2</text>
+      <text x="500" y="190" text-anchor="middle" class="fki4-label" font-size="38">3</text>
+      <text x="500" y="255" text-anchor="middle" class="fki4-label" font-size="38">4</text>
+
+      <g stroke-width="3" marker-end="url(#fki4-arrow-blue)">
+        <line x1="135" y1="50" x2="460" y2="50" class="fki4-line-blue" />
+        <line x1="135" y1="115" x2="460" y2="180" class="fki4-line-blue" />
+        <line x1="135" y1="180" x2="460" y2="115" class="fki4-line-blue" />
+        <line x1="135" y1="245" x2="460" y2="245" class="fki4-line-blue" />
+      </g>
+
+      <text x="300" y="20" text-anchor="middle" class="fki4-label" font-size="42" font-style="italic">f</text>
+
+    </g>
+  </svg>
+</div>
+
+<div class="kf-row"><div class="kf-fig"><svg class="kf-svg" viewBox="0 0 155 130" width="155" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari A ke B"><defs><marker id="kfa6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><ellipse cx="25.7" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><ellipse cx="129.1" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><text x="25.7" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">A</tspan></text><text x="129.1" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">B</tspan></text><circle cx="33.4" cy="46.0" r="3" class="kf-dot"/><text x="25.4" y="50.5" class="kf-t" font-size="13" text-anchor="end"><tspan font-style="italic">p</tspan></text><circle cx="33.4" cy="74.0" r="3" class="kf-dot"/><text x="25.4" y="78.5" class="kf-t" font-size="13" text-anchor="end"><tspan font-style="italic">q</tspan></text><circle cx="33.4" cy="102.0" r="3" class="kf-dot"/><text x="25.4" y="106.5" class="kf-t" font-size="13" text-anchor="end"><tspan font-style="italic">r</tspan></text><circle cx="121.4" cy="46.0" r="3" class="kf-dot kf-t"/><text x="129.4" y="50.5" class="kf-t" font-size="13"><tspan font-style="italic">x</tspan></text><circle cx="121.4" cy="74.0" r="3" class="kf-dot kf-t"/><text x="129.4" y="78.5" class="kf-t" font-size="13"><tspan font-style="italic">y</tspan></text><circle cx="121.4" cy="102.0" r="3" class="kf-dot kf-t"/><text x="129.4" y="106.5" class="kf-t" font-size="13"><tspan font-style="italic">z</tspan></text><line x1="37.4" y1="46.0" x2="114.4" y2="46.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa6)"/><line x1="37.4" y1="74.0" x2="114.7" y2="48.1" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa6)"/><line x1="37.4" y1="102.0" x2="114.7" y2="76.1" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa6)"/></svg><div class="kf-cap">(a) Fungsi: setiap anggota $A$ punya tepat 1 pasangan</div></div><div class="kf-fig"><svg class="kf-svg" viewBox="0 0 155 130" width="155" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari A ke B"><defs><marker id="kfa7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-r"/></marker></defs><ellipse cx="25.7" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><ellipse cx="129.1" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><text x="25.7" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">A</tspan></text><text x="129.1" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">B</tspan></text><circle cx="33.4" cy="46.0" r="3" class="kf-dot"/><text x="25.4" y="50.5" class="kf-t" font-size="13" text-anchor="end"><tspan font-style="italic">p</tspan></text><circle cx="33.4" cy="74.0" r="3" class="kf-dot"/><text x="25.4" y="78.5" class="kf-t" font-size="13" text-anchor="end"><tspan font-style="italic">q</tspan></text><circle cx="33.4" cy="102.0" r="3" class="kf-dot"/><text x="25.4" y="106.5" class="kf-t" font-size="13" text-anchor="end"><tspan font-style="italic">r</tspan></text><circle cx="121.4" cy="46.0" r="3" class="kf-dot kf-t"/><text x="129.4" y="50.5" class="kf-t" font-size="13"><tspan font-style="italic">x</tspan></text><circle cx="121.4" cy="74.0" r="3" class="kf-dot kf-t"/><text x="129.4" y="78.5" class="kf-t" font-size="13"><tspan font-style="italic">y</tspan></text><circle cx="121.4" cy="102.0" r="3" class="kf-dot kf-t"/><text x="129.4" y="106.5" class="kf-t" font-size="13"><tspan font-style="italic">z</tspan></text><line x1="37.4" y1="46.0" x2="114.4" y2="46.0" class="kf-ln-r" stroke-width="1.6" marker-end="url(#kfa7)"/><line x1="37.4" y1="74.0" x2="114.4" y2="74.0" class="kf-ln-r" stroke-width="1.6" marker-end="url(#kfa7)"/></svg><div class="kf-cap">(b) Bukan fungsi: $r$ tidak punya pasangan</div></div><div class="kf-fig"><svg class="kf-svg" viewBox="0 0 155 130" width="155" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari A ke B"><defs><marker id="kfa8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-r"/></marker></defs><ellipse cx="25.7" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><ellipse cx="129.1" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><text x="25.7" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">A</tspan></text><text x="129.1" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">B</tspan></text><circle cx="33.4" cy="46.0" r="3" class="kf-dot"/><text x="25.4" y="50.5" class="kf-t" font-size="13" text-anchor="end"><tspan font-style="italic">p</tspan></text><circle cx="33.4" cy="74.0" r="3" class="kf-dot"/><text x="25.4" y="78.5" class="kf-t" font-size="13" text-anchor="end"><tspan font-style="italic">q</tspan></text><circle cx="33.4" cy="102.0" r="3" class="kf-dot"/><text x="25.4" y="106.5" class="kf-t" font-size="13" text-anchor="end"><tspan font-style="italic">r</tspan></text><circle cx="121.4" cy="46.0" r="3" class="kf-dot kf-t"/><text x="129.4" y="50.5" class="kf-t" font-size="13"><tspan font-style="italic">x</tspan></text><circle cx="121.4" cy="74.0" r="3" class="kf-dot kf-t"/><text x="129.4" y="78.5" class="kf-t" font-size="13"><tspan font-style="italic">y</tspan></text><circle cx="121.4" cy="102.0" r="3" class="kf-dot kf-t"/><text x="129.4" y="106.5" class="kf-t" font-size="13"><tspan font-style="italic">z</tspan></text><line x1="37.4" y1="46.0" x2="114.4" y2="46.0" class="kf-ln-r" stroke-width="1.6" marker-end="url(#kfa8)"/><line x1="37.4" y1="46.0" x2="114.7" y2="71.9" class="kf-ln-r" stroke-width="1.6" marker-end="url(#kfa8)"/><line x1="37.4" y1="102.0" x2="114.4" y2="102.0" class="kf-ln-r" stroke-width="1.6" marker-end="url(#kfa8)"/></svg><div class="kf-cap">(c) Bukan fungsi: $p$ punya dua pasangan</div></div></div>
+    <h3 class="subsection-title">2. Syarat dan Ciri-ciri Fungsi</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Dua Syarat Fungsi</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li><strong>Kelengkapan</strong>: setiap anggota $A$ <strong>harus</strong> punya pasangan di $B$.</li><li><strong>Ketunggalan</strong>: setiap anggota $A$ punya <strong>tepat satu</strong> pasangan di $B$.</li></ul>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Cara Cepat Mengecek</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li><strong>Diagram panah</strong>: hitung panah yang keluar dari setiap titik di $A$. Fungsi jika semuanya tepat satu.</li><li><strong>Pasangan berurutan</strong>: jika ada dua pasangan dengan elemen pertama sama tetapi elemen kedua berbeda, maka <strong>bukan</strong> fungsi.</li><li>Anggota $B$ <strong>boleh</strong> menerima lebih dari satu panah, dan boleh juga tidak menerima panah sama sekali. Syarat fungsi hanya berlaku untuk anggota $A$.</li></ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Manakah dari tiga diagram panah berikut yang merupakan fungsi? Jelaskan alasannya.</p><div class="kf-row"><div class="kf-fig"><svg class="kf-svg" viewBox="0 0 151 130" width="151" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari A ke B"><defs><marker id="kfa9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><ellipse cx="25.7" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><ellipse cx="125.1" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><text x="25.7" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">A</tspan></text><text x="125.1" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">B</tspan></text><circle cx="33.4" cy="46.0" r="3" class="kf-dot"/><text x="25.4" y="50.5" class="kf-t" font-size="13" text-anchor="end">1</text><circle cx="33.4" cy="74.0" r="3" class="kf-dot"/><text x="25.4" y="78.5" class="kf-t" font-size="13" text-anchor="end">2</text><circle cx="33.4" cy="102.0" r="3" class="kf-dot"/><text x="25.4" y="106.5" class="kf-t" font-size="13" text-anchor="end">3</text><circle cx="117.4" cy="46.0" r="3" class="kf-dot kf-t"/><text x="125.4" y="50.5" class="kf-t" font-size="13"><tspan font-style="italic">a</tspan></text><circle cx="117.4" cy="74.0" r="3" class="kf-dot kf-t"/><text x="125.4" y="78.5" class="kf-t" font-size="13"><tspan font-style="italic">b</tspan></text><circle cx="117.4" cy="102.0" r="3" class="kf-dot kf-t"/><text x="125.4" y="106.5" class="kf-t" font-size="13"><tspan font-style="italic">c</tspan></text><line x1="37.4" y1="46.0" x2="111.6" y2="98.1" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa9)"/><line x1="37.4" y1="74.0" x2="110.4" y2="74.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa9)"/><line x1="37.4" y1="102.0" x2="110.8" y2="76.2" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa9)"/></svg><div class="kf-cap">(i)</div></div><div class="kf-fig"><svg class="kf-svg" viewBox="0 0 151 130" width="151" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari A ke B"><defs><marker id="kfa10" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><ellipse cx="25.7" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><ellipse cx="125.1" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><text x="25.7" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">A</tspan></text><text x="125.1" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">B</tspan></text><circle cx="33.4" cy="46.0" r="3" class="kf-dot"/><text x="25.4" y="50.5" class="kf-t" font-size="13" text-anchor="end">1</text><circle cx="33.4" cy="74.0" r="3" class="kf-dot"/><text x="25.4" y="78.5" class="kf-t" font-size="13" text-anchor="end">2</text><circle cx="33.4" cy="102.0" r="3" class="kf-dot"/><text x="25.4" y="106.5" class="kf-t" font-size="13" text-anchor="end">3</text><circle cx="117.4" cy="46.0" r="3" class="kf-dot kf-t"/><text x="125.4" y="50.5" class="kf-t" font-size="13"><tspan font-style="italic">a</tspan></text><circle cx="117.4" cy="74.0" r="3" class="kf-dot kf-t"/><text x="125.4" y="78.5" class="kf-t" font-size="13"><tspan font-style="italic">b</tspan></text><circle cx="117.4" cy="102.0" r="3" class="kf-dot kf-t"/><text x="125.4" y="106.5" class="kf-t" font-size="13"><tspan font-style="italic">c</tspan></text><line x1="37.4" y1="46.0" x2="110.4" y2="46.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa10)"/><line x1="37.4" y1="46.0" x2="111.6" y2="98.1" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa10)"/><line x1="37.4" y1="74.0" x2="110.4" y2="74.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa10)"/><line x1="37.4" y1="102.0" x2="110.4" y2="102.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa10)"/></svg><div class="kf-cap">(ii)</div></div><div class="kf-fig"><svg class="kf-svg" viewBox="0 0 151 130" width="151" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari A ke B"><defs><marker id="kfa11" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><ellipse cx="25.7" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><ellipse cx="125.1" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><text x="25.7" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">A</tspan></text><text x="125.1" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">B</tspan></text><circle cx="33.4" cy="46.0" r="3" class="kf-dot"/><text x="25.4" y="50.5" class="kf-t" font-size="13" text-anchor="end">1</text><circle cx="33.4" cy="74.0" r="3" class="kf-dot"/><text x="25.4" y="78.5" class="kf-t" font-size="13" text-anchor="end">2</text><circle cx="33.4" cy="102.0" r="3" class="kf-dot"/><text x="25.4" y="106.5" class="kf-t" font-size="13" text-anchor="end">3</text><circle cx="117.4" cy="46.0" r="3" class="kf-dot kf-t"/><text x="125.4" y="50.5" class="kf-t" font-size="13"><tspan font-style="italic">a</tspan></text><circle cx="117.4" cy="74.0" r="3" class="kf-dot kf-t"/><text x="125.4" y="78.5" class="kf-t" font-size="13"><tspan font-style="italic">b</tspan></text><circle cx="117.4" cy="102.0" r="3" class="kf-dot kf-t"/><text x="125.4" y="106.5" class="kf-t" font-size="13"><tspan font-style="italic">c</tspan></text><line x1="37.4" y1="46.0" x2="110.4" y2="46.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa11)"/><line x1="37.4" y1="74.0" x2="110.8" y2="99.8" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa11)"/></svg><div class="kf-cap">(iii)</div></div></div>
+
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">i</span><span>Diagram (i)</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung panah keluar:</strong> $1 \to c$, $2 \to b$, $3 \to b$, masing-masing tepat satu.</p>
+      <div class="sol-jadi">(i) <strong>fungsi</strong>. Dua panah menuju $b$ tidak melanggar syarat.</div>
+      <div class="sol-part"><span class="sol-tag">ii</span><span>Diagram (ii)</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung panah keluar:</strong> $1$ punya dua panah (ke $a$ dan $c$).</p>
+      <div class="sol-jadi">(ii) <strong>bukan fungsi</strong>, melanggar syarat ketunggalan.</div>
+      <div class="sol-part"><span class="sol-tag">iii</span><span>Diagram (iii)</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung panah keluar:</strong> $3$ tidak punya panah.</p>
+      <div class="sol-jadi">(iii) <strong>bukan fungsi</strong>, melanggar syarat kelengkapan.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $A = \{1, 2, 3, 4\}$ dan $B = \{2, 3, 5\}$. Manakah yang merupakan fungsi dari $A$ ke $B$?<br>(a) $R_1 = \{(1,2), (2,3), (3,3), (4,5)\}$<br>(b) $R_2 = \{(1,2), (1,5), (2,3), (3,3), (4,2)\}$<br>(c) $R_3 = \{(1,2), (2,3), (3,3)\}$</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>$R_1$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Periksa elemen pertama:</strong> $1, 2, 3, 4$ masing-masing muncul tepat sekali.</p>
+      <div class="sol-jadi">$R_1$ <strong>fungsi</strong>.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$R_2$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Periksa elemen pertama:</strong> $1$ muncul dua kali dengan pasangan berbeda, yaitu $2$ dan $5$.</p>
+      <div class="sol-jadi">$R_2$ <strong>bukan fungsi</strong> (melanggar ketunggalan).</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$R_3$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Periksa elemen pertama:</strong> $4 \in A$ tidak muncul sama sekali.</p>
+      <div class="sol-jadi">$R_3$ <strong>bukan fungsi</strong> (melanggar kelengkapan).</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Tinjau dua pemetaan berikut. Manakah yang merupakan fungsi?<br>(a) Setiap siswa dipetakan ke Nomor Induk Siswa (NIS)-nya.<br>(b) Setiap golongan darah dipetakan ke orang-orang yang bergolongan darah tersebut.</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>Siswa → NIS</span></div>
+      <ul class="sol-cek">
+        <li>Kelengkapan: setiap siswa pasti punya NIS ✓</li>
+        <li>Ketunggalan: tidak ada siswa dengan dua NIS ✓</li>
+      </ul>
+      <div class="sol-jadi">pemetaan (a) <strong>fungsi</strong>.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Golongan darah → orang</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Periksa ketunggalan:</strong> daerah asalnya $\{A, B, AB, O\}$, dan golongan $O$ dipasangkan dengan <em>banyak</em> orang sekaligus.</p>
+      <div class="sol-jadi">pemetaan (b) <strong>bukan fungsi</strong>.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Titik-titik $(1,2)$, $(2,3)$, $(3,3)$, $(4,5)$ menyatakan pemasangan dari $A = \{1, 2, 3, 4\}$ ke $B = \{1, 2, 3, 4, 5\}$. Apakah ini fungsi? Bagaimana jika ditambahkan titik $(2,5)$?</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">1</span><span>Pasangan awal</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Periksa nilai $x$:</strong> $1, 2, 3, 4$ masing-masing muncul tepat sekali.</p>
+      <div class="sol-jadi">pasangan awal <strong>fungsi</strong>.</div>
+      <div class="sol-part"><span class="sol-tag">2</span><span>Setelah ditambah $(2,5)$</span></div>
+<div class="kf-fig"><svg class="kf-svg" viewBox="0 0 213 170" width="213" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram Cartesius"><polyline points="66.0,146.0 66.0,97.1 30.0,97.1" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><polyline points="102.0,146.0 102.0,72.7 30.0,72.7" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><polyline points="138.0,146.0 138.0,72.7 30.0,72.7" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><polyline points="174.0,146.0 174.0,23.8 30.0,23.8" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><polyline points="102.0,146.0 102.0,23.8 30.0,23.8" fill="none" class="kf-dash" stroke-width="1" stroke-dasharray="3 3"/><line x1="24.0" y1="146.0" x2="199.2" y2="146.0" class="kf-ax" stroke-width="1.4"/><polygon points="205.2,146.0 198.2,142.0 198.2,150.0" class="kf-axh"/><line x1="30.0" y1="152.0" x2="30.0" y2="10.0" class="kf-ax" stroke-width="1.4"/><polygon points="30.0,4.0 26.0,11.0 34.0,11.0" class="kf-axh"/><text x="203.2" y="162.0" class="kf-t" font-size="12" font-style="italic">x</text><text x="38.0" y="14.0" class="kf-t" font-size="12" font-style="italic">y</text><text x="25.0" y="160.0" class="kf-t" font-size="11" text-anchor="end">0</text><line x1="66.0" y1="143.0" x2="66.0" y2="149.0" class="kf-ax"/><text x="66.0" y="161.0" class="kf-t" font-size="11" text-anchor="middle">1</text><line x1="102.0" y1="143.0" x2="102.0" y2="149.0" class="kf-ax"/><text x="102.0" y="161.0" class="kf-t" font-size="11" text-anchor="middle">2</text><line x1="138.0" y1="143.0" x2="138.0" y2="149.0" class="kf-ax"/><text x="138.0" y="161.0" class="kf-t" font-size="11" text-anchor="middle">3</text><line x1="174.0" y1="143.0" x2="174.0" y2="149.0" class="kf-ax"/><text x="174.0" y="161.0" class="kf-t" font-size="11" text-anchor="middle">4</text><line x1="27.0" y1="121.6" x2="33.0" y2="121.6" class="kf-ax"/><text x="24.0" y="125.6" class="kf-t" font-size="11" text-anchor="end">1</text><line x1="27.0" y1="97.1" x2="33.0" y2="97.1" class="kf-ax"/><text x="24.0" y="101.1" class="kf-t" font-size="11" text-anchor="end">2</text><line x1="27.0" y1="72.7" x2="33.0" y2="72.7" class="kf-ax"/><text x="24.0" y="76.7" class="kf-t" font-size="11" text-anchor="end">3</text><line x1="27.0" y1="48.2" x2="33.0" y2="48.2" class="kf-ax"/><text x="24.0" y="52.2" class="kf-t" font-size="11" text-anchor="end">4</text><line x1="27.0" y1="23.8" x2="33.0" y2="23.8" class="kf-ax"/><text x="24.0" y="27.8" class="kf-t" font-size="11" text-anchor="end">5</text><circle cx="66.0" cy="97.1" r="3.8" class="kf-pt-r"/><circle cx="102.0" cy="72.7" r="3.8" class="kf-pt-r"/><circle cx="138.0" cy="72.7" r="3.8" class="kf-pt-r"/><circle cx="174.0" cy="23.8" r="3.8" class="kf-pt-r"/><circle cx="102.0" cy="23.8" r="3.8" class="kf-pt-r"/></svg></div>      <p class="sol-step"><span class="sol-no">1</span><strong>Periksa nilai $x = 2$:</strong> kini berpasangan dengan $3$ dan $5$, sehingga ada dua titik pada satu garis tegak $x = 2$.</p>
+      <div class="sol-jadi">himpunan pasangan yang baru <strong>bukan fungsi</strong>.</div>
+    </div>
+
+    <h3 class="subsection-title">3. Uji Garis Vertikal</h3>
+    <p>Pada Contoh di atas, dua titik yang segaris tegak menandakan bukan fungsi. Gagasan yang sama berlaku untuk grafik berupa kurva.</p>
+    <p>Selain sebagai diagram panah, fungsi juga sering dinyatakan sebagai <strong>grafik</strong> pada bidang Cartesius. Tidak semua kurva pada bidang Cartesius merupakan grafik fungsi &mdash; syaratnya, setiap nilai $x$ hanya boleh berpasangan dengan <strong>tepat satu</strong> nilai $y$ (sesuai definisi fungsi itu sendiri).</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Uji Garis Vertikal</div>
+      <p style="margin:0;font-size:.9rem;">Suatu kurva merupakan grafik fungsi jika dan hanya jika setiap garis vertikal $x = k$ memotong kurva tersebut di <strong>paling banyak satu titik</strong>.</p>
+    </div>
+
+    <p>Pada grafik yang memenuhi uji ini, setiap garis vertikal memotong kurva tepat satu kali. Sebaliknya, jika ada garis vertikal yang memotong kurva di dua titik atau lebih, artinya satu nilai $x$ berpasangan dengan lebih dari satu nilai $y$ &mdash; ini melanggar definisi fungsi.</p>
+<div class="kf-row"><div class="kf-fig"><svg class="kf-svg" viewBox="0 0 150 150" width="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Parabola: tepat 1 titik potong → fungsi ✓"><line x1="6" y1="80" x2="144" y2="80" class="kf-ax" stroke-width="1.2"/><line x1="75" y1="142" x2="75" y2="14" class="kf-ax" stroke-width="1.2"/><polyline points="13.4,20.6 15.6,28.2 17.8,35.4 20.0,42.5 22.2,49.2 24.4,55.7 26.6,61.8 28.8,67.8 31.0,73.4 33.2,78.8 35.4,83.9 37.6,88.7 39.8,93.2 42.0,97.5 44.2,101.5 46.4,105.2 48.6,108.6 50.8,111.8 53.0,114.7 55.2,117.3 57.4,119.6 59.6,121.7 61.8,123.5 64.0,125.0 66.2,126.2 68.4,127.2 70.6,127.9 72.8,128.3 75.0,128.4 77.2,128.3 79.4,127.9 81.6,127.2 83.8,126.2 86.0,125.0 88.2,123.5 90.4,121.7 92.6,119.6 94.8,117.3 97.0,114.7 99.2,111.8 101.4,108.6 103.6,105.2 105.8,101.5 108.0,97.5 110.2,93.2 112.4,88.7 114.6,83.9 116.8,78.8 119.0,73.4 121.2,67.8 123.4,61.8 125.6,55.7 127.8,49.2 130.0,42.5 132.2,35.4 134.4,28.2 136.6,20.6" fill="none" class="kf-ln-b" stroke-width="2.2"/><line x1="101.4" y1="12" x2="101.4" y2="144" class="kf-ln-g" stroke-width="1.6" stroke-dasharray="5 4"/><circle cx="101.4" cy="108.6" r="4" class="kf-pt-g"/></svg><div class="kf-cap">Parabola: tepat 1 titik potong → fungsi ✓</div></div><div class="kf-fig"><svg class="kf-svg" viewBox="0 0 150 150" width="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lingkaran: 2 titik potong → bukan fungsi ✗"><line x1="6" y1="80" x2="144" y2="80" class="kf-ax" stroke-width="1.2"/><line x1="75" y1="142" x2="75" y2="14" class="kf-ax" stroke-width="1.2"/><polyline points="125.6,80.0 125.4,76.0 125.0,72.1 124.2,68.2 123.1,64.4 121.7,60.6 120.1,57.0 118.1,53.6 115.9,50.3 113.5,47.1 110.8,44.2 107.9,41.5 104.7,39.1 101.4,36.9 98.0,34.9 94.4,33.3 90.6,31.9 86.8,30.8 82.9,30.0 79.0,29.6 75.0,29.4 71.0,29.6 67.1,30.0 63.2,30.8 59.4,31.9 55.6,33.3 52.0,34.9 48.6,36.9 45.3,39.1 42.1,41.5 39.2,44.2 36.5,47.1 34.1,50.3 31.9,53.6 29.9,57.0 28.3,60.6 26.9,64.4 25.8,68.2 25.0,72.1 24.6,76.0 24.4,80.0 24.6,84.0 25.0,87.9 25.8,91.8 26.9,95.6 28.3,99.4 29.9,103.0 31.9,106.4 34.1,109.7 36.5,112.9 39.2,115.8 42.1,118.5 45.3,120.9 48.6,123.1 52.0,125.1 55.6,126.7 59.4,128.1 63.2,129.2 67.1,130.0 71.0,130.4 75.0,130.6 79.0,130.4 82.9,130.0 86.8,129.2 90.6,128.1 94.4,126.7 98.0,125.1 101.4,123.1 104.7,120.9 107.9,118.5 110.8,115.8 113.5,112.9 115.9,109.7 118.1,106.4 120.1,103.0 121.7,99.4 123.1,95.6 124.2,91.8 125.0,87.9 125.4,84.0 125.6,80.0" fill="none" class="kf-ln-b" stroke-width="2.2"/><line x1="101.4" y1="12" x2="101.4" y2="144" class="kf-ln-r" stroke-width="1.6" stroke-dasharray="5 4"/><circle cx="101.4" cy="36.8" r="4" class="kf-pt-r"/><circle cx="101.4" cy="123.2" r="4" class="kf-pt-r"/></svg><div class="kf-cap">Lingkaran: 2 titik potong → bukan fungsi ✗</div></div></div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Selidiki apakah aturan berikut merupakan <strong>fungsi</strong> atau <strong>bukan fungsi</strong>: $$y^2 = x, \quad x \in \{0, 1, 4, 9\}$$</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari pasangan setiap $x$:</strong> untuk $x = 1$, persamaan $y^2 = 1$ memberi $y = 1$ dan $y = -1$.</p>
+      <div class="sol-jadi">aturan $y^2 = x$ <strong>bukan fungsi</strong>, karena satu nilai $x$ berpasangan dengan dua nilai $y$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Selidiki apakah grafik lingkaran penuh (berpusat di sumbu $x$) merupakan <strong>fungsi</strong> atau <strong>bukan fungsi</strong>.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan uji garis vertikal:</strong> garis tegak yang melewati bagian dalam lingkaran memotong lingkaran di dua titik.</p>
+      <div class="sol-jadi">lingkaran <strong>bukan grafik fungsi</strong>.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan B</div>
+      <ol class="soal-list">
+        <li>Diketahui $A = \{a, b, c, d\}$ dan $B = \{1, 2, 3\}$. Buatlah satu contoh relasi dari $A$ ke $B$ yang merupakan fungsi dan satu yang bukan fungsi (dalam bentuk pasangan berurutan).</li>
+        <li>Manakah yang merupakan fungsi dari $\{1, 2, 3\}$ ke $\{p, q, r, s\}$?<br>(a) $\{(1,p), (2,q), (3,r)\}$<br>(b) $\{(1,p), (1,q), (2,r), (3,s)\}$<br>(c) $\{(1,p), (2,p), (3,p)\}$</li>
+        <li>Relasi "$y$ adalah kuadrat dari $x$" dari $A = \{-2, -1, 0, 1, 2\}$ ke $B = \{0, 1, 4\}$. Apakah relasi ini fungsi? Periksa kedua syaratnya.</li>
+        <li>Seorang guru memasangkan setiap siswa dengan <strong>nilai ujian tertingginya</strong>. Apakah pemasangan ini fungsi? Bagaimana jika dipasangkan dengan <strong>semua nilai ujiannya</strong>?</li>
+        <li>Diketahui $f: x \to 2x$ dari $A = \{1, 2, 3, 4, 5\}$ ke $B = \{2, 4, 6, 8, 10\}$. Tunjukkan bahwa $f$ fungsi dengan memeriksa kedua syarat.</li>
+        <li>Mesin ATM memetakan setiap nomor kartu ke satu rekening bank. Mengapa pemetaan ini <strong>harus</strong> berupa fungsi? Apa yang terjadi jika syarat ketunggalan dilanggar?</li>
+        <li>Diketahui $R = \{(x, y) \mid y = x^2\}$ dengan $x \in \{-3, -2, -1, 0, 1, 2, 3\}$. Tunjukkan bahwa $R$ fungsi, lalu jelaskan mengapa nilai $x$ berbeda yang menghasilkan $y$ sama tidak melanggar syarat fungsi.</li>
+        <li>Selidiki apakah aturan berikut merupakan <strong>fungsi</strong> atau <strong>bukan fungsi</strong>: $$y^2 = x + 1, \quad x \in \{-1, 0, 3, 8\}$$</li>
+        <li>Selidiki apakah grafik lingkaran $x^2 + y^2 = 9$ merupakan <strong>fungsi</strong> atau <strong>bukan fungsi</strong>. Gunakan uji garis vertikal untuk menjelaskan jawabanmu.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ C. DOMAIN, KODOMAIN, DAN RANGE ═══ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Domain, Kodomain, dan Range</h2>
+    <h3 class="subsection-title">1. Pengertian Domain, Kodomain, dan Range</h3>
+    <p>Setiap fungsi $f: A \to B$ memiliki tiga daerah penting. Perhatikan fungsi $f: x \to 2x$ dari $A = \{1, 2, 3, 4\}$ ke $B = \{2, 4, 6, 8, 10\}$.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Domain, Kodomain, dan Range</div>
+      <div class="kf-fig"><svg class="kf-svg" viewBox="0 0 194 186" width="194" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari A ke B"><defs><marker id="kfa12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><ellipse cx="25.7" cy="102.0" rx="21.7" ry="78.0" class="kf-ov"/><ellipse cx="164.8" cy="102.0" rx="25.4" ry="78.0" class="kf-ov"/><text x="25.7" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">A</tspan></text><text x="164.8" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">B</tspan></text><circle cx="33.4" cy="60.0" r="3" class="kf-dot"/><text x="25.4" y="64.5" class="kf-t" font-size="13" text-anchor="end">1</text><circle cx="33.4" cy="88.0" r="3" class="kf-dot"/><text x="25.4" y="92.5" class="kf-t" font-size="13" text-anchor="end">2</text><circle cx="33.4" cy="116.0" r="3" class="kf-dot"/><text x="25.4" y="120.5" class="kf-t" font-size="13" text-anchor="end">3</text><circle cx="33.4" cy="144.0" r="3" class="kf-dot"/><text x="25.4" y="148.5" class="kf-t" font-size="13" text-anchor="end">4</text><circle cx="153.4" cy="46.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="50.5" class="kf-t" font-size="13">2</text><circle cx="153.4" cy="74.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="78.5" class="kf-t" font-size="13">4</text><circle cx="153.4" cy="102.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="106.5" class="kf-t" font-size="13">6</text><circle cx="153.4" cy="130.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="134.5" class="kf-t" font-size="13">8</text><circle cx="153.4" cy="158.0" r="3" class="kf-dot kf-mute"/><text x="161.4" y="162.5" class="kf-mute" font-size="13">10</text><line x1="37.4" y1="60.0" x2="146.4" y2="46.8" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa12)"/><line x1="37.4" y1="88.0" x2="146.4" y2="74.8" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa12)"/><line x1="37.4" y1="116.0" x2="146.4" y2="102.8" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa12)"/><line x1="37.4" y1="144.0" x2="146.4" y2="130.8" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa12)"/></svg></div><ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li><strong>Domain</strong> (daerah asal) $D_f = A = \{1, 2, 3, 4\}$</li><li><strong>Kodomain</strong> (daerah kawan) $= B = \{2, 4, 6, 8, 10\}$</li><li><strong>Range</strong> (daerah hasil) $R_f = \{2, 4, 6, 8\}$</li><li>$10$ (abu-abu) termasuk kodomain tetapi <strong>bukan</strong> range, karena tidak ada anggota $A$ yang dipetakan ke sana.</li></ul>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Hubungan Ketiganya</div>
+      <p style="margin:0;font-size:.9rem;">$R_f \subseteq \text{kodomain}$, selalu. Range adalah bagian kodomain yang <strong>benar-benar terpakai</strong>. Domain selalu sama dengan $A$, karena syarat kelengkapan mewajibkan semua anggota $A$ punya pasangan.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui fungsi $f: x \to 2x - 1$ dari $A = \{1, 2, 3\}$ ke $B = \{1, 3, 5, 7, 9\}$. Tentukan domain, kodomain, dan range-nya.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung bayangan setiap anggota $A$:</strong></p>
+      $$f(1) = 1, \quad f(2) = 3, \quad f(3) = 5$$
+      <ul class="sol-cek">
+        <li>Domain $= \{1, 2, 3\}$</li>
+        <li>Kodomain $= \{1, 3, 5, 7, 9\}$</li>
+        <li>Range $= \{1, 3, 5\}$</li>
+      </ul>
+      <div class="sol-jadi">range $\{1, 3, 5\}$; nilai $7$ dan $9$ tidak tercapai.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = x^2 - 1$ dengan domain $\{-2, -1, 0, 1, 2\}$ dan kodomain $\{-1, 0, 1, 2, 3, 4, 5\}$. Tentukan range-nya.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung bayangan setiap anggota domain:</strong></p>
+      $$\begin{align*} f(-2) &= f(2) = 4 - 1 = 3 \\ f(-1) &= f(1) = 1 - 1 = 0 \\ f(0) &= 0 - 1 = -1 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kumpulkan nilai yang muncul,</strong> tanpa pengulangan.</p>
+      <p class="sol-step">Dua domain berbeda boleh punya bayangan sama, misalnya $f(-2) = f(2)$. Fungsi seperti ini disebut <em>banyak-satu</em> dan dibahas di Bagian D.</p>
+      <div class="sol-jadi">$R_f = \{-1, 0, 3\}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $R = \{(a,1), (b,2), (c,1), (d,3)\}$ adalah fungsi dari $A = \{a, b, c, d\}$ ke $B = \{1, 2, 3, 4\}$. Tentukan domain, kodomain, dan range-nya.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Domain dan kodomain</strong> ditentukan oleh soal, yaitu $A$ dan $B$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Range</strong> adalah elemen kedua yang benar-benar muncul: $1, 2, 3$. Nilai $4$ tidak dipasangkan dengan siapa pun.</p>
+      <div class="sol-jadi">$D_f = \{a, b, c, d\}$, kodomain $\{1, 2, 3, 4\}$, dan $R_f = \{1, 2, 3\}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah bioskop menetapkan harga tiket: Anak → Rp20.000, Remaja → Rp25.000, Dewasa → Rp35.000, Lansia → Rp25.000. Daftar harga di sistem kasir: Rp20.000, Rp25.000, Rp35.000, Rp40.000, dan Rp50.000. Tentukan domain, kodomain, dan range fungsi "penetapan harga tiket".</p>
+    </div>
+    <div class="penyelesaian">
+      <ul class="sol-cek">
+        <li>Domain: {Anak, Remaja, Dewasa, Lansia}</li>
+        <li>Kodomain: {Rp20.000, Rp25.000, Rp35.000, Rp40.000, Rp50.000}</li>
+        <li>Range: {Rp20.000, Rp25.000, Rp35.000}</li>
+      </ul>
+      <p class="sol-step">Remaja dan Lansia dikenai harga yang <strong>sama</strong>. Ini tetap sah, karena syarat fungsi tidak melarang dua domain memiliki bayangan sama.</p>
+      <div class="sol-jadi">harga Rp40.000 dan Rp50.000 termasuk kodomain, tetapi bukan range.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan C</div>
+      <ol class="soal-list">
+        <li>Diketahui $f: x \to x + 2$ dari $A = \{1, 2, 3, 4\}$ ke $B = \{3, 4, 5, 6, 7, 8\}$. Tentukan domain, kodomain, dan range-nya.</li>
+        <li>Diketahui $R = \{(1,a), (2,b), (3,a), (4,c)\}$ adalah fungsi dari $\{1, 2, 3, 4\}$ ke $\{a, b, c, d\}$. Tentukan domain, kodomain, dan range-nya.</li>
+        <li>Diketahui $f(x) = 3x - 4$ dengan domain $\{0, 1, 2, 3, 4\}$. Tentukan range-nya.</li>
+        <li>Diketahui $f(x) = x^2 + 1$ dengan domain $\{-2, -1, 0, 1, 2\}$ dan kodomain $\{1, 2, 3, 4, 5, 6, 7\}$. Tentukan range-nya dan pasangan domain yang bayangannya sama.</li>
+        <li>Diketahui $f: x \to \tfrac{1}{2}x$ $+ 1$ dengan domain $\{-4, -2, 0, 2, 4\}$ dan kodomain bilangan bulat dari $-5$ sampai $5$. Tulis kodomainnya dalam notasi himpunan, lalu tentukan range-nya.</li>
+        <li>Aplikasi ojek daring memetakan zona jarak (dekat, sedang, jauh) ke tarif. Kodomain tarifnya Rp8.000, Rp12.000, Rp18.000, Rp25.000, dan Rp35.000, tetapi hanya tiga tarif pertama yang pernah dikenakan. Mengapa range bisa lebih kecil dari kodomain? Apakah ini tetap fungsi?</li>
+        <li>Diketahui $g(x) = 2x^2 - 3$ dengan domain $\{-2, -1, 0, 1, 2, 3\}$. Tentukan range-nya dan banyaknya pasangan domain berbeda yang bayangannya sama.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ D. KORESPONDENSI SATU-SATU DAN JENIS FUNGSI ═══ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Korespondensi Satu-satu dan Jenis Fungsi</h2>
+    <h3 class="subsection-title">1. Korespondensi Satu-satu</h3>
+    <p><strong>Korespondensi satu-satu</strong> antara $A$ dan $B$ terjadi jika setiap anggota $A$ dipasangkan dengan tepat satu anggota $B$, <strong>dan sebaliknya</strong> setiap anggota $B$ dipasangkan dengan tepat satu anggota $A$.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Korespondensi Satu-satu</div>
+      <div class="kf-fig"><svg class="kf-svg" viewBox="0 0 187 130" width="187" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram panah dari A ke B"><defs><marker id="kfa13" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><ellipse cx="25.7" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><ellipse cx="161.1" cy="74.0" rx="21.7" ry="50.0" class="kf-ov"/><text x="25.7" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">A</tspan></text><text x="161.1" y="15" class="kf-t" font-size="13" font-weight="700" text-anchor="middle"><tspan font-style="italic">B</tspan></text><circle cx="33.4" cy="46.0" r="3" class="kf-dot"/><text x="25.4" y="50.5" class="kf-t" font-size="13" text-anchor="end">1</text><circle cx="33.4" cy="74.0" r="3" class="kf-dot"/><text x="25.4" y="78.5" class="kf-t" font-size="13" text-anchor="end">2</text><circle cx="33.4" cy="102.0" r="3" class="kf-dot"/><text x="25.4" y="106.5" class="kf-t" font-size="13" text-anchor="end">3</text><circle cx="153.4" cy="46.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="50.5" class="kf-t" font-size="13"><tspan font-style="italic">a</tspan></text><circle cx="153.4" cy="74.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="78.5" class="kf-t" font-size="13"><tspan font-style="italic">b</tspan></text><circle cx="153.4" cy="102.0" r="3" class="kf-dot kf-t"/><text x="161.4" y="106.5" class="kf-t" font-size="13"><tspan font-style="italic">c</tspan></text><line x1="37.4" y1="46.0" x2="146.4" y2="46.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa13)"/><line x1="37.4" y1="74.0" x2="146.4" y2="74.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa13)"/><line x1="37.4" y1="102.0" x2="146.4" y2="102.0" class="kf-ln-b" stroke-width="1.6" marker-end="url(#kfa13)"/></svg></div><ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Hanya mungkin jika $n(A) = n(B)$.</li><li>Banyak korespondensi satu-satu antara dua himpunan yang masing-masing beranggota $n$ adalah $n! = n \times (n - 1) \times \cdots \times 2 \times 1$.</li></ul>
+    </div>
+
+    <h3 class="subsection-title">2. Jenis-jenis Fungsi: Injektif, Surjektif, dan Bijektif</h3>
+    <p><strong>a. Fungsi Injektif (Satu-Satu)</strong> — Fungsi $f: A \to B$ disebut <strong>injektif</strong> jika setiap dua elemen berbeda di $A$ selalu dipetakan ke elemen berbeda di $B$.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Syarat Injektif</div>
+      <div class="math-block">$$\begin{gather*} f(x_1) = f(x_2) \implies x_1 = x_2 \\ \text{atau setara:} \\ x_1 \neq x_2 \implies f(x_1) \neq f(x_2) \end{gather*}$$</div>
+    </div>
+
+    <p><strong>b. Fungsi Surjektif (Pada)</strong> — $f(A) = B$ (range = kodomain). Setiap $y \in B$ punya paling sedikit satu pasangan $x \in A$.</p>
+
+    <p><strong>c. Fungsi Bijektif (Korespondensi Satu-Satu)</strong> — injektif sekaligus surjektif.</p>
+
+    <!-- SVG: Jenis-jenis fungsi -->
+    <div class="fki-jenis">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 430" role="img" aria-label="Diagram fungsi injektif">
+    <defs>
+      <style>
+        .fki5-panel { fill: #f8fafc; stroke: #e2e8f0; transition: all 0.3s ease; }
+        .fki5-box { fill: none; stroke: #334155; transition: all 0.3s ease; }
+        .fki5-gray { fill: #64748b; font-family: Cambria, 'Times New Roman', serif; }
+        .fki5-inj { stroke: #2563eb; fill: #2563eb; }
+        .fki5-sur { stroke: #16a34a; fill: #16a34a; }
+        .fki5-bij { stroke: #0d9488; fill: #0d9488; }
+        .fki5-text-inj { fill: #2563eb; font-family: Cambria, 'Times New Roman', serif; font-weight: bold; }
+        .fki5-text-sur { fill: #16a34a; font-family: Cambria, 'Times New Roman', serif; font-weight: bold; }
+        .fki5-text-bij { fill: #0d9488; font-family: Cambria, 'Times New Roman', serif; font-weight: bold; }
+        [data-theme="dark"] .fki5-panel { fill: #1e293b; stroke: #334155; }
+        [data-theme="dark"] .fki5-box { stroke: #94a3b8; }
+        [data-theme="dark"] .fki5-gray { fill: #94a3b8 !important; }
+        [data-theme="dark"] .fki5-inj { stroke: #60a5fa; fill: #60a5fa; }
+        [data-theme="dark"] .fki5-sur { stroke: #4ade80; fill: #4ade80; }
+        [data-theme="dark"] .fki5-bij { stroke: #2dd4bf; fill: #2dd4bf; }
+        [data-theme="dark"] .fki5-text-inj { fill: #60a5fa !important; }
+        [data-theme="dark"] .fki5-text-sur { fill: #4ade80 !important; }
+        [data-theme="dark"] .fki5-text-bij { fill: #2dd4bf !important; }
+      </style>
+
+      <marker id="arrow-inj" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki5-inj" />
+      </marker>
+      <marker id="arrow-sur" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki5-sur" />
+      </marker>
+      <marker id="arrow-bij" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="fki5-bij" />
+      </marker>
+    </defs>
+    <g>
+      <rect width="320" height="430" rx="20" ry="20" class="fki5-panel" stroke-width="2" />
+      
+      <ellipse cx="90" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
+      <ellipse cx="230" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
+      
+      <text x="90" y="140" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">a</text>
+      <text x="90" y="190" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">b</text>
+      <text x="90" y="240" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">c</text>
+      
+      <text x="230" y="125" text-anchor="middle" class="fki5-gray" font-size="24">1</text>
+      <text x="230" y="170" text-anchor="middle" class="fki5-gray" font-size="24">2</text>
+      <text x="230" y="215" text-anchor="middle" class="fki5-gray" font-size="24">3</text>
+      <text x="230" y="260" text-anchor="middle" class="fki5-gray" font-size="24">4</text>
+      
+      <g stroke-width="2.5" marker-end="url(#arrow-inj)" fill="none">
+        <line x1="110" y1="135" x2="210" y2="122" class="fki5-inj" />
+        <line x1="110" y1="185" x2="210" y2="167" class="fki5-inj" />
+        <line x1="110" y1="235" x2="210" y2="212" class="fki5-inj" />
+      </g>
+      
+      <text x="160" y="355" text-anchor="middle" class="fki5-text-inj" font-size="24">Injektif</text>
+      <text x="160" y="385" text-anchor="middle" class="fki5-gray" font-size="20">(satu-satu)</text>
+    </g>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 430" role="img" aria-label="Diagram fungsi surjektif">
+    <g>
+      <rect width="320" height="430" rx="20" ry="20" class="fki5-panel" stroke-width="2" />
+      
+      <ellipse cx="90" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
+      <ellipse cx="230" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
+      
+      <text x="90" y="125" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">a</text>
+      <text x="90" y="167" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">b</text>
+      <text x="90" y="209" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">c</text>
+      <text x="90" y="251" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">d</text>
+      
+      <text x="230" y="140" text-anchor="middle" class="fki5-gray" font-size="24">1</text>
+      <text x="230" y="190" text-anchor="middle" class="fki5-gray" font-size="24">2</text>
+      <text x="230" y="240" text-anchor="middle" class="fki5-gray" font-size="24">3</text>
+      
+      <g stroke-width="2.5" marker-end="url(#arrow-sur)" fill="none">
+        <line x1="110" y1="120" x2="210" y2="135" class="fki5-sur" />
+        <line x1="110" y1="162" x2="210" y2="140" class="fki5-sur" />
+        <line x1="110" y1="204" x2="210" y2="185" class="fki5-sur" />
+        <line x1="110" y1="246" x2="210" y2="235" class="fki5-sur" />
+      </g>
+      
+      <text x="160" y="355" text-anchor="middle" class="fki5-text-sur" font-size="24">Surjektif</text>
+      <text x="160" y="385" text-anchor="middle" class="fki5-gray" font-size="20">(onto)</text>
+    </g>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 430" role="img" aria-label="Diagram fungsi bijektif">
+    <g>
+      <rect width="320" height="430" rx="20" ry="20" class="fki5-panel" stroke-width="2" />
+      
+      <ellipse cx="90" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
+      <ellipse cx="230" cy="190" rx="45" ry="105" class="fki5-box" stroke-width="2" />
+      
+      <text x="90" y="140" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">a</text>
+      <text x="90" y="190" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">b</text>
+      <text x="90" y="240" text-anchor="middle" class="fki5-gray" font-size="24" font-style="italic">c</text>
+      
+      <text x="230" y="140" text-anchor="middle" class="fki5-gray" font-size="24">1</text>
+      <text x="230" y="190" text-anchor="middle" class="fki5-gray" font-size="24">2</text>
+      <text x="230" y="240" text-anchor="middle" class="fki5-gray" font-size="24">3</text>
+      
+      <g stroke-width="2.5" marker-end="url(#arrow-bij)" fill="none">
+        <line x1="110" y1="135" x2="210" y2="135" class="fki5-bij" />
+        <line x1="110" y1="185" x2="210" y2="185" class="fki5-bij" />
+        <line x1="110" y1="235" x2="210" y2="235" class="fki5-bij" />
+      </g>
+      
+      <text x="160" y="355" text-anchor="middle" class="fki5-text-bij" font-size="24">Bijektif</text>
+      <text x="160" y="385" text-anchor="middle" class="fki5-gray" font-size="20">(korespondensi 1-1)</text>
+    </g>
+      </svg>
+    </div>
+
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Hanya fungsi <strong>bijektif</strong> yang memiliki fungsi invers. Jika $f$ tidak bijektif, maka $f^{-1}$ bukan merupakan fungsi.</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Cara Cepat dari Diagram Panah</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li><strong>Injektif?</strong> Tidak ada dua panah yang menuju titik $B$ yang sama.</li><li><strong>Surjektif?</strong> Semua titik $B$ menerima panah, sehingga $R_f = $ kodomain.</li><li><strong>Bijektif?</strong> Keduanya terpenuhi; otomatis $n(A) = n(B)$.</li></ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $A = \{1, 2, 3, 4\}$ dan $B = \{p, q, r, s\}$. Ada berapa korespondensi satu-satu yang mungkin dari $A$ ke $B$?</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Periksa syarat:</strong> $n(A) = n(B) = 4$.</p>
+      $$4! = 4 \times 3 \times 2 \times 1 = 24$$
+      <div class="sol-jadi">ada $24$ korespondensi satu-satu.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f: A \to B$ dengan $A = \{1, 2, 3\}$, $B = \{4, 5, 6, 7\}$, $f(1) = 4$, $f(2) = 6$, $f(3) = 7$. Apakah $f$ injektif, surjektif, atau bijektif?</p>
+    </div>
+    <div class="penyelesaian">
+      <ul class="sol-cek">
+        <li>Injektif: bayangan $4, 6, 7$ semuanya berbeda ✓</li>
+        <li>Surjektif: $5 \in B$ tidak menjadi bayangan, jadi $R_f \neq B$ ✗</li>
+      </ul>
+      <div class="sol-jadi">$f$ injektif, tetapi tidak surjektif, sehingga tidak bijektif.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = x + 3$ dengan domain $A = \{1, 2, 3\}$ dan kodomain $B = \{4, 5, 6\}$. Selidiki apakah $f$ bijektif.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung bayangan:</strong> $f(1) = 4$, $f(2) = 5$, $f(3) = 6$.</p>
+      <ul class="sol-cek">
+        <li>Injektif: $4, 5, 6$ semuanya berbeda ✓</li>
+        <li>Surjektif: $R_f = \{4, 5, 6\} = B$ ✓</li>
+      </ul>
+      <div class="sol-jadi">$f$ <strong>bijektif</strong> (korespondensi satu-satu).</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Panitia ujian menempatkan $5$ peserta ke $5$ kursi bernomor: setiap peserta menempati tepat satu kursi dan setiap kursi ditempati tepat satu peserta. Ada berapa cara penempatan? Mengapa ini korespondensi satu-satu?</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Periksa kedua arah:</strong> setiap peserta tepat satu kursi, dan setiap kursi tepat satu peserta, tanpa sisa maupun dobel.</p>
+      $$5! = 5 \times 4 \times 3 \times 2 \times 1 = 120$$
+      <div class="sol-jadi">ada $120$ cara penempatan, dan pemasangan ini korespondensi satu-satu.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $A = \{1, 2, 3, 4\}$ dan $B = \{a, b, c, d, e\}$, dengan relasi:<br>
+      (a) $f = \{(1,a), (2,b), (3,c), (4,d)\}$ &nbsp; (b) $g = \{(1,a), (2,a), (3,b), (4,c)\}$<br>
+      Selidiki apakah $f$ dan $g$ injektif, surjektif, dan/atau bijektif.</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>$f = \{(1,a), (2,b), (3,c), (4,d)\}$</span></div>
+      <ul class="sol-cek">
+        <li>Injektif: semua bayangan berbeda ✓</li>
+        <li>Surjektif: $e \in B$ tidak punya pasangan ✗</li>
+      </ul>
+      <div class="sol-jadi">$f$ injektif, tetapi tidak surjektif, sehingga tidak bijektif.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$g = \{(1,a), (2,a), (3,b), (4,c)\}$</span></div>
+      <ul class="sol-cek">
+        <li>Injektif: $g(1) = g(2) = a$ ✗</li>
+        <li>Surjektif: $d, e \in B$ tidak punya pasangan ✗</li>
+      </ul>
+      <div class="sol-jadi">$g$ tidak injektif dan tidak surjektif, sehingga tidak bijektif.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f: \mathbb{R} \to \mathbb{R}$ dengan $f(x) = 2x - 1$. Selidiki apakah $f$ injektif dan surjektif menggunakan pendekatan aljabar.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji injektif:</strong> misalkan $f(x_1) = f(x_2)$.</p>
+      $$2x_1 - 1 = 2x_2 - 1 \;\Rightarrow\; x_1 = x_2$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Uji surjektif:</strong> ambil sembarang $y \in \mathbb{R}$ dan cari $x$ dengan $f(x) = y$.</p>
+      $$2x - 1 = y \;\Rightarrow\; x = \frac{y + 1}{2} \in \mathbb{R}$$
+      <div class="sol-jadi">$f$ injektif dan surjektif, sehingga <strong>bijektif</strong>.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 21</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f: \mathbb{R} \to \mathbb{R}$ dengan $f(x) = x^2$. Selidiki apakah $f$ injektif pada domain $\mathbb{R}$. Apa yang terjadi jika domain dibatasi menjadi $x \geq 0$?</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>Domain $\mathbb{R}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Cari contoh penyangkal:</strong> $f(-2) = 4 = f(2)$ padahal $-2 \neq 2$.</p>
+      <div class="sol-jadi">$f(x) = x^2$ tidak injektif pada $\mathbb{R}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Domain $x \geq 0$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uji injektif:</strong> $x_1^2 = x_2^2$ dengan $x_1, x_2 \geq 0$ memberi $x_1 = x_2$, karena kedua bilangan tak negatif.</p>
+      <div class="sol-jadi">$f$ injektif pada $x \geq 0$. Membatasi domain dapat membuat fungsi kuadrat memiliki invers.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Catatan</div>
+      <p style="margin:0;font-size:.9rem;">Membatasi domain dapat mengubah fungsi yang semula tidak injektif menjadi injektif. Teknik ini penting agar fungsi kuadrat dapat memiliki invers (dibahas di materi Fungsi, Komposisi &amp; Invers).</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan D</div>
+      <ol class="soal-list">
+        <li>Diketahui $A = \{1, 2, 3, 4, 5\}$ dan $B = \{a, b, c, d, e\}$. Tentukan banyaknya korespondensi satu-satu yang mungkin.</li>
+        <li>Diketahui $f: A \to B$ dengan $A = \{1, 2\}$, $B = \{x, y\}$, $f(1) = x$, $f(2) = y$. Tunjukkan bahwa $f$ korespondensi satu-satu.</li>
+        <li>Diketahui $g: A \to B$ dengan $A = \{1, 2, 3\}$, $B = \{6, 7\}$, $g(1) = 6$, $g(2) = 6$, $g(3) = 7$. Selidiki apakah $g$ injektif, surjektif, atau bijektif.</li>
+        <li>Diketahui $h(x) = 2x - 1$ dengan domain $\{1, 2, 3, 4\}$ dan kodomain $\{1, 3, 5, 7\}$. Selidiki apakah $h$ bijektif.</li>
+        <li>Diketahui $f(x) = 2x$ dari $A = \{1, 2, 3, 4\}$ ke $B = \{2, 4, 6, 8, 10\}$. Selidiki apakah $f$ injektif, surjektif, dan bijektif. Mengapa $f$ tidak mungkin bijektif tanpa mengubah kodomainnya?</li>
+        <li>Sistem parkir otomatis memasangkan setiap kendaraan dengan tepat satu slot kosong, dan setiap slot hanya untuk satu kendaraan. Jika ada $8$ kendaraan dan $8$ slot, mengapa ini korespondensi satu-satu? Berapa banyak cara penempatannya?</li>
+        <li>Diketahui $f: A \to B$ injektif dengan $A = \{1, 2, 3, 4, 5\}$ dan $n(B) = 5$. Buktikan bahwa $f$ pasti surjektif (sehingga bijektif).</li>
+        <li>Diketahui $A = \{1,2,3\}$ dan $B = \{p,q,r,s\}$ dengan $f = \{(1,p),(2,q),(3,r)\}$. Selidiki apakah $f$ injektif, surjektif, dan/atau bijektif.</li>
+        <li>Diketahui $f: \mathbb{R} \to \mathbb{R}$ dengan $f(x) = 3x + 2$. Selidiki apakah $f$ injektif dan surjektif menggunakan pendekatan aljabar.</li>
+        <li>Diketahui $f: \mathbb{R} \to \mathbb{R}$ dengan $f(x) = x^2 - 4$. Selidiki apakah $f$ injektif pada domain $\mathbb{R}$. Bagaimana jika domain dibatasi menjadi $x \geq 0$?</li>
+        <li>Sebuah maskapai penerbangan memasangkan setiap penumpang dengan satu nomor kursi unik pada satu penerbangan (satu penumpang, satu nomor kursi, dan setiap nomor kursi hanya dimiliki satu penumpang). Dengan asumsi seluruh kursi terisi, jelaskan menggunakan istilah injektif, surjektif, dan bijektif, kemudian berikan satu contoh situasi di mana pemasangan semacam ini <strong>gagal</strong> bersifat injektif.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ E. NOTASI DAN NILAI FUNGSI ═══ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Notasi dan Nilai Fungsi</h2>
+    <h3 class="subsection-title">1. Notasi Fungsi</h3>
+    <p>Fungsi dari $A$ ke $B$ ditulis $f: A \to B$. Aturannya ditulis $f(x)$ (dibaca "$f$ dari $x$") atau $f: x \to \ldots$. Bayangkan fungsi sebagai <strong>mesin</strong>: nilai $x$ dimasukkan, diproses sesuai aturan, lalu keluar nilai $f(x)$.</p>
+<div class="kf-fig"><svg class="kf-svg" viewBox="0 0 330 92" width="330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mesin fungsi"><defs><marker id="kfm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" class="kf-ar-b"/></marker></defs><rect x="112" y="22" width="106" height="52" rx="10" class="kf-box"/><text x="165" y="53" class="kf-t" font-size="15" text-anchor="middle"><tspan font-style="italic">f</tspan>(<tspan font-style="italic">x</tspan>) = <tspan font-style="italic">x</tspan>²</text><line x1="12" y1="48" x2="108" y2="48" class="kf-ln-b" stroke-width="2" marker-end="url(#kfm)"/><text x="58" y="38" class="kf-t" font-size="13" text-anchor="middle"><tspan font-style="italic">x</tspan> = 3</text><text x="58" y="68" class="kf-mute2" font-size="11" text-anchor="middle">masukan</text><line x1="222" y1="48" x2="318" y2="48" class="kf-ln-b" stroke-width="2" marker-end="url(#kfm)"/><text x="270" y="38" class="kf-t" font-size="13" text-anchor="middle"><tspan font-style="italic">f</tspan>(3) = 9</text><text x="270" y="68" class="kf-mute2" font-size="11" text-anchor="middle">keluaran</text></svg><div class="kf-cap">Nilai $x = 3$ masuk ke mesin $f(x) = x^2$ dan keluar sebagai $f(3) = 9$.</div></div>
+    <div class="box box-catatan">
+      <div class="box-label">💡 Dua Notasi yang Setara</div>
+      $$\begin{gather*} f(x) = 2x + 1 \\ \Updownarrow \\ f: x \to 2x + 1 \end{gather*}$$<p style="margin:0;font-size:.9rem;">Bentuk $f(x) = \ldots$ lebih sering dipakai untuk menghitung, sedangkan $f: x \to \ldots$ menekankan proses pemetaannya.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Menentukan Nilai Fungsi</h3>
+    <p>Untuk menghitung $f(a)$, ganti <strong>setiap</strong> $x$ pada rumus $f(x)$ dengan $a$.</p>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = 3x - 2$. Tentukan $f(2)$, $f(-1)$, dan $f(0)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Substitusi setiap nilai:</strong></p>
+      $$\begin{align*} f(2) &= 3(2) - 2 = 4 \\ f(-1) &= 3(-1) - 2 = -5 \\ f(0) &= 3(0) - 2 = -2 \end{align*}$$
+      <div class="sol-jadi">$f(2) = 4$, $f(-1) = -5$, dan $f(0) = -2$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 23</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = x^2 - 4x + 3$. Tentukan $f(1)$, $f(3)$, dan $f(-2)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Substitusi setiap nilai:</strong></p>
+      $$\begin{align*} f(1) &= 1 - 4 + 3 = 0 \\ f(3) &= 9 - 12 + 3 = 0 \\ f(-2) &= 4 + 8 + 3 = 15 \end{align*}$$
+      <p class="sol-step">$f(1) = f(3) = 0$: dua nilai $x$ berbeda menghasilkan bayangan sama, jadi $f$ fungsi banyak-satu (tidak injektif).</p>
+      <div class="sol-jadi">$f(1) = 0$, $f(3) = 0$, dan $f(-2) = 15$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $f(x) = 2x + 5$. Jika $f(a) = 17$, tentukan nilai $a$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Substitusi $x = a$</strong> lalu samakan dengan $17$:</p>
+      $$\begin{align*} 2a + 5 &= 17 \\ 2a &= 12 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Periksa:</strong> $f(6) = 2(6) + 5 = 17$ ✓</p>
+      <div class="sol-jadi">$a = 6$.</div>
+    </div>
+
+    <h3 class="subsection-title">3. Menentukan Rumus Fungsi dari Data</h3>
+    <p>Jika yang diketahui hanya beberapa nilai fungsi, rumus $f(x) = ax + b$ dapat dicari dengan menyusun <strong>dua persamaan</strong> dari data, lalu menyelesaikannya dengan eliminasi atau substitusi.</p>
+    <div class="box box-catatan">
+      <div class="box-label">💡 Strategi</div>
+      <ol style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Ubah setiap data $f(x_1) = y_1$ menjadi $ax_1 + b = y_1$.</li><li>Eliminasi $b$ untuk mendapat $a$.</li><li>Substitusi kembali untuk mendapat $b$.</li><li>Tulis $f(x) = ax + b$, lalu jawab pertanyaan lanjutan.</li></ol>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui fungsi linear $f(x) = ax + b$ dengan $f(1) = 5$ dan $f(3) = 11$. Tentukan rumus $f(x)$, lalu hitung $f(10)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Susun dua persamaan:</strong></p>
+      $$\begin{align*} a + b &= 5 \quad \text{(i)} \\ 3a + b &= 11 \quad \text{(ii)} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Eliminasi $b$:</strong> (ii) $-$ (i) memberi $2a = 6$, jadi $a = 3$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Substitusi ke (i):</strong> $3 + b = 5$, jadi $b = 2$.</p>
+      <p class="sol-step"><span class="sol-no">4</span><strong>Hitung:</strong> $f(10) = 3(10) + 2 = 32$.</p>
+      <div class="sol-jadi">$f(x) = 3x + 2$ dan $f(10) = 32$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Tarif taksi daring mengikuti $f(x) = ax + b$, dengan $x$ jarak (km) dan $f(x)$ biaya (rupiah). Perjalanan $2$ km dikenai Rp15.000 dan perjalanan $5$ km dikenai Rp27.000. Tentukan rumus tarifnya, lalu hitung biaya perjalanan $10$ km.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Susun dua persamaan:</strong></p>
+      $$\begin{align*} &2a + b \\ &= 15.000 \quad \text{(i)} \\ &5a + b \\ &= 27.000 \quad \text{(ii)} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Eliminasi $b$:</strong> (ii) $-$ (i) memberi $3a = 12.000$, jadi $a = 4.000$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Substitusi ke (i):</strong> $8.000 + b = 15.000$, jadi $b = 7.000$.</p>
+      <p class="sol-step">Artinya, biaya awal Rp7.000 ditambah Rp4.000 untuk setiap km.</p>
+      <p class="sol-step"><span class="sol-no">4</span><strong>Hitung:</strong> $f(10)$ $= 4.000(10) + 7.000$ $= 47.000$.</p>
+      <div class="sol-jadi">$f(x) = 4.000x + 7.000$, dan biaya $10$ km adalah Rp47.000.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan E</div>
+      <ol class="soal-list">
+        <li>Diketahui $f(x) = 5x - 3$. Tentukan $f(2)$, $f(0)$, dan $f(-3)$.</li>
+        <li>Diketahui $g(x) = x^2 + 2x$. Tentukan $g(3)$ dan $g(-4)$.</li>
+        <li>Diketahui $f(x) = 4x + 1$. Jika $f(a) = 21$, tentukan nilai $a$.</li>
+        <li>Diketahui $h(x) = -2x + 7$. Tentukan nilai $x$ agar $h(x) = -5$.</li>
+        <li>Diketahui fungsi linear $f(x) = ax + b$ dengan $f(2) = 7$ dan $f(5) = 16$. Tentukan rumus $f(x)$, lalu hitung $f(-1)$.</li>
+        <li>Diketahui fungsi linear $g(x) = ax + b$ dengan $g(-1) = 4$ dan $g(3) = -8$. Tentukan rumus $g(x)$.</li>
+        <li>Biaya berlangganan platform streaming mengikuti $f(x) = ax + b$ terhadap jumlah bulan $x$. Berlangganan $3$ bulan menghabiskan Rp150.000 dan $7$ bulan Rp310.000. Tentukan rumusnya, prediksi biaya $12$ bulan, dan jelaskan makna $b$.</li>
+        <li>Diketahui $f(x) = x^2$ $- 5x$ $+ 6$. Tentukan semua nilai $x$ yang memenuhi $f(x) = 0$. Apa hubungannya dengan fungsi banyak-satu?</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ F. DOMAIN ALAMI DAN RANGE FUNGSI REAL ═══ -->
+  <section class="section" id="bagian-f">
+    <h2 class="section-title"><span class="section-badge">F</span>Domain Alami dan Range Fungsi Real</h2>
+    <p>Pada Bagian C, domain berupa himpunan terhingga yang ditentukan soal. Jika fungsi hanya diberikan lewat rumus, misalnya $f(x) = \sqrt{x - 1}$, domain yang dipakai adalah <strong>domain alami</strong>: semua bilangan real $x$ yang membuat $f(x)$ terdefinisi.</p>
+    <h3 class="subsection-title">1. Domain Alami Berbagai Jenis Fungsi</h3>
+
+    <p>Domain (daerah asal) suatu fungsi adalah himpunan semua nilai $x$ yang menghasilkan nilai $f(x)$ yang <strong>terdefinisi</strong>. Beberapa jenis fungsi memiliki batasan domain tertentu.</p>
+
+    <p><strong>a. Fungsi Linear</strong> $f(x) = ax + b$</p>
+    <p>Tidak ada batasan, domain = $\mathbb{R}$ (semua bilangan real).</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Domain Fungsi Linear</div>
+      <div class="math-block">$$D_f = \mathbb{R}$$</div>
+    </div>
+
+    <p><strong>b. Fungsi Pecahan</strong> $f(x) = \dfrac{p(x)}{q(x)}$</p>
+    <p>Penyebut tidak boleh nol, sehingga: $q(x) \neq 0$.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Domain Fungsi Pecahan</div>
+      <div class="math-block">$$D_f = \{x \in \mathbb{R} \mid q(x) \neq 0\}$$</div>
+    </div>
+
+    <p><strong>c. Fungsi Akar</strong> $f(x) = \sqrt{h(x)}$</p>
+    <p>Ekspresi di bawah tanda akar harus <strong>tidak negatif</strong>:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Domain Fungsi Akar</div>
+      <div class="math-block">$$D_f = \{x \in \mathbb{R} \mid h(x) \geq 0\}$$</div>
+    </div>
+
+    <p><strong>d. Fungsi Pecahan Berakar</strong> $f(x) = \dfrac{p(x)}{\sqrt{q(x)}}$</p>
+    <p>Gabungan dua syarat: ekspresi dalam akar $> 0$ (karena sekaligus jadi penyebut):</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Domain Fungsi Pecahan Berakar</div>
+      <div class="math-block">$$D_f = \{x \in \mathbb{R} \mid q(x) > 0\}$$</div>
+    </div>
+
+    <p><strong>e. Fungsi Polinomial</strong> $f(x) = a_nx^n + \cdots + a_1x + a_0$</p>
+    <p>Tidak ada batasan, domain = $\mathbb{R}$ untuk semua $n \in \mathbb{N}$.</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Domain Fungsi Polinomial</div>
+      <div class="math-block">$$D_f = \mathbb{R}$$</div>
+    </div>
+
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 27</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = 5x^3 - 2x + 7$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kenali jenis fungsi:</strong> fungsi polinomial tidak memiliki syarat penyebut atau akar.</p>
+      <div class="sol-jadi">$D_f = \mathbb{R}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = \dfrac{3x + 1}{x^2 - 5x + 6}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat penyebut tidak nol:</strong></p>
+      $$\begin{align*} x^2 - 5x + 6 &\neq 0 \\ (x - 2)(x - 3) &\neq 0 \end{align*}$$
+      <div class="nline-wrap">
+        <svg viewBox="0 0 300 46" width="300" xmlns="http://www.w3.org/2000/svg">
+        <line class="nl-ax" x1="6" y1="26" x2="294" y2="26" stroke="#888" stroke-width="1.4"/>
+        <polygon class="nl-axh" points="298,26 291,22 291,30" fill="#888"/>
+        <line class="nl-ax" x1="22" y1="23" x2="22" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="22" y="42" font-size="10" fill="#555" text-anchor="middle">0</text>
+        <line class="nl-ax" x1="73.2" y1="23" x2="73.2" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="73.2" y="42" font-size="10" fill="#555" text-anchor="middle">1</text>
+        <line class="nl-ax" x1="124.4" y1="23" x2="124.4" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="124.4" y="42" font-size="10" fill="#555" text-anchor="middle">2</text>
+        <line class="nl-ax" x1="175.6" y1="23" x2="175.6" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="175.6" y="42" font-size="10" fill="#555" text-anchor="middle">3</text>
+        <line class="nl-ax" x1="226.8" y1="23" x2="226.8" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="226.8" y="42" font-size="10" fill="#555" text-anchor="middle">4</text>
+        <line class="nl-ax" x1="278" y1="23" x2="278" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="278" y="42" font-size="10" fill="#555" text-anchor="middle">5</text>
+        <line x1="8" y1="26" x2="124.4" y2="26" stroke="#3B82F6" stroke-width="3"/>
+        <polygon points="4,26 12,21 12,31" fill="#3B82F6"/>
+        <circle class="nl-open" cx="124.4" cy="26" r="4.6" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+        <line x1="124.4" y1="26" x2="175.6" y2="26" stroke="#3B82F6" stroke-width="3"/>
+        <circle class="nl-open" cx="124.4" cy="26" r="4.6" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+        <circle class="nl-open" cx="175.6" cy="26" r="4.6" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+        <line x1="175.6" y1="26" x2="288" y2="26" stroke="#3B82F6" stroke-width="3"/>
+        <polygon points="294,26 286,21 286,31" fill="#3B82F6"/>
+        <circle class="nl-open" cx="175.6" cy="26" r="4.6" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="sol-jadi">$D_f = \mathbb{R} \setminus \{2, 3\}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 29</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = \sqrt{2x - 8}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat di bawah akar tak negatif:</strong></p>
+      $$2x - 8 \geq 0 \;\Rightarrow\; x \geq 4$$
+      <div class="nline-wrap">
+        <svg viewBox="0 0 300 46" width="300" xmlns="http://www.w3.org/2000/svg">
+        <line class="nl-ax" x1="6" y1="26" x2="294" y2="26" stroke="#888" stroke-width="1.4"/>
+        <polygon class="nl-axh" points="298,26 291,22 291,30" fill="#888"/>
+        <line class="nl-ax" x1="22" y1="23" x2="22" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="22" y="42" font-size="10" fill="#555" text-anchor="middle">1</text>
+        <line class="nl-ax" x1="64.7" y1="23" x2="64.7" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="64.7" y="42" font-size="10" fill="#555" text-anchor="middle">2</text>
+        <line class="nl-ax" x1="107.3" y1="23" x2="107.3" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="107.3" y="42" font-size="10" fill="#555" text-anchor="middle">3</text>
+        <line class="nl-ax" x1="150" y1="23" x2="150" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="150" y="42" font-size="10" fill="#555" text-anchor="middle">4</text>
+        <line class="nl-ax" x1="192.7" y1="23" x2="192.7" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="192.7" y="42" font-size="10" fill="#555" text-anchor="middle">5</text>
+        <line class="nl-ax" x1="235.3" y1="23" x2="235.3" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="235.3" y="42" font-size="10" fill="#555" text-anchor="middle">6</text>
+        <line class="nl-ax" x1="278" y1="23" x2="278" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="278" y="42" font-size="10" fill="#555" text-anchor="middle">7</text>
+        <line x1="150" y1="26" x2="288" y2="26" stroke="#3B82F6" stroke-width="3"/>
+        <polygon points="294,26 286,21 286,31" fill="#3B82F6"/>
+        <circle cx="150" cy="26" r="4.6" fill="#3B82F6"/>
+        </svg>
+      </div>
+      <div class="sol-jadi">$D_f = [4, \infty)$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 30</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = \sqrt{-x^2 + 4x + 5}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat di bawah akar tak negatif,</strong> lalu kalikan $-1$ (tanda berbalik):</p>
+      $$\begin{align*} -x^2 + 4x + 5 &\geq 0 \\ x^2 - 4x - 5 &\leq 0 \\ (x - 5)(x + 1) &\leq 0 \end{align*}$$
+      <div class="nline-wrap">
+        <svg viewBox="0 0 300 46" width="300" xmlns="http://www.w3.org/2000/svg">
+        <line class="nl-ax" x1="6" y1="26" x2="294" y2="26" stroke="#888" stroke-width="1.4"/>
+        <polygon class="nl-axh" points="298,26 291,22 291,30" fill="#888"/>
+        <line class="nl-ax" x1="22" y1="23" x2="22" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="22" y="42" font-size="10" fill="#555" text-anchor="middle">−2</text>
+        <line class="nl-ax" x1="54" y1="23" x2="54" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="54" y="42" font-size="10" fill="#555" text-anchor="middle">−1</text>
+        <line class="nl-ax" x1="86" y1="23" x2="86" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="86" y="42" font-size="10" fill="#555" text-anchor="middle">0</text>
+        <line class="nl-ax" x1="118" y1="23" x2="118" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="118" y="42" font-size="10" fill="#555" text-anchor="middle">1</text>
+        <line class="nl-ax" x1="150" y1="23" x2="150" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="150" y="42" font-size="10" fill="#555" text-anchor="middle">2</text>
+        <line class="nl-ax" x1="182" y1="23" x2="182" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="182" y="42" font-size="10" fill="#555" text-anchor="middle">3</text>
+        <line class="nl-ax" x1="214" y1="23" x2="214" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="214" y="42" font-size="10" fill="#555" text-anchor="middle">4</text>
+        <line class="nl-ax" x1="246" y1="23" x2="246" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="246" y="42" font-size="10" fill="#555" text-anchor="middle">5</text>
+        <line class="nl-ax" x1="278" y1="23" x2="278" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="278" y="42" font-size="10" fill="#555" text-anchor="middle">6</text>
+        <line x1="54" y1="26" x2="246" y2="26" stroke="#3B82F6" stroke-width="3"/>
+        <circle cx="54" cy="26" r="4.6" fill="#3B82F6"/>
+        <circle cx="246" cy="26" r="4.6" fill="#3B82F6"/>
+        </svg>
+      </div>
+      <div class="sol-jadi">$D_f = [-1, 5]$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 31</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = \dfrac{x+3}{\sqrt{x^2 - x - 6}}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat akar di penyebut:</strong> harus <em>positif</em> (tidak boleh nol), jadi $x^2 - x - 6 > 0$.</p>
+      $$(x - 3)(x + 2) > 0$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Uji tanda:</strong> positif di luar akar-akarnya.</p>
+      <div class="nline-wrap">
+        <svg viewBox="0 0 300 46" width="300" xmlns="http://www.w3.org/2000/svg">
+        <line class="nl-ax" x1="6" y1="26" x2="294" y2="26" stroke="#888" stroke-width="1.4"/>
+        <polygon class="nl-axh" points="298,26 291,22 291,30" fill="#888"/>
+        <line class="nl-ax" x1="22" y1="23" x2="22" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="22" y="42" font-size="10" fill="#555" text-anchor="middle">−4</text>
+        <line class="nl-ax" x1="50.4" y1="23" x2="50.4" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="50.4" y="42" font-size="10" fill="#555" text-anchor="middle">−3</text>
+        <line class="nl-ax" x1="78.9" y1="23" x2="78.9" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="78.9" y="42" font-size="10" fill="#555" text-anchor="middle">−2</text>
+        <line class="nl-ax" x1="107.3" y1="23" x2="107.3" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="107.3" y="42" font-size="10" fill="#555" text-anchor="middle">−1</text>
+        <line class="nl-ax" x1="135.8" y1="23" x2="135.8" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="135.8" y="42" font-size="10" fill="#555" text-anchor="middle">0</text>
+        <line class="nl-ax" x1="164.2" y1="23" x2="164.2" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="164.2" y="42" font-size="10" fill="#555" text-anchor="middle">1</text>
+        <line class="nl-ax" x1="192.7" y1="23" x2="192.7" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="192.7" y="42" font-size="10" fill="#555" text-anchor="middle">2</text>
+        <line class="nl-ax" x1="221.1" y1="23" x2="221.1" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="221.1" y="42" font-size="10" fill="#555" text-anchor="middle">3</text>
+        <line class="nl-ax" x1="249.6" y1="23" x2="249.6" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="249.6" y="42" font-size="10" fill="#555" text-anchor="middle">4</text>
+        <line class="nl-ax" x1="278" y1="23" x2="278" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="278" y="42" font-size="10" fill="#555" text-anchor="middle">5</text>
+        <line x1="8" y1="26" x2="78.9" y2="26" stroke="#3B82F6" stroke-width="3"/>
+        <polygon points="4,26 12,21 12,31" fill="#3B82F6"/>
+        <circle class="nl-open" cx="78.9" cy="26" r="4.6" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+        <line x1="221.1" y1="26" x2="288" y2="26" stroke="#3B82F6" stroke-width="3"/>
+        <polygon points="294,26 286,21 286,31" fill="#3B82F6"/>
+        <circle class="nl-open" cx="221.1" cy="26" r="4.6" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="sol-jadi">$D_f = \{x \mid x &lt; -2 \text{ atau } x > 3\}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 32</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = \sqrt{x+4} + \dfrac{1}{x-1}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis kedua syarat:</strong></p>
+      <ul class="sol-cek">
+        <li>Akar: $x + 4 \geq 0$, jadi $x \geq -4$</li>
+        <li>Penyebut: $x - 1 \neq 0$, jadi $x \neq 1$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Iriskan:</strong></p>
+      <div class="nline-wrap">
+        <svg viewBox="0 0 300 46" width="300" xmlns="http://www.w3.org/2000/svg">
+        <line class="nl-ax" x1="6" y1="26" x2="294" y2="26" stroke="#888" stroke-width="1.4"/>
+        <polygon class="nl-axh" points="298,26 291,22 291,30" fill="#888"/>
+        <line class="nl-ax" x1="22" y1="23" x2="22" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="22" y="42" font-size="10" fill="#555" text-anchor="middle">−5</text>
+        <line class="nl-ax" x1="54" y1="23" x2="54" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="54" y="42" font-size="10" fill="#555" text-anchor="middle">−4</text>
+        <line class="nl-ax" x1="86" y1="23" x2="86" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="86" y="42" font-size="10" fill="#555" text-anchor="middle">−3</text>
+        <line class="nl-ax" x1="118" y1="23" x2="118" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="118" y="42" font-size="10" fill="#555" text-anchor="middle">−2</text>
+        <line class="nl-ax" x1="150" y1="23" x2="150" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="150" y="42" font-size="10" fill="#555" text-anchor="middle">−1</text>
+        <line class="nl-ax" x1="182" y1="23" x2="182" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="182" y="42" font-size="10" fill="#555" text-anchor="middle">0</text>
+        <line class="nl-ax" x1="214" y1="23" x2="214" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="214" y="42" font-size="10" fill="#555" text-anchor="middle">1</text>
+        <line class="nl-ax" x1="246" y1="23" x2="246" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="246" y="42" font-size="10" fill="#555" text-anchor="middle">2</text>
+        <line class="nl-ax" x1="278" y1="23" x2="278" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="278" y="42" font-size="10" fill="#555" text-anchor="middle">3</text>
+        <line x1="54" y1="26" x2="214" y2="26" stroke="#3B82F6" stroke-width="3"/>
+        <circle cx="54" cy="26" r="4.6" fill="#3B82F6"/>
+        <circle class="nl-open" cx="214" cy="26" r="4.6" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+        <line x1="214" y1="26" x2="288" y2="26" stroke="#3B82F6" stroke-width="3"/>
+        <polygon points="294,26 286,21 286,31" fill="#3B82F6"/>
+        <circle class="nl-open" cx="214" cy="26" r="4.6" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="sol-jadi">$D_f = \{x \mid x \geq -4,\ x \neq 1\}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 33</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $a$ agar domain dari $f(x) = \sqrt{ax - 8}$ adalah $D_f = [2,\, +\infty)$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis syarat domain:</strong> $ax - 8 \geq 0$. Agar hasilnya berbentuk $[2, \infty)$ (mengarah ke kanan), $a$ harus positif.</p>
+      $$ax \geq 8 \;\Rightarrow\; x \geq \frac{8}{a}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Samakan batas bawah:</strong> $\dfrac{8}{a} = 2$, jadi $a = 4$. Cek: $4x - 8$ $\geq 0$ $\Rightarrow x$ $\geq 2$ ✓</p>
+      <div class="sol-jadi">$a = 4$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 34</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan domain dari $f(x) = \sqrt{\dfrac{x+2}{5-x}}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis syarat:</strong> $\dfrac{x + 2}{5 - x}$ $\geq 0$ dengan $x \neq 5$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Uji tanda dengan pembuat nol</strong> $x = -2$ dan $x = 5$: pecahan tak negatif untuk $-2 \leq x &lt; 5$.</p>
+      <p class="sol-step">$x = -2$ ikut (nilainya $0$), $x = 5$ tidak ikut (penyebut nol).</p>
+      <div class="nline-wrap">
+        <svg viewBox="0 0 300 46" width="300" xmlns="http://www.w3.org/2000/svg">
+        <line class="nl-ax" x1="6" y1="26" x2="294" y2="26" stroke="#888" stroke-width="1.4"/>
+        <polygon class="nl-axh" points="298,26 291,22 291,30" fill="#888"/>
+        <line class="nl-ax" x1="22" y1="23" x2="22" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="22" y="42" font-size="10" fill="#555" text-anchor="middle">−3</text>
+        <line class="nl-ax" x1="50.4" y1="23" x2="50.4" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="50.4" y="42" font-size="10" fill="#555" text-anchor="middle">−2</text>
+        <line class="nl-ax" x1="78.9" y1="23" x2="78.9" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="78.9" y="42" font-size="10" fill="#555" text-anchor="middle">−1</text>
+        <line class="nl-ax" x1="107.3" y1="23" x2="107.3" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="107.3" y="42" font-size="10" fill="#555" text-anchor="middle">0</text>
+        <line class="nl-ax" x1="135.8" y1="23" x2="135.8" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="135.8" y="42" font-size="10" fill="#555" text-anchor="middle">1</text>
+        <line class="nl-ax" x1="164.2" y1="23" x2="164.2" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="164.2" y="42" font-size="10" fill="#555" text-anchor="middle">2</text>
+        <line class="nl-ax" x1="192.7" y1="23" x2="192.7" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="192.7" y="42" font-size="10" fill="#555" text-anchor="middle">3</text>
+        <line class="nl-ax" x1="221.1" y1="23" x2="221.1" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="221.1" y="42" font-size="10" fill="#555" text-anchor="middle">4</text>
+        <line class="nl-ax" x1="249.6" y1="23" x2="249.6" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="249.6" y="42" font-size="10" fill="#555" text-anchor="middle">5</text>
+        <line class="nl-ax" x1="278" y1="23" x2="278" y2="29" stroke="#888" stroke-width="1"/>
+        <text class="nl-t" x="278" y="42" font-size="10" fill="#555" text-anchor="middle">6</text>
+        <line x1="50.4" y1="26" x2="249.6" y2="26" stroke="#3B82F6" stroke-width="3"/>
+        <circle cx="50.4" cy="26" r="4.6" fill="#3B82F6"/>
+        <circle class="nl-open" cx="249.6" cy="26" r="4.6" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="sol-jadi">$D_f = [-2, 5)$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 35</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan himpunan nilai $k$ agar domain dari $f(x) = \sqrt{x^2 - 4x + k}$ meliputi <strong>seluruh</strong> bilangan real ($D_f = \mathbb{R}$).</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis syaratnya:</strong> $x^2 - 4x + k \geq 0$ untuk <em>semua</em> $x$. Parabola terbuka ke atas, jadi cukup $D \leq 0$.</p>
+      $$\begin{align*} (-4)^2 - 4(1)(k) &\leq 0 \\ 16 - 4k &\leq 0 \end{align*}$$
+      <div class="sol-jadi">$k \geq 4$.</div>
+    </div>
+
+    <h3 class="subsection-title">2. Range (Daerah Hasil) Fungsi Real</h3>
+    <p>Range $R_f$ adalah himpunan semua nilai $f(x)$ yang benar-benar dihasilkan ketika $x$ menjelajahi seluruh domain. Range selalu merupakan bagian dari kodomain, dan kelak menjadi <strong>domain fungsi invers</strong> pada materi Fungsi Komposisi &amp; Invers.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Cara Menentukan Range</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;">
+        <li>Fungsi kuadrat: ubah ke bentuk $a(x - p)^2 + q$; range $[q, \infty)$ jika $a > 0$ dan $(-\infty, q]$ jika $a &lt; 0$.</li>
+        <li>Fungsi akar: $\sqrt{\cdots} \geq 0$, lalu geser sesuai suku tambahan.</li>
+        <li>Fungsi pecahan linear $\dfrac{ax + b}{cx + d}$: nyatakan $x$ dalam $y$, atau langsung $\mathbb{R} \setminus \left\{\dfrac{a}{c}\right\}$.</li>
+      </ul>
+    </div>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 36</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan range (daerah hasil) fungsi berikut pada domain alaminya.</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>$f(x) = x^2 - 4x + 1$</li><li>$g(x) = \sqrt{x - 1} + 2$</li><li>$h(x) = \dfrac{2x + 1}{x - 3}$</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>$f(x) = x^2 - 4x + 1$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bentuk puncak:</strong> $f(x) = (x - 2)^2 - 3$. Karena $(x - 2)^2 \geq 0$, nilai terkecil $-3$ di $x = 2$.</p>
+      <div class="sol-jadi">$R_f = [-3, \infty)$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$g(x) = \sqrt{x - 1} + 2$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Perhatikan akar:</strong> $\sqrt{x - 1}$ bernilai $0$ sampai tak hingga, jadi $g(x) \geq 2$.</p>
+      <div class="sol-jadi">$R_g = [2, \infty)$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$h(x) = \dfrac{2x + 1}{x - 3}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Nyatakan $x$ dalam $y$:</strong> $y(x - 3) = 2x + 1$ memberi $x = \dfrac{3y + 1}{y - 2}$, yang terdefinisi untuk semua $y \neq 2$.</p>
+      <p class="sol-step">Cara cepat: range fungsi pecahan linear $\dfrac{ax + b}{cx + d}$ adalah $\mathbb{R} \setminus \left\{\dfrac{a}{c}\right\}$.</p>
+      <div class="sol-jadi">$R_h = \mathbb{R} \setminus \{2\}$.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan F</div>
+      <ol class="soal-list">
+        <li>Tentukan domain dari $f(x) = \sqrt{3x + 9}$.</li>
+        <li>Tentukan domain dari $f(x) = \sqrt{x - 1}$ $+ \dfrac{3}{x + 2}$.</li>
+        <li>Tentukan domain dari $f(x) = \sqrt{\dfrac{x-1}{4-x}}$.</li>
+        <li>Tentukan himpunan nilai $m$ agar domain dari $f(x) = \sqrt{x^2 - 2x + m}$ meliputi <strong>seluruh</strong> bilangan real ($D_f = \mathbb{R}$).</li>
+        <li>Tentukan range dari (a) $f(x) = -x^2$ $+ 6x$ $- 5$ dan (b) $g(x) = \dfrac{3x - 1}{x + 2}$.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ G. TABEL RINGKASAN ═══ -->
+  <section class="section" id="bagian-g">
+    <h2 class="section-title"><span class="section-badge">G</span>Tabel Ringkasan</h2>
+    <h3 class="subsection-title">1. Relasi, Fungsi, dan Jenisnya</h3>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Istilah</th><th>Arti</th><th>Syarat kunci</th></tr></thead>
+        <tbody>
+          <tr><td>Relasi</td><td>Hubungan bebas antara anggota $A$ dan $B$</td><td>Tidak ada</td></tr>
+          <tr><td>Fungsi $f: A \to B$</td><td>Setiap anggota $A$ tepat satu pasangan di $B$</td><td>Lengkap dan tunggal</td></tr>
+          <tr><td>Injektif</td><td>Bayangan tidak pernah kembar</td><td>$f(x_1)$ $= f(x_2)$ $\Rightarrow x_1$ $= x_2$</td></tr>
+          <tr><td>Surjektif</td><td>Semua anggota kodomain terpakai</td><td>$R_f = $ kodomain</td></tr>
+          <tr><td>Bijektif</td><td>Injektif dan surjektif</td><td>Pada himpunan terhingga: $n(A) = n(B)$</td></tr>
+          <tr><td>Korespondensi satu-satu</td><td>Pemasangan bijektif</td><td>Banyaknya $n!$</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="subsection-title">2. Domain, Kodomain, Range, dan Notasi</h3>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Konsep</th><th>Ringkasan</th></tr></thead>
+        <tbody>
+          <tr><td>Domain $D_f$</td><td>Daerah asal, himpunan semua $x$</td></tr>
+          <tr><td>Kodomain</td><td>Daerah kawan, himpunan tujuan</td></tr>
+          <tr><td>Range $R_f$</td><td>$\{f(x) \mid x \in D_f\} \subseteq$ kodomain</td></tr>
+          <tr><td>Nilai fungsi</td><td>Ganti setiap $x$ dengan nilainya</td></tr>
+          <tr><td>Rumus dari dua data</td><td>Susun $ax_1 + b = y_1$ dan $ax_2 + b = y_2$, lalu eliminasi</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="subsection-title">3. Domain Alami</h3>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Bentuk</th><th>Syarat domain</th></tr></thead>
+        <tbody>
+          <tr><td>Polinomial</td><td>$D_f = \mathbb{R}$</td></tr>
+          <tr><td>$\dfrac{p(x)}{q(x)}$</td><td>$q(x) \neq 0$</td></tr>
+          <tr><td>$\sqrt{h(x)}$</td><td>$h(x) \geq 0$</td></tr>
+          <tr><td>$\dfrac{p(x)}{\sqrt{q(x)}}$</td><td>$q(x) > 0$</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <!-- Baris 1: Prev / Next -->
+    <div class="footer-nav">
+      <a class="nav-btn" href="../induksi-matematika/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Induksi Matematika
+      </a>
+      <a class="nav-btn" href="../fungsi-linear/">
+        Fungsi Linier
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <!-- Baris 2: Actions -->
+    <div class="footer-actions">
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- SECTION KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Disqus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi ini? Tulis di kolom diskusi. Login dengan akun Google.</p>
+        <div id="disqus_thread"></div>
+    <script>
+    (function() {
+      var disqusLoaded = false;
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !disqusLoaded) {
+          disqusLoaded = true;
+          observer.disconnect();
+          var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://eksaktalab.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      }, { threshold: 0.1 });
+      var thread = document.getElementById('disqus_thread');
+      if (thread) observer.observe(thread);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </div><!-- /komentar-section -->
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── Scroll progress bar tipis + scroll-to-top ──
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  // Tampilkan tombol scroll-to-top setelah 30%
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+// ── Theme toggle ──────────────────────────
+
+
+// ── TOC Dropdown ──────────────────────────
+function toggleTOC() {
+  document.getElementById('tocDropdown').classList.toggle('open');
+}
+function closeTOC() {
+  document.getElementById('tocDropdown').classList.remove('open');
+}
+// Tutup dropdown saat klik di luar
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+// ── Bookmark ──────────────────────────────
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ─────────────────────────────────
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Konsep Fungsi — EksaktaLab',
+      text:  'Belajar Konsep Fungsi (relasi, domain, range, injektif, surjektif, bijektif) di EksaktaLab, lengkap dengan contoh soal!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+
+// ── SHARED HELPERS ────────────────────────
+const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+  <polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) {
+      MathJax.typesetPromise([typesetEl]).catch(() => {});
+    }
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── 1. BOX RUMUS → accordion hijau ───────
+  document.querySelectorAll('.box.box-rumus').forEach((box, i) => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+
+    // Semua konten kecuali label
+    let bodyHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body">
+        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
+      </div>`;
+
+    const header   = wrap.querySelector('.rumus-header');
+    const statusEl = wrap.querySelector('.rumus-status');
+    const bodyInner = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+
+    box.replaceWith(wrap);
+  });
+
+  // ── 2. BOX CONTOH → accordion navy/teal ──
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+
+    let qHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header">
+            <span class="solve-dot"></span>
+            <span class="solve-title">Penyelesaian</span>
+          </div>
+          <div class="penyelesaian-inner">
+            ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
+          </div>
+        </div>
+      </div>`;
+
+    const header   = wrap.querySelector('.contoh-header');
+    const statusEl = null;
+    const pi       = wrap.querySelector('.penyelesaian-inner');
+
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (statusEl) statusEl.textContent = '';
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+    });
+
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+  // ── 3. Buka / Tutup Semua per section ────
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+
+    const updateBtn = () => {
+      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
+    };
+    updateBtn();
+
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+  // ── 4. SOAL LATIHAN → accordion kunci jawaban ──
+  const jawabanData = {
+    // A
+    0: [
+      { jawaban:`$R = \\{(1,2), (2,4), (3,6)\\}$; panah $1 \\to 2$, $2 \\to 4$, $3 \\to 6$.` },
+      { jawaban:`Panah: $a \\to 1$, $a \\to 3$, $b \\to 2$, $c \\to 1$. Anggota $a$ punya <strong>dua</strong> panah.` },
+      { jawaban:`$\\{(2,6), (2,8), (2,10), (3,6),$<br>$(3,15), (4,8), (5,10), (5,15)\\}$` },
+      { jawaban:`$R = \\{(1,3), (2,5), (3,7)\\}$, aturannya $y = 2x + 1$ ("dua kali ditambah satu").` },
+      { jawaban:`$\\{(2,10), (3,15), (3,21), (5,10),$<br>$(5,15), (5,25), (5,35), (7,21),$<br>$(7,35)\\}$` },
+      { jawaban:`Relasi tidak punya syarat, jadi sah. Bukan fungsi karena satu kurir bisa berpasangan dengan lebih dari satu kota. Contoh: $(K_1, \\text{Bandung})$, $(K_1, \\text{Jakarta})$, $(K_2, \\text{Jakarta})$, $(K_3, \\text{Surabaya})$.` },
+      { jawaban:`$4 + 3 + 2 + 1 = 10$ pasangan berurutan.` },
+    ],
+    // B
+    1: [
+      { jawaban:`Contoh fungsi: $\\{(a,1), (b,2), (c,3), (d,1)\\}$. Contoh bukan fungsi: $\\{(a,1), (a,2), (b,2), (c,3), (d,3)\\}$ ($a$ punya dua pasangan). Jawaban lain mungkin.` },
+      { jawaban:`(a) fungsi &nbsp;|&nbsp; (b) bukan fungsi ($1$ punya dua pasangan) &nbsp;|&nbsp; (c) fungsi (semua menuju $p$ tetap boleh)` },
+      { jawaban:`Bayangan: $4, 1, 0, 1, 4$, semuanya di $B$ dan tunggal. Relasi ini <strong>fungsi</strong>.` },
+      { jawaban:`Nilai tertinggi: <strong>fungsi</strong> (setiap siswa tepat satu nilai tertinggi). Semua nilai: <strong>bukan fungsi</strong> (satu siswa punya beberapa nilai).` },
+      { jawaban:`$1 \\to 2$, $2 \\to 4$, $3 \\to 6$, $4 \\to 8$, $5 \\to 10$: setiap anggota $A$ punya tepat satu pasangan di $B$, jadi <strong>fungsi</strong>.` },
+      { jawaban:`Harus fungsi agar setiap kartu terhubung ke <strong>tepat satu</strong> rekening. Jika ketunggalan dilanggar, satu kartu terhubung ke dua rekening sehingga transaksi bisa masuk ke rekening yang salah.` },
+      { jawaban:`Setiap $x$ menghasilkan tepat satu $y = x^2$, jadi fungsi. $f(-3) = f(3) = 9$ boleh, karena syarat fungsi hanya melarang <em>satu</em> $x$ punya <em>dua</em> $y$.` },
+      { jawaban:`Aturan tersebut <strong>bukan fungsi</strong> (untuk $x=0$, $y=1$ atau $y=-1$).` },
+      { jawaban:`Grafik lingkaran <strong>bukan fungsi</strong> (gagal uji garis vertikal, contoh $x=0$ menghasilkan $y=3$ dan $y=-3$).` },
+    ],
+    // C
+    2: [
+      { jawaban:`Domain $\\{1, 2, 3, 4\\}$, kodomain $\\{3, 4, 5, 6, 7, 8\\}$, range $\\{3, 4, 5, 6\\}$` },
+      { jawaban:`Domain $\\{1, 2, 3, 4\\}$, kodomain $\\{a, b, c, d\\}$, range $\\{a, b, c\\}$` },
+      { jawaban:`$R_f = \\{-4, -1, 2, 5, 8\\}$` },
+      { jawaban:`$R_f = \\{1, 2, 5\\}$; $f(-2) = f(2) = 5$ dan $f(-1) = f(1) = 2$` },
+      { jawaban:`Kodomain $\\{-5, -4, \\ldots, 4, 5\\}$, range $\\{-1, 0, 1, 2, 3\\}$` },
+      { jawaban:`Range hanya memuat tarif yang benar-benar dikenakan, sedangkan kodomain memuat semua tarif yang tersedia. Tetap fungsi, karena setiap zona punya tepat satu tarif.` },
+      { jawaban:`Bayangan: $5, -1, -3, -1, 5, 15$, jadi $R_g = \\{-3, -1, 5, 15\\}$. Ada $2$ pasangan: $(-2, 2)$ dan $(-1, 1)$.` },
+    ],
+    // D
+    3: [
+      { jawaban:`$5! = 120$` },
+      { jawaban:`$f(1) = x$, $f(2) = y$: bayangan berbeda (injektif) dan $R_f = \\{x, y\\} = B$ (surjektif), jadi bijektif atau korespondensi satu-satu.` },
+      { jawaban:`Tidak injektif ($g(1) = g(2)$), surjektif ($R_g = \\{6, 7\\} = B$), jadi tidak bijektif.` },
+      { jawaban:`Bayangan $1, 3, 5, 7$ berbeda dan $R_h = B$, jadi $h$ <strong>bijektif</strong>.` },
+      { jawaban:`Injektif ✓, tidak surjektif ($10$ tidak tercapai), tidak bijektif. Karena $n(A) = 4 \\neq 5 = n(B)$, bijektif mustahil.` },
+      { jawaban:`Setiap kendaraan tepat satu slot dan setiap slot tepat satu kendaraan, dengan $n = 8$. Banyak cara $8! = 40.320$.` },
+      { jawaban:`Injektif berarti $5$ anggota $A$ punya $5$ bayangan berbeda, jadi $n(R_f) = 5$. Karena $R_f \\subseteq B$ dan $n(B) = 5$, maka $R_f = B$: surjektif. $\\blacksquare$` },
+      { jawaban:`$f$ <strong>injektif</strong>, tetapi <strong>tidak surjektif</strong> (karena $s \\in B$ tidak punya pasangan), sehingga <strong>tidak bijektif</strong>.` },
+      { jawaban:`$f$ <strong>injektif</strong> dan <strong>surjektif</strong>, sehingga $f$ <strong>bijektif</strong>.` },
+      { jawaban:`Pada $\\mathbb{R}$: $f$ <strong>tidak injektif</strong>. Pada $x \\geq 0$: $f$ <strong>injektif</strong>.` },
+      { jawaban:`Pemasangan <strong>injektif, surjektif, dan bijektif</strong>. Gagal injektif jika terjadi <em>double booking</em> (dua penumpang mendapat nomor kursi yang sama).` },
+    ],
+    // E
+    4: [
+      { jawaban:`$f(2) = 7$, $f(0) = -3$, $f(-3) = -18$` },
+      { jawaban:`$g(3) = 15$, $g(-4) = 8$` },
+      { jawaban:`$4a + 1 = 21$, jadi $a = 5$` },
+      { jawaban:`$-2x + 7 = -5$, jadi $x = 6$` },
+      { jawaban:`$f(x) = 3x + 1$, $f(-1) = -2$` },
+      { jawaban:`$g(x) = -3x + 1$` },
+      { jawaban:`$f(x) = 40.000x + 30.000$; biaya $12$ bulan Rp510.000; $b = 30.000$ adalah biaya awal (pendaftaran) di luar biaya bulanan.` },
+      { jawaban:`$(x - 2)(x - 3) = 0$, jadi $x = 2$ atau $x = 3$. Karena $f(2) = f(3) = 0$, $f$ fungsi banyak-satu (tidak injektif).` },
+    ],
+    // F
+    5: [
+      { jawaban:`$$D_f = [-3,\\,+\\infty)$$` },
+      { jawaban:`$$D_f = [1,\\,+\\infty)$$` },
+      { jawaban:`$$D_f = [1,\\,4)$$` },
+      { jawaban:`$$m \\geq 1$$` },
+      { jawaban:`(a) $f(x) = -(x - 3)^2 + 4$, jadi $R_f = (-\\infty, 4]$ &nbsp;|&nbsp; (b) $R_g = \\mathbb{R} \\setminus \\{3\\}$` },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+
+    const items = [...list.querySelectorAll('li')];
+    const newList = document.createElement('div');
+    newList.className = 'soal-list-accordion';
+
+    items.forEach((li, i) => {
+      const ans   = answers[i] || {};
+      const diff  = ans.diff || 'sedang';
+      const diffLabel = { mudah:'★ Mudah', sedang:'★★ Sedang', sulit:'★★★ Sulit' }[diff] || '';
+      const jawaban = ans.jawaban || '';
+
+      const item = document.createElement('div');
+      item.className = 'soal-item';
+      item.innerHTML = `
+        <div class="soal-item-header" role="button" tabindex="0">
+          <span class="soal-num">${i+1}</span>
+          <span class="soal-text">${li.innerHTML}</span>
+          <button class="soal-key-btn" tabindex="-1">Kunci</button>
+        </div>
+        <div class="soal-answer">
+          <div class="soal-answer-inner">
+            <div class="soal-answer-label">Jawaban</div>
+            ${jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
+          </div>
+        </div>`;
+
+      const header = item.querySelector('.soal-item-header');
+      const toggle = () => {
+        const open = item.classList.toggle('open');
+        if (open && window.MathJax) {
+          MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
+        }
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+
+      newList.appendChild(item);
+    });
+
+    list.replaceWith(newList);
+  });
+
+});
+</script>
+
+<!-- FOOTER -->
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+</body>
+</html>
