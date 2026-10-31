@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
 <link rel="apple-touch-icon" href="../../assets/favicon.svg">
-<meta name="description" content="Materi lengkap Matriks SMA: definisi, operasi aljabar, determinan, invers, persamaan matriks, dan sistem persamaan linear. Dilengkapi 36 contoh soal dan pembahasan.">
+<meta name="description" content="Materi lengkap Matriks SMA: definisi, operasi aljabar, determinan, invers, persamaan matriks, dan sistem persamaan linear. Dilengkapi 40 contoh soal dan pembahasan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
@@ -66,8 +66,8 @@ window.MathJax = {
         <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Operasi Aljabar</a>
         <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Determinan</a>
         <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Invers Ordo 2×2</a>
-        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Persamaan Matriks</a>
-        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Invers Ordo 3×3</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Invers Ordo 3×3</a>
+        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Persamaan Matriks</a>
         <a class="toc-menu-item" href="#bagian-g" onclick="closeTOC()"><span class="toc-menu-badge">G</span>Sistem Persamaan Linear</a>
         <a class="toc-menu-item" href="#bagian-h" onclick="closeTOC()"><span class="toc-menu-badge">H</span>Tabel Ringkasan</a>
       </div>
@@ -99,7 +99,7 @@ window.MathJax = {
       <div class="materi-tags">
         <span class="tag">Aljabar &amp; Fungsi</span>
         <span class="tag">8 Sub-bab</span>
-        <span class="tag">36 Contoh Soal</span>
+        <span class="tag">40 Contoh Soal</span>
       </div>
     </div>
   </div>
@@ -208,8 +208,8 @@ window.MathJax = {
       <li><a href="#bagian-b" data-num="B">Operasi Aljabar pada Matriks</a></li>
       <li><a href="#bagian-c" data-num="C">Determinan Matriks</a></li>
       <li><a href="#bagian-d" data-num="D">Invers Perkalian Matriks Ordo 2×2</a></li>
-      <li><a href="#bagian-e" data-num="E">Menyelesaikan Persamaan Matriks</a></li>
-      <li><a href="#bagian-f" data-num="F">Invers Perkalian Matriks Ordo 3×3</a></li>
+      <li><a href="#bagian-e" data-num="E">Invers Perkalian Matriks Ordo 3×3</a></li>
+      <li><a href="#bagian-f" data-num="F">Menyelesaikan Persamaan Matriks</a></li>
       <li><a href="#bagian-g" data-num="G">Menyelesaikan Sistem Persamaan Linear</a></li>
       <li><a href="#bagian-h" data-num="H">Tabel Ringkasan</a></li>
     </ul>
@@ -317,6 +317,17 @@ window.MathJax = {
       </svg>
     </div>
 
+    <div class="box box-rumus">
+      <div class="box-label">Sifat-Sifat Transpose</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;">
+        <li>$(A^{\mathrm{T}})^{\mathrm{T}} = A$</li>
+        <li>$(A + B)^{\mathrm{T}} = A^{\mathrm{T}} + B^{\mathrm{T}}$</li>
+        <li>$(kA)^{\mathrm{T}} = kA^{\mathrm{T}}$ untuk skalar $k$</li>
+        <li>$(AB)^{\mathrm{T}} = B^{\mathrm{T}}A^{\mathrm{T}}$ (urutan dibalik)</li>
+        <li>Matriks persegi $A$ disebut <strong>simetris</strong> jika $A^{\mathrm{T}} = A$, misalnya $\begin{bmatrix} 1 & 4 \\ 4 & 3 \end{bmatrix}$.</li>
+      </ul>
+    </div>
+
     <p>Dua matriks $A$ dan $B$ dikatakan <strong>sama</strong> ($A = B$) jika dan hanya jika ordonya sama <strong>dan</strong> setiap elemen yang seletak nilainya sama ($a_{ij} = b_{ij}$ untuk semua $i, j$).</p>
 
     <div class="box box-contoh">
@@ -325,10 +336,13 @@ window.MathJax = {
       (a) Tentukan ordo matriks $A$. &emsp; (b) Sebutkan unsur baris ke-1. &emsp; (c) Sebutkan unsur kolom ke-2.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Matriks $A$ berordo $\mathbf{(2 \times 3)}$.<br><br>
-      <strong>(b)</strong> Unsur baris ke-1 adalah $2, 3, 1$.<br><br>
-      <strong>(c)</strong> Unsur kolom ke-2 adalah $3$ dan $0$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung baris dan kolom:</strong> $A$ memiliki $2$ baris dan $3$ kolom.</p>
+      <ul class="sol-cek">
+        <li>(a) Ordo $A$ adalah $2 \times 3$</li>
+        <li>(b) Unsur baris ke-1: $2, 3, 1$</li>
+        <li>(c) Unsur kolom ke-2: $3$ dan $0$</li>
+      </ul>
+      <div class="sol-jadi">ordo $2 \times 3$, baris ke-1 $(2, 3, 1)$, kolom ke-2 $(3, 0)$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -336,8 +350,9 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan transpose matriks $A = \begin{bmatrix} 3 & 0 & -1 \\ 2 & 4 & 2 \\ 1 & -3 & 4 \end{bmatrix}$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah setiap baris menjadi kolom:</strong> baris ke-1 $(3, 0, -1)$ menjadi kolom ke-1, dan seterusnya.</p>
       $$A^{\mathrm{T}} = \begin{bmatrix} 3 & 2 & 1 \\ 0 & 4 & -3 \\ -1 & 2 & 4 \end{bmatrix}$$
+      <div class="sol-jadi">$A^{\mathrm{T}} = \begin{bmatrix} 3 & 2 & 1 \\ 0 & 4 & -3 \\ -1 & 2 & 4 \end{bmatrix}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -345,8 +360,13 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui matriks $A = \begin{bmatrix} r & 7 \\ 2p-3 & 2r \end{bmatrix}$ dan $B = \begin{bmatrix} 2q & p+3q \\ 5 & 2r \end{bmatrix}$. Jika $A = B$, tentukan nilai $r$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{align*} 2p - 3 &= 5 \;\Rightarrow\; p = 4 \\ 7 &= p + 3q = 4 + 3q \;\Rightarrow\; q = 1 \\ r &= 2q = 2(1) = \mathbf{2} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Samakan elemen yang seletak:</strong></p>
+      <ul class="sol-cek">
+        <li>Baris 2 kolom 1: $2p - 3 = 5$, jadi $p = 4$</li>
+        <li>Baris 1 kolom 2: $7 = p + 3q = 4 + 3q$, jadi $q = 1$</li>
+        <li>Baris 1 kolom 1: $r = 2q = 2$</li>
+      </ul>
+      <div class="sol-jadi">$r = 2$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -354,10 +374,15 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui matriks $A = \begin{bmatrix} 5 & -2 & b \\ 1 & 4 & d \\ 0 & 2b & 6c \end{bmatrix}$ dan $B = \begin{bmatrix} 5 & 1 & 0 \\ -2 & 4 & 6 \\ 3c & d & 4d \end{bmatrix}$. Jika $A = B^{\mathrm{T}}$, tentukan elemen matriks $A$ baris ke-2 kolom ke-3.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $A = B^{\mathrm{T}}$ berarti $A = \begin{bmatrix} 5 & -2 & 3c \\ 1 & 4 & d \\ 0 & 6 & 4d \end{bmatrix}$.
-      $$\begin{align*} 2b &= 6 \;\Rightarrow\; b = 3 \\ b &= 3c \;\Rightarrow\; 3 = 3c \;\Rightarrow\; c = 1 \\ 6c &= 4d \;\Rightarrow\; 6(1) = 4d \;\Rightarrow\; d = \tfrac{3}{2} \end{align*}$$
-      Jadi elemen baris ke-2 kolom ke-3 adalah $d = \mathbf{\dfrac{3}{2}}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis transpose $B$:</strong></p>
+      $$B^{\mathrm{T}} = \begin{bmatrix} 5 & -2 & 3c \\ 1 & 4 & d \\ 0 & 6 & 4d \end{bmatrix}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Samakan dengan $A$:</strong></p>
+      <ul class="sol-cek">
+        <li>$2b = 6$, jadi $b = 3$</li>
+        <li>$b = 3c$, jadi $c = 1$</li>
+        <li>$6c = 4d$, jadi $d = \tfrac{3}{2}$</li>
+      </ul>
+      <div class="sol-jadi">elemen baris ke-2 kolom ke-3 adalah $d = \dfrac{3}{2}$.</div>
     </div>
 
     <div class="box box-latihan">
@@ -393,10 +418,16 @@ window.MathJax = {
       (a) $A + B - C$ &emsp; (b) $A - (B + C)$ &emsp; (c) $(A - B) - (A - C) + (B + C)$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong>$$\begin{align*} &A + B - C \\ &= \begin{bmatrix} 2+0+3 & -5+4-4 \\ 3-2-2 & -1-6+2 \end{bmatrix} \\ &= \begin{bmatrix} 5 & -5 \\ -1 & -5 \end{bmatrix} \end{align*}$$
-      <strong>(b)</strong>$$\begin{align*} &A - (B + C) \\ &= \begin{bmatrix} 2 & -5 \\ 3 & -1 \end{bmatrix} - \begin{bmatrix} -3 & 8 \\ 0 & -8 \end{bmatrix} \\ &= \begin{bmatrix} 5 & -13 \\ 3 & 7 \end{bmatrix} \end{align*}$$
-      <strong>(c)</strong>$$\begin{align*} &(A - B) - (A - C) + (B + C) \\ &= A - B - A + C + B + C \\ &= 2C = \begin{bmatrix} -6 & 8 \\ 4 & -4 \end{bmatrix} \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>$A + B - C$</span></div>
+      $$\begin{align*} &A + B - C \\ &= \begin{bmatrix} 2+0+3 & -5+4-4 \\ 3-2-2 & -1-6+2 \end{bmatrix} \\ &= \begin{bmatrix} 5 & -5 \\ -1 & -5 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">$A + B - C = \begin{bmatrix} 5 & -5 \\ -1 & -5 \end{bmatrix}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$A - (B + C)$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung $B + C$ dulu:</strong> $B + C = \begin{bmatrix} -3 & 8 \\ 0 & -8 \end{bmatrix}$.</p>
+      $$\begin{align*} &A - (B + C) \\ &= \begin{bmatrix} 2 & -5 \\ 3 & -1 \end{bmatrix} - \begin{bmatrix} -3 & 8 \\ 0 & -8 \end{bmatrix} \\ &= \begin{bmatrix} 5 & -13 \\ 3 & 7 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">$A - (B + C) = \begin{bmatrix} 5 & -13 \\ 3 & 7 \end{bmatrix}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$(A - B) - (A - C) + (B + C)$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sederhanakan secara aljabar dulu:</strong> $A - B - A + C + B + C = 2C$.</p>
+      <div class="sol-jadi">hasilnya $2C = \begin{bmatrix} -6 & 8 \\ 4 & -4 \end{bmatrix}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -406,9 +437,14 @@ window.MathJax = {
       (b)$$\begin{gather*} 3\begin{bmatrix} -5 & 2 \\ 1 & 0 \end{bmatrix} - \begin{bmatrix} -6 & 1 \\ 2 & -3 \end{bmatrix} \\ - 2\begin{bmatrix} 1 & -1 \\ 4 & -3 \end{bmatrix} \end{gather*}$$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong>$$\begin{align*} &= \begin{bmatrix} 8 & 4 \\ -12 & 0 \end{bmatrix} + \begin{bmatrix} 2 & -1 \\ 0 & 4 \end{bmatrix} \\ &\quad - \begin{bmatrix} -4 & 6 \\ 0 & -2 \end{bmatrix} \\ &= \begin{bmatrix} 14 & -3 \\ -12 & 6 \end{bmatrix} \end{align*}$$
-      <strong>(b)</strong>$$\begin{align*} &= \begin{bmatrix} -15 & 6 \\ 3 & 0 \end{bmatrix} - \begin{bmatrix} -6 & 1 \\ 2 & -3 \end{bmatrix} \\ &\quad - \begin{bmatrix} 2 & -2 \\ 8 & -6 \end{bmatrix} \\ &= \begin{bmatrix} -11 & 7 \\ -7 & 9 \end{bmatrix} \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Bentuk pertama</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kalikan setiap skalar:</strong></p>
+      $$\begin{align*} &\begin{bmatrix} 8 & 4 \\ -12 & 0 \end{bmatrix} + \begin{bmatrix} 2 & -1 \\ 0 & 4 \end{bmatrix} \\ &\quad - \begin{bmatrix} -4 & 6 \\ 0 & -2 \end{bmatrix} \\ &= \begin{bmatrix} 14 & -3 \\ -12 & 6 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">hasilnya $\begin{bmatrix} 14 & -3 \\ -12 & 6 \end{bmatrix}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Bentuk kedua</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kalikan setiap skalar:</strong></p>
+      $$\begin{align*} &\begin{bmatrix} -15 & 6 \\ 3 & 0 \end{bmatrix} - \begin{bmatrix} -6 & 1 \\ 2 & -3 \end{bmatrix} \\ &\quad - \begin{bmatrix} 2 & -2 \\ 8 & -6 \end{bmatrix} \\ &= \begin{bmatrix} -11 & 7 \\ -7 & 9 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">hasilnya $\begin{bmatrix} -11 & 7 \\ -7 & 9 \end{bmatrix}$.</div>
     </div>
 
     <h3 class="subsection-title">2. Perkalian Skalar</h3>
@@ -425,9 +461,18 @@ window.MathJax = {
       (b)$$\begin{gather*} 4X + 2\begin{bmatrix} 3 & 0 & -5 \\ -2 & -4 & 1 \end{bmatrix} \\ - 3\begin{bmatrix} 4 & -2 & 3 \\ 0 & 1 & 2 \end{bmatrix} \\ = \begin{bmatrix} 4 & 6 & 1 \\ -2 & 3 & 0 \end{bmatrix} + 2X \end{gather*}$$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong>$$\begin{gather*} 3X - \begin{bmatrix} 6 & -4 \\ 12 & 2 \end{bmatrix} = \begin{bmatrix} 3 & 10 \\ -6 & 1 \end{bmatrix} \\ 3X = \begin{bmatrix} 9 & 6 \\ 6 & 3 \end{bmatrix} \\ X = \begin{bmatrix} 3 & 2 \\ 2 & 1 \end{bmatrix} \end{gather*}$$
-      <strong>(b)</strong>$$\begin{gather*} 4X + \begin{bmatrix} 6 & 0 & -10 \\ -4 & -8 & 2 \end{bmatrix} \\ - \begin{bmatrix} 12 & -6 & 9 \\ 0 & 3 & 6 \end{bmatrix} \\ = \begin{bmatrix} 4 & 6 & 1 \\ -2 & 3 & 0 \end{bmatrix} + 2X \end{gather*}$$Sederhanakan:$$\begin{gather*} 4X + \begin{bmatrix} -6 & 6 & -19 \\ -4 & -11 & -4 \end{bmatrix} \\ = \begin{bmatrix} 4 & 6 & 1 \\ -2 & 3 & 0 \end{bmatrix} + 2X \\ 2X = \begin{bmatrix} 10 & 0 & 20 \\ 2 & 14 & 4 \end{bmatrix} \\ X = \begin{bmatrix} 5 & 0 & 10 \\ 1 & 7 & 2 \end{bmatrix} \end{gather*}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Persamaan pertama</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung perkalian skalar:</strong></p>
+      $$3X - \begin{bmatrix} 6 & -4 \\ 12 & 2 \end{bmatrix} = \begin{bmatrix} 3 & 10 \\ -6 & 1 \end{bmatrix}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Pindahkan konstanta, lalu bagi $3$:</strong></p>
+      $$\begin{align*} 3X &= \begin{bmatrix} 9 & 6 \\ 6 & 3 \end{bmatrix} \\ X &= \begin{bmatrix} 3 & 2 \\ 2 & 1 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">$X = \begin{bmatrix} 3 & 2 \\ 2 & 1 \end{bmatrix}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Persamaan kedua</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung konstanta di ruas kiri:</strong></p>
+      $$\begin{align*} &\begin{bmatrix} 6 & 0 & -10 \\ -4 & -8 & 2 \end{bmatrix} \\ &\quad - \begin{bmatrix} 12 & -6 & 9 \\ 0 & 3 & 6 \end{bmatrix} \\ &= \begin{bmatrix} -6 & 6 & -19 \\ -4 & -11 & -4 \end{bmatrix} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kumpulkan suku $X$ di kiri:</strong> $4X - 2X = 2X$.</p>
+      $$\begin{align*} 2X &= \begin{bmatrix} 4 & 6 & 1 \\ -2 & 3 & 0 \end{bmatrix} \\ &\quad - \begin{bmatrix} -6 & 6 & -19 \\ -4 & -11 & -4 \end{bmatrix} \\ &= \begin{bmatrix} 10 & 0 & 20 \\ 2 & 14 & 4 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">$X = \begin{bmatrix} 5 & 0 & 10 \\ 1 & 7 & 2 \end{bmatrix}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -435,11 +480,15 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$, $y$, dan $z$ jika$$\begin{gather*} \begin{bmatrix} x & 4 \\ 3x & 6 \end{bmatrix} + \dfrac{1}{2}\begin{bmatrix} 6y & 10 \\ 4 & 2z \end{bmatrix} \\ = \begin{bmatrix} 3+4x & 9 \\ 8 & 2y \end{bmatrix} \end{gather*}$$</p>
     </div>
     <div class="penyelesaian">
-      <br>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sederhanakan ruas kiri:</strong></p>
       $$\begin{gather*} \begin{bmatrix} x+3y & 9 \\ 3x+2 & 6+z \end{bmatrix} \\ = \begin{bmatrix} 3+4x & 9 \\ 8 & 2y \end{bmatrix} \end{gather*}$$
-      Dari kesamaan elemen:
-      $$\begin{align*} 3x + 2 &= 8 \;\Rightarrow\; x = 2 \\ x + 3y &= 3 + 4x \\ 2 + 3y &= 11 \;\Rightarrow\; y = 3 \\ 6 + z &= 2y = 6 \;\Rightarrow\; z = 0 \end{align*}$$
-      Jadi $x = 2$, $y = 3$, $z = 0$.
+      <p class="sol-step"><span class="sol-no">2</span><strong>Samakan elemen yang seletak:</strong></p>
+      <ul class="sol-cek">
+        <li>$3x + 2 = 8$, jadi $x = 2$</li>
+        <li>$x + 3y = 3 + 4x$, jadi $2 + 3y = 11$ dan $y = 3$</li>
+        <li>$6 + z = 2y = 6$, jadi $z = 0$</li>
+      </ul>
+      <div class="sol-jadi">$x = 2$, $y = 3$, dan $z = 0$.</div>
     </div>
 
     <h3 class="subsection-title">3. Perkalian Matriks</h3>
@@ -544,11 +593,18 @@ window.MathJax = {
       (d) $\begin{bmatrix} 2 & 0 \\ 0 & 3 \\ -1 & 3 \end{bmatrix}\begin{bmatrix} 1 & 4 & 0 \\ 2 & -1 & 3 \end{bmatrix}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> Hasilnya berordo $2 \times 2$:$$\begin{align*} c_{11} &= 2(-1)+1(3)+(-3)(4) = -11 \\ c_{12} &= 2(2)+1(0)+(-3)(2) = -2 \\ c_{21} &= (-1)(-1)+0(3)+2(4) = 9 \\ c_{22} &= (-1)(2)+0(0)+2(2) = 2 \end{align*}$$$$\text{Jadi hasilnya } \begin{bmatrix} -11 & -2 \\ 9 & 2 \end{bmatrix}$$
-      <strong>(b)</strong>$$\begin{align*} c_{11} &= 2(0)+0(2) = 0 \\ c_{12} &= 2(-4)+0(-1) = -8 \\ c_{21} &= (-3)(0)+1(2) = 2 \\ c_{22} &= (-3)(-4)+1(-1) = 11 \end{align*}$$$$\text{Jadi hasilnya } \begin{bmatrix} 0 & -8 \\ 2 & 11 \end{bmatrix}$$
-      <strong>(c)</strong> Hasilnya berordo $2 \times 3$:$$\begin{align*} c_{11} &= 3(-1)+(-1)(2) = -5 \\ c_{12} &= 3(1)+(-1)(0) = 3 \\ c_{13} &= 3(3)+(-1)(2) = 7 \\ c_{21} &= (-1)(-1)+0(2) = 1 \\ c_{22} &= (-1)(1)+0(0) = -1 \\ c_{23} &= (-1)(3)+0(2) = -3 \end{align*}$$$$\text{Jadi hasilnya } \begin{bmatrix} -5 & 3 & 7 \\ 1 & -1 & -3 \end{bmatrix}$$
-      <strong>(d)</strong> Hasilnya berordo $3 \times 3$:$$\begin{align*} c_{11} &= 2(1)+0(2) = 2 \\ c_{12} &= 2(4)+0(-1) = 8 \\ c_{13} &= 2(0)+0(3) = 0 \\ c_{21} &= 0(1)+3(2) = 6 \\ c_{22} &= 0(4)+3(-1) = -3 \\ c_{23} &= 0(0)+3(3) = 9 \\ c_{31} &= (-1)(1)+3(2) = 5 \\ c_{32} &= (-1)(4)+3(-1) = -7 \\ c_{33} &= (-1)(0)+3(3) = 9 \end{align*}$$$$\text{Jadi hasilnya } \begin{bmatrix} 2 & 8 & 0 \\ 6 & -3 & 9 \\ 5 & -7 & 9 \end{bmatrix}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Ordo $(2 \times 3)(3 \times 2) = 2 \times 2$</span></div>
+      $$\begin{align*} c_{11} &= 2(-1) + 1(3) + (-3)(4) = -11 \\ c_{12} &= 2(2) + 1(0) + (-3)(2) = -2 \\ c_{21} &= (-1)(-1) + 0(3) + 2(4) = 9 \\ c_{22} &= (-1)(2) + 0(0) + 2(2) = 2 \end{align*}$$
+      <div class="sol-jadi">hasilnya $\begin{bmatrix} -11 & -2 \\ 9 & 2 \end{bmatrix}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Ordo $(2 \times 2)(2 \times 2) = 2 \times 2$</span></div>
+      $$\begin{align*} c_{11} &= 2(0) + 0(2) = 0 \\ c_{12} &= 2(-4) + 0(-1) = -8 \\ c_{21} &= (-3)(0) + 1(2) = 2 \\ c_{22} &= (-3)(-4) + 1(-1) = 11 \end{align*}$$
+      <div class="sol-jadi">hasilnya $\begin{bmatrix} 0 & -8 \\ 2 & 11 \end{bmatrix}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Ordo $(2 \times 2)(2 \times 3) = 2 \times 3$</span></div>
+      $$\begin{align*} c_{11} &= 3(-1) + (-1)(2) = -5 \\ c_{12} &= 3(1) + (-1)(0) = 3 \\ c_{13} &= 3(3) + (-1)(2) = 7 \\ c_{21} &= (-1)(-1) + 0(2) = 1 \\ c_{22} &= (-1)(1) + 0(0) = -1 \\ c_{23} &= (-1)(3) + 0(2) = -3 \end{align*}$$
+      <div class="sol-jadi">hasilnya $\begin{bmatrix} -5 & 3 & 7 \\ 1 & -1 & -3 \end{bmatrix}$.</div>
+      <div class="sol-part"><span class="sol-tag">d</span><span>Ordo $(3 \times 2)(2 \times 3) = 3 \times 3$</span></div>
+      $$\begin{align*} c_{11} &= 2(1) + 0(2) = 2 \\ c_{12} &= 2(4) + 0(-1) = 8 \\ c_{13} &= 2(0) + 0(3) = 0 \\ c_{21} &= 0(1) + 3(2) = 6 \\ c_{22} &= 0(4) + 3(-1) = -3 \\ c_{23} &= 0(0) + 3(3) = 9 \\ c_{31} &= (-1)(1) + 3(2) = 5 \\ c_{32} &= (-1)(4) + 3(-1) = -7 \\ c_{33} &= (-1)(0) + 3(3) = 9 \end{align*}$$
+      <div class="sol-jadi">hasilnya $\begin{bmatrix} 2 & 8 & 0 \\ 6 & -3 & 9 \\ 5 & -7 & 9 \end{bmatrix}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -556,8 +612,11 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui $A = \begin{bmatrix} 3 & 4 \\ 1 & 6 \end{bmatrix}$, $B = \begin{bmatrix} 7 & -9 \\ 8 & 15 \end{bmatrix}$, $C = \begin{bmatrix} -6 & 11 \\ -7 & -12 \end{bmatrix}$. Tentukan $AB + AC$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Gunakan sifat distributif: $AB + AC = A(B + C)$.$$\begin{align*} B + C &= \begin{bmatrix} 7 & -9 \\ 8 & 15 \end{bmatrix} + \begin{bmatrix} -6 & 11 \\ -7 & -12 \end{bmatrix} \\ &= \begin{bmatrix} 1 & 2 \\ 1 & 3 \end{bmatrix} \\ A(B + C) &= \begin{bmatrix} 3 & 4 \\ 1 & 6 \end{bmatrix}\begin{bmatrix} 1 & 2 \\ 1 & 3 \end{bmatrix} \\ &= \begin{bmatrix} 7 & 18 \\ 7 & 20 \end{bmatrix} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan sifat distributif:</strong> $AB + AC = A(B + C)$, sehingga cukup satu perkalian.</p>
+      $$B + C = \begin{bmatrix} 1 & 2 \\ 1 & 3 \end{bmatrix}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kalikan $A$ dengan $B + C$:</strong></p>
+      $$\begin{align*} A(B + C) &= \begin{bmatrix} 3 & 4 \\ 1 & 6 \end{bmatrix}\begin{bmatrix} 1 & 2 \\ 1 & 3 \end{bmatrix} \\ &= \begin{bmatrix} 3+4 & 6+12 \\ 1+6 & 2+18 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">$AB + AC = \begin{bmatrix} 7 & 18 \\ 7 & 20 \end{bmatrix}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -565,8 +624,12 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Diketahui matriks $A = \begin{bmatrix} 2 & 1 \\ 0 & -3 \end{bmatrix}$ dan fungsi $f(x) = x^2 - 3x$. Tentukan $f(A)$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{align*} A^2 &= \begin{bmatrix} 2 & 1 \\ 0 & -3 \end{bmatrix}\begin{bmatrix} 2 & 1 \\ 0 & -3 \end{bmatrix} \\ &= \begin{bmatrix} 4 & -1 \\ 0 & 9 \end{bmatrix} \\ 3A &= \begin{bmatrix} 6 & 3 \\ 0 & -9 \end{bmatrix} \\ f(A) &= A^2 - 3A \\ &= \begin{bmatrix} 4 & -1 \\ 0 & 9 \end{bmatrix} - \begin{bmatrix} 6 & 3 \\ 0 & -9 \end{bmatrix} \\ &= \begin{bmatrix} -2 & -4 \\ 0 & 18 \end{bmatrix} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung $A^2$:</strong></p>
+      $$\begin{align*} A^2 &= \begin{bmatrix} 2 & 1 \\ 0 & -3 \end{bmatrix}\begin{bmatrix} 2 & 1 \\ 0 & -3 \end{bmatrix} \\ &= \begin{bmatrix} 4 & -1 \\ 0 & 9 \end{bmatrix} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung $3A$:</strong> $3A = \begin{bmatrix} 6 & 3 \\ 0 & -9 \end{bmatrix}$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Substitusi ke $f(A) = A^2 - 3A$:</strong></p>
+      $$\begin{align*} f(A) &= \begin{bmatrix} 4 & -1 \\ 0 & 9 \end{bmatrix} - \begin{bmatrix} 6 & 3 \\ 0 & -9 \end{bmatrix} \\ &= \begin{bmatrix} -2 & -4 \\ 0 & 18 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">$f(A) = \begin{bmatrix} -2 & -4 \\ 0 & 18 \end{bmatrix}$.</div>
     </div>
 
     <div class="box box-contoh">
@@ -574,14 +637,70 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$, $y$, $z$ jika$$\begin{gather*} \begin{bmatrix} 2y & 2x \\ -3 & 1 \end{bmatrix}\begin{bmatrix} 3 & -1 \\ 1 & -2 \end{bmatrix} \\ = \begin{bmatrix} 3x+4 & -10 \\ -8 & z \end{bmatrix} \end{gather*}$$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Lakukan perkalian matriks ruas kiri:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kalikan matriks di ruas kiri:</strong></p>
       $$\begin{gather*} \begin{bmatrix} 6y+2x & -2y-4x \\ -8 & 1 \end{bmatrix} \\ = \begin{bmatrix} 3x+4 & -10 \\ -8 & z \end{bmatrix} \end{gather*}$$
-      Dari kesamaan elemen:
-      $$\begin{align*} z &= 1 \\ -2y - 4x &= -10 \\ y + 2x &= 5 \\ 6y + 2x &= 3x + 4 \\ 6y - x &= 4 \end{align*}$$
-      Dari $y = 5 - 2x$ disubstitusi ke $6y - x = 4$:
-      $$\begin{gather*} 6(5 - 2x) - x = 4 \\ 30 - 13x = 4 \;\Rightarrow\; x = 2 \\ y = 5 - 2(2) = 1 \end{gather*}$$
-      Jadi $x = 2$, $y = 1$, $z = 1$.
+      <p class="sol-step"><span class="sol-no">2</span><strong>Samakan elemen yang seletak:</strong></p>
+      <ul class="sol-cek">
+        <li>$z = 1$</li>
+        <li>$-2y - 4x = -10$, jadi $y + 2x = 5$</li>
+        <li>$6y + 2x = 3x + 4$, jadi $6y - x = 4$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Substitusi $y = 5 - 2x$:</strong></p>
+      $$\begin{align*} 6(5 - 2x) - x &= 4 \\ 30 - 13x &= 4 \\ x &= 2 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Hitung $y$:</strong> $y = 5 - 2(2) = 1$.</p>
+      <div class="sol-jadi">$x = 2$, $y = 1$, dan $z = 1$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah toko kue mencatat penjualan dua hari. Sabtu: $20$ roti, $15$ donat, $10$ bolu. Minggu: $25$ roti, $12$ donat, $8$ bolu. Harga roti Rp5.000, donat Rp4.000, dan bolu Rp15.000. Gunakan perkalian matriks untuk menghitung pendapatan setiap hari.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Susun matriks penjualan dan harga</strong> (harga dalam ribu rupiah):</p>
+      $$P = \begin{bmatrix} 20 & 15 & 10 \\ 25 & 12 & 8 \end{bmatrix}, \quad H = \begin{bmatrix} 5 \\ 4 \\ 15 \end{bmatrix}$$
+      <p class="sol-step">Ordo $(2 \times 3)(3 \times 1) = 2 \times 1$: satu baris hasil untuk setiap hari.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung $PH$:</strong></p>
+      $$\begin{align*} PH &= \begin{bmatrix} 20(5) + 15(4) + 10(15) \\ 25(5) + 12(4) + 8(15) \end{bmatrix} \\ &= \begin{bmatrix} 310 \\ 293 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">pendapatan Sabtu Rp310.000 dan Minggu Rp293.000.</div>
+    </div>
+
+    <h3 class="subsection-title">4. Pangkat Matriks Persegi</h3>
+    <p>Untuk matriks persegi $A$, pangkat didefinisikan sebagai perkalian berulang: $A^2 = A \cdot A$, $A^3 = A^2 \cdot A$, dan seterusnya. Soal TKA sering meminta $A^n$ untuk $n$ besar; kuncinya adalah <strong>mencari pola</strong> dari $A^2$ dan $A^3$.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Pola yang Sering Muncul</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;">
+        <li>$\begin{bmatrix} 1 & a \\ 0 & 1 \end{bmatrix}^n = \begin{bmatrix} 1 & na \\ 0 & 1 \end{bmatrix}$</li>
+        <li>Jika $A^2 = kA$, maka $A^n = k^{n-1}A$.</li>
+        <li>Jika $A^2 = I$, maka $A^n = I$ untuk $n$ genap dan $A^n = A$ untuk $n$ ganjil.</li>
+      </ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $A = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$. Tentukan $A^2$ dan $A^3$, lalu tentukan $A^{10}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung $A^2$ dan $A^3$:</strong></p>
+      $$\begin{align*} A^2 &= \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix} \\ A^3 &= \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 3 \\ 0 & 1 \end{bmatrix} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Baca polanya:</strong> elemen kanan atas sama dengan pangkatnya, jadi $A^n = \begin{bmatrix} 1 & n \\ 0 & 1 \end{bmatrix}$.</p>
+      <div class="sol-jadi">$A^{10} = \begin{bmatrix} 1 & 10 \\ 0 & 1 \end{bmatrix}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $A = \begin{bmatrix} 3 & 6 \\ 1 & 2 \end{bmatrix}$. Tunjukkan bahwa $A^2 = kA$ untuk suatu $k$, lalu tentukan $A^4$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung $A^2$:</strong></p>
+      $$\begin{align*} A^2 &= \begin{bmatrix} 3 & 6 \\ 1 & 2 \end{bmatrix}\begin{bmatrix} 3 & 6 \\ 1 & 2 \end{bmatrix} \\ &= \begin{bmatrix} 15 & 30 \\ 5 & 10 \end{bmatrix} = 5A \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan pola</strong> $A^n = k^{n-1}A$ dengan $k = 5$: $A^4 = 5^3A = 125A$.</p>
+      <p class="sol-step">Tanpa pola, kita perlu tiga kali perkalian matriks. Dengan pola, cukup satu perkalian skalar.</p>
+      <div class="sol-jadi">$k = 5$ dan $A^4 = 125A = \begin{bmatrix} 375 & 750 \\ 125 & 250 \end{bmatrix}$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Matriks dan Transformasi Geometri</div>
+      <p style="margin:0;font-size:.9rem;">Perkalian matriks juga dipakai untuk memindahkan titik pada bidang: refleksi, rotasi, dan dilatasi ditulis sebagai $\begin{bmatrix} x' \\ y' \end{bmatrix} = M\begin{bmatrix} x \\ y \end{bmatrix}$. Bahasan lengkapnya ada di materi <a href="../transformasi_geometri/"><strong>Transformasi Geometri</strong></a>.</p>
     </div>
 
     <div class="box box-latihan">
@@ -605,6 +724,8 @@ window.MathJax = {
         <li>Diketahui $A = \begin{bmatrix} 1 & 2 \\ 0 & -1 \end{bmatrix}$ dan $f(x) = x^2 + 2x - 3$. Tentukan $f(A)$.</li>
         <li>Buktikan bahwa untuk $A = \begin{bmatrix} 3 & 1 \\ 2 & 4 \end{bmatrix}$ dan $B = \begin{bmatrix} -1 & 2 \\ 0 & 1 \end{bmatrix}$ berlaku $(A \times B)^{\mathrm{T}} = B^{\mathrm{T}} \times A^{\mathrm{T}}$.</li>
         <li>Sebuah toko menjual tiga jenis buah: apel (A), jeruk (J), mangga (M). Penjualan selama dua hari disajikan dalam matriks $P = \begin{bmatrix} 5 & 8 & 3 \\ 4 & 6 & 7 \end{bmatrix}$ (baris = hari, kolom = jenis buah). Harga per kg (dalam ribuan): A = 15, J = 8, M = 12. Nyatakan dalam matriks dan hitung total penjualan setiap hari.</li>
+        <li>Diketahui $A = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix}$. Tentukan $A^2$, $A^3$, lalu $A^5$.</li>
+        <li>Diketahui $A = \begin{bmatrix} 2 & 4 \\ 1 & 2 \end{bmatrix}$. Tunjukkan bahwa $A^2 = kA$, tentukan $k$, lalu hitung $A^3$.</li>
       </ol>
     </div>
   </section>
@@ -623,26 +744,32 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 13</div>
+      <div class="box-label">📘 Contoh 16</div>
       <p style="margin:0;font-size:.9rem;">Tentukan determinan matriks-matriks berikut:<br><br>
       (a) $A = \begin{bmatrix} 3 & 5 \\ 2 & 4 \end{bmatrix}$ &emsp;
       (b) $B = \begin{bmatrix} -2 & 7 \\ 1 & -3 \end{bmatrix}$ &emsp;
       (c) $C = \begin{bmatrix} 6 & 3 \\ 4 & 2 \end{bmatrix}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> $\det(A) = (3)(4) - (5)(2)$<br>$\phantom{\det(A)} = 12 - 10 = \mathbf{2}$<br><br>
-      <strong>(b)</strong> $\det(B) = (-2)(-3) - (7)(1)$<br>$\phantom{\det(B)} = 6 - 7 = \mathbf{-1}$<br><br>
-      <strong>(c)</strong> $\det(C) = (6)(2) - (3)(4)$<br>$\phantom{\det(C)} = 12 - 12 = \mathbf{0}$<br>Jadi $C$ matriks singular (tidak memiliki invers).
+      <div class="sol-part"><span class="sol-tag">a</span><span>$A$</span></div>
+      $$\det(A) = (3)(4) - (5)(2) = 2$$
+      <div class="sol-jadi">$\det(A) = 2$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$B$</span></div>
+      $$\det(B) = (-2)(-3) - (7)(1) = -1$$
+      <div class="sol-jadi">$\det(B) = -1$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$C$</span></div>
+      $$\det(C) = (6)(2) - (3)(4) = 0$$
+      <div class="sol-jadi">$\det(C) = 0$, sehingga $C$ singular (tidak punya invers).</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 14</div>
+      <div class="box-label">📘 Contoh 17</div>
       <p style="margin:0;font-size:.9rem;">Diketahui $\det\begin{bmatrix} 2x & 3 \\ x-1 & 4 \end{bmatrix} = 11$. Tentukan nilai $x$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{gather*} 8x - 3(x-1) = 11 \\ 8x - 3x + 3 = 11 \\ 5x = 8 \;\Rightarrow\; x = \mathbf{\dfrac{8}{5}} \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis determinannya:</strong> $ad - bc = (2x)(4) - 3(x - 1)$.</p>
+      $$\begin{align*} 8x - 3(x - 1) &= 11 \\ 5x + 3 &= 11 \\ 5x &= 8 \end{align*}$$
+      <div class="sol-jadi">$x = \dfrac{8}{5}$.</div>
     </div>
 
     <h3 class="subsection-title">2. Determinan Matriks Ordo 3×3</h3>
@@ -715,32 +842,40 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 15</div>
+      <div class="box-label">📘 Contoh 18</div>
       <p style="margin:0;font-size:.9rem;">Tentukan determinan $A = \begin{bmatrix} 2 & 1 & -1 \\ 0 & 3 & 4 \\ 1 & -2 & 2 \end{bmatrix}$ dengan metode Sarrus.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{align*} \det(A) &= (2)(3)(2) + (1)(4)(1) \\ &\quad + (-1)(0)(-2) - (-1)(3)(1) \\ &\quad - (2)(4)(-2) - (1)(0)(2) \\ &= 12 + 4 + 0 + 3 + 16 - 0 \\ &= \mathbf{35} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung tiga diagonal turun (+):</strong> $2 \cdot 3 \cdot 2 = 12$, $1 \cdot 4 \cdot 1 = 4$, dan $(-1) \cdot 0 \cdot (-2) = 0$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung tiga diagonal naik (−):</strong> $(-1) \cdot 3 \cdot 1 = -3$, $2 \cdot 4 \cdot (-2) = -16$, dan $1 \cdot 0 \cdot 2 = 0$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Kurangkan:</strong></p>
+      $$\begin{align*} \det(A) &= (12 + 4 + 0) \\ &\quad - (-3 - 16 + 0) \\ &= 16 + 19 \end{align*}$$
+      <div class="sol-jadi">$\det(A) = 35$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 16</div>
+      <div class="box-label">📘 Contoh 19</div>
       <p style="margin:0;font-size:.9rem;">Tentukan determinan $B = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 0 \end{bmatrix}$ dengan ekspansi kofaktor baris pertama.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$\begin{align*} \det(B) &= 1 \cdot C_{11} + 2 \cdot C_{12} + 3 \cdot C_{13} \\ C_{11} &= +\begin{vmatrix} 5 & 6 \\ 8 & 0 \end{vmatrix} = 0 - 48 = -48 \\ C_{12} &= -\begin{vmatrix} 4 & 6 \\ 7 & 0 \end{vmatrix} = -(0 - 42) = 42 \\ C_{13} &= +\begin{vmatrix} 4 & 5 \\ 7 & 8 \end{vmatrix} = 32 - 35 = -3 \\ \det(B) &= 1(-48) + 2(42) + 3(-3) \\ &= -48 + 84 - 9 = \mathbf{27} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung kofaktor baris pertama:</strong></p>
+      $$\begin{align*} C_{11} &= +\begin{vmatrix} 5 & 6 \\ 8 & 0 \end{vmatrix} = -48 \\ C_{12} &= -\begin{vmatrix} 4 & 6 \\ 7 & 0 \end{vmatrix} = 42 \\ C_{13} &= +\begin{vmatrix} 4 & 5 \\ 7 & 8 \end{vmatrix} = -3 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Jumlahkan $a_{1j} C_{1j}$:</strong></p>
+      $$\begin{align*} \det(B) &= 1(-48) + 2(42) + 3(-3) \\ &= -48 + 84 - 9 \end{align*}$$
+      <div class="sol-jadi">$\det(B) = 27$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 17</div>
+      <div class="box-label">📘 Contoh 20</div>
       <p style="margin:0;font-size:.9rem;">Tentukan nilai $x$ jika $\begin{vmatrix} x & 1 & 0 \\ 2 & x & 1 \\ 1 & 0 & x \end{vmatrix} = 0$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>Penyelesaian (ekspansi baris pertama):</strong>
-      $$\begin{align*} x \begin{vmatrix} x & 1 \\ 0 & x \end{vmatrix} - 1 \begin{vmatrix} 2 & 1 \\ 1 & x \end{vmatrix} + 0 &= 0 \\ x(x^2 - 0) - 1(2x - 1) &= 0 \\ x^3 - 2x + 1 &= 0 \\ (x-1)(x^2+x-1) &= 0 \end{align*}$$
-      $x = 1$ atau $x = \dfrac{-1 \pm \sqrt{5}}{2}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ekspansi baris pertama:</strong></p>
+      $$\begin{align*} x\begin{vmatrix} x & 1 \\ 0 & x \end{vmatrix} - 1\begin{vmatrix} 2 & 1 \\ 1 & x \end{vmatrix} &= 0 \\ x(x^2) - (2x - 1) &= 0 \\ x^3 - 2x + 1 &= 0 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Faktorkan:</strong> $x = 1$ adalah akar karena $1 - 2 + 1 = 0$.</p>
+      $$(x - 1)(x^2 + x - 1) = 0$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Selesaikan faktor kuadrat</strong> dengan rumus ABC: $x = \dfrac{-1 \pm \sqrt{5}}{2}$.</p>
+      <div class="sol-jadi">$x = 1$ atau $x = \dfrac{-1 \pm \sqrt{5}}{2}$.</div>
     </div>
 
     <h3 class="subsection-title">3. Sifat-Sifat Determinan</h3>
@@ -756,15 +891,21 @@ window.MathJax = {
     </ul>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 18</div>
+      <div class="box-label">📘 Contoh 21</div>
       <p style="margin:0;font-size:.9rem;">Diketahui $\det(A) = 4$ dan $\det(B) = -3$ untuk matriks $3 \times 3$. Tentukan:<br>
       (a) $\det(AB)$ &emsp; (b) $\det(2A)$ &emsp; (c) $\det(A^{-1}B)$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> $\det(AB) = \det(A)\cdot\det(B)$<br>$\phantom{\det(AB)} = 4 \times (-3) = \mathbf{-12}$<br><br>
-      <strong>(b)</strong> $\det(2A) = 2^3 \det(A) = 8 \times 4 = \mathbf{32}$<br><br>
-      <strong>(c)</strong> $\det(A^{-1}B) = \det(A^{-1})\cdot\det(B)$<br>$\phantom{\det(A^{-1}B)} = \dfrac{1}{4} \times (-3) = \mathbf{-\dfrac{3}{4}}$
+      <div class="sol-part"><span class="sol-tag">a</span><span>$\det(AB)$</span></div>
+      $$\begin{align*} \det(AB) &= \det(A) \cdot \det(B) \\ &= 4(-3) = -12 \end{align*}$$
+      <div class="sol-jadi">$\det(AB) = -12$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$\det(2A)$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan $\det(kA) = k^n \det(A)$</strong> dengan $n = 3$.</p>
+      $$\det(2A) = 2^3 \cdot 4 = 32$$
+      <div class="sol-jadi">$\det(2A) = 32$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$\det(A^{-1}B)$</span></div>
+      $$\begin{align*} \det(A^{-1}B) &= \frac{1}{\det(A)} \cdot \det(B) \\ &= \frac{-3}{4} \end{align*}$$
+      <div class="sol-jadi">$\det(A^{-1}B) = -\dfrac{3}{4}$.</div>
     </div>
 
     <div class="box box-latihan">
@@ -805,59 +946,76 @@ window.MathJax = {
     </ul>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 19</div>
+      <div class="box-label">📘 Contoh 22</div>
       <p style="margin:0;font-size:.9rem;">Tentukan invers setiap matriks berikut dan verifikasi hasilnya:<br>
       (a) $A = \begin{bmatrix} 2 & 5 \\ 1 & 3 \end{bmatrix}$ &emsp; (b) $B = \begin{bmatrix} 2 & 4 \\ 3 & 5 \end{bmatrix}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> $\det(A) = (2)(3) - (5)(1) = 1$, sehingga $A^{-1} = \dfrac{1}{1}\begin{bmatrix} 3 & -5 \\ -1 & 2 \end{bmatrix} = \begin{bmatrix} 3 & -5 \\ -1 & 2 \end{bmatrix}$.<br><br>
-      Verifikasi:$$\begin{gather*} A \times A^{-1} = \begin{bmatrix} 2 & 5 \\ 1 & 3 \end{bmatrix}\begin{bmatrix} 3 & -5 \\ -1 & 2 \end{bmatrix} \\ = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I \;\checkmark \end{gather*}$$
-      <strong>(b)</strong> $\det(B) = (2)(5) - (4)(3) = -2$, sehingga $B^{-1} = \dfrac{1}{-2}\begin{bmatrix} 5 & -4 \\ -3 & 2 \end{bmatrix} = \begin{bmatrix} -\frac{5}{2} & 2 \\ \frac{3}{2} & -1 \end{bmatrix}$.
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 20</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan invers dari matriks-matriks berikut:<br>
-      (a) $A = \begin{bmatrix} 1 & 3/2 \\ 3/4 & 5/4 \end{bmatrix}$ &emsp; (b) $B = \begin{bmatrix} 32 & -64 \\ 16 & -48 \end{bmatrix}$</p>
-    </div>
-    <div class="penyelesaian">
-      <br>
-      <strong>(a)</strong> $A = \dfrac{1}{4}\begin{bmatrix} 4 & 6 \\ 3 & 5 \end{bmatrix}$. Dengan sifat $(kA)^{-1} = \tfrac{1}{k}A^{-1}$:
-      $$\begin{align*} A^{-1} &= 4 \cdot \frac{1}{20-18}\begin{bmatrix} 5 & -6 \\ -3 & 4 \end{bmatrix} \\ &= 2\begin{bmatrix} 5 & -6 \\ -3 & 4 \end{bmatrix} = \begin{bmatrix} 10 & -12 \\ -6 & 8 \end{bmatrix} \end{align*}$$
-      <strong>(b)</strong> $B = 16\begin{bmatrix} 2 & -4 \\ 1 & -3 \end{bmatrix}$, maka:
-      $$\begin{align*} B^{-1} &= \frac{1}{16} \cdot \frac{1}{-6+4}\begin{bmatrix} -3 & 4 \\ -1 & 2 \end{bmatrix} \\ &= -\frac{1}{32}\begin{bmatrix} -3 & 4 \\ -1 & 2 \end{bmatrix} \\ &= \begin{bmatrix} \dfrac{3}{32} & -\dfrac{1}{8} \\[6pt] \dfrac{1}{32} & -\dfrac{1}{16} \end{bmatrix} \end{align*}$$
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 21</div>
-      <p style="margin:0;font-size:.9rem;">Jika $A = \begin{bmatrix} 5 & -3 \\ 6 & -4 \end{bmatrix}$, tentukan $(A \times B)^{-1} \times A$ untuk $B = \begin{bmatrix} 3 & 2 \\ 4 & 3 \end{bmatrix}$.</p>
-    </div>
-    <div class="penyelesaian">
-      <br>
-      Gunakan sifat $(A \times B)^{-1} = B^{-1} \times A^{-1}$:$$\begin{align*} &(A \times B)^{-1} \times A \\ &= B^{-1} \times A^{-1} \times A \\ &= B^{-1} \times I = B^{-1} \end{align*}$$Karena $\det(B) = (3)(3) - (2)(4) = 1$, maka$$(A \times B)^{-1} \times A = B^{-1} = \begin{bmatrix} 3 & -2 \\ -4 & 3 \end{bmatrix}$$
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 22</div>
-      <p style="margin:0;font-size:.9rem;">Jika matriks $A = \begin{bmatrix} x-4 & 6-x \\ 3 & x-2 \end{bmatrix}$ merupakan matriks singular, tentukan nilai $x$.</p>
-    </div>
-    <div class="penyelesaian">
-      <br>
-      Syarat singular: $\det(A) = 0$.$$\begin{align*} (x-4)(x-2) - (6-x)(3) &= 0 \\ x^2 - 6x + 8 - 18 + 3x &= 0 \\ x^2 - 3x - 10 &= 0 \\ (x-5)(x+2) &= 0 \end{align*}$$
-      Jadi $x = 5$ atau $x = -2$.
+      <div class="sol-part"><span class="sol-tag">a</span><span>$A$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung determinan:</strong> $\det(A) = (2)(3) - (5)(1) = 1$.</p>
+      $$A^{-1} = \frac{1}{1}\begin{bmatrix} 3 & -5 \\ -1 & 2 \end{bmatrix} = \begin{bmatrix} 3 & -5 \\ -1 & 2 \end{bmatrix}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Verifikasi:</strong></p>
+      $$\begin{align*} A A^{-1} &= \begin{bmatrix} 2 & 5 \\ 1 & 3 \end{bmatrix}\begin{bmatrix} 3 & -5 \\ -1 & 2 \end{bmatrix} \\ &= \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I \;\checkmark \end{align*}$$
+      <div class="sol-jadi">$A^{-1} = \begin{bmatrix} 3 & -5 \\ -1 & 2 \end{bmatrix}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$B$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung determinan:</strong> $\det(B) = (2)(5) - (4)(3) = -2$.</p>
+      $$B^{-1} = \frac{1}{-2}\begin{bmatrix} 5 & -4 \\ -3 & 2 \end{bmatrix} = \begin{bmatrix} -\frac{5}{2} & 2 \\ \frac{3}{2} & -1 \end{bmatrix}$$
+      <div class="sol-jadi">$B^{-1} = \begin{bmatrix} -\frac{5}{2} & 2 \\ \frac{3}{2} & -1 \end{bmatrix}$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 23</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan invers dari matriks-matriks berikut:<br>
+      (a) $A = \begin{bmatrix} 1 & 3/2 \\ 3/4 & 5/4 \end{bmatrix}$ &emsp; (b) $B = \begin{bmatrix} 32 & -64 \\ 16 & -48 \end{bmatrix}$</p>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>$A$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Keluarkan faktor $\tfrac{1}{4}$:</strong> $A = \tfrac{1}{4}\begin{bmatrix} 4 & 6 \\ 3 & 5 \end{bmatrix}$, dengan determinan $20 - 18 = 2$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gunakan $(kA)^{-1} = \tfrac{1}{k}A^{-1}$:</strong></p>
+      $$\begin{align*} A^{-1} &= 4 \cdot \frac{1}{2}\begin{bmatrix} 5 & -6 \\ -3 & 4 \end{bmatrix} \\ &= \begin{bmatrix} 10 & -12 \\ -6 & 8 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">$A^{-1} = \begin{bmatrix} 10 & -12 \\ -6 & 8 \end{bmatrix}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$B$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Keluarkan faktor $16$:</strong> $B = 16\begin{bmatrix} 2 & -4 \\ 1 & -3 \end{bmatrix}$, dengan determinan $-6 + 4 = -2$.</p>
+      $$\begin{align*} B^{-1} &= \frac{1}{16} \cdot \frac{1}{-2}\begin{bmatrix} -3 & 4 \\ -1 & 2 \end{bmatrix} \\ &= \begin{bmatrix} \frac{3}{32} & -\frac{1}{8} \\ \frac{1}{32} & -\frac{1}{16} \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">$B^{-1} = \begin{bmatrix} \frac{3}{32} & -\frac{1}{8} \\ \frac{1}{32} & -\frac{1}{16} \end{bmatrix}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Jika $A = \begin{bmatrix} 5 & -3 \\ 6 & -4 \end{bmatrix}$, tentukan $(A \times B)^{-1} \times A$ untuk $B = \begin{bmatrix} 3 & 2 \\ 4 & 3 \end{bmatrix}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan sifat $(AB)^{-1} = B^{-1}A^{-1}$:</strong></p>
+      $$\begin{align*} (AB)^{-1} A &= B^{-1} A^{-1} A \\ &= B^{-1} I = B^{-1} \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung $B^{-1}$:</strong> $\det(B) = (3)(3) - (2)(4) = 1$.</p>
+      $$B^{-1} = \begin{bmatrix} 3 & -2 \\ -4 & 3 \end{bmatrix}$$
+      <div class="sol-jadi">$(AB)^{-1} A = \begin{bmatrix} 3 & -2 \\ -4 & 3 \end{bmatrix}$, tanpa perlu menghitung $AB$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Jika matriks $A = \begin{bmatrix} x-4 & 6-x \\ 3 & x-2 \end{bmatrix}$ merupakan matriks singular, tentukan nilai $x$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat singular:</strong> $\det(A) = 0$.</p>
+      $$\begin{align*} (x - 4)(x - 2) - 3(6 - x) &= 0 \\ x^2 - 6x + 8 - 18 + 3x &= 0 \\ x^2 - 3x - 10 &= 0 \\ (x - 5)(x + 2) &= 0 \end{align*}$$
+      <div class="sol-jadi">$x = 5$ atau $x = -2$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26</div>
       <p style="margin:0;font-size:.9rem;">Matriks $A = \begin{bmatrix} 5 & -2 \\ 6 & -2 \end{bmatrix}$ adalah invers dari matriks $B = \begin{bmatrix} -1 & x+y \\ 2x+1 & 5/2 \end{bmatrix}$. Tentukan nilai $x$ dan $y$.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $A^{-1} = B$. Hitung $A^{-1}$:
-      $$\begin{gather*} \det(A) = (5)(-2)-(-2)(6) = 2 \\ A^{-1} = \frac{1}{2}\begin{bmatrix} -2 & 2 \\ -6 & 5 \end{bmatrix} = \begin{bmatrix} -1 & 1 \\ -3 & \frac{5}{2} \end{bmatrix} \end{gather*}$$
-      Dari kesamaan elemen dengan $B$:
-      $$\begin{gather*} 2x + 1 = -3 \;\Rightarrow\; x = -2 \\ x + y = 1 \;\Rightarrow\; y = 3 \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Karena $A$ invers dari $B$,</strong> maka $B = A^{-1}$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung $A^{-1}$:</strong> $\det(A) = (5)(-2) - (-2)(6) = 2$.</p>
+      $$A^{-1} = \frac{1}{2}\begin{bmatrix} -2 & 2 \\ -6 & 5 \end{bmatrix} = \begin{bmatrix} -1 & 1 \\ -3 & \frac{5}{2} \end{bmatrix}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Samakan dengan $B$:</strong></p>
+      <ul class="sol-cek">
+        <li>$2x + 1 = -3$, jadi $x = -2$</li>
+        <li>$x + y = 1$, jadi $y = 3$</li>
+      </ul>
+      <div class="sol-jadi">$x = -2$ dan $y = 3$.</div>
     </div>
 
     <div class="box box-latihan">
@@ -873,88 +1031,9 @@ window.MathJax = {
     </div>
   </section>
 
-  <!-- ═══ E. PERSAMAAN MATRIKS ═════════════════════════════════════════ -->
+  <!-- ═══ E. INVERS 3×3 ════════════════════════════════════════════════ -->
   <section class="section" id="bagian-e">
-    <h2 class="section-title"><span class="section-badge">E</span>Menyelesaikan Persamaan Matriks</h2>
-
-    <p>Invers matriks digunakan untuk menyelesaikan persamaan matriks dengan aturan:</p>
-
-    <div class="box box-rumus">
-      <div class="box-label">Aturan Persamaan Matriks</div>
-      <ul style="margin:.4rem 0 0;padding-left:1.3rem;line-height:2.2;">
-        <li>Jika $A \times B = C$, maka $B = A^{-1} \times C$</li>
-        <li>Jika $B \times A = C$, maka $B = C \times A^{-1}$</li>
-        <li>Jika $A \times B \times C = D$, maka $B = A^{-1} \times D \times C^{-1}$</li>
-        <li>Jika $P \times X \times Q = R$, maka $X = P^{-1} \times R \times Q^{-1}$</li>
-      </ul>
-      <p style="margin:.4rem 0 0;font-size:.85rem;">Aturan ini hanya berlaku jika matriks yang diinverskan ($A$, $C$, $P$, $Q$) <strong>nonsingular</strong>, yaitu determinannya $\neq 0$.</p>
-    </div>
-
-    <div class="box box-catatan">
-      <div class="box-label">⚠ Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Perhatikan posisi $A^{-1}$: pada kasus $A \times B = C$, invers dikalikan dari <strong>kiri</strong> ($B = A^{-1} \times C$). Pada kasus $B \times A = C$, invers dikalikan dari <strong>kanan</strong> ($B = C \times A^{-1}$). Urutan ini tidak boleh ditukar karena perkalian matriks tidak komutatif. Untuk persamaan dengan tiga matriks atau lebih, selesaikan secara bertahap: kalikan dari kiri atau kanan dengan invers yang sesuai hingga variabel terisolasi.</p>
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 24</div>
-      <p style="margin:0;font-size:.9rem;">Diketahui $A = \begin{bmatrix} 2 & 3 \\ 3 & 4 \end{bmatrix}$ dan $C = \begin{bmatrix} 3 & 1 \\ -2 & -5 \end{bmatrix}$. Tentukan $B$ jika $B \times A = C$.</p>
-    </div>
-    <div class="penyelesaian">
-      <br>
-      $B = C \times A^{-1}$, $\quad \det(A) = -1$, $\quad A^{-1} = \begin{bmatrix} -4 & 3 \\ 3 & -2 \end{bmatrix}$
-      $$\begin{gather*} B = \begin{bmatrix} 3 & 1 \\ -2 & -5 \end{bmatrix}\begin{bmatrix} -4 & 3 \\ 3 & -2 \end{bmatrix} \\ = \begin{bmatrix} -9 & 7 \\ -7 & 4 \end{bmatrix} \end{gather*}$$
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 25</div>
-      <p style="margin:0;font-size:.9rem;">Diketahui $A = \begin{bmatrix} 2 & -1 \\ 4 & -3 \end{bmatrix}$, $C = \begin{bmatrix} 3 & 2 \\ 2 & 1 \end{bmatrix}$, $D = \begin{bmatrix} 0 & 4 \\ -2 & 2 \end{bmatrix}$. Tentukan $B$ jika $A \times C \times B = D$.</p>
-    </div>
-    <div class="penyelesaian">
-      <br>
-      Dari $A \times C \times B = D$, maka $B = C^{-1} \times A^{-1} \times D$.<br><br>
-      <strong>Langkah 1:</strong> $\det(A) = (2)(-3) - (-1)(4) = -2$, $\quad A^{-1} = \begin{bmatrix} \frac{3}{2} & -\frac{1}{2} \\ 2 & -1 \end{bmatrix}$<br><br>
-      <strong>Langkah 2:</strong> $\det(C) = (3)(1) - (2)(2) = -1$, $\quad C^{-1} = \begin{bmatrix} -1 & 2 \\ 2 & -3 \end{bmatrix}$<br><br>
-      <strong>Langkah 3:</strong>$$\begin{gather*} A^{-1} \times D = \begin{bmatrix} \frac{3}{2} & -\frac{1}{2} \\ 2 & -1 \end{bmatrix}\begin{bmatrix} 0 & 4 \\ -2 & 2 \end{bmatrix} \\ = \begin{bmatrix} 1 & 5 \\ 2 & 6 \end{bmatrix} \end{gather*}$$
-      <strong>Langkah 4:</strong> $B = C^{-1} \times (A^{-1} \times D)$$$\begin{gather*} B = \begin{bmatrix} -1 & 2 \\ 2 & -3 \end{bmatrix}\begin{bmatrix} 1 & 5 \\ 2 & 6 \end{bmatrix} \\ = \begin{bmatrix} 3 & 7 \\ -4 & -8 \end{bmatrix} \end{gather*}$$
-      Verifikasi (dengan $A \times C = \begin{bmatrix} 4 & 3 \\ 6 & 5 \end{bmatrix}$):$$\begin{gather*} A \times C \times B = \begin{bmatrix} 4 & 3 \\ 6 & 5 \end{bmatrix}\begin{bmatrix} 3 & 7 \\ -4 & -8 \end{bmatrix} \\ = \begin{bmatrix} 0 & 4 \\ -2 & 2 \end{bmatrix} = D \;\checkmark \end{gather*}$$
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 26</div>
-      <p style="margin:0;font-size:.9rem;">Diketahui $B = \begin{bmatrix} -2 & 3 \\ 0 & 4 \end{bmatrix}$ dan $C = \begin{bmatrix} 1 & -4 \\ 2 & 2 \end{bmatrix}$. Jika $(A^{-1} \cdot B)^{-1} = C$, tentukan matriks $A$.</p>
-    </div>
-    <div class="penyelesaian">
-      <br>
-      Gunakan sifat $(PQ)^{-1} = Q^{-1}P^{-1}$ dan $(A^{-1})^{-1} = A$, lalu kalikan $B$ dari kiri:$$\begin{align*} (A^{-1} \cdot B)^{-1} &= C \\ B^{-1} \cdot (A^{-1})^{-1} &= C \\ B^{-1} \cdot A &= C \\ A &= B \cdot C \end{align*}$$
-      $$A = \begin{bmatrix} -2 & 3 \\ 0 & 4 \end{bmatrix}\begin{bmatrix} 1 & -4 \\ 2 & 2 \end{bmatrix} = \begin{bmatrix} 4 & 14 \\ 8 & 8 \end{bmatrix}$$
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 27</div>
-      <p style="margin:0;font-size:.9rem;">Diketahui $A = \begin{bmatrix} 6 & 4 \\ 2 & 8 \end{bmatrix}$, $C = \begin{bmatrix} 2 & 1 \\ 5 & 3 \end{bmatrix}$, $D = \begin{bmatrix} -2 & 0 \\ 1 & 4 \end{bmatrix}$. Jika $(A^{-1} \cdot C)^{-1}(A^{-1} \cdot B) = D$, tentukan $B$.</p>
-    </div>
-    <div class="penyelesaian">
-      <br>
-      $$\begin{align*} &(A^{-1} C)^{-1}(A^{-1} B) = D \\ &C^{-1}(A^{-1})^{-1} A^{-1} B = D \\ &C^{-1} A A^{-1} B = D \\ &C^{-1} B = D \;\Rightarrow\; B = C D \end{align*}$$
-      $$B = \begin{bmatrix} 2 & 1 \\ 5 & 3 \end{bmatrix}\begin{bmatrix} -2 & 0 \\ 1 & 4 \end{bmatrix} = \begin{bmatrix} -3 & 4 \\ -7 & 12 \end{bmatrix}$$
-    </div>
-
-    <div class="box box-latihan">
-      <div class="box-label">Soal Latihan E</div>
-      <ol class="soal-list">
-        <li>Selesaikan persamaan matriks $\begin{bmatrix} 3 & 1 \\ 5 & 2 \end{bmatrix} X = \begin{bmatrix} 4 & -1 \\ 7 & 2 \end{bmatrix}$.</li>
-        <li>Tentukan $B$ jika $B \times \begin{bmatrix} 4 & 3 \\ 3 & 2 \end{bmatrix} = \begin{bmatrix} 2 & 1 \\ -1 & 3 \end{bmatrix}$.</li>
-        <li>Diketahui $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$, $C = \begin{bmatrix} 3 & 2 \\ 1 & -4 \end{bmatrix}$. Tentukan $B$ jika $A \times B = C$.</li>
-        <li>Tentukan $X$ jika $\begin{bmatrix} 2 & -1 \\ -3 & 2 \end{bmatrix} X \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} = \begin{bmatrix} 5 & 6 \\ -3 & -4 \end{bmatrix}$.</li>
-        <li>Diketahui $B = \begin{bmatrix} 1 & 2 \\ 1 & 3 \end{bmatrix}$ dan $C = \begin{bmatrix} 2 & 1 \\ 3 & 2 \end{bmatrix}$. Jika $(A \cdot B)^{-1} = C$, tentukan $A$.</li>
-        <li>Tentukan matriks $X$ dan $Y$ jika $\begin{cases} 2X + Y = \begin{bmatrix} 5 & 1 \\ 3 & -2 \end{bmatrix} \\ X - Y = \begin{bmatrix} 1 & 2 \\ 0 & 5 \end{bmatrix} \end{cases}$.</li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ═══ F. INVERS 3×3 ════════════════════════════════════════════════ -->
-  <section class="section" id="bagian-f">
-    <h2 class="section-title"><span class="section-badge">F</span>Invers Perkalian Matriks Ordo 3×3</h2>
+    <h2 class="section-title"><span class="section-badge">E</span>Invers Perkalian Matriks Ordo 3×3</h2>
 
     <p>Untuk menentukan invers matriks berordo $3 \times 3$ terdapat dua metode.</p>
 
@@ -980,46 +1059,49 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 28</div>
+      <div class="box-label">📘 Contoh 27</div>
       <p style="margin:0;font-size:.9rem;">Tentukan invers dari $A = \begin{bmatrix} 1 & -2 & 1 \\ 2 & -3 & 2 \\ 0 & -5 & 1 \end{bmatrix}$ dengan metode reduksi baris.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>Operasi pada $[A \mid I]$:</strong><br><br>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis matriks diperluas $[A \mid I]$:</strong></p>
       $$\left[\begin{array}{ccc|ccc} 1 & -2 & 1 & 1 & 0 & 0 \\ 2 & -3 & 2 & 0 & 1 & 0 \\ 0 & -5 & 1 & 0 & 0 & 1 \end{array}\right]$$
-      $$\xrightarrow{b_2 - 2b_1} \left[\begin{array}{ccc|ccc} 1 & -2 & 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & -2 & 1 & 0 \\ 0 & -5 & 1 & 0 & 0 & 1 \end{array}\right]$$
-      $$\xrightarrow{b_3 + 5b_2} \left[\begin{array}{ccc|ccc} 1 & -2 & 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & -2 & 1 & 0 \\ 0 & 0 & 1 & -10 & 5 & 1 \end{array}\right]$$
-      $$\xrightarrow{b_1 + 2b_2} \left[\begin{array}{ccc|ccc} 1 & 0 & 1 & -3 & 2 & 0 \\ 0 & 1 & 0 & -2 & 1 & 0 \\ 0 & 0 & 1 & -10 & 5 & 1 \end{array}\right]$$
-      $$\xrightarrow{b_1 - b_3} \left[\begin{array}{ccc|ccc} 1 & 0 & 0 & 7 & -3 & -1 \\ 0 & 1 & 0 & -2 & 1 & 0 \\ 0 & 0 & 1 & -10 & 5 & 1 \end{array}\right]$$
-      Jadi $A^{-1} = \begin{bmatrix} 7 & -3 & -1 \\ -2 & 1 & 0 \\ -10 & 5 & 1 \end{bmatrix}$.
+      <p class="sol-step"><span class="sol-no">2</span><strong>Nolkan kolom 1:</strong> $b_2 - 2b_1$.</p>
+      $$\left[\begin{array}{ccc|ccc} 1 & -2 & 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & -2 & 1 & 0 \\ 0 & -5 & 1 & 0 & 0 & 1 \end{array}\right]$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Nolkan kolom 2 di baris 3:</strong> $b_3 + 5b_2$.</p>
+      $$\left[\begin{array}{ccc|ccc} 1 & -2 & 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & -2 & 1 & 0 \\ 0 & 0 & 1 & -10 & 5 & 1 \end{array}\right]$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Nolkan di atas pivot:</strong> $b_1 + 2b_2$, lalu $b_1 - b_3$.</p>
+      $$\left[\begin{array}{ccc|ccc} 1 & 0 & 0 & 7 & -3 & -1 \\ 0 & 1 & 0 & -2 & 1 & 0 \\ 0 & 0 & 1 & -10 & 5 & 1 \end{array}\right]$$
+      <div class="sol-jadi">$A^{-1} = \begin{bmatrix} 7 & -3 & -1 \\ -2 & 1 & 0 \\ -10 & 5 & 1 \end{bmatrix}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan invers dari $A = \begin{bmatrix} 3 & -5 & 0 \\ 2 & -3 & 1 \\ -1 & 2 & 2 \end{bmatrix}$ menggunakan metode kofaktor.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung sembilan kofaktor $C_{ij} = (-1)^{i+j}M_{ij}$:</strong></p>
+      $$\begin{align*} C_{11} &= +\begin{vmatrix} -3 & 1 \\ 2 & 2 \end{vmatrix} = -8 \\ C_{12} &= -\begin{vmatrix} 2 & 1 \\ -1 & 2 \end{vmatrix} = -5 \\ C_{13} &= +\begin{vmatrix} 2 & -3 \\ -1 & 2 \end{vmatrix} = 1 \\ C_{21} &= -\begin{vmatrix} -5 & 0 \\ 2 & 2 \end{vmatrix} = 10 \\ C_{22} &= +\begin{vmatrix} 3 & 0 \\ -1 & 2 \end{vmatrix} = 6 \\ C_{23} &= -\begin{vmatrix} 3 & -5 \\ -1 & 2 \end{vmatrix} = -1 \\ C_{31} &= +\begin{vmatrix} -5 & 0 \\ -3 & 1 \end{vmatrix} = -5 \\ C_{32} &= -\begin{vmatrix} 3 & 0 \\ 2 & 1 \end{vmatrix} = -3 \\ C_{33} &= +\begin{vmatrix} 3 & -5 \\ 2 & -3 \end{vmatrix} = 1 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung determinan</strong> (ekspansi baris 1): $3(-8) + (-5)(-5) + 0 = 1$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Susun adjoin</strong> $\operatorname{adj}(A) = C^{\mathrm{T}}$, lalu bagi dengan $\det(A) = 1$.</p>
+      $$A^{-1} = \begin{bmatrix} -8 & 10 & -5 \\ -5 & 6 & -3 \\ 1 & -1 & 1 \end{bmatrix}$$
+      <div class="sol-jadi">$A^{-1} = \begin{bmatrix} -8 & 10 & -5 \\ -5 & 6 & -3 \\ 1 & -1 & 1 \end{bmatrix}$.</div>
     </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 29</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan invers dari $A = \begin{bmatrix} 3 & -5 & 0 \\ 2 & -3 & 1 \\ -1 & 2 & 2 \end{bmatrix}$ menggunakan metode kofaktor.</p>
-    </div>
-    <div class="penyelesaian">
-      <br>
-      <strong>Kofaktor</strong> ($C_{ij} = (-1)^{i+j}M_{ij}$):
-      $$\begin{align*} C_{11} &= +\begin{vmatrix} -3 & 1 \\ 2 & 2 \end{vmatrix} = -8 \\ C_{12} &= -\begin{vmatrix} 2 & 1 \\ -1 & 2 \end{vmatrix} = -5 \\ C_{13} &= +\begin{vmatrix} 2 & -3 \\ -1 & 2 \end{vmatrix} = 1 \\ C_{21} &= -\begin{vmatrix} -5 & 0 \\ 2 & 2 \end{vmatrix} = 10 \\ C_{22} &= +\begin{vmatrix} 3 & 0 \\ -1 & 2 \end{vmatrix} = 6 \\ C_{23} &= -\begin{vmatrix} 3 & -5 \\ -1 & 2 \end{vmatrix} = -1 \\ C_{31} &= +\begin{vmatrix} -5 & 0 \\ -3 & 1 \end{vmatrix} = -5 \\ C_{32} &= -\begin{vmatrix} 3 & 0 \\ 2 & 1 \end{vmatrix} = -3 \\ C_{33} &= +\begin{vmatrix} 3 & -5 \\ 2 & -3 \end{vmatrix} = 1 \end{align*}$$
-      $$\begin{align*} \det(A) &= 3(-8) + (-5)(-5) + 0 \\ &= -24 + 25 = 1 \end{align*}$$
-      $$\begin{gather*} \text{adj}(A) = C^{\mathrm{T}} = \begin{bmatrix} -8 & 10 & -5 \\ -5 & 6 & -3 \\ 1 & -1 & 1 \end{bmatrix} \\ A^{-1} = \frac{1}{1}\,\text{adj}(A) = \begin{bmatrix} -8 & 10 & -5 \\ -5 & 6 & -3 \\ 1 & -1 & 1 \end{bmatrix} \end{gather*}$$
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 30</div>
       <p style="margin:0;font-size:.9rem;">Tentukan invers $A = \begin{bmatrix} 1 & 3 & 3 \\ 1 & 2 & 1 \\ -1 & 3 & 1 \end{bmatrix}$ menggunakan metode kofaktor.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>Kofaktor:</strong>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung sembilan kofaktor:</strong></p>
       $$\begin{align*} C_{11} &= +\begin{vmatrix} 2 & 1 \\ 3 & 1 \end{vmatrix} = -1 \\ C_{12} &= -\begin{vmatrix} 1 & 1 \\ -1 & 1 \end{vmatrix} = -2 \\ C_{13} &= +\begin{vmatrix} 1 & 2 \\ -1 & 3 \end{vmatrix} = 5 \\ C_{21} &= -\begin{vmatrix} 3 & 3 \\ 3 & 1 \end{vmatrix} = 6 \\ C_{22} &= +\begin{vmatrix} 1 & 3 \\ -1 & 1 \end{vmatrix} = 4 \\ C_{23} &= -\begin{vmatrix} 1 & 3 \\ -1 & 3 \end{vmatrix} = -6 \\ C_{31} &= +\begin{vmatrix} 3 & 3 \\ 2 & 1 \end{vmatrix} = -3 \\ C_{32} &= -\begin{vmatrix} 1 & 3 \\ 1 & 1 \end{vmatrix} = 2 \\ C_{33} &= +\begin{vmatrix} 1 & 3 \\ 1 & 2 \end{vmatrix} = -1 \end{align*}$$
-      $$\begin{align*} \det(A) &= 1(-1) + 3(-2) + 3(5) \\ &= -1 - 6 + 15 = 8 \end{align*}$$
-      $$\begin{gather*} \text{adj}(A) = C^{\mathrm{T}} = \begin{bmatrix} -1 & 6 & -3 \\ -2 & 4 & 2 \\ 5 & -6 & -1 \end{bmatrix} \\ A^{-1} = \frac{1}{8}\begin{bmatrix} -1 & 6 & -3 \\ -2 & 4 & 2 \\ 5 & -6 & -1 \end{bmatrix} \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung determinan:</strong> $1(-1) + 3(-2) + 3(5) = 8$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Susun adjoin</strong> $\operatorname{adj}(A) = C^{\mathrm{T}}$:</p>
+      $$\operatorname{adj}(A) = \begin{bmatrix} -1 & 6 & -3 \\ -2 & 4 & 2 \\ 5 & -6 & -1 \end{bmatrix}$$
+      <div class="sol-jadi">$A^{-1} = \dfrac{1}{8}\begin{bmatrix} -1 & 6 & -3 \\ -2 & 4 & 2 \\ 5 & -6 & -1 \end{bmatrix}$.</div>
     </div>
 
     <div class="box box-latihan">
-      <div class="box-label">Soal Latihan F</div>
+      <div class="box-label">Soal Latihan E</div>
       <ol class="soal-list">
         <li>Tentukan determinan matriks $A = \begin{bmatrix} 2 & 1 & -2 \\ -1 & 2 & 3 \\ 0 & 3 & 1 \end{bmatrix}$ menggunakan kaidah Sarrus.</li>
         <li>Tentukan invers matriks $A = \begin{bmatrix} 1 & 2 & 1 \\ 0 & 1 & 2 \\ 1 & 2 & 2 \end{bmatrix}$ menggunakan metode reduksi baris.</li>
@@ -1027,6 +1109,93 @@ window.MathJax = {
         <li>Tentukan invers matriks $C = \begin{bmatrix} 1 & -1 & 0 \\ 2 & 1 & 1 \\ 0 & 1 & 3 \end{bmatrix}$ menggunakan metode kofaktor, kemudian verifikasi $C \cdot C^{-1} = I$.</li>
         <li>Tentukan nilai $a$ jika $\det\begin{bmatrix} 2 & a & 1 \\ 1 & 3 & -1 \\ 0 & 2 & 4 \end{bmatrix} = 20$.</li>
         <li>Dengan metode kofaktor, tentukan invers $A = \begin{bmatrix} 2 & 2 & 3 \\ -1 & 1 & 3 \\ -2 & 1 & 2 \end{bmatrix}$, kemudian tentukan $\text{adj}(A)$.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ F. PERSAMAAN MATRIKS ═════════════════════════════════════════ -->
+  <section class="section" id="bagian-f">
+    <h2 class="section-title"><span class="section-badge">F</span>Menyelesaikan Persamaan Matriks</h2>
+
+    <p>Invers matriks digunakan untuk menyelesaikan persamaan matriks dengan aturan:</p>
+
+    <div class="box box-rumus">
+      <div class="box-label">Aturan Persamaan Matriks</div>
+      <ul style="margin:.4rem 0 0;padding-left:1.3rem;line-height:2.2;">
+        <li>Jika $A \times B = C$, maka $B = A^{-1} \times C$</li>
+        <li>Jika $B \times A = C$, maka $B = C \times A^{-1}$</li>
+        <li>Jika $A \times B \times C = D$, maka $B = A^{-1} \times D \times C^{-1}$</li>
+        <li>Jika $P \times X \times Q = R$, maka $X = P^{-1} \times R \times Q^{-1}$</li>
+      </ul>
+      <p style="margin:.4rem 0 0;font-size:.85rem;">Aturan ini hanya berlaku jika matriks yang diinverskan ($A$, $C$, $P$, $Q$) <strong>nonsingular</strong>, yaitu determinannya $\neq 0$.</p>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Catatan Penting</div>
+      <p style="margin:0;font-size:.9rem;">Perhatikan posisi $A^{-1}$: pada kasus $A \times B = C$, invers dikalikan dari <strong>kiri</strong> ($B = A^{-1} \times C$). Pada kasus $B \times A = C$, invers dikalikan dari <strong>kanan</strong> ($B = C \times A^{-1}$). Urutan ini tidak boleh ditukar karena perkalian matriks tidak komutatif. Untuk persamaan dengan tiga matriks atau lebih, selesaikan secara bertahap: kalikan dari kiri atau kanan dengan invers yang sesuai hingga variabel terisolasi.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 30</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $A = \begin{bmatrix} 2 & 3 \\ 3 & 4 \end{bmatrix}$ dan $C = \begin{bmatrix} 3 & 1 \\ -2 & -5 \end{bmatrix}$. Tentukan $B$ jika $B \times A = C$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Isolasi $B$:</strong> dari $BA = C$, kalikan $A^{-1}$ dari <strong>kanan</strong>: $B = CA^{-1}$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung $A^{-1}$:</strong> $\det(A) = 8 - 9 = -1$, jadi $A^{-1} = \begin{bmatrix} -4 & 3 \\ 3 & -2 \end{bmatrix}$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Kalikan:</strong></p>
+      $$\begin{align*} B &= \begin{bmatrix} 3 & 1 \\ -2 & -5 \end{bmatrix}\begin{bmatrix} -4 & 3 \\ 3 & -2 \end{bmatrix} \\ &= \begin{bmatrix} -9 & 7 \\ -7 & 4 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">$B = \begin{bmatrix} -9 & 7 \\ -7 & 4 \end{bmatrix}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 31</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $A = \begin{bmatrix} 2 & -1 \\ 4 & -3 \end{bmatrix}$, $C = \begin{bmatrix} 3 & 2 \\ 2 & 1 \end{bmatrix}$, $D = \begin{bmatrix} 0 & 4 \\ -2 & 2 \end{bmatrix}$. Tentukan $B$ jika $A \times C \times B = D$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Isolasi $B$:</strong> dari $ACB = D$, kalikan dari kiri dengan $(AC)^{-1} = C^{-1}A^{-1}$, sehingga $B = C^{-1}A^{-1}D$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung $A^{-1}$:</strong> $\det(A) = -6 + 4 = -2$, jadi $A^{-1} = \begin{bmatrix} \frac{3}{2} & -\frac{1}{2} \\ 2 & -1 \end{bmatrix}$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Hitung $C^{-1}$:</strong> $\det(C) = 3 - 4 = -1$, jadi $C^{-1} = \begin{bmatrix} -1 & 2 \\ 2 & -3 \end{bmatrix}$.</p>
+      <p class="sol-step"><span class="sol-no">4</span><strong>Hitung $A^{-1}D$:</strong></p>
+      $$A^{-1}D = \begin{bmatrix} 1 & 5 \\ 2 & 6 \end{bmatrix}$$
+      <p class="sol-step"><span class="sol-no">5</span><strong>Kalikan dengan $C^{-1}$ dari kiri:</strong></p>
+      $$\begin{align*} B &= \begin{bmatrix} -1 & 2 \\ 2 & -3 \end{bmatrix}\begin{bmatrix} 1 & 5 \\ 2 & 6 \end{bmatrix} \\ &= \begin{bmatrix} 3 & 7 \\ -4 & -8 \end{bmatrix} \end{align*}$$
+      <p class="sol-step">Cek: $AC = \begin{bmatrix} 4 & 3 \\ 6 & 5 \end{bmatrix}$ dan $(AC)B = \begin{bmatrix} 0 & 4 \\ -2 & 2 \end{bmatrix} = D$ ✓</p>
+      <div class="sol-jadi">$B = \begin{bmatrix} 3 & 7 \\ -4 & -8 \end{bmatrix}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 32</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $B = \begin{bmatrix} -2 & 3 \\ 0 & 4 \end{bmatrix}$ dan $C = \begin{bmatrix} 1 & -4 \\ 2 & 2 \end{bmatrix}$. Jika $(A^{-1} \cdot B)^{-1} = C$, tentukan matriks $A$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uraikan dengan $(PQ)^{-1} = Q^{-1}P^{-1}$:</strong></p>
+      $$\begin{align*} (A^{-1}B)^{-1} &= C \\ B^{-1}(A^{-1})^{-1} &= C \\ B^{-1}A &= C \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kalikan $B$ dari kiri:</strong> $A = BC$.</p>
+      $$\begin{align*} A &= \begin{bmatrix} -2 & 3 \\ 0 & 4 \end{bmatrix}\begin{bmatrix} 1 & -4 \\ 2 & 2 \end{bmatrix} \\ &= \begin{bmatrix} 4 & 14 \\ 8 & 8 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">$A = \begin{bmatrix} 4 & 14 \\ 8 & 8 \end{bmatrix}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 33</div>
+      <p style="margin:0;font-size:.9rem;">Diketahui $A = \begin{bmatrix} 6 & 4 \\ 2 & 8 \end{bmatrix}$, $C = \begin{bmatrix} 2 & 1 \\ 5 & 3 \end{bmatrix}$, $D = \begin{bmatrix} -2 & 0 \\ 1 & 4 \end{bmatrix}$. Jika $(A^{-1} \cdot C)^{-1}(A^{-1} \cdot B) = D$, tentukan $B$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sederhanakan ruas kiri:</strong></p>
+      $$\begin{align*} (A^{-1}C)^{-1}(A^{-1}B) &= D \\ C^{-1}A\,A^{-1}B &= D \\ C^{-1}B &= D \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kalikan $C$ dari kiri:</strong> $B = CD$; matriks $A$ ternyata tidak diperlukan.</p>
+      $$\begin{align*} B &= \begin{bmatrix} 2 & 1 \\ 5 & 3 \end{bmatrix}\begin{bmatrix} -2 & 0 \\ 1 & 4 \end{bmatrix} \\ &= \begin{bmatrix} -3 & 4 \\ -7 & 12 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">$B = \begin{bmatrix} -3 & 4 \\ -7 & 12 \end{bmatrix}$.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan F</div>
+      <ol class="soal-list">
+        <li>Selesaikan persamaan matriks $\begin{bmatrix} 3 & 1 \\ 5 & 2 \end{bmatrix} X = \begin{bmatrix} 4 & -1 \\ 7 & 2 \end{bmatrix}$.</li>
+        <li>Tentukan $B$ jika $B \times \begin{bmatrix} 4 & 3 \\ 3 & 2 \end{bmatrix} = \begin{bmatrix} 2 & 1 \\ -1 & 3 \end{bmatrix}$.</li>
+        <li>Diketahui $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$, $C = \begin{bmatrix} 3 & 2 \\ 1 & -4 \end{bmatrix}$. Tentukan $B$ jika $A \times B = C$.</li>
+        <li>Tentukan $X$ jika $\begin{bmatrix} 2 & -1 \\ -3 & 2 \end{bmatrix} X \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} = \begin{bmatrix} 5 & 6 \\ -3 & -4 \end{bmatrix}$.</li>
+        <li>Diketahui $B = \begin{bmatrix} 1 & 2 \\ 1 & 3 \end{bmatrix}$ dan $C = \begin{bmatrix} 2 & 1 \\ 3 & 2 \end{bmatrix}$. Jika $(A \cdot B)^{-1} = C$, tentukan $A$.</li>
+        <li>Tentukan matriks $X$ dan $Y$ jika $\begin{cases} 2X + Y = \begin{bmatrix} 5 & 1 \\ 3 & -2 \end{bmatrix} \\ X - Y = \begin{bmatrix} 1 & 2 \\ 0 & 5 \end{bmatrix} \end{cases}$.</li>
       </ol>
     </div>
   </section>
@@ -1049,44 +1218,59 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 31</div>
+      <div class="box-label">📘 Contoh 34</div>
       <p style="margin:0;font-size:.9rem;">Tentukan himpunan penyelesaian $2x - 3y = 8$ dan $x + 2y = -3$ dengan kedua metode.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      <strong>(a) Metode invers:</strong> $\det(A) = (2)(2) - (-3)(1) = 7$
-      $$\begin{align*} \begin{bmatrix} x \\ y \end{bmatrix} &= \frac{1}{7}\begin{bmatrix} 2 & 3 \\ -1 & 2 \end{bmatrix}\begin{bmatrix} 8 \\ -3 \end{bmatrix} \\ &= \frac{1}{7}\begin{bmatrix} 7 \\ -14 \end{bmatrix} = \begin{bmatrix} 1 \\ -2 \end{bmatrix} \end{align*}$$
-      <strong>(b) Metode Cramer:</strong> $D = 7$, $D_x = \begin{vmatrix} 8 & -3 \\ -3 & 2 \end{vmatrix} = 16 - 9 = 7$, $D_y = \begin{vmatrix} 2 & 8 \\ 1 & -3 \end{vmatrix} = -6 - 8 = -14$<br><br>
-      $x = \dfrac{7}{7} = 1$, $\quad y = \dfrac{-14}{7} = -2$.
-      Jadi $x = 1$ dan $y = -2$.
+      <div class="sol-part"><span class="sol-tag">a</span><span>Metode invers</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung determinan:</strong> $\det(A) = 7$.</p>
+      $$\begin{align*} \begin{bmatrix} x \\ y \end{bmatrix} &= \frac{1}{7}\begin{bmatrix} 2 & 3 \\ -1 & 2 \end{bmatrix}\begin{bmatrix} 8 \\ -3 \end{bmatrix} \\ &= \begin{bmatrix} 1 \\ -2 \end{bmatrix} \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">b</span><span>Metode Cramer</span></div>
+      <ul class="sol-cek">
+        <li>$D = 7$</li>
+        <li>$D_x = \begin{vmatrix} 8 & -3 \\ -3 & 2 \end{vmatrix} = 16 - 9 = 7$</li>
+        <li>$D_y = \begin{vmatrix} 2 & 8 \\ 1 & -3 \end{vmatrix} = -6 - 8 = -14$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bagi dengan $D$:</strong> $x = \tfrac{7}{7} = 1$ dan $y = \tfrac{-14}{7} = -2$.</p>
+      <div class="sol-jadi">$x = 1$ dan $y = -2$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 32</div>
+      <div class="box-label">📘 Contoh 35</div>
       <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian $y = \dfrac{1}{2}x + 5$ dan $x + 6 = \dfrac{2}{3}y$ dengan kedua metode.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Ubah ke bentuk standar: $-x + 2y = 10$ dan $3x - 2y = -18$.<br><br>
-      <strong>(a) Metode invers:</strong> $A = \begin{bmatrix} -1 & 2 \\ 3 & -2 \end{bmatrix}$, $\det(A) = 2 - 6 = -4$
-      $$\begin{align*} \begin{bmatrix} x \\ y \end{bmatrix} &= \frac{1}{-4}\begin{bmatrix} -2 & -2 \\ -3 & -1 \end{bmatrix}\begin{bmatrix} 10 \\ -18 \end{bmatrix} \\ &= \frac{1}{-4}\begin{bmatrix} 16 \\ -12 \end{bmatrix} = \begin{bmatrix} -4 \\ 3 \end{bmatrix} \end{align*}$$
-      <strong>(b) Metode Cramer:</strong><br>
-      $D = \begin{vmatrix} -1 & 2 \\ 3 & -2 \end{vmatrix} = 2 - 6 = -4$; $\quad D_x = \begin{vmatrix} 10 & 2 \\ -18 & -2 \end{vmatrix} = -20+36 = 16$; $\quad D_y = \begin{vmatrix} -1 & 10 \\ 3 & -18 \end{vmatrix} = 18-30 = -12$.<br><br>
-      $x = \dfrac{16}{-4} = -4$, $\quad y = \dfrac{-12}{-4} = 3$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah ke bentuk standar:</strong> $-x + 2y = 10$ dan $3x - 2y = -18$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Metode invers</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung determinan:</strong> $\det(A) = -4$.</p>
+      $$\begin{align*} \begin{bmatrix} x \\ y \end{bmatrix} &= \frac{1}{-4}\begin{bmatrix} -2 & -2 \\ -3 & -1 \end{bmatrix}\begin{bmatrix} 10 \\ -18 \end{bmatrix} \\ &= \begin{bmatrix} -4 \\ 3 \end{bmatrix} \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">b</span><span>Metode Cramer</span></div>
+      <ul class="sol-cek">
+        <li>$D = -4$</li>
+        <li>$D_x = \begin{vmatrix} 10 & 2 \\ -18 & -2 \end{vmatrix} = -20 + 36 = 16$</li>
+        <li>$D_y = \begin{vmatrix} -1 & 10 \\ 3 & -18 \end{vmatrix} = 18 - 30 = -12$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bagi dengan $D$:</strong> $x = \tfrac{16}{-4} = -4$ dan $y = \tfrac{-12}{-4} = 3$.</p>
+      <div class="sol-jadi">$x = -4$ dan $y = 3$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 33</div>
+      <div class="box-label">📘 Contoh 36</div>
       <p style="margin:0;font-size:.9rem;">Tentukan penyelesaian $2y - 3x = -4$ dan $2x + y = 5$ dengan kedua metode.</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      Ubah ke bentuk standar: $3x - 2y = 4$ dan $2x + y = 5$.<br><br>
-      <strong>(a) Metode invers:</strong> $A = \begin{bmatrix} 3 & -2 \\ 2 & 1 \end{bmatrix}$, $\det(A) = 7$
-      $$A^{-1} = \frac{1}{7}\begin{bmatrix} 1 & 2 \\ -2 & 3 \end{bmatrix}$$$$\begin{align*} \begin{bmatrix} x \\ y \end{bmatrix} &= \frac{1}{7}\begin{bmatrix} 1 & 2 \\ -2 & 3 \end{bmatrix}\begin{bmatrix} 4 \\ 5 \end{bmatrix} \\ &= \frac{1}{7}\begin{bmatrix} 14 \\ 7 \end{bmatrix} = \begin{bmatrix} 2 \\ 1 \end{bmatrix} \end{align*}$$
-      <strong>(b) Metode Cramer:</strong>
-      $$\begin{gather*} D = 7 \\ D_x = \begin{vmatrix} 4 & -2 \\ 5 & 1 \end{vmatrix} = 14 \\ D_y = \begin{vmatrix} 3 & 4 \\ 2 & 5 \end{vmatrix} = 7 \end{gather*}$$
-      $x = \dfrac{14}{7} = 2$, $\quad y = \dfrac{7}{7} = 1$. Jadi $x = 2$ dan $y = 1$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ubah ke bentuk standar:</strong> $3x - 2y = 4$ dan $2x + y = 5$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Metode invers</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung determinan:</strong> $\det(A) = 7$.</p>
+      $$\begin{align*} \begin{bmatrix} x \\ y \end{bmatrix} &= \frac{1}{7}\begin{bmatrix} 1 & 2 \\ -2 & 3 \end{bmatrix}\begin{bmatrix} 4 \\ 5 \end{bmatrix} \\ &= \begin{bmatrix} 2 \\ 1 \end{bmatrix} \end{align*}$$
+      <div class="sol-part"><span class="sol-tag">b</span><span>Metode Cramer</span></div>
+      <ul class="sol-cek">
+        <li>$D = 7$</li>
+        <li>$D_x = \begin{vmatrix} 4 & -2 \\ 5 & 1 \end{vmatrix} = 4 + 10 = 14$</li>
+        <li>$D_y = \begin{vmatrix} 3 & 4 \\ 2 & 5 \end{vmatrix} = 15 - 8 = 7$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bagi dengan $D$:</strong> $x = \tfrac{14}{7} = 2$ dan $y = \tfrac{7}{7} = 1$.</p>
+      <div class="sol-jadi">$x = 2$ dan $y = 1$.</div>
     </div>
 
     <h3 class="subsection-title">2. Sistem Persamaan Linear Tiga Variabel</h3>
@@ -1095,47 +1279,61 @@ window.MathJax = {
       <div class="box-label">Metode Cramer (3 Variabel)</div>
       <div class="math-block">$$\begin{gather*} D = \begin{vmatrix} a_1 & b_1 & c_1 \\ a_2 & b_2 & c_2 \\ a_3 & b_3 & c_3 \end{vmatrix} \\ D_x = \begin{vmatrix} d_1 & b_1 & c_1 \\ d_2 & b_2 & c_2 \\ d_3 & b_3 & c_3 \end{vmatrix} \\ D_y = \begin{vmatrix} a_1 & d_1 & c_1 \\ a_2 & d_2 & c_2 \\ a_3 & d_3 & c_3 \end{vmatrix} \\ D_z = \begin{vmatrix} a_1 & b_1 & d_1 \\ a_2 & b_2 & d_2 \\ a_3 & b_3 & d_3 \end{vmatrix} \\ x = \frac{D_x}{D},\quad y = \frac{D_y}{D},\quad z = \frac{D_z}{D} \end{gather*}$$</div>
     </div>
-    <p><strong>Metode invers matriks:</strong> $A\mathbf{x} = \mathbf{d} \;\Rightarrow\; \mathbf{x} = A^{-1}\mathbf{d}$, di mana $A^{-1} = \dfrac{1}{\det(A)}\,\text{adj}(A)$.</p>
+    <p><strong>Metode invers matriks:</strong> $AX = K \;\Rightarrow\; X = A^{-1}K$, dengan $X$ matriks variabel dan $K$ matriks konstanta, di mana $A^{-1} = \dfrac{1}{\det(A)}\,\text{adj}(A)$.</p>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 34</div>
+      <div class="box-label">📘 Contoh 37</div>
       <p style="margin:0;font-size:.9rem;">Tentukan himpunan penyelesaian dengan metode determinan: $\begin{cases} x + 2y + z = 2 \\ x - y - 2z = -1 \\ x + y - z = 3 \end{cases}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $$D = \begin{vmatrix} 1 & 2 & 1 \\ 1 & -1 & -2 \\ 1 & 1 & -1 \end{vmatrix}$$
-      Dengan metode Sarrus:<br>
-      Diagonal turun (+):<br>$(1)(-1)(-1) + (2)(-2)(1)$ $+\,(1)(1)(1)$<br>$= 1 - 4 + 1 = -2$<br>
-      Diagonal naik (−):<br>$(1)(-1)(1) + (1)(-2)(1)$ $+\,(2)(1)(-1)$<br>$= -1 - 2 - 2 = -5$<br>
-      $D = -2 - (-5) = \mathbf{3}$<br><br>
-      $D_x = \begin{vmatrix} 2 & 2 & 1 \\ -1 & -1 & -2 \\ 3 & 1 & -1 \end{vmatrix} = -6$, $\quad D_y = \begin{vmatrix} 1 & 2 & 1 \\ 1 & -1 & -2 \\ 1 & 3 & -1 \end{vmatrix} = 9$, $\quad D_z = \begin{vmatrix} 1 & 2 & 2 \\ 1 & -1 & -1 \\ 1 & 1 & 3 \end{vmatrix} = -6$<br><br>
-      $x = \dfrac{-6}{3} = \mathbf{-2}$, $\; y = \dfrac{9}{3} = \mathbf{3}$, $\; z = \dfrac{-6}{3} = \mathbf{-2}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung $D$ dengan Sarrus:</strong> diagonal turun $1 - 4 + 1 = -2$, diagonal naik $-1 - 2 - 2 = -5$, sehingga $D = -2 - (-5) = 3$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Ganti kolom dengan konstanta:</strong></p>
+      $$\begin{align*} D_x &= \begin{vmatrix} 2 & 2 & 1 \\ -1 & -1 & -2 \\ 3 & 1 & -1 \end{vmatrix} = -6 \\ D_y &= \begin{vmatrix} 1 & 2 & 1 \\ 1 & -1 & -2 \\ 1 & 3 & -1 \end{vmatrix} = 9 \\ D_z &= \begin{vmatrix} 1 & 2 & 2 \\ 1 & -1 & -1 \\ 1 & 1 & 3 \end{vmatrix} = -6 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Bagi dengan $D$:</strong> $x = \tfrac{-6}{3}$, $y = \tfrac{9}{3}$, $z = \tfrac{-6}{3}$.</p>
+      <div class="sol-jadi">$x = -2$, $y = 3$, dan $z = -2$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 35</div>
+      <div class="box-label">📘 Contoh 38</div>
       <p style="margin:0;font-size:.9rem;">Selesaikan SPL berikut menggunakan metode invers matriks: $\begin{cases} x + y - 2z = 2 \\ x - 3y + z = -3 \\ x - y + z = 1 \end{cases}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $A = \begin{bmatrix} 1 & 1 & -2 \\ 1 & -3 & 1 \\ 1 & -1 & 1 \end{bmatrix}$ dengan $\det(A) = -6$, sehingga$$A^{-1} = \frac{1}{-6}\begin{bmatrix} -2 & 1 & -5 \\ 0 & 3 & -3 \\ 2 & 2 & -4 \end{bmatrix}$$
-      $$\begin{align*} \begin{bmatrix} x \\ y \\ z \end{bmatrix} &= \frac{1}{-6}\begin{bmatrix} -2 & 1 & -5 \\ 0 & 3 & -3 \\ 2 & 2 & -4 \end{bmatrix}\begin{bmatrix} 2 \\ -3 \\ 1 \end{bmatrix} \\ &= \frac{1}{-6}\begin{bmatrix} -12 \\ -12 \\ -6 \end{bmatrix} = \begin{bmatrix} 2 \\ 2 \\ 1 \end{bmatrix} \end{align*}$$
-      Jadi $x = 2$, $y = 2$, $z = 1$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis matriks koefisien:</strong> $A = \begin{bmatrix} 1 & 1 & -2 \\ 1 & -3 & 1 \\ 1 & -1 & 1 \end{bmatrix}$ dengan $\det(A) = -6$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Susun invers dari adjoin:</strong></p>
+      $$A^{-1} = -\frac{1}{6}\begin{bmatrix} -2 & 1 & -5 \\ 0 & 3 & -3 \\ 2 & 2 & -4 \end{bmatrix}$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Kalikan $A^{-1}$ dengan matriks konstanta:</strong></p>
+      $$\begin{align*} \begin{bmatrix} x \\ y \\ z \end{bmatrix} &= -\frac{1}{6}\begin{bmatrix} -2 & 1 & -5 \\ 0 & 3 & -3 \\ 2 & 2 & -4 \end{bmatrix}\begin{bmatrix} 2 \\ -3 \\ 1 \end{bmatrix} \\ &= -\frac{1}{6}\begin{bmatrix} -12 \\ -12 \\ -6 \end{bmatrix} = \begin{bmatrix} 2 \\ 2 \\ 1 \end{bmatrix} \end{align*}$$
+      <div class="sol-jadi">$x = 2$, $y = 2$, dan $z = 1$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 36</div>
+      <div class="box-label">📘 Contoh 39</div>
       <p style="margin:0;font-size:.9rem;">Selesaikan dengan metode invers matriks: $\begin{cases} 2x - 3y + 2z = -3 \\ x + 2y + z = 2 \\ 2x - y + 3z = 1 \end{cases}$</p>
     </div>
     <div class="penyelesaian">
-      <br>
-      $A = \begin{bmatrix} 2 & -3 & 2 \\ 1 & 2 & 1 \\ 2 & -1 & 3 \end{bmatrix}$<br><br>
-      <strong>Kofaktor:</strong>
-      $$\begin{align*} C_{11} &= +\begin{vmatrix}2&1\\-1&3\end{vmatrix} = 7 \\ C_{12} &= -\begin{vmatrix}1&1\\2&3\end{vmatrix} = -1 \\ C_{13} &= +\begin{vmatrix}1&2\\2&-1\end{vmatrix} = -5 \\ C_{21} &= -\begin{vmatrix}-3&2\\-1&3\end{vmatrix} = 7 \\ C_{22} &= +\begin{vmatrix}2&2\\2&3\end{vmatrix} = 2 \\ C_{23} &= -\begin{vmatrix}2&-3\\2&-1\end{vmatrix} = -4 \\ C_{31} &= +\begin{vmatrix}-3&2\\2&1\end{vmatrix} = -7 \\ C_{32} &= -\begin{vmatrix}2&2\\1&1\end{vmatrix} = 0 \\ C_{33} &= +\begin{vmatrix}2&-3\\1&2\end{vmatrix} = 7 \end{align*}$$
-      $\det(A) = 2(7) + (-3)(-1) + 2(-5)$<br>$\phantom{\det(A)} = 14 + 3 - 10 = 7$<br><br>
-      $$\begin{gather*} \text{adj}(A) = C^{\mathrm{T}} = \begin{bmatrix} 7 & 7 & -7 \\ -1 & 2 & 0 \\ -5 & -4 & 7 \end{bmatrix} \\ A^{-1} = \frac{1}{7}\begin{bmatrix} 7 & 7 & -7 \\ -1 & 2 & 0 \\ -5 & -4 & 7 \end{bmatrix} \end{gather*}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung sembilan kofaktor</strong> dari $A = \begin{bmatrix} 2 & -3 & 2 \\ 1 & 2 & 1 \\ 2 & -1 & 3 \end{bmatrix}$:</p>
+      $$\begin{align*} C_{11} &= +\begin{vmatrix} 2 & 1 \\ -1 & 3 \end{vmatrix} = 7 \\ C_{12} &= -\begin{vmatrix} 1 & 1 \\ 2 & 3 \end{vmatrix} = -1 \\ C_{13} &= +\begin{vmatrix} 1 & 2 \\ 2 & -1 \end{vmatrix} = -5 \\ C_{21} &= -\begin{vmatrix} -3 & 2 \\ -1 & 3 \end{vmatrix} = 7 \\ C_{22} &= +\begin{vmatrix} 2 & 2 \\ 2 & 3 \end{vmatrix} = 2 \\ C_{23} &= -\begin{vmatrix} 2 & -3 \\ 2 & -1 \end{vmatrix} = -4 \\ C_{31} &= +\begin{vmatrix} -3 & 2 \\ 2 & 1 \end{vmatrix} = -7 \\ C_{32} &= -\begin{vmatrix} 2 & 2 \\ 1 & 1 \end{vmatrix} = 0 \\ C_{33} &= +\begin{vmatrix} 2 & -3 \\ 1 & 2 \end{vmatrix} = 7 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung determinan:</strong> $2(7) + (-3)(-1) + 2(-5) = 7$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Susun invers:</strong></p>
+      $$A^{-1} = \frac{1}{7}\begin{bmatrix} 7 & 7 & -7 \\ -1 & 2 & 0 \\ -5 & -4 & 7 \end{bmatrix}$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Kalikan dengan matriks konstanta:</strong></p>
       $$\begin{align*} \begin{bmatrix} x \\ y \\ z \end{bmatrix} &= \frac{1}{7}\begin{bmatrix} 7 & 7 & -7 \\ -1 & 2 & 0 \\ -5 & -4 & 7 \end{bmatrix}\begin{bmatrix} -3 \\ 2 \\ 1 \end{bmatrix} \\ &= \frac{1}{7}\begin{bmatrix} -14 \\ 7 \\ 14 \end{bmatrix} = \begin{bmatrix} -2 \\ 1 \\ 2 \end{bmatrix} \end{align*}$$
-      Jadi $x = -2$, $y = 1$, $z = 2$.
+      <div class="sol-jadi">$x = -2$, $y = 1$, dan $z = 2$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 40</div>
+      <p style="margin:0;font-size:.9rem;">Di sebuah pasar, $2$ kg apel, $1$ kg jeruk, dan $1$ kg mangga seharga Rp70.000; $1$ kg apel, $2$ kg jeruk, dan $1$ kg mangga seharga Rp60.000; $1$ kg apel, $1$ kg jeruk, dan $2$ kg mangga seharga Rp70.000. Tentukan harga per kg setiap buah dengan metode Cramer.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Buat model</strong> (harga dalam ribu rupiah): $a$ apel, $j$ jeruk, $m$ mangga.</p>
+      $$\begin{cases} 2a + j + m = 70 \\ a + 2j + m = 60 \\ a + j + 2m = 70 \end{cases}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung determinan koefisien:</strong> $D = \begin{vmatrix} 2 & 1 & 1 \\ 1 & 2 & 1 \\ 1 & 1 & 2 \end{vmatrix} = 4$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Ganti kolom dengan konstanta:</strong></p>
+      $$\begin{align*} D_a &= \begin{vmatrix} 70 & 1 & 1 \\ 60 & 2 & 1 \\ 70 & 1 & 2 \end{vmatrix} = 80 \\ D_j &= \begin{vmatrix} 2 & 70 & 1 \\ 1 & 60 & 1 \\ 1 & 70 & 2 \end{vmatrix} = 40 \\ D_m &= \begin{vmatrix} 2 & 1 & 70 \\ 1 & 2 & 60 \\ 1 & 1 & 70 \end{vmatrix} = 80 \end{align*}$$
+      <p class="sol-step"><span class="sol-no">4</span><strong>Bagi dengan $D$:</strong> $a = \tfrac{80}{4} = 20$, $j = \tfrac{40}{4} = 10$, $m = \tfrac{80}{4} = 20$.</p>
+      <p class="sol-step">Cek: $2(20) + 10 + 20 = 70$ ✓</p>
+      <div class="sol-jadi">apel Rp20.000/kg, jeruk Rp10.000/kg, dan mangga Rp20.000/kg.</div>
     </div>
 
     <div class="box box-latihan">
@@ -1240,8 +1438,8 @@ window.MathJax = {
           <tr><td>$AX = C$</td><td>$X = A^{-1}C$</td><td>Kalikan $A^{-1}$ dari <strong>kiri</strong></td></tr>
           <tr><td>$XA = C$</td><td>$X = CA^{-1}$</td><td>Kalikan $A^{-1}$ dari <strong>kanan</strong></td></tr>
           <tr><td>$AXB = C$</td><td>$X = A^{-1}CB^{-1}$</td><td>Kalikan $A^{-1}$ dari kiri, $B^{-1}$ dari kanan</td></tr>
-          <tr><td>SPL: metode invers</td><td>$\mathbf{x} = A^{-1}\mathbf{d}$</td><td>$A\mathbf{x}=\mathbf{d}$; berlaku jika $\det(A) \neq 0$</td></tr>
-          <tr><td>SPL: metode Cramer</td><td>$x_i = \dfrac{D_{x_i}}{D}$, $D = \det(A)$</td><td>Ganti kolom ke-$i$ matriks $A$ dengan vektor $\mathbf{d}$</td></tr>
+          <tr><td>SPL: metode invers</td><td>$X = A^{-1}K$</td><td>$AX = K$; berlaku jika $\det(A) \neq 0$</td></tr>
+          <tr><td>SPL: metode Cramer</td><td>$x_i = \dfrac{D_{x_i}}{D}$, $D = \det(A)$</td><td>Ganti kolom ke-$i$ matriks $A$ dengan matriks konstanta $K$</td></tr>
         </tbody>
       </table>
     </div>
@@ -1473,59 +1671,61 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     1: [
       { jawaban: `$A+B-C=\\begin{bmatrix}-2&-9\\\\0&-1\\end{bmatrix}$` },
-      { jawaban: `$=\\begin{bmatrix}3&-6\\\\12&0\\end{bmatrix}-\\begin{bmatrix}3&2\\\\-1&4\\end{bmatrix}$<br>$\\quad+\\begin{bmatrix}-2&10\\\\0&-6\\end{bmatrix}=\\begin{bmatrix}-2&2\\\\13&-10\\end{bmatrix}$` },
-      { jawaban: `$3X=\\begin{bmatrix}9&3\\\\0&-12\\end{bmatrix}+\\begin{bmatrix}2&-6\\\\8&4\\end{bmatrix}$<br>$\\phantom{3X}=\\begin{bmatrix}11&-3\\\\8&-8\\end{bmatrix}$<br>$X=\\begin{bmatrix}\\frac{11}{3}&-1\\\\\\frac{8}{3}&-\\frac{8}{3}\\end{bmatrix}$` },
+      { jawaban: `$=\\begin{bmatrix}3&-6\\\\12&0\\end{bmatrix}-\\begin{bmatrix}3&2\\\\-1&4\\end{bmatrix}$<br>$+\\begin{bmatrix}-2&10\\\\0&-6\\end{bmatrix}=\\begin{bmatrix}-2&2\\\\13&-10\\end{bmatrix}$` },
+      { jawaban: `$3X=\\begin{bmatrix}9&3\\\\0&-12\\end{bmatrix}+\\begin{bmatrix}2&-6\\\\8&4\\end{bmatrix}$<br>$=\\begin{bmatrix}11&-3\\\\8&-8\\end{bmatrix}$<br>$X=\\begin{bmatrix}\\frac{11}{3}&-1\\\\\\frac{8}{3}&-\\frac{8}{3}\\end{bmatrix}$` },
       { jawaban: `$\\begin{bmatrix}2x-4&6-z\\\\3&2y-5\\end{bmatrix}=\\begin{bmatrix}0&1\\\\3&-1\\end{bmatrix}$<br>$x=2$, $z=5$, $y=2$` },
       { jawaban: `$2X=\\begin{bmatrix}4&-2&6\\\\2&10&-4\\end{bmatrix}$<br>$X=\\begin{bmatrix}2&-1&3\\\\1&5&-2\\end{bmatrix}$` },
-      { jawaban: `$B=-A=\\begin{bmatrix}-3&-4\\\\5&0\\end{bmatrix}$<br>$A+2B=A-2A$<br>$\\phantom{A+2B}=-A=\\begin{bmatrix}-3&-4\\\\5&0\\end{bmatrix}$` },
+      { jawaban: `$B=-A=\\begin{bmatrix}-3&-4\\\\5&0\\end{bmatrix}$<br>$A+2B=A-2A$<br>$=-A=\\begin{bmatrix}-3&-4\\\\5&0\\end{bmatrix}$` },
     ],
     2: [
       { jawaban: `(a) $\\begin{bmatrix}4&-6\\\\2&12\\end{bmatrix}$ &nbsp; (b) $\\begin{bmatrix}-2&3\\\\3&2\\end{bmatrix}$` },
       { jawaban: `$AB=\\begin{bmatrix}\\frac{15}{2}&\\frac{13}{4}\\\\\\frac{1}{2}&-4\\end{bmatrix}$<br>$BA=\\begin{bmatrix}\\frac{11}{4}&\\frac{11}{4}\\\\\\frac{49}{4}&\\frac{3}{4}\\end{bmatrix}$<br>Jadi $AB\\neq BA$.` },
       { jawaban: `$\\begin{bmatrix}2+2x&4+xy\\\\7&2+3y\\end{bmatrix}=\\begin{bmatrix}8&z\\\\7&5\\end{bmatrix}$<br>$2+2x=8 \\Rightarrow x=3$<br>$2+3y=5 \\Rightarrow y=1$<br>$z=4+xy=7$` },
       { jawaban: `$A^2=\\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}$, $2A=\\begin{bmatrix}2&4\\\\0&-2\\end{bmatrix}$<br>$f(A)=A^2+2A-3I=\\begin{bmatrix}0&4\\\\0&-4\\end{bmatrix}$` },
-      { jawaban: `$AB=\\begin{bmatrix}-3&7\\\\-2&8\\end{bmatrix}$, $(AB)^{\\mathrm{T}}=\\begin{bmatrix}-3&-2\\\\7&8\\end{bmatrix}$<br>$B^{\\mathrm{T}}A^{\\mathrm{T}}=\\begin{bmatrix}-1&0\\\\2&1\\end{bmatrix}\\begin{bmatrix}3&2\\\\1&4\\end{bmatrix}$<br>$\\phantom{B^{\\mathrm{T}}A^{\\mathrm{T}}}=\\begin{bmatrix}-3&-2\\\\7&8\\end{bmatrix}$ ✓` },
+      { jawaban: `$AB=\\begin{bmatrix}-3&7\\\\-2&8\\end{bmatrix}$, $(AB)^{\\mathrm{T}}=\\begin{bmatrix}-3&-2\\\\7&8\\end{bmatrix}$<br>$B^{\\mathrm{T}}A^{\\mathrm{T}}=\\begin{bmatrix}-1&0\\\\2&1\\end{bmatrix}\\begin{bmatrix}3&2\\\\1&4\\end{bmatrix}$<br>$=\\begin{bmatrix}-3&-2\\\\7&8\\end{bmatrix}$ ✓` },
       { jawaban: `Harga $H=\\begin{bmatrix}15\\\\8\\\\12\\end{bmatrix}$, sehingga<br>$PH=\\begin{bmatrix}75+64+36\\\\60+48+84\\end{bmatrix}=\\begin{bmatrix}175\\\\192\\end{bmatrix}$<br>Hari 1: Rp175.000; hari 2: Rp192.000` },
+      { jawaban: `$A^2 = \\begin{bmatrix} 1 & 0 \\\\ 4 & 1 \\end{bmatrix}$, $A^3 = \\begin{bmatrix} 1 & 0 \\\\ 6 & 1 \\end{bmatrix}$<br>Polanya $A^n = \\begin{bmatrix} 1 & 0 \\\\ 2n & 1 \\end{bmatrix}$, jadi $A^5 = \\begin{bmatrix} 1 & 0 \\\\ 10 & 1 \\end{bmatrix}$` },
+      { jawaban: `$A^2 = \\begin{bmatrix} 8 & 16 \\\\ 4 & 8 \\end{bmatrix} = 4A$, jadi $k = 4$<br>$A^3 = 4^2A = 16A = \\begin{bmatrix} 32 & 64 \\\\ 16 & 32 \\end{bmatrix}$` },
     ],
     3: [
       { jawaban: `(a) $20-6=14$<br>(b) $2-18=-16$<br>(c) $24-24=0$ (singular)` },
       { jawaban: `$15x-2(x+1)=24$<br>$13x=26 \\Rightarrow x=2$` },
       { jawaban: `(a) $(-9+16+0)-(0+4+6)=-3$<br>(b) $(36+0-4)-(4+6+0)=22$` },
       { jawaban: `$C_{11}=\\begin{vmatrix}5&-2\\\\1&0\\end{vmatrix}=2$, $C_{31}=\\begin{vmatrix}-1&3\\\\5&-2\\end{vmatrix}=-13$<br>$\\det=2(2)+0+4(-13)=-48$` },
-      { jawaban: `$\\det=2(3x)-x(x)+1(2+3)$<br>$\\phantom{\\det}=-x^2+6x+5=10$<br>$x^2-6x+5=0 \\Rightarrow x=1$ atau $x=5$` },
+      { jawaban: `$\\det=2(3x)-x(x)+1(2+3)$<br>$=-x^2+6x+5=10$<br>$x^2-6x+5=0 \\Rightarrow x=1$ atau $x=5$` },
       { jawaban: `(a) $3^3\\cdot 6=162$<br>(b) $\\det A\\cdot(\\det B)^2=6\\cdot 4=24$<br>(c) $\\dfrac{\\det B}{\\det A}=\\dfrac{-2}{6}=-\\dfrac{1}{3}$` },
       { jawaban: `$AB=\\begin{bmatrix}2&0\\\\5&1\\end{bmatrix}$, $\\det(AB)=2$<br>$\\det A\\cdot\\det B=1\\cdot 2=2$ ✓` },
-      { jawaban: `$\\det=k(k^2-3)-2(k-0)+0$<br>$\\phantom{\\det}=k^3-5k=k(k^2-5)=0$<br>$k=0$ atau $k=\\pm\\sqrt{5}$` },
+      { jawaban: `$\\det=k(k^2-3)-2(k-0)+0$<br>$=k^3-5k=k(k^2-5)=0$<br>$k=0$ atau $k=\\pm\\sqrt{5}$` },
     ],
     4: [
       { jawaban: `(a) $\\det=1$, $A^{-1}=\\begin{bmatrix}2&-7\\\\-1&4\\end{bmatrix}$<br>(b) $\\det=0$, tidak ada invers<br>(c) $\\det=1$, $C^{-1}=\\begin{bmatrix}2&1\\\\5&3\\end{bmatrix}$` },
       { jawaban: `$(k+1)(k+2)-6=0$<br>$k^2+3k-4=0 \\Rightarrow k=1$ atau $k=-4$` },
-      { jawaban: `$AB=\\begin{bmatrix}11&9\\\\12&10\\end{bmatrix}$, $\\det(AB)=2$<br>$(AB)^{-1}=\\dfrac{1}{2}\\begin{bmatrix}10&-9\\\\-12&11\\end{bmatrix}$<br>$\\phantom{(AB)^{-1}}=\\begin{bmatrix}5&-\\frac{9}{2}\\\\-6&\\frac{11}{2}\\end{bmatrix}$` },
+      { jawaban: `$AB=\\begin{bmatrix}11&9\\\\12&10\\end{bmatrix}$, $\\det(AB)=2$<br>$(AB)^{-1}=\\dfrac{1}{2}\\begin{bmatrix}10&-9\\\\-12&11\\end{bmatrix}$<br>$=\\begin{bmatrix}5&-\\frac{9}{2}\\\\-6&\\frac{11}{2}\\end{bmatrix}$` },
       { jawaban: `$\\det A=-1$, $A^{-1}=\\begin{bmatrix}-3&2\\\\5&-3\\end{bmatrix}=B$<br>$x+y=-3$, $3x-1=5$, $z=-3$<br>$x=2$, $y=-5$, $z=-3$` },
       { jawaban: `$\\det A=1$, $A^{-1}=\\begin{bmatrix}2&-5\\\\-1&3\\end{bmatrix}$<br>$(A^{-1})^{-1}=\\dfrac{1}{1}\\begin{bmatrix}3&5\\\\1&2\\end{bmatrix}=A$ ✓` },
       { jawaban: `$(p+2)(p-1)-4=0$<br>$p^2+p-6=0 \\Rightarrow p=-3$ atau $p=2$` },
     ],
     5: [
+      { jawaban: `Sarrus: $(4+0+6)-(0+18-1)$<br>$=10-17=-7$` },
+      { jawaban: `$\\det A=1$. Reduksi $[A\\mid I]$ menghasilkan<br>$A^{-1}=\\begin{bmatrix}-2&-2&3\\\\2&1&-2\\\\-1&0&1\\end{bmatrix}$` },
+      { jawaban: `$\\det B=24$<br>$\\text{adj}(B)=\\begin{bmatrix}7&10&1\\\\-3&6&3\\\\1&-2&7\\end{bmatrix}$<br>$B^{-1}=\\dfrac{1}{24}\\,\\text{adj}(B)$` },
+      { jawaban: `$\\det C=1(3-1)+1(6-0)+0$<br>$=8$<br>$\\text{adj}(C)=\\begin{bmatrix}2&3&-1\\\\-6&3&-1\\\\2&-1&3\\end{bmatrix}$<br>$C^{-1}=\\dfrac{1}{8}\\,\\text{adj}(C)$, dan $C\\cdot C^{-1}=I$ ✓` },
+      { jawaban: `$2(12+2)-a(4-0)$<br>$+1(2-0)=20$<br>$30-4a=20 \\Rightarrow a=\\dfrac{5}{2}$` },
+      { jawaban: `$\\det A=-7$<br>$\\text{adj}(A)=\\begin{bmatrix}-1&-1&3\\\\-4&10&-9\\\\1&-6&4\\end{bmatrix}$<br>$A^{-1}=-\\dfrac{1}{7}\\,\\text{adj}(A)$` },
+    ],
+    6: [
       { jawaban: `$\\det A=1$, $A^{-1}=\\begin{bmatrix}2&-1\\\\-5&3\\end{bmatrix}$<br>$X=A^{-1}\\begin{bmatrix}4&-1\\\\7&2\\end{bmatrix}=\\begin{bmatrix}1&-4\\\\1&11\\end{bmatrix}$` },
-      { jawaban: `$B=\\begin{bmatrix}2&1\\\\-1&3\\end{bmatrix}\\begin{bmatrix}4&3\\\\3&2\\end{bmatrix}^{-1}$<br>$\\phantom{B}=\\begin{bmatrix}2&1\\\\-1&3\\end{bmatrix}\\begin{bmatrix}-2&3\\\\3&-4\\end{bmatrix}$<br>$\\phantom{B}=\\begin{bmatrix}-1&2\\\\11&-15\\end{bmatrix}$` },
+      { jawaban: `$B=\\begin{bmatrix}2&1\\\\-1&3\\end{bmatrix}\\begin{bmatrix}4&3\\\\3&2\\end{bmatrix}^{-1}$<br>$=\\begin{bmatrix}2&1\\\\-1&3\\end{bmatrix}\\begin{bmatrix}-2&3\\\\3&-4\\end{bmatrix}$<br>$=\\begin{bmatrix}-1&2\\\\11&-15\\end{bmatrix}$` },
       { jawaban: `$\\det A=-2$, $A^{-1}=\\begin{bmatrix}-2&1\\\\\\frac{3}{2}&-\\frac{1}{2}\\end{bmatrix}$<br>$B=A^{-1}C=\\begin{bmatrix}-5&-8\\\\4&5\\end{bmatrix}$` },
       { jawaban: `Misal $P=\\begin{bmatrix}2&-1\\\\-3&2\\end{bmatrix}$, $Q=\\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}$<br>$X=P^{-1}\\begin{bmatrix}5&6\\\\-3&-4\\end{bmatrix}Q^{-1}$<br>$P^{-1}=\\begin{bmatrix}2&1\\\\3&2\\end{bmatrix}$, $Q^{-1}=\\begin{bmatrix}-2&1\\\\\\frac{3}{2}&-\\frac{1}{2}\\end{bmatrix}$<br>$X=\\begin{bmatrix}7&8\\\\9&10\\end{bmatrix}Q^{-1}=\\begin{bmatrix}-2&3\\\\-3&4\\end{bmatrix}$` },
       { jawaban: `$(AB)^{-1}=C \\Rightarrow AB=C^{-1}$<br>$\\Rightarrow A=C^{-1}B^{-1}$<br>$C^{-1}=\\begin{bmatrix}2&-1\\\\-3&2\\end{bmatrix}$, $B^{-1}=\\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}$<br>$A=\\begin{bmatrix}7&-5\\\\-11&8\\end{bmatrix}$` },
       { jawaban: `Jumlahkan kedua persamaan: $3X=\\begin{bmatrix}6&3\\\\3&3\\end{bmatrix}$<br>$X=\\begin{bmatrix}2&1\\\\1&1\\end{bmatrix}$<br>$Y=\\begin{bmatrix}5&1\\\\3&-2\\end{bmatrix}-2X=\\begin{bmatrix}1&-1\\\\1&-4\\end{bmatrix}$` },
     ],
-    6: [
-      { jawaban: `Sarrus: $(4+0+6)-(0+18-1)$<br>$=10-17=-7$` },
-      { jawaban: `$\\det A=1$. Reduksi $[A\\mid I]$ menghasilkan<br>$A^{-1}=\\begin{bmatrix}-2&-2&3\\\\2&1&-2\\\\-1&0&1\\end{bmatrix}$` },
-      { jawaban: `$\\det B=24$<br>$\\text{adj}(B)=\\begin{bmatrix}7&10&1\\\\-3&6&3\\\\1&-2&7\\end{bmatrix}$<br>$B^{-1}=\\dfrac{1}{24}\\,\\text{adj}(B)$` },
-      { jawaban: `$\\det C=1(3-1)+1(6-0)+0$<br>$\\phantom{\\det C}=8$<br>$\\text{adj}(C)=\\begin{bmatrix}2&3&-1\\\\-6&3&-1\\\\2&-1&3\\end{bmatrix}$<br>$C^{-1}=\\dfrac{1}{8}\\,\\text{adj}(C)$, dan $C\\cdot C^{-1}=I$ ✓` },
-      { jawaban: `$2(12+2)-a(4-0)$<br>$\\quad+1(2-0)=20$<br>$30-4a=20 \\Rightarrow a=\\dfrac{5}{2}$` },
-      { jawaban: `$\\det A=-7$<br>$\\text{adj}(A)=\\begin{bmatrix}-1&-1&3\\\\-4&10&-9\\\\1&-6&4\\end{bmatrix}$<br>$A^{-1}=-\\dfrac{1}{7}\\,\\text{adj}(A)$` },
-    ],
     7: [
-      { jawaban: `(a) $\\det A=-5$<br>$\\begin{bmatrix}x\\\\y\\end{bmatrix}=\\dfrac{1}{-5}\\begin{bmatrix}-1&-2\\\\-1&3\\end{bmatrix}\\begin{bmatrix}7\\\\-1\\end{bmatrix}$<br>$\\phantom{\\begin{bmatrix}x\\\\y\\end{bmatrix}}=\\begin{bmatrix}1\\\\2\\end{bmatrix}$<br>(b) $\\det A=17$<br>$\\begin{bmatrix}x\\\\y\\end{bmatrix}=\\dfrac{1}{17}\\begin{bmatrix}1&5\\\\-3&2\\end{bmatrix}\\begin{bmatrix}1\\\\-7\\end{bmatrix}=\\begin{bmatrix}-2\\\\-1\\end{bmatrix}$` },
+      { jawaban: `(a) $\\det A=-5$<br>$\\begin{bmatrix}x\\\\y\\end{bmatrix}=\\dfrac{1}{-5}\\begin{bmatrix}-1&-2\\\\-1&3\\end{bmatrix}\\begin{bmatrix}7\\\\-1\\end{bmatrix}$<br>$=\\begin{bmatrix}1\\\\2\\end{bmatrix}$<br>(b) $\\det A=17$<br>$\\begin{bmatrix}x\\\\y\\end{bmatrix}=\\dfrac{1}{17}\\begin{bmatrix}1&5\\\\-3&2\\end{bmatrix}\\begin{bmatrix}1\\\\-7\\end{bmatrix}=\\begin{bmatrix}-2\\\\-1\\end{bmatrix}$` },
       { jawaban: `(a) $D=14$, $D_x=28$, $D_y=-42$<br>$x=2$, $y=-3$<br>(b) $D=14$, $D_x=14$, $D_y=-28$<br>$x=1$, $y=-2$` },
       { jawaban: `$D=-3$, $D_x=-3$, $D_y=-6$, $D_z=3$<br>$x=1$, $y=2$, $z=-1$` },
-      { jawaban: `$\\det A=-7$ (lihat Latihan F no. 6)<br>$\\mathbf{x}=A^{-1}\\mathbf{d}=-\\dfrac{1}{7}\\,\\text{adj}(A)\\begin{bmatrix}4\\\\1\\\\-3\\end{bmatrix}$<br>$\\phantom{\\mathbf{x}}=-\\dfrac{1}{7}\\begin{bmatrix}-14\\\\21\\\\-14\\end{bmatrix}=\\begin{bmatrix}2\\\\-3\\\\2\\end{bmatrix}$` },
+      { jawaban: `$\\det A=-7$ (lihat Latihan E no. 6)<br>$X=A^{-1}K=-\\dfrac{1}{7}\\,\\text{adj}(A)\\begin{bmatrix}4\\\\1\\\\-3\\end{bmatrix}$<br>$=-\\dfrac{1}{7}\\begin{bmatrix}-14\\\\21\\\\-14\\end{bmatrix}=\\begin{bmatrix}2\\\\-3\\\\2\\end{bmatrix}$` },
       { jawaban: `Dengan Cramer: $D=5$, $D_x=5$, $D_y=-10$, $D_z=15$<br>$x=1$, $y=-2$, $z=3$` },
       { jawaban: `$\\begin{cases}x+y+z=60\\\\x+2y-z=50\\\\x-y+2z=35\\end{cases}$, $D=-3$<br>$x=25$, $y=20$, $z=15$<br>Rekening 1: Rp25 juta, rekening 2: Rp20 juta, rekening 3: Rp15 juta` },
     ],
