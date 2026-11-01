@@ -1010,14 +1010,24 @@ window.MathJax = {
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 4)</strong> Tentukanlah himpunan penyelesaian dari $(2x-5)^{4x+3} = (2x-5)^{2x-7}$.</p>
     </div>
     <div class="penyelesaian">
-      <p class="sol-step"><span class="sol-no">1</span><strong>Basis kedua ruas sama,</strong> yaitu $(2x-5)$. Periksa empat kemungkinan:</p>
-      <ul class="sol-cek">
-        <li>Pangkat sama: $4x+3 = 2x-7 \Rightarrow x = -5$ ✓</li>
-        <li>Basis $= 1$: $2x - 5 = 1 \Rightarrow x = 3$ ✓</li>
-        <li>Basis $= 0$: $x = \tfrac{5}{2}$, tetapi pangkat kanan $2(\tfrac{5}{2}) - 7 = -2 < 0$ ✗ (dibuang)</li>
-        <li>Basis $= -1$: $x = 2$, pangkat $4(2)+3 = 11$ dan $2(2)-7 = -3$ sama-sama ganjil ✓</li>
-      </ul>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Basis kedua ruas sama,</strong> yaitu $h(x) = 2x - 5$. Bentuk $h^{f} = h^{g}$ dipenuhi pada <strong>empat kemungkinan</strong>; periksa satu per satu.</p>
+      <div class="sol-part"><span class="sol-tag">1</span><span>Pangkat sama: $f(x) = g(x)$</span></div>
+      $$\begin{align*} 4x + 3 &= 2x - 7 \\ 2x &= -10 \\ x &= -5 \end{align*}$$
+      <p class="sol-step">Cek basis: $2(-5) - 5 = -15 \neq 0$, jadi sah. <strong>$x = -5$ memenuhi.</strong></p>
+      <div class="sol-part"><span class="sol-tag">2</span><span>Basis $= 1$</span></div>
+      $$\begin{align*} 2x - 5 &= 1 \\ x &= 3 \end{align*}$$
+      <p class="sol-step">$1$ dipangkatkan berapa pun tetap $1$, jadi kedua ruas sama. <strong>$x = 3$ memenuhi.</strong></p>
+      <div class="sol-part"><span class="sol-tag">3</span><span>Basis $= 0$</span></div>
+      $$\begin{align*} 2x - 5 &= 0 \\ x &= \tfrac{5}{2} \end{align*}$$
+      <p class="sol-step">Cek pangkat: kiri $4\left(\tfrac{5}{2}\right) + 3 = 13$, kanan $2\left(\tfrac{5}{2}\right) - 7 = -2$.</p>
+      <p class="sol-step">Ruas kanan menjadi $0^{-2} = \dfrac{1}{0^2}$, <strong>tidak terdefinisi</strong>. Jadi $x = \tfrac{5}{2}$ <strong>dibuang</strong>.</p>
+      <div class="sol-part"><span class="sol-tag">4</span><span>Basis $= -1$</span></div>
+      $$\begin{align*} 2x - 5 &= -1 \\ x &= 2 \end{align*}$$
+      <p class="sol-step">Cek pangkat: kiri $4(2) + 3 = 11$, kanan $2(2) - 7 = -3$. Keduanya <strong>ganjil</strong>, sehingga $(-1)^{11} = -1 = (-1)^{-3}$. <strong>$x = 2$ memenuhi.</strong></p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Rangkum hasil keempat kemungkinan:</strong></p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Kemungkinan</th><th>Nilai $x$</th><th>Keterangan</th></tr></thead><tbody><tr><td>Pangkat sama</td><td>$-5$</td><td>memenuhi</td></tr><tr><td>Basis $= 1$</td><td>$3$</td><td>memenuhi</td></tr><tr><td>Basis $= 0$</td><td>$\tfrac{5}{2}$</td><td>dibuang</td></tr><tr><td>Basis $= -1$</td><td>$2$</td><td>memenuhi</td></tr></tbody></table></div>
       <div class="sol-jadi">$\text{HP} = \{-5,\ 2,\ 3\}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "(2x-5)^{4x+3} = (2x-5)^{2x-7}", "note": "Soal: tentukan himpunan penyelesaian."}, {"tex": "\\color{#0d9488}{(2x-5)}^{\\color{#d97706}{4x+3}} = \\color{#0d9488}{(2x-5)}^{\\color{#7c3aed}{2x-7}}", "note": "Basis kedua ruas sama (hijau), pangkatnya berbeda (oranye dan ungu). Ada <strong>empat kemungkinan<\/strong> yang harus diperiksa."}, {"tex": "\\color{#d97706}{4x + 3} = \\color{#7c3aed}{2x - 7}", "note": "<strong>Kemungkinan 1:<\/strong> pangkatnya sama."}, {"tex": "2x = -10 \\;\\;\\to\\;\\; \\color{#e11d48}{x = -5}", "note": "Selesaikan. Basis $2(-5) - 5 = -15 \\neq 0$, jadi $x = -5$ <strong>memenuhi<\/strong>."}, {"tex": "\\color{#0d9488}{2x - 5} = 1", "note": "<strong>Kemungkinan 2:<\/strong> basisnya $1$, karena $1$ dipangkatkan berapa pun tetap $1$."}, {"tex": "\\color{#e11d48}{x = 3}", "note": "$2x = 6$, jadi $x = 3$ <strong>memenuhi<\/strong>."}, {"tex": "\\color{#0d9488}{2x - 5} = 0 \\;\\;\\to\\;\\; x = \\tfrac{5}{2}", "note": "<strong>Kemungkinan 3:<\/strong> basisnya $0$. Periksa dulu pangkatnya."}, {"tex": "0^{\\color{#d97706}{13}} = 0^{\\color{#7c3aed}{-2}}", "note": "Pangkat kiri $13$, pangkat kanan $-2$. Padahal $0^{-2} = \\tfrac{1}{0^2}$ tidak terdefinisi."}, {"tex": "x = \\tfrac{5}{2} \\;\\;\\color{#e11d48}{\\text{dibuang}}", "note": "Karena ada ruas yang tidak terdefinisi, nilai ini <strong>tidak memenuhi<\/strong>."}, {"tex": "\\color{#0d9488}{2x - 5} = -1 \\;\\;\\to\\;\\; x = 2", "note": "<strong>Kemungkinan 4:<\/strong> basisnya $-1$. Syaratnya kedua pangkat sama-sama genap atau sama-sama ganjil."}, {"tex": "(-1)^{\\color{#d97706}{11}} = (-1)^{\\color{#7c3aed}{-3}}", "note": "Pangkat kiri $11$ dan kanan $-3$: keduanya <strong>ganjil<\/strong>, sehingga kedua ruas bernilai $-1$."}, {"tex": "\\color{#e11d48}{x = 2}", "note": "Jadi $x = 2$ <strong>memenuhi<\/strong>."}, {"tex": "\\text{HP} = \\{\\color{#e11d48}{-5},\\ \\color{#e11d48}{2},\\ \\color{#e11d48}{3}\\}", "note": "<strong>Jadi,<\/strong> $\\text{HP} = \\{-5,\\ 2,\\ 3\\}$."}]</script></div>
     </div>
 
     <div class="box box-contoh">
