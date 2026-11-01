@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
 <link rel="apple-touch-icon" href="../../assets/favicon.svg">
-<meta name="description" content="Materi lengkap Kaidah Pencacahan dan Kombinatorika SMA: aturan perkalian & penjumlahan, permutasi, kombinasi, Segitiga Pascal, dan Binomial Newton. Dilengkapi 49 contoh soal dan pembahasan.">
+<meta name="description" content="Materi lengkap Kaidah Pencacahan dan Kombinatorika SMA: aturan perkalian & penjumlahan, permutasi, kombinasi, Segitiga Pascal, dan Binomial Newton. Dilengkapi 52 contoh soal dan pembahasan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
@@ -31,7 +31,7 @@ window.MathJax = {
 <meta property="og:locale" content="id_ID">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kombinatorika — EksaktaLab">
-<meta name="twitter:description" content="Materi lengkap Kaidah Pencacahan dan Kombinatorika SMA dilengkapi 53 contoh soal.">
+<meta name="twitter:description" content="Materi lengkap Kaidah Pencacahan dan Kombinatorika SMA dilengkapi 52 contoh soal.">
   <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Kombinatorika","url":"https://lutfima11.github.io/eksaktalab/materi/kombinatorika/","description":"Materi lengkap Kaidah Pencacahan dan Kombinatorika SMA.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Statistika"},{"@type":"ListItem","position":4,"name":"Kombinatorika","item":"https://lutfima11.github.io/eksaktalab/materi/kombinatorika/"}]}}</script>
 </head>
@@ -94,7 +94,7 @@ window.MathJax = {
       <div class="materi-tags">
         <span class="tag">Statistika &amp; Peluang</span>
         <span class="tag">5 Sub-bab</span>
-        <span class="tag">49 Contoh Soal</span>
+        <span class="tag">52 Contoh Soal</span>
       </div>
     </div>
   </div>
@@ -230,10 +230,11 @@ window.MathJax = {
     <h3 class="subsection-title">2. Aturan Tabel dan Diagram Cabang</h3>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 1</div>
+      <div class="box-label">📘 Contoh 1</div>
       <p style="margin:0;font-size:.9rem;">Seseorang mempunyai 3 pasang sepatu ($P_1, P_2, P_3$) dan 5 pasang kaus kaki ($K_1\text{–}K_5$). Dengan aturan tabel, tentukan banyaknya cara orang tersebut mengenakan sepatu dan kaus kaki!</p>
     </div>
     <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Buat tabel</strong> pasangan sepatu (baris) dan kaus kaki (kolom):</p>
       <div class="table-wrap" style="margin:.5rem 0;">
         <table class="tbl-mini">
           <thead><tr><th>$P \backslash K$</th><th>$K_1$</th><th>$K_2$</th><th>$K_3$</th><th>$K_4$</th><th>$K_5$</th></tr></thead>
@@ -244,14 +245,16 @@ window.MathJax = {
           </tbody>
         </table>
       </div>
-      Jadi banyaknya cara $= 3 \times 5 = \mathbf{15}$ cara.
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung isi tabel:</strong> $3$ baris $\times$ $5$ kolom.</p>
+      <div class="sol-jadi">banyaknya cara $3 \times 5 = 15$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 2</div>
+      <div class="box-label">📘 Contoh 2</div>
       <p style="margin:0;font-size:.9rem;">Ahmad dan Budi adalah calon ketua OSIS, Mahmud, Cici, dan Gani adalah calon wakil, serta Yuli dan Susi adalah calon sekretaris. Dengan diagram cabang, tentukan banyaknya kemungkinan susunan pengurus inti!</p>
     </div>
     <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Diagram cabang</strong> ketua → wakil → sekretaris:</p>
       <div class="branch-tree">
         <strong>Ketua A:</strong><br>
         &nbsp;&nbsp;&mdash; Wakil M &rarr; Sekretaris Y &rarr; <em>AMY</em><br>
@@ -265,14 +268,16 @@ window.MathJax = {
         &nbsp;&nbsp;&mdash; Wakil C &rarr; Y: <em>BCY</em> &nbsp; S: <em>BCS</em><br>
         &nbsp;&nbsp;&mdash; Wakil G &rarr; Y: <em>BGY</em> &nbsp; S: <em>BGS</em>
       </div>
-      Terdapat $2 \times 3 \times 2 = \mathbf{12}$ kemungkinan susunan pengurus.
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hitung ujung cabang:</strong> $2 \times 3 \times 2$.</p>
+      <div class="sol-jadi">ada $12$ kemungkinan susunan pengurus.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 3</div>
+      <div class="box-label">📘 Contoh 3</div>
       <p style="margin:0;font-size:.9rem;">Terdapat 4 jalan dari kota P ke Q, 3 jalan dari Q ke R, dan 3 jalan dari R ke S. Tentukan banyaknya rute perjalanan dari kota P ke S!</p>
     </div>
     <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Perjalanan berurutan,</strong> jadi pakai aturan perkalian:</p>
       <div class="diagram-slot">
         <div class="slot-box"><div class="slot-n">4</div><div class="slot-lbl">P &rarr; Q</div></div>
         <div class="slot-times">&times;</div>
@@ -280,18 +285,19 @@ window.MathJax = {
         <div class="slot-times">&times;</div>
         <div class="slot-box"><div class="slot-n">3</div><div class="slot-lbl">R &rarr; S</div></div>
       </div>
-      Banyaknya rute $= 4 \times 3 \times 3 = \mathbf{36}$ rute.
+      <div class="sol-jadi">banyaknya rute $4 \times 3 \times 3 = 36$ rute.</div>
     </div>
 
     <h3 class="subsection-title">3. Aturan Perkalian dengan Syarat</h3>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 4</div>
+      <div class="box-label">📘 Contoh 4</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan banyaknya bilangan tiga angka dari $\{3,4,5,6,7\}$ jika:</p>
       <ol class="alpha-list" style="margin:0;"><li>angka tidak boleh berulang</li><li>angka boleh berulang</li></ol>
     </div>
     <div class="penyelesaian">
-      <strong>a. Tidak boleh berulang</strong> &mdash; pilihan berkurang tiap posisi:
+      <div class="sol-part"><span class="sol-tag">a</span><span>Tidak boleh berulang</span></div>
+      <p class="sol-step">Pilihan berkurang satu di setiap posisi.</p>
       <div class="diagram-slot" style="margin:.5rem 0;">
         <div class="slot-box"><div class="slot-n">5</div><div class="slot-lbl">ratusan</div></div>
         <div class="slot-times">&times;</div>
@@ -299,8 +305,10 @@ window.MathJax = {
         <div class="slot-times">&times;</div>
         <div class="slot-box"><div class="slot-n">3</div><div class="slot-lbl">satuan</div></div>
       </div>
-      $$N = 5 \times 4 \times 3 = \boxed{60 \text{ bilangan}}$$
-      <strong>b. Boleh berulang</strong> &mdash; setiap posisi selalu 5 pilihan:
+      $$N = 5 \times 4 \times 3 = 60$$
+      <div class="sol-jadi">ada $60$ bilangan.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Boleh berulang</span></div>
+      <p class="sol-step">Setiap posisi selalu punya 5 pilihan.</p>
       <div class="diagram-slot" style="margin:.5rem 0;">
         <div class="slot-box"><div class="slot-n">5</div><div class="slot-lbl">ratusan</div></div>
         <div class="slot-times">&times;</div>
@@ -308,17 +316,18 @@ window.MathJax = {
         <div class="slot-times">&times;</div>
         <div class="slot-box"><div class="slot-n">5</div><div class="slot-lbl">satuan</div></div>
       </div>
-      $$N = 5 \times 5 \times 5 = \boxed{125 \text{ bilangan}}$$
+      $$N = 5^3 = 125$$
+      <div class="sol-jadi">ada $125$ bilangan.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 5</div>
+      <div class="box-label">📘 Contoh 5</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan banyaknya bilangan tiga angka berbeda dari $\{2,3,4,5,6\}$ yang nilainya:</p>
       <ol class="alpha-list" style="margin:0;"><li>genap</li><li>ganjil</li></ol>
     </div>
     <div class="penyelesaian">
-      Karena ada syarat pada nilai, <strong>isi posisi satuan terlebih dahulu</strong>.<br><br>
-      <strong>a. Bilangan genap</strong> &rarr; satuan dari $\{2,4,6\}$:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat ada pada nilai,</strong> jadi isi posisi satuan lebih dulu.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Genap: satuan dari $\{2, 4, 6\}$</span></div>
       <div class="diagram-slot" style="margin:.5rem 0;">
         <div class="slot-box"><div class="slot-n">4</div><div class="slot-lbl">ratusan (sisa)</div></div>
         <div class="slot-times">&times;</div>
@@ -326,8 +335,9 @@ window.MathJax = {
         <div class="slot-times">&times;</div>
         <div class="slot-box highlight"><div class="slot-n">3</div><div class="slot-lbl">satuan $\{2,4,6\}$</div><div class="slot-hint">isi dulu</div></div>
       </div>
-      $$N = 4 \times 3 \times 3 = \boxed{36 \text{ bilangan}}$$
-      <strong>b. Bilangan ganjil</strong> &rarr; satuan dari $\{3,5\}$:
+      $$N = 4 \times 3 \times 3 = 36$$
+      <div class="sol-jadi">ada $36$ bilangan genap.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Ganjil: satuan dari $\{3, 5\}$</span></div>
       <div class="diagram-slot" style="margin:.5rem 0;">
         <div class="slot-box"><div class="slot-n">4</div><div class="slot-lbl">ratusan (sisa)</div></div>
         <div class="slot-times">&times;</div>
@@ -335,17 +345,18 @@ window.MathJax = {
         <div class="slot-times">&times;</div>
         <div class="slot-box highlight"><div class="slot-n">2</div><div class="slot-lbl">satuan $\{3,5\}$</div><div class="slot-hint">isi dulu</div></div>
       </div>
-      $$N = 4 \times 3 \times 2 = \boxed{24 \text{ bilangan}}$$
+      $$N = 4 \times 3 \times 2 = 24$$
+      <div class="sol-jadi">ada $24$ bilangan ganjil.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 6</div>
+      <div class="box-label">📘 Contoh 6</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Tentukan banyaknya bilangan ribuan dari $\{1,2,3,4,5\}$ tanpa pengulangan, jika nilainya:</p>
       <ol class="alpha-list" style="margin:0;"><li>lebih dari 2.000</li><li>kurang dari 3.000</li></ol>
     </div>
     <div class="penyelesaian">
-      Karena syarat ada pada nilai, <strong>isi posisi ribuan terlebih dahulu</strong>.<br><br>
-      <strong>a. Lebih dari 2.000</strong> &rarr; ribuan dari $\{2,3,4,5\}$:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat ada pada nilai,</strong> jadi isi posisi ribuan lebih dulu.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Lebih dari $2.000$: ribuan dari $\{2, 3, 4, 5\}$</span></div>
       <div class="diagram-slot" style="margin:.5rem 0;">
         <div class="slot-box highlight"><div class="slot-n">4</div><div class="slot-lbl">ribuan $\{2,3,4,5\}$</div><div class="slot-hint">isi dulu</div></div>
         <div class="slot-times">&times;</div>
@@ -355,8 +366,9 @@ window.MathJax = {
         <div class="slot-times">&times;</div>
         <div class="slot-box"><div class="slot-n">2</div><div class="slot-lbl">satuan</div></div>
       </div>
-      $$N = 4 \times 4 \times 3 \times 2 = \boxed{96 \text{ bilangan}}$$
-      <strong>b. Kurang dari 3.000</strong> &rarr; ribuan dari $\{1,2\}$:
+      $$N = 4 \times 4 \times 3 \times 2 = 96$$
+      <div class="sol-jadi">ada $96$ bilangan.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Kurang dari $3.000$: ribuan dari $\{1, 2\}$</span></div>
       <div class="diagram-slot" style="margin:.5rem 0;">
         <div class="slot-box highlight"><div class="slot-n">2</div><div class="slot-lbl">ribuan $\{1,2\}$</div><div class="slot-hint">isi dulu</div></div>
         <div class="slot-times">&times;</div>
@@ -366,16 +378,17 @@ window.MathJax = {
         <div class="slot-times">&times;</div>
         <div class="slot-box"><div class="slot-n">2</div><div class="slot-lbl">satuan</div></div>
       </div>
-      $$N = 2 \times 4 \times 3 \times 2 = \boxed{48 \text{ bilangan}}$$
+      $$N = 2 \times 4 \times 3 \times 2 = 48$$
+      <div class="sol-jadi">ada $48$ bilangan.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 7</div>
+      <div class="box-label">📘 Contoh 7</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Enam orang (4 pria: Andi, Budi, Candra, Doni; 2 wanita: Eka, Fani) duduk berdampingan dalam satu baris. Tentukan banyaknya susunan jika:</p>
       <ol class="alpha-list" style="margin:0;"><li>tidak ada syarat (bebas)</li><li>kedua wanita harus selalu berdampingan</li><li>kedua wanita tidak boleh berdampingan</li></ol>
     </div>
     <div class="penyelesaian">
-      <strong>a. Bebas:</strong>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Bebas</span></div>
       <div class="diagram-slot" style="margin:.5rem 0;">
         <div class="slot-box"><div class="slot-n">6</div><div class="slot-lbl">kursi 1</div></div>
         <div class="slot-times">&times;</div>
@@ -389,53 +402,56 @@ window.MathJax = {
         <div class="slot-times">&times;</div>
         <div class="slot-box"><div class="slot-n">1</div><div class="slot-lbl">kursi 6</div></div>
       </div>
-      $$N_a = 6! = \boxed{720 \text{ susunan}}$$
-
-      <strong>b. Kedua wanita harus berdampingan:</strong><br>
-      Gabungkan Eka dan Fani menjadi 1 blok [EF] &rarr; ada 5 objek yang disusun.
-      $$\text{Susunan 5 objek} = 5! = 120 \text{ cara}$$
-      Di dalam blok, Eka dan Fani bisa bertukar: $2! = 2$ cara.
-      $$N_b = 5! \times 2! = 120 \times 2 = \boxed{240 \text{ susunan}}$$
-
-      <strong>c. Kedua wanita tidak boleh berdampingan</strong> &mdash; gunakan <strong>komplemen</strong>:
-      $$N_c = N_a - N_b = 720 - 240 = \boxed{480 \text{ susunan}}$$
+      $$N_a = 6! = 720$$
+      <div class="sol-jadi">$720$ susunan.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Kedua wanita berdampingan</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Satukan</strong> Eka dan Fani menjadi blok $[EF]$, sehingga ada $5$ objek: $5! = 120$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Di dalam blok</strong> keduanya bisa bertukar: $2! = 2$.</p>
+      $$N_b = 5! \times 2! = 240$$
+      <div class="sol-jadi">$240$ susunan.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Kedua wanita tidak berdampingan</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Komplemen dari (b):</strong></p>
+      $$N_c = 720 - 240 = 480$$
+      <div class="sol-jadi">$480$ susunan.</div>
     </div>
 
     <div class="box box-catatan">
       <div class="box-label">&#9888; Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Gunakan <strong>pendekatan komplemen</strong> ketika syarat yang diminta adalah kebalikan dari syarat yang lebih mudah dihitung: $N_{\text{tidak A}} = N_{\text{total}} - N_{\text{selalu A}}$. Pada soal ini, &ldquo;tidak berdampingan&rdquo; lebih sulit dihitung langsung, sehingga lebih efisien menggunakan komplemen.</p>
+      <p style="margin:0;font-size:.9rem;">Gunakan <strong>pendekatan komplemen</strong> ketika syarat yang diminta adalah kebalikan dari syarat yang lebih mudah dihitung: $N_{\text{tidak A}}$ $= N_{\text{total}}$ $- N_{\text{selalu A}}$. Pada soal ini, &ldquo;tidak berdampingan&rdquo; lebih sulit dihitung langsung, sehingga lebih efisien menggunakan komplemen.</p>
     </div>
 
     <h3 class="subsection-title">4. Aturan Penjumlahan</h3>
     <p>Aturan penjumlahan digunakan ketika terdapat <strong>dua atau lebih pilihan yang bersifat eksklusif</strong> (tidak dapat dilakukan sekaligus). Tandanya adalah kata <strong>&ldquo;atau&rdquo;</strong> dalam soal.</p>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 8</div>
+      <div class="box-label">📘 Contoh 8</div>
       <p style="margin:0;font-size:.9rem;">Seorang siswa akan memilih satu buku dari 5 buku matematika, 3 buku fisika, atau 4 buku biologi. Berapa banyak pilihan buku yang tersedia?</p>
     </div>
     <div class="penyelesaian">
-      Karena siswa hanya memilih <strong>satu</strong> buku dari ketiga kategori:
-      $$N = 5 + 3 + 4 = \boxed{12 \text{ pilihan}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hanya memilih satu buku,</strong> jadi pakai aturan penjumlahan:</p>
+      $$N = 5 + 3 + 4 = 12$$
+      <div class="sol-jadi">ada $12$ pilihan buku.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 9</div>
+      <div class="box-label">📘 Contoh 9</div>
       <p style="margin:0;font-size:.9rem;">Seorang siswa akan pergi dari rumah ke sekolah. Tersedia dua pilihan rute: jalan utama (3 jalur) atau jalan alternatif (2 jalur). Siswa hanya bisa memilih <strong>satu</strong> rute setiap kali berangkat. Berapa banyak pilihan perjalanan?</p>
     </div>
     <div class="penyelesaian">
-      Kedua rute bersifat <strong>eksklusif</strong> &mdash; berlaku aturan penjumlahan:
-      $$N = 3 + 2 = \boxed{5 \text{ pilihan perjalanan}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kedua rute tidak bisa dipakai sekaligus,</strong> jadi dijumlah:</p>
+      $$N = 3 + 2 = 5$$
+      <div class="sol-jadi">ada $5$ pilihan perjalanan.</div>
     </div>
 
     <h3 class="subsection-title">5. Gabungan Aturan Perkalian dan Penjumlahan</h3>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 10</div>
+      <div class="box-label">📘 Contoh 10</div>
       <p style="margin:0;font-size:.9rem;">Dari angka $\{1,2,3,4,5,6\}$ tanpa pengulangan, berapa banyak bilangan tiga angka yang nilainya <strong>kurang dari 300 atau lebih dari 500</strong>?</p>
     </div>
     <div class="penyelesaian">
-      Dua syarat tersebut tidak dapat dipenuhi sekaligus &mdash; bagi menjadi dua kasus.<br><br>
-      <strong>Kasus 1: Kurang dari 300</strong> &rarr; ratusan dari $\{1,2\}$:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bagi menjadi dua kasus</strong> yang tidak mungkin terjadi bersamaan.</p>
+      <div class="sol-part"><span class="sol-tag">1</span><span>Kurang dari $300$: ratusan dari $\{1, 2\}$</span></div>
       <div class="diagram-slot" style="margin:.4rem 0;">
         <div class="slot-box highlight"><div class="slot-n">2</div><div class="slot-lbl">ratusan $\{1,2\}$</div><div class="slot-hint">isi dulu</div></div>
         <div class="slot-times">&times;</div>
@@ -443,8 +459,8 @@ window.MathJax = {
         <div class="slot-times">&times;</div>
         <div class="slot-box"><div class="slot-n">4</div><div class="slot-lbl">satuan</div></div>
       </div>
-      $N_1 = 2 \times 5 \times 4 = 40$<br><br>
-      <strong>Kasus 2: Lebih dari 500</strong> &rarr; ratusan dari $\{5,6\}$:
+      $$N_1 = 2 \times 5 \times 4 = 40$$
+      <div class="sol-part"><span class="sol-tag">2</span><span>Lebih dari $500$: ratusan dari $\{5, 6\}$</span></div>
       <div class="diagram-slot" style="margin:.4rem 0;">
         <div class="slot-box highlight"><div class="slot-n">2</div><div class="slot-lbl">ratusan $\{5,6\}$</div><div class="slot-hint">isi dulu</div></div>
         <div class="slot-times">&times;</div>
@@ -452,20 +468,25 @@ window.MathJax = {
         <div class="slot-times">&times;</div>
         <div class="slot-box"><div class="slot-n">4</div><div class="slot-lbl">satuan</div></div>
       </div>
-      $N_2 = 2 \times 5 \times 4 = 40$<br><br>
-      Karena kedua kasus eksklusif: $N = 40 + 40 = \boxed{80 \text{ bilangan}}$
+      $$N_2 = 2 \times 5 \times 4 = 40$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Jumlahkan kedua kasus:</strong></p>
+      $$N = 40 + 40 = 80$$
+      <div class="sol-jadi">ada $80$ bilangan.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 11</div>
+      <div class="box-label">📘 Contoh 11</div>
       <p style="margin:0;font-size:.9rem;">Dari Kota A menuju Kota D terdapat jalur: A&rarr;B (2 jalan), A&rarr;C (3 jalan), A&rarr;D langsung (1 jalan), B&rarr;D (2 jalan), C&rarr;D (2 jalan). Berapa banyak jalur dari A ke D?</p>
     </div>
     <div class="penyelesaian">
-      Tiga jalur bersifat eksklusif:<br><br>
-      <strong>Kasus 1: Lewat B</strong> (A&rarr;B&rarr;D): $2 \times 2 = 4$ jalur<br>
-      <strong>Kasus 2: Lewat C</strong> (A&rarr;C&rarr;D): $3 \times 2 = 6$ jalur<br>
-      <strong>Kasus 3: Langsung</strong> (A&rarr;D): $1$ jalur<br><br>
-      $$N = 4 + 6 + 1 = \boxed{11 \text{ jalur}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tiga jalur saling lepas:</strong></p>
+      <ul class="sol-cek">
+        <li>Lewat B: $2 \times 2 = 4$</li>
+        <li>Lewat C: $3 \times 2 = 6$</li>
+        <li>Langsung: $1$</li>
+      </ul>
+      $$N = 4 + 6 + 1 = 11$$
+      <div class="sol-jadi">ada $11$ jalur dari A ke D.</div>
     </div>
 
     <div class="box box-catatan">
@@ -499,12 +520,12 @@ window.MathJax = {
     <h2 class="section-title"><span class="section-badge">B</span>Permutasi</h2>
 
     <h3 class="subsection-title">1. Notasi Faktorial</h3>
-    <p>Misalnya, berapa banyak cara menyusun 4 buku berbeda dalam satu rak? Kita punya 4 pilihan untuk posisi pertama, 3 untuk kedua, 2 untuk ketiga, dan 1 untuk terakhir: $4 \times 3 \times 2 \times 1 = 24$ cara. Perkalian semacam inilah yang disimbolkan dengan notasi faktorial.</p>
+    <p>Misalnya, berapa banyak cara menyusun 4 buku berbeda dalam satu rak? Kita punya 4 pilihan untuk posisi pertama, 3 untuk kedua, 2 untuk ketiga, dan 1 untuk terakhir: $4 \times 3 \times 2 \times 1$ $= 24$ cara. Perkalian semacam inilah yang disimbolkan dengan notasi faktorial.</p>
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Definisi Faktorial</div>
       <p style="margin:.4rem 0;font-size:.9rem;">Jika $n$ adalah bilangan asli, maka <strong>$n$ faktorial</strong> ditulis $n!$ didefinisikan sebagai:</p>
-      <div class="math-block">$$n! = n \times (n-1) \times (n-2) \times \cdots \times 2 \times 1$$</div>
+      <div class="math-block">$$ \begin{gather*} n! = n \times (n-1) \times (n-2) \\ \times \cdots \times 2 \times 1 \end{gather*} $$</div>
       <p style="margin:.3rem 0;font-size:.9rem;"><strong>Kasus khusus:</strong> $0! = 1$ &emsp; <strong>Sifat rekursif:</strong> $n! = n \times (n-1)!$</p>
     </div>
 
@@ -514,27 +535,32 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 12</div>
+      <div class="box-label">📘 Contoh 12</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Hitunglah setiap nilai faktorial berikut:</p>
       <ol class="alpha-list" style="margin:0;"><li>$3! \cdot 4!$</li><li>$\dfrac{8!\cdot 2!}{6!\cdot 5!}$</li></ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$3! = 6,\quad 4! = 24 \implies 3! \cdot 4! = 6 \times 24 = \boxed{144}$</li>
-        <li>$$\frac{8!\cdot 2!}{6!\cdot 5!} = \frac{8 \times 7 \times \cancel{6!} \times \cancel{2!}}{\cancel{6!} \times 5 \times 4 \times 3 \times \cancel{2!}} = \frac{56}{60} = \boxed{\frac{14}{15}}$$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$3! \cdot 4!$</span></div>
+      $$3! \cdot 4! = 6 \times 24 = 144$$
+      <div class="sol-jadi">hasilnya $144$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$\dfrac{8! \cdot 2!}{6! \cdot 5!}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis</strong> $8! = 8 \cdot 7 \cdot 6!$ dan $5! = 5 \cdot 4 \cdot 3 \cdot 2!$, lalu coret $6!$ dan $2!$:</p>
+      $$\frac{8 \times 7}{5 \times 4 \times 3} = \frac{56}{60}$$
+      <div class="sol-jadi">hasilnya $\dfrac{14}{15}$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 13</div>
+      <div class="box-label">📘 Contoh 13</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Uraikanlah bentuk faktorial berikut:</p>
       <ol class="alpha-list" style="margin:0;"><li>$\dfrac{(n-3)!}{(n-6)!}$</li><li>$\dfrac{(n+2)!}{(n-3)!}$</li></ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$$\frac{(n-3)!}{(n-6)!} = \frac{(n-3)(n-4)(n-5)\cancel{(n-6)!}}{\cancel{(n-6)!}} = \boxed{(n-3)(n-4)(n-5)}$$</li>
-        <li>$$\frac{(n+2)!}{(n-3)!} = \frac{(n+2)(n+1)\,n\,(n-1)(n-2)\cancel{(n-3)!}}{\cancel{(n-3)!}} = \boxed{(n+2)(n+1)\,n\,(n-1)(n-2)}$$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$\dfrac{(n - 3)!}{(n - 6)!}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uraikan $(n - 3)!$</strong> sampai muncul $(n - 6)!$, lalu coret.</p>
+      <div class="sol-jadi">hasilnya $(n - 3)(n - 4)(n - 5)$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$\dfrac{(n + 2)!}{(n - 3)!}$</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Uraikan $(n + 2)!$</strong> sampai muncul $(n - 3)!$, lalu coret.</p>
+      <div class="sol-jadi">hasilnya $(n + 2)(n + 1)\,n\,(n - 1)(n - 2)$.</div>
     </div>
 
     <h3 class="subsection-title">2. Permutasi $r$ Objek dari $n$ Objek Berbeda</h3>
@@ -543,63 +569,69 @@ window.MathJax = {
     <div class="box box-rumus">
       <div class="box-label">&bull; Rumus Permutasi</div>
       <p style="margin:.3rem 0;font-size:.9rem;"><strong>Permutasi $r$ objek dari $n$ objek berbeda:</strong></p>
-      <div class="math-block">$$_nP_r = \frac{n!}{(n-r)!} \qquad \text{dengan } 0 \leq r \leq n$$</div>
+      <div class="math-block">$$ \begin{gather*} _nP_r = \frac{n!}{(n-r)!} \\ \text{dengan } 0 \leq r \leq n \end{gather*} $$</div>
       <p style="margin:.3rem 0;font-size:.9rem;"><strong>Permutasi semua $n$ objek</strong> (bila $r = n$): $_nP_n = n!$</p>
     </div>
 
     <div class="box box-catatan">
       <div class="box-label">&#9888; Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;">Notasi $_nP_r$ juga ditulis $P(n,r)$, ${}^nP_r$, atau $A_n^r$. Nilai $_nP_r$ dapat dihitung langsung dengan: $_nP_r = n\,(n-1)\,(n-2)\cdots(n-r+1)$ (perkalian $r$ suku).</p>
+      <p style="margin:0;font-size:.9rem;">Notasi $_nP_r$ juga ditulis $P(n,r)$, ${}^nP_r$, atau $A_n^r$. Nilai $_nP_r$ dapat dihitung langsung dengan: $_nP_r$ $= n\,(n-1)\,(n-2)\cdots(n-r+1)$ (perkalian $r$ suku).</p>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 14</div>
+      <div class="box-label">📘 Contoh 14</div>
       <p style="margin:0;font-size:.9rem;">Tentukan banyaknya susunan 3 huruf dari huruf-huruf $\{a,b,c,d\}$ dengan memperhatikan urutannya!</p>
     </div>
     <div class="penyelesaian">
-      $n=4$, $r=3$: $_4P_3 = \dfrac{4!}{1!} = 4 \times 3 \times 2 = \boxed{24 \text{ susunan}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Urutan diperhatikan,</strong> $n = 4$, $r = 3$:</p>
+      $${}_4P_3 = \frac{4!}{1!} = 4 \times 3 \times 2 = 24$$
+      <div class="sol-jadi">ada $24$ susunan.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 15</div>
+      <div class="box-label">📘 Contoh 15</div>
       <p style="margin:0;font-size:.9rem;">Terdapat 8 orang juru masak. Dari 8 orang ini ditunjuk 3 orang untuk memasak gulai rendang, sayur lodeh, dan sambal daging (masing-masing satu menu berbeda). Tentukan banyaknya cara penunjukan!</p>
     </div>
     <div class="penyelesaian">
-      $n=8$, $r=3$ (urutan penting, tugas berbeda):
-      $$_8P_3 = \frac{8!}{5!} = 8 \times 7 \times 6 = \boxed{336 \text{ cara}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tiap orang mendapat menu berbeda,</strong> jadi urutan penting ($n = 8$, $r = 3$):</p>
+      $${}_8P_3 = \frac{8!}{5!} = 8 \times 7 \times 6 = 336$$
+      <div class="sol-jadi">ada $336$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 16</div>
+      <div class="box-label">📘 Contoh 16</div>
       <p style="margin:0;font-size:.9rem;">Enam orang siswa akan berbaris membentuk satu barisan. Tentukan banyaknya susunan barisan!</p>
     </div>
     <div class="penyelesaian">
-      $P_6 = 6! = 6 \times 5 \times 4 \times 3 \times 2 \times 1 = \boxed{720 \text{ susunan}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Menyusun semua 6 orang:</strong></p>
+      $$P_6 = 6! = 720$$
+      <div class="sol-jadi">ada $720$ susunan.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 17</div>
+      <div class="box-label">📘 Contoh 17</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Empat orang lelaki dan dua orang wanita berdiri membentuk satu barisan. Tentukan banyaknya susunan jika:</p>
       <ol class="alpha-list" style="margin:0;"><li>lelaki dan wanita boleh bercampur</li><li>lelaki dan wanita tidak boleh bercampur</li></ol>
     </div>
     <div class="penyelesaian">
-      <strong>a. Boleh bercampur:</strong> $P_6 = 6! = \boxed{720 \text{ susunan}}$<br><br>
-      <strong>b. Tidak boleh bercampur</strong> &mdash; kelompokkan menjadi 1 blok lelaki $[L_1L_2L_3L_4]$ dan 1 blok wanita $[W_1W_2]$:<br>
-      <ul style="margin:.4rem 0;padding-left:1.3rem;font-size:.9rem;">
-        <li>Susunan 2 blok: $2! = 2$ cara</li>
-        <li>Di dalam blok lelaki: $4! = 24$ cara</li>
-        <li>Di dalam blok wanita: $2! = 2$ cara</li>
-      </ul>
-      $$N_b = 2! \times 4! \times 2! = 2 \times 24 \times 2 = \boxed{96 \text{ susunan}}$$
+      <div class="sol-part"><span class="sol-tag">a</span><span>Boleh bercampur</span></div>
+      $$6! = 720$$
+      <div class="sol-jadi">$720$ susunan.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Tidak boleh bercampur</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Dua blok:</strong> blok lelaki dan blok wanita, $2! = 2$ cara.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Di dalam blok:</strong> lelaki $4! = 24$, wanita $2! = 2$.</p>
+      $$N_b = 2! \times 4! \times 2! = 96$$
+      <div class="sol-jadi">$96$ susunan.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 18</div>
+      <div class="box-label">📘 Contoh 18</div>
       <p style="margin:0;font-size:.9rem;">Empat orang pria dan tiga orang wanita berdiri membentuk satu barisan. Jika formasi harus berselang-seling pria&ndash;wanita, tentukan banyaknya formasi!</p>
     </div>
     <div class="penyelesaian">
-      Formasi: P W P W P W P (pria di posisi ganjil, wanita di posisi genap).
-      $$P_4 \times P_3 = 4! \times 3! = 24 \times 6 = \boxed{144 \text{ formasi}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pola formasi:</strong> P W P W P W P, pria di posisi ganjil dan wanita di posisi genap.</p>
+      $$4! \times 3! = 24 \times 6 = 144$$
+      <div class="sol-jadi">ada $144$ formasi.</div>
     </div>
 
     <h3 class="subsection-title">3. Permutasi dengan Unsur yang Sama</h3>
@@ -607,39 +639,42 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Permutasi dengan Unsur yang Sama</div>
-      <div class="math-block">$$P_n = \frac{n!}{n_1!\cdot n_2!\cdot n_3!\cdots n_k!}$$</div>
+      <div class="math-block">$$ \begin{align*} P_n &= \frac{n!}{n_1!\cdot n_2!\cdot n_3!\cdots n_k!} \end{align*} $$</div>
       <p style="margin:.3rem 0;font-size:.9rem;">di mana $n_1+n_2+\cdots+n_k = n$ dan $n_i$ adalah banyaknya unsur jenis ke-$i$ yang sama.</p>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 19</div>
+      <div class="box-label">📘 Contoh 19</div>
       <p style="margin:0;font-size:.9rem;">Tentukan banyaknya susunan huruf yang dapat dibentuk dari huruf-huruf pada kata <strong>&ldquo;PANGAN&rdquo;</strong>!</p>
     </div>
     <div class="penyelesaian">
-      PANGAN: P(1), A(2), N(2), G(1) &mdash; 6 huruf dengan A muncul 2&times;, N muncul 2&times;.
-      $$P = \frac{6!}{2!\cdot 2!} = \frac{720}{4} = \boxed{180 \text{ susunan}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung huruf kembar:</strong> PANGAN berisi $6$ huruf, A dan N masing-masing muncul $2$ kali.</p>
+      $$\frac{6!}{2! \cdot 2!} = \frac{720}{4} = 180$$
+      <div class="sol-jadi">ada $180$ susunan.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 20</div>
+      <div class="box-label">📘 Contoh 20</div>
       <p style="margin:0;font-size:.9rem;">Kode rahasia terdiri dari 7 digit yang disusun dari angka-angka: 2, 2, 2, 3, 3, 5, 5. Berapa banyak kode berbeda yang dapat dibentuk?</p>
     </div>
     <div class="penyelesaian">
-      Total digit $= 7$; angka 2 muncul 3&times;, angka 3 muncul 2&times;, angka 5 muncul 2&times;:
-      $$P = \frac{7!}{3!\cdot 2!\cdot 2!} = \frac{5040}{6 \times 2 \times 2} = \frac{5040}{24} = \boxed{210 \text{ kode}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung angka kembar:</strong> $7$ digit; angka $2$ muncul $3$ kali, angka $3$ dan $5$ masing-masing $2$ kali.</p>
+      $$\frac{7!}{3! \cdot 2! \cdot 2!} = \frac{5040}{24} = 210$$
+      <div class="sol-jadi">ada $210$ kode.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 21</div>
+      <div class="box-label">📘 Contoh 21</div>
       <p style="margin:0;font-size:.9rem;">Empat buah ubin merah, 3 ubin kuning, dan 2 ubin hijau akan disusun berderet satu baris. Tentukan banyaknya cara menyusun kesembilan ubin jika <strong>ubin hijau tidak boleh bersebelahan</strong>!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Langkah 1 &mdash; Total susunan tanpa syarat:</strong>
-      $$P_{\text{total}} = \frac{9!}{4!\cdot 3!\cdot 2!} = \frac{362880}{288} = 1.260$$
-      <strong>Langkah 2 &mdash; Kedua ubin hijau berdampingan</strong> (anggap [HH] sebagai 1 blok):
-      $$P_{\text{berdampingan}} = \frac{8!}{4!\cdot 3!} = \frac{40320}{144} = 280$$
-      <strong>Langkah 3 &mdash; Komplemen:</strong>
-      $$P_{\text{tidak berdampingan}} = 1.260 - 280 = \boxed{980 \text{ cara}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Total tanpa syarat:</strong></p>
+      $$\frac{9!}{4! \cdot 3! \cdot 2!} = 1.260$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Hijau berdampingan:</strong> anggap $[HH]$ satu blok, sehingga ada $8$ objek.</p>
+      $$\frac{8!}{4! \cdot 3!} = 280$$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Komplemen:</strong></p>
+      $$1.260 - 280 = 980$$
+      <div class="sol-jadi">ada $980$ cara.</div>
     </div>
 
     <h3 class="subsection-title">4. Permutasi dengan Pengulangan</h3>
@@ -651,24 +686,26 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 22</div>
+      <div class="box-label">📘 Contoh 22</div>
       <p style="margin:0;font-size:.9rem;">Tentukan banyaknya susunan 3 huruf dari $\{a,b,c,d,e\}$ jika huruf boleh berulang!</p>
     </div>
     <div class="penyelesaian">
-      $n=5$, $r=3$: $\quad 5^3 = \boxed{125 \text{ susunan}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Setiap posisi</strong> punya $5$ pilihan ($n = 5$, $r = 3$):</p>
+      $$5^3 = 125$$
+      <div class="sol-jadi">ada $125$ susunan.</div>
     </div>
 
     <div class="box box-catatan">
       <div class="box-label">&#9888; Catatan Penting</div>
-      <p style="margin:0;font-size:.9rem;"><em>Verifikasi:</em> Untuk setiap posisi ada 5 pilihan (boleh berulang). Dengan aturan perkalian: $5 \times 5 \times 5 = 125$. Contoh susunan: aaa, aab, abc, cba, eee, dst.</p>
+      <p style="margin:0;font-size:.9rem;"><em>Verifikasi:</em> Untuk setiap posisi ada 5 pilihan (boleh berulang). Dengan aturan perkalian: $5 \times 5 \times 5$ $= 125$. Contoh susunan: aaa, aab, abc, cba, eee, dst.</p>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 23</div>
+      <div class="box-label">📘 Contoh 23</div>
       <p style="margin:0;font-size:.9rem;">Berapa banyak bilangan 4 angka dari $\{1,2,3,4,5\}$ (boleh berulang) yang nilainya kurang dari 4000?</p>
     </div>
     <div class="penyelesaian">
-      Syarat: ribuan harus $< 4$ &rarr; dari $\{1,2,3\}$ (3 pilihan):
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat:</strong> ribuan harus $1$, $2$, atau $3$; posisi lain bebas $5$ pilihan.</p>
       <div class="diagram-slot" style="margin:.5rem 0;">
         <div class="slot-box highlight"><div class="slot-n">3</div><div class="slot-lbl">ribuan $\{1,2,3\}$</div><div class="slot-hint">isi dulu</div></div>
         <div class="slot-times">&times;</div>
@@ -678,18 +715,22 @@ window.MathJax = {
         <div class="slot-times">&times;</div>
         <div class="slot-box"><div class="slot-n">5</div><div class="slot-lbl">satuan</div></div>
       </div>
-      $$3 \times 5^3 = 3 \times 125 = \boxed{375 \text{ bilangan}}$$
+      $$3 \times 5^3 = 375$$
+      <div class="sol-jadi">ada $375$ bilangan.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 24</div>
+      <div class="box-label">📘 Contoh 24</div>
       <p style="margin:0;font-size:.9rem;">Sebuah plat nomor terdiri dari 4 digit angka dari $\{1,2,3,4,5\}$ (boleh berulang). Berapa banyak plat nomor yang dapat dibentuk jika angka 1 harus muncul <strong>paling sedikit satu kali</strong>?</p>
     </div>
     <div class="penyelesaian">
-      Gunakan komplemen:<br>
-      Total plat tanpa syarat: $5^4 = 625$<br>
-      Plat tanpa angka 1 sama sekali (hanya $\{2,3,4,5\}$): $4^4 = 256$
-      $$625 - 256 = \boxed{369 \text{ plat nomor}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Gunakan komplemen:</strong> "paling sedikit satu angka 1" = total − tanpa angka 1.</p>
+      <ul class="sol-cek">
+        <li>Total: $5^4 = 625$</li>
+        <li>Tanpa angka $1$: $4^4 = 256$</li>
+      </ul>
+      $$625 - 256 = 369$$
+      <div class="sol-jadi">ada $369$ plat nomor.</div>
     </div>
 
     <h3 class="subsection-title">5. Permutasi Siklis (Melingkar)</h3>
@@ -708,55 +749,73 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 25</div>
+      <div class="box-label">📘 Contoh 25</div>
       <p style="margin:0;font-size:.9rem;">Enam tangkai bunga yang berlainan akan disusun melingkar di atas meja. Tentukan banyaknya cara menyusunnya!</p>
     </div>
     <div class="penyelesaian">
-      $n=6$: $(6-1)! = 5! = \boxed{120 \text{ cara}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Susunan melingkar</strong> $n = 6$ objek:</p>
+      $$(6 - 1)! = 5! = 120$$
+      <div class="sol-jadi">ada $120$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 26</div>
+      <div class="box-label">📘 Contoh 26</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Lima orang (3 pria dan 2 wanita) duduk mengelilingi meja bundar. Tentukan banyaknya susunan jika:</p>
       <ol class="alpha-list" style="margin:0;"><li>tidak ada syarat khusus</li><li>semua wanita harus duduk berdampingan</li></ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>$(5-1)! = 4! = \boxed{24 \text{ cara}}$</li>
-        <li>Anggap 2 wanita sebagai 1 blok &rarr; ada 4 elemen mengelilingi meja: $(4-1)! = 6$ cara. Di dalam blok wanita ada $2! = 2$ susunan: $6 \times 2 = \boxed{12 \text{ cara}}$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Tanpa syarat</span></div>
+      $$(5 - 1)! = 4! = 24$$
+      <div class="sol-jadi">$24$ cara.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Wanita berdampingan</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Satukan</strong> 2 wanita menjadi blok, sehingga ada $4$ objek melingkar: $(4 - 1)! = 6$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Di dalam blok:</strong> $2! = 2$.</p>
+      $$6 \times 2 = 12$$
+      <div class="sol-jadi">$12$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 27</div>
+      <div class="box-label">📘 Contoh 27</div>
       <p style="margin:0;font-size:.9rem;">Acara wisuda dihadiri 1 dekan, 2 wakil dekan, serta 8 mahasiswa (3 Fisika, 3 Kimia, 2 Matematika) dengan meja bundar. Jika <strong>dekan dan kedua wakil harus duduk berdekatan</strong> serta <strong>mahasiswa satu jurusan harus duduk bersama</strong>, tentukan banyaknya susunan!</p>
     </div>
     <div class="penyelesaian">
-      <strong>Langkah 1 &mdash; Bentuk 4 blok:</strong> Pimpinan (3 orang), Fisika (3), Kimia (3), Matematika (2).<br><br>
-      <strong>Langkah 2 &mdash; Susunan siklis 4 blok:</strong> $(4-1)! = 3! = 6$ cara<br><br>
-      <strong>Langkah 3 &mdash; Susunan di dalam tiap blok:</strong>
-      <ul style="margin:.3rem 0;padding-left:1.3rem;font-size:.9rem;">
-        <li>Blok Pimpinan: $3! = 6$</li>
-        <li>Blok Fisika: $3! = 6$</li>
-        <li>Blok Kimia: $3! = 6$</li>
-        <li>Blok Matematika: $2! = 2$</li>
-      </ul>
-      <strong>Langkah 4 &mdash; Kalikan:</strong>
-      $$N = 3! \times 3! \times 3! \times 3! \times 2! = 6 \times 6 \times 6 \times 6 \times 2 = \boxed{2.592 \text{ susunan}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bentuk 4 blok:</strong> pimpinan (3), Fisika (3), Kimia (3), Matematika (2).</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Blok melingkar:</strong> $(4 - 1)! = 3! = 6$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Susunan di dalam blok:</strong> $3!$, $3!$, $3!$, dan $2!$.</p>
+      $$N = 3! \times 3! \times 3! \times 3! \times 2! = 2.592$$
+      <div class="sol-jadi">ada $2.592$ susunan.</div>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Gelang dan Kalung</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Gelang atau kalung dapat <strong>dibalik</strong>, sehingga susunan searah dan berlawanan arah jarum jam dianggap sama:</p>
+      <div class="math-block">$$P_n^{\text{gelang}} = \frac{(n - 1)!}{2}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Delapan manik-manik berbeda warna dirangkai menjadi sebuah gelang. Berapa banyak gelang berbeda yang dapat dibuat?</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Susunan melingkar:</strong> $(8 - 1)! = 7! = 5.040$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Gelang dapat dibalik,</strong> jadi setiap susunan terhitung dua kali.</p>
+      $$\frac{5.040}{2} = 2.520$$
+      <div class="sol-jadi">ada $2.520$ gelang berbeda.</div>
     </div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan B</div>
       <ol class="soal-list">
-        <li>Tentukan nilai $n$ yang memenuhi:<br>(a) $\dfrac{n!}{(n-2)!} = 30$<br>(b) $\dfrac{(n+1)!}{(n-1)!} = 56$</li>
+        <li>Tentukan nilai $n$ yang memenuhi:<br>(a) $\dfrac{n!}{(n-2)!}$ $= 30$<br>(b) $\dfrac{(n+1)!}{(n-1)!}$ $= 56$</li>
         <li>Sebuah tim cerdas cermat akan memilih juara pertama, kedua, dan ketiga dari 8 peserta. Berapa banyak susunan pemenang yang mungkin?</li>
         <li>Panitia festival seni akan menyusun jadwal penampilan 6 grup tari secara berurutan. Berapa banyak urutan penampilan yang dapat dibuat?</li>
         <li>Tentukan banyaknya susunan huruf berbeda yang dapat dibentuk dari kata <strong>&ldquo;STATISTIKA&rdquo;</strong>!</li>
         <li>Empat orang pria dan tiga orang wanita akan berdiri dalam satu barisan. Tentukan banyaknya susunan jika:<br>(a) semua wanita harus <em>selalu berdampingan</em><br>(b) semua pria dan semua wanita masing-masing <em>tidak boleh bercampur</em></li>
         <li>Sistem keamanan menggunakan kode akses 5 karakter dari huruf-huruf kata <strong>&ldquo;PINTU&rdquo;</strong> (semua huruf berbeda). Berapa banyak kode jika:<br>(a) setiap huruf hanya boleh digunakan <em>sekali</em><br>(b) setiap huruf <em>boleh digunakan berulang</em></li>
         <li>Delapan orang (3 anggota keluarga A dan 5 tamu) akan duduk mengelilingi meja bundar. Tentukan banyaknya susunan jika ketiga anggota keluarga A <em>harus selalu duduk berdampingan</em>!</li>
-        <li>Enam orang (4 pria dan 2 wanita) akan berdiri dalam satu barisan. Tentukan banyaknya susunan jika:<br>(a) kedua wanita <em>tidak boleh berdiri berdampingan</em><br>(b) pria dan wanita harus <em>berselang-seling</em></li>
+        <li>Enam orang (4 pria dan 2 wanita) akan berdiri dalam satu barisan. Tentukan banyaknya susunan jika:<br>(a) kedua wanita <em>tidak boleh berdiri berdampingan</em><br>(b) kedua wanita harus berdiri di <em>kedua ujung</em> barisan</li>
         <li>Empat orang pria dan 3 orang wanita akan duduk mengelilingi meja bundar. Tentukan banyaknya formasi duduk jika <em>tidak ada dua wanita yang boleh duduk berdampingan</em>!</li>
+        <li>Tujuh kunci berbeda dipasang pada gantungan kunci berbentuk cincin. Berapa banyak susunan kunci yang berbeda?</li>
       </ol>
     </div>
 
@@ -772,14 +831,14 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Rumus Kombinasi</div>
-      <div class="math-block">$${}_nC_r = \binom{n}{r} = \frac{n!}{r!\cdot(n-r)!} \qquad \text{dengan } 0 \leq r \leq n$$</div>
-      <p style="margin:.3rem 0;font-size:.9rem;"><strong>Hubungan dengan permutasi:</strong> ${}_nC_r = \dfrac{{}_nP_r}{r!}$</p>
+      <div class="math-block">$$ \begin{gather*} {}_nC_r = \binom{n}{r} = \frac{n!}{r!\cdot(n-r)!} \\ \text{dengan } 0 \leq r \leq n \end{gather*} $$</div>
+      <p style="margin:.3rem 0;font-size:.9rem;"><strong>Hubungan dengan permutasi:</strong> ${}_nC_r$ $= \dfrac{{}_nP_r}{r!}$</p>
       <p style="margin:.4rem 0;font-size:.9rem;"><strong>Sifat-sifat penting:</strong></p>
       <ul style="margin:.2rem 0;padding-left:1.3rem;font-size:.9rem;">
         <li>${}_nC_0 = {}_nC_n = 1$</li>
         <li>${}_nC_r = {}_nC_{n-r}$ &ensp;(sifat simetri)</li>
-        <li>${}_nC_r + {}_nC_{r+1} = {}_{n+1}C_{r+1}$ &ensp;(identitas Pascal)</li>
-        <li>$\displaystyle\sum_{r=0}^{n} {}_nC_r = 2^n$ &ensp;(jumlah semua kombinasi)</li>
+        <li>${}_nC_r + {}_nC_{r+1}$ $= {}_{n+1}C_{r+1}$ &ensp;(identitas Pascal)</li>
+        <li>$\displaystyle\sum_{r=0}^{n} {}_nC_r$ $= 2^n$ &ensp;(jumlah semua kombinasi)</li>
       </ul>
     </div>
 
@@ -793,27 +852,31 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 32</div>
+      <div class="box-label">📘 Contoh 29</div>
       <p style="margin:0;font-size:.9rem;">Dari himpunan $A = \{p,q,r,s,t\}$, berapa banyak cara mengambil 2 huruf tanpa memperhatikan urutan?</p>
     </div>
     <div class="penyelesaian">
-      $n=5$, $r=2$: ${}_5C_2 = \dfrac{5!}{2!\cdot 3!} = \dfrac{5 \times 4}{2} = \boxed{10 \text{ cara}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Urutan tidak diperhatikan,</strong> $n = 5$, $r = 2$:</p>
+      $${}_5C_2 = \frac{5 \times 4}{2!} = 10$$
+      <div class="sol-jadi">ada $10$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 33</div>
+      <div class="box-label">📘 Contoh 30</div>
       <p style="margin:0;font-size:.9rem;">Dari 7 orang calon paduan suara akan dipilih 5 orang untuk festival. Tentukan banyaknya cara pemilihan!</p>
     </div>
     <div class="penyelesaian">
-      $n=7$, $r=5$. Gunakan sifat simetri: ${}_7C_5 = {}_7C_2 = \dfrac{7 \times 6}{2} = \boxed{21 \text{ cara}}$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sifat simetri:</strong> ${}_7C_5 = {}_7C_2$.</p>
+      $${}_7C_2 = \frac{7 \times 6}{2} = 21$$
+      <div class="sol-jadi">ada $21$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 34</div>
+      <div class="box-label">📘 Contoh 31</div>
       <p style="margin:0;font-size:.9rem;">Tersedia 5 kelereng merah identik dan 3 kelereng biru identik. Berapa banyak cara mengambil 4 kelereng?</p>
     </div>
     <div class="penyelesaian">
-      Karena kelereng dalam satu warna identik, yang menentukan hanyalah <strong>banyaknya kelereng tiap warna</strong>. Misalkan $m$ kelereng merah dan $b$ kelereng biru diambil, dengan $m+b=4$:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kelereng satu warna identik,</strong> jadi yang menentukan hanya banyaknya tiap warna: $m + b = 4$ dengan $b \leq 3$.</p>
       <div class="table-wrap" style="margin:.6rem 0;">
         <table class="tbl-mini">
           <thead><tr><th>Merah ($m$)</th><th>Biru ($b$)</th><th>Cara</th></tr></thead>
@@ -825,46 +888,49 @@ window.MathJax = {
           </tbody>
         </table>
       </div>
-      $N = \boxed{4 \text{ cara}}$
+      <div class="sol-jadi">ada $4$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 35</div>
-      <p style="margin:0;font-size:.9rem;">Tentukan nilai $r$ jika ${}_6C_r = 2 \cdot {}_5C_r$.</p>
+      <div class="box-label">📘 Contoh 32</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan nilai $r$ jika ${}_6C_r$ $= 2 \cdot {}_5C_r$.</p>
     </div>
     <div class="penyelesaian">
-      <p><strong>Penyelesaian:</strong></p>
-      <div class="math-block">$$\begin{align*}
-\frac{6!}{r!(6-r)!} &= 2 \cdot \frac{5!}{r!(5-r)!} \\[4pt]
-\frac{6 \times \cancel{5!}}{(6-r)!} &= \frac{2 \times \cancel{5!}}{(5-r)!} \\[4pt]
-\frac{6}{(6-r)\cancel{(5-r)!}} &= \frac{2}{\cancel{(5-r)!}} \\[4pt]
-6 &= 2(6-r) \;\Rightarrow\; r = \boxed{3}
-\end{align*}$$</div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis dengan faktorial:</strong></p>
+      $$\frac{6!}{r!\,(6 - r)!} = 2 \cdot \frac{5!}{r!\,(5 - r)!}$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Coret $r!$ dan $5!$,</strong> lalu pakai $(6 - r)!$ $= (6 - r)(5 - r)!$:</p>
+      $$ \begin{align*} \frac{6}{6 - r} &= 2 \\ 6 &= 12 - 2r \end{align*} $$
+      <div class="sol-jadi">$r = 3$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 36</div>
+      <div class="box-label">📘 Contoh 33</div>
       <p style="margin:0;font-size:.9rem;">Dari 20 anggota English Club (10 pria dan 10 wanita) akan dipilih tim 4 pria dan 2 wanita untuk lomba debat. Tentukan banyaknya cara pemilihan!</p>
     </div>
     <div class="penyelesaian">
-      $${}_{10}C_4 \times {}_{10}C_2 = \frac{10\times9\times8\times7}{4!} \times \frac{10\times9}{2} = 210 \times 45 = \boxed{9.450 \text{ cara}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pilih pria dan wanita bersamaan,</strong> jadi dikali:</p>
+      $$ \begin{align*} {}_{10}C_4 \times {}_{10}C_2 &= 210 \times 45 \\ &= 9.450 \end{align*} $$
+      <div class="sol-jadi">ada $9.450$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 37</div>
+      <div class="box-label">📘 Contoh 34</div>
       <p style="margin:0;font-size:.9rem;">Dalam keranjang terdapat 6 kelereng hitam dan 4 kelereng putih. Jika diambil 5 kelereng, tentukan banyaknya cara terambilnya tepat 3 hitam dan 2 putih!</p>
     </div>
     <div class="penyelesaian">
-      $${}_6C_3 \times {}_4C_2 = 20 \times 6 = \boxed{120 \text{ cara}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitam dan putih diambil bersamaan:</strong></p>
+      $${}_6C_3 \times {}_4C_2 = 20 \times 6 = 120$$
+      <div class="sol-jadi">ada $120$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 38</div>
+      <div class="box-label">📘 Contoh 35</div>
       <p style="margin:0;font-size:.9rem;">Dalam sebuah kotak terdapat 5 bola kuning dan 4 bola hijau. Jika diambil 2 bola, tentukan banyaknya kemungkinan terambilnya dua bola berwarna sama!</p>
     </div>
     <div class="penyelesaian">
-      Dua bola berwarna sama $=$ kuning-kuning <strong>atau</strong> hijau-hijau:
-      $${}_5C_2 + {}_4C_2 = 10 + 6 = \boxed{16 \text{ cara}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Dua kuning atau dua hijau</strong> (tidak mungkin sekaligus), jadi dijumlah:</p>
+      $${}_5C_2 + {}_4C_2 = 10 + 6 = 16$$
+      <div class="sol-jadi">ada $16$ cara.</div>
     </div>
 
     <div class="box box-catatan">
@@ -877,26 +943,30 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 39</div>
+      <div class="box-label">📘 Contoh 36</div>
       <p style="margin:0;font-size:.9rem;">Di suatu sekolah terdapat 10 calon pemain voli: 3 kelas X, 2 kelas XI, dan 5 kelas XII. Jika dipilih 6 siswa, tentukan banyaknya cara pemilihan yang terdiri dari 2 siswa kelas X, 2 kelas XI, dan 2 kelas XII!</p>
     </div>
     <div class="penyelesaian">
-      $${}_3C_2 \times {}_2C_2 \times {}_5C_2 = 3 \times 1 \times 10 = \boxed{30 \text{ cara}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pilih dari tiap kelas</strong> secara bersamaan:</p>
+      $$ \begin{align*} {}_3C_2 \times {}_2C_2 \times {}_5C_2 &= 3 \times 1 \times 10 \end{align*} $$
+      <div class="sol-jadi">ada $30$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 40</div>
+      <div class="box-label">📘 Contoh 37</div>
       <p style="margin:0;font-size:.9rem;">Berapa banyak diagonal yang dapat ditarik pada sebuah segi-10 (dekagon)?</p>
     </div>
     <div class="penyelesaian">
-      Total garis dari 10 titik: ${}_{10}C_2 = 45$. Dari 45 tersebut, 10 adalah sisi segi-10 (bukan diagonal).
-      $$\text{Banyak diagonal} = {}_{10}C_2 - 10 = 45 - 10 = \boxed{35 \text{ diagonal}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Garis dari 10 titik sudut:</strong> ${}_{10}C_2 = 45$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kurangi sisi:</strong> $10$ garis di antaranya adalah sisi.</p>
+      $$45 - 10 = 35$$
+      <div class="sol-jadi">ada $35$ diagonal.</div>
     </div>
 
     <div class="box box-catatan">
       <div class="box-label">&#9888; Catatan Penting</div>
       <p style="margin:0;font-size:.9rem;">Secara umum, banyak diagonal sebuah poligon $n$ sisi adalah:
-      $$D = {}_nC_2 - n = \frac{n(n-1)}{2} - n = \frac{n(n-3)}{2}$$</p>
+      $$ \begin{align*} D &= {}_nC_2 - n \\ &= \frac{n(n-1)}{2} - n \\ &= \frac{n(n-3)}{2} \end{align*} $$</p>
     </div>
 
     <h3 class="subsection-title">2. Kombinasi dengan Syarat Wajib atau Larangan</h3>
@@ -911,25 +981,34 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 41</div>
+      <div class="box-label">📘 Contoh 38</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Dari 9 orang anggota OSIS akan dipilih panitia 4 orang. Berapa banyak susunan panitia jika:</p>
       <ol class="alpha-list" style="margin:0;"><li>Andi <em>wajib</em> masuk panitia</li><li>Budi <em>tidak boleh</em> masuk panitia</li><li>Andi <em>wajib</em> masuk <strong>dan</strong> Budi <em>tidak boleh</em> masuk</li></ol>
     </div>
     <div class="penyelesaian">
-      <ol class="alpha-list" style="margin-top:.4rem;">
-        <li>Andi sudah terpilih &rarr; sisa 3 posisi dari 8 orang: ${}_8C_3 = \boxed{56 \text{ cara}}$</li>
-        <li>Budi dikeluarkan &rarr; pilih 4 dari 8 orang: ${}_8C_4 = \boxed{70 \text{ cara}}$</li>
-        <li>Andi wajib (sisa 3 posisi), Budi dilarang (kolam $= 9-2=7$): ${}_7C_3 = \boxed{35 \text{ cara}}$</li>
-      </ol>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Andi wajib</span></div>
+      <p class="sol-step">Sisa $3$ kursi dari $8$ orang.</p>
+      $${}_8C_3 = 56$$
+      <div class="sol-jadi">$56$ cara.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Budi dilarang</span></div>
+      <p class="sol-step">Pilih $4$ dari $8$ orang.</p>
+      $${}_8C_4 = 70$$
+      <div class="sol-jadi">$70$ cara.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Andi wajib, Budi dilarang</span></div>
+      <p class="sol-step">Sisa $3$ kursi dari $7$ orang.</p>
+      $${}_7C_3 = 35$$
+      <div class="sol-jadi">$35$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 42</div>
+      <div class="box-label">📘 Contoh 39</div>
       <p style="margin:0;font-size:.9rem;">Dari 6 pria dan 5 wanita akan dibentuk panitia 5 orang (3 pria dan 2 wanita). Tentukan banyaknya cara jika Pak Hendra (pria) <em>pasti terpilih</em> dan Ibu Sari (wanita) <em>tidak boleh</em> terpilih!</p>
     </div>
     <div class="penyelesaian">
-      Pak Hendra wajib &rarr; sisa 2 pria dari $6-1=5$. Ibu Sari dilarang &rarr; 2 wanita dari $5-1=4$:
-      $${}_5C_2 \times {}_4C_2 = 10 \times 6 = \boxed{60 \text{ cara}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pak Hendra wajib:</strong> sisa $2$ pria dari $5$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Ibu Sari dilarang:</strong> $2$ wanita dari $4$.</p>
+      $${}_5C_2 \times {}_4C_2 = 10 \times 6 = 60$$
+      <div class="sol-jadi">ada $60$ cara.</div>
     </div>
 
     <h3 class="subsection-title">3. Teknik Komplemen</h3>
@@ -937,7 +1016,7 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Rumus Komplemen</div>
-      <div class="math-block">$$n(\text{memenuhi}) = n(\text{total}) - n(\text{tidak memenuhi})$$</div>
+      <div class="math-block">$$ \begin{gather*} n(\text{memenuhi}) = n(\text{total}) \\ -\, n(\text{tidak memenuhi}) \end{gather*} $$</div>
     </div>
 
     <div class="box box-catatan">
@@ -951,11 +1030,11 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 43</div>
+      <div class="box-label">📘 Contoh 40</div>
       <p style="margin:0;font-size:.9rem;">Dari 6 pria dan 4 wanita akan dipilih 5 orang. Berapa banyak cara jika jumlah pria yang terpilih <strong>lebih banyak</strong> dari jumlah wanita?</p>
     </div>
     <div class="penyelesaian">
-      Syarat $p > w$ dengan $p + w = 5$:
+      <p class="sol-step"><span class="sol-no">1</span><strong>Syarat $p > w$</strong> dengan $p + w = 5$ memberi tiga kasus:</p>
       <div class="table-wrap" style="margin:.6rem 0;">
         <table class="tbl-mini">
           <thead><tr><th>Kasus</th><th>Pria ($p$)</th><th>Wanita ($w$)</th><th>Banyak cara</th></tr></thead>
@@ -966,67 +1045,108 @@ window.MathJax = {
           </tbody>
         </table>
       </div>
-      $$N = 120 + 60 + 6 = \boxed{186 \text{ cara}}$$
+      $$N = 120 + 60 + 6 = 186$$
+      <div class="sol-jadi">ada $186$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 44</div>
+      <div class="box-label">📘 Contoh 41</div>
       <p style="margin:0;font-size:.9rem;">Dari 7 orang (4 pria dan 3 wanita) akan dipilih tim 3 orang. Berapa banyak cara pemilihan yang mengandung <em>paling sedikit 1 wanita</em>?</p>
     </div>
     <div class="penyelesaian">
-      Gunakan komplemen: Total $-$ (tidak ada wanita):
-      $$\text{Total} = {}_7C_3 = 35;\quad \text{0 wanita} = {}_4C_3 = 4$$
-      $$\text{Paling sedikit 1 wanita} = 35 - 4 = \boxed{31 \text{ cara}}$$
-      <em>Verifikasi langsung:</em> Tepat 1 wanita: $3\times6=18$; tepat 2 wanita: $3\times4=12$; tepat 3 wanita: $1\times1=1$. Total $= 31$ &#10003;
+      <p class="sol-step"><span class="sol-no">1</span><strong>Komplemen:</strong> total − tanpa wanita.</p>
+      <ul class="sol-cek">
+        <li>Total: ${}_7C_3 = 35$</li>
+        <li>Tanpa wanita: ${}_4C_3 = 4$</li>
+      </ul>
+      $$35 - 4 = 31$$
+      <p class="sol-step">Cek langsung: $18 + 12 + 1 = 31$ ✓</p>
+      <div class="sol-jadi">ada $31$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 45</div>
+      <div class="box-label">📘 Contoh 42</div>
       <p style="margin:0;font-size:.9rem;">Dari 10 orang calon akan dipilih tim 4 orang. Berapa banyak cara jika <em>paling banyak 1 orang</em> dari 3 calon tertentu (A, B, C) yang boleh masuk tim?</p>
     </div>
     <div class="penyelesaian">
-      Gunakan komplemen: Total $-$ (2 atau lebih dari $\{A,B,C\}$ masuk):
-      $${}_{10}C_4 = 210$$
-      Tepat 2 dari $\{A,B,C\}$: ${}_3C_2 \times {}_7C_2 = 3 \times 21 = 63$<br>
-      Tepat 3 dari $\{A,B,C\}$: ${}_3C_3 \times {}_7C_1 = 1 \times 7 = 7$
-      $$\text{Paling banyak 1} = 210 - 63 - 7 = \boxed{140 \text{ cara}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Komplemen:</strong> total − (2 atau 3 dari $\{A, B, C\}$ masuk).</p>
+      <ul class="sol-cek">
+        <li>Total: ${}_{10}C_4 = 210$</li>
+        <li>Tepat 2: ${}_3C_2 \times {}_7C_2$ $= 63$</li>
+        <li>Tepat 3: ${}_3C_3 \times {}_7C_1$ $= 7$</li>
+      </ul>
+      $$210 - 63 - 7 = 140$$
+      <div class="sol-jadi">ada $140$ cara.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 46</div>
+      <div class="box-label">📘 Contoh 43</div>
       <p style="margin:0;font-size:.9rem;">Dari 7 pria dan 5 wanita, pilih 6 orang dengan syarat <strong>paling sedikit 2 pria</strong> dan <strong>paling banyak 4 wanita</strong>. Berapa banyak cara pemilihan?</p>
     </div>
     <div class="penyelesaian">
-      Syarat $w \leq 4$ ekuivalen dengan $p \geq 2$ (karena $p = 6-w \geq 2$). Kasus yang mungkin:
-      <div class="table-wrap" style="margin:.6rem 0;">
-        <table class="tbl-mini">
-          <thead><tr><th>Pria</th><th>Wanita</th><th>Banyak cara</th></tr></thead>
-          <tbody>
-            <tr><td>2</td><td>4</td><td>${}_7C_2 \times {}_5C_4 = 21\times5=105$</td></tr>
-            <tr><td>3</td><td>3</td><td>${}_7C_3 \times {}_5C_3 = 35\times10=350$</td></tr>
-            <tr><td>4</td><td>2</td><td>${}_7C_4 \times {}_5C_2 = 35\times10=350$</td></tr>
-            <tr><td>5</td><td>1</td><td>${}_7C_5 \times {}_5C_1 = 21\times5=105$</td></tr>
-            <tr><td>6</td><td>0</td><td>${}_7C_6 \times {}_5C_0 = 7\times1=7$</td></tr>
-          </tbody>
-        </table>
-      </div>
-      $$N = 105+350+350+105+7 = \boxed{917 \text{ cara}}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kedua syarat sama saja:</strong> $w \leq 4$ berarti $p = 6 - w \geq 2$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Komplemen:</strong> satu-satunya kasus yang dilarang adalah $1$ pria dan $5$ wanita.</p>
+      <ul class="sol-cek">
+        <li>Total: ${}_{12}C_6 = 924$</li>
+        <li>Dilarang: ${}_7C_1 \times {}_5C_5$ $= 7$</li>
+      </ul>
+      $$924 - 7 = 917$$
+      <p class="sol-step">Cara kasus per kasus ($105 + 350 + 350 + 105 + 7$) memberi hasil sama, tetapi jauh lebih panjang.</p>
+      <div class="sol-jadi">ada $917$ cara.</div>
+    </div>
+
+    <h3 class="subsection-title">4. Penerapan: Lintasan Terpendek dan Kombinasi Berulang</h3>
+    <p>Dua tipe soal yang sering muncul di SNBT ternyata adalah kombinasi yang "menyamar".</p>
+    <div class="box box-rumus">
+      <div class="box-label">Dua Rumus Penerapan</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li><strong>Lintasan terpendek</strong> $m$ langkah ke kanan dan $n$ langkah ke atas: $\binom{m + n}{m}$.</li><li><strong>Kombinasi berulang</strong> (memilih $r$ benda dari $k$ jenis, boleh sejenis): $\binom{r + k - 1}{k - 1}$.</li></ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 44</div>
+      <p style="margin:0;font-size:.9rem;">Pada jaringan jalan berpetak $4 \times 3$ di bawah ini, seseorang berjalan dari A ke B hanya ke <strong>kanan</strong> atau ke <strong>atas</strong>. Berapa banyak lintasan terpendek yang mungkin?</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Setiap lintasan</strong> terdiri atas $4$ langkah kanan (K) dan $3$ langkah atas (A), total $7$ langkah.</p>
+      <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 260 200" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="170" x2="30" y2="20" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><line x1="80" y1="170" x2="80" y2="20" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><line x1="130" y1="170" x2="130" y2="20" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><line x1="180" y1="170" x2="180" y2="20" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><line x1="230" y1="170" x2="230" y2="20" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><line x1="30" y1="170" x2="230" y2="170" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><line x1="30" y1="120" x2="230" y2="120" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><line x1="30" y1="70" x2="230" y2="70" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><line x1="30" y1="20" x2="230" y2="20" style="stroke:var(--text-3,#94a3b8);stroke-width:1.4"/><polyline points="30,170 130,170 130,120 180,120 180,20 230,20" style="fill:none;stroke:#0d9488;stroke-width:3.4;stroke-linejoin:round"/><circle cx="30" cy="170" r="5" style="fill:#0d9488"/><circle cx="230" cy="20" r="5" style="fill:#e11d48"/><text x="24" y="186" style="fill:var(--text-2,#475569);font-size:11px;font-weight:600">A</text><text x="234" y="12" style="fill:var(--text-2,#475569);font-size:11px;font-weight:600">B</text><text x="130" y="188" text-anchor="middle" style="fill:var(--text-3,#94a3b8);font-size:10px">contoh: K K A K A A K</text></svg></div>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Lintasan ditentukan</strong> oleh posisi ketiga langkah A di antara $7$ langkah:</p>
+      $$\binom{7}{3} = \frac{7 \times 6 \times 5}{3!} = 35$$
+      <p class="sol-step">Cara lain: permutasi unsur sama $\dfrac{7!}{4! \cdot 3!}$ $= 35$.</p>
+      <div class="sol-jadi">ada $35$ lintasan terpendek.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 45</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Ani membeli $6$ donat dari $3$ rasa (cokelat, keju, stroberi); stok setiap rasa cukup banyak. Berapa banyak pilihan jika:</p><ol class="alpha-list" style="margin:0;"><li>tidak ada syarat</li><li>setiap rasa minimal satu</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>Tanpa syarat</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Model bintang dan sekat:</strong> $6$ donat = $6$ bintang, $3$ rasa dipisah oleh $2$ sekat. Contoh: ★★|★|★★★ berarti 2 cokelat, 1 keju, 3 stroberi.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Pilih posisi sekat</strong> di antara $6 + 2 = 8$ tempat:</p>
+      $$\binom{8}{2} = 28$$
+      <div class="sol-jadi">ada $28$ pilihan.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Setiap rasa minimal satu</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ambil dulu</strong> satu donat tiap rasa, sisa $3$ donat dibagi bebas ke $3$ rasa:</p>
+      $$\binom{3 + 2}{2} = \binom{5}{2} = 10$$
+      <div class="sol-jadi">ada $10$ pilihan.</div>
     </div>
 
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan C</div>
       <ol class="soal-list">
         <li>Hitung nilai berikut, gunakan sifat simetri bila memungkinkan:<br>(a) ${}_{10}C_3$<br>(b) ${}_{12}C_9$<br>(c) ${}_{15}C_{13}$</li>
-        <li>Tentukan nilai $r$ yang memenuhi ${}_8C_r = {}_8C_{r+2}$.</li>
+        <li>Tentukan nilai $r$ yang memenuhi ${}_8C_r$ $= {}_8C_{r+2}$.</li>
         <li>Tersedia 4 bola merah identik dan 5 bola hijau identik. Berapa banyak cara mengambil 6 bola dari kumpulan tersebut?</li>
         <li>Dari 8 pria dan 6 wanita akan dipilih delegasi yang terdiri dari 3 pria dan 2 wanita. Berapa banyak cara pemilihan?</li>
-        <li>Sebuah kotak berisi 6 bola merah dan 5 bola biru. Jika diambil 3 bola, berapa banyak cara terambilnya <em>dua bola berwarna sama</em>?</li>
+        <li>Sebuah kotak berisi 6 bola merah dan 5 bola biru. Jika diambil 3 bola, berapa banyak cara terambilnya <em>tepat dua bola berwarna sama</em>?</li>
         <li>Terdapat 10 titik pada sebuah bidang datar (tidak ada 3 titik yang segaris). Berapa banyak segitiga yang dapat dibentuk?</li>
         <li>Dari 11 orang anggota ekskul akan dipilih pengurus inti 4 orang. Tentukan banyaknya cara jika:<br>(a) Sinta <em>wajib</em> terpilih<br>(b) Bagas <em>tidak boleh</em> terpilih<br>(c) Sinta <em>wajib</em> terpilih <strong>dan</strong> Bagas <em>tidak boleh</em> terpilih</li>
         <li>Dari 7 pria dan 5 wanita akan dibentuk tim 5 orang (3 pria dan 2 wanita). Jika Pak Reza (pria) <em>pasti terpilih</em> dan Bu Nisa (wanita) <em>tidak boleh</em> terpilih, berapa banyak cara?</li>
         <li>Dari 5 pria dan 4 wanita akan dipilih 4 orang. Berapa banyak cara jika jumlah pria yang terpilih <strong>lebih banyak</strong> dari jumlah wanita?</li>
         <li>Dari 9 orang (6 pria dan 3 wanita) akan dipilih tim 4 orang. Berapa banyak cara pemilihan yang terdiri dari <em>paling sedikit 1 wanita</em>?</li>
         <li>Panitia 6 orang akan dibentuk dari 8 pria dan 5 wanita. Berapa banyak susunan panitia jika:<br>(a) terdiri dari <em>tepat</em> 4 pria dan 2 wanita, dengan syarat Pak Hadi (pria) <em>wajib</em> masuk dan Bu Laras (wanita) <em>tidak boleh</em> masuk<br>(b) jumlah pria <em>lebih banyak</em> dari jumlah wanita</li>
+        <li>Pada jaringan jalan berpetak, seseorang berjalan dari $A(0, 0)$ ke $B(5, 3)$ hanya ke kanan atau ke atas. Berapa banyak lintasan terpendek yang <strong>melewati</strong> titik $C(2, 1)$?</li>
+        <li>Berapa banyak penyelesaian bilangan bulat tak negatif dari $x + y + z = 7$?</li>
       </ol>
     </div>
 
@@ -1066,7 +1186,7 @@ window.MathJax = {
         <li>Setiap bilangan diperoleh dari <strong>jumlah dua bilangan di atasnya</strong> (kiri dan kanan).</li>
         <li>Baris ke-$n$ (dimulai dari $n=0$) berisi koefisien-koefisien $\binom{n}{0}, \binom{n}{1}, \ldots, \binom{n}{n}$.</li>
         <li>Jumlah semua bilangan pada baris ke-$n$ adalah $2^n$.</li>
-        <li>Segitiga ini <strong>simetris</strong> karena $\binom{n}{k} = \binom{n}{n-k}$.</li>
+        <li>Segitiga ini <strong>simetris</strong> karena $\binom{n}{k}$ $= \binom{n}{n-k}$.</li>
       </ul>
     </div>
 
@@ -1074,9 +1194,9 @@ window.MathJax = {
 
     <div class="box box-rumus">
       <div class="box-label">&bull; Teorema Binomial Newton</div>
-      <div class="math-block">$$(a+b)^n = \sum_{r=0}^{n} \binom{n}{r}\, a^{\,n-r}\, b^{\,r} = {}_nC_0 a^n + {}_nC_1 a^{n-1}b + \cdots + {}_nC_n b^n$$</div>
+      <div class="math-block">$$ \begin{align*} (a+b)^n &= \sum_{r=0}^{n} \binom{n}{r}\, a^{\,n-r}\, b^{\,r} \\ &= {}_nC_0 a^n + {}_nC_1 a^{n-1}b \\ &\quad + \cdots + {}_nC_n b^n \end{align*} $$</div>
       <p style="margin:.5rem 0;font-size:.9rem;"><strong>Suku ke-$p$</strong> ($p = 1, 2, \ldots, n+1$):</p>
-      <div class="math-block">$$\boxed{U_p = {}_nC_{p-1} \cdot a^{\,n-p+1} \cdot b^{\,p-1}}$$</div>
+      <div class="math-block">$$U_p = {}_nC_{p-1} \cdot a^{\,n-p+1} \cdot b^{\,p-1}$$</div>
     </div>
 
     <div class="box box-catatan">
@@ -1085,76 +1205,77 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 47</div>
+      <div class="box-label">📘 Contoh 46</div>
       <p style="margin:0;font-size:.9rem;">Jabarkan $(a+2)^4$!</p>
     </div>
     <div class="penyelesaian">
-      Gunakan teorema binomial dengan $a=a$, $b=2$, $n=4$:
-      $$\begin{align*} r=0:&\;\binom{4}{0}a^4\cdot1 = a^4 \\ r=1:&\;\binom{4}{1}a^3\cdot2 = 8a^3 \\ r=2:&\;\binom{4}{2}a^2\cdot4 = 24a^2 \\ r=3:&\;\binom{4}{3}a^1\cdot8 = 32a \\ r=4:&\;\binom{4}{4}\cdot16 = 16 \end{align*}$$
-      $$\boxed{(a+2)^4 = a^4 + 8a^3 + 24a^2 + 32a + 16}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Binomial</strong> dengan $b = 2$, $n = 4$:</p>
+      $$ \begin{align*} &(a + 2)^4 \\  &= a^4 + 4a^3(2) + 6a^2(4) \\ &\quad + 4a(8) + 16 \end{align*} $$
+      <div class="sol-jadi">$(a + 2)^4$ $= a^4$ $+ 8a^3$ $+ 24a^2$ $+ 32a$ $+ 16$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 48</div>
+      <div class="box-label">📘 Contoh 47</div>
       <p style="margin:0;font-size:.9rem;">Jabarkan $(2x - y)^3$!</p>
     </div>
     <div class="penyelesaian">
-      Tulis $(2x-y)^3 = (2x+(-y))^3$:
-      $$= \binom{3}{0}(2x)^3(-y)^0 + \binom{3}{1}(2x)^2(-y)^1 + \binom{3}{2}(2x)(-y)^2 + \binom{3}{3}(-y)^3$$
-      $$= 8x^3 - 12x^2y + 6xy^2 - y^3$$
-      $$\boxed{(2x-y)^3 = 8x^3 - 12x^2y + 6xy^2 - y^3}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tulis</strong> $(2x - y)^3$ $= \bigl(2x + (-y)\bigr)^3$:</p>
+      $$ \begin{align*} &(2x)^3 + 3(2x)^2(-y) \\ &\quad + 3(2x)(-y)^2 + (-y)^3 \end{align*} $$
+      <div class="sol-jadi">$(2x - y)^3$ $= 8x^3 - 12x^2y + 6xy^2 - y^3$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 49</div>
+      <div class="box-label">📘 Contoh 48</div>
       <p style="margin:0;font-size:.9rem;">Tentukan suku ke-4 dari penjabaran $(a+b)^8$!</p>
     </div>
     <div class="penyelesaian">
-      $n=8$, $p=4$:
-      $$U_4 = \binom{8}{3}\cdot a^5\cdot b^3 = 56\,a^5b^3$$
-      $$\boxed{U_4 = 56\,a^5b^3}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Suku ke-4:</strong> $p = 4$, jadi $r = p - 1 = 3$.</p>
+      $$U_4 = \binom{8}{3} a^5 b^3 = 56\,a^5b^3$$
+      <div class="sol-jadi">$U_4 = 56\,a^5b^3$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 50</div>
+      <div class="box-label">📘 Contoh 49</div>
       <p style="margin:0;font-size:.9rem;">Tentukan suku ke-6 dari $(2x - y)^9$!</p>
     </div>
     <div class="penyelesaian">
-      $a=2x$, $b=-y$, $n=9$, $p=6$:
-      $$U_6 = \binom{9}{5}(2x)^4(-y)^5 = 126 \cdot 16x^4 \cdot (-y^5) = \boxed{-2016\,x^4y^5}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Suku ke-6:</strong> $a = 2x$, $b = -y$, $r = 5$.</p>
+      $$ \begin{align*} U_6 &= \binom{9}{5}(2x)^4(-y)^5 \\ &= 126 \cdot 16x^4 \cdot (-y^5) \end{align*} $$
+      <div class="sol-jadi">$U_6 = -2016\,x^4y^5$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 51</div>
+      <div class="box-label">📘 Contoh 50</div>
       <p style="margin:0;font-size:.9rem;">Dalam penjabaran $(a+3b)^6$, salah satu sukunya adalah $m \cdot a^4 b^2$. Tentukan nilai $m$!</p>
     </div>
     <div class="penyelesaian">
-      Suku umum: $U_p = \binom{6}{p-1}\cdot a^{7-p}\cdot(3b)^{p-1}$.<br>
-      Agar pangkat $a$ adalah 4: $7-p=4 \implies p=3$.
-      $$U_3 = \binom{6}{2}\cdot a^4\cdot(3b)^2 = 15\cdot 9\,a^4b^2 = 135\,a^4b^2$$
-      $$\boxed{m = 135}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Suku umum:</strong> $U_p = \binom{6}{p - 1} a^{7 - p}(3b)^{p - 1}$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Pangkat $a$ harus 4:</strong> $7 - p = 4$, jadi $p = 3$.</p>
+      $$ \begin{align*} U_3 &= \binom{6}{2} a^4 (3b)^2 \\ &= 15 \cdot 9\,a^4b^2 \end{align*} $$
+      <div class="sol-jadi">$m = 135$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 52</div>
+      <div class="box-label">📘 Contoh 51</div>
       <p style="margin:0;font-size:.9rem;">Tentukan koefisien suku yang memuat $x^3$ dari $(x+2)^5$!</p>
     </div>
     <div class="penyelesaian">
-      Suku umum: $U_p = \binom{5}{p-1}\cdot x^{6-p}\cdot 2^{p-1}$.<br>
-      Agar pangkat $x$ adalah 3: $6-p=3 \implies p=3$.
-      $$U_3 = \binom{5}{2}\cdot x^3\cdot 2^2 = 10\cdot 4\cdot x^3 = 40x^3$$
-      Koefisien $x^3$ adalah $\boxed{40}$.
+      <p class="sol-step"><span class="sol-no">1</span><strong>Suku umum:</strong> $U_p = \binom{5}{p - 1} x^{6 - p} \, 2^{p - 1}$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Pangkat $x$ harus 3:</strong> $6 - p = 3$, jadi $p = 3$.</p>
+      $$U_3 = \binom{5}{2} x^3 \cdot 2^2 = 40x^3$$
+      <div class="sol-jadi">koefisien $x^3$ adalah $40$.</div>
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">&#128216; Contoh 53</div>
+      <div class="box-label">📘 Contoh 52</div>
       <p style="margin:0;font-size:.9rem;">Tentukan suku yang tidak memuat $x$ (suku konstan) dari $\left(x + \dfrac{2}{x}\right)^6$!</p>
     </div>
     <div class="penyelesaian">
-      $a=x$, $b=\dfrac{2}{x}$, $n=6$. Suku umum:
-      $$U_p = \binom{6}{p-1}\cdot x^{7-p}\cdot\left(\frac{2}{x}\right)^{p-1} = \binom{6}{p-1}\cdot 2^{p-1}\cdot x^{8-2p}$$
-      Agar suku tidak memuat $x$: $8-2p=0 \implies p=4$.
-      $$U_4 = \binom{6}{3}\cdot 2^3 = 20\cdot 8 = \boxed{160}$$
+      <p class="sol-step"><span class="sol-no">1</span><strong>Suku umum:</strong> $a = x$, $b = \dfrac{2}{x}$, $n = 6$.</p>
+      $$ \begin{align*} U_p &= \binom{6}{p - 1} x^{7 - p}\left(\frac{2}{x}\right)^{p - 1} \\ &= \binom{6}{p - 1} 2^{p - 1} x^{8 - 2p} \end{align*} $$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tidak memuat $x$:</strong> $8 - 2p = 0$, jadi $p = 4$.</p>
+      $$U_4 = \binom{6}{3} \cdot 2^3 = 20 \cdot 8$$
+      <div class="sol-jadi">suku konstannya $160$.</div>
     </div>
 
     <div class="box box-rumus">
@@ -1219,7 +1340,7 @@ window.MathJax = {
           <tr><td>Urutan</td><td>Diperhatikan</td><td>Tidak diperhatikan</td></tr>
           <tr><td>Rumus</td><td>$\dfrac{n!}{(n-r)!}$</td><td>$\dfrac{n!}{r!(n-r)!}$</td></tr>
           <tr><td>Contoh soal</td><td>Susunan huruf, kode PIN, barisan, pemenang lomba 1/2/3</td><td>Pilih tim, panitia, ambil bola, komite</td></tr>
-          <tr><td>Hubungan</td><td colspan="2" style="text-align:center;">${}_nC_r = \dfrac{{}_nP_r}{r!}$</td></tr>
+          <tr><td>Hubungan</td><td colspan="2" style="text-align:center;">${}_nC_r$ $= \dfrac{{}_nP_r}{r!}$</td></tr>
           <tr><td>Nilai saat $r=n$</td><td>$n!$</td><td>$1$</td></tr>
         </tbody>
       </table>
@@ -1313,7 +1434,7 @@ function toggleBookmark() {
 }
 function shareMateri() {
   if (navigator.share) {
-    navigator.share({ title: 'Kombinatorika \u2014 EksaktaLab', text: 'Belajar Kombinatorika di EksaktaLab, lengkap dengan 53 contoh soal dan pembahasan!', url: window.location.href });
+    navigator.share({ title: 'Kombinatorika \u2014 EksaktaLab', text: 'Belajar Kombinatorika di EksaktaLab, lengkap dengan 52 contoh soal dan pembahasan!', url: window.location.href });
   } else {
     navigator.clipboard.writeText(window.location.href).then(() => {
       const btn = document.querySelector('[onclick="shareMateri()"]');
@@ -1427,15 +1548,71 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // SOAL LATIHAN accordion
+  const jawabanData = {
+    // Latihan A
+    0: [
+      { jawaban: `$5 \\times 3 = 15$ pilihan` },
+      { jawaban: `$3 \\times 4 = 12$ kata sandi` },
+      { jawaban: `(a) $5 \\times 5 = 25$ &nbsp; (b) $5 \\times 4 = 20$` },
+      { jawaban: `Satuan ganjil $\\{1, 3, 5\\}$: $4 \\times 3 \\times 3$ $= 36$ bilangan` },
+      { jawaban: `Satu kegiatan saja: $3 + 2 + 4 = 9$ pilihan` },
+      { jawaban: `Langsung $2$, lewat Q $3 \\times 4 = 12$<br>Total $2 + 12 = 14$ rute` },
+      { jawaban: `Kurang dari $2000$ (ribuan $1$): $1 \\times 5 \\times 4 \\times 3$ $= 60$<br>Lebih dari $4000$ (ribuan $4, 5, 6$): $3 \\times 60$ $= 180$<br>Total $240$ bilangan` },
+      { jawaban: `$26^2 \\times 10 \\times 9 \\times 8$ $= 676 \\times 720$<br>$= 486.720$ plat nomor` },
+    ],
+    // Latihan B
+    1: [
+      { jawaban: `(a) $n(n - 1) = 30$, jadi $n = 6$<br>(b) $(n + 1)n = 56$, jadi $n = 7$` },
+      { jawaban: `\${}_8P_3$ $= 8 \\times 7 \\times 6$ $= 336$ susunan` },
+      { jawaban: `$6! = 720$ urutan` },
+      { jawaban: `STATISTIKA: $10$ huruf, S$\\times 2$, T$\\times 3$, A$\\times 2$, I$\\times 2$<br>$\\dfrac{10!}{2!\\,3!\\,2!\\,2!}$ $= 75.600$ susunan` },
+      { jawaban: `(a) Blok wanita: $5! \\times 3!$ $= 720$<br>(b) $2! \\times 4! \\times 3!$ $= 288$` },
+      { jawaban: `(a) \${}_5P_5$ $= 5!$ $= 120$ kode &nbsp; (b) $5^5 = 3.125$ kode` },
+      { jawaban: `Keluarga A jadi blok: $6$ objek melingkar<br>$(6 - 1)! \\times 3!$ $= 120 \\times 6$ $= 720$ susunan` },
+      { jawaban: `(a) $6! - 5! \\times 2!$ $= 720 - 240$ $= 480$<br>(b) Wanita di ujung: $2! \\times 4!$ $= 48$` },
+      { jawaban: `Pria melingkar $(4 - 1)! = 6$; wanita mengisi $3$ dari $4$ celah: \${}_4P_3 = 24$<br>Total $6 \\times 24$ $= 144$ formasi` },
+      { jawaban: `Cincin dapat dibalik: $\\dfrac{(7 - 1)!}{2}$ $= \\dfrac{720}{2}$ $= 360$ susunan` },
+    ],
+    // Latihan C
+    2: [
+      { jawaban: `(a) $120$ &nbsp; (b) \${}_{12}C_3 = 220$ &nbsp; (c) \${}_{15}C_2 = 105$` },
+      { jawaban: `$r + (r + 2) = 8$, jadi $r = 3$` },
+      { jawaban: `$m + h = 6$ dengan $m \\leq 4$, $h \\leq 5$: $(1, 5)$, $(2, 4)$, $(3, 3)$, $(4, 2)$<br>Ada $4$ cara` },
+      { jawaban: `\${}_8C_3 \\times {}_6C_2$ $= 56 \\times 15$ $= 840$ cara` },
+      { jawaban: `2 merah + 1 biru: $15 \\times 5 = 75$<br>2 biru + 1 merah: $10 \\times 6 = 60$<br>Total $135$ cara` },
+      { jawaban: `\${}_{10}C_3 = 120$ segitiga` },
+      { jawaban: `(a) \${}_{10}C_3 = 120$ &nbsp; (b) \${}_{10}C_4 = 210$ &nbsp; (c) \${}_9C_3 = 84$` },
+      { jawaban: `Pak Reza wajib: \${}_6C_2 = 15$; Bu Nisa dilarang: \${}_4C_2 = 6$<br>Total $90$ cara` },
+      { jawaban: `$(3, 1)$: $10 \\times 4 = 40$; $(4, 0)$: $5 \\times 1 = 5$<br>Total $45$ cara` },
+      { jawaban: `Komplemen: \${}_9C_4 - {}_6C_4$ $= 126 - 15$ $= 111$ cara` },
+      { jawaban: `(a) \${}_7C_3 \\times {}_4C_2$ $= 35 \\times 6$ $= 210$<br>(b) $(4, 2)$: $70 \\times 10$ $= 700$; $(5, 1)$: $56 \\times 5$ $= 280$; $(6, 0)$: $28$<br>Total $1.008$ cara` },
+      { jawaban: `A ke C: $\\binom{3}{1} = 3$; C ke B: $\\binom{5}{2}$ $= 10$<br>Total $3 \\times 10 = 30$ lintasan` },
+      { jawaban: `Bintang dan sekat: $7$ bintang, $2$ sekat<br>$\\binom{9}{2}$ $= 36$ penyelesaian` },
+    ],
+    // Latihan D
+    3: [
+      { jawaban: `$x^4$ $+ 12x^3$ $+ 54x^2$ $+ 108x$ $+ 81$` },
+      { jawaban: `$32x^5$ $- 80x^4$ $+ 80x^3$ $- 40x^2$ $+ 10x$ $- 1$` },
+      { jawaban: `$U_4 = \\binom{6}{3}(3a)^3(-2b)^3$ $= 20 \\cdot 27 \\cdot (-8)\\,a^3b^3$<br>$= -4.320\\,a^3b^3$` },
+      { jawaban: `$U_5 = \\binom{10}{4}x^6\\left(\\dfrac{1}{x}\\right)^4$ $= 210x^2$` },
+      { jawaban: `Suku $\\binom{6}{4}(2x)^4$ $= 15 \\cdot 16x^4$<br>Koefisien $240$` },
+      { jawaban: `Suku $x^3$: $\\binom{5}{2}(2x)^3k^2$ $= 80k^2x^3$<br>$80k^2 = 80$, jadi $k = \\pm 1$` },
+      { jawaban: `Suku umum $\\binom{9}{r}2^{9 - r}(-1)^r x^{18 - 3r}$<br>$18 - 3r = 0$ memberi $r = 6$: $84 \\cdot 8 = 672$` },
+      { jawaban: `Untuk $x = 1$: $T_r = \\binom{10}{r}2^{10 - r}$<br>$T_2 = 11.520$, $T_3 = 15.360$, $T_4 = 13.440$<br>Suku terbesar: suku ke-4, nilainya $15.360$` },
+    ],
+  };
+
   let latihanIdx = 0;
   document.querySelectorAll('.box.box-latihan').forEach(box => {
     latihanIdx++;
     const list = box.querySelector('.soal-list');
     if (!list) return;
     const items = [...list.querySelectorAll('li')];
+    const answers = jawabanData[latihanIdx - 1] || [];
     const newList = document.createElement('div');
     newList.className = 'soal-list-accordion';
     items.forEach((li, i) => {
+      const jawaban = answers[i]?.jawaban || '';
       const item = document.createElement('div');
       item.className = 'soal-item';
       item.innerHTML = `
@@ -1447,7 +1624,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="soal-answer">
           <div class="soal-answer-inner">
             <div class="soal-answer-label">Jawaban</div>
-            <span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>
+            ${jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
           </div>
         </div>`;
       const header = item.querySelector('.soal-item-header');
