@@ -380,10 +380,12 @@ window.MathJax = {
       <p class="sol-step">Faktorkan pembilang dengan faktor persekutuan $ab$:</p>
       $$\begin{align*} \frac{a^2 b + ab^2}{ab} &= \frac{ab(a + b)}{ab} \\ &= \frac{\cancel{ab}\,(a + b)}{\cancel{ab}} \\ &= a + b \end{align*}$$
       <div class="sol-jadi">bentuk sederhananya $a + b$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\dfrac{a^2b + ab^2}{ab}", "note": "Soal: sederhanakan pecahan ini."}, {"tex": "\\dfrac{\\color{#0d9488}{ab} \\cdot a + \\color{#0d9488}{ab} \\cdot b}{\\color{#0d9488}{ab}}", "note": "Tulis $a^2b = ab \\cdot a$ dan $ab^2 = ab \\cdot b$. Faktor $ab$ ada di semua suku."}, {"tex": "\\dfrac{\\color{#0d9488}{ab}\\,(a + b)}{\\color{#0d9488}{ab}}", "note": "Keluarkan faktor persekutuan $ab$ dari pembilang."}, {"tex": "\\dfrac{\\color{#e11d48}{\\cancel{ab}}\\,(a + b)}{\\color{#e11d48}{\\cancel{ab}}}", "note": "Pembilang dan penyebut sama-sama memuat $ab$: coret keduanya."}, {"tex": "a + b", "note": "Hasil akhir: bentuk paling sederhana."}]</script></div>
       <div class="sol-part"><span class="sol-tag">b</span>$\dfrac{a^5 b^3 + a^3 b^5}{a^2 b^2 + b^4}$</div>
       <p class="sol-step">Faktorkan pembilang dengan $a^3 b^3$ dan penyebut dengan $b^2$:</p>
       $$\begin{align*} \frac{a^5 b^3 + a^3 b^5}{a^2 b^2 + b^4} &= \frac{a^3 b^3\cancel{(a^2 + b^2)}}{b^2\cancel{(a^2 + b^2)}} \\ &= \frac{a^3 b \cdot \cancel{b^2}}{\cancel{b^2}} \\ &= a^3 b \end{align*}$$
       <div class="sol-jadi">bentuk sederhananya $a^3 b$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\dfrac{a^5b^3 + a^3b^5}{a^2b^2 + b^4}", "note": "Soal: sederhanakan pecahan ini."}, {"tex": "\\dfrac{\\color{#0d9488}{a^3b^3} \\cdot a^2 + \\color{#0d9488}{a^3b^3} \\cdot b^2}{a^2b^2 + b^4}", "note": "Pembilang: kedua suku memuat $a^3b^3$."}, {"tex": "\\dfrac{\\color{#0d9488}{a^3b^3}\\,(a^2 + b^2)}{\\color{#d97706}{b^2} \\cdot a^2 + \\color{#d97706}{b^2} \\cdot b^2}", "note": "Keluarkan $a^3b^3$. Penyebut: kedua suku memuat $b^2$."}, {"tex": "\\dfrac{a^3b^3\\,\\color{#7c3aed}{(a^2 + b^2)}}{b^2\\,\\color{#7c3aed}{(a^2 + b^2)}}", "note": "Keluarkan $b^2$. Sekarang faktor $(a^2 + b^2)$ muncul di atas dan di bawah."}, {"tex": "\\dfrac{a^3b^3\\,\\color{#e11d48}{\\cancel{(a^2 + b^2)}}}{b^2\\,\\color{#e11d48}{\\cancel{(a^2 + b^2)}}}", "note": "Coret faktor yang sama, $(a^2 + b^2)$."}, {"tex": "\\dfrac{a^3b^3}{b^2}", "note": "Tersisa pecahan sederhana."}, {"tex": "\\dfrac{a^3b \\cdot \\color{#d97706}{b^2}}{\\color{#d97706}{b^2}}", "note": "Pecah $b^3 = b \\cdot b^2$ agar terlihat faktor $b^2$."}, {"tex": "\\dfrac{a^3b \\cdot \\color{#e11d48}{\\cancel{b^2}}}{\\color{#e11d48}{\\cancel{b^2}}}", "note": "Coret $b^2$ di atas dan di bawah."}, {"tex": "a^3 b", "note": "Hasil akhir: bentuk paling sederhana."}]</script></div>
     </div>
 
     <div class="box box-contoh">
@@ -2683,6 +2685,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!-- FOOTER -->
 <div id="eksaktalab-footer"></div>
+<script src="../../assets/js/langkah-anim.js"></script>
 <script src="../../assets/js/footer.js"></script>
 <script src="../../assets/js/protect.js"></script>
 </body>
