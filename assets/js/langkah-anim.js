@@ -109,8 +109,20 @@
       timer = setInterval(() => show(cur + 1), DELAY);
     }
     function stop() { clearInterval(timer); timer = null; playB.innerHTML = ICON.play; }
+    // rumus yang sedikit lebih lebar dari kotak diperkecil agar tidak perlu digeser
+    function shrink() {
+      const avail = stage.clientWidth - 8;
+      els.forEach(e => {
+        const m = e.querySelector('mjx-container'); if (!m) return;
+        m.style.removeProperty('font-size');
+        const svg = m.querySelector('svg'); if (!svg) return;
+        const w = svg.getBoundingClientRect().width / (e.classList.contains('on') ? 1 : .98);
+        if (w > avail) m.style.setProperty('font-size', Math.max(80, 118 * avail / w).toFixed(1) + '%', 'important');
+      });
+      fit();
+    }
     function prepare() {
-      if (!ready) ready = (window.MathJax && MathJax.typesetPromise ? MathJax.typesetPromise([stage]) : Promise.resolve());
+      if (!ready) ready = (window.MathJax && MathJax.typesetPromise ? MathJax.typesetPromise([stage]) : Promise.resolve()).then(shrink);
       return ready;
     }
     tog.onclick = () => {
@@ -124,7 +136,8 @@
       if (a === 'play') { timer ? stop() : play(); }
       else { stop(); show(a === 'first' ? 0 : a === 'prev' ? cur - 1 : cur + 1); }
     };
-    window.addEventListener('resize', fit);
+    let rz = null;
+    window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => ready && ready.then(shrink), 150); });
   }
   // dibangun setelah skrip halaman selesai memindahkan penyelesaian ke kartu contoh
   function init() { document.querySelectorAll('.langkah-anim:not([data-la])').forEach(r => { r.dataset.la = 1; build(r); }); }
