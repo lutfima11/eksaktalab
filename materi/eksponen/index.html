@@ -1253,17 +1253,192 @@ window.MathJax = {
   <section class="section" id="bagian-f">
     <h2 class="section-title"><span class="section-badge">F</span>Fungsi Eksponen</h2>
 
-    <p><strong>Fungsi eksponen</strong> adalah fungsi $f : \mathbb{R} \to (0,+\infty)$ yang didefinisikan sebagai:</p>
+    <p><strong>Fungsi eksponen</strong> adalah fungsi yang variabelnya berada <strong>di pangkat</strong>, misalnya $f(x) = 2^x$. Ciri khasnya mudah diingat: <strong>setiap $x$ bertambah $1$, nilai fungsinya dikali $a$</strong>.</p>
 
     <div class="box box-rumus">
-      <div class="box-label">• Definisi Fungsi Eksponen</div>
+      <div class="box-label">• Bentuk Dasar Fungsi Eksponen</div>
       <div class="math-block">$$f(x) = a^x, \qquad a > 0,\; a \neq 1$$</div>
+      <p style="margin:.3rem 0 0;font-size:.88rem;">Bilangan $a$ disebut <strong>basis</strong>, yaitu angka pengali setiap kali $x$ naik $1$.</p>
     </div>
 
-    <p>Bilangan $a$ disebut <strong>basis</strong> (bilangan pokok). Syarat $a &gt; 0$ dan $a \neq 1$ diperlukan agar fungsi terdefinisi untuk seluruh $x \in \mathbb{R}$ dan tidak bersifat konstan. Bentuk yang lebih umum adalah $f(x) = k \cdot a^x$ dengan $k \neq 0$ sebagai <strong>koefisien skala</strong>.</p>
+    <p>Contohnya $f(x) = 2^x$: nilainya terus berlipat dua.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>$x$</th><th>$0$</th><th>$1$</th><th>$2$</th><th>$3$</th><th>$4$</th></tr></thead>
+        <tbody><tr><td>$2^x$</td><td>$1$</td><td>$2$</td><td>$4$</td><td>$8$</td><td>$16$</td></tr></tbody>
+      </table>
+    </div>
 
-    <h3 class="subsection-title">1. Sifat-Sifat Grafik Fungsi Eksponen</h3>
-    <p>Grafik $f(x) = a^x$ memiliki dua perilaku berbeda bergantung nilai $a$:</p>
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Kenapa Syaratnya $a &gt; 0$ dan $a \neq 1$?</div>
+      <ul style="margin:.2rem 0 0;padding-left:1.2rem;font-size:.88rem;line-height:1.8;">
+        <li>Jika $a = 1$: $1^x = 1$ untuk setiap $x$. Grafiknya hanya garis datar, tidak ada perubahan.</li>
+        <li>Jika $a = 0$: $0^x$ bernilai $0$ untuk $x &gt; 0$ dan tidak terdefinisi untuk $x \leq 0$.</li>
+        <li>Jika $a &lt; 0$: misalnya $(-4)^{1/2} = \sqrt{-4}$ bukan bilangan real, sehingga grafiknya putus-putus.</li>
+      </ul>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Peta Belajar Bagian Ini</div>
+      <ol class="step-list">
+        <li><strong>Menggambar</strong> grafik $y = a^x$ dengan tabel nilai.</li>
+        <li><strong>Mengenali</strong> dua bentuk grafik: naik atau turun, beserta sifat-sifatnya.</li>
+        <li><strong>Menggeser</strong> grafik ke atas, bawah, kiri, atau kanan.</li>
+        <li><strong>Mencari rumus</strong> fungsi dari gambar grafiknya.</li>
+        <li><strong>Memakai</strong> fungsi eksponen untuk masalah pertumbuhan dan peluruhan.</li>
+      </ol>
+    </div>
+
+    <h3 class="subsection-title">1. Menggambar Grafik $y = a^x$</h3>
+    <p>Cara paling aman menggambar grafik adalah dengan <strong>tabel nilai</strong>: pilih beberapa nilai $x$, hitung $y$, letakkan titik-titiknya, lalu hubungkan dengan kurva mulus.</p>
+    <p>Titik-titik dari tabel $y = 2^x$ di atas, ditambah $x = -1, -2, -3$, menghasilkan grafik berikut:</p>
+    <div class="grafik-wrap">
+        <svg viewBox="0 0 340 290" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:320px;">
+          <defs>
+            <marker id="arr-f1" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#888"/></marker>
+            <marker id="arr-f1l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M7,1 L1,3.5 L7,6z" fill="#888"/></marker>
+          </defs>
+          <!-- Grid -->
+          <g stroke="#e2e8f0" stroke-width="0.6">
+            <line x1="60" y1="20" x2="60" y2="265"/><line x1="90" y1="20" x2="90" y2="265"/>
+            <line x1="120" y1="20" x2="120" y2="265"/><line x1="150" y1="20" x2="150" y2="265"/>
+            <line x1="180" y1="20" x2="180" y2="265"/><line x1="210" y1="20" x2="210" y2="265"/>
+            <line x1="240" y1="20" x2="240" y2="265"/>
+            <line x1="20" y1="235" x2="320" y2="235"/><line x1="20" y1="205" x2="320" y2="205"/>
+            <line x1="20" y1="175" x2="320" y2="175"/><line x1="20" y1="145" x2="320" y2="145"/>
+            <line x1="20" y1="115" x2="320" y2="115"/><line x1="20" y1="85" x2="320" y2="85"/>
+            <line x1="20" y1="55" x2="320" y2="55"/><line x1="20" y1="25" x2="320" y2="25"/>
+          </g>
+          <!-- Axes: origin=(120,265) -->
+          <line x1="20" y1="265" x2="325" y2="265" stroke="#888" stroke-width="1.2" marker-start="url(#arr-f1l)" marker-end="url(#arr-f1)"/>
+          <line x1="120" y1="282" x2="120" y2="18" stroke="#888" stroke-width="1.2" marker-start="url(#arr-f1l)" marker-end="url(#arr-f1)"/>
+          <text x="328" y="270" font-family="Inter,sans-serif" font-size="11" fill="#888">x</text>
+          <text x="112" y="14" font-family="Inter,sans-serif" font-size="11" fill="#888">y</text>
+          <text x="104" y="278" font-family="Inter,sans-serif" font-size="10" fill="#888">O</text>
+          <!-- Ticks x -->
+          <text x="60"  y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−3</text>
+          <text x="90"  y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−2</text>
+          <text x="150" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
+          <text x="180" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">2</text>
+          <text x="210" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
+          <!-- Ticks y -->
+          <text x="108" y="239" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
+          <text x="108" y="209" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">2</text>
+          <text x="108" y="179" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
+          <text x="108" y="149" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">4</text>
+          <text x="108" y="89"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">6</text>
+          <text x="108" y="59"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">7</text>
+          <text x="108" y="29"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">8</text>
+          <!-- Asimtot y=0 -->
+          <line x1="20" y1="265" x2="320" y2="265" stroke="#D8E0F5" stroke-dasharray="5,3" stroke-width="1"/>
+          <!-- Kurva f(x)=2^x — cubic bezier presisi -->
+          <path d="M 15.0,262.3 C 25.0,261.7 35.0,260.9 45.0,259.7 C 55.0,258.5 65.0,256.8 75.0,254.4 C 85.0,251.9 95.0,248.7 105.0,243.8 C 115.0,238.9 125.0,232.4 135.0,222.6 C 145.0,212.8 155.0,199.8 165.0,180.1 C 175.0,160.5 185.0,134.5 195.0,95.3 C 200.0,75.7 205.0,52.7 210.0,25.0" stroke="#3B82F6" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-f1)"/>
+          <!-- Titik (0,1) -->
+          <circle cx="120" cy="235" r="4" fill="#EF4444"/>
+          <text x="128" y="231" font-family="Inter,sans-serif" font-size="9" fill="#EF4444">(0, 1)</text>
+          <!-- Label kurva -->
+          <text x="215" y="24" font-family="Inter,sans-serif" font-size="10" fill="#3B82F6">f(x) = 2ˣ</text>
+        </svg>
+      </div>
+    <p>Dari grafik $y = 2^x$ terlihat tiga hal penting: grafik <strong>selalu di atas sumbu-$X$</strong>, <strong>melewati titik $(0,\,1)$</strong>, dan ke arah kiri <strong>makin mendekati sumbu-$X$</strong> tanpa pernah menyentuhnya.</p>
+
+    <p>Coba langkah lengkapnya pada contoh berikut.</p>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 30</div>
+      <p style="margin:0;font-size:.9rem;">Lukislah grafik fungsi $f(x) = 2^x$ pada interval $-3 \leq x \leq 3$. Tentukan domain, range, asimtot, dan sifat kemonotonannya.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Titik potong sumbu-$Y$:</strong> $f(0) = 2^0 = 1$, yaitu $(0, 1)$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Buat tabel nilai:</strong></p>
+      <div style="overflow-x:auto; margin:.75rem 0;">
+  <table class="tbl-nilai" style="border-collapse:collapse; font-size:.88rem; min-width:380px; width:100%; border:1px solid var(--border);">
+    
+    <tr>
+      <th style="border:1px solid var(--border); padding:.6rem .7rem; font-family:var(--sans); font-size:.88rem; font-weight:600; text-align:left; background: #111622; color: #ffffff;">$x$</th>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$-3$</td>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$-2$</td>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$-1$</td>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$0$</td>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$1$</td>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$2$</td>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$3$</td>
+    </tr>
+    
+    <tr>
+      <th style="border:1px solid var(--border); padding:.6rem .7rem; font-family:var(--sans); font-size:.88rem; font-weight:600; text-align:left; background: #111622; color: #ffffff;">$f(x)=2^x$</th>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$\tfrac{1}{8}$</td>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$\tfrac{1}{4}$</td>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$\tfrac{1}{2}$</td>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$1$</td>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$2$</td>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$4$</td>
+      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$8$</td>
+    </tr>
+
+  </table>
+</div>
+      <p class="sol-step">Perhatikan polanya: setiap $x$ naik $1$, nilai $f(x)$ <strong>dikali $2$</strong>. Ke kanan nilainya cepat membesar; ke kiri nilainya makin kecil mendekati $0$, tetapi tidak pernah sampai $0$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Hubungkan titik-titiknya</strong> dengan kurva mulus:</p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 340 290" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:320px;">
+          <defs>
+            <marker id="arr-g28" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#888"/></marker>
+            <marker id="arr-g28l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M7,1 L1,3.5 L7,6z" fill="#888"/></marker>
+          </defs>
+          <!-- Grid -->
+          <g stroke="#e2e8f0" stroke-width="0.6">
+            <line x1="60" y1="20" x2="60" y2="265"/><line x1="90" y1="20" x2="90" y2="265"/>
+            <line x1="120" y1="20" x2="120" y2="265"/><line x1="150" y1="20" x2="150" y2="265"/>
+            <line x1="180" y1="20" x2="180" y2="265"/><line x1="210" y1="20" x2="210" y2="265"/>
+            <line x1="240" y1="20" x2="240" y2="265"/>
+            <line x1="20" y1="235" x2="320" y2="235"/><line x1="20" y1="205" x2="320" y2="205"/>
+            <line x1="20" y1="175" x2="320" y2="175"/><line x1="20" y1="145" x2="320" y2="145"/>
+            <line x1="20" y1="115" x2="320" y2="115"/><line x1="20" y1="85" x2="320" y2="85"/>
+            <line x1="20" y1="55" x2="320" y2="55"/><line x1="20" y1="25" x2="320" y2="25"/>
+          </g>
+          <!-- Axes: origin=(120,265) -->
+          <line x1="20" y1="265" x2="325" y2="265" stroke="#888" stroke-width="1.2" marker-start="url(#arr-g28l)" marker-end="url(#arr-g28)"/>
+          <line x1="120" y1="282" x2="120" y2="18" stroke="#888" stroke-width="1.2" marker-start="url(#arr-g28l)" marker-end="url(#arr-g28)"/>
+          <text x="328" y="270" font-family="Inter,sans-serif" font-size="11" fill="#888">x</text>
+          <text x="112" y="14" font-family="Inter,sans-serif" font-size="11" fill="#888">y</text>
+          <text x="104" y="278" font-family="Inter,sans-serif" font-size="10" fill="#888">O</text>
+          <!-- Ticks x -->
+          <text x="60"  y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−3</text>
+          <text x="90"  y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−2</text>
+          <text x="150" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
+          <text x="180" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">2</text>
+          <text x="210" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
+          <!-- Ticks y -->
+          <text x="108" y="239" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
+          <text x="108" y="209" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">2</text>
+          <text x="108" y="179" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
+          <text x="108" y="149" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">4</text>
+          <text x="108" y="89"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">6</text>
+          <text x="108" y="59"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">7</text>
+          <text x="108" y="29"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">8</text>
+          <!-- Asimtot y=0 -->
+          <line x1="20" y1="265" x2="320" y2="265" stroke="#D8E0F5" stroke-dasharray="5,3" stroke-width="1"/>
+          <!-- Kurva f(x)=2^x — cubic bezier presisi -->
+          <path d="M 15.0,262.3 C 25.0,261.7 35.0,260.9 45.0,259.7 C 55.0,258.5 65.0,256.8 75.0,254.4 C 85.0,251.9 95.0,248.7 105.0,243.8 C 115.0,238.9 125.0,232.4 135.0,222.6 C 145.0,212.8 155.0,199.8 165.0,180.1 C 175.0,160.5 185.0,134.5 195.0,95.3 C 200.0,75.7 205.0,52.7 210.0,25.0" stroke="#3B82F6" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-g28)"/>
+          <!-- Titik (0,1) -->
+          <circle cx="120" cy="235" r="4" fill="#EF4444"/>
+          <text x="128" y="231" font-family="Inter,sans-serif" font-size="9" fill="#EF4444">(0, 1)</text>
+          <!-- Label kurva -->
+          <text x="215" y="24" font-family="Inter,sans-serif" font-size="10" fill="#3B82F6">f(x) = 2ˣ</text>
+        </svg>
+      </div>
+      <p class="sol-step">Saat $x \to -\infty$, $f(x) \to 0^+$; saat $x \to +\infty$, $f(x) \to +\infty$.</p>
+      <div class="sol-jadi">domain $\mathbb{R}$, range $(0, +\infty)$, asimtot $y = 0$, dan fungsi monoton naik karena $2 > 1$.</div>
+    </div>
+
+
+    <h3 class="subsection-title">2. Naik atau Turun? Dua Bentuk Grafik</h3>
+    <p>Bentuk grafik $y = a^x$ hanya ada dua, dan yang menentukan adalah <strong>basis $a$</strong>:</p>
+    <ul style="font-size:.93rem;line-height:1.8;">
+      <li>$a &gt; 1$ (misalnya $2$, $3$, $10$): dikali bilangan lebih dari $1$, nilainya membesar, jadi grafiknya <strong>naik</strong>.</li>
+      <li>$0 &lt; a &lt; 1$ (misalnya $\tfrac12$, $\tfrac13$): dikali pecahan, nilainya mengecil, jadi grafiknya <strong>turun</strong>.</li>
+    </ul>
 
     <div class="grafik-wrap">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="100%" style="max-width:780px;">
@@ -1329,40 +1504,141 @@ window.MathJax = {
       </svg>
     </div>
 
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 31</div>
+      <p style="margin:0;font-size:.9rem;">Lukislah grafik $f(x) = \left(\dfrac{1}{3}\right)^x$ pada interval $-3 \leq x \leq 3$. Tentukan sifat-sifatnya dan bandingkan dengan $g(x) = 3^x$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hubungkan dengan $g(x) = 3^x$:</strong> $\left(\tfrac{1}{3}\right)^x = 3^{-x}$, jadi grafik $f$ adalah pencerminan grafik $g$ terhadap sumbu-$Y$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Buat tabel nilai:</strong></p>
+      <div style="overflow-x:auto; margin:.75rem 0;">
+  <table class="tbl-nilai" style="border-collapse:collapse; font-size:.83rem; min-width:420px; width:100%; border:1px solid var(--border);">
+    
+    <tr>
+      <th style="border:1px solid var(--border); padding:.5rem .6rem; font-family:var(--sans); font-size:.83rem; font-weight:600; text-align:left; background: #111622; color: #ffffff;">$x$</th>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$-3$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$-2$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$-1$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$0$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$1$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$2$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$3$</td>
+    </tr>
+    
+    <tr>
+      <th style="border:1px solid var(--border); padding:.5rem .6rem; font-family:var(--sans); font-size:.83rem; font-weight:600; text-align:left; background: #111622; color: #ffffff;">$f(x)=(1/3)^x$</th>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$27$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$9$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$3$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$1$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$\tfrac{1}{3}$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$\tfrac{1}{9}$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$\tfrac{1}{27}$</td>
+    </tr>
+    
+    <tr>
+      <th style="border:1px solid var(--border); padding:.5rem .6rem; font-family:var(--sans); font-size:.83rem; font-weight:600; text-align:left; background: #111622; color: #ffffff;">$g(x)=3^x$</th>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$\tfrac{1}{27}$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$\tfrac{1}{9}$</td>
+      <td style="border:1px solid var(--border) ; padding:.5rem .6rem; text-align:center; color: var(--text-1);">$\tfrac{1}{3}$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$1$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$3$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$9$</td>
+      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$27$</td>
+    </tr>
+
+  </table>
+</div>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Hubungkan titik-titiknya:</strong></p>
+      <div class="grafik-wrap">
+        <svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
+          <defs>
+            <marker id="arr-g29" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#888"/></marker>
+            <marker id="arr-g29l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M7,1 L1,3.5 L7,6z" fill="#888"/></marker>
+          </defs>
+          <!-- Grid -->
+          <g stroke="#e2e8f0" stroke-width="0.6">
+            <line x1="50" y1="15" x2="50" y2="295"/><line x1="85" y1="15" x2="85" y2="295"/>
+            <line x1="120" y1="15" x2="120" y2="295"/><line x1="155" y1="15" x2="155" y2="295"/>
+            <line x1="190" y1="15" x2="190" y2="295"/><line x1="225" y1="15" x2="225" y2="295"/>
+            <line x1="260" y1="15" x2="260" y2="295"/><line x1="295" y1="15" x2="295" y2="295"/>
+            <line x1="20" y1="285" x2="340" y2="285"/><line x1="20" y1="250" x2="340" y2="250"/>
+            <line x1="20" y1="215" x2="340" y2="215"/><line x1="20" y1="180" x2="340" y2="180"/>
+            <line x1="20" y1="145" x2="340" y2="145"/><line x1="20" y1="110" x2="340" y2="110"/>
+            <line x1="20" y1="75" x2="340" y2="75"/><line x1="20" y1="40" x2="340" y2="40"/>
+          </g>
+          <!-- Axes: origin=(155,285), Δx=35px/unit, Δy=35px/unit -->
+          <line x1="20" y1="285" x2="345" y2="285" stroke="#888" stroke-width="1.2" marker-start="url(#arr-g29l)" marker-end="url(#arr-g29)"/>
+          <line x1="155" y1="305" x2="155" y2="12" stroke="#888" stroke-width="1.2" marker-start="url(#arr-g29l)" marker-end="url(#arr-g29)"/>
+          <text x="348" y="291" font-family="Inter,sans-serif" font-size="11" fill="#888">x</text>
+          <text x="147" y="10"  font-family="Inter,sans-serif" font-size="11" fill="#888">y</text>
+          <text x="138" y="298" font-family="Inter,sans-serif" font-size="10" fill="#888">O</text>
+          <!-- Ticks x -->
+          <text x="50"  y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−3</text>
+          <text x="85"  y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−2</text>
+          <text x="120" y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−1</text>
+          <text x="190" y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
+          <text x="225" y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">2</text>
+          <text x="260" y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
+          <!-- Ticks y -->
+          <text x="143" y="254" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
+          <text x="143" y="184" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
+          <text x="143" y="114" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">6</text>
+          <text x="143" y="79"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">9</text>
+          <!-- Asimtot y=0 -->
+          <line x1="20" y1="285" x2="340" y2="285" stroke="#D8E0F5" stroke-dasharray="5,3" stroke-width="1"/>
+          <!-- Sumbu simetri (sumbu-Y) -->
+          <line x1="155" y1="12" x2="155" y2="305" stroke="#D8E0F5" stroke-dasharray="4,3" stroke-width="1"/>
+          <!-- f(x)=(1/3)^x: turun — cubic bezier presisi, masuk dari atas kiri -->
+          <path d="M 88.5,2.8 C 99.0,95.8 109.5,145.4 120.0,180.0 C 131.7,218.5 143.3,237.2 155.0,250.0 C 166.7,262.8 178.3,269.1 190.0,273.3 C 201.7,277.6 213.3,279.7 225.0,281.1 C 236.7,282.5 248.3,283.2 260.0,283.7" stroke="#EF4444" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#arr-g29l)"/>
+          <!-- g(x)=3^x: naik — cubic bezier presisi, cerminan f terhadap sumbu-Y -->
+          <path d="M 50.0,283.7 C 61.7,283.2 73.3,282.5 85.0,281.1 C 96.7,279.7 108.3,277.6 120.0,273.3 C 131.7,269.1 143.3,262.8 155.0,250.0 C 166.7,237.2 178.3,218.5 190.0,180.0 C 199.8,147.7 209.6,102.1 219.4,20.8" stroke="#3B82F6" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-g29)"/>
+          <!-- Titik perpotongan (0,1) -->
+          <circle cx="155" cy="250" r="4" fill="#00BFA5"/>
+          <text x="162" y="246" font-family="Inter,sans-serif" font-size="9" fill="#00BFA5">(0, 1)</text>
+          <!-- Label kurva -->
+          <text x="22"  y="36" font-family="Inter,sans-serif" font-size="10" fill="#EF4444">f(x) = (⅓)ˣ</text>
+          <text x="248" y="36" font-family="Inter,sans-serif" font-size="10" fill="#3B82F6">g(x) = 3ˣ</text>
+        </svg>
+      </div>
+      <div class="sol-jadi">domain $\mathbb{R}$, range $(0, +\infty)$, asimtot $y = 0$, fungsi monoton turun karena $0 < \tfrac{1}{3} < 1$, dan grafik $f$ simetris dengan grafik $g$ terhadap sumbu-$Y$.</div>
+    </div>
+
     <div class="box box-definisi">
-      <div class="box-label">Sifat-Sifat Grafik $f(x) = a^x$</div>
-      <ol>
-        <li><strong>Domain:</strong> $\mathbb{R}$; &nbsp;<strong>Range:</strong> $(0,\,+\infty)$.</li>
-        <li>Grafik selalu melalui titik $(0,\,1)$ karena $a^0 = 1$ untuk semua $a &gt; 0$.</li>
-        <li>Sumbu-$X$ ($y = 0$) adalah <strong>asimtot horizontal</strong>: grafik mendekati tetapi tidak pernah menyentuh sumbu-$X$.</li>
-        <li>Jika $a &gt; 1$: fungsi <strong>monoton naik</strong>; jika $0 &lt; a &lt; 1$: fungsi <strong>monoton turun</strong>.</li>
-        <li>Grafik $y = a^{-x} = \left(\dfrac{1}{a}\right)^x$ merupakan <strong>pencerminan</strong> grafik $y = a^x$ terhadap sumbu-$Y$.</li>
-      </ol>
+      <div class="box-label">Sifat Grafik dalam Bahasa Sehari-hari</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Istilah</th><th>Artinya untuk $y = a^x$</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Domain</strong> $\mathbb{R}$</td><td>$x$ boleh diisi bilangan real berapa saja.</td></tr>
+            <tr><td><strong>Range</strong> $(0,\,+\infty)$</td><td>Nilai $y$ selalu positif: grafik selalu <strong>di atas sumbu-$X$</strong>.</td></tr>
+            <tr><td><strong>Titik $(0,\,1)$</strong></td><td>Semua grafik $y = a^x$ melewati titik ini, karena $a^0 = 1$.</td></tr>
+            <tr><td><strong>Asimtot</strong> $y = 0$</td><td>Garis yang makin didekati grafik tetapi <strong>tidak pernah disentuh</strong>. Di sini garisnya sumbu-$X$.</td></tr>
+            <tr><td><strong>Monoton</strong></td><td>Grafik tidak pernah berbalik arah: selalu <strong>naik</strong> jika $a &gt; 1$, selalu <strong>turun</strong> jika $0 &lt; a &lt; 1$.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin:.5rem 0 0;font-size:.88rem;">Grafik $y = \left(\tfrac{1}{a}\right)^x = a^{-x}$ adalah <strong>cermin</strong> grafik $y = a^x$ terhadap sumbu-$Y$, seperti $\left(\tfrac13\right)^x$ dan $3^x$ pada Contoh 31.</p>
     </div>
 
-    <h3 class="subsection-title">2. Transformasi (Pergeseran) Grafik Fungsi Eksponen</h3>
-    <p>Grafik fungsi eksponen yang lebih umum diperoleh dengan <strong>menggeser</strong> grafik $y = a^x$. Bentuk umumnya:</p>
-    <div class="box box-rumus">
-      <div class="box-label">• Bentuk Umum Fungsi Eksponen</div>
-      <div class="math-block">$$y = k \cdot a^{x-h} + c$$</div>
-      <p style="margin:.3rem 0 0;font-size:.88rem;">$h$ = pergeseran mendatar ($h&gt;0$ ke kanan, $h&lt;0$ ke kiri); &nbsp;$c$ = pergeseran tegak ($c&gt;0$ ke atas, $c&lt;0$ ke bawah); &nbsp;$k \neq 0$ = faktor regangan tegak ($|k|&gt;1$ diregangkan, $0&lt;|k|&lt;1$ dimampatkan, $k&lt;0$ sekaligus dicerminkan terhadap sumbu-$X$). Asimtotnya $y = c$, dan titik $(0,\,1)$ pada $y = a^x$ berpindah ke $(h,\,k + c)$.</p>
-    </div>
-    <p>Jika $k = 1$, yang terjadi hanya pergeseran: $y = a^{x-h} + c$. Untuk $k &gt; 0$, faktor $k$ juga dapat ditulis sebagai pergeseran mendatar karena $k = a^m$ untuk suatu $m$, sehingga $k \cdot a^{x-h} = a^{x-(h-m)}$. Contohnya $8 \cdot 2^x = 2^{x+3}$.</p>
+    <h3 class="subsection-title">3. Menggeser Grafik</h3>
+    <p>Grafik seperti $y = 2^{x-2} + 1$ tidak perlu digambar dari nol. Cukup ambil grafik dasar $y = 2^x$, lalu <strong>geser</strong>. Hanya ada dua jenis geseran:</p>
 
-    <div class="box box-catatan">
-      <div class="box-label">⚠ Logika Praktis Mengingat Arah Transformasi</div>
-      <p style="margin:0;font-size:.88rem;"><strong>Jika yang diubah adalah variabel $x$</strong> (berada di dalam fungsi), arahnya <em>berlawanan</em>:
-        $y = 2^{x+3}$: tanda "$+3$" pada $x$ → geser ke <strong>kiri</strong> 3 satuan.
-        $y = 2^{x-3}$: tanda "$-3$" pada $x$ → geser ke <strong>kanan</strong> 3 satuan.<br>
-        <strong>Jika yang diubah adalah nilai $y$ atau $f(x)$</strong> (berada di luar fungsi), arahnya <em>bersesuaian</em>:
-        $y = 2^x + 3$: penambahan 3 pada $y$ → geser ke <strong>atas</strong> 3 satuan.
-        $y = 2^x - 3$: pengurangan 3 pada $y$ → geser ke <strong>bawah</strong> 3 satuan.<br>
-        <strong>Tanda negatif:</strong>
-        $y = 2^{-x}$: tanda negatif pada $x$ → cermin terhadap <strong>sumbu-$Y$</strong>.
-        $y = -2^{x}$: tanda negatif pada $f(x)$ → cermin terhadap <strong>sumbu-$X$</strong>.</p>
+    <div class="box box-definisi">
+      <div class="box-label">Aturan Menggeser Grafik</div>
+      <div class="table-wrap" style="margin:.5rem 0 0;">
+        <table>
+          <thead><tr><th>Bentuk</th><th>Geseran</th></tr></thead>
+          <tbody>
+            <tr><td>$y = a^x + c$<br><small>angka <strong>di luar</strong> pangkat</small></td><td><strong>Atas/bawah</strong>, searah tanda: $+c$ naik, $-c$ turun.</td></tr>
+            <tr><td>$y = a^{x-h}$<br><small>angka <strong>di dalam</strong> pangkat</small></td><td><strong>Kanan/kiri</strong>, berlawanan tanda: $x-3$ ke kanan $3$, $x+3$ ke kiri $3$.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin:.5rem 0 0;font-size:.88rem;"><strong>Cara mengingat:</strong> di luar pangkat → <strong>searah</strong>; di dalam pangkat → <strong>terbalik</strong>.</p>
     </div>
 
-    <p>Perhatikan empat pergeseran grafik $y = 2^x$ (garis putus-putus abu-abu) berikut. Amati ke mana titik $(0,\,1)$ berpindah dan kapan <span style="color:#F59E0B;font-weight:600;">asimtot</span> ikut bergeser.</p>
+    <p>Perhatikan empat geseran grafik $y = 2^x$ (garis putus-putus abu-abu) berikut. Amati ke mana titik $(0,\,1)$ berpindah dan kapan <span style="color:#F59E0B;font-weight:600;">asimtot</span> ikut bergeser.</p>
     <div class="grafik-row">
 <svg viewBox="0 0 178 214" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:260px;">
   <defs>
@@ -1563,216 +1839,34 @@ window.MathJax = {
     </div>
 
     <div class="box box-definisi">
-      <div class="box-label">Ringkasan Transformasi Grafik $y = a^x$</div>
+      <div class="box-label">Apa yang Ikut Berpindah?</div>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Bentuk</th><th>Pergeseran</th><th>Titik $(0,1)$ menjadi</th><th>Asimtot</th></tr></thead>
+          <thead><tr><th>Bentuk</th><th>Titik $(0,1)$ menjadi</th><th>Asimtot</th></tr></thead>
           <tbody>
-            <tr><td>$y = a^x + c$</td><td>atas ($c&gt;0$) / bawah ($c&lt;0$) sejauh $|c|$</td><td>$(0,\,1+c)$</td><td>$y = c$</td></tr>
-            <tr><td>$y = a^{x-h}$</td><td>kanan ($h&gt;0$) / kiri ($h&lt;0$) sejauh $|h|$</td><td>$(h,\,1)$</td><td>$y = 0$ (tetap)</td></tr>
-            <tr><td>$y = a^{x-h} + c$</td><td>mendatar $h$, lalu tegak $c$</td><td>$(h,\,1+c)$</td><td>$y = c$</td></tr>
-            <tr><td>$y = k \cdot a^{x-h} + c$</td><td>regangan tegak $k$, lalu geser $h$ dan $c$</td><td>$(h,\,k+c)$</td><td>$y = c$</td></tr>
+            <tr><td>$y = a^x + c$</td><td>$(0,\,1+c)$</td><td>$y = c$ (ikut naik/turun)</td></tr>
+            <tr><td>$y = a^{x-h}$</td><td>$(h,\,1)$</td><td>$y = 0$ (tetap)</td></tr>
+            <tr><td>$y = a^{x-h} + c$</td><td>$(h,\,1+c)$</td><td>$y = c$</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="margin:.5rem 0 0;font-size:.88rem;">Pergeseran <strong>kiri/kanan tidak mengubah asimtot</strong>; hanya pergeseran <strong>atas/bawah</strong> yang memindahkan asimtot.</p>
+      <p style="margin:.5rem 0 0;font-size:.88rem;">Geser kiri/kanan <strong>tidak mengubah asimtot</strong>; hanya geser atas/bawah yang memindahkannya.</p>
     </div>
 
-    <h3 class="subsection-title">3. Melukis Grafik Fungsi Eksponen</h3>
-    <p><strong>Langkah-langkah melukis grafik</strong> $y = a^x$ maupun hasil pergeserannya $y = a^{x-h} + c$:</p>
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Tanda Negatif = Cermin</div>
+      <p style="margin:0;font-size:.88rem;">$y = 2^{-x}$: negatif <strong>di dalam</strong> pangkat → cermin terhadap <strong>sumbu-$Y$</strong>.<br>
+        $y = -2^{x}$: negatif <strong>di luar</strong> → cermin terhadap <strong>sumbu-$X$</strong> (grafik pindah ke bawah sumbu-$X$).</p>
+    </div>
+
+    <p><strong>Langkah melukis grafik hasil geseran</strong> $y = a^{x-h} + c$:</p>
     <ol class="step-list">
-      <li>Gambar <strong>asimtot</strong> $y = c$ dengan garis putus-putus (untuk $y = a^x$ atau $y = k\cdot a^x$, asimtotnya $y = 0$).</li>
-      <li>Tentukan <strong>titik-titik kunci</strong> $y = a^x$, yaitu $\left(-1,\,\tfrac{1}{a}\right)$, $(0,\,1)$, $(1,\,a)$, $(2,\,a^2)$. Untuk grafik hasil pergeseran, geser setiap titik kunci sejauh $h$ satuan mendatar dan $c$ satuan tegak.</li>
-      <li>Tentukan titik potong sumbu-$Y$ dengan substitusi $x = 0$ (dan titik potong sumbu-$X$ jika ada).</li>
-      <li>Hubungkan titik-titik dengan kurva mulus yang makin mendekati asimtot tetapi <strong>tidak pernah memotongnya</strong>. Periksa arahnya: $a &gt; 1$ naik, $0 &lt; a &lt; 1$ turun.</li>
+      <li><strong>Baca geserannya:</strong> berapa satuan ke kanan/kiri ($h$) dan ke atas/bawah ($c$).</li>
+      <li><strong>Gambar asimtot</strong> $y = c$ dengan garis putus-putus.</li>
+      <li><strong>Geser titik kunci</strong> $y = a^x$, yaitu $\left(-1,\,\tfrac{1}{a}\right)$, $(0,\,1)$, $(1,\,a)$, $(2,\,a^2)$, sejauh $h$ mendatar dan $c$ tegak.</li>
+      <li><strong>Hitung titik potong</strong> sumbu-$Y$ (isi $x = 0$), dan sumbu-$X$ jika ada.</li>
+      <li><strong>Hubungkan</strong> titik-titiknya dengan kurva mulus yang mendekati asimtot.</li>
     </ol>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 30</div>
-      <p style="margin:0;font-size:.9rem;">Lukislah grafik fungsi $f(x) = 2^x$ pada interval $-3 \leq x \leq 3$. Tentukan domain, range, asimtot, dan sifat kemonotonannya.</p>
-    </div>
-    <div class="penyelesaian">
-      <p class="sol-step"><span class="sol-no">1</span><strong>Titik potong sumbu-$Y$:</strong> $f(0) = 2^0 = 1$, yaitu $(0, 1)$.</p>
-      <p class="sol-step"><span class="sol-no">2</span><strong>Buat tabel nilai:</strong></p>
-      <div style="overflow-x:auto; margin:.75rem 0;">
-  <table class="tbl-nilai" style="border-collapse:collapse; font-size:.88rem; min-width:380px; width:100%; border:1px solid var(--border);">
-    
-    <tr>
-      <th style="border:1px solid var(--border); padding:.6rem .7rem; font-family:var(--sans); font-size:.88rem; font-weight:600; text-align:left; background: #111622; color: #ffffff;">$x$</th>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$-3$</td>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$-2$</td>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$-1$</td>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$0$</td>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$1$</td>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$2$</td>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; font-weight:600; color: var(--text-1);">$3$</td>
-    </tr>
-    
-    <tr>
-      <th style="border:1px solid var(--border); padding:.6rem .7rem; font-family:var(--sans); font-size:.88rem; font-weight:600; text-align:left; background: #111622; color: #ffffff;">$f(x)=2^x$</th>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$\tfrac{1}{8}$</td>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$\tfrac{1}{4}$</td>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$\tfrac{1}{2}$</td>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$1$</td>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$2$</td>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$4$</td>
-      <td style="border:1px solid var(--border); padding:.6rem .7rem; text-align:center; color: var(--text-1);">$8$</td>
-    </tr>
-
-  </table>
-</div>
-      <p class="sol-step"><span class="sol-no">3</span><strong>Hubungkan titik-titiknya</strong> dengan kurva mulus:</p>
-      <div class="grafik-wrap">
-        <svg viewBox="0 0 340 290" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:320px;">
-          <defs>
-            <marker id="arr-g28" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#888"/></marker>
-            <marker id="arr-g28l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M7,1 L1,3.5 L7,6z" fill="#888"/></marker>
-          </defs>
-          <!-- Grid -->
-          <g stroke="#e2e8f0" stroke-width="0.6">
-            <line x1="60" y1="20" x2="60" y2="265"/><line x1="90" y1="20" x2="90" y2="265"/>
-            <line x1="120" y1="20" x2="120" y2="265"/><line x1="150" y1="20" x2="150" y2="265"/>
-            <line x1="180" y1="20" x2="180" y2="265"/><line x1="210" y1="20" x2="210" y2="265"/>
-            <line x1="240" y1="20" x2="240" y2="265"/>
-            <line x1="20" y1="235" x2="320" y2="235"/><line x1="20" y1="205" x2="320" y2="205"/>
-            <line x1="20" y1="175" x2="320" y2="175"/><line x1="20" y1="145" x2="320" y2="145"/>
-            <line x1="20" y1="115" x2="320" y2="115"/><line x1="20" y1="85" x2="320" y2="85"/>
-            <line x1="20" y1="55" x2="320" y2="55"/><line x1="20" y1="25" x2="320" y2="25"/>
-          </g>
-          <!-- Axes: origin=(120,265) -->
-          <line x1="20" y1="265" x2="325" y2="265" stroke="#888" stroke-width="1.2" marker-start="url(#arr-g28l)" marker-end="url(#arr-g28)"/>
-          <line x1="120" y1="282" x2="120" y2="18" stroke="#888" stroke-width="1.2" marker-start="url(#arr-g28l)" marker-end="url(#arr-g28)"/>
-          <text x="328" y="270" font-family="Inter,sans-serif" font-size="11" fill="#888">x</text>
-          <text x="112" y="14" font-family="Inter,sans-serif" font-size="11" fill="#888">y</text>
-          <text x="104" y="278" font-family="Inter,sans-serif" font-size="10" fill="#888">O</text>
-          <!-- Ticks x -->
-          <text x="60"  y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−3</text>
-          <text x="90"  y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−2</text>
-          <text x="150" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
-          <text x="180" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">2</text>
-          <text x="210" y="278" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
-          <!-- Ticks y -->
-          <text x="108" y="239" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
-          <text x="108" y="209" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">2</text>
-          <text x="108" y="179" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
-          <text x="108" y="149" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">4</text>
-          <text x="108" y="89"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">6</text>
-          <text x="108" y="59"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">7</text>
-          <text x="108" y="29"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">8</text>
-          <!-- Asimtot y=0 -->
-          <line x1="20" y1="265" x2="320" y2="265" stroke="#D8E0F5" stroke-dasharray="5,3" stroke-width="1"/>
-          <!-- Kurva f(x)=2^x — cubic bezier presisi -->
-          <path d="M 15.0,262.3 C 25.0,261.7 35.0,260.9 45.0,259.7 C 55.0,258.5 65.0,256.8 75.0,254.4 C 85.0,251.9 95.0,248.7 105.0,243.8 C 115.0,238.9 125.0,232.4 135.0,222.6 C 145.0,212.8 155.0,199.8 165.0,180.1 C 175.0,160.5 185.0,134.5 195.0,95.3 C 200.0,75.7 205.0,52.7 210.0,25.0" stroke="#3B82F6" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-g28)"/>
-          <!-- Titik (0,1) -->
-          <circle cx="120" cy="235" r="4" fill="#EF4444"/>
-          <text x="128" y="231" font-family="Inter,sans-serif" font-size="9" fill="#EF4444">(0, 1)</text>
-          <!-- Label kurva -->
-          <text x="215" y="24" font-family="Inter,sans-serif" font-size="10" fill="#3B82F6">f(x) = 2ˣ</text>
-        </svg>
-      </div>
-      <p class="sol-step">Saat $x \to -\infty$, $f(x) \to 0^+$; saat $x \to +\infty$, $f(x) \to +\infty$.</p>
-      <div class="sol-jadi">domain $\mathbb{R}$, range $(0, +\infty)$, asimtot $y = 0$, dan fungsi monoton naik karena $2 > 1$.</div>
-    </div>
-
-    <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 31</div>
-      <p style="margin:0;font-size:.9rem;">Lukislah grafik $f(x) = \left(\dfrac{1}{3}\right)^x$ pada interval $-3 \leq x \leq 3$. Tentukan sifat-sifatnya dan bandingkan dengan $g(x) = 3^x$.</p>
-    </div>
-    <div class="penyelesaian">
-      <p class="sol-step"><span class="sol-no">1</span><strong>Hubungkan dengan $g(x) = 3^x$:</strong> $\left(\tfrac{1}{3}\right)^x = 3^{-x}$, jadi grafik $f$ adalah pencerminan grafik $g$ terhadap sumbu-$Y$.</p>
-      <p class="sol-step"><span class="sol-no">2</span><strong>Buat tabel nilai:</strong></p>
-      <div style="overflow-x:auto; margin:.75rem 0;">
-  <table class="tbl-nilai" style="border-collapse:collapse; font-size:.83rem; min-width:420px; width:100%; border:1px solid var(--border);">
-    
-    <tr>
-      <th style="border:1px solid var(--border); padding:.5rem .6rem; font-family:var(--sans); font-size:.83rem; font-weight:600; text-align:left; background: #111622; color: #ffffff;">$x$</th>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$-3$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$-2$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$-1$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$0$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$1$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$2$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; font-weight:600; color: var(--text-1);">$3$</td>
-    </tr>
-    
-    <tr>
-      <th style="border:1px solid var(--border); padding:.5rem .6rem; font-family:var(--sans); font-size:.83rem; font-weight:600; text-align:left; background: #111622; color: #ffffff;">$f(x)=(1/3)^x$</th>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$27$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$9$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$3$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$1$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$\tfrac{1}{3}$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$\tfrac{1}{9}$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$\tfrac{1}{27}$</td>
-    </tr>
-    
-    <tr>
-      <th style="border:1px solid var(--border); padding:.5rem .6rem; font-family:var(--sans); font-size:.83rem; font-weight:600; text-align:left; background: #111622; color: #ffffff;">$g(x)=3^x$</th>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$\tfrac{1}{27}$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$\tfrac{1}{9}$</td>
-      <td style="border:1px solid var(--border) ; padding:.5rem .6rem; text-align:center; color: var(--text-1);">$\tfrac{1}{3}$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$1$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$3$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$9$</td>
-      <td style="border:1px solid var(--border); padding:.5rem .6rem; text-align:center; color: var(--text-1);">$27$</td>
-    </tr>
-
-  </table>
-</div>
-      <p class="sol-step"><span class="sol-no">3</span><strong>Hubungkan titik-titiknya:</strong></p>
-      <div class="grafik-wrap">
-        <svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
-          <defs>
-            <marker id="arr-g29" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#888"/></marker>
-            <marker id="arr-g29l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M7,1 L1,3.5 L7,6z" fill="#888"/></marker>
-          </defs>
-          <!-- Grid -->
-          <g stroke="#e2e8f0" stroke-width="0.6">
-            <line x1="50" y1="15" x2="50" y2="295"/><line x1="85" y1="15" x2="85" y2="295"/>
-            <line x1="120" y1="15" x2="120" y2="295"/><line x1="155" y1="15" x2="155" y2="295"/>
-            <line x1="190" y1="15" x2="190" y2="295"/><line x1="225" y1="15" x2="225" y2="295"/>
-            <line x1="260" y1="15" x2="260" y2="295"/><line x1="295" y1="15" x2="295" y2="295"/>
-            <line x1="20" y1="285" x2="340" y2="285"/><line x1="20" y1="250" x2="340" y2="250"/>
-            <line x1="20" y1="215" x2="340" y2="215"/><line x1="20" y1="180" x2="340" y2="180"/>
-            <line x1="20" y1="145" x2="340" y2="145"/><line x1="20" y1="110" x2="340" y2="110"/>
-            <line x1="20" y1="75" x2="340" y2="75"/><line x1="20" y1="40" x2="340" y2="40"/>
-          </g>
-          <!-- Axes: origin=(155,285), Δx=35px/unit, Δy=35px/unit -->
-          <line x1="20" y1="285" x2="345" y2="285" stroke="#888" stroke-width="1.2" marker-start="url(#arr-g29l)" marker-end="url(#arr-g29)"/>
-          <line x1="155" y1="305" x2="155" y2="12" stroke="#888" stroke-width="1.2" marker-start="url(#arr-g29l)" marker-end="url(#arr-g29)"/>
-          <text x="348" y="291" font-family="Inter,sans-serif" font-size="11" fill="#888">x</text>
-          <text x="147" y="10"  font-family="Inter,sans-serif" font-size="11" fill="#888">y</text>
-          <text x="138" y="298" font-family="Inter,sans-serif" font-size="10" fill="#888">O</text>
-          <!-- Ticks x -->
-          <text x="50"  y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−3</text>
-          <text x="85"  y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−2</text>
-          <text x="120" y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">−1</text>
-          <text x="190" y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
-          <text x="225" y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">2</text>
-          <text x="260" y="298" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
-          <!-- Ticks y -->
-          <text x="143" y="254" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">1</text>
-          <text x="143" y="184" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">3</text>
-          <text x="143" y="114" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">6</text>
-          <text x="143" y="79"  text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#777">9</text>
-          <!-- Asimtot y=0 -->
-          <line x1="20" y1="285" x2="340" y2="285" stroke="#D8E0F5" stroke-dasharray="5,3" stroke-width="1"/>
-          <!-- Sumbu simetri (sumbu-Y) -->
-          <line x1="155" y1="12" x2="155" y2="305" stroke="#D8E0F5" stroke-dasharray="4,3" stroke-width="1"/>
-          <!-- f(x)=(1/3)^x: turun — cubic bezier presisi, masuk dari atas kiri -->
-          <path d="M 88.5,2.8 C 99.0,95.8 109.5,145.4 120.0,180.0 C 131.7,218.5 143.3,237.2 155.0,250.0 C 166.7,262.8 178.3,269.1 190.0,273.3 C 201.7,277.6 213.3,279.7 225.0,281.1 C 236.7,282.5 248.3,283.2 260.0,283.7" stroke="#EF4444" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-start="url(#arr-g29l)"/>
-          <!-- g(x)=3^x: naik — cubic bezier presisi, cerminan f terhadap sumbu-Y -->
-          <path d="M 50.0,283.7 C 61.7,283.2 73.3,282.5 85.0,281.1 C 96.7,279.7 108.3,277.6 120.0,273.3 C 131.7,269.1 143.3,262.8 155.0,250.0 C 166.7,237.2 178.3,218.5 190.0,180.0 C 199.8,147.7 209.6,102.1 219.4,20.8" stroke="#3B82F6" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arr-g29)"/>
-          <!-- Titik perpotongan (0,1) -->
-          <circle cx="155" cy="250" r="4" fill="#00BFA5"/>
-          <text x="162" y="246" font-family="Inter,sans-serif" font-size="9" fill="#00BFA5">(0, 1)</text>
-          <!-- Label kurva -->
-          <text x="22"  y="36" font-family="Inter,sans-serif" font-size="10" fill="#EF4444">f(x) = (⅓)ˣ</text>
-          <text x="248" y="36" font-family="Inter,sans-serif" font-size="10" fill="#3B82F6">g(x) = 3ˣ</text>
-        </svg>
-      </div>
-      <div class="sol-jadi">domain $\mathbb{R}$, range $(0, +\infty)$, asimtot $y = 0$, fungsi monoton turun karena $0 < \tfrac{1}{3} < 1$, dan grafik $f$ simetris dengan grafik $g$ terhadap sumbu-$Y$.</div>
-    </div>
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 32</div>
@@ -1942,18 +2036,23 @@ window.MathJax = {
       <div class="langkah-anim"><script type="application/json">[{"tex": "h(x) = \\left(\\tfrac{1}{2}\\right)^{x+1} - 2", "note": "Soal: tentukan titik potong sumbu-$Y$ dan sumbu-$X$."}, {"tex": "h(\\color{#0d9488}{0}) = \\left(\\tfrac{1}{2}\\right)^{\\color{#0d9488}{0}+1} - 2", "note": "Titik potong sumbu-$Y$: substitusi $x = 0$."}, {"tex": "h(0) = \\tfrac{1}{2} - 2 = \\color{#e11d48}{-\\tfrac{3}{2}}", "note": "Titik potong sumbu-$Y$: $\\left(0, -\\tfrac{3}{2}\\right)$."}, {"tex": "\\left(\\tfrac{1}{2}\\right)^{x+1} - 2 = \\color{#d97706}{0}", "note": "Titik potong sumbu-$X$: buat $h(x) = 0$."}, {"tex": "\\left(\\tfrac{1}{2}\\right)^{\\color{#7c3aed}{x+1}} = 2 = \\left(\\tfrac{1}{2}\\right)^{\\color{#7c3aed}{-1}}", "note": "Tulis $2 = \\left(\\tfrac{1}{2}\\right)^{-1}$ agar basisnya sama."}, {"tex": "\\color{#7c3aed}{x + 1} = \\color{#7c3aed}{-1}", "note": "Basis sama, maka pangkatnya disamakan."}, {"tex": "\\color{#e11d48}{x = -2}", "note": "Samakan pangkat."}]</script></div>
     </div>
 
-    <h3 class="subsection-title">4. Menentukan Fungsi Eksponen dari Grafik</h3>
-    <p>Kebalikan dari melukis: diberikan grafiknya, kita menentukan rumus fungsinya. Kuncinya adalah <strong>membaca informasi pada grafik</strong>, yaitu asimtot, titik potong, dan titik-titik yang dilalui kurva.</p>
+    <h3 class="subsection-title">4. Mencari Rumus dari Grafik</h3>
+    <p>Ini kebalikan dari menggambar: grafiknya sudah ada, kita mencari rumusnya. Caranya seperti detektif, yaitu <strong>mengumpulkan petunjuk</strong> dari grafik satu per satu.</p>
 
     <div class="box box-catatan">
-      <div class="box-label">⚠ Strategi Membaca Grafik $y = a^{x-h} + c$</div>
-      <ol style="margin:.2rem 0 0;padding-left:1.2rem;font-size:.88rem;line-height:1.8;">
-        <li><strong>Asimtot → nilai $c$.</strong> Jika asimtotnya $y = 0$, tidak ada pergeseran atas/bawah.</li>
-        <li><strong>Cari "bayangan" titik $(0,1)$</strong>, yaitu titik yang tingginya tepat <em>1 satuan di atas asimtot</em>. Koordinat $x$ titik itu adalah nilai $h$.</li>
-        <li><strong>Gunakan satu titik lain</strong> untuk menentukan basis $a$.</li>
-        <li><strong>Cek</strong> dengan titik ketiga pada grafik.</li>
+      <div class="box-label">⚠ Langkah Membaca Grafik</div>
+      <p style="margin:0 0 .2rem;font-size:.88rem;"><strong>Bentuk $y = k \cdot a^x$</strong> (asimtotnya sumbu-$X$; grafik $a^x$ yang diregangkan $k$ kali):</p>
+      <ol style="margin:0 0 .5rem;padding-left:1.2rem;font-size:.88rem;line-height:1.8;">
+        <li>Titik potong sumbu-$Y$ adalah $(0,\,k)$ → langsung dapat <strong>$k$</strong>.</li>
+        <li>Masukkan satu titik lain → dapat <strong>$a$</strong>.</li>
       </ol>
-      <p style="margin:.4rem 0 0;font-size:.88rem;">Untuk bentuk $y = k \cdot a^x$ (asimtot $y = 0$): titik potong sumbu-$Y$ langsung memberi $k$, karena $y(0) = k$. Pada bentuk umum $y = k \cdot a^{x-h} + c$, titik bayangan $(0,1)$ berada $k$ satuan dari asimtot, bukan 1 satuan, sehingga dibutuhkan satu titik lagi untuk menentukan $k$.</p>
+      <p style="margin:0 0 .2rem;font-size:.88rem;"><strong>Bentuk $y = a^{x-h} + c$</strong> (grafik hasil geseran):</p>
+      <ol style="margin:0;padding-left:1.2rem;font-size:.88rem;line-height:1.8;">
+        <li>Lihat asimtot $y = c$ → dapat <strong>$c$</strong>.</li>
+        <li>Cari titik yang tingginya <strong>tepat $1$ di atas asimtot</strong> (di $y = c + 1$). Titik ini adalah $(0,\,1)$ yang sudah digeser, jadi koordinat $x$-nya adalah <strong>$h$</strong>.</li>
+        <li>Masukkan satu titik lain → dapat <strong>$a$</strong>.</li>
+      </ol>
+      <p style="margin:.4rem 0 0;font-size:.88rem;">Selalu <strong>cek</strong> jawabannya dengan satu titik lagi pada grafik.</p>
     </div>
 
     <div class="box box-contoh">
@@ -2242,16 +2341,24 @@ window.MathJax = {
       <div class="sol-jadi">$a = 2$, $h = 1$, $c = 3$, dan $y = 2^{x-1} + 3$.</div>
     </div>
 
-    <h3 class="subsection-title">5. Penerapan Fungsi Eksponen</h3>
-    <p>Fungsi eksponen banyak digunakan untuk memodelkan fenomena dunia nyata yang bersifat <strong>pertumbuhan</strong> atau <strong>peluruhan</strong> secara proporsional.</p>
+    <h3 class="subsection-title">5. Untuk Apa? Pertumbuhan dan Peluruhan</h3>
+    <p>Fungsi eksponen dipakai untuk segala hal yang <strong>berlipat dengan perbandingan tetap</strong>: bakteri yang membelah, tabungan berbunga, harga barang yang menyusut, atau zat radioaktif yang meluruh.</p>
 
     <div class="box box-definisi">
       <div class="box-label">Model Pertumbuhan dan Peluruhan</div>
-      <p><strong>Model Pertumbuhan:</strong></p>
-      <div class="math-block">$$N(t) = N_0 \cdot a^t, \qquad a > 1$$</div>
-      <p><strong>Model Peluruhan:</strong></p>
-      <div class="math-block">$$\begin{gather*} N(t) = N_0 \cdot a^t, \quad 0 < a < 1 \\ \text{atau} \\ N(t) = N_0 \cdot \left(\dfrac{1}{2}\right)^{\!\frac{t}{T_h}} \end{gather*}$$</div>
-      <p><em>Keterangan:</em> $N_0$ = nilai awal (saat $t=0$); $\;t$ = waktu; $\;T_h$ = waktu paruh (<em>half-life</em>).</p>
+      <div class="math-block">$$N(t) = N_0 \cdot a^t$$</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Simbol</th><th>Artinya</th></tr></thead>
+          <tbody>
+            <tr><td>$N_0$</td><td>Jumlah awal (saat $t = 0$).</td></tr>
+            <tr><td>$a$</td><td>Pengali tiap satuan waktu. $a &gt; 1$ berarti <strong>tumbuh</strong> (misalnya $a = 2$: berlipat dua); $0 &lt; a &lt; 1$ berarti <strong>meluruh</strong> (misalnya $a = 0{,}8$: tinggal $80\%$).</td></tr>
+            <tr><td>$t$</td><td>Waktu yang sudah berlalu.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin:.5rem 0 .2rem;"><strong>Khusus waktu paruh</strong> $T_h$ (waktu sampai jumlahnya tinggal setengah):</p>
+      <div class="math-block">$$N(t) = N_0 \cdot \left(\dfrac{1}{2}\right)^{\!\frac{t}{T_h}}$$</div>
     </div>
 
     <div class="box box-contoh">
@@ -2294,6 +2401,18 @@ window.MathJax = {
       <div class="sol-part"><span class="sol-tag">b</span>Waktu agar massa tinggal $\tfrac{1}{16}$ bagian</div>
       $$\begin{align*} \left(\tfrac{1}{2}\right)^{\frac{t}{10}} &= \tfrac{1}{16} = \left(\tfrac{1}{2}\right)^4 \\ \tfrac{t}{10} &= 4 \;\Rightarrow\; t = 40 \end{align*}$$
       <div class="sol-jadi">massa tinggal $\tfrac{1}{16}$ dari massa awal setelah 40 tahun.</div>
+    </div>
+
+    <div class="box box-definisi">
+      <div class="box-label">Peta Cepat Fungsi Eksponen</div>
+      <ol class="step-list">
+        <li><strong>Bentuk dasar</strong> $y = a^x$: selalu di atas sumbu-$X$, melewati $(0,\,1)$, asimtot $y = 0$.</li>
+        <li>$a &gt; 1$ → <strong>naik</strong>; $0 &lt; a &lt; 1$ → <strong>turun</strong>.</li>
+        <li>Angka <strong>di luar</strong> pangkat ($+c$) → geser atas/bawah searah tanda; asimtot menjadi $y = c$.</li>
+        <li>Angka <strong>di dalam</strong> pangkat ($x - h$) → geser kanan/kiri berlawanan tanda; asimtot tetap.</li>
+        <li><strong>Cari rumus:</strong> asimtot → $c$; titik $1$ di atas asimtot → $h$; titik lain → $a$.</li>
+        <li><strong>Aplikasi:</strong> $N(t) = N_0 \cdot a^t$, dengan $N_0$ jumlah awal dan $a$ pengali tiap satuan waktu.</li>
+      </ol>
     </div>
 
     <div class="box box-latihan">
