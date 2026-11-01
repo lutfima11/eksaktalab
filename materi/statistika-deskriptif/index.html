@@ -1,0 +1,1309 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistika Deskriptif: Ukuran Pemusatan, Letak, dan Penyebaran Data — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
+<meta name="description" content="Materi lengkap Statistika Deskriptif SMA: mean, median, modus, kuartil, desil, persentil, simpangan baku, pencilan, pengaruh operasi pada data, data berkelompok, histogram, ogive, dan box plot. Dilengkapi 28 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script>window.addEventListener("load",function(){var s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";document.head.appendChild(s);});</script>
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/statistika-deskriptif/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/statistika-deskriptif/">
+  <meta property="og:title" content="Statistika Deskriptif: Ukuran Pemusatan, Letak, dan Penyebaran Data — EksaktaLab">
+  <meta property="og:description" content="Materi lengkap Statistika Deskriptif SMA: mean, median, modus, kuartil, desil, persentil, simpangan baku, pencilan, pengaruh operasi pada data, data berkelompok, histogram, ogive, dan box plot.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+  <meta property="og:site_name" content="EksaktaLab">
+  <meta property="og:locale" content="id_ID">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Statistika Deskriptif: Ukuran Pemusatan, Letak, dan Penyebaran Data — EksaktaLab">
+  <meta name="twitter:description" content="Materi lengkap Statistika Deskriptif SMA: mean, median, modus, kuartil, desil, persentil, simpangan baku, pencilan, pengaruh operasi pada data, data berkelompok, histogram, ogive, dan box plot.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Statistika Deskriptif","url":"https://lutfima11.github.io/eksaktalab/materi/statistika-deskriptif/","description":"Materi lengkap Statistika Deskriptif SMA: mean, median, modus, kuartil, desil, persentil, simpangan baku, pencilan, pengaruh operasi pada data, data berkelompok, histogram, ogive, dan box plot.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Statistika"},{"@type":"ListItem","position":4,"name":"Statistika Deskriptif","item":"https://lutfima11.github.io/eksaktalab/materi/statistika-deskriptif/"}]}}</script>
+<style>.fki-jenis{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin:1rem 0}.fki-jenis svg{width:100%;height:auto;display:block}@media(max-width:560px){.fki-jenis{grid-template-columns:1fr;max-width:230px;margin:1rem auto}}[data-theme="dark"] .grafik-wrap svg [stroke="#555"]{stroke:#94A3B8}[data-theme="dark"] .grafik-wrap svg [fill="#555"]{fill:#94A3B8}[data-theme="dark"] .grafik-wrap svg text[fill="#059669"]{fill:#34D399}[data-theme="dark"] .grafik-wrap svg [stroke="#059669"]{stroke:#34D399}[data-theme="dark"] .grafik-wrap svg text[fill="#94A3B8"]{fill:#CBD5E8}[data-theme="dark"] .grafik-wrap svg .c1-lgf{stroke:#60A5FA;fill:#60A5FA}[data-theme="dark"] .grafik-wrap svg text.t1-lgf{fill:#60A5FA}@media(max-width:500px){.table-wrap th,.table-wrap td{padding:.45rem .35rem}.table-wrap table{font-size:.72rem}}@media(max-width:400px){.table-wrap th,.table-wrap td{padding:.4rem .25rem}.table-wrap table{font-size:.66rem}.table-wrap mjx-container{font-size:85% !important}.soal-item-header{flex-wrap:wrap}.soal-key-btn{margin-left:auto}}@media(max-width:400px){.contoh-body mjx-container[display="true"],.rumus-body mjx-container[display="true"],.box mjx-container[display="true"],.contoh-question mjx-container[display="true"]{font-size:88% !important}}@media(max-width:360px){.rumus-status{display:none}}.kf-fig{text-align:center;margin:.8rem 0}.kf-fig svg{display:inline-block;max-width:100%;height:auto}.kf-cap{font-size:.8rem;opacity:.8;margin-top:.3rem;line-height:1.4}.kf-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.6rem;align-items:end;margin:.8rem 0}.kf-row .kf-fig{margin:0}.kf-ov{fill:none;stroke:#94A3B8;stroke-width:1.6}.kf-box{fill:#F1F5F9;stroke:#475569;stroke-width:1.6}.kf-t{fill:#334155}.kf-dot{fill:#334155}.kf-mute{fill:#CBD5E1}.kf-mute2{fill:#94A3B8}.kf-ln-b{stroke:#2563EB}.kf-ar-b{fill:#2563EB}.kf-ln-r{stroke:#DC2626}.kf-ar-r{fill:#DC2626}.kf-ln-g{stroke:#059669}.kf-ax{stroke:#555}.kf-axh{fill:#555}.kf-dash{stroke:#CBD5E1}.kf-pt-b{fill:#2563EB}.kf-pt-r{fill:#DC2626}.kf-pt-g{fill:#059669}[data-theme="dark"] .kf-t,[data-theme="dark"] .kf-dot{fill:#E2E8F0}[data-theme="dark"] .kf-ov{stroke:#64748B}[data-theme="dark"] .kf-box{fill:#1E293B;stroke:#94A3B8}[data-theme="dark"] .kf-mute{fill:#475569}[data-theme="dark"] .kf-mute2{fill:#64748B}[data-theme="dark"] .kf-ln-b{stroke:#60A5FA}[data-theme="dark"] .kf-ar-b,[data-theme="dark"] .kf-pt-b{fill:#60A5FA}[data-theme="dark"] .kf-ln-r{stroke:#F87171}[data-theme="dark"] .kf-ar-r,[data-theme="dark"] .kf-pt-r{fill:#F87171}[data-theme="dark"] .kf-ln-g{stroke:#34D399}[data-theme="dark"] .kf-pt-g{fill:#34D399}[data-theme="dark"] .kf-ax{stroke:#94A3B8}[data-theme="dark"] .kf-axh{fill:#94A3B8}[data-theme="dark"] .kf-dash{stroke:#475569}[data-theme="dark"] .nline-wrap svg .nl-ax{stroke:#94A3B8}[data-theme="dark"] .nline-wrap svg .nl-axh{fill:#94A3B8}[data-theme="dark"] .nline-wrap svg text[fill="#555"]{fill:#CBD5E8}[data-theme="dark"] .nline-wrap svg .nl-open{fill:#1E2640}.penyelesaian .nline-wrap svg{margin:0 auto;max-width:100%;height:auto}</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <!-- Daftar Isi Dropdown -->
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Statistika Deskriptif · 8 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Pengertian Dasar</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Ukuran Pemusatan</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Ukuran Letak</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Ukuran Penyebaran</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Distribusi Frekuensi</a>
+        <a class="toc-menu-item" href="#bagian-f" onclick="closeTOC()"><span class="toc-menu-badge">F</span>Data Berkelompok</a>
+        <a class="toc-menu-item" href="#bagian-g" onclick="closeTOC()"><span class="toc-menu-badge">G</span>Penyajian Data</a>
+        <a class="toc-menu-item" href="#bagian-h" onclick="closeTOC()"><span class="toc-menu-badge">H</span>Ringkasan Rumus</a>
+      </div>
+    </div>
+    <!-- Tema -->
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<!-- Floating scroll to top -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#fase-6">Statistika &amp; Peluang</a>
+    <span>/</span>
+    Statistika Deskriptif
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">FASE 6 · No.38</div>
+      <h1 class="materi-title">Statistika Deskriptif</h1>
+      <p class="materi-desc">Membaca cerita di balik kumpulan angka: ukuran pemusatan, letak, dan penyebaran data tunggal maupun berkelompok, serta penyajian data dalam tabel dan diagram.</p>
+      <div class="materi-tags">
+        <span class="tag">Statistika &amp; Peluang</span>
+        <span class="tag">8 Sub-bab</span>
+        <span class="tag">28 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PENGANTAR ═══ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Ketika Rata-Rata Bisa Menipu</h2>
+    <p>Sebuah perusahaan kecil mengumumkan: "Rata-rata gaji karyawan kami Rp15.000.000 per bulan." Terdengar makmur? Kenyataannya, direkturnya bergaji Rp100.000.000, sementara sembilan karyawan lain hanya sekitar Rp3.000.000. Satu angka menyembunyikan kesenjangan besar. Karena itu statistika tidak cukup dengan satu ukuran: kita perlu tahu <em>di mana pusat data</em>, <em>di mana letak suatu nilai</em>, dan <em>seberapa jauh data tersebar</em>.</p>
+    <div class="box box-catatan">
+      <div class="box-label">💡 Gagasan Utama</div>
+      <p style="margin:0;font-size:.9rem;text-align:center;"><strong>Ukuran pemusatan, letak, dan penyebaran harus dibaca bersama-sama.</strong></p>
+    </div>
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 300 150" width="100%" style="max-width:320px" xmlns="http://www.w3.org/2000/svg"><text x="150" y="24" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">Data A: sebaran sempit</text><line x1="20" y1="50" x2="285" y2="50" style="stroke:var(--text-2,#475569);stroke-width:1.4"/><ellipse cx="148.8" cy="43" rx="5" ry="5" style="fill:#0d9488"/><ellipse cx="154.4" cy="43" rx="5" ry="5" style="fill:#0d9488"/><ellipse cx="160.0" cy="43" rx="5" ry="5" style="fill:#0d9488"/><ellipse cx="165.6" cy="43" rx="5" ry="5" style="fill:#0d9488"/><ellipse cx="171.2" cy="43" rx="5" ry="5" style="fill:#0d9488"/><path d="M155.0,56 L165.0,56 L160.0,51 Z" style="fill:#4f46e5"/><text x="160.0" y="68" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">rata-rata 5</text><text x="150" y="94" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">Data B: sebaran lebar</text><line x1="20" y1="120" x2="285" y2="120" style="stroke:var(--text-2,#475569);stroke-width:1.4"/><ellipse cx="62.0" cy="113" rx="5" ry="5" style="fill:#d97706"/><ellipse cx="104.0" cy="113" rx="5" ry="5" style="fill:#d97706"/><ellipse cx="132.0" cy="113" rx="5" ry="5" style="fill:#d97706"/><ellipse cx="160.0" cy="113" rx="5" ry="5" style="fill:#d97706"/><ellipse cx="202.0" cy="113" rx="5" ry="5" style="fill:#d97706"/><ellipse cx="258.0" cy="113" rx="5" ry="5" style="fill:#d97706"/><path d="M155.0,126 L165.0,126 L160.0,121 Z" style="fill:#4f46e5"/><text x="160.0" y="138" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">rata-rata 5</text></svg><div style="font-size:.8rem;color:var(--text-3);margin-top:.3rem;">Rata-rata kedua data sama, tetapi sebarannya sangat berbeda.</div></div>
+    <h3 class="subsection-title">Sejarah Singkat</h3>
+    <p>Sensus penduduk sudah dilakukan bangsa Mesir, Babilonia, dan Tiongkok kuno untuk keperluan pajak. Statistika modern dirintis <strong>John Graunt</strong> (1662) lewat tabel kematian kota London. Pada abad ke-19, <strong>Adolphe Quetelet</strong> memperkenalkan gagasan "manusia rata-rata", <strong>Francis Galton</strong> dan <strong>Karl Pearson</strong> mengembangkan korelasi serta istilah <em>standar deviasi</em>, lalu <strong>Ronald A. Fisher</strong> meletakkan dasar statistika inferensial modern.</p>
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Pengertian Dasar Statistika</a></li>
+      <li><a href="#bagian-b" data-num="B">Ukuran Pemusatan Data Tunggal</a></li>
+      <li><a href="#bagian-c" data-num="C">Ukuran Letak Data Tunggal</a></li>
+      <li><a href="#bagian-d" data-num="D">Ukuran Penyebaran Data Tunggal</a></li>
+      <li><a href="#bagian-e" data-num="E">Tabel Distribusi Frekuensi</a></li>
+      <li><a href="#bagian-f" data-num="F">Ukuran Data Berkelompok</a></li>
+      <li><a href="#bagian-g" data-num="G">Penyajian Data dalam Diagram</a></li>
+      <li><a href="#bagian-h" data-num="H">Ringkasan Rumus</a></li>
+    </ul>
+  </div>
+
+  </section>
+
+  <!-- ═══ A. PENGERTIAN DASAR STATISTIKA ═══ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Pengertian Dasar Statistika</h2>
+    <h3 class="subsection-title">1. Definisi dan Ruang Lingkup</h3>
+    <p><strong>Statistika</strong> mempelajari cara mengumpulkan, mengolah, menyajikan, dan menganalisis data, serta menarik kesimpulan dari hasil pengolahan itu.</p>
+    <div class="box box-definisi">
+      <div class="box-label">Populasi, Sampel, dan Data</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li><strong>Populasi</strong>: keseluruhan objek yang menjadi sasaran penelitian.</li><li><strong>Sampel</strong>: bagian populasi yang dipilih untuk mewakilinya; sampel yang baik diambil secara <em>acak</em>.</li><li><strong>Data</strong>: catatan informasi yang diperoleh dari penelitian.</li></ul>
+    </div>
+
+    <h3 class="subsection-title">2. Jenis-Jenis Statistika</h3>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Jenis</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>Deskriptif</td><td>Menggambarkan dan meringkas data yang ada, <strong>tanpa</strong> menarik kesimpulan tentang populasi yang lebih besar (materi ini).</td></tr>
+          <tr><td>Inferensial</td><td>Menaksir atau menguji karakteristik populasi berdasarkan data sampel: estimasi, uji hipotesis, regresi.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="subsection-title">3. Jenis-Jenis Data</h3>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Penggolongan</th><th>Jenis</th><th>Contoh</th></tr></thead>
+        <tbody>
+          <tr><td>Sifat</td><td>Kualitatif</td><td>jenis pekerjaan, warna</td></tr>
+          <tr><td></td><td>Kuantitatif</td><td>tinggi badan, skor ujian</td></tr>
+          <tr><td>Proses</td><td>Diskrit (cacahan)</td><td>jumlah siswa, jumlah kendaraan</td></tr>
+          <tr><td></td><td>Kontinu (ukuran)</td><td>berat badan, suhu</td></tr>
+          <tr><td>Skala</td><td>Nominal / Ordinal</td><td>nomor rumah, peringkat lomba</td></tr>
+          <tr><td></td><td>Interval / Rasio</td><td>suhu °C, berat dalam kg</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══ B. UKURAN PEMUSATAN DATA TUNGGAL ═══ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Ukuran Pemusatan Data Tunggal</h2>
+    <p>Ukuran pemusatan adalah satu nilai yang mewakili kecenderungan data berkumpul di tengah: <strong>mean</strong>, <strong>median</strong>, dan <strong>modus</strong>.</p>
+    <h3 class="subsection-title">1. Rataan (Mean)</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Mean</div>
+      <div class="math-block">$$\bar{x} = \frac{\sum x}{n}$$</div><p style="margin:.4rem 0 0;font-size:.9rem;">Untuk data berfrekuensi: $\bar{x}$ $= \dfrac{\sum f x}{\sum f}$.</p>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Mean Gabungan dan Data Tambahan</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Gabungan dua kelompok: $\bar{x}_T$ $= \dfrac{n_1\bar{x}_1 + n_2\bar{x}_2}{n_1 + n_2}$</li><li>Satu data $A$ ditambahkan: $\bar{x}_{\text{baru}}$ $= \dfrac{n\bar{x} + A}{n + 1}$</li></ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan mean dari data 3, 5, 4, 6, 7, 5, 8, 6.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Jumlahkan semua data:</strong> $\sum x = 44$ dengan $n = 8$.</p>
+      $$\bar{x} = \frac{44}{8} = 5{,}5$$
+      <div class="sol-jadi">mean data $5{,}5$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0;font-size:.9rem;">Rataan nilai 8 siswa laki-laki adalah 60 dan rataan nilai 12 siswa perempuan adalah 70. Tentukan rataan seluruh siswa.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Mean gabungan:</strong></p>
+      $$ \begin{align*} \bar{x}_T &= \frac{8(60) + 12(70)}{8 + 12} \\ &= \frac{480 + 840}{20} = \frac{1320}{20} \end{align*} $$
+      <div class="sol-jadi">rataan seluruh siswa $66$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan mean data berikut.</p>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai ($x$)</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead>
+        <tbody>
+          <tr><td>$f$</td><td>1</td><td>1</td><td>3</td><td>3</td><td>2</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kalikan nilai dengan frekuensinya:</strong></p>
+      $$ \begin{align*} \sum fx &= 2 + 3 + 12 + 15 + 12 = 44 \\ \sum f &= 10 \end{align*} $$
+      $$\bar{x} = \frac{44}{10}$$
+      <div class="sol-jadi">mean data $4{,}4$.</div>
+    </div>
+
+    <h3 class="subsection-title">2. Median</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Median</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Nilai tengah setelah data diurutkan:</p><ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>$n$ ganjil: $M_e = X_{\frac{n + 1}{2}}$</li><li>$n$ genap: $M_e = \dfrac{1}{2}\left(X_{\frac{n}{2}} + X_{\frac{n}{2} + 1}\right)$</li></ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan median dari data 2, 5, 2, 2, 1, 6, 3, 3.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Urutkan:</strong> 1, 2, 2, 2, 3, 3, 5, 6 ($n = 8$, genap).</p>
+      $$M_e = \frac{1}{2}(X_4 + X_5) = \frac{1}{2}(2 + 3)$$
+      <div class="sol-jadi">median $2{,}5$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan median dari data 2, 3, 1, 1, 4, 6, 2, 5, 2, 1, 6.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Urutkan:</strong> 1, 1, 1, 2, 2, 2, 3, 4, 5, 6, 6 ($n = 11$, ganjil).</p>
+      $$M_e = X_{\frac{11 + 1}{2}} = X_6$$
+      <div class="sol-jadi">median $2$.</div>
+    </div>
+
+    <h3 class="subsection-title">3. Modus</h3>
+    <div class="box box-definisi">
+      <div class="box-label">Modus</div>
+      <p style="margin:0;font-size:.9rem;">Nilai yang paling sering muncul. Data bisa memiliki satu modus (unimodal), dua modus (bimodal), atau lebih.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan modus dari data 4, 7, 5, 4, 6, 4, 7, 7, 5, 4.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung kemunculan:</strong> nilai 4 muncul 4 kali, nilai 7 muncul 3 kali, lainnya lebih sedikit.</p>
+      <div class="sol-jadi">modus $4$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan mean, median, dan modus dari data 2, 3, 1, 1, 4, 6, 2, 5, 2, 1, 6.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Urutkan:</strong> 1, 1, 1, 2, 2, 2, 3, 4, 5, 6, 6.</p>
+      <ul class="sol-cek">
+        <li>Mean: $\dfrac{33}{11} = 3$</li>
+        <li>Median: $X_6 = 2$</li>
+        <li>Modus: $1$ dan $2$ (masing-masing 3 kali, bimodal)</li>
+      </ul>
+      <div class="sol-jadi">mean $3$, median $2$, modus $1$ dan $2$.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan B</div>
+      <ol class="soal-list">
+        <li>Tentukan mean, median, dan modus dari data 6, 8, 5, 9, 7, 8, 6, 10, 6, 8.</li>
+        <li>Tentukan mean, median, dan modus dari data berikut.    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead>
+        <tbody>
+          <tr><td>Frekuensi</td><td>2</td><td>4</td><td>6</td><td>5</td><td>3</td></tr>
+        </tbody>
+      </table>
+    </div>
+</li>
+        <li>Rata-rata nilai 10 siswa adalah 7,5. Jika seorang siswa baru bernilai 6,0 bergabung, tentukan rata-rata yang baru.</li>
+        <li>Rataan nilai 15 siswa kelas A adalah 72 dan rataan 25 siswa kelas B adalah 80. Tentukan rataan gabungannya.</li>
+        <li>Rata-rata nilai 9 siswa adalah 68. Setelah nilai siswa ke-10 ditambahkan, rata-ratanya menjadi 70. Tentukan nilai siswa ke-10.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ C. UKURAN LETAK DATA TUNGGAL ═══ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Ukuran Letak Data Tunggal</h2>
+    <p>Ukuran letak membagi data terurut menjadi bagian sama banyak: <strong>kuartil</strong> (4 bagian), <strong>desil</strong> (10 bagian), dan <strong>persentil</strong> (100 bagian).</p>
+    <h3 class="subsection-title">1. Kuartil</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Kuartil Data Tunggal</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>$Q_2$ = median seluruh data (50% data di bawahnya).</li><li>$Q_1$ = median separuh data bawah; $Q_3$ = median separuh data atas.</li><li>Rataan kuartil $= \dfrac{1}{2}(Q_1 + Q_3)$; rataan tiga $= \dfrac{1}{4}(Q_1 + 2Q_2 + Q_3)$.</li></ul>
+    </div>
+
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 320 120" width="100%" style="max-width:340px" xmlns="http://www.w3.org/2000/svg"><line x1="56.0" y1="55" x2="108.0" y2="55" style="stroke:#4f46e5;stroke-width:2"/><line x1="212.0" y1="55" x2="264.0" y2="55" style="stroke:#4f46e5;stroke-width:2"/><rect x="108.0" y="35" width="104.0" height="40" style="fill:rgba(79,70,229,.18);stroke:#4f46e5;stroke-width:2"/><line x1="160.0" y1="35" x2="160.0" y2="75" style="stroke:#4f46e5;stroke-width:2.4"/><line x1="56.0" y1="45" x2="56.0" y2="65" style="stroke:#4f46e5;stroke-width:2"/><line x1="264.0" y1="45" x2="264.0" y2="65" style="stroke:#4f46e5;stroke-width:2"/><text x="56.0" y="26" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">X<tspan font-size="8" dy="3">min</tspan></text><text x="108.0" y="26" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">Q<tspan font-size="8" dy="3">1</tspan></text><text x="160.0" y="26" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">Q<tspan font-size="8" dy="3">2</tspan></text><text x="212.0" y="26" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">Q<tspan font-size="8" dy="3">3</tspan></text><text x="264.0" y="26" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">X<tspan font-size="8" dy="3">max</tspan></text></svg><div style="font-size:.8rem;color:var(--text-3);margin-top:.3rem;">Statistik lima serangkai: $X_{\min}$, $Q_1$, $Q_2$, $Q_3$, $X_{\max}$; tiap bagian memuat 25% data.</div></div>
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Cara Menentukan Separuh Data</div>
+      <p style="margin:0;font-size:.9rem;">Jika $n$ ganjil, $Q_2$ <strong>tidak</strong> ikut ke separuh bawah maupun atas. Sebagian buku memakai letak $\dfrac{i(n + 1)}{4}$ dengan interpolasi; hasilnya bisa sedikit berbeda. Di halaman ini kuartil data tunggal memakai cara separuh data, sedangkan desil dan persentil memakai letak dengan interpolasi.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan $Q_1$, $Q_2$, $Q_3$, rataan kuartil, dan rataan tiga dari data 2, 3, 5, 2, 6, 3, 5, 2, 7, 9, 6, 3, 3, 5.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Urutkan:</strong> 2, 2, 2, 3, 3, 3, 3 | 5, 5, 5, 6, 6, 7, 9 ($n = 14$).</p>
+      <ul class="sol-cek">
+        <li>$Q_2 = \dfrac{1}{2}(X_7 + X_8)$ $= \dfrac{3 + 5}{2}$ $= 4$</li>
+        <li>$Q_1$ = median 7 data bawah $= X_4 = 3$</li>
+        <li>$Q_3$ = median 7 data atas $= X_{11} = 6$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Rataan:</strong></p>
+      $$ \begin{align*} \text{rataan kuartil} &= \tfrac{1}{2}(3 + 6) \\ &= 4{,}5 \\ \text{rataan tiga} &= \tfrac{1}{4}(3 + 8 + 6) \\ &= 4{,}25 \end{align*} $$
+      <div class="sol-jadi">$Q_1 = 3$, $Q_2 = 4$, $Q_3 = 6$, rataan kuartil $4{,}5$, rataan tiga $4{,}25$.</div>
+    </div>
+
+    <h3 class="subsection-title">2. Desil dan Persentil</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Letak Desil dan Persentil</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Letak $D_i = \dfrac{i(n + 1)}{10}$, $i = 1, \ldots, 9$</li><li>Letak $P_i = \dfrac{i(n + 1)}{100}$, $i = 1, \ldots, 99$</li><li>Jika letaknya $k{,}d$: nilai $= X_k$ $+ 0{,}d\,(X_{k + 1} - X_k)$ (interpolasi)</li></ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan $D_2$ dan $D_6$ dari data 8, 2, 6, 3, 5, 7, 4, 5, 5, 6, 4.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Urutkan:</strong> 2, 3, 4, 4, 5, 5, 5, 6, 6, 7, 8 ($n = 11$).</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$D_2$</span></div>
+      <p class="sol-step">Letak $\dfrac{2(12)}{10}$ $= 2{,}4$.</p>
+      $$ \begin{align*} D_2 &= X_2 + 0{,}4(X_3 - X_2) \\ &= 3 + 0{,}4(1) \end{align*} $$
+      <div class="sol-jadi">$D_2 = 3{,}4$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$D_6$</span></div>
+      <p class="sol-step">Letak $\dfrac{6(12)}{10}$ $= 7{,}2$.</p>
+      $$ \begin{align*} D_6 &= X_7 + 0{,}2(X_8 - X_7) \\ &= 5 + 0{,}2(1) \end{align*} $$
+      <div class="sol-jadi">$D_6 = 5{,}2$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan $P_{45}$ dan $P_{24}$ dari data 42, 24, 30, 46, 28, 32, 42, 36, 20.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Urutkan:</strong> 20, 24, 28, 30, 32, 36, 42, 42, 46 ($n = 9$).</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$P_{45}$</span></div>
+      <p class="sol-step">Letak $\dfrac{45(10)}{100}$ $= 4{,}5$.</p>
+      $$P_{45} = 30 + 0{,}5(32 - 30)$$
+      <div class="sol-jadi">$P_{45} = 31$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$P_{24}$</span></div>
+      <p class="sol-step">Letak $\dfrac{24(10)}{100}$ $= 2{,}4$.</p>
+      $$P_{24} = 24 + 0{,}4(28 - 24)$$
+      <div class="sol-jadi">$P_{24} = 25{,}6$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Hubungan Ukuran Letak</div>
+      <p style="margin:0;font-size:.9rem;">Secara konsep $Q_1 = P_{25}$, $Q_2 = D_5 = P_{50}$, dan $Q_3 = P_{75}$.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan C</div>
+      <ol class="soal-list">
+        <li>Tentukan $Q_1$, $Q_2$, $Q_3$, rataan kuartil, dan rataan tiga dari data 12, 18, 14, 16, 15, 13, 17, 19, 11, 20.</li>
+        <li>Tentukan $D_3$, $D_7$, dan $P_{60}$ dari data 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65.</li>
+        <li>Tentukan $Q_1$, $Q_3$, $D_4$, dan $P_{70}$ dari data 45, 50, 42, 48, 55, 60, 47, 52, 58, 44, 49.</li>
+        <li>Suatu data memiliki $Q_1 = 24$, $Q_2 = 30$, dan $Q_3 = 36$. Tentukan rataan kuartil dan rataan tiganya.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ D. UKURAN PENYEBARAN DATA TUNGGAL ═══ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Ukuran Penyebaran Data Tunggal</h2>
+    <p>Ukuran penyebaran menggambarkan seberapa jauh data menyebar dari pusatnya.</p>
+    <h3 class="subsection-title">1. Rumus-Rumus Penyebaran</h3>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Ukuran</th><th>Rumus</th></tr></thead>
+        <tbody>
+          <tr><td>Jangkauan (rentang)</td><td>$R = X_{\max} - X_{\min}$</td></tr>
+          <tr><td>Rentang antarkuartil (hamparan)</td><td>$H = Q_3 - Q_1$</td></tr>
+          <tr><td>Simpangan kuartil</td><td>$Q_d = \tfrac{1}{2}(Q_3 - Q_1)$</td></tr>
+          <tr><td>Langkah</td><td>$L = \tfrac{3}{2}(Q_3 - Q_1)$</td></tr>
+          <tr><td>Pagar dalam / luar</td><td>$Q_1 - L$ dan $Q_3 + L$</td></tr>
+          <tr><td>Simpangan rata-rata</td><td>$SR = \dfrac{\sum |x_i - \bar{x}|}{n}$</td></tr>
+          <tr><td>Ragam (varians)</td><td>$s^2 = \dfrac{\sum (x_i - \bar{x})^2}{n}$</td></tr>
+          <tr><td>Simpangan baku</td><td>$s = \sqrt{s^2}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box box-catatan">
+      <div class="box-label">💡 Pencilan</div>
+      <p style="margin:0;font-size:.9rem;">Data di bawah pagar dalam atau di atas pagar luar disebut <strong>pencilan</strong> (<em>outlier</em>): nilai yang jauh menyimpang dari kelompoknya.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan jangkauan dan rentang antarkuartil dari data 28, 22, 34, 42, 36, 53, 48, 56, 62, 65.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Urutkan:</strong> 22, 28, 34, 36, 42 | 48, 53, 56, 62, 65 ($n = 10$).</p>
+      $$R = 65 - 22 = 43$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kuartil:</strong> $Q_1$ = median 5 data bawah $= 34$; $Q_3$ = median 5 data atas $= 56$.</p>
+      $$H = 56 - 34 = 22$$
+      <div class="sol-jadi">jangkauan $43$ dan rentang antarkuartil $22$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan simpangan rata-rata dan simpangan baku dari data 3, 5, 4, 6, 6, 4, 8, 5, 4.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Mean:</strong> $\bar{x}$ $= \dfrac{45}{9}$ $= 5$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Simpangan tiap data:</strong> $|x - 5|$ = 2, 0, 1, 1, 1, 1, 3, 0, 1; jumlahnya $10$. Kuadratnya 4, 0, 1, 1, 1, 1, 9, 0, 1; jumlahnya $18$.</p>
+      $$ \begin{align*} SR &= \frac{10}{9} \approx 1{,}11 \\ s &= \sqrt{\frac{18}{9}} = \sqrt{2} \approx 1{,}41 \end{align*} $$
+      <div class="sol-jadi">$SR \approx 1{,}11$ dan $s = \sqrt{2}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan simpangan rata-rata dan simpangan baku data berikut.</p>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai ($x$)</th><th>2</th><th>3</th><th>4</th><th>6</th></tr></thead>
+        <tbody>
+          <tr><td>$f$</td><td>3</td><td>2</td><td>3</td><td>4</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Mean:</strong> $\bar{x}$ $= \dfrac{6 + 6 + 12 + 24}{12}$ $= \dfrac{48}{12}$ $= 4$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Tabel bantu:</strong></p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>$x$</th><th>$f$</th><th>$f|x - \bar{x}|$</th><th>$f(x - \bar{x})^2$</th></tr></thead><tbody><tr><td>2</td><td>3</td><td>6</td><td>12</td></tr><tr><td>3</td><td>2</td><td>2</td><td>2</td></tr><tr><td>4</td><td>3</td><td>0</td><td>0</td></tr><tr><td>6</td><td>4</td><td>8</td><td>16</td></tr><tr><td>Jumlah</td><td>12</td><td>16</td><td>30</td></tr></tbody></table></div>
+      $$ \begin{align*} SR &= \frac{16}{12} = \frac{4}{3} \\ s &= \sqrt{\frac{30}{12}} = \frac{\sqrt{10}}{2} \end{align*} $$
+      <div class="sol-jadi">$SR = \dfrac{4}{3}$ dan $s = \dfrac{\sqrt{10}}{2} \approx 1{,}58$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan data pencilan (jika ada) dari data 20, 68, 68, 74, 76, 78, 80, 83, 84, 88, 92, 96.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kuartil</strong> ($n = 12$, sudah terurut):</p>
+      <ul class="sol-cek">
+        <li>$Q_2 = \dfrac{78 + 80}{2}$ $= 79$</li>
+        <li>$Q_1$ = median 20, 68, 68, 74, 76, 78 $= \dfrac{68 + 74}{2}$ $= 71$</li>
+        <li>$Q_3$ = median 80, 83, 84, 88, 92, 96 $= \dfrac{84 + 88}{2}$ $= 86$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Langkah dan pagar:</strong></p>
+      $$ \begin{align*} L &= \tfrac{3}{2}(86 - 71) = 22{,}5 \\ \text{pagar dalam} &= 71 - 22{,}5 \\ &= 48{,}5 \\ \text{pagar luar} &= 86 + 22{,}5 \\ &= 108{,}5 \end{align*} $$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Bandingkan:</strong> hanya 20 yang berada di luar selang $[48{,}5;\ 108{,}5]$.</p>
+      <div class="sol-jadi">data pencilannya adalah $20$.</div>
+    </div>
+
+    <h3 class="subsection-title">2. Pengaruh Operasi Hitung pada Data</h3>
+    <p>Tipe soal ini sangat sering muncul di SNBT: setiap data diubah dengan cara yang sama, lalu ditanya ukuran barunya.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Jika Setiap Data Diubah</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li><strong>Ditambah/dikurangi $c$</strong>: ukuran pemusatan dan letak ikut bertambah $c$; ukuran penyebaran <strong>tetap</strong>.</li><li><strong>Dikali $k$</strong>: ukuran pemusatan, letak, dan penyebaran ikut dikali $k$ (ragam dikali $k^2$).</li><li>Contoh: $y = kx + c$ memberi $\bar{y} = k\bar{x} + c$ dan $s_y = |k|\,s_x$.</li></ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0;font-size:.9rem;">Suatu data memiliki rata-rata 12, jangkauan 8, dan simpangan baku 3. Setiap data dikali 2 lalu dikurangi 5. Tentukan rata-rata, jangkauan, dan simpangan baku yang baru.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pemusatan ikut seluruh operasi:</strong></p>
+      $$\bar{y} = 2(12) - 5 = 19$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Penyebaran hanya terpengaruh perkalian:</strong></p>
+      $$ \begin{align*} R_y &= 2 \times 8 = 16 \\ s_y &= 2 \times 3 = 6 \end{align*} $$
+      <div class="sol-jadi">rata-rata $19$, jangkauan $16$, simpangan baku $6$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0;font-size:.9rem;">Rata-rata 5 data adalah 70. Ternyata satu data salah tulis: tertulis 56, seharusnya 65. Tentukan rata-rata yang benar.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Jumlah data semula:</strong> $5 \times 70 = 350$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Koreksi jumlah:</strong> $350 - 56 + 65 = 359$.</p>
+      $$\bar{x} = \frac{359}{5} = 71{,}8$$
+      <div class="sol-jadi">rata-rata yang benar $71{,}8$.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan D</div>
+      <ol class="soal-list">
+        <li>Tentukan simpangan rata-rata dan simpangan baku dari data 4, 6, 5, 7, 7, 5, 9, 6, 5.</li>
+        <li>Dari data 12, 18, 14, 16, 15, 13, 17, 19, 11, 20, tentukan simpangan kuartil, langkah, pagar dalam, dan pagar luar.</li>
+        <li>Tentukan data pencilan (jika ada) dari data 50, 70, 68, 74, 76, 78, 80, 83, 84, 88, 92, 96, 98.</li>
+        <li>Tentukan jangkauan, simpangan rata-rata, dan simpangan baku data berikut.    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai ($x$)</th><th>3</th><th>5</th><th>7</th><th>9</th><th>11</th></tr></thead>
+        <tbody>
+          <tr><td>$f$</td><td>2</td><td>4</td><td>6</td><td>5</td><td>3</td></tr>
+        </tbody>
+      </table>
+    </div>
+</li>
+        <li>Nilai ulangan suatu kelas memiliki rata-rata 60, median 62, dan simpangan baku 8. Guru mengubah setiap nilai $x$ menjadi $1{,}5x - 10$. Tentukan rata-rata, median, dan simpangan baku yang baru.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ E. TABEL DISTRIBUSI FREKUENSI ═══ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Tabel Distribusi Frekuensi</h2>
+    <h3 class="subsection-title">1. Pengertian dan Istilah</h3>
+    <div class="box box-definisi">
+      <div class="box-label">Data Berkelompok</div>
+      <p style="margin:0;font-size:.9rem;">Data dalam jumlah besar dikelompokkan ke dalam interval-interval yang disebut <strong>kelas</strong>, lalu disajikan dalam tabel distribusi frekuensi.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Kelas</th><th>Batas bawah–atas</th><th>Tepi bawah–atas</th><th>Titik tengah</th><th>$f$</th></tr></thead>
+        <tbody>
+          <tr><td>51–55</td><td>51 – 55</td><td>50,5 – 55,5</td><td>53</td><td>3</td></tr>
+          <tr><td>56–60</td><td>56 – 60</td><td>55,5 – 60,5</td><td>58</td><td>4</td></tr>
+          <tr><td>61–65</td><td>61 – 65</td><td>60,5 – 65,5</td><td>63</td><td>5</td></tr>
+          <tr><td>66–70</td><td>66 – 70</td><td>65,5 – 70,5</td><td>68</td><td>2</td></tr>
+          <tr><td>71–75</td><td>71 – 75</td><td>70,5 – 75,5</td><td>73</td><td>2</td></tr>
+          <tr><td>76–80</td><td>76 – 80</td><td>75,5 – 80,5</td><td>78</td><td>4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box box-rumus">
+      <div class="box-label">Istilah Penting</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li><strong>Tepi kelas</strong> = batas kelas $\pm 0{,}5$ (untuk data bilangan bulat).</li><li><strong>Panjang kelas</strong> $p$ = tepi atas $-$ tepi bawah (contoh di atas: $5$).</li><li><strong>Titik tengah</strong> $= \dfrac{\text{batas bawah} + \text{batas atas}}{2}$.</li><li><strong>Aturan Sturges</strong>: banyak kelas $k = 1 + 3{,}322 \log n$; panjang kelas $p \approx \dfrac{R}{k}$ (bulatkan ke atas).</li></ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0;font-size:.9rem;">Susunlah tabel distribusi frekuensi dengan aturan Sturges untuk 20 data berikut: 62, 75, 58, 81, 69, 72, 64, 88, 77, 70, 55, 83, 66, 79, 73, 60, 85, 68, 74, 71.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Banyak kelas:</strong></p>
+      $$ \begin{align*} k &= 1 + 3{,}322 \log 20 \\ &\approx 1 + 3{,}322(1{,}301) = 5{,}32 \end{align*} $$
+      <p class="sol-step">Dibulatkan menjadi $k = 5$ kelas.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Panjang kelas:</strong> jangkauan $R = 88 - 55 = 33$, jadi $p = \dfrac{33}{5}$ $= 6{,}6$, dibulatkan ke atas menjadi $7$.</p>
+      <p class="sol-step"><span class="sol-no">3</span><strong>Turus setiap kelas,</strong> dimulai dari data terkecil 55:</p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Kelas</th><th>Data</th><th>$f$</th></tr></thead><tbody><tr><td>55–61</td><td>55, 58, 60</td><td>3</td></tr><tr><td>62–68</td><td>62, 64, 66, 68</td><td>4</td></tr><tr><td>69–75</td><td>69, 70, 71, 72, 73, 74, 75</td><td>7</td></tr><tr><td>76–82</td><td>77, 79, 81</td><td>3</td></tr><tr><td>83–89</td><td>83, 85, 88</td><td>3</td></tr></tbody></table></div>
+      <div class="sol-jadi">tabelnya terdiri atas 5 kelas dengan panjang 7 dan total frekuensi $20$.</div>
+    </div>
+
+    <h3 class="subsection-title">2. Frekuensi Kumulatif</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Frekuensi Kumulatif</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li><strong>Kurang dari</strong>: jumlah frekuensi sampai tepi <em>atas</em> suatu kelas.</li><li><strong>Lebih dari</strong>: jumlah frekuensi mulai tepi <em>bawah</em> suatu kelas.</li><li><strong>Relatif</strong>: $\dfrac{\text{frekuensi kumulatif}}{n} \times 100\%$.</li></ul>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan E</div>
+      <ol class="soal-list">
+        <li>Tentukan panjang kelas dan titik tengah setiap kelas dari tabel berikut.    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai</th><th>40–44</th><th>45–49</th><th>50–54</th><th>55–59</th><th>60–64</th><th>65–69</th><th>70–74</th></tr></thead>
+        <tbody>
+          <tr><td>$f$</td><td>3</td><td>7</td><td>10</td><td>15</td><td>8</td><td>5</td><td>2</td></tr>
+        </tbody>
+      </table>
+    </div>
+</li>
+        <li>Dari tabel pada soal nomor 1, tentukan frekuensi kumulatif kurang dari 64,5 dan frekuensi kumulatif lebih dari 54,5.</li>
+        <li>Buatlah tabel distribusi frekuensi dengan aturan Sturges untuk data: 45, 52, 67, 71, 58, 63, 49, 55, 60, 74, 48, 56, 68, 72, 59, 64, 50, 57, 61, 75, 47, 53, 69, 73, 62.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ F. UKURAN DATA BERKELOMPOK ═══ -->
+  <section class="section" id="bagian-f">
+    <h2 class="section-title"><span class="section-badge">F</span>Ukuran Data Berkelompok</h2>
+    <h3 class="subsection-title">1. Rataan Data Berkelompok</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Mean Data Berkelompok</div>
+      <div class="math-block">$$\bar{x} = \frac{\sum f\,x_T}{\sum f}$$</div><p style="margin:.4rem 0 0;font-size:.9rem;">dengan $x_T$ titik tengah kelas. Dengan rataan sementara $x_s$: $\bar{x}$ $= x_s$ $+ \dfrac{\sum f d}{\sum f}$, $d = x_T - x_s$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan rataan data berikut dengan dua cara.</p>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai</th><th>$f$</th></tr></thead>
+        <tbody>
+          <tr><td>1–5</td><td>4</td></tr>
+          <tr><td>6–10</td><td>2</td></tr>
+          <tr><td>11–15</td><td>5</td></tr>
+          <tr><td>16–20</td><td>5</td></tr>
+          <tr><td>21–25</td><td>3</td></tr>
+          <tr><td>26–30</td><td>1</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">1</span><span>Cara langsung</span></div>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Kelas</th><th>$f$</th><th>$x_T$</th><th>$f x_T$</th></tr></thead><tbody><tr><td>1–5</td><td>4</td><td>3</td><td>12</td></tr><tr><td>6–10</td><td>2</td><td>8</td><td>16</td></tr><tr><td>11–15</td><td>5</td><td>13</td><td>65</td></tr><tr><td>16–20</td><td>5</td><td>18</td><td>90</td></tr><tr><td>21–25</td><td>3</td><td>23</td><td>69</td></tr><tr><td>26–30</td><td>1</td><td>28</td><td>28</td></tr><tr><td>Jumlah</td><td>20</td><td></td><td>280</td></tr></tbody></table></div>
+      $$\bar{x} = \frac{280}{20} = 14$$
+      <div class="sol-part"><span class="sol-tag">2</span><span>Rataan sementara $x_s = 18$</span></div>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>$x_T$</th><th>$f$</th><th>$d = x_T - 18$</th><th>$f d$</th></tr></thead><tbody><tr><td>3</td><td>4</td><td>$-15$</td><td>$-60$</td></tr><tr><td>8</td><td>2</td><td>$-10$</td><td>$-20$</td></tr><tr><td>13</td><td>5</td><td>$-5$</td><td>$-25$</td></tr><tr><td>18</td><td>5</td><td>0</td><td>0</td></tr><tr><td>23</td><td>3</td><td>5</td><td>15</td></tr><tr><td>28</td><td>1</td><td>10</td><td>10</td></tr><tr><td>Jumlah</td><td>20</td><td></td><td>$-80$</td></tr></tbody></table></div>
+      $$\bar{x} = 18 + \frac{-80}{20} = 14$$
+      <div class="sol-jadi">rataannya $14$ (kedua cara sama).</div>
+    </div>
+
+    <h3 class="subsection-title">2. Median dan Modus Data Berkelompok</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Median dan Modus</div>
+      <div class="math-block">$$M_e = T_b + p\left(\frac{\frac{n}{2} - f_k}{f}\right)$$</div><div class="math-block">$$M_o = T_b + p\left(\frac{d_1}{d_1 + d_2}\right)$$</div><ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>$T_b$: tepi bawah kelas; $p$: panjang kelas; $f_k$: frekuensi kumulatif <em>sebelum</em> kelas; $f$: frekuensi kelas itu.</li><li>$d_1$, $d_2$: selisih frekuensi kelas modus dengan kelas sebelum dan sesudahnya.</li></ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan median data berikut.</p>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai</th><th>$f$</th></tr></thead>
+        <tbody>
+          <tr><td>51–55</td><td>3</td></tr>
+          <tr><td>56–60</td><td>4</td></tr>
+          <tr><td>61–65</td><td>5</td></tr>
+          <tr><td>66–70</td><td>2</td></tr>
+          <tr><td>71–75</td><td>2</td></tr>
+          <tr><td>76–80</td><td>4</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kelas median:</strong> $\tfrac{n}{2} = 10$; frekuensi kumulatif 3, 7, 12, …, jadi data ke-10 ada di kelas 61–65.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Unsur rumus:</strong> $T_b = 60{,}5$, $p = 5$, $f_k = 7$, $f = 5$.</p>
+      $$ \begin{align*} M_e &= 60{,}5 + 5\left(\frac{10 - 7}{5}\right) \\ &= 60{,}5 + 3 \end{align*} $$
+      <div class="sol-jadi">mediannya $63{,}5$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan modus data berikut.</p>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai</th><th>$f$</th></tr></thead>
+        <tbody>
+          <tr><td>21–25</td><td>4</td></tr>
+          <tr><td>26–30</td><td>5</td></tr>
+          <tr><td>31–35</td><td>8</td></tr>
+          <tr><td>36–40</td><td>6</td></tr>
+          <tr><td>41–45</td><td>5</td></tr>
+          <tr><td>46–50</td><td>3</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Kelas modus:</strong> frekuensi terbesar 8 di kelas 31–35.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Unsur rumus:</strong> $T_b = 30{,}5$, $p = 5$, $d_1 = 8 - 5 = 3$, $d_2 = 8 - 6 = 2$.</p>
+      $$M_o = 30{,}5 + 5\left(\frac{3}{3 + 2}\right) = 30{,}5 + 3$$
+      <div class="sol-jadi">modusnya $33{,}5$.</div>
+    </div>
+
+    <h3 class="subsection-title">3. Kuartil, Desil, dan Persentil Data Berkelompok</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Ukuran Letak Berkelompok</div>
+      <div class="math-block">$$Q_i = T_b + p\left(\frac{\frac{i}{4}n - f_k}{f}\right)$$</div><p style="margin:.4rem 0 0;font-size:.9rem;">Untuk desil ganti $\tfrac{i}{4}$ dengan $\tfrac{i}{10}$; untuk persentil dengan $\tfrac{i}{100}$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 21</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Tentukan $Q_1$ dan $Q_3$ data berikut.</p>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai</th><th>$f$</th></tr></thead>
+        <tbody>
+          <tr><td>31–36</td><td>1</td></tr>
+          <tr><td>37–42</td><td>5</td></tr>
+          <tr><td>43–48</td><td>4</td></tr>
+          <tr><td>49–54</td><td>7</td></tr>
+          <tr><td>55–60</td><td>5</td></tr>
+          <tr><td>61–66</td><td>2</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Banyak data:</strong> $n = 24$, panjang kelas $p = 6$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$Q_1$</span></div>
+      <p class="sol-step">Letak $\tfrac{1}{4}(24) = 6$ di kelas 37–42: $T_b = 36{,}5$, $f_k = 1$, $f = 5$.</p>
+      $$Q_1 = 36{,}5 + 6\left(\frac{6 - 1}{5}\right)$$
+      <div class="sol-jadi">$Q_1 = 42{,}5$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$Q_3$</span></div>
+      <p class="sol-step">Letak $\tfrac{3}{4}(24) = 18$ di kelas 55–60: $T_b = 54{,}5$, $f_k = 17$, $f = 5$.</p>
+      $$Q_3 = 54{,}5 + 6\left(\frac{18 - 17}{5}\right)$$
+      <div class="sol-jadi">$Q_3 = 55{,}7$.</div>
+    </div>
+
+    <h3 class="subsection-title">4. Simpangan Baku Data Berkelompok</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Simpangan Baku</div>
+      <div class="math-block">$$s = \sqrt{\frac{\sum f\,(x_T - \bar{x})^2}{\sum f}}$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0;font-size:.9rem;">Tentukan simpangan baku data pada contoh rataan data berkelompok di atas ($\bar{x} = 14$).</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Tabel bantu:</strong></p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>$x_T$</th><th>$f$</th><th>$(x_T - \bar{x})^2$</th><th>$f(x_T - \bar{x})^2$</th></tr></thead><tbody><tr><td>3</td><td>4</td><td>121</td><td>484</td></tr><tr><td>8</td><td>2</td><td>36</td><td>72</td></tr><tr><td>13</td><td>5</td><td>1</td><td>5</td></tr><tr><td>18</td><td>5</td><td>16</td><td>80</td></tr><tr><td>23</td><td>3</td><td>81</td><td>243</td></tr><tr><td>28</td><td>1</td><td>196</td><td>196</td></tr><tr><td>Jumlah</td><td>20</td><td></td><td>1080</td></tr></tbody></table></div>
+      $$s = \sqrt{\frac{1080}{20}} = \sqrt{54} = 3\sqrt{6}$$
+      <div class="sol-jadi">simpangan bakunya $3\sqrt{6} \approx 7{,}35$.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan F</div>
+      <ol class="soal-list">
+        <li>Dari tabel berikut, tentukan (a) mean, (b) median, (c) modus, (d) $Q_1$ dan $Q_3$, (e) simpangan baku.    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai</th><th>40–44</th><th>45–49</th><th>50–54</th><th>55–59</th><th>60–64</th><th>65–69</th><th>70–74</th></tr></thead>
+        <tbody>
+          <tr><td>$f$</td><td>3</td><td>7</td><td>10</td><td>15</td><td>8</td><td>5</td><td>2</td></tr>
+        </tbody>
+      </table>
+    </div>
+</li>
+        <li>Nilai 30 siswa disajikan berikut. Jika diambil 40% nilai terbaik, tentukan batas nilai terendah yang diambil.    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai</th><th>40–45</th><th>46–51</th><th>52–57</th><th>58–63</th><th>64–69</th><th>70–75</th></tr></thead>
+        <tbody>
+          <tr><td>$f$</td><td>3</td><td>5</td><td>7</td><td>4</td><td>6</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </div>
+</li>
+        <li>Tentukan modus dan simpangan baku data berikut.    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai</th><th>10–19</th><th>20–29</th><th>30–39</th><th>40–49</th><th>50–59</th><th>60–69</th></tr></thead>
+        <tbody>
+          <tr><td>$f$</td><td>4</td><td>9</td><td>14</td><td>11</td><td>7</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </div>
+</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ G. PENYAJIAN DATA DALAM DIAGRAM ═══ -->
+  <section class="section" id="bagian-g">
+    <h2 class="section-title"><span class="section-badge">G</span>Penyajian Data dalam Diagram</h2>
+    <h3 class="subsection-title">1. Diagram Batang</h3>
+    <p>Cocok untuk <strong>membandingkan</strong> besaran beberapa kategori.</p>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 23</div>
+      <p style="margin:0;font-size:.9rem;">Sajikan data penjualan berikut dalam diagram batang: buku tulis 25, pensil 40, pena 20, penghapus 35.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sumbu mendatar</strong> memuat kategori barang, sumbu tegak memuat jumlah; tinggi batang sebanding dengan jumlahnya.</p>
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 300 210" width="100%" style="max-width:320px" xmlns="http://www.w3.org/2000/svg"><line x1="42" y1="176.0" x2="290" y2="176.0" style="stroke:var(--text-2,#475569);stroke-width:1.4"/><text x="37" y="179.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">0</text><line x1="42" y1="144.0" x2="290" y2="144.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="147.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">10</text><line x1="42" y1="112.0" x2="290" y2="112.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="115.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">20</text><line x1="42" y1="80.0" x2="290" y2="80.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="83.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">30</text><line x1="42" y1="48.0" x2="290" y2="48.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="51.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">40</text><line x1="42" y1="16.0" x2="290" y2="16.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="19.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">50</text><line x1="42" y1="176" x2="42" y2="12" style="stroke:var(--text-2,#475569);stroke-width:1.4"/><rect x="54.4" y="96.0" width="37.2" height="80.0" style="fill:#0d9488;opacity:.85"/><text x="73.0" y="92.0" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">25</text><text x="73.0" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">Buku</text><rect x="116.4" y="48.0" width="37.2" height="128.0" style="fill:#0d9488;opacity:.85"/><text x="135.0" y="44.0" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">40</text><text x="135.0" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">Pensil</text><rect x="178.4" y="112.0" width="37.2" height="64.0" style="fill:#0d9488;opacity:.85"/><text x="197.0" y="108.0" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">20</text><text x="197.0" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">Pena</text><rect x="240.4" y="64.0" width="37.2" height="112.0" style="fill:#0d9488;opacity:.85"/><text x="259.0" y="60.0" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">35</text><text x="259.0" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">Penghapus</text></svg></div>
+      <div class="sol-jadi">penjualan terbanyak adalah pensil (40) dan paling sedikit pena (20).</div>
+    </div>
+
+    <h3 class="subsection-title">2. Diagram Garis</h3>
+    <p>Cocok untuk menampilkan <strong>perkembangan</strong> data dari waktu ke waktu.</p>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Sajikan nilai kuis seorang siswa dalam diagram garis: kuis 1 sampai 6 bernilai 50, 60, 55, 70, 80, 70.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Plot setiap pasangan</strong> (kuis, nilai) lalu hubungkan berurutan:</p>
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 300 210" width="100%" style="max-width:320px" xmlns="http://www.w3.org/2000/svg"><line x1="42" y1="176.0" x2="290" y2="176.0" style="stroke:var(--text-2,#475569);stroke-width:1.4"/><text x="37" y="179.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">40</text><line x1="42" y1="144.0" x2="290" y2="144.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="147.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">50</text><line x1="42" y1="112.0" x2="290" y2="112.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="115.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">60</text><line x1="42" y1="80.0" x2="290" y2="80.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="83.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">70</text><line x1="42" y1="48.0" x2="290" y2="48.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="51.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">80</text><line x1="42" y1="16.0" x2="290" y2="16.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="19.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">90</text><line x1="42" y1="176" x2="42" y2="12" style="stroke:var(--text-2,#475569);stroke-width:1.4"/><polyline points="62.7,144.0 104.0,112.0 145.3,128.0 186.7,80.0 228.0,48.0 269.3,80.0" style="fill:none;stroke:#0d9488;stroke-width:2.2"/><ellipse cx="62.7" cy="144.0" rx="3.6" ry="3.6" style="fill:#0d9488"/><text x="62.7" y="137.0" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">50</text><text x="62.7" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">1</text><ellipse cx="104.0" cy="112.0" rx="3.6" ry="3.6" style="fill:#0d9488"/><text x="104.0" y="105.0" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">60</text><text x="104.0" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">2</text><ellipse cx="145.3" cy="128.0" rx="3.6" ry="3.6" style="fill:#0d9488"/><text x="145.3" y="121.0" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">55</text><text x="145.3" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">3</text><ellipse cx="186.7" cy="80.0" rx="3.6" ry="3.6" style="fill:#0d9488"/><text x="186.7" y="73.0" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">70</text><text x="186.7" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">4</text><ellipse cx="228.0" cy="48.0" rx="3.6" ry="3.6" style="fill:#0d9488"/><text x="228.0" y="41.0" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">80</text><text x="228.0" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">5</text><ellipse cx="269.3" cy="80.0" rx="3.6" ry="3.6" style="fill:#0d9488"/><text x="269.3" y="73.0" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">70</text><text x="269.3" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">6</text><text x="166.0" y="204" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">Kuis ke-</text></svg></div>
+      <div class="sol-jadi">nilai cenderung naik dan mencapai puncak 80 pada kuis ke-5.</div>
+    </div>
+
+    <h3 class="subsection-title">3. Diagram Lingkaran</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Sudut Sektor</div>
+      <div class="math-block">$$\text{sudut} = \frac{\text{nilai}}{\text{total}} \times 360^\circ$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Dukungan untuk 5 calon: A = 300, B = 150, C = 225, D = 675, E = 450 (total 1.800). Tentukan sudut setiap sektor dan gambarkan diagram lingkarannya.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung sudut:</strong></p>
+      <ul class="sol-cek">
+        <li>A: $\tfrac{300}{1800} \times 360^\circ$ $= 60^\circ$</li>
+        <li>B: $30^\circ$, C: $45^\circ$</li>
+        <li>D: $135^\circ$, E: $90^\circ$ (jumlah $360^\circ$ ✓)</li>
+      </ul>
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 300 200" width="100%" style="max-width:320px" xmlns="http://www.w3.org/2000/svg"><path d="M95,100 L95.0,20.0 A80,80 0 0,1 164.3,60.0 Z" style="fill:#0d9488;stroke:#fff;stroke-width:1.5"/><text x="119.8" y="61.0" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:700">60°</text><rect x="200" y="40" width="12" height="12" rx="2" style="fill:#0d9488"/><text x="218" y="50" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">A (300)</text><path d="M95,100 L164.3,60.0 A80,80 0 0,1 175.0,100.0 Z" style="fill:#d97706;stroke:#fff;stroke-width:1.5"/><text x="142.9" y="91.2" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:700">30°</text><rect x="200" y="64" width="12" height="12" rx="2" style="fill:#d97706"/><text x="218" y="74" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">B (150)</text><path d="M95,100 L175.0,100.0 A80,80 0 0,1 151.6,156.6 Z" style="fill:#7c3aed;stroke:#fff;stroke-width:1.5"/><text x="140.8" y="123.0" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:700">45°</text><rect x="200" y="88" width="12" height="12" rx="2" style="fill:#7c3aed"/><text x="218" y="98" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">C (225)</text><path d="M95,100 L151.6,156.6 A80,80 0 0,1 15.0,100.0 Z" style="fill:#4f46e5;stroke:#fff;stroke-width:1.5"/><text x="76.0" y="149.8" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:700">135°</text><rect x="200" y="112" width="12" height="12" rx="2" style="fill:#4f46e5"/><text x="218" y="122" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">D (675)</text><path d="M95,100 L15.0,100.0 A80,80 0 0,1 95.0,20.0 Z" style="fill:#e11d48;stroke:#fff;stroke-width:1.5"/><text x="59.9" y="68.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:700">90°</text><rect x="200" y="136" width="12" height="12" rx="2" style="fill:#e11d48"/><text x="218" y="146" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">E (450)</text></svg></div>
+      <div class="sol-jadi">sektor terbesar D ($135^\circ$) dan terkecil B ($30^\circ$).</div>
+    </div>
+
+    <h3 class="subsection-title">4. Diagram Kotak Garis (Box Plot)</h3>
+    <p>Box plot menampilkan statistik lima serangkai sekaligus memperlihatkan sebaran data.</p>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26</div>
+      <p style="margin:0;font-size:.9rem;">Buatlah box plot untuk data 72, 72, 75, 78, 78, 78, 78, 82, 83, 85, 86, 86, 88, 90, 92, 92.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Lima serangkai</strong> ($n = 16$):</p>
+      <ul class="sol-cek">
+        <li>$Q_1 = \tfrac{1}{2}(X_4 + X_5)$ $= 78$</li>
+        <li>$Q_2 = \tfrac{1}{2}(X_8 + X_9)$ $= 82{,}5$</li>
+        <li>$Q_3 = \tfrac{1}{2}(X_{12} + X_{13})$ $= 87$</li>
+        <li>$X_{\min} = 72$, $X_{\max} = 92$</li>
+      </ul>
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 320 120" width="100%" style="max-width:340px" xmlns="http://www.w3.org/2000/svg"><line x1="51.7" y1="55" x2="116.7" y2="55" style="stroke:#4f46e5;stroke-width:2"/><line x1="214.2" y1="55" x2="268.3" y2="55" style="stroke:#4f46e5;stroke-width:2"/><rect x="116.7" y="35" width="97.5" height="40" style="fill:rgba(79,70,229,.18);stroke:#4f46e5;stroke-width:2"/><line x1="165.4" y1="35" x2="165.4" y2="75" style="stroke:#4f46e5;stroke-width:2.4"/><line x1="51.7" y1="45" x2="51.7" y2="65" style="stroke:#4f46e5;stroke-width:2"/><line x1="268.3" y1="45" x2="268.3" y2="65" style="stroke:#4f46e5;stroke-width:2"/><text x="51.7" y="26" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">X<tspan font-size="8" dy="3">min</tspan></text><text x="51.7" y="95" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">72</text><text x="116.7" y="26" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">Q<tspan font-size="8" dy="3">1</tspan></text><text x="116.7" y="95" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">78</text><text x="165.4" y="26" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">Q<tspan font-size="8" dy="3">2</tspan></text><text x="165.4" y="95" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">82,5</text><text x="214.2" y="26" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">Q<tspan font-size="8" dy="3">3</tspan></text><text x="214.2" y="95" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">87</text><text x="268.3" y="26" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:11px;font-weight:600">X<tspan font-size="8" dy="3">max</tspan></text><text x="268.3" y="95" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">92</text></svg></div>
+      <div class="sol-jadi">kotak membentang dari 78 sampai 87 dengan median 82,5.</div>
+    </div>
+
+    <h3 class="subsection-title">5. Histogram dan Poligon Frekuensi</h3>
+    <p>Untuk data berkelompok: batang histogram berdempetan pada tepi kelas; poligon frekuensi menghubungkan titik tengah puncak setiap batang.</p>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 27</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Buatlah histogram dan poligon frekuensi data berikut.</p>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai</th><th>$f$</th></tr></thead>
+        <tbody>
+          <tr><td>21–25</td><td>15</td></tr>
+          <tr><td>26–30</td><td>10</td></tr>
+          <tr><td>31–35</td><td>12</td></tr>
+          <tr><td>36–40</td><td>20</td></tr>
+          <tr><td>41–45</td><td>16</td></tr>
+          <tr><td>46–50</td><td>8</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Sumbu mendatar</strong> memuat tepi kelas 20,5; 25,5; …; 50,5, sumbu tegak memuat frekuensi.</p>
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 300 210" width="100%" style="max-width:320px" xmlns="http://www.w3.org/2000/svg"><line x1="42" y1="176.0" x2="290" y2="176.0" style="stroke:var(--text-2,#475569);stroke-width:1.4"/><text x="37" y="179.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">0</text><line x1="42" y1="149.3" x2="290" y2="149.3" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="152.3" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">4</text><line x1="42" y1="122.7" x2="290" y2="122.7" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="125.7" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">8</text><line x1="42" y1="96.0" x2="290" y2="96.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="99.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">12</text><line x1="42" y1="69.3" x2="290" y2="69.3" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="72.3" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">16</text><line x1="42" y1="42.7" x2="290" y2="42.7" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="45.7" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">20</text><line x1="42" y1="16.0" x2="290" y2="16.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="19.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">24</text><line x1="42" y1="176" x2="42" y2="12" style="stroke:var(--text-2,#475569);stroke-width:1.4"/><rect x="68.3" y="76.0" width="32.6" height="100.0" style="fill:rgba(79,70,229,.22);stroke:#4f46e5;stroke-width:1.2"/><rect x="100.9" y="109.3" width="32.6" height="66.7" style="fill:rgba(79,70,229,.22);stroke:#4f46e5;stroke-width:1.2"/><rect x="133.4" y="96.0" width="32.6" height="80.0" style="fill:rgba(79,70,229,.22);stroke:#4f46e5;stroke-width:1.2"/><rect x="166.0" y="42.7" width="32.6" height="133.3" style="fill:rgba(79,70,229,.22);stroke:#4f46e5;stroke-width:1.2"/><rect x="198.6" y="69.3" width="32.6" height="106.7" style="fill:rgba(79,70,229,.22);stroke:#4f46e5;stroke-width:1.2"/><rect x="231.1" y="122.7" width="32.6" height="53.3" style="fill:rgba(79,70,229,.22);stroke:#4f46e5;stroke-width:1.2"/><text x="68.3" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">20,5</text><text x="100.9" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">25,5</text><text x="133.4" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">30,5</text><text x="166.0" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">35,5</text><text x="198.6" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">40,5</text><text x="231.1" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">45,5</text><text x="263.7" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">50,5</text><polyline points="52.0,176.0 84.6,76.0 117.1,109.3 149.7,96.0 182.3,42.7 214.9,69.3 247.4,122.7 280.0,176.0" style="fill:none;stroke:#0d9488;stroke-width:2"/><ellipse cx="52.0" cy="176.0" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="84.6" cy="76.0" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="117.1" cy="109.3" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="149.7" cy="96.0" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="182.3" cy="42.7" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="214.9" cy="69.3" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="247.4" cy="122.7" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="280.0" cy="176.0" rx="3" ry="3" style="fill:#0d9488"/></svg><div style="font-size:.8rem;color:var(--text-3);margin-top:.3rem;">Garis hijau: poligon frekuensi melalui titik tengah kelas.</div></div>
+      <div class="sol-jadi">frekuensi tertinggi ada di kelas 36–40 (20 data).</div>
+    </div>
+
+    <h3 class="subsection-title">6. Ogive</h3>
+    <p>Ogive adalah grafik frekuensi kumulatif: ogive <strong>kurang dari</strong> naik, ogive <strong>lebih dari</strong> turun. Kedua ogive berpotongan di atas <strong>median</strong>.</p>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Gambarlah ogive kurang dari dan lebih dari untuk data berikut.</p>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai</th><th>$f$</th></tr></thead>
+        <tbody>
+          <tr><td>10–14</td><td>15</td></tr>
+          <tr><td>15–19</td><td>10</td></tr>
+          <tr><td>20–24</td><td>12</td></tr>
+          <tr><td>25–29</td><td>20</td></tr>
+          <tr><td>30–34</td><td>16</td></tr>
+          <tr><td>35–39</td><td>8</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Frekuensi kumulatif</strong> pada setiap tepi kelas:</p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Tepi</th><th>9,5</th><th>14,5</th><th>19,5</th><th>24,5</th><th>29,5</th><th>34,5</th><th>39,5</th></tr></thead><tbody><tr><td>Kurang dari</td><td>0</td><td>15</td><td>25</td><td>37</td><td>57</td><td>73</td><td>81</td></tr><tr><td>Lebih dari</td><td>81</td><td>66</td><td>56</td><td>44</td><td>24</td><td>8</td><td>0</td></tr></tbody></table></div>
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 300 210" width="100%" style="max-width:320px" xmlns="http://www.w3.org/2000/svg"><line x1="42" y1="176.0" x2="290" y2="176.0" style="stroke:var(--text-2,#475569);stroke-width:1.4"/><text x="37" y="179.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">0</text><line x1="42" y1="149.3" x2="290" y2="149.3" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="152.3" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">15</text><line x1="42" y1="122.7" x2="290" y2="122.7" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="125.7" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">30</text><line x1="42" y1="96.0" x2="290" y2="96.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="99.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">45</text><line x1="42" y1="69.3" x2="290" y2="69.3" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="72.3" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">60</text><line x1="42" y1="42.7" x2="290" y2="42.7" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="45.7" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">75</text><line x1="42" y1="16.0" x2="290" y2="16.0" style="stroke:var(--text-3,#94a3b8);stroke-width:.6;stroke-dasharray:3 3"/><text x="37" y="19.0" text-anchor="end" style="fill:var(--text-2,#475569);font-size:10px">90</text><line x1="42" y1="176" x2="42" y2="12" style="stroke:var(--text-2,#475569);stroke-width:1.4"/><polyline points="50.0,176.0 88.7,149.3 127.3,131.6 166.0,110.2 204.7,74.7 243.3,46.2 282.0,32.0" style="fill:none;stroke:#0d9488;stroke-width:2"/><ellipse cx="50.0" cy="176.0" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="88.7" cy="149.3" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="127.3" cy="131.6" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="166.0" cy="110.2" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="204.7" cy="74.7" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="243.3" cy="46.2" rx="3" ry="3" style="fill:#0d9488"/><ellipse cx="282.0" cy="32.0" rx="3" ry="3" style="fill:#0d9488"/><polyline points="50.0,32.0 88.7,58.7 127.3,76.4 166.0,97.8 204.7,133.3 243.3,161.8 282.0,176.0" style="fill:none;stroke:#e11d48;stroke-width:2;stroke-dasharray:5 3"/><ellipse cx="50.0" cy="32.0" rx="3" ry="3" style="fill:#e11d48"/><ellipse cx="88.7" cy="58.7" rx="3" ry="3" style="fill:#e11d48"/><ellipse cx="127.3" cy="76.4" rx="3" ry="3" style="fill:#e11d48"/><ellipse cx="166.0" cy="97.8" rx="3" ry="3" style="fill:#e11d48"/><ellipse cx="204.7" cy="133.3" rx="3" ry="3" style="fill:#e11d48"/><ellipse cx="243.3" cy="161.8" rx="3" ry="3" style="fill:#e11d48"/><ellipse cx="282.0" cy="176.0" rx="3" ry="3" style="fill:#e11d48"/><text x="50.0" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">9,5</text><text x="88.7" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">14,5</text><text x="127.3" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">19,5</text><text x="166.0" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">24,5</text><text x="204.7" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">29,5</text><text x="243.3" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">34,5</text><text x="282.0" y="190" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:10px">39,5</text><rect x="50" y="6" width="10" height="3" style="fill:#0d9488"/><text x="64" y="10" style="fill:var(--text-2,#475569);font-size:10px">kurang dari</text><rect x="134" y="6" width="10" height="3" style="fill:#e11d48"/><text x="148" y="10" style="fill:var(--text-2,#475569);font-size:10px">lebih dari</text></svg></div>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Titik potong:</strong> kedua ogive bernilai $\tfrac{81}{2} = 40{,}5$ di $24{,}5$ $+ 5\left(\dfrac{40{,}5 - 37}{20}\right) \approx 25{,}4$.</p>
+      <div class="sol-jadi">kedua ogive berpotongan di sekitar nilai $25{,}4$, yaitu median data.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan G</div>
+      <ol class="soal-list">
+        <li>Hobi 200 siswa: membaca 50, olahraga 70, musik 40, gaming 30, lainnya 10. Tentukan sudut setiap sektor diagram lingkarannya.</li>
+        <li>Tentukan statistik lima serangkai untuk box plot data tinggi badan (cm): 155, 158, 160, 162, 162, 165, 167, 168, 170, 172, 175, 178.</li>
+        <li>Dari tabel berikut, tentukan tepi kelas, titik tengah, dan frekuensi kumulatif kurang dari yang diperlukan untuk menggambar histogram, poligon frekuensi, dan ogive kurang dari.    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Nilai</th><th>30–39</th><th>40–49</th><th>50–59</th><th>60–69</th><th>70–79</th><th>80–89</th></tr></thead>
+        <tbody>
+          <tr><td>$f$</td><td>5</td><td>8</td><td>12</td><td>18</td><td>10</td><td>7</td></tr>
+        </tbody>
+      </table>
+    </div>
+</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ H. RINGKASAN RUMUS ═══ -->
+  <section class="section" id="bagian-h">
+    <h2 class="section-title"><span class="section-badge">H</span>Ringkasan Rumus</h2>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Ukuran</th><th>Data tunggal</th><th>Data berkelompok</th></tr></thead>
+        <tbody>
+          <tr><td>Mean</td><td>$\dfrac{\sum x}{n}$ atau $\dfrac{\sum fx}{\sum f}$</td><td>$\dfrac{\sum f x_T}{\sum f}$</td></tr>
+          <tr><td>Median</td><td>nilai tengah data terurut</td><td>$T_b + p\left(\dfrac{\frac{n}{2} - f_k}{f}\right)$</td></tr>
+          <tr><td>Modus</td><td>nilai paling sering muncul</td><td>$T_b + p\left(\dfrac{d_1}{d_1 + d_2}\right)$</td></tr>
+          <tr><td>Kuartil</td><td>median separuh data</td><td>$T_b + p\left(\dfrac{\frac{i}{4}n - f_k}{f}\right)$</td></tr>
+          <tr><td>Desil / persentil</td><td>letak $\dfrac{i(n + 1)}{10}$ / $\dfrac{i(n + 1)}{100}$, interpolasi</td><td>ganti $\tfrac{i}{4}$ dengan $\tfrac{i}{10}$ / $\tfrac{i}{100}$</td></tr>
+          <tr><td>Simpangan baku</td><td>$\sqrt{\dfrac{\sum (x - \bar{x})^2}{n}}$</td><td>$\sqrt{\dfrac{\sum f(x_T - \bar{x})^2}{\sum f}}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Ukuran penyebaran</th><th>Rumus</th></tr></thead>
+        <tbody>
+          <tr><td>Jangkauan</td><td>$X_{\max} - X_{\min}$</td></tr>
+          <tr><td>Hamparan</td><td>$Q_3 - Q_1$</td></tr>
+          <tr><td>Simpangan kuartil</td><td>$\tfrac{1}{2}(Q_3 - Q_1)$</td></tr>
+          <tr><td>Langkah dan pagar</td><td>$L = \tfrac{3}{2}(Q_3 - Q_1)$; $Q_1 - L$, $Q_3 + L$</td></tr>
+          <tr><td>Data $kx + c$</td><td>mean $k\bar{x} + c$; simpangan $|k|\,s$</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <!-- Baris 1: Prev / Next -->
+    <div class="footer-nav">
+      <a class="nav-btn" href="../turunan-fungsi/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Turunan Fungsi
+      </a>
+      <a class="nav-btn" href="../kombinatorika/">
+        Kaidah Pencacahan
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <!-- Baris 2: Actions -->
+    <div class="footer-actions">
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- SECTION KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Disqus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi ini? Tulis di kolom diskusi. Login dengan akun Google.</p>
+        <div id="disqus_thread"></div>
+    <script>
+    (function() {
+      var disqusLoaded = false;
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !disqusLoaded) {
+          disqusLoaded = true;
+          observer.disconnect();
+          var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://eksaktalab.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      }, { threshold: 0.1 });
+      var thread = document.getElementById('disqus_thread');
+      if (thread) observer.observe(thread);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </div><!-- /komentar-section -->
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── Scroll progress bar tipis + scroll-to-top ──
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  // Tampilkan tombol scroll-to-top setelah 30%
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+// ── Theme toggle ──────────────────────────
+
+
+// ── TOC Dropdown ──────────────────────────
+function toggleTOC() {
+  document.getElementById('tocDropdown').classList.toggle('open');
+}
+function closeTOC() {
+  document.getElementById('tocDropdown').classList.remove('open');
+}
+// Tutup dropdown saat klik di luar
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+// ── Bookmark ──────────────────────────────
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ─────────────────────────────────
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Statistika Deskriptif — EksaktaLab',
+      text:  'Belajar Statistika Deskriptif di EksaktaLab, lengkap dengan contoh soal dan pembahasan!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+
+// ── SHARED HELPERS ────────────────────────
+const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+  <polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) {
+      MathJax.typesetPromise([typesetEl]).catch(() => {});
+    }
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── 1. BOX RUMUS → accordion hijau ───────
+  document.querySelectorAll('.box.box-rumus').forEach((box, i) => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+
+    // Semua konten kecuali label
+    let bodyHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body">
+        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
+      </div>`;
+
+    const header   = wrap.querySelector('.rumus-header');
+    const statusEl = wrap.querySelector('.rumus-status');
+    const bodyInner = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+
+    box.replaceWith(wrap);
+  });
+
+  // ── 2. BOX CONTOH → accordion navy/teal ──
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+
+    let qHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header">
+            <span class="solve-dot"></span>
+            <span class="solve-title">Penyelesaian</span>
+          </div>
+          <div class="penyelesaian-inner">
+            ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
+          </div>
+        </div>
+      </div>`;
+
+    const header   = wrap.querySelector('.contoh-header');
+    const statusEl = null;
+    const pi       = wrap.querySelector('.penyelesaian-inner');
+
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (statusEl) statusEl.textContent = '';
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+    });
+
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+  // ── 3. Buka / Tutup Semua per section ────
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+
+    const updateBtn = () => {
+      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
+    };
+    updateBtn();
+
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+  // ── 4. SOAL LATIHAN → accordion kunci jawaban ──
+  const jawabanData = {
+    // Latihan B
+    0: [
+      { jawaban:`Terurut: 5, 6, 6, 6, 7, 8, 8, 8, 9, 10<br>Mean $\\dfrac{73}{10}$ $= 7{,}3$; median $\\dfrac{7 + 8}{2}$ $= 7{,}5$; modus $6$ dan $8$` },
+      { jawaban:`$n = 20$, $\\sum fx = 103$, mean $5{,}15$<br>Data ke-10 dan ke-11 bernilai 5, jadi median $5$; modus $5$` },
+      { jawaban:`$\\bar{x}_{\\text{baru}}$ $= \\dfrac{10(7{,}5) + 6}{11}$ $= \\dfrac{81}{11} \\approx 7{,}36$` },
+      { jawaban:`$\\dfrac{15(72) + 25(80)}{40}$ $= \\dfrac{3080}{40}$ $= 77$` },
+      { jawaban:`$10 \\times 70$ $- 9 \\times 68$ $= 700 - 612$ $= 88$` },
+    ],
+    // Latihan C
+    1: [
+      { jawaban:`Terurut 11–20; $Q_2 = 15{,}5$, $Q_1 = 13$, $Q_3 = 18$<br>Rataan kuartil $15{,}5$; rataan tiga $\\dfrac{13 + 31 + 18}{4}$ $= 15{,}5$` },
+      { jawaban:`$D_3$: letak $3{,}6$, $25 + 0{,}6(5)$ $= 28$<br>$D_7$: letak $8{,}4$, $50 + 0{,}4(5)$ $= 52$<br>$P_{60}$: letak $7{,}2$, $45 + 0{,}2(5)$ $= 46$` },
+      { jawaban:`Terurut: 42, 44, 45, 47, 48, 49, 50, 52, 55, 58, 60<br>$Q_1 = 45$, $Q_3 = 55$<br>$D_4$: letak $4{,}8$, $47{,}8$; $P_{70}$: letak $8{,}4$, $53{,}2$` },
+      { jawaban:`Rataan kuartil $\\dfrac{24 + 36}{2}$ $= 30$; rataan tiga $\\dfrac{24 + 60 + 36}{4}$ $= 30$` },
+    ],
+    // Latihan D
+    2: [
+      { jawaban:`$\\bar{x} = 6$; $SR = \\dfrac{10}{9} \\approx 1{,}11$; $s = \\sqrt{\\dfrac{18}{9}}$ $= \\sqrt{2}$` },
+      { jawaban:`$Q_1 = 13$, $Q_3 = 18$<br>$Q_d = 2{,}5$; $L = 7{,}5$; pagar dalam $5{,}5$; pagar luar $25{,}5$` },
+      { jawaban:`$Q_1 = \\dfrac{70 + 74}{2}$ $= 72$, $Q_3 = \\dfrac{88 + 92}{2}$ $= 90$, $L = 27$<br>Pagar $[45;\\ 117]$: semua data di dalamnya, jadi <strong>tidak ada</strong> pencilan` },
+      { jawaban:`$n = 20$, $\\bar{x}$ $= \\dfrac{146}{20}$ $= 7{,}3$; jangkauan $8$<br>$\\sum f|x$ $- \\bar{x}|$ $= 39{,}2$, $SR = 1{,}96$<br>$\\sum f(x - \\bar{x})^2$ $= 114{,}2$, $s = \\sqrt{5{,}71} \\approx 2{,}39$` },
+      { jawaban:`Mean $1{,}5(60) - 10$ $= 80$; median $1{,}5(62) - 10$ $= 83$<br>Simpangan baku $1{,}5 \\times 8$ $= 12$ (pengurangan 10 tidak berpengaruh)` },
+    ],
+    // Latihan E
+    3: [
+      { jawaban:`Panjang kelas $5$<br>Titik tengah: 42, 47, 52, 57, 62, 67, 72` },
+      { jawaban:`Kurang dari 64,5: $3$ $+ 7$ $+ 10$ $+ 15$ $+ 8$ $= 43$<br>Lebih dari 54,5: $15 + 8 + 5 + 2$ $= 30$` },
+      { jawaban:`$k = 1$ $+ 3{,}322 \\log 25 \\approx 5{,}64$, ambil $6$ kelas; $R = 75 - 45 = 30$<br>$p = \\dfrac{30}{6}$ $= 5$ belum memuat data 75 (6 kelas hanya 45–74), jadi $p = 6$<br>45–50: 5; 51–56: 4; 57–62: 6; 63–68: 4; 69–74: 5; 75–80: 1` },
+    ],
+    // Latihan F
+    4: [
+      { jawaban:`$n = 50$<br>(a) $\\dfrac{2805}{50}$ $= 56{,}1$ &nbsp; (b) $54{,}5$ $+ 5\\left(\\dfrac{25 - 20}{15}\\right) \\approx 56{,}17$<br>(c) $54{,}5$ $+ 5\\left(\\dfrac{5}{5 + 7}\\right) \\approx 56{,}58$<br>(d) $Q_1 = 49{,}5$ $+ 5\\left(\\dfrac{12{,}5 - 10}{10}\\right)$ $= 50{,}75$; $Q_3 = 59{,}5$ $+ 5\\left(\\dfrac{37{,}5 - 35}{8}\\right) \\approx 61{,}06$<br>(e) $s = \\sqrt{\\dfrac{2734{,}5}{50}} \\approx 7{,}40$` },
+      { jawaban:`40% terbaik di atas $P_{60}$; letak $0{,}6 \\times 30$ $= 18$ di kelas 58–63<br>$P_{60}$ $= 57{,}5$ $+ 6\\left(\\dfrac{18 - 15}{4}\\right)$ $= 62$` },
+      { jawaban:`Modus: $29{,}5$ $+ 10\\left(\\dfrac{5}{5 + 3}\\right)$ $= 35{,}75$<br>$\\bar{x}$ $= \\dfrac{1955}{50}$ $= 39{,}1$; $s = \\sqrt{\\dfrac{9842}{50}} \\approx 14{,}03$` },
+    ],
+    // Latihan G
+    5: [
+      { jawaban:`Membaca $90^\\circ$, olahraga $126^\\circ$, musik $72^\\circ$, gaming $54^\\circ$, lainnya $18^\\circ$` },
+      { jawaban:`$X_{\\min} = 155$, $Q_1 = \\dfrac{160 + 162}{2}$ $= 161$, $Q_2 = \\dfrac{165 + 167}{2}$ $= 166$<br>$Q_3 = \\dfrac{170 + 172}{2}$ $= 171$, $X_{\\max} = 178$` },
+      { jawaban:`Tepi kelas: 29,5; 39,5; …; 89,5 &nbsp; Titik tengah: 34,5; 44,5; …; 84,5<br>Kumulatif kurang dari (tepi atas 39,5 … 89,5): 5, 13, 25, 43, 53, 60` },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+
+    const items = [...list.querySelectorAll('li')];
+    const newList = document.createElement('div');
+    newList.className = 'soal-list-accordion';
+
+    items.forEach((li, i) => {
+      const ans   = answers[i] || {};
+      const diff  = ans.diff || 'sedang';
+      const diffLabel = { mudah:'★ Mudah', sedang:'★★ Sedang', sulit:'★★★ Sulit' }[diff] || '';
+      const jawaban = ans.jawaban || '';
+
+      const item = document.createElement('div');
+      item.className = 'soal-item';
+      item.innerHTML = `
+        <div class="soal-item-header" role="button" tabindex="0">
+          <span class="soal-num">${i+1}</span>
+          <span class="soal-text">${li.innerHTML}</span>
+          <button class="soal-key-btn" tabindex="-1">Kunci</button>
+        </div>
+        <div class="soal-answer">
+          <div class="soal-answer-inner">
+            <div class="soal-answer-label">Jawaban</div>
+            ${jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
+          </div>
+        </div>`;
+
+      const header = item.querySelector('.soal-item-header');
+      const toggle = () => {
+        const open = item.classList.toggle('open');
+        if (open && window.MathJax) {
+          MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
+        }
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+
+      newList.appendChild(item);
+    });
+
+    list.replaceWith(newList);
+  });
+
+});
+</script>
+
+<!-- FOOTER -->
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+</body>
+</html>
