@@ -1,0 +1,1153 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<script src="../../assets/js/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peluang: Ruang Sampel, Kejadian Majemuk, Peluang Bersyarat — EksaktaLab</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
+<meta name="description" content="Materi lengkap Peluang SMA: ruang sampel, peluang klasik dan empiris, komplemen, frekuensi harapan, kejadian majemuk, saling lepas, saling bebas, peluang bersyarat, dan Teorema Bayes. Dilengkapi 29 contoh soal dan pembahasan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
+<link rel="stylesheet" href="../../assets/css/footer.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'ams' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script>window.addEventListener("load",function(){var s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";document.head.appendChild(s);});</script>
+<link rel="canonical" href="https://lutfima11.github.io/eksaktalab/materi/peluang/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lutfima11.github.io/eksaktalab/materi/peluang/">
+  <meta property="og:title" content="Peluang: Ruang Sampel, Kejadian Majemuk, Peluang Bersyarat — EksaktaLab">
+  <meta property="og:description" content="Materi lengkap Peluang SMA: ruang sampel, peluang klasik dan empiris, komplemen, frekuensi harapan, kejadian majemuk, saling lepas, saling bebas, peluang bersyarat, dan Teorema Bayes.">
+  <meta property="og:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+  <meta property="og:site_name" content="EksaktaLab">
+  <meta property="og:locale" content="id_ID">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Peluang: Ruang Sampel, Kejadian Majemuk, Peluang Bersyarat — EksaktaLab">
+  <meta name="twitter:description" content="Materi lengkap Peluang SMA: ruang sampel, peluang klasik dan empiris, komplemen, frekuensi harapan, kejadian majemuk, saling lepas, saling bebas, peluang bersyarat, dan Teorema Bayes.">
+  <meta name="twitter:image" content="https://lutfima11.github.io/eksaktalab/assets/og-image.svg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Peluang","url":"https://lutfima11.github.io/eksaktalab/materi/peluang/","description":"Materi lengkap Peluang SMA: ruang sampel, peluang klasik dan empiris, komplemen, frekuensi harapan, kejadian majemuk, saling lepas, saling bebas, peluang bersyarat, dan Teorema Bayes.","provider":{"@type":"Organization","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"inLanguage":"id","isPartOf":{"@type":"WebSite","name":"EksaktaLab","url":"https://lutfima11.github.io/eksaktalab/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":2,"name":"Materi","item":"https://lutfima11.github.io/eksaktalab/"},{"@type":"ListItem","position":3,"name":"Statistika"},{"@type":"ListItem","position":4,"name":"Peluang","item":"https://lutfima11.github.io/eksaktalab/materi/peluang/"}]}}</script>
+<style>.fki-jenis{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin:1rem 0}.fki-jenis svg{width:100%;height:auto;display:block}@media(max-width:560px){.fki-jenis{grid-template-columns:1fr;max-width:230px;margin:1rem auto}}[data-theme="dark"] .grafik-wrap svg [stroke="#555"]{stroke:#94A3B8}[data-theme="dark"] .grafik-wrap svg [fill="#555"]{fill:#94A3B8}[data-theme="dark"] .grafik-wrap svg text[fill="#059669"]{fill:#34D399}[data-theme="dark"] .grafik-wrap svg [stroke="#059669"]{stroke:#34D399}[data-theme="dark"] .grafik-wrap svg text[fill="#94A3B8"]{fill:#CBD5E8}[data-theme="dark"] .grafik-wrap svg .c1-lgf{stroke:#60A5FA;fill:#60A5FA}[data-theme="dark"] .grafik-wrap svg text.t1-lgf{fill:#60A5FA}@media(max-width:500px){.table-wrap th,.table-wrap td{padding:.45rem .35rem}.table-wrap table{font-size:.72rem}}@media(max-width:400px){.table-wrap th,.table-wrap td{padding:.4rem .25rem}.table-wrap table{font-size:.66rem}.table-wrap mjx-container{font-size:85% !important}.soal-item-header{flex-wrap:wrap}.soal-key-btn{margin-left:auto}}@media(max-width:400px){.contoh-body mjx-container[display="true"],.rumus-body mjx-container[display="true"],.box mjx-container[display="true"],.contoh-question mjx-container[display="true"]{font-size:88% !important}}@media(max-width:360px){.rumus-status{display:none}}.kf-fig{text-align:center;margin:.8rem 0}.kf-fig svg{display:inline-block;max-width:100%;height:auto}.kf-cap{font-size:.8rem;opacity:.8;margin-top:.3rem;line-height:1.4}.kf-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.6rem;align-items:end;margin:.8rem 0}.kf-row .kf-fig{margin:0}.kf-ov{fill:none;stroke:#94A3B8;stroke-width:1.6}.kf-box{fill:#F1F5F9;stroke:#475569;stroke-width:1.6}.kf-t{fill:#334155}.kf-dot{fill:#334155}.kf-mute{fill:#CBD5E1}.kf-mute2{fill:#94A3B8}.kf-ln-b{stroke:#2563EB}.kf-ar-b{fill:#2563EB}.kf-ln-r{stroke:#DC2626}.kf-ar-r{fill:#DC2626}.kf-ln-g{stroke:#059669}.kf-ax{stroke:#555}.kf-axh{fill:#555}.kf-dash{stroke:#CBD5E1}.kf-pt-b{fill:#2563EB}.kf-pt-r{fill:#DC2626}.kf-pt-g{fill:#059669}[data-theme="dark"] .kf-t,[data-theme="dark"] .kf-dot{fill:#E2E8F0}[data-theme="dark"] .kf-ov{stroke:#64748B}[data-theme="dark"] .kf-box{fill:#1E293B;stroke:#94A3B8}[data-theme="dark"] .kf-mute{fill:#475569}[data-theme="dark"] .kf-mute2{fill:#64748B}[data-theme="dark"] .kf-ln-b{stroke:#60A5FA}[data-theme="dark"] .kf-ar-b,[data-theme="dark"] .kf-pt-b{fill:#60A5FA}[data-theme="dark"] .kf-ln-r{stroke:#F87171}[data-theme="dark"] .kf-ar-r,[data-theme="dark"] .kf-pt-r{fill:#F87171}[data-theme="dark"] .kf-ln-g{stroke:#34D399}[data-theme="dark"] .kf-pt-g{fill:#34D399}[data-theme="dark"] .kf-ax{stroke:#94A3B8}[data-theme="dark"] .kf-axh{fill:#94A3B8}[data-theme="dark"] .kf-dash{stroke:#475569}[data-theme="dark"] .nline-wrap svg .nl-ax{stroke:#94A3B8}[data-theme="dark"] .nline-wrap svg .nl-axh{fill:#94A3B8}[data-theme="dark"] .nline-wrap svg text[fill="#555"]{fill:#CBD5E8}[data-theme="dark"] .nline-wrap svg .nl-open{fill:#1E2640}.penyelesaian .nline-wrap svg{margin:0 auto;max-width:100%;height:auto}</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-logo" href="../../">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 8h8M4 12h16M4 16h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 6l4 6-4 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Eksakta<em>Lab</em></div>
+      <div class="nav-logo-tag">Lab Belajar Matematika</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <!-- Daftar Isi Dropdown -->
+    <div class="toc-dropdown" id="tocDropdown">
+      <button class="toc-dropdown-btn" onclick="toggleTOC()">
+        <svg width="13" height="13" viewBox="0 0 13 13"><line x1="1" y1="3" x2="12" y2="3"/><line x1="1" y1="6.5" x2="9" y2="6.5"/><line x1="1" y1="10" x2="11" y2="10"/></svg>
+        Daftar Isi
+        <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="2,3 5,7 8,3"/></svg>
+      </button>
+      <div class="toc-dropdown-menu">
+        <div class="toc-menu-header">Peluang · 5 Sub-bab</div>
+        <a class="toc-menu-item" href="#bagian-a" onclick="closeTOC()"><span class="toc-menu-badge">A</span>Ruang Sampel &amp; Peluang</a>
+        <a class="toc-menu-item" href="#bagian-b" onclick="closeTOC()"><span class="toc-menu-badge">B</span>Kejadian Majemuk</a>
+        <a class="toc-menu-item" href="#bagian-c" onclick="closeTOC()"><span class="toc-menu-badge">C</span>Saling Bebas</a>
+        <a class="toc-menu-item" href="#bagian-d" onclick="closeTOC()"><span class="toc-menu-badge">D</span>Peluang Bersyarat &amp; Bayes</a>
+        <a class="toc-menu-item" href="#bagian-e" onclick="closeTOC()"><span class="toc-menu-badge">E</span>Ringkasan Rumus</a>
+      </div>
+    </div>
+    <!-- Tema -->
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙 Gelap</button>
+  </div>
+</nav>
+
+<!-- Floating scroll to top -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<div class="page-wrap">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../">Beranda</a>
+    <span>/</span>
+    <a href="../../#materi">Materi</a>
+    <span>/</span>
+    <a href="../../#fase-6">Statistika &amp; Peluang</a>
+    <span>/</span>
+    Peluang
+  </div>
+
+  <!-- HERO -->
+  <div class="materi-hero">
+    <div class="materi-hero-grid"></div>
+    <div class="materi-hero-content">
+      <div class="materi-eyebrow">FASE 6 · No.41</div>
+      <h1 class="materi-title">Peluang</h1>
+      <p class="materi-desc">Ukur ketidakpastian dengan angka: ruang sampel, peluang klasik dan empiris, kejadian majemuk, kejadian saling bebas, peluang bersyarat, hingga Teorema Bayes.</p>
+      <div class="materi-tags">
+        <span class="tag">Statistika &amp; Peluang</span>
+        <span class="tag">5 Sub-bab</span>
+        <span class="tag">29 Contoh Soal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PENGANTAR ═══ -->
+  <section class="section" id="pengantar">
+    <h2 class="section-title"><span class="section-badge" style="background:var(--accent-2,#64748b);">✦</span>Pengantar: Seberapa Besar Kemungkinannya?</h2>
+    <p>Bayangkan kamu memasukkan tangan ke kantong berisi 3 bola merah dan 7 bola biru, lalu mengambil satu bola tanpa melihat. Lebih mungkin mendapat merah atau biru? Pertanyaan sederhana inilah yang dijawab oleh <strong>teori peluang</strong>. Kata <em>peluang</em> (<em>probability</em>) berasal dari bahasa Latin <em>probabilitas</em>, "layak diduga": kita tidak bisa memastikan hasilnya, tetapi bisa <em>mengukur</em> seberapa layak hasil itu terjadi.</p>
+    <div class="box box-catatan">
+      <div class="box-label">💡 Gagasan Utama</div>
+      <p style="margin:0;font-size:.9rem;text-align:center;"><strong>Peluang adalah cara matematika untuk mengukur ketidakpastian.</strong></p>
+    </div>
+    <p>Peluang menjadi jembatan ke banyak bidang: statistika, genetika (pewarisan sifat), pembelajaran mesin, hingga asuransi dan investasi. Materi ini memakai pendekatan <strong>klasik</strong> yang mengandalkan <a href="../kombinatorika/">Kaidah Pencacahan</a> (permutasi dan kombinasi) untuk menghitung banyaknya anggota ruang sampel dan kejadian.</p>
+    <h3 class="subsection-title">Sejarah Singkat</h3>
+    <p>Pada 1654, <strong>Chevalier de Méré</strong> bertanya kepada <strong>Blaise Pascal</strong> mengapa strategi berjudinya mulai merugi. Korespondensi Pascal dengan <strong>Pierre de Fermat</strong> melahirkan fondasi teori peluang modern. Jauh sebelumnya, <strong>Al-Kindi</strong> (abad ke-9) memakai analisis frekuensi huruf untuk memecahkan sandi, cikal bakal peluang empiris. <strong>Jakob Bernoulli</strong> memperkenalkan Hukum Bilangan Besar dalam <em>Ars Conjectandi</em> (1713), <strong>Laplace</strong> menyempurnakan definisi peluang klasik (1812), dan <strong>Kolmogorov</strong> (1933) meletakkan fondasi aksiomatis modern.</p>
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">Daftar Isi</div>
+    <ul class="toc-list">
+      <li><a href="#bagian-a" data-num="A">Ruang Sampel dan Peluang Kejadian</a></li>
+      <li><a href="#bagian-b" data-num="B">Peluang Kejadian Majemuk</a></li>
+      <li><a href="#bagian-c" data-num="C">Kejadian Saling Bebas</a></li>
+      <li><a href="#bagian-d" data-num="D">Peluang Bersyarat dan Teorema Bayes</a></li>
+      <li><a href="#bagian-e" data-num="E">Ringkasan Rumus</a></li>
+    </ul>
+  </div>
+
+  </section>
+
+  <!-- ═══ A. RUANG SAMPEL DAN PELUANG KEJADIAN ═══ -->
+  <section class="section" id="bagian-a">
+    <h2 class="section-title"><span class="section-badge">A</span>Ruang Sampel dan Peluang Kejadian</h2>
+    <h3 class="subsection-title">1. Percobaan, Ruang Sampel, dan Kejadian</h3>
+    <p>Setiap situasi acak dimulai dari sebuah <strong>percobaan</strong>. Agar bisa menghitung peluang, kita perlu bahasa yang tepat:</p>
+    <div class="box box-rumus">
+      <div class="box-label">Percobaan, Ruang Sampel, Kejadian</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li><strong>Percobaan</strong>: kegiatan yang hasilnya tidak dapat dipastikan sebelumnya (melempar dadu, mengambil bola).</li><li><strong>Ruang sampel</strong> $S$: himpunan <em>semua</em> hasil yang mungkin; banyaknya $n(S)$.</li><li><strong>Kejadian</strong> $A$: himpunan <em>bagian</em> dari ruang sampel; banyaknya $n(A)$.</li></ul>
+    </div>
+
+    <div class="box box-rumus">
+      <div class="box-label">Menghitung n(S) dengan Pencacahan</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>Urutan diperhatikan: $n(S) = {}_nP_r$ $= \dfrac{n!}{(n - r)!}$</li><li>Urutan tidak diperhatikan: $n(S) = {}_nC_r$ $= \dfrac{n!}{r!\,(n - r)!}$</li></ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 1</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Pada pelemparan satu buah dadu, tentukanlah:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>ruang sampel $S$</li><li>kejadian $A$: muncul mata dadu genap</li><li>kejadian $B$: muncul mata dadu lebih dari 4</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>Ruang sampel</span></div>
+      <p class="sol-step">Dadu punya enam muka: $S = \{1, 2, 3, 4, 5, 6\}$.</p>
+      <div class="sol-jadi">$n(S) = 6$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Mata dadu genap</span></div>
+      <p class="sol-step">$A = \{2, 4, 6\}$.</p>
+      <div class="sol-jadi">$n(A) = 3$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Lebih dari 4</span></div>
+      <p class="sol-step">$B = \{5, 6\}$.</p>
+      <div class="sol-jadi">$n(B) = 2$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 2</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Pada pelemparan dua buah dadu serentak, tentukanlah:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>banyaknya anggota ruang sampel</li><li>kejadian $A$: jumlah kedua mata dadu habis dibagi 4</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>Ruang sampel</span></div>
+      $$n(S) = 6 \times 6 = 36$$
+      <div class="sol-jadi">$n(S) = 36$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Jumlah habis dibagi 4</span></div>
+      <p class="sol-step"><span class="sol-no">1</span><strong>Jumlah yang mungkin:</strong> $4$, $8$, atau $12$.</p>
+      <ul class="sol-cek">
+        <li>Jumlah 4: $(1, 3), (3, 1), (2, 2)$</li>
+        <li>Jumlah 8: $(2, 6), (6, 2), (3, 5), (5, 3), (4, 4)$</li>
+        <li>Jumlah 12: $(6, 6)$</li>
+      </ul>
+      <div class="sol-jadi">$n(A) = 3 + 5 + 1 = 9$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 3</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Dari himpunan $P = \{a, b, c, d, e\}$ diambil dua huruf <em>tanpa memperhatikan urutan</em>. Tentukanlah:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>banyaknya anggota ruang sampel</li><li>kejadian terambil dua huruf vokal</li><li>kejadian terambil dua huruf konsonan</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Urutan tidak diperhatikan,</strong> jadi pakai kombinasi.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Ruang sampel</span></div>
+      $$n(S) = {}_5C_2 = \frac{5 \times 4}{2} = 10$$
+      <div class="sol-jadi">$n(S) = 10$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Vokal $\{a, e\}$</span></div>
+      $$n(A) = {}_2C_2 = 1$$
+      <div class="sol-jadi">$A = \{ae\}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Konsonan $\{b, c, d\}$</span></div>
+      $$n(B) = {}_3C_2 = 3$$
+      <div class="sol-jadi">$B = \{bc, bd, cd\}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 4</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Dari himpunan $\{1, 2, 3, 4, 5\}$ diambil dua angka <em>dengan memperhatikan urutan</em>. Tentukanlah:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>banyaknya anggota ruang sampel</li><li>kejadian terambil dua angka genap</li><li>kejadian terambil dua angka ganjil</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Urutan diperhatikan,</strong> jadi pakai permutasi.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Ruang sampel</span></div>
+      $$n(S) = {}_5P_2 = 5 \times 4 = 20$$
+      <div class="sol-jadi">$n(S) = 20$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Genap $\{2, 4\}$</span></div>
+      $$n(A) = {}_2P_2 = 2$$
+      <div class="sol-jadi">$A = \{24, 42\}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Ganjil $\{1, 3, 5\}$</span></div>
+      $$n(B) = {}_3P_2 = 6$$
+      <div class="sol-jadi">$B = \{13, 15, 31, 35, 51, 53\}$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Permutasi atau Kombinasi?</div>
+      <p style="margin:0;font-size:.9rem;"><strong>Urutan penting → permutasi; urutan tidak penting → kombinasi.</strong> Memilih ketua, sekretaris, bendahara (jabatan berbeda) adalah permutasi; memilih 3 anggota tim adalah kombinasi. Perhatikan ${}_5P_2 = 20$ tetapi ${}_5C_2 = 10$, karena ${}_nP_r$ $= r! \times {}_nC_r$.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Peluang Suatu Kejadian</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Definisi Peluang Klasik</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Jika setiap hasil sama mungkin terjadi, peluang kejadian $A$ adalah</p><div class="math-block">$$P(A) = \frac{n(A)}{n(S)}$$</div><ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li>$0 \leq P(A) \leq 1$</li><li>$P(A) = 0$: kejadian mustahil; $P(A) = 1$: kejadian pasti</li><li>$P(S) = 1$</li></ul>
+    </div>
+
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 280 70" width="100%" style="max-width:300px" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="30" x2="260" y2="30" style="stroke:var(--text-2,#475569);stroke-width:1.6"/><line x1="20" y1="24" x2="20" y2="36" style="stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="20" y="18" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">0</text><text x="20" y="54" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:11px">mustahil</text><line x1="140" y1="24" x2="140" y2="36" style="stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="140" y="18" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">0,5</text><text x="140" y="54" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:11px">sama peluang</text><line x1="260" y1="24" x2="260" y2="36" style="stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="260" y="18" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">1</text><text x="260" y="54" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:11px">pasti</text></svg><div style="font-size:.8rem;color:var(--text-3);margin-top:.3rem;">Makin dekat ke 1, makin besar kemungkinan kejadian itu terjadi.</div></div>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 5</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Sebuah dadu dilempar satu kali. Tentukanlah peluang munculnya mata dadu:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>ganjil</li><li>lebih dari 4</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ruang sampel:</strong> $n(S) = 6$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Ganjil</span></div>
+      <p class="sol-step">$A = \{1, 3, 5\}$, $n(A) = 3$.</p>
+      $$P(A) = \frac{3}{6}$$
+      <div class="sol-jadi">$P(A) = \dfrac{1}{2}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Lebih dari 4</span></div>
+      <p class="sol-step">$B = \{5, 6\}$, $n(B) = 2$.</p>
+      $$P(B) = \frac{2}{6}$$
+      <div class="sol-jadi">$P(B) = \dfrac{1}{3}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 6</div>
+      <p style="margin:0;font-size:.9rem;">Dua buah dadu dilempar serentak. Tentukanlah peluang munculnya jumlah mata dadu yang habis dibagi 5.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Jumlah yang habis dibagi 5:</strong> $5$ atau $10$.</p>
+      <ul class="sol-cek">
+        <li>Jumlah 5: $(1, 4), (4, 1), (2, 3), (3, 2)$</li>
+        <li>Jumlah 10: $(4, 6), (6, 4), (5, 5)$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Peluang:</strong> $n(A) = 7$ dan $n(S) = 36$.</p>
+      <div class="sol-jadi">$P(A) = \dfrac{7}{36}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 7</div>
+      <p style="margin:0;font-size:.9rem;">Tiga angka diambil acak dari $\{1, 2, 3, 4, 5, 6, 7, 8\}$ tanpa memperhatikan urutan. Tentukanlah peluang ketiganya genap.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ruang sampel:</strong></p>
+      $$n(S) = {}_8C_3 = \frac{8 \times 7 \times 6}{3!} = 56$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kejadian:</strong> angka genap $\{2, 4, 6, 8\}$, ambil 3 dari 4: $n(A) = {}_4C_3 = 4$.</p>
+      $$P(A) = \frac{4}{56}$$
+      <div class="sol-jadi">$P(A) = \dfrac{1}{14}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 8</div>
+      <p style="margin:0;font-size:.9rem;">Dari 8 calon pengurus (5 pria, 3 wanita) dipilih 3 orang sebagai ketua, sekretaris, dan bendahara. Tentukanlah peluang ketiga jabatan diisi pria.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Jabatan berbeda,</strong> jadi urutan diperhatikan.</p>
+      $$n(S) = {}_8P_3 = 8 \times 7 \times 6 = 336$$
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kejadian:</strong> 3 pria dari 5 dengan urutan: $n(A) = {}_5P_3 = 60$.</p>
+      $$P(A) = \frac{60}{336}$$
+      <div class="sol-jadi">$P(A) = \dfrac{5}{28}$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Strategi Pemilihan Campuran</div>
+      <p style="margin:0;font-size:.9rem;">Untuk memilih $r_1$ dari kelompok $n_1$ <strong>dan</strong> $r_2$ dari kelompok $n_2$: $n(S)$ dihitung dari semua orang sekaligus, sedangkan $n(A) = {}_{n_1}C_{r_1} \times {}_{n_2}C_{r_2}$.</p>
+    </div>
+
+    <h3 class="subsection-title">3. Peluang Komplemen</h3>
+    <p>Kadang lebih mudah menghitung peluang kejadian yang <em>tidak</em> kita inginkan, lalu menguranginya dari 1.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Peluang Komplemen</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">$A^c$ adalah kejadian "bukan $A$":</p><div class="math-block">$$P(A^c) = 1 - P(A)$$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 9</div>
+      <p style="margin:0;font-size:.9rem;">Pada pelemparan dua dadu, tentukanlah peluang munculnya jumlah mata dadu <strong>lebih dari 3</strong>.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Komplemen lebih mudah:</strong> jumlah $\leq 3$, yaitu $A^c = \{(1, 1), (1, 2), (2, 1)\}$, $n(A^c) = 3$.</p>
+      $$ \begin{align*} P(A) &= 1 - \frac{3}{36} \\ &= \frac{33}{36} \end{align*} $$
+      <div class="sol-jadi">$P(A) = \dfrac{11}{12}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 10</div>
+      <p style="margin:0;font-size:.9rem;">Tiga uang logam dilempar serentak. Tentukanlah peluang muncul <strong>paling sedikit satu</strong> sisi Angka.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Komplemen:</strong> "tidak ada Angka", yaitu $A^c = \{GGG\}$, dengan $n(S) = 2^3 = 8$.</p>
+      $$P(A) = 1 - \frac{1}{8}$$
+      <div class="sol-jadi">$P(A) = \dfrac{7}{8}$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Kapan Memakai Komplemen?</div>
+      <p style="margin:0;font-size:.9rem;">Saat soal memuat kata <strong>"paling sedikit satu"</strong>, <strong>"bukan"</strong>, atau <strong>"tidak semuanya"</strong>, dan komplemennya ("tidak ada satu pun" atau "semuanya") jauh lebih sedikit kasusnya.</p>
+    </div>
+
+    <h3 class="subsection-title">4. Frekuensi Harapan</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Frekuensi Harapan</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Dalam $n$ kali percobaan, kejadian $A$ diharapkan muncul sebanyak</p><div class="math-block">$$F(A) = n \times P(A)$$</div><p style="margin:.4rem 0 0;font-size:.9rem;">Ini nilai rata-rata jangka panjang, bukan jaminan hasil tepat.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 11</div>
+      <p style="margin:0;font-size:.9rem;">Empat uang logam dilempar serentak sebanyak 640 kali. Tentukanlah frekuensi harapan munculnya tepat tiga sisi Gambar.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ruang sampel:</strong> $n(S) = 2^4 = 16$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Kejadian:</strong> posisi 3 Gambar dari 4 uang: $n(A) = {}_4C_3 = 4$, jadi $P(A) = \dfrac{1}{4}$.</p>
+      $$F(A) = 640 \times \frac{1}{4} = 160$$
+      <div class="sol-jadi">frekuensi harapannya $160$ kali.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 12</div>
+      <p style="margin:0;font-size:.9rem;">Sebuah pesawat mengangkut 150 penumpang. Jika terjadi kecelakaan, peluang setiap penumpang selamat adalah $\dfrac{2}{5}$. Berapa penumpang yang diperkirakan tidak selamat?</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Komplemen:</strong> $P(\text{tidak selamat})$ $= 1 - \dfrac{2}{5}$ $= \dfrac{3}{5}$.</p>
+      $$F = 150 \times \frac{3}{5} = 90$$
+      <div class="sol-jadi">diperkirakan $90$ penumpang.</div>
+    </div>
+
+    <h3 class="subsection-title">5. Peluang Empiris (Frekuensi Relatif)</h3>
+    <p>Peluang klasik mensyaratkan semua hasil sama mungkin. Untuk benda yang tidak simetris (paku payung, tutup botol) atau data nyata, peluang ditaksir dari hasil percobaan.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Frekuensi Relatif</div>
+      <div class="math-block">$$f_r(A) = \frac{m}{n}$$</div><p style="margin:.4rem 0 0;font-size:.9rem;">dengan $m$ = banyak kejadian $A$ muncul dan $n$ = banyak percobaan. Makin banyak percobaan, frekuensi relatif makin mendekati peluang teoretis (Hukum Bilangan Besar).</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 13</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Sebuah koin dilempar 200 kali dan sisi Angka muncul 92 kali.</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>tentukan frekuensi relatif munculnya Angka</li><li>bandingkan dengan peluang teoretisnya</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>Frekuensi relatif</span></div>
+      $$f_r = \frac{92}{200} = 0{,}46$$
+      <div class="sol-jadi">frekuensi relatifnya $0{,}46$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Peluang teoretis</span></div>
+      <p class="sol-step">Koin seimbang: $P(\text{Angka})$ $= \dfrac{1}{2}$ $= 0{,}5$.</p>
+      <div class="sol-jadi">keduanya berdekatan; selisih $0{,}04$ wajar karena percobaan terbatas.</div>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan A</div>
+      <ol class="soal-list">
+        <li>Pada pelemparan satu dadu, tentukanlah peluang munculnya mata dadu:<br>(a) bilangan prima<br>(b) faktor dari 6</li>
+        <li>Sebuah kartu diambil acak dari 52 kartu bridge. Tentukanlah peluang terambilnya:<br>(a) kartu As<br>(b) kartu merah (hati atau wajik)</li>
+        <li>Dari $\{1, 2, 3, 4, 5, 6\}$ diambil 2 angka tanpa memperhatikan urutan. Tentukanlah peluang jumlah kedua angka:<br>(a) sama dengan 7<br>(b) lebih dari 9</li>
+        <li>Sebuah kotak berisi 5 bola putih dan 3 bola hitam. Diambil 4 bola sekaligus. Tentukanlah peluang terambil tepat 2 putih dan 2 hitam.</li>
+        <li>Lima remaja (3 pria, 2 wanita) berdiri acak dalam satu barisan. Tentukanlah peluang:<br>(a) posisinya berselang-seling P-W-P-W-P<br>(b) kedua wanita berdampingan</li>
+        <li>Ada 10 calon pemain voli: 3 kelas X, 2 kelas XI, dan 5 kelas XII. Dipilih 6 siswa secara acak. Tentukanlah peluang terpilih tepat 2 siswa dari setiap kelas.</li>
+        <li>Dua dadu dilempar sebanyak 180 kali.<br>(a) Dengan komplemen, tentukan peluang jumlah mata dadu kurang dari 11.<br>(b) Tentukan frekuensi harapannya.</li>
+        <li>Sebuah kotak berisi 4 kelereng kuning dan 3 kelereng hijau. Diambil 2 kelereng sekaligus. Dengan komplemen, tentukan peluang terambil paling sedikit satu kelereng kuning, lalu jelaskan mengapa cara komplemen lebih singkat.</li>
+        <li>Sebuah paku payung dilempar 300 kali dan mendarat dengan ujung ke atas sebanyak 117 kali.<br>(a) Tentukan frekuensi relatifnya.<br>(b) Jika dilempar 1.000 kali, berapa kali kira-kira ujungnya ke atas?</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ B. PELUANG KEJADIAN MAJEMUK ═══ -->
+  <section class="section" id="bagian-b">
+    <h2 class="section-title"><span class="section-badge">B</span>Peluang Kejadian Majemuk</h2>
+    <h3 class="subsection-title">1. Pengertian Kejadian Majemuk</h3>
+    <p>Kejadian majemuk melibatkan dua kejadian sekaligus, misalnya "hujan <strong>atau</strong> macet" ($A \cup B$) dan "hujan <strong>dan</strong> macet" ($A \cap B$).</p>
+    <div class="box box-rumus">
+      <div class="box-label">Peluang Gabungan</div>
+      <div class="math-block">$$ \begin{gather*} P(A \cup B) = P(A) + P(B) \\ -\, P(A \cap B) \end{gather*} $$</div><p style="margin:.4rem 0 0;font-size:.9rem;">$P(A \cap B)$ dikurangkan agar irisan tidak terhitung dua kali.</p>
+    </div>
+
+    <h3 class="subsection-title">2. Kejadian Saling Lepas</h3>
+    <p>Dua kejadian <strong>saling lepas</strong> jika tidak mungkin terjadi bersamaan (tidak beririsan).</p>
+    <div class="box box-rumus">
+      <div class="box-label">Kejadian Saling Lepas</div>
+      <div class="math-block">$$ \begin{gather*} A \cap B = \emptyset \\ \Rightarrow\; P(A \cup B) = P(A) + P(B) \end{gather*} $$</div>
+    </div>
+
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 260 170" width="100%" style="max-width:260px" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="248" height="158" rx="8" style="fill:none;stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="242" y="24" text-anchor="end" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">S</text><ellipse cx="75" cy="88" rx="55" ry="55" style="fill:rgba(13,148,136,.16);stroke:#0d9488;stroke-width:2"/><ellipse cx="185" cy="88" rx="55" ry="55" style="fill:rgba(225,29,72,.12);stroke:#e11d48;stroke-width:2"/><text x="45" y="30" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">A</text><text x="215" y="30" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">B</text></svg><div style="font-size:.8rem;color:var(--text-3);margin-top:.3rem;">$A$ dan $B$ saling lepas: tidak ada irisan.</div></div>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Sebuah dadu dilempar. $A$ = muncul angka 5, $B$ = muncul angka 4. Tentukanlah:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>$P(A \cap B)$</li><li>$P(A \cup B)$</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Selidiki irisan:</strong> $A = \{5\}$, $B = \{4\}$, $A \cap B = \emptyset$, jadi saling lepas.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$P(A \cap B)$</span></div>
+      <div class="sol-jadi">$P(A \cap B) = 0$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$P(A \cup B)$</span></div>
+      $$P(A \cup B) = \frac{1}{6} + \frac{1}{6}$$
+      <div class="sol-jadi">$P(A \cup B)$ $= \dfrac{1}{3}$.</div>
+    </div>
+
+    <h3 class="subsection-title">3. Kejadian Tidak Saling Lepas</h3>
+    <p>Jika dua kejadian bisa terjadi bersamaan, irisannya harus dikurangkan sekali.</p>
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 260 170" width="100%" style="max-width:260px" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="248" height="158" rx="8" style="fill:none;stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="242" y="24" text-anchor="end" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">S</text><ellipse cx="100" cy="88" rx="55" ry="55" style="fill:rgba(13,148,136,.16);stroke:#0d9488;stroke-width:2"/><ellipse cx="160" cy="88" rx="55" ry="55" style="fill:rgba(225,29,72,.12);stroke:#e11d48;stroke-width:2"/><text x="70" y="30" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">A</text><text x="190" y="30" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">B</text></svg><div style="font-size:.8rem;color:var(--text-3);margin-top:.3rem;">Irisan $A \cap B$ hanya dihitung sekali.</div></div>
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Dua dadu dilempar serentak. $A$ = jumlah mata dadu 5, $B$ = hasil kali mata dadu 6. Tentukanlah:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>$P(A \cap B)$</li><li>$P(A \cup B)$</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Daftar anggota:</strong></p>
+      <ul class="sol-cek">
+        <li>$A = \{(1, 4), (4, 1), (2, 3), (3, 2)\}$</li>
+        <li>$B = \{(1, 6), (6, 1), (2, 3), (3, 2)\}$</li>
+        <li>$A \cap B$ $= \{(2, 3), (3, 2)\}$, jadi tidak saling lepas</li>
+      </ul>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$P(A \cap B)$</span></div>
+      $$\frac{2}{36}$$
+      <div class="sol-jadi">$P(A \cap B)$ $= \dfrac{1}{18}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$P(A \cup B)$</span></div>
+      $$\frac{4}{36} + \frac{4}{36} - \frac{2}{36} = \frac{6}{36}$$
+      <div class="sol-jadi">$P(A \cup B)$ $= \dfrac{1}{6}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 16</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Satu kartu diambil dari 52 kartu bridge. $A$ = kartu hati, $B$ = kartu King. Tentukanlah:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>$P(A \cap B)$</li><li>$P(A \cup B)$</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung anggota:</strong> $n(A) = 13$, $n(B) = 4$, dan $A \cap B$ = King hati, $n(A \cap B) = 1$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$P(A \cap B)$</span></div>
+      <div class="sol-jadi">$P(A \cap B)$ $= \dfrac{1}{52}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$P(A \cup B)$</span></div>
+      $$\frac{13}{52} + \frac{4}{52} - \frac{1}{52} = \frac{16}{52}$$
+      <div class="sol-jadi">$P(A \cup B)$ $= \dfrac{4}{13}$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Isi Kartu Bridge</div>
+      <p style="margin:0;font-size:.9rem;">52 kartu = 4 jenis (hati dan wajik merah; sekop dan keriting hitam) × 13 kartu (As, 2–10, Jack, Queen, King). Kartu bergambar (Jack, Queen, King) ada $4 \times 3 = 12$. Konteks ini sering muncul di soal SNBT.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 17</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Di kelas berisi 30 siswa, 16 menyukai olahraga, 12 menyukai seni, dan 6 tidak menyukai keduanya. Seorang siswa dipilih acak. Tentukanlah peluang ia menyukai:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>olahraga dan seni</li><li>olahraga saja</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Bagi diagram Venn</strong> menjadi $a$ (olahraga saja), $b$ (keduanya), $c$ (seni saja), $d = 6$.</p>
+      $$ \begin{align*} a + b + c &= 30 - 6 = 24 \\ c &= 24 - 16 = 8 \\ b &= 12 - 8 = 4 \\ a &= 16 - 4 = 12 \end{align*} $$
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 260 170" width="100%" style="max-width:260px" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="248" height="158" rx="8" style="fill:none;stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="242" y="24" text-anchor="end" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">S = 30</text><ellipse cx="100" cy="88" rx="55" ry="55" style="fill:rgba(13,148,136,.16);stroke:#0d9488;stroke-width:2"/><ellipse cx="160" cy="88" rx="55" ry="55" style="fill:rgba(225,29,72,.12);stroke:#e11d48;stroke-width:2"/><text x="70" y="30" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">Olahraga</text><text x="190" y="30" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">Seni</text><text x="78" y="92" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">12</text><text x="130" y="92" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">4</text><text x="182" y="92" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">8</text><text x="236" y="154" text-anchor="end" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">d = 6</text></svg></div>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Keduanya</span></div>
+      $$\frac{4}{30}$$
+      <div class="sol-jadi">peluangnya $\dfrac{2}{15}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Olahraga saja</span></div>
+      $$\frac{12}{30}$$
+      <div class="sol-jadi">peluangnya $\dfrac{2}{5}$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Teknik Diagram Venn</div>
+      <p style="margin:0;font-size:.9rem;">Bagi menjadi 4 wilayah: $a$ (hanya X), $b$ (keduanya), $c$ (hanya Y), $d$ (tidak keduanya), dengan $n(X) = a + b$, $n(Y) = b + c$, dan $a + b + c + d = n(S)$. Cari $c$ dari $a + b + c = n(S) - d$, lalu $b$, lalu $a$.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan B</div>
+      <ol class="soal-list">
+        <li>Sebuah dadu dilempar sekali. $A$ = angka ganjil, $B$ = angka prima.<br>(a) Tentukan $P(A \cup B)$.<br>(b) Apakah $A$ dan $B$ saling lepas? Jelaskan.</li>
+        <li>Dua dadu dilempar serentak. $A$ = jumlah mata dadu 7, $B$ = jumlah mata dadu 11. Tunjukkan bahwa $A$ dan $B$ saling lepas, lalu tentukan $P(A \cup B)$.</li>
+        <li>Dadu merah dan putih dilempar serentak. Tentukanlah peluang muncul angka 3 pada dadu merah <em>atau</em> angka 5 pada dadu putih.</li>
+        <li>Di kelas berisi 40 siswa, 20 menyukai matematika, 15 menyukai fisika, dan 8 menyukai keduanya. Seorang siswa dipilih acak. Tentukanlah peluang ia:<br>(a) menyukai matematika atau fisika<br>(b) tidak menyukai keduanya</li>
+        <li>Survei kepemilikan: 25% penduduk memiliki TV saja, 40% kulkas saja, dan 20% tidak memiliki keduanya. Seorang penduduk dipilih acak. Tentukanlah peluang ia:<br>(a) memiliki TV<br>(b) memiliki TV dan kulkas</li>
+        <li>Keranjang berisi 4 apel merah dan 4 apel hijau; diambil 3 apel sekaligus. $A$ = terambil 2 merah dan 1 hijau, $B$ = terambil 1 merah dan 2 hijau. Jelaskan mengapa $A$ dan $B$ saling lepas, lalu tentukan $P(A \cup B)$.</li>
+        <li>Dua dadu dilempar serentak. $A$ = jumlah mata dadu 6, $B$ = hasil kali mata dadu 8, $C$ = paling sedikit satu dadu menunjukkan angka 2.<br>(a) Tentukan $P(A)$, $P(B)$, $P(C)$.<br>(b) Tentukan $P(A \cup B)$; apakah $A$, $B$ saling lepas?<br>(c) Tentukan $P(B \cup C)$; apakah $B$, $C$ saling lepas?</li>
+        <li>Diketahui $P(A) = 0{,}4$, $P(B) = 0{,}5$, dan $P(A \cup B)$ $= 0{,}7$.<br>(a) Tentukan $P(A \cap B)$.<br>(b) Apakah $A$ dan $B$ saling lepas?<br>(c) Tentukan peluang setiap wilayah diagram Venn-nya.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ C. KEJADIAN SALING BEBAS ═══ -->
+  <section class="section" id="bagian-c">
+    <h2 class="section-title"><span class="section-badge">C</span>Kejadian Saling Bebas</h2>
+    <h3 class="subsection-title">1. Definisi dan Cara Menyelidiki</h3>
+    <p><strong>Saling lepas</strong>: tidak bisa terjadi bersamaan. <strong>Saling bebas</strong>: bisa terjadi bersamaan, tetapi yang satu tidak memengaruhi yang lain.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Kejadian Saling Bebas</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">$A$ dan $B$ saling bebas jika dan hanya jika</p><div class="math-block">$$P(A \cap B) = P(A) \times P(B)$$</div><p style="margin:.4rem 0 0;font-size:.9rem;">Akibatnya $P(A \cup B)$ $= P(A) + P(B) - P(A)\,P(B)$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 18</div>
+      <p style="margin:0;font-size:.9rem;">Dadu merah dan putih dilempar serentak. $A$ = angka 4 pada dadu merah, $B$ = angka 6 pada dadu putih. Selidikilah apakah $A$ dan $B$ saling bebas.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Hitung peluang:</strong> $P(A) = \dfrac{6}{36}$ $= \dfrac{1}{6}$, $P(B) = \dfrac{1}{6}$, $A \cap B = \{(4, 6)\}$ sehingga $P(A \cap B)$ $= \dfrac{1}{36}$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan:</strong></p>
+      $$ \begin{align*} P(A) \times P(B) &= \frac{1}{6} \times \frac{1}{6} \\ &= \frac{1}{36} \\ &= P(A \cap B) \end{align*} $$
+      <div class="sol-jadi">$A$ dan $B$ <strong>saling bebas</strong>; masuk akal, karena dadu merah tidak memengaruhi dadu putih.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin:0;font-size:.9rem;">Dua dadu dilempar serentak. $A$ = jumlah mata dadu 8, $B$ = hasil kali mata dadu 12. Selidikilah apakah $A$ dan $B$ saling bebas.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Daftar anggota:</strong></p>
+      <ul class="sol-cek">
+        <li>$A = \{(2, 6), (6, 2), (3, 5), (5, 3), (4, 4)\}$, $P(A) = \dfrac{5}{36}$</li>
+        <li>$B = \{(2, 6), (6, 2), (3, 4), (4, 3)\}$, $P(B) = \dfrac{1}{9}$</li>
+        <li>$A \cap B$ $= \{(2, 6), (6, 2)\}$, $P(A \cap B)$ $= \dfrac{1}{18}$</li>
+      </ul>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Bandingkan:</strong></p>
+      $$P(A) \times P(B) = \frac{5}{324} \neq \frac{1}{18}$$
+      <div class="sol-jadi">$A$ dan $B$ <strong>tidak saling bebas</strong>.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 20</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">$A$ dan $B$ saling bebas dengan $P(A) = \dfrac{2}{3}$ dan $P(B) = \dfrac{1}{2}$. Tentukanlah:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>$P(A \cup B)$</li><li>$P\bigl((A \cap B)^c\bigr)$</li><li>$P(A^c \cap B)$</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Irisan:</strong> $P(A \cap B)$ $= \dfrac{2}{3} \times \dfrac{1}{2}$ $= \dfrac{1}{3}$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$P(A \cup B)$</span></div>
+      $$\frac{2}{3} + \frac{1}{2} - \frac{1}{3} = \frac{5}{6}$$
+      <div class="sol-jadi">$P(A \cup B)$ $= \dfrac{5}{6}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Bukan keduanya</span></div>
+      $$1 - \frac{1}{3} = \frac{2}{3}$$
+      <div class="sol-jadi">peluangnya $\dfrac{2}{3}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>$A$ tidak, $B$ terjadi</span></div>
+      $$P(A^c) \times P(B) = \frac{1}{3} \times \frac{1}{2}$$
+      <div class="sol-jadi">$P(A^c \cap B)$ $= \dfrac{1}{6}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 21</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Peluang Amir lulus ujian $\dfrac{3}{4}$ dan peluang Budi lulus $\dfrac{1}{3}$ (saling bebas). Tentukanlah peluang:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>keduanya tidak lulus</li><li>Amir lulus tetapi Budi tidak</li><li>paling sedikit satu lulus</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Komplemen:</strong> $P(A^c) = \dfrac{1}{4}$ dan $P(B^c) = \dfrac{2}{3}$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Keduanya tidak lulus</span></div>
+      $$\frac{1}{4} \times \frac{2}{3}$$
+      <div class="sol-jadi">peluangnya $\dfrac{1}{6}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Hanya Amir</span></div>
+      $$\frac{3}{4} \times \frac{2}{3}$$
+      <div class="sol-jadi">peluangnya $\dfrac{1}{2}$.</div>
+      <div class="sol-part"><span class="sol-tag">c</span><span>Paling sedikit satu</span></div>
+      <p class="sol-step">Komplemen dari (a):</p>
+      $$1 - \frac{1}{6}$$
+      <div class="sol-jadi">peluangnya $\dfrac{5}{6}$.</div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Kejadian ($A$, $B$ saling bebas)</th><th>Rumus</th></tr></thead>
+        <tbody>
+          <tr><td>Keduanya terjadi</td><td>$P(A)\,P(B)$</td></tr>
+          <tr><td>Hanya $A$</td><td>$P(A)\,[1 - P(B)]$</td></tr>
+          <tr><td>Hanya $B$</td><td>$[1 - P(A)]\,P(B)$</td></tr>
+          <tr><td>Keduanya tidak</td><td>$[1 - P(A)][1 - P(B)]$</td></tr>
+          <tr><td>Paling sedikit satu</td><td>$1 - [1 - P(A)][1 - P(B)]$</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Saling Lepas Bukan Saling Bebas</div>
+      <p style="margin:0;font-size:.9rem;">Jika $P(A) > 0$ dan $P(B) > 0$, kejadian yang <strong>saling lepas pasti tidak saling bebas</strong>: $P(A \cap B) = 0$, padahal $P(A)\,P(B) > 0$. Mengetahui $A$ terjadi justru memastikan $B$ tidak terjadi.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan C</div>
+      <ol class="soal-list">
+        <li>$A$ dan $B$ saling bebas dengan $P(A) = 0{,}3$ dan $P(B) = 0{,}5$. Tentukanlah:<br>(a) $P(A \cap B)$<br>(b) $P(A \cup B)$<br>(c) $P(A^c \cap B^c)$</li>
+        <li>Dadu merah dan hijau dilempar serentak. $A$ = angka genap pada dadu merah, $B$ = angka ganjil pada dadu hijau. Selidikilah apakah $A$ dan $B$ saling bebas.</li>
+        <li>Peluang Andi, Beni, dan Caca lulus berturut-turut $\dfrac{1}{2}$, $\dfrac{2}{3}$, dan $\dfrac{3}{4}$ (saling bebas). Tentukanlah peluang:<br>(a) ketiganya lulus<br>(b) hanya Andi yang lulus<br>(c) paling sedikit satu lulus</li>
+        <li>Sebuah dadu dan dua uang logam dilempar serentak. $A$ = muncul dua Angka pada uang logam, $B$ = muncul angka 5 pada dadu. Selidikilah apakah $A$ dan $B$ saling bebas, lalu tentukan $P(A \cup B)$.</li>
+        <li>Peluang komponen jenis I cacat 0,05 dan jenis II cacat 0,08 (saling bebas). Tentukanlah peluang:<br>(a) kedua komponen cacat<br>(b) paling sedikit satu cacat<br>(c) hanya komponen jenis I yang cacat</li>
+        <li>$A$ dan $B$ saling bebas, $P(A) = x$, $P(B) = 2x$, dan $P(A \cap B)$ $= 0{,}18$. Tentukan $x$, lalu hitung $P(A \cup B)$.</li>
+        <li>Dua dadu dilempar. $A$ = jumlah mata dadu habis dibagi 3, $B$ = kedua mata dadu sama.<br>(a) Tentukan $P(A)$, $P(B)$, $P(A \cap B)$.<br>(b) Selidikilah apakah $A$ dan $B$ saling bebas.</li>
+        <li>Diketahui $P(A) = \dfrac{1}{3}$, $P(B) = \dfrac{1}{4}$, dan $A$, $B$ saling bebas. Tunjukkan bahwa $P(A^c \cap B^c)$ $= P(A^c) \cdot P(B^c)$.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ D. PELUANG BERSYARAT DAN TEOREMA BAYES ═══ -->
+  <section class="section" id="bagian-d">
+    <h2 class="section-title"><span class="section-badge">D</span>Peluang Bersyarat dan Teorema Bayes</h2>
+    <h3 class="subsection-title">1. Definisi dan Rumus</h3>
+    <p>Sering kali kita ingin menghitung peluang suatu kejadian <em>dengan informasi tambahan</em> bahwa kejadian lain sudah terjadi, misalnya "peluang seseorang sakit jika diketahui hasil tesnya positif".</p>
+    <div class="box box-rumus">
+      <div class="box-label">Peluang Bersyarat</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">$P(B \mid A)$ dibaca "peluang $B$ dengan syarat $A$ telah terjadi":</p><div class="math-block">$$ \begin{align*} P(B \mid A) &= \frac{P(A \cap B)}{P(A)} \\ &= \frac{n(A \cap B)}{n(A)} \end{align*} $$</div><p style="margin:.4rem 0 0;font-size:.9rem;">Ruang sampel "menyusut" menjadi anggota $A$ saja. Aturan perkalian: $P(A \cap B)$ $= P(A) \cdot P(B \mid A)$. Jika saling bebas, $P(B \mid A) = P(B)$.</p>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Dua dadu dilempar serentak. $A$ = hasil kali mata dadu 12, $B$ = jumlah mata dadu 8. Tentukanlah:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>$P(A \mid B)$</li><li>$P(B \mid A)$</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Daftar anggota:</strong></p>
+      <ul class="sol-cek">
+        <li>$A = \{(3, 4), (4, 3), (6, 2), (2, 6)\}$, $n(A) = 4$</li>
+        <li>$B = \{(2, 6), (6, 2), (3, 5), (5, 3), (4, 4)\}$, $n(B) = 5$</li>
+        <li>$A \cap B$ $= \{(6, 2), (2, 6)\}$</li>
+      </ul>
+      <div class="sol-part"><span class="sol-tag">a</span><span>$P(A \mid B)$</span></div>
+      <p class="sol-step">Dari 5 hasil berjumlah 8, ada 2 yang hasil kalinya 12.</p>
+      <div class="sol-jadi">$P(A \mid B)$ $= \dfrac{2}{5}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>$P(B \mid A)$</span></div>
+      <p class="sol-step">Dari 4 hasil berhasil kali 12, ada 2 yang jumlahnya 8.</p>
+      <div class="sol-jadi">$P(B \mid A)$ $= \dfrac{1}{2}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 23</div>
+      <p style="margin:0;font-size:.9rem;">Dua dadu dilempar dan diketahui jumlah kedua mata dadu 6. Berapakah peluang salah satu dadu menunjukkan angka 4?</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Ruang sampel menyusut:</strong> $B = \{(1, 5), (5, 1), (2, 4), (4, 2), (3, 3)\}$, $n(B) = 5$.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Yang memuat angka 4:</strong> $\{(2, 4), (4, 2)\}$.</p>
+      <div class="sol-jadi">peluangnya $\dfrac{2}{5}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 24</div>
+      <p style="margin:0;font-size:.9rem;">Di kelas berisi 40 siswa, 34 menyukai matematika, 22 menyukai fisika, dan 2 tidak menyukai keduanya. Seorang siswa yang menyukai fisika dipilih acak. Berapakah peluang ia juga menyukai matematika?</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Diagram Venn:</strong> $a + b + c = 38$, $a + b = 34$, sehingga $c = 4$, $b = 18$, $a = 16$.</p>
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 260 170" width="100%" style="max-width:260px" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="248" height="158" rx="8" style="fill:none;stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="242" y="24" text-anchor="end" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">S = 40</text><ellipse cx="100" cy="88" rx="55" ry="55" style="fill:rgba(13,148,136,.16);stroke:#0d9488;stroke-width:2"/><ellipse cx="160" cy="88" rx="55" ry="55" style="fill:rgba(225,29,72,.12);stroke:#e11d48;stroke-width:2"/><text x="70" y="30" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">Mat</text><text x="190" y="30" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">Fis</text><text x="78" y="92" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">16</text><text x="130" y="92" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">18</text><text x="182" y="92" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">4</text><text x="236" y="154" text-anchor="end" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">d = 2</text></svg></div>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Ruang sampel menyusut</strong> ke penyuka fisika: $n(\text{Fis}) = 22$.</p>
+      $$P(\text{Mat} \mid \text{Fis}) = \frac{18}{22}$$
+      <div class="sol-jadi">peluangnya $\dfrac{9}{11}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;">Dari 52 kartu bridge diambil 2 kartu satu per satu <strong>tanpa pengembalian</strong>. Tentukanlah peluang keduanya King.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Aturan perkalian:</strong> setelah satu King terambil, tersisa 3 King dari 51 kartu.</p>
+      $$P(K_1 \cap K_2) = \frac{4}{52} \times \frac{3}{51} = \frac{12}{2652}$$
+      <div class="sol-jadi">peluangnya $\dfrac{1}{221}$.</div>
+    </div>
+
+    <h3 class="subsection-title">2. Pengambilan Berturut-turut</h3>
+    <div class="box box-rumus">
+      <div class="box-label">Dengan dan Tanpa Pengembalian</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.9rem;"><li><strong>Tanpa pengembalian</strong>: total berkurang, peluang berubah: $P(A_1 \cap A_2)$ $= P(A_1)\,P(A_2 \mid A_1)$.</li><li><strong>Dengan pengembalian</strong>: total tetap, setiap pengambilan saling bebas: $P(A_1 \cap A_2)$ $= P(A_1)\,P(A_2)$.</li></ul>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 26</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Kotak berisi 4 bola hijau dan 6 bola kuning. Diambil 4 bola satu per satu. Tentukanlah peluang pengambilan ke-1 dan ke-2 hijau, ke-3 dan ke-4 kuning:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>tanpa pengembalian</li><li>dengan pengembalian</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span><span>Tanpa pengembalian</span></div>
+      <p class="sol-step">Penyebut turun satu setiap langkah.</p>
+      $$ \begin{align*} P &= \frac{4}{10} \times \frac{3}{9} \times \frac{6}{8} \times \frac{5}{7} \\ &= \frac{360}{5040} \end{align*} $$
+      <div class="sol-jadi">peluangnya $\dfrac{1}{14}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Dengan pengembalian</span></div>
+      <p class="sol-step">Penyebut selalu 10.</p>
+      $$ \begin{align*} P &= \frac{4}{10} \times \frac{4}{10} \times \frac{6}{10} \times \frac{6}{10} \\ &= \frac{576}{10.000} \end{align*} $$
+      <div class="sol-jadi">peluangnya $\dfrac{36}{625}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 27</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Kantong berisi 5 bola hitam dan 5 bola putih. Diambil 2 bola sekaligus sebanyak tiga kali berturut-turut. Tentukanlah peluang berturut-turut terambil 2 hitam, 2 hitam, lalu 2 putih:</p><ol type="a" style="margin:.3rem 0 0;padding-left:1.4rem;font-size:.9rem;"><li>tanpa pengembalian</li><li>dengan pengembalian</li></ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Setiap pengambilan 2 bola sekaligus,</strong> jadi pakai kombinasi.</p>
+      <div class="sol-part"><span class="sol-tag">a</span><span>Tanpa pengembalian</span></div>
+      <ul class="sol-cek">
+        <li>Ke-1 (5H, 5P): $\dfrac{{}_5C_2}{{}_{10}C_2}$ $= \dfrac{10}{45}$</li>
+        <li>Ke-2 (3H, 5P): $\dfrac{{}_3C_2}{{}_8C_2}$ $= \dfrac{3}{28}$</li>
+        <li>Ke-3 (1H, 5P): $\dfrac{{}_5C_2}{{}_6C_2}$ $= \dfrac{10}{15}$</li>
+      </ul>
+      $$\frac{10}{45} \times \frac{3}{28} \times \frac{10}{15} = \frac{300}{18.900}$$
+      <div class="sol-jadi">peluangnya $\dfrac{1}{63}$.</div>
+      <div class="sol-part"><span class="sol-tag">b</span><span>Dengan pengembalian</span></div>
+      <p class="sol-step">Komposisi selalu 5H dan 5P, dan peluang 2 hitam sama dengan 2 putih: $\dfrac{10}{45}$ $= \dfrac{2}{9}$.</p>
+      $$\left(\frac{2}{9}\right)^3$$
+      <div class="sol-jadi">peluangnya $\dfrac{8}{729}$.</div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th></th><th>Tanpa Pengembalian</th><th>Dengan Pengembalian</th></tr></thead>
+        <tbody>
+          <tr><td>Total benda</td><td>Berkurang</td><td>Tetap</td></tr>
+          <tr><td>Antar pengambilan</td><td>Tidak saling bebas</td><td>Saling bebas</td></tr>
+          <tr><td>Rumus</td><td>$P(A)\,P(B \mid A) \cdots$</td><td>$P(A)\,P(B) \cdots$</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="subsection-title">3. Aturan Peluang Total dan Teorema Bayes</h3>
+    <p>Bagaimana jika suatu hasil bisa datang dari beberapa sumber? Jumlahkan peluang setiap jalur (<strong>peluang total</strong>). Jika arahnya dibalik, yaitu hasilnya diketahui dan kita mencari sumbernya, pakai <strong>Teorema Bayes</strong>.</p>
+    <div class="box box-rumus">
+      <div class="box-label">Peluang Total dan Teorema Bayes</div>
+      <p style="margin:0 0 .4rem;font-size:.9rem;">Jika $B_1, \ldots, B_n$ saling lepas dan meliputi $S$:</p><div class="math-block">$$ \begin{gather*} P(A) = P(B_1)\,P(A \mid B_1) + \cdots \\ +\, P(B_n)\,P(A \mid B_n) \end{gather*} $$</div><div class="math-block">$$ \begin{align*} P(B_i \mid A) &= \frac{P(B_i)\,P(A \mid B_i)}{P(A)} \end{align*} $$</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 28</div>
+      <p style="margin:0;font-size:.9rem;">Kantong I berisi 5 bola merah dan 2 biru; kantong II berisi 3 merah dan 1 biru. Sebuah kantong dipilih acak, lalu satu bola diambil darinya. Tentukanlah peluang terambil bola biru.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Dua jalur saling lepas:</strong> kantong I atau kantong II, masing-masing berpeluang $\dfrac{1}{2}$.</p>
+      $$ \begin{align*} P(\text{biru}) &= \frac{1}{2} \cdot \frac{2}{7} + \frac{1}{2} \cdot \frac{1}{4} \\ &= \frac{1}{7} + \frac{1}{8} \end{align*} $$
+      <div class="sol-jadi">$P(\text{biru})$ $= \dfrac{15}{56}$.</div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 29</div>
+      <p style="margin:0;font-size:.9rem;">Mesin A dan B memproduksi 60% dan 40% dari total produk. Peluang produk cacat dari mesin A 2% dan dari mesin B 5%. Sebuah produk diambil acak dan ternyata cacat. Tentukanlah peluang produk itu berasal dari mesin A.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Diagram pohon:</strong> kalikan peluang di sepanjang setiap cabang.</p>
+    <div class="grafik-wrap" style="margin:.8rem 0;text-align:center;"><svg viewBox="0 0 300 190" width="100%" style="max-width:320px" xmlns="http://www.w3.org/2000/svg"><text x="150" y="20" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">Produk</text><line x1="150" y1="26" x2="80" y2="70" style="stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="103" y="44" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:11px">0,6</text><line x1="150" y1="26" x2="220" y2="70" style="stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="197" y="44" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:11px">0,4</text><text x="80" y="84" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">Mesin A</text><text x="220" y="84" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">Mesin B</text><line x1="80" y1="90" x2="40" y2="140" style="stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="46" y="112" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:11px">0,02</text><line x1="80" y1="90" x2="120" y2="140" style="stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="114" y="112" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:11px">0,98</text><line x1="220" y1="90" x2="180" y2="140" style="stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="186" y="112" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:11px">0,05</text><line x1="220" y1="90" x2="260" y2="140" style="stroke:var(--text-2,#475569);stroke-width:1.6"/><text x="254" y="112" text-anchor="middle" style="fill:var(--text-2,#475569);font-size:11px">0,95</text><text x="40" y="154" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">Cacat</text><text x="120" y="154" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">Baik</text><text x="180" y="154" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">Cacat</text><text x="260" y="154" text-anchor="middle" style="fill:var(--text-1,#1e293b);font-size:12px;font-weight:600">Baik</text><text x="40" y="178" text-anchor="middle" style="fill:#0d9488;font-size:11px;font-weight:700">0,012</text><text x="180" y="178" text-anchor="middle" style="fill:#e11d48;font-size:11px;font-weight:700">0,020</text></svg></div>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Peluang total cacat:</strong></p>
+      $$ \begin{align*} P(D) &= 0{,}6 \times 0{,}02 + 0{,}4 \times 0{,}05 \\ &= 0{,}012 + 0{,}020 = 0{,}032 \end{align*} $$
+      <p class="sol-step"><span class="sol-no">3</span><strong>Teorema Bayes:</strong></p>
+      $$ \begin{align*} P(M_A \mid D) &= \frac{0{,}012}{0{,}032} \\ &= 0{,}375 \end{align*} $$
+      <div class="sol-jadi">peluangnya $\dfrac{3}{8}$.</div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">💡 Cara Membaca Soal Bayes</div>
+      <p style="margin:0;font-size:.9rem;">Soal Bayes berbentuk "diketahui hasilnya…, berapa peluang penyebabnya…": tes positif tetapi belum tentu sakit, produk cacat dari mesin mana. Langkahnya: (1) buat diagram pohon, (2) jumlahkan semua cabang yang berakhir di hasil itu, (3) bagi cabang yang ditanyakan dengan jumlah tersebut.</p>
+    </div>
+
+    <div class="box box-latihan">
+      <div class="box-label">Soal Latihan D</div>
+      <ol class="soal-list">
+        <li>Dua dadu dilempar dan diketahui jumlah mata dadu 8. Tentukanlah peluang salah satu dadu menunjukkan angka 3.</li>
+        <li>Sebuah dadu dan dua uang logam dilempar serentak. Diketahui dadu menunjukkan angka 5. Tentukanlah peluang muncul tepat satu Angka pada uang logam.</li>
+        <li>Kantong berisi 3 bola merah dan 5 bola biru. Diambil dua bola satu per satu <strong>tanpa pengembalian</strong>. Tentukanlah peluang:<br>(a) keduanya merah<br>(b) pertama merah, kedua biru<br>(c) kedua bola berbeda warna</li>
+        <li>Kotak berisi 5 bola putih dan 3 bola hitam. Diambil dua bola satu per satu <strong>dengan pengembalian</strong>. Tentukanlah peluang terambil satu putih dan satu hitam (urutan apa pun).</li>
+        <li>Kotak berisi 6 bola hijau dan 4 bola merah. Diambil 3 bola satu per satu <strong>tanpa pengembalian</strong>. Tentukanlah peluang:<br>(a) ketiganya hijau<br>(b) urutan Hijau-Hijau-Merah<br>(c) paling sedikit satu merah</li>
+        <li>Kantong berisi 4 bola hitam dan 6 bola putih. Diambil 2 bola sekaligus sebanyak dua kali tanpa pengembalian. Tentukanlah peluang pengambilan pertama 2 hitam dan kedua 2 putih.</li>
+        <li>Kelas berisi 15 putri dan 15 putra. Dipilih 3 siswa satu per satu tanpa pengembalian.<br>(a) Tentukan peluang urutan putri-putri-putra.<br>(b) Tentukan peluang tepat dua putri (urutan bebas).<br>(c) Mengapa hasil (a) dan (b) berbeda?</li>
+        <li>Tes suatu penyakit memberi hasil positif dengan peluang 0,95 jika orangnya sakit, dan 0,04 jika orangnya sehat. Hanya 1% populasi yang sakit. Seseorang dites dan hasilnya positif. Tentukanlah peluang ia benar-benar sakit.</li>
+        <li>Kelompok belajar I diikuti 70% siswa dan Kelompok II 30% siswa. Peluang lulus siswa Kelompok I 0,9 dan Kelompok II 0,6. Seorang siswa yang lulus dipilih acak. Tentukanlah peluang ia dari Kelompok II.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ E. RINGKASAN RUMUS ═══ -->
+  <section class="section" id="bagian-e">
+    <h2 class="section-title"><span class="section-badge">E</span>Ringkasan Rumus</h2>
+    <div class="table-wrap">
+      <table class="ringkasan-table">
+        <thead><tr><th>Konsep</th><th>Rumus</th></tr></thead>
+        <tbody>
+          <tr><td>Peluang klasik</td><td>$P(A) = \dfrac{n(A)}{n(S)}$, $0 \leq P(A) \leq 1$</td></tr>
+          <tr><td>Komplemen</td><td>$P(A^c) = 1 - P(A)$</td></tr>
+          <tr><td>Frekuensi harapan</td><td>$F(A) = n \times P(A)$</td></tr>
+          <tr><td>Frekuensi relatif</td><td>$\dfrac{\text{muncul}}{\text{percobaan}}$</td></tr>
+          <tr><td>Gabungan</td><td>$P(A \cup B) = P(A) + P(B) - P(A \cap B)$</td></tr>
+          <tr><td>Saling lepas</td><td>$P(A \cap B) = 0$</td></tr>
+          <tr><td>Saling bebas</td><td>$P(A \cap B) = P(A)\,P(B)$</td></tr>
+          <tr><td>Peluang bersyarat</td><td>$P(B \mid A) = \dfrac{P(A \cap B)}{P(A)}$</td></tr>
+          <tr><td>Aturan perkalian</td><td>$P(A \cap B) = P(A)\,P(B \mid A)$</td></tr>
+          <tr><td>Teorema Bayes</td><td>$P(B_i \mid A) = \dfrac{P(B_i)\,P(A \mid B_i)}{P(A)}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ACTION FOOTER -->
+  <div class="action-footer">
+    <!-- Baris 1: Prev / Next -->
+    <div class="footer-nav">
+      <a class="nav-btn" href="../kombinatorika/">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9,2 4,7 9,12"/></svg>
+        Kaidah Pencacahan
+      </a>
+      <a class="nav-btn" href="../../">
+        Semua Materi
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5,2 10,7 5,12"/></svg>
+      </a>
+    </div>
+    <!-- Baris 2: Actions -->
+    <div class="footer-actions">
+      <button class="nav-btn" id="bookmarkBtn" onclick="toggleBookmark()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg>
+        Simpan
+      </button>
+      <button class="nav-btn" onclick="shareMateri()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="3" r="1.5"/><circle cx="11" cy="11" r="1.5"/><circle cx="3" cy="7" r="1.5"/><line x1="4.5" y1="6.2" x2="9.5" y2="3.8"/><line x1="4.5" y1="7.8" x2="9.5" y2="10.2"/></svg>
+        Bagikan
+      </button>
+    </div>
+  </div>
+
+  <!-- SECTION KOMENTAR -->
+  <div class="komentar-section">
+    <div class="komentar-header">
+      <h2 class="komentar-title">Diskusi &amp; Pertanyaan</h2>
+      <span class="komentar-badge">Disqus</span>
+    </div>
+    <p class="komentar-desc">Punya pertanyaan tentang materi ini? Tulis di kolom diskusi. Login dengan akun Google.</p>
+        <div id="disqus_thread"></div>
+    <script>
+    (function() {
+      var disqusLoaded = false;
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !disqusLoaded) {
+          disqusLoaded = true;
+          observer.disconnect();
+          var disqus_config = function() {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://eksaktalab.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      }, { threshold: 0.1 });
+      var thread = document.getElementById('disqus_thread');
+      if (thread) observer.observe(thread);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </div><!-- /komentar-section -->
+
+</div><!-- /page-wrap -->
+
+<script>
+// ── Scroll progress bar tipis + scroll-to-top ──
+window.addEventListener('scroll', () => {
+  const el  = document.documentElement;
+  const pct = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+  document.getElementById('scroll-bar').style.width = pct + '%';
+  // Tampilkan tombol scroll-to-top setelah 30%
+  const btn = document.getElementById('scroll-top');
+  if (pct > 30) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+// ── Theme toggle ──────────────────────────
+
+
+// ── TOC Dropdown ──────────────────────────
+function toggleTOC() {
+  document.getElementById('tocDropdown').classList.toggle('open');
+}
+function closeTOC() {
+  document.getElementById('tocDropdown').classList.remove('open');
+}
+// Tutup dropdown saat klik di luar
+document.addEventListener('click', e => {
+  const dd = document.getElementById('tocDropdown');
+  if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
+
+// ── Bookmark ──────────────────────────────
+let bookmarked = false;
+function toggleBookmark() {
+  bookmarked = !bookmarked;
+  const btn = document.getElementById('bookmarkBtn');
+  btn.classList.toggle('bookmarked', bookmarked);
+  btn.innerHTML = bookmarked
+    ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Tersimpan`
+    : `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h8v11l-4-3-4 3V2z"/></svg> Simpan`;
+}
+
+// ── Share ─────────────────────────────────
+function shareMateri() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Peluang — EksaktaLab',
+      text:  'Belajar Peluang di EksaktaLab, lengkap dengan contoh soal dan pembahasan!',
+      url:   window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('[onclick="shareMateri()"]');
+      const ori = btn.innerHTML;
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,7 5,10 12,3"/></svg> Link Disalin!`;
+      btn.classList.add('active');
+      setTimeout(() => { btn.innerHTML = ori; btn.classList.remove('active'); }, 2000);
+    });
+  }
+}
+
+// ── SHARED HELPERS ────────────────────────
+const chevronSVG = () => `<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+  <polyline points="2,4 6,8 10,4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function makeToggle(wrap, header, statusEl, bodyEl, typesetEl) {
+  const doToggle = () => {
+    const open = wrap.classList.toggle('open');
+    header.setAttribute('aria-expanded', open);
+    if (statusEl) statusEl.textContent = open ? 'Sembunyikan' : 'Lihat rumus';
+    if (open && window.MathJax && typesetEl) {
+      MathJax.typesetPromise([typesetEl]).catch(() => {});
+    }
+  };
+  header.addEventListener('click', doToggle);
+  header.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── 1. BOX RUMUS → accordion hijau ───────
+  document.querySelectorAll('.box.box-rumus').forEach((box, i) => {
+    const labelEl  = box.querySelector('.box-label');
+    const titleTxt = labelEl ? labelEl.textContent.replace(/^[•\s]+/, '').trim() : 'Rumus';
+
+    // Semua konten kecuali label
+    let bodyHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) bodyHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const wrap = document.createElement('div');
+    wrap.className = 'rumus-wrap';
+    wrap.innerHTML = `
+      <div class="rumus-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="rumus-badge">Rumus</span>
+        <span class="rumus-title">${titleTxt || 'Rumus Utama'}</span>
+        <span class="rumus-status">Lihat rumus</span>
+        <span class="rumus-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="rumus-body">
+        <div class="rumus-body-inner">${bodyHTML.trim()}</div>
+      </div>`;
+
+    const header   = wrap.querySelector('.rumus-header');
+    const statusEl = wrap.querySelector('.rumus-status');
+    const bodyInner = wrap.querySelector('.rumus-body-inner');
+    makeToggle(wrap, header, statusEl, wrap.querySelector('.rumus-body'), bodyInner);
+
+    box.replaceWith(wrap);
+  });
+
+  // ── 2. BOX CONTOH → accordion navy/teal ──
+  let counter = 0;
+  document.querySelectorAll('.box.box-contoh').forEach(box => {
+    counter++;
+    const labelEl  = box.querySelector('.box-label');
+    const numMatch = labelEl?.textContent.match(/\d+/);
+    const num      = numMatch ? numMatch[0] : String(counter);
+
+    let qHTML = '';
+    box.childNodes.forEach(n => {
+      if (n !== labelEl) qHTML += n.nodeType === 3 ? n.textContent : (n.outerHTML || '');
+    });
+
+    const sib      = box.nextElementSibling;
+    const hasSolve = sib?.classList.contains('penyelesaian');
+    const solveHTML = hasSolve ? sib.innerHTML : '';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'contoh-wrap';
+    wrap.innerHTML = `
+      <div class="contoh-header" role="button" aria-expanded="false" tabindex="0">
+        <span class="contoh-badge">Contoh ${num}</span>
+        <div class="contoh-question">${qHTML.trim()}</div>
+        <span class="contoh-chevron">${chevronSVG()}</span>
+      </div>
+      <div class="contoh-body">
+        <div class="contoh-body-inner">
+          <div class="solve-header">
+            <span class="solve-dot"></span>
+            <span class="solve-title">Penyelesaian</span>
+          </div>
+          <div class="penyelesaian-inner">
+            ${solveHTML || '<p style="color:rgba(0,191,165,.4);font-style:italic;margin:0">Penyelesaian belum tersedia.</p>'}
+          </div>
+        </div>
+      </div>`;
+
+    const header   = wrap.querySelector('.contoh-header');
+    const statusEl = null;
+    const pi       = wrap.querySelector('.penyelesaian-inner');
+
+    const doToggle = () => {
+      const open = wrap.classList.toggle('open');
+      header.setAttribute('aria-expanded', open);
+      if (statusEl) statusEl.textContent = '';
+      if (open && window.MathJax) MathJax.typesetPromise([pi]).catch(() => {});
+    };
+    header.addEventListener('click', doToggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doToggle(); }
+    });
+
+    box.replaceWith(wrap);
+    if (hasSolve) sib.remove();
+  });
+
+  // ── 3. Buka / Tutup Semua per section ────
+  document.querySelectorAll('.section').forEach(sec => {
+    const wraps = [...sec.querySelectorAll('.contoh-wrap')];
+    if (!wraps.length) return;
+    let allOpen = false;
+
+    const tw  = document.createElement('div');
+    tw.className = 'toggle-all-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'btn-toggle-all';
+
+    const updateBtn = () => {
+      btn.innerHTML = `${chevronSVG()} ${allOpen ? 'Tutup Semua' : 'Buka Semua Contoh'}`;
+    };
+    updateBtn();
+
+    btn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      wraps.forEach(w => {
+        const h = w.querySelector('.contoh-header');
+        const p = w.querySelector('.penyelesaian-inner');
+        w.classList.toggle('open', allOpen);
+        h.setAttribute('aria-expanded', allOpen);
+
+        if (allOpen && window.MathJax) MathJax.typesetPromise([p]).catch(() => {});
+      });
+      updateBtn();
+    });
+
+    tw.appendChild(btn);
+    wraps[0].before(tw);
+  });
+
+  // ── 4. SOAL LATIHAN → accordion kunci jawaban ──
+  const jawabanData = {
+    // Latihan A
+    0: [
+      { jawaban:`(a) Prima $\\{2, 3, 5\\}$: $\\dfrac{1}{2}$ &nbsp; (b) Faktor 6 $\\{1, 2, 3, 6\\}$: $\\dfrac{2}{3}$` },
+      { jawaban:`(a) $\\dfrac{4}{52}$ $= \\dfrac{1}{13}$ &nbsp; (b) $\\dfrac{26}{52}$ $= \\dfrac{1}{2}$` },
+      { jawaban:`$n(S) = {}_6C_2$ $= 15$<br>(a) $\\{1, 6\\}, \\{2, 5\\}, \\{3, 4\\}$: $\\dfrac{3}{15}$ $= \\dfrac{1}{5}$<br>(b) $\\{4, 6\\}, \\{5, 6\\}$: $\\dfrac{2}{15}$` },
+      { jawaban:`$\\dfrac{{}_5C_2 \\times {}_3C_2}{{}_8C_4}$ $= \\dfrac{10 \\times 3}{70}$ $= \\dfrac{3}{7}$` },
+      { jawaban:`$n(S) = 5! = 120$<br>(a) $3! \\times 2!$ $= 12$: $\\dfrac{1}{10}$ &nbsp; (b) $4! \\times 2!$ $= 48$: $\\dfrac{2}{5}$` },
+      { jawaban:`$\\dfrac{{}_3C_2 \\times {}_2C_2 \\times {}_5C_2}{{}_{10}C_6}$ $= \\dfrac{30}{210}$ $= \\dfrac{1}{7}$` },
+      { jawaban:`(a) Komplemen: jumlah 11 atau 12 ada $3$ hasil, $P = 1$ $- \\dfrac{3}{36}$ $= \\dfrac{11}{12}$<br>(b) $F = 180 \\times \\dfrac{11}{12}$ $= 165$ kali` },
+      { jawaban:`Komplemen: keduanya hijau, $\\dfrac{{}_3C_2}{{}_7C_2}$ $= \\dfrac{3}{21}$; jadi $P = 1$ $- \\dfrac{1}{7}$ $= \\dfrac{6}{7}$<br>Komplemen hanya 1 kasus, cara langsung perlu 2 kasus (1 kuning atau 2 kuning)` },
+      { jawaban:`(a) $\\dfrac{117}{300}$ $= 0{,}39$ &nbsp; (b) $1.000 \\times 0{,}39$ $= 390$ kali` },
+    ],
+    // Latihan B
+    1: [
+      { jawaban:`(a) $A \\cup B$ $= \\{1, 2, 3, 5\\}$: $\\dfrac{4}{6}$ $= \\dfrac{2}{3}$<br>(b) Tidak, karena $A \\cap B$ $= \\{3, 5\\}$ $\\neq \\emptyset$` },
+      { jawaban:`Jumlah 7 dan 11 tidak mungkin terjadi bersamaan<br>$P(A \\cup B)$ $= \\dfrac{6}{36}$ $+ \\dfrac{2}{36}$ $= \\dfrac{2}{9}$` },
+      { jawaban:`$\\dfrac{1}{6}$ $+ \\dfrac{1}{6}$ $- \\dfrac{1}{36}$ $= \\dfrac{11}{36}$` },
+      { jawaban:`(a) $\\dfrac{20 + 15 - 8}{40}$ $= \\dfrac{27}{40}$ &nbsp; (b) $\\dfrac{13}{40}$` },
+      { jawaban:`Keduanya: $100\\%$ $- 25\\%$ $- 40\\%$ $- 20\\%$ $= 15\\%$<br>(a) $25\\% + 15\\%$ $= 0{,}4$ &nbsp; (b) $0{,}15$` },
+      { jawaban:`Tidak mungkin terambil 2 merah dan 1 merah sekaligus<br>$P(A) = P(B)$ $= \\dfrac{{}_4C_2 \\times {}_4C_1}{{}_8C_3}$ $= \\dfrac{24}{56}$, jadi $P(A \\cup B)$ $= \\dfrac{48}{56}$ $= \\dfrac{6}{7}$` },
+      { jawaban:`(a) $P(A) = \\dfrac{5}{36}$, $P(B) = \\dfrac{2}{36}$, $P(C) = \\dfrac{11}{36}$<br>(b) $A \\cap B$ $= \\{(2, 4), (4, 2)\\}$: $P(A \\cup B)$ $= \\dfrac{5}{36}$, tidak saling lepas<br>(c) $B \\cap C$ $= \\{(2, 4), (4, 2)\\}$: $P(B \\cup C)$ $= \\dfrac{11}{36}$, tidak saling lepas` },
+      { jawaban:`(a) $0{,}4$ $+ 0{,}5$ $- 0{,}7$ $= 0{,}2$ &nbsp; (b) Tidak, karena $P(A \\cap B)$ $\\neq 0$<br>(c) Hanya $A$: $0{,}2$; irisan $0{,}2$; hanya $B$: $0{,}3$; di luar: $0{,}3$` },
+    ],
+    // Latihan C
+    2: [
+      { jawaban:`(a) $0{,}15$ &nbsp; (b) $0{,}3$ $+ 0{,}5$ $- 0{,}15$ $= 0{,}65$ &nbsp; (c) $0{,}7 \\times 0{,}5$ $= 0{,}35$` },
+      { jawaban:`$P(A) = P(B)$ $= \\dfrac{1}{2}$, $P(A \\cap B)$ $= \\dfrac{9}{36}$ $= \\dfrac{1}{4}$ $= P(A)\\,P(B)$<br>Jadi saling bebas` },
+      { jawaban:`(a) $\\dfrac{1}{2} \\cdot \\dfrac{2}{3} \\cdot \\dfrac{3}{4}$ $= \\dfrac{1}{4}$ &nbsp; (b) $\\dfrac{1}{2} \\cdot \\dfrac{1}{3} \\cdot \\dfrac{1}{4}$ $= \\dfrac{1}{24}$<br>(c) $1$ $- \\dfrac{1}{2} \\cdot \\dfrac{1}{3} \\cdot \\dfrac{1}{4}$ $= \\dfrac{23}{24}$` },
+      { jawaban:`$P(A) = \\dfrac{1}{4}$, $P(B) = \\dfrac{1}{6}$, $P(A \\cap B)$ $= \\dfrac{1}{24}$: saling bebas<br>$P(A \\cup B)$ $= \\dfrac{1}{4}$ $+ \\dfrac{1}{6}$ $- \\dfrac{1}{24}$ $= \\dfrac{3}{8}$` },
+      { jawaban:`(a) $0{,}05 \\times 0{,}08$ $= 0{,}004$ &nbsp; (b) $1$ $- 0{,}95 \\times 0{,}92$ $= 0{,}126$<br>(c) $0{,}05 \\times 0{,}92$ $= 0{,}046$` },
+      { jawaban:`$2x^2 = 0{,}18$, jadi $x = 0{,}3$<br>$P(A \\cup B)$ $= 0{,}3$ $+ 0{,}6$ $- 0{,}18$ $= 0{,}72$` },
+      { jawaban:`(a) Jumlah 3, 6, 9, 12: $12$ hasil, $P(A) = \\dfrac{1}{3}$; $P(B) = \\dfrac{1}{6}$; $A \\cap B$ $= \\{(3, 3), (6, 6)\\}$: $\\dfrac{1}{18}$<br>(b) $\\dfrac{1}{3} \\times \\dfrac{1}{6}$ $= \\dfrac{1}{18}$, jadi saling bebas` },
+      { jawaban:`$P(A^c \\cap B^c)$ $= 1 - P(A \\cup B)$ $= 1$ $- \\left(\\dfrac{1}{3} + \\dfrac{1}{4} - \\dfrac{1}{12}\\right)$ $= \\dfrac{1}{2}$<br>$P(A^c)\\,P(B^c)$ $= \\dfrac{2}{3} \\cdot \\dfrac{3}{4}$ $= \\dfrac{1}{2}$ ✓` },
+    ],
+    // Latihan D
+    3: [
+      { jawaban:`Jumlah 8: $5$ hasil; yang memuat 3: $(3, 5), (5, 3)$<br>Peluang $\\dfrac{2}{5}$` },
+      { jawaban:`Dadu tidak memengaruhi uang logam: $P = \\dfrac{2}{4}$ $= \\dfrac{1}{2}$` },
+      { jawaban:`(a) $\\dfrac{3}{8} \\cdot \\dfrac{2}{7}$ $= \\dfrac{3}{28}$ &nbsp; (b) $\\dfrac{3}{8} \\cdot \\dfrac{5}{7}$ $= \\dfrac{15}{56}$<br>(c) $2 \\times \\dfrac{15}{56}$ $= \\dfrac{15}{28}$` },
+      { jawaban:`$2 \\times \\dfrac{5}{8} \\times \\dfrac{3}{8}$ $= \\dfrac{30}{64}$ $= \\dfrac{15}{32}$` },
+      { jawaban:`(a) $\\dfrac{6}{10} \\cdot \\dfrac{5}{9} \\cdot \\dfrac{4}{8}$ $= \\dfrac{1}{6}$ &nbsp; (b) $\\dfrac{6}{10} \\cdot \\dfrac{5}{9} \\cdot \\dfrac{4}{8}$ $= \\dfrac{1}{6}$<br>(c) $1 - \\dfrac{1}{6}$ $= \\dfrac{5}{6}$` },
+      { jawaban:`$\\dfrac{{}_4C_2}{{}_{10}C_2} \\times \\dfrac{{}_6C_2}{{}_8C_2}$ $= \\dfrac{6}{45} \\times \\dfrac{15}{28}$ $= \\dfrac{1}{14}$` },
+      { jawaban:`(a) $\\dfrac{15}{30} \\cdot \\dfrac{14}{29} \\cdot \\dfrac{15}{28}$ $= \\dfrac{15}{116}$<br>(b) Tiga urutan (PPL, PLP, LPP): $\\dfrac{45}{116}$<br>(c) (a) hanya satu urutan, (b) menjumlahkan ketiga urutan` },
+      { jawaban:`$P(+) = 0{,}01 \\times 0{,}95$ $+ 0{,}99 \\times 0{,}04$ $= 0{,}0491$<br>$P(\\text{sakit} \\mid +)$ $= \\dfrac{0{,}0095}{0{,}0491} \\approx 0{,}193$ (sekitar 19%)` },
+      { jawaban:`$P(L) = 0{,}7 \\times 0{,}9$ $+ 0{,}3 \\times 0{,}6$ $= 0{,}81$<br>$P(\\text{II} \\mid L)$ $= \\dfrac{0{,}18}{0{,}81}$ $= \\dfrac{2}{9}$` },
+    ],
+  };
+
+  let latihanIdx = 0;
+  document.querySelectorAll('.box.box-latihan').forEach(box => {
+    const answers = jawabanData[latihanIdx] || [];
+    latihanIdx++;
+
+    const list = box.querySelector('.soal-list');
+    if (!list) return;
+
+    const items = [...list.querySelectorAll('li')];
+    const newList = document.createElement('div');
+    newList.className = 'soal-list-accordion';
+
+    items.forEach((li, i) => {
+      const ans   = answers[i] || {};
+      const diff  = ans.diff || 'sedang';
+      const diffLabel = { mudah:'★ Mudah', sedang:'★★ Sedang', sulit:'★★★ Sulit' }[diff] || '';
+      const jawaban = ans.jawaban || '';
+
+      const item = document.createElement('div');
+      item.className = 'soal-item';
+      item.innerHTML = `
+        <div class="soal-item-header" role="button" tabindex="0">
+          <span class="soal-num">${i+1}</span>
+          <span class="soal-text">${li.innerHTML}</span>
+          <button class="soal-key-btn" tabindex="-1">Kunci</button>
+        </div>
+        <div class="soal-answer">
+          <div class="soal-answer-inner">
+            <div class="soal-answer-label">Jawaban</div>
+            ${jawaban || '<span style="color:var(--text-3);font-style:italic">Kunci jawaban segera tersedia.</span>'}
+          </div>
+        </div>`;
+
+      const header = item.querySelector('.soal-item-header');
+      const toggle = () => {
+        const open = item.classList.toggle('open');
+        if (open && window.MathJax) {
+          MathJax.typesetPromise([item.querySelector('.soal-answer-inner')]).catch(()=>{});
+        }
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+
+      newList.appendChild(item);
+    });
+
+    list.replaceWith(newList);
+  });
+
+});
+</script>
+
+<!-- FOOTER -->
+<div id="eksaktalab-footer"></div>
+<script src="../../assets/js/footer.js"></script>
+<script src="../../assets/js/protect.js"></script>
+</body>
+</html>
