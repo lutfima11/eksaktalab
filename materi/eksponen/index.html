@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
 <link rel="apple-touch-icon" href="../../assets/favicon.svg">
-<meta name="description" content="Materi lengkap Eksponen SMA: pangkat bulat, bentuk akar, pangkat pecahan, persamaan eksponen, pertidaksamaan eksponen, dan fungsi eksponen. Dilengkapi 39 contoh soal dan pembahasan.">
+<meta name="description" content="Materi lengkap Eksponen SMA: pangkat bulat, bentuk akar, pangkat pecahan, persamaan eksponen, pertidaksamaan eksponen, dan fungsi eksponen. Dilengkapi 40 contoh soal dan pembahasan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/materi.css?v=aa8e42fb">
@@ -105,7 +105,7 @@ window.MathJax = {
       <div class="materi-tags">
         <span class="tag">Bilangan</span>
         <span class="tag">7 Sub-bab</span>
-        <span class="tag">39 Contoh Soal</span>
+        <span class="tag">40 Contoh Soal</span>
       </div>
     </div>
   </div>
@@ -932,10 +932,10 @@ window.MathJax = {
   <section class="section" id="bagian-d">
     <h2 class="section-title"><span class="section-badge">D</span>Persamaan Eksponen</h2>
 
-    <p><strong>Persamaan eksponen</strong> adalah persamaan yang memuat variabel pada eksponen (pangkat), berbentuk $a^{f(x)} = b$ atau $a^{f(x)} = a^{g(x)}$. Berikut disajikan lima tipe beserta cara penyelesaiannya.</p>
+    <p><strong>Persamaan eksponen</strong> adalah persamaan yang memuat variabel pada eksponen (pangkat), berbentuk $a^{f(x)} = b$ atau $a^{f(x)} = a^{g(x)}$. Berikut disajikan enam tipe beserta cara penyelesaiannya.</p>
 
     <div class="box box-definisi">
-      <div class="box-label">Lima Tipe Persamaan Eksponen</div>
+      <div class="box-label">Enam Tipe Persamaan Eksponen</div>
       <p><strong>Tipe 1. Basis sama, pangkat mengandung variabel:</strong>
         $$\begin{gather*} a^{f(x)} = a^p \;\Longrightarrow\; f(x) = p \\ (a > 0,\, a \neq 1) \end{gather*}$$</p>
       <p><strong>Tipe 2. Basis sama, kedua pangkat mengandung variabel:</strong>
@@ -950,7 +950,14 @@ window.MathJax = {
         <li>$h(x) = 0$, dengan syarat $f(x) &gt; 0$ dan $g(x) &gt; 0$</li>
         <li>$h(x) = -1$, dengan syarat $f(x)$ dan $g(x)$ keduanya genap atau keduanya ganjil</li>
       </ol>
-      <p><strong>Tipe 5. Persamaan kuadrat dalam eksponen:</strong>
+      <p><strong>Tipe 5. Basis berbeda mengandung variabel, pangkat sama:</strong>
+        $[f(x)]^{h(x)} = [g(x)]^{h(x)}$ mempunyai kemungkinan penyelesaian:</p>
+      <ol type="i">
+        <li>$f(x) = g(x)$</li>
+        <li>$h(x) = 0$, dengan syarat $f(x) \neq 0$ dan $g(x) \neq 0$</li>
+        <li>$f(x) = -g(x)$, dengan syarat $h(x)$ bilangan genap</li>
+      </ol>
+      <p><strong>Tipe 6. Persamaan kuadrat dalam eksponen:</strong>
         $A\!\left[a^{f(x)}\right]^2 + B\!\left[a^{f(x)}\right] + C = 0$ diselesaikan dengan substitusi $p = a^{f(x)}$, lalu persamaan kuadrat $Ap^2 + Bp + C = 0$ diselesaikan terlebih dahulu. Solusi diterima apabila $p &gt; 0$.</p>
     </div>
 
@@ -1032,7 +1039,28 @@ window.MathJax = {
 
     <div class="box box-contoh">
       <div class="box-label">📘 Contoh 24</div>
-      <p style="margin:0;font-size:.9rem;"><strong>(Tipe 5)</strong> Tentukanlah himpunan penyelesaian dari $2^{2x} - 3 \cdot 2^{x+2} + 32 = 0$.</p>
+      <p style="margin:0;font-size:.9rem;"><strong>(Tipe 5)</strong> Tentukanlah himpunan penyelesaian dari $(2x-1)^{x^2-4} = (x+3)^{x^2-4}$.</p>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step"><span class="sol-no">1</span><strong>Pangkat kedua ruas sama,</strong> yaitu $h(x) = x^2 - 4$, tetapi basisnya berbeda: $f(x) = 2x - 1$ dan $g(x) = x + 3$. Periksa <strong>tiga kemungkinan</strong>.</p>
+      <div class="sol-part"><span class="sol-tag">1</span><span>Basis sama: $f(x) = g(x)$</span></div>
+      $$\begin{align*} 2x - 1 &= x + 3 \\ x &= 4 \end{align*}$$
+      <p class="sol-step">Basis kedua ruas sama-sama $7$, jadi kesamaan berlaku. <strong>$x = 4$ memenuhi.</strong></p>
+      <div class="sol-part"><span class="sol-tag">2</span><span>Pangkat $= 0$: $h(x) = 0$</span></div>
+      $$\begin{align*} x^2 - 4 &= 0 \\ x &= 2 \;\text{atau}\; x = -2 \end{align*}$$
+      <p class="sol-step">Cek basis: untuk $x = 2$, $f = 3$ dan $g = 5$; untuk $x = -2$, $f = -5$ dan $g = 1$. Tidak ada basis nol, jadi kedua ruas bernilai $1$. <strong>$x = 2$ dan $x = -2$ memenuhi.</strong></p>
+      <div class="sol-part"><span class="sol-tag">3</span><span>Basis berlawanan: $f(x) = -g(x)$</span></div>
+      $$\begin{align*} 2x - 1 &= -(x + 3) \\ 3x &= -2 \\ x &= -\tfrac{2}{3} \end{align*}$$
+      <p class="sol-step">Cek pangkat: $h\left(-\tfrac{2}{3}\right) = \tfrac{4}{9} - 4 = -\tfrac{32}{9}$, bukan bilangan genap. Jadi $x = -\tfrac{2}{3}$ <strong>dibuang</strong>.</p>
+      <p class="sol-step"><span class="sol-no">2</span><strong>Rangkum hasilnya:</strong></p>
+      <div class="table-wrap"><table class="tb-opt"><thead><tr><th>Kemungkinan</th><th>Nilai $x$</th><th>Keterangan</th></tr></thead><tbody><tr><td>Basis sama</td><td>$4$</td><td>memenuhi</td></tr><tr><td>Pangkat $= 0$</td><td>$2$ dan $-2$</td><td>memenuhi</td></tr><tr><td>Basis berlawanan</td><td>$-\tfrac{2}{3}$</td><td>dibuang</td></tr></tbody></table></div>
+      <div class="sol-jadi">$\text{HP} = \{-2,\ 2,\ 4\}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "(2x-1)^{x^2-4} = (x+3)^{x^2-4}", "note": "Soal: tentukan himpunan penyelesaian."}, {"tex": "\\color{#0d9488}{(2x-1)}^{\\color{#d97706}{x^2-4}} = \\color{#7c3aed}{(x+3)}^{\\color{#d97706}{x^2-4}}", "note": "Pangkatnya sama (oranye), basisnya berbeda (hijau dan ungu). Ada <strong>tiga kemungkinan<\/strong>."}, {"tex": "\\color{#0d9488}{2x - 1} = \\color{#7c3aed}{x + 3}", "note": "<strong>Kemungkinan 1:<\/strong> kedua basis sama."}, {"tex": "\\color{#e11d48}{x = 4}", "note": "Basis menjadi $7 = 7$, jadi $x = 4$ <strong>memenuhi<\/strong>."}, {"tex": "\\color{#d97706}{x^2 - 4} = 0", "note": "<strong>Kemungkinan 2:<\/strong> pangkatnya nol, karena $a^0 = 1$ untuk setiap $a \\neq 0$."}, {"tex": "\\color{#e11d48}{x = 2 \\;\\text{atau}\\; x = -2}", "note": "Cek basis: $x = 2$ memberi $3$ dan $5$; $x = -2$ memberi $-5$ dan $1$. Tidak ada yang nol, jadi keduanya <strong>memenuhi<\/strong>."}, {"tex": "\\color{#0d9488}{2x - 1} = -(\\color{#7c3aed}{x + 3})", "note": "<strong>Kemungkinan 3:<\/strong> basisnya berlawanan tanda; ini hanya berlaku jika pangkatnya <strong>genap<\/strong>."}, {"tex": "3x = -2 \\;\\;\\to\\;\\; x = -\\tfrac{2}{3}", "note": "Selesaikan persamaan linearnya."}, {"tex": "\\color{#d97706}{h\\!\\left(-\\tfrac{2}{3}\\right) = -\\tfrac{32}{9}}", "note": "Pangkatnya pecahan, bukan bilangan genap."}, {"tex": "x = -\\tfrac{2}{3} \\;\\;\\color{#e11d48}{\\text{dibuang}}", "note": "Syarat kemungkinan 3 tidak terpenuhi."}, {"tex": "\\text{HP} = \\{\\color{#e11d48}{-2},\\ \\color{#e11d48}{2},\\ \\color{#e11d48}{4}\\}", "note": "<strong>Jadi,<\/strong> $\\text{HP} = \\{-2,\\ 2,\\ 4\\}$."}]</script></div>
+    </div>
+
+    <div class="box box-contoh">
+      <div class="box-label">📘 Contoh 25</div>
+      <p style="margin:0;font-size:.9rem;"><strong>(Tipe 6)</strong> Tentukanlah himpunan penyelesaian dari $2^{2x} - 3 \cdot 2^{x+2} + 32 = 0$.</p>
     </div>
     <div class="penyelesaian">
       <p class="sol-step"><span class="sol-no">1</span><strong>Uraikan suku tengah:</strong> $3 \cdot 2^{x+2} = 12 \cdot 2^x$, sehingga</p>
@@ -1054,6 +1082,7 @@ window.MathJax = {
         <li>Tentukanlah nilai $x$:<br>(a) $3^{2x-1} = 81$<br>(b) $2^{x+3} = 4^{x-1}$<br>(c) $\sqrt[4]{32^{x+1}} = \sqrt[3]{4^{2x-3}}$</li>
         <li>Tentukanlah himpunan penyelesaian dari $7^8 \cdot 3^{x^2-8} = 3^{2x} \cdot 7^{x^2-2x}$.</li>
         <li>Tentukanlah himpunan penyelesaian dari $(x^2 - 2x +1)^{3x+1}$ $=\, (x^2 - 2x +1)^{x+9}$.</li>
+        <li>Tentukanlah himpunan penyelesaian dari $(x^2 - 4)^{x-3}$ $=\, (3x)^{x-3}$.</li>
         <li>Tentukanlah nilai $x$ jika $9^x - 4 \cdot 3^x - 45 = 0$.</li>
         <li>Tentukanlah nilai $x$ jika $4^x - 10 \cdot 2^x + 16 = 0$.</li>
       </ol>
@@ -1081,7 +1110,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 25</div>
+      <div class="box-label">📘 Contoh 26</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $3^{3x-21} &lt; 27^{2x+5}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1112,7 +1141,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 26</div>
+      <div class="box-label">📘 Contoh 27</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $\left(\dfrac{2}{5}\right)^{x^2-5x-20} \geq \left(\dfrac{5}{2}\right)^{x^2+3x-20}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1146,7 +1175,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 27</div>
+      <div class="box-label">📘 Contoh 28</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $\dfrac{3^{4x-2}}{9^{3x+1}} &gt; \left(\dfrac{1}{3}\right)^{x-14}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1177,7 +1206,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 28</div>
+      <div class="box-label">📘 Contoh 29</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $4^x - 5 \cdot 2^x + 4 \leq 0$.</p>
     </div>
     <div class="penyelesaian">
@@ -1559,7 +1588,7 @@ window.MathJax = {
     </ol>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 29</div>
+      <div class="box-label">📘 Contoh 30</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik fungsi $f(x) = 2^x$ pada interval $-3 \leq x \leq 3$. Tentukan domain, range, asimtot, dan sifat kemonotonannya.</p>
     </div>
     <div class="penyelesaian">
@@ -1646,7 +1675,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 30</div>
+      <div class="box-label">📘 Contoh 31</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik $f(x) = \left(\dfrac{1}{3}\right)^x$ pada interval $-3 \leq x \leq 3$. Tentukan sifat-sifatnya dan bandingkan dengan $g(x) = 3^x$.</p>
     </div>
     <div class="penyelesaian">
@@ -1746,7 +1775,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 31</div>
+      <div class="box-label">📘 Contoh 32</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik $g(x) = 2^{x-2} + 1$ dengan menggeser grafik $f(x) = 2^x$. Tentukan asimtot dan titik potong sumbu-$Y$-nya.</p>
     </div>
     <div class="penyelesaian">
@@ -1830,7 +1859,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 32</div>
+      <div class="box-label">📘 Contoh 33</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik $h(x) = \left(\tfrac{1}{2}\right)^{x+1} - 2$. Tentukan asimtot, titik potong sumbu-$Y$, dan titik potong sumbu-$X$-nya.</p>
     </div>
     <div class="penyelesaian">
@@ -1928,7 +1957,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 33</div>
+      <div class="box-label">📘 Contoh 34</div>
       <p style="margin:0;font-size:.9rem;">Sebuah fungsi eksponen $y = k \cdot a^x$ diketahui grafiknya melalui titik $(0,\,5)$ dan $(2,\,20)$. Tentukanlah rumus fungsi tersebut.</p>
     </div>
     <div class="penyelesaian">
@@ -1942,7 +1971,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 34 — Grafik Tanpa Pergeseran</div>
+      <div class="box-label">📘 Contoh 35 — Grafik Tanpa Pergeseran</div>
       <p style="margin:0 0 .3rem;font-size:.9rem;">Grafik berikut berbentuk $y = k \cdot a^x$. Tentukanlah rumus fungsinya.</p>
 <div class="grafik-wrap">
 <svg viewBox="0 0 228 224" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
@@ -2005,7 +2034,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 35 — Grafik Digeser ke Atas/Bawah</div>
+      <div class="box-label">📘 Contoh 36 — Grafik Digeser ke Atas/Bawah</div>
       <p style="margin:0 0 .3rem;font-size:.9rem;">Grafik berikut berbentuk $y = a^x + c$, dengan asimtot ditunjukkan garis putus-putus. Tentukanlah rumus fungsinya.</p>
 <div class="grafik-wrap">
 <svg viewBox="0 0 190 306" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
@@ -2076,7 +2105,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 36 — Grafik Digeser ke Kiri/Kanan</div>
+      <div class="box-label">📘 Contoh 37 — Grafik Digeser ke Kiri/Kanan</div>
       <p style="margin:0 0 .3rem;font-size:.9rem;">Grafik berikut adalah grafik $y = 2^x$ yang digeser secara mendatar. Tentukanlah rumus fungsinya.</p>
 <div class="grafik-wrap">
 <svg viewBox="0 0 228 224" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
@@ -2141,7 +2170,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 37 — Pergeseran Mendatar dan Tegak Sekaligus</div>
+      <div class="box-label">📘 Contoh 38 — Pergeseran Mendatar dan Tegak Sekaligus</div>
       <p style="margin:0 0 .3rem;font-size:.9rem;">Grafik berikut berbentuk $y = a^{x-h} + c$. Tentukanlah nilai $a$, $h$, $c$ dan rumus fungsinya.</p>
 <div class="grafik-wrap">
 <svg viewBox="0 0 238 258" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
@@ -2226,7 +2255,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 38</div>
+      <div class="box-label">📘 Contoh 39</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sebuah koloni bakteri berkembang mengikuti model $N(t) = 500 \cdot 2^t$, dengan $t$ dalam jam.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>Tentukanlah jumlah bakteri awal ($t=0$).</li>
@@ -2249,7 +2278,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh">
-      <div class="box-label">📘 Contoh 39</div>
+      <div class="box-label">📘 Contoh 40</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Suatu zat radioaktif memiliki waktu paruh $T_h = 10$ tahun dan massa awal 200 gram.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>Tentukanlah massa zat setelah 30 tahun.</li>
@@ -2352,7 +2381,8 @@ window.MathJax = {
           <tr><td>Tipe 2</td><td>$a^{f(x)} = a^{g(x)}$</td><td>$f(x) = g(x)$; samakan basis</td></tr>
           <tr><td>Tipe 3</td><td>$a^{f(x)} = b^{f(x)}$, $a \neq b$</td><td>$f(x) = 0$</td></tr>
           <tr><td>Tipe 4</td><td>$[h(x)]^{f(x)} = [h(x)]^{g(x)}$</td><td>Cek: $f(x)=g(x)$; $h(x)=1$; $h(x)=0$; $h(x)=-1$</td></tr>
-          <tr><td>Tipe 5</td><td>Kuadrat dalam eksponen</td><td>Substitusi $p = a^{f(x)}$, selesaikan kuadrat</td></tr>
+          <tr><td>Tipe 5</td><td>$[f(x)]^{h(x)} = [g(x)]^{h(x)}$</td><td>Cek: $f(x)=g(x)$; $h(x)=0$ ($f,g \neq 0$); $f(x)=-g(x)$ ($h$ genap)</td></tr>
+          <tr><td>Tipe 6</td><td>Kuadrat dalam eksponen</td><td>Substitusi $p = a^{f(x)}$, selesaikan kuadrat</td></tr>
           <tr><td>$a &gt; 1$</td><td>$a^{f(x)} \gtrless a^{g(x)}$</td><td>Arah pertidaksamaan <strong>tetap</strong></td></tr>
           <tr><td>$0 &lt; a &lt; 1$</td><td>$a^{f(x)} \gtrless a^{g(x)}$</td><td>Arah pertidaksamaan <strong>berbalik</strong></td></tr>
         </tbody>
@@ -2680,6 +2710,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { jawaban:`(a) $x = \\dfrac{5}{2}$ &nbsp;|&nbsp; (b) $x = 5$ &nbsp;|&nbsp; (c) $x = 39$` },
       { jawaban:`$\\text{HP} = \\{-2,\\; 4\\}$` },
       { jawaban:`$\\text{HP} = \\{0, 1, 2, 4\\}$` },
+      { jawaban:`Basis sama: $x^2 - 3x - 4 = 0$, $x = 4$ atau $x = -1$<br>Pangkat nol: $x = 3$ (basis $5$ dan $9$, tidak nol)<br>Basis berlawanan: $x^2 + 3x - 4 = 0$, $x = 1$ (pangkat $-2$, genap) ✓; $x = -4$ (pangkat $-7$, ganjil) ✗<br>$\\text{HP} = \\{-1,\\ 1,\\ 3,\\ 4\\}$` },
       { jawaban:`$x = 2$` },
       { jawaban:`$2^x = 2$ atau $2^x = 8$, jadi $x = 1$ atau $x = 3$` },
     ],
