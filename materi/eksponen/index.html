@@ -1440,67 +1440,42 @@ window.MathJax = {
       <li>$0 &lt; a &lt; 1$ (misalnya $\tfrac12$, $\tfrac13$): dikali pecahan, nilainya mengecil, jadi grafiknya <strong>turun</strong>.</li>
     </ul>
 
-    <div class="grafik-wrap">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="100%" style="max-width:780px;">
+    <div class="grafik-wrap" style="display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="15 20 400 330" width="100%" style="flex:1 1 240px;max-width:340px;">
         <defs>
-          <marker id="fexp-axis" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-            <path d="M0,1 L6,3.5 L0,6z" fill="#888"/>
-          </marker>
-          <marker id="fexp-curve-r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-            <path d="M0,1 L6,3.5 L0,6z" fill="#C0392B"/>
-          </marker>
-          <marker id="fexp-curve-l" markerWidth="7" markerHeight="7" refX="1" refY="3.5" orient="auto">
-            <path d="M7,1 L1,3.5 L7,6z" fill="#C0392B"/>
-          </marker>
+          <marker id="fexp-axis-n" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#888"/></marker>
+          <marker id="fexp-curve-n" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#C0392B"/></marker>
         </defs>
-
-        <!-- Panel kiri: a > 1 -->
-        <g transform="translate(15, 15)">
-          <rect width="400" height="430" rx="14" ry="14" fill="none" stroke="#D8E0F5" stroke-width="1.5"/>
-          <!-- Judul -->
-          <text x="200" y="46" font-family="Inter,sans-serif" font-size="22" font-weight="600" fill="#888" text-anchor="middle">a &gt; 1</text>
-          <!-- Sumbu Y -->
-          <line x1="160" y1="400" x2="160" y2="70" stroke="#888" stroke-width="1.2" marker-end="url(#fexp-axis)"/>
-          <text x="153" y="62" font-family="Inter,sans-serif" font-size="15" fill="#888" text-anchor="middle">y</text>
-          <!-- Sumbu X -->
-          <line x1="30" y1="265" x2="375" y2="265" stroke="#888" stroke-width="1.2" marker-end="url(#fexp-axis)"/>
-          <text x="382" y="270" font-family="Inter,sans-serif" font-size="15" fill="#888">x</text>
-          <!-- O -->
-          <text x="148" y="281" font-family="Inter,sans-serif" font-size="14" fill="#888" text-anchor="end">O</text>
-          <!-- Kurva naik: dari kiri bawah mendekati asimtot, naik tajam ke kanan -->
-          <path d="M 30,248 C 80,237 130,220 160,200 C 195,177 222,144 240,115" fill="none" stroke="#C0392B" stroke-width="2.5" stroke-linecap="round" marker-end="url(#fexp-curve-r)"/>
-          <!-- Titik (0,1) -->
-          <circle cx="160" cy="200" r="5" fill="#888"/>
-          <text x="148" y="191" font-family="Inter,sans-serif" font-size="13" fill="#888" text-anchor="end">(0, 1)</text>
-          <!-- Label formula -->
-          <text x="248" y="100" font-family="Inter,sans-serif" font-size="18" font-style="italic" fill="#C0392B">f(x) = a<tspan dy="-7" font-size="12">x</tspan></text>
-          <!-- Keterangan -->
-          <text x="200" y="330" font-family="Inter,sans-serif" font-size="15" font-style="italic" fill="#777" text-anchor="middle">monoton naik</text>
-        </g>
-
-        <!-- Panel kanan: 0 < a < 1 -->
-        <g transform="translate(445, 15)">
-          <rect width="400" height="430" rx="14" ry="14" fill="none" stroke="#D8E0F5" stroke-width="1.5"/>
-          <!-- Judul -->
-          <text x="200" y="46" font-family="Inter,sans-serif" font-size="22" font-weight="600" fill="#888" text-anchor="middle">0 &lt; a &lt; 1</text>
-          <!-- Sumbu Y -->
-          <line x1="160" y1="400" x2="160" y2="70" stroke="#888" stroke-width="1.2" marker-end="url(#fexp-axis)"/>
-          <text x="153" y="62" font-family="Inter,sans-serif" font-size="15" fill="#888" text-anchor="middle">y</text>
-          <!-- Sumbu X -->
-          <line x1="30" y1="265" x2="375" y2="265" stroke="#888" stroke-width="1.2" marker-end="url(#fexp-axis)"/>
-          <text x="382" y="270" font-family="Inter,sans-serif" font-size="15" fill="#888">x</text>
-          <!-- O -->
-          <text x="148" y="281" font-family="Inter,sans-serif" font-size="14" fill="#888" text-anchor="end">O</text>
-          <!-- Kurva turun: dari kiri atas turun, mendekati asimtot ke kanan -->
-          <path d="M 85,112 C 105,138 132,172 160,200 C 194,232 250,248 370,258" fill="none" stroke="#C0392B" stroke-width="2.5" stroke-linecap="round" marker-end="url(#fexp-curve-r)"/>
-          <!-- Titik (0,1) -->
-          <circle cx="160" cy="200" r="5" fill="#888"/>
-          <text x="170" y="191" font-family="Inter,sans-serif" font-size="13" fill="#888">(0, 1)</text>
-          <!-- Label formula -->
-          <text x="220" y="175" font-family="Inter,sans-serif" font-size="18" font-style="italic" fill="#C0392B">f(x) = a<tspan dy="-7" font-size="12">x</tspan></text>
-          <!-- Keterangan -->
-          <text x="200" y="330" font-family="Inter,sans-serif" font-size="15" font-style="italic" fill="#777" text-anchor="middle">monoton turun</text>
-        </g>
+        <rect x="17" y="22" width="396" height="326" rx="14" ry="14" fill="none" stroke="#D8E0F5" stroke-width="1.5"/>
+        <text x="215" y="56" font-family="Inter,sans-serif" font-size="26" font-weight="700" fill="#888" text-anchor="middle">a &gt; 1</text>
+        <line x1="175" y1="330" x2="175" y2="80" stroke="#888" stroke-width="1.4" marker-end="url(#fexp-axis-n)"/>
+        <text x="160" y="92" font-family="Inter,sans-serif" font-size="18" fill="#888" text-anchor="middle">y</text>
+        <line x1="40" y1="280" x2="395" y2="280" stroke="#888" stroke-width="1.4" marker-end="url(#fexp-axis-n)"/>
+        <text x="392" y="306" font-family="Inter,sans-serif" font-size="18" fill="#888" text-anchor="middle">x</text>
+        <text x="165" y="302" font-family="Inter,sans-serif" font-size="17" fill="#888" text-anchor="end">O</text>
+        <path d="M 45,263 C 95,252 145,235 175,215 C 210,192 237,159 255,128" fill="none" stroke="#C0392B" stroke-width="3" stroke-linecap="round" marker-end="url(#fexp-curve-n)"/>
+        <circle cx="175" cy="215" r="6" fill="#888"/>
+        <text x="163" y="206" font-family="Inter,sans-serif" font-size="17" fill="#888" text-anchor="end">(0, 1)</text>
+        <text x="262" y="122" font-family="Inter,sans-serif" font-size="22" font-style="italic" fill="#C0392B">f(x) = a<tspan dy="-9" font-size="15">x</tspan></text>
+        <text x="290" y="330" font-family="Inter,sans-serif" font-size="19" font-style="italic" font-weight="600" fill="#777" text-anchor="middle">grafik naik</text>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="15 20 400 330" width="100%" style="flex:1 1 240px;max-width:340px;">
+        <defs>
+          <marker id="fexp-axis-t" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#888"/></marker>
+          <marker id="fexp-curve-t" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,1 L6,3.5 L0,6z" fill="#C0392B"/></marker>
+        </defs>
+        <rect x="17" y="22" width="396" height="326" rx="14" ry="14" fill="none" stroke="#D8E0F5" stroke-width="1.5"/>
+        <text x="215" y="56" font-family="Inter,sans-serif" font-size="26" font-weight="700" fill="#888" text-anchor="middle">0 &lt; a &lt; 1</text>
+        <line x1="175" y1="330" x2="175" y2="80" stroke="#888" stroke-width="1.4" marker-end="url(#fexp-axis-t)"/>
+        <text x="160" y="92" font-family="Inter,sans-serif" font-size="18" fill="#888" text-anchor="middle">y</text>
+        <line x1="40" y1="280" x2="395" y2="280" stroke="#888" stroke-width="1.4" marker-end="url(#fexp-axis-t)"/>
+        <text x="392" y="306" font-family="Inter,sans-serif" font-size="18" fill="#888" text-anchor="middle">x</text>
+        <text x="165" y="302" font-family="Inter,sans-serif" font-size="17" fill="#888" text-anchor="end">O</text>
+        <path d="M 100,127 C 120,153 147,187 175,215 C 209,247 265,263 385,273" fill="none" stroke="#C0392B" stroke-width="3" stroke-linecap="round" marker-end="url(#fexp-curve-t)"/>
+        <circle cx="175" cy="215" r="6" fill="#888"/>
+        <text x="187" y="206" font-family="Inter,sans-serif" font-size="17" fill="#888">(0, 1)</text>
+        <text x="232" y="185" font-family="Inter,sans-serif" font-size="22" font-style="italic" fill="#C0392B">f(x) = a<tspan dy="-9" font-size="15">x</tspan></text>
+        <text x="290" y="330" font-family="Inter,sans-serif" font-size="19" font-style="italic" font-weight="600" fill="#777" text-anchor="middle">grafik turun</text>
       </svg>
     </div>
 
@@ -1877,8 +1852,8 @@ window.MathJax = {
       <p class="sol-step"><span class="sol-no">2</span><strong>Geser titik-titik kunci:</strong></p>
       <div class="table-wrap" style="margin:.75rem 0;">
         <table>
-          <thead><tr><th>Titik kunci $f(x)=2^x$</th><th>$(-1,\,\tfrac12)$</th><th>$(0,\,1)$</th><th>$(1,\,2)$</th><th>$(2,\,4)$</th></tr></thead>
-          <tbody><tr><td>Digeser $(+2,\,+1)$ → titik pada $g$</td><td>$(1,\,\tfrac32)$</td><td>$(2,\,2)$</td><td>$(3,\,3)$</td><td>$(4,\,5)$</td></tr></tbody>
+          <thead><tr><th>Titik pada $f(x)=2^x$</th><th></th><th>Digeser $(+2,\,+1)$, titik pada $g$</th></tr></thead>
+          <tbody><tr><td>$(-1,\,\tfrac12)$</td><td>→</td><td>$(1,\,\tfrac32)$</td></tr><tr><td>$(0,\,1)$</td><td>→</td><td>$(2,\,2)$</td></tr><tr><td>$(1,\,2)$</td><td>→</td><td>$(3,\,3)$</td></tr><tr><td>$(2,\,4)$</td><td>→</td><td>$(4,\,5)$</td></tr></tbody>
         </table>
       </div>
       <p class="sol-step"><span class="sol-no">3</span><strong>Asimtot:</strong> $y = 0$ ikut bergeser 1 satuan ke atas menjadi $y = 1$.</p>
@@ -1961,8 +1936,8 @@ window.MathJax = {
       <p class="sol-step"><span class="sol-no">2</span><strong>Geser titik-titik kunci:</strong></p>
       <div class="table-wrap" style="margin:.75rem 0;">
         <table>
-          <thead><tr><th>Titik kunci $y=(\tfrac12)^x$</th><th>$(-2,\,4)$</th><th>$(-1,\,2)$</th><th>$(0,\,1)$</th><th>$(1,\,\tfrac12)$</th></tr></thead>
-          <tbody><tr><td>Digeser $(-1,\,-2)$ → titik pada $h$</td><td>$(-3,\,2)$</td><td>$(-2,\,0)$</td><td>$(-1,\,-1)$</td><td>$(0,\,-\tfrac32)$</td></tr></tbody>
+          <thead><tr><th>Titik pada $y=(\tfrac12)^x$</th><th></th><th>Digeser $(-1,\,-2)$, titik pada $h$</th></tr></thead>
+          <tbody><tr><td>$(-2,\,4)$</td><td>→</td><td>$(-3,\,2)$</td></tr><tr><td>$(-1,\,2)$</td><td>→</td><td>$(-2,\,0)$</td></tr><tr><td>$(0,\,1)$</td><td>→</td><td>$(-1,\,-1)$</td></tr><tr><td>$(1,\,\tfrac12)$</td><td>→</td><td>$(0,\,-\tfrac32)$</td></tr></tbody>
         </table>
       </div>
       <p class="sol-step"><span class="sol-no">3</span><strong>Asimtot:</strong> $y = -2$.</p>
