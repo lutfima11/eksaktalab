@@ -278,7 +278,7 @@ window.MathJax = {
       <p class="sol-step"><span class="sol-no">1</span><strong>Selisih fungsi:</strong></p>
       $$ \begin{align*} &f(x + h) - f(x) \\ &= (x + h)^3 - 2(x + h) - x^3 + 2x \\ &= 3x^2h + 3xh^2 + h^3 - 2h \end{align*} $$
       <p class="sol-step"><span class="sol-no">2</span><strong>Bagi dengan $h$,</strong> lalu $h \to 0$:</p>
-      $$ \begin{align*} f'(x) &= \lim_{h \to 0} (3x^2 + 3xh + h^2 - 2) \end{align*} $$
+      $$ \begin{align*} f'(x) &= \lim_{h \to 0} (3x^2 + 3xh + h^2 - 2) \\ &= 3x^2 - 2 \end{align*} $$
       <div class="sol-jadi">$f'(x) = 3x^2 - 2$.</div>
     </div>
 
@@ -432,7 +432,7 @@ window.MathJax = {
     <div class="penyelesaian">
       <div class="sol-part"><span class="sol-tag">a</span><span>Hasil kali</span></div>
       <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan $u, v$:</strong> $u = x^2 - 4x$, $u' = 2x - 4$; $v = 2x + 3$, $v' = 2$.</p>
-      $$ \begin{align*} &f'(x) \\  &= (2x - 4)(2x + 3) \\ &\quad + (x^2 - 4x)(2) \\ &= 4x^2 - 2x - 12 + 2x^2 - 8x \end{align*} $$
+      $$ \begin{align*} &f'(x) \\  &= (2x - 4)(2x + 3) \\ &\quad + (x^2 - 4x)(2) \\ &= 4x^2 - 2x - 12 + 2x^2 - 8x \\ &= 6x^2 - 10x - 12 \end{align*} $$
       <div class="sol-jadi">$f'(x) = 6x^2 - 10x - 12$.</div>
       <div class="sol-part"><span class="sol-tag">b</span><span>Hasil bagi</span></div>
       <p class="sol-step"><span class="sol-no">1</span><strong>Tentukan $u, v$:</strong> $u = 4x^2 - 5$, $u' = 8x$; $v = 2x + 3$, $v' = 2$.</p>
@@ -471,7 +471,7 @@ window.MathJax = {
     <div class="penyelesaian">
       <div class="sol-part"><span class="sol-tag">a</span><span>$f(x) = (2x + 5)^4$</span></div>
       <p class="sol-step"><span class="sol-no">1</span><strong>Pangkat fungsi:</strong> $u = 2x + 5$, $u' = 2$.</p>
-      $$f'(x) = 4(2x + 5)^3 \cdot 2$$
+      $$f'(x) = 4(2x + 5)^3 \cdot 2 = 8(2x + 5)^3$$
       <div class="sol-jadi">$f'(x) = 8(2x + 5)^3$.</div>
       <div class="sol-part"><span class="sol-tag">b</span><span>$f(x) = (2x + 5)^3(2x - 1)$</span></div>
       <p class="sol-step"><span class="sol-no">1</span><strong>Hasil kali:</strong> $u = (2x + 5)^3$, $u' = 6(2x + 5)^2$; $v = 2x - 1$, $v' = 2$.</p>
@@ -586,7 +586,7 @@ window.MathJax = {
       <p class="sol-step"><span class="sol-no">1</span><strong>Turunkan dua kali:</strong></p>
       $$ \begin{align*} f'(x) &= 6(2x + 3)^2 \\ f''(x) &= 24(2x + 3) \end{align*} $$
       <p class="sol-step"><span class="sol-no">2</span><strong>Syarat $f''(x) = 120$:</strong></p>
-      $$ \begin{align*} 24(2x + 3) &= 120 \\ 2x + 3 &= 5 \end{align*} $$
+      $$ \begin{align*} 24(2x + 3) &= 120 \\ 2x + 3 &= 5 \\ x &= 1 \end{align*} $$
       <div class="sol-jadi">$x = 1$.</div>
     </div>
 
@@ -650,7 +650,7 @@ window.MathJax = {
       <div class="sol-jadi">$f'(x)$ $= 5\sec^2 x - \csc^2 x$.</div>
       <div class="sol-part"><span class="sol-tag">c</span><span>$\sin x \cos x$</span></div>
       <p class="sol-step"><span class="sol-no">1</span><strong>Hasil kali:</strong> $u = \sin x$, $v = \cos x$.</p>
-      $$f'(x) = \cos^2 x - \sin^2 x$$
+      $$f'(x) = \cos^2 x - \sin^2 x = \cos 2x$$
       <div class="sol-jadi">$f'(x) = \cos 2x$.</div>
       <div class="sol-part"><span class="sol-tag">d</span><span>$\dfrac{\sin x}{1 + \cos x}$</span></div>
       <p class="sol-step"><span class="sol-no">1</span><strong>Hasil bagi</strong> dengan $\sin^2 x + \cos^2 x = 1$:</p>
@@ -703,7 +703,7 @@ window.MathJax = {
       <div class="sol-jadi">$f'(x) = 3\cos(6x - 1)$.</div>
       <div class="sol-part"><span class="sol-tag">d</span><span>$5\sec^3 x$</span></div>
       <p class="sol-step"><span class="sol-no">1</span><strong>Pangkat fungsi:</strong> $u = \sec x$, $u' = \sec x\tan x$.</p>
-      $$f'(x) = 15\sec^2 x \cdot \sec x\tan x$$
+      $$\begin{align*} f'(x) &= 15\sec^2 x \cdot \sec x\tan x \\ &= 15\sec^3 x\tan x \end{align*}$$
       <div class="sol-jadi">$f'(x) = 15\sec^3 x\tan x$.</div>
       <div class="sol-part"><span class="sol-tag">e</span><span>$\sin^4(3x + 5)$</span></div>
       <p class="sol-step"><span class="sol-no">1</span><strong>Pangkat lalu rantai:</strong></p>
@@ -806,11 +806,11 @@ window.MathJax = {
     <div class="penyelesaian">
       <div class="sol-part"><span class="sol-tag">a</span><span>Di titik $T(3, -4)$</span></div>
       <p class="sol-step"><span class="sol-no">1</span><strong>Gradien:</strong> $f'(x) = 3x^2 - 12x + 4$, $m = 27 - 36 + 4 = -5$.</p>
-      $$y + 4 = -5(x - 3)$$
+      $$\begin{align*} y + 4 &= -5(x - 3) \\ y &= -5x + 11 \end{align*}$$
       <div class="sol-jadi">$y = -5x + 11$.</div>
       <div class="sol-part"><span class="sol-tag">b</span><span>Gradien $3$</span></div>
       <p class="sol-step"><span class="sol-no">1</span><strong>Cari titik singgung:</strong> $f'(x) = 2x - 5 = 3$, jadi $x_1 = 4$ dan $y_1 = 16 - 20 + 6 = 2$.</p>
-      $$y - 2 = 3(x - 4)$$
+      $$\begin{align*} y - 2 &= 3(x - 4) \\ y &= 3x - 10 \end{align*}$$
       <div class="sol-jadi">$y = 3x - 10$.</div>
       <div class="sol-part"><span class="sol-tag">c</span><span>Di $x = 1$</span></div>
       <p class="sol-step"><span class="sol-no">1</span><strong>Titik dan gradien:</strong> $y(1) = 0$; $y' = 2(x - 1)(x + 2)$ $+ (x - 1)^2$ $= (x - 1)(3x + 3)$, jadi $m = 0$.</p>
