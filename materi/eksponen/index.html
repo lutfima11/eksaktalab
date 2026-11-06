@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
 <link rel="apple-touch-icon" href="../../assets/favicon.svg">
-<meta name="description" content="Materi lengkap Eksponen SMA: pangkat bulat, bentuk akar, pangkat pecahan, persamaan eksponen, pertidaksamaan eksponen, dan fungsi eksponen. Dilengkapi 51 contoh soal dan pembahasan.">
+<meta name="description" content="Materi lengkap Eksponen SMA: pangkat bulat, bentuk akar, pangkat pecahan, persamaan eksponen, pertidaksamaan eksponen, dan fungsi eksponen. Dilengkapi 56 contoh soal dan pembahasan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/materi.css?v=defe8ebe">
@@ -105,7 +105,7 @@ window.MathJax = {
       <div class="materi-tags">
         <span class="tag">Bilangan</span>
         <span class="tag">7 Sub-bab</span>
-        <span class="tag">51 Contoh Soal</span>
+        <span class="tag">56 Contoh Soal</span>
       </div>
     </div>
   </div>
@@ -1101,37 +1101,60 @@ window.MathJax = {
   <section class="section" id="bagian-c">
     <h2 class="section-title"><span class="section-badge">C</span>Pangkat Pecahan</h2>
 
-    <p>Misalkan $a \geq 0$, $m \in \mathbb{Z}$, dan $n \in \mathbb{Z}^+$ dengan $n \geq 2$. <strong>Pangkat pecahan</strong> $a^{\frac{m}{n}}$ didefinisikan sebagai:</p>
+    <p>Misalkan $a \geq 0$, $m$ bilangan bulat, dan $n$ bilangan bulat positif dengan $n \geq 2$ (untuk $a = 0$, $m$ harus positif). <strong>Pangkat pecahan</strong> $a^{\frac{m}{n}}$ didefinisikan sebagai:</p>
 
     <div class="box box-rumus">
       <div class="box-label">• Definisi Pangkat Pecahan</div>
       <div class="math-block">$$a^{\frac{m}{n}} = \sqrt[n]{a^m} = \left(\sqrt[n]{a}\right)^m$$</div>
-    
-        <p style="margin:.3rem 0 0;font-size:.88rem;">Khususnya, untuk $m = 1$: $a^{\frac{1}{n}} = \sqrt[n]{a}$.</p>
+        <p style="margin:.3rem 0 0;font-size:.88rem;">Khususnya, untuk $m = 1$: $a^{\frac{1}{n}} = \sqrt[n]{a}$. Penyebut $n$ menjadi indeks akar dan pembilang $m$ menjadi pangkat.</p>
       </div>
+
+    <p><strong>Mengapa $a^{\frac{1}{2}} = \sqrt{a}$?</strong> Dengan sifat pangkat, $\left(a^{\frac{1}{2}}\right)^2 = a^{\frac{1}{2} \cdot 2} = a^1 = a$. Bilangan tak negatif yang kuadratnya $a$ adalah $\sqrt{a}$, sehingga $a^{\frac{1}{2}} = \sqrt{a}$. Dengan alasan yang sama, $a^{\frac{1}{n}} = \sqrt[n]{a}$.</p>
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Perluasan ke $a &lt; 0$</div>
       <p style="margin:0;font-size:.9rem;">Apabila $n$ <strong>ganjil</strong>, definisi dapat diperluas ke $a &lt; 0$ karena akar ke-$n$ dari bilangan negatif tetap terdefinisi dalam $\mathbb{R}$. Misalnya:
         $$\begin{align*} (-32)^{\frac{3}{5}} &= \left(\sqrt[5]{-32}\right)^3 \\ &= (-2)^3 = -8. \end{align*}$$
+        Syaratnya, pecahan $\frac{m}{n}$ ditulis dalam <strong>bentuk paling sederhana</strong>. Tanpa syarat ini hasilnya bisa bertentangan: $(-8)^{\frac{1}{3}} = -2$, tetapi jika $\frac{1}{3}$ ditulis sebagai $\frac{2}{6}$, diperoleh $(-8)^{\frac{2}{6}} = \sqrt[6]{(-8)^2} = \sqrt[6]{64} = 2$.<br>
         Sebaliknya, jika $n$ <strong>genap</strong> dan $a &lt; 0$, maka $a^{\frac{m}{n}}$ <strong>tidak terdefinisi</strong> dalam $\mathbb{R}$.</p>
     </div>
 
-    <div class="box box-definisi">
-      <div class="box-label">Sifat-Sifat Pangkat Pecahan</div>
-      <p>Untuk $a, b &gt; 0$, $m, n \in \mathbb{Z}$, dan $p, q \in \mathbb{Z}^+$, berlaku:</p>
-      <ol>
-        <li>$a^{\frac{m}{p}} \cdot a^{\frac{n}{p}} = a^{\frac{m+n}{p}}$</li>
-        <li>$a^{\frac{m}{p}} \div a^{\frac{n}{p}} = a^{\frac{m-n}{p}}$</li>
-        <li>$\left(a^{\frac{m}{p}}\right)^{q} = a^{\frac{mq}{p}}$</li>
-        <li>$\left(a \cdot b\right)^{\frac{m}{p}} = a^{\frac{m}{p}} \cdot b^{\frac{m}{p}}$</li>
-        <li>$a^{\frac{m}{p}} \cdot a^{\frac{n}{q}} = a^{\frac{mq+np}{pq}}$ &nbsp;<em>(penjumlahan eksponen beda penyebut)</em></li>
-        <li>$a^{-\frac{m}{p}} = \dfrac{1}{a^{\frac{m}{p}}}$</li>
-      </ol>
-    </div>
+    <h3 class="subsection-title">1. Mengubah Bentuk Pangkat dan Akar</h3>
+    <p>Bentuk $a^{\frac{m}{n}}$ dapat dihitung dengan mengubahnya ke bentuk akar. Cara paling mudah: <strong>akarkan dulu</strong>, baru pangkatkan, misalnya $27^{\frac{2}{3}} = \left(\sqrt[3]{27}\right)^2 = 3^2 = 9$.</p>
 
     <div class="box box-contoh" data-level="beginner">
       <div class="box-label">📘 Contoh 27</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Hitunglah nilai setiap bentuk berikut.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$8^{\frac{2}{3}}$</li>
+        <li>$16^{-\frac{3}{4}}$</li>
+        <li>$\left(\dfrac{1}{27}\right)^{-\frac{2}{3}}$</li>
+        <li>$(-27)^{\frac{2}{3}}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step">Gunakan $a^{\frac{m}{n}} = \left(\sqrt[n]{a}\right)^m$: <strong>akarkan dulu</strong>, baru pangkatkan, agar bilangannya tetap kecil.</p>
+      <div class="sol-part"><span class="sol-tag">a</span>$8^{\frac{2}{3}}$</div>
+      $$\begin{align*} 8^{\frac{2}{3}} &= \left(\sqrt[3]{8}\right)^2 \\ &= 2^2 = 4 \end{align*}$$
+      <div class="sol-jadi">nilainya $4$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "8^{\\frac{2}{3}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\left(\\sqrt[\\color{#0d9488}{3}]{8}\\right)^{\\color{#d97706}{2}}", "note": "Penyebut $3$ menjadi <strong>indeks akar<\/strong>, pembilang $2$ menjadi <strong>pangkat<\/strong>."}, {"tex": "\\left(\\color{#7c3aed}{2}\\right)^2", "note": "$\\sqrt[3]{8} = 2$, karena $2^3 = 8$."}, {"tex": "\\color{#e11d48}{4}", "note": "<strong>Jadi,<\/strong> nilainya $4$."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">b</span>$16^{-\frac{3}{4}}$</div>
+      $$\begin{align*} 16^{-\frac{3}{4}} &= \frac{1}{16^{\frac{3}{4}}} = \frac{1}{\left(\sqrt[4]{16}\right)^3} \\ &= \frac{1}{2^3} = \frac{1}{8} \end{align*}$$
+      <div class="sol-jadi">nilainya $\dfrac{1}{8}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "16^{-\\frac{3}{4}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\dfrac{1}{16^{\\color{#0d9488}{\\frac{3}{4}}}}", "note": "Pangkat negatif berarti <strong>kebalikan<\/strong>, bukan bilangan negatif."}, {"tex": "\\dfrac{1}{\\left(\\sqrt[4]{16}\\right)^3} = \\dfrac{1}{\\color{#7c3aed}{2}^3}", "note": "$\\sqrt[4]{16} = 2$, karena $2^4 = 16$."}, {"tex": "\\color{#e11d48}{\\dfrac{1}{8}}", "note": "<strong>Jadi,<\/strong> nilainya $\\dfrac{1}{8}$."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">c</span>$\left(\dfrac{1}{27}\right)^{-\frac{2}{3}}$</div>
+      $$\begin{align*} \left(\frac{1}{27}\right)^{-\frac{2}{3}} &= 27^{\frac{2}{3}} = \left(\sqrt[3]{27}\right)^2 \\ &= 3^2 = 9 \end{align*}$$
+      <div class="sol-jadi">nilainya $9$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\left(\\dfrac{1}{27}\\right)^{-\\frac{2}{3}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\color{#0d9488}{27}^{\\frac{2}{3}}", "note": "Pangkat negatif <strong>membalik<\/strong> pecahan: $\\left(\\frac{1}{27}\\right)^{-r} = 27^{r}$."}, {"tex": "\\left(\\sqrt[3]{27}\\right)^2 = \\color{#7c3aed}{3}^2", "note": "$\\sqrt[3]{27} = 3$."}, {"tex": "\\color{#e11d48}{9}", "note": "<strong>Jadi,<\/strong> nilainya $9$."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">d</span>$(-27)^{\frac{2}{3}}$</div>
+      <p class="sol-step">Penyebut $3$ ganjil dan pecahan $\frac{2}{3}$ sudah paling sederhana, jadi basis negatif boleh dipakai:</p>
+      $$\begin{align*} (-27)^{\frac{2}{3}} &= \left(\sqrt[3]{-27}\right)^2 \\ &= (-3)^2 = 9 \end{align*}$$
+      <div class="sol-jadi">nilainya $9$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "(-27)^{\\frac{2}{3}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\left(\\sqrt[\\color{#0d9488}{3}]{-27}\\right)^2", "note": "Indeks akar $3$ <strong>ganjil<\/strong>, jadi akar dari bilangan negatif terdefinisi."}, {"tex": "\\left(\\color{#d97706}{-3}\\right)^2", "note": "$\\sqrt[3]{-27} = -3$, karena $(-3)^3 = -27$."}, {"tex": "\\color{#e11d48}{9}", "note": "Kuadrat bilangan negatif positif. <strong>Jadi,<\/strong> nilainya $9$."}]</script></div>
+    </div>
+
+    <div class="box box-contoh" data-level="beginner">
+      <div class="box-label">📘 Contoh 28</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Ubahlah setiap bentuk pangkat berikut ke dalam bentuk akar, kemudian sederhanakanlah.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$32^{\frac{7}{10}}$</li>
@@ -1158,7 +1181,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 28</div>
+      <div class="box-label">📘 Contoh 29</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Ubahlah setiap bentuk akar berikut ke dalam notasi pangkat, kemudian sederhanakanlah.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$16\sqrt{32}$</li>
@@ -1187,8 +1210,85 @@ window.MathJax = {
       <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt[3]{16\\sqrt{8}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\left(\\color{#0d9488}{2^4} \\cdot \\color{#d97706}{2^{\\frac{3}{2}}}\\right)^{\\frac{1}{3}}", "note": "Akar pangkat tiga = pangkat $\\tfrac{1}{3}$. Tulis $16 = 2^4$ dan $\\sqrt{8} = 2^{\\frac{3}{2}}$."}, {"tex": "\\left(2^{\\color{#0d9488}{4} + \\color{#d97706}{\\frac{3}{2}}}\\right)^{\\frac{1}{3}} = \\left(2^{\\frac{11}{2}}\\right)^{\\color{#7c3aed}{\\frac{1}{3}}}", "note": "Jumlahkan pangkat: $4 + \\tfrac{3}{2} = \\tfrac{11}{2}$."}, {"tex": "2^{\\frac{11}{2} \\cdot \\color{#7c3aed}{\\frac{1}{3}}}", "note": "Pangkat bertingkat dikalikan."}, {"tex": "\\color{#e11d48}{2^{\\frac{11}{6}}}", "note": "<strong>Jadi,<\/strong> $\\sqrt[3]{16\\sqrt{8}} = 2^{\\frac{11}{6}}$."}]</script></div>
     </div>
 
+    <h3 class="subsection-title">2. Sifat dan Penyederhanaan</h3>
+    <div class="box box-definisi">
+      <div class="box-label">Sifat-Sifat Pangkat Pecahan</div>
+      <p>Untuk $a, b &gt; 0$ dan $r, s$ bilangan rasional, <strong>semua sifat pangkat bulat tetap berlaku</strong>:</p>
+      <ol>
+        <li>$a^{r} \cdot a^{s} = a^{r+s}$ &nbsp;<em>(samakan penyebut lebih dulu, misalnya $a^{\frac12} \cdot a^{\frac13} = a^{\frac36 + \frac26} = a^{\frac56}$)</em></li>
+        <li>$\dfrac{a^{r}}{a^{s}} = a^{r-s}$</li>
+        <li>$\left(a^{r}\right)^{s} = a^{rs}$</li>
+        <li>$(a \cdot b)^{r} = a^{r} \cdot b^{r}$</li>
+        <li>$\left(\dfrac{a}{b}\right)^{r} = \dfrac{a^{r}}{b^{r}}$</li>
+        <li>$a^{-r} = \dfrac{1}{a^{r}}$</li>
+      </ol>
+    </div>
+
+    <div class="box box-contoh" data-level="intermediate">
+      <div class="box-label">📘 Contoh 30</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah dan nyatakan hasilnya dengan pangkat positif, dengan $a, x, y &gt; 0$.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\dfrac{a^{\frac{1}{2}} \cdot a^{\frac{1}{3}}}{a^{\frac{1}{4}}}$</li>
+        <li>$\dfrac{\left(x^{\frac{1}{2}}\,y^{-\frac{1}{3}}\right)^6}{x^2\,y^{-1}}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>$\dfrac{a^{\frac{1}{2}} \cdot a^{\frac{1}{3}}}{a^{\frac{1}{4}}}$</div>
+      <p class="sol-step">Basis sama: pangkat dijumlahkan untuk perkalian dan dikurangkan untuk pembagian. Samakan penyebutnya menjadi $12$:</p>
+      $$\begin{align*} \frac{a^{\frac{1}{2}} \cdot a^{\frac{1}{3}}}{a^{\frac{1}{4}}} &= a^{\frac{1}{2}+\frac{1}{3}-\frac{1}{4}} \\ &= a^{\frac{6}{12}+\frac{4}{12}-\frac{3}{12}} \\ &= a^{\frac{7}{12}} \end{align*}$$
+      <div class="sol-jadi">bentuk sederhananya $a^{\frac{7}{12}}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\dfrac{a^{\\frac12} \\cdot a^{\\frac13}}{a^{\\frac14}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "a^{\\color{#0d9488}{\\frac12}+\\color{#d97706}{\\frac13}-\\color{#7c3aed}{\\frac14}}", "note": "Basis sama: pangkat <strong>dijumlah<\/strong> (perkalian) dan <strong>dikurang<\/strong> (pembagian)."}, {"tex": "a^{\\color{#0d9488}{\\frac{6}{12}}+\\color{#d97706}{\\frac{4}{12}}-\\color{#7c3aed}{\\frac{3}{12}}}", "note": "Penyebutnya berbeda. Samakan menjadi $12$."}, {"tex": "\\color{#e11d48}{a^{\\frac{7}{12}}}", "note": "$6 + 4 - 3 = 7$. <strong>Jadi,<\/strong> bentuk sederhananya $a^{\\frac{7}{12}}$."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">b</span>$\dfrac{\left(x^{\frac{1}{2}}\,y^{-\frac{1}{3}}\right)^6}{x^2\,y^{-1}}$</div>
+      <p class="sol-step">Kalikan pangkat $6$ ke setiap pangkat di dalam kurung, lalu kurangkan pangkat basis yang sama:</p>
+      $$\begin{align*} \frac{\left(x^{\frac{1}{2}}\,y^{-\frac{1}{3}}\right)^6}{x^2\,y^{-1}} &= \frac{x^{3}\,y^{-2}}{x^{2}\,y^{-1}} \\ &= x^{3-2}\,y^{-2-(-1)} \\ &= x\,y^{-1} = \frac{x}{y} \end{align*}$$
+      <div class="sol-jadi">bentuk sederhananya $\dfrac{x}{y}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\dfrac{\\left(x^{\\frac12}\\,y^{-\\frac13}\\right)^6}{x^2\\,y^{-1}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\dfrac{x^{\\color{#0d9488}{\\frac12 \\cdot 6}}\\,y^{\\color{#d97706}{-\\frac13 \\cdot 6}}}{x^2\\,y^{-1}}", "note": "Pangkat $6$ dikalikan ke setiap pangkat di dalam kurung."}, {"tex": "\\dfrac{\\color{#0d9488}{x^{3}}\\,\\color{#d97706}{y^{-2}}}{\\color{#0d9488}{x^{2}}\\,\\color{#d97706}{y^{-1}}}", "note": "$\\frac12 \\cdot 6 = 3$ dan $-\\frac13 \\cdot 6 = -2$."}, {"tex": "\\color{#0d9488}{x^{3-2}}\\,\\color{#d97706}{y^{-2-(-1)}}", "note": "Basis sama: kurangkan pangkatnya."}, {"tex": "x\\,\\color{#d97706}{y^{-1}}", "note": "Masih ada pangkat negatif pada $y$."}, {"tex": "\\color{#e11d48}{\\dfrac{x}{y}}", "note": "$y^{-1} = \\frac{1}{y}$. <strong>Jadi,<\/strong> bentuk sederhananya $\\dfrac{x}{y}$."}]</script></div>
+    </div>
+
+    <div class="box box-contoh" data-level="intermediate">
+      <div class="box-label">📘 Contoh 31</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah, dengan $x, y &gt; 0$ dan $x \neq 9$.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\left(x^{\frac{1}{2}} + y^{\frac{1}{2}}\right)\left(x^{\frac{1}{2}} - y^{\frac{1}{2}}\right)$</li>
+        <li>$\dfrac{x - 9}{x^{\frac{1}{2}} + 3}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>$\left(x^{\frac{1}{2}} + y^{\frac{1}{2}}\right)\left(x^{\frac{1}{2}} - y^{\frac{1}{2}}\right)$</div>
+      <p class="sol-step">Bentuknya $(p + q)(p - q) = p^2 - q^2$ dengan $p = x^{\frac12}$ dan $q = y^{\frac12}$:</p>
+      $$\begin{align*} &\left(x^{\frac{1}{2}} + y^{\frac{1}{2}}\right)\left(x^{\frac{1}{2}} - y^{\frac{1}{2}}\right) \\ &= \left(x^{\frac{1}{2}}\right)^2 - \left(y^{\frac{1}{2}}\right)^2 \\ &= x - y \end{align*}$$
+      <div class="sol-jadi">bentuk sederhananya $x - y$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\left(\\color{#0d9488}{x^{\\frac12}}+\\color{#d97706}{y^{\\frac12}}\\right)\\left(\\color{#0d9488}{x^{\\frac12}}-\\color{#d97706}{y^{\\frac12}}\\right)", "note": "Bentuknya $(p+q)(p-q)$ dengan $p = x^{\\frac12}$ (hijau) dan $q = y^{\\frac12}$ (oranye)."}, {"tex": "\\color{#0d9488}{\\left(x^{\\frac12}\\right)^2} - \\color{#d97706}{\\left(y^{\\frac12}\\right)^2}", "note": "$(p+q)(p-q) = p^2 - q^2$."}, {"tex": "\\color{#e11d48}{x - y}", "note": "$\\left(x^{\\frac12}\\right)^2 = x^{1} = x$. <strong>Jadi,<\/strong> hasilnya $x - y$."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">b</span>$\dfrac{x - 9}{x^{\frac{1}{2}} + 3}$</div>
+      <p class="sol-step">Pandang pembilang sebagai selisih dua kuadrat: $x = \left(x^{\frac12}\right)^2$ dan $9 = 3^2$.</p>
+      $$\begin{align*} &\frac{x - 9}{x^{\frac{1}{2}} + 3} \\ &= \frac{\left(x^{\frac{1}{2}} + 3\right)\left(x^{\frac{1}{2}} - 3\right)}{x^{\frac{1}{2}} + 3} \\ &= x^{\frac{1}{2}} - 3 \end{align*}$$
+      <div class="sol-jadi">bentuk sederhananya $x^{\frac{1}{2}} - 3$, yaitu $\sqrt{x} - 3$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\dfrac{x - 9}{x^{\\frac12} + 3}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\dfrac{\\color{#0d9488}{\\left(x^{\\frac12}\\right)^2} - \\color{#d97706}{3^2}}{x^{\\frac12} + 3}", "note": "Pembilang adalah <strong>selisih dua kuadrat<\/strong>."}, {"tex": "\\dfrac{\\left(x^{\\frac12}+3\\right)\\left(x^{\\frac12}-3\\right)}{x^{\\frac12}+3}", "note": "$p^2 - q^2 = (p+q)(p-q)$."}, {"tex": "\\dfrac{\\color{#e11d48}{\\cancel{\\left(x^{\\frac12}+3\\right)}}\\left(x^{\\frac12}-3\\right)}{\\color{#e11d48}{\\cancel{x^{\\frac12}+3}}}", "note": "Coret faktor yang sama."}, {"tex": "\\color{#e11d48}{x^{\\frac12} - 3}", "note": "<strong>Jadi,<\/strong> bentuk sederhananya $x^{\\frac12} - 3 = \\sqrt{x} - 3$."}]</script></div>
+    </div>
+
+    <div class="box box-contoh" data-level="intermediate">
+      <div class="box-label">📘 Contoh 32</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Menurut hukum Kleiber, laju metabolisme seekor hewan bermassa $m$ kg kira-kira $B = 70\,m^{\frac{3}{4}}$ kkal per hari.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Tentukanlah laju metabolisme hewan bermassa $16$ kg.</li>
+        <li>Hewan Q bermassa $81$ kali massa hewan P. Berapa kali laju metabolisme hewan Q dibandingkan hewan P?</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>Hewan bermassa $16$ kg</div>
+      $$\begin{align*} B &= 70 \cdot 16^{\frac{3}{4}} \\ &= 70 \cdot \left(\sqrt[4]{16}\right)^3 \\ &= 70 \cdot 2^3 = 70 \cdot 8 = 560 \end{align*}$$
+      <div class="sol-jadi">laju metabolismenya $560$ kkal per hari.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "B = 70 \\cdot \\color{#0d9488}{16}^{\\frac34}", "note": "Substitusikan $m = 16$."}, {"tex": "16^{\\frac34} = \\left(\\sqrt[4]{16}\\right)^3 = 2^3 = \\color{#d97706}{8}", "note": "Akarkan dulu, baru pangkatkan."}, {"tex": "B = 70 \\cdot \\color{#d97706}{8}", "note": "Kalikan dengan $70$."}, {"tex": "\\color{#e11d48}{B = 560}", "note": "<strong>Jadi,<\/strong> laju metabolismenya $560$ kkal per hari."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">b</span>Perbandingan hewan Q dan P</div>
+      <p class="sol-step">Misalkan massa hewan P adalah $m$, sehingga massa hewan Q adalah $81m$. Gunakan $(ab)^r = a^r b^r$:</p>
+      $$\begin{align*} \frac{B_Q}{B_P} &= \frac{70\,(81m)^{\frac{3}{4}}}{70\,m^{\frac{3}{4}}} \\ &= \frac{\cancel{70}\cdot 81^{\frac{3}{4}}\,\cancel{m^{\frac{3}{4}}}}{\cancel{70}\,\cancel{m^{\frac{3}{4}}}} \\ &= 81^{\frac{3}{4}} = \left(\sqrt[4]{81}\right)^3 \\ &= 3^3 = 27 \end{align*}$$
+      <p class="sol-step">Perhatikan: massanya $81$ kali, tetapi laju metabolismenya hanya $27$ kali. Hewan besar memakai energi lebih hemat per kilogram.</p>
+      <div class="sol-jadi">laju metabolisme hewan Q $27$ kali laju metabolisme hewan P.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\dfrac{B_Q}{B_P} = \\dfrac{70\\,(\\color{#0d9488}{81}m)^{\\frac34}}{70\\,m^{\\frac34}}", "note": "Massa hewan Q adalah $81m$."}, {"tex": "\\dfrac{\\color{#e11d48}{\\cancel{70}}\\cdot \\color{#0d9488}{81}^{\\frac34}\\,\\color{#e11d48}{\\cancel{m^{\\frac34}}}}{\\color{#e11d48}{\\cancel{70}}\\,\\color{#e11d48}{\\cancel{m^{\\frac34}}}}", "note": "Pecah $(81m)^{\\frac34} = 81^{\\frac34}\\, m^{\\frac34}$, lalu coret yang sama."}, {"tex": "81^{\\frac34} = \\left(\\sqrt[4]{81}\\right)^3 = \\color{#d97706}{3}^3", "note": "$\\sqrt[4]{81} = 3$."}, {"tex": "\\color{#e11d48}{27\\ \\text{kali}}", "note": "<strong>Jadi,<\/strong> $27$ kali, bukan $81$ kali."}]</script></div>
+    </div>
+
     <div class="box box-contoh" data-level="expert">
-      <div class="box-label">📘 Contoh 29</div>
+      <div class="box-label">📘 Contoh 33</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk berikut.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\dfrac{(2^{\frac{5}{4}})^2 \cdot 16^{\frac{3}{8}}}{8^{\frac{7}{6}}}$</li>
@@ -1208,13 +1308,52 @@ window.MathJax = {
       <div class="langkah-anim"><script type="application/json">[{"tex": "\\left[\\dfrac{3^{\\frac{2}{3}} \\cdot (27^{\\frac{1}{2}})^{\\frac{4}{3}}}{(81^{\\frac{1}{3}})^5}\\right]^{-\\frac{1}{2}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\left[\\dfrac{3^{\\frac{2}{3}} \\cdot (\\color{#0d9488}{3^{\\frac{3}{2}}})^{\\frac{4}{3}}}{(\\color{#d97706}{3^{\\frac{4}{3}}})^5}\\right]^{-\\frac{1}{2}}", "note": "Samakan basis $3$: $27^{\\frac{1}{2}} = 3^{\\frac{3}{2}}$ dan $81^{\\frac{1}{3}} = 3^{\\frac{4}{3}}$."}, {"tex": "\\left[\\dfrac{3^{\\frac{2}{3}} \\cdot \\color{#0d9488}{3^2}}{\\color{#d97706}{3^{\\frac{20}{3}}}}\\right]^{-\\frac{1}{2}}", "note": "Pangkat bertingkat dikalikan: $\\tfrac{3}{2} \\cdot \\tfrac{4}{3} = 2$ dan $\\tfrac{4}{3} \\cdot 5 = \\tfrac{20}{3}$."}, {"tex": "\\left[3^{\\color{#7c3aed}{\\frac{2 + 6 - 20}{3}}}\\right]^{-\\frac{1}{2}}", "note": "Jumlahkan pangkat pembilang, kurangi pangkat penyebut ($2 = \\tfrac{6}{3}$)."}, {"tex": "\\left[3^{-4}\\right]^{\\color{#d97706}{-\\frac{1}{2}}}", "note": "$\\tfrac{2 + 6 - 20}{3} = \\tfrac{-12}{3} = -4$."}, {"tex": "3^{(-4)(\\color{#d97706}{-\\frac{1}{2}})} = 3^2", "note": "Pangkat dikalikan: negatif kali negatif menjadi positif."}, {"tex": "\\color{#e11d48}{9}", "note": "<strong>Jadi,<\/strong> nilainya $9$."}]</script></div>
     </div>
 
+    <div class="box box-contoh" data-level="expert">
+      <div class="box-label">📘 Contoh 34</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Soal penalaran: kerjakan tanpa kalkulator.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Manakah yang lebih besar, $\sqrt[3]{3}$ atau $\sqrt{2}$?</li>
+        <li>Diketahui $x^{\frac{1}{2}} + x^{-\frac{1}{2}} = 3$. Tentukanlah nilai $x + x^{-1}$.</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>$\sqrt[3]{3}$ atau $\sqrt{2}$</div>
+      <p class="sol-step">Ubah ke pangkat pecahan, lalu samakan penyebut pangkatnya menjadi $6$:</p>
+      $$\begin{align*} \sqrt[3]{3} &= 3^{\frac{1}{3}} = 3^{\frac{2}{6}} \\ &= \sqrt[6]{3^2} = \sqrt[6]{9} \\ \sqrt{2} &= 2^{\frac{1}{2}} = 2^{\frac{3}{6}} \\ &= \sqrt[6]{2^3} = \sqrt[6]{8} \end{align*}$$
+      <p class="sol-step">Indeks akarnya sama, jadi cukup bandingkan isinya: $9 &gt; 8$.</p>
+      <div class="sol-jadi">$\sqrt[3]{3}$ lebih besar daripada $\sqrt{2}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt[3]{3} \\quad\\text{atau}\\quad \\sqrt{2}\\,?", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "3^{\\color{#0d9488}{\\frac13}} \\quad\\text{dan}\\quad 2^{\\color{#d97706}{\\frac12}}", "note": "Ubah ke pangkat pecahan."}, {"tex": "3^{\\color{#0d9488}{\\frac26}} \\quad\\text{dan}\\quad 2^{\\color{#d97706}{\\frac36}}", "note": "Samakan penyebut pangkat menjadi $6$."}, {"tex": "\\sqrt[6]{\\color{#7c3aed}{9}} \\quad\\text{dan}\\quad \\sqrt[6]{\\color{#7c3aed}{8}}", "note": "$3^{\\frac26} = \\sqrt[6]{3^2}$ dan $2^{\\frac36} = \\sqrt[6]{2^3}$."}, {"tex": "\\color{#e11d48}{\\sqrt[3]{3} > \\sqrt{2}}", "note": "Karena $9 > 8$. <strong>Jadi,<\/strong> $\\sqrt[3]{3}$ lebih besar."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">b</span>$x^{\frac{1}{2}} + x^{-\frac{1}{2}} = 3$</div>
+      <p class="sol-step">Kuadratkan kedua ruas. Ingat $\left(x^{\frac12}\right)^2 = x$ dan $x^{\frac12} \cdot x^{-\frac12} = x^0 = 1$:</p>
+      $$\begin{align*} \left(x^{\frac{1}{2}} + x^{-\frac{1}{2}}\right)^2 &= 3^2 \\ x + 2 + x^{-1} &= 9 \\ x + x^{-1} &= 7 \end{align*}$$
+      <div class="sol-jadi">$x + x^{-1} = 7$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\begin{aligned} x^{\\frac12} + x^{-\\frac12} = 3 \\\\ x + x^{-1} = \\,? \\end{aligned}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\left(\\color{#0d9488}{x^{\\frac12} + x^{-\\frac12}}\\right)^2 = \\color{#0d9488}{3}^2", "note": "Kuadratkan kedua ruas."}, {"tex": "x + \\color{#d97706}{2 \\cdot x^{\\frac12} \\cdot x^{-\\frac12}} + x^{-1} = 9", "note": "$(p+q)^2 = p^2 + 2pq + q^2$, dan $\\left(x^{\\frac12}\\right)^2 = x$."}, {"tex": "x + \\color{#d97706}{2} + x^{-1} = 9", "note": "$x^{\\frac12} \\cdot x^{-\\frac12} = x^0 = 1$."}, {"tex": "\\color{#e11d48}{x + x^{-1} = 7}", "note": "Kurangkan $2$. <strong>Jadi,<\/strong> $x + x^{-1} = 7$."}]</script></div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Kesalahan yang Sering Terjadi</div>
+      <ul style="margin:.2rem 0 0;padding-left:1.2rem;font-size:.9rem;line-height:1.7;">
+        <li style="margin-bottom:.45rem;"><span style="color:#e11d48;font-weight:700;">✗</span> $8^{\frac{2}{3}} = \sqrt{8^3}$<br><span style="color:#16a34a;font-weight:700;">✓</span> $8^{\frac{2}{3}} = \sqrt[3]{8^2} = 4$<br><span style="font-size:.85rem;">Penyebut menjadi indeks akar, pembilang menjadi pangkat.</span></li>
+        <li style="margin-bottom:.45rem;"><span style="color:#e11d48;font-weight:700;">✗</span> $8^{\frac{2}{3}} = 8 \cdot \tfrac{2}{3} = \tfrac{16}{3}$<br><span style="color:#16a34a;font-weight:700;">✓</span> $8^{\frac{2}{3}} = 4$<br><span style="font-size:.85rem;">Pangkat bukan pengali.</span></li>
+        <li style="margin-bottom:.45rem;"><span style="color:#e11d48;font-weight:700;">✗</span> $4^{-\frac{1}{2}} = -2$<br><span style="color:#16a34a;font-weight:700;">✓</span> $4^{-\frac{1}{2}} = \dfrac{1}{4^{\frac{1}{2}}} = \dfrac{1}{2}$<br><span style="font-size:.85rem;">Pangkat negatif berarti kebalikan, bukan bilangan negatif.</span></li>
+        <li style="margin-bottom:.45rem;"><span style="color:#e11d48;font-weight:700;">✗</span> $a^{\frac{1}{2}} \cdot a^{\frac{1}{3}} = a^{\frac{1}{6}}$<br><span style="color:#16a34a;font-weight:700;">✓</span> $a^{\frac{1}{2}} \cdot a^{\frac{1}{3}} = a^{\frac{5}{6}}$<br><span style="font-size:.85rem;">Pada perkalian, pangkat dijumlahkan (samakan penyebutnya dulu), bukan dikalikan.</span></li>
+      </ul>
+    </div>
+
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan C</div>
+      <p style="margin:0;padding:.75rem 1rem .25rem;font-size:.88rem;"><strong>Pemahaman:</strong> soal 1–3 &nbsp;·&nbsp; <strong>Penerapan:</strong> soal 4–7 &nbsp;·&nbsp; <strong>Penalaran:</strong> soal 8–10</p>
       <ol class="soal-list">
-        <li>Nyatakanlah dalam bentuk akar yang paling sederhana:<br>(a) $4^{\frac{3}{2}}$<br>(b) $8^{\frac{2}{3}}$<br>(c) $27^{\frac{4}{3}}$<br>(d) $(-32)^{\frac{3}{5}}$</li>
+        <li>Hitunglah nilai dari:<br>(a) $4^{\frac{3}{2}}$<br>(b) $8^{\frac{2}{3}}$<br>(c) $27^{\frac{4}{3}}$<br>(d) $(-32)^{\frac{3}{5}}$</li>
+        <li>Hitunglah nilai dari:<br>(a) $9^{-\frac{1}{2}}$<br>(b) $32^{-\frac{4}{5}}$<br>(c) $\left(\dfrac{8}{27}\right)^{-\frac{2}{3}}$</li>
         <li>Nyatakanlah dalam notasi pangkat pecahan:<br>(a) $8\sqrt[3]{4}$<br>(b) $\sqrt[4]{27\sqrt{3}}$</li>
-        <li>Sederhanakanlah: $\dfrac{\left(4^{\frac{3}{2}}\right)^2 \cdot \sqrt[3]{27}}{(9^{\frac{1}{2}})^3}$</li>
+        <li>Sederhanakanlah $\dfrac{\left(4^{\frac{3}{2}}\right)^2 \cdot \sqrt[3]{27}}{(9^{\frac{1}{2}})^3}$.</li>
+        <li>Sederhanakanlah dan nyatakan dengan pangkat positif, dengan $a, b, x &gt; 0$:<br>(a) $x^{\frac{2}{3}} \cdot x^{\frac{1}{4}}$<br>(b) $\dfrac{\left(a^{\frac{3}{4}}\,b^{-\frac{1}{2}}\right)^4}{a^2\,b^{-3}}$</li>
+        <li>Sederhanakanlah $\dfrac{x - 16}{x^{\frac{1}{2}} - 4}$, dengan $x &gt; 0$ dan $x \neq 16$.</li>
+        <li>Sebuah kubus bervolume $V$ cm$^3$ memiliki panjang rusuk $s = V^{\frac{1}{3}}$ dan luas permukaan $L = 6V^{\frac{2}{3}}$. Untuk $V = 125$, tentukanlah $s$ dan $L$.</li>
         <li>Buktikanlah bahwa $\dfrac{x - y}{x^{\frac{1}{2}} + y^{\frac{1}{2}}} = x^{\frac{1}{2}} - y^{\frac{1}{2}}$ untuk $x, y &gt; 0$.</li>
+        <li>Diketahui $x^{\frac{1}{2}} - x^{-\frac{1}{2}} = 2$. Tentukanlah nilai $x + x^{-1}$.</li>
+        <li>Tanpa kalkulator, tentukanlah mana yang lebih besar: $\sqrt[4]{5}$ atau $\sqrt[3]{3}$.</li>
       </ol>
     </div>
 
@@ -1254,7 +1393,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 30</div>
+      <div class="box-label">📘 Contoh 35</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 1)</strong> Tentukanlah nilai $x$ yang memenuhi $25 \cdot 5^{3x+2} = 1$.</p>
     </div>
     <div class="penyelesaian">
@@ -1267,7 +1406,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 31</div>
+      <div class="box-label">📘 Contoh 36</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 2)</strong> Tentukanlah nilai $x$ yang memenuhi $\sqrt{27^{2x-5}} = 3\bigl(9^{6x-8}\bigr)$.</p>
     </div>
     <div class="penyelesaian">
@@ -1280,7 +1419,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 32</div>
+      <div class="box-label">📘 Contoh 37</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 3)</strong> Tentukanlah himpunan penyelesaian dari $25 \cdot 8^x = 4 \cdot 125^x$.</p>
     </div>
     <div class="penyelesaian">
@@ -1293,7 +1432,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 33</div>
+      <div class="box-label">📘 Contoh 38</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 3 — Pangkat Kuadrat)</strong> Tentukanlah himpunan penyelesaian dari $6^{x^2-3} = 10^{x^2-3}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1305,7 +1444,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="expert">
-      <div class="box-label">📘 Contoh 34</div>
+      <div class="box-label">📘 Contoh 39</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 4)</strong> Tentukanlah himpunan penyelesaian dari $(2x-5)^{4x+3} = (2x-5)^{2x-7}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1330,7 +1469,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="expert">
-      <div class="box-label">📘 Contoh 35</div>
+      <div class="box-label">📘 Contoh 40</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 5)</strong> Tentukanlah himpunan penyelesaian dari $(2x-1)^{x^2-4} = (x+3)^{x^2-4}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1351,7 +1490,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 36</div>
+      <div class="box-label">📘 Contoh 41</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 6)</strong> Tentukanlah himpunan penyelesaian dari $2^{2x} - 3 \cdot 2^{x+2} + 32 = 0$.</p>
     </div>
     <div class="penyelesaian">
@@ -1403,7 +1542,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 37</div>
+      <div class="box-label">📘 Contoh 42</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $3^{3x-21} &lt; 27^{2x+5}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1434,7 +1573,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 38</div>
+      <div class="box-label">📘 Contoh 43</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $\left(\dfrac{2}{5}\right)^{x^2-5x-20} \geq \left(\dfrac{5}{2}\right)^{x^2+3x-20}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1468,7 +1607,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 39</div>
+      <div class="box-label">📘 Contoh 44</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $\dfrac{3^{4x-2}}{9^{3x+1}} &gt; \left(\dfrac{1}{3}\right)^{x-14}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1499,7 +1638,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 40</div>
+      <div class="box-label">📘 Contoh 45</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $4^x - 5 \cdot 2^x + 4 \leq 0$.</p>
     </div>
     <div class="penyelesaian">
@@ -1627,7 +1766,7 @@ window.MathJax = {
     <p>Coba langkah lengkapnya pada contoh berikut.</p>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 41</div>
+      <div class="box-label">📘 Contoh 46</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik fungsi $f(x) = 2^x$ pada interval $-3 \leq x \leq 3$. Tentukan domain, range, asimtot, dan sifat kemonotonannya.</p>
     </div>
     <div class="penyelesaian">
@@ -1762,7 +1901,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 42</div>
+      <div class="box-label">📘 Contoh 47</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik $f(x) = \left(\dfrac{1}{3}\right)^x$ pada interval $-3 \leq x \leq 3$. Tentukan sifat-sifatnya dan bandingkan dengan $g(x) = 3^x$.</p>
     </div>
     <div class="penyelesaian">
@@ -1875,7 +2014,7 @@ window.MathJax = {
           </tbody>
         </table>
       </div>
-      <p style="margin:.5rem 0 0;font-size:.88rem;">Grafik $y = \left(\tfrac{1}{a}\right)^x = a^{-x}$ adalah <strong>cermin</strong> grafik $y = a^x$ terhadap sumbu-$Y$, seperti $\left(\tfrac13\right)^x$ dan $3^x$ pada Contoh 42.</p>
+      <p style="margin:.5rem 0 0;font-size:.88rem;">Grafik $y = \left(\tfrac{1}{a}\right)^x = a^{-x}$ adalah <strong>cermin</strong> grafik $y = a^x$ terhadap sumbu-$Y$, seperti $\left(\tfrac13\right)^x$ dan $3^x$ pada Contoh 47.</p>
     </div>
 
     <h3 class="subsection-title">3. Menggeser Grafik</h3>
@@ -2263,7 +2402,7 @@ window.MathJax = {
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Hubungan $k$ dengan Geser Kiri/Kanan</div>
-      <p style="margin:0;font-size:.88rem;">Untuk $k &gt; 0$, mengalikan dengan $k$ hasilnya <strong>sama dengan menggeser</strong> ke kiri atau kanan. Contohnya $8 \cdot 2^x = 2^3 \cdot 2^x = 2^{x+3}$: dikali $8$ sama saja dengan geser kiri $3$ satuan. Hal ini terlihat lagi pada Contoh 48.</p>
+      <p style="margin:0;font-size:.88rem;">Untuk $k &gt; 0$, mengalikan dengan $k$ hasilnya <strong>sama dengan menggeser</strong> ke kiri atau kanan. Contohnya $8 \cdot 2^x = 2^3 \cdot 2^x = 2^{x+3}$: dikali $8$ sama saja dengan geser kiri $3$ satuan. Hal ini terlihat lagi pada Contoh 53.</p>
     </div>
 
     <div class="box box-definisi">
@@ -2298,7 +2437,7 @@ window.MathJax = {
     </ol>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 43</div>
+      <div class="box-label">📘 Contoh 48</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik $g(x) = 2^{x-2} + 1$ dengan menggeser grafik $f(x) = 2^x$. Tentukan asimtot dan titik potong sumbu-$Y$-nya.</p>
     </div>
     <div class="penyelesaian">
@@ -2382,7 +2521,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 44</div>
+      <div class="box-label">📘 Contoh 49</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik $h(x) = \left(\tfrac{1}{2}\right)^{x+1} - 2$. Tentukan asimtot, titik potong sumbu-$Y$, dan titik potong sumbu-$X$-nya.</p>
     </div>
     <div class="penyelesaian">
@@ -2485,7 +2624,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 45</div>
+      <div class="box-label">📘 Contoh 50</div>
       <p style="margin:0;font-size:.9rem;">Sebuah fungsi eksponen $y = k \cdot a^x$ diketahui grafiknya melalui titik $(0,\,5)$ dan $(2,\,20)$. Tentukanlah rumus fungsi tersebut.</p>
     </div>
     <div class="penyelesaian">
@@ -2499,7 +2638,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 46 — Grafik Tanpa Pergeseran</div>
+      <div class="box-label">📘 Contoh 51 — Grafik Tanpa Pergeseran</div>
       <p style="margin:0 0 .3rem;font-size:.9rem;">Grafik berikut berbentuk $y = k \cdot a^x$. Tentukanlah rumus fungsinya.</p>
 <div class="grafik-wrap">
 <svg viewBox="0 0 228 224" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
@@ -2562,7 +2701,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 47 — Grafik Digeser ke Atas/Bawah</div>
+      <div class="box-label">📘 Contoh 52 — Grafik Digeser ke Atas/Bawah</div>
       <p style="margin:0 0 .3rem;font-size:.9rem;">Grafik berikut berbentuk $y = a^x + c$, dengan asimtot ditunjukkan garis putus-putus. Tentukanlah rumus fungsinya.</p>
 <div class="grafik-wrap">
 <svg viewBox="0 0 190 306" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
@@ -2633,7 +2772,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 48 — Grafik Digeser ke Kiri/Kanan</div>
+      <div class="box-label">📘 Contoh 53 — Grafik Digeser ke Kiri/Kanan</div>
       <p style="margin:0 0 .3rem;font-size:.9rem;">Grafik berikut adalah grafik $y = 2^x$ yang digeser secara mendatar. Tentukanlah rumus fungsinya.</p>
 <div class="grafik-wrap">
 <svg viewBox="0 0 228 224" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
@@ -2698,7 +2837,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="expert">
-      <div class="box-label">📘 Contoh 49 — Pergeseran Mendatar dan Tegak Sekaligus</div>
+      <div class="box-label">📘 Contoh 54 — Pergeseran Mendatar dan Tegak Sekaligus</div>
       <p style="margin:0 0 .3rem;font-size:.9rem;">Grafik berikut berbentuk $y = a^{x-h} + c$. Tentukanlah nilai $a$, $h$, $c$ dan rumus fungsinya.</p>
 <div class="grafik-wrap">
 <svg viewBox="0 0 238 258" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
@@ -2791,7 +2930,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 50</div>
+      <div class="box-label">📘 Contoh 55</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sebuah koloni bakteri berkembang mengikuti model $N(t) = 500 \cdot 2^t$, dengan $t$ dalam jam.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>Tentukanlah jumlah bakteri awal ($t=0$).</li>
@@ -2814,7 +2953,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 51</div>
+      <div class="box-label">📘 Contoh 56</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Suatu zat radioaktif memiliki waktu paruh $T_h = 10$ tahun dan massa awal 200 gram.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>Tentukanlah massa zat setelah 30 tahun.</li>
@@ -3264,9 +3403,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // C — Pangkat Pecahan
     2: [
       { jawaban:`(a) $8$ &nbsp;|&nbsp; (b) $4$ &nbsp;|&nbsp; (c) $81$ &nbsp;|&nbsp; (d) $-8$` },
+      { jawaban:`(a) $\\dfrac{1}{3}$ &nbsp;|&nbsp; (b) $\\dfrac{1}{16}$ &nbsp;|&nbsp; (c) $\\dfrac{9}{4}$` },
       { jawaban:`(a) $2^{\\frac{11}{3}}$ &nbsp;|&nbsp; (b) $3^{\\frac{7}{8}}$` },
       { jawaban:`$\\dfrac{64}{9}$` },
+      { jawaban:`(a) $x^{\\frac{11}{12}}$ &nbsp;|&nbsp; (b) $ab$` },
+      { jawaban:`$x^{\\frac{1}{2}} + 4$` },
+      { jawaban:`$s = 5$ cm, $L = 150$ cm$^2$` },
       { jawaban:`Terbukti. <em>Petunjuk: $x - y = \\left(x^{\\frac12}\\right)^2 - \\left(y^{\\frac12}\\right)^2$.</em>` },
+      { jawaban:`$x + x^{-1} = 6$` },
+      { jawaban:`$\\sqrt[4]{5}$ lebih besar` },
     ],
     // D — Persamaan Eksponen
     3: [
