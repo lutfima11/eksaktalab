@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.svg">
 <link rel="apple-touch-icon" href="../../assets/favicon.svg">
-<meta name="description" content="Materi lengkap Eksponen SMA: pangkat bulat, bentuk akar, pangkat pecahan, persamaan eksponen, pertidaksamaan eksponen, dan fungsi eksponen. Dilengkapi 44 contoh soal dan pembahasan.">
+<meta name="description" content="Materi lengkap Eksponen SMA: pangkat bulat, bentuk akar, pangkat pecahan, persamaan eksponen, pertidaksamaan eksponen, dan fungsi eksponen. Dilengkapi 48 contoh soal dan pembahasan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/materi.css?v=defe8ebe">
@@ -105,7 +105,7 @@ window.MathJax = {
       <div class="materi-tags">
         <span class="tag">Bilangan</span>
         <span class="tag">7 Sub-bab</span>
-        <span class="tag">44 Contoh Soal</span>
+        <span class="tag">48 Contoh Soal</span>
       </div>
     </div>
   </div>
@@ -583,15 +583,16 @@ window.MathJax = {
 
     <div class="box box-definisi">
       <div class="box-label">Sifat-Sifat Bentuk Akar</div>
-      <p>Untuk $a, b \geq 0$, $m, n$ bilangan riil (koefisien), $p, q \in \mathbb{Z}^+$ ($p,q \geq 2$), dan $b \neq 0$, berlaku:</p>
+      <p>Untuk $a, b \geq 0$, $m, n$ bilangan real (koefisien), dan $p, q$ bilangan bulat positif dengan $p, q \geq 2$, berlaku:</p>
       <ol>
-        <li>$m\sqrt[p]{a} + n\sqrt[p]{a} = (m+n)\sqrt[p]{a}$ &nbsp;&nbsp;<em>(penjumlahan akar senama)</em></li>
-        <li>$m\sqrt{a} \times n\sqrt{b} = mn\sqrt{ab}$ &nbsp;&nbsp;<em>(perkalian bentuk akar)</em></li>
+        <li>$m\sqrt[p]{a} \pm n\sqrt[p]{a} = (m \pm n)\sqrt[p]{a}$ &nbsp;&nbsp;<em>(penjumlahan dan pengurangan akar senama)</em></li>
+        <li>$m\sqrt[p]{a} \times n\sqrt[p]{b} = mn\sqrt[p]{ab}$ &nbsp;&nbsp;<em>(perkalian akar berindeks sama)</em></li>
         <li>$\sqrt{a} \times \sqrt{a} = a$ &nbsp;&nbsp;<em>(identitas dasar akar)</em></li>
-        <li>$\sqrt[p]{a \cdot b} = \sqrt[p]{a} \cdot \sqrt[p]{b}$ &nbsp;&nbsp;<em>(distributif perkalian)</em></li>
-        <li>$\sqrt[p]{\dfrac{a}{b}} = \dfrac{\sqrt[p]{a}}{\sqrt[p]{b}}$ &nbsp;&nbsp;<em>(distributif pembagian)</em></li>
+        <li>$\sqrt[p]{a \cdot b} = \sqrt[p]{a} \cdot \sqrt[p]{b}$ &nbsp;&nbsp;<em>(akar dari hasil kali)</em></li>
+        <li>$\sqrt[p]{\dfrac{a}{b}} = \dfrac{\sqrt[p]{a}}{\sqrt[p]{b}}$, dengan $b \neq 0$ &nbsp;&nbsp;<em>(akar dari hasil bagi)</em></li>
         <li>$\sqrt[p]{\sqrt[q]{a}} = \sqrt[pq]{a}$ &nbsp;&nbsp;<em>(akar bertingkat)</em></li>
         <li>$\left(\sqrt[p]{a}\right)^m = \sqrt[p]{a^m}$ &nbsp;&nbsp;<em>(pangkat di dalam akar)</em></li>
+        <li>$\sqrt{x^2} = |x|$ untuk setiap bilangan real $x$ &nbsp;&nbsp;<em>(akar kuadrat tidak pernah negatif; misalnya $\sqrt{(-3)^2} = 3$)</em></li>
       </ol>
     </div>
 
@@ -605,7 +606,7 @@ window.MathJax = {
 
     <div class="box box-contoh" data-level="beginner">
       <div class="box-label">📘 Contoh 10</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar berikut.</p>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar berikut, dengan $a, b \geq 0$.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\sqrt{48}$</li>
         <li>$\sqrt{200}$</li>
@@ -635,7 +636,7 @@ window.MathJax = {
 
     <div class="box box-contoh" data-level="beginner">
       <div class="box-label">📘 Contoh 11</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar berikut.</p>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar berikut, dengan $a, b \geq 0$.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\sqrt[3]{54}$</li>
         <li>$\sqrt[3]{32}$</li>
@@ -713,6 +714,54 @@ window.MathJax = {
       <div class="sol-jadi">bentuk sederhananya $20\sqrt{6}$.</div>
       <div class="langkah-anim"><script type="application/json">[{"tex": "(\\sqrt{50} - \\sqrt{2})(\\sqrt{27} + \\sqrt{12})", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "(\\color{#0d9488}{5\\sqrt{2}} - \\color{#0d9488}{\\sqrt{2}})(\\color{#d97706}{3\\sqrt{3}} + \\color{#d97706}{2\\sqrt{3}})", "note": "Sederhanakan dulu setiap akar: $\\sqrt{50} = 5\\sqrt{2}$, $\\sqrt{27} = 3\\sqrt{3}$, $\\sqrt{12} = 2\\sqrt{3}$."}, {"tex": "\\color{#0d9488}{4\\sqrt{2}} \\times \\color{#d97706}{5\\sqrt{3}}", "note": "Setiap kurung kini berisi suku sejenis: hitung isinya."}, {"tex": "(4 \\times 5)\\sqrt{2 \\times 3}", "note": "Kalikan angka luar dan angka dalam akar."}, {"tex": "\\color{#e11d48}{20\\sqrt{6}}", "note": "<strong>Jadi,<\/strong> bentuk sederhananya $20\\sqrt{6}$."}]</script></div>
     </div>
+
+    <div class="box box-contoh" data-level="beginner">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar bertingkat berikut menggunakan sifat $\sqrt[p]{\sqrt[q]{a}} = \sqrt[pq]{a}$.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\sqrt{\sqrt[3]{64}}$</li>
+        <li>$\sqrt[3]{\sqrt{729}}$</li>
+        <li>$\sqrt[2]{\sqrt[4]{a^8}}$ &nbsp;(untuk $a \geq 0$)</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step">Gunakan sifat $\sqrt[p]{\sqrt[q]{a}} = \sqrt[pq]{a}$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span>$\sqrt{\sqrt[3]{64}}$</div>
+      $$\sqrt{\sqrt[3]{64}} = \sqrt[6]{64} = \sqrt[6]{2^6}$$
+      <div class="sol-jadi">nilainya $2$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt{\\sqrt[3]{64}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt[\\color{#0d9488}{2 \\cdot 3}]{64} = \\sqrt[\\color{#0d9488}{6}]{64}", "note": "Akar dari akar: indeksnya dikalikan, $\\sqrt[m]{\\sqrt[n]{a}} = \\sqrt[m \\cdot n]{a}$."}, {"tex": "\\sqrt[6]{\\color{#d97706}{2^6}}", "note": "Tulis $64 = 2^6$ agar pangkatnya sama dengan indeks akar."}, {"tex": "\\sqrt[\\color{#0d9488}{6}]{2^{\\color{#d97706}{6}}}", "note": "Akar ke-$n$ dari $x^n$ adalah $x$."}, {"tex": "\\color{#e11d48}{2}", "note": "<strong>Jadi,<\/strong> nilainya $2$."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">b</span>$\sqrt[3]{\sqrt{729}}$</div>
+      $$\sqrt[3]{\sqrt{729}} = \sqrt[6]{729} = \sqrt[6]{3^6}$$
+      <div class="sol-jadi">nilainya $3$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt[3]{\\sqrt{729}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt[\\color{#0d9488}{3 \\cdot 2}]{729} = \\sqrt[\\color{#0d9488}{6}]{729}", "note": "Akar dari akar: indeksnya dikalikan, $\\sqrt[m]{\\sqrt[n]{a}} = \\sqrt[m \\cdot n]{a}$."}, {"tex": "\\sqrt[6]{\\color{#d97706}{3^6}}", "note": "Tulis $729 = 3^6$."}, {"tex": "\\sqrt[\\color{#0d9488}{6}]{3^{\\color{#d97706}{6}}}", "note": "Akar ke-$n$ dari $x^n$ adalah $x$."}, {"tex": "\\color{#e11d48}{3}", "note": "<strong>Jadi,<\/strong> nilainya $3$."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">c</span>$\sqrt[2]{\sqrt[4]{a^8}}$ (untuk $a \geq 0$)</div>
+      $$\sqrt[2]{\sqrt[4]{a^8}} = \sqrt[8]{a^8} = a$$
+      <div class="sol-jadi">bentuk sederhananya $a$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt{\\sqrt[4]{a^8}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt[\\color{#0d9488}{2 \\cdot 4}]{a^8} = \\sqrt[\\color{#0d9488}{8}]{a^8}", "note": "Akar dari akar: indeksnya dikalikan."}, {"tex": "\\sqrt[\\color{#0d9488}{8}]{a^{\\color{#d97706}{8}}} = a", "note": "Akar ke-$8$ dari $a^8$ adalah $a$, karena $a \\geq 0$."}, {"tex": "\\color{#e11d48}{a}", "note": "<strong>Jadi,<\/strong> bentuk sederhananya $a$."}]</script></div>
+    </div>
+
+    <div class="box box-contoh" data-level="beginner">
+      <div class="box-label">📘 Contoh 15</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Bandingkan bentuk akar berikut.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Urutkan dari yang terkecil: $2\sqrt{3}$, $3\sqrt{2}$, $\sqrt{17}$, $2\sqrt{5}$.</li>
+        <li>Manakah yang lebih besar, $5\sqrt{2}$ atau $4\sqrt{3}$?</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>$2\sqrt{3},\ 3\sqrt{2},\ \sqrt{17},\ 2\sqrt{5}$</div>
+      <p class="sol-step">Masukkan koefisien ke dalam akar dengan $k\sqrt{a} = \sqrt{k^2 a}$, lalu bandingkan isi akarnya:</p>
+      $$\begin{align*} 2\sqrt{3} &= \sqrt{4 \cdot 3} = \sqrt{12} \\ 3\sqrt{2} &= \sqrt{9 \cdot 2} = \sqrt{18} \\ 2\sqrt{5} &= \sqrt{4 \cdot 5} = \sqrt{20} \end{align*}$$
+      <p class="sol-step">Karena $12 &lt; 17 &lt; 18 &lt; 20$, urutannya $\sqrt{12} &lt; \sqrt{17} &lt; \sqrt{18} &lt; \sqrt{20}$.</p>
+      <div class="sol-jadi">urutannya $2\sqrt{3} &lt; \sqrt{17} &lt; 3\sqrt{2} &lt; 2\sqrt{5}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "2\\sqrt{3},\\ 3\\sqrt{2},\\ \\sqrt{17},\\ 2\\sqrt{5}", "note": "Soal: urutkan dari yang terkecil."}, {"tex": "\\color{#0d9488}{2}\\sqrt{3} = \\sqrt{\\color{#0d9488}{2^2} \\cdot 3}", "note": "Koefisien masuk ke dalam akar sebagai <strong>kuadratnya<\/strong>: $k\\sqrt{a} = \\sqrt{k^2 a}$."}, {"tex": "\\sqrt{\\color{#d97706}{12}},\\ \\sqrt{\\color{#d97706}{18}},\\ \\sqrt{\\color{#d97706}{17}},\\ \\sqrt{\\color{#d97706}{20}}", "note": "Lakukan untuk semua bilangan. Sekarang cukup bandingkan isi akarnya."}, {"tex": "\\sqrt{12} < \\sqrt{17} < \\sqrt{18} < \\sqrt{20}", "note": "Isi akar lebih besar berarti nilainya lebih besar."}, {"tex": "\\color{#e11d48}{2\\sqrt{3} < \\sqrt{17} < 3\\sqrt{2} < 2\\sqrt{5}}", "note": "Kembalikan ke bentuk semula. <strong>Jadi,<\/strong> inilah urutannya."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">b</span>$5\sqrt{2} \text{ atau } 4\sqrt{3}$</div>
+      $$\begin{align*} 5\sqrt{2} &= \sqrt{25 \cdot 2} = \sqrt{50} \\ 4\sqrt{3} &= \sqrt{16 \cdot 3} = \sqrt{48} \end{align*}$$
+      <p class="sol-step">Karena $50 &gt; 48$, maka $\sqrt{50} &gt; \sqrt{48}$.</p>
+      <div class="sol-jadi">$5\sqrt{2}$ lebih besar daripada $4\sqrt{3}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "5\\sqrt{2} \\quad\\text{atau}\\quad 4\\sqrt{3}\\,?", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt{\\color{#0d9488}{5^2} \\cdot 2} \\quad\\text{dan}\\quad \\sqrt{\\color{#d97706}{4^2} \\cdot 3}", "note": "Masukkan koefisien ke dalam akar."}, {"tex": "\\sqrt{\\color{#0d9488}{50}} \\quad\\text{dan}\\quad \\sqrt{\\color{#d97706}{48}}", "note": "$25 \\cdot 2 = 50$ dan $16 \\cdot 3 = 48$."}, {"tex": "\\color{#e11d48}{5\\sqrt{2} > 4\\sqrt{3}}", "note": "Karena $50 > 48$. <strong>Jadi,<\/strong> $5\\sqrt{2}$ lebih besar."}]</script></div>
+    </div>
+
     <h3 class="subsection-title">2. Akar dari Bentuk $a + b \pm 2\sqrt{ab}$</h3>
     <p>Perhatikan ekspansi kuadrat $(\sqrt{a} + \sqrt{b})^2 = a + 2\sqrt{ab} + b$. Dengan membalik operasi tersebut, kita dapat menyederhanakan ekspresi akar yang memuat suku irasional di dalamnya menjadi penjumlahan atau selisih dua akar sederhana.</p>
 
@@ -727,13 +776,16 @@ window.MathJax = {
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Cara Menentukan $a$ dan $b$</div>
-      <p style="margin:0;font-size:.9rem;">Untuk menyederhanakan $\sqrt{c + d\sqrt{e}}$, cari $a, b \geq 0$ yang memenuhi sistem berikut (dengan menyamakan $\sqrt{c + d\sqrt{e}} = \sqrt{a + b + 2\sqrt{ab}}$):</p>
-      $$\begin{cases} a + b = c \\ 4ab = d^2 e \end{cases}$$
-      <p style="margin:.3rem 0 0;font-size:.9rem;">Nilai $a$ dan $b$ adalah akar-akar persamaan kuadrat $t^2 - ct + \dfrac{d^2 e}{4} = 0$. Setelah $a$ dan $b$ ditemukan, substitusikan langsung ke rumus di atas.</p>
+      <p style="margin:0 0 .2rem;font-size:.9rem;">Untuk menyederhanakan $\sqrt{c \pm d\sqrt{e}}$:</p>
+      <ol style="margin:0;padding-left:1.2rem;font-size:.9rem;line-height:1.8;">
+        <li>Ubah suku akarnya ke bentuk $2\sqrt{k}$, misalnya $4\sqrt{3} = 2\sqrt{12}$ dan $\sqrt{24} = 2\sqrt{6}$.</li>
+        <li>Cari dua bilangan $a$ dan $b$ dengan $a + b = c$ dan $a \times b = k$.</li>
+        <li>Hasilnya $\sqrt{a} + \sqrt{b}$ untuk tanda $+$, atau $\sqrt{a} - \sqrt{b}$ (dengan $a &gt; b$) untuk tanda $-$.</li>
+      </ol>
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 14</div>
+      <div class="box-label">📘 Contoh 16</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar berikut.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\sqrt{7 + 4\sqrt{3}}$</li>
@@ -757,7 +809,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 15</div>
+      <div class="box-label">📘 Contoh 17</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar berikut.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\sqrt{11 + 6\sqrt{2}}$</li>
@@ -781,7 +833,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="expert">
-      <div class="box-label">📘 Contoh 16</div>
+      <div class="box-label">📘 Contoh 18</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar berikut.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\sqrt[4]{49 - 20\sqrt{6}}$</li>
@@ -806,30 +858,22 @@ window.MathJax = {
       <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt{6 + \\sqrt{20}} + \\sqrt{6 - \\sqrt{20}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\color{#0d9488}{\\sqrt{6 + 2\\sqrt{5}}} + \\color{#d97706}{\\sqrt{6 - 2\\sqrt{5}}}", "note": "Ubah $\\sqrt{20} = 2\\sqrt{5}$. Kerjakan suku hijau dan oranye satu per satu."}, {"tex": "\\color{#0d9488}{\\sqrt{(\\sqrt{5} + 1)^2}} + \\color{#d97706}{\\sqrt{(\\sqrt{5} - 1)^2}}", "note": "Jumlah $6$, hasil kali $5$: bilangannya $5$ dan $1$."}, {"tex": "(\\color{#0d9488}{\\sqrt{5} + 1}) + (\\color{#d97706}{\\sqrt{5} - 1})", "note": "Akar dari kuadrat sempurna."}, {"tex": "\\sqrt{5} + \\sqrt{5} + \\color{#7c3aed}{1 - 1}", "note": "Kelompokkan: $+1$ dan $-1$ saling menghilangkan."}, {"tex": "\\color{#e11d48}{2\\sqrt{5}}", "note": "<strong>Jadi,<\/strong> bentuk sederhananya $2\\sqrt{5}$."}]</script></div>
     </div>
 
-    <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 17</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar bertingkat berikut menggunakan sifat $\sqrt[p]{\sqrt[q]{a}} = \sqrt[pq]{a}$.</p>
-      <ol class="alpha-list" style="margin:0;">
-        <li>$\sqrt{\sqrt[3]{64}}$</li>
-        <li>$\sqrt[3]{\sqrt{729}}$</li>
-        <li>$\sqrt[2]{\sqrt[4]{a^8}}$ &nbsp;(untuk $a \geq 0$)</li>
-      </ol>
+    <div class="box box-contoh" data-level="expert">
+      <div class="box-label">📘 Contoh 19</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah $\sqrt{6 + 2\sqrt{2} + 2\sqrt{3} + 2\sqrt{6}}$.</p>
     </div>
     <div class="penyelesaian">
-      <p class="sol-step">Gunakan sifat $\sqrt[p]{\sqrt[q]{a}} = \sqrt[pq]{a}$.</p>
-      <div class="sol-part"><span class="sol-tag">a</span>$\sqrt{\sqrt[3]{64}}$</div>
-      $$\sqrt{\sqrt[3]{64}} = \sqrt[6]{64} = \sqrt[6]{2^6}$$
-      <div class="sol-jadi">nilainya $2$.</div>
-      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt{\\sqrt[3]{64}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt[\\color{#0d9488}{2 \\cdot 3}]{64} = \\sqrt[\\color{#0d9488}{6}]{64}", "note": "Akar dari akar: indeksnya dikalikan, $\\sqrt[m]{\\sqrt[n]{a}} = \\sqrt[m \\cdot n]{a}$."}, {"tex": "\\sqrt[6]{\\color{#d97706}{2^6}}", "note": "Tulis $64 = 2^6$ agar pangkatnya sama dengan indeks akar."}, {"tex": "\\sqrt[\\color{#0d9488}{6}]{2^{\\color{#d97706}{6}}}", "note": "Akar ke-$n$ dari $x^n$ adalah $x$."}, {"tex": "\\color{#e11d48}{2}", "note": "<strong>Jadi,<\/strong> nilainya $2$."}]</script></div>
-      <div class="sol-part"><span class="sol-tag">b</span>$\sqrt[3]{\sqrt{729}}$</div>
-      $$\sqrt[3]{\sqrt{729}} = \sqrt[6]{729} = \sqrt[6]{3^6}$$
-      <div class="sol-jadi">nilainya $3$.</div>
-      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt[3]{\\sqrt{729}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt[\\color{#0d9488}{3 \\cdot 2}]{729} = \\sqrt[\\color{#0d9488}{6}]{729}", "note": "Akar dari akar: indeksnya dikalikan, $\\sqrt[m]{\\sqrt[n]{a}} = \\sqrt[m \\cdot n]{a}$."}, {"tex": "\\sqrt[6]{\\color{#d97706}{3^6}}", "note": "Tulis $729 = 3^6$."}, {"tex": "\\sqrt[\\color{#0d9488}{6}]{3^{\\color{#d97706}{6}}}", "note": "Akar ke-$n$ dari $x^n$ adalah $x$."}, {"tex": "\\color{#e11d48}{3}", "note": "<strong>Jadi,<\/strong> nilainya $3$."}]</script></div>
-      <div class="sol-part"><span class="sol-tag">c</span>$\sqrt[2]{\sqrt[4]{a^8}}$ (untuk $a \geq 0$)</div>
-      $$\sqrt[2]{\sqrt[4]{a^8}} = \sqrt[8]{a^8} = a^{\frac{8}{8}}$$
-      <div class="sol-jadi">bentuk sederhananya $a$.</div>
-      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt{\\sqrt[4]{a^8}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt[\\color{#0d9488}{2 \\cdot 4}]{a^8} = \\sqrt[\\color{#0d9488}{8}]{a^8}", "note": "Akar dari akar: indeksnya dikalikan."}, {"tex": "a^{\\frac{\\color{#d97706}{8}}{\\color{#0d9488}{8}}}", "note": "Ubah ke pangkat pecahan: $\\sqrt[n]{a^m} = a^{\\frac{m}{n}}$."}, {"tex": "a^1 = \\color{#e11d48}{a}", "note": "<strong>Jadi,<\/strong> bentuk sederhananya $a$."}]</script></div>
+      <p class="sol-step">Bentuk ini berasal dari kuadrat tiga suku:</p>
+      $$\begin{align*} &\left(\sqrt{x} + \sqrt{y} + \sqrt{z}\right)^2 \\ &= (x + y + z) \\ &\quad + 2\left(\sqrt{xy} + \sqrt{xz} + \sqrt{yz}\right) \end{align*}$$
+      <p class="sol-step">Cocokkan dengan soal: $x + y + z = 6$, dan ketiga hasil kali $xy$, $xz$, $yz$ adalah $2$, $3$, dan $6$. Kalikan ketiganya:</p>
+      $$\begin{align*} (xyz)^2 &= 2 \cdot 3 \cdot 6 = 36 \\ xyz &= 6 \end{align*}$$
+      <p class="sol-step">Bagi $xyz$ dengan setiap hasil kali: $z = \tfrac{6}{2} = 3$, $y = \tfrac{6}{3} = 2$, $x = \tfrac{6}{6} = 1$. Cek: $1 + 2 + 3 = 6$ ✓</p>
+      $$\begin{align*} &\sqrt{6 + 2\sqrt{2} + 2\sqrt{3} + 2\sqrt{6}} \\ &= \sqrt{\left(1 + \sqrt{2} + \sqrt{3}\right)^2} \\ &= 1 + \sqrt{2} + \sqrt{3} \end{align*}$$
+      <div class="sol-jadi">bentuk sederhananya $1 + \sqrt{2} + \sqrt{3}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt{6 + 2\\sqrt{2} + 2\\sqrt{3} + 2\\sqrt{6}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\left(\\sqrt{x}+\\sqrt{y}+\\sqrt{z}\\right)^2", "note": "Ada <strong>tiga<\/strong> suku akar, jadi bentuk asalnya kuadrat dari tiga suku."}, {"tex": "\\begin{aligned} &\\color{#0d9488}{(x+y+z)} \\\\ &+ 2\\left(\\color{#d97706}{\\sqrt{xy}+\\sqrt{xz}+\\sqrt{yz}}\\right) \\end{aligned}", "note": "Hasil kuadratnya: bagian tanpa akar (hijau) ditambah dua kali jumlah akar hasil kali (oranye)."}, {"tex": "\\color{#0d9488}{x+y+z = 6},\\quad \\color{#d97706}{xy,\\ xz,\\ yz = 2,\\ 3,\\ 6}", "note": "Cocokkan dengan soal."}, {"tex": "(xyz)^2 = \\color{#d97706}{2 \\cdot 3 \\cdot 6} = 36 \\;\\Rightarrow\\; \\color{#7c3aed}{xyz = 6}", "note": "Kalikan ketiga hasil kali: setiap huruf muncul dua kali."}, {"tex": "\\begin{aligned} z = \\tfrac{\\color{#7c3aed}{6}}{2} = 3,\\ \\ y = \\tfrac{\\color{#7c3aed}{6}}{3} = 2 \\\\ x = \\tfrac{\\color{#7c3aed}{6}}{6} = 1 \\end{aligned}", "note": "Bagi $xyz$ dengan tiap hasil kali. Cek: $1 + 2 + 3 = 6$ ✓"}, {"tex": "\\color{#e11d48}{1 + \\sqrt{2} + \\sqrt{3}}", "note": "<strong>Jadi,<\/strong> bentuk sederhananya $1 + \\sqrt{2} + \\sqrt{3}$."}]</script></div>
     </div>
+
+
 
     <h3 class="subsection-title">3. Merasionalkan Penyebut</h3>
     <p>Merasionalkan penyebut adalah proses mengubah pecahan yang penyebutnya memuat bentuk akar menjadi pecahan yang penyebutnya berupa bilangan rasional.</p>
@@ -859,7 +903,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 18</div>
+      <div class="box-label">📘 Contoh 20</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\dfrac{3}{\sqrt{6}}$</li>
@@ -884,7 +928,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 19</div>
+      <div class="box-label">📘 Contoh 21</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\dfrac{2}{\sqrt{6}-\sqrt{2}}$</li>
@@ -908,14 +952,65 @@ window.MathJax = {
       <div class="langkah-anim"><script type="application/json">[{"tex": "\\dfrac{\\sqrt{6}+\\sqrt{3}}{\\sqrt{6}-\\sqrt{3}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\dfrac{\\sqrt{6}+\\sqrt{3}}{\\sqrt{6}\\color{#d97706}{-}\\sqrt{3}} \\times \\color{#0d9488}{\\dfrac{\\sqrt{6}+\\sqrt{3}}{\\sqrt{6}+\\sqrt{3}}}", "note": "Kalikan dengan sekawan penyebut."}, {"tex": "\\dfrac{\\color{#d97706}{(\\sqrt{6}+\\sqrt{3})^2}}{\\color{#0d9488}{6 - 3}}", "note": "Pembilang menjadi kuadrat; penyebut $(\\sqrt{6})^2 - (\\sqrt{3})^2$."}, {"tex": "\\dfrac{\\color{#d97706}{6 + 2\\sqrt{18} + 3}}{3}", "note": "$(a + b)^2 = a^2 + 2ab + b^2$."}, {"tex": "\\dfrac{9 + 6\\sqrt{2}}{3}", "note": "$2\\sqrt{18} = 2 \\cdot 3\\sqrt{2} = 6\\sqrt{2}$."}, {"tex": "\\dfrac{\\color{#e11d48}{\\cancel{3}}(3 + 2\\sqrt{2})}{\\color{#e11d48}{\\cancel{3}}}", "note": "Keluarkan faktor $3$, lalu coret."}, {"tex": "\\color{#e11d48}{3 + 2\\sqrt{2}}", "note": "<strong>Jadi,<\/strong> bentuk rasionalnya $3 + 2\\sqrt{2}$."}]</script></div>
     </div>
 
+    <div class="box box-contoh" data-level="intermediate">
+      <div class="box-label">📘 Contoh 22</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Rasionalkanlah penyebut setiap bentuk berikut.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\dfrac{6}{3-\sqrt{3}}$</li>
+        <li>$\dfrac{4}{2\sqrt{3}+3}$</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step">Penyebut berbentuk $c \pm \sqrt{b}$, jadi kalikan dengan sekawannya dan gunakan $(c+\sqrt{b})(c-\sqrt{b}) = c^2 - b$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span>$\dfrac{6}{3-\sqrt{3}}$</div>
+      $$\begin{align*} \frac{6}{3-\sqrt{3}} \times \frac{3+\sqrt{3}}{3+\sqrt{3}} &= \frac{6(3+\sqrt{3})}{9-3} \\ &= \frac{\cancel{6}(3+\sqrt{3})}{\cancel{6}} \\ &= 3+\sqrt{3} \end{align*}$$
+      <div class="sol-jadi">bentuk rasionalnya $3 + \sqrt{3}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\dfrac{6}{3-\\sqrt{3}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\dfrac{6}{\\color{#0d9488}{3-\\sqrt{3}}} \\times \\dfrac{\\color{#d97706}{3+\\sqrt{3}}}{\\color{#d97706}{3+\\sqrt{3}}}", "note": "Sekawan dari $3 - \\sqrt{3}$ adalah $3 + \\sqrt{3}$ (tanda tengahnya dibalik)."}, {"tex": "\\dfrac{6(3+\\sqrt{3})}{\\color{#0d9488}{3^2} - \\color{#0d9488}{(\\sqrt{3})^2}}", "note": "Penyebut memakai $(c-\\sqrt{b})(c+\\sqrt{b}) = c^2 - b$."}, {"tex": "\\dfrac{\\color{#e11d48}{\\cancel{6}}(3+\\sqrt{3})}{\\color{#e11d48}{\\cancel{6}}}", "note": "$9 - 3 = 6$. Coret $6$."}, {"tex": "\\color{#e11d48}{3+\\sqrt{3}}", "note": "<strong>Jadi,<\/strong> bentuk rasionalnya $3 + \\sqrt{3}$."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">b</span>$\dfrac{4}{2\sqrt{3}+3}$</div>
+      <p class="sol-step">Sekawan dari $2\sqrt{3} + 3$ adalah $2\sqrt{3} - 3$. Perhatikan koefisien $2$ ikut dikuadratkan: $(2\sqrt{3})^2 = 4 \cdot 3 = 12$.</p>
+      $$\begin{align*} \frac{4}{2\sqrt{3}+3} \times \frac{2\sqrt{3}-3}{2\sqrt{3}-3} &= \frac{4(2\sqrt{3}-3)}{12-9} \\ &= \frac{8\sqrt{3}-12}{3} \end{align*}$$
+      <div class="sol-jadi">bentuk rasionalnya $\dfrac{8\sqrt{3}-12}{3}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\dfrac{4}{2\\sqrt{3}+3}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\dfrac{4}{\\color{#0d9488}{2\\sqrt{3}+3}} \\times \\dfrac{\\color{#d97706}{2\\sqrt{3}-3}}{\\color{#d97706}{2\\sqrt{3}-3}}", "note": "Kalikan dengan sekawan $2\\sqrt{3} - 3$."}, {"tex": "\\dfrac{4(2\\sqrt{3}-3)}{\\color{#0d9488}{(2\\sqrt{3})^2} - \\color{#0d9488}{3^2}}", "note": "Penyebut menjadi selisih kuadrat."}, {"tex": "\\dfrac{4(2\\sqrt{3}-3)}{\\color{#7c3aed}{12} - \\color{#7c3aed}{9}}", "note": "Koefisien ikut dikuadratkan: $(2\\sqrt{3})^2 = 4 \\cdot 3 = 12$."}, {"tex": "\\color{#e11d48}{\\dfrac{8\\sqrt{3}-12}{3}}", "note": "$12 - 9 = 3$; kalikan $4$ ke dalam kurung. <strong>Jadi,<\/strong> inilah bentuk rasionalnya."}]</script></div>
+    </div>
+
+    <div class="box box-contoh" data-level="expert">
+      <div class="box-label">📘 Contoh 23</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Hitunglah nilai dari</p>
+      $$\begin{aligned} &\frac{1}{\sqrt{2}+1} + \frac{1}{\sqrt{3}+\sqrt{2}} + \frac{1}{\sqrt{4}+\sqrt{3}} \\ &+ \cdots + \frac{1}{\sqrt{100}+\sqrt{99}} \end{aligned}$$
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step">Rasionalkan satu suku umum $\dfrac{1}{\sqrt{k+1}+\sqrt{k}}$ dengan sekawannya:</p>
+      $$\begin{align*} &\frac{1}{\sqrt{k+1}+\sqrt{k}} \times \frac{\sqrt{k+1}-\sqrt{k}}{\sqrt{k+1}-\sqrt{k}} \\ &= \frac{\sqrt{k+1}-\sqrt{k}}{(k+1)-k} \\ &= \sqrt{k+1}-\sqrt{k} \end{align*}$$
+      <p class="sol-step">Tulis setiap suku dalam bentuk ini, untuk $k = 1$ sampai $k = 99$. Suku-suku di tengah saling menghapus:</p>
+      $$\begin{align*} &\left(\cancel{\sqrt{2}}-\sqrt{1}\right) + \left(\cancel{\sqrt{3}}-\cancel{\sqrt{2}}\right) \\ &\quad + \cdots + \left(\sqrt{100}-\cancel{\sqrt{99}}\right) \\ &= \sqrt{100}-\sqrt{1} \\ &= 10 - 1 = 9 \end{align*}$$
+      <div class="sol-jadi">nilai jumlahnya $9$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\begin{aligned} &\\dfrac{1}{\\sqrt{2}+1} + \\dfrac{1}{\\sqrt{3}+\\sqrt{2}} \\\\ &+ \\cdots + \\dfrac{1}{\\sqrt{100}+\\sqrt{99}} \\end{aligned}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\dfrac{1}{\\color{#0d9488}{\\sqrt{k+1}+\\sqrt{k}}}", "note": "Semua suku berbentuk sama. Kerjakan satu suku umum dulu."}, {"tex": "\\dfrac{1}{\\sqrt{k+1}+\\sqrt{k}} \\times \\dfrac{\\color{#d97706}{\\sqrt{k+1}-\\sqrt{k}}}{\\color{#d97706}{\\sqrt{k+1}-\\sqrt{k}}}", "note": "Kalikan dengan sekawannya."}, {"tex": "\\dfrac{\\sqrt{k+1}-\\sqrt{k}}{\\color{#7c3aed}{(k+1)-k}} = \\color{#e11d48}{\\sqrt{k+1}-\\sqrt{k}}", "note": "Penyebutnya $1$, jadi setiap suku menjadi <strong>selisih dua akar<\/strong>."}, {"tex": "\\begin{aligned} &(\\color{#e11d48}{\\cancel{\\sqrt{2}}}-1) + (\\color{#e11d48}{\\cancel{\\sqrt{3}}}-\\color{#e11d48}{\\cancel{\\sqrt{2}}}) \\\\ &+ \\cdots + (\\sqrt{100}-\\color{#e11d48}{\\cancel{\\sqrt{99}}}) \\end{aligned}", "note": "Suku-suku di tengah saling menghapus (teleskopik)."}, {"tex": "\\sqrt{100} - 1", "note": "Yang tersisa hanya suku paling akhir dan paling awal."}, {"tex": "\\color{#e11d48}{9}", "note": "$10 - 1 = 9$. <strong>Jadi,<\/strong> nilai jumlahnya $9$."}]</script></div>
+    </div>
+
+    <div class="box box-catatan">
+      <div class="box-label">⚠ Kesalahan yang Sering Terjadi</div>
+      <ul style="margin:.2rem 0 0;padding-left:1.2rem;font-size:.9rem;line-height:1.7;">
+        <li style="margin-bottom:.45rem;"><span style="color:#e11d48;font-weight:700;">✗</span> $\sqrt{a+b} = \sqrt{a} + \sqrt{b}$<br><span style="color:#16a34a;font-weight:700;">✓</span> $\sqrt{9+16} = \sqrt{25} = 5$<br><span style="font-size:.85rem;">Padahal $\sqrt{9} + \sqrt{16} = 7$. Akar tidak dapat dibagikan ke penjumlahan.</span></li>
+        <li style="margin-bottom:.45rem;"><span style="color:#e11d48;font-weight:700;">✗</span> $\sqrt{2} + \sqrt{3} = \sqrt{5}$<br><span style="color:#16a34a;font-weight:700;">✓</span> $\sqrt{2} + \sqrt{3}$ tidak dapat disederhanakan<br><span style="font-size:.85rem;">Hanya akar senama yang dapat dijumlahkan.</span></li>
+        <li style="margin-bottom:.45rem;"><span style="color:#e11d48;font-weight:700;">✗</span> $\left(\sqrt{a}+\sqrt{b}\right)^2 = a + b$<br><span style="color:#16a34a;font-weight:700;">✓</span> $\left(\sqrt{a}+\sqrt{b}\right)^2$<br>&nbsp;&nbsp;&nbsp;&nbsp;$= a + 2\sqrt{ab} + b$<br><span style="font-size:.85rem;">Suku tengah $2\sqrt{ab}$ jangan terlupa.</span></li>
+        <li style="margin-bottom:.45rem;"><span style="color:#e11d48;font-weight:700;">✗</span> $\sqrt{x^2} = x$<br><span style="color:#16a34a;font-weight:700;">✓</span> $\sqrt{x^2} = |x|$<br><span style="font-size:.85rem;">Contohnya $\sqrt{(-3)^2} = \sqrt{9} = 3$, bukan $-3$.</span></li>
+        <li style="margin-bottom:.45rem;"><span style="color:#e11d48;font-weight:700;">✗</span> $2\sqrt{3} \cdot 3\sqrt{3} = 6\sqrt{3}$<br><span style="color:#16a34a;font-weight:700;">✓</span> $2\sqrt{3} \cdot 3\sqrt{3} = 6 \cdot 3 = 18$<br><span style="font-size:.85rem;">Ingat $\sqrt{3} \cdot \sqrt{3} = 3$.</span></li>
+      </ul>
+    </div>
+
     <div class="box box-latihan">
       <div class="box-label">Soal Latihan B</div>
+      <p style="margin:0;padding:.75rem 1rem .25rem;font-size:.88rem;"><strong>Pemahaman:</strong> soal 1–2 &nbsp;·&nbsp; <strong>Penerapan:</strong> soal 3–6 &nbsp;·&nbsp; <strong>Penalaran:</strong> soal 7–9</p>
       <ol class="soal-list">
+        <li>Sederhanakanlah, dengan $x, y \geq 0$:<br>(a) $\sqrt{72}$<br>(b) $\sqrt[3]{81}$<br>(c) $\sqrt{18x^3y^4}$<br>(d) $\sqrt[3]{16x^5}$</li>
+        <li>Urutkanlah dari yang terkecil: $3\sqrt{5}$, $5\sqrt{2}$, $4\sqrt{3}$, $\sqrt{47}$.</li>
         <li>Sederhanakanlah:<br>(a) $3\sqrt{12} - \sqrt{75} + 2\sqrt{27}$<br>(b) $\sqrt{5}(\sqrt{15} + \sqrt{20})$<br>(c) $(\sqrt{3} + \sqrt{2})^2 - (\sqrt{3} - \sqrt{2})^2$</li>
-        <li>Rasionalkanlah penyebut:<br>(a) $\dfrac{4}{2\sqrt{3}-\sqrt{2}}$<br>(b) $\dfrac{6\sqrt{2}}{4+3\sqrt{2}}$</li>
+        <li>Rasionalkanlah penyebut:<br>(a) $\dfrac{10}{\sqrt{5}}$<br>(b) $\dfrac{4}{2\sqrt{3}-\sqrt{2}}$<br>(c) $\dfrac{6\sqrt{2}}{4+3\sqrt{2}}$</li>
+        <li>Sederhanakanlah:<br>(a) $\sqrt{8 + 2\sqrt{15}}$<br>(b) $\sqrt{12 - \sqrt{140}}$</li>
+        <li>Sederhanakanlah $\sqrt[3]{\sqrt[4]{a^{24}}}$, dengan $a \geq 0$.</li>
         <li>Tentukanlah bentuk sederhana dari $\sqrt{10+2(\sqrt{15}+\sqrt{10}+\sqrt{6})}$.</li>
         <li>Tunjukkan bahwa $\dfrac{1}{\sqrt{n+1}+\sqrt{n}} = \sqrt{n+1} - \sqrt{n}$ untuk setiap $n \geq 0$.</li>
-        <li>Sederhanakanlah $\sqrt[3]{\sqrt[4]{a^{24}}}$ dan nyatakan hasilnya dalam bentuk akar paling sederhana (untuk $a \geq 0$).</li>
+        <li>Hitunglah nilai dari<br>$\dfrac{1}{1+\sqrt{2}} + \dfrac{1}{\sqrt{2}+\sqrt{3}}$<br>$+ \cdots + \dfrac{1}{\sqrt{48}+\sqrt{49}}$.</li>
       </ol>
     </div>
 
@@ -955,7 +1050,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 20</div>
+      <div class="box-label">📘 Contoh 24</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Ubahlah setiap bentuk pangkat berikut ke dalam bentuk akar, kemudian sederhanakanlah.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$32^{\frac{7}{10}}$</li>
@@ -982,7 +1077,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 21</div>
+      <div class="box-label">📘 Contoh 25</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Ubahlah setiap bentuk akar berikut ke dalam notasi pangkat, kemudian sederhanakanlah.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$16\sqrt{32}$</li>
@@ -1012,7 +1107,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="expert">
-      <div class="box-label">📘 Contoh 22</div>
+      <div class="box-label">📘 Contoh 26</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk berikut.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\dfrac{(2^{\frac{5}{4}})^2 \cdot 16^{\frac{3}{8}}}{8^{\frac{7}{6}}}$</li>
@@ -1078,7 +1173,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 23</div>
+      <div class="box-label">📘 Contoh 27</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 1)</strong> Tentukanlah nilai $x$ yang memenuhi $25 \cdot 5^{3x+2} = 1$.</p>
     </div>
     <div class="penyelesaian">
@@ -1091,7 +1186,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 24</div>
+      <div class="box-label">📘 Contoh 28</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 2)</strong> Tentukanlah nilai $x$ yang memenuhi $\sqrt{27^{2x-5}} = 3\bigl(9^{6x-8}\bigr)$.</p>
     </div>
     <div class="penyelesaian">
@@ -1104,7 +1199,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 25</div>
+      <div class="box-label">📘 Contoh 29</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 3)</strong> Tentukanlah himpunan penyelesaian dari $25 \cdot 8^x = 4 \cdot 125^x$.</p>
     </div>
     <div class="penyelesaian">
@@ -1117,7 +1212,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 26</div>
+      <div class="box-label">📘 Contoh 30</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 3 — Pangkat Kuadrat)</strong> Tentukanlah himpunan penyelesaian dari $6^{x^2-3} = 10^{x^2-3}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1129,7 +1224,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="expert">
-      <div class="box-label">📘 Contoh 27</div>
+      <div class="box-label">📘 Contoh 31</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 4)</strong> Tentukanlah himpunan penyelesaian dari $(2x-5)^{4x+3} = (2x-5)^{2x-7}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1154,7 +1249,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="expert">
-      <div class="box-label">📘 Contoh 28</div>
+      <div class="box-label">📘 Contoh 32</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 5)</strong> Tentukanlah himpunan penyelesaian dari $(2x-1)^{x^2-4} = (x+3)^{x^2-4}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1175,7 +1270,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 29</div>
+      <div class="box-label">📘 Contoh 33</div>
       <p style="margin:0;font-size:.9rem;"><strong>(Tipe 6)</strong> Tentukanlah himpunan penyelesaian dari $2^{2x} - 3 \cdot 2^{x+2} + 32 = 0$.</p>
     </div>
     <div class="penyelesaian">
@@ -1227,7 +1322,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 30</div>
+      <div class="box-label">📘 Contoh 34</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $3^{3x-21} &lt; 27^{2x+5}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1258,7 +1353,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 31</div>
+      <div class="box-label">📘 Contoh 35</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $\left(\dfrac{2}{5}\right)^{x^2-5x-20} \geq \left(\dfrac{5}{2}\right)^{x^2+3x-20}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1292,7 +1387,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 32</div>
+      <div class="box-label">📘 Contoh 36</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $\dfrac{3^{4x-2}}{9^{3x+1}} &gt; \left(\dfrac{1}{3}\right)^{x-14}$.</p>
     </div>
     <div class="penyelesaian">
@@ -1323,7 +1418,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 33</div>
+      <div class="box-label">📘 Contoh 37</div>
       <p style="margin:0;font-size:.9rem;">Tentukanlah himpunan penyelesaian dari $4^x - 5 \cdot 2^x + 4 \leq 0$.</p>
     </div>
     <div class="penyelesaian">
@@ -1451,7 +1546,7 @@ window.MathJax = {
     <p>Coba langkah lengkapnya pada contoh berikut.</p>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 34</div>
+      <div class="box-label">📘 Contoh 38</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik fungsi $f(x) = 2^x$ pada interval $-3 \leq x \leq 3$. Tentukan domain, range, asimtot, dan sifat kemonotonannya.</p>
     </div>
     <div class="penyelesaian">
@@ -1586,7 +1681,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 35</div>
+      <div class="box-label">📘 Contoh 39</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik $f(x) = \left(\dfrac{1}{3}\right)^x$ pada interval $-3 \leq x \leq 3$. Tentukan sifat-sifatnya dan bandingkan dengan $g(x) = 3^x$.</p>
     </div>
     <div class="penyelesaian">
@@ -1699,7 +1794,7 @@ window.MathJax = {
           </tbody>
         </table>
       </div>
-      <p style="margin:.5rem 0 0;font-size:.88rem;">Grafik $y = \left(\tfrac{1}{a}\right)^x = a^{-x}$ adalah <strong>cermin</strong> grafik $y = a^x$ terhadap sumbu-$Y$, seperti $\left(\tfrac13\right)^x$ dan $3^x$ pada Contoh 35.</p>
+      <p style="margin:.5rem 0 0;font-size:.88rem;">Grafik $y = \left(\tfrac{1}{a}\right)^x = a^{-x}$ adalah <strong>cermin</strong> grafik $y = a^x$ terhadap sumbu-$Y$, seperti $\left(\tfrac13\right)^x$ dan $3^x$ pada Contoh 39.</p>
     </div>
 
     <h3 class="subsection-title">3. Menggeser Grafik</h3>
@@ -2087,7 +2182,7 @@ window.MathJax = {
 
     <div class="box box-catatan">
       <div class="box-label">⚠ Hubungan $k$ dengan Geser Kiri/Kanan</div>
-      <p style="margin:0;font-size:.88rem;">Untuk $k &gt; 0$, mengalikan dengan $k$ hasilnya <strong>sama dengan menggeser</strong> ke kiri atau kanan. Contohnya $8 \cdot 2^x = 2^3 \cdot 2^x = 2^{x+3}$: dikali $8$ sama saja dengan geser kiri $3$ satuan. Hal ini terlihat lagi pada Contoh 41.</p>
+      <p style="margin:0;font-size:.88rem;">Untuk $k &gt; 0$, mengalikan dengan $k$ hasilnya <strong>sama dengan menggeser</strong> ke kiri atau kanan. Contohnya $8 \cdot 2^x = 2^3 \cdot 2^x = 2^{x+3}$: dikali $8$ sama saja dengan geser kiri $3$ satuan. Hal ini terlihat lagi pada Contoh 45.</p>
     </div>
 
     <div class="box box-definisi">
@@ -2122,7 +2217,7 @@ window.MathJax = {
     </ol>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 36</div>
+      <div class="box-label">📘 Contoh 40</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik $g(x) = 2^{x-2} + 1$ dengan menggeser grafik $f(x) = 2^x$. Tentukan asimtot dan titik potong sumbu-$Y$-nya.</p>
     </div>
     <div class="penyelesaian">
@@ -2206,7 +2301,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 37</div>
+      <div class="box-label">📘 Contoh 41</div>
       <p style="margin:0;font-size:.9rem;">Lukislah grafik $h(x) = \left(\tfrac{1}{2}\right)^{x+1} - 2$. Tentukan asimtot, titik potong sumbu-$Y$, dan titik potong sumbu-$X$-nya.</p>
     </div>
     <div class="penyelesaian">
@@ -2309,7 +2404,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 38</div>
+      <div class="box-label">📘 Contoh 42</div>
       <p style="margin:0;font-size:.9rem;">Sebuah fungsi eksponen $y = k \cdot a^x$ diketahui grafiknya melalui titik $(0,\,5)$ dan $(2,\,20)$. Tentukanlah rumus fungsi tersebut.</p>
     </div>
     <div class="penyelesaian">
@@ -2323,7 +2418,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 39 — Grafik Tanpa Pergeseran</div>
+      <div class="box-label">📘 Contoh 43 — Grafik Tanpa Pergeseran</div>
       <p style="margin:0 0 .3rem;font-size:.9rem;">Grafik berikut berbentuk $y = k \cdot a^x$. Tentukanlah rumus fungsinya.</p>
 <div class="grafik-wrap">
 <svg viewBox="0 0 228 224" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
@@ -2386,7 +2481,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 40 — Grafik Digeser ke Atas/Bawah</div>
+      <div class="box-label">📘 Contoh 44 — Grafik Digeser ke Atas/Bawah</div>
       <p style="margin:0 0 .3rem;font-size:.9rem;">Grafik berikut berbentuk $y = a^x + c$, dengan asimtot ditunjukkan garis putus-putus. Tentukanlah rumus fungsinya.</p>
 <div class="grafik-wrap">
 <svg viewBox="0 0 190 306" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
@@ -2457,7 +2552,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 41 — Grafik Digeser ke Kiri/Kanan</div>
+      <div class="box-label">📘 Contoh 45 — Grafik Digeser ke Kiri/Kanan</div>
       <p style="margin:0 0 .3rem;font-size:.9rem;">Grafik berikut adalah grafik $y = 2^x$ yang digeser secara mendatar. Tentukanlah rumus fungsinya.</p>
 <div class="grafik-wrap">
 <svg viewBox="0 0 228 224" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
@@ -2522,7 +2617,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="expert">
-      <div class="box-label">📘 Contoh 42 — Pergeseran Mendatar dan Tegak Sekaligus</div>
+      <div class="box-label">📘 Contoh 46 — Pergeseran Mendatar dan Tegak Sekaligus</div>
       <p style="margin:0 0 .3rem;font-size:.9rem;">Grafik berikut berbentuk $y = a^{x-h} + c$. Tentukanlah nilai $a$, $h$, $c$ dan rumus fungsinya.</p>
 <div class="grafik-wrap">
 <svg viewBox="0 0 238 258" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:340px;">
@@ -2615,7 +2710,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 43</div>
+      <div class="box-label">📘 Contoh 47</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sebuah koloni bakteri berkembang mengikuti model $N(t) = 500 \cdot 2^t$, dengan $t$ dalam jam.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>Tentukanlah jumlah bakteri awal ($t=0$).</li>
@@ -2638,7 +2733,7 @@ window.MathJax = {
     </div>
 
     <div class="box box-contoh" data-level="intermediate">
-      <div class="box-label">📘 Contoh 44</div>
+      <div class="box-label">📘 Contoh 48</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Suatu zat radioaktif memiliki waktu paruh $T_h = 10$ tahun dan massa awal 200 gram.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>Tentukanlah massa zat setelah 30 tahun.</li>
@@ -3071,11 +3166,15 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     // B — Bentuk Akar
     1: [
+      { jawaban:`(a) $6\\sqrt{2}$ &nbsp;|&nbsp; (b) $3\\sqrt[3]{3}$ &nbsp;|&nbsp; (c) $3xy^2\\sqrt{2x}$ &nbsp;|&nbsp; (d) $2x\\sqrt[3]{2x^2}$` },
+      { jawaban:`$3\\sqrt{5} &lt; \\sqrt{47} &lt; 4\\sqrt{3} &lt; 5\\sqrt{2}$` },
       { jawaban:`(a) $7\\sqrt{3}$ &nbsp;|&nbsp; (b) $5\\sqrt{3}+10$ &nbsp;|&nbsp; (c) $4\\sqrt{6}$` },
-      { jawaban:`(a) $\\dfrac{4\\sqrt{3}+2\\sqrt{2}}{5}$ &nbsp;|&nbsp; (b) $18 - 12\\sqrt{2}$` },
+      { jawaban:`(a) $2\\sqrt{5}$ &nbsp;|&nbsp; (b) $\\dfrac{4\\sqrt{3}+2\\sqrt{2}}{5}$ &nbsp;|&nbsp; (c) $18 - 12\\sqrt{2}$` },
+      { jawaban:`(a) $\\sqrt{5}+\\sqrt{3}$ &nbsp;|&nbsp; (b) $\\sqrt{7}-\\sqrt{5}$` },
+      { jawaban:`$a^2$` },
       { jawaban:`$\\sqrt{5}+\\sqrt{3}+\\sqrt{2}$` },
       { jawaban:`Terbukti. <em>Petunjuk: kalikan dengan sekawan $\\sqrt{n+1} - \\sqrt{n}$.</em>` },
-      { jawaban:`$a^2$` },
+      { jawaban:`$6$` },
     ],
     // C — Pangkat Pecahan
     2: [
