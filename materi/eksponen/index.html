@@ -444,7 +444,6 @@ window.MathJax = {
       <div class="langkah-anim"><script type="application/json">[{"tex": "6^0 + 0^6 + (2 \\times 4)^0", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\color{#0d9488}{6^0} + \\color{#d97706}{0^6} + \\color{#0d9488}{(2 \\times 4)^0}", "note": "Bilangan bukan nol berpangkat $0$ bernilai $1$ (hijau); $0$ berpangkat positif bernilai $0$ (oranye)."}, {"tex": "\\color{#0d9488}{1} + \\color{#d97706}{0} + \\color{#0d9488}{1}", "note": "Ganti setiap suku dengan nilainya."}, {"tex": "\\color{#e11d48}{2}", "note": "<strong>Jadi,<\/strong> nilainya $2$."}]</script></div>
     </div>
 
-
     <div class="box box-contoh" data-level="intermediate">
       <div class="box-label">📘 Contoh 6</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah dan nyatakan hasilnya dengan pangkat positif.</p>
@@ -684,8 +683,55 @@ window.MathJax = {
       <div class="langkah-anim"><script type="application/json">[{"tex": "2\\sqrt{27} - \\sqrt{12} + 3\\sqrt{48}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "2\\sqrt{\\color{#0d9488}{9} \\cdot 3} - \\sqrt{\\color{#0d9488}{4} \\cdot 3} + 3\\sqrt{\\color{#0d9488}{16} \\cdot 3}", "note": "Sederhanakan tiap akar."}, {"tex": "2(\\color{#0d9488}{3}\\sqrt{3}) - \\color{#0d9488}{2}\\sqrt{3} + 3(\\color{#0d9488}{4}\\sqrt{3})", "note": "$\\sqrt{27} = 3\\sqrt{3}$, $\\sqrt{12} = 2\\sqrt{3}$, $\\sqrt{48} = 4\\sqrt{3}$."}, {"tex": "\\color{#0d9488}{6}\\color{#d97706}{\\sqrt{3}} - \\color{#0d9488}{2}\\color{#d97706}{\\sqrt{3}} + \\color{#0d9488}{12}\\color{#d97706}{\\sqrt{3}}", "note": "Kalikan koefisiennya. Semua suku memuat $\\sqrt{3}$."}, {"tex": "(\\color{#0d9488}{6 - 2 + 12})\\color{#d97706}{\\sqrt{3}}", "note": "Jumlahkan koefisien suku sejenis."}, {"tex": "\\color{#e11d48}{16\\sqrt{3}}", "note": "<strong>Jadi,<\/strong> bentuk sederhananya $16\\sqrt{3}$."}]</script></div>
     </div>
 
-    <div class="box box-contoh" data-level="intermediate">
+    <div class="box box-contoh" data-level="beginner">
       <div class="box-label">📘 Contoh 13</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar bertingkat berikut menggunakan sifat $\sqrt[p]{\sqrt[q]{a}} = \sqrt[pq]{a}$.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>$\sqrt{\sqrt[3]{64}}$</li>
+        <li>$\sqrt[3]{\sqrt{729}}$</li>
+        <li>$\sqrt[2]{\sqrt[4]{a^8}}$ &nbsp;(untuk $a \geq 0$)</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <p class="sol-step">Gunakan sifat $\sqrt[p]{\sqrt[q]{a}} = \sqrt[pq]{a}$.</p>
+      <div class="sol-part"><span class="sol-tag">a</span>$\sqrt{\sqrt[3]{64}}$</div>
+      $$\sqrt{\sqrt[3]{64}} = \sqrt[6]{64} = \sqrt[6]{2^6}$$
+      <div class="sol-jadi">nilainya $2$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt{\\sqrt[3]{64}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt[\\color{#0d9488}{2 \\cdot 3}]{64} = \\sqrt[\\color{#0d9488}{6}]{64}", "note": "Akar dari akar: indeksnya dikalikan, $\\sqrt[m]{\\sqrt[n]{a}} = \\sqrt[m \\cdot n]{a}$."}, {"tex": "\\sqrt[6]{\\color{#d97706}{2^6}}", "note": "Tulis $64 = 2^6$ agar pangkatnya sama dengan indeks akar."}, {"tex": "\\sqrt[\\color{#0d9488}{6}]{2^{\\color{#d97706}{6}}}", "note": "Akar ke-$n$ dari $x^n$ adalah $x$."}, {"tex": "\\color{#e11d48}{2}", "note": "<strong>Jadi,<\/strong> nilainya $2$."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">b</span>$\sqrt[3]{\sqrt{729}}$</div>
+      $$\sqrt[3]{\sqrt{729}} = \sqrt[6]{729} = \sqrt[6]{3^6}$$
+      <div class="sol-jadi">nilainya $3$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt[3]{\\sqrt{729}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt[\\color{#0d9488}{3 \\cdot 2}]{729} = \\sqrt[\\color{#0d9488}{6}]{729}", "note": "Akar dari akar: indeksnya dikalikan, $\\sqrt[m]{\\sqrt[n]{a}} = \\sqrt[m \\cdot n]{a}$."}, {"tex": "\\sqrt[6]{\\color{#d97706}{3^6}}", "note": "Tulis $729 = 3^6$."}, {"tex": "\\sqrt[\\color{#0d9488}{6}]{3^{\\color{#d97706}{6}}}", "note": "Akar ke-$n$ dari $x^n$ adalah $x$."}, {"tex": "\\color{#e11d48}{3}", "note": "<strong>Jadi,<\/strong> nilainya $3$."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">c</span>$\sqrt[2]{\sqrt[4]{a^8}}$ (untuk $a \geq 0$)</div>
+      $$\sqrt[2]{\sqrt[4]{a^8}} = \sqrt[8]{a^8} = a$$
+      <div class="sol-jadi">bentuk sederhananya $a$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt{\\sqrt[4]{a^8}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt[\\color{#0d9488}{2 \\cdot 4}]{a^8} = \\sqrt[\\color{#0d9488}{8}]{a^8}", "note": "Akar dari akar: indeksnya dikalikan."}, {"tex": "\\sqrt[\\color{#0d9488}{8}]{a^{\\color{#d97706}{8}}} = a", "note": "Akar ke-$8$ dari $a^8$ adalah $a$, karena $a \\geq 0$."}, {"tex": "\\color{#e11d48}{a}", "note": "<strong>Jadi,<\/strong> bentuk sederhananya $a$."}]</script></div>
+    </div>
+
+    <div class="box box-contoh" data-level="beginner">
+      <div class="box-label">📘 Contoh 14</div>
+      <p style="margin-bottom:.5rem;font-size:.9rem;">Bandingkan bentuk akar berikut.</p>
+      <ol class="alpha-list" style="margin:0;">
+        <li>Urutkan dari yang terkecil: $2\sqrt{3}$, $3\sqrt{2}$, $\sqrt{17}$, $2\sqrt{5}$.</li>
+        <li>Manakah yang lebih besar, $5\sqrt{2}$ atau $4\sqrt{3}$?</li>
+      </ol>
+    </div>
+    <div class="penyelesaian">
+      <div class="sol-part"><span class="sol-tag">a</span>$2\sqrt{3},\ 3\sqrt{2},\ \sqrt{17},\ 2\sqrt{5}$</div>
+      <p class="sol-step">Masukkan koefisien ke dalam akar dengan $k\sqrt{a} = \sqrt{k^2 a}$, lalu bandingkan isi akarnya:</p>
+      $$\begin{align*} 2\sqrt{3} &= \sqrt{4 \cdot 3} = \sqrt{12} \\ 3\sqrt{2} &= \sqrt{9 \cdot 2} = \sqrt{18} \\ 2\sqrt{5} &= \sqrt{4 \cdot 5} = \sqrt{20} \end{align*}$$
+      <p class="sol-step">Karena $12 &lt; 17 &lt; 18 &lt; 20$, urutannya $\sqrt{12} &lt; \sqrt{17} &lt; \sqrt{18} &lt; \sqrt{20}$.</p>
+      <div class="sol-jadi">urutannya $2\sqrt{3} &lt; \sqrt{17} &lt; 3\sqrt{2} &lt; 2\sqrt{5}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "2\\sqrt{3},\\ 3\\sqrt{2},\\ \\sqrt{17},\\ 2\\sqrt{5}", "note": "Soal: urutkan dari yang terkecil."}, {"tex": "\\color{#0d9488}{2}\\sqrt{3} = \\sqrt{\\color{#0d9488}{2^2} \\cdot 3}", "note": "Koefisien masuk ke dalam akar sebagai <strong>kuadratnya<\/strong>: $k\\sqrt{a} = \\sqrt{k^2 a}$."}, {"tex": "\\sqrt{\\color{#d97706}{12}},\\ \\sqrt{\\color{#d97706}{18}},\\ \\sqrt{\\color{#d97706}{17}},\\ \\sqrt{\\color{#d97706}{20}}", "note": "Lakukan untuk semua bilangan. Sekarang cukup bandingkan isi akarnya."}, {"tex": "\\sqrt{12} < \\sqrt{17} < \\sqrt{18} < \\sqrt{20}", "note": "Isi akar lebih besar berarti nilainya lebih besar."}, {"tex": "\\color{#e11d48}{2\\sqrt{3} < \\sqrt{17} < 3\\sqrt{2} < 2\\sqrt{5}}", "note": "Kembalikan ke bentuk semula. <strong>Jadi,<\/strong> inilah urutannya."}]</script></div>
+      <div class="sol-part"><span class="sol-tag">b</span>$5\sqrt{2} \text{ atau } 4\sqrt{3}$</div>
+      $$\begin{align*} 5\sqrt{2} &= \sqrt{25 \cdot 2} = \sqrt{50} \\ 4\sqrt{3} &= \sqrt{16 \cdot 3} = \sqrt{48} \end{align*}$$
+      <p class="sol-step">Karena $50 &gt; 48$, maka $\sqrt{50} &gt; \sqrt{48}$.</p>
+      <div class="sol-jadi">$5\sqrt{2}$ lebih besar daripada $4\sqrt{3}$.</div>
+      <div class="langkah-anim"><script type="application/json">[{"tex": "5\\sqrt{2} \\quad\\text{atau}\\quad 4\\sqrt{3}\\,?", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt{\\color{#0d9488}{5^2} \\cdot 2} \\quad\\text{dan}\\quad \\sqrt{\\color{#d97706}{4^2} \\cdot 3}", "note": "Masukkan koefisien ke dalam akar."}, {"tex": "\\sqrt{\\color{#0d9488}{50}} \\quad\\text{dan}\\quad \\sqrt{\\color{#d97706}{48}}", "note": "$25 \\cdot 2 = 50$ dan $16 \\cdot 3 = 48$."}, {"tex": "\\color{#e11d48}{5\\sqrt{2} > 4\\sqrt{3}}", "note": "Karena $50 > 48$. <strong>Jadi,<\/strong> $5\\sqrt{2}$ lebih besar."}]</script></div>
+    </div>
+
+    <div class="box box-contoh" data-level="intermediate">
+      <div class="box-label">📘 Contoh 15</div>
       <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah operasi perkalian bentuk akar berikut.</p>
       <ol class="alpha-list" style="margin:0;">
         <li>$\sqrt{6} \times \sqrt{3}$</li>
@@ -713,53 +759,6 @@ window.MathJax = {
       $$\begin{align*} &(5\sqrt{2} - \sqrt{2})(3\sqrt{3} + 2\sqrt{3}) \\ &= 4\sqrt{2} \times 5\sqrt{3} \\ &= 20\sqrt{6} \end{align*}$$
       <div class="sol-jadi">bentuk sederhananya $20\sqrt{6}$.</div>
       <div class="langkah-anim"><script type="application/json">[{"tex": "(\\sqrt{50} - \\sqrt{2})(\\sqrt{27} + \\sqrt{12})", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "(\\color{#0d9488}{5\\sqrt{2}} - \\color{#0d9488}{\\sqrt{2}})(\\color{#d97706}{3\\sqrt{3}} + \\color{#d97706}{2\\sqrt{3}})", "note": "Sederhanakan dulu setiap akar: $\\sqrt{50} = 5\\sqrt{2}$, $\\sqrt{27} = 3\\sqrt{3}$, $\\sqrt{12} = 2\\sqrt{3}$."}, {"tex": "\\color{#0d9488}{4\\sqrt{2}} \\times \\color{#d97706}{5\\sqrt{3}}", "note": "Setiap kurung kini berisi suku sejenis: hitung isinya."}, {"tex": "(4 \\times 5)\\sqrt{2 \\times 3}", "note": "Kalikan angka luar dan angka dalam akar."}, {"tex": "\\color{#e11d48}{20\\sqrt{6}}", "note": "<strong>Jadi,<\/strong> bentuk sederhananya $20\\sqrt{6}$."}]</script></div>
-    </div>
-
-    <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 14</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Sederhanakanlah setiap bentuk akar bertingkat berikut menggunakan sifat $\sqrt[p]{\sqrt[q]{a}} = \sqrt[pq]{a}$.</p>
-      <ol class="alpha-list" style="margin:0;">
-        <li>$\sqrt{\sqrt[3]{64}}$</li>
-        <li>$\sqrt[3]{\sqrt{729}}$</li>
-        <li>$\sqrt[2]{\sqrt[4]{a^8}}$ &nbsp;(untuk $a \geq 0$)</li>
-      </ol>
-    </div>
-    <div class="penyelesaian">
-      <p class="sol-step">Gunakan sifat $\sqrt[p]{\sqrt[q]{a}} = \sqrt[pq]{a}$.</p>
-      <div class="sol-part"><span class="sol-tag">a</span>$\sqrt{\sqrt[3]{64}}$</div>
-      $$\sqrt{\sqrt[3]{64}} = \sqrt[6]{64} = \sqrt[6]{2^6}$$
-      <div class="sol-jadi">nilainya $2$.</div>
-      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt{\\sqrt[3]{64}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt[\\color{#0d9488}{2 \\cdot 3}]{64} = \\sqrt[\\color{#0d9488}{6}]{64}", "note": "Akar dari akar: indeksnya dikalikan, $\\sqrt[m]{\\sqrt[n]{a}} = \\sqrt[m \\cdot n]{a}$."}, {"tex": "\\sqrt[6]{\\color{#d97706}{2^6}}", "note": "Tulis $64 = 2^6$ agar pangkatnya sama dengan indeks akar."}, {"tex": "\\sqrt[\\color{#0d9488}{6}]{2^{\\color{#d97706}{6}}}", "note": "Akar ke-$n$ dari $x^n$ adalah $x$."}, {"tex": "\\color{#e11d48}{2}", "note": "<strong>Jadi,<\/strong> nilainya $2$."}]</script></div>
-      <div class="sol-part"><span class="sol-tag">b</span>$\sqrt[3]{\sqrt{729}}$</div>
-      $$\sqrt[3]{\sqrt{729}} = \sqrt[6]{729} = \sqrt[6]{3^6}$$
-      <div class="sol-jadi">nilainya $3$.</div>
-      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt[3]{\\sqrt{729}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt[\\color{#0d9488}{3 \\cdot 2}]{729} = \\sqrt[\\color{#0d9488}{6}]{729}", "note": "Akar dari akar: indeksnya dikalikan, $\\sqrt[m]{\\sqrt[n]{a}} = \\sqrt[m \\cdot n]{a}$."}, {"tex": "\\sqrt[6]{\\color{#d97706}{3^6}}", "note": "Tulis $729 = 3^6$."}, {"tex": "\\sqrt[\\color{#0d9488}{6}]{3^{\\color{#d97706}{6}}}", "note": "Akar ke-$n$ dari $x^n$ adalah $x$."}, {"tex": "\\color{#e11d48}{3}", "note": "<strong>Jadi,<\/strong> nilainya $3$."}]</script></div>
-      <div class="sol-part"><span class="sol-tag">c</span>$\sqrt[2]{\sqrt[4]{a^8}}$ (untuk $a \geq 0$)</div>
-      $$\sqrt[2]{\sqrt[4]{a^8}} = \sqrt[8]{a^8} = a$$
-      <div class="sol-jadi">bentuk sederhananya $a$.</div>
-      <div class="langkah-anim"><script type="application/json">[{"tex": "\\sqrt{\\sqrt[4]{a^8}}", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt[\\color{#0d9488}{2 \\cdot 4}]{a^8} = \\sqrt[\\color{#0d9488}{8}]{a^8}", "note": "Akar dari akar: indeksnya dikalikan."}, {"tex": "\\sqrt[\\color{#0d9488}{8}]{a^{\\color{#d97706}{8}}} = a", "note": "Akar ke-$8$ dari $a^8$ adalah $a$, karena $a \\geq 0$."}, {"tex": "\\color{#e11d48}{a}", "note": "<strong>Jadi,<\/strong> bentuk sederhananya $a$."}]</script></div>
-    </div>
-
-    <div class="box box-contoh" data-level="beginner">
-      <div class="box-label">📘 Contoh 15</div>
-      <p style="margin-bottom:.5rem;font-size:.9rem;">Bandingkan bentuk akar berikut.</p>
-      <ol class="alpha-list" style="margin:0;">
-        <li>Urutkan dari yang terkecil: $2\sqrt{3}$, $3\sqrt{2}$, $\sqrt{17}$, $2\sqrt{5}$.</li>
-        <li>Manakah yang lebih besar, $5\sqrt{2}$ atau $4\sqrt{3}$?</li>
-      </ol>
-    </div>
-    <div class="penyelesaian">
-      <div class="sol-part"><span class="sol-tag">a</span>$2\sqrt{3},\ 3\sqrt{2},\ \sqrt{17},\ 2\sqrt{5}$</div>
-      <p class="sol-step">Masukkan koefisien ke dalam akar dengan $k\sqrt{a} = \sqrt{k^2 a}$, lalu bandingkan isi akarnya:</p>
-      $$\begin{align*} 2\sqrt{3} &= \sqrt{4 \cdot 3} = \sqrt{12} \\ 3\sqrt{2} &= \sqrt{9 \cdot 2} = \sqrt{18} \\ 2\sqrt{5} &= \sqrt{4 \cdot 5} = \sqrt{20} \end{align*}$$
-      <p class="sol-step">Karena $12 &lt; 17 &lt; 18 &lt; 20$, urutannya $\sqrt{12} &lt; \sqrt{17} &lt; \sqrt{18} &lt; \sqrt{20}$.</p>
-      <div class="sol-jadi">urutannya $2\sqrt{3} &lt; \sqrt{17} &lt; 3\sqrt{2} &lt; 2\sqrt{5}$.</div>
-      <div class="langkah-anim"><script type="application/json">[{"tex": "2\\sqrt{3},\\ 3\\sqrt{2},\\ \\sqrt{17},\\ 2\\sqrt{5}", "note": "Soal: urutkan dari yang terkecil."}, {"tex": "\\color{#0d9488}{2}\\sqrt{3} = \\sqrt{\\color{#0d9488}{2^2} \\cdot 3}", "note": "Koefisien masuk ke dalam akar sebagai <strong>kuadratnya<\/strong>: $k\\sqrt{a} = \\sqrt{k^2 a}$."}, {"tex": "\\sqrt{\\color{#d97706}{12}},\\ \\sqrt{\\color{#d97706}{18}},\\ \\sqrt{\\color{#d97706}{17}},\\ \\sqrt{\\color{#d97706}{20}}", "note": "Lakukan untuk semua bilangan. Sekarang cukup bandingkan isi akarnya."}, {"tex": "\\sqrt{12} < \\sqrt{17} < \\sqrt{18} < \\sqrt{20}", "note": "Isi akar lebih besar berarti nilainya lebih besar."}, {"tex": "\\color{#e11d48}{2\\sqrt{3} < \\sqrt{17} < 3\\sqrt{2} < 2\\sqrt{5}}", "note": "Kembalikan ke bentuk semula. <strong>Jadi,<\/strong> inilah urutannya."}]</script></div>
-      <div class="sol-part"><span class="sol-tag">b</span>$5\sqrt{2} \text{ atau } 4\sqrt{3}$</div>
-      $$\begin{align*} 5\sqrt{2} &= \sqrt{25 \cdot 2} = \sqrt{50} \\ 4\sqrt{3} &= \sqrt{16 \cdot 3} = \sqrt{48} \end{align*}$$
-      <p class="sol-step">Karena $50 &gt; 48$, maka $\sqrt{50} &gt; \sqrt{48}$.</p>
-      <div class="sol-jadi">$5\sqrt{2}$ lebih besar daripada $4\sqrt{3}$.</div>
-      <div class="langkah-anim"><script type="application/json">[{"tex": "5\\sqrt{2} \\quad\\text{atau}\\quad 4\\sqrt{3}\\,?", "note": "Soal: perhatikan bentuk yang akan dikerjakan."}, {"tex": "\\sqrt{\\color{#0d9488}{5^2} \\cdot 2} \\quad\\text{dan}\\quad \\sqrt{\\color{#d97706}{4^2} \\cdot 3}", "note": "Masukkan koefisien ke dalam akar."}, {"tex": "\\sqrt{\\color{#0d9488}{50}} \\quad\\text{dan}\\quad \\sqrt{\\color{#d97706}{48}}", "note": "$25 \\cdot 2 = 50$ dan $16 \\cdot 3 = 48$."}, {"tex": "\\color{#e11d48}{5\\sqrt{2} > 4\\sqrt{3}}", "note": "Karena $50 > 48$. <strong>Jadi,<\/strong> $5\\sqrt{2}$ lebih besar."}]</script></div>
     </div>
 
     <h3 class="subsection-title">2. Akar dari Bentuk $a + b \pm 2\sqrt{ab}$</h3>
